@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;430;450;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+@layer utilities {
+  .animate-meteor {
+    animation: meteor 5s linear infinite;
+  }
+}
+
+@keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+
+
+:root {
+  font-family: 'Inter', 'Google Sans Flex', 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  /* overflow-x: hidden; */
+}
+
+* {
+  cursor: none !important;
+}
+
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FAFAFA;
+  color: rgb(18, 19, 23);
+  /* overflow-x: hidden; */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark mode global overrides */
+html.dark body {
+  background: #000000;
+  /* Ensure pitch black */
+  color: #ededed;
+}
+
+html.dark section {
+  background-color: transparent !important;
+  /* Allow body background to show through unless specific */
+}
+
+/* Typography Dark Mode Overrides */
+html.dark .hero-h1,
+html.dark .section-h2,
+html.dark .section-h3,
+html.dark .lead-text {
+  color: #ffffff;
+}
+
+html.dark .body-text,
+html.dark .caption-text,
+html.dark .small-label {
+  color: #a1a1aa;
+}
+
+/* Card Dark Mode */
+html.dark .card {
+  background: #171717;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+html.dark .card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Dark Mode */
+html.dark .btn-primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+html.dark .btn-primary:hover {
+  background: #e5e5e5;
+}
+
+html.dark .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+html.dark .btn-nav {
+  color: #a1a1aa;
+}
+
+html.dark .btn-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Exact Antigravity Typography with precise line-heights and letter-spacing */
+.hero-h1 {
+  font-size: 80px;
+  font-weight: 450;
+  line-height: 88px;
+  letter-spacing: normal;
+  color: rgb(18, 19, 23);
+}
+
+.section-h2 {
+  font-size: 42px;
+  font-weight: 450;
+  line-height: 43.68px;
+  letter-spacing: -0.73px;
+  color: rgb(18, 19, 23);
+}
+
+.section-h3 {
+  font-size: 54px;
+  font-weight: 450;
+  line-height: 56.16px;
+  letter-spacing: -0.95px;
+  color: rgb(18, 19, 23);
+}
+
+.lead-text {
+  font-size: 24px;
+  font-weight: 450;
+  line-height: 25.92px;
+  letter-spacing: -0.07px;
+  color: rgb(18, 19, 23);
+}
+
+.body-text {
+  font-size: 17.5px;
+  font-weight: 400;
+  line-height: 25.38px;
+  letter-spacing: 0.18px;
+  color: rgb(69, 71, 77);
+}
+
+.caption-text {
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 21.02px;
+  letter-spacing: 0.16px;
+  color: rgb(69, 71, 77);
+}
+
+.small-label {
+  font-size: 12.5px;
+  font-weight: 450;
+  line-height: 15.5px;
+  letter-spacing: 0.11px;
+  color: rgb(69, 71, 77);
+}
+
+/* Exact Button Styles */
+.btn-primary {
+  padding: 10px 24px;
+  font-size: 17.5px;
+  font-weight: 430;
+  background: rgb(18, 19, 23);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  border: none;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: rgb(47, 48, 52);
+}
+
+.btn-secondary {
+  padding: 10px 24px;
+  font-size: 17.5px;
+  font-weight: 430;
+  background: rgba(183, 191, 217, 0.1);
+  color: rgb(18, 19, 23);
+  border-radius: 9999px;
+  border: 1px solid rgba(33, 34, 38, 0.06);
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgb(240, 241, 245);
+}
+
+.btn-nav {
+  padding: 6px 16px;
+  font-size: 14.5px;
+  font-weight: 430;
+  background: transparent;
+  color: rgb(69, 71, 77);
+  border-radius: 9999px;
+  border: none;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+.btn-nav:hover {
+  background: rgba(183, 191, 217, 0.2);
+}
+
+/* Card Styles - exact 36px radius */
+.card {
+  background: white;
+  border-radius: 36px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 24px 0px;
+  transition: all 0.15s ease-out;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 32px 0px;
+}
+
+/* Media Placeholders - simple gray background */
+.media-placeholder {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 36px;
+}
+
+.media-placeholder-text {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #999;
+  text-align: center;
+}
