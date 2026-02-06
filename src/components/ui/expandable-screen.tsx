@@ -153,7 +153,7 @@ export function ExpandableScreenContent({
     showCloseButton = true,
     closeButtonClassName = "",
 }: ExpandableScreenContentProps) {
-    const { isExpanded, collapse, layoutId, contentRadius, animationDuration } =
+    const { isExpanded, collapse, layoutId, animationDuration } =
         useExpandableScreen()
 
     return (

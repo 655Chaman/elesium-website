@@ -49,7 +49,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     const id = useId()
     const svgRef = React.useRef<SVGSVGElement>(null)
     const [pathD, setPathD] = useState("")
-    const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 })
+    const [_svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 })
 
     // Calculate the gradient coordinates based on the reverse prop
     const gradientCoordinates = vertical

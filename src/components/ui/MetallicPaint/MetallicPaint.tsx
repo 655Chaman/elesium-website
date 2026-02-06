@@ -195,7 +195,8 @@ function processImage(img: HTMLImageElement): ImageData {
 
     for (let i = 0; i < size; i++) {
         const idx = i * 4;
-        const r = data[idx], g = data[idx + 1], b = data[idx + 2], a = data[idx + 3];
+        // Only need alpha value, ignore RGB
+        const a = data[idx + 3];
         // Modified: treat only low alpha as background to support white logos on transparent bg
         const isBackground = a < 10;
         alphaValues[i] = isBackground ? 0 : a / 255;

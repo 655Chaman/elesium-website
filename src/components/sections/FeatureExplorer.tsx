@@ -26,8 +26,22 @@ const features = [
     },
 ]
 
+import { MotionValue } from 'framer-motion'
+
+interface Feature {
+    title: string
+    description: string
+}
+
+interface FeatureItemProps {
+    feature: Feature
+    index: number
+    total: number
+    scrollYProgress: MotionValue<number>
+}
+
 // Sub-component to handle per-item hooks safely
-function FeatureItem({ feature, index, total, scrollYProgress }) {
+function FeatureItem({ feature, index, total, scrollYProgress }: FeatureItemProps) {
     const start = index / total
     const end = (index + 1) / total
 
