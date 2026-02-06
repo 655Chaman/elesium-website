@@ -85,9 +85,9 @@ export default function FeatureExplorer() {
             }}
         >
             <div className="sticky top-0 h-screen flex items-center justify-center">
-                <div className="max-w-6xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="max-w-6xl mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
                     {/* Left: Text */}
-                    <div className="grid grid-cols-1 items-center -ml-12 relative w-full">
+                    <div className="grid grid-cols-1 items-center md:-ml-12 relative w-full">
                         {features.map((feature, index) => (
                             <FeatureItem
                                 key={feature.title}

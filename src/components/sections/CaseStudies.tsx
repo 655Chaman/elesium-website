@@ -46,15 +46,15 @@ export default function CaseStudies() {
         <section
             id="case-studies"
             ref={ref}
-            className="relative transition-colors duration-300 dark:bg-black bg-[#FAFAFA]"
+            className="relative transition-colors duration-300 dark:bg-black bg-[#FAFAFA] py-16 md:py-0"
             style={{
-                paddingTop: '72px',
-                paddingBottom: '120px',
+                paddingTop: undefined,
+                paddingBottom: undefined,
             }}
         >
             <div className="absolute inset-0 bg-[#FAFAFA] dark:hidden -z-10" />
 
-            <div className="max-w-6xl mx-auto px-12">
+            <div className="max-w-6xl mx-auto px-4 md:px-12 md:py-[72px] md:pb-[120px]">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}

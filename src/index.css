@@ -49,6 +49,13 @@ html {
   cursor: none !important;
 }
 
+/* Enable cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
+
 input,
 textarea,
 select {
@@ -261,4 +268,50 @@ html.dark .btn-nav:hover {
   font-weight: 400;
   color: #999;
   text-align: center;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE TYPOGRAPHY
+   ======================================== */
+
+/* Mobile-first approach: base styles are for mobile */
+@media (max-width: 767px) {
+  .hero-h1 {
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-h2 {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+  }
+
+  .section-h3 {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+  }
+
+  .lead-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .body-text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .caption-text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  /* Reduce section padding on mobile */
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }

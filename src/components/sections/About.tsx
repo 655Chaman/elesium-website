@@ -13,13 +13,13 @@ export default function About() {
     const isInView = useInView(ref, { once: true, amount: 0.3 })
 
     return (
-        <section id="about" className="py-40 bg-gradient-to-b from-gray-50 to-white">
-            <div className="container mx-auto px-6 max-w-7xl">
+        <section id="about" className="py-16 md:py-40 bg-gradient-to-b from-gray-50 to-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="text-center mb-20"
+                    className="text-center mb-10 md:mb-20"
                 >
                     <h2 className="display-lg mb-6 text-brand-dark">
                         Built for <span className="text-gradient">scale</span>
@@ -43,7 +43,7 @@ export default function About() {
                                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 mb-6">
                                     <Icon className="text-white" size={32} />
                                 </div>
-                                <div className="text-6xl font-bold text-brand-dark mb-3" style={{ letterSpacing: '-0.02em' }}>
+                                <div className="text-4xl md:text-6xl font-bold text-brand-dark mb-3" style={{ letterSpacing: '-0.02em' }}>
                                     {stat.value}
                                 </div>
                                 <div className="text-lg text-gray-600">

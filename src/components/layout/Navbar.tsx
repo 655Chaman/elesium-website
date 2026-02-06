@@ -13,7 +13,7 @@ interface NavbarProps {
 export default function Navbar({ onNavigate }: NavbarProps) {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style={{ height: '52px' }}>
-            <div className="max-w-[1440px] mx-auto px-12 h-full flex items-center justify-between">
+            <div className="max-w-[1440px] mx-auto px-4 md:px-12 h-full flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavigate?.('home')}>
                     <img

@@ -24,8 +24,8 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
     ];
 
     return (
-        <footer className="relative bg-white text-black py-24 md:py-32 overflow-hidden font-sans border-t border-gray-100">
-            <div className="max-w-[95%] mx-auto px-6 flex flex-col min-h-[80vh] justify-between">
+        <footer className="relative bg-white text-black py-16 md:py-24 lg:py-32 overflow-hidden font-sans border-t border-gray-100">
+            <div className="max-w-[95%] mx-auto px-4 md:px-6 flex flex-col min-h-[50vh] md:min-h-[80vh] justify-between">
 
                 {/* Top Section */}
                 <div className="flex flex-col md:flex-row justify-between w-full items-start gap-16 md:gap-0">

@@ -8,7 +8,7 @@ export default function CallToAction() {
     const isInView = useInView(ref, { once: true, amount: 0.4 })
 
     return (
-        <section ref={ref} className="py-40 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 relative overflow-hidden">
+        <section ref={ref} className="py-16 md:py-40 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 relative overflow-hidden">
             {/* Animated background circles */}
             <div className="absolute inset-0 opacity-10">
                 <motion.div

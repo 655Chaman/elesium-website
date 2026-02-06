@@ -35,13 +35,13 @@ export default function Industries() {
     const isInView = useInView(ref, { once: true, amount: 0.2 })
 
     return (
-        <section id="industries" className="py-40 bg-white">
-            <div className="container mx-auto px-6 max-w-7xl">
+        <section id="industries" className="py-16 md:py-40 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="text-center mb-20"
+                    className="text-center mb-10 md:mb-20"
                 >
                     <h2 className="display-lg mb-6 text-brand-dark">
                         <span className="text-gradient">Industries</span>

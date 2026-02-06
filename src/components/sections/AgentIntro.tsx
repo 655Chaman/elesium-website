@@ -27,7 +27,7 @@ export default function AgentIntro() {
             }}
         >
             <div
-                className="max-w-7xl mx-auto px-12 flex flex-col lg:flex-row-reverse gap-16 relative"
+                className="max-w-7xl mx-auto px-4 md:px-12 flex flex-col lg:flex-row-reverse gap-16 relative"
             >
                 {/* Text Content - naturally scrolling */}
                 <div className="w-full lg:w-1/2 text-center lg:text-left py-[50vh] relative z-20">
