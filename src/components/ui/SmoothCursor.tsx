@@ -111,10 +111,14 @@ export function SmoothCursor({
         damping: 35,
     })
 
+    const [isVisible, setIsVisible] = useState(false)
+
     useEffect(() => {
         // Check if device has a coarse pointer (touch)
         const isTouchDevice = window.matchMedia("(pointer: coarse)").matches
         if (isTouchDevice) return
+
+        setIsVisible(true)
 
         const updateVelocity = (currentPos: Position) => {
             const currentTime = Date.now()
@@ -186,6 +190,8 @@ export function SmoothCursor({
             if (rafId) cancelAnimationFrame(rafId)
         }
     }, [cursorX, cursorY, rotation, scale])
+
+    if (!isVisible) return null
 
     return (
         <motion.div
