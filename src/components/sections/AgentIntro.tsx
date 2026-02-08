@@ -60,11 +60,13 @@ export default function AgentIntro() {
                             </div>
                         </div>
 
+                        {/* Supply -> Elesium (Beam 1) */}
                         <AnimatedBeam
                             containerRef={containerRef}
                             fromRef={div1Ref}
                             toRef={div2Ref}
-                            duration={5}
+                            duration={4}
+                            delay={0}
                             pathWidth={5}
                             pathColor={pathColor}
                             gradientStartColor={gradientStartColor}
@@ -74,11 +76,47 @@ export default function AgentIntro() {
                             endYOffset={-64}
                             className="z-0"
                         />
+                        {/* Supply -> Elesium (Beam 2) - Staggered */}
+                        <AnimatedBeam
+                            containerRef={containerRef}
+                            fromRef={div1Ref}
+                            toRef={div2Ref}
+                            duration={4}
+                            delay={2}
+                            pathWidth={5}
+                            pathColor={pathColor}
+                            gradientStartColor={gradientStartColor}
+                            gradientStopColor={gradientStopColor}
+                            vertical={true}
+                            startYOffset={40}
+                            endYOffset={-64}
+                            className="z-0"
+                        />
+
+                        {/* Demand -> Elesium (Beam 1) */}
                         <AnimatedBeam
                             containerRef={containerRef}
                             fromRef={div3Ref}
                             toRef={div2Ref}
-                            duration={5}
+                            duration={4}
+                            delay={0}
+                            pathWidth={5}
+                            pathColor={pathColor}
+                            gradientStartColor={gradientStartColor}
+                            gradientStopColor={gradientStopColor}
+                            vertical={true}
+                            reverse={true}
+                            startYOffset={-40}
+                            endYOffset={64}
+                            className="z-0"
+                        />
+                        {/* Demand -> Elesium (Beam 2) - Staggered */}
+                        <AnimatedBeam
+                            containerRef={containerRef}
+                            fromRef={div3Ref}
+                            toRef={div2Ref}
+                            duration={4}
+                            delay={2}
                             pathWidth={5}
                             pathColor={pathColor}
                             gradientStartColor={gradientStartColor}

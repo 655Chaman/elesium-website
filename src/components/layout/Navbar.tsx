@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -7,7 +6,6 @@ import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
 import { WaitingListForm } from '../features/WaitingListForm'
 import logo from '../../Assets/LOGO_NEW.png'
-
 
 interface NavbarProps {
     onNavigate?: (page: 'home' | 'how-we-work' | 'industries') => void;
