@@ -40,14 +40,15 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
                     />
 
                     {/* Modal Content */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                        transition={{ duration: 0.2 }}
-                        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl z-[9999] px-4"
-                    >
-                        <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-zinc-800 max-h-[85vh] overflow-y-auto">
+                    {/* Modal Content Wrapper */}
+                    <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4 pointer-events-none">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            transition={{ duration: 0.2 }}
+                            className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-zinc-800 max-h-[85vh] overflow-y-auto w-full max-w-2xl pointer-events-auto"
+                        >
                             <div className="relative p-6 md:p-8">
                                 <button
                                     onClick={onClose}
@@ -60,8 +61,8 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
                                 </button>
                                 {children}
                             </div>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
                 </>
             )}
         </AnimatePresence>,

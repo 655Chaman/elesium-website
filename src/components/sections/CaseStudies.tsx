@@ -39,7 +39,7 @@ const caseStudies = [
 
 export default function CaseStudies() {
     const ref = useRef(null)
-    const isInView = useInView(ref, { once: true, amount: 0.2 })
+    const isInView = useInView(ref, { once: true, amount: 0.1 })
     const [selectedStudy, setSelectedStudy] = useState<typeof caseStudies[0] | null>(null)
 
     return (

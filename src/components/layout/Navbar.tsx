@@ -6,8 +6,8 @@ import { AnimatedThemeToggler } from '../ui/AnimatedThemeToggler'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
 import { WaitingListForm } from '../features/WaitingListForm'
-
 import logo from '../../Assets/LOGO_NEW.png'
+
 
 interface NavbarProps {
     onNavigate?: (page: 'home' | 'how-we-work' | 'industries') => void;

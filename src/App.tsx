@@ -9,6 +9,7 @@ import Solutions from './components/sections/Solutions'
 import DownloadFooter from './components/layout/Footer'
 import { SmoothCursor } from './components/ui/SmoothCursor'
 import SmoothScroll from './components/ui/SmoothScroll'
+import NoiseOverlay from './components/ui/NoiseOverlay'
 import HowWeWork from './components/pages/HowWeWork'
 
 import Industries from './components/pages/Industries'
@@ -21,6 +22,7 @@ function App() {
             {/* Smooth Cursor */}
             <SmoothCursor />
             <SmoothScroll />
+            <NoiseOverlay />
 
             <AnimatePresence mode="wait">
                 {view === 'home' ? (
