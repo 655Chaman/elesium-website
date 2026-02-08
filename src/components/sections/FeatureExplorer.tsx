@@ -101,7 +101,7 @@ export default function FeatureExplorer() {
 
                     {/* Right: Media Placeholder */}
                     <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center" style={{ height: '550px', width: '100%' }}>
-                        <div className="w-[310px] md:w-[700px] h-full ml-40 mt-5 opacity-90">
+                        <div className="w-full max-w-[310px] md:max-w-none md:w-[700px] h-full ml-0 md:ml-40 mt-0 md:mt-5 opacity-90">
                             <MetallicPaint
                                 imageSrc={logoWhite}
                                 scale={3}

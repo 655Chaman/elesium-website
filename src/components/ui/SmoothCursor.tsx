@@ -112,6 +112,10 @@ export function SmoothCursor({
     })
 
     useEffect(() => {
+        // Check if device has a coarse pointer (touch)
+        const isTouchDevice = window.matchMedia("(pointer: coarse)").matches
+        if (isTouchDevice) return
+
         const updateVelocity = (currentPos: Position) => {
             const currentTime = Date.now()
             const deltaTime = currentTime - lastUpdateTime.current

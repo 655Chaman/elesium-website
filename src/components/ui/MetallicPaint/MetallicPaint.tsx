@@ -421,5 +421,30 @@ export default function MetallicPaint({
     // The CSS class 'paint-container' is hardcoded in the original, but maybe I should allow custom classes?
     // The user wants to position it with 'ml-60 mt-5'.
     // I'll add className and style to the props interface to be flexible.
-    return <canvas ref={canvasRef} className="paint-container" />;
+    // Mobile/Touch detection for fallback
+    const [isTouch, setIsTouch] = useState(false);
+
+    useEffect(() => {
+        setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+    }, []);
+
+    const showFallback = isTouch || !ready;
+
+    return (
+        <div className={`relative w-full h-full ${isTouch ? 'overflow-hidden' : ''}`}>
+            <canvas
+                ref={canvasRef}
+                className={`paint-container ${showFallback ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            />
+
+            {/* Fallback Image */}
+            <img
+                src={imageSrc}
+                alt="Feature visual"
+                className={`absolute inset-0 w-full h-full object-contain pointer-events-none transition-opacity duration-500 ${showFallback ? 'opacity-100' : 'opacity-0'}`}
+                style={{ filter: 'brightness(1.2) contrast(1.1)' }} // Mimic some detailed look
+            />
+        </div>
+    );
 }

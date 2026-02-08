@@ -19,19 +19,17 @@ export default function AgentIntro() {
     return (
         <section
             ref={ref}
-            className="relative bg-white dark:bg-black transition-colors duration-300"
             style={{
-                minHeight: '300vh',
-                paddingTop: '0',
-                paddingBottom: '0'
+                minHeight: 'auto',
             }}
+            className="relative bg-white dark:bg-black transition-colors duration-300 min-h-[150vh] lg:min-h-[300vh] py-0"
         >
             <div
                 className="max-w-7xl mx-auto px-4 md:px-12 flex flex-col lg:flex-row-reverse gap-16 relative"
             >
                 {/* Text Content - naturally scrolling */}
-                <div className="w-full lg:w-1/2 text-center lg:text-left py-[50vh] relative z-20">
-                    <TextReveal className="lg:min-h-screen flex items-center">
+                <div className="w-full lg:w-1/2 text-center lg:text-left py-24 lg:py-[50vh] relative z-20">
+                    <TextReveal className="lg:min-h-screen flex items-center justify-center lg:justify-start">
                         We connect Supply to Demand, and Demand to Supply, helping you find the right partners faster — with context, qualification, and trust built in.
                     </TextReveal>
                 </div>
