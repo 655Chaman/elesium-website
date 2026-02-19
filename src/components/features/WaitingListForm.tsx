@@ -67,9 +67,9 @@ export function WaitingListForm() {
     }
 
     return (
-        <div className="flex flex-col md:flex-row h-full min-h-screen">
+        <div className="flex flex-col md:flex-row h-full">
             {/* Left Panel - Context */}
-            <div className="w-full md:w-5/12 bg-gray-50 dark:bg-neutral-900 border-r border-gray-100 dark:border-white/5 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+            <div className="w-full md:w-5/12 bg-gray-50 dark:bg-neutral-900 border-r border-gray-100 dark:border-white/5 p-6 md:p-12 lg:p-16 flex flex-col justify-center">
                 <div className="max-w-md mx-auto md:mx-0">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-sm font-medium mb-8">
                         <span className="relative flex h-2 w-2">
@@ -93,7 +93,7 @@ export function WaitingListForm() {
             </div>
 
             {/* Right Panel - Form */}
-            <div className="w-full md:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white dark:bg-black">
+            <div className="w-full md:w-7/12 p-6 md:p-12 lg:p-16 flex flex-col justify-center bg-white dark:bg-black">
                 <div className="max-w-lg mx-auto w-full">
                     <AnimatePresence mode="wait">
                         {step === 1 ? (

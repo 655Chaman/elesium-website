@@ -428,7 +428,7 @@ export default function MetallicPaint({
         setIsTouch(window.matchMedia("(pointer: coarse)").matches);
     }, []);
 
-    const showFallback = isTouch || !ready;
+    const showFallback = !ready;
 
     return (
         <div className={`relative w-full h-full ${isTouch ? 'overflow-hidden' : ''}`}>

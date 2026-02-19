@@ -67,7 +67,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.2, duration: 0.8 }}
-                                className="text-6xl md:text-8xl font-medium tracking-tighter leading-[0.9] text-black dark:text-white mb-8"
+                                className="text-5xl md:text-8xl font-medium tracking-tighter leading-[0.9] text-black dark:text-white mb-8"
                             >
                                 How We<br />Work
                             </motion.h1>

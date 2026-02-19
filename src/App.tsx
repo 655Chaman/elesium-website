@@ -7,7 +7,6 @@ import FeatureExplorer from './components/sections/FeatureExplorer'
 import CaseStudies from './components/sections/CaseStudies'
 import Solutions from './components/sections/Solutions'
 import DownloadFooter from './components/layout/Footer'
-import { SmoothCursor } from './components/ui/SmoothCursor'
 import SmoothScroll from './components/ui/SmoothScroll'
 import NoiseOverlay from './components/ui/NoiseOverlay'
 import HowWeWork from './components/pages/HowWeWork'
@@ -20,7 +19,7 @@ function App() {
     return (
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300">
             {/* Smooth Cursor */}
-            <SmoothCursor />
+
             <SmoothScroll />
             <NoiseOverlay />
 

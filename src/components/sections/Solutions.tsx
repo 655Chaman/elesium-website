@@ -16,7 +16,7 @@ export default function Solutions() {
                 minHeight: '0',
             }}
         >
-            <div className="md:min-h-[839px] md:py-[55px]">
+            <div className="md:min-h-[auto] lg:min-h-[839px] md:py-[55px]">
                 <div className="max-w-6xl mx-auto px-4 md:px-12">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}

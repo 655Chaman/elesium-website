@@ -51,8 +51,8 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
                 </div>
 
                 {/* Massive Text Section */}
-                <div className="w-full flex justify-center items-center py-12 flex-grow">
-                    <h1 className="text-[18vw] leading-none font-medium tracking-tighter select-none -mb-[0.05em] text-center">
+                <div className="w-full flex justify-center items-center py-12 flex-grow overflow-hidden">
+                    <h1 className="text-[15vw] md:text-[18vw] leading-none font-medium tracking-tighter select-none -mb-[0.05em] text-center">
                         Elesium
                     </h1>
                 </div>

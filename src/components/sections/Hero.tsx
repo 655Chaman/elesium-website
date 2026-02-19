@@ -16,13 +16,13 @@ export default function HeroSection() {
             className="relative flex items-center justify-center overflow-hidden bg-white dark:bg-black transition-colors duration-300 min-h-[calc(100vh-52px)] md:min-h-0 pt-16 md:pt-[52px]"
             style={{ height: 'auto' }}
         >
-            <div className="h-auto md:h-[777px] flex items-center">
+            <div className="min-h-[500px] md:h-[777px] flex items-center w-full">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                     transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="text-center px-6 md:px-12 py-12 md:py-0"
-                    style={{ maxWidth: '900px' }}
+                    className="text-center px-6 md:px-12 py-12 md:py-0 w-full"
+                    style={{ maxWidth: '900px', margin: '0 auto' }}
                 >
                     {/* Company Name Badge */}
                     <div className="mb-6 flex justify-center items-center">

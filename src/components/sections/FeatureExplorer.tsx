@@ -56,10 +56,10 @@ function FeatureItem({ feature, index, total, scrollYProgress }: FeatureItemProp
             style={{ opacity }}
             className="col-start-1 row-start-1"
         >
-            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-black dark:text-white mb-6">
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-black dark:text-white mb-4 text-center md:text-left">
                 {feature.title}
             </h3>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0 text-center md:text-left">
                 {feature.description}
             </p>
         </motion.div>
@@ -84,8 +84,8 @@ export default function FeatureExplorer() {
                 paddingBottom: '120px'
             }}
         >
-            <div className="sticky top-0 h-screen flex items-center justify-center">
-                <div className="max-w-6xl mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div className="sticky top-[52px] h-[calc(100vh-52px)] flex items-center justify-center">
+                <div className="max-w-6xl mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 items-center">
                     {/* Left: Text */}
                     <div className="grid grid-cols-1 items-center md:-ml-12 relative w-full">
                         {features.map((feature, index) => (
@@ -100,13 +100,14 @@ export default function FeatureExplorer() {
                     </div>
 
                     {/* Right: Media Placeholder */}
-                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center" style={{ height: '550px', width: '100%' }}>
-                        <div className="w-full max-w-[310px] md:max-w-none md:w-[700px] h-full ml-0 md:ml-40 mt-0 md:mt-5 opacity-90">
+                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center h-[280px] md:h-[500px] w-full">
+                        <div className="w-full max-w-[310px] md:max-w-none md:w-[700px] h-full ml-2.5 md:ml-40 mt-0 md:mt-5 opacity-100">
                             <MetallicPaint
                                 imageSrc={logoWhite}
                                 scale={3}
                                 speed={0.5}
-                                brightness={1.5}
+                                brightness={2.5}
+                                darkColor="#444444"
                                 liquid={0.8}
                                 distortion={1.5}
                             />
