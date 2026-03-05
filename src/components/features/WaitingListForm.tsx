@@ -29,26 +29,29 @@ export function WaitingListForm() {
         e.preventDefault()
         setIsLoading(true)
 
-        // Here we would call the backend API (Notion)
         try {
+            // Attempt to hit local API (useful for local development)
+            // In production (GitHub pages), this will fail fast and drop into the catch block
             const response = await fetch('http://localhost:3001/api/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
-            })
+            }).catch(() => null); // Catch network errors natively
 
-            if (!response.ok) throw new Error('Network response was not ok')
+            if (response && response.ok) {
+                setIsLoading(false)
+                setIsSuccess(true)
+                return;
+            }
 
-            setIsLoading(false)
-            setIsSuccess(true)
+            throw new Error('Fallback to demo mode');
         } catch (error) {
-            console.error("Submission failed", error)
-            // Fallback for demo if server isn't running
-            await new Promise(resolve => setTimeout(resolve, 1000))
+            // Graceful fallback for the static demo site
+            // Simulates processing time without throwing console errors
+            await new Promise(resolve => setTimeout(resolve, 1500))
             setIsSuccess(true)
             setIsLoading(false)
         }
-
     }
 
 
@@ -147,7 +150,7 @@ export function WaitingListForm() {
                                 onSubmit={handleSubmit}
                                 className="space-y-6"
                             >
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-300">Full Name *</label>
                                         <input
@@ -184,12 +187,12 @@ export function WaitingListForm() {
                                     />
                                 </div>
 
-                                <div className="flex gap-4">
+                                <div className="flex flex-col sm:flex-row gap-4">
                                     <button
                                         type="button"
                                         onClick={() => setStep(1)}
                                         disabled={isLoading}
-                                        className="w-1/3 h-14 text-lg flex items-center justify-center gap-2 border border-gray-200 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
+                                        className="w-full sm:w-1/3 h-14 text-lg flex items-center justify-center gap-2 border border-gray-200 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
                                     >
                                         <ArrowLeft className="h-5 w-5" />
                                         Back
@@ -197,7 +200,7 @@ export function WaitingListForm() {
                                     <button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="w-2/3 btn-primary h-14 text-lg flex items-center justify-center gap-2 group"
+                                        className="w-full sm:w-2/3 btn-primary h-14 text-lg flex items-center justify-center gap-2 group"
                                     >
                                         {isLoading ? (
                                             <Loader2 className="h-5 w-5 animate-spin" />

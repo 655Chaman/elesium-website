@@ -441,7 +441,7 @@ export default function MetallicPaint({
             {/* Fallback Image */}
             <img
                 src={imageSrc}
-                alt="Feature visual"
+                alt="Elesium platform feature showcase with metallic paint effect"
                 className={`absolute inset-0 w-full h-full object-contain pointer-events-none transition-opacity duration-500 ${showFallback ? 'opacity-100' : 'opacity-0'}`}
                 style={{ filter: 'brightness(1.2) contrast(1.1)' }} // Mimic some detailed look
             />

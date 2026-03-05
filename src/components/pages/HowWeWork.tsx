@@ -42,9 +42,9 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
             transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
             data-lenis-prevent
         >
-            <div className="min-h-screen p-8 md:p-12 lg:p-20 max-w-[1600px] mx-auto flex flex-col">
+            <div className="min-h-screen p-6 md:p-12 lg:p-20 max-w-[1600px] mx-auto flex flex-col">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-24 md:mb-32">
+                <div className="flex items-center justify-between mb-12 md:mb-32">
                     <button
                         onClick={onBack}
                         className="group flex items-center gap-3 text-sm font-medium tracking-wide uppercase text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
@@ -60,14 +60,14 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
 
                 {/* Main Content */}
                 <div className="flex-grow">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
                         {/* Title Section */}
                         <div className="lg:col-span-4">
                             <motion.h1
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.2, duration: 0.8 }}
-                                className="text-5xl md:text-8xl font-medium tracking-tighter leading-[0.9] text-black dark:text-white mb-8"
+                                className="text-4xl md:text-8xl font-medium tracking-tighter leading-[0.9] text-black dark:text-white mb-6 md:mb-8"
                             >
                                 How We<br />Work
                             </motion.h1>

@@ -57,7 +57,7 @@ export default function Industries({ onBack }: IndustriesProps) {
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto">
             {/* Header */}
             <div className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
-                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
                     <button
                         onClick={onBack}
                         className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
@@ -71,14 +71,14 @@ export default function Industries({ onBack }: IndustriesProps) {
                 </div>
             </div>
 
-            <main className="max-w-7xl mx-auto px-6 py-20">
+            <main className="max-w-7xl mx-auto px-5 md:px-6 py-12 md:py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="mb-24 max-w-3xl"
+                    className="mb-12 md:mb-24 max-w-3xl"
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+                    <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8">
                         Industries<br />We Serve.
                     </h1>
                     <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed">
@@ -87,7 +87,7 @@ export default function Industries({ onBack }: IndustriesProps) {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
                     {industries.map((industry, index) => (
                         <motion.div
                             key={industry.id}

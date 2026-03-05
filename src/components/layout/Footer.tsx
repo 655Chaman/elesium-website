@@ -24,11 +24,11 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
     ];
 
     return (
-        <footer className="relative bg-white text-black py-16 md:py-24 lg:py-32 overflow-hidden font-sans border-t border-gray-100">
-            <div className="max-w-[95%] mx-auto px-4 md:px-6 flex flex-col min-h-[50vh] md:min-h-[80vh] justify-between">
+        <footer className="relative bg-white text-black py-12 md:py-24 lg:py-32 overflow-hidden font-sans border-t border-gray-100">
+            <div className="max-w-[95%] mx-auto px-5 md:px-6 flex flex-col min-h-[40vh] md:min-h-[80vh] justify-between">
 
                 {/* Top Section */}
-                <div className="flex flex-col md:flex-row justify-between w-full items-start gap-16 md:gap-0">
+                <div className="flex flex-col md:flex-row justify-between w-full items-start gap-8 md:gap-0">
 
 
                     <div className="flex gap-24 md:gap-32 pr-4 md:pr-12">
@@ -51,20 +51,20 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
                 </div>
 
                 {/* Massive Text Section */}
-                <div className="w-full flex justify-center items-center py-12 flex-grow overflow-hidden">
-                    <h1 className="text-[15vw] md:text-[18vw] leading-none font-medium tracking-tighter select-none -mb-[0.05em] text-center">
+                <div className="w-full flex justify-center items-center py-8 md:py-12 flex-grow overflow-hidden">
+                    <h1 className="text-[18vw] md:text-[18vw] leading-none font-medium tracking-tighter select-none -mb-[0.05em] text-center">
                         Elesium
                     </h1>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="flex flex-col md:flex-row justify-between items-end md:items-end gap-8 pb-4 pt-8 border-t border-transparent">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-8 pb-4 pt-8 border-t border-transparent">
                     <div className="text-2xl font-medium text-[#5F6368]">
                         Elesium.online
                     </div>
 
                     <div className="flex flex-wrap gap-8 text-[13px] text-[#5F6368] font-medium">
-                        <span className="cursor-default">© 2024 Elesium</span>
+                        <span className="cursor-default">© 2025 Elesium</span>
                         <a href="#" className="hover:text-black transition-colors">Privacy</a>
                         <a href="#" className="hover:text-black transition-colors">Terms</a>
                     </div>

@@ -54,7 +54,7 @@ export default function CaseStudies() {
         >
             <div className="absolute inset-0 bg-[#FAFAFA] dark:hidden -z-10" />
 
-            <div className="max-w-6xl mx-auto px-4 md:px-12 md:py-[72px] md:pb-[120px]">
+            <div className="max-w-6xl mx-auto px-5 md:px-12 py-4 md:py-[72px] pb-8 md:pb-[120px]">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
@@ -63,7 +63,7 @@ export default function CaseStudies() {
                     <h2 className="section-h2 mb-4 text-center dark:text-white transition-colors">
                         Case Studies
                     </h2>
-                    <p className="body-text text-center mb-16 max-w-2xl mx-auto dark:text-gray-400 transition-colors">
+                    <p className="body-text text-center mb-8 md:mb-16 max-w-2xl mx-auto dark:text-gray-400 transition-colors">
                         See how we have done it
                     </p>
                 </motion.div>

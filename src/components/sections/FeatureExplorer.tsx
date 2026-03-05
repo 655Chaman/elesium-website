@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import logoWhite from '../../Assets/LOGO_NEW.png'
 import MetallicPaint from '../ui/MetallicPaint/MetallicPaint'
 
@@ -59,7 +59,7 @@ function FeatureItem({ feature, index, total, scrollYProgress }: FeatureItemProp
             <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-black dark:text-white mb-4 text-center md:text-left">
                 {feature.title}
             </h3>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0 text-center md:text-left">
+            <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0 text-center md:text-left">
                 {feature.description}
             </p>
         </motion.div>
@@ -73,21 +73,30 @@ export default function FeatureExplorer() {
         offset: ['start start', 'end end']
     })
 
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768)
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
     return (
         <section
             id="platform"
             ref={containerRef}
             className="relative bg-white"
             style={{
-                height: '3571px',
-                paddingTop: '120px',
-                paddingBottom: '120px'
+                height: isMobile ? 'auto' : '3571px',
+                paddingTop: isMobile ? '60px' : '120px',
+                paddingBottom: isMobile ? '60px' : '120px'
             }}
         >
-            <div className="sticky top-[52px] h-[calc(100vh-52px)] flex items-center justify-center">
-                <div className="max-w-6xl mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 items-center">
+            <div className="md:sticky md:top-[52px] md:h-[calc(100vh-52px)] flex items-center justify-center">
+                <div className="max-w-6xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
                     {/* Left: Text */}
-                    <div className="grid grid-cols-1 items-center md:-ml-12 relative w-full">
+                    <div className="grid grid-cols-1 items-center md:-ml-12 relative w-full order-2 lg:order-1">
                         {features.map((feature, index) => (
                             <FeatureItem
                                 key={feature.title}
@@ -100,8 +109,8 @@ export default function FeatureExplorer() {
                     </div>
 
                     {/* Right: Media Placeholder */}
-                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center h-[280px] md:h-[500px] w-full">
-                        <div className="w-full max-w-[310px] md:max-w-none md:w-[700px] h-full ml-2.5 md:ml-40 mt-0 md:mt-5 opacity-100">
+                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center h-[250px] md:h-[500px] w-full order-1 lg:order-2">
+                        <div className="w-full max-w-[280px] md:max-w-none md:w-[700px] h-full mx-auto md:ml-40 mt-0 md:mt-5 opacity-100">
                             <MetallicPaint
                                 imageSrc={logoWhite}
                                 scale={3}

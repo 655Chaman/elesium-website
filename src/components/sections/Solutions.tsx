@@ -17,13 +17,13 @@ export default function Solutions() {
             }}
         >
             <div className="md:min-h-[auto] lg:min-h-[839px] md:py-[55px]">
-                <div className="max-w-6xl mx-auto px-4 md:px-12">
+                <div className="max-w-6xl mx-auto px-5 md:px-12">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                     >
-                        <h2 className="section-h2 mb-16 text-center dark:text-white transition-colors">Achieve new heights</h2>
+                        <h2 className="section-h2 mb-8 md:mb-16 text-center dark:text-white transition-colors">Achieve new heights</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '24px' }}>
@@ -38,10 +38,9 @@ export default function Solutions() {
                             }}
                         >
                             <h3 style={{
-                                fontSize: '32px',
                                 fontWeight: 450,
                                 marginBottom: '16px',
-                            }} className="text-[#121317] dark:text-white transition-colors">
+                            }} className="text-2xl md:text-[32px] text-[#121317] dark:text-white transition-colors">
                                 For Medium-sized Businesses
                             </h3>
                             <p className="body-text mb-8 dark:text-gray-400">
