@@ -32,7 +32,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className, sticky = 
                 <span
                     ref={targetRef}
                     className={
-                        "flex flex-wrap p-5 text-2xl font-bold text-black/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl dark:text-white/20"
+                        "flex flex-wrap justify-center lg:justify-start p-5 text-2xl font-bold text-black/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl dark:text-white/20"
                     }
                 >
                     {words.map((word, i) => {

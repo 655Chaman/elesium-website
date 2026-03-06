@@ -395,23 +395,34 @@ const TextAnimateBase = ({
                 {...props}
             >
                 {accessible && <span className="sr-only">{children}</span>}
-                {segments.map((segment, i) => (
-                    <motion.span
-                        key={`${by}-${segment}-${i}`}
-                        variants={finalVariants.item}
-                        custom={i * staggerTimings[by]}
-                        className={cn(
-                            by === "line" ? "block" : "inline-block whitespace-pre",
-                            by === "character" && "",
-                            typeof segmentClassName === "function"
-                                ? segmentClassName(segment, i)
-                                : segmentClassName
-                        )}
-                        aria-hidden={accessible ? true : undefined}
-                    >
-                        {segment}
-                    </motion.span>
-                ))}
+                {segments.map((segment, i) => {
+                    // Render spaces as plain inline elements so the browser handles word wrapping and centering correctly
+                    if (by === "word" && segment.trim() === "") {
+                        return (
+                            <span key={`${by}-${segment}-${i}`} className="whitespace-pre">
+                                {segment}
+                            </span>
+                        )
+                    }
+
+                    return (
+                        <motion.span
+                            key={`${by}-${segment}-${i}`}
+                            variants={finalVariants.item}
+                            custom={i * staggerTimings[by]}
+                            className={cn(
+                                by === "line" ? "block" : "inline-block whitespace-pre",
+                                by === "character" && "",
+                                typeof segmentClassName === "function"
+                                    ? segmentClassName(segment, i)
+                                    : segmentClassName
+                            )}
+                            aria-hidden={accessible ? true : undefined}
+                        >
+                            {segment}
+                        </motion.span>
+                    )
+                })}
             </MotionComponent>
         </AnimatePresence>
     )
