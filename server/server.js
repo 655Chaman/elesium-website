@@ -22,6 +22,9 @@ app.post('/api/submit', async (req, res) => {
             throw new Error('Database ID is not defined in .env');
         }
 
+        // --- Create Notion Page ---
+        // Note: Using 'select' instead of 'status' as a more compatible default.
+        // Also fixed typo 'CHEKC 1' to 'Pending' or a more standard status name.
         const response = await notion.pages.create({
             parent: { database_id: DATABASE_ID },
             properties: {
@@ -38,8 +41,8 @@ app.post('/api/submit', async (req, res) => {
                     email: email,
                 },
                 Status: {
-                    status: {
-                        name: 'CHEKC 1', // Default status from your board
+                    select: {
+                        name: 'Pending', // More robust status name
                     },
                 },
             },
@@ -86,54 +89,64 @@ app.post('/api/submit', async (req, res) => {
 
         console.log('Success! Entry added.');
 
-        // --- Trigger Drip Sequence (Simulation) ---
-        // In a real app, this would call SendGrid, Mailgun, or another API.
-        triggerDripSequence(email, name);
+        // --- Trigger Drip Sequence (Using native fetch to avoid dependency issues) ---
+        await triggerDripSequence(email, name);
 
         res.json({ success: true, message: 'Application received', id: response.id });
     } catch (error) {
-        console.error(error);
+        console.error('Error processing submission:', error.message);
         res.status(500).json({ error: error.message });
     }
 });
 
-// Initialize Resend
-const { Resend } = require('resend');
-const resend = new Resend(process.env.RESEND_API_KEY);
-
+/**
+ * Sends a welcome email using the Resend API directly via fetch.
+ * This removes the dependency on the 'resend' npm package.
+ */
 async function triggerDripSequence(email, name) {
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    
+    if (!RESEND_API_KEY || RESEND_API_KEY === 're_123456789') {
+        console.warn('[DRIP-SEQUENCE] Valid RESEND_API_KEY not found. Skipping email.');
+        return;
+    }
+
     console.log(`[DRIP-SEQUENCE] Initiating for: ${email}`);
 
     try {
-        if (!process.env.RESEND_API_KEY) {
-            console.warn('[DRIP-SEQUENCE] No RESEND_API_KEY found. Skipping email send.');
-            return;
-        }
-
-        const { data, error } = await resend.emails.send({
-            from: 'Elesium <onboarding@resend.dev>', // Update this with your verified domain later
-            to: [email],
-            subject: 'Welcome to Elesium - You are on the list',
-            html: `
-                <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-                    <h1>Welcome into the fold, ${name || 'Future Partner'}.</h1>
-                    <p>We've received your application for early access.</p>
-                    <p>Our team is currently reviewing your profile to ensure we're the right fit for your industry needs.</p>
-                    <p>Expect to hear from us within 48 hours.</p>
-                    <br/>
-                    <p>Regards,</p>
-                    <p><strong>The Elesium Team</strong></p>
-                </div>
-            `,
+        const response = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${RESEND_API_KEY}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                from: 'Elesium <onboarding@resend.dev>',
+                to: [email],
+                subject: 'Welcome to Elesium - You are on the list',
+                html: `
+                    <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+                        <h1>Welcome into the fold, ${name || 'Future Partner'}.</h1>
+                        <p>We've received your application for early access.</p>
+                        <p>Our team is currently reviewing your profile to ensure we're the right fit for your industry needs.</p>
+                        <p>Expect to hear from us within 48 hours.</p>
+                        <br/>
+                        <p>Regards,</p>
+                        <p><strong>The Elesium Team</strong></p>
+                    </div>
+                `,
+            }),
         });
 
-        if (error) {
-            console.error('[DRIP-SEQUENCE] Error sending email:', error);
+        const data = await response.json();
+
+        if (!response.ok) {
+            console.error('[DRIP-SEQUENCE] API Error:', data);
         } else {
-            console.log(`[DRIP-SEQUENCE] Processed successfully. Email ID: ${data.id}`);
+            console.log(`[DRIP-SEQUENCE] Email sent successfully. ID: ${data.id}`);
         }
     } catch (err) {
-        console.error('[DRIP-SEQUENCE] Unexpected error:', err);
+        console.error('[DRIP-SEQUENCE] Unexpected network error:', err.message);
     }
 }
 
