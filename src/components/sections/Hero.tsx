@@ -5,7 +5,6 @@ import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
 
-
 export default function HeroSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.1 })
@@ -33,7 +32,7 @@ export default function HeroSection() {
                     >
                         <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-[0.22em] uppercase text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-white/10 rounded-full px-4 py-1.5">
                             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                            Elesium — Strategic Partnership Mandates
+                            Elesium — Verified Partner Matching
                         </span>
                     </motion.div>
 
@@ -69,7 +68,7 @@ export default function HeroSection() {
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>
                                 <InteractiveHoverButton id="hero-mandate-cta">
-                                    Apply for a Strategic Mandate
+                                    Apply for a Priority Partner Slot
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>

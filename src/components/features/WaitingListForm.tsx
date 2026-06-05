@@ -14,14 +14,14 @@ const STEPS = [
 
 const LEFT_PANEL = [
     {
-        badge: 'Strategic Mandate Application',
+        badge: 'Priority Partner Application',
         heading: 'Enter Your Credentials.',
         body: 'We selectively engage with qualified principals. This application is the first step in an exclusive intake process — not a signup form.',
     },
     {
         badge: 'Qualification Screen',
         heading: 'Demonstrate Readiness.',
-        body: 'Our mandates are reserved for organizations with the capacity and urgency to act on high-quality introductions. These questions are non-negotiable.',
+        body: 'Our active engagements are reserved for organizations with the capacity and urgency to act on high-quality introductions. These questions are non-negotiable.',
     },
     {
         badge: 'Final Profile',
@@ -123,12 +123,12 @@ export function MandateApplicationForm() {
                     Application Status: Under Review
                 </span>
                 <h3 className="text-3xl md:text-4xl font-semibold mb-4 dark:text-white tracking-tight">
-                    Mandate Under Review.
+                    Application Under Review.
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 max-w-sm text-base leading-relaxed">
                     A senior associate will review your profile and respond within{' '}
                     <strong className="text-gray-900 dark:text-white">24 hours</strong> with
-                    a decision and, if approved, a proposed mandate structure.
+                    a decision and, if approved, a proposed engagement structure.
                 </p>
             </div>
         )
@@ -401,7 +401,7 @@ export function MandateApplicationForm() {
                                             <Loader2 className="h-5 w-5 animate-spin" />
                                         ) : (
                                             <>
-                                                Submit Mandate Application
+                                                Submit Application
                                                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                             </>
                                         )}

@@ -27,7 +27,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
         },
         {
             number: '04',
-            title: 'Mandate Delivery',
+            title: 'Partner Delivery',
             description: 'You receive a curated shortlist of compliance-verified, ready-to-move decision-makers. Trust is engineered into every introduction before you take the first call.',
             details: ['Curated Shortlist', 'Executive Introductions', 'Pipeline Handoff']
         }
@@ -77,7 +77,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                 transition={{ delay: 0.4, duration: 0.8 }}
                                 className="text-lg text-gray-600 dark:text-gray-400 max-w-sm leading-relaxed"
                             >
-                                We don't facilitate introductions. We engineer partnerships — from target intelligence to mandate delivery — with verifiable data and trust built in at every stage.
+                                We don't facilitate introductions. We engineer partnerships — from target intelligence to partner delivery — with verifiable data and trust built in at every stage.
                             </motion.p>
                         </div>
 

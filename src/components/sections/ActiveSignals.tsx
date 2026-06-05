@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 
-// Edit these entries to reflect your active mandates
+// Edit these entries to reflect your active engagements
 const signals = [
     {
         id: 1,
@@ -15,7 +15,7 @@ const signals = [
         id: 2,
         sector: 'INDUSTRIAL',
         status: 'ACTIVE',
-        description: 'Active mandate: precision machining RFQ from European aerospace OEM — decision-maker contacts engaged.',
+        description: 'Active engagement: precision machining RFQ from European aerospace OEM — decision-maker contacts engaged.',
         metric: '22 verified contacts',
         timeframe: '96 hours',
     },
@@ -29,7 +29,7 @@ const signals = [
     },
     {
         id: 4,
-        sector: 'ENERGY',
+        sector: 'ADVANCED MFG',
         status: 'ACTIVE',
         description: 'Multi-channel outbound campaign running for an energy infrastructure OEM targeting certified welding subcontractors.',
         metric: '31 decision-makers reached',
@@ -37,9 +37,9 @@ const signals = [
     },
     {
         id: 5,
-        sector: 'AUTOMOTIVE',
+        sector: 'AUTOMATION',
         status: 'EXECUTING',
-        description: 'Lightweight material innovation mandate — connecting EV battery enclosure manufacturer with Tier-1 aluminum die-casters.',
+        description: 'Systems integration engagement — connecting high-scale production line OEM with robotics deployment experts.',
         metric: '18 qualified leads surfaced',
         timeframe: '4 days',
     },
@@ -62,8 +62,8 @@ export default function ActiveSignals() {
     const sectorColor = (sector: string) => {
         if (sector === 'AEROSPACE') return 'text-blue-400'
         if (sector === 'INDUSTRIAL') return 'text-amber-400'
-        if (sector === 'ENERGY') return 'text-emerald-400'
-        if (sector === 'AUTOMOTIVE') return 'text-violet-400'
+        if (sector === 'ADVANCED MFG') return 'text-emerald-400'
+        if (sector === 'AUTOMATION') return 'text-violet-400'
         return 'text-gray-400'
     }
 
@@ -111,7 +111,7 @@ export default function ActiveSignals() {
                         <div className="h-2.5 w-2.5 rounded-full bg-amber-500/50" />
                         <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/50" />
                         <span className="ml-3 text-xs font-mono text-white/20 tracking-wider">
-                            elesium-signals-v2 — active_mandates.log
+                            elesium-signals-v2 — active_engagements.log
                         </span>
                     </div>
 
@@ -185,7 +185,7 @@ export default function ActiveSignals() {
                     className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 rounded-xl overflow-hidden"
                 >
                     {[
-                        { label: 'Campaigns Active', value: '12' },
+                        { label: 'Engagements Active', value: '12' },
                         { label: 'Decision-Makers Reached (30d)', value: '340+' },
                         { label: 'Avg. Response Time', value: '< 72h' },
                     ].map((stat) => (

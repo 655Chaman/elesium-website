@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft, Zap, Plane, Beaker, Car } from 'lucide-react'
+import { ArrowLeft, Plane, Factory, Settings } from 'lucide-react'
 
 interface IndustriesProps {
     onBack: () => void;
@@ -7,47 +7,36 @@ interface IndustriesProps {
 
 const industries = [
     {
-        id: 'energy',
-        title: 'Energy',
-        icon: Zap,
-        description: 'Accelerating the transition to sustainable power through optimized supply chains and advanced component sourcing.',
-        details: [
-            'Renewable Energy Infrastructure',
-            'Grid Modernization Components',
-            'Sustainable Material Sourcing'
-        ]
-    },
-    {
         id: 'aerospace',
-        title: 'Aerospace',
+        title: 'Aerospace & Defense',
         icon: Plane,
-        description: 'Precision-critical sourcing for the next generation of flight, ensuring 100% compliance and traceability.',
+        description: 'Focus on compliance, precision manufacturing, Tier-1/Tier-2 supplier matching, and AS9100-vetted connections.',
         details: [
             'AS9100 Certified Suppliers',
-            'Raw Material Traceability',
-            'Advanced Avionics Components'
+            'Tier-1/Tier-2 Defense Pipeline',
+            'Precision Manufacturing'
         ]
     },
     {
-        id: 'plastics',
-        title: 'Plastics',
-        icon: Beaker,
-        description: 'Connecting innovators with high-performance polymer manufacturers for medical, industrial, and consumer applications.',
+        id: 'industrial-automation',
+        title: 'Industrial Automation',
+        icon: Settings,
+        description: 'Focus on systems integrators, robotics deployment, and high-scale production line optimization.',
         details: [
-            'Injection Molding Partners',
-            'Sustainable Polymer Alternatives',
-            'High-Precision Tooling'
+            'Systems Integrators',
+            'Robotics Deployment',
+            'Production Line Optimization'
         ]
     },
     {
-        id: 'automotive',
-        title: 'Automotive',
-        icon: Car,
-        description: 'Driving efficiency in the automotive supply chain, from EV components to traditional tier-1 manufacturing.',
+        id: 'advanced-mfg',
+        title: 'Advanced Manufacturing',
+        icon: Factory,
+        description: 'Focus on custom component fabrication, high-volume contract fulfillment, and supply chain redundancy.',
         details: [
-            'EV Battery Supply Chain',
-            'Lightweight Material Innovation',
-            'Just-in-Time Manufacturing'
+            'Custom Component Fabrication',
+            'Contract Fulfillment',
+            'Supply Chain Redundancy'
         ]
     }
 ]
@@ -66,7 +55,7 @@ export default function Industries({ onBack }: IndustriesProps) {
                         Back to Home
                     </button>
                     <span className="text-sm font-semibold tracking-wide uppercase text-gray-400 dark:text-gray-600">
-                        Sectors
+                        Industry Architecture
                     </span>
                 </div>
             </div>
@@ -79,15 +68,14 @@ export default function Industries({ onBack }: IndustriesProps) {
                     className="mb-12 md:mb-24 max-w-3xl"
                 >
                     <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8">
-                        Industries<br />We Serve.
+                        The Three Pillars.
                     </h1>
                     <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed">
-                        We specialize in high-stakes sectors where precision, compliance, and speed are non-negotiable.
-                        Our network is built to handle the rigorous demands of these four key industries.
+                        We dominate the heavy infrastructure landscape by locking into three interconnected sectors. We balance supply and demand through precision matching and verified engagements.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
                     {industries.map((industry, index) => (
                         <motion.div
                             key={industry.id}
@@ -101,7 +89,7 @@ export default function Industries({ onBack }: IndustriesProps) {
                                 <div className="h-12 w-12 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                     <industry.icon className="h-6 w-6 text-gray-900 dark:text-white" />
                                 </div>
-                                <h2 className="text-3xl font-semibold">{industry.title}</h2>
+                                <h2 className="text-2xl font-semibold">{industry.title}</h2>
                             </div>
 
                             <div className="border-l-2 border-gray-100 dark:border-white/10 pl-6 group-hover:border-black dark:group-hover:border-white transition-colors duration-300">

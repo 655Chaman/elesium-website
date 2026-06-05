@@ -1,6 +1,6 @@
 
 interface FooterProps {
-    onNavigate?: (page: 'home' | 'how-we-work' | 'industries') => void;
+    onNavigate?: (page: 'home' | 'how-we-work' | 'industries' | 'market-signals') => void;
 }
 
 export default function DownloadFooter({ onNavigate }: FooterProps) {
@@ -9,11 +9,14 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
             onNavigate?.('how-we-work');
         } else if (name === 'Industries') {
             onNavigate?.('industries');
+        } else if (name === 'Market Signals') {
+            onNavigate?.('market-signals');
         } else if (name === 'Case Studies') {
-            const section = document.getElementById(id);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
+            onNavigate?.('home'); // ensures we go to home first
+            setTimeout(() => {
+                const section = document.getElementById(id);
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
         }
     };
 
@@ -21,6 +24,7 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
         { name: 'How We Work', id: 'how-we-work' },
         { name: 'Industries', id: 'industries' },
         { name: 'Case Studies', id: 'case-studies' },
+        { name: 'Market Signals', id: 'market-signals' },
     ];
 
     return (
@@ -38,7 +42,7 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
                                     <li key={item.name}>
                                         <button
                                             onClick={() => handleNavigation(item.name, item.id)}
-                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[15px] text-left"
+                                            className={`${item.name === 'Market Signals' ? 'text-emerald-600 dark:text-emerald-500' : 'text-[#3C4043] dark:text-gray-500'} hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
                                         >
                                             {item.name}
                                         </button>
@@ -51,7 +55,7 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
                     {/* Right: tagline */}
                     <div className="hidden md:flex flex-col items-end gap-2 text-right max-w-xs">
                         <span className="text-xs font-mono tracking-[0.18em] uppercase text-gray-400 dark:text-gray-600">
-                            Strategic Mandate Firm
+                            Strategic Partnership Engine
                         </span>
                         <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">
                             Exclusive intake. Verified introductions.<br />

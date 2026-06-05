@@ -8,13 +8,13 @@ import { MandateApplicationForm } from '../features/WaitingListForm'
 import logo from '../../Assets/LOGO_NEW.png'
 
 interface NavbarProps {
-    onNavigate?: (page: 'home' | 'how-we-work' | 'industries') => void;
+    onNavigate?: (page: 'home' | 'how-we-work' | 'industries' | 'market-signals') => void;
 }
 
 export default function Navbar({ onNavigate }: NavbarProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-    const handleMobileNavigate = (page: 'home' | 'how-we-work' | 'industries') => {
+    const handleMobileNavigate = (page: 'home' | 'how-we-work' | 'industries' | 'market-signals') => {
         onNavigate?.(page)
         setIsMobileMenuOpen(false)
     }
@@ -23,6 +23,12 @@ export default function Navbar({ onNavigate }: NavbarProps) {
         const section = document.getElementById('case-studies');
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            onNavigate?.('home');
+            setTimeout(() => {
+                const section = document.getElementById('case-studies');
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
         }
         setIsMobileMenuOpen(false)
     }
@@ -40,7 +46,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                         />
                     </div>
 
-
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center" style={{ gap: '4px' }}>
                         <button
@@ -49,7 +54,6 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                         >
                             How We Work
                         </button>
-
                         <button
                             onClick={() => onNavigate?.('industries')}
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
@@ -57,15 +61,16 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                             Industries
                         </button>
                         <button
-                            onClick={() => {
-                                const section = document.getElementById('case-studies');
-                                if (section) {
-                                    section.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
+                            onClick={scrollToCaseStudies}
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
                             Case Studies
+                        </button>
+                        <button
+                            onClick={() => onNavigate?.('market-signals')}
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                        >
+                            Market Signals
                         </button>
                     </div>
 
@@ -75,7 +80,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>
                                 <InteractiveHoverButton id="nav-mandate-cta" className="h-10 px-4 text-sm">
-                                    Apply for Mandate
+                                    Apply for Partner Slot
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>
@@ -127,12 +132,18 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                             >
                                 Case Studies
                             </button>
+                            <button
+                                onClick={() => handleMobileNavigate('market-signals')}
+                                className="text-2xl font-medium text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Market Signals
+                            </button>
 
                             <div className="mt-8 w-full">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
                                         <InteractiveHoverButton className="w-full justify-center h-12 text-lg">
-                                            Apply for Mandate
+                                            Apply for Partner Slot
                                         </InteractiveHoverButton>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>

@@ -1,99 +1,91 @@
-
 import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
-import Modal from '../ui/Modal'
-import { FocusCards } from '../ui/focus-cards'
+import { useRef } from 'react'
 
 const caseStudies = [
     {
         id: 1,
-        title: 'Network Optimization',
-        description: 'How we restructured a global manufacturer\'s supplier discovery process — reducing vetting time and mitigating critical redundancy risks.',
-        details: {
-            heading: 'Global Supply Chain Optimization',
-            content: 'We partnered with a Fortune 500 manufacturer to overhaul their supplier discovery and qualification process. By deploying Elesium\'s outbound architecture and compliance verification engine, they reduced vetting time by 40%, identified three critical redundancy risks in their supply path, and received a curated shortlist of ready-to-sign partners within the first quarter.',
-            stats: ['40% Faster Vetting', '3 Risk Points Mitigated', '$2M Estimated Savings']
-        }
+        title: 'Aerospace Components',
+        description: 'Placed 4 AS9100-certified manufacturing partners into a Tier-1 defense pipeline within 45 days.',
+        stats: [
+            { label: 'Partners Placed', value: '4' },
+            { label: 'Standard', value: 'AS9100' },
+            { label: 'Timeline', value: '45 Days' }
+        ]
     },
     {
         id: 2,
-        title: 'Aerospace Partnerships',
-        description: 'Connecting an aerospace component provider with Tier-1 suppliers — compliance-verified introductions that converted to contracts in under 90 days.',
-        details: {
-            heading: 'Aerospace Partnership Mandate',
-            content: 'A mid-sized aerospace component provider needed Tier-1 supplier relationships — fast, compliant, and at the executive level. Elesium deployed a targeted outbound mandate, surfacing AS9100-certified contacts and delivering pre-qualified introductions with full certification histories. Two major contracts were signed within the first quarter. Zero compliance issues throughout.',
-            stats: ['2 Major Contracts Signed', '15 Qualified Leads Surfaced', 'Zero Compliance Issues']
-        }
+        title: 'Industrial Robotics',
+        description: 'Secured 2 primary automation integration contracts totaling $140K in under 60 days.',
+        stats: [
+            { label: 'Contracts', value: '2' },
+            { label: 'Value', value: '$140K' },
+            { label: 'Timeline', value: '< 60 Days' }
+        ]
     },
     {
         id: 3,
-        title: 'Automated Compliance',
-        description: 'Deploying agentic verification workflows to automatically validate global certifications before any human conversation begins.',
-        details: {
-            heading: 'Automated Compliance Verification',
-            content: 'Compliance bottlenecks were costing an industrial group weeks of manual vetting per engagement. We deployed our agentic verification system to automatically cross-reference certifications (ISO 9001, AS9100, NADCAP) against global regulatory databases — 24/7, with instant audit trails. By the time the first call was booked, every contact had been fully cleared.',
-            stats: ['100% Pre-Meeting Compliance', '24/7 Automated Monitoring', 'Instant Audit Trails']
-        }
+        title: 'Precision Machining',
+        description: 'Connected a high-volume supply bottleneck with a vetted capacity partner within 14 days.',
+        stats: [
+            { label: 'Resolution', value: 'Capacity Matched' },
+            { label: 'Vetting', value: '100% Cleared' },
+            { label: 'Timeline', value: '14 Days' }
+        ]
     },
 ]
 
 export default function CaseStudies() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.1 })
-    const [selectedStudy, setSelectedStudy] = useState<typeof caseStudies[0] | null>(null)
 
     return (
         <section
             id="case-studies"
             ref={ref}
-            className="relative transition-colors duration-300 dark:bg-black bg-[#FAFAFA] py-16 md:py-0"
-            style={{
-                paddingTop: undefined,
-                paddingBottom: undefined,
-            }}
+            className="relative transition-colors duration-300 dark:bg-black bg-[#FAFAFA] py-16 md:py-24"
         >
-            <div className="absolute inset-0 bg-[#FAFAFA] dark:hidden -z-10" />
-
-            <div className="max-w-6xl mx-auto px-5 md:px-12 py-4 md:py-[72px] pb-8 md:pb-[120px]">
+            <div className="max-w-6xl mx-auto px-5 md:px-12">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                     transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                    <h2 className="section-h2 mb-4 text-center dark:text-white transition-colors">
-                        Case Studies
+                    <h2 className="section-h2 mb-4 text-left dark:text-white transition-colors">
+                        Recent Connections
                     </h2>
-                    <p className="body-text text-center mb-8 md:mb-16 max-w-2xl mx-auto dark:text-gray-400 transition-colors">
-                        Mandates executed. Results delivered.
+                    <p className="body-text text-left mb-12 max-w-2xl dark:text-gray-400 transition-colors">
+                        Data-driven results. No descriptive paragraphs. Just stark performance metrics.
                     </p>
                 </motion.div>
 
-                <FocusCards
-                    cards={caseStudies}
-                    onCardClick={setSelectedStudy}
-                />
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {caseStudies.map((study, i) => (
+                        <motion.div
+                            key={study.id}
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+                            transition={{ duration: 0.8, delay: i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+                            className="bg-white dark:bg-[#111] dark:border dark:border-white/5 border border-gray-200 p-8 rounded-2xl flex flex-col h-full hover:shadow-lg transition-shadow"
+                        >
+                            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">
+                                {study.title}
+                            </h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-8 flex-grow text-lg">
+                                {study.description}
+                            </p>
+                            
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-100 dark:border-white/10 pt-6 mt-auto">
+                                {study.stats.map((stat, idx) => (
+                                    <div key={idx} className="flex flex-col">
+                                        <span className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">{stat.label}</span>
+                                        <span className="text-sm font-semibold text-black dark:text-white">{stat.value}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-
-            <Modal isOpen={!!selectedStudy} onClose={() => setSelectedStudy(null)}>
-                {selectedStudy && (
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-gray-900 dark:text-white">
-                            {selectedStudy.details.heading}
-                        </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                            {selectedStudy.details.content}
-                        </p>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-100 dark:border-zinc-800 pt-6">
-                            {selectedStudy.details.stats.map((stat, i) => (
-                                <div key={i} className="bg-gray-50 dark:bg-zinc-800/50 p-4 rounded-lg text-center">
-                                    <span className="text-sm font-semibold text-gray-900 dark:text-white">{stat}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-            </Modal>
         </section>
     )
 }

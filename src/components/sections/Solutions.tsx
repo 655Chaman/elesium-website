@@ -38,7 +38,7 @@ export default function Solutions() {
                             }}
                         >
                             <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 dark:text-gray-600 mb-4">
-                                Mandate Type / 01
+                                Engagement Tier / 01
                             </span>
                             <h3 style={{
                                 fontWeight: 500,
@@ -53,7 +53,7 @@ export default function Solutions() {
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
                                         <button className="btn-primary">
-                                            Apply for Mandate
+                                            Apply for a Priority Partner Slot
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
@@ -74,7 +74,7 @@ export default function Solutions() {
                             }}
                         >
                             <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 dark:text-gray-600 mb-4">
-                                Mandate Type / 02
+                                Engagement Tier / 02
                             </span>
                             <h3 style={{
                                 fontSize: '32px',
@@ -84,13 +84,13 @@ export default function Solutions() {
                                 Enterprise & Tier-1 OEMs
                             </h3>
                             <p className="body-text mb-8 dark:text-gray-400">
-                                Global mandate execution for large-scale organizations. Custom outbound architecture, dedicated compliance verification, and white-glove partner introductions at the executive level.
+                                Global engagement execution for large-scale organizations. Custom outbound architecture, dedicated compliance verification, and white-glove partner introductions at the executive level.
                             </p>
                             <div className="mt-auto">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
                                         <button className="btn-primary">
-                                            Apply for Mandate
+                                            Apply for a Priority Partner Slot
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
