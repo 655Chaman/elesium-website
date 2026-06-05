@@ -5,7 +5,7 @@ const caseStudies = [
     {
         id: 1,
         title: 'Aerospace Components',
-        description: 'Placed 4 AS9100-certified manufacturing partners into a Tier-1 defense pipeline within 45 days.',
+        description: 'Placed 4 certified manufacturing partners in 45 days.',
         stats: [
             { label: 'Partners Placed', value: '4' },
             { label: 'Standard', value: 'AS9100' },
@@ -15,7 +15,7 @@ const caseStudies = [
     {
         id: 2,
         title: 'Industrial Robotics',
-        description: 'Secured 2 primary automation integration contracts totaling $140K in under 60 days.',
+        description: 'Secured 2 automation contracts under 60 days.',
         stats: [
             { label: 'Contracts', value: '2' },
             { label: 'Value', value: '$140K' },
@@ -25,7 +25,7 @@ const caseStudies = [
     {
         id: 3,
         title: 'Precision Machining',
-        description: 'Connected a high-volume supply bottleneck with a vetted capacity partner within 14 days.',
+        description: 'Connected a supply bottleneck with a vetted partner in 14 days.',
         stats: [
             { label: 'Resolution', value: 'Capacity Matched' },
             { label: 'Vetting', value: '100% Cleared' },
@@ -65,12 +65,12 @@ export default function CaseStudies() {
                             initial={{ opacity: 0, y: 40 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                             transition={{ duration: 0.8, delay: i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-                            className="bg-white dark:bg-[#111] dark:border dark:border-white/5 border border-gray-200 p-8 rounded-2xl flex flex-col h-full hover:shadow-lg transition-shadow"
+                            className="group bg-white dark:bg-[#111] dark:border dark:border-white/10 border border-gray-200 p-8 rounded-2xl flex flex-col h-full hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-[#1a1a1a] dark:active:bg-[#222] transition-colors cursor-pointer"
                         >
-                            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">
+                            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 {study.title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-8 flex-grow text-lg">
+                            <p className="text-gray-700 dark:text-gray-300 mb-8 flex-grow text-lg transition-colors">
                                 {study.description}
                             </p>
                             

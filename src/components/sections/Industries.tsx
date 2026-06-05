@@ -26,7 +26,7 @@ const industries = [
         icon: Zap,
         title: 'Energy',
         description: 'Renewable and traditional energy.',
-        color: 'from-green-500 to-emerald-500',
+        color: 'from-green-500 to-blue-500',
     },
 ]
 

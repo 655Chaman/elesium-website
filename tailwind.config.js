@@ -9,7 +9,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Outfit', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
                 heading: ['Outfit', 'sans-serif'],
                 body: ['Inter', 'sans-serif'],
             },

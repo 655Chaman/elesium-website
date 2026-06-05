@@ -42,7 +42,7 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
                                     <li key={item.name}>
                                         <button
                                             onClick={() => handleNavigation(item.name, item.id)}
-                                            className={`${item.name === 'Market Signals' ? 'text-emerald-600 dark:text-emerald-500' : 'text-[#3C4043] dark:text-gray-500'} hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
+                                            className={`${item.name === 'Market Signals' ? 'text-blue-600 dark:text-blue-500' : 'text-[#3C4043] dark:text-gray-500'} hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
                                         >
                                             {item.name}
                                         </button>

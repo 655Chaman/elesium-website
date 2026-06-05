@@ -33,7 +33,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                         <ArrowLeft className="h-4 w-4" />
                         {selectedId ? 'All Signals' : 'Back to Home'}
                     </button>
-                    <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-emerald-500 dark:text-emerald-400">
+                    <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-500 dark:text-blue-400">
                         {selectedId ? 'Intelligence Report' : 'Market Signals'}
                     </span>
                 </div>
@@ -53,10 +53,10 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                             <div className="mb-12 md:mb-20 max-w-3xl">
                                 <div className="flex items-center gap-3 mb-6">
                                     <span className="relative flex h-3 w-3">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-60" />
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500" />
                                     </span>
-                                    <span className="text-[11px] font-semibold tracking-[0.08em] text-emerald-500 dark:text-emerald-400 uppercase">
+                                    <span className="text-[11px] font-semibold tracking-[0.08em] text-blue-500 dark:text-blue-400 uppercase">
                                         The Authority Engine
                                     </span>
                                 </div>
@@ -87,7 +87,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                             className="group flex flex-col md:flex-row gap-4 md:gap-12 border-b border-gray-100 dark:border-white/5 pb-12 cursor-pointer"
                                         >
                                             <div className="md:w-1/4 flex flex-col gap-2 md:gap-4">
-                                                <div className="flex items-center gap-2 text-[11px] font-medium text-emerald-500 dark:text-emerald-400">
+                                                <div className="flex items-center gap-2 text-[11px] font-medium text-blue-500 dark:text-blue-400">
                                                     <Icon className="h-4 w-4" />
                                                     <span className="tracking-[0.06em] uppercase">{article.category}</span>
                                                 </div>
@@ -97,13 +97,13 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                             </div>
 
                                             <div className="md:w-3/4">
-                                                <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                                                <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                                                     {article.title}
                                                 </h2>
                                                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                                                     {article.excerpt}
                                                 </p>
-                                                <div className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <div className="flex items-center gap-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                                     Read Intelligence Report <ChevronRight className="h-3 w-3" />
                                                 </div>
                                             </div>
@@ -124,7 +124,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                             >
                                 {/* Meta Header */}
                                 <div className="flex flex-wrap items-center gap-y-2 gap-x-4 mb-8 text-[11px] font-semibold text-gray-500 dark:text-gray-400 tracking-[0.06em] uppercase">
-                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full">
+                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full">
                                         {activeArticle.category}
                                     </span>
                                     <span className="flex items-center gap-1">
@@ -170,7 +170,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                                             const [boldPart, rest] = item.includes(':') ? item.split(':', 2) : [null, item];
                                                             return (
                                                                 <li key={iIdx} className="flex items-start gap-3 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                                                                    <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                                                                    <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
                                                                     <span>
                                                                         {boldPart ? (
                                                                             <>
@@ -186,7 +186,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                                 );
                                             case 'quote':
                                                 return (
-                                                    <blockquote key={sIdx} className="border-l-2 border-emerald-500 pl-6 my-8 py-1">
+                                                    <blockquote key={sIdx} className="border-l-2 border-blue-500 pl-6 my-8 py-1">
                                                         <p className="text-base md:text-lg italic text-gray-800 dark:text-gray-200 leading-relaxed">
                                                             {section.value as string}
                                                         </p>
@@ -201,7 +201,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                                                     <div className="text-3xl md:text-4xl font-bold text-black dark:text-white tracking-tight mb-1">
                                                                         {metric.value}
                                                                     </div>
-                                                                    <div className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 tracking-[0.06em] uppercase mb-3">
+                                                                    <div className="text-[11px] font-semibold text-blue-600 dark:text-blue-400 tracking-[0.06em] uppercase mb-3">
                                                                         {metric.label}
                                                                     </div>
                                                                 </div>
@@ -225,7 +225,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                             setSelectedId(null);
                                             window.scrollTo({ top: 0, behavior: 'smooth' });
                                         }}
-                                        className="flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                                        className="flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                                     >
                                         <ArrowLeft className="h-4 w-4" />
                                         Back to All Signals

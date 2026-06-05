@@ -1,32 +1,29 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
-import logoWhite from '../../Assets/LOGO_NEW.png'
-import MetallicPaint from '../ui/MetallicPaint/MetallicPaint'
+import { MotionValue } from 'framer-motion'
 
 const features = [
     {
         title: 'Proprietary Target Intelligence',
-        description: 'We map the entire landscape of your ideal buyer market — enriched with firmographic, technographic, and compliance data — before a single contact is made.',
+        description: 'We map your ideal buyer market with enriched data before contact is made.',
     },
     {
         title: 'Compliance-Verified Introductions',
-        description: 'Every introduction is pre-screened against your exact certification requirements: AS9100, ISO 9001, NADCAP, ITAR. No unqualified contacts. Ever.',
+        description: 'Introductions are pre-screened against your certification requirements. No unqualified contacts.',
     },
     {
         title: 'Global Decision-Maker Database',
-        description: 'Access a continuously refreshed database of verified decision-makers across aerospace, industrial, energy, and automotive sectors worldwide.',
+        description: 'Access a continuously refreshed database of verified global decision-makers.',
     },
     {
         title: 'Engineered Trust Infrastructure',
-        description: 'We build verifiable credibility into every introduction — transparent qualification history, certification status, and risk assessment delivered upfront.',
+        description: 'We build verifiable credibility into every introduction with transparent qualification history.',
     },
     {
         title: 'Multi-Signal Qualification Engine',
-        description: 'Our outbound engine deploys multi-channel signals to surface buying intent, bypass gatekeepers, and ensure you only speak with principals ready to move.',
+        description: 'Our outbound engine surfaces buying intent to ensure you speak with principals ready to move.',
     },
 ]
-
-import { MotionValue } from 'framer-motion'
 
 interface Feature {
     title: string
@@ -94,9 +91,9 @@ export default function FeatureExplorer() {
             }}
         >
             <div className="md:sticky md:top-[52px] md:h-[calc(100vh-52px)] flex items-center justify-center">
-                <div className="max-w-6xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div className="max-w-6xl mx-auto px-5 md:px-12 grid grid-cols-1 items-center justify-items-center">
                     {/* Left: Text */}
-                    <div className="grid grid-cols-1 items-center md:-ml-12 relative w-full order-2 lg:order-1">
+                    <div className="grid grid-cols-1 items-center relative w-full text-center">
                         {features.map((feature, index) => (
                             <FeatureItem
                                 key={feature.title}
@@ -107,23 +104,9 @@ export default function FeatureExplorer() {
                             />
                         ))}
                     </div>
-
-                    {/* Right: MetallicPaint Logo */}
-                    <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center h-[250px] md:h-[500px] w-full order-1 lg:order-2">
-                        <div className="w-full max-w-[280px] md:max-w-none md:w-[700px] h-full mx-auto md:ml-40 mt-0 md:mt-5 opacity-100">
-                            <MetallicPaint
-                                imageSrc={logoWhite}
-                                scale={3}
-                                speed={0.5}
-                                brightness={2.5}
-                                darkColor="#444444"
-                                liquid={0.8}
-                                distortion={1.5}
-                            />
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
     )
 }
+

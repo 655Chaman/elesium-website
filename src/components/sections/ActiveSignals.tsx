@@ -1,45 +1,44 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 
-// Edit these entries to reflect your active engagements
 const signals = [
     {
         id: 1,
-        sector: 'AEROSPACE',
+        sector: 'COMPLIANCE',
         status: 'ACTIVE',
-        description: 'Targeted outreach executing for a Tier-2 composite manufacturer seeking AS9100-certified lamination partners.',
+        description: 'Targeted outreach executing for a Tier-1 regulatory consultancy seeking organizations facing GDPR non-compliance fines.',
         metric: '14 qualified responses',
         timeframe: '72 hours',
     },
     {
         id: 2,
-        sector: 'INDUSTRIAL',
+        sector: 'LEGAL RISK',
         status: 'ACTIVE',
-        description: 'Active engagement: precision machining RFQ from European aerospace OEM — decision-maker contacts engaged.',
+        description: 'Active engagement: Class-action settlement restructuring RFQ — decision-maker contacts engaged.',
         metric: '22 verified contacts',
         timeframe: '96 hours',
     },
     {
         id: 3,
-        sector: 'AEROSPACE',
+        sector: 'PENALTY MARKET',
         status: 'EXECUTING',
-        description: 'AS9100 / NADCAP-certified fastener supplier sourcing for a Midwest industrial group. Pipeline seeded.',
+        description: 'Connecting antitrust defense litigators with corporate groups anticipating regulatory crackdowns.',
         metric: '9 verified contacts',
         timeframe: '48 hours',
     },
     {
         id: 4,
-        sector: 'ADVANCED MFG',
+        sector: 'DATA PRIVACY',
         status: 'ACTIVE',
-        description: 'Multi-channel outbound campaign running for an energy infrastructure OEM targeting certified welding subcontractors.',
+        description: 'Multi-channel outbound campaign targeting enterprise CTOs with imminent CCPA penalty exposures.',
         metric: '31 decision-makers reached',
         timeframe: '5 days',
     },
     {
         id: 5,
-        sector: 'AUTOMATION',
+        sector: 'RISK MITIGATION',
         status: 'EXECUTING',
-        description: 'Systems integration engagement — connecting high-scale production line OEM with robotics deployment experts.',
+        description: 'Regulatory integration engagement — connecting high-exposure financial institutions with audit specialists.',
         metric: '18 qualified leads surfaced',
         timeframe: '4 days',
     },
@@ -47,23 +46,14 @@ const signals = [
 
 export default function ActiveSignals() {
     const [activeIndex, setActiveIndex] = useState(0)
-    const [isPaused, setIsPaused] = useState(false)
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.2 })
 
-    useEffect(() => {
-        if (isPaused) return
-        const interval = setInterval(() => {
-            setActiveIndex(prev => (prev + 1) % signals.length)
-        }, 5000)
-        return () => clearInterval(interval)
-    }, [isPaused])
-
     const sectorColor = (sector: string) => {
-        if (sector === 'AEROSPACE') return 'text-blue-400'
-        if (sector === 'INDUSTRIAL') return 'text-amber-400'
-        if (sector === 'ADVANCED MFG') return 'text-emerald-400'
-        if (sector === 'AUTOMATION') return 'text-violet-400'
+        if (sector === 'COMPLIANCE') return 'text-blue-400'
+        if (sector === 'LEGAL RISK') return 'text-amber-400'
+        if (sector === 'PENALTY MARKET') return 'text-purple-400'
+        if (sector === 'DATA PRIVACY') return 'text-indigo-400'
         return 'text-gray-400'
     }
 
@@ -84,10 +74,10 @@ export default function ActiveSignals() {
                     <div className="flex items-center gap-3">
                         {/* Pulse dot */}
                         <span className="relative flex h-2.5 w-2.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-60" />
+                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500" />
                         </span>
-                        <span className="text-[11px] font-medium tracking-[0.08em] text-emerald-400">
+                        <span className="text-[11px] font-medium tracking-[0.08em] text-blue-400">
                             Live Signals
                         </span>
                     </div>
@@ -96,104 +86,92 @@ export default function ActiveSignals() {
                     </span>
                 </motion.div>
 
-                {/* Main Display */}
+                {/* Main Display Grid */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7, delay: 0.15 }}
-                    className="border border-white/8 rounded-2xl md:rounded-3xl overflow-hidden"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
+                    className="grid grid-cols-1 md:grid-cols-12 gap-8"
                 >
-                    {/* Terminal bar */}
-                    <div className="flex items-center gap-2 px-5 py-3.5 border-b border-white/8 bg-white/[0.03]">
-                        <div className="h-2.5 w-2.5 rounded-full bg-red-500/50" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-amber-500/50" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/50" />
-                        <span className="ml-3 text-xs font-mono text-white/20 tracking-wider">
-                            elesium-signals-v2 — active_engagements.log
-                        </span>
-                    </div>
-
-                    {/* Active signal display */}
-                    <div className="p-6 md:p-10 min-h-[200px] md:min-h-[180px] flex flex-col justify-center">
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={activeIndex}
-                                initial={{ opacity: 0, y: 12 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -12 }}
-                                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-                                className="space-y-4"
+                    {/* Left side: Interactive List */}
+                    <div className="md:col-span-4 flex flex-col gap-2">
+                        {signals.map((signal, i) => (
+                            <button
+                                key={signal.id}
+                                onClick={() => setActiveIndex(i)}
+                                className={`text-left p-4 rounded-xl transition-all duration-300 border ${
+                                    i === activeIndex 
+                                    ? 'bg-white/10 border-white/20 shadow-lg' 
+                                    : 'bg-transparent border-transparent hover:bg-white/5 hover:border-white/10'
+                                }`}
                             >
-                                {/* Sector + Status */}
-                                <div className="flex items-center gap-4 flex-wrap">
-                                    <span className={`text-[11px] font-semibold tracking-[0.08em] ${sectorColor(signals[activeIndex].sector)}`}>
-                                        {signals[activeIndex].sector}
+                                <div className="flex items-center justify-between mb-2">
+                                    <span className={`text-[10px] font-semibold tracking-wider ${sectorColor(signal.sector)}`}>
+                                        {signal.sector}
                                     </span>
-                                    <span className="h-px w-6 bg-white/15" />
-                                    <span className="text-[11px] font-medium tracking-[0.06em] text-white/30">
-                                        {signals[activeIndex].status}
+                                    <span className="text-[10px] font-mono text-white/30">
+                                        {signal.timeframe}
                                     </span>
                                 </div>
-
-                                {/* Description */}
-                                <p className="text-lg md:text-2xl font-light leading-snug text-white/80 max-w-3xl">
-                                    {signals[activeIndex].description}
-                                </p>
-
-                                {/* Metric */}
-                                <div className="flex items-baseline gap-2 pt-2">
-                                    <span className="text-3xl md:text-4xl font-bold text-white tracking-tight font-mono">
-                                        {signals[activeIndex].metric}
-                                    </span>
-                                    <span className="text-sm text-white/35 font-mono">
-                                        / {signals[activeIndex].timeframe}
-                                    </span>
+                                <div className="text-sm font-medium text-white/80 line-clamp-2">
+                                    {signal.metric}
                                 </div>
-                            </motion.div>
-                        </AnimatePresence>
+                            </button>
+                        ))}
                     </div>
 
-                    {/* Navigation dots + progress */}
-                    <div className="flex items-center justify-between px-6 md:px-10 pb-6 border-t border-white/5 pt-4">
-                        <div className="flex gap-2">
-                            {signals.map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setActiveIndex(i)}
-                                    aria-label={`View signal ${i + 1}`}
-                                    className={`h-1 rounded-full transition-all duration-400 ${
-                                        i === activeIndex
-                                            ? 'w-8 bg-white/60'
-                                            : 'w-2 bg-white/15 hover:bg-white/30'
-                                    }`}
-                                />
-                            ))}
+                    {/* Right side: Active Signal Detail */}
+                    <div className="md:col-span-8 border border-white/8 rounded-2xl md:rounded-3xl overflow-hidden bg-[#0A0A0A]">
+                        {/* Terminal bar */}
+                        <div className="flex items-center gap-2 px-5 py-3.5 border-b border-white/8 bg-white/[0.03]">
+                            <div className="h-2.5 w-2.5 rounded-full bg-red-500/50" />
+                            <div className="h-2.5 w-2.5 rounded-full bg-amber-500/50" />
+                            <div className="h-2.5 w-2.5 rounded-full bg-blue-500/50" />
+                            <span className="ml-3 text-xs font-mono text-white/20 tracking-wider">
+                                elesium-signals-v2 — active_engagements.log
+                            </span>
                         </div>
-                        <span className="text-xs font-mono text-white/20">
-                            {String(activeIndex + 1).padStart(2, '0')} / {String(signals.length).padStart(2, '0')}
-                        </span>
-                    </div>
-                </motion.div>
 
-                {/* All signals ledger (below fold) */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 rounded-xl overflow-hidden"
-                >
-                    {[
-                        { label: 'Engagements Active', value: '12' },
-                        { label: 'Decision-Makers Reached (30d)', value: '340+' },
-                        { label: 'Avg. Response Time', value: '< 72h' },
-                    ].map((stat) => (
-                        <div key={stat.label} className="bg-[#050505] px-6 py-5 flex flex-col gap-1">
-                            <span className="text-[11px] font-medium text-white/25 tracking-[0.06em] mb-1">{stat.label}</span>
-                            <span className="text-2xl md:text-3xl font-bold text-white">{stat.value}</span>
+                        {/* Active signal display */}
+                        <div className="p-6 md:p-10 min-h-[300px] flex flex-col justify-center">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={activeIndex}
+                                    initial={{ opacity: 0, y: 12 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -12 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="space-y-6"
+                                >
+                                    {/* Sector + Status */}
+                                    <div className="flex items-center gap-4 flex-wrap">
+                                        <span className={`text-xs font-semibold tracking-[0.08em] ${sectorColor(signals[activeIndex].sector)}`}>
+                                            {signals[activeIndex].sector}
+                                        </span>
+                                        <span className="h-px w-6 bg-white/15" />
+                                        <span className="text-xs font-medium tracking-[0.06em] text-white/40">
+                                            {signals[activeIndex].status}
+                                        </span>
+                                    </div>
+
+                                    {/* Description */}
+                                    <p className="text-xl md:text-3xl font-light leading-snug text-white/90 max-w-3xl">
+                                        {signals[activeIndex].description}
+                                    </p>
+
+                                    {/* Metric */}
+                                    <div className="flex items-baseline gap-2 pt-4">
+                                        <span className="text-4xl md:text-5xl font-bold text-white tracking-tight font-mono">
+                                            {signals[activeIndex].metric}
+                                        </span>
+                                    </div>
+                                    <div className="text-sm text-white/40 font-mono">
+                                        Timeframe: {signals[activeIndex].timeframe}
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
-                    ))}
+                    </div>
                 </motion.div>
             </div>
         </section>

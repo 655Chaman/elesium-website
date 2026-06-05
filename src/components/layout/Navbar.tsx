@@ -79,8 +79,8 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                         <AnimatedThemeToggler />
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>
-                                <InteractiveHoverButton id="nav-mandate-cta" className="h-10 px-4 text-sm">
-                                    Apply for Partner Slot
+                                <InteractiveHoverButton id="nav-mandate-cta" className="h-8 px-3 text-xs">
+                                    Apply Now
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>
@@ -134,7 +134,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                             </button>
                             <button
                                 onClick={() => handleMobileNavigate('market-signals')}
-                                className="text-2xl font-medium text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
+                                className="text-2xl font-medium text-left text-blue-600 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Market Signals
                             </button>
@@ -142,8 +142,8 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                             <div className="mt-8 w-full">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
-                                        <InteractiveHoverButton className="w-full justify-center h-12 text-lg">
-                                            Apply for Partner Slot
+                                        <InteractiveHoverButton className="w-full justify-center h-10 text-sm">
+                                            Apply Now
                                         </InteractiveHoverButton>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>

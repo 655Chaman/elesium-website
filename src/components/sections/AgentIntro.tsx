@@ -30,7 +30,7 @@ export default function AgentIntro() {
                 {/* Text Content - naturally scrolling */}
                 <div className="w-full lg:w-1/2 text-center lg:text-left py-12 md:py-24 lg:py-[50vh] relative z-20">
                     <TextReveal className="lg:min-h-screen flex items-center justify-center lg:justify-start">
-                        We don't rely on passive networks. We actively engineer your pipeline. Our backend maps the entire landscape of your target market, enriches the data for exact compliance, and utilizes high-volume, multi-channel outbound architecture to bypass gatekeepers and put you directly in front of ready-to-move decision-makers.
+                        We bypass gatekeepers to connect you directly with ready-to-move decision-makers.
                     </TextReveal>
                 </div>
 

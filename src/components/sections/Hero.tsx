@@ -23,18 +23,7 @@ export default function HeroSection() {
                     className="text-center px-5 md:px-12 py-8 md:py-0 w-full"
                     style={{ maxWidth: '960px', margin: '0 auto' }}
                 >
-                    {/* Authority Badge */}
-                    <motion.div
-                        className="mb-8 flex justify-center items-center"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                    >
-                        <span className="inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.08em] text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-white/10 rounded-full px-4 py-1.5">
-                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                            Elesium — Verified Partner Matching
-                        </span>
-                    </motion.div>
+                    {/* Authority Badge Removed */}
 
                     <h1 className="hero-h1 mb-6 text-center mx-auto" style={{ maxWidth: '100%' }}>
                         <TextAnimate
@@ -44,7 +33,7 @@ export default function HeroSection() {
                             duration={3}
                             className="text-black dark:text-white font-semibold"
                         >
-                            We Secure Your Ideal Buyers. You Close the Contract.
+                            We Secure Your Ideal Buyers.
                         </TextAnimate>
                     </h1>
 
@@ -55,8 +44,7 @@ export default function HeroSection() {
                         animate={isInView ? { opacity: 1 } : {}}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        We deploy proprietary data infrastructure and targeted outbound architecture
-                        to broker exclusive, high-ticket partnerships across the aerospace and industrial sectors.
+                        Proprietary data infrastructure meets targeted outbound architecture to broker exclusive, high-ticket partnerships.
                     </motion.p>
 
                     <motion.div
@@ -67,17 +55,14 @@ export default function HeroSection() {
                     >
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>
-                                <InteractiveHoverButton id="hero-mandate-cta">
-                                    Apply for a Priority Partner Slot
+                                <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm">
+                                    Apply Now
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>
                                 <MandateApplicationForm />
                             </ExpandableScreenContent>
                         </ExpandableScreen>
-                        <span className="text-xs text-gray-400 dark:text-gray-600 font-medium tracking-wide">
-                            Selective intake — reviewed within 24h
-                        </span>
                     </motion.div>
                 </motion.div>
             </div>

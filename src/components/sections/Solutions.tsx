@@ -47,13 +47,13 @@ export default function Solutions() {
                                 Growth-Stage Manufacturers
                             </h3>
                             <p className="body-text mb-8 dark:text-gray-400">
-                                You have the capacity to scale. We engineer the pipeline to fill it. Our outbound architecture places you directly in front of decision-makers who are ready to sign — not browse.
+                                You have the capacity to scale. We engineer the pipeline to fill it.
                             </p>
                             <div className="mt-auto">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
-                                        <button className="btn-primary">
-                                            Apply for a Priority Partner Slot
+                                        <button className="btn-primary text-sm px-4 py-2">
+                                            Apply Now
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
@@ -84,13 +84,13 @@ export default function Solutions() {
                                 Enterprise & Tier-1 OEMs
                             </h3>
                             <p className="body-text mb-8 dark:text-gray-400">
-                                Global engagement execution for large-scale organizations. Custom outbound architecture, dedicated compliance verification, and white-glove partner introductions at the executive level.
+                                Custom outbound architecture and white-glove partner introductions at the executive level.
                             </p>
                             <div className="mt-auto">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
-                                        <button className="btn-primary">
-                                            Apply for a Priority Partner Slot
+                                        <button className="btn-primary text-sm px-4 py-2">
+                                            Apply Now
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
