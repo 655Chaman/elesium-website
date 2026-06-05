@@ -1,116 +1,242 @@
-import { motion } from 'framer-motion'
-import { ArrowLeft, TrendingUp, Cpu, Network } from 'lucide-react'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight } from 'lucide-react'
+import { blogPosts } from '../../data/blogPosts'
 
 interface MarketSignalsProps {
     onBack: () => void;
 }
 
-const articles = [
-    {
-        id: 1,
-        category: 'Market Intelligence',
-        icon: TrendingUp,
-        title: 'The 2026 Shift in Tier-2 Aerospace Sourcing: Where the Bottlenecks Are',
-        date: 'June 02, 2026',
-        readTime: '5 min read',
-        excerpt: 'An analysis of supply chain constraints affecting AS9100-certified manufacturers and how primes are restructuring their procurement strategies.',
-    },
-    {
-        id: 2,
-        category: 'Operational Leverage',
-        icon: Cpu,
-        title: 'How Industrial Automation Firms Are Scaling Contract Acquisition Without Fluffy Marketing',
-        date: 'May 28, 2026',
-        readTime: '7 min read',
-        excerpt: 'A deep dive into systems-driven outbound architectures that bypass traditional lead generation and place integrators directly in front of active RFQs.',
-    },
-    {
-        id: 3,
-        category: 'Matchmaking Frameworks',
-        icon: Network,
-        title: 'Why Traditional B2B Directories Fail Heavy Manufacturing (And the Structural Fix)',
-        date: 'May 15, 2026',
-        readTime: '6 min read',
-        excerpt: 'Directories provide raw lists. We provide verified alignment. Exploring the data engineering required to pre-screen high-ticket manufacturing partners.',
-    }
-]
-
 export default function MarketSignals({ onBack }: MarketSignalsProps) {
+    const [selectedId, setSelectedId] = useState<number | null>(null);
+
+    const activeArticle = blogPosts.find(post => post.id === selectedId);
+
+    const getIcon = (category: string) => {
+        switch (category) {
+            case 'Market Intelligence': return TrendingUp;
+            case 'Operational Leverage': return Cpu;
+            case 'Matchmaking Frameworks': return Network;
+            default: return TrendingUp;
+        }
+    };
+
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto">
             {/* Header */}
-            <div className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
-                <div className="max-w-7xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
+            <div className="sticky top-0 z-50 bg-[#FAFAFA]/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
+                <div className="max-w-4xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
                     <button
-                        onClick={onBack}
+                        onClick={selectedId ? () => setSelectedId(null) : onBack}
                         className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                     >
                         <ArrowLeft className="h-4 w-4" />
-                        Back to Home
+                        {selectedId ? 'All Signals' : 'Back to Home'}
                     </button>
-                    <span className="text-sm font-semibold tracking-wide uppercase text-emerald-500 dark:text-emerald-400">
-                        Market Signals
+                    <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-emerald-500 dark:text-emerald-400">
+                        {selectedId ? 'Intelligence Report' : 'Market Signals'}
                     </span>
                 </div>
             </div>
 
-            <main className="max-w-7xl mx-auto px-5 md:px-6 py-12 md:py-20">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-12 md:mb-24 max-w-3xl"
-                >
-                    <div className="flex items-center gap-3 mb-6">
-                        <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
-                        </span>
-                        <span className="text-[11px] font-medium tracking-[0.08em] text-emerald-500">
-                            The Authority Engine
-                        </span>
-                    </div>
-                    <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 text-black dark:text-white">
-                        Market Signals &<br />Intelligence.
-                    </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                        Real-time market changes, supply chain constraints, and operational bottlenecks. 
-                        Insights engineered for aerospace and industrial executives.
-                    </p>
-                </motion.div>
-
-                <div className="grid grid-cols-1 gap-y-12">
-                    {articles.map((article, index) => (
+            <main className="max-w-4xl mx-auto px-5 md:px-6 py-12 md:py-20">
+                <AnimatePresence mode="wait">
+                    {!selectedId ? (
                         <motion.div
-                            key={article.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group flex flex-col md:flex-row gap-6 md:gap-12 border-b border-gray-200 dark:border-white/10 pb-12 cursor-pointer"
+                            key="list"
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -15 }}
+                            transition={{ duration: 0.4 }}
                         >
-                            <div className="md:w-1/4 flex flex-col gap-4">
-                                <div className="flex items-center gap-2 text-[11px] font-medium text-gray-500 dark:text-gray-400">
-                                    <article.icon className="h-4 w-4" />
-                                    <span className="tracking-[0.04em]">{article.category}</span>
+                            {/* Intro Section */}
+                            <div className="mb-12 md:mb-20 max-w-3xl">
+                                <div className="flex items-center gap-3 mb-6">
+                                    <span className="relative flex h-3 w-3">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+                                    </span>
+                                    <span className="text-[11px] font-semibold tracking-[0.08em] text-emerald-500 dark:text-emerald-400 uppercase">
+                                        The Authority Engine
+                                    </span>
                                 </div>
-                                <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
-                                    {article.date} · {article.readTime}
-                                </div>
-                            </div>
-
-                            <div className="md:w-3/4">
-                                <h2 className="text-2xl md:text-4xl font-semibold mb-4 text-black dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                                    {article.title}
-                                </h2>
-                                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    {article.excerpt}
+                                <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 text-black dark:text-white leading-[1.1]">
+                                    Market Signals &<br />Intelligence.
+                                </h1>
+                                <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+                                    Real-time market shifts, sub-tier constraints, and procurement bottlenecks. 
+                                    Strategic insights engineered exclusively for aerospace and industrial leaders.
                                 </p>
                             </div>
+
+                            {/* Articles Grid/List */}
+                            <div className="grid grid-cols-1 gap-y-12">
+                                {blogPosts.map((article, index) => {
+                                    const Icon = getIcon(article.category);
+                                    return (
+                                        <motion.div
+                                            key={article.id}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                                            onClick={() => {
+                                                setSelectedId(article.id);
+                                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                            }}
+                                            className="group flex flex-col md:flex-row gap-4 md:gap-12 border-b border-gray-100 dark:border-white/5 pb-12 cursor-pointer"
+                                        >
+                                            <div className="md:w-1/4 flex flex-col gap-2 md:gap-4">
+                                                <div className="flex items-center gap-2 text-[11px] font-medium text-emerald-500 dark:text-emerald-400">
+                                                    <Icon className="h-4 w-4" />
+                                                    <span className="tracking-[0.06em] uppercase">{article.category}</span>
+                                                </div>
+                                                <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
+                                                    {article.date} · {article.readTime}
+                                                </div>
+                                            </div>
+
+                                            <div className="md:w-3/4">
+                                                <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                                                    {article.title}
+                                                </h2>
+                                                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                                    {article.excerpt}
+                                                </p>
+                                                <div className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                    Read Intelligence Report <ChevronRight className="h-3 w-3" />
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    );
+                                })}
+                            </div>
                         </motion.div>
-                    ))}
-                </div>
+                    ) : (
+                        activeArticle && (
+                            <motion.article
+                                key="article"
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -15 }}
+                                transition={{ duration: 0.4 }}
+                                className="max-w-3xl mx-auto"
+                            >
+                                {/* Meta Header */}
+                                <div className="flex flex-wrap items-center gap-y-2 gap-x-4 mb-8 text-[11px] font-semibold text-gray-500 dark:text-gray-400 tracking-[0.06em] uppercase">
+                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full">
+                                        {activeArticle.category}
+                                    </span>
+                                    <span className="flex items-center gap-1">
+                                        <Calendar className="h-3.5 w-3.5" />
+                                        {activeArticle.date}
+                                    </span>
+                                    <span className="flex items-center gap-1">
+                                        <Clock className="h-3.5 w-3.5" />
+                                        {activeArticle.readTime}
+                                    </span>
+                                </div>
+
+                                {/* Title */}
+                                <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-black dark:text-white leading-[1.15] mb-8">
+                                    {activeArticle.title}
+                                </h1>
+
+                                {/* Intro */}
+                                <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-normal border-b border-gray-100 dark:border-white/5 pb-10 mb-10">
+                                    {activeArticle.intro}
+                                </p>
+
+                                {/* Dynamic Sections */}
+                                <div className="space-y-8">
+                                    {activeArticle.sections.map((section, sIdx) => {
+                                        switch (section.type) {
+                                            case 'heading':
+                                                return (
+                                                    <h2 key={sIdx} className="text-xl md:text-2xl font-bold text-black dark:text-white tracking-tight mt-10 mb-4">
+                                                        {section.value as string}
+                                                    </h2>
+                                                );
+                                            case 'paragraph':
+                                                return (
+                                                    <p key={sIdx} className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+                                                        {section.value as string}
+                                                    </p>
+                                                );
+                                            case 'list':
+                                                return (
+                                                    <ul key={sIdx} className="space-y-4 my-6 pl-1">
+                                                        {(section.value as string[]).map((item, iIdx) => {
+                                                            const [boldPart, rest] = item.includes(':') ? item.split(':', 2) : [null, item];
+                                                            return (
+                                                                <li key={iIdx} className="flex items-start gap-3 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                                                                    <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                                                                    <span>
+                                                                        {boldPart ? (
+                                                                            <>
+                                                                                <strong className="font-semibold text-black dark:text-white">{boldPart}</strong>:
+                                                                                {rest}
+                                                                            </>
+                                                                        ) : item}
+                                                                    </span>
+                                                                </li>
+                                                            );
+                                                        })}
+                                                    </ul>
+                                                );
+                                            case 'quote':
+                                                return (
+                                                    <blockquote key={sIdx} className="border-l-2 border-emerald-500 pl-6 my-8 py-1">
+                                                        <p className="text-base md:text-lg italic text-gray-800 dark:text-gray-200 leading-relaxed">
+                                                            {section.value as string}
+                                                        </p>
+                                                    </blockquote>
+                                                );
+                                            case 'metric':
+                                                return (
+                                                    <div key={sIdx} className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+                                                        {(section.value as { label: string; value: string; description: string }[]).map((metric, mIdx) => (
+                                                            <div key={mIdx} className="bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-lg p-5 flex flex-col justify-between">
+                                                                <div>
+                                                                    <div className="text-3xl md:text-4xl font-bold text-black dark:text-white tracking-tight mb-1">
+                                                                        {metric.value}
+                                                                    </div>
+                                                                    <div className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 tracking-[0.06em] uppercase mb-3">
+                                                                        {metric.label}
+                                                                    </div>
+                                                                </div>
+                                                                <div className="text-xs text-gray-500 dark:text-gray-400 leading-normal">
+                                                                    {metric.description}
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                );
+                                            default:
+                                                return null;
+                                        }
+                                    })}
+                                </div>
+
+                                {/* Article Footer Navigation */}
+                                <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">
+                                    <button
+                                        onClick={() => {
+                                            setSelectedId(null);
+                                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                                        }}
+                                        className="flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                                    >
+                                        <ArrowLeft className="h-4 w-4" />
+                                        Back to All Signals
+                                    </button>
+                                </div>
+                            </motion.article>
+                        )
+                    )}
+                </AnimatePresence>
             </main>
         </div>
     )
 }
+
