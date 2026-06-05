@@ -30,7 +30,7 @@ export default function HeroSection() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
-                        <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-[0.22em] uppercase text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-white/10 rounded-full px-4 py-1.5">
+                        <span className="inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.08em] text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-white/10 rounded-full px-4 py-1.5">
                             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                             Elesium — Verified Partner Matching
                         </span>
@@ -75,7 +75,7 @@ export default function HeroSection() {
                                 <MandateApplicationForm />
                             </ExpandableScreenContent>
                         </ExpandableScreen>
-                        <span className="text-xs text-gray-400 dark:text-gray-600 font-mono tracking-wide">
+                        <span className="text-xs text-gray-400 dark:text-gray-600 font-medium tracking-wide">
                             Selective intake — reviewed within 24h
                         </span>
                     </motion.div>

@@ -54,7 +54,7 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
 
                     {/* Right: tagline */}
                     <div className="hidden md:flex flex-col items-end gap-2 text-right max-w-xs">
-                        <span className="text-xs font-mono tracking-[0.18em] uppercase text-gray-400 dark:text-gray-600">
+                        <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600">
                             Strategic Partnership Engine
                         </span>
                         <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">

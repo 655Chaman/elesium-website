@@ -66,7 +66,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                             <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
                         </span>
-                        <span className="text-xs font-mono font-semibold tracking-[0.2em] uppercase text-emerald-500">
+                        <span className="text-[11px] font-medium tracking-[0.08em] text-emerald-500">
                             The Authority Engine
                         </span>
                     </div>
@@ -90,11 +90,11 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                             className="group flex flex-col md:flex-row gap-6 md:gap-12 border-b border-gray-200 dark:border-white/10 pb-12 cursor-pointer"
                         >
                             <div className="md:w-1/4 flex flex-col gap-4">
-                                <div className="flex items-center gap-2 text-sm font-mono text-gray-500 dark:text-gray-400">
+                                <div className="flex items-center gap-2 text-[11px] font-medium text-gray-500 dark:text-gray-400">
                                     <article.icon className="h-4 w-4" />
-                                    <span className="uppercase tracking-wider">{article.category}</span>
+                                    <span className="tracking-[0.04em]">{article.category}</span>
                                 </div>
-                                <div className="text-sm text-gray-400 dark:text-gray-600 font-mono">
+                                <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
                                     {article.date} · {article.readTime}
                                 </div>
                             </div>

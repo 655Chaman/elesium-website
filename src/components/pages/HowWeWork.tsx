@@ -53,8 +53,8 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                         <span>Back</span>
                     </button>
 
-                    <div className="hidden md:block text-xs font-mono text-gray-400 dark:text-gray-600">
-                        PROCESS / 2026
+                    <div className="hidden md:block text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600">
+                        Process / 2026
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                     transition={{ delay: 0.5 + (index * 0.1), duration: 0.8 }}
                                     className="group border-t border-gray-200 dark:border-white/10 pt-8"
                                 >
-                                    <span className="block text-sm font-mono text-gray-400 dark:text-gray-600 mb-6">{step.number}</span>
+                                    <span className="block text-[11px] font-medium text-gray-400 dark:text-gray-600 tracking-[0.06em] mb-6">{step.number}</span>
                                     <h3 className="text-3xl font-medium mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {step.title}
                                     </h3>
@@ -100,7 +100,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                     </p>
                                     <ul className="flex flex-wrap gap-x-6 gap-y-2">
                                         {step.details.map((detail) => (
-                                            <li key={detail} className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-600">
+                                            <li key={detail} className="text-[11px] font-medium tracking-[0.04em] text-gray-400 dark:text-gray-600">
                                                 • {detail}
                                             </li>
                                         ))}

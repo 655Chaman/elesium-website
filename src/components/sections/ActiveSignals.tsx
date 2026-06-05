@@ -87,11 +87,11 @@ export default function ActiveSignals() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                         </span>
-                        <span className="text-xs font-mono font-semibold tracking-[0.22em] uppercase text-emerald-400">
+                        <span className="text-[11px] font-medium tracking-[0.08em] text-emerald-400">
                             Live Signals
                         </span>
                     </div>
-                    <span className="hidden md:block text-xs font-mono text-white/20 tracking-widest uppercase">
+                    <span className="hidden md:block text-[11px] font-medium text-white/20 tracking-[0.06em]">
                         Outbound Intelligence Feed
                     </span>
                 </motion.div>
@@ -128,11 +128,11 @@ export default function ActiveSignals() {
                             >
                                 {/* Sector + Status */}
                                 <div className="flex items-center gap-4 flex-wrap">
-                                    <span className={`text-xs font-mono font-bold tracking-[0.2em] uppercase ${sectorColor(signals[activeIndex].sector)}`}>
+                                    <span className={`text-[11px] font-semibold tracking-[0.08em] ${sectorColor(signals[activeIndex].sector)}`}>
                                         {signals[activeIndex].sector}
                                     </span>
                                     <span className="h-px w-6 bg-white/15" />
-                                    <span className="text-xs font-mono tracking-widest uppercase text-white/30">
+                                    <span className="text-[11px] font-medium tracking-[0.06em] text-white/30">
                                         {signals[activeIndex].status}
                                     </span>
                                 </div>
@@ -190,8 +190,8 @@ export default function ActiveSignals() {
                         { label: 'Avg. Response Time', value: '< 72h' },
                     ].map((stat) => (
                         <div key={stat.label} className="bg-[#050505] px-6 py-5 flex flex-col gap-1">
-                            <span className="text-xs font-mono text-white/25 uppercase tracking-widest">{stat.label}</span>
-                            <span className="text-2xl md:text-3xl font-bold text-white font-mono">{stat.value}</span>
+                            <span className="text-[11px] font-medium text-white/25 tracking-[0.06em] mb-1">{stat.label}</span>
+                            <span className="text-2xl md:text-3xl font-bold text-white">{stat.value}</span>
                         </div>
                     ))}
                 </motion.div>

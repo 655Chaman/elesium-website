@@ -56,10 +56,10 @@ function FeatureItem({ feature, index, total, scrollYProgress }: FeatureItemProp
             style={{ opacity }}
             className="col-start-1 row-start-1"
         >
-            <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-black dark:text-white mb-4 text-center md:text-left">
+            <h3 className="section-h2 mb-4 text-center md:text-left dark:text-white">
                 {feature.title}
             </h3>
-            <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0 text-center md:text-left">
+            <p className="body-text text-gray-600 dark:text-gray-400 max-w-lg mx-auto md:mx-0 text-center md:text-left">
                 {feature.description}
             </p>
         </motion.div>

@@ -37,7 +37,7 @@ export default function Solutions() {
                                 backgroundSize: '20px 20px'
                             }}
                         >
-                            <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 dark:text-gray-600 mb-4">
+                            <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600 mb-4">
                                 Engagement Tier / 01
                             </span>
                             <h3 style={{
@@ -73,7 +73,7 @@ export default function Solutions() {
                                 backgroundSize: '20px 20px'
                             }}
                         >
-                            <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 dark:text-gray-600 mb-4">
+                            <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600 mb-4">
                                 Engagement Tier / 02
                             </span>
                             <h3 style={{

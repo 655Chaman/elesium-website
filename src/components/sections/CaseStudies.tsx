@@ -77,7 +77,7 @@ export default function CaseStudies() {
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-100 dark:border-white/10 pt-6 mt-auto">
                                 {study.stats.map((stat, idx) => (
                                     <div key={idx} className="flex flex-col">
-                                        <span className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">{stat.label}</span>
+                                        <span className="text-[11px] font-medium text-gray-400 tracking-[0.06em] mb-1">{stat.label}</span>
                                         <span className="text-sm font-semibold text-black dark:text-white">{stat.value}</span>
                                     </div>
                                 ))}

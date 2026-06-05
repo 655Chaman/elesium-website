@@ -119,7 +119,7 @@ export function MandateApplicationForm() {
                 <div className="h-20 w-20 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center mb-6">
                     <CheckCircle2 className="h-9 w-9 text-gray-900 dark:text-white" />
                 </div>
-                <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 mb-4">
+                <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 mb-4">
                     Application Status: Under Review
                 </span>
                 <h3 className="text-3xl md:text-4xl font-semibold mb-4 dark:text-white tracking-tight">
@@ -146,7 +146,7 @@ export function MandateApplicationForm() {
                         {STEPS.map((s, i) => (
                             <div key={s.num} className="flex items-center gap-2">
                                 <span
-                                    className={`text-xs font-mono font-bold transition-colors ${
+                                    className={`text-[11px] font-bold transition-colors ${
                                         step === i + 1
                                             ? 'text-gray-900 dark:text-white'
                                             : step > i + 1
@@ -163,7 +163,7 @@ export function MandateApplicationForm() {
                         ))}
                     </div>
 
-                    <span className="inline-block text-xs font-mono font-semibold tracking-[0.18em] uppercase text-gray-400 dark:text-gray-500 mb-6">
+                    <span className="inline-block text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-500 mb-6">
                         {panel.badge}
                     </span>
 
@@ -177,7 +177,7 @@ export function MandateApplicationForm() {
                 </div>
 
                 {/* Bottom disclaimer */}
-                <p className="hidden md:block text-xs text-gray-300 dark:text-gray-700 mt-10 font-mono">
+                <p className="hidden md:block text-[11px] text-gray-300 dark:text-gray-700 mt-10 font-medium">
                     Confidential. Not shared with third parties.
                 </p>
             </div>
@@ -411,7 +411,7 @@ export function MandateApplicationForm() {
                         )}
                     </AnimatePresence>
 
-                    <p className="text-center text-xs text-gray-300 dark:text-gray-700 mt-6 font-mono">
+                    <p className="text-center text-[11px] text-gray-300 dark:text-gray-700 mt-6 font-medium">
                         Step {step} of 3 · Applications reviewed within 24 hours.
                     </p>
                 </div>
