@@ -5,24 +5,24 @@ import MetallicPaint from '../ui/MetallicPaint/MetallicPaint'
 
 const features = [
     {
-        title: 'Smart Matching',
-        description: 'Connect with partners that actually fit your specific needs',
+        title: 'Proprietary Target Intelligence',
+        description: 'We map the entire landscape of your ideal buyer market — enriched with firmographic, technographic, and compliance data — before a single contact is made.',
     },
     {
-        title: 'Verified Partners',
-        description: 'Every supplier is vetted for quality, reliability, and capability',
+        title: 'Compliance-Verified Introductions',
+        description: 'Every introduction is pre-screened against your exact certification requirements: AS9100, ISO 9001, NADCAP, ITAR. No unqualified contacts. Ever.',
     },
     {
-        title: 'Global Network',
-        description: 'Access a worldwide database of manufacturers and suppliers',
+        title: 'Global Decision-Maker Database',
+        description: 'Access a continuously refreshed database of verified decision-makers across aerospace, industrial, energy, and automotive sectors worldwide.',
     },
     {
-        title: 'Instant Trust',
-        description: 'Transparent history and qualifications build confidence immediately',
+        title: 'Engineered Trust Infrastructure',
+        description: 'We build verifiable credibility into every introduction — transparent qualification history, certification status, and risk assessment delivered upfront.',
     },
     {
-        title: 'Contextual Search',
-        description: 'Find exactly what you need with deep, context-aware filtering',
+        title: 'Multi-Signal Qualification Engine',
+        description: 'Our outbound engine deploys multi-channel signals to surface buying intent, bypass gatekeepers, and ensure you only speak with principals ready to move.',
     },
 ]
 
@@ -108,7 +108,7 @@ export default function FeatureExplorer() {
                         ))}
                     </div>
 
-                    {/* Right: Media Placeholder */}
+                    {/* Right: MetallicPaint Logo */}
                     <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-black/40 border border-gray-100 dark:border-white/5 flex items-center justify-center h-[250px] md:h-[500px] w-full order-1 lg:order-2">
                         <div className="w-full max-w-[280px] md:max-w-none md:w-[700px] h-full mx-auto md:ml-40 mt-0 md:mt-5 opacity-100">
                             <MetallicPaint

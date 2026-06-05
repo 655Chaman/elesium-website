@@ -8,31 +8,31 @@ const caseStudies = [
     {
         id: 1,
         title: 'Network Optimization',
-        description: 'Deep dive into how we helped a global manufacturer streamline their supply chain operations.',
+        description: 'How we restructured a global manufacturer\'s supplier discovery process — reducing vetting time and mitigating critical redundancy risks.',
         details: {
             heading: 'Global Supply Chain Optimization',
-            content: 'In this case study, we partnered with a Fortune 500 manufacturer to overhaul their supplier discovery process. By implementing Elesium, they reduced vetting time by 40% and identified 3 key redundancy risks in their critical path.',
+            content: 'We partnered with a Fortune 500 manufacturer to overhaul their supplier discovery and qualification process. By deploying Elesium\'s outbound architecture and compliance verification engine, they reduced vetting time by 40%, identified three critical redundancy risks in their supply path, and received a curated shortlist of ready-to-sign partners within the first quarter.',
             stats: ['40% Faster Vetting', '3 Risk Points Mitigated', '$2M Estimated Savings']
         }
     },
     {
         id: 2,
         title: 'Aerospace Partnerships',
-        description: 'Constructing mutually beneficial partnerships and ensuring compliance in the aerospace sector.',
+        description: 'Connecting an aerospace component provider with Tier-1 suppliers — compliance-verified introductions that converted to contracts in under 90 days.',
         details: {
-            heading: 'Aerospace Partnership Network',
-            content: 'Elesium enabled a mid-sized aerospace component provider to connect with Tier 1 suppliers. The transparent qualification data built immediate trust, leading to 2 major contracts within the first quarter.',
-            stats: ['2 Major Contracts', '15 New Qualified Leads', 'Zero Compliance Issues']
+            heading: 'Aerospace Partnership Mandate',
+            content: 'A mid-sized aerospace component provider needed Tier-1 supplier relationships — fast, compliant, and at the executive level. Elesium deployed a targeted outbound mandate, surfacing AS9100-certified contacts and delivering pre-qualified introductions with full certification histories. Two major contracts were signed within the first quarter. Zero compliance issues throughout.',
+            stats: ['2 Major Contracts Signed', '15 Qualified Leads Surfaced', 'Zero Compliance Issues']
         }
     },
     {
         id: 3,
         title: 'Automated Compliance',
-        description: 'Leveraging agentic workflows to automatically verify global certifications and standards.',
+        description: 'Deploying agentic verification workflows to automatically validate global certifications before any human conversation begins.',
         details: {
             heading: 'Automated Compliance Verification',
-            content: 'Compliance is the bottleneck of modern manufacturing. We deployed our agentic workflow system to automatically verify certifications (ISO 9001, AS9100) against global databases, ensuring 100% compliance before any human conversation started.',
-            stats: ['100% Automated Checks', '24/7 Monitoring', 'Instant Audit Trails']
+            content: 'Compliance bottlenecks were costing an industrial group weeks of manual vetting per engagement. We deployed our agentic verification system to automatically cross-reference certifications (ISO 9001, AS9100, NADCAP) against global regulatory databases — 24/7, with instant audit trails. By the time the first call was booked, every contact had been fully cleared.',
+            stats: ['100% Pre-Meeting Compliance', '24/7 Automated Monitoring', 'Instant Audit Trails']
         }
     },
 ]
@@ -64,7 +64,7 @@ export default function CaseStudies() {
                         Case Studies
                     </h2>
                     <p className="body-text text-center mb-8 md:mb-16 max-w-2xl mx-auto dark:text-gray-400 transition-colors">
-                        See how we have done it
+                        Mandates executed. Results delivered.
                     </p>
                 </motion.div>
 

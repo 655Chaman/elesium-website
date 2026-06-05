@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { AnimatedThemeToggler } from '../ui/AnimatedThemeToggler'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
-import { WaitingListForm } from '../features/WaitingListForm'
+import { MandateApplicationForm } from '../features/WaitingListForm'
 import logo from '../../Assets/LOGO_NEW.png'
 
 interface NavbarProps {
@@ -74,12 +74,12 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                         <AnimatedThemeToggler />
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>
-                                <InteractiveHoverButton className="h-10 px-4 text-sm">
-                                    Explore
+                                <InteractiveHoverButton id="nav-mandate-cta" className="h-10 px-4 text-sm">
+                                    Apply for Mandate
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>
-                                <WaitingListForm />
+                                <MandateApplicationForm />
                             </ExpandableScreenContent>
                         </ExpandableScreen>
                     </div>
@@ -132,11 +132,11 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
                                         <InteractiveHoverButton className="w-full justify-center h-12 text-lg">
-                                            Explore Features
+                                            Apply for Mandate
                                         </InteractiveHoverButton>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
-                                        <WaitingListForm />
+                                        <MandateApplicationForm />
                                     </ExpandableScreenContent>
                                 </ExpandableScreen>
                             </div>

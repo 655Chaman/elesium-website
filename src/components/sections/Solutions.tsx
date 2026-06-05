@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
-import { WaitingListForm } from '../features/WaitingListForm'
+import { MandateApplicationForm } from '../features/WaitingListForm'
 
 export default function Solutions() {
     const ref = useRef(null)
@@ -23,7 +23,7 @@ export default function Solutions() {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                     >
-                        <h2 className="section-h2 mb-8 md:mb-16 text-center dark:text-white transition-colors">Achieve new heights</h2>
+                        <h2 className="section-h2 mb-8 md:mb-16 text-center dark:text-white transition-colors">Built for Market Leaders</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '24px' }}>
@@ -37,24 +37,27 @@ export default function Solutions() {
                                 backgroundSize: '20px 20px'
                             }}
                         >
+                            <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 dark:text-gray-600 mb-4">
+                                Mandate Type / 01
+                            </span>
                             <h3 style={{
-                                fontWeight: 450,
+                                fontWeight: 500,
                                 marginBottom: '16px',
                             }} className="text-2xl md:text-[32px] text-[#121317] dark:text-white transition-colors">
-                                For Medium-sized Businesses
+                                Growth-Stage Manufacturers
                             </h3>
                             <p className="body-text mb-8 dark:text-gray-400">
-                                Scale your operations with AI-driven partnerships and automated workflows designed for growth.
+                                You have the capacity to scale. We engineer the pipeline to fill it. Our outbound architecture places you directly in front of decision-makers who are ready to sign — not browse.
                             </p>
                             <div className="mt-auto">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
                                         <button className="btn-primary">
-                                            Explore
+                                            Apply for Mandate
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
-                                        <WaitingListForm />
+                                        <MandateApplicationForm />
                                     </ExpandableScreenContent>
                                 </ExpandableScreen>
                             </div>
@@ -70,26 +73,28 @@ export default function Solutions() {
                                 backgroundSize: '20px 20px'
                             }}
                         >
+                            <span className="text-xs font-mono tracking-[0.2em] uppercase text-gray-400 dark:text-gray-600 mb-4">
+                                Mandate Type / 02
+                            </span>
                             <h3 style={{
                                 fontSize: '32px',
-                                fontWeight: 450,
+                                fontWeight: 500,
                                 marginBottom: '16px',
                             }} className="text-[#121317] dark:text-white transition-colors">
-                                For Enterprise
+                                Enterprise & Tier-1 OEMs
                             </h3>
                             <p className="body-text mb-8 dark:text-gray-400">
-                                Secure, scalable infrastructure for global organizations.
-                                Custom integrations and dedicated support.
+                                Global mandate execution for large-scale organizations. Custom outbound architecture, dedicated compliance verification, and white-glove partner introductions at the executive level.
                             </p>
                             <div className="mt-auto">
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
                                         <button className="btn-primary">
-                                            Explore
+                                            Apply for Mandate
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
-                                        <WaitingListForm />
+                                        <MandateApplicationForm />
                                     </ExpandableScreenContent>
                                 </ExpandableScreen>
                             </div>

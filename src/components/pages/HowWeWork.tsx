@@ -9,27 +9,27 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
     const steps = [
         {
             number: '01',
-            title: 'Discovery',
-            description: 'We listen first. Understanding your unique supply chain bottlenecks and goals is the foundation of our partnership.',
-            details: ['Requirements Mapping', 'Gap Analysis', 'Goal Setting']
+            title: 'Intelligence Mapping',
+            description: 'We map the entire landscape of your target market — firmographic data, decision-maker contacts, certification status, and buying signals — before a single message is sent.',
+            details: ['Target Market Scoping', 'Firmographic Enrichment', 'Decision-Maker Identification']
         },
         {
             number: '02',
-            title: 'Digital Twin',
-            description: 'We build a digital model of your ideal partner ecosystem, calibrated against our global verified network.',
-            details: ['Data Modeling', 'Network Scoping', 'Compliance Filters']
+            title: 'Target Architecture',
+            description: 'We build a precision engagement model calibrated against your exact compliance requirements and ideal partner profile. Every contact is scored before outreach begins.',
+            details: ['ICP Modeling', 'Compliance Scoring', 'Engagement Sequencing']
         },
         {
             number: '03',
-            title: 'Match & Verify',
-            description: 'AI-driven algorithms identify best-fit partners, while automated workflows validate every single certification.',
-            details: ['Algorithmic Matching', 'Auto-Verification', 'Risk Assessment']
+            title: 'Outbound Execution',
+            description: 'High-volume, multi-channel outbound architecture is deployed to bypass gatekeepers and reach principals directly. Automated workflows validate certifications in real time.',
+            details: ['Multi-Channel Outbound', 'Gatekeeper Bypass', 'Real-Time Verification']
         },
         {
             number: '04',
-            title: 'Connect',
-            description: 'You receive a curated shortlist of ready-to-sign partners. Trust is engineered into the process from day one.',
-            details: ['Curated Shortlist', 'Direct Introductions', 'Scale Operations']
+            title: 'Mandate Delivery',
+            description: 'You receive a curated shortlist of compliance-verified, ready-to-move decision-makers. Trust is engineered into every introduction before you take the first call.',
+            details: ['Curated Shortlist', 'Executive Introductions', 'Pipeline Handoff']
         }
     ]
 
@@ -53,8 +53,8 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                         <span>Back</span>
                     </button>
 
-                    <div className="hidden md:block text-xs font-mono text-gray-400">
-                        PROCESS / 2024
+                    <div className="hidden md:block text-xs font-mono text-gray-400 dark:text-gray-600">
+                        PROCESS / 2026
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                 transition={{ delay: 0.4, duration: 0.8 }}
                                 className="text-lg text-gray-600 dark:text-gray-400 max-w-sm leading-relaxed"
                             >
-                                We don't just connect companies; we engineer partnerships based on verifiable data and mutual trust.
+                                We don't facilitate introductions. We engineer partnerships — from target intelligence to mandate delivery — with verifiable data and trust built in at every stage.
                             </motion.p>
                         </div>
 
@@ -91,7 +91,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                     transition={{ delay: 0.5 + (index * 0.1), duration: 0.8 }}
                                     className="group border-t border-gray-200 dark:border-white/10 pt-8"
                                 >
-                                    <span className="block text-sm font-mono text-gray-400 mb-6">{step.number}</span>
+                                    <span className="block text-sm font-mono text-gray-400 dark:text-gray-600 mb-6">{step.number}</span>
                                     <h3 className="text-3xl font-medium mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {step.title}
                                     </h3>
@@ -100,7 +100,7 @@ export default function HowWeWork({ onBack }: HowWeWorkProps) {
                                     </p>
                                     <ul className="flex flex-wrap gap-x-6 gap-y-2">
                                         {step.details.map((detail) => (
-                                            <li key={detail} className="text-xs font-medium uppercase tracking-wider text-gray-400">
+                                            <li key={detail} className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-600">
                                                 • {detail}
                                             </li>
                                         ))}

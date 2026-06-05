@@ -12,7 +12,7 @@ export default function AgentIntro() {
     const div3Ref = useRef<HTMLDivElement>(null)
 
     // Beam Colors
-    const pathColor = "rgba(100, 100, 100, 0.2)"
+    const pathColor = "rgba(100, 100, 100, 0.15)"
     const gradientStartColor = "#4F46E5" // Indigo
     const gradientStopColor = "#EC4899" // Pink
 
@@ -30,18 +30,17 @@ export default function AgentIntro() {
                 {/* Text Content - naturally scrolling */}
                 <div className="w-full lg:w-1/2 text-center lg:text-left py-12 md:py-24 lg:py-[50vh] relative z-20">
                     <TextReveal className="lg:min-h-screen flex items-center justify-center lg:justify-start">
-                        We connect Supply to Demand, and Demand to Supply, helping you find the right partners faster — with context, qualification, and trust built in.
+                        We don't rely on passive networks. We actively engineer your pipeline. Our backend maps the entire landscape of your target market, enriches the data for exact compliance, and utilizes high-volume, multi-channel outbound architecture to bypass gatekeepers and put you directly in front of ready-to-move decision-makers.
                     </TextReveal>
                 </div>
 
                 {/* Animated Beam - Sticky */}
-                {/* valid 'track' for sticky is the parent flex item which must be tall */}
                 <div className="hidden lg:flex w-full lg:w-1/2 relative min-h-full">
                     <div className="sticky top-0 h-screen flex flex-col items-center justify-center gap-24 py-12 w-full relative" ref={containerRef}>
-                        {/* Node 1: Supply */}
+                        {/* Node 1: Seller */}
                         <div className="flex flex-col items-center gap-2 z-10">
                             <div ref={div1Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white shadow-lg hover:scale-105 transition-transform duration-300">
-                                <span className="text-base font-semibold text-gray-600 dark:text-white">Supply</span>
+                                <span className="text-base font-semibold text-gray-600 dark:text-white">Seller</span>
                             </div>
                         </div>
 
@@ -53,14 +52,14 @@ export default function AgentIntro() {
                             </div>
                         </div>
 
-                        {/* Node 3: Demand */}
+                        {/* Node 3: Buyer */}
                         <div className="flex flex-col items-center gap-2 z-10">
                             <div ref={div3Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white shadow-lg hover:scale-105 transition-transform duration-300">
-                                <span className="text-base font-semibold text-gray-600 dark:text-white">Demand</span>
+                                <span className="text-base font-semibold text-gray-600 dark:text-white">Buyer</span>
                             </div>
                         </div>
 
-                        {/* Supply -> Elesium (Beam 1) */}
+                        {/* Seller -> Elesium (Beam 1) */}
                         <AnimatedBeam
                             containerRef={containerRef}
                             fromRef={div1Ref}
@@ -76,7 +75,7 @@ export default function AgentIntro() {
                             endYOffset={-64}
                             className="z-0"
                         />
-                        {/* Supply -> Elesium (Beam 2) - Staggered */}
+                        {/* Seller -> Elesium (Beam 2) - Staggered */}
                         <AnimatedBeam
                             containerRef={containerRef}
                             fromRef={div1Ref}
@@ -93,7 +92,7 @@ export default function AgentIntro() {
                             className="z-0"
                         />
 
-                        {/* Demand -> Elesium (Beam 1) */}
+                        {/* Buyer -> Elesium (Beam 1) */}
                         <AnimatedBeam
                             containerRef={containerRef}
                             fromRef={div3Ref}
@@ -110,7 +109,7 @@ export default function AgentIntro() {
                             endYOffset={64}
                             className="z-0"
                         />
-                        {/* Demand -> Elesium (Beam 2) - Staggered */}
+                        {/* Buyer -> Elesium (Beam 2) - Staggered */}
                         <AnimatedBeam
                             containerRef={containerRef}
                             fromRef={div3Ref}

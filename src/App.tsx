@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
 import HeroSection from './components/sections/Hero'
 import AgentIntro from './components/sections/AgentIntro'
+import ActiveSignals from './components/sections/ActiveSignals'
 import DownloadFooter from './components/layout/Footer'
 import SmoothScroll from './components/ui/SmoothScroll'
 import NoiseOverlay from './components/ui/NoiseOverlay'
@@ -20,8 +21,6 @@ function App() {
 
     return (
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300">
-            {/* Smooth Cursor */}
-
             <SmoothScroll />
             <NoiseOverlay />
 
@@ -40,6 +39,9 @@ function App() {
                             <HeroSection />
 
                             <AgentIntro />
+
+                            {/* Active Signals Ledger */}
+                            <ActiveSignals />
 
                             {/* Lazy Loaded Sections */}
                             <FeatureExplorer />
