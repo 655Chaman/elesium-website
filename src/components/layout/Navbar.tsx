@@ -37,9 +37,9 @@ export default function Navbar() {
                         <img
                             src={logo}
                             alt="Elesium"
-                            className="h-8 md:h-10 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm"
+                            className="h-8 md:h-10 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm -translate-y-[8px]"
                         />
-                        <span className="text-xl md:text-2xl font-bold tracking-tighter text-black dark:text-white inline-block -translate-y-[8px]">
+                        <span className="text-xl md:text-2xl font-bold tracking-tighter text-black dark:text-white">
                             Elesium
                         </span>
                     </Link>
