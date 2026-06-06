@@ -93,10 +93,22 @@ export function MandateApplicationForm() {
         e.preventDefault()
         setIsLoading(true)
         try {
-            const response = await fetch('http://localhost:3001/api/submit', {
+            const payload = {
+                name: formData.name,
+                email: formData.email,
+                company: formData.company,
+                website: formData.website,
+                role: formData.role,
+                revenue: formData.revenue,
+                certifications: formData.targetPartner,
+                readiness: formData.readiness,
+                usecase: '',
+            }
+
+            const response = await fetch('https://api.elesium.software/api/website-leads/intake', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(payload),
             }).catch(() => null)
 
             if (response && response.ok) {
