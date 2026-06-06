@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowLeft, Plane, Factory, Settings } from 'lucide-react'
-
-interface IndustriesProps {
-    onBack: () => void;
-}
+import { useNavigate } from 'react-router-dom'
 
 const industries = [
     {
@@ -41,14 +38,16 @@ const industries = [
     }
 ]
 
-export default function Industries({ onBack }: IndustriesProps) {
+export default function Industries() {
+    const navigate = useNavigate();
+
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto">
             {/* Header */}
             <div className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
                 <div className="max-w-7xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
                     <button
-                        onClick={onBack}
+                        onClick={() => navigate('/')}
                         className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                     >
                         <ArrowLeft className="h-4 w-4" />

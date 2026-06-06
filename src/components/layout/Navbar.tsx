@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AnimatedThemeToggler } from '../ui/AnimatedThemeToggler'
@@ -7,28 +8,23 @@ import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } fr
 import { MandateApplicationForm } from '../features/WaitingListForm'
 import logo from '../../Assets/LOGO_NEW.png'
 
-interface NavbarProps {
-    onNavigate?: (page: 'home' | 'how-we-work' | 'industries' | 'market-signals') => void;
-}
-
-export default function Navbar({ onNavigate }: NavbarProps) {
+export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-    const handleMobileNavigate = (page: 'home' | 'how-we-work' | 'industries' | 'market-signals') => {
-        onNavigate?.(page)
-        setIsMobileMenuOpen(false)
-    }
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const scrollToCaseStudies = () => {
-        const section = document.getElementById('case-studies');
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            onNavigate?.('home');
+        if (location.pathname !== '/') {
+            navigate('/')
             setTimeout(() => {
                 const section = document.getElementById('case-studies');
                 if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+            }, 500);
+        } else {
+            const section = document.getElementById('case-studies');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         }
         setIsMobileMenuOpen(false)
     }
@@ -38,40 +34,40 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style={{ height: '52px' }}>
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-full flex items-center justify-between">
                     {/* Logo */}
-                    <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleMobileNavigate('home')}>
+                    <Link to="/" className="flex items-center gap-3 cursor-pointer">
                         <img
                             src={logo}
                             alt="Elesium"
                             className="h-8 md:h-10 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm"
                         />
-                    </div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center" style={{ gap: '4px' }}>
-                        <button
-                            onClick={() => onNavigate?.('how-we-work')}
+                        <Link
+                            to="/how-we-work"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
                             How We Work
-                        </button>
-                        <button
-                            onClick={() => onNavigate?.('industries')}
+                        </Link>
+                        <Link
+                            to="/industries"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
                             Industries
-                        </button>
+                        </Link>
                         <button
                             onClick={scrollToCaseStudies}
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
                             Case Studies
                         </button>
-                        <button
-                            onClick={() => onNavigate?.('market-signals')}
+                        <Link
+                            to="/signals"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
                             Market Signals
-                        </button>
+                        </Link>
                     </div>
 
                     {/* CTA & Theme Toggler (Desktop) */}
@@ -114,30 +110,33 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                         className="fixed inset-0 z-40 bg-white dark:bg-black pt-[60px] px-6 md:hidden flex flex-col items-center"
                     >
                         <div className="flex flex-col w-full gap-6 mt-8">
-                            <button
-                                onClick={() => handleMobileNavigate('how-we-work')}
+                            <Link
+                                to="/how-we-work"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 How We Work
-                            </button>
-                            <button
-                                onClick={() => handleMobileNavigate('industries')}
+                            </Link>
+                            <Link
+                                to="/industries"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Industries
-                            </button>
+                            </Link>
                             <button
                                 onClick={scrollToCaseStudies}
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Case Studies
                             </button>
-                            <button
-                                onClick={() => handleMobileNavigate('market-signals')}
+                            <Link
+                                to="/signals"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-medium text-left text-blue-600 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Market Signals
-                            </button>
+                            </Link>
 
                             <div className="mt-8 w-full">
                                 <ExpandableScreen>

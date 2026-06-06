@@ -1,30 +1,29 @@
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
-interface FooterProps {
-    onNavigate?: (page: 'home' | 'how-we-work' | 'industries' | 'market-signals') => void;
-}
+export default function DownloadFooter() {
+    const navigate = useNavigate();
+    const location = useLocation();
 
-export default function DownloadFooter({ onNavigate }: FooterProps) {
     const handleNavigation = (name: string, id: string) => {
-        if (name === 'How We Work') {
-            onNavigate?.('how-we-work');
-        } else if (name === 'Industries') {
-            onNavigate?.('industries');
-        } else if (name === 'Market Signals') {
-            onNavigate?.('market-signals');
-        } else if (name === 'Case Studies') {
-            onNavigate?.('home'); // ensures we go to home first
-            setTimeout(() => {
+        if (name === 'Case Studies') {
+            if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => {
+                    const section = document.getElementById(id);
+                    if (section) section.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            } else {
                 const section = document.getElementById(id);
                 if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+            }
         }
     };
 
     const footerSections = [
-        { name: 'How We Work', id: 'how-we-work' },
-        { name: 'Industries', id: 'industries' },
+        { name: 'How We Work', path: '/how-we-work' },
+        { name: 'Industries', path: '/industries' },
         { name: 'Case Studies', id: 'case-studies' },
-        { name: 'Market Signals', id: 'market-signals' },
+        { name: 'Market Signals', path: '/signals' },
     ];
 
     return (
@@ -40,12 +39,21 @@ export default function DownloadFooter({ onNavigate }: FooterProps) {
                             <ul className="flex flex-col gap-4">
                                 {footerSections.map((item) => (
                                     <li key={item.name}>
-                                        <button
-                                            onClick={() => handleNavigation(item.name, item.id)}
-                                            className={`${item.name === 'Market Signals' ? 'text-blue-600 dark:text-blue-500' : 'text-[#3C4043] dark:text-gray-500'} hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
-                                        >
-                                            {item.name}
-                                        </button>
+                                        {item.path ? (
+                                            <Link
+                                                to={item.path}
+                                                className={`${item.name === 'Market Signals' ? 'text-blue-600 dark:text-blue-500' : 'text-[#3C4043] dark:text-gray-500'} hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        ) : (
+                                            <button
+                                                onClick={() => handleNavigation(item.name, item.id as string)}
+                                                className={`text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
+                                            >
+                                                {item.name}
+                                            </button>
+                                        )}
                                     </li>
                                 ))}
                             </ul>

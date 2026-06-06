@@ -1,16 +1,19 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight } from 'lucide-react'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { blogPosts } from '../../data/blogPosts'
 
-interface MarketSignalsProps {
-    onBack: () => void;
-}
+export default function MarketSignals() {
+    const { slug } = useParams();
+    const navigate = useNavigate();
 
-export default function MarketSignals({ onBack }: MarketSignalsProps) {
-    const [selectedId, setSelectedId] = useState<number | null>(null);
+    const activeArticle = slug ? blogPosts.find(post => post.slug === slug) : null;
 
-    const activeArticle = blogPosts.find(post => post.id === selectedId);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [slug]);
 
     const getIcon = (category: string) => {
         switch (category) {
@@ -22,26 +25,41 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
     };
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto">
+        <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
+            {/* SEO Helmet */}
+            {activeArticle ? (
+                <Helmet>
+                    <title>{activeArticle.title} | Elesium</title>
+                    <meta name="description" content={activeArticle.metaDescription} />
+                    <meta property="og:title" content={activeArticle.title} />
+                    <meta property="og:description" content={activeArticle.metaDescription} />
+                </Helmet>
+            ) : (
+                <Helmet>
+                    <title>Market Signals & Intelligence | Elesium</title>
+                    <meta name="description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for aerospace and industrial leaders." />
+                </Helmet>
+            )}
+
             {/* Header */}
-            <div className="sticky top-0 z-50 bg-[#FAFAFA]/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
+            <div className="sticky top-[52px] z-40 bg-[#FAFAFA]/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
                 <div className="max-w-4xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
                     <button
-                        onClick={selectedId ? () => setSelectedId(null) : onBack}
+                        onClick={() => slug ? navigate('/signals') : navigate('/')}
                         className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                     >
                         <ArrowLeft className="h-4 w-4" />
-                        {selectedId ? 'All Signals' : 'Back to Home'}
+                        {slug ? 'All Signals' : 'Back to Home'}
                     </button>
                     <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-500 dark:text-blue-400">
-                        {selectedId ? 'Intelligence Report' : 'Market Signals'}
+                        {slug ? 'Intelligence Report' : 'Market Signals'}
                     </span>
                 </div>
             </div>
 
             <main className="max-w-4xl mx-auto px-5 md:px-6 py-12 md:py-20">
                 <AnimatePresence mode="wait">
-                    {!selectedId ? (
+                    {!slug ? (
                         <motion.div
                             key="list"
                             initial={{ opacity: 0, y: 15 }}
@@ -55,7 +73,7 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                     Market Signals &<br />Intelligence.
                                 </h1>
                                 <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
-                                    Real-time market shifts, sub-tier constraints, and procurement bottlenecks. 
+                                    Real-time market shifts, supply chain constraints, and operational bottlenecks. 
                                     Strategic insights engineered exclusively for aerospace and industrial leaders.
                                 </p>
                             </div>
@@ -71,40 +89,40 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                                            onClick={() => {
-                                                setSelectedId(article.id);
-                                                window.scrollTo({ top: 0, behavior: 'smooth' });
-                                            }}
-                                            className="group flex flex-col md:flex-row gap-4 md:gap-12 border-b border-gray-100 dark:border-white/5 pb-12 cursor-pointer"
                                         >
-                                            <div className="md:w-1/4 flex flex-col gap-2 md:gap-4">
-                                                <div className="flex items-center gap-2 text-[11px] font-medium text-blue-500 dark:text-blue-400">
-                                                    <Icon className="h-4 w-4" />
-                                                    <span className="tracking-[0.06em] uppercase">{article.category}</span>
+                                            <Link 
+                                                to={`/signals/${article.slug}`}
+                                                className="group flex flex-col md:flex-row gap-4 md:gap-12 border-b border-gray-100 dark:border-white/5 pb-12 cursor-pointer block"
+                                            >
+                                                <div className="md:w-1/4 flex flex-col gap-2 md:gap-4">
+                                                    <div className="flex items-center gap-2 text-[11px] font-medium text-blue-500 dark:text-blue-400">
+                                                        <Icon className="h-4 w-4" />
+                                                        <span className="tracking-[0.06em] uppercase">{article.category}</span>
+                                                    </div>
+                                                    <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
+                                                        {article.date} · {article.readTime}
+                                                    </div>
                                                 </div>
-                                                <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
-                                                    {article.date} · {article.readTime}
-                                                </div>
-                                            </div>
 
-                                            <div className="md:w-3/4">
-                                                <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
-                                                    {article.title}
-                                                </h2>
-                                                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                                    {article.excerpt}
-                                                </p>
-                                                <div className="flex items-center gap-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                    Read Intelligence Report <ChevronRight className="h-3 w-3" />
+                                                <div className="md:w-3/4">
+                                                    <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                                                        {article.title}
+                                                    </h2>
+                                                    <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                                        {article.excerpt}
+                                                    </p>
+                                                    <div className="flex items-center gap-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                        Read Intelligence Report <ChevronRight className="h-3 w-3" />
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </motion.div>
                                     );
                                 })}
                             </div>
                         </motion.div>
                     ) : (
-                        activeArticle && (
+                        activeArticle ? (
                             <motion.article
                                 key="article"
                                 initial={{ opacity: 0, y: 15 }}
@@ -211,18 +229,17 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
 
                                 {/* Article Footer Navigation */}
                                 <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">
-                                    <button
-                                        onClick={() => {
-                                            setSelectedId(null);
-                                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                                        }}
+                                    <Link
+                                        to="/signals"
                                         className="flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                                     >
                                         <ArrowLeft className="h-4 w-4" />
                                         Back to All Signals
-                                    </button>
+                                    </Link>
                                 </div>
                             </motion.article>
+                        ) : (
+                            <div className="text-center py-20 text-gray-500">Signal not found.</div>
                         )
                     )}
                 </AnimatePresence>
@@ -230,4 +247,3 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
         </div>
     )
 }
-
