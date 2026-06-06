@@ -36,10 +36,10 @@ export default function AgentIntro() {
                 {/* Animated Beam - Sticky */}
                 <div className="hidden lg:flex w-full lg:w-1/2 relative min-h-full">
                     <div className="sticky top-0 h-screen flex flex-col items-center justify-center gap-24 py-12 w-full relative" ref={containerRef}>
-                        {/* Node 1: Seller */}
+                        {/* Node 1: Supply */}
                         <div className="flex flex-col items-center gap-2 z-10">
                             <div ref={div1Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white shadow-lg hover:scale-105 transition-transform duration-300">
-                                <span className="text-base font-semibold text-gray-600 dark:text-white">Seller</span>
+                                <span className="text-base font-semibold text-gray-600 dark:text-white">Supply</span>
                             </div>
                         </div>
 
@@ -51,10 +51,10 @@ export default function AgentIntro() {
                             </div>
                         </div>
 
-                        {/* Node 3: Buyer */}
+                        {/* Node 3: Demand */}
                         <div className="flex flex-col items-center gap-2 z-10">
                             <div ref={div3Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white shadow-lg hover:scale-105 transition-transform duration-300">
-                                <span className="text-base font-semibold text-gray-600 dark:text-white">Buyer</span>
+                                <span className="text-base font-semibold text-gray-600 dark:text-white">Demand</span>
                             </div>
                         </div>
 
