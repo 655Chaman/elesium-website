@@ -115,21 +115,54 @@ export function MandateApplicationForm() {
     // ── Success state ──────────────────────────────────────────────────────────
     if (isSuccess) {
         return (
-            <div className="flex flex-col items-center justify-center h-full text-center p-8 animate-in fade-in duration-500 bg-white dark:bg-black">
-                <div className="h-20 w-20 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center mb-6">
-                    <CheckCircle2 className="h-9 w-9 text-gray-900 dark:text-white" />
+            <div className="flex flex-col items-center justify-center h-full text-center p-6 md:p-8 animate-in fade-in duration-500 bg-white dark:bg-black">
+                {/* Pulsing Success Ring */}
+                <div className="relative flex items-center justify-center h-24 w-24 mb-8">
+                    <span className="animate-ping absolute inline-flex h-20 w-20 rounded-full bg-emerald-500/20 opacity-75" />
+                    <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 dark:text-emerald-400">
+                        <CheckCircle2 className="h-8 w-8" />
+                    </span>
                 </div>
-                <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 mb-4">
-                    Application Status: Under Review
-                </span>
-                <h3 className="text-3xl md:text-4xl font-semibold mb-4 dark:text-white tracking-tight">
-                    Application Under Review.
+
+                <div className="flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-semibold tracking-[0.08em] uppercase mb-4">
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                    </span>
+                    Transmission Verified
+                </div>
+
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white tracking-tight leading-tight">
+                    Mandate Successfully Ingested.
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 max-w-sm text-base leading-relaxed">
-                    A senior associate will review your profile and respond within{' '}
-                    <strong className="text-gray-900 dark:text-white">24 hours</strong> with
-                    a decision and, if approved, a proposed engagement structure.
+                
+                <p className="text-gray-500 dark:text-gray-400 max-w-md text-base leading-relaxed mb-8">
+                    Your profile and capacity details have been successfully queued. Our mapping engine is actively parsing target matches. A Managing Partner will contact you within <strong className="text-gray-900 dark:text-white">12 hours</strong>.
                 </p>
+
+                {/* Dashboard summary widget of ingestion */}
+                <div className="w-full max-w-sm bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-xl p-5 text-left font-mono text-xs">
+                    <div className="flex justify-between border-b border-gray-200/50 dark:border-white/5 pb-2 mb-2">
+                        <span className="text-gray-400">STATUS</span>
+                        <span className="text-emerald-500 font-semibold">MATCHING ACTIVE</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-200/50 dark:border-white/5 pb-2 mb-2">
+                        <span className="text-gray-400">ORGANIZATION</span>
+                        <span className="text-gray-900 dark:text-white truncate max-w-[180px]">{formData.company || 'Verified Partner'}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-200/50 dark:border-white/5 pb-2 mb-2">
+                        <span className="text-gray-400">REVENUE BASE</span>
+                        <span className="text-gray-900 dark:text-white">
+                            {formData.revenue === 'under-10m' && 'Under $10M'}
+                            {formData.revenue === '10m-50m' && '$10M – $50M'}
+                            {formData.revenue === '50m-plus' && '$50M+'}
+                        </span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-gray-400">QUEUE PRIORITY</span>
+                        <span className="text-gray-900 dark:text-white">HIGH / TIER-1</span>
+                    </div>
+                </div>
             </div>
         )
     }
