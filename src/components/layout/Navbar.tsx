@@ -39,7 +39,7 @@ export default function Navbar() {
                             alt="Elesium"
                             className="h-8 md:h-10 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm"
                         />
-                        <span className="text-xl md:text-2xl font-bold tracking-tighter text-black dark:text-white">
+                        <span className="text-xl md:text-2xl font-bold tracking-tighter text-black dark:text-white inline-block -translate-y-[8px]">
                             Elesium
                         </span>
                     </Link>
