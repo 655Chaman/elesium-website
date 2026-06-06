@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
@@ -45,6 +45,11 @@ function App() {
 
     // Since we're using React Router now, the Navbar and Footer are rendered once outside Routes
     // and we only animate the inner content changing.
+    
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     return (
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
