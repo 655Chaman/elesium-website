@@ -159,7 +159,7 @@ export default function HowWeWork() {
                                 <h3 className="text-xl font-bold">Who We Partner With</h3>
                             </div>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-[15px]">
-                                Established operators in Aerospace & Defense, Industrial Automation, and Advanced Manufacturing who have the capacity to take on new, high-ticket contracts and can move quickly when an introduction is made.
+                                Established operators across our master markets—including Defense & Aerospace, Energy & Infrastructure, Private Equity, and MedTech—who have the capacity to take on new, high-ticket contracts and can move quickly when an introduction is made.
                             </p>
                         </div>
                         <div className="space-y-4">

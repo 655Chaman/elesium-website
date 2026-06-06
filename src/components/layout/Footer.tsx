@@ -21,7 +21,7 @@ export default function DownloadFooter() {
 
     const footerSections = [
         { name: 'How We Work', path: '/how-we-work' },
-        { name: 'Industries', path: '/industries' },
+        { name: 'Markets', path: '/markets' },
         { name: 'Case Studies', id: 'case-studies' },
         { name: 'Market Signals', path: '/signals' },
     ];
@@ -67,7 +67,7 @@ export default function DownloadFooter() {
                         </span>
                         <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">
                             Exclusive intake. Verified introductions.<br />
-                            Aerospace & Industrial Sectors.
+                            Defense & Industrial Master Markets.
                         </p>
                     </div>
                 </div>

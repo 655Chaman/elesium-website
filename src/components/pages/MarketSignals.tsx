@@ -37,7 +37,7 @@ export default function MarketSignals() {
             ) : (
                 <Helmet>
                     <title>Market Signals & Intelligence | Elesium</title>
-                    <meta name="description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for aerospace and industrial leaders." />
+                    <meta name="description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for defense, aerospace, and industrial leaders." />
                 </Helmet>
             )}
 
@@ -74,7 +74,7 @@ export default function MarketSignals() {
                                 </h1>
                                 <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                                     Real-time market shifts, supply chain constraints, and operational bottlenecks. 
-                                    Strategic insights engineered exclusively for aerospace and industrial leaders.
+                                    Strategic insights engineered exclusively for defense, aerospace, and industrial leaders.
                                 </p>
                             </div>
 

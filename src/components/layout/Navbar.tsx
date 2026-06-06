@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { AnimatedThemeToggler } from '../ui/AnimatedThemeToggler'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
@@ -54,10 +53,10 @@ export default function Navbar() {
                             How We Work
                         </Link>
                         <Link
-                            to="/industries"
+                            to="/markets"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
-                            Industries
+                            Markets
                         </Link>
                         <button
                             onClick={scrollToCaseStudies}
@@ -73,9 +72,8 @@ export default function Navbar() {
                         </Link>
                     </div>
 
-                    {/* CTA & Theme Toggler (Desktop) */}
+                    {/* CTA (Desktop) */}
                     <div className="hidden md:flex items-center gap-6">
-                        <AnimatedThemeToggler />
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>
                                 <InteractiveHoverButton id="nav-mandate-cta" className="h-8 px-3 text-xs">
@@ -90,7 +88,6 @@ export default function Navbar() {
 
                     {/* Mobile Menu Toggle */}
                     <div className="flex md:hidden items-center gap-4">
-                        <AnimatedThemeToggler />
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="p-2 text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors z-50"
@@ -121,11 +118,11 @@ export default function Navbar() {
                                 How We Work
                             </Link>
                             <Link
-                                to="/industries"
+                                to="/markets"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
-                                Industries
+                                Markets
                             </Link>
                             <button
                                 onClick={scrollToCaseStudies}

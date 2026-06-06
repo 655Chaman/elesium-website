@@ -1,39 +1,72 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft, Plane, Factory, Settings } from 'lucide-react'
+import { ArrowLeft, Shield, TrendingUp, Zap, Activity, Cpu, Share2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 const industries = [
     {
-        id: 'aerospace',
-        title: 'Aerospace & Defense',
-        icon: Plane,
-        description: 'Focus on compliance, precision manufacturing, Tier-1/Tier-2 supplier matching, and AS9100-vetted connections.',
+        id: 'defense-aerospace',
+        title: 'Defense & Aerospace Pipelines',
+        icon: Shield,
+        description: 'Routing precision manufacturing capacity and securing contract placement with Tier-1 defense primes.',
         details: [
-            'AS9100 Certified Suppliers',
-            'Tier-1/Tier-2 Defense Pipeline',
-            'Precision Manufacturing'
+            'Tier-1 Prime Contractor Placement',
+            'AS9100 & ITAR Capacity Sourcing',
+            'Precision Manufacturing Routing'
         ]
     },
     {
-        id: 'industrial-automation',
-        title: 'Industrial Automation',
-        icon: Settings,
-        description: 'Focus on systems integrators, robotics deployment, and high-scale production line optimization.',
+        id: 'private-equity',
+        title: 'Private Equity & Industrial Roll-Ups',
+        icon: TrendingUp,
+        description: 'Sourcing off-market acquisition targets, platform capacity, and dealflow for industrial investment firms.',
         details: [
-            'Systems Integrators',
-            'Robotics Deployment',
-            'Production Line Optimization'
+            'Off-Market Target Identification',
+            'Platform Capacity Sourcing',
+            'Dealflow Sourcing & Acceleration'
         ]
     },
     {
-        id: 'advanced-mfg',
-        title: 'Advanced Manufacturing',
-        icon: Factory,
-        description: 'Focus on custom component fabrication, high-volume contract fulfillment, and supply chain redundancy.',
+        id: 'energy-infrastructure',
+        title: 'Energy & Infrastructure Logistics',
+        icon: Zap,
+        description: 'Connecting high-scale thermal management, power distribution, and data center components to enterprise operators.',
         details: [
-            'Custom Component Fabrication',
-            'Contract Fulfillment',
-            'Supply Chain Redundancy'
+            'Power Distribution Logistics',
+            'Thermal Management Systems',
+            'Enterprise Component Sourcing'
+        ]
+    },
+    {
+        id: 'advanced-medtech',
+        title: 'Advanced MedTech & Healthcare Systems',
+        icon: Activity,
+        description: 'Matching FDA-compliant contract manufacturing organizations with high-stakes medical hardware pipelines.',
+        details: [
+            'FDA-Compliant CMO Matching',
+            'High-Stakes Hardware Pipelines',
+            'Sterile & Precision Manufacturing'
+        ]
+    },
+    {
+        id: 'applied-ai',
+        title: 'Applied AI & Enterprise Workflows',
+        icon: Cpu,
+        description: 'Pairing traditional industrial operators with agentic compliance architectures and automated backend systems.',
+        details: [
+            'Agentic Compliance Systems',
+            'Automated Backend Workflows',
+            'AI-Driven Operational Efficiency'
+        ]
+    },
+    {
+        id: 'supply-chain-capital',
+        title: 'Supply Chain Capital & Placement',
+        icon: Share2,
+        description: 'Brokering high-leverage strategic partnerships and mission-critical talent routing across deep technical sectors.',
+        details: [
+            'Strategic Partnership Brokering',
+            'Mission-Critical Talent Routing',
+            'Deep Tech Capital Placement'
         ]
     }
 ]
@@ -67,14 +100,14 @@ export default function Industries() {
                     className="mb-12 md:mb-24 max-w-3xl"
                 >
                     <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8">
-                        The Three Pillars.
+                        Master Markets.
                     </h1>
                     <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed">
-                        We dominate the heavy infrastructure landscape by locking into three interconnected sectors. We balance supply and demand through precision matching and verified engagements.
+                        We orchestrate high-ticket dealflow and secure contract placement across six critical master markets. Our advanced matching systems connect Tier-1 primes, investment firms, and enterprise operators with friction-free precision.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
                     {industries.map((industry, index) => (
                         <motion.div
                             key={industry.id}
