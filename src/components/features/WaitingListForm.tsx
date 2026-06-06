@@ -36,7 +36,7 @@ type FormData = {
     email: string
     website: string
     revenue: string
-    certifications: string
+    targetPartner: string
     readiness: string
     name: string
     company: string
@@ -68,7 +68,7 @@ export function MandateApplicationForm() {
         email: '',
         website: '',
         revenue: '',
-        certifications: '',
+        targetPartner: '',
         readiness: '',
         name: '',
         company: '',
@@ -243,13 +243,17 @@ export function MandateApplicationForm() {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -24 }}
                                 transition={{ duration: 0.35 }}
-                                onSubmit={next}
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    if (!formData.readiness) return;
+                                    next(e);
+                                }}
                                 className="space-y-6"
                             >
                                 {/* Revenue */}
                                 <div>
                                     <label htmlFor="revenue" className={labelClass}>
-                                        What is your current monthly revenue? <span className="text-gray-400">*</span>
+                                        What is your current Annual Revenue? <span className="text-gray-400">*</span>
                                     </label>
                                     <div className="relative">
                                         <select
@@ -260,10 +264,9 @@ export function MandateApplicationForm() {
                                             className={selectClass}
                                         >
                                             <option value="" disabled>Select a range</option>
-                                            <option value="under-500k">Under $500K</option>
-                                            <option value="500k-2m">$500K – $2M</option>
-                                            <option value="2m-10m">$2M – $10M</option>
-                                            <option value="10m-plus">$10M+</option>
+                                            <option value="under-10m">Under $10M</option>
+                                            <option value="10m-50m">$10M – $50M</option>
+                                            <option value="50m-plus">$50M+</option>
                                         </select>
                                         <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
                                             ▾
@@ -271,44 +274,56 @@ export function MandateApplicationForm() {
                                     </div>
                                 </div>
 
-                                {/* Certifications */}
+                                {/* Target Partner */}
                                 <div>
-                                    <label htmlFor="certifications" className={labelClass}>
-                                        What certifications or compliance standards do your ideal partners require? <span className="text-gray-400">*</span>
+                                    <label htmlFor="targetPartner" className={labelClass}>
+                                        Who is your exact target buyer or required supply partner? <span className="text-gray-400">*</span>
                                     </label>
                                     <input
                                         required
                                         type="text"
-                                        id="certifications"
-                                        value={formData.certifications}
+                                        id="targetPartner"
+                                        value={formData.targetPartner}
                                         onChange={handleChange}
                                         className={inputClass}
-                                        placeholder="e.g. AS9100, ISO 9001, NADCAP, ITAR..."
+                                        placeholder="e.g. Tier-1 Defense Primes, Robotics Integrators..."
                                     />
                                 </div>
 
-                                {/* Readiness */}
+                                {/* Capacity Check */}
                                 <div>
-                                    <label htmlFor="readiness" className={labelClass}>
-                                        Are you prepared to handle an influx of 5–10 qualified introductions this quarter? <span className="text-gray-400">*</span>
+                                    <label className={labelClass}>
+                                        Do you have the operational bandwidth to onboard high-ticket mandates this quarter? <span className="text-gray-400">*</span>
                                     </label>
-                                    <div className="relative">
-                                        <select
-                                            required
-                                            id="readiness"
-                                            value={formData.readiness}
-                                            onChange={handleChange}
-                                            className={selectClass}
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <button
+                                            type="button"
+                                            onClick={() => setFormData(prev => ({ ...prev, readiness: 'yes' }))}
+                                            className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all text-center ${
+                                                formData.readiness === 'yes'
+                                                    ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black shadow-md'
+                                                    : 'border-gray-200 dark:border-white/10 bg-white dark:bg-[#111] text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-white/[0.08]'
+                                            }`}
                                         >
-                                            <option value="" disabled>Select</option>
-                                            <option value="yes">Yes — we have capacity and urgency</option>
-                                            <option value="no">No — not at this time</option>
-                                            <option value="discuss">I need to discuss this first</option>
-                                        </select>
-                                        <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
-                                            ▾
-                                        </span>
+                                            Yes
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => setFormData(prev => ({ ...prev, readiness: 'no' }))}
+                                            className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all text-center ${
+                                                formData.readiness === 'no'
+                                                    ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black shadow-md'
+                                                    : 'border-gray-200 dark:border-white/10 bg-white dark:bg-[#111] text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-white/[0.08]'
+                                            }`}
+                                        >
+                                            No
+                                        </button>
                                     </div>
+                                    {!formData.readiness && (
+                                        <p className="text-xs text-red-500 mt-1.5 font-medium animate-pulse">
+                                            * Please select an option to continue
+                                        </p>
+                                    )}
                                 </div>
 
                                 <div className="flex gap-3 pt-1">
@@ -321,7 +336,8 @@ export function MandateApplicationForm() {
                                     </button>
                                     <button
                                         type="submit"
-                                        className="flex-1 btn-primary h-13 text-base flex items-center justify-center gap-2 group"
+                                        disabled={!formData.readiness}
+                                        className="flex-1 btn-primary h-13 text-base flex items-center justify-center gap-2 group disabled:opacity-40"
                                     >
                                         Continue
                                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
