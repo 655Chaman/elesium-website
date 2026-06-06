@@ -27,10 +27,9 @@ export default function AgentIntro() {
             <div
                 className="max-w-7xl mx-auto px-5 md:px-12 flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 relative"
             >
-                {/* Text Content - naturally scrolling */}
                 <div className="w-full lg:w-1/2 text-center lg:text-left py-12 md:py-24 lg:py-[50vh] relative z-20">
                     <TextReveal className="lg:min-h-screen flex items-center justify-center lg:justify-start">
-                        We bypass gatekeepers to connect you directly with ready-to-move decision-makers.
+                        We don't rely on passive networks—we actively engineer your pipeline to connect you directly with ready-to-move decision-makers.
                     </TextReveal>
                 </div>
 
