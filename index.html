@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -54,13 +54,10 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Dark Mode Default -->
+  <!-- Dark Mode Locked -->
   <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
   </script>
 </head>
 

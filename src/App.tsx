@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
 import HeroSection from './components/sections/Hero'
@@ -48,7 +48,8 @@ function App() {
     
     // Scroll to top on route change
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // Reset scroll position immediately on route change
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }, [location.pathname]);
 
     return (
@@ -57,13 +58,14 @@ function App() {
             <NoiseOverlay />
             <Navbar />
 
-            <div className="flex-1">
-                <AnimatePresence mode="wait">
+            <div className="flex-1 min-h-[100vh] flex flex-col relative">
+                <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
                     <Suspense fallback={<Preloader />}>
                         <Routes location={location} key={location.pathname}>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/how-we-work" element={<HowWeWork />} />
-                            <Route path="/industries" element={<Industries />} />
+                            <Route path="/industries" element={<Navigate to="/markets" replace />} />
+                            <Route path="/markets" element={<Industries />} />
                             <Route path="/signals" element={<MarketSignals />} />
                             <Route path="/signals/:slug" element={<MarketSignals />} />
                         </Routes>

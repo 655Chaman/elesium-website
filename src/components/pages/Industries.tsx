@@ -87,7 +87,7 @@ export default function Industries() {
                         Back to Home
                     </button>
                     <span className="text-sm font-semibold tracking-wide uppercase text-gray-400 dark:text-gray-600">
-                        Industry Architecture
+                        Market Architecture
                     </span>
                 </div>
             </div>
