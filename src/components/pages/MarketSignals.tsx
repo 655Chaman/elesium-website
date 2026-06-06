@@ -51,15 +51,6 @@ export default function MarketSignals({ onBack }: MarketSignalsProps) {
                         >
                             {/* Intro Section */}
                             <div className="mb-12 md:mb-20 max-w-3xl">
-                                <div className="flex items-center gap-3 mb-6">
-                                    <span className="relative flex h-3 w-3">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-60" />
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500" />
-                                    </span>
-                                    <span className="text-[11px] font-semibold tracking-[0.08em] text-blue-500 dark:text-blue-400 uppercase">
-                                        The Authority Engine
-                                    </span>
-                                </div>
                                 <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 text-black dark:text-white leading-[1.1]">
                                     Market Signals &<br />Intelligence.
                                 </h1>
