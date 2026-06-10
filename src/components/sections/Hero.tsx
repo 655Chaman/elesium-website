@@ -24,39 +24,24 @@ export default function HeroSection() {
                     className="text-center px-5 md:px-12 py-8 md:py-0 w-full"
                     style={{ maxWidth: '960px', margin: '0 auto' }}
                 >
-                    {/* Authority Brand block with watermark and small logo */}
+                    {/* Brand block with static watermark logo */}
                     <div className="relative mb-8 flex flex-col items-center justify-center select-none">
-                        {/* Faint rotating/floating logo watermark behind text */}
+                        {/* Faint static logo watermark behind text */}
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
-                            <motion.img
+                            <img
                                 src={logo}
                                 alt=""
                                 className="w-24 h-24 md:w-32 md:h-32 object-contain opacity-[0.05] dark:opacity-[0.09] select-none pointer-events-none"
-                                animate={{
-                                    rotate: 360,
-                                    y: [0, -3, 0]
-                                }}
-                                transition={{
-                                    rotate: { duration: 40, ease: "linear", repeat: Infinity },
-                                    y: { duration: 6, ease: "easeInOut", repeat: Infinity }
-                                }}
                             />
                         </div>
 
                         {/* Brand content */}
                         <motion.div
-                            className="relative z-10 flex flex-col items-center gap-1.5"
+                            className="relative z-10 flex flex-col items-center"
                             initial={{ opacity: 0, y: -10 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            {/* Small logo icon */}
-                            <img
-                                src={logo}
-                                alt="Elesium Icon"
-                                className="h-5 w-auto object-contain select-none opacity-80 dark:opacity-95"
-                            />
-                            
                             {/* Text elesium.online */}
                             <span className="text-[11px] md:text-[12.5px] font-semibold font-heading tracking-[0.32em] uppercase text-black/90 dark:text-white/80">
                                 elesium.online
