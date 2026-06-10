@@ -41,6 +41,7 @@ type FormData = {
     name: string
     company: string
     role: string
+    usecase: string
 }
 
 // ─── Shared input style ───────────────────────────────────────────────────────
@@ -73,6 +74,7 @@ export function MandateApplicationForm() {
         name: '',
         company: '',
         role: '',
+        usecase: '',
     })
 
     const handleChange = (
@@ -429,6 +431,19 @@ export function MandateApplicationForm() {
                                         onChange={handleChange}
                                         className={inputClass}
                                         placeholder="Acme Aerospace Inc."
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="usecase" className={labelClass}>
+                                        Primary Use Case / Target Acqusition <span className="text-gray-400">*</span>
+                                    </label>
+                                    <textarea
+                                        required
+                                        id="usecase"
+                                        value={formData.usecase}
+                                        onChange={handleChange as any}
+                                        className={`${inputClass} min-h-[100px] resize-y`}
+                                        placeholder="What specific outcome are you looking to achieve?"
                                     />
                                 </div>
 

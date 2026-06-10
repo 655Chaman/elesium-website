@@ -15,84 +15,54 @@ const notion = new Client({
 const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 app.post('/api/submit', async (req, res) => {
-    const { name, email, company, usecase, website } = req.body;
+    const { name, email, company, usecase, website, role, revenue, certifications, readiness } = req.body;
 
     try {
-        if (!DATABASE_ID) {
-            throw new Error('Database ID is not defined in .env');
+        console.log(`[SUBMIT] Attempting to route lead to CRM: ${email}`);
+        
+        // 1. Try forwarding to the new CRM Automation Pipeline (Port 3002)
+        try {
+            const crmResponse = await fetch('http://localhost:3002/api/website-leads/intake', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(req.body)
+            });
+            
+            if (crmResponse.ok) {
+                const crmData = await crmResponse.json();
+                console.log('[SUBMIT] Successfully routed to CRM pipeline.');
+                return res.json({ success: true, message: 'Application received', id: crmData.id });
+            }
+            console.warn('[SUBMIT] CRM responded with non-ok status, falling back to Notion.');
+        } catch (crmError) {
+            console.warn('[SUBMIT] CRM unreachable, falling back to Notion.', crmError.message);
         }
 
-        // --- Create Notion Page ---
-        // Note: Using 'select' instead of 'status' as a more compatible default.
-        // Also fixed typo 'CHEKC 1' to 'Pending' or a more standard status name.
+        // 2. Fallback: Save directly to Notion if CRM is down
+        if (!DATABASE_ID) throw new Error('Database ID is not defined in .env');
+
         const response = await notion.pages.create({
             parent: { database_id: DATABASE_ID },
             properties: {
-                Name: {
-                    title: [
-                        {
-                            text: {
-                                content: name || 'Anonymous',
-                            },
-                        },
-                    ],
-                },
-                Email: {
-                    email: email,
-                },
-                Status: {
-                    select: {
-                        name: 'Pending', // More robust status name
-                    },
-                },
+                Name: { title: [{ text: { content: name || 'Anonymous' } }] },
+                Email: { email: email },
+                Status: { select: { name: 'Pending' } },
             },
             children: [
-                {
-                    object: 'block',
-                    type: 'heading_3',
-                    heading_3: {
-                        rich_text: [{ text: { content: 'Lead Details' } }],
-                    },
-                },
-                {
-                    object: 'block',
-                    type: 'paragraph',
-                    paragraph: {
-                        rich_text: [
-                            { text: { content: 'Company: ' }, annotations: { bold: true } },
-                            { text: { content: company || 'N/A' } },
-                        ],
-                    },
-                },
-                {
-                    object: 'block',
-                    type: 'paragraph',
-                    paragraph: {
-                        rich_text: [
-                            { text: { content: 'Website: ' }, annotations: { bold: true } },
-                            { text: { content: website || 'N/A' } },
-                        ],
-                    },
-                },
-                {
-                    object: 'block',
-                    type: 'paragraph',
-                    paragraph: {
-                        rich_text: [
-                            { text: { content: 'Use Case: ' }, annotations: { bold: true } },
-                            { text: { content: usecase || 'N/A' } },
-                        ],
-                    },
-                },
+                { object: 'block', type: 'heading_3', heading_3: { rich_text: [{ text: { content: 'Lead Details' } }] } },
+                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Company: ' }, annotations: { bold: true } }, { text: { content: company || 'N/A' } }] } },
+                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Website: ' }, annotations: { bold: true } }, { text: { content: website || 'N/A' } }] } },
+                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Role: ' }, annotations: { bold: true } }, { text: { content: role || 'N/A' } }] } },
+                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Use Case: ' }, annotations: { bold: true } }, { text: { content: usecase || 'N/A' } }] } },
             ],
         });
 
-        console.log('Success! Entry added.');
+        console.log('[SUBMIT] Fallback: Entry added to Notion.');
 
-        // --- Trigger Drip Sequence (Using native fetch to avoid dependency issues) ---
+        // Trigger basic fallback drip sequence
         await triggerDripSequence(email, name);
 
-        res.json({ success: true, message: 'Application received', id: response.id });
+        res.json({ success: true, message: 'Application received via fallback', id: response.id });
     } catch (error) {
         console.error('Error processing submission:', error.message);
         res.status(500).json({ error: error.message });
@@ -100,8 +70,7 @@ app.post('/api/submit', async (req, res) => {
 });
 
 /**
- * Sends a welcome email using the Resend API directly via fetch.
- * This removes the dependency on the 'resend' npm package.
+ * Fallback Email Drip (only used if CRM is down)
  */
 async function triggerDripSequence(email, name) {
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
@@ -111,17 +80,12 @@ async function triggerDripSequence(email, name) {
         return;
     }
 
-    console.log(`[DRIP-SEQUENCE] Initiating for: ${email}`);
-
     try {
         const response = await fetch('https://api.resend.com/emails', {
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${RESEND_API_KEY}`,
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                from: 'Elesium <onboarding@resend.dev>',
+                from: 'Elesium <hello@elesium.online>',
                 to: [email],
                 subject: 'Welcome to Elesium - You are on the list',
                 html: `
@@ -137,14 +101,8 @@ async function triggerDripSequence(email, name) {
                 `,
             }),
         });
-
         const data = await response.json();
-
-        if (!response.ok) {
-            console.error('[DRIP-SEQUENCE] API Error:', data);
-        } else {
-            console.log(`[DRIP-SEQUENCE] Email sent successfully. ID: ${data.id}`);
-        }
+        if (response.ok) console.log(`[DRIP-SEQUENCE] Fallback email sent. ID: ${data.id}`);
     } catch (err) {
         console.error('[DRIP-SEQUENCE] Unexpected network error:', err.message);
     }
