@@ -32,7 +32,7 @@ export default function HeroSection() {
                                 src={logo}
                                 alt=""
                                 className="w-24 h-24 md:w-32 md:h-32 object-contain opacity-[0.05] dark:opacity-[0.09] select-none pointer-events-none"
-                                style={{ transform: 'translateX(13px)' }}
+                                style={{ transform: 'translateX(17px)' }}
                             />
                         </div>
 
