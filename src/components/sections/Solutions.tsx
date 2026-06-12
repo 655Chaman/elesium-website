@@ -57,7 +57,7 @@ export default function Solutions() {
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
-                                        <MandateApplicationForm />
+                                        <MandateApplicationForm source="Tier 1 - Growth-Stage" />
                                     </ExpandableScreenContent>
                                 </ExpandableScreen>
                             </div>
@@ -94,7 +94,7 @@ export default function Solutions() {
                                         </button>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
-                                        <MandateApplicationForm />
+                                        <MandateApplicationForm source="Tier 2 - Enterprise & OEMs" />
                                     </ExpandableScreenContent>
                                 </ExpandableScreen>
                             </div>

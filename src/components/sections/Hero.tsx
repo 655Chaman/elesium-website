@@ -85,7 +85,7 @@ export default function HeroSection() {
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>
-                                <MandateApplicationForm />
+                                <MandateApplicationForm source="Hero CTA" />
                             </ExpandableScreenContent>
                         </ExpandableScreen>
                     </motion.div>

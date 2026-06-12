@@ -78,7 +78,7 @@ export default function Navbar() {
                                 </InteractiveHoverButton>
                             </ExpandableScreenTrigger>
                             <ExpandableScreenContent>
-                                <MandateApplicationForm />
+                                <MandateApplicationForm source="Navbar CTA" />
                             </ExpandableScreenContent>
                         </ExpandableScreen>
                     </div>
@@ -143,7 +143,7 @@ export default function Navbar() {
                                         </InteractiveHoverButton>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
-                                        <MandateApplicationForm />
+                                        <MandateApplicationForm source="Navbar CTA (Mobile)" />
                                     </ExpandableScreenContent>
                                 </ExpandableScreen>
                             </div>

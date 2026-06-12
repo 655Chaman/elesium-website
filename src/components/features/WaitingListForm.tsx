@@ -42,6 +42,7 @@ type FormData = {
     company: string
     role: string
     usecase: string
+    leadSource: string
 }
 
 // ─── Shared input style ───────────────────────────────────────────────────────
@@ -56,11 +57,15 @@ const labelClass = 'block text-sm font-medium text-gray-600 dark:text-gray-400 m
 
 // ─── Main export (legacy name kept so existing imports don't break) ────────────
 
-export function WaitingListForm() {
-    return <MandateApplicationForm />
+interface MandateApplicationFormProps {
+    source?: string
 }
 
-export function MandateApplicationForm() {
+export function WaitingListForm(props: MandateApplicationFormProps) {
+    return <MandateApplicationForm {...props} />
+}
+
+export function MandateApplicationForm({ source = 'mandate-application' }: MandateApplicationFormProps) {
     const [step, setStep] = useState(1)
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
@@ -75,6 +80,7 @@ export function MandateApplicationForm() {
         company: '',
         role: '',
         usecase: '',
+        leadSource: source,
     })
 
     const handleChange = (
