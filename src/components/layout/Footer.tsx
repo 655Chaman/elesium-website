@@ -5,24 +5,13 @@ export default function DownloadFooter() {
     const location = useLocation();
 
     const handleNavigation = (name: string, id: string) => {
-        if (name === 'Case Studies') {
-            if (location.pathname !== '/') {
-                navigate('/');
-                setTimeout(() => {
-                    const section = document.getElementById(id);
-                    if (section) section.scrollIntoView({ behavior: 'smooth' });
-                }, 500);
-            } else {
-                const section = document.getElementById(id);
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+        // no-op if no longer needed, keeping for structure
     };
 
     const footerSections = [
         { name: 'How We Work', path: '/how-we-work' },
         { name: 'Markets', path: '/markets' },
-        { name: 'Case Studies', id: 'case-studies' },
+        { name: 'AI Automation', path: '/ai-automation' },
         { name: 'Market Signals', path: '/signals' },
     ];
 

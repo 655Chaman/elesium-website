@@ -12,8 +12,8 @@ import Preloader from './components/ui/Preloader'
 
 // Lazy load heavy below-the-fold components and secondary pages
 const FeatureExplorer = lazy(() => import('./components/sections/FeatureExplorer'))
-const CaseStudies = lazy(() => import('./components/sections/CaseStudies'))
 const Solutions = lazy(() => import('./components/sections/Solutions'))
+const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
 const HowWeWork = lazy(() => import('./components/pages/HowWeWork'))
 const Industries = lazy(() => import('./components/pages/Industries'))
 const MarketSignals = lazy(() => import('./components/pages/MarketSignals'))
@@ -35,7 +35,6 @@ function HomePage() {
             {/* Lazy Loaded Sections */}
             <FeatureExplorer />
             <Solutions />
-            <CaseStudies />
         </motion.div>
     )
 }
@@ -68,6 +67,7 @@ function App() {
                             <Route path="/markets" element={<Industries />} />
                             <Route path="/signals" element={<MarketSignals />} />
                             <Route path="/signals/:slug" element={<MarketSignals />} />
+                            <Route path="/ai-automation" element={<AIAutomation />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

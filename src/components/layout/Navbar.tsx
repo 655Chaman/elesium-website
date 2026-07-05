@@ -12,21 +12,7 @@ export default function Navbar() {
     const navigate = useNavigate()
     const location = useLocation()
 
-    const scrollToCaseStudies = () => {
-        if (location.pathname !== '/') {
-            navigate('/')
-            setTimeout(() => {
-                const section = document.getElementById('case-studies');
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }, 500);
-        } else {
-            const section = document.getElementById('case-studies');
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-        setIsMobileMenuOpen(false)
-    }
+
 
     return (
         <>
@@ -59,12 +45,12 @@ export default function Navbar() {
                         >
                             Markets
                         </Link>
-                        <button
-                            onClick={scrollToCaseStudies}
+                        <Link
+                            to="/ai-automation"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
-                            Case Studies
-                        </button>
+                            AI Automation
+                        </Link>
                         <Link
                             to="/signals"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
@@ -125,12 +111,13 @@ export default function Navbar() {
                             >
                                 Markets
                             </Link>
-                            <button
-                                onClick={scrollToCaseStudies}
+                            <Link
+                                to="/ai-automation"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
-                                Case Studies
-                            </button>
+                                AI Automation
+                            </Link>
                             <Link
                                 to="/signals"
                                 onClick={() => setIsMobileMenuOpen(false)}

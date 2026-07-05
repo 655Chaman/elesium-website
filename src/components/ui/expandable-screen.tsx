@@ -9,6 +9,7 @@ import React, {
     useId,
     useState,
 } from "react"
+import { createPortal } from "react-dom"
 import { cn } from "../../lib/utils"
 
 interface ExpandableScreenContextType {
@@ -155,14 +156,19 @@ export function ExpandableScreenContent({
 }: ExpandableScreenContentProps) {
     const { isExpanded, collapse, layoutId, animationDuration } =
         useExpandableScreen()
+        
+    const [mounted, setMounted] = useState(false)
+    useEffect(() => setMounted(true), [])
 
-    return (
+    if (!mounted) return null
+
+    return createPortal(
         <AnimatePresence>
             {isExpanded && (
                 <motion.div
                     layoutId={layoutId}
                     className={cn(
-                        "fixed inset-0 z-50 flex h-screen w-screen flex-col overflow-hidden bg-white shadow-2xl dark:bg-black",
+                        "fixed inset-0 z-[100] flex h-screen w-screen flex-col overflow-hidden bg-white shadow-2xl dark:bg-black",
                         className
                     )}
                     initial={{ opacity: 0 }}
@@ -181,7 +187,7 @@ export function ExpandableScreenContent({
                                 collapse()
                             }}
                             className={cn(
-                                "absolute right-4 top-4 z-50 rounded-full bg-black/5 p-2 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20",
+                                "absolute right-4 top-4 z-[101] rounded-full bg-black/5 p-2 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20",
                                 closeButtonClassName
                             )}
                             aria-label="Close"
@@ -194,7 +200,8 @@ export function ExpandableScreenContent({
                     </div>
                 </motion.div>
             )}
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     )
 }
 
