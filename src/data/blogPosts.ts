@@ -30,7 +30,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
     {
         id: 19,
-        slug: 'b2b-pipeline-automation-software-and-executive-sales-in-ii',
+        slug: 'b2b-pipeline-automation-software-and-executive-sales-in-ii-19',
         category: 'Market Intelligence',
         title: '**B2B Pipeline Automation Software** and **Executive Sales Introductions**: A New Approach to Enterprise Dealflow',
         date: 'July 05, 2026',
@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
             { q: 'How can an OEM supplier marketplace benefit my procurement process?', a: 'An OEM supplier marketplace provides a platform to connect with verified suppliers, reducing the risk of working with unqualified vendors. This also enables procurement executives to efficiently compare prices and services. Elesium\'s verified buyer matching ensures that suppliers are matched with genuine buyers.' },
             { q: 'What are account based marketing tools and how do they support executive sales introductions?', a: 'Account based marketing tools allow manufacturers to target specific accounts and tailor their marketing efforts to those accounts\' needs. This approach supports executive sales introductions by providing a personalized and relevant pitch, increasing the chances of a successful introduction. Elesium\'s model integrates with these tools to facilitate growth stage manufacturer leads.' }
         ],
-        internalLinks: ['b2b-pipeline-automation-software-and-executive-sales-in-ii'],
+        internalLinks: ['b2b-pipeline-automation-software-and-executive-sales-in-ii-19'],
         jsonLdSchema: `[
     {
         "@context": "https://schema.org",
