@@ -21,5 +21,16 @@ export const resourcesData: ResourceItem[] = [
     readTime: '5 min read',
     googleDriveLink: 'https://drive.google.com/file/d/your-google-drive-id/view?usp=sharing', // Update this link when you upload your files
     markdownFile: '/resources/sample-resource.md',
+  },
+  {
+    id: '2',
+    title: 'Multi-Channel Inbound Tracker',
+    slug: 'multi-channel-inbound-tracker',
+    description: 'The ultimate pipeline management dashboard to bring absolute clarity to your lead flow across all social platforms.',
+    category: 'Operations',
+    date: 'July 2026',
+    readTime: '6 min read',
+    googleDriveLink: 'https://docs.google.com/spreadsheets/d/1-aLyIWilXpnhshXDA2krm98a0uSCdSt_jaC0xx3unDA/edit?usp=sharing',
+    markdownFile: '/resources/multi-channel-tracker.md',
   }
 ];
