@@ -33,7 +33,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install openai pytrends google-genai
+          pip install openai pytrends google-genai python-dotenv
 
       - name: Configure Git identity
         run: |
