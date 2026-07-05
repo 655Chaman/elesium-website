@@ -64,6 +64,9 @@ app.post('/api/submit', async (req, res) => {
                 await doc.loadInfo();
                 const sheet = doc.sheetsByIndex[0]; // Assumes first tab
 
+                // The headers in the user's template are on Row 8
+                await sheet.loadHeaderRow(8);
+
                 await sheet.addRow({
                     'Timestamp': new Date().toISOString(),
                     'Name': name || '',
