@@ -1,0 +1,79 @@
+name: Daily SEO Block Generation
+
+on:
+  schedule:
+    # Runs at 12:00 UTC (8:00 AM EST) every day
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Python dependencies
+        run: |
+          pip install openai pytrends google-genai
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Install NPM dependencies
+        run: npm ci
+
+      - name: Run Keyword Researcher
+        run: python3 seo-automation/keyword_researcher.py
+
+      - name: Run SEO Block Generator
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          AI_PROVIDER: 'nvidia'
+        run: |
+          python3 seo-automation/seo_block_generator.py --no-push
+
+      - name: Commit and Push SEO Changes
+        run: |
+          git add -A
+          git commit -m "Auto-generate daily SEO blocks: $(date '+%Y-%m-%d')" || exit 0
+          git push origin main
+
+      - name: Build Site (SSG)
+        run: npm run build
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: generate-and-deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
