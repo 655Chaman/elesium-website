@@ -1,39 +1,47 @@
 {
-  "total_words": 310,
-  "keywords_found": 5,
-  "keywords_missing": 5,
+  "total_words": 379,
+  "keywords_found": 7,
+  "keywords_missing": 3,
   "found": [
     {
-      "keyword": "enterprise sales automation",
-      "count": 5,
-      "density_pct": 4.84
+      "keyword": "B2B revenue acceleration",
+      "count": 3,
+      "density_pct": 2.37
     },
     {
-      "keyword": "AI powered lead qualification",
-      "count": 5,
-      "density_pct": 6.45
+      "keyword": "sales pipeline automation",
+      "count": 2,
+      "density_pct": 1.58
     },
     {
-      "keyword": "predictive B2B analytics platform",
+      "keyword": "executive sales introductions",
+      "count": 3,
+      "density_pct": 2.37
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 2,
+      "density_pct": 1.58
+    },
+    {
+      "keyword": "manufacturing automation buyers",
       "count": 1,
-      "density_pct": 1.29
+      "density_pct": 0.79
     },
     {
-      "keyword": "manufacturing buyer network",
-      "count": 2,
-      "density_pct": 1.94
+      "keyword": "signal-driven outbound marketing",
+      "count": 1,
+      "density_pct": 0.79
     },
     {
-      "keyword": "intent data sales platform",
-      "count": 2,
-      "density_pct": 2.58
+      "keyword": "B2B lead generation platform",
+      "count": 1,
+      "density_pct": 1.06
     }
   ],
   "missing": [
-    "B2B buyer matching platform",
-    "signal driven outbound marketing",
-    "high ticket B2B partnerships",
-    "enterprise dealflow management",
-    "revenue operations 2025"
+    "high ticket B2B deals",
+    "enterprise sales strategy 2025",
+    "account based marketing tools"
   ]
 }

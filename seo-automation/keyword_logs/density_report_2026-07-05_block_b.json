@@ -1,30 +1,51 @@
 {
-  "total_words": 367,
-  "keywords_found": 4,
-  "keywords_missing": 1,
+  "total_words": 356,
+  "keywords_found": 8,
+  "keywords_missing": 2,
   "found": [
     {
-      "keyword": "B2B pipeline automation software",
+      "keyword": "supply chain partner matching",
       "count": 3,
-      "density_pct": 3.27
+      "density_pct": 3.37
     },
     {
-      "keyword": "OEM supplier marketplace",
+      "keyword": "revenue operations software",
       "count": 1,
-      "density_pct": 0.82
+      "density_pct": 0.84
     },
     {
-      "keyword": "executive sales introductions",
-      "count": 3,
-      "density_pct": 2.45
-    },
-    {
-      "keyword": "account based marketing tools",
+      "keyword": "OEM supplier network",
       "count": 1,
-      "density_pct": 1.09
+      "density_pct": 0.84
+    },
+    {
+      "keyword": "AI sales intelligence",
+      "count": 2,
+      "density_pct": 1.69
+    },
+    {
+      "keyword": "B2B partnership platform",
+      "count": 2,
+      "density_pct": 1.69
+    },
+    {
+      "keyword": "B2B buyer intent platform",
+      "count": 1,
+      "density_pct": 1.12
+    },
+    {
+      "keyword": "predictive B2B analytics",
+      "count": 1,
+      "density_pct": 0.84
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "count": 1,
+      "density_pct": 0.84
     }
   ],
   "missing": [
-    "growth stage manufacturer leads"
+    "weather forecast weekend",
+    "football match today"
   ]
 }
