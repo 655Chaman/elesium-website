@@ -1,13 +1,11 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, FileText, ChevronRight, Download } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { FileText, ChevronRight, Download } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { resourcesData } from '../../data/resourcesData'
 
 export default function Resources() {
-    const navigate = useNavigate();
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
