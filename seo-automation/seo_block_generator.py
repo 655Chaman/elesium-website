@@ -232,20 +232,22 @@ Return ONLY the markdown. Start with the HTML meta comment. Nothing else.
 def call_ai_model(prompt: str) -> str:
     """Call the configured AI API (NVIDIA or Gemini) and return generated content."""
     if getattr(config, "AI_PROVIDER", "gemini") == "nvidia":
-        return _call_nvidia(prompt)
+        try:
+            return _call_nvidia(prompt)
+        except Exception as e:
+            log(f"NVIDIA API failed ({type(e).__name__}: {str(e)}). Falling back to Gemini...", "WARN")
+            return _call_gemini(prompt)
     else:
         return _call_gemini(prompt)
 
 def _call_nvidia(prompt: str) -> str:
     if not getattr(config, "NVIDIA_API_KEY", ""):
-        log("NVIDIA_API_KEY not set in .env file.", "ERROR")
-        sys.exit(1)
+        raise ValueError("NVIDIA_API_KEY not set in .env file.")
 
     try:
         from openai import OpenAI
     except ImportError:
-        log("openai package not installed. Run: pip install openai", "ERROR")
-        sys.exit(1)
+        raise ImportError("openai package not installed. Run: pip install openai")
 
     log(f"Calling NVIDIA NIM ({config.NVIDIA_MODEL}) for content generation...")
     
@@ -265,8 +267,7 @@ def _call_nvidia(prompt: str) -> str:
     content = completion.choices[0].message.content.strip()
     
     if not content:
-        log("NVIDIA returned empty content.", "ERROR")
-        sys.exit(1)
+        raise ValueError("NVIDIA returned empty content.")
 
     log(f"Content generated: {len(content.split())} words.")
     return content
