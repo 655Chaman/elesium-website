@@ -1,47 +1,39 @@
 {
-  "total_words": 379,
-  "keywords_found": 7,
-  "keywords_missing": 3,
+  "total_words": 409,
+  "keywords_found": 5,
+  "keywords_missing": 5,
   "found": [
     {
       "keyword": "B2B revenue acceleration",
-      "count": 3,
-      "density_pct": 2.37
+      "count": 4,
+      "density_pct": 2.93
     },
     {
       "keyword": "sales pipeline automation",
-      "count": 2,
-      "density_pct": 1.58
+      "count": 1,
+      "density_pct": 0.73
     },
     {
       "keyword": "executive sales introductions",
-      "count": 3,
-      "density_pct": 2.37
+      "count": 1,
+      "density_pct": 0.73
     },
     {
       "keyword": "industrial B2B marketplace",
-      "count": 2,
-      "density_pct": 1.58
+      "count": 1,
+      "density_pct": 0.73
     },
     {
       "keyword": "manufacturing automation buyers",
       "count": 1,
-      "density_pct": 0.79
-    },
-    {
-      "keyword": "signal-driven outbound marketing",
-      "count": 1,
-      "density_pct": 0.79
-    },
-    {
-      "keyword": "B2B lead generation platform",
-      "count": 1,
-      "density_pct": 1.06
+      "density_pct": 0.73
     }
   ],
   "missing": [
     "high ticket B2B deals",
     "enterprise sales strategy 2025",
-    "account based marketing tools"
+    "account based marketing tools",
+    "signal-driven outbound marketing",
+    "B2B lead generation platform"
   ]
 }
