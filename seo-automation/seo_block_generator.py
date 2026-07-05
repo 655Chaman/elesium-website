@@ -689,9 +689,10 @@ def build_ts_entry(
     excerpt = re.sub(r'\*\*(.+?)\*\*', r'\1', paragraphs[0])[:220] if paragraphs else ""
 
     # Generate slug
-    slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:60]
+    slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:55]
     if block_id == 2:
-        slug = slug[:55] + "-ii"
+        slug = slug[:50] + "-ii"
+    slug = f"{slug}-{next_id}"
 
     # Date format
     try:
@@ -896,18 +897,20 @@ def run(
             for kw_item in density["found"][:5]:
                 log(f"    ✓ '{kw_item['keyword']}' — {kw_item['count']}× ({kw_item['density_pct']}%)")
 
-        # ── Pillar 2: Build JSON-LD schema ──
+        # ── Build JSON-LD schema & TS entry ──
+        next_id = get_next_blog_id(config.BLOGPOSTS_TS_PATH)
         meta_match = re.search(r'<!--\s*META:\s*(.*?)\s*-->', content)
         meta_desc_for_schema = meta_match.group(1) if meta_match else ""
         title_match_s = re.search(r'^##\s+(.+)$', content, re.MULTILINE)
         title_for_schema = title_match_s.group(1) if title_match_s else f"B2B Market Intelligence — {today}"
-        slug_for_schema = re.sub(r'[^a-z0-9]+', '-', title_for_schema.lower()).strip('-')[:60]
+        
+        slug_for_schema = re.sub(r'[^a-z0-9]+', '-', title_for_schema.lower()).strip('-')[:55]
         if block_id == 2:
-            slug_for_schema = slug_for_schema[:55] + "-ii"
+            slug_for_schema = slug_for_schema[:50] + "-ii"
+        slug_for_schema = f"{slug_for_schema}-{next_id}"
+        
         json_ld = build_json_ld_schema(title_for_schema, meta_desc_for_schema, slug_for_schema, today, faq_items, block_kws)
 
-        # ── Build and inject TS entry ──
-        next_id = get_next_blog_id(config.BLOGPOSTS_TS_PATH)
         related_slugs = [r["slug"] for r in related] if related else []
 
         ts_entry, injected_slug = build_ts_entry(
