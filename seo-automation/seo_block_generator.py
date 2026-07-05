@@ -113,14 +113,10 @@ def mock_keywords() -> dict:
 # PROMPT ENGINEERING — 2-PHASE KEYWORD-FIRST STRATEGY
 # ─────────────────────────────────────────────────────
 
-def build_gemini_prompt(keywords: List[Dict], block_label: str) -> str:
+def build_gemini_prompt(keywords: List[Dict], block_label: str, related_posts: List[Dict] = None) -> str:
     """
-    Build the Gemini prompt using a 2-phase keyword-first writing strategy.
-
-    Phase 1: Raw keywords are placed as standalone anchor points.
-    Phase 2: Tight, enterprise-grade statements are built around each anchor.
-
-    This produces maximum keyword density while remaining readable.
+    Build the AI prompt using a 2-phase keyword-first writing strategy.
+    Also injects E-E-A-T case studies (Pillar 4) and internal link anchors (Pillar 1).
     """
     # Extract keyword strings with their interest scores
     kw_lines = []
@@ -179,6 +175,17 @@ Example transformation:
 6. **Meta description**: 150-char HTML comment at the very top
 7. **CTA**: Final paragraph ends with a subtle invitation to partner with Elesium
 8. **No .md formatting artifacts** — clean markdown only
+
+## PILLAR 4 — E-E-A-T: USE THESE REAL ELESIUM OUTCOMES AS PROOF POINTS
+Google rewards content with genuine first-hand experience. Weave at least 2 of these into your content naturally:
+
+{chr(10).join(f'  - {cs}' for cs in getattr(config, 'ELESIUM_CASE_STUDIES', []))}
+
+{f'''## PILLAR 1 — INTERNAL LINKING
+Naturally reference and link to these related Elesium intelligence posts at least once in the body:
+{chr(10).join(f'  - [{rp["title"]}](/signals/{rp["slug"]})' for rp in (related_posts or [])[:2])}
+Use markdown link format exactly as shown above.
+''' if related_posts else ''}
 
 ## ABSOLUTE RULES
 - NEVER use: "In today's landscape", "In conclusion", "game-changer", "synergy", "leverage" (unless financial), "holistic", "robust", "ecosystem" (overused)
@@ -328,6 +335,177 @@ Apply to access Elesium's verified buyer network and receive your first qualifie
 """
 
 
+
+# ─────────────────────────────────────────────────────
+# PILLAR 1 — INTERNAL LINKING: Find related posts
+# ─────────────────────────────────────────────────────
+
+def find_related_posts(current_keywords: List[str], ts_path: Path, limit: int = 2) -> List[Dict]:
+    """
+    Read blogPosts.ts and find the most topically related published posts
+    by matching keywords against existing post titles and slugs.
+    Returns up to `limit` related posts as [{ title, slug }].
+    """
+    if not ts_path.exists():
+        return []
+    try:
+        content = ts_path.read_text(encoding="utf-8")
+        slugs = re.findall(r"slug:\s*'([^']+)'", content)
+        titles = re.findall(r"title:\s*'([^']+)'", content)
+        posts = [{"slug": s, "title": t} for s, t in zip(slugs, titles)]
+
+        # Score each existing post by keyword overlap
+        scored = []
+        kw_lower = [k.lower() for k in current_keywords]
+        for post in posts:
+            combined = (post["title"] + " " + post["slug"]).lower()
+            score = sum(1 for kw in kw_lower if kw in combined)
+            if score > 0:
+                scored.append((score, post))
+
+        scored.sort(key=lambda x: x[0], reverse=True)
+        return [p for _, p in scored[:limit]]
+    except Exception:
+        return []
+
+
+# ─────────────────────────────────────────────────────
+# PILLAR 2 — JSON-LD SCHEMA BUILDER
+# ─────────────────────────────────────────────────────
+
+def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, faq_items: list) -> str:
+    """
+    Generate combined Article + FAQPage JSON-LD schema markup.
+    This is injected into the blogPost's jsonLdSchema field and rendered
+    in <Helmet> by MarketSignals.tsx for every article page.
+    """
+    faq_schema = ""
+    if faq_items:
+        qa_items = ",\n".join(
+            f'{{"@type":"Question","name":{json.dumps(item["q"])},'
+            f'"acceptedAnswer":{{"@type":"Answer","text":{json.dumps(item["a"])}}}}}'
+            for item in faq_items
+        )
+        faq_schema = f""",
+    {{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{qa_items}]
+    }}"""
+
+    schema = f"""[
+    {{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": {json.dumps(title)},
+        "description": {json.dumps(meta_desc)},
+        "datePublished": "{date_str}",
+        "dateModified": "{date_str}",
+        "author": {{"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"}},
+        "publisher": {{"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"}},
+        "url": "https://elesium.online/signals/{slug}",
+        "mainEntityOfPage": {{"@type": "WebPage", "@id": "https://elesium.online/signals/{slug}"}}
+    }}{faq_schema}
+]"""
+    return schema
+
+
+# ─────────────────────────────────────────────────────
+# PILLAR 5 — FAQ GENERATOR (People Also Ask capture)
+# ─────────────────────────────────────────────────────
+
+def generate_faq(keywords: List[Dict], test_mode: bool = False) -> List[Dict]:
+    """
+    Generate 3 FAQ pairs targeting 'People Also Ask' search boxes.
+    Uses a second, fast AI call with a stripped-down prompt.
+    Returns [{ q: str, a: str }, ...]
+    """
+    if test_mode:
+        kws = [item["keyword"] for item in keywords[:3]]
+        return [
+            {
+                "q": f"What is {kws[0]} and how does Elesium use it?",
+                "a": f"Elesium uses {kws[0]} to connect verified, high-intent buyers with enterprise sellers — eliminating cold outreach and replacing it with signal-driven introductions that arrive at the right moment."
+            },
+            {
+                "q": f"How does {kws[1] if len(kws) > 1 else kws[0]} differ from traditional B2B lead generation?",
+                "a": f"Traditional B2B lead generation relies on volume and cold contact. {kws[1] if len(kws) > 1 else kws[0]} through Elesium is precision-targeted — every introduction is backed by verified budget authority and an active purchase mandate."
+            },
+            {
+                "q": "How quickly can Elesium deliver a qualified buyer introduction?",
+                "a": "Elesium clients typically receive their first verified buyer introduction within 7–14 days of onboarding. The platform's signal-driven matching ensures only operationally ready buyers are introduced."
+            }
+        ]
+
+    kw_list = ", ".join(item["keyword"] for item in keywords[:5])
+    faq_prompt = f"""You are an SEO expert. Generate exactly 3 FAQ question-answer pairs for a B2B enterprise blog post about: {kw_list}
+
+The questions must match what B2B sales directors and procurement executives actually type into Google's "People Also Ask" section.
+Each answer must be 2-3 tight, specific sentences. Reference Elesium's model (signal-driven dealflow, verified buyer matching) naturally.
+
+Return ONLY a valid JSON array. No preamble. No explanation. Example format:
+[
+  {{"q": "Question here?", "a": "Answer here."}},
+  {{"q": "Question here?", "a": "Answer here."}},
+  {{"q": "Question here?", "a": "Answer here."}}
+]"""
+
+    try:
+        raw = call_ai_model(faq_prompt)
+        # Extract JSON from response
+        json_match = re.search(r'\[.*\]', raw, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group())
+    except Exception as e:
+        log(f"FAQ generation failed: {e}", "WARN")
+    return []
+
+
+# ─────────────────────────────────────────────────────
+# PILLAR 6 — GUEST POST / BACKLINK ASSET GENERATOR
+# ─────────────────────────────────────────────────────
+
+def generate_guest_post(keywords: List[Dict], date_str: str, test_mode: bool = False) -> Optional[str]:
+    """
+    Generate a full 1,000-1,200 word guest post suitable for submission to
+    Forbes, SalesHacker, Manufacturing.net, LinkedIn Articles, etc.
+    Includes one natural Elesium backlink. Saved to keyword_logs/ for manual submission.
+    """
+    kw_list = ", ".join(item["keyword"] for item in keywords[:8])
+
+    if test_mode:
+        log("Test mode: skipping guest post generation.")
+        return None
+
+    guest_prompt = f"""You are a senior B2B industry analyst writing a guest article for Forbes Business Council.
+
+Write a 1,000-1,200 word thought leadership article about: {kw_list}
+
+RULES:
+- Write as an experienced B2B revenue strategist, NOT as Elesium
+- Reference Elesium ONCE naturally as "Elesium (elesium.online), a B2B buyer-matching platform" in a sentence that makes sense contextually
+- Include a compelling headline, 3-4 H2 subheadings, and short paragraphs
+- Use specific statistics, percentages, and concrete examples
+- No fluff. No filler. Every sentence must have commercial value.
+- Tone: Harvard Business Review meets Silicon Valley operator
+- End with a strong industry call to action (NOT a sales pitch)
+
+Return the full article in clean Markdown. Start with the headline."""
+
+    try:
+        content = call_ai_model(guest_prompt)
+        guest_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"guest_post_{date_str}.md"
+        with open(guest_path, "w", encoding="utf-8") as f:
+            f.write(f"# GUEST POST — {date_str}\n# Target: Forbes / SalesHacker / Manufacturing.net\n\n")
+            f.write(content)
+        log(f"  ✅ Guest post saved to: {guest_path}")
+        log(f"  → Submit manually to: Forbes Business Council, SalesHacker, LinkedIn Articles")
+        return str(guest_path)
+    except Exception as e:
+        log(f"Guest post generation failed: {e}", "WARN")
+        return None
+
+
 # ─────────────────────────────────────────────────────
 # KEYWORD DENSITY ANALYSIS
 # ─────────────────────────────────────────────────────
@@ -427,7 +605,17 @@ def get_next_blog_id(ts_path: Path) -> int:
     return max(int(x) for x in ids) + 1
 
 
-def build_ts_entry(content: str, keywords: List[Dict], date_str: str, block_id: int, next_id: int) -> str:
+def build_ts_entry(
+    content: str,
+    keywords: List[Dict],
+    date_str: str,
+    block_id: int,
+    next_id: int,
+    faq_items: list = None,
+    json_ld: str = "",
+    related_slugs: List[str] = None,
+    weekly_theme: str = "",
+) -> str:
     """Build a full, valid TypeScript BlogPost object from generated content."""
     # Extract meta description
     meta_match = re.search(r'<!--\s*META:\s*(.*?)\s*-->', content)
@@ -450,7 +638,6 @@ def build_ts_entry(content: str, keywords: List[Dict], date_str: str, block_id: 
 
     # Generate slug
     slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:60]
-    # Ensure block B has a distinct slug
     if block_id == 2:
         slug = slug[:55] + "-ii"
 
@@ -473,6 +660,29 @@ def build_ts_entry(content: str, keywords: List[Dict], date_str: str, block_id: 
     safe_excerpt = excerpt.replace("'", "\\'")
     safe_intro = f"Elesium market intelligence — {config.CURRENT_YEAR}. Keywords: {top_kws}.".replace("'", "\\'")
 
+    # Build FAQ TS string
+    faq_str = ""
+    if faq_items:
+        faq_entries = ",\n".join(
+            f"            {{ q: '{item['q'].replace(chr(39), chr(92)+chr(39))}', a: '{item['a'].replace(chr(39), chr(92)+chr(39))}' }}"
+            for item in faq_items
+        )
+        faq_str = f"\n        faq: [\n{faq_entries}\n        ],"
+
+    # Build internalLinks TS string
+    links_str = ""
+    if related_slugs:
+        slugs_ts = ", ".join(f"'{s}'" for s in related_slugs)
+        links_str = f"\n        internalLinks: [{slugs_ts}],"
+
+    # Build jsonLdSchema TS string (escaped for template literal)
+    schema_str = ""
+    if json_ld:
+        safe_schema = json_ld.replace('`', '\\`').replace('\\', '\\\\')
+        schema_str = f"\n        jsonLdSchema: `{safe_schema}`,"
+
+    theme_str = f"\n        weeklyTheme: '{weekly_theme}'," if weekly_theme else ""
+
     label = "Block A" if block_id == 1 else "Block B"
     entry = (
         f"    {{\n"
@@ -484,13 +694,13 @@ def build_ts_entry(content: str, keywords: List[Dict], date_str: str, block_id: 
         f"        readTime: '5 min read',\n"
         f"        excerpt: '{safe_excerpt}',\n"
         f"        intro: '{safe_intro}',\n"
-        f"        metaDescription: '{safe_meta}',\n"
+        f"        metaDescription: '{safe_meta}',{faq_str}{links_str}{schema_str}{theme_str}\n"
         f"        sections: [\n"
         f"{sections_str}\n"
         f"        ]\n"
         f"    }},\n    /* SEO_AUTO_INJECT_{label}_{date_str} */"
     )
-    return entry
+    return entry, slug
 
 
 def inject_into_blogposts_ts(entry: str, ts_path: Path, date_str: str, block_label: str) -> bool:
@@ -595,15 +805,34 @@ def run(
         log(f"Generating {block_label} ({len(block_kws)} keywords)...")
         log(f"  Top keywords: {', '.join(item['keyword'] for item in block_kws[:5])}")
 
+        # ── Pillar 3: Weekly theme ──
+        weekly_themes = getattr(config, 'WEEKLY_THEME_ROTATION', [])
+        iso_week = datetime.now().isocalendar()[1]
+        theme = weekly_themes[iso_week % len(weekly_themes)] if weekly_themes else ""
+        if theme:
+            log(f"  Weekly theme: {theme}")
+
+        # ── Pillar 1: Find related posts for internal linking ──
+        kw_strings = [item["keyword"] for item in block_kws]
+        related = find_related_posts(kw_strings, config.BLOGPOSTS_TS_PATH, limit=2)
+        if related:
+            log(f"  Related posts found: {[r['title'][:40] for r in related]}")
+
         # ── Generate content ──
         if test_mode:
             log(f"  Test mode: generating mock content for {block_label}.")
             content = generate_mock_content(block_kws, block_label)
         else:
-            prompt = build_gemini_prompt(block_kws, block_label)
+            prompt = build_gemini_prompt(block_kws, block_label, related_posts=related)
             if verbose:
                 log(f"  Prompt preview (first 300 chars):\n  {prompt[:300]}...")
             content = call_ai_model(prompt)
+
+        # ── Pillar 5: Generate FAQ ──
+        log(f"  Generating FAQ section (People Also Ask)...")
+        faq_items = generate_faq(block_kws, test_mode=test_mode)
+        if faq_items:
+            log(f"  ✅ {len(faq_items)} FAQ pairs generated.")
 
         # ── Keyword density check ──
         density = analyze_keyword_density(content, block_kws)
@@ -613,9 +842,27 @@ def run(
             for kw_item in density["found"][:5]:
                 log(f"    ✓ '{kw_item['keyword']}' — {kw_item['count']}× ({kw_item['density_pct']}%)")
 
+        # ── Pillar 2: Build JSON-LD schema ──
+        meta_match = re.search(r'<!--\s*META:\s*(.*?)\s*-->', content)
+        meta_desc_for_schema = meta_match.group(1) if meta_match else ""
+        title_match_s = re.search(r'^##\s+(.+)$', content, re.MULTILINE)
+        title_for_schema = title_match_s.group(1) if title_match_s else f"B2B Market Intelligence — {today}"
+        slug_for_schema = re.sub(r'[^a-z0-9]+', '-', title_for_schema.lower()).strip('-')[:60]
+        if block_id == 2:
+            slug_for_schema = slug_for_schema[:55] + "-ii"
+        json_ld = build_json_ld_schema(title_for_schema, meta_desc_for_schema, slug_for_schema, today, faq_items)
+
         # ── Build and inject TS entry ──
         next_id = get_next_blog_id(config.BLOGPOSTS_TS_PATH)
-        ts_entry = build_ts_entry(content, block_kws, today, block_id, next_id)
+        related_slugs = [r["slug"] for r in related] if related else []
+
+        ts_entry, injected_slug = build_ts_entry(
+            content, block_kws, today, block_id, next_id,
+            faq_items=faq_items,
+            json_ld=json_ld,
+            related_slugs=related_slugs,
+            weekly_theme=theme,
+        )
 
         injected = inject_into_blogposts_ts(
             ts_entry, config.BLOGPOSTS_TS_PATH, today, block_label

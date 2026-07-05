@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight } from 'lucide-react'
+import { ArrowLeft, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { blogPosts } from '../../data/blogPosts'
@@ -8,11 +8,18 @@ import { blogPosts } from '../../data/blogPosts'
 export default function MarketSignals() {
     const { slug } = useParams();
     const navigate = useNavigate();
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     const activeArticle = slug ? blogPosts.find(post => post.slug === slug) : null;
 
+    // Pillar 1: Find related posts for internal linking
+    const relatedPosts = activeArticle?.internalLinks
+        ? blogPosts.filter(p => activeArticle.internalLinks!.includes(p.slug))
+        : [];
+
     useEffect(() => {
         window.scrollTo(0, 0);
+        setOpenFaq(null);
     }, [slug]);
 
     const getIcon = (category: string) => {
@@ -26,18 +33,35 @@ export default function MarketSignals() {
 
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
-            {/* SEO Helmet */}
+            {/* SEO Helmet — Pillar 2: JSON-LD Schema */}
             {activeArticle ? (
                 <Helmet>
                     <title>{activeArticle.title} | Elesium</title>
                     <meta name="description" content={activeArticle.metaDescription} />
                     <meta property="og:title" content={activeArticle.title} />
                     <meta property="og:description" content={activeArticle.metaDescription} />
+                    <meta property="og:type" content="article" />
+                    <meta property="og:url" content={`https://elesium.online/signals/${activeArticle.slug}`} />
+                    <link rel="canonical" href={`https://elesium.online/signals/${activeArticle.slug}`} />
+                    {activeArticle.jsonLdSchema && (
+                        <script type="application/ld+json">
+                            {activeArticle.jsonLdSchema}
+                        </script>
+                    )}
                 </Helmet>
             ) : (
                 <Helmet>
                     <title>Market Signals & Intelligence | Elesium</title>
                     <meta name="description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for defense, aerospace, and industrial leaders." />
+                    <link rel="canonical" href="https://elesium.online/signals" />
+                    <script type="application/ld+json">{`{
+                        "@context": "https://schema.org",
+                        "@type": "Blog",
+                        "name": "Elesium Market Signals",
+                        "description": "B2B enterprise market intelligence from Elesium",
+                        "url": "https://elesium.online/signals",
+                        "publisher": { "@type": "Organization", "name": "Elesium", "url": "https://elesium.online" }
+                    }`}</script>
                 </Helmet>
             )}
 
@@ -221,11 +245,98 @@ export default function MarketSignals() {
                                                         ))}
                                                     </div>
                                                 );
+                                            case 'faq':
+                                                return (
+                                                    <div key={sIdx} className="my-8 space-y-3">
+                                                        {(section.value as { q: string; a: string }[]).map((item, fIdx) => (
+                                                            <div key={fIdx} className="border border-gray-100 dark:border-white/5 rounded-lg overflow-hidden">
+                                                                <button
+                                                                    onClick={() => setOpenFaq(openFaq === fIdx ? null : fIdx)}
+                                                                    className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                                                                >
+                                                                    {item.q}
+                                                                    <ChevronDown className={`h-4 w-4 flex-shrink-0 text-blue-500 transition-transform duration-200 ${openFaq === fIdx ? 'rotate-180' : ''}`} />
+                                                                </button>
+                                                                <AnimatePresence>
+                                                                    {openFaq === fIdx && (
+                                                                        <motion.div
+                                                                            initial={{ height: 0, opacity: 0 }}
+                                                                            animate={{ height: 'auto', opacity: 1 }}
+                                                                            exit={{ height: 0, opacity: 0 }}
+                                                                            transition={{ duration: 0.2 }}
+                                                                            className="overflow-hidden"
+                                                                        >
+                                                                            <p className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.a}</p>
+                                                                        </motion.div>
+                                                                    )}
+                                                                </AnimatePresence>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                );
                                             default:
                                                 return null;
                                         }
                                     })}
                                 </div>
+
+                                {/* Pillar 5: FAQ Section */}
+                                {activeArticle.faq && activeArticle.faq.length > 0 && (
+                                    <div className="mt-16 border-t border-gray-100 dark:border-white/5 pt-12">
+                                        <h2 className="text-xl font-bold text-black dark:text-white mb-6">Frequently Asked Questions</h2>
+                                        <div className="space-y-3">
+                                            {activeArticle.faq.map((item, fIdx) => (
+                                                <div key={fIdx} className="border border-gray-100 dark:border-white/5 rounded-lg overflow-hidden">
+                                                    <button
+                                                        onClick={() => setOpenFaq(openFaq === fIdx + 100 ? null : fIdx + 100)}
+                                                        className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                                                    >
+                                                        {item.q}
+                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-blue-500 transition-transform duration-200 ${openFaq === fIdx + 100 ? 'rotate-180' : ''}`} />
+                                                    </button>
+                                                    <AnimatePresence>
+                                                        {openFaq === fIdx + 100 && (
+                                                            <motion.div
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{ height: 'auto', opacity: 1 }}
+                                                                exit={{ height: 0, opacity: 0 }}
+                                                                transition={{ duration: 0.2 }}
+                                                                className="overflow-hidden"
+                                                            >
+                                                                <p className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.a}</p>
+                                                            </motion.div>
+                                                        )}
+                                                    </AnimatePresence>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Pillar 1: Related Posts — Internal Linking */}
+                                {relatedPosts.length > 0 && (
+                                    <div className="mt-12 border-t border-gray-100 dark:border-white/5 pt-12">
+                                        <h2 className="text-lg font-bold text-black dark:text-white mb-5 flex items-center gap-2">
+                                            <ExternalLink className="h-4 w-4 text-blue-500" />
+                                            Related Intelligence
+                                        </h2>
+                                        <div className="space-y-3">
+                                            {relatedPosts.map(rp => (
+                                                <Link
+                                                    key={rp.slug}
+                                                    to={`/signals/${rp.slug}`}
+                                                    className="group flex items-start gap-3 p-4 rounded-lg border border-gray-100 dark:border-white/5 hover:border-blue-200 dark:hover:border-blue-500/20 hover:bg-blue-50/50 dark:hover:bg-blue-500/5 transition-all duration-200"
+                                                >
+                                                    <ChevronRight className="h-4 w-4 mt-0.5 text-blue-500 flex-shrink-0" />
+                                                    <div>
+                                                        <p className="text-sm font-semibold text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{rp.title}</p>
+                                                        <p className="text-xs text-gray-500 mt-0.5">{rp.date} · {rp.readTime}</p>
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* Article Footer Navigation */}
                                 <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">

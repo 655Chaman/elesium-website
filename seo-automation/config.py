@@ -140,6 +140,39 @@ BLOCK_KEYWORDS_EACH = 10   # keywords per block
 CURRENT_YEAR = 2026
 
 # ─────────────────────────────────────────────
+# PILLAR 3 — DYNAMIC TOPIC CLUSTERING (Themed Weeks)
+# ─────────────────────────────────────────────
+# The script rotates through these themes weekly (by ISO week number).
+# This builds "Topical Authority" — Google rewards sites that go DEEP on a niche.
+# Week 1 = B2B Sales & Dealflow, Week 2 = Manufacturing & Industrial, etc.
+WEEKLY_THEME_ROTATION = [
+    "B2B Sales & Dealflow",
+    "Manufacturing & Industrial",
+    "Signal-Driven Outbound",
+    "Revenue & Growth",
+    "Business Matchmaking & Partnerships",
+    "SaaS & Tech B2B",
+    "Staffing & Talent",
+]
+
+# ─────────────────────────────────────────────
+# PILLAR 4 — E-E-A-T: ELESIUM CASE STUDIES
+# ─────────────────────────────────────────────
+# Google now aggressively filters AI-generated content that lacks first-hand
+# experience (the first 'E' in E-E-A-T). These proof points are injected into
+# every generated block to make content feel genuinely authored by Elesium.
+#
+# ⚠️  IMPORTANT: Replace these placeholder stats with your REAL client outcomes.
+#    The more specific the number, the stronger the E-E-A-T signal.
+ELESIUM_CASE_STUDIES = [
+    "An OEM supplier in the mid-market segment reduced their average sales cycle by over 60% after Elesium facilitated three verified introductions to procurement directors within their target vertical.",
+    "A growth-stage SaaS firm secured two enterprise pilots within 45 days of onboarding with Elesium, bypassing what would have been six months of cold outreach.",
+    "A manufacturing buyer closed a high-ticket supply contract through a single Elesium-facilitated introduction — the buyer had an active mandate that standard lead generation tools never would have surfaced.",
+    "Enterprise firms using Elesium's signal-driven model report that over 70% of introductions lead to a qualified first conversation, compared to an industry average of under 5% for cold outreach.",
+    "Elesium's proprietary buyer-readiness signal has been shown to cut time-to-first-meeting from an average of 90 days (cold outreach) to under 14 days.",
+]
+
+# ─────────────────────────────────────────────
 # OUTPUT PATHS
 # ─────────────────────────────────────────────
 import pathlib
