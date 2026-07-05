@@ -36,7 +36,11 @@ export default function Navbar() {
                     <Link to="/" className="flex items-center cursor-pointer">
                         <img
                             src={logo}
-                            alt="Elesium"
+                            alt="Elesium Logo"
+                            width="160"
+                            height="40"
+                            loading="eager"
+                            fetchPriority="high"
                             className="h-8 md:h-10 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm"
                         />
                     </Link>

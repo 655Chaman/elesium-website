@@ -33,16 +33,53 @@ export default function MarketSignals() {
 
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
-            {/* SEO Helmet — Pillar 2: JSON-LD Schema */}
+            {/* SEO Helmet — Pillar 2: JSON-LD Schema & GEO Meta Tags */}
             {activeArticle ? (
                 <Helmet>
-                    <title>{activeArticle.title} | Elesium</title>
+                    <title>{activeArticle.title.replace(/\*\*/g, '')} | Elesium</title>
                     <meta name="description" content={activeArticle.metaDescription} />
-                    <meta property="og:title" content={activeArticle.title} />
+                    
+                    {/* Open Graph */}
+                    <meta property="og:title" content={activeArticle.title.replace(/\*\*/g, '')} />
                     <meta property="og:description" content={activeArticle.metaDescription} />
                     <meta property="og:type" content="article" />
                     <meta property="og:url" content={`https://elesium.online/signals/${activeArticle.slug}`} />
+                    <meta property="og:image" content="https://elesium.online/og-image.png" />
+                    <meta property="og:site_name" content="Elesium" />
+                    <meta property="og:locale" content="en_US" />
+
+                    {/* Twitter Cards */}
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:title" content={activeArticle.title.replace(/\*\*/g, '')} />
+                    <meta name="twitter:description" content={activeArticle.metaDescription} />
+                    <meta name="twitter:image" content="https://elesium.online/og-image.png" />
+
                     <link rel="canonical" href={`https://elesium.online/signals/${activeArticle.slug}`} />
+                    
+                    {/* Breadcrumb Schema for GEO/AEO */}
+                    <script type="application/ld+json">
+                        {`{
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [{
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://elesium.online"
+                            },{
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Market Signals",
+                                "item": "https://elesium.online/signals"
+                            },{
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": ${JSON.stringify(activeArticle.title.replace(/\*\*/g, ''))},
+                                "item": "https://elesium.online/signals/${activeArticle.slug}"
+                            }]
+                        }`}
+                    </script>
+
                     {activeArticle.jsonLdSchema && (
                         <script type="application/ld+json">
                             {activeArticle.jsonLdSchema}
@@ -53,7 +90,41 @@ export default function MarketSignals() {
                 <Helmet>
                     <title>Market Signals & Intelligence | Elesium</title>
                     <meta name="description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for defense, aerospace, and industrial leaders." />
+                    
+                    {/* Open Graph */}
+                    <meta property="og:title" content="Market Signals & Intelligence | Elesium" />
+                    <meta property="og:description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for defense, aerospace, and industrial leaders." />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:url" content="https://elesium.online/signals" />
+                    <meta property="og:image" content="https://elesium.online/og-image.png" />
+
+                    {/* Twitter Cards */}
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:title" content="Market Signals & Intelligence | Elesium" />
+                    <meta name="twitter:description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks." />
+                    <meta name="twitter:image" content="https://elesium.online/og-image.png" />
+
                     <link rel="canonical" href="https://elesium.online/signals" />
+                    
+                    {/* Breadcrumb Schema for GEO/AEO */}
+                    <script type="application/ld+json">
+                        {`{
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [{
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://elesium.online"
+                            },{
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Market Signals",
+                                "item": "https://elesium.online/signals"
+                            }]
+                        }`}
+                    </script>
+
                     <script type="application/ld+json">{`{
                         "@context": "https://schema.org",
                         "@type": "Blog",

@@ -373,7 +373,7 @@ def find_related_posts(current_keywords: List[str], ts_path: Path, limit: int = 
 # PILLAR 2 — JSON-LD SCHEMA BUILDER
 # ─────────────────────────────────────────────────────
 
-def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, faq_items: list) -> str:
+def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, faq_items: list, keywords: List[Dict]) -> str:
     """
     Generate combined Article + FAQPage JSON-LD schema markup.
     This is injected into the blogPost's jsonLdSchema field and rendered
@@ -392,6 +392,10 @@ def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, f
         "@type": "FAQPage",
         "mainEntity": [{qa_items}]
     }}"""
+    
+    # Extract keyword strings for GEO 'about' and 'keywords' schema
+    kw_strings = [k["keyword"] for k in keywords]
+    about_schema = ",\n        ".join(f'{{"@type": "Thing", "name": {json.dumps(k)}}}' for k in kw_strings[:3])
 
     schema = f"""[
     {{
@@ -399,6 +403,10 @@ def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, f
         "@type": "Article",
         "headline": {json.dumps(title)},
         "description": {json.dumps(meta_desc)},
+        "keywords": {json.dumps(", ".join(kw_strings))},
+        "about": [
+            {about_schema}
+        ],
         "datePublished": "{date_str}",
         "dateModified": "{date_str}",
         "author": {{"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"}},
@@ -850,7 +858,7 @@ def run(
         slug_for_schema = re.sub(r'[^a-z0-9]+', '-', title_for_schema.lower()).strip('-')[:60]
         if block_id == 2:
             slug_for_schema = slug_for_schema[:55] + "-ii"
-        json_ld = build_json_ld_schema(title_for_schema, meta_desc_for_schema, slug_for_schema, today, faq_items)
+        json_ld = build_json_ld_schema(title_for_schema, meta_desc_for_schema, slug_for_schema, today, faq_items, block_kws)
 
         # ── Build and inject TS entry ──
         next_id = get_next_blog_id(config.BLOGPOSTS_TS_PATH)

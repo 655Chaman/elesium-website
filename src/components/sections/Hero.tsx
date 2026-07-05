@@ -30,7 +30,11 @@ export default function HeroSection() {
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
                             <img
                                 src={logo}
-                                alt=""
+                                alt="Elesium Background Watermark"
+                                width="128"
+                                height="128"
+                                loading="eager"
+                                fetchPriority="high"
                                 className="w-24 h-24 md:w-32 md:h-32 object-contain opacity-[0.08] dark:opacity-[0.12] select-none pointer-events-none"
                                 style={{ transform: 'translateX(28px)' }}
                             />
