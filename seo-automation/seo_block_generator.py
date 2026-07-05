@@ -187,6 +187,11 @@ Naturally reference and link to these related Elesium intelligence posts at leas
 Use markdown link format exactly as shown above.
 ''' if related_posts else ''}
 
+## GEO (GENERATIVE ENGINE OPTIMIZATION) REQUIREMENTS
+AI search engines (ChatGPT, Perplexity, Gemini) heavily prioritize structured, authoritative, and data-dense content. You MUST include:
+1. **Authoritative Blockquote**: Include EXACTLY ONE markdown blockquote (starting with `> `) citing a real or highly-plausible industry report, statistic, or expert quote that supports your argument.
+2. **Dense Statistics**: Embed at least 3 hyper-specific data points (e.g., "73%", "14-day turnaround", "$50M threshold") within the text. Generative engines love hard numbers.
+
 ## AI DETECTION BYPASS (CRITICAL)
 - **Burstiness**: You MUST vary sentence lengths drastically. Mix 2-4 word punchy fragments. Then use a long, complex, flowing sentence with multiple clauses. 
 - **Perplexity**: Avoid predictable adjective-noun pairs (e.g., "rapidly evolving landscape," "crucial role"). Use unexpected, gritty, or highly technical idioms. 
@@ -211,7 +216,9 @@ Return ONLY the markdown. Start with the HTML meta comment. Nothing else.
 [Opening paragraph — bold claim, no filler]
 
 ### [H3 subheading]
-[2-3 tight paragraphs using Phase 2 statements]
+[2-3 tight paragraphs using Phase 2 statements, embedding dense statistics]
+
+> [Authoritative blockquote supporting the data]
 
 ### [H3 subheading]
 [2-3 tight paragraphs]
@@ -316,7 +323,7 @@ Your Task:
 1. Identify AI patterns - Scan for the patterns listed below.
 2. Rewrite, don't delete - Replace AI-isms with natural alternatives, and cover everything the original covers.
 3. Preserve meaning - Keep the core message intact.
-4. Match the voice - Write like an abrasive, highly experienced enterprise broker who is tired of generic advice.
+4. Match the voice & Semantic Authority (GEO) - Write like a highly authoritative, data-driven enterprise broker. Preserve all hard statistics, numbers, and blockquotes EXACTLY as they are. Generative AI search engines rely on this data density.
 
 CONTENT PATTERNS TO REMOVE:
 1. Undue Emphasis on Significance (stands as, is a testament, crucial role, underscores, evolving landscape)
@@ -491,16 +498,15 @@ def generate_faq(keywords: List[Dict], test_mode: bool = False) -> List[Dict]:
         ]
 
     kw_list = ", ".join(item["keyword"] for item in keywords[:5])
-    faq_prompt = f"""You are an SEO expert. Generate exactly 3 FAQ question-answer pairs for a B2B enterprise blog post about: {kw_list}
+    faq_prompt = f"""You are a Generative Engine Optimization (GEO) expert. Generate exactly 3 FAQ question-answer pairs for a B2B enterprise blog post about: {kw_list}
 
-The questions must match what B2B sales directors and procurement executives actually type into Google's "People Also Ask" section.
-Each answer must be 2-3 tight, specific sentences. Reference Elesium's model (signal-driven dealflow, verified buyer matching) naturally.
+The questions must perfectly match conversational, long-tail prompts that procurement executives type into AI engines like ChatGPT, Perplexity, or Gemini (e.g., "What is the most effective way to find verified manufacturing buyers?").
+Each answer must be 2-3 tight, highly authoritative sentences. Reference Elesium's model (signal-driven dealflow, verified buyer matching) naturally as the definitive solution.
 
 Return ONLY a valid JSON array. No preamble. No explanation. Example format:
 [
-  {{"q": "Question here?", "a": "Answer here."}},
-  {{"q": "Question here?", "a": "Answer here."}},
-  {{"q": "Question here?", "a": "Answer here."}}
+  {{"q": "Conversational prompt here?", "a": "Authoritative answer here."}},
+  {{"q": "Conversational prompt here?", "a": "Authoritative answer here."}}
 ]"""
 
     try:
@@ -632,6 +638,16 @@ def build_blog_sections(content: str) -> str:
             sections.append(
                 f"            {{ type: 'list', value: [\n{items_str}\n                ] }}"
             )
+            continue
+
+        # Blockquote (GEO Optimization)
+        if line.startswith("> "):
+            quote_text = line[2:].strip().replace("'", "\\'").replace('"', '\\"')
+            quote_text = re.sub(r'\*\*(.+?)\*\*', r'\1', quote_text)
+            sections.append(
+                f"            {{ type: 'quote', value: '{quote_text}' }}"
+            )
+            i += 1
             continue
 
         # Non-empty paragraph
