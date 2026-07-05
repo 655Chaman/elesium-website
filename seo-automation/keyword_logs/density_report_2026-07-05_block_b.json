@@ -1,39 +1,30 @@
 {
-  "total_words": 237,
-  "keywords_found": 5,
-  "keywords_missing": 5,
+  "total_words": 367,
+  "keywords_found": 4,
+  "keywords_missing": 1,
   "found": [
     {
-      "keyword": "revenue operations",
-      "count": 2,
-      "density_pct": 1.69
+      "keyword": "B2B pipeline automation software",
+      "count": 3,
+      "density_pct": 3.27
     },
     {
-      "keyword": "OEM supplier network",
-      "count": 2,
-      "density_pct": 2.53
-    },
-    {
-      "keyword": "outbound intelligence",
-      "count": 2,
-      "density_pct": 1.69
-    },
-    {
-      "keyword": "enterprise procurement",
+      "keyword": "OEM supplier marketplace",
       "count": 1,
-      "density_pct": 0.84
+      "density_pct": 0.82
     },
     {
-      "keyword": "deal sourcing platform",
+      "keyword": "executive sales introductions",
+      "count": 3,
+      "density_pct": 2.45
+    },
+    {
+      "keyword": "account based marketing tools",
       "count": 1,
-      "density_pct": 1.27
+      "density_pct": 1.09
     }
   ],
   "missing": [
-    "industrial B2B marketplace",
-    "account based marketing",
-    "business matchmaking",
-    "B2B revenue acceleration",
-    "cold outreach alternative"
+    "growth stage manufacturer leads"
   ]
 }
