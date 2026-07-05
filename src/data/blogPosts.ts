@@ -1,6 +1,11 @@
 export interface BlogSection {
-    type: 'paragraph' | 'heading' | 'list' | 'quote' | 'metric';
-    value: string | string[] | { label: string; value: string; description: string }[];
+    type: 'paragraph' | 'heading' | 'list' | 'quote' | 'metric' | 'faq';
+    value: string | string[] | { label: string; value: string; description: string }[] | { q: string; a: string }[];
+}
+
+export interface BlogFaq {
+    q: string;
+    a: string;
 }
 
 export interface BlogPost {
@@ -14,6 +19,12 @@ export interface BlogPost {
     intro: string;
     metaDescription: string;
     sections: BlogSection[];
+    // SEO Enhancement fields
+    jsonLdSchema?: string;        // Pillar 2: JSON-LD Article + FAQ schema markup
+    faq?: BlogFaq[];              // Pillar 5: FAQ for People Also Ask
+    internalLinks?: string[];     // Pillar 1: Related post slugs for internal linking
+    isGuestPost?: boolean;        // Pillar 6: Backlink guest post flag
+    weeklyTheme?: string;         // Pillar 3: The topic cluster theme this post targets
 }
 
 export const blogPosts: BlogPost[] = [

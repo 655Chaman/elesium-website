@@ -101,7 +101,8 @@ export function MandateApplicationForm({ source = 'mandate-application' }: Manda
         e.preventDefault()
         setIsLoading(true)
         try {
-            const response = await fetch('http://localhost:3001/api/submit', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const response = await fetch(`${apiUrl}/api/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
