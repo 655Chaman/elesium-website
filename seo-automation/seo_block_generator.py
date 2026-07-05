@@ -187,6 +187,12 @@ Naturally reference and link to these related Elesium intelligence posts at leas
 Use markdown link format exactly as shown above.
 ''' if related_posts else ''}
 
+## AI DETECTION BYPASS (CRITICAL)
+- **Burstiness**: You MUST vary sentence lengths drastically. Mix 2-4 word punchy fragments. Then use a long, complex, flowing sentence with multiple clauses. 
+- **Perplexity**: Avoid predictable adjective-noun pairs (e.g., "rapidly evolving landscape," "crucial role"). Use unexpected, gritty, or highly technical idioms. 
+- **Formatting**: Do NOT use standard AI transition words ("In conclusion", "Moreover", "Furthermore", "Additionally").
+- **Voice**: Write like an abrasive, highly experienced enterprise broker who is tired of generic advice.
+
 ## ABSOLUTE RULES
 - NEVER use: "In today's landscape", "In conclusion", "game-changer", "synergy", "leverage" (unless financial), "holistic", "robust", "ecosystem" (overused)
 - NEVER start a sentence with "However," or "Furthermore,"
