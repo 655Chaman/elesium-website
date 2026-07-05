@@ -78,31 +78,36 @@ app.post('/api/submit', async (req, res) => {
             console.error('[SUBMIT] Error saving to Google Sheet:', sheetError.message);
         }
 
+        let notionSuccess = false;
         // 3. Fallback: Save directly to Notion if CRM is down
-        if (!DATABASE_ID) throw new Error('Database ID is not defined in .env');
+        try {
+            if (!DATABASE_ID) throw new Error('Database ID is not defined in .env');
 
-        const response = await notion.pages.create({
-            parent: { database_id: DATABASE_ID },
-            properties: {
-                Name: { title: [{ text: { content: name || 'Anonymous' } }] },
-                Email: { email: email },
-                Status: { select: { name: 'Pending' } },
-            },
-            children: [
-                { object: 'block', type: 'heading_3', heading_3: { rich_text: [{ text: { content: 'Lead Details' } }] } },
-                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Company: ' }, annotations: { bold: true } }, { text: { content: company || 'N/A' } }] } },
-                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Website: ' }, annotations: { bold: true } }, { text: { content: website || 'N/A' } }] } },
-                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Role: ' }, annotations: { bold: true } }, { text: { content: role || 'N/A' } }] } },
-                { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Use Case: ' }, annotations: { bold: true } }, { text: { content: usecase || 'N/A' } }] } },
-            ],
-        });
-
-        console.log('[SUBMIT] Fallback: Entry added to Notion.');
+            const response = await notion.pages.create({
+                parent: { database_id: DATABASE_ID },
+                properties: {
+                    Name: { title: [{ text: { content: name || 'Anonymous' } }] },
+                    Email: { email: email },
+                    Status: { select: { name: 'Pending' } },
+                },
+                children: [
+                    { object: 'block', type: 'heading_3', heading_3: { rich_text: [{ text: { content: 'Lead Details' } }] } },
+                    { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Company: ' }, annotations: { bold: true } }, { text: { content: company || 'N/A' } }] } },
+                    { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Website: ' }, annotations: { bold: true } }, { text: { content: website || 'N/A' } }] } },
+                    { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Role: ' }, annotations: { bold: true } }, { text: { content: role || 'N/A' } }] } },
+                    { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Use Case: ' }, annotations: { bold: true } }, { text: { content: usecase || 'N/A' } }] } },
+                ],
+            });
+            console.log('[SUBMIT] Fallback: Entry added to Notion.');
+            notionSuccess = true;
+        } catch (notionError) {
+            console.error('[SUBMIT] Error saving to Notion:', notionError.message);
+        }
 
         // Trigger basic fallback drip sequence
         await triggerDripSequence(email, name);
 
-        res.json({ success: true, message: 'Application received via fallback', id: response.id });
+        res.json({ success: true, message: 'Application received', notionSuccess });
     } catch (error) {
         console.error('Error processing submission:', error.message);
         res.status(500).json({ error: error.message });

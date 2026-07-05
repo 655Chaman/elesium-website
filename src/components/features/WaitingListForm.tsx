@@ -101,28 +101,26 @@ export function MandateApplicationForm({ source = 'mandate-application' }: Manda
         e.preventDefault()
         setIsLoading(true)
         try {
-            const apiUrl = import.meta.env.VITE_API_URL;
-            if (apiUrl) {
-                const response = await fetch(`${apiUrl}/api/submit`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData),
-                }).catch(() => null)
+            const apiUrl = import.meta.env.VITE_API_URL || 'https://elesium-website.onrender.com';
+            
+            const response = await fetch(`${apiUrl}/api/submit`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            }).catch(() => null)
 
-                if (response && response.ok) {
-                    setIsLoading(false)
-                    setIsSuccess(true)
-                    return
-                }
+            if (response && response.ok) {
+                setIsLoading(false)
+                setIsSuccess(true)
+                return
             }
             
-            // Fallback: Simulate network delay if no API URL or API failed
-            await new Promise(r => setTimeout(r, 1600))
-            setIsSuccess(true)
+            // If we get here, the API call failed
             setIsLoading(false)
+            alert("There was an error submitting your application. Please try again.")
         } catch (error) {
-            setIsSuccess(true)
             setIsLoading(false)
+            alert("There was an error submitting your application. Please try again.")
         }
     }
 
