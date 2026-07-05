@@ -55,6 +55,12 @@ export default function Navbar() {
                         >
                             Market Signals
                         </Link>
+                        <Link
+                            to="/resources"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                        >
+                            Resources
+                        </Link>
                     </div>
 
                     {/* CTA (Desktop) */}
@@ -119,9 +125,16 @@ export default function Navbar() {
                             <Link
                                 to="/signals"
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-blue-600 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
+                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Market Signals
+                            </Link>
+                            <Link
+                                to="/resources"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-blue-600 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Resources
                             </Link>
 
                             <div className="mt-8 w-full">

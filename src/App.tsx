@@ -17,7 +17,8 @@ const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
 const HowWeWork = lazy(() => import('./components/pages/HowWeWork'))
 const Industries = lazy(() => import('./components/pages/Industries'))
 const MarketSignals = lazy(() => import('./components/pages/MarketSignals'))
-
+const Resources = lazy(() => import('./components/pages/Resources'))
+const ResourceDetail = lazy(() => import('./components/pages/ResourceDetail'))
 function HomePage() {
     return (
         <motion.div
@@ -67,6 +68,8 @@ function App() {
                             <Route path="/markets" element={<Industries />} />
                             <Route path="/signals" element={<MarketSignals />} />
                             <Route path="/signals/:slug" element={<MarketSignals />} />
+                            <Route path="/resources" element={<Resources />} />
+                            <Route path="/resources/:slug" element={<ResourceDetail />} />
                             <Route path="/ai-automation" element={<AIAutomation />} />
                         </Routes>
                     </Suspense>
