@@ -1,47 +1,43 @@
 {
-  "total_words": 440,
-  "keywords_found": 7,
-  "keywords_missing": 3,
+  "total_words": 241,
+  "keywords_found": 6,
+  "keywords_missing": 4,
   "found": [
     {
-      "keyword": "enterprise sales automation",
+      "keyword": "enterprise dealflow",
       "count": 3,
-      "density_pct": 2.05
+      "density_pct": 2.49
     },
     {
-      "keyword": "AI powered lead qualification",
-      "count": 3,
-      "density_pct": 2.73
+      "keyword": "buyer matching platform",
+      "count": 2,
+      "density_pct": 2.49
     },
     {
-      "keyword": "B2B buyer matching platform",
-      "count": 4,
-      "density_pct": 3.64
+      "keyword": "signal driven outbound",
+      "count": 2,
+      "density_pct": 2.49
     },
     {
-      "keyword": "predictive B2B analytics platform",
-      "count": 3,
-      "density_pct": 2.73
-    },
-    {
-      "keyword": "manufacturing buyer network",
+      "keyword": "high ticket B2B sales",
       "count": 1,
-      "density_pct": 0.68
+      "density_pct": 1.66
     },
     {
-      "keyword": "intent data sales platform",
+      "keyword": "B2B pipeline automation",
       "count": 1,
-      "density_pct": 0.91
+      "density_pct": 1.24
     },
     {
-      "keyword": "enterprise dealflow management",
+      "keyword": "verified buyer network",
       "count": 1,
-      "density_pct": 0.68
+      "density_pct": 1.24
     }
   ],
   "missing": [
-    "signal driven outbound marketing",
-    "high ticket B2B partnerships",
-    "revenue operations 2025"
+    "manufacturing buyer network",
+    "intent data platform",
+    "sales pipeline engineering",
+    "executive strategic introductions"
   ]
 }
