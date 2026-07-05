@@ -109,15 +109,21 @@ export default function ResourceDetail() {
                         {/* Markdown Content */}
                         <div className="prose prose-lg dark:prose-invert max-w-none 
                             prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-black dark:prose-headings:text-white
-                            prose-p:text-gray-600 dark:prose-p:text-gray-400 prose-p:leading-relaxed
+                            prose-h1:text-4xl prose-h2:text-2xl prose-h3:text-xl
+                            prose-h2:mt-16 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-100 dark:prose-h2:border-white/5 prose-h2:pb-4
+                            prose-p:text-gray-600 dark:prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
                             prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
-                            prose-strong:text-black dark:prose-strong:text-white
-                            prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
-                            prose-li:text-gray-600 dark:prose-li:text-gray-400
-                            prose-ul:list-disc prose-ol:list-decimal
-                            prose-code:bg-gray-100 dark:prose-code:bg-white/10 prose-code:rounded prose-code:px-1 prose-code:text-sm prose-code:font-mono prose-code:text-pink-500
-                            prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-lg prose-pre:p-4 prose-pre:overflow-x-auto
-                            prose-img:rounded-lg prose-img:shadow-md
+                            prose-strong:text-black dark:prose-strong:text-white prose-strong:font-semibold
+                            prose-blockquote:border-l-2 prose-blockquote:border-black dark:prose-blockquote:border-white prose-blockquote:pl-6 prose-blockquote:font-medium prose-blockquote:text-gray-900 dark:prose-blockquote:text-gray-100 prose-blockquote:not-italic prose-blockquote:my-10
+                            prose-li:text-gray-600 dark:prose-li:text-gray-400 prose-li:mb-3
+                            prose-ul:list-none prose-ul:pl-0 prose-ul:my-8
+                            prose-ul>li:relative prose-ul>li:pl-6
+                            prose-ul>li:before:content-[''] prose-ul>li:before:absolute prose-ul>li:before:left-0 prose-ul>li:before:top-[0.6em] prose-ul>li:before:h-1.5 prose-ul>li:before:w-1.5 prose-ul>li:before:rounded-full prose-ul>li:before:bg-gray-300 dark:prose-ul>li:before:bg-gray-700
+                            prose-ol:list-decimal prose-ol:pl-5 prose-ol:my-8
+                            prose-code:bg-gray-100 dark:prose-code:bg-white/5 prose-code:rounded-md prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-mono prose-code:text-gray-800 dark:prose-code:text-gray-200 prose-code:before:content-none prose-code:after:content-none
+                            prose-pre:bg-[#111] prose-pre:text-gray-100 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:border prose-pre:border-white/10
+                            prose-img:rounded-2xl prose-img:shadow-2xl prose-img:border prose-img:border-gray-100 dark:prose-img:border-white/10
+                            prose-hr:border-gray-100 dark:prose-hr:border-white/5 prose-hr:my-12
                         ">
                             {loading ? (
                                 <div className="flex animate-pulse space-x-4">

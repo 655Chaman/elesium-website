@@ -38,9 +38,18 @@ export default function Resources() {
                         transition={{ duration: 0.4 }}
                     >
                         {/* Intro Section */}
-                        <div className="mb-12 md:mb-20 max-w-3xl">
+                        <div className="mb-12 md:mb-20 max-w-3xl relative">
+                            <Link 
+                                to="/" 
+                                className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors mb-8 group"
+                            >
+                                <svg className="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                </svg>
+                                Back to Home
+                            </Link>
                             <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-8 text-black dark:text-white leading-[1.1]">
-                                Resources &<br />Tools.
+                                Resources
                             </h1>
                             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                                 Download our exclusive tools, scripts, and workflows. Complete with detailed documentation on how to implement them.

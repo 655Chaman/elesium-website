@@ -56,7 +56,7 @@ function App() {
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
             <SmoothScroll />
             <NoiseOverlay />
-            <Navbar />
+            {!location.pathname.startsWith('/resources') && <Navbar />}
 
             <div className="flex-1 min-h-[100vh] flex flex-col relative">
                 <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
