@@ -1,47 +1,47 @@
 {
-  "total_words": 348,
+  "total_words": 399,
   "keywords_found": 8,
   "keywords_missing": 2,
   "found": [
     {
       "keyword": "supply chain partner matching",
-      "count": 4,
-      "density_pct": 4.6
+      "count": 5,
+      "density_pct": 5.01
     },
     {
       "keyword": "revenue operations software",
       "count": 1,
-      "density_pct": 0.86
+      "density_pct": 0.75
     },
     {
       "keyword": "OEM supplier network",
       "count": 1,
-      "density_pct": 0.86
+      "density_pct": 0.75
     },
     {
       "keyword": "AI sales intelligence",
       "count": 2,
-      "density_pct": 1.72
+      "density_pct": 1.5
     },
     {
       "keyword": "B2B partnership platform",
-      "count": 4,
-      "density_pct": 3.45
+      "count": 3,
+      "density_pct": 2.26
     },
     {
       "keyword": "B2B buyer intent platform",
-      "count": 1,
-      "density_pct": 1.15
+      "count": 2,
+      "density_pct": 2.01
     },
     {
       "keyword": "predictive B2B analytics",
-      "count": 1,
-      "density_pct": 0.86
+      "count": 2,
+      "density_pct": 1.5
     },
     {
       "keyword": "enterprise dealflow management",
-      "count": 1,
-      "density_pct": 0.86
+      "count": 4,
+      "density_pct": 3.01
     }
   ],
   "missing": [
