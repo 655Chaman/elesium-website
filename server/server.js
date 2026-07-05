@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const { Client } = require('@notionhq/client');
 const cors = require('cors');
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { JWT } = require('google-auth-library');
 
 const app = express();
 app.use(cors());
@@ -15,7 +17,7 @@ const notion = new Client({
 const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 app.post('/api/submit', async (req, res) => {
-    const { name, email, company, usecase, website, role, revenue, certifications, readiness } = req.body;
+    const { name, email, company, usecase, website, role, revenue, certifications, readiness, targetPartner, leadSource } = req.body;
 
     try {
         console.log(`[SUBMIT] Attempting to route lead to CRM: ${email}`);
@@ -35,10 +37,43 @@ app.post('/api/submit', async (req, res) => {
             }
             console.warn('[SUBMIT] CRM responded with non-ok status, falling back to Notion.');
         } catch (crmError) {
-            console.warn('[SUBMIT] CRM unreachable, falling back to Notion.', crmError.message);
+            console.warn('[SUBMIT] CRM unreachable, falling back to Notion and Google Sheets.', crmError.message);
         }
 
-        // 2. Fallback: Save directly to Notion if CRM is down
+        // 2. Google Sheets Integration
+        try {
+            if (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY && process.env.GOOGLE_SHEET_ID) {
+                const serviceAccountAuth = new JWT({
+                    email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+                    key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+                    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+                });
+                const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
+                await doc.loadInfo();
+                const sheet = doc.sheetsByIndex[0]; // Assumes first tab
+
+                await sheet.addRow({
+                    'Timestamp': new Date().toISOString(),
+                    'Name': name || '',
+                    'Email': email || '',
+                    'Company': company || '',
+                    'Role': role || '',
+                    'Website': website || '',
+                    'Revenue': revenue || '',
+                    'Target Partner': targetPartner || '',
+                    'Readiness': readiness || '',
+                    'Use Case': usecase || '',
+                    'Lead Source': leadSource || ''
+                });
+                console.log('[SUBMIT] Added lead to Google Sheet.');
+            } else {
+                console.warn('[SUBMIT] Google Sheets credentials missing in .env, skipping Google Sheets integration.');
+            }
+        } catch (sheetError) {
+            console.error('[SUBMIT] Error saving to Google Sheet:', sheetError.message);
+        }
+
+        // 3. Fallback: Save directly to Notion if CRM is down
         if (!DATABASE_ID) throw new Error('Database ID is not defined in .env');
 
         const response = await notion.pages.create({

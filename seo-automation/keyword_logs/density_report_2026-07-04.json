@@ -1,0 +1,101 @@
+{
+  "total_words": 586,
+  "keywords_found": 18,
+  "keywords_missing": 2,
+  "found": [
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 4,
+      "density_pct": 2.05
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 2,
+      "density_pct": 1.37
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "high ticket B2B sales",
+      "count": 1,
+      "density_pct": 0.68
+    },
+    {
+      "keyword": "outbound sales platform",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "buyer intent signals platform",
+      "count": 1,
+      "density_pct": 0.68
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "manufacturing buyers platform",
+      "count": 2,
+      "density_pct": 1.02
+    },
+    {
+      "keyword": "customer acquisition cost reduction",
+      "count": 1,
+      "density_pct": 0.68
+    },
+    {
+      "keyword": "B2B revenue acceleration",
+      "count": 2,
+      "density_pct": 1.02
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 2,
+      "density_pct": 1.02
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "sales cycle reduction",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "B2B partnership program",
+      "count": 2,
+      "density_pct": 1.02
+    },
+    {
+      "keyword": "OEM supplier network",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "account based marketing platform",
+      "count": 1,
+      "density_pct": 0.68
+    },
+    {
+      "keyword": "business matchmaking service",
+      "count": 1,
+      "density_pct": 0.51
+    },
+    {
+      "keyword": "executive recruitment platform",
+      "count": 1,
+      "density_pct": 0.51
+    }
+  ],
+  "missing": [
+    "B2B lead generation 2025",
+    "sales intelligence software"
+  ]
+}
