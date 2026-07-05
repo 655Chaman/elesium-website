@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Elesium</title>
+  <script>
+    // GitHub Pages SPA redirect hack.
+    // When GitHub Pages can't find a file (e.g. /signals), it serves this 404.html.
+    // This script encodes the path as a query param and redirects to index.html,
+    // which then decodes it and pushes it back to the React Router history.
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.host + l.pathname.split('/').slice(0, 1).join('/') +
+      '/?/' + l.pathname.slice(1).replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>
