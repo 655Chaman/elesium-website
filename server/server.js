@@ -9,6 +9,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root route for cron-job pinging
+app.get('/', (req, res) => {
+    res.send('Elesium Server is awake!');
+});
+
 // Initialize Notion Client
 const notion = new Client({
     auth: process.env.NOTION_API_KEY,
