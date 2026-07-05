@@ -45,12 +45,19 @@ app.post('/api/submit', async (req, res) => {
             console.warn('[SUBMIT] CRM unreachable, falling back to Notion and Google Sheets.', crmError.message);
         }
 
+        let sheetSuccess = false;
+        let sheetErrorMessage = null;
         // 2. Google Sheets Integration
         try {
             if (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY && process.env.GOOGLE_SHEET_ID) {
+                // Robustly parse the private key in case Render handles quotes or newlines differently
+                let rawKey = process.env.GOOGLE_PRIVATE_KEY;
+                rawKey = rawKey.replace(/^"|"$/g, ''); // Remove leading/trailing quotes
+                const formattedKey = rawKey.replace(/\\n/g, '\n');
+
                 const serviceAccountAuth = new JWT({
                     email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-                    key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+                    key: formattedKey,
                     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
                 });
                 const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
@@ -71,11 +78,13 @@ app.post('/api/submit', async (req, res) => {
                     'Lead Source': leadSource || ''
                 });
                 console.log('[SUBMIT] Added lead to Google Sheet.');
+                sheetSuccess = true;
             } else {
                 console.warn('[SUBMIT] Google Sheets credentials missing in .env, skipping Google Sheets integration.');
             }
         } catch (sheetError) {
             console.error('[SUBMIT] Error saving to Google Sheet:', sheetError.message);
+            sheetErrorMessage = sheetError.message;
         }
 
         let notionSuccess = false;
@@ -107,7 +116,7 @@ app.post('/api/submit', async (req, res) => {
         // Trigger basic fallback drip sequence
         await triggerDripSequence(email, name);
 
-        res.json({ success: true, message: 'Application received', notionSuccess });
+        res.json({ success: true, message: 'Application received', notionSuccess, sheetSuccess, sheetErrorMessage });
     } catch (error) {
         console.error('Error processing submission:', error.message);
         res.status(500).json({ error: error.message });
