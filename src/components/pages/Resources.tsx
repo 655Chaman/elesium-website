@@ -28,21 +28,7 @@ export default function Resources() {
                 <link rel="canonical" href="https://elesium.online/resources" />
             </Helmet>
 
-            {/* Header */}
-            <div className="sticky top-[52px] z-40 bg-[#FAFAFA]/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
-                <div className="max-w-4xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
-                    <button
-                        onClick={() => navigate('/')}
-                        className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                    >
-                        <ArrowLeft className="h-4 w-4" />
-                        Back to Home
-                    </button>
-                    <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-500 dark:text-blue-400">
-                        Resources
-                    </span>
-                </div>
-            </div>
+
 
             <main className="max-w-4xl mx-auto px-5 md:px-6 py-12 md:py-20">
                 <AnimatePresence mode="wait">
