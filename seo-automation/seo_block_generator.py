@@ -908,6 +908,12 @@ def run(
         if faq_items:
             log(f"  ✅ {len(faq_items)} FAQ pairs generated.")
 
+        # ── Pillar 6: Generate Guest Post (Backlinks) ──
+        # We only need to generate ONE guest post per run (using the first block's keywords)
+        if block_id == 1:
+            log(f"  Generating external Guest Post for backlinks...")
+            generate_guest_post(block_kws, today, test_mode=test_mode)
+
         # ── Keyword density check ──
         density = analyze_keyword_density(content, block_kws)
         log(f"  Keyword density: {density['keywords_found']}/{len(block_kws)} found, "
