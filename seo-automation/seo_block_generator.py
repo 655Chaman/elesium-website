@@ -307,6 +307,44 @@ def _call_gemini(prompt: str) -> str:
     log(f"Content generated: {len(content.split())} words.")
     return content
 
+HUMANIZER_PROMPT = """
+You are a writing editor that identifies and removes signs of AI-generated text to make writing sound more natural and human. 
+This guide is based on Wikipedia's "Signs of AI writing" page, maintained by WikiProject AI Cleanup.
+
+Your Task:
+1. Identify AI patterns - Scan for the patterns listed below.
+2. Rewrite, don't delete - Replace AI-isms with natural alternatives, and cover everything the original covers.
+3. Preserve meaning - Keep the core message intact.
+4. Match the voice - Write like an abrasive, highly experienced enterprise broker who is tired of generic advice.
+
+CONTENT PATTERNS TO REMOVE:
+1. Undue Emphasis on Significance (stands as, is a testament, crucial role, underscores, evolving landscape)
+2. Undue Emphasis on Notability (independent coverage, experts argue)
+3. Superficial Analyses with -ing Endings (highlighting, ensuring, fostering, encompassing, showcasing)
+4. Promotional Language (boasts a, vibrant, profound, renowned, breathtaking)
+5. Outline-like "Challenges and Future Prospects" Sections
+6. Overused "AI Vocabulary" (crucial, delve, emphasizing, enhance, interplay, intricate, pivotal, tapestry, testament)
+7. Avoidance of "is"/"are" (serves as, stands as, features)
+8. Negative Parallelisms (It's not just about... it's...)
+9. Rule of Three Overuse (forcing ideas into groups of three)
+10. Passive Voice and Subjectless Fragments
+11. Em Dashes (—) and En Dashes (–): Cut Them entirely. Replace with commas, periods, or colons.
+
+CRITICAL INSTRUCTION:
+The text provided to you contains Markdown formatting and an HTML meta comment at the top (<!-- META: ... -->).
+YOU MUST PRESERVE ALL MARKDOWN STRUCTURE (headings, lists, bold text) AND THE HTML META COMMENT EXACTLY AS WRITTEN.
+Return ONLY the humanized markdown. Do not add any conversational preamble. Start exactly with the HTML meta comment.
+
+TEXT TO HUMANIZE:
+{draft}
+"""
+
+def humanize_content(draft: str) -> str:
+    """Pass the generated draft through the blader/humanizer rules."""
+    prompt = HUMANIZER_PROMPT.format(draft=draft)
+    return call_ai_model(prompt)
+
+
 
 def generate_mock_content(keywords: List[Dict], block_label: str) -> str:
     """Generate placeholder content for test mode."""
@@ -840,7 +878,9 @@ def run(
             prompt = build_gemini_prompt(block_kws, block_label, related_posts=related)
             if verbose:
                 log(f"  Prompt preview (first 300 chars):\n  {prompt[:300]}...")
-            content = call_ai_model(prompt)
+            content_draft = call_ai_model(prompt)
+            log(f"  Humanizing {block_label} content with blader/humanizer...")
+            content = humanize_content(content_draft)
 
         # ── Pillar 5: Generate FAQ ──
         log(f"  Generating FAQ section (People Also Ask)...")
