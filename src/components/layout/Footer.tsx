@@ -1,10 +1,7 @@
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function DownloadFooter() {
-    const navigate = useNavigate();
-    const location = useLocation();
-
-    const handleNavigation = (name: string, id: string) => {
+    const handleNavigation = () => {
         // no-op if no longer needed, keeping for structure
     };
 
@@ -37,7 +34,7 @@ export default function DownloadFooter() {
                                             </Link>
                                         ) : (
                                             <button
-                                                onClick={() => handleNavigation(item.name, item.id as string)}
+                                                onClick={() => handleNavigation()}
                                                 className={`text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
                                             >
                                                 {item.name}

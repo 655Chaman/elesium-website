@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
@@ -9,8 +9,6 @@ import logo from '../../Assets/LOGO_NEW.png'
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-    const navigate = useNavigate()
-    const location = useLocation()
 
 
 

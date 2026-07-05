@@ -677,6 +677,8 @@ def build_ts_entry(
     # Extract H2 title
     title_match = re.search(r'^##\s+(.+)$', content, re.MULTILINE)
     title = title_match.group(1) if title_match else f"B2B Market Intelligence — {date_str}"
+    # Strip ** from title for clean rendering
+    title = title.replace("**", "")
 
     # Extract first real paragraph as excerpt
     paragraphs = [
