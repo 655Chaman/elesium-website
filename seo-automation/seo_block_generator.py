@@ -16,13 +16,16 @@ Usage:
 """
 
 import argparse
+import os
+import sys
 import json
 import re
 import subprocess
-import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, List, Dict
+import urllib.request
+import urllib.parse
 
 import config
 
@@ -519,10 +522,48 @@ Return ONLY a valid JSON array. No preamble. No explanation. Example format:
         log(f"FAQ generation failed: {e}", "WARN")
     return []
 
+# ─────────────────────────────────────────────────────
+# PILLAR 6 — GUEST POST / BACKLINK ASSET GENERATOR & MEDIUM API
+# ─────────────────────────────────────────────────────
 
-# ─────────────────────────────────────────────────────
-# PILLAR 6 — GUEST POST / BACKLINK ASSET GENERATOR
-# ─────────────────────────────────────────────────────
+def publish_to_medium(title: str, content: str):
+    """Publish the guest post to Medium.com via their API."""
+    if not getattr(config, "MEDIUM_API_KEY", ""):
+        log("Medium API Key not found. Skipping auto-publish.", "WARN")
+        return
+        
+    try:
+        log("Connecting to Medium API...")
+        # Get User ID
+        req = urllib.request.Request(
+            "https://api.medium.com/v1/me", 
+            headers={"Authorization": f"Bearer {config.MEDIUM_API_KEY}", "Content-Type": "application/json"}
+        )
+        with urllib.request.urlopen(req) as response:
+            user_data = json.loads(response.read().decode())
+            author_id = user_data["data"]["id"]
+            
+        # Publish Post
+        post_url = f"https://api.medium.com/v1/users/{author_id}/posts"
+        payload = json.dumps({
+            "title": title,
+            "contentFormat": "markdown",
+            "content": content,
+            "publishStatus": "public",
+            "tags": ["B2B", "Sales", "Enterprise", "Revenue"]
+        }).encode('utf-8')
+        
+        req_post = urllib.request.Request(
+            post_url, 
+            data=payload,
+            headers={"Authorization": f"Bearer {config.MEDIUM_API_KEY}", "Content-Type": "application/json", "Accept": "application/json"}
+        )
+        with urllib.request.urlopen(req_post) as response:
+            post_data = json.loads(response.read().decode())
+            log(f"  ✅ Successfully published to Medium: {post_data.get('data', {}).get('url')}")
+            
+    except Exception as e:
+        log(f"Medium publishing failed: {e}", "ERROR")
 
 def generate_guest_post(keywords: List[Dict], date_str: str, test_mode: bool = False) -> Optional[str]:
     """
@@ -553,12 +594,20 @@ Return the full article in clean Markdown. Start with the headline."""
 
     try:
         content = call_ai_model(guest_prompt)
+        
+        # Extract title (first line without markdown hashes)
+        lines = content.strip().split("\n")
+        title = lines[0].lstrip("#").strip() if lines else f"B2B Revenue Acceleration - {date_str}"
+        
         guest_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"guest_post_{date_str}.md"
         with open(guest_path, "w", encoding="utf-8") as f:
-            f.write(f"# GUEST POST — {date_str}\n# Target: Forbes / SalesHacker / Manufacturing.net\n\n")
+            f.write(f"# GUEST POST — {date_str}\n# Target: Forbes / SalesHacker / Medium\n\n")
             f.write(content)
-        log(f"  ✅ Guest post saved to: {guest_path}")
-        log(f"  → Submit manually to: Forbes Business Council, SalesHacker, LinkedIn Articles")
+        log(f"  ✅ Guest post saved locally to: {guest_path}")
+        
+        # Auto-publish to Medium
+        publish_to_medium(title, content)
+        
         return str(guest_path)
     except Exception as e:
         log(f"Guest post generation failed: {e}", "WARN")

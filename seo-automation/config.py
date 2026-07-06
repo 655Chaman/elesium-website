@@ -16,6 +16,7 @@ NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY", "")
 DATAFORSEO_LOGIN = os.getenv("DATAFORSEO_LOGIN", "")
 DATAFORSEO_PASSWORD = os.getenv("DATAFORSEO_PASSWORD", "")
 SERPAPI_KEY = os.getenv("SERPAPI_KEY", "")
+MEDIUM_API_KEY = os.getenv("MEDIUM_API_KEY", "")
 
 # ─────────────────────────────────────────────
 # ELESIUM BUSINESS CONTEXT
