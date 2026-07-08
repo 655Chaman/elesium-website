@@ -26,8 +26,6 @@ export default function Resources() {
                 <link rel="canonical" href="https://elesium.online/resources" />
             </Helmet>
 
-
-
             <main className="max-w-4xl mx-auto px-5 md:px-6 py-12 md:py-20">
                 <AnimatePresence mode="wait">
                     <motion.div

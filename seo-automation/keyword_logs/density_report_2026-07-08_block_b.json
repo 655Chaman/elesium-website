@@ -1,0 +1,30 @@
+{
+  "total_words": 404,
+  "keywords_found": 4,
+  "keywords_missing": 1,
+  "found": [
+    {
+      "keyword": "B2B pipeline automation software",
+      "count": 4,
+      "density_pct": 3.96
+    },
+    {
+      "keyword": "OEM supplier marketplace",
+      "count": 2,
+      "density_pct": 1.49
+    },
+    {
+      "keyword": "executive sales introductions",
+      "count": 3,
+      "density_pct": 2.23
+    },
+    {
+      "keyword": "growth stage manufacturer leads",
+      "count": 1,
+      "density_pct": 0.99
+    }
+  ],
+  "missing": [
+    "account based marketing tools"
+  ]
+}

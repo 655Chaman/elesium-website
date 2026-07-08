@@ -1,0 +1,199 @@
+{
+  "date": "2026-07-08",
+  "timestamp": "2026-07-08T08:49:05.174871",
+  "total_keywords": 24,
+  "keywords": [
+    {
+      "keyword": "B2B partnership platform",
+      "trending_score": 96.82576963975728,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 96.82576963975728,
+      "composite_score": 0.8475
+    },
+    {
+      "keyword": "OEM supplier network",
+      "trending_score": 95.43061231691655,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 95.43061231691655,
+      "composite_score": 0.8399
+    },
+    {
+      "keyword": "B2B lead generation platform",
+      "trending_score": 94.48799022639345,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 94.48799022639345,
+      "composite_score": 0.8347
+    },
+    {
+      "keyword": "revenue operations software",
+      "trending_score": 86.98064010852347,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 86.98064010852347,
+      "composite_score": 0.7934
+    },
+    {
+      "keyword": "B2B buyer intent platform",
+      "trending_score": 80.83421150065375,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 80.83421150065375,
+      "composite_score": 0.7596
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "trending_score": 75.93303764181213,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 75.93303764181213,
+      "composite_score": 0.7326
+    },
+    {
+      "keyword": "sales pipeline automation",
+      "trending_score": 67.40963288725185,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 67.40963288725185,
+      "composite_score": 0.6858
+    },
+    {
+      "keyword": "manufacturing automation buyers",
+      "trending_score": 62.71957538536553,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 62.71957538536553,
+      "composite_score": 0.66
+    },
+    {
+      "keyword": "account based marketing tools",
+      "trending_score": 61.27317771920336,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 61.27317771920336,
+      "composite_score": 0.652
+    },
+    {
+      "keyword": "movie release dates",
+      "trending_score": 95.01459784446722,
+      "source": "mock_test",
+      "relevance_score": 0.243,
+      "trending_score_raw": 95.01459784446722,
+      "composite_score": 0.6077
+    },
+    {
+      "keyword": "B2B revenue acceleration",
+      "trending_score": 52.33664327329546,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 52.33664327329546,
+      "composite_score": 0.6029
+    },
+    {
+      "keyword": "enterprise sales strategy 2025",
+      "trending_score": 44.1489148533786,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 44.1489148533786,
+      "composite_score": 0.5578
+    },
+    {
+      "keyword": "football match today",
+      "trending_score": 84.57038911498289,
+      "source": "mock_test",
+      "relevance_score": 0.263,
+      "trending_score_raw": 84.57038911498289,
+      "composite_score": 0.5572
+    },
+    {
+      "keyword": "supply chain partner matching",
+      "trending_score": 37.83530280752085,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 37.83530280752085,
+      "composite_score": 0.5231
+    },
+    {
+      "keyword": "AI sales intelligence",
+      "trending_score": 36.764130867088525,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 36.764130867088525,
+      "composite_score": 0.5172
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "trending_score": 27.88419466520513,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 27.88419466520513,
+      "composite_score": 0.4684
+    },
+    {
+      "keyword": "predictive B2B analytics",
+      "trending_score": 64.16107390742165,
+      "source": "mock_test",
+      "relevance_score": 0.267,
+      "trending_score_raw": 64.16107390742165,
+      "composite_score": 0.4462
+    },
+    {
+      "keyword": "high ticket B2B deals",
+      "trending_score": 20.7464700546487,
+      "source": "mock_test",
+      "relevance_score": 0.9,
+      "trending_score_raw": 20.7464700546487,
+      "composite_score": 0.4291
+    },
+    {
+      "keyword": "growth stage manufacturer sales",
+      "trending_score": 55.39074290455487,
+      "source": "mock_test",
+      "relevance_score": 0.255,
+      "trending_score_raw": 55.39074290455487,
+      "composite_score": 0.3939
+    },
+    {
+      "keyword": "executive sales introductions",
+      "trending_score": 35.69634442777782,
+      "source": "mock_test",
+      "relevance_score": 0.533,
+      "trending_score_raw": 35.69634442777782,
+      "composite_score": 0.383
+    },
+    {
+      "keyword": "celebrity gossip news",
+      "trending_score": 56.665501819775116,
+      "source": "mock_test",
+      "relevance_score": 0.2,
+      "trending_score_raw": 56.665501819775116,
+      "composite_score": 0.3817
+    },
+    {
+      "keyword": "weather forecast weekend",
+      "trending_score": 50.33921756009253,
+      "source": "mock_test",
+      "relevance_score": 0.222,
+      "trending_score_raw": 50.33921756009253,
+      "composite_score": 0.3546
+    },
+    {
+      "keyword": "enterprise procurement automation",
+      "trending_score": 31.356750316247517,
+      "source": "mock_test",
+      "relevance_score": 0.267,
+      "trending_score_raw": 31.356750316247517,
+      "composite_score": 0.2658
+    },
+    {
+      "keyword": "signal-driven outbound marketing",
+      "trending_score": 28.971134013402597,
+      "source": "mock_test",
+      "relevance_score": 0.271,
+      "trending_score_raw": 28.971134013402597,
+      "composite_score": 0.2541
+    }
+  ]
+}
