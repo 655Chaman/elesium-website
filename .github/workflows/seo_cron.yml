@@ -43,6 +43,13 @@ jobs:
       - name: Install NPM dependencies
         run: npm ci
 
+      - name: Run Trend Fetcher
+        env:
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python3 seo-automation/trend_fetcher.py
+
       - name: Run Keyword Researcher
         run: python3 seo-automation/keyword_researcher.py
 
