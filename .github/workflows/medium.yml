@@ -1,0 +1,26 @@
+name: medium.com
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  get-latest-post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 📋 YOUR LATEST MEDIUM POST 📋
+        run: |
+          latest_file=$(ls -t seo-automation/keyword_logs/guest_post_*.md | head -1)
+          echo "================================================================="
+          echo "COPY EVERYTHING BELOW THIS LINE AND PASTE INTO MEDIUM.COM"
+          echo "================================================================="
+          echo ""
+          cat "$latest_file"
+          echo ""
+          echo "================================================================="
+          echo "END OF POST"
+          echo "================================================================="
