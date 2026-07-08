@@ -25,6 +25,8 @@ jobs:
         with:
           python-version: '3.11'
 
+
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -84,3 +86,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  audit:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run SEO Audit (SEOmator)
+        run: |
+          npm install -g @seomator/seo-audit
+          seomator audit https://elesium.online

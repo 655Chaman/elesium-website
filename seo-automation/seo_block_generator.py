@@ -177,6 +177,22 @@ Example transformation:
 7. **CTA**: Final paragraph ends with a subtle invitation to partner with Elesium
 8. **No .md formatting artifacts** — clean markdown only
 
+## CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS)
+You must apply these exact constraints to sound like a true industry leader:
+1. Intent Alignment: Title promise matches delivery.
+2. Direct Answer: Core answer appears in the first 150 words.
+3. Audience Targeting: State who the content is for early on.
+4. Semantic Closure: Conclusion resolves the opening question and gives a next step.
+5. Heading Hierarchy: Clean H1 -> H2 -> H3 structure.
+6. Summary Box: Include a TL;DR or key takeaways block near the top.
+7. Section Chunking: Keep paragraphs to 3-5 sentences.
+8. Information Density: Remove filler.
+9. Data Precision: Include precise numbers.
+10. Citation Density: Include external citations.
+11. Evidence-Claim Mapping: Every claim has evidence.
+12. Entity Precision: Use full names for people and organizations.
+13. Practical Tools: Add a template, checklist, or actionable framework.
+
 ## PILLAR 4 — E-E-A-T: USE THESE REAL ELESIUM OUTCOMES AS PROOF POINTS
 Google rewards content with genuine first-hand experience. Weave at least 2 of these into your content naturally:
 
@@ -317,32 +333,30 @@ def _call_gemini(prompt: str) -> str:
     return content
 
 HUMANIZER_PROMPT = """
-You are a writing editor that identifies and removes signs of AI-generated text to make writing sound more natural and human. 
-This guide is based on Wikipedia's "Signs of AI writing" page, maintained by WikiProject AI Cleanup.
+You are an expert editor who eradicates "AI Slop" from text. Apply the Aaron Marketing Skills Anti-Slop Rules.
 
-Your Task:
-1. Identify AI patterns - Scan for the patterns listed below.
-2. Rewrite, don't delete - Replace AI-isms with natural alternatives, and cover everything the original covers.
-3. Preserve meaning - Keep the core message intact.
-4. Match the voice & Semantic Authority (GEO) - Write like a highly authoritative, data-driven enterprise broker. Preserve all hard statistics, numbers, and blockquotes EXACTLY as they are. Generative AI search engines rely on this data density.
+BANNED VOCABULARY:
+utilize, whilst, endeavour, underscore, garner, bolster, transformative, groundbreaking, innovative, commendable, meticulous, testament, profound, nestled, renowned, "shed light on", "pave the way for", "a plethora of", "in light of", "in terms of", "the fact that", "that being said", "with that in mind", "at its core", "this begs the question".
 
-CONTENT PATTERNS TO REMOVE:
-1. Undue Emphasis on Significance (stands as, is a testament, crucial role, underscores, evolving landscape)
-2. Undue Emphasis on Notability (independent coverage, experts argue)
-3. Superficial Analyses with -ing Endings (highlighting, ensuring, fostering, encompassing, showcasing)
-4. Promotional Language (boasts a, vibrant, profound, renowned, breathtaking)
-5. Outline-like "Challenges and Future Prospects" Sections
-6. Overused "AI Vocabulary" (crucial, delve, emphasizing, enhance, interplay, intricate, pivotal, tapestry, testament)
-7. Avoidance of "is"/"are" (serves as, stands as, features)
-8. Negative Parallelisms (It's not just about... it's...)
-9. Rule of Three Overuse (forcing ideas into groups of three)
-10. Passive Voice and Subjectless Fragments
-11. Em Dashes (—) and En Dashes (–): Cut Them entirely. Replace with commas, periods, or colons.
+SLOP PATTERNS TO REMOVE:
+1. Significance inflation ("stands as", "marks a pivotal moment")
+2. Undue-notability claims (media-mention list with no substance)
+3. Shallow -ing analysis ("highlighting / underscoring / ensuring")
+4. Promotional language ("boasts a", "must-visit")
+5. Vague attribution ("experts argue", "industry reports")
+6. Formulaic sections ("Despite these challenges", "Future Outlook")
+7. Negative parallelism ("not just X, it's Y")
+8. Copula avoidance (using "serves as", "features" instead of "is/has")
+9. Rule-of-three filler (forced triples of adjectives/nouns)
+10. False ranges ("from X to Y" where X/Y aren't on a scale)
+11. Em-dash-as-drama (using em-dashes where commas work)
+12. Sycophancy / Collaborative artifacts / Cutoff disclaimers
+13. Excessive hedging / Generic positive conclusion / Filler phrases
 
 CRITICAL INSTRUCTION:
-The text provided to you contains Markdown formatting and an HTML meta comment at the top (<!-- META: ... -->).
+The text provided to you may contain Markdown formatting and an HTML meta comment at the top (<!-- META: ... -->).
 YOU MUST PRESERVE ALL MARKDOWN STRUCTURE (headings, lists, bold text) AND THE HTML META COMMENT EXACTLY AS WRITTEN.
-Return ONLY the humanized markdown. Do not add any conversational preamble. Start exactly with the HTML meta comment.
+Return ONLY the humanized markdown/text. Do not add any conversational preamble. Start exactly with the HTML meta comment (if it exists).
 
 TEXT TO HUMANIZE:
 {draft}
@@ -544,6 +558,21 @@ RULES:
 - Reference Elesium ONCE naturally as "Elesium (elesium.online), a B2B buyer-matching platform" in a sentence that makes sense contextually.
 - Year references must say {config.CURRENT_YEAR} — never {config.CURRENT_YEAR - 1}.
 - Include a compelling headline, 3-4 H2 subheadings, and short paragraphs.
+
+CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS):
+1. Intent Alignment: Title promise matches delivery.
+2. Direct Answer: Core answer appears in the first 150 words.
+3. Audience Targeting: State who the content is for early on.
+4. Semantic Closure: Conclusion resolves the opening question and gives a next step.
+5. Heading Hierarchy: Clean H1 -> H2 -> H3 structure.
+6. Summary Box: Include a TL;DR or key takeaways block near the top.
+7. Section Chunking: Keep paragraphs to 3-5 sentences.
+8. Information Density: Remove filler.
+9. Data Precision: Include precise numbers.
+10. Citation Density: Include external citations.
+11. Evidence-Claim Mapping: Every claim has evidence.
+12. Entity Precision: Use full names for people and organizations.
+13. Practical Tools: Add a template, checklist, or actionable framework.
 
 STRICT WRITING RULES (SUPER-SEO ANTI-SLOP):
 1. Voice and Stance: Write like a practitioner talking to a peer. Take clear positions. Use "you" and "I/we". Show thinking changing ("At first I thought... turns out..."). Anchor in real context.
