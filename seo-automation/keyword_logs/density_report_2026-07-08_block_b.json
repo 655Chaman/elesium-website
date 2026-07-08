@@ -1,30 +1,35 @@
 {
-  "total_words": 404,
+  "total_words": 362,
   "keywords_found": 4,
-  "keywords_missing": 1,
+  "keywords_missing": 6,
   "found": [
     {
-      "keyword": "B2B pipeline automation software",
-      "count": 4,
-      "density_pct": 3.96
-    },
-    {
-      "keyword": "OEM supplier marketplace",
-      "count": 2,
-      "density_pct": 1.49
-    },
-    {
-      "keyword": "executive sales introductions",
-      "count": 3,
-      "density_pct": 2.23
-    },
-    {
-      "keyword": "growth stage manufacturer leads",
+      "keyword": "customer acquisition cost reduction",
       "count": 1,
-      "density_pct": 0.99
+      "density_pct": 1.1
+    },
+    {
+      "keyword": "B2B revenue acceleration",
+      "count": 1,
+      "density_pct": 0.83
+    },
+    {
+      "keyword": "B2B partnership program",
+      "count": 1,
+      "density_pct": 0.83
+    },
+    {
+      "keyword": "OEM supplier network",
+      "count": 1,
+      "density_pct": 0.83
     }
   ],
   "missing": [
-    "account based marketing tools"
+    "industrial B2B marketplace",
+    "enterprise revenue growth",
+    "sales cycle reduction",
+    "account based marketing platform",
+    "business matchmaking service",
+    "executive recruitment platform"
   ]
 }
