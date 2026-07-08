@@ -553,15 +553,15 @@ STRICT WRITING RULES (SUPER-SEO ANTI-SLOP):
 5. BANNED PHRASES: NEVER use: "It's worth noting", "In today's [anything]", "Let's dive in", "In conclusion", "plays a crucial role", "It goes without saying", "In the realm of".
 6. BANNED PATTERNS: NO rule-of-three groupings. NO synonym cycling. NO "serves as" (just say "is"). NO em-dash chains. NO binary contrasts. NO clustering of however/notably/essentially.
 
-Return the full article in clean Markdown. Start with the headline. Do NOT wrap in JSON."""
+Return the full article in clean plain text format ONLY. DO NOT use any Markdown formatting (no asterisks for bolding, no hashtags for headers). Do NOT wrap in JSON."""
 
     try:
         content_draft = call_ai_model(guest_prompt)
         content = humanize_content(content_draft)
         
-        guest_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"guest_post_{date_str}.md"
+        guest_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"guest_post_{date_str}.txt"
         with open(guest_path, "w", encoding="utf-8") as f:
-            f.write(f"# GUEST POST — {date_str}\n# Target: Forbes / SalesHacker / LinkedIn\n\n")
+            f.write(f"GUEST POST — {date_str}\nTarget: Forbes / SalesHacker / LinkedIn\n\n")
             f.write(content)
         log(f"  ✅ Guest post saved locally to: {guest_path}")
         

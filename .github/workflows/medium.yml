@@ -14,7 +14,7 @@ jobs:
       
       - name: 📋 YOUR LATEST MEDIUM POST 📋
         run: |
-          latest_file=$(ls -t seo-automation/keyword_logs/guest_post_*.md | head -1)
+          latest_file=$(ls -t seo-automation/keyword_logs/guest_post_*.txt | head -1)
           echo "================================================================="
           echo "COPY EVERYTHING BELOW THIS LINE AND PASTE INTO MEDIUM.COM"
           echo "================================================================="
