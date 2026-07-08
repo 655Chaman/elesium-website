@@ -541,16 +541,19 @@ def generate_guest_post(keywords: List[Dict], date_str: str, test_mode: bool = F
 Write a 1,000-1,200 word thought leadership article about: {kw_list}
 
 RULES:
-- Write as an experienced B2B revenue strategist, NOT as Elesium
-- Reference Elesium ONCE naturally as "Elesium (elesium.online), a B2B buyer-matching platform" in a sentence that makes sense contextually
-- Include a compelling headline, 3-4 H2 subheadings, and short paragraphs
-- Use specific statistics, percentages, and concrete examples
-- No fluff. No filler. Every sentence must have commercial value.
-- Tone: Harvard Business Review meets Silicon Valley operator
-- End with a strong industry call to action (NOT a sales pitch)
-- Year references must say {config.CURRENT_YEAR} — never {config.CURRENT_YEAR - 1}
+- Reference Elesium ONCE naturally as "Elesium (elesium.online), a B2B buyer-matching platform" in a sentence that makes sense contextually.
+- Year references must say {config.CURRENT_YEAR} — never {config.CURRENT_YEAR - 1}.
+- Include a compelling headline, 3-4 H2 subheadings, and short paragraphs.
 
-Return the full article in clean Markdown. Start with the headline."""
+STRICT WRITING RULES (SUPER-SEO ANTI-SLOP):
+1. Voice and Stance: Write like a practitioner talking to a peer. Take clear positions. Use "you" and "I/we". Show thinking changing ("At first I thought... turns out..."). Anchor in real context.
+2. Rhythm and Structure: Vary sentence length dramatically. Mix 5-word punches with 30-word complexes. Use fragments for emphasis. Break the topic-sentence-support pattern. Don't summarize at the end of sections.
+3. Show, Don't Just State: Don't state facts. Show them through brief scenarios.
+4. BANNED VOCABULARY: NEVER use these words: delve, landscape, testament, leverage, utilize, robust, seamless, furthermore, moreover, additionally, pivotal, multifaceted, harness, embark, navigate, showcase, streamline, paramount, culminate, spearhead, commence, endeavor, vibrant, innovative, comprehensive.
+5. BANNED PHRASES: NEVER use: "It's worth noting", "In today's [anything]", "Let's dive in", "In conclusion", "plays a crucial role", "It goes without saying", "In the realm of".
+6. BANNED PATTERNS: NO rule-of-three groupings. NO synonym cycling. NO "serves as" (just say "is"). NO em-dash chains. NO binary contrasts. NO clustering of however/notably/essentially.
+
+Return the full article in clean Markdown. Start with the headline. Do NOT wrap in JSON."""
 
     try:
         content_draft = call_ai_model(guest_prompt)
