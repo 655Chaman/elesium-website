@@ -1,0 +1,35 @@
+{
+  "total_words": 383,
+  "keywords_found": 4,
+  "keywords_missing": 6,
+  "found": [
+    {
+      "keyword": "customer acquisition cost reduction",
+      "count": 2,
+      "density_pct": 2.09
+    },
+    {
+      "keyword": "B2B revenue acceleration",
+      "count": 2,
+      "density_pct": 1.57
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 1,
+      "density_pct": 0.78
+    },
+    {
+      "keyword": "B2B partnership program",
+      "count": 1,
+      "density_pct": 0.78
+    }
+  ],
+  "missing": [
+    "enterprise revenue growth",
+    "sales cycle reduction",
+    "OEM supplier network",
+    "account based marketing platform",
+    "business matchmaking service",
+    "executive recruitment platform"
+  ]
+}

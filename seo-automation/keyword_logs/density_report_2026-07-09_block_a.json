@@ -1,0 +1,43 @@
+{
+  "total_words": 415,
+  "keywords_found": 6,
+  "keywords_missing": 4,
+  "found": [
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 5,
+      "density_pct": 3.61
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 1,
+      "density_pct": 0.96
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 1,
+      "density_pct": 0.72
+    },
+    {
+      "keyword": "outbound sales platform",
+      "count": 1,
+      "density_pct": 0.72
+    },
+    {
+      "keyword": "buyer intent signals platform",
+      "count": 1,
+      "density_pct": 0.96
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "count": 1,
+      "density_pct": 0.72
+    }
+  ],
+  "missing": [
+    "B2B lead generation 2025",
+    "high ticket B2B sales",
+    "sales intelligence software",
+    "manufacturing buyers platform"
+  ]
+}
