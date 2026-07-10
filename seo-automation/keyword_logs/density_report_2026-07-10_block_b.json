@@ -1,0 +1,43 @@
+{
+  "total_words": 314,
+  "keywords_found": 6,
+  "keywords_missing": 4,
+  "found": [
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 1,
+      "density_pct": 0.96
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "count": 3,
+      "density_pct": 2.87
+    },
+    {
+      "keyword": "B2B partnership program",
+      "count": 1,
+      "density_pct": 0.96
+    },
+    {
+      "keyword": "OEM supplier network",
+      "count": 1,
+      "density_pct": 0.96
+    },
+    {
+      "keyword": "business matchmaking service",
+      "count": 1,
+      "density_pct": 0.96
+    },
+    {
+      "keyword": "executive recruitment platform",
+      "count": 1,
+      "density_pct": 0.96
+    }
+  ],
+  "missing": [
+    "customer acquisition cost reduction",
+    "B2B revenue acceleration",
+    "sales cycle reduction",
+    "account based marketing platform"
+  ]
+}
