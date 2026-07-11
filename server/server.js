@@ -79,7 +79,7 @@ app.post('/api/submit', async (req, res) => {
                     'Readiness': readiness || '',
                     'Use Case': usecase || '',
                     'Lead Source': leadSource || ''
-                });
+                }, { insert: true });
                 console.log('[SUBMIT] Added lead to Google Sheet.');
                 sheetSuccess = true;
             } else {
