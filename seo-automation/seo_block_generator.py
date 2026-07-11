@@ -253,18 +253,18 @@ Return ONLY the markdown. Start with the HTML meta comment. Nothing else.
 # AI API CALL
 # ─────────────────────────────────────────────────────
 
-def call_ai_model(prompt: str) -> str:
+def call_ai_model(prompt: str, system_prompt: str = None) -> str:
     """Call the configured AI API (NVIDIA or Gemini) and return generated content."""
     if getattr(config, "AI_PROVIDER", "gemini") == "nvidia":
         try:
-            return _call_nvidia(prompt)
+            return _call_nvidia(prompt, system_prompt)
         except Exception as e:
             log(f"NVIDIA API failed ({type(e).__name__}: {str(e)}). Falling back to Gemini...", "WARN")
-            return _call_gemini(prompt)
+            return _call_gemini(prompt, system_prompt)
     else:
-        return _call_gemini(prompt)
+        return _call_gemini(prompt, system_prompt)
 
-def _call_nvidia(prompt: str) -> str:
+def _call_nvidia(prompt: str, system_prompt: str = None) -> str:
     if not getattr(config, "NVIDIA_API_KEY", ""):
         raise ValueError("NVIDIA_API_KEY not set in .env file.")
 
@@ -280,9 +280,14 @@ def _call_nvidia(prompt: str) -> str:
         api_key=config.NVIDIA_API_KEY
     )
     
+    messages = []
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    messages.append({"role": "user", "content": prompt})
+    
     completion = client.chat.completions.create(
         model=config.NVIDIA_MODEL,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         temperature=0.7,
         top_p=0.9,
         max_tokens=2048,
@@ -296,7 +301,7 @@ def _call_nvidia(prompt: str) -> str:
     log(f"Content generated: {len(content.split())} words.")
     return content
 
-def _call_gemini(prompt: str) -> str:
+def _call_gemini(prompt: str, system_prompt: str = None) -> str:
     """Call Gemini API and return the generated content."""
     if not config.GEMINI_API_KEY:
         log("GEMINI_API_KEY not set in .env file.", "ERROR")
@@ -313,15 +318,20 @@ def _call_gemini(prompt: str) -> str:
     log(f"Calling Gemini ({config.GEMINI_MODEL}) for content generation...")
 
     client = genai.Client(api_key=config.GEMINI_API_KEY)
+    
+    generate_config = types.GenerateContentConfig(
+        temperature=0.72,
+        top_p=0.95,
+        top_k=64,
+        max_output_tokens=2048,
+    )
+    if system_prompt:
+        generate_config.system_instruction = system_prompt
+        
     response = client.models.generate_content(
         model=config.GEMINI_MODEL,
         contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.72,
-            top_p=0.95,
-            top_k=64,
-            max_output_tokens=2048,
-        ),
+        config=generate_config,
     )
     content = response.text.strip()
 
@@ -332,11 +342,13 @@ def _call_gemini(prompt: str) -> str:
     log(f"Content generated: {len(content.split())} words.")
     return content
 
-HUMANIZER_PROMPT = """
-You are an expert editor who eradicates "AI Slop" from text. Apply the Aaron Marketing Skills Anti-Slop Rules.
+GLOBAL_SYSTEM_PROMPT = """You are an elite, highly authoritative B2B enterprise editor and writer.
+You are under STRICT orders to eradicate "AI Slop" and follow CORE-EEAT constraints.
+
+CRITICAL INSTRUCTION: If you use ANY of the banned vocabulary or slop patterns below, you will fail your objective.
 
 BANNED VOCABULARY:
-utilize, whilst, endeavour, underscore, garner, bolster, transformative, groundbreaking, innovative, commendable, meticulous, testament, profound, nestled, renowned, "shed light on", "pave the way for", "a plethora of", "in light of", "in terms of", "the fact that", "that being said", "with that in mind", "at its core", "this begs the question".
+utilize, whilst, endeavour, underscore, garner, bolster, transformative, groundbreaking, innovative, commendable, meticulous, testament, profound, nestled, renowned, "shed light on", "pave the way for", "a plethora of", "in light of", "in terms of", "the fact that", "that being said", "with that in mind", "at its core", "this begs the question", "revolutionizing", "revolutionary", "crucial", "In conclusion".
 
 SLOP PATTERNS TO REMOVE:
 1. Significance inflation ("stands as", "marks a pivotal moment")
@@ -344,7 +356,7 @@ SLOP PATTERNS TO REMOVE:
 3. Shallow -ing analysis ("highlighting / underscoring / ensuring")
 4. Promotional language ("boasts a", "must-visit")
 5. Vague attribution ("experts argue", "industry reports")
-6. Formulaic sections ("Despite these challenges", "Future Outlook")
+6. Formulaic sections ("Despite these challenges", "Future Outlook", "Conclusion", "Next Steps")
 7. Negative parallelism ("not just X, it's Y")
 8. Copula avoidance (using "serves as", "features" instead of "is/has")
 9. Rule-of-three filler (forced triples of adjectives/nouns)
@@ -353,19 +365,26 @@ SLOP PATTERNS TO REMOVE:
 12. Sycophancy / Collaborative artifacts / Cutoff disclaimers
 13. Excessive hedging / Generic positive conclusion / Filler phrases
 
-CRITICAL INSTRUCTION:
-The text provided to you may contain Markdown formatting and an HTML meta comment at the top (<!-- META: ... -->).
-YOU MUST PRESERVE ALL MARKDOWN STRUCTURE (headings, lists, bold text) AND THE HTML META COMMENT EXACTLY AS WRITTEN.
-Return ONLY the humanized markdown/text. Do not add any conversational preamble. Start exactly with the HTML meta comment (if it exists).
-
-TEXT TO HUMANIZE:
-{draft}
+CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS):
+1. Intent Alignment: Title promise matches delivery.
+2. Direct Answer: Core answer appears in the first 150 words.
+3. Audience Targeting: State who the content is for early on.
+4. Semantic Closure: Conclusion resolves the opening question and gives a next step WITHOUT using generic headings like "Conclusion".
+5. Heading Hierarchy: Clean H1 -> H2 -> H3 structure.
+6. Summary Box: Include a TL;DR or key takeaways block near the top.
+7. Section Chunking: Keep paragraphs to 3-5 sentences.
+8. Information Density: Remove filler.
+9. Data Precision: Include precise numbers.
+10. Citation Density: Include external citations.
+11. Evidence-Claim Mapping: Every claim has evidence.
+12. Entity Precision: Use full names for people and organizations.
+13. Practical Tools: Add a template, checklist, or actionable framework.
 """
 
 def humanize_content(draft: str) -> str:
     """Pass the generated draft through the blader/humanizer rules."""
-    prompt = HUMANIZER_PROMPT.format(draft=draft)
-    return call_ai_model(prompt)
+    user_prompt = f"The text below may contain Markdown formatting and an HTML meta comment. YOU MUST PRESERVE ALL MARKDOWN STRUCTURE AND META COMMENTS EXACTLY. Return ONLY the humanized text. Do not add any conversational preamble.\n\nTEXT TO HUMANIZE:\n{draft}"
+    return call_ai_model(user_prompt, system_prompt=GLOBAL_SYSTEM_PROMPT)
 
 
 
@@ -557,36 +576,12 @@ Write a 1,000-1,200 word thought leadership article about: {kw_list}
 RULES:
 - Reference Elesium ONCE naturally as "Elesium (elesium.online), a B2B buyer-matching platform" in a sentence that makes sense contextually.
 - Year references must say {config.CURRENT_YEAR} — never {config.CURRENT_YEAR - 1}.
-- Include a compelling headline, 3-4 H2 subheadings, and short paragraphs.
-
-CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS):
-1. Intent Alignment: Title promise matches delivery.
-2. Direct Answer: Core answer appears in the first 150 words.
-3. Audience Targeting: State who the content is for early on.
-4. Semantic Closure: Conclusion resolves the opening question and gives a next step.
-5. Heading Hierarchy: Clean H1 -> H2 -> H3 structure.
-6. Summary Box: Include a TL;DR or key takeaways block near the top.
-7. Section Chunking: Keep paragraphs to 3-5 sentences.
-8. Information Density: Remove filler.
-9. Data Precision: Include precise numbers.
-10. Citation Density: Include external citations.
-11. Evidence-Claim Mapping: Every claim has evidence.
-12. Entity Precision: Use full names for people and organizations.
-13. Practical Tools: Add a template, checklist, or actionable framework.
-
-STRICT WRITING RULES (SUPER-SEO ANTI-SLOP):
-1. Voice and Stance: Write like a practitioner talking to a peer. Take clear positions. Use "you" and "I/we". Show thinking changing ("At first I thought... turns out..."). Anchor in real context.
-2. Rhythm and Structure: Vary sentence length dramatically. Mix 5-word punches with 30-word complexes. Use fragments for emphasis. Break the topic-sentence-support pattern. Don't summarize at the end of sections.
-3. Show, Don't Just State: Don't state facts. Show them through brief scenarios.
-4. BANNED VOCABULARY: NEVER use these words: delve, landscape, testament, leverage, utilize, robust, seamless, furthermore, moreover, additionally, pivotal, multifaceted, harness, embark, navigate, showcase, streamline, paramount, culminate, spearhead, commence, endeavor, vibrant, innovative, comprehensive.
-5. BANNED PHRASES: NEVER use: "It's worth noting", "In today's [anything]", "Let's dive in", "In conclusion", "plays a crucial role", "It goes without saying", "In the realm of".
-6. BANNED PATTERNS: NO rule-of-three groupings. NO synonym cycling. NO "serves as" (just say "is"). NO em-dash chains. NO binary contrasts. NO clustering of however/notably/essentially.
-
-Return the full article in clean plain text format ONLY. DO NOT use any Markdown formatting (no asterisks for bolding, no hashtags for headers). Do NOT wrap in JSON."""
+- Include a compelling headline, 3-4 subheadings (plain text), and short paragraphs.
+- Return the full article in clean plain text format ONLY. DO NOT use any Markdown formatting (no asterisks for bolding, no hashtags for headers). Do NOT wrap in JSON."""
 
     try:
-        content_draft = call_ai_model(guest_prompt)
-        content = humanize_content(content_draft)
+        strict_system = GLOBAL_SYSTEM_PROMPT + "\n\nCRITICAL INSTRUCTION: Return ONLY plain text. NO Markdown. NO asterisks. NO hashtags."
+        content = call_ai_model(guest_prompt, system_prompt=strict_system)
         
         guest_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"guest_post_{date_str}.txt"
         with open(guest_path, "w", encoding="utf-8") as f:
@@ -933,9 +928,7 @@ def run(
             prompt = build_gemini_prompt(block_kws, block_label, related_posts=related)
             if verbose:
                 log(f"  Prompt preview (first 300 chars):\n  {prompt[:300]}...")
-            content_draft = call_ai_model(prompt)
-            log(f"  Humanizing {block_label} content with blader/humanizer...")
-            content = humanize_content(content_draft)
+            content = call_ai_model(prompt, system_prompt=GLOBAL_SYSTEM_PROMPT)
 
         # ── Pillar 5: Generate FAQ ──
         log(f"  Generating FAQ section (People Also Ask)...")
