@@ -240,14 +240,23 @@ def fetch_tier3_curated() -> list:
         ("passive candidate sourcing", 64),
         ("talent acquisition platform 2025", 62),
     ]
+    
+    # Shuffle the list uniquely for each day so we don't repeat the exact same keywords
+    import random
+    from datetime import datetime
+    today_seed = datetime.now().strftime("%Y-%m-%d")
+    random.seed(today_seed)
+    random.shuffle(curated)
+    
+    # Re-assign trending scores linearly so the top randomized ones get selected
     return [
         {
             "keyword": kw,
-            "trending_score": float(score),
+            "trending_score": float(95 - i),
             "source": "curated_fallback",
             "relevance_score": 0.8,
         }
-        for kw, score in curated
+        for i, (kw, _) in enumerate(curated)
     ]
 
 

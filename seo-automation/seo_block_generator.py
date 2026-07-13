@@ -365,6 +365,13 @@ SLOP PATTERNS TO REMOVE:
 12. Sycophancy / Collaborative artifacts / Cutoff disclaimers
 13. Excessive hedging / Generic positive conclusion / Filler phrases
 
+WINNING COPY STYLE CONSTRAINTS:
+1. Radical Honesty & Anti-Corporate: Reject standard "B2B thought leadership" jargon entirely. Speak like a real human who hates fluff. Be raw and unfiltered. 
+2. Conversational Tone: Use a colloquial, vulnerable tone as if speaking to a friend in a cafe.
+3. Micro-Pacing & Rhythm: Use extreme sentence variation. Heavy use of single-sentence paragraphs for dramatic effect and punchiness.
+4. Micro-Narratives: Do not list facts. Anchor every lesson or claim in a brief, relatable scenario or story.
+5. Zero Fluff: Never use "In today's fast-paced world" introductions.
+
 CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS):
 1. Intent Alignment: Title promise matches delivery.
 2. Direct Answer: Core answer appears in the first 150 words.
@@ -372,7 +379,7 @@ CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS):
 4. Semantic Closure: Conclusion resolves the opening question and gives a next step WITHOUT using generic headings like "Conclusion".
 5. Heading Hierarchy: Clean H1 -> H2 -> H3 structure.
 6. Summary Box: Include a TL;DR or key takeaways block near the top.
-7. Section Chunking: Keep paragraphs to 3-5 sentences.
+7. Section Chunking: Keep paragraphs to 1-3 sentences maximum.
 8. Information Density: Remove filler.
 9. Data Precision: Include precise numbers.
 10. Citation Density: Include external citations.
