@@ -995,6 +995,20 @@ def run(
         report_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"{report_key}.json"
         with open(report_path, "w", encoding="utf-8") as f:
             json.dump(density, f, indent=2, ensure_ascii=False)
+            
+        # ── Save Plain Text for Medium ──
+        # Strip out basic markdown for a clean copy-paste experience
+        clean_content = re.sub(r'<!--.*?-->', '', content, flags=re.DOTALL) # Remove HTML comments
+        clean_content = re.sub(r'#+\s*', '', clean_content) # Remove headers
+        clean_content = clean_content.replace('**', '').replace('__', '') # Remove bold
+        clean_content = clean_content.replace('* ', '• ').replace('- ', '• ') # Replace list asterisks with bullets
+        clean_content = clean_content.strip()
+        
+        medium_key = f"medium_post_{today}_{block_label.replace(' ', '_').lower()}"
+        medium_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"{medium_key}.txt"
+        with open(medium_path, "w", encoding="utf-8") as f:
+            f.write(f"TITLE: {title_for_schema}\n\n{clean_content}")
+        log(f"  ✅ Plain text Medium post saved locally to: {medium_path}")
 
         # ── Auto git push ──
         if auto_push and not test_mode:

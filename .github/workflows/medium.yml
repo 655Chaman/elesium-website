@@ -12,15 +12,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: 📋 YOUR LATEST MEDIUM POST 📋
+      - name: 📋 YOUR LATEST MEDIUM POSTS 📋
         run: |
-          latest_file=$(ls -t seo-automation/keyword_logs/guest_post_*.txt | head -1)
           echo "================================================================="
-          echo "COPY EVERYTHING BELOW THIS LINE AND PASTE INTO MEDIUM.COM"
+          echo "HERE ARE YOUR GENERATED PLAIN-TEXT BLOGS AND GUEST POSTS"
           echo "================================================================="
-          echo ""
-          cat "$latest_file"
-          echo ""
-          echo "================================================================="
-          echo "END OF POST"
-          echo "================================================================="
+          
+          # Find all text files generated in the last 24 hours
+          files=$(find seo-automation/keyword_logs -name "*.txt" -type f -mtime -1)
+          
+          if [ -z "$files" ]; then
+            echo "No text posts found generated recently."
+          else
+            for f in $files; do
+              echo ""
+              echo "--- FILE: $(basename "$f") ---"
+              cat "$f"
+              echo ""
+              echo "--------------------------------------------------------"
+            done
+          fi
+
+      - name: 📦 Upload Text Files as Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Medium-Text-Posts
+          path: seo-automation/keyword_logs/*.txt
+          retention-days: 7
