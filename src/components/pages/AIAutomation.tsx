@@ -3,42 +3,52 @@ import { useEffect, useState } from 'react'
 import { Terminal, Shield, Network, Zap, Cpu, Code2, Lock, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+const terminalLines = [
+    "> Initializing Agent_04 [Sales_Ops]...",
+    "> Connecting to CRM database...",
+    "[OK] CRM authenticated.",
+    "> Analyzing 4,203 open leads for intent signals...",
+    "> Intent analysis complete. 14 high-intent accounts identified.",
+    "> Drafting personalized outreach based on Q3 earnings...",
+    "> Simulating response probability... 87% confidence.",
+    "> Action: Sending 14 tailored sequences via Outreach.",
+    "[SUCCESS] Operation completed in 2.4s. Human hours saved: 18h."
+]
+
 // Mock Terminal component for the interactive section
 const AgentTerminal = () => {
     const [lines, setLines] = useState<string[]>([])
-    const terminalLines = [
-        "> Initializing Agent_04 [Sales_Ops]...",
-        "> Connecting to CRM database...",
-        "[OK] CRM authenticated.",
-        "> Analyzing 4,203 open leads for intent signals...",
-        "> Intent analysis complete. 14 high-intent accounts identified.",
-        "> Drafting personalized outreach based on Q3 earnings...",
-        "> Simulating response probability... 87% confidence.",
-        "> Action: Sending 14 tailored sequences via Outreach.",
-        "[SUCCESS] Operation completed in 2.4s. Human hours saved: 18h."
-    ]
 
     useEffect(() => {
+        let isCancelled = false;
         let currentIndex = 0;
-        let isWaiting = false;
-        const interval = setInterval(() => {
-            if (isWaiting) return;
-            
+        let timeoutId: NodeJS.Timeout;
+
+        const typeNextLine = () => {
+            if (isCancelled) return;
+
             if (currentIndex < terminalLines.length) {
                 setLines(prev => [...prev, terminalLines[currentIndex]]);
                 currentIndex++;
+                timeoutId = setTimeout(typeNextLine, 800);
             } else {
-                isWaiting = true;
                 // Reset after a delay
-                setTimeout(() => {
+                timeoutId = setTimeout(() => {
+                    if (isCancelled) return;
                     setLines([]);
                     currentIndex = 0;
-                    isWaiting = false;
+                    timeoutId = setTimeout(typeNextLine, 800);
                 }, 5000);
             }
-        }, 800);
+        };
 
-        return () => clearInterval(interval);
+        // Start typing
+        timeoutId = setTimeout(typeNextLine, 800);
+
+        return () => {
+            isCancelled = true;
+            clearTimeout(timeoutId);
+        };
     }, []);
 
     return (
@@ -54,7 +64,7 @@ const AgentTerminal = () => {
                     <motion.div 
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        key={i} 
+                        key={`terminal-line-${i}-${line.substring(0,5)}`}
                         className={`${line.startsWith('[SUCCESS]') ? 'text-green-400' : line.startsWith('[OK]') ? 'text-blue-400' : 'text-gray-300'}`}
                     >
                         {line}
