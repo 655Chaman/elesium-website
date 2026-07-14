@@ -12,6 +12,17 @@ export interface ResourceItem {
 
 export const resourcesData: ResourceItem[] = [
   {
+    id: '1',
+    title: 'Offer Creation Blueprint',
+    slug: 'offer-creation-blueprint',
+    description: 'The reverse-engineered framework to build a world-class, irresistible offer instead of racing to the bottom with competitors.',
+    category: 'Strategy',
+    date: 'July 2026',
+    readTime: '8 min read',
+    googleDriveLink: 'https://docs.google.com/document/d/1RZeCYMKegf17kA48ijPpzRF6LxD1TiFoHVJ6PRDjaH4/edit?usp=sharing',
+    markdownFile: '/resources/offer-creation-blueprint.md',
+  },
+  {
     id: '2',
     title: 'Multi-Channel Inbound Tracker',
     slug: 'multi-channel-inbound-tracker',
