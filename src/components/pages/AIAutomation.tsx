@@ -29,7 +29,8 @@ const AgentTerminal = () => {
             if (isCancelled) return;
 
             if (currentIndex < terminalLines.length) {
-                setLines(prev => [...prev, terminalLines[currentIndex]]);
+                const nextLine = terminalLines[currentIndex];
+                setLines(prev => [...prev, nextLine]);
                 currentIndex++;
                 timeoutId = setTimeout(typeNextLine, 800);
             } else {
