@@ -20,16 +20,20 @@ const AgentTerminal = () => {
 
     useEffect(() => {
         let currentIndex = 0;
+        let isWaiting = false;
         const interval = setInterval(() => {
+            if (isWaiting) return;
+            
             if (currentIndex < terminalLines.length) {
                 setLines(prev => [...prev, terminalLines[currentIndex]]);
                 currentIndex++;
             } else {
-                clearInterval(interval);
+                isWaiting = true;
                 // Reset after a delay
                 setTimeout(() => {
                     setLines([]);
                     currentIndex = 0;
+                    isWaiting = false;
                 }, 5000);
             }
         }, 800);
@@ -82,10 +86,7 @@ export default function AIAutomation() {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="text-center max-w-4xl mx-auto mb-32"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 mb-8 backdrop-blur-md">
-                        <SparklesIcon className="w-4 h-4 text-blue-500" />
-                        <span className="text-sm font-medium text-gray-900 dark:text-gray-200">The Future of Operations</span>
-                    </div>
+
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.1]">
                         Shift from Manual<br/>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
@@ -238,25 +239,3 @@ export default function AIAutomation() {
     )
 }
 
-function SparklesIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-            <path d="M5 3v4" />
-            <path d="M19 17v4" />
-            <path d="M3 5h4" />
-            <path d="M17 19h4" />
-        </svg>
-    )
-}
