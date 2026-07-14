@@ -1,0 +1,43 @@
+{
+  "total_words": 333,
+  "keywords_found": 6,
+  "keywords_missing": 4,
+  "found": [
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 3,
+      "density_pct": 3.6
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 1,
+      "density_pct": 0.9
+    },
+    {
+      "keyword": "outbound sales platform",
+      "count": 2,
+      "density_pct": 1.8
+    },
+    {
+      "keyword": "manufacturing buyers platform",
+      "count": 2,
+      "density_pct": 1.8
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "count": 1,
+      "density_pct": 0.9
+    },
+    {
+      "keyword": "B2B growth hacking",
+      "count": 2,
+      "density_pct": 1.8
+    }
+  ],
+  "missing": [
+    "high ticket B2B sales",
+    "account based marketing platform",
+    "industrial automation buyers",
+    "B2B manufacturing sales"
+  ]
+}

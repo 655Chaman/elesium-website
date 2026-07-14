@@ -1,0 +1,51 @@
+{
+  "total_words": 421,
+  "keywords_found": 8,
+  "keywords_missing": 2,
+  "found": [
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 4,
+      "density_pct": 2.85
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 4,
+      "density_pct": 2.85
+    },
+    {
+      "keyword": "business matchmaking service",
+      "count": 2,
+      "density_pct": 1.43
+    },
+    {
+      "keyword": "plant manager procurement",
+      "count": 2,
+      "density_pct": 1.43
+    },
+    {
+      "keyword": "sales intelligence software",
+      "count": 2,
+      "density_pct": 1.43
+    },
+    {
+      "keyword": "customer acquisition cost reduction",
+      "count": 2,
+      "density_pct": 1.9
+    },
+    {
+      "keyword": "B2B revenue acceleration",
+      "count": 2,
+      "density_pct": 1.43
+    },
+    {
+      "keyword": "supply chain partner matching",
+      "count": 2,
+      "density_pct": 1.9
+    }
+  ],
+  "missing": [
+    "sales cycle reduction",
+    "market signals sales"
+  ]
+}
