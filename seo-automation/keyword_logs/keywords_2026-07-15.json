@@ -1,0 +1,301 @@
+{
+  "date": "2026-07-15",
+  "timestamp": "2026-07-15T13:28:02.205511",
+  "total_keywords": 20,
+  "clusters": {
+    "Revenue & Growth": [
+      "B2B lead generation 2025",
+      "B2B growth hacking",
+      "B2B revenue acceleration",
+      "customer acquisition cost reduction"
+    ],
+    "B2B Sales & Dealflow": [
+      "enterprise dealflow management",
+      "sales cycle reduction",
+      "outbound sales platform",
+      "high ticket B2B sales",
+      "B2B partnership program",
+      "enterprise sales strategy",
+      "enterprise revenue growth"
+    ],
+    "Manufacturing & Industrial": [
+      "industrial B2B marketplace",
+      "B2B manufacturing sales"
+    ],
+    "Signal-Driven Outbound": [
+      "buyer intent signals platform",
+      "account based marketing platform",
+      "B2B buyer intent data",
+      "market signals sales"
+    ],
+    "Staffing & Talent": [
+      "talent acquisition platform 2025",
+      "executive recruitment platform"
+    ],
+    "Business Matchmaking & Partnerships": [
+      "B2B buyer matching platform"
+    ]
+  },
+  "keywords": [
+    {
+      "keyword": "B2B lead generation 2025",
+      "trending_score": 95.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 95.0,
+      "composite_score": 0.8375,
+      "trending_score_norm": 0.95,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.8375
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "trending_score": 94.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 94.0,
+      "composite_score": 0.832,
+      "trending_score_norm": 0.94,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.832
+    },
+    {
+      "keyword": "sales cycle reduction",
+      "trending_score": 93.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 93.0,
+      "composite_score": 0.8265,
+      "trending_score_norm": 0.93,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.8265
+    },
+    {
+      "keyword": "outbound sales platform",
+      "trending_score": 91.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 91.0,
+      "composite_score": 0.8155,
+      "trending_score_norm": 0.91,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.8155
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "trending_score": 89.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 89.0,
+      "composite_score": 0.8045,
+      "trending_score_norm": 0.89,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.8045
+    },
+    {
+      "keyword": "B2B growth hacking",
+      "trending_score": 88.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 88.0,
+      "composite_score": 0.799,
+      "trending_score_norm": 0.88,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.799
+    },
+    {
+      "keyword": "B2B revenue acceleration",
+      "trending_score": 87.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 87.0,
+      "composite_score": 0.7935,
+      "trending_score_norm": 0.87,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7935
+    },
+    {
+      "keyword": "high ticket B2B sales",
+      "trending_score": 85.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 85.0,
+      "composite_score": 0.7825,
+      "trending_score_norm": 0.85,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7825
+    },
+    {
+      "keyword": "buyer intent signals platform",
+      "trending_score": 83.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 83.0,
+      "composite_score": 0.7715,
+      "trending_score_norm": 0.83,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7715
+    },
+    {
+      "keyword": "account based marketing platform",
+      "trending_score": 82.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 82.0,
+      "composite_score": 0.766,
+      "trending_score_norm": 0.82,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.766
+    },
+    {
+      "keyword": "talent acquisition platform 2025",
+      "trending_score": 80.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 80.0,
+      "composite_score": 0.755,
+      "trending_score_norm": 0.8,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.755
+    },
+    {
+      "keyword": "B2B buyer intent data",
+      "trending_score": 79.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 79.0,
+      "composite_score": 0.7495,
+      "trending_score_norm": 0.79,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7495
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "trending_score": 78.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 78.0,
+      "composite_score": 0.744,
+      "trending_score_norm": 0.78,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.744
+    },
+    {
+      "keyword": "B2B partnership program",
+      "trending_score": 77.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 77.0,
+      "composite_score": 0.7385,
+      "trending_score_norm": 0.77,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7385
+    },
+    {
+      "keyword": "enterprise sales strategy",
+      "trending_score": 76.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 76.0,
+      "composite_score": 0.733,
+      "trending_score_norm": 0.76,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.733
+    },
+    {
+      "keyword": "market signals sales",
+      "trending_score": 74.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 74.0,
+      "composite_score": 0.722,
+      "trending_score_norm": 0.74,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.722
+    },
+    {
+      "keyword": "B2B manufacturing sales",
+      "trending_score": 73.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 73.0,
+      "composite_score": 0.7165,
+      "trending_score_norm": 0.73,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7165
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "trending_score": 72.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 72.0,
+      "composite_score": 0.711,
+      "trending_score_norm": 0.72,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.711
+    },
+    {
+      "keyword": "executive recruitment platform",
+      "trending_score": 70.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 70.0,
+      "composite_score": 0.7,
+      "trending_score_norm": 0.7,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.7
+    },
+    {
+      "keyword": "customer acquisition cost reduction",
+      "trending_score": 69.0,
+      "source": "curated_fallback",
+      "relevance_score": 0.9,
+      "trending_score_raw": 69.0,
+      "composite_score": 0.6945,
+      "trending_score_norm": 0.69,
+      "volume": 0,
+      "cpc": 0.0,
+      "competition": 0.0,
+      "final_score": 0.6945
+    }
+  ]
+}
