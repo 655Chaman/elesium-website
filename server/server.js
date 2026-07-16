@@ -22,7 +22,7 @@ const notion = new Client({
 const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 app.post('/api/submit', async (req, res) => {
-    const { name, email, company, usecase, website, role, revenue, certifications, readiness, targetPartner, leadSource } = req.body;
+    const { name, email, company, usecase, website, role, revenue, certifications, readiness, targetPartner, leadSource, attributionSource } = req.body;
 
     try {
         console.log(`[SUBMIT] Attempting to route lead to CRM: ${email}`);
@@ -108,6 +108,7 @@ app.post('/api/submit', async (req, res) => {
                     { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Website: ' }, annotations: { bold: true } }, { text: { content: website || 'N/A' } }] } },
                     { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Role: ' }, annotations: { bold: true } }, { text: { content: role || 'N/A' } }] } },
                     { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Use Case: ' }, annotations: { bold: true } }, { text: { content: usecase || 'N/A' } }] } },
+                    { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: 'Source / Attribution: ' }, annotations: { bold: true } }, { text: { content: attributionSource || leadSource || 'N/A' } }] } },
                 ],
             });
             console.log('[SUBMIT] Fallback: Entry added to Notion.');

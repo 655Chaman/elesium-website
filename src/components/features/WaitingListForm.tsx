@@ -42,6 +42,7 @@ type FormData = {
     company: string
     role: string
     usecase: string
+    attributionSource: string
     leadSource: string
 }
 
@@ -80,6 +81,7 @@ export function MandateApplicationForm({ source = 'mandate-application' }: Manda
         company: '',
         role: '',
         usecase: '',
+        attributionSource: '',
         leadSource: source,
     })
 
@@ -455,6 +457,32 @@ export function MandateApplicationForm({ source = 'mandate-application' }: Manda
                                         className={`${inputClass} min-h-[100px] resize-y`}
                                         placeholder="What specific outcome are you looking to achieve?"
                                     />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="attributionSource" className={labelClass}>
+                                        How did you hear about us? <span className="text-gray-400">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <select
+                                            required
+                                            id="attributionSource"
+                                            value={formData.attributionSource}
+                                            onChange={handleChange}
+                                            className={selectClass}
+                                        >
+                                            <option value="" disabled>Select an option</option>
+                                            <option value="google-search">Google Search</option>
+                                            <option value="ai-assistant">AI Assistant (ChatGPT, Claude, etc.)</option>
+                                            <option value="ai-search">AI Search Engine (Perplexity, AI Overviews)</option>
+                                            <option value="linkedin-social">LinkedIn / Social Media</option>
+                                            <option value="word-of-mouth">Word of Mouth / Referral</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                                            ▾
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <div className="flex gap-3 pt-1">
