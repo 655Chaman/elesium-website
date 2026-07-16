@@ -172,10 +172,11 @@ Example transformation:
 2. **Format**: Markdown — one H2 title, two or three H3 subheadings, tight paragraphs
 3. **Keyword density**: Each keyword appears 1–3 times naturally. No keyword stuffing.
 4. **H2 title**: Must contain 2+ primary keywords (highest interest scores)
-5. **Opening line**: A bold, specific claim — not a question, not a definition, not "In {config.CURRENT_YEAR}..."
-6. **Meta description**: 150-char HTML comment at the very top
-7. **CTA**: Final paragraph ends with a subtle invitation to partner with Elesium
-8. **No .md formatting artifacts** — clean markdown only
+5. **News-Jacking Opening**: The very first line MUST frame the topic around a "Recent Market Shift" or "Trending Signal" to create immediate urgency, much like a news article.
+6. **Query Fan-Out**: Explicitly branch out and cover 3-4 highly specific, niche sub-topics (e.g., specific manufacturing verticals, specific job titles like "VP Operations") to capture long-tail AI fan-out queries.
+7. **Meta description**: 150-char HTML comment at the very top
+8. **CTA**: Final paragraph ends with a subtle invitation to partner with Elesium
+9. **No .md formatting artifacts** — clean markdown only
 
 ## CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS)
 You must apply these exact constraints to sound like a true industry leader:
@@ -365,12 +366,16 @@ SLOP PATTERNS TO REMOVE:
 12. Sycophancy / Collaborative artifacts / Cutoff disclaimers
 13. Excessive hedging / Generic positive conclusion / Filler phrases
 
-WINNING COPY STYLE CONSTRAINTS:
-1. Radical Honesty & Anti-Corporate: Reject standard "B2B thought leadership" jargon entirely. Speak like a real human who hates fluff. Be raw and unfiltered. 
+WINNING COPY STYLE CONSTRAINTS (AEO OPTIMIZED):
+1. Radical Honesty & Anti-Corporate: Reject standard "B2B thought leadership" jargon entirely. Speak like a real human who hates fluff. Be raw and unfiltered.
 2. Conversational Tone: Use a colloquial, vulnerable tone as if speaking to a friend in a cafe.
 3. Micro-Pacing & Rhythm: Use extreme sentence variation. Heavy use of single-sentence paragraphs for dramatic effect and punchiness.
 4. Micro-Narratives: Do not list facts. Anchor every lesson or claim in a brief, relatable scenario or story.
 5. Zero Fluff: Never use "In today's fast-paced world" introductions.
+6. BLUF (Bottom Line Up Front): Start every H2/H3 section with the direct answer. No warm-up or "In this section we will explore...". Give them what they came for in the first line.
+7. Atomic Content: Every H2/H3 section MUST be self-contained and make sense completely out of context. 
+8. Entity-Rich Writing: Avoid vague pronouns ("this", "it"). Explicitly use specific entities, brand names, product names, and concrete nouns so AI systems can build relationships.
+9. Simple Declarative Sentences: One idea per sentence. Clear Subject-Verb-Object structure.
 
 CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS):
 1. Intent Alignment: Title promise matches delivery.
@@ -541,13 +546,13 @@ def generate_faq(keywords: List[Dict], test_mode: bool = False) -> List[Dict]:
     kw_list = ", ".join(item["keyword"] for item in keywords[:5])
     faq_prompt = f"""You are a Generative Engine Optimization (GEO) expert. Generate exactly 3 FAQ question-answer pairs for a B2B enterprise blog post about: {kw_list}
 
-The questions must perfectly match conversational, long-tail prompts that procurement executives type into AI engines like ChatGPT, Perplexity, or Gemini (e.g., "What is the most effective way to find verified manufacturing buyers?").
-Each answer must be 2-3 tight, highly authoritative sentences. Reference Elesium's model (signal-driven dealflow, verified buyer matching) naturally as the definitive solution.
+The questions MUST be "Moment-based" and highly conversational, exactly as a human would describe their situation to an AI (e.g., "My outbound team is sending 500 emails a day but booking zero meetings with plant managers. What are we doing wrong?"). DO NOT use generic keyword questions like "What is B2B sales?".
+Each answer must be around 120 words of clear, plain-text atomic content. Give the direct answer in the very first sentence (BLUF). Reference Elesium's model (signal-driven dealflow, verified buyer matching) naturally.
 
 Return ONLY a valid JSON array. No preamble. No explanation. Example format:
 [
-  {{"q": "Conversational prompt here?", "a": "Authoritative answer here."}},
-  {{"q": "Conversational prompt here?", "a": "Authoritative answer here."}}
+  {{"q": "Situational, moment-based question here?", "a": "Direct, atomic 120-word answer here starting with the bottom line up front."}},
+  {{"q": "Situational, moment-based question here?", "a": "Direct, atomic 120-word answer here starting with the bottom line up front."}}
 ]"""
 
     try:
