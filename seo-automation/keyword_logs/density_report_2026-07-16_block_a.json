@@ -1,0 +1,31 @@
+{
+  "total_words": 387,
+  "keywords_found": 3,
+  "keywords_missing": 7,
+  "found": [
+    {
+      "keyword": "B2B partnership program",
+      "count": 3,
+      "density_pct": 2.33
+    },
+    {
+      "keyword": "B2B manufacturing sales",
+      "count": 2,
+      "density_pct": 1.55
+    },
+    {
+      "keyword": "high ticket B2B sales",
+      "count": 1,
+      "density_pct": 1.03
+    }
+  ],
+  "missing": [
+    "B2B lead generation 2025",
+    "manufacturing buyers platform",
+    "OEM supplier network",
+    "B2B growth hacking",
+    "customer acquisition cost reduction",
+    "supply chain partner matching",
+    "B2B revenue acceleration"
+  ]
+}

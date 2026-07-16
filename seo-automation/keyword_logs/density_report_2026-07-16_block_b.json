@@ -1,0 +1,51 @@
+{
+  "total_words": 415,
+  "keywords_found": 8,
+  "keywords_missing": 2,
+  "found": [
+    {
+      "keyword": "plant manager procurement",
+      "count": 1,
+      "density_pct": 0.72
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "count": 1,
+      "density_pct": 0.72
+    },
+    {
+      "keyword": "sales cycle reduction",
+      "count": 1,
+      "density_pct": 0.72
+    },
+    {
+      "keyword": "ICP targeting platform",
+      "count": 1,
+      "density_pct": 0.72
+    },
+    {
+      "keyword": "executive recruitment platform",
+      "count": 2,
+      "density_pct": 1.45
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 3,
+      "density_pct": 2.89
+    },
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 2,
+      "density_pct": 1.45
+    },
+    {
+      "keyword": "outbound sales platform",
+      "count": 2,
+      "density_pct": 1.45
+    }
+  ],
+  "missing": [
+    "market signals sales",
+    "account based marketing platform"
+  ]
+}
