@@ -1,0 +1,47 @@
+{
+  "total_words": 353,
+  "keywords_found": 7,
+  "keywords_missing": 3,
+  "found": [
+    {
+      "keyword": "supply chain partner matching",
+      "count": 4,
+      "density_pct": 4.53
+    },
+    {
+      "keyword": "manufacturing buyers platform",
+      "count": 2,
+      "density_pct": 1.7
+    },
+    {
+      "keyword": "industrial automation buyers",
+      "count": 4,
+      "density_pct": 3.4
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 2,
+      "density_pct": 1.7
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 4,
+      "density_pct": 3.4
+    },
+    {
+      "keyword": "buyer intent signals platform",
+      "count": 3,
+      "density_pct": 3.4
+    },
+    {
+      "keyword": "business matchmaking service",
+      "count": 2,
+      "density_pct": 1.7
+    }
+  ],
+  "missing": [
+    "talent acquisition platform 2025",
+    "B2B buyer intent data",
+    "executive recruitment platform"
+  ]
+}
