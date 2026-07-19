@@ -1,0 +1,47 @@
+{
+  "total_words": 529,
+  "keywords_found": 7,
+  "keywords_missing": 3,
+  "found": [
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 2,
+      "density_pct": 1.13
+    },
+    {
+      "keyword": "market signals sales",
+      "count": 1,
+      "density_pct": 0.57
+    },
+    {
+      "keyword": "executive recruitment platform",
+      "count": 2,
+      "density_pct": 1.13
+    },
+    {
+      "keyword": "B2B growth hacking",
+      "count": 2,
+      "density_pct": 1.13
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "count": 2,
+      "density_pct": 1.13
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 2,
+      "density_pct": 1.51
+    },
+    {
+      "keyword": "supply chain partner matching",
+      "count": 2,
+      "density_pct": 1.51
+    }
+  ],
+  "missing": [
+    "talent acquisition platform 2025",
+    "B2B revenue acceleration",
+    "buyer intent signals platform"
+  ]
+}

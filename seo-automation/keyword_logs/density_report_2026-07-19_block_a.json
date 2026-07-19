@@ -1,0 +1,31 @@
+{
+  "total_words": 360,
+  "keywords_found": 3,
+  "keywords_missing": 7,
+  "found": [
+    {
+      "keyword": "sales cycle reduction",
+      "count": 1,
+      "density_pct": 0.83
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 2,
+      "density_pct": 1.67
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 2,
+      "density_pct": 1.67
+    }
+  ],
+  "missing": [
+    "industrial automation buyers",
+    "high ticket B2B sales",
+    "account based marketing platform",
+    "OEM supplier network",
+    "sales intelligence software",
+    "customer acquisition cost reduction",
+    "enterprise dealflow management"
+  ]
+}
