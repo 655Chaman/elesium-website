@@ -1,0 +1,43 @@
+{
+  "total_words": 374,
+  "keywords_found": 6,
+  "keywords_missing": 4,
+  "found": [
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 2,
+      "density_pct": 2.14
+    },
+    {
+      "keyword": "outbound sales platform",
+      "count": 4,
+      "density_pct": 3.21
+    },
+    {
+      "keyword": "B2B partnership program",
+      "count": 1,
+      "density_pct": 0.8
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 2,
+      "density_pct": 2.14
+    },
+    {
+      "keyword": "plant manager procurement",
+      "count": 1,
+      "density_pct": 0.8
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 2,
+      "density_pct": 1.6
+    }
+  ],
+  "missing": [
+    "talent acquisition platform 2025",
+    "buyer intent signals platform",
+    "market signals sales",
+    "customer acquisition cost reduction"
+  ]
+}
