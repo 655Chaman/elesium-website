@@ -1,0 +1,35 @@
+{
+  "total_words": 412,
+  "keywords_found": 4,
+  "keywords_missing": 6,
+  "found": [
+    {
+      "keyword": "business matchmaking service",
+      "count": 1,
+      "density_pct": 0.73
+    },
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 1,
+      "density_pct": 0.97
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "count": 2,
+      "density_pct": 1.46
+    },
+    {
+      "keyword": "sales intelligence software",
+      "count": 1,
+      "density_pct": 0.73
+    }
+  ],
+  "missing": [
+    "B2B lead generation 2025",
+    "account based marketing platform",
+    "customer acquisition cost reduction",
+    "B2B revenue acceleration",
+    "industrial automation buyers",
+    "supply chain partner matching"
+  ]
+}
