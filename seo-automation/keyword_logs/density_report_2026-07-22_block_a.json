@@ -1,0 +1,39 @@
+{
+  "total_words": 363,
+  "keywords_found": 5,
+  "keywords_missing": 5,
+  "found": [
+    {
+      "keyword": "B2B partnership program",
+      "count": 3,
+      "density_pct": 2.48
+    },
+    {
+      "keyword": "B2B lead generation 2025",
+      "count": 1,
+      "density_pct": 1.1
+    },
+    {
+      "keyword": "enterprise revenue growth",
+      "count": 1,
+      "density_pct": 0.83
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "count": 1,
+      "density_pct": 0.83
+    },
+    {
+      "keyword": "sales cycle reduction",
+      "count": 1,
+      "density_pct": 0.83
+    }
+  ],
+  "missing": [
+    "sales intelligence software",
+    "talent acquisition platform 2025",
+    "industrial B2B marketplace",
+    "B2B revenue acceleration",
+    "revenue operations software"
+  ]
+}
