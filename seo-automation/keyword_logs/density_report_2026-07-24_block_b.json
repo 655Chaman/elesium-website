@@ -1,0 +1,35 @@
+{
+  "total_words": 324,
+  "keywords_found": 4,
+  "keywords_missing": 6,
+  "found": [
+    {
+      "keyword": "B2B partnership program",
+      "count": 2,
+      "density_pct": 1.85
+    },
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 3,
+      "density_pct": 2.78
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 1,
+      "density_pct": 0.93
+    },
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 1,
+      "density_pct": 1.23
+    }
+  ],
+  "missing": [
+    "business matchmaking service",
+    "OEM supplier network",
+    "customer acquisition cost reduction",
+    "account based marketing platform",
+    "executive partnership introductions",
+    "enterprise revenue growth"
+  ]
+}

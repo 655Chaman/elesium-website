@@ -1,0 +1,47 @@
+{
+  "total_words": 384,
+  "keywords_found": 7,
+  "keywords_missing": 3,
+  "found": [
+    {
+      "keyword": "high ticket B2B sales",
+      "count": 1,
+      "density_pct": 1.04
+    },
+    {
+      "keyword": "plant manager procurement",
+      "count": 1,
+      "density_pct": 0.78
+    },
+    {
+      "keyword": "B2B manufacturing sales",
+      "count": 2,
+      "density_pct": 1.56
+    },
+    {
+      "keyword": "supply chain partner matching",
+      "count": 1,
+      "density_pct": 1.04
+    },
+    {
+      "keyword": "buyer intent signals platform",
+      "count": 1,
+      "density_pct": 1.04
+    },
+    {
+      "keyword": "market signals sales",
+      "count": 1,
+      "density_pct": 0.78
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 1,
+      "density_pct": 0.78
+    }
+  ],
+  "missing": [
+    "manufacturing buyers platform",
+    "executive recruitment platform",
+    "outbound sales platform"
+  ]
+}
