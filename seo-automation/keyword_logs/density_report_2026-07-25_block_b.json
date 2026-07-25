@@ -1,0 +1,51 @@
+{
+  "total_words": 369,
+  "keywords_found": 8,
+  "keywords_missing": 2,
+  "found": [
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 2,
+      "density_pct": 1.63
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 1,
+      "density_pct": 1.08
+    },
+    {
+      "keyword": "high ticket B2B sales",
+      "count": 2,
+      "density_pct": 2.17
+    },
+    {
+      "keyword": "ICP targeting platform",
+      "count": 1,
+      "density_pct": 0.81
+    },
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 2,
+      "density_pct": 2.17
+    },
+    {
+      "keyword": "OEM supplier network",
+      "count": 1,
+      "density_pct": 0.81
+    },
+    {
+      "keyword": "outbound sales platform",
+      "count": 1,
+      "density_pct": 0.81
+    },
+    {
+      "keyword": "sales intelligence software",
+      "count": 2,
+      "density_pct": 1.63
+    }
+  ],
+  "missing": [
+    "talent acquisition platform 2025",
+    "B2B growth hacking"
+  ]
+}
