@@ -1,0 +1,58 @@
+{
+  "total_words": 346,
+  "keywords_found": 10,
+  "keywords_missing": 0,
+  "found": [
+    {
+      "keyword": "manufacturing buyers platform",
+      "count": 1,
+      "density_pct": 0.87
+    },
+    {
+      "keyword": "OEM supplier network",
+      "count": 1,
+      "density_pct": 0.87
+    },
+    {
+      "keyword": "industrial automation buyers",
+      "count": 2,
+      "density_pct": 1.73
+    },
+    {
+      "keyword": "B2B manufacturing sales",
+      "count": 2,
+      "density_pct": 1.73
+    },
+    {
+      "keyword": "ICP targeting platform",
+      "count": 1,
+      "density_pct": 0.87
+    },
+    {
+      "keyword": "industrial B2B marketplace",
+      "count": 2,
+      "density_pct": 1.73
+    },
+    {
+      "keyword": "B2B partnership program",
+      "count": 1,
+      "density_pct": 0.87
+    },
+    {
+      "keyword": "enterprise dealflow management",
+      "count": 2,
+      "density_pct": 1.73
+    },
+    {
+      "keyword": "B2B buyer matching platform",
+      "count": 3,
+      "density_pct": 3.47
+    },
+    {
+      "keyword": "plant manager procurement",
+      "count": 1,
+      "density_pct": 0.87
+    }
+  ],
+  "missing": []
+}

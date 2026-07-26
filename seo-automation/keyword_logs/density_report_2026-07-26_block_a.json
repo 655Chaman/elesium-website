@@ -1,0 +1,43 @@
+{
+  "total_words": 356,
+  "keywords_found": 6,
+  "keywords_missing": 4,
+  "found": [
+    {
+      "keyword": "supply chain partner matching",
+      "count": 1,
+      "density_pct": 1.12
+    },
+    {
+      "keyword": "high ticket B2B sales",
+      "count": 1,
+      "density_pct": 1.12
+    },
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 5,
+      "density_pct": 5.62
+    },
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 1,
+      "density_pct": 0.84
+    },
+    {
+      "keyword": "market signals sales",
+      "count": 1,
+      "density_pct": 0.84
+    },
+    {
+      "keyword": "buyer intent signals platform",
+      "count": 1,
+      "density_pct": 1.12
+    }
+  ],
+  "missing": [
+    "customer acquisition cost reduction",
+    "B2B growth hacking",
+    "talent acquisition platform 2025",
+    "executive recruitment platform"
+  ]
+}
