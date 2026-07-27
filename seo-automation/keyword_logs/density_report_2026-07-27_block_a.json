@@ -1,0 +1,47 @@
+{
+  "total_words": 420,
+  "keywords_found": 7,
+  "keywords_missing": 3,
+  "found": [
+    {
+      "keyword": "buyer intent signals platform",
+      "count": 5,
+      "density_pct": 4.76
+    },
+    {
+      "keyword": "B2B growth hacking",
+      "count": 2,
+      "density_pct": 1.43
+    },
+    {
+      "keyword": "supply chain partner matching",
+      "count": 2,
+      "density_pct": 1.9
+    },
+    {
+      "keyword": "revenue operations software",
+      "count": 1,
+      "density_pct": 0.71
+    },
+    {
+      "keyword": "high ticket B2B sales",
+      "count": 2,
+      "density_pct": 1.9
+    },
+    {
+      "keyword": "enterprise sales strategy",
+      "count": 1,
+      "density_pct": 0.71
+    },
+    {
+      "keyword": "B2B buyer intent data",
+      "count": 1,
+      "density_pct": 0.95
+    }
+  ],
+  "missing": [
+    "talent acquisition platform 2025",
+    "executive recruitment platform",
+    "manufacturing buyers platform"
+  ]
+}
