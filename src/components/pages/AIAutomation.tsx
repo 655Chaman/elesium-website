@@ -233,17 +233,19 @@ export default function AIAutomation() {
                         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
                             Stop wasting human capital on robotic tasks. Schedule a custom AI readiness audit to see exactly where our infrastructure can impact your bottom line.
                         </p>
-                        <ExpandableScreen>
-                            <ExpandableScreenTrigger>
-                                <button className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
-                                    Book an AI Audit
-                                    <ArrowRight className="w-5 h-5" />
-                                </button>
-                            </ExpandableScreenTrigger>
-                            <ExpandableScreenContent>
-                                <MandateApplicationForm source="AI Automation Page CTA" />
-                            </ExpandableScreenContent>
-                        </ExpandableScreen>
+                        <div className="flex justify-center">
+                            <ExpandableScreen>
+                                <ExpandableScreenTrigger>
+                                    <button className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
+                                        Book an AI Audit
+                                        <ArrowRight className="w-5 h-5" />
+                                    </button>
+                                </ExpandableScreenTrigger>
+                                <ExpandableScreenContent>
+                                    <MandateApplicationForm source="AI Automation Page CTA" />
+                                </ExpandableScreenContent>
+                            </ExpandableScreen>
+                        </div>
                     </div>
                     {/* Decorative blurred blobs */}
                     <div className="absolute top-[-20%] left-[-10%] w-[300px] h-[300px] bg-blue-500/30 blur-[100px] rounded-full"></div>
