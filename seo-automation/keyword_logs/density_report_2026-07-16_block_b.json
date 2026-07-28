@@ -1,51 +1,39 @@
 {
-  "total_words": 415,
-  "keywords_found": 8,
-  "keywords_missing": 2,
+  "total_words": 237,
+  "keywords_found": 5,
+  "keywords_missing": 5,
   "found": [
     {
-      "keyword": "plant manager procurement",
-      "count": 1,
-      "density_pct": 0.72
-    },
-    {
-      "keyword": "enterprise dealflow management",
-      "count": 1,
-      "density_pct": 0.72
-    },
-    {
-      "keyword": "sales cycle reduction",
-      "count": 1,
-      "density_pct": 0.72
-    },
-    {
-      "keyword": "ICP targeting platform",
-      "count": 1,
-      "density_pct": 0.72
-    },
-    {
-      "keyword": "executive recruitment platform",
+      "keyword": "revenue operations",
       "count": 2,
-      "density_pct": 1.45
+      "density_pct": 1.69
     },
     {
-      "keyword": "B2B buyer matching platform",
-      "count": 3,
-      "density_pct": 2.89
-    },
-    {
-      "keyword": "enterprise sales strategy",
+      "keyword": "OEM supplier network",
       "count": 2,
-      "density_pct": 1.45
+      "density_pct": 2.53
     },
     {
-      "keyword": "outbound sales platform",
+      "keyword": "outbound intelligence",
       "count": 2,
-      "density_pct": 1.45
+      "density_pct": 1.69
+    },
+    {
+      "keyword": "enterprise procurement",
+      "count": 1,
+      "density_pct": 0.84
+    },
+    {
+      "keyword": "deal sourcing platform",
+      "count": 1,
+      "density_pct": 1.27
     }
   ],
   "missing": [
-    "market signals sales",
-    "account based marketing platform"
+    "industrial B2B marketplace",
+    "account based marketing",
+    "business matchmaking",
+    "B2B revenue acceleration",
+    "cold outreach alternative"
   ]
 }

@@ -1,31 +1,43 @@
 {
-  "total_words": 387,
-  "keywords_found": 3,
-  "keywords_missing": 7,
+  "total_words": 241,
+  "keywords_found": 6,
+  "keywords_missing": 4,
   "found": [
     {
-      "keyword": "B2B partnership program",
+      "keyword": "enterprise dealflow",
       "count": 3,
-      "density_pct": 2.33
+      "density_pct": 2.49
     },
     {
-      "keyword": "B2B manufacturing sales",
+      "keyword": "buyer matching platform",
       "count": 2,
-      "density_pct": 1.55
+      "density_pct": 2.49
+    },
+    {
+      "keyword": "signal driven outbound",
+      "count": 2,
+      "density_pct": 2.49
     },
     {
       "keyword": "high ticket B2B sales",
       "count": 1,
-      "density_pct": 1.03
+      "density_pct": 1.66
+    },
+    {
+      "keyword": "B2B pipeline automation",
+      "count": 1,
+      "density_pct": 1.24
+    },
+    {
+      "keyword": "verified buyer network",
+      "count": 1,
+      "density_pct": 1.24
     }
   ],
   "missing": [
-    "B2B lead generation 2025",
-    "manufacturing buyers platform",
-    "OEM supplier network",
-    "B2B growth hacking",
-    "customer acquisition cost reduction",
-    "supply chain partner matching",
-    "B2B revenue acceleration"
+    "manufacturing buyer network",
+    "intent data platform",
+    "sales pipeline engineering",
+    "executive strategic introductions"
   ]
 }

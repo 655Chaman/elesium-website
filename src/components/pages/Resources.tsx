@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FileText, ChevronRight, Download } from 'lucide-react'
+import { FileText, Download } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { resourcesData } from '../../data/resourcesData'
@@ -75,7 +75,7 @@ export default function Resources() {
                                 </div>
 
                                 <div className="flex flex-col gap-2">
-                                    {resourcesData.filter(r => r.section === 'series').map((resource, index) => (
+                                    {resourcesData.filter(r => r.section === 'series').map(resource => (
                                         <motion.div
                                             key={resource.id}
                                             initial={{ opacity: 0, y: 15 }}
@@ -146,7 +146,7 @@ export default function Resources() {
                                 </div>
 
                                 <div className="flex flex-col gap-2">
-                                    {resourcesData.filter(r => r.section === 'segregated' || !r.section).map((resource, index) => (
+                                    {resourcesData.filter(r => r.section === 'segregated' || !r.section).map(resource => (
                                         <motion.div
                                             key={resource.id}
                                             initial={{ opacity: 0, y: 15 }}
