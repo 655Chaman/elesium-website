@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Configuration
-const WATCH_PATHS = ['src/**/*', 'public/**/*', 'server/**/*', 'index.html', 'package.json', 'vite.config.ts', 'tsconfig.json', 'AUTO-SYNC.md'];
+const WATCH_PATHS = ['frontend/src/**/*', 'frontend/public/**/*', 'backend/**/*', 'automation/**/*', 'frontend/index.html', 'frontend/package.json', 'frontend/vite.config.ts'];
 const IGNORE_PATHS = ['**/node_modules/**', '**/dist/**', '**/.git/**', '**/.gemini/**'];
 const SYNC_INTERVAL = 30000; // 30 seconds
 const DEBOUNCE_DELAY = 2000; // 2 seconds

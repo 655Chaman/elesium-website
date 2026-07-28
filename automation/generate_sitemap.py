@@ -13,8 +13,8 @@ from pathlib import Path
 # Paths relative to this script
 BASE_DIR = Path(__file__).parent
 WEBSITE_ROOT = BASE_DIR.parent
-TS_PATH = WEBSITE_ROOT / "src" / "data" / "blogPosts.ts"
-SITEMAP_PATH = WEBSITE_ROOT / "public" / "sitemap.xml"
+TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "blogPosts.ts"
+SITEMAP_PATH = WEBSITE_ROOT / "frontend" / "public" / "sitemap.xml"
 
 # Website URL
 BASE_URL = "https://elesium.online"

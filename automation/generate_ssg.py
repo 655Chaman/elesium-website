@@ -14,9 +14,9 @@ import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
-DIST_DIR = BASE_DIR / "dist"
+DIST_DIR = BASE_DIR / "frontend" / "dist"
 DIST_INDEX = DIST_DIR / "index.html"
-TS_PATH = BASE_DIR / "src" / "data" / "blogPosts.ts"
+TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "blogPosts.ts"
 
 def extract_posts(ts_content):
     """

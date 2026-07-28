@@ -180,7 +180,7 @@ import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent
 WEBSITE_ROOT = BASE_DIR.parent            # /Users/krdeeksha/ELESIUM WEBSITE
-BLOGPOSTS_TS_PATH = WEBSITE_ROOT / "src" / "data" / "blogPosts.ts"
+BLOGPOSTS_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "blogPosts.ts"
 
 # Keyword logs are still stored locally for auditing
 OUTPUT_KEYWORD_LOGS_DIR = BASE_DIR / "keyword_logs"

@@ -43,6 +43,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install NPM dependencies
+        working-directory: ./frontend
         run: npm ci
 
       - name: Run Trend Fetcher
@@ -69,12 +70,13 @@ jobs:
           git push origin main
 
       - name: Build Site (SSG)
+        working-directory: ./frontend
         run: npm run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./frontend/dist
 
   deploy:
     needs: generate-and-deploy
