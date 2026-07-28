@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
+import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
 
 export default function HowWeWork() {

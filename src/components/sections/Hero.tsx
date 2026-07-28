@@ -2,9 +2,9 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { TextAnimate } from '../ui/TextAnimate'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
+import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
-import logo from '../../Assets/LOGO_NEW.png'
+import logo from '../../assets/LOGO_NEW.png'
 
 export default function HeroSection() {
     const ref = useRef(null)

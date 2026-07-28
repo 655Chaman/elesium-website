@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Terminal, Shield, Network, Zap, Cpu, Code2, Lock, ArrowRight } from 'lucide-react'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
+import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
 
 const terminalLines = [

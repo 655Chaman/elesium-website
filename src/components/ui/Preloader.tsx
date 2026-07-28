@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import logo from '../../Assets/LOGO_NEW.png'
+import logo from '../../assets/LOGO_NEW.png'
 
 export default function Preloader() {
     return (

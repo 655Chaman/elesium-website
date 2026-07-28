@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/expandable-screen'
+import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
-import logo from '../../Assets/LOGO_NEW.png'
+import logo from '../../assets/LOGO_NEW.png'
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
