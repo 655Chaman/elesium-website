@@ -55,54 +55,136 @@ export default function Resources() {
                         </div>
 
                         {/* Resources Grid/List */}
-                        <div className="grid grid-cols-1 gap-y-12">
-                            {resourcesData.map((resource, index) => {
-                                return (
-                                    <motion.div
-                                        key={resource.id}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    >
-                                        <div className="group flex flex-col md:flex-row gap-4 md:gap-12 border-b border-gray-100 dark:border-white/5 pb-12">
-                                            <div className="md:w-1/4 flex flex-col gap-2 md:gap-4">
-                                                <div className="flex items-center gap-2 text-[11px] font-medium text-blue-500 dark:text-blue-400">
-                                                    <FileText className="h-4 w-4" />
-                                                    <span className="tracking-[0.06em] uppercase">{resource.category}</span>
-                                                </div>
-                                                <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
-                                                    {resource.date} · {resource.readTime}
-                                                </div>
-                                            </div>
-
-                                            <div className="md:w-3/4">
-                                                <Link to={`/resources/${resource.slug}`} className="block">
-                                                    <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
-                                                        {resource.title}
-                                                    </h2>
-                                                    <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                                                        {resource.description}
-                                                    </p>
-                                                    <div className="flex items-center gap-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-6">
-                                                        View Documentation <ChevronRight className="h-3 w-3" />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                            {/* Column 1: Series */}
+                            <div>
+                                <h2 className="text-2xl font-bold mb-8 text-black dark:text-white border-b border-gray-200 dark:border-white/10 pb-4">Series</h2>
+                                <div className="grid grid-cols-1 gap-y-12">
+                                    {resourcesData.filter(r => r.section === 'series').map((resource, index) => {
+                                        return (
+                                            <motion.div
+                                                key={resource.id}
+                                                initial={{ opacity: 0, y: 20 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                            >
+                                                <div className="group flex flex-col gap-4 border-b border-gray-100 dark:border-white/5 pb-12">
+                                                    <div className="flex flex-col gap-2">
+                                                        <div className="flex items-center gap-2 text-[11px] font-medium text-blue-500 dark:text-blue-400">
+                                                            <FileText className="h-4 w-4" />
+                                                            <span className="tracking-[0.06em] uppercase">{resource.category}</span>
+                                                        </div>
+                                                        <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
+                                                            {resource.date} · {resource.readTime}
+                                                        </div>
                                                     </div>
-                                                </Link>
-                                                
-                                                <a 
-                                                    href={resource.googleDriveLink}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-full transition-colors"
-                                                >
-                                                    <Download className="h-4 w-4" />
-                                                    Download from Drive
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
+
+                                                    <div>
+                                                        {resource.markdownFile ? (
+                                                            <Link to={`/resources/${resource.slug}`} className="block">
+                                                                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                                                                    {resource.title}
+                                                                </h3>
+                                                                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                                                    {resource.description}
+                                                                </p>
+                                                                <div className="flex items-center gap-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-6">
+                                                                    View Documentation <ChevronRight className="h-3 w-3" />
+                                                                </div>
+                                                            </Link>
+                                                        ) : (
+                                                            <div className="block mb-6">
+                                                                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-black dark:text-white leading-tight">
+                                                                    {resource.title}
+                                                                </h3>
+                                                                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                                                                    {resource.description}
+                                                                </p>
+                                                            </div>
+                                                        )}
+                                                        
+                                                        <a 
+                                                            href={resource.googleDriveLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-full transition-colors"
+                                                        >
+                                                            <Download className="h-4 w-4" />
+                                                            Download PDF
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            {/* Column 2: Segregated */}
+                            <div>
+                                <h2 className="text-2xl font-bold mb-8 text-black dark:text-white border-b border-gray-200 dark:border-white/10 pb-4">Segregated</h2>
+                                <div className="grid grid-cols-1 gap-y-12">
+                                    {resourcesData.filter(r => r.section === 'segregated' || !r.section).map((resource, index) => {
+                                        return (
+                                            <motion.div
+                                                key={resource.id}
+                                                initial={{ opacity: 0, y: 20 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                            >
+                                                <div className="group flex flex-col gap-4 border-b border-gray-100 dark:border-white/5 pb-12">
+                                                    <div className="flex flex-col gap-2">
+                                                        <div className="flex items-center gap-2 text-[11px] font-medium text-blue-500 dark:text-blue-400">
+                                                            <FileText className="h-4 w-4" />
+                                                            <span className="tracking-[0.06em] uppercase">{resource.category}</span>
+                                                        </div>
+                                                        <div className="text-[11px] text-gray-400 dark:text-gray-600 font-medium">
+                                                            {resource.date} · {resource.readTime}
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        {resource.markdownFile ? (
+                                                            <Link to={`/resources/${resource.slug}`} className="block">
+                                                                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                                                                    {resource.title}
+                                                                </h3>
+                                                                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                                                    {resource.description}
+                                                                </p>
+                                                                <div className="flex items-center gap-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-6">
+                                                                    View Documentation <ChevronRight className="h-3 w-3" />
+                                                                </div>
+                                                            </Link>
+                                                        ) : (
+                                                            <div className="block mb-6">
+                                                                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-black dark:text-white leading-tight">
+                                                                    {resource.title}
+                                                                </h3>
+                                                                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                                                                    {resource.description}
+                                                                </p>
+                                                            </div>
+                                                        )}
+                                                        
+                                                        <a 
+                                                            href={resource.googleDriveLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-full transition-colors"
+                                                        >
+                                                            <Download className="h-4 w-4" />
+                                                            Download from Drive
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </AnimatePresence>

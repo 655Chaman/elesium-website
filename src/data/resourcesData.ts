@@ -7,10 +7,22 @@ export interface ResourceItem {
   date: string;
   readTime: string;
   googleDriveLink: string;
-  markdownFile: string;
+  markdownFile?: string;
+  section?: 'series' | 'segregated';
 }
 
 export const resourcesData: ResourceItem[] = [
+  {
+    id: 'series-1',
+    title: 'Comprehensive Series Resource',
+    slug: 'comprehensive-series-resource',
+    description: 'Our complete series documentation and resources in a downloadable PDF format.',
+    category: 'Series',
+    date: 'July 2026',
+    readTime: '5 min read',
+    googleDriveLink: 'https://drive.google.com/file/d/1Hd2IfDm9JjrVlvLTuhX323Rs8N-G81IY/view?usp=sharing',
+    section: 'series'
+  },
   {
     id: '1',
     title: 'Offer Creation Blueprint',
@@ -21,6 +33,7 @@ export const resourcesData: ResourceItem[] = [
     readTime: '8 min read',
     googleDriveLink: 'https://docs.google.com/document/d/1RZeCYMKegf17kA48ijPpzRF6LxD1TiFoHVJ6PRDjaH4/edit?usp=sharing',
     markdownFile: '/resources/offer-creation-blueprint.md',
+    section: 'segregated'
   },
   {
     id: '2',
@@ -32,5 +45,6 @@ export const resourcesData: ResourceItem[] = [
     readTime: '6 min read',
     googleDriveLink: 'https://docs.google.com/spreadsheets/d/1-aLyIWilXpnhshXDA2krm98a0uSCdSt_jaC0xx3unDA/edit?usp=sharing',
     markdownFile: '/resources/multi-channel-tracker.md',
+    section: 'segregated'
   }
 ];
