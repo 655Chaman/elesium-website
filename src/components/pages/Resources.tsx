@@ -69,9 +69,9 @@ export default function Resources() {
                                 {/* Table Header */}
                                 <div className="hidden md:grid grid-cols-12 gap-6 pb-4 text-xs font-semibold tracking-wider text-gray-400 dark:text-gray-500 uppercase px-4">
                                     <div className="col-span-5">Resource</div>
-                                    <div className="col-span-3">Category</div>
+                                    <div className="col-span-2">Category</div>
                                     <div className="col-span-2">Details</div>
-                                    <div className="col-span-2 text-right">Action</div>
+                                    <div className="col-span-3 text-right">Action</div>
                                 </div>
 
                                 <div className="flex flex-col gap-2">
@@ -97,7 +97,7 @@ export default function Resources() {
                                             </div>
 
                                             {/* Category */}
-                                            <div className="col-span-1 md:col-span-3 flex items-center mt-2 md:mt-0">
+                                            <div className="col-span-1 md:col-span-2 flex items-center mt-2 md:mt-0">
                                                 <span className="inline-flex items-center px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400 uppercase">
                                                     <FileText className="w-3.5 h-3.5 mr-2" />
                                                     {resource.category}
@@ -111,7 +111,7 @@ export default function Resources() {
                                             </div>
 
                                             {/* Action */}
-                                            <div className="col-span-1 md:col-span-2 flex items-center justify-start md:justify-end gap-4 mt-4 md:mt-0">
+                                            <div className="col-span-1 md:col-span-3 flex items-center justify-start md:justify-end gap-4 mt-4 md:mt-0">
                                                 {resource.markdownFile && (
                                                     <Link to={`/resources/${resource.slug}`} className="hidden lg:flex items-center text-xs font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
                                                         Docs <ChevronRight className="h-3 w-3 ml-0.5" />
@@ -145,9 +145,9 @@ export default function Resources() {
                                 {/* Table Header */}
                                 <div className="hidden md:grid grid-cols-12 gap-6 pb-4 text-xs font-semibold tracking-wider text-gray-400 dark:text-gray-500 uppercase px-4">
                                     <div className="col-span-5">Resource</div>
-                                    <div className="col-span-3">Category</div>
+                                    <div className="col-span-2">Category</div>
                                     <div className="col-span-2">Details</div>
-                                    <div className="col-span-2 text-right">Action</div>
+                                    <div className="col-span-3 text-right">Action</div>
                                 </div>
 
                                 <div className="flex flex-col gap-2">
@@ -173,7 +173,7 @@ export default function Resources() {
                                             </div>
 
                                             {/* Category */}
-                                            <div className="col-span-1 md:col-span-3 flex items-center mt-2 md:mt-0">
+                                            <div className="col-span-1 md:col-span-2 flex items-center mt-2 md:mt-0">
                                                 <span className="inline-flex items-center px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide bg-gray-100 text-gray-700 dark:bg-white/10 dark:text-gray-300 uppercase">
                                                     <FileText className="w-3.5 h-3.5 mr-2" />
                                                     {resource.category}
@@ -187,7 +187,7 @@ export default function Resources() {
                                             </div>
 
                                             {/* Action */}
-                                            <div className="col-span-1 md:col-span-2 flex items-center justify-start md:justify-end gap-4 mt-4 md:mt-0">
+                                            <div className="col-span-1 md:col-span-3 flex items-center justify-start md:justify-end gap-4 mt-4 md:mt-0">
                                                 {resource.markdownFile && (
                                                     <Link to={`/resources/${resource.slug}`} className="hidden lg:flex items-center text-xs font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
                                                         Docs <ChevronRight className="h-3 w-3 ml-0.5" />
