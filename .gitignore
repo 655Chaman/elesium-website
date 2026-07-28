@@ -24,10 +24,10 @@ Thumbs.db
 npm-debug.log*
 __pycache__/
 *.pyc
-seo-automation/keyword_logs/
-seo-automation/daily_seo_blocks/
+automation/keyword_logs/
+automation/daily_seo_blocks/
 
-# Android preview build outputs
-android-preview/.gradle/
-android-preview/build/
-android-preview/app/build/
+# Mobile app build outputs
+mobile/.gradle/
+mobile/build/
+mobile/app/build/

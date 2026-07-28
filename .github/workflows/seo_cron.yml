@@ -50,17 +50,17 @@ jobs:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-        run: python3 seo-automation/trend_fetcher.py
+        run: python3 automation/trend_fetcher.py
 
       - name: Run Keyword Researcher
-        run: python3 seo-automation/keyword_researcher.py
+        run: python3 automation/keyword_researcher.py
 
       - name: Run SEO Block Generator
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           AI_PROVIDER: 'nvidia'
         run: |
-          python3 seo-automation/seo_block_generator.py --no-push
+          python3 automation/seo_block_generator.py --no-push
 
       - name: Commit and Push SEO Changes
         run: |

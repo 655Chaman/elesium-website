@@ -19,7 +19,7 @@ jobs:
           echo "================================================================="
           
           # Find all text files generated in the last 24 hours
-          files=$(find seo-automation/keyword_logs -name "*.txt" -type f -mtime -1)
+          files=$(find automation/keyword_logs -name "*.txt" -type f -mtime -1)
           
           if [ -z "$files" ]; then
             echo "No text posts found generated recently."
@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Medium-Text-Posts
-          path: seo-automation/keyword_logs/*.txt
+          path: automation/keyword_logs/*.txt
           retention-days: 7
