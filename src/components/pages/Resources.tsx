@@ -81,7 +81,7 @@ export default function Resources() {
                                             initial={{ opacity: 0, y: 15 }}
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 }}
+                                            transition={{ duration: 0.3 }}
                                             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 py-6 md:items-center hover:bg-white dark:hover:bg-white/[0.02] transition-colors rounded-2xl md:px-4 hover:shadow-sm dark:hover:shadow-none border border-transparent hover:border-gray-100 dark:hover:border-white/5 group"
                                         >
                                             {/* Name & Description */}
@@ -112,11 +112,6 @@ export default function Resources() {
 
                                             {/* Action */}
                                             <div className="col-span-1 md:col-span-3 flex items-center justify-start md:justify-end gap-4 mt-4 md:mt-0">
-                                                {resource.markdownFile && (
-                                                    <Link to={`/resources/${resource.slug}`} className="hidden lg:flex items-center text-xs font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
-                                                        Docs <ChevronRight className="h-3 w-3 ml-0.5" />
-                                                    </Link>
-                                                )}
                                                 <a 
                                                     href={resource.googleDriveLink}
                                                     target="_blank"
@@ -157,7 +152,7 @@ export default function Resources() {
                                             initial={{ opacity: 0, y: 15 }}
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 }}
+                                            transition={{ duration: 0.3 }}
                                             className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 py-6 md:items-center hover:bg-white dark:hover:bg-white/[0.02] transition-colors rounded-2xl md:px-4 hover:shadow-sm dark:hover:shadow-none border border-transparent hover:border-gray-100 dark:hover:border-white/5 group"
                                         >
                                             {/* Name & Description */}
@@ -188,11 +183,6 @@ export default function Resources() {
 
                                             {/* Action */}
                                             <div className="col-span-1 md:col-span-3 flex items-center justify-start md:justify-end gap-4 mt-4 md:mt-0">
-                                                {resource.markdownFile && (
-                                                    <Link to={`/resources/${resource.slug}`} className="hidden lg:flex items-center text-xs font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
-                                                        Docs <ChevronRight className="h-3 w-3 ml-0.5" />
-                                                    </Link>
-                                                )}
                                                 <a 
                                                     href={resource.googleDriveLink}
                                                     target="_blank"
