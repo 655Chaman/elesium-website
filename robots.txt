@@ -1,0 +1,7 @@
+# Robots.txt for elesium.online
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://elesium.online/sitemap.xml
