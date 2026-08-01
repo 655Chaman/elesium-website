@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -28,6 +28,11 @@ jobs:
         working-directory: ./frontend
       - run: npm run build
         working-directory: ./frontend
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          cname: elesium.online
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ./frontend/dist
@@ -41,3 +46,4 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
+        continue-on-error: true
