@@ -8,16 +8,35 @@ export default function Waitlist() {
     const [submitted, setSubmitted] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         if (!email) return
         
         setIsLoading(true)
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const apiUrl = import.meta.env.VITE_API_URL || 'https://elesium-website.onrender.com'
+            const response = await fetch(`${apiUrl}/api/submit`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    email, 
+                    leadSource: 'ele-in Waitlist',
+                    // Fallbacks for API validation if required
+                    name: 'ele-in Waitlist User',
+                    company: 'N/A'
+                }),
+            }).catch(() => null)
+
+            if (response && response.ok) {
+                setSubmitted(true)
+            } else {
+                alert("There was an error joining the waitlist. Please try again.")
+            }
+        } catch (error) {
+            alert("There was an error joining the waitlist. Please try again.")
+        } finally {
             setIsLoading(false)
-            setSubmitted(true)
-        }, 1500)
+        }
     }
 
     return (
