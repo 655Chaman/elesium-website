@@ -19,6 +19,7 @@ const Industries = lazy(() => import('./components/pages/Industries'))
 const MarketSignals = lazy(() => import('./components/pages/MarketSignals'))
 const Resources = lazy(() => import('./components/pages/Resources'))
 const ResourceDetail = lazy(() => import('./components/pages/ResourceDetail'))
+const Waitlist = lazy(() => import('./components/pages/Waitlist'))
 function HomePage() {
     return (
         <motion.div
@@ -71,6 +72,7 @@ function App() {
                             <Route path="/resources" element={<Resources />} />
                             <Route path="/resources/:slug" element={<ResourceDetail />} />
                             <Route path="/ai-automation" element={<AIAutomation />} />
+                            <Route path="/waitlist" element={<Waitlist />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

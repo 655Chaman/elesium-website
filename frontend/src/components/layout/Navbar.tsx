@@ -32,6 +32,13 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center" style={{ gap: '4px' }}>
                         <Link
+                            to="/waitlist"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400"
+                        >
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            ele-in
+                        </Link>
+                        <Link
                             to="/how-we-work"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
@@ -101,6 +108,14 @@ export default function Navbar() {
                         className="fixed inset-0 z-40 bg-white dark:bg-black pt-[60px] px-6 md:hidden flex flex-col items-center"
                     >
                         <div className="flex flex-col w-full gap-6 mt-8">
+                            <Link
+                                to="/waitlist"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-semibold text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10 flex items-center gap-3"
+                            >
+                                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                ele-in
+                            </Link>
                             <Link
                                 to="/how-we-work"
                                 onClick={() => setIsMobileMenuOpen(false)}
