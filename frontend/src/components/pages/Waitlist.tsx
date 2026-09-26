@@ -15,16 +15,10 @@ export default function Waitlist() {
         setIsLoading(true)
         try {
             const apiUrl = import.meta.env.VITE_API_URL || 'https://elesium-website.onrender.com'
-            const response = await fetch(`${apiUrl}/api/submit`, {
+            const response = await fetch(`${apiUrl}/api/waitlist`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
-                    email, 
-                    leadSource: 'ele-in Waitlist',
-                    // Fallbacks for API validation if required
-                    name: 'ele-in Waitlist User',
-                    company: 'N/A'
-                }),
+                body: JSON.stringify({ email }),
             }).catch(() => null)
 
             if (response && response.ok) {

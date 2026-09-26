@@ -166,6 +166,66 @@ async function triggerDripSequence(email, name) {
     }
 }
 
+app.post('/api/waitlist', async (req, res) => {
+    const { email } = req.body;
+
+    try {
+        if (!email) {
+            return res.status(400).json({ error: 'Email is required' });
+        }
+        
+        let sheetSuccess = false;
+        let sheetErrorMessage = null;
+
+        if (process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && process.env.GOOGLE_PRIVATE_KEY && process.env.GOOGLE_SHEET_ID) {
+            let rawKey = process.env.GOOGLE_PRIVATE_KEY.replace(/^"|"$/g, '');
+            const formattedKey = rawKey.replace(/\\n/g, '\n');
+
+            const serviceAccountAuth = new JWT({
+                email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+                key: formattedKey,
+                scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+            });
+            const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
+            await doc.loadInfo();
+            
+            // Try to find the waitlist sheet by title
+            let sheet = doc.sheetsByTitle['ele-in waitlist'];
+            
+            // If it doesn't exist, create it with headers
+            if (!sheet) {
+                console.log('[WAITLIST] Creating new sheet "ele-in waitlist"');
+                sheet = await doc.addSheet({ title: 'ele-in waitlist', headerValues: ['Timestamp', 'Email'] });
+            } else {
+                // Ensure headers are loaded if it already exists but we just found it
+                try {
+                    await sheet.loadHeaderRow();
+                    // If headers are missing, set them
+                    if (sheet.headerValues.length === 0) {
+                        await sheet.setHeaderRow(['Timestamp', 'Email']);
+                    }
+                } catch (e) {
+                    await sheet.setHeaderRow(['Timestamp', 'Email']);
+                }
+            }
+            
+            await sheet.addRow({
+                'Timestamp': new Date().toISOString(),
+                'Email': email
+            });
+            console.log(`[WAITLIST] Added ${email} to ele-in waitlist bucket.`);
+            sheetSuccess = true;
+        } else {
+            console.warn('[WAITLIST] Google Sheets credentials missing in .env');
+        }
+
+        res.json({ success: true, message: 'Successfully joined waitlist', sheetSuccess, sheetErrorMessage });
+    } catch (error) {
+        console.error('Error processing waitlist:', error.message);
+        res.status(500).json({ error: error.message });
+    }
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
