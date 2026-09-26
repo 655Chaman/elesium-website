@@ -69,10 +69,11 @@ export default function Waitlist() {
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight text-black dark:text-white mb-6">
-                        Autonomous LinkedIn Outreach
+                        You provide the leads. <br className="hidden md:block" />
+                        <span className="text-emerald-500">We book the meetings.</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-center text-black/60 dark:text-white/60 max-w-lg leading-relaxed">
-                        The complete A-to-Z LinkedIn automation platform. Provide your leads, and ele-in handles the entire outreach lifecycle—turning prospects into booked meetings on autopilot.
+                    <p className="text-lg md:text-xl text-center text-black/60 dark:text-white/60 max-w-xl leading-relaxed">
+                        ele-in is an autonomous AI agent that completely takes over your LinkedIn outreach. From the first touch to the final calendar invite, we handle the entire A-to-Z process. Your only job is to show up and close.
                     </p>
                 </motion.div>
 
