@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CheckCircle, Sparkles, ArrowRight } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import logo from '../../assets/ele-in-logo.png'
 
 export default function Waitlist() {
@@ -33,6 +33,9 @@ export default function Waitlist() {
         }
     }
 
+    const inputClass =
+        'w-full px-4 py-4 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px]'
+
     return (
         <motion.div 
             key="waitlist"
@@ -40,40 +43,37 @@ export default function Waitlist() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="relative min-h-[100vh] pt-24 pb-16 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-black"
+            className="relative min-h-[100vh] pt-32 pb-24 px-6 md:px-12 flex flex-col items-center justify-center bg-gray-50 dark:bg-[#0a0a0a]"
         >
-            {/* Background effects */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/10 dark:bg-blue-500/5 blur-[100px] rounded-full pointer-events-none" />
-
-            <div className="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center">
+            <div className="relative z-10 w-full max-w-[480px] mx-auto flex flex-col">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex flex-col items-center mb-12"
+                    className="flex flex-col items-center mb-10"
                 >
-                    <div className="relative w-48 h-24 md:w-56 md:h-28 mb-10 flex items-center justify-center">
+                    <div className="flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-semibold tracking-[0.08em] uppercase mb-8">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                        </span>
+                        Partnered with Elesium
+                    </div>
+
+                    <div className="relative w-40 h-20 md:w-48 md:h-24 mb-8 flex items-center justify-center">
                         <img 
                             src={logo} 
                             alt="ele-in Logo" 
                             className="w-full h-full object-contain"
                         />
                     </div>
-                    
-                    <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 mb-8 backdrop-blur-md shadow-sm">
-                        <Sparkles className="w-4 h-4 text-emerald-500" />
-                        <span className="text-sm font-medium text-black/80 dark:text-white/80 tracking-wide">
-                            Partnered with Elesium.online
-                        </span>
-                    </div>
 
-                    <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight text-black dark:text-white mb-6">
+                    <h1 className="text-3xl md:text-4xl font-bold text-center tracking-tight text-gray-900 dark:text-white mb-4">
                         You provide the leads. <br className="hidden md:block" />
-                        <span className="text-emerald-500">We book the meetings.</span>
+                        <span className="text-gray-400 dark:text-gray-500">We book the meetings.</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-center text-black/60 dark:text-white/60 max-w-xl leading-relaxed">
-                        ele-in is an autonomous AI agent that completely takes over your LinkedIn outreach. From the first touch to the final calendar invite, we handle the entire A-to-Z process. Your only job is to show up and close.
+                    <p className="text-[15px] text-center text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
+                        ele-in is an autonomous AI agent that completely takes over your LinkedIn outreach. From the first touch to the final calendar invite, we handle the entire A-to-Z process.
                     </p>
                 </motion.div>
 
@@ -83,57 +83,77 @@ export default function Waitlist() {
                             key="form"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
                             onSubmit={handleSubmit}
-                            className="w-full max-w-md relative"
+                            className="w-full flex flex-col space-y-4 bg-white dark:bg-black p-6 md:p-8 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm"
                         >
-                            <div className="relative flex flex-col sm:flex-row items-center gap-3 p-1.5 bg-black/5 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-full shadow-lg">
-                                <div className="relative w-full">
-                                    <input
-                                        type="email"
-                                        required
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Enter your email address..."
-                                        className="w-full h-12 pl-5 pr-4 rounded-full bg-transparent text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:outline-none transition-all"
-                                        disabled={isLoading}
-                                    />
-                                </div>
-                                <button
-                                    type="submit"
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
+                                    Work Email <span className="text-gray-400">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    required
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="you@company.com"
+                                    className={inputClass}
                                     disabled={isLoading}
-                                    className="w-full sm:w-auto h-12 px-8 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-70 whitespace-nowrap shadow-md"
-                                >
-                                    {isLoading ? (
-                                        <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                                    ) : (
-                                        <>
-                                            Join Waitlist
-                                            <ArrowRight className="w-4 h-4" />
-                                        </>
-                                    )}
-                                </button>
+                                />
                             </div>
-                            <p className="text-xs text-center text-black/40 dark:text-white/40 mt-6 font-medium">
-                                Secure your early access. No spam, ever.
+                            <button
+                                type="submit"
+                                disabled={isLoading}
+                                className="w-full btn-primary h-13 text-base flex items-center justify-center gap-2 group disabled:opacity-60 mt-2"
+                            >
+                                {isLoading ? (
+                                    <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                                ) : (
+                                    <>
+                                        Secure Early Access
+                                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                    </>
+                                )}
+                            </button>
+                            <p className="text-center text-[11px] text-gray-400 dark:text-gray-600 mt-4 font-medium">
+                                Confidential. No spam, ever.
                             </p>
                         </motion.form>
                     ) : (
                         <motion.div
                             key="success"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="flex flex-col items-center p-8 rounded-[2rem] bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-xl w-full max-w-md text-center shadow-2xl"
+                            className="flex flex-col items-center justify-center text-center p-8 bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm"
                         >
-                            <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mb-6 ring-1 ring-emerald-500/20">
-                                <CheckCircle className="w-8 h-8 text-emerald-500" />
+                            <div className="relative flex items-center justify-center h-20 w-20 mb-6">
+                                <span className="animate-ping absolute inline-flex h-16 w-16 rounded-full bg-emerald-500/20 opacity-75" />
+                                <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 dark:text-emerald-400">
+                                    <CheckCircle className="h-7 w-7" />
+                                </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-black dark:text-white mb-3 tracking-tight">You're on the list!</h3>
-                            <p className="text-black/60 dark:text-white/60 leading-relaxed">
-                                We'll notify <strong className="font-semibold text-black dark:text-white">{email}</strong> as soon as we're ready to onboard you.
+                            <div className="flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-semibold tracking-[0.08em] uppercase mb-4">
+                                Access Granted
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">You're on the list.</h3>
+                            <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                                We've reserved a spot for <strong className="text-gray-900 dark:text-white font-medium">{email}</strong>. Our team will notify you the moment we open up onboarding.
                             </p>
+                            
+                            {/* Terminal-style status box */}
+                            <div className="w-full bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-xl p-4 text-left font-mono text-xs">
+                                <div className="flex justify-between border-b border-gray-200/50 dark:border-white/5 pb-2 mb-2">
+                                    <span className="text-gray-400">STATUS</span>
+                                    <span className="text-emerald-500 font-semibold">WAITLISTED</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span className="text-gray-400">QUEUE PRIORITY</span>
+                                    <span className="text-gray-900 dark:text-white">TIER-1</span>
+                                </div>
+                            </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
