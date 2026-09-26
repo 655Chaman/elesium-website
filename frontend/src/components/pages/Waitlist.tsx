@@ -34,7 +34,14 @@ export default function Waitlist() {
     }
 
     return (
-        <div className="relative min-h-[100vh] pt-24 pb-16 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-black">
+        <motion.div 
+            key="waitlist"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="relative min-h-[100vh] pt-24 pb-16 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-black"
+        >
             {/* Background effects */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/10 dark:bg-blue-500/5 blur-[100px] rounded-full pointer-events-none" />
@@ -46,12 +53,11 @@ export default function Waitlist() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col items-center mb-12"
                 >
-                    <div className="relative w-40 h-40 md:w-48 md:h-48 mb-8 rounded-[2.5rem] bg-white/60 dark:bg-white/5 backdrop-blur-2xl border border-black/5 dark:border-white/10 shadow-2xl flex items-center justify-center overflow-hidden p-6 ring-1 ring-black/5 dark:ring-white/10 transition-all hover:scale-105 duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-transparent opacity-50" />
+                    <div className="relative w-48 h-24 md:w-56 md:h-28 mb-10 flex items-center justify-center">
                         <img 
                             src={logo} 
                             alt="ele-in Logo" 
-                            className="w-full h-full object-contain relative z-10 drop-shadow-xl"
+                            className="w-full h-full object-contain"
                         />
                     </div>
                     
@@ -62,11 +68,11 @@ export default function Waitlist() {
                         </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold text-center tracking-tight text-black dark:text-white mb-6">
-                        ele-in
+                    <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight text-black dark:text-white mb-6">
+                        Autonomous LinkedIn Outreach
                     </h1>
                     <p className="text-lg md:text-xl text-center text-black/60 dark:text-white/60 max-w-lg leading-relaxed">
-                        The next generation of autonomous digital experiences. Join the waitlist to secure early access.
+                        The complete A-to-Z LinkedIn automation platform. Provide your leads, and ele-in handles the entire outreach lifecycle—turning prospects into booked meetings on autopilot.
                     </p>
                 </motion.div>
 
@@ -109,7 +115,7 @@ export default function Waitlist() {
                                 </button>
                             </div>
                             <p className="text-xs text-center text-black/40 dark:text-white/40 mt-6 font-medium">
-                                By joining, you agree to receive updates about ele-in. No spam, ever.
+                                Secure your early access. No spam, ever.
                             </p>
                         </motion.form>
                     ) : (
@@ -125,12 +131,12 @@ export default function Waitlist() {
                             </div>
                             <h3 className="text-2xl font-bold text-black dark:text-white mb-3 tracking-tight">You're on the list!</h3>
                             <p className="text-black/60 dark:text-white/60 leading-relaxed">
-                                We'll notify <strong className="font-semibold text-black dark:text-white">{email}</strong> as soon as we're ready for you.
+                                We'll notify <strong className="font-semibold text-black dark:text-white">{email}</strong> as soon as we're ready to onboard you.
                             </p>
                         </motion.div>
                     )}
                 </AnimatePresence>
             </div>
-        </div>
+        </motion.div>
     )
 }
