@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowLeft, Shield, TrendingUp, Zap, Activity, Cpu, Share2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const industries = [
     {
@@ -76,6 +77,12 @@ export default function Industries() {
 
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto">
+            <Helmet>
+                <title>AI Automation for Every Industry | Elesium India</title>
+                <meta name="description" content="Elesium delivers AI automation across BFSI, Healthcare, SaaS, Manufacturing and more. India's trusted AI partner for enterprise automation." />
+                <link rel="canonical" href="https://elesium.online/markets" />
+            </Helmet>
+            <h1 className="sr-only">AI Automation Solutions for Every Industry in India</h1>
             {/* Header */}
             <div className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
                 <div className="max-w-7xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">

@@ -1,0 +1,107 @@
+name: Sync Nimap Blogs
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # Runs daily at 04:00 UTC (9:30 AM IST)
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  sync_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      - name: Install Python dependencies
+        run: |
+          cd automation
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Nimap Monitor & Personalize
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          cd automation
+          python nimap_monitor.py
+
+      - name: Check for new blog post
+        id: git-check
+        run: |
+          if [ -n "$(git status --porcelain frontend/src/data/blogPosts.ts)" ]; then
+            echo "new_post=true" >> $GITHUB_OUTPUT
+            echo "✅ Detected new blog post to publish!"
+          else
+            echo "new_post=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No new blog post found."
+          fi
+
+      - name: Commit and Push to main
+        if: steps.git-check.outputs.new_post == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add frontend/src/data/blogPosts.ts
+          git commit -m "Auto-sync: Personalized new blog from Nimap"
+          git push origin main
+
+      - name: Install Frontend Dependencies
+        if: steps.git-check.outputs.new_post == 'true'
+        working-directory: ./frontend
+        run: npm install
+
+      - name: Build Site (Sitemap + SSG + Vite)
+        if: steps.git-check.outputs.new_post == 'true'
+        working-directory: ./frontend
+        run: npm run build
+
+      - name: Publish to gh-pages branch
+        if: steps.git-check.outputs.new_post == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          cname: elesium.online
+
+      - name: Upload Pages Artifact
+        if: steps.git-check.outputs.new_post == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./frontend/dist
+
+  deploy:
+    needs: sync_and_deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true

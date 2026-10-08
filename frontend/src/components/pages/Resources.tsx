@@ -13,12 +13,12 @@ export default function Resources() {
     return (
         <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
             <Helmet>
-                <title>Resources & Tools | Elesium</title>
-                <meta name="description" content="Download our resources, tools, and automation workflows engineered for industrial leaders." />
+                <title>AI Automation Resources & Guides | Elesium</title>
+                <meta name="description" content="Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency." />
                 
                 {/* Open Graph */}
-                <meta property="og:title" content="Resources & Tools | Elesium" />
-                <meta property="og:description" content="Download our resources, tools, and automation workflows engineered for industrial leaders." />
+                <meta property="og:title" content="AI Automation Resources & Guides | Elesium" />
+                <meta property="og:description" content="Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://elesium.online/resources" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />

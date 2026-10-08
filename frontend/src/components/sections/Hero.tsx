@@ -73,7 +73,8 @@ export default function HeroSection() {
                         animate={isInView ? { opacity: 1 } : {}}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        Proprietary data infrastructure meets targeted outbound architecture to broker exclusive, high-ticket partnerships.
+                        <span className="block font-medium text-gray-900 dark:text-gray-300 mb-2">India's premier AI engineering firm for enterprise.</span>
+                        We replace fragile 40-hour manual workflows with autonomous agents. Proprietary data infrastructure meets targeted outbound architecture to broker exclusive, high-ticket partnerships.
                     </motion.p>
 
                     <motion.div

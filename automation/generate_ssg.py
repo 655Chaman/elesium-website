@@ -169,7 +169,55 @@ def generate_ssg():
         out_file.write_text(html, encoding="utf-8")
         print(f"Generated SSG for: /signals/{slug}")
 
-    print("✅ SSG complete. GitHub Pages will now serve 200 OK for all signals routes.")
+    print("✅ SSG complete for signals.")
+
+    print("Starting SSG Generation for static pages...")
+    static_pages = {
+        "ai-automation": {
+            "title": "AI Automation Agency India",
+            "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
+        },
+        "how-we-work": {
+            "title": "How Our AI Automation Works",
+            "desc": "Elesium's proven 4-step AI implementation process delivers automation ROI in 90 days. See how India's top AI agency operates."
+        },
+        "markets": {
+            "title": "AI Automation for Every Industry",
+            "desc": "Elesium delivers AI automation across BFSI, Healthcare, SaaS, Manufacturing and more. India's trusted AI partner for enterprise automation."
+        },
+        "resources": {
+            "title": "AI Automation Resources & Guides",
+            "desc": "Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency."
+        },
+        "ai-automation-agency-india": {
+            "title": "AI Automation Agency India",
+            "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
+        }
+    }
+    
+    for route, meta in static_pages.items():
+        title = meta["title"]
+        desc = meta["desc"]
+        
+        out_dir = DIST_DIR / route
+        out_dir.mkdir(parents=True, exist_ok=True)
+        out_file = out_dir / "index.html"
+        
+        html = base_html
+        
+        html = re.sub(r"<title>.*?</title>", f"<title>{title} | Elesium</title>", html)
+        html = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{desc}">', html)
+        html = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="https://elesium.online/{route}">', html)
+        html = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{title} | Elesium">', html)
+        html = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{desc}">', html)
+        html = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="https://elesium.online/{route}">', html)
+        html = re.sub(r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{title} | Elesium">', html)
+        html = re.sub(r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{desc}">', html)
+        
+        out_file.write_text(html, encoding="utf-8")
+        print(f"Generated SSG for: /{route}")
+        
+    print("✅ SSG complete. GitHub Pages will now serve 200 OK for all required routes.")
 
 if __name__ == "__main__":
     generate_ssg()

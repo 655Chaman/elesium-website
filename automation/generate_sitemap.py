@@ -25,8 +25,11 @@ def generate_sitemap():
     # Base URLs that are static
     urls = [
         {"loc": f"{BASE_URL}/", "priority": "1.0", "changefreq": "daily"},
-        {"loc": f"{BASE_URL}/solutions", "priority": "0.9", "changefreq": "weekly"},
-        {"loc": f"{BASE_URL}/industries", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/markets", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/how-we-work", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/ai-automation", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/resources", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/ai-automation-agency-india", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/signals", "priority": "0.9", "changefreq": "daily"},
     ]
     

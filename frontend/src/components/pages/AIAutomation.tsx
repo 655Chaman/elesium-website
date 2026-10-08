@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Terminal, Shield, Network, Zap, Cpu, Code2, Lock, ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
 
@@ -85,6 +86,53 @@ const AgentTerminal = () => {
 export default function AIAutomation() {
     return (
         <div className="pt-32 pb-24 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
+            <Helmet>
+                <title>AI Automation Agency India | Elesium</title>
+                <meta name="description" content="Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down." />
+                <link rel="canonical" href="https://elesium.online/ai-automation" />
+                <script type="application/ld+json">
+                    {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      "mainEntity": [
+                        {
+                          "@type": "Question",
+                          "name": "What is AI automation and how can it help my business in India?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "AI automation involves using artificial intelligence to execute complex tasks traditionally requiring human reasoning. For Indian businesses, it means scaling operations rapidly, reducing manual errors, and competing globally without proportionally increasing headcount."
+                          }
+                        },
+                        {
+                          "@type": "Question",
+                          "name": "How long does it take to implement AI automation?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "While timeline varies by complexity, we typically deploy pilot agents within 4-6 weeks. Full enterprise integration across multiple workflows usually takes 2-3 months from audit to production deployment."
+                          }
+                        },
+                        {
+                          "@type": "Question",
+                          "name": "What industries in India benefit most from AI automation?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We see the highest ROI in manufacturing, defense, industrial B2B, healthcare, and enterprise SaaS. These sectors deal with complex, high-volume data where deterministic AI agents can automate compliance, sales, and supply chain operations."
+                          }
+                        },
+                        {
+                          "@type": "Question",
+                          "name": "How is Elesium different from other AI agencies in India?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Unlike agencies relying on standard LLM wrappers, Elesium builds custom, deterministic AI infrastructure. We embed deeply into your proprietary enterprise data securely, prioritizing measurable ROI and autonomous execution over generic generative tools."
+                          }
+                        }
+                      ]
+                    }
+                    `}
+                </script>
+            </Helmet>
             
             {/* Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-500/5 dark:bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
@@ -216,6 +264,38 @@ export default function AIAutomation() {
                             </div>
                         </div>
 
+                    </div>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="mb-32 max-w-3xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+                    </div>
+                    <div className="space-y-6">
+                        {[
+                            {
+                                q: "What is AI automation and how can it help my business in India?",
+                                a: "True AI automation isn't a chatbot answering FAQs. It's a deterministic multi-agent system that autonomously routes tickets, extracts structured data from messy ERP systems (like SAP), and executes supply chain negotiations without human intervention. It transforms Opex into highly scalable Capex."
+                            },
+                            {
+                                q: "How long does it take to implement AI automation?",
+                                a: "Most legacy agencies quote 6 to 12 months for 'digital transformation'. We deploy hardened, production-ready pilot agents within 4 to 6 weeks. Full enterprise integration across multiple data silos reaches production scale within 90 days."
+                            },
+                            {
+                                q: "What industries in India benefit most from AI automation?",
+                                a: "Any industry choked by unstructured data and manual data entry. We see the most aggressive ROI in Indian BFSI (autonomous underwriting), Manufacturing (inventory signal processing), and Enterprise SaaS (automated technical onboarding)."
+                            },
+                            {
+                                q: "How is Elesium different from other AI agencies in India?",
+                                a: "We don't build generic ChatGPT wrappers. We are an engineering firm that builds custom Python/LangGraph architectures deeply integrated into your legacy on-prem systems. We mandate a clear, mathematically sound ROI before writing a single line of code."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="bg-[#F5F5F5] dark:bg-[#111] border border-black/5 dark:border-white/5 rounded-2xl p-6">
+                                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-3">{faq.q}</h3>
+                                <p className="text-gray-600 dark:text-gray-400">{faq.a}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 

@@ -48,12 +48,14 @@ export default function DownloadFooter() {
 
                     {/* Right: tagline */}
                     <div className="hidden md:flex flex-col items-end gap-2 text-right max-w-xs">
-                        <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600">
-                            Strategic Partnership Engine
+                        <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600 uppercase">
+                            Enterprise AI Engineering | India & Global
                         </span>
                         <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">
-                            Exclusive intake. Verified introductions.<br />
-                            Defense & Industrial Master Markets.
+                            Bangalore, India<br />
+                            Architecting autonomous systems for Indian & Global Enterprises.<br />
+                            Exclusive intake. Hard ROI focus.<br />
+                            Multi-Agent Infrastructure & Private LLM Deployments.
                         </p>
                     </div>
                 </div>

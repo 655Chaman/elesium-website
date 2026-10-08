@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
@@ -38,6 +39,12 @@ export default function HowWeWork() {
             transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
             data-lenis-prevent
         >
+            <Helmet>
+                <title>How Our AI Automation Works | Elesium</title>
+                <meta name="description" content="Elesium's proven 4-step AI implementation process delivers automation ROI in 90 days. See how India's top AI agency operates." />
+                <link rel="canonical" href="https://elesium.online/how-we-work" />
+            </Helmet>
+            <h1 className="sr-only">How Our AI Automation Process Works in India</h1>
             <div className="min-h-screen p-6 md:p-12 lg:p-20 max-w-[1200px] mx-auto flex flex-col">
                 {/* Header / Nav */}
                 <div className="flex items-center justify-between mb-16 md:mb-24">
