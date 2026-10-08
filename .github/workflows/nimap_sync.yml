@@ -9,6 +9,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: 'pages'
@@ -50,6 +51,39 @@ jobs:
           cd automation
           python nimap_monitor.py
 
+      - name: Track failures and auto-alert
+        run: |
+          cd automation
+          if [ ! -f "last_run_status.json" ]; then
+            echo '{"success": false, "posts_found": 0, "error_message": "File not found"}' > last_run_status.json
+          fi
+          if [ ! -f "consecutive_no_posts.txt" ]; then
+            echo "0" > consecutive_no_posts.txt
+          fi
+          
+          SUCCESS=$(jq -r '.success' last_run_status.json)
+          POSTS=$(jq -r '.posts_found' last_run_status.json)
+          
+          if [ "$SUCCESS" = "false" ] || [ "$POSTS" = "0" ]; then
+            COUNT=$(cat consecutive_no_posts.txt)
+            COUNT=$((COUNT + 1))
+            echo $COUNT > consecutive_no_posts.txt
+          else
+            echo "0" > consecutive_no_posts.txt
+          fi
+          
+          NEW_COUNT=$(cat consecutive_no_posts.txt)
+          echo "Current consecutive failures/no posts: $NEW_COUNT"
+          
+          if [ "$NEW_COUNT" -ge 7 ]; then
+            echo "🚨 7 days without a new post! Creating GitHub Issue..."
+            curl -X POST \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${{ github.repository }}/issues \
+              -d '{"title":"🚨 Blog Automation: 7 Days Without New Post","body":"The Nimap blog monitor has run for 7 consecutive days without finding or generating a new post. This likely means:\n\n1. Nimap changed their website HTML structure\n2. The AI API (NVIDIA/Gemini) is failing\n3. All recent Nimap posts are duplicates of existing posts\n\nCheck the Actions logs for details: https://github.com/${{ github.repository }}/actions","labels":["automation","alert"]}'
+          fi
+
       - name: Check for new blog post
         id: git-check
         run: |
@@ -61,14 +95,20 @@ jobs:
             echo "ℹ️ No new blog post found."
           fi
 
-      - name: Commit and Push to main
-        if: steps.git-check.outputs.new_post == 'true'
+      - name: Commit state and new blog post
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add frontend/src/data/blogPosts.ts
-          git commit -m "Auto-sync: Personalized new blog from Nimap"
-          git push origin main
+          git add automation/last_run_status.json automation/consecutive_no_posts.txt
+          if [ "${{ steps.git-check.outputs.new_post }}" == 'true' ]; then
+            git add frontend/src/data/blogPosts.ts
+            git commit -m "Auto-sync: Personalized new blog from Nimap & update status"
+          else
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto-sync: Update blog automation status"
+            fi
+          fi
+          git push origin main || echo "No changes to push"
 
       - name: Install Frontend Dependencies
         if: steps.git-check.outputs.new_post == 'true'
@@ -93,6 +133,25 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./frontend/dist
+          
+      - name: Print Workflow Summary
+        if: always()
+        run: |
+          cd automation
+          SUCCESS=$(jq -r '.success' last_run_status.json 2>/dev/null || echo "false")
+          POSTS=$(jq -r '.posts_found' last_run_status.json 2>/dev/null || echo "0")
+          ERR=$(jq -r '.error_message' last_run_status.json 2>/dev/null || echo "null")
+          COUNT=$(cat consecutive_no_posts.txt 2>/dev/null || echo "0")
+          
+          echo "### Blog Sync Execution Summary" >> $GITHUB_STEP_SUMMARY
+          if [ "$SUCCESS" = "true" ] && [ "$POSTS" != "0" ]; then
+            echo "✅ **SUCCESS:** New blog post successfully generated and integrated." >> $GITHUB_STEP_SUMMARY
+          elif [ "$SUCCESS" = "true" ] && [ "$POSTS" = "0" ]; then
+            echo "⚠️ **WARNING:** Script ran successfully, but no new posts were found. (Consecutive days: $COUNT)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **FAILURE:** Script encountered an error. (Consecutive days: $COUNT)" >> $GITHUB_STEP_SUMMARY
+            echo "**Error Details:** $ERR" >> $GITHUB_STEP_SUMMARY
+          fi
 
   deploy:
     needs: sync_and_deploy

@@ -47,3 +47,29 @@ jobs:
       - uses: actions/deploy-pages@v4
         id: deployment
         continue-on-error: true
+
+      - name: Ping Google Search Console (Sitemap)
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://elesium.online/sitemap.xml" \
+            -o /dev/null -w "Google ping status: %{http_code}\n"
+
+      - name: Ping Bing Sitemap
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://elesium.online/sitemap.xml" \
+            -o /dev/null -w "Bing ping status: %{http_code}\n"
+
+      - name: Request Google Indexing for Key Pages
+        run: |
+          echo "Notifying Google of updated pages..."
+          pages=(
+            "https://elesium.online/"
+            "https://elesium.online/ai-automation"
+            "https://elesium.online/ai-automation-agency-india"
+            "https://elesium.online/how-we-work"
+            "https://elesium.online/markets"
+          )
+          for page in "${pages[@]}"; do
+            curl -s "https://www.google.com/ping?sitemap=${page}" \
+              -o /dev/null -w "Pinged: ${page} — Status: %{http_code}\n" || true
+          done
+          echo "Done. Pages submitted for indexing consideration."

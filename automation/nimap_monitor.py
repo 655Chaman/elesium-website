@@ -4,6 +4,24 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+import atexit
+import datetime
+import traceback
+import sys
+
+run_status = {
+    "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    "success": False,
+    "posts_found": 0,
+    "error_message": None
+}
+
+def save_status():
+    status_path = os.path.join(os.path.dirname(__file__), "last_run_status.json")
+    with open(status_path, "w", encoding="utf-8") as f:
+        json.dump(run_status, f, indent=2)
+
+atexit.register(save_status)
 
 # Load local environment variables if available
 load_dotenv()
@@ -11,7 +29,9 @@ NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not NVIDIA_API_KEY and not GEMINI_API_KEY:
-    print("❌ Error: Neither NVIDIA_API_KEY nor GEMINI_API_KEY was found in environment.")
+    msg = "Neither NVIDIA_API_KEY nor GEMINI_API_KEY was found in environment."
+    print(f"❌ Error: {msg}")
+    run_status["error_message"] = msg
     exit(1)
 
 BLOG_URL = "https://nimapinfotech.com/blog/"
@@ -26,10 +46,14 @@ headers = {
 try:
     response = requests.get(BLOG_URL, headers=headers, timeout=20)
     if response.status_code != 200:
-        print(f"⚠️ Failed to fetch Nimap blogs. Status: {response.status_code}")
+        msg = f"Failed to fetch Nimap blogs. Status: {response.status_code}"
+        print(f"⚠️ {msg}")
+        run_status["error_message"] = msg
         exit(0)
 except Exception as e:
-    print(f"⚠️ Network error while fetching blog list: {e}")
+    msg = f"Network error while fetching blog list: {e}"
+    print(f"⚠️ {msg}")
+    run_status["error_message"] = msg
     exit(0)
 
 soup = BeautifulSoup(response.text, 'html.parser')
@@ -46,6 +70,7 @@ for a in links:
 
 if not post_links:
     print("ℹ️ No blog post links found on page.")
+    run_status["success"] = True
     exit(0)
 
 latest_post_url = post_links[0]
@@ -57,13 +82,16 @@ try:
     with open(POSTS_FILE_PATH, 'r', encoding='utf-8') as f:
         posts_content = f.read()
 except FileNotFoundError:
-    print(f"❌ Could not find {POSTS_FILE_PATH}")
+    msg = f"Could not find {POSTS_FILE_PATH}"
+    print(f"❌ {msg}")
+    run_status["error_message"] = msg
     exit(1)
 
 # Check if slug exists
 existing_slugs = re.findall(r"slug:\s*'([^']+)'", posts_content)
 if any(raw_slug in s for s in existing_slugs):
     print(f"✅ Post with slug base '{raw_slug}' already exists in blogPosts.ts. No new post to import.")
+    run_status["success"] = True
     exit(0)
 
 # Extract highest ID
@@ -80,10 +108,14 @@ print(f"📥 Fetching article content from {latest_post_url} ...")
 try:
     post_response = requests.get(latest_post_url, headers=headers, timeout=25)
     if post_response.status_code != 200:
-        print(f"⚠️ Failed to fetch post content. Status: {post_response.status_code}")
+        msg = f"Failed to fetch post content. Status: {post_response.status_code}"
+        print(f"⚠️ {msg}")
+        run_status["error_message"] = msg
         exit(0)
 except Exception as e:
-    print(f"⚠️ Network error while fetching post content: {e}")
+    msg = f"Network error while fetching post content: {e}"
+    print(f"⚠️ {msg}")
+    run_status["error_message"] = msg
     exit(0)
 
 post_soup = BeautifulSoup(post_response.text, 'html.parser')
@@ -98,7 +130,9 @@ article_tag = post_soup.find('article') or post_soup.find('main') or post_soup.f
 raw_text = article_tag.get_text(separator='\n', strip=True) if article_tag else ""
 
 if len(raw_text) < 200:
-    print("⚠️ Extracted text is too short to be a valid blog post.")
+    msg = "Extracted text is too short to be a valid blog post."
+    print(f"⚠️ {msg}")
+    run_status["error_message"] = msg
     exit(0)
 
 # 4. Generate with AI (Dual Engine: NVIDIA NIM or Google Gemini)
@@ -188,7 +222,9 @@ def execute_ai_generation(prompt_text: str) -> str:
         except Exception as err:
             print(f"❌ Gemini API call failed: {err}")
 
-    raise RuntimeError("Both NVIDIA and Gemini generation failed or keys were missing.")
+    msg = "Both NVIDIA and Gemini generation failed or keys were missing."
+    run_status["error_message"] = msg
+    raise RuntimeError(msg)
 
 output_text = execute_ai_generation(prompt)
 
@@ -205,8 +241,10 @@ output_text = output_text.strip()
 try:
     new_post = json.loads(output_text)
 except json.JSONDecodeError as e:
-    print(f"❌ Failed to parse JSON from AI response: {e}")
+    msg = f"Failed to parse JSON from AI response: {e}"
+    print(f"❌ {msg}")
     print("Response preview:", output_text[:300])
+    run_status["error_message"] = msg
     exit(1)
 
 # Ensure internalLinks
@@ -219,7 +257,9 @@ ts_object_formatted = "    " + ts_object
 
 array_start_match = re.search(r'export const blogPosts:\s*BlogPost\[\]\s*=\s*\[', posts_content)
 if not array_start_match:
-    print("❌ Could not find 'export const blogPosts: BlogPost[] = [' in blogPosts.ts")
+    msg = "Could not find 'export const blogPosts: BlogPost[] = [' in blogPosts.ts"
+    print(f"❌ {msg}")
+    run_status["error_message"] = msg
     exit(1)
 
 insert_index = array_start_match.end()
@@ -233,4 +273,6 @@ new_posts_content = (
 with open(POSTS_FILE_PATH, 'w', encoding='utf-8') as f:
     f.write(new_posts_content)
 
+run_status["success"] = True
+run_status["posts_found"] = 1
 print(f"🎉 Successfully injected new blog post (ID: {new_id}, Slug: '{new_slug}') into blogPosts.ts!")

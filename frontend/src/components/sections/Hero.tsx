@@ -2,13 +2,13 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { TextAnimate } from '../ui/TextAnimate'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
-import { MandateApplicationForm } from '../features/WaitingListForm'
+import { useCalendly } from '../../hooks/useCalendly'
 import logo from '../../assets/LOGO_NEW.png'
 
 export default function HeroSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.1 })
+    const { openCalendly, CalendlyModal } = useCalendly();
 
     return (
         <section
@@ -83,16 +83,10 @@ export default function HeroSection() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        <ExpandableScreen>
-                            <ExpandableScreenTrigger>
-                                <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm">
-                                    Apply Now
-                                </InteractiveHoverButton>
-                            </ExpandableScreenTrigger>
-                            <ExpandableScreenContent>
-                                <MandateApplicationForm source="Hero CTA" />
-                            </ExpandableScreenContent>
-                        </ExpandableScreen>
+                        <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm" onClick={openCalendly}>
+                            Apply Now
+                        </InteractiveHoverButton>
+                        <CalendlyModal />
                     </motion.div>
                 </motion.div>
             </div>
