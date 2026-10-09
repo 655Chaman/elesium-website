@@ -1,0 +1,16 @@
+{
+    "curl_command": "curl -X POST -H 'Content-Type: application/json' -H 'api-key: YOUR_API_KEY' -d @dev_to_payload.json https://dev.to/api/articles",
+    "payload": {
+        "article": {
+            "title": "Top 10 AI Automation Agencies in India (2026 Deep Comparison)",
+            "body_markdown": "Read the full study at [Top 10 AI Automation Agencies in India (2026 Deep Comparison)](https://elesium.online/signals/top-ai-automation-agencies-india-2026).",
+            "published": true,
+            "tags": [
+                "tech",
+                "architecture",
+                "engineering"
+            ],
+            "canonical_url": "https://elesium.online/signals/top-ai-automation-agencies-india-2026"
+        }
+    }
+}

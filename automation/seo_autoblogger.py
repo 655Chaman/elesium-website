@@ -189,32 +189,48 @@ def inject_post(final_data: dict, keyword: str, image_url: str, related_slugs: l
     with open(ts_path, 'r', encoding='utf-8') as f:
         ts_content = f.read()
         
-    new_id = int(datetime.now().timestamp())
-    date_str = datetime.now().strftime('%Y-%m-%d')
+    ids = [int(m) for m in re.findall(r'id:\s*(\d+)', ts_content)]
+    new_id = (max(ids) + 1) if ids else 75
+    date_str = datetime.now().strftime('%B %d, %Y')
     
-    safe_title = final_data.get('title', keyword).replace("'", "\\'")
-    safe_slug = keyword.replace(" ", "-").lower()
+    clean_kw = keyword.lower()
+    clean_kw = re.sub(r'[^a-z0-9\s-]', '', clean_kw)
+    safe_slug = re.sub(r'[\s_]+', '-', clean_kw).strip('-')
+    if not safe_slug:
+        safe_slug = f"ai-automation-signal-{new_id}"
+    
+    title_str = final_data.get('title', keyword).strip()
+    excerpt_str = final_data.get('excerpt', '').strip()
+    intro_str = final_data.get('intro', '').strip()
+    meta_desc_str = final_data.get('metaDescription', excerpt_str).strip()
+    
+    title_json = json.dumps(title_str)
+    slug_json = json.dumps(safe_slug)
+    excerpt_json = json.dumps(excerpt_str)
+    intro_json = json.dumps(intro_str)
+    meta_json = json.dumps(meta_desc_str)
+    image_json = json.dumps(image_url)
     
     sections_json = json.dumps(final_data.get('sections', []), indent=4)
     faq_json = json.dumps(final_data.get('faq', []), indent=4)
     internal_links_json = json.dumps(related_slugs)
     
     new_post_obj = f'''
-  {{
-    id: {new_id},
-    title: '{safe_title}',
-    slug: '{safe_slug}',
-    category: 'AI Automation',
-    date: '{date_str}',
-    readTime: '8 min read',
-    excerpt: `{final_data.get('excerpt', '')}`,
-    intro: `{final_data.get('intro', '')}`,
-    metaDescription: `{final_data.get('metaDescription', '')}`,
-    image: '{image_url}',
-    internalLinks: {internal_links_json},
-    faq: {faq_json},
-    sections: {sections_json}
-  }},'''
+    {{
+        id: {new_id},
+        slug: {slug_json},
+        category: 'AI Automation',
+        title: {title_json},
+        date: '{date_str}',
+        readTime: '8 min read',
+        excerpt: {excerpt_json},
+        intro: {intro_json},
+        metaDescription: {meta_json},
+        image: {image_json},
+        internalLinks: {internal_links_json},
+        faq: {faq_json},
+        sections: {sections_json}
+    }},'''
 
     match = re.search(r'export\s+const\s+blogPosts\s*(:\s*BlogPost\[\]\s*)?=\s*\[', ts_content)
     if match:
@@ -222,9 +238,11 @@ def inject_post(final_data: dict, keyword: str, image_url: str, related_slugs: l
         new_ts = ts_content[:insert_idx] + "\n" + new_post_obj + ts_content[insert_idx:]
         with open(ts_path, 'w', encoding='utf-8') as f:
             f.write(new_ts)
-        print("Injected successfully into blogPosts.ts!")
+        print(f"Injected successfully into blogPosts.ts! (ID: {new_id}, Slug: {safe_slug})")
+        return {"id": new_id, "slug": safe_slug, "title": title_str, "excerpt": excerpt_str}
     else:
         print("Could not parse blogPosts.ts")
+        return None
 
 def generate_content(keyword: str, research_data: dict) -> dict:
     """3-Agent Pipeline"""

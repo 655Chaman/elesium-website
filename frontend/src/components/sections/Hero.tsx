@@ -2,13 +2,13 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { TextAnimate } from '../ui/TextAnimate'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
-import { useCalendly } from '../../hooks/useCalendly'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 import logo from '../../assets/LOGO_NEW.png'
 
 export default function HeroSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.1 })
-    const { openCalendly, CalendlyModal } = useCalendly();
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
     return (
         <section
@@ -83,10 +83,10 @@ export default function HeroSection() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm" onClick={openCalendly}>
-                            Apply Now
+                        <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm" onClick={openWhatsApp}>
+                            Initiate AI Audit
                         </InteractiveHoverButton>
-                        <CalendlyModal />
+                        <WhatsAppModal />
                     </motion.div>
                 </motion.div>
             </div>

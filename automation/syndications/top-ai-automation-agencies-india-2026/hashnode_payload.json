@@ -1,0 +1,12 @@
+{
+    "query": "\n    mutation PublishPost($input: PublishPostInput!) {\n      publishPost(input: $input) {\n        post {\n          id\n          title\n          url\n        }\n      }\n    }\n    ",
+    "variables": {
+        "input": {
+            "title": "Top 10 AI Automation Agencies in India (2026 Deep Comparison)",
+            "contentMarkdown": "Read the full study at [Top 10 AI Automation Agencies in India (2026 Deep Comparison)](https://elesium.online/signals/top-ai-automation-agencies-india-2026).",
+            "tags": [],
+            "isRepublished": true,
+            "originalArticleURL": "https://elesium.online/signals/top-ai-automation-agencies-india-2026"
+        }
+    }
+}

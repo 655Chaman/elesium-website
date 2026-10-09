@@ -34,34 +34,13 @@ jobs:
             npm --prefix frontend install
           fi
 
-      - name: Run Competitor Outrank Scraper
-        run: |
-          if [ -f "automation/competitor_outrank_scraper.py" ]; then
-            python automation/competitor_outrank_scraper.py --run || true
-          fi
-
-      - name: Run SEO Autoblogger
+      - name: Run Master Linear SEO Pipeline
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          if [ -f "automation/seo_autoblogger.py" ]; then
-            python automation/seo_autoblogger.py
-          fi
-
-      - name: Run Link Builder & Syndication
-        env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: |
-          if [ -f "automation/link_builder.py" ]; then
-            python automation/link_builder.py --latest
-          fi
-
-      - name: Build Frontend
-        run: |
-          if [ -d "frontend" ]; then
-            npm --prefix frontend run build
-          fi
+          python automation/orchestrator.py
 
       - name: Commit and Push Changes
         run: |

@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import argparse
 import requests
@@ -175,26 +176,26 @@ def update_log(slug, title, url):
     with open(LOG_FILE, "w") as f:
         json.dump(log_data, f, indent=4)
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--latest", action="store_true", help="Process the latest post")
-    parser.add_argument("--slug", type=str, help="Process a specific slug")
-    parser.add_argument("--title", type=str, help="Title of the post", default="Auto-generated Post Title")
-    args = parser.parse_args()
+def get_latest_post_from_codebase():
+    ts_path = Path(__file__).resolve().parent.parent / "frontend" / "src" / "data" / "blogPosts.ts"
+    if not ts_path.exists():
+        return {"slug": "ai-automation-agency-india", "title": "Top AI Automation Agency in India", "excerpt": ""}
+    
+    with open(ts_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+        
+    slug_match = re.search(r"slug:\s*['\"]([^'\"]+)['\"]", content)
+    title_match = re.search(r"title:\s*['\"]([^'\"]+)['\"]", content)
+    excerpt_match = re.search(r"excerpt:\s*['\"`]([^'\"`]+)['\"`]", content)
+    
+    slug = slug_match.group(1) if slug_match else "ai-automation-agency-india"
+    title = title_match.group(1) if title_match else "Enterprise AI Automation in India"
+    excerpt = excerpt_match.group(1) if excerpt_match else ""
+    return {"slug": slug, "title": title, "excerpt": excerpt}
 
+def process_post(slug: str, title: str, excerpt: str = ""):
     setup()
     env_vars = load_env()
-
-    if args.latest:
-        slug = "latest-post"
-        title = "Latest Auto-generated Post Title"
-    elif args.slug:
-        slug = args.slug
-        title = args.title
-    else:
-        print("Please specify --latest or --slug")
-        return
-
     url = f"https://elesium.online/signals/{slug}"
     
     handle_devto_syndication(slug, title, url, env_vars)
@@ -202,8 +203,30 @@ def main():
     generate_social_drafts(slug, title, url)
     ping_search_engines(url)
     update_log(slug, title, url)
+    print(f"Successfully processed syndications and pings for {slug} ('{title}')")
 
-    print(f"Successfully processed syndications and pings for {slug}")
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--latest", action="store_true", help="Process the latest post from blogPosts.ts")
+    parser.add_argument("--slug", type=str, help="Process a specific slug")
+    parser.add_argument("--title", type=str, help="Title of the post", default="")
+    parser.add_argument("--excerpt", type=str, help="Excerpt of the post", default="")
+    args = parser.parse_args()
+
+    if args.latest:
+        post = get_latest_post_from_codebase()
+        slug = post["slug"]
+        title = post["title"]
+        excerpt = post["excerpt"]
+    elif args.slug:
+        slug = args.slug
+        title = args.title or slug.replace("-", " ").title()
+        excerpt = args.excerpt or ""
+    else:
+        print("Please specify --latest or --slug")
+        return
+
+    process_post(slug, title, excerpt)
 
 if __name__ == "__main__":
     main()

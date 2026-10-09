@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
-import { useCalendly } from '../../hooks/useCalendly'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 const terminalLines = [
     "> Initializing Agent_04 [Sales_Ops_India]...",
@@ -104,7 +104,7 @@ const faqs = [
 
 export default function AIAutomationIndia() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
-    const { openCalendly, CalendlyModal } = useCalendly();
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
     const toggleFaq = (index: number) => {
         setOpenFaq(openFaq === index ? null : index);
@@ -409,11 +409,11 @@ export default function AIAutomationIndia() {
                             Stop wasting human capital on robotic tasks. Schedule a custom AI readiness audit to see exactly where our infrastructure can impact your bottom line.
                         </p>
                         <div className="flex justify-center">
-                            <button onClick={openCalendly} className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
-                                Book an AI Audit
+                            <button onClick={openWhatsApp} className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
+                                Request Private AI Audit
                                 <ArrowRight className="w-5 h-5" />
                             </button>
-                            <CalendlyModal />
+                            <WhatsAppModal />
                         </div>
                     </div>
                     {/* Decorative blurred blobs */}

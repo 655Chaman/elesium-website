@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Terminal, Shield, Network, Zap, Cpu, Code2, Lock, ArrowRight } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
-import { useCalendly } from '../../hooks/useCalendly'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 const terminalLines = [
     "> Initializing Agent_04 [Sales_Ops]...",
@@ -83,7 +83,7 @@ const AgentTerminal = () => {
 }
 
 export default function AIAutomation() {
-    const { openCalendly, CalendlyModal } = useCalendly();
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
     return (
         <div className="pt-32 pb-24 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
@@ -315,11 +315,11 @@ export default function AIAutomation() {
                             Stop wasting human capital on robotic tasks. Schedule a custom AI readiness audit to see exactly where our infrastructure can impact your bottom line.
                         </p>
                         <div className="flex justify-center">
-                            <button onClick={openCalendly} className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
-                                Book an AI Audit
+                            <button onClick={openWhatsApp} className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
+                                Request Private AI Audit
                                 <ArrowRight className="w-5 h-5" />
                             </button>
-                            <CalendlyModal />
+                            <WhatsAppModal />
                         </div>
                     </div>
                     {/* Decorative blurred blobs */}
