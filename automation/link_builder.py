@@ -6,104 +6,143 @@ import datetime
 from pathlib import Path
 
 BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SYNDICATIONS_DIR = BASE_DIR / "automation" / "syndications"
-LOG_FILE = BASE_DIR / "automation" / "link_distribution_log.json"
+AUTOMATION_DIR = BASE_DIR / "automation"
+SYNDICATIONS_DIR = AUTOMATION_DIR / "syndications"
+SOCIAL_DRAFTS_DIR = AUTOMATION_DIR / "social_drafts"
+LOG_FILE = AUTOMATION_DIR / "link_distribution_log.json"
+ENV_FILE = AUTOMATION_DIR / ".env"
 
 def setup():
     SYNDICATIONS_DIR.mkdir(parents=True, exist_ok=True)
+    SOCIAL_DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
     if not LOG_FILE.exists():
         with open(LOG_FILE, "w") as f:
             json.dump([], f)
 
-def generate_syndication_files(slug, title, url):
+def load_env():
+    env_vars = {}
+    if ENV_FILE.exists():
+        with open(ENV_FILE, "r") as f:
+            for line in f:
+                if "=" in line:
+                    key, val = line.strip().split("=", 1)
+                    env_vars[key] = val
+    return env_vars
+
+def generate_social_drafts(slug, title, url):
+    draft_file = SOCIAL_DRAFTS_DIR / f"{slug}.md"
+    content = f"""# Social Distribution Drafts for {title}
+
+## LinkedIn Executive Post
+[Hook] {title} is changing the game.
+
+[Problem] The industry has been struggling with this for years.
+
+[Architecture Breakdown] Here's how it works under the hood:
+- Component 1
+- Component 2
+
+[Enterprise ROI Numbers] 
+- 50% cost reduction
+- 3x speed improvement
+
+[Call-to-Action] Read the full architectural breakdown and signal at Elesium: {url}
+
+---
+
+## X (Twitter) 6-Part Thread
+1/6 🧵 {title} is finally here. We've been analyzing the core technical insights. Here is what you need to know. 👇
+
+2/6 The main challenge was scaling the data pipeline without breaking the bank.
+
+3/6 By optimizing the architecture, we bypassed the usual bottlenecks. 
+
+4/6 Enterprise ROI? Massive. We are seeing up to 50% cost reductions across the board.
+
+5/6 The secret sauce lies in the integration strategy and the tech stack alignment.
+
+6/6 Dive deep into the full architecture and technical breakdown. Read the complete signal at Elesium here: {url}
+"""
+    with open(draft_file, "w") as f:
+        f.write(content)
+
+def handle_devto_syndication(slug, title, url, env_vars):
     slug_dir = SYNDICATIONS_DIR / slug
     slug_dir.mkdir(parents=True, exist_ok=True)
     
-    # Dev.to
-    dev_to = f"""---
-title: {title}
-published: false
-canonical_url: {url}
----
+    devto_key = env_vars.get("DEVTO_API_KEY") or os.environ.get("DEVTO_API_KEY")
+    
+    payload = {
+        "article": {
+            "title": title,
+            "body_markdown": f"Read the full study at [{title}]({url}).",
+            "published": True,
+            "tags": ["tech", "architecture", "engineering"],
+            "canonical_url": url
+        }
+    }
+    
+    if devto_key:
+        print(f"Publishing to Dev.to for {slug}...")
+        headers = {
+            "Content-Type": "application/json",
+            "api-key": devto_key
+        }
+        try:
+            res = requests.post("https://dev.to/api/articles", json=payload, headers=headers)
+            res.raise_for_status()
+            print("Successfully published to Dev.to")
+        except Exception as e:
+            print(f"Failed to publish to Dev.to: {e}")
+    else:
+        print(f"No DEVTO_API_KEY found. Generating payload file.")
+        payload_file = slug_dir / "dev_to_payload.json"
+        
+        output_data = {
+            "curl_command": "curl -X POST -H 'Content-Type: application/json' -H 'api-key: YOUR_API_KEY' -d @dev_to_payload.json https://dev.to/api/articles",
+            "payload": payload
+        }
+        with open(payload_file, "w") as f:
+            json.dump(output_data, f, indent=4)
 
-# {title}
-
-Read the full study at [{title}]({url}).
-"""
-    with open(slug_dir / "dev_to_article.md", "w") as f:
-        f.write(dev_to)
-
-    # Hashnode
-    hashnode = f"""---
-title: {title}
-slug: {slug}
-canonical_url: {url}
----
-
-# {title}
-
-Read the full study at [{title}]({url}).
-"""
-    with open(slug_dir / "hashnode_article.md", "w") as f:
-        f.write(hashnode)
-
-    # Medium
-    medium = f"""# {title}
-
-Read the full study at [{title}]({url}).
-"""
-    with open(slug_dir / "medium_article.md", "w") as f:
-        f.write(medium)
-
-    # LinkedIn
-    linkedin = f"""# {title}
-
-Executive Summary:
-[Insert executive summary here]
-
-Read the full study at [{title}]({url}).
-"""
-    with open(slug_dir / "linkedin_article.md", "w") as f:
-        f.write(linkedin)
-
-def generate_outreach_pitch(slug, title, url):
+def handle_hashnode_syndication(slug, title, url):
     slug_dir = SYNDICATIONS_DIR / slug
-    pitch = f"""# Outreach Pitch for {title}
-
-## Contextual Excerpt (250-350 words)
-[Insert 250-350 word plain-text contextual excerpt here]
-
-## Email Templates
-
-### Template 1 (YourStory / Inc42)
-Hi [Editor Name],
-Loved your recent piece on [Topic]. I recently published a deep dive on {title} that might interest your readers: {url}.
-
-### Template 2 (Analytics India Magazine)
-Hi [Editor Name],
-As a regular reader of AIM, I thought your audience would appreciate this new study: {title} ({url}).
-
-### Template 3 (TechInAsia)
-Hi [Editor Name],
-We just published an extensive piece on {title} covering the Asian tech ecosystem. Read more: {url}.
-
-## Anchor Text Recommendations
-- [{title}]({url})
-"""
-    with open(slug_dir / "outreach_pitch.md", "w") as f:
-        f.write(pitch)
+    slug_dir.mkdir(parents=True, exist_ok=True)
+    
+    payload_file = slug_dir / "hashnode_payload.json"
+    mutation = '''
+    mutation PublishPost($input: PublishPostInput!) {
+      publishPost(input: $input) {
+        post {
+          id
+          title
+          url
+        }
+      }
+    }
+    '''
+    
+    variables = {
+        "input": {
+            "title": title,
+            "contentMarkdown": f"Read the full study at [{title}]({url}).",
+            "tags": [],
+            "isRepublished": True,
+            "originalArticleURL": url
+        }
+    }
+    
+    with open(payload_file, "w") as f:
+        json.dump({"query": mutation, "variables": variables}, f, indent=4)
 
 def ping_search_engines(url):
     print(f"Pinging search engines for {url}...")
+    
+    sitemap_url = "https://elesium.online/sitemap.xml"
     try:
-        requests.get(f"https://www.google.com/ping?sitemap={url}", timeout=5)
+        requests.get(f"https://www.google.com/ping?sitemap={sitemap_url}", timeout=5)
     except Exception as e:
         print(f"Google ping failed: {e}")
-        
-    try:
-        requests.get(f"https://www.bing.com/ping?sitemap={url}", timeout=5)
-    except Exception as e:
-        print(f"Bing ping failed: {e}")
         
     # IndexNow
     try:
@@ -144,6 +183,7 @@ def main():
     args = parser.parse_args()
 
     setup()
+    env_vars = load_env()
 
     if args.latest:
         slug = "latest-post"
@@ -157,8 +197,9 @@ def main():
 
     url = f"https://elesium.online/signals/{slug}"
     
-    generate_syndication_files(slug, title, url)
-    generate_outreach_pitch(slug, title, url)
+    handle_devto_syndication(slug, title, url, env_vars)
+    handle_hashnode_syndication(slug, title, url)
+    generate_social_drafts(slug, title, url)
     ping_search_engines(url)
     update_log(slug, title, url)
 

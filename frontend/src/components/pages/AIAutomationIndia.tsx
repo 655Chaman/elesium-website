@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Terminal, Shield, Network, Zap, Cpu, Code2, Lock, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react'
+import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useCalendly } from '../../hooks/useCalendly'
 

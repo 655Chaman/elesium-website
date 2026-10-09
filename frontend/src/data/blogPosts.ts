@@ -19,6 +19,7 @@ export interface BlogPost {
     intro: string;
     metaDescription: string;
     sections: BlogSection[];
+    image?: string;
     // SEO Enhancement fields
     jsonLdSchema?: string;        // Pillar 2: JSON-LD Article + FAQ schema markup
     faq?: BlogFaq[];              // Pillar 5: FAQ for People Also Ask
