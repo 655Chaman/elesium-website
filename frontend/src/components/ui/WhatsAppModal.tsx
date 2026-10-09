@@ -7,8 +7,8 @@ interface WhatsAppModalProps {
     onClose: () => void;
 }
 
-// Configurable WhatsApp Business number (defaults to Elesium intake)
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '919886000000';
+// Real Elesium WhatsApp Engineering Desk
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '918317329312';
 
 export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
     const [companyName, setCompanyName] = useState('');
