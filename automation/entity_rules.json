@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "2.0.0",
+  "domain": "Enterprise AI Automation & Agentic Systems",
+  "approved_entities": [
+    {
+      "name": "Artificial Intelligence",
+      "wikidata_qid": "Q11660",
+      "productontology_url": "http://www.productontology.org/id/Artificial_intelligence",
+      "canonical_term": "Enterprise AI Automation"
+    },
+    {
+      "name": "Machine Learning",
+      "wikidata_qid": "Q2539",
+      "productontology_url": "http://www.productontology.org/id/Machine_learning",
+      "canonical_term": "Machine Learning Systems"
+    },
+    {
+      "name": "Software Agent",
+      "wikidata_qid": "Q289569",
+      "productontology_url": "http://www.productontology.org/id/Intelligent_agent",
+      "canonical_term": "Autonomous AI Agent"
+    },
+    {
+      "name": "LangGraph",
+      "wikidata_qid": "Q125555000",
+      "productontology_url": "http://www.productontology.org/id/State_machine",
+      "canonical_term": "Deterministic State Machine Orchestration"
+    },
+    {
+      "name": "FastAPI",
+      "wikidata_qid": "Q100348737",
+      "productontology_url": "http://www.productontology.org/id/Web_framework",
+      "canonical_term": "Asynchronous High-Throughput API"
+    },
+    {
+      "name": "PostgreSQL",
+      "wikidata_qid": "Q192490",
+      "productontology_url": "http://www.productontology.org/id/Relational_database_management_system",
+      "canonical_term": "Transactional Vector Storage (pgvector)"
+    },
+    {
+      "name": "Virtual Private Cloud",
+      "wikidata_qid": "Q7935071",
+      "productontology_url": "http://www.productontology.org/id/Virtual_private_cloud",
+      "canonical_term": "Private VPC Isolation"
+    }
+  ],
+  "geographic_entities": {
+    "primary_market": "India",
+    "primary_hub": "Bangalore",
+    "approved_micro_zones": [
+      {
+        "name": "Koramangala",
+        "wikidata_qid": "Q6431398",
+        "type": "Commercial Tech Hub"
+      },
+      {
+        "name": "Indiranagar",
+        "wikidata_qid": "Q6024982",
+        "type": "Enterprise Corridor"
+      },
+      {
+        "name": "Whitefield",
+        "wikidata_qid": "Q7996160",
+        "type": "IT Export Zone"
+      },
+      {
+        "name": "Electronic City",
+        "wikidata_qid": "Q5358313",
+        "type": "Industrial Tech Campus"
+      },
+      {
+        "name": "Outer Ring Road (ORR)",
+        "wikidata_qid": "Q7112000",
+        "type": "Global Capability Centers (GCC)"
+      }
+    ]
+  },
+  "negative_blacklist_patterns": [
+    "(?i)\\bzapier\\b",
+    "(?i)\\bmake\\.com\\b",
+    "(?i)\\bchatgpt\\s+wrapper\\b",
+    "(?i)\\bno-code\\s+toy\\b",
+    "(?i)\\bprompt\\s+engineering\\s+hacks?\\b",
+    "(?i)\\bheart\\s+of\\s+bangalore\\b",
+    "(?i)\\bdelve\\b",
+    "(?i)\\btapestry\\b",
+    "(?i)\\bseamlessly?\\b",
+    "(?i)\\bgame-changer\\b",
+    "(?i)\\brevolutionary\\b",
+    "(?i)\\btestament\\b"
+  ]
+}

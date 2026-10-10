@@ -214,6 +214,102 @@ def generate_ssg():
         html = re.sub(r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{title} | Elesium">', html)
         html = re.sub(r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{desc}">', html)
         
+        if route == "ai-automation-agency-india":
+            service_schema = {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "Enterprise AI Automation Services",
+                "serviceType": "AI Automation Agency",
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency India",
+                    "url": "https://elesium.online",
+                    "telephone": "+91-8317329312",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Koramangala 4th Block",
+                        "addressLocality": "Bangalore",
+                        "addressRegion": "Karnataka",
+                        "postalCode": "560034",
+                        "addressCountry": "IN"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 12.9352,
+                        "longitude": 77.6245
+                    },
+                    "hasMap": "https://www.google.com/maps/place/Koramangala,+Bengaluru,+Karnataka",
+                    "sameAs": [
+                        "https://elesium.online",
+                        "https://github.com/elesium-ai",
+                        "https://www.linkedin.com/company/elesium",
+                        "https://x.com/elesium_ai",
+                        "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e",
+                        "https://www.wikidata.org/wiki/Q11660"
+                    ]
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "India"
+                },
+                "description": "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Enterprise AI Automation Investment Tiers",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "name": "Pilot Architecture Sprint",
+                            "description": "Single-Process Deterministic Agent, Private Cloud Staging Deployment, FastAPI + LangGraph Architecture, 14-Day Delivery Guarantee.",
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": "150000",
+                                "maxPrice": "350000",
+                                "priceCurrency": "INR"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Enterprise Multi-Agent Suite",
+                            "description": "Multi-Agent Collaborative Triad (LangGraph), Private VPC / Zero-Data-Retention Deployment, Deep Legacy ERP/SAP & SQL Integration, 99.9% Production SLA & 90-Day ROI Guarantee.",
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": "600000",
+                                "maxPrice": "1500000",
+                                "priceCurrency": "INR"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Autonomous Engineering Pod",
+                            "description": "3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.",
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "price": "450000",
+                                "priceCurrency": "INR",
+                                "unitText": "MONTH"
+                            }
+                        }
+                    ]
+                }
+            }
+            crawler_noscript = """
+    <noscript>
+        <section id="static-pricing-content">
+            <h2>Enterprise AI Automation Pricing in India</h2>
+            <p>The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.</p>
+            <ul>
+                <li><strong>Tier 1: Pilot Architecture Sprint:</strong> ₹1,50,000 – ₹3,50,000 ($2,000 – $4,500 USD) • 14-Day Delivery</li>
+                <li><strong>Tier 2: Enterprise Multi-Agent Suite:</strong> ₹6,00,000 – ₹15,00,000 ($7,500 – $18,000 USD) • 30–45 Days</li>
+                <li><strong>Tier 3: Autonomous AI Engineering Pod:</strong> ₹4,50,000 / month ($5,500 / month USD) • 12-Month Retainer</li>
+            </ul>
+        </section>
+    </noscript>
+"""
+            schema_json = json.dumps(service_schema, ensure_ascii=False)
+            html = html.replace("</head>", f'<script type="application/ld+json">{schema_json}</script>\n</head>')
+            html = html.replace("</body>", f'{crawler_noscript}\n</body>')
+        
         out_file.write_text(html, encoding="utf-8")
         print(f"Generated SSG for: /{route}")
         

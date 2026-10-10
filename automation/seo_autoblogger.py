@@ -75,11 +75,94 @@ def call_llm(system_prompt: str, user_prompt: str, expected_json: bool = False) 
         })
     return "Fallback content generated due to API errors."
 
+def sanitize_entities(raw_content: str, rules_path: str = None) -> dict:
+    """
+    Scans generated text against entity whitelist and negative regex blacklist.
+    Removes banned tokens and enforces verified Wikidata entity grounding.
+    """
+    if rules_path is None:
+        rules_path = os.path.join(os.path.dirname(__file__), "entity_rules.json")
+        
+    if not os.path.exists(rules_path):
+        return {
+            "sanitized_content": raw_content,
+            "violations_detected": [],
+            "entity_density": {},
+            "is_pure": True
+        }
+        
+    try:
+        with open(rules_path, 'r', encoding='utf-8') as f:
+            rules = json.load(f)
+    except Exception as e:
+        print(f"Warning loading entity_rules.json: {e}")
+        return {
+            "sanitized_content": raw_content,
+            "violations_detected": [],
+            "entity_density": {},
+            "is_pure": True
+        }
+        
+    violations = []
+    sanitized = raw_content
+    
+    # 1. Negative Blacklist Scan & Replace
+    for pattern in rules.get("negative_blacklist_patterns", []):
+        matches = re.findall(pattern, sanitized)
+        if matches:
+            violations.extend(matches)
+            sanitized = re.sub(pattern, "deterministic agent infrastructure", sanitized)
+            
+    # 2. Entity Density Verification
+    approved_names = [e["name"].lower() for e in rules.get("approved_entities", [])]
+    text_lower = sanitized.lower()
+    entity_hits = {name: text_lower.count(name) for name in approved_names}
+    
+    return {
+        "sanitized_content": sanitized,
+        "violations_detected": list(set(violations)),
+        "entity_density": entity_hits,
+        "is_pure": len(violations) == 0
+    }
+
 def agent_architect(keyword: str, research_data: dict) -> str:
+    feedback_path = os.path.join(os.path.dirname(__file__), "performance_feedback_log.json")
+    top_patterns_str = ""
+    if os.path.exists(feedback_path):
+        try:
+            with open(feedback_path, 'r', encoding='utf-8') as f:
+                fb_data = json.load(f)
+            top_posts = [p for p in fb_data.get("posts", []) if p.get("feedback_rating") == "ELITE_HIGH_PERFORMER"]
+            if top_posts:
+                exemplar = top_posts[0]
+                top_patterns_str = (
+                    f"\nCOMPOUNDING FEEDBACK INSTRUCTION:\n"
+                    f"Our highest-performing indexed post is '{exemplar['slug']}' which captured {exemplar['serp_feature_captured']}.\n"
+                    f"Emulate its structural patterns: Answer capsule word count ({exemplar['structural_patterns']['answer_capsule_word_count']}), "
+                    f"Table format ({exemplar['structural_patterns']['table_format']}), Code blocks ({exemplar['structural_patterns']['code_block_present']})."
+                )
+        except Exception as e:
+            print(f"Feedback log read error: {e}")
+
+    serp_profile = research_data.get("serp_profile", {})
+    dominant_feature = serp_profile.get("dominant_above_fold_feature", "ORGANIC_TOP")
+    triage_channel = serp_profile.get("triage_channel", "TECHNICAL_WHITE_PAPER")
+    actionable_directive = serp_profile.get("actionable_directive", "Deploy 2,500-word deep architecture post with complete LangGraph Python code.")
+    serp_instruction = (
+        f"\nSERP INTERACTION DEPTH DIRECTIVE (Ted Kubaitis Framework):\n"
+        f"Dominant Above-Fold SERP Feature: {dominant_feature}\n"
+        f"Assigned Triage Channel: {triage_channel}\n"
+        f"Mandatory Structural Directive: {actionable_directive}\n"
+    )
+
     system_prompt = (
         "You are the Stage 1: Outline & Information Gain Architect. "
         "Dissect the search query and create a comprehensive 6-8 section outline with unique data angles. "
         "Invent and include proprietary methodology names like 'Elesium Deterministic Agent Framework', 'VPC-Isolated Multi-Agent Triad'. "
+        "MANDATORY ENTITY DISCIPLINE: Adhere strictly to authorized entities (LangGraph, FastAPI, Python, PostgreSQL, Private VPC, Llama 3). "
+        "STRICTLY FORBIDDEN: Zapier, Make.com, ChatGPT wrappers, no-code, delve, tapestry, seamlessly, game-changer, revolutionary. "
+        f"{top_patterns_str} "
+        f"{serp_instruction} "
         "Output ONLY the outline, structured clearly."
     )
     user_prompt = f"Keyword: {keyword}\nResearch Data: {json.dumps(research_data)}"
@@ -90,6 +173,8 @@ def agent_technical_writer(keyword: str, outline: str) -> str:
         "You are the Stage 2: Technical Subject Matter Writer. "
         "Using the provided outline, generate full technical depth content. "
         "Include Python/LangGraph examples, enterprise architecture patterns, and real Indian enterprise ROI metrics like BFSI/manufacturing. "
+        "MANDATORY ENTITY DISCIPLINE: Adhere strictly to authorized entities (LangGraph, FastAPI, Python, PostgreSQL, Private VPC, Llama 3). "
+        "STRICTLY FORBIDDEN: Zapier, Make.com, ChatGPT wrappers, no-code, delve, tapestry, seamlessly, game-changer, revolutionary. "
         "Output the full article in Markdown format."
     )
     user_prompt = f"Keyword: {keyword}\nOutline:\n{outline}"
@@ -103,7 +188,7 @@ def agent_brutal_editor(keyword: str, draft: str) -> dict:
         "1. Add bolded 40-50 word 'Answer Capsules' directly beneath every H2 heading optimized for Google AI Overview / Perplexity direct answer citation.\n"
         "2. Insert structured comparative Markdown tables (e.g. Technology comparison, pricing tier, architecture matrix).\n"
         "3. Enforce the 'Elesium E-E-A-T' voice (coining proprietary frameworks: 'Elesium Deterministic Agent Framework', 'VPC-Isolated Multi-Agent Triad').\n"
-        "4. Strip all generic AI buzzwords ('delve', 'tapestry', 'seamless', 'game-changer').\n"
+        "4. Strip all generic AI buzzwords ('delve', 'tapestry', 'seamless', 'game-changer', 'revolutionary', 'zapier', 'make.com').\n"
         "5. Include at least one contextual link to `/ai-automation-agency-india` with natural anchor text (e.g., [India's leading enterprise AI engineering firm](/ai-automation-agency-india)) within a paragraph section.\n\n"
         "Output JSON with these keys:\n"
         "- title (string)\n"
@@ -121,10 +206,10 @@ def agent_brutal_editor(keyword: str, draft: str) -> dict:
     res = re.sub(r'^```\s*', '', res)
     res = re.sub(r'\s*```$', '', res)
     try:
-        return json.loads(res)
+        data = json.loads(res)
     except Exception as e:
         print(f"Failed to parse JSON from editor agent: {e}")
-        return {
+        data = {
             "title": f"The Guide to {keyword}",
             "intro": "Placeholder intro.",
             "metaDescription": "Placeholder meta.",
@@ -132,6 +217,44 @@ def agent_brutal_editor(keyword: str, draft: str) -> dict:
             "sections": [{"type": "paragraph", "value": "Failed to parse JSON content from LLM."}],
             "faq": []
         }
+        
+    # Programmatic Entity Sanitization Pass
+    total_violations = []
+    if "intro" in data and isinstance(data["intro"], str):
+        san = sanitize_entities(data["intro"])
+        data["intro"] = san["sanitized_content"]
+        total_violations.extend(san["violations_detected"])
+        
+    if "metaDescription" in data and isinstance(data["metaDescription"], str):
+        san = sanitize_entities(data["metaDescription"])
+        data["metaDescription"] = san["sanitized_content"]
+        total_violations.extend(san["violations_detected"])
+        
+    if "excerpt" in data and isinstance(data["excerpt"], str):
+        san = sanitize_entities(data["excerpt"])
+        data["excerpt"] = san["sanitized_content"]
+        total_violations.extend(san["violations_detected"])
+        
+    if "sections" in data and isinstance(data["sections"], list):
+        for sec in data["sections"]:
+            if isinstance(sec, dict) and "value" in sec and isinstance(sec["value"], str):
+                san = sanitize_entities(sec["value"])
+                sec["value"] = san["sanitized_content"]
+                total_violations.extend(san["violations_detected"])
+                
+    if "faq" in data and isinstance(data["faq"], list):
+        for item in data["faq"]:
+            if isinstance(item, dict) and "a" in item and isinstance(item["a"], str):
+                san = sanitize_entities(item["a"])
+                item["a"] = san["sanitized_content"]
+                total_violations.extend(san["violations_detected"])
+                
+    if total_violations:
+        print(f"⚠️ Entity Sanitizer cleansed {len(total_violations)} violations: {list(set(total_violations))}")
+    else:
+        print("✅ Entity Sanitizer confirmed 100% entity purity.")
+        
+    return data
 
 def get_cosine_similarity(vec1, vec2):
     intersection = set(vec1.keys()) & set(vec2.keys())

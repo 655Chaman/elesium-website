@@ -37,13 +37,18 @@ def run_cmd(cmd, cwd=BASE_DIR, env=None, check=True):
 def main():
     print("⚓ Elesium Autonomous SEO Fleet: Initializing Linear Pipeline...")
 
-    # Phase 1: Competitor Intelligence
-    log_step(1, "Competitor Gap Intelligence")
+    # Phase 1: Competitor Intelligence & GSC Striking Distance Patterns
+    log_step(1, "Competitor Gap Intelligence & GSC Pattern Detection")
     competitor_script = AUTOMATION_DIR / "competitor_outrank_scraper.py"
+    gsc_script = AUTOMATION_DIR / "gsc_query_expander.py"
+    
     if competitor_script.exists():
         run_cmd(f"python3 {competitor_script} --run", check=False)
     else:
         print("Competitor scraper skipped (not found).")
+        
+    if gsc_script.exists():
+        run_cmd(f"python3 {gsc_script}", check=False)
 
     # Phase 2: 3-Agent Editorial Autoblogger
     log_step(2, "3-Agent Editorial & GEO Article Generation")
@@ -54,11 +59,18 @@ def main():
         print("❌ Error: seo_autoblogger.py is missing!")
         sys.exit(1)
 
-    # Phase 3: Link Building, Social Drafts & IndexNow Pings
-    log_step(3, "Omnichannel Syndication & Search Indexing")
+    # Phase 3: Link Building, Social Drafts, Consensus Roundups & Video Scripting
+    log_step(3, "Omnichannel Syndication, Consensus Roundups & Video Scripting")
     link_builder_script = AUTOMATION_DIR / "link_builder.py"
+    video_script = AUTOMATION_DIR / "video_script_generator.py"
+    web3_script = AUTOMATION_DIR / "web3_publisher.py"
+    
     if link_builder_script.exists():
         run_cmd(f"python3 {link_builder_script} --latest", check=False)
+    if video_script.exists():
+        run_cmd(f"python3 {video_script}", check=False)
+    if web3_script.exists():
+        run_cmd(f"python3 {web3_script}", check=False)
 
     # Phase 4: Sitemap & Static Site Generation (Prerendering)
     log_step(4, "Sitemap & Static Site Pre-rendering")

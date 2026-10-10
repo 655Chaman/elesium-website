@@ -1,0 +1,122 @@
+{
+  "high_intent_persona_queries": [
+    {
+      "query": "cost of enterprise ai automation in india",
+      "position": 7.4,
+      "impressions": 1850,
+      "ctr": "0.75%",
+      "landing_page": "/ai-automation-agency-india",
+      "high_intent": true,
+      "local_anchor": true
+    },
+    {
+      "query": "we need custom ai agent development bangalore",
+      "position": 5.2,
+      "impressions": 620,
+      "ctr": "0.96%",
+      "landing_page": "/ai-automation-agency-india",
+      "high_intent": true,
+      "local_anchor": true
+    },
+    {
+      "query": "how to automate tally erp with llm agents",
+      "position": 14.6,
+      "impressions": 1120,
+      "ctr": "0.17%",
+      "landing_page": "/signals/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
+      "high_intent": true,
+      "local_anchor": false
+    }
+  ],
+  "striking_distance_total": 6,
+  "striking_distance_queries": [
+    {
+      "query": "cost of enterprise ai automation in india",
+      "position": 7.4,
+      "impressions": 1850,
+      "ctr": "0.75%",
+      "landing_page": "/ai-automation-agency-india",
+      "high_intent": true,
+      "local_anchor": true
+    },
+    {
+      "query": "we need custom ai agent development bangalore",
+      "position": 5.2,
+      "impressions": 620,
+      "ctr": "0.96%",
+      "landing_page": "/ai-automation-agency-india",
+      "high_intent": true,
+      "local_anchor": true
+    },
+    {
+      "query": "langgraph vs autogen enterprise automation india",
+      "position": 8.1,
+      "impressions": 940,
+      "ctr": "0.85%",
+      "landing_page": "/signals/n8n-vs-langchain-vs-custom-agents-india-2026",
+      "high_intent": false,
+      "local_anchor": true
+    },
+    {
+      "query": "best ai automation agency in india for manufacturing",
+      "position": 11.3,
+      "impressions": 780,
+      "ctr": "0.51%",
+      "landing_page": "/markets",
+      "high_intent": false,
+      "local_anchor": true
+    },
+    {
+      "query": "how to automate tally erp with llm agents",
+      "position": 14.6,
+      "impressions": 1120,
+      "ctr": "0.17%",
+      "landing_page": "/signals/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
+      "high_intent": true,
+      "local_anchor": false
+    },
+    {
+      "query": "private vpc ai deployment india dpdp compliant",
+      "position": 6.8,
+      "impressions": 540,
+      "ctr": "0.92%",
+      "landing_page": "/how-we-work",
+      "high_intent": false,
+      "local_anchor": true
+    }
+  ],
+  "quick_win_h2_candidates": [
+    {
+      "query": "cost of enterprise ai automation in india",
+      "target_page": "/ai-automation-agency-india",
+      "recommended_action": "Inject 'cost of enterprise ai automation in india' as explicit H2 subheading with a 45-word bold Answer Capsule."
+    },
+    {
+      "query": "we need custom ai agent development bangalore",
+      "target_page": "/ai-automation-agency-india",
+      "recommended_action": "Inject 'we need custom ai agent development bangalore' as explicit H2 subheading with a 45-word bold Answer Capsule."
+    },
+    {
+      "query": "langgraph vs autogen enterprise automation india",
+      "target_page": "/signals/n8n-vs-langchain-vs-custom-agents-india-2026",
+      "recommended_action": "Inject 'langgraph vs autogen enterprise automation india' as explicit H2 subheading with a 45-word bold Answer Capsule."
+    },
+    {
+      "query": "private vpc ai deployment india dpdp compliant",
+      "target_page": "/how-we-work",
+      "recommended_action": "Inject 'private vpc ai deployment india dpdp compliant' as explicit H2 subheading with a 45-word bold Answer Capsule."
+    }
+  ],
+  "dedicated_post_candidates": [
+    {
+      "query": "best ai automation agency in india for manufacturing",
+      "target_page": "/markets",
+      "recommended_action": "Create dedicated 2,000-word cluster post or deep FAQ card targeting 'best ai automation agency in india for manufacturing'."
+    },
+    {
+      "query": "how to automate tally erp with llm agents",
+      "target_page": "/signals/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
+      "recommended_action": "Create dedicated 2,000-word cluster post or deep FAQ card targeting 'how to automate tally erp with llm agents'."
+    }
+  ]
+}

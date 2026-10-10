@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "last_feedback_sync": "2026-10-10T02:00:00Z",
+  "posts": [
+    {
+      "post_id": 74,
+      "slug": "ai-automation-cost-india-2026-pricing",
+      "keyword": "AI automation cost India",
+      "published_at": "2026-10-08",
+      "http_status": 200,
+      "indexed_status": true,
+      "interaction_depth_measured": 1,
+      "serp_feature_captured": "AI_OVERVIEW_CITATION",
+      "structural_patterns": {
+        "answer_capsule_word_count": 44,
+        "table_format": "3_COLUMN_INVESTMENT_TIER",
+        "code_block_present": true,
+        "geo_density_score": 0.88
+      },
+      "feedback_rating": "ELITE_HIGH_PERFORMER"
+    },
+    {
+      "post_id": 73,
+      "slug": "n8n-vs-custom-python-agents-enterprise",
+      "keyword": "n8n vs custom Python agents enterprise",
+      "published_at": "2026-10-07",
+      "http_status": 200,
+      "indexed_status": true,
+      "interaction_depth_measured": 2,
+      "serp_feature_captured": "ORGANIC_FEATURED_SNIPPET",
+      "structural_patterns": {
+        "answer_capsule_word_count": 48,
+        "table_format": "BENCHMARK_LATENCY_COMPARISON",
+        "code_block_present": true,
+        "geo_density_score": 0.42
+      },
+      "feedback_rating": "HIGH_PERFORMER"
+    }
+  ],
+  "prompt_injection_rules": {
+    "recommended_answer_capsule_range": [42, 48],
+    "mandatory_table_types": ["3_COLUMN_INVESTMENT_TIER", "BENCHMARK_LATENCY_COMPARISON"],
+    "banned_structural_patterns": ["UNFORMATTED_BULLET_LISTS_UNDER_H2"]
+  }
+}

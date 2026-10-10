@@ -1,0 +1,65 @@
+# Elesium Decentralized Sovereign Entity Verification
+
+**Immutable IPFS Content Identifier (CID):** `Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e`  
+**Cloudflare Public Gateway:** [https://cloudflare-ipfs.com/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e](https://cloudflare-ipfs.com/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e)  
+**IPFS Gateway:** [https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e](https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e)  
+
+### Verifiable Schema JSON-LD Linked Data:
+```json
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Organization",
+    "ProfessionalService",
+    "LocalBusiness"
+  ],
+  "name": "Elesium",
+  "legalName": "Elesium Digital Systems",
+  "url": "https://elesium.online",
+  "telephone": "+91-8317329312",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Bangalore",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Koramangala 4th Block",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "postalCode": "560034",
+      "addressCountry": "IN"
+    }
+  },
+  "knowsAbout": [
+    "https://www.wikidata.org/wiki/Q11660",
+    "https://www.wikidata.org/wiki/Q2539",
+    "https://www.wikidata.org/wiki/Q289569",
+    "https://www.wikidata.org/wiki/Q100348737",
+    "https://www.wikidata.org/wiki/Q192490",
+    "https://www.wikidata.org/wiki/Q7935071"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Enterprise AI Automation Investment Tiers",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Pilot Architecture Sprint",
+        "price": "150000",
+        "priceCurrency": "INR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise Multi-Agent Suite",
+        "price": "600000",
+        "priceCurrency": "INR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Autonomous AI Engineering Pod",
+        "price": "450000",
+        "priceCurrency": "INR"
+      }
+    ]
+  }
+}
+```

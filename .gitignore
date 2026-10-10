@@ -31,3 +31,6 @@ automation/daily_seo_blocks/
 mobile/.gradle/
 mobile/build/
 mobile/app/build/
+
+# Proprietary Training & Course Materials (Private local files)
+SEO SOURCE/

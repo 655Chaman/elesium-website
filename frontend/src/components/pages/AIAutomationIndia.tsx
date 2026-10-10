@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react'
+import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -86,7 +86,7 @@ const faqs = [
     },
     {
         question: "How much does AI automation cost in India?",
-        answer: "Stop paying massive T&M retainers to legacy IT giants. Simple low-code workflows start around ₹2,00,000, while custom agentic infrastructure for enterprises ranges from ₹15,00,000 to ₹50,00,000+. At Elesium, we don't build unless we can map the architecture to a hard, cash-flow positive ROI within 90 days."
+        answer: "Stop paying massive T&M retainers to legacy IT giants. The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate. At Elesium, we don't build unless we can map the architecture to a hard, cash-flow positive ROI within 90 days."
     },
     {
         question: "What AI automation services does Elesium offer?",
@@ -94,7 +94,7 @@ const faqs = [
     },
     {
         question: "How long does AI automation implementation take?",
-        answer: "Legacy firms quote 6-12 months. We deploy production-ready pilot agents in 4 to 6 weeks. Full enterprise integration across multiple siloed departments usually reaches scale within 90 days, followed by continuous guardrail optimization."
+        answer: "Legacy firms quote 6-12 months. We deploy production-ready pilot agents in 14 days to 6 weeks. Full enterprise integration across multiple siloed departments usually reaches scale within 90 days, followed by continuous guardrail optimization."
     },
     {
         question: "Which industries benefit most from AI automation in India?",
@@ -103,27 +103,79 @@ const faqs = [
 ]
 
 export default function AIAutomationIndia() {
-    const [openFaq, setOpenFaq] = useState<number | null>(null);
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
-    const toggleFaq = (index: number) => {
-        setOpenFaq(openFaq === index ? null : index);
-    }
+    const [intakeWorkflow, setIntakeWorkflow] = useState('Document Extraction & Invoice Reconciliation');
+    const [intakeErp, setIntakeErp] = useState('SAP / Oracle NetSuite');
+    const [intakeHours, setIntakeHours] = useState(80);
+    const [intakeSecurity, setIntakeSecurity] = useState('Private VPC (AWS/GCP India) - Zero Retention');
+
+    const calculatedAnnualHoursSaved = Math.round(intakeHours * 50 * 0.82);
+    const calculatedAnnualCostSavings = calculatedAnnualHoursSaved * 1250;
+    const recommendedSprint = intakeHours <= 40 
+        ? 'Tier 1: Pilot Architecture Sprint (₹1.5L – ₹3.5L)' 
+        : intakeHours <= 150 
+            ? 'Tier 2: Enterprise Multi-Agent Suite (₹6L – ₹15L)' 
+            : 'Tier 3: Autonomous AI Engineering Pod (₹4.5L/mo Retainer)';
+
+    const handleTransmitIntake = () => {
+        const text = `Hello Elesium Architecture Team,\n\nI completed the Enterprise AI Architecture Intake on elesium.online:\n• Workflow Focus: ${intakeWorkflow}\n• Core ERP/Stack: ${intakeErp}\n• Current Manual Load: ${intakeHours} hours/week\n• Security Constraint: ${intakeSecurity}\n• Projected Annual Hours Saved: ${calculatedAnnualHoursSaved.toLocaleString('en-IN')} hrs\n• Projected Annual Cost Savings: ₹${calculatedAnnualCostSavings.toLocaleString('en-IN')}\n• Recommended Tier: ${recommendedSprint}\n\nPlease share the bespoke technical feasibility blueprint and proof-of-concept timeline.`;
+        const encoded = encodeURIComponent(text);
+        window.open(`https://wa.me/918317329312?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    };
+
+    const handleTierWhatsApp = (tierName: string, budget: string) => {
+        const text = `Hello Elesium Engineering Team,\n\nI want to initiate the ${tierName} (${budget}) for our enterprise.\n\nPlease share your architecture roadmap and onboarding availability.`;
+        const encoded = encodeURIComponent(text);
+        window.open(`https://wa.me/918317329312?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    };
 
     const jsonLdLocalBusiness = {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Elesium",
+        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+        "name": "Elesium - Enterprise AI Automation Agency India",
         "image": "https://elesium.online/favicon.png",
-        "@id": "https://elesium.online",
+        "@id": "https://elesium.online/#organization",
         "url": "https://elesium.online/ai-automation-agency-india",
-        "telephone": "",
+        "telephone": "+91-8317329312",
+        "priceRange": "₹1,50,000 - ₹15,00,000+",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Koramangala 4th Block",
             "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560034",
             "addressCountry": "IN"
         },
-        "description": "India's leading AI automation agency building custom agentic AI workflows and LLM integrations for enterprises."
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9352,
+            "longitude": 77.6245
+        },
+        "hasMap": "https://www.google.com/maps/place/Koramangala,+Bengaluru,+Karnataka",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+            }
+        ],
+        "sameAs": [
+            "https://elesium.online",
+            "https://github.com/elesium-ai",
+            "https://www.linkedin.com/company/elesium",
+            "https://x.com/elesium_ai",
+            "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e",
+            "https://www.wikidata.org/wiki/Q11660"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Elesium AI Systems Architecture Team",
+            "jobTitle": "Lead AI Systems Architect",
+            "telephone": "+91-8317329312"
+        },
+        "description": "India's leading AI automation agency building custom agentic AI workflows, LangGraph state machines, and private VPC LLM infrastructure for enterprises."
     };
 
     const jsonLdFaq = {
@@ -142,16 +194,66 @@ export default function AIAutomationIndia() {
     const jsonLdService = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "serviceType": "AI Automation Services",
+        "name": "Enterprise AI Automation Services",
+        "serviceType": "AI Automation Agency",
         "provider": {
             "@type": "LocalBusiness",
-            "name": "Elesium"
+            "name": "Elesium",
+            "url": "https://elesium.online",
+            "telephone": "+91-8317329312",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Koramangala 4th Block",
+                "addressLocality": "Bangalore",
+                "addressRegion": "Karnataka",
+                "postalCode": "560034",
+                "addressCountry": "IN"
+            }
         },
         "areaServed": {
             "@type": "Country",
             "name": "India"
         },
-        "description": "Custom AI Infrastructure, Agentic Workflows, LLM Integration, and Process Automation."
+        "description": "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Enterprise AI Automation Investment Tiers",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Pilot Architecture Sprint",
+                    "description": "Single-Process Deterministic Agent, Private Cloud Staging Deployment, FastAPI + LangGraph Architecture, 14-Day Delivery Guarantee.",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": "150000",
+                        "maxPrice": "350000",
+                        "priceCurrency": "INR"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Enterprise Multi-Agent Suite",
+                    "description": "Multi-Agent Collaborative Triad (LangGraph), Private VPC / Zero-Data-Retention Deployment, Deep Legacy ERP/SAP & SQL Integration, 99.9% Production SLA & 90-Day ROI Guarantee.",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": "600000",
+                        "maxPrice": "1500000",
+                        "priceCurrency": "INR"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Autonomous Engineering Pod",
+                    "description": "3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "450000",
+                        "priceCurrency": "INR",
+                        "unitText": "MONTH"
+                    }
+                }
+            ]
+        }
     };
 
     return (
@@ -367,28 +469,291 @@ export default function AIAutomationIndia() {
                     </div>
                 </div>
 
-                {/* FAQ Section */}
+                {/* Enterprise Pricing Matrix Section (Shaun Mitchell & Fountain Hills Parity) */}
+                <div id="pricing-matrix" className="mb-32">
+                    <div className="text-center mb-16">
+                        <span className="text-blue-600 dark:text-cyan-400 font-mono text-sm uppercase tracking-wider">Transparent Institutional Investment</span>
+                        <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mt-3">Enterprise AI Automation Pricing in India</h2>
+                        <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-3xl mx-auto text-base md:text-lg">
+                            The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {/* Tier 1 */}
+                        <div className="bg-[#F5F5F5] dark:bg-[#0A0A0A] border border-black/10 dark:border-white/10 rounded-3xl p-8 hover:border-blue-500/40 dark:hover:border-cyan-500/40 transition-all flex flex-col justify-between">
+                            <div>
+                                <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">Tier 1 // 14-Day Sprint</div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Pilot Architecture Sprint</h3>
+                                <div className="mt-4 mb-6">
+                                    <span className="text-3xl font-extrabold text-gray-900 dark:text-white">₹1,50,000 – ₹3,50,000</span>
+                                    <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">($2,000 – $4,500 USD) • Fixed Investment</span>
+                                </div>
+                                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Single-Process Deterministic Agent</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Private Cloud Staging Deployment</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> FastAPI + LangGraph Architecture</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 14-Day Delivery Guarantee</li>
+                                </ul>
+                            </div>
+                            <button 
+                                onClick={() => handleTierWhatsApp('Pilot Architecture Sprint', '₹1,50,000 - ₹3,50,000')}
+                                className="mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+                            >
+                                Deploy Pilot Sprint
+                            </button>
+                        </div>
+
+                        {/* Tier 2: Highlighted */}
+                        <div className="bg-gradient-to-b from-blue-50 to-[#F5F5F5] dark:from-[#151515] dark:to-[#0A0A0A] border-2 border-blue-600 dark:border-cyan-500 rounded-3xl p-8 shadow-2xl shadow-blue-500/10 dark:shadow-cyan-500/10 flex flex-col justify-between relative">
+                            <span className="absolute -top-3 right-6 bg-blue-600 dark:bg-cyan-500 text-white dark:text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Most Deployed</span>
+                            <div>
+                                <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">Tier 2 // Production Suite</div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Enterprise Multi-Agent Suite</h3>
+                                <div className="mt-4 mb-6">
+                                    <span className="text-3xl font-extrabold text-gray-900 dark:text-white">₹6,00,000 – ₹15,00,000</span>
+                                    <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">($7,500 – $18,000 USD) • Milestone-Based</span>
+                                </div>
+                                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Multi-Agent Collaborative Triad (LangGraph)</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Private VPC / Zero-Data-Retention Deployment</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Deep Legacy ERP/SAP & SQL Integration</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 99.9% Production SLA & 90-Day ROI Guarantee</li>
+                                </ul>
+                            </div>
+                            <button 
+                                onClick={() => handleTierWhatsApp('Enterprise Multi-Agent Suite', '₹6,00,000 - ₹15,00,000')}
+                                className="mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-black font-semibold hover:bg-blue-700 dark:hover:bg-cyan-400 transition-colors"
+                            >
+                                Deploy Enterprise Suite
+                            </button>
+                        </div>
+
+                        {/* Tier 3 */}
+                        <div className="bg-[#F5F5F5] dark:bg-[#0A0A0A] border border-black/10 dark:border-white/10 rounded-3xl p-8 hover:border-blue-500/40 dark:hover:border-cyan-500/40 transition-all flex flex-col justify-between">
+                            <div>
+                                <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">Tier 3 // Continuous Pod</div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Autonomous Engineering Pod</h3>
+                                <div className="mt-4 mb-6">
+                                    <span className="text-3xl font-extrabold text-gray-900 dark:text-white">₹4,50,000 / month</span>
+                                    <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">($5,500 / month USD) • 12-Month Retainer</span>
+                                </div>
+                                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 3 Dedicated AI Systems Engineers + Architect</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Continuous Fine-Tuning & Vector Optimization</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Omnichannel Voice + WhatsApp Systems</li>
+                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 1-Hour Critical Incident Response SLA</li>
+                                </ul>
+                            </div>
+                            <button 
+                                onClick={() => handleTierWhatsApp('Autonomous AI Engineering Pod', '₹4,50,000 / month')}
+                                className="mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+                            >
+                                Retain Engineering Pod
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Proprietary Enterprise Architecture Intake & ROI Calculator (Shaun Mitchell Framework) */}
+                <div id="architecture-intake" className="mb-32 bg-[#F8F9FA] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/10 rounded-[32px] p-8 md:p-14">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 text-blue-600 dark:text-cyan-400 text-xs font-mono uppercase tracking-wider mb-4">
+                            <Calculator className="w-3.5 h-3.5" />
+                            Shaun Mitchell Enterprise Intake Dataset Framework
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white">
+                            AI Architecture Audit & ROI Estimator
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-400 mt-3 text-base md:text-lg">
+                            Configure your enterprise workflow parameters below to generate an instant mathematical feasibility benchmark and projected capital savings.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                        {/* Configuration Controls */}
+                        <div className="lg:col-span-7 space-y-8">
+                            {/* Parameter 1: Workflow */}
+                            <div>
+                                <label className="block text-sm font-mono text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-3">
+                                    1. Primary Enterprise Workflow Bottleneck
+                                </label>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                    {[
+                                        'Document Extraction & Invoice Reconciliation',
+                                        'Autonomous Support & Case Resolution',
+                                        'Cross-System ERP-CRM Synchronization',
+                                        'Regulatory Compliance & Audit Trails',
+                                        'Bespoke Multi-Agent Operational Pod'
+                                    ].map((opt) => (
+                                        <button
+                                            key={opt}
+                                            type="button"
+                                            onClick={() => setIntakeWorkflow(opt)}
+                                            className={`text-left text-xs md:text-sm p-3.5 rounded-xl border transition-all ${
+                                                intakeWorkflow === opt
+                                                    ? 'border-blue-600 dark:border-cyan-400 bg-blue-50/50 dark:bg-cyan-950/20 text-gray-900 dark:text-white font-medium'
+                                                    : 'border-black/5 dark:border-white/5 bg-white dark:bg-[#141414] text-gray-600 dark:text-gray-400 hover:border-black/20 dark:hover:border-white/20'
+                                            }`}
+                                        >
+                                            {opt}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Parameter 2: ERP & Stack */}
+                            <div>
+                                <label className="block text-sm font-mono text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-3">
+                                    2. Core Data Environment & ERP Stack
+                                </label>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                                    {[
+                                        'SAP / Oracle NetSuite',
+                                        'Tally Prime / Zoho Books',
+                                        'Salesforce / HubSpot',
+                                        'PostgreSQL / SQL Server',
+                                        'Snowflake / Databricks',
+                                        'Custom REST / Microservices'
+                                    ].map((opt) => (
+                                        <button
+                                            key={opt}
+                                            type="button"
+                                            onClick={() => setIntakeErp(opt)}
+                                            className={`text-center text-xs p-3 rounded-xl border transition-all ${
+                                                intakeErp === opt
+                                                    ? 'border-blue-600 dark:border-cyan-400 bg-blue-50/50 dark:bg-cyan-950/20 text-gray-900 dark:text-white font-medium'
+                                                    : 'border-black/5 dark:border-white/5 bg-white dark:bg-[#141414] text-gray-600 dark:text-gray-400 hover:border-black/20 dark:hover:border-white/20'
+                                            }`}
+                                        >
+                                            {opt}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Parameter 3: Weekly Manual Hours */}
+                            <div>
+                                <div className="flex justify-between items-center mb-3">
+                                    <label className="text-sm font-mono text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                                        3. Human Labor Dedicated to Manual Workflow
+                                    </label>
+                                    <span className="text-base font-bold text-blue-600 dark:text-cyan-400 font-mono">
+                                        {intakeHours} Hours / Week
+                                    </span>
+                                </div>
+                                <input
+                                    type="range"
+                                    min="20"
+                                    max="300"
+                                    step="10"
+                                    value={intakeHours}
+                                    onChange={(e) => setIntakeHours(Number(e.target.value))}
+                                    className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-cyan-400"
+                                />
+                                <div className="flex justify-between text-xs text-gray-400 font-mono mt-1">
+                                    <span>20 hrs (Pilot team)</span>
+                                    <span>150 hrs (Division)</span>
+                                    <span>300+ hrs (Department)</span>
+                                </div>
+                            </div>
+
+                            {/* Parameter 4: Security Tier */}
+                            <div>
+                                <label className="block text-sm font-mono text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-3">
+                                    4. Security & Compliance Protocol
+                                </label>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                    {[
+                                        'Private VPC (AWS/GCP India) - Zero Retention',
+                                        'Air-Gapped / On-Premise Enclave',
+                                        'SOC2 & DPDP Act 2023 Compliant Pod'
+                                    ].map((opt) => (
+                                        <button
+                                            key={opt}
+                                            type="button"
+                                            onClick={() => setIntakeSecurity(opt)}
+                                            className={`text-center text-xs p-3 rounded-xl border transition-all ${
+                                                intakeSecurity === opt
+                                                    ? 'border-blue-600 dark:border-cyan-400 bg-blue-50/50 dark:bg-cyan-950/20 text-gray-900 dark:text-white font-medium'
+                                                    : 'border-black/5 dark:border-white/5 bg-white dark:bg-[#141414] text-gray-600 dark:text-gray-400 hover:border-black/20 dark:hover:border-white/20'
+                                            }`}
+                                        >
+                                            {opt}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Live Architectural Output Card */}
+                        <div className="lg:col-span-5 bg-white dark:bg-[#121212] border border-blue-500/20 dark:border-cyan-500/20 rounded-2xl p-7 flex flex-col justify-between shadow-xl">
+                            <div>
+                                <div className="flex items-center justify-between border-b border-black/5 dark:border-white/10 pb-4 mb-6">
+                                    <span className="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-cyan-400">
+                                        Architectural Assessment
+                                    </span>
+                                    <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 font-mono">
+                                        94% Deterministic Match
+                                    </span>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <div>
+                                        <span className="text-xs text-gray-500 dark:text-gray-400 font-mono block">Projected 12-Month Net Capital Savings</span>
+                                        <div className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">
+                                            ₹{calculatedAnnualCostSavings.toLocaleString('en-IN')}
+                                        </div>
+                                        <span className="text-xs text-emerald-600 dark:text-emerald-400 mt-1 block">
+                                            Recovers ~{calculatedAnnualHoursSaved.toLocaleString('en-IN')} high-value human engineering/operational hours
+                                        </span>
+                                    </div>
+
+                                    <div className="p-4 rounded-xl bg-gray-50 dark:bg-[#181818] border border-black/5 dark:border-white/5 space-y-2 text-xs">
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Recommended Sprint:</span>
+                                            <span className="font-semibold text-gray-900 dark:text-white text-right">{recommendedSprint}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Target Tech Stack:</span>
+                                            <span className="font-mono text-gray-800 dark:text-gray-200">{intakeErp}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Security Architecture:</span>
+                                            <span className="font-mono text-gray-800 dark:text-gray-200">Zero-Data-Retention</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Deployment Lead Time:</span>
+                                            <span className="font-mono text-emerald-500 font-bold">14 – 21 Business Days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                onClick={handleTransmitIntake}
+                                className="mt-8 w-full py-4 px-6 rounded-xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-black font-semibold text-sm hover:bg-blue-700 dark:hover:bg-cyan-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 dark:shadow-cyan-500/20"
+                            >
+                                Transmit Architecture Intake to Systems Architect
+                                <ArrowRight className="w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* FAQ Section (Statically Open DOM Rendering - Zero Accordion Traps) */}
                 <div className="mb-32 max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+                        <p className="text-gray-600 dark:text-gray-400">Direct answers to technical and commercial evaluation questions.</p>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="bg-[#F5F5F5] dark:bg-[#111] border border-black/5 dark:border-white/5 rounded-2xl overflow-hidden transition-all duration-300">
-                                <button 
-                                    onClick={() => toggleFaq(i)}
-                                    className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none"
-                                >
-                                    <span className="font-medium text-gray-900 dark:text-white">{faq.question}</span>
-                                    <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''}`} />
-                                </button>
-                                <div 
-                                    className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaq === i ? 'max-h-96 pb-4 opacity-100' : 'max-h-0 opacity-0'}`}
-                                >
-                                    <p className="text-gray-600 dark:text-gray-400 pt-2 border-t border-black/5 dark:border-white/5">
-                                        {faq.answer}
-                                    </p>
-                                </div>
+                            <div key={i} className="bg-[#F5F5F5] dark:bg-[#111] border border-black/5 dark:border-white/5 rounded-2xl p-6">
+                                <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-3">{faq.question}</h3>
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    {faq.answer}
+                                </p>
                             </div>
                         ))}
                     </div>
