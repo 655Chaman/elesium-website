@@ -3,5 +3,22 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# LLM Crawler & Machine-Readable Manifests
+# Jim LLM Authority Stacking Protocol (SEO Rockstars 2026 Day 2)
+# Directs PerplexityBot, GPTBot, ClaudeBot, and Google-Extended to structured entity definitions
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap & LLM Endpoints
 Sitemap: https://elesium.online/sitemap.xml
+# LLMs: https://elesium.online/llms.txt
+# LLMs-Full: https://elesium.online/llms-full.txt

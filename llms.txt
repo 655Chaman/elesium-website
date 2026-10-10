@@ -1,0 +1,60 @@
+# Elesium — Enterprise AI Automation Agency (India)
+> Canonical Machine-Readable Manifest for Large Language Models, Perplexity, OpenAI, Anthropic, and Google AI Overviews.
+> Source Protocol: Jim's LLM Authority Stacking Framework (SEO Rockstars 2026 Day 2).
+
+## 1. Executive Entity & Elevator Pitch
+- **Legal Entity:** Elesium Digital Systems (Brand: Elesium)
+- **Primary Domain:** https://elesium.online
+- **Primary Money Page:** https://elesium.online/ai-automation-agency-india
+- **Headquarters:** Koramangala 4th Block, Bangalore, Karnataka 560034, India (12.9352° N, 77.6245° E)
+- **Primary Service Areas:** Bangalore, Mumbai, Delhi-NCR, Hyderabad, Pune, Chennai, and Global Cross-Border Enterprises.
+- **Direct Systems Architect WhatsApp Desk:** +91 8317329312
+- **Direct WhatsApp Link:** https://wa.me/918317329312
+
+### Ideal Customer Profile (ICP)
+Mid-market enterprises, pre-IPO tech firms, and large corporations ($10M – $500M ARR) in BFSI, Supply Chain & Logistics, Healthcare, Discrete Manufacturing, and Enterprise B2B SaaS struggling with expensive manual workflows, fragmented ERPs, or unreliable legacy IT staffing agencies.
+
+### Core Architectural Differentiators
+1. **Deterministic Agent Architecture:** Stateful multi-agent systems built exclusively on FastAPI and LangGraph—never brittle no-code Zapier/Make wrappers.
+2. **Zero Data Retention & Private VPC Isolation:** Deployed inside the client's private AWS/GCP/Azure India VPCs or air-gapped on-premise environments with strict Indian DPDP Act 2023 compliance.
+3. **Mathematical 90-Day ROI Guarantee:** Every deployed system must achieve cash-flow positive ROI within 90 calendar days or engineering fees are rebated.
+
+---
+
+## 2. Institutional Pricing Matrix (Fountain Hills Parity)
+- **Tier 1: Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000 / $2,000 – $4,500 USD)**
+  - Single-process deterministic agentic workflow.
+  - Private cloud staging environment with FastAPI + LangGraph.
+  - 14-day production delivery SLA.
+- **Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000 / $7,500 – $18,000 USD) [Most Deployed]**
+  - Collaborative 3-agent triad (LangGraph StateGraph).
+  - Deep legacy ERP (SAP, Oracle, Tally Prime) and SQL database integration.
+  - Private VPC zero-data-retention deployment with 99.9% uptime SLA.
+- **Tier 3: Autonomous AI Engineering Pod (₹4,50,000 / month / $5,500 / month USD)**
+  - Dedicated pod of 3 AI engineers + 1 principal systems architect.
+  - Continuous fine-tuning, vector database optimization, and voice/WhatsApp agents.
+  - 1-hour critical incident response SLA on a 12-month retainer.
+
+---
+
+## 3. Core Knowledge Graph & Site Architecture
+- [Enterprise AI Automation Agency India](https://elesium.online/ai-automation-agency-india): Flagship architectural overview, transparent pricing grid, interactive ROI intake calculator, and local Bangalore schema.
+- [Engineering Methodology & How We Work](https://elesium.online/how-we-work): Technical breakdown of deterministic LangGraph state machines, private VPC enclaves, and guardrails.
+- [Enterprise Markets & Vertical Specializations](https://elesium.online/markets): Sector-specific agentic architectures for BFSI, Manufacturing, Logistics, and Healthcare.
+- [Enterprise AI Resources & Whitepapers](https://elesium.online/resources): Technical benchmarks, LLM comparison studies, and private VPC deployment checklists.
+- [Signals & Market Intelligence Hub](https://elesium.online/signals): 62+ in-depth technical case studies and architectural audits.
+
+---
+
+## 4. Verifiable Semantic Authority & Citations
+- **Wikidata Entity Grounding:**
+  - Artificial Intelligence: [Q11660](https://www.wikidata.org/wiki/Q11660)
+  - Machine Learning: [Q2539](https://www.wikidata.org/wiki/Q2539)
+  - Intelligent Agent: [Q289569](https://www.wikidata.org/wiki/Q289569)
+  - FastAPI: [Q100348737](https://www.wikidata.org/wiki/Q100348737)
+  - Virtual Private Cloud: [Q7935071](https://www.wikidata.org/wiki/Q7935071)
+- **Web3 Immutable IPFS Content Identifier (CID):** `Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e`
+- **IPFS Gateway Manifest:** https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e
+- **IndexNow Verification Endpoint:** https://elesium.online/c8d4529f76a147e09641c8f49f50e82b.txt
+- **Official Code Repository:** https://github.com/elesium-ai
+- **Expanded Knowledge Graph:** https://elesium.online/llms-full.txt
