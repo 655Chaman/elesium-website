@@ -4,75 +4,161 @@ import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, 
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
-const terminalLines = [
-    "> Initializing Agent_04 [Sales_Ops_India]...",
-    "> Connecting to Indian Enterprise CRM database...",
-    "[OK] CRM authenticated.",
-    "> Analyzing 4,203 open leads for intent signals...",
-    "> Intent analysis complete. 14 high-intent accounts identified.",
-    "> Drafting personalized outreach based on Q3 earnings...",
-    "> Simulating response probability... 87% confidence.",
-    "> Action: Sending 14 tailored sequences via Outreach.",
-    "[SUCCESS] Operation completed in 2.4s. Human hours saved: 18h."
-]
+const agentWorkflows = {
+    bfsi: {
+        name: "BFSI Underwriting Agent",
+        badge: "Banking & NBFC",
+        color: "text-amber-400",
+        border: "border-amber-500/30",
+        lines: [
+            "> Initializing Agent_BFSI [Underwriting_VLM_V2]...",
+            "> Ingesting 48-page audited financial PDF (GST + ITR + P&L)...",
+            "[OK] Document parsed via Azure Document Intelligence in 0.8s.",
+            "> Reconciling 1,420 bank statement line items with GST returns...",
+            "[ALERT] Zero discrepancies detected. Debt service ratio: 1.42.",
+            "> Executing fraud heuristics & MCA corporate registry check...",
+            "[SUCCESS] Underwriting memo compiled. Risk Score: Tier-1 Prime.",
+            "[COMPLETE] Time elapsed: 1.9s. Manual hours saved: 14.5 hours."
+        ]
+    },
+    supply_chain: {
+        name: "SAP Supply Chain Agent",
+        badge: "Manufacturing & ERP",
+        color: "text-cyan-400",
+        border: "border-cyan-500/30",
+        lines: [
+            "> Initializing Agent_SCM [SAP_RFC_Synchronizer]...",
+            "> Connecting to SAP S/4HANA on private VPC (10.0.4.12)...",
+            "[OK] SAP Session authenticated with read/write ledger rights.",
+            "> Monitoring 84 assembly component inventory levels...",
+            "[WARN] Silicon carbide inventory projected stockout in 72h.",
+            "> Evaluating 6 verified suppliers against macroeconomic price index...",
+            "> Drafting auto-purchase requisition #PO-94812 with approved vendor...",
+            "[SUCCESS] SAP PO committed. Dispatched approval prompt to CFO WhatsApp.",
+            "[COMPLETE] Stockout averted. Saved: ₹18.4L in downtime penalties."
+        ]
+    },
+    sales_ops: {
+        name: "Enterprise Revenue Agent",
+        badge: "Revenue Ops & CRM",
+        color: "text-blue-400",
+        border: "border-blue-500/30",
+        lines: [
+            "> Initializing Agent_REV [Enterprise_Sales_Orchestrator]...",
+            "> Scanning 4,203 open pipeline accounts across Salesforce & HubSpot...",
+            "[OK] CRM authenticated. Ingesting Q3 corporate earnings signals...",
+            "> Identified 14 Tier-1 accounts showing active AI modernization intent.",
+            "> Synthesizing bespoke 1-pager technical blueprints per account...",
+            "> Simulating CXO engagement probability: 89.4% confidence.",
+            "[SUCCESS] 14 tailored briefs dispatched to Enterprise AE queue.",
+            "[COMPLETE] Operation completed in 2.4s. Human hours saved: 18h."
+        ]
+    }
+}
+
+type AgentKey = keyof typeof agentWorkflows
 
 const AgentTerminal = () => {
+    const [activeAgent, setActiveAgent] = useState<AgentKey>('bfsi')
     const [lines, setLines] = useState<string[]>([])
 
     useEffect(() => {
-        let isCancelled = false;
-        let currentIndex = 0;
-        let timeoutId: NodeJS.Timeout;
+        let isCancelled = false
+        let currentIndex = 0
+        let timeoutId: NodeJS.Timeout
+
+        setLines([])
+        const currentLines = agentWorkflows[activeAgent].lines
 
         const typeNextLine = () => {
-            if (isCancelled) return;
+            if (isCancelled) return
 
-            if (currentIndex < terminalLines.length) {
-                const nextLine = terminalLines[currentIndex];
-                setLines(prev => [...prev, nextLine]);
-                currentIndex++;
-                timeoutId = setTimeout(typeNextLine, 800);
+            if (currentIndex < currentLines.length) {
+                const nextLine = currentLines[currentIndex]
+                setLines(prev => [...prev, nextLine])
+                currentIndex++
+                timeoutId = setTimeout(typeNextLine, 650)
             } else {
                 timeoutId = setTimeout(() => {
-                    if (isCancelled) return;
-                    setLines([]);
-                    currentIndex = 0;
-                    timeoutId = setTimeout(typeNextLine, 800);
-                }, 5000);
+                    if (isCancelled) return
+                    setLines([])
+                    currentIndex = 0
+                    timeoutId = setTimeout(typeNextLine, 650)
+                }, 6000)
             }
-        };
+        }
 
-        timeoutId = setTimeout(typeNextLine, 800);
+        timeoutId = setTimeout(typeNextLine, 300)
 
         return () => {
-            isCancelled = true;
-            clearTimeout(timeoutId);
-        };
-    }, []);
+            isCancelled = true
+            clearTimeout(timeoutId)
+        }
+    }, [activeAgent])
 
     return (
-        <div className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 font-mono text-sm shadow-2xl overflow-hidden h-[300px] flex flex-col justify-end relative">
-            <div className="flex items-center gap-2 mb-4 absolute top-4 left-4">
-                <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
-                <span className="ml-2 text-white/30 text-xs">elesium_agent.sh</span>
+        <div className="bg-[#07090E] border border-white/10 rounded-3xl p-6 font-mono text-xs md:text-sm shadow-2xl relative overflow-hidden backdrop-blur-xl">
+            {/* Terminal Top Bar */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-white/10">
+                <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500/30 border border-red-500/60" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/30 border border-yellow-500/60" />
+                    <div className="w-3 h-3 rounded-full bg-emerald-500/30 border border-emerald-500/60" />
+                    <span className="ml-2 text-white/40 text-xs">elesium_runtime_v2.6.sh</span>
+                </div>
+
+                {/* Workflow Switcher Tabs */}
+                <div className="flex items-center gap-1.5 bg-white/5 p-1 rounded-xl border border-white/10">
+                    {(Object.keys(agentWorkflows) as AgentKey[]).map(key => (
+                        <button
+                            key={key}
+                            onClick={() => setActiveAgent(key)}
+                            className={`px-3 py-1 rounded-lg text-xs font-sans font-medium transition-all ${
+                                activeAgent === key 
+                                    ? 'bg-blue-600 text-white shadow-md' 
+                                    : 'text-white/60 hover:text-white hover:bg-white/5'
+                            }`}
+                        >
+                            {agentWorkflows[key].badge}
+                        </button>
+                    ))}
+                </div>
             </div>
-            <div className="space-y-2 mt-8">
+
+            {/* Current Active Workflow Subheading */}
+            <div className="flex items-center justify-between mb-3 text-xs">
+                <span className={`font-semibold ${agentWorkflows[activeAgent].color}`}>
+                    ● {agentWorkflows[activeAgent].name}
+                </span>
+                <span className="text-white/40 font-mono text-[10px] tracking-wider uppercase">
+                    Status: RUNNING ON PRIVATE VPC
+                </span>
+            </div>
+
+            {/* Terminal Body */}
+            <div className="space-y-2 h-[260px] flex flex-col justify-end overflow-hidden">
                 {lines.map((line, i) => (
                     <motion.div 
-                        initial={{ opacity: 0, x: -10 }}
+                        initial={{ opacity: 0, x: -8 }}
                         animate={{ opacity: 1, x: 0 }}
-                        key={`terminal-line-${i}-${line.substring(0,5)}`}
-                        className={`${line.startsWith('[SUCCESS]') ? 'text-green-400' : line.startsWith('[OK]') ? 'text-blue-400' : 'text-gray-300'}`}
+                        key={`terminal-line-${activeAgent}-${i}`}
+                        className={`leading-relaxed ${
+                            line.startsWith('[SUCCESS]') || line.startsWith('[COMPLETE]') 
+                                ? 'text-emerald-400 font-bold' 
+                                : line.startsWith('[OK]') 
+                                    ? 'text-cyan-400' 
+                                    : line.startsWith('[WARN]') || line.startsWith('[ALERT]')
+                                        ? 'text-amber-400'
+                                        : 'text-gray-300'
+                        }`}
                     >
                         {line}
                     </motion.div>
                 ))}
                 <motion.div 
                     animate={{ opacity: [1, 0] }} 
-                    transition={{ repeat: Infinity, duration: 0.8 }}
-                    className="w-2 h-4 bg-white/70 inline-block mt-2"
+                    transition={{ repeat: Infinity, duration: 0.7 }}
+                    className="w-2 h-4 bg-cyan-400 inline-block mt-1"
                 />
             </div>
         </div>
@@ -277,20 +363,66 @@ export default function AIAutomationIndia() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center max-w-4xl mx-auto mb-32"
+                    className="text-center max-w-5xl mx-auto mb-28"
                 >
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.1]">
-                        India's Leading <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
-                            AI Automation Agency
+                    {/* Live Status Badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/20 text-blue-600 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Tier-1 AI Systems Architecture • Bengaluru, India • DPDP Act 2023 Compliant
+                    </div>
+
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
+                        India's Premier <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 dark:from-blue-400 dark:via-cyan-300 dark:to-indigo-400">
+                            Enterprise AI Automation Agency
                         </span>
                     </h1>
-                    <h2 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-200 mb-6 font-medium">
-                        We replace 40-hour manual workflows with deterministic, autonomous agents.
+
+                    <h2 className="text-xl md:text-3xl text-gray-800 dark:text-gray-200 mb-6 font-medium max-w-4xl mx-auto leading-snug">
+                        Replacing 40-hour manual bottlenecks with <span className="underline decoration-cyan-400/50 underline-offset-4 font-semibold">deterministic, autonomous multi-agent systems</span> deployed on your private VPC.
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                        Elesium is India's premier AI engineering firm for the enterprise. We design and deploy robust, autonomous AI systems and private LLM infrastructure. Stop relying on fragile Zapier wrappers; start building defensible AI assets that scale operations, integrate with legacy ERPs, and slash technical debt.
+
+                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                        We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases—delivering a hard, audited ROI within 90 days.
                     </p>
+
+                    {/* Dual Conversion Action Buttons */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                        <a 
+                            href="#architecture-intake"
+                            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 dark:bg-cyan-500 dark:hover:bg-cyan-400 text-white dark:text-black font-semibold text-base transition-all shadow-xl shadow-blue-500/20 dark:shadow-cyan-500/20 flex items-center justify-center gap-2 group"
+                        >
+                            Configure Architecture & ROI
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <button
+                            onClick={openWhatsApp}
+                            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 border border-black/10 dark:border-white/15 text-gray-900 dark:text-white font-medium text-base transition-all flex items-center justify-center gap-2"
+                        >
+                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                            Direct WhatsApp Engineering Desk
+                        </button>
+                    </div>
+
+                    {/* Live Metric Pills */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-black/5 dark:border-white/10 text-left font-mono">
+                        <div className="p-3.5 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
+                            <div className="text-xs text-gray-500 dark:text-gray-400 uppercase">Speed to Pilot</div>
+                            <div className="text-lg font-bold text-gray-900 dark:text-white mt-0.5">14 Days</div>
+                        </div>
+                        <div className="p-3.5 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
+                            <div className="text-xs text-gray-500 dark:text-gray-400 uppercase">Avg 1-Year ROI</div>
+                            <div className="text-lg font-bold text-emerald-500 mt-0.5">3.5x Capital</div>
+                        </div>
+                        <div className="p-3.5 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
+                            <div className="text-xs text-gray-500 dark:text-gray-400 uppercase">Data Security</div>
+                            <div className="text-lg font-bold text-gray-900 dark:text-white mt-0.5">Zero Retention</div>
+                        </div>
+                        <div className="p-3.5 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
+                            <div className="text-xs text-gray-500 dark:text-gray-400 uppercase">Legacy Stack</div>
+                            <div className="text-lg font-bold text-cyan-500 mt-0.5">SAP / Oracle</div>
+                        </div>
+                    </div>
                 </motion.div>
 
                 {/* Description & Tech Stack Section */}
