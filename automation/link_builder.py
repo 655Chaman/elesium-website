@@ -146,6 +146,8 @@ def handle_hashnode_syndication(slug, title, url):
 
 def ping_search_engines(url):
     print(f"Pinging search engines for {url}...")
+    import ssl
+    ctx = ssl._create_unverified_context()
     
     sitemap_url = "https://elesium.online/sitemap.xml"
     try:
@@ -153,7 +155,8 @@ def ping_search_engines(url):
             f"https://www.google.com/ping?sitemap={sitemap_url}",
             headers={"User-Agent": "Mozilla/5.0"}
         )
-        urllib.request.urlopen(req, timeout=5)
+        urllib.request.urlopen(req, timeout=5, context=ctx)
+        print("✅ Google sitemap ping delivered.")
     except Exception as e:
         print(f"Google ping notice: {e}")
         
@@ -170,7 +173,8 @@ def ping_search_engines(url):
             data=json.dumps(indexnow_data).encode('utf-8'),
             headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"}
         )
-        urllib.request.urlopen(req, timeout=5)
+        with urllib.request.urlopen(req, timeout=5, context=ctx) as response:
+            print(f"✅ IndexNow ping accepted (HTTP {response.getcode()}).")
     except Exception as e:
         print(f"IndexNow ping notice: {e}")
 
