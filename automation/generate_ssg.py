@@ -93,10 +93,11 @@ def generate_ssg():
         desc = post.get("metaDescription", "")
         json_ld = post.get("jsonLdSchema", "")
         
-        # Create output directory
+        # Create output directory and direct HTML file
         out_dir = DIST_DIR / "signals" / slug
         out_dir.mkdir(parents=True, exist_ok=True)
         out_file = out_dir / "index.html"
+        direct_file = DIST_DIR / "signals" / f"{slug}.html"
         
         # Modify HTML
         html = base_html
@@ -167,6 +168,7 @@ def generate_ssg():
             html = html.replace("</head>", injection)
             
         out_file.write_text(html, encoding="utf-8")
+        direct_file.write_text(html, encoding="utf-8")
         print(f"Generated SSG for: /signals/{slug}")
 
     print("✅ SSG complete for signals.")
@@ -202,6 +204,7 @@ def generate_ssg():
         out_dir = DIST_DIR / route
         out_dir.mkdir(parents=True, exist_ok=True)
         out_file = out_dir / "index.html"
+        direct_file = DIST_DIR / f"{route}.html"
         
         html = base_html
         
@@ -311,6 +314,7 @@ def generate_ssg():
             html = html.replace("</body>", f'{crawler_noscript}\n</body>')
         
         out_file.write_text(html, encoding="utf-8")
+        direct_file.write_text(html, encoding="utf-8")
         print(f"Generated SSG for: /{route}")
         
     print("✅ SSG complete. GitHub Pages will now serve 200 OK for all required routes.")
