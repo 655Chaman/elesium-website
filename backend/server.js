@@ -81,6 +81,22 @@ app.post('/api/submit', async (req, res) => {
                     'Lead Source': leadSource || ''
                 }, { insert: true });
                 console.log('[SUBMIT] Added lead to Google Sheet.');
+                
+                // If this submission is from the ele-in waitlist, also record in dedicated waitlist tab
+                if ((leadSource === 'ele-in Waitlist' || req.body.leadSource === 'ele-in Waitlist') && doc.sheetsByTitle['ele-in waitlist']) {
+                    try {
+                        const waitlistSheet = doc.sheetsByTitle['ele-in waitlist'];
+                        await waitlistSheet.loadHeaderRow().catch(() => {});
+                        await waitlistSheet.addRow({
+                            'Timestamp': new Date().toISOString(),
+                            'Email': email
+                        });
+                        console.log(`[SUBMIT] Also recorded ${email} in dedicated ele-in waitlist sheet.`);
+                    } catch (wErr) {
+                        console.warn('[SUBMIT] Could not record to ele-in waitlist tab:', wErr.message);
+                    }
+                }
+
                 sheetSuccess = true;
             } else {
                 console.warn('[SUBMIT] Google Sheets credentials missing in .env, skipping Google Sheets integration.');

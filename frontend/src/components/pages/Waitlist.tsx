@@ -15,11 +15,31 @@ export default function Waitlist() {
         setIsLoading(true)
         try {
             const apiUrl = import.meta.env.VITE_API_URL || 'https://elesium-website.onrender.com'
-            const response = await fetch(`${apiUrl}/api/waitlist`, {
+            
+            // 1. Try dedicated waitlist endpoint first
+            let response = await fetch(`${apiUrl}/api/waitlist`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }),
             }).catch(() => null)
+
+            // 2. If /api/waitlist is not available or returned non-ok (e.g. 404),
+            // fallback immediately to /api/submit which is confirmed live and records leads to Google Sheets
+            if (!response || !response.ok) {
+                console.warn('[WAITLIST] /api/waitlist endpoint unavailable, falling back to /api/submit')
+                response = await fetch(`${apiUrl}/api/submit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        email, 
+                        leadSource: 'ele-in Waitlist',
+                        name: 'ele-in Waitlist Member',
+                        company: 'ele-in Waitlist',
+                        role: 'Waitlist',
+                        usecase: 'ele-in LinkedIn Autonomous AI Outreach Waitlist'
+                    }),
+                }).catch(() => null)
+            }
 
             if (response && response.ok) {
                 setSubmitted(true)
@@ -27,6 +47,7 @@ export default function Waitlist() {
                 alert("There was an error joining the waitlist. Please try again.")
             }
         } catch (error) {
+            console.error('Waitlist submission error:', error)
             alert("There was an error joining the waitlist. Please try again.")
         } finally {
             setIsLoading(false)

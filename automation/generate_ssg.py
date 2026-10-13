@@ -194,6 +194,10 @@ def generate_ssg():
         "ai-automation-agency-india": {
             "title": "AI Automation Agency India",
             "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
+        },
+        "waitlist": {
+            "title": "ele-in Early Access Waitlist | Autonomous AI LinkedIn Outreach",
+            "desc": "Join the ele-in early access waitlist by Elesium. Autonomous AI agent taking over B2B LinkedIn outreach from lead generation to booked meetings."
         }
     }
     

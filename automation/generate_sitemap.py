@@ -30,6 +30,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/ai-automation", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/resources", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/ai-automation-agency-india", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/waitlist", "priority": "0.8", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/signals", "priority": "0.9", "changefreq": "daily"},
     ]
     
