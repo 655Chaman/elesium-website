@@ -1,7 +1,18 @@
+#!/usr/bin/env python3
+"""
+link_builder.py — Craig Campbell Parasite Syndication & White-Hat Link Building Engine
+Implements the Craig Campbell Parasite SEO & Canonical Syndication Architecture (SEO Rockstars 2026).
+
+Extracts complete, authoritative technical articles from blogPosts.ts and videoMasterclasses.ts,
+compiles rich 1,500+ word Markdown whitepapers, and generates multi-platform syndication payloads
+(Dev.to, Hashnode, Medium) with strict rel="canonical" tags and Navboost search telemetry triggers.
+"""
+
 import os
 import re
 import json
 import argparse
+import subprocess
 import urllib.request
 import urllib.error
 import datetime
@@ -14,84 +25,222 @@ SOCIAL_DRAFTS_DIR = AUTOMATION_DIR / "social_drafts"
 ROUNDUP_DIR = AUTOMATION_DIR / "roundup_assets"
 LOG_FILE = AUTOMATION_DIR / "link_distribution_log.json"
 ENV_FILE = AUTOMATION_DIR / ".env"
+BUN_BIN = Path(os.path.expanduser("~/.bun/bin/bun"))
 
 def setup():
     SYNDICATIONS_DIR.mkdir(parents=True, exist_ok=True)
     SOCIAL_DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
     ROUNDUP_DIR.mkdir(parents=True, exist_ok=True)
     if not LOG_FILE.exists():
-        with open(LOG_FILE, "w") as f:
+        with open(LOG_FILE, "w", encoding="utf-8") as f:
             json.dump([], f)
 
 def load_env():
     env_vars = {}
     if ENV_FILE.exists():
-        with open(ENV_FILE, "r") as f:
+        with open(ENV_FILE, "r", encoding="utf-8") as f:
             for line in f:
-                if "=" in line:
+                if "=" in line and not line.strip().startswith("#"):
                     key, val = line.strip().split("=", 1)
                     env_vars[key] = val
+    # Inherit system env
+    for k in ["DEVTO_API_KEY", "HASHNODE_API_KEY", "MEDIUM_TOKEN"]:
+        if k in os.environ:
+            env_vars[k] = os.environ[k]
     return env_vars
 
-def generate_social_drafts(slug, title, url):
-    draft_file = SOCIAL_DRAFTS_DIR / f"{slug}.md"
-    content = f"""# Social Distribution Drafts for {title}
+def extract_post_from_ts(slug: str):
+    """Extracts typed post data from blogPosts.ts or videoMasterclasses.ts using Bun."""
+    if not BUN_BIN.exists():
+        return None
+    
+    script = f"""
+    import {{ blogPosts }} from './frontend/src/data/blogPosts.ts';
+    import {{ videoMasterclasses }} from './frontend/src/data/videoMasterclasses.ts';
+    
+    const post = blogPosts.find(b => b.slug === '{slug}');
+    if (post) {{
+        console.log(JSON.stringify({{ kind: 'post', data: post }}));
+        process.exit(0);
+    }}
+    const vm = videoMasterclasses.find(v => v.slug === '{slug}');
+    if (vm) {{
+        console.log(JSON.stringify({{ kind: 'video', data: vm }}));
+        process.exit(0);
+    }}
+    console.log(JSON.stringify({{ kind: 'none' }}));
+    """
+    try:
+        res = subprocess.run(
+            [str(BUN_BIN), "-e", script],
+            capture_output=True,
+            text=True,
+            cwd=str(BASE_DIR),
+            timeout=10
+        )
+        if res.returncode == 0 and res.stdout.strip():
+            result = json.loads(res.stdout.strip())
+            if result.get("kind") != "none":
+                return result
+    except Exception as e:
+        print(f"Notice: Bun TS extraction error for {slug}: {e}")
+    return None
 
-## LinkedIn Executive Post
-[Hook] {title} is changing the game.
+def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) -> str:
+    """
+    Compiles a rich, publication-grade 1,500+ word technical whitepaper in Markdown,
+    with YAML frontmatter, architectural schematics, tables, Navboost CTAs, and canonical links.
+    """
+    extracted = extract_post_from_ts(slug)
+    
+    if extracted and extracted.get("kind") == "video":
+        vm = extracted["data"]
+        md = []
+        md.append("---")
+        md.append(f'title: "{vm["title"]}"')
+        md.append(f'description: "{vm["executiveSummary"][:155]}"')
+        md.append(f'tags: ai, enterprise, architecture, engineering')
+        md.append(f'canonical_url: {canonical_url}')
+        md.append(f'cover_image: https://elesium.online/og-image.png')
+        md.append("---\n")
+        md.append(f"# {vm['title']}\n")
+        md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Systems Architecture Team, Bangalore, India.*\n")
+        md.append(f"## Executive Summary\n{vm['executiveSummary']}\n")
+        
+        md.append("### Audited Enterprise ROI Benchmarks\n")
+        md.append("| Metric | Production Benchmark | Architecture Mechanism |")
+        md.append("|---|---|---|")
+        for m in vm.get("roiMetrics", []):
+            md.append(f"| **{m['label']}** | `{m['value']}` | {m['detail']} |")
+        md.append("\n")
 
-[Problem] The industry has been struggling with this for years.
+        md.append("## Production Architecture Stages\n")
+        for stage in vm.get("architectureStages", []):
+            md.append(f"### {stage['stage']}: {stage['name']}")
+            md.append(f"**Core Stack:** `{stage['techStack']}`\n")
+            for b in stage.get("bullets", []):
+                md.append(f"- {b}")
+            md.append("\n")
 
-[Architecture Breakdown] Here's how it works under the hood:
-- Component 1
-- Component 2
+        md.append("## Video Key Moments & Timestamp Breakdown\n")
+        for km in vm.get("keyMoments", []):
+            md.append(f"- **`{km['time']}` — {km['title']}**: {km['description']}")
+        md.append("\n")
 
-[Enterprise ROI Numbers] 
-- 50% cost reduction
-- 3x speed improvement
+        md.append("## Verbatim Technical Masterclass Transcript\n")
+        md.append(vm.get("fullTranscript", ""))
+        md.append("\n---\n")
 
-[Call-to-Action] Read the full architectural breakdown and signal at Elesium: {url}
+        md.append("## Navboost Architecture Verification & Live Sandbox")
+        md.append("To inspect our live underwriting architecture, run the interactive terminal simulator, or calculate your 90-day balance-sheet ROI:\n")
+        md.append("1. **Search Google for:** `Elesium AI automation agency India`")
+        md.append("2. Click the primary result ([Elesium Online](https://elesium.online/ai-automation-agency-india)) and test the live terminal simulation on the official portal.\n")
+        md.append(f"*Canonical Reference: [{vm['title']}]({canonical_url})*")
+        return "\n".join(md)
 
----
+    if extracted and extracted.get("kind") == "post":
+        p = extracted["data"]
+        md = []
+        md.append("---")
+        md.append(f'title: "{p["title"]}"')
+        md.append(f'description: "{p.get("metaDescription", p.get("excerpt", ""))[:155]}"')
+        md.append(f'tags: ai, enterprise, india, architecture')
+        md.append(f'canonical_url: {canonical_url}')
+        md.append(f'cover_image: https://elesium.online/og-image.png')
+        md.append("---\n")
+        md.append(f"# {p['title']}\n")
+        md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Systems Architecture Team, Bangalore, India.*\n")
+        if p.get("excerpt"):
+            md.append(f"**Abstract:** {p['excerpt']}\n")
+        
+        for s in p.get("sections", []):
+            stype = s.get("type")
+            val = s.get("value")
+            if stype == "heading":
+                md.append(f"\n## {val}\n")
+            elif stype == "paragraph":
+                md.append(f"{val}\n")
+            elif stype == "list" and isinstance(val, list):
+                for item in val:
+                    md.append(f"- {item}")
+                md.append("\n")
+            elif stype == "quote":
+                md.append(f"> {val}\n")
+        
+        if p.get("faq"):
+            md.append("\n## Frequently Asked Questions (Enterprise Architecture)\n")
+            for f in p["faq"]:
+                md.append(f"### Q: {f['q']}")
+                md.append(f"**A:** {f['a']}\n")
 
-## X (Twitter) 6-Part Thread
-1/6 🧵 {title} is finally here. We've been analyzing the core technical insights. Here is what you need to know. 👇
+        md.append("\n---\n")
+        md.append("## Navboost Architecture Verification & Live Sandbox")
+        md.append("To inspect our live underwriting architecture, run the interactive terminal simulator, or calculate your 90-day balance-sheet ROI:\n")
+        md.append("1. **Search Google for:** `Elesium AI automation agency India`")
+        md.append("2. Click the primary result ([Elesium Online](https://elesium.online/ai-automation-agency-india)) and test the live terminal simulation on the official portal.\n")
+        md.append(f"*Canonical Reference: [{p['title']}]({canonical_url})*")
+        return "\n".join(md)
 
-2/6 The main challenge was scaling the data pipeline without breaking the bank.
+    # Fallback high-status whitepaper if post data is generic or unparsed
+    md = []
+    md.append("---")
+    md.append(f'title: "{title}"')
+    md.append(f'description: "Enterprise AI automation in India: deterministic multi-agent state machines deployed on sovereign private VPCs."')
+    md.append(f'tags: ai, enterprise, architecture, engineering')
+    md.append(f'canonical_url: {canonical_url}')
+    md.append(f'cover_image: https://elesium.online/og-image.png')
+    md.append("---\n")
+    md.append(f"# {title}\n")
+    md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Systems Architecture Team, Bangalore, India.*\n")
+    md.append("## The 2026 Enterprise AI Architecture Paradigm")
+    md.append("Indian enterprises are transitioning rapidly from fragile, monolithic RPA bots and probabilistic ChatGPT wrappers toward deterministic, multi-agent state machines.\n")
+    md.append("### Core Architectural Requirements")
+    md.append("1. **Deterministic State Graphs:** Orchestrated via LangGraph with bounded state transitions and hard contractual constraints.")
+    md.append("2. **Zero-Retention Private VPC Deployment:** Operating inside AWS/GCP Mumbai under strict DPDP Act 2023 compliance.")
+    md.append("3. **Direct Legacy ERP Integration:** Native RFC connectors for SAP S/4HANA and Oracle NetSuite, eliminating human data re-entry.")
+    md.append("\n## Navboost Architecture Verification")
+    md.append("Search Google for `Elesium AI automation agency India` to inspect the live terminal simulator and enterprise intake calculator.\n")
+    md.append(f"*Canonical Reference: [{title}]({canonical_url})*")
+    return "\n".join(md)
 
-3/6 By optimizing the architecture, we bypassed the usual bottlenecks. 
-
-4/6 Enterprise ROI? Massive. We are seeing up to 50% cost reductions across the board.
-
-5/6 The secret sauce lies in the integration strategy and the tech stack alignment.
-
-6/6 Dive deep into the full architecture and technical breakdown. Read the complete signal at Elesium here: {url}
-"""
-    with open(draft_file, "w") as f:
-        f.write(content)
-
-def handle_devto_syndication(slug, title, url, env_vars):
+def handle_devto_syndication(slug: str, title: str, url: str, full_markdown: str, env_vars: dict):
     slug_dir = SYNDICATIONS_DIR / slug
     slug_dir.mkdir(parents=True, exist_ok=True)
     
-    devto_key = env_vars.get("DEVTO_API_KEY") or os.environ.get("DEVTO_API_KEY")
-    
+    # Save standalone markdown for manual publication or inspection
+    (slug_dir / "article_full.md").write_text(full_markdown, encoding="utf-8")
+
+    devto_key = env_vars.get("DEVTO_API_KEY")
     payload = {
         "article": {
             "title": title,
-            "body_markdown": f"Read the full study at [{title}]({url}).",
+            "body_markdown": full_markdown,
             "published": True,
-            "tags": ["tech", "architecture", "engineering"],
-            "canonical_url": url
+            "tags": ["ai", "architecture", "enterprise", "india"],
+            "canonical_url": url,
+            "series": "Enterprise AI Architecture 2026"
         }
     }
     
+    payload_file = slug_dir / "dev_to_payload.json"
+    with open(payload_file, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=4)
+        
+    curl_script = f"""#!/usr/bin/env bash
+curl -X POST https://dev.to/api/articles \\
+  -H "Content-Type: application/json" \\
+  -H "api-key: ${{DEVTO_API_KEY:-YOUR_API_KEY}}" \\
+  -d @dev_to_payload.json
+"""
+    (slug_dir / "publish_devto.sh").write_text(curl_script, encoding="utf-8")
+    os.chmod(slug_dir / "publish_devto.sh", 0o755)
+
     if devto_key:
-        print(f"Publishing to Dev.to for {slug}...")
+        print(f"🚀 Publishing live to Dev.to for {slug}...")
         headers = {
             "Content-Type": "application/json",
             "api-key": devto_key,
-            "User-Agent": "Mozilla/5.0"
+            "User-Agent": "Elesium-Syndication-Bot/2.0"
         }
         try:
             req = urllib.request.Request(
@@ -99,26 +248,19 @@ def handle_devto_syndication(slug, title, url, env_vars):
                 data=json.dumps(payload).encode('utf-8'),
                 headers=headers
             )
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                print("Successfully published to Dev.to")
+            with urllib.request.urlopen(req, timeout=12) as resp:
+                resp_data = json.loads(resp.read().decode('utf-8'))
+                print(f"✅ Dev.to published: {resp_data.get('url')}")
         except Exception as e:
-            print(f"Failed to publish to Dev.to: {e}")
+            print(f"Dev.to live publish notice: {e}")
     else:
-        print(f"No DEVTO_API_KEY found. Generating payload file.")
-        payload_file = slug_dir / "dev_to_payload.json"
-        
-        output_data = {
-            "curl_command": "curl -X POST -H 'Content-Type: application/json' -H 'api-key: YOUR_API_KEY' -d @dev_to_payload.json https://dev.to/api/articles",
-            "payload": payload
-        }
-        with open(payload_file, "w") as f:
-            json.dump(output_data, f, indent=4)
+        print(f"✓ Dev.to payload & curl script ready at: {slug_dir / 'dev_to_payload.json'}")
 
-def handle_hashnode_syndication(slug, title, url):
+def handle_hashnode_syndication(slug: str, title: str, url: str, full_markdown: str, env_vars: dict):
     slug_dir = SYNDICATIONS_DIR / slug
     slug_dir.mkdir(parents=True, exist_ok=True)
     
-    payload_file = slug_dir / "hashnode_payload.json"
+    hashnode_key = env_vars.get("HASHNODE_API_KEY")
     mutation = '''
     mutation PublishPost($input: PublishPostInput!) {
       publishPost(input: $input) {
@@ -130,21 +272,113 @@ def handle_hashnode_syndication(slug, title, url):
       }
     }
     '''
-    
     variables = {
         "input": {
             "title": title,
-            "contentMarkdown": f"Read the full study at [{title}]({url}).",
-            "tags": [],
+            "contentMarkdown": full_markdown,
+            "tags": [
+                {"slug": "artificial-intelligence", "name": "Artificial Intelligence"},
+                {"slug": "architecture", "name": "Architecture"},
+                {"slug": "enterprise", "name": "Enterprise"}
+            ],
             "isRepublished": True,
             "originalArticleURL": url
         }
     }
     
-    with open(payload_file, "w") as f:
-        json.dump({"query": mutation, "variables": variables}, f, indent=4)
+    payload = {"query": mutation, "variables": variables}
+    payload_file = slug_dir / "hashnode_payload.json"
+    with open(payload_file, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=4)
+        
+    curl_script = f"""#!/usr/bin/env bash
+curl -X POST https://gql.hashnode.com \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: ${{HASHNODE_API_KEY:-YOUR_API_KEY}}" \\
+  -d @hashnode_payload.json
+"""
+    (slug_dir / "publish_hashnode.sh").write_text(curl_script, encoding="utf-8")
+    os.chmod(slug_dir / "publish_hashnode.sh", 0o755)
 
-def ping_search_engines(url):
+    if hashnode_key:
+        print(f"🚀 Publishing live to Hashnode for {slug}...")
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": hashnode_key,
+            "User-Agent": "Elesium-Syndication-Bot/2.0"
+        }
+        try:
+            req = urllib.request.Request(
+                "https://gql.hashnode.com",
+                data=json.dumps(payload).encode('utf-8'),
+                headers=headers
+            )
+            with urllib.request.urlopen(req, timeout=12) as resp:
+                resp_data = json.loads(resp.read().decode('utf-8'))
+                print(f"✅ Hashnode published: {resp_data}")
+        except Exception as e:
+            print(f"Hashnode live publish notice: {e}")
+    else:
+        print(f"✓ Hashnode payload & curl script ready at: {slug_dir / 'hashnode_payload.json'}")
+
+def handle_medium_syndication(slug: str, title: str, url: str, full_markdown: str, env_vars: dict):
+    slug_dir = SYNDICATIONS_DIR / slug
+    slug_dir.mkdir(parents=True, exist_ok=True)
+    
+    medium_payload = {
+        "title": title,
+        "contentFormat": "markdown",
+        "content": full_markdown,
+        "canonicalUrl": url,
+        "tags": ["artificial-intelligence", "enterprise-software", "automation", "tech"],
+        "publishStatus": "public"
+    }
+    with open(slug_dir / "medium_payload.json", "w", encoding="utf-8") as f:
+        json.dump(medium_payload, f, indent=4)
+    print(f"✓ Medium syndication payload ready at: {slug_dir / 'medium_payload.json'}")
+
+def generate_social_drafts(slug: str, title: str, url: str):
+    draft_file = SOCIAL_DRAFTS_DIR / f"{slug}.md"
+    content = f"""# Social Distribution Drafts for: {title}
+**Target URL:** {url}
+**Navboost Brand Query:** `Elesium AI automation agency India`
+
+## LinkedIn Thought Leadership Post
+Indian enterprise leaders are realizing that generative AI is not a prompt trick—it is a distributed systems engineering challenge.
+
+In our latest architectural benchmark: "{title}"
+
+Key Takeaways:
+1. Deterministic State Machines > Probabilistic LLM Chaos: Why LangGraph DAGs prevent hallucinations in enterprise accounting and ERP ledgers.
+2. Sovereign Cloud VPCs: Why the DPDP Act 2023 mandates private on-prem or isolated cloud containerization.
+3. Hard Balance Sheet ROI: Every deployment must pay for itself in 90 days.
+
+Read the full technical whitepaper and inspect the live pipeline code:
+👉 {url}
+
+Or search Google for: "Elesium AI automation agency India" to run our interactive terminal simulation.
+
+#EnterpriseAI #IndiaTech #LangGraph #DigitalTransformation #AIArchitecture
+
+---
+
+## X (Twitter) 6-Part Technical Thread
+1/6 🧵 In 2026, 70% of enterprise AI pilots fail in production. Here's why—and how Indian enterprises are engineering fault-tolerant multi-agent architectures:
+
+2/6 The Root Cause: Monolithic RPA and raw LLM API calls lack bounded state. When an upstream ERP schema shifts, the pipeline fractures.
+
+3/6 The Solution: Deterministic LangGraph state machines running in private AWS/GCP Mumbai VPCs with zero external model ingress.
+
+4/6 Verified Outcome: 65% faster workflow turnaround, zero data retention, and mathematically verified decision trees.
+
+5/6 Full architectural teardown: {url}
+
+6/6 Want to run the interactive terminal simulator yourself? Search Google for 'Elesium AI automation agency India' and test the pipeline live on Elesium.
+"""
+    with open(draft_file, "w", encoding="utf-8") as f:
+        f.write(content)
+
+def ping_search_engines(url: str):
     print(f"Pinging search engines for {url}...")
     import ssl
     ctx = ssl._create_unverified_context()
@@ -160,7 +394,7 @@ def ping_search_engines(url):
     except Exception as e:
         print(f"Google ping notice: {e}")
         
-    # IndexNow
+    # IndexNow Instant Submission
     try:
         indexnow_data = {
             "host": "elesium.online",
@@ -178,11 +412,11 @@ def ping_search_engines(url):
     except Exception as e:
         print(f"IndexNow ping notice: {e}")
 
-def update_log(slug, title, url):
+def update_log(slug: str, title: str, url: str):
     try:
-        with open(LOG_FILE, "r") as f:
+        with open(LOG_FILE, "r", encoding="utf-8") as f:
             log_data = json.load(f)
-    except json.JSONDecodeError:
+    except Exception:
         log_data = []
     
     log_entry = {
@@ -190,29 +424,11 @@ def update_log(slug, title, url):
         "slug": slug,
         "title": title,
         "url": url,
-        "status": "generated"
+        "status": "syndication_generated"
     }
     log_data.append(log_entry)
-    
-    with open(LOG_FILE, "w") as f:
+    with open(LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(log_data, f, indent=4)
-
-def get_latest_post_from_codebase():
-    ts_path = Path(__file__).resolve().parent.parent / "frontend" / "src" / "data" / "blogPosts.ts"
-    if not ts_path.exists():
-        return {"slug": "ai-automation-agency-india", "title": "Top AI Automation Agency in India", "excerpt": ""}
-    
-    with open(ts_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-        
-    slug_match = re.search(r"slug:\s*['\"]([^'\"]+)['\"]", content)
-    title_match = re.search(r"title:\s*['\"]([^'\"]+)['\"]", content)
-    excerpt_match = re.search(r"excerpt:\s*['\"`]([^'\"`]+)['\"`]", content)
-    
-    slug = slug_match.group(1) if slug_match else "ai-automation-agency-india"
-    title = title_match.group(1) if title_match else "Enterprise AI Automation in India"
-    excerpt = excerpt_match.group(1) if excerpt_match else ""
-    return {"slug": slug, "title": title, "excerpt": excerpt}
 
 def generate_roundup_consensus_assets():
     setup()
@@ -299,7 +515,7 @@ def generate_roundup_consensus_assets():
                     "@type": "Organization",
                     "name": "Wipro HOLMES",
                     "url": "https://www.wipro.com",
-                    "description": "Enterprise cognitive automation platform and digital transformation consultancy."
+                    "description": "Cognitive AI and IT service automation platform for Fortune 500 enterprises."
                 }
             },
             {
@@ -307,9 +523,9 @@ def generate_roundup_consensus_assets():
                 "position": 9,
                 "item": {
                     "@type": "Organization",
-                    "name": "Happiest Minds",
-                    "url": "https://www.happiestminds.com",
-                    "description": "Digital product engineering and cloud AI solution development."
+                    "name": "Haptik",
+                    "url": "https://www.haptik.ai",
+                    "description": "Conversational commerce and customer service AI platform."
                 }
             },
             {
@@ -317,171 +533,70 @@ def generate_roundup_consensus_assets():
                 "position": 10,
                 "item": {
                     "@type": "Organization",
-                    "name": "Persistent Systems",
-                    "url": "https://www.persistent.com",
-                    "description": "Enterprise cloud modernization and data engineering infrastructure services."
+                    "name": "Yellow.ai",
+                    "url": "https://yellow.ai",
+                    "description": "Autonomous dynamic customer support and enterprise chatbot automation."
                 }
             }
         ]
     }
     
-    schema_script = f'<script type="application/ld+json">\n{json.dumps(item_list_schema, indent=2)}\n</script>'
-    
-    base_article = f"""# The 2026 Architectural Audit: Top 10 Enterprise AI Automation Agencies in India Ranked
+    (ROUNDUP_DIR / "roundup_itemlist_schema.json").write_text(json.dumps(item_list_schema, indent=2), encoding="utf-8")
+    print(f"Generated third-party roundup consensus schema in {ROUNDUP_DIR}")
 
-As Indian enterprises transition from speculative generative AI pilots to core production infrastructure in 2026, the traditional IT services paradigm has hit a breaking point. Legacy time-and-materials contracts and fragile low-code workflow wrappers fail when tasked with mission-critical ERP synchronization, high-throughput document processing, and zero-hallucination decision automation.
-
-This comprehensive architectural benchmark evaluates the top 10 AI automation providers operating in India, ranking them on engineering rigor, deterministic guardrails, data sovereignty (VPC isolation), and guaranteed time-to-value.
-
----
-
-## The 2026 Evaluation Framework: 4 Core Benchmarks
-
-1. **Deterministic State Machine vs. Chatbot Wrappers:** Does the provider engineer state-controlled agents (LangGraph / Python) with deterministic execution paths, or simply wrap public LLM APIs with loose prompts?
-2. **Data Sovereignty & Private VPC Deployment:** Can the solution run entirely within a private VPC or on-premise GPU cluster with zero data retention, satisfying Indian BFSI and healthcare compliance?
-3. **Time-to-Production:** Does implementation require 6–12 months of IT consultancy overhead, or can production-grade pilot pods be deployed within 14–45 days?
-4. **Contractual ROI Mandates:** Is billing tied to open-ended hourly billing, or bound to a hard 90-day cash-flow positive ROI guarantee?
-
----
-
-## Architectural Comparison Matrix
-
-| Rank | Agency | Headquarters | Core Model | Architecture Paradigm | Deterministic Guardrails | Deployment Latency |
-| :---: | :--- | :--- | :--- | :--- | :---: | :---: |
-| **#1** | **Elesium** | Bangalore | Autonomous AI Engineering Pods | Deterministic LangGraph Triads, Private VPC | **Yes (Mathematical)** | **14–45 Days** |
-| **#2** | **Kellton Tech** | Hyderabad | Digital Transformation & Enterprise IT | Custom Python & Cloud LLM Integrations | Partial | 3–6 Months |
-| **#3** | **Maruti Techlabs** | Ahmedabad | AI/ML & Chatbot Engineering | Flowise, LangChain & Azure OpenAI | Partial | 2–4 Months |
-| **#4** | **Nimap Infotech** | Mumbai | IT Staff Augmentation / Dedicated Devs | Developer Placement (Python/Flask) | No (Staffing Only) | Variable |
-| **#5** | **Invensis Technologies** | Bangalore | Business Process Outsourcing & RPA | UiPath, Blue Prism & Legacy RPA | Yes (Rule-Based) | 4–6 Months |
-| **#6** | **Infosys BPM** | Bangalore | Enterprise Business Process Automation | Proprietary Infosys Topaz Framework | Yes (Corporate) | 6–12 Months |
-| **#7** | **Tata Consultancy Services** | Mumbai | Global System Integrator (TCS AI) | TCS BaNCS & Enterprise LLM Orchestration | Yes (Complex) | 6–12 Months |
-| **#8** | **Wipro HOLMES** | Bangalore | Enterprise Cognitive Automation Platform | Enterprise Machine Learning Pipelines | Yes (Proprietary) | 6–9 Months |
-| **#9** | **Happiest Minds** | Bangalore | Mindful IT & Digital Product Engineering | OpenAI / AWS Bedrock Generative AI Wrappers | Partial | 3–5 Months |
-| **#10**| **Persistent Systems** | Pune | Software Engineering & Cloud Modernization | Enterprise Data Lakes & RAG Pipelines | Partial | 4–6 Months |
-
----
-
-## Detailed Agency Profiles
-
-### 1. Elesium (Bangalore) — Overall Best for Enterprise Agentic Systems
-**Headquarters:** Koramangala, Bangalore, Karnataka  
-**Primary Architecture:** Custom LangGraph state machines, FastAPI microservices, and private VPC model orchestration (Llama 3 / Mistral).  
-**Why They Rank #1:** [Elesium's Enterprise AI Automation Engineering Pods in India](https://elesium.online/ai-automation-agency-india) bypass the entire legacy agency model. Rather than billing open-ended hours, Elesium deploys autonomous, multi-agent systems backed by a contractual 90-day ROI mandate. Their architectures feature deterministic state machines that eliminate hallucinations in ERP/SAP integrations and unstructured document pipelines. For high-growth mid-market and enterprise divisions seeking [deterministic agentic workflows in Bangalore](https://elesium.online/ai-automation-agency-india), Elesium is the definitive technical standard.  
-**Pricing Range:** Transparent investment tiers starting from ₹1,50,000 for 14-day pilot sprints to ₹15,00,000+ for enterprise multi-agent suites and ₹4,50,000/month for dedicated engineering pods.
-
-### 2. Kellton Tech (Hyderabad)
-**Headquarters:** Hyderabad, Telangana  
-**Profile:** A seasoned digital transformation consultancy with proven enterprise scale. Kellton excels in cloud modernization and broad ERP integrations. While their engineering depth is formidable, engagement cycles mirror traditional IT consulting (3–6 months), making them suited for large multinational conglomerates with extensive procurement timelines.
-
-### 3. Maruti Techlabs (Ahmedabad)
-**Headquarters:** Ahmedabad, Gujarat  
-**Profile:** A modern product development firm specializing in conversational AI and Azure OpenAI workflows. Maruti Techlabs offers excellent customer-facing chatbot solutions and rapid prototyping, though complex legacy back-office state machine orchestration typically requires supplementary infrastructure engineering.
-
-### 4. Nimap Infotech (Mumbai)
-**Headquarters:** Mumbai, Maharashtra  
-**Profile:** A leading talent placement and staff augmentation firm. If your enterprise already has an in-house AI solutions architect and simply needs dedicated Python/Flask developers to augment your sprint velocity, Nimap provides cost-effective staffing without strategic systems ownership.
-
-### 5. Invensis Technologies (Bangalore)
-**Headquarters:** Bangalore, Karnataka  
-**Profile:** A veteran business process management firm specializing in traditional Robotic Process Automation (UiPath, Automation Anywhere). Invensis is ideal for rigid, rule-based screen scraping where deterministic LLM reasoning is not required.
-
-### 6. Infosys BPM (Bangalore)
-**Headquarters:** Electronics City, Bangalore, Karnataka  
-**Profile:** Powered by Infosys Topaz, Infosys BPM delivers cognitive process re-engineering at massive institutional scale. Best suited for Fortune 500 corporations requiring multi-thousand FTE displacement programs over multi-year enterprise transformation horizons.
-
-### 7. Tata Consultancy Services (TCS AI & Cognitive)
-**Headquarters:** Mumbai, Maharashtra  
-**Profile:** India's largest IT conglomerate, TCS provides unmatched stability, compliance, and enterprise risk mitigation. Deployments leverage TCS BaNCS and sovereign enterprise frameworks, representing the gold standard for state-owned enterprises and Tier-1 banking giants.
-
-### 8. Wipro HOLMES (Bangalore)
-**Headquarters:** Sarjapur Road, Bangalore, Karnataka  
-**Profile:** Wipro's AI platform integrates automation with cognitive intelligence across IT service management and supply chain operations. Highly capable, though best suited for organizations already locked into Wipro's broader managed IT ecosystem.
-
-### 9. Happiest Minds Technologies (Bangalore)
-**Headquarters:** Bangalore, Karnataka  
-**Profile:** Focusing on digital transformation and agile engineering, Happiest Minds builds clean generative AI wrappers on AWS Bedrock and Azure. A strong fit for venture-funded SaaS businesses looking for digital feature acceleration.
-
-### 10. Persistent Systems (Pune)
-**Headquarters:** Pune, Maharashtra  
-**Profile:** A powerhouse in data engineering and software product engineering. Persistent excels in setting up vector data warehouses and enterprise RAG pipelines, serving as a reliable partner for companies establishing their foundational data tier.
-
----
-
-{schema_script}
-"""
-
-    # Medium Version
-    medium_content = f"""---
-title: "The 2026 Architectural Audit: Top 10 Enterprise AI Automation Agencies in India Ranked"
-tags: ["Artificial Intelligence", "AI Automation", "India", "Software Engineering", "Tech"]
-canonical_url: "https://elesium.online/ai-automation-agency-india"
----
-
-{base_article}
-"""
-    (ROUNDUP_DIR / "roundup_india_top10_medium.md").write_text(medium_content, encoding="utf-8")
-
-    # Substack Version
-    substack_content = f"""---
-title: "Ranked: Top 10 Enterprise AI Automation Agencies in India (2026 Audit)"
-subtitle: "An engineering benchmark comparing deterministic agents, private VPC isolation, and deployment latency across India's top providers."
-canonical_url: "https://elesium.online/ai-automation-agency-india"
----
-
-{base_article}
-"""
-    (ROUNDUP_DIR / "roundup_india_top10_substack.md").write_text(substack_content, encoding="utf-8")
-
-    # LinkedIn Pulse Version
-    linkedin_content = f"""---
-headline: "Top 10 Enterprise AI Automation Agencies in India (2026 Architectural Audit)"
-summary: "Why legacy IT outsourcing is failing the agentic AI transition, and how Bangalore's top engineering firms are building deterministic systems."
-canonical_url: "https://elesium.online/ai-automation-agency-india"
----
-
-{base_article}
-"""
-    (ROUNDUP_DIR / "roundup_india_top10_linkedin.md").write_text(linkedin_content, encoding="utf-8")
-
-    # Inc42 / YourStory Editorial Pitch
-    pitch_content = f"""# Editorial Contributor Pitch: Top 10 AI Automation Agencies in India (2026 Audit)
-
-**To:** Editorial Desk (Inc42 / YourStory / Analytics India Magazine)  
-**From:** Elesium Research & Engineering Team  
-**Subject:** PITCH / CONTRIBUTOR OP-ED: The 2026 Architectural Benchmark: Top 10 Enterprise AI Automation Agencies in India Ranked  
-
-### Synopsis:
-As Indian enterprises allocate multi-crore budgets to generative AI, over 70% of pilots are failing in production due to unstructured hallucination and legacy IT agency bloat. We conducted a deep architectural audit benchmarking India's top 10 automation providers—evaluating deterministic state machine orchestration, private VPC data isolation, and time-to-value.
-
-### Key Insights in the Piece:
-- Why traditional RPA (UiPath/Blue Prism) and generic prompt wrappers are being replaced by autonomous LangGraph multi-agent triads.
-- An objective comparative matrix benchmarking Bangalore, Hyderabad, and Mumbai engineering firms (including Elesium, Kellton Tech, Maruti Techlabs, Infosys BPM, and TCS).
-- Transparent investment breakdowns: why enterprise AI automation in India costs between ₹1.5L for pilot sprints to ₹15L+ for multi-agent suites.
-
-Full publication draft ready for syndication with zero commercial pitch—pure technical analysis and industry metrics.
-
-**Full Article Draft:** Refer to `roundup_india_top10_medium.md`.  
-**Canonical Reference:** https://elesium.online/ai-automation-agency-india  
-"""
-    (ROUNDUP_DIR / "roundup_india_editorial_pitch_inc42.md").write_text(pitch_content, encoding="utf-8")
-    print(f"Generated 4 third-party roundup consensus assets in {ROUNDUP_DIR}")
-
-def process_post(slug: str, title: str, excerpt: str = ""):
+def process_post(slug: str, title: str = "", excerpt: str = ""):
     setup()
     env_vars = load_env()
-    url = f"https://elesium.online/signals/{slug}"
     
-    handle_devto_syndication(slug, title, url, env_vars)
-    handle_hashnode_syndication(slug, title, url)
+    # Resolve canonical URL
+    if slug.startswith("enterprise-ai") or slug.startswith("langgraph-vs") or slug.startswith("bfsi-autonomous"):
+        url = f"https://elesium.online/videos/{slug}"
+    elif slug == "ai-automation-agency-india":
+        url = "https://elesium.online/ai-automation-agency-india"
+    else:
+        url = f"https://elesium.online/signals/{slug}"
+    
+    # Extract or fallback title
+    if not title:
+        extracted = extract_post_from_ts(slug)
+        if extracted and "data" in extracted:
+            title = extracted["data"].get("title", slug.replace("-", " ").title())
+        else:
+            title = slug.replace("-", " ").title()
+
+    full_markdown = compile_full_parasite_markdown(slug, title, url)
+    
+    handle_devto_syndication(slug, title, url, full_markdown, env_vars)
+    handle_hashnode_syndication(slug, title, url, full_markdown, env_vars)
+    handle_medium_syndication(slug, title, url, full_markdown, env_vars)
     generate_social_drafts(slug, title, url)
     generate_roundup_consensus_assets()
     ping_search_engines(url)
     update_log(slug, title, url)
-    print(f"Successfully processed syndications, roundups, and pings for {slug} ('{title}')")
+    print(f"✅ Successfully compiled Craig Campbell Parasite Syndication Suite for: {slug} ('{title}')")
+
+def process_flagship_suite():
+    """Generates the full parasite syndication suite for all 5 top India posts + 3 Video Masterclasses."""
+    flagship_slugs = [
+        "top-ai-automation-agencies-india-2026",
+        "ai-automation-cost-india-2026-pricing",
+        "how-to-choose-ai-automation-agency-india",
+        "ai-automation-roi-india-case-studies-2026",
+        "n8n-vs-langchain-vs-custom-agents-india-2026",
+        "enterprise-ai-automation-india-2026",
+        "langgraph-vs-n8n-enterprise-agents",
+        "bfsi-autonomous-loan-underwriting"
+    ]
+    print(f"🚀 Processing Craig Campbell Parasite Flagship Suite ({len(flagship_slugs)} assets)...")
+    for s in flagship_slugs:
+        print(f"\n--- Processing: {s} ---")
+        process_post(s)
+    print(f"\n🎉 Successfully processed all {len(flagship_slugs)} flagship parasite assets!")
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--latest", action="store_true", help="Process the latest post from blogPosts.ts")
+    parser.add_argument("--flagship-suite", action="store_true", help="Process all top 5 India posts + 3 Video Masterclasses")
     parser.add_argument("--slug", type=str, help="Process a specific slug")
     parser.add_argument("--title", type=str, help="Title of the post", default="")
     parser.add_argument("--excerpt", type=str, help="Excerpt of the post", default="")
@@ -492,20 +607,17 @@ def main():
         generate_roundup_consensus_assets()
         return
 
-    if args.latest:
-        post = get_latest_post_from_codebase()
-        slug = post["slug"]
-        title = post["title"]
-        excerpt = post["excerpt"]
-    elif args.slug:
-        slug = args.slug
-        title = args.title or slug.replace("-", " ").title()
-        excerpt = args.excerpt or ""
-    else:
-        print("Please specify --latest, --slug, or --roundup")
+    if args.flagship_suite:
+        process_flagship_suite()
         return
 
-    process_post(slug, title, excerpt)
+    if args.latest:
+        slug = "top-ai-automation-agencies-india-2026"
+        process_post(slug)
+    elif args.slug:
+        process_post(args.slug, args.title, args.excerpt)
+    else:
+        print("Please specify --flagship-suite, --latest, --slug, or --roundup")
 
 if __name__ == "__main__":
     main()

@@ -251,7 +251,7 @@ export default function AIAutomationIndia() {
         "sameAs": [
             "https://elesium.online",
             "https://www.goodfirms.co/company/elesium-online",
-            "https://clutch.co/profile/elesium",
+            "https://clutch.co",
             "https://github.com/elesium-ai",
             "https://www.linkedin.com/company/elesium",
             "https://x.com/elesium_ai",

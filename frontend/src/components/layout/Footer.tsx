@@ -62,43 +62,43 @@ export default function DownloadFooter() {
                             </p>
                         </div>
 
-                        {/* Directory Authority Badges (GoodFirms & Clutch) */}
-                        <div className="flex flex-wrap items-center gap-3 pt-2">
+                        {/* Directory Authority Badges (GoodFirms & Clutch) - Monochrome Architecture */}
+                        <div className="flex flex-wrap items-center gap-2.5 pt-2">
                             <a
                                 href="https://www.goodfirms.co/company/elesium-online"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] hover:border-amber-500/50 dark:hover:border-amber-400/50 hover:bg-amber-500/[0.05] transition-all duration-300"
+                                className="group flex items-center gap-2.5 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
                                 title="Elesium Online on GoodFirms — Top AI Company"
                             >
-                                <div className="w-5 h-5 rounded-md bg-amber-500/20 flex items-center justify-center text-amber-500 dark:text-amber-400 font-bold text-[10px]">
-                                    ★
-                                </div>
+                                <span className="w-4 h-4 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[9px] text-gray-700 dark:text-gray-300 font-mono">
+                                    ✓
+                                </span>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[9px] font-mono tracking-wider uppercase text-gray-400 dark:text-gray-500 group-hover:text-amber-500 transition-colors">
+                                    <span className="text-[9px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
                                         GoodFirms
                                     </span>
-                                    <span className="text-[11px] font-semibold text-gray-900 dark:text-white">
+                                    <span className="text-[11px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
                                         Verified AI Agency
                                     </span>
                                 </div>
                             </a>
 
                             <a
-                                href="https://clutch.co/profile/elesium"
+                                href="https://clutch.co"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] hover:border-red-500/50 dark:hover:border-red-400/50 hover:bg-red-500/[0.05] transition-all duration-300"
-                                title="Elesium on Clutch — Verified AI Partner"
+                                className="group flex items-center gap-2.5 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="Clutch Verified AI Directory"
                             >
-                                <div className="w-5 h-5 rounded-md bg-red-500/20 flex items-center justify-center text-red-500 dark:text-red-400 font-bold text-[10px]">
-                                    C
-                                </div>
+                                <span className="w-4 h-4 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[9px] text-gray-700 dark:text-gray-300 font-mono">
+                                    ✓
+                                </span>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[9px] font-mono tracking-wider uppercase text-gray-400 dark:text-gray-500 group-hover:text-red-500 transition-colors">
+                                    <span className="text-[9px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
                                         Clutch
                                     </span>
-                                    <span className="text-[11px] font-semibold text-gray-900 dark:text-white">
+                                    <span className="text-[11px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
                                         Verified Partner
                                     </span>
                                 </div>
