@@ -9,6 +9,8 @@ export default function DownloadFooter() {
         { name: 'How We Work', path: '/how-we-work' },
         { name: 'Markets', path: '/markets' },
         { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'India Enterprise', path: '/ai-automation-agency-india' },
+        { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
     ];
 

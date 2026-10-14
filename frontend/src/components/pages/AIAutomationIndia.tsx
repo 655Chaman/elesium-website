@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -249,6 +250,8 @@ export default function AIAutomationIndia() {
         ],
         "sameAs": [
             "https://elesium.online",
+            "https://www.goodfirms.co/company/elesium-online",
+            "https://clutch.co/profile/elesium",
             "https://github.com/elesium-ai",
             "https://www.linkedin.com/company/elesium",
             "https://x.com/elesium_ai",
@@ -402,6 +405,27 @@ export default function AIAutomationIndia() {
                             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                             Direct WhatsApp Engineering Desk
                         </button>
+                    </div>
+
+                    {/* Video Masterclass Architecture Teardown Link */}
+                    <div className="flex justify-center mb-10">
+                        <Link
+                            to="/videos/enterprise-ai-automation-india-2026"
+                            className="group inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 border border-blue-500/20 dark:border-cyan-500/30 hover:border-cyan-400/60 hover:bg-cyan-500/10 transition-all duration-300 shadow-lg shadow-cyan-500/5 hover:shadow-cyan-500/15"
+                        >
+                            <span className="flex items-center justify-center w-8 h-8 rounded-xl bg-cyan-500 text-black font-bold text-xs shadow-md shadow-cyan-500/30 group-hover:scale-110 transition-transform">
+                                ▶
+                            </span>
+                            <div className="text-left">
+                                <div className="text-[11px] font-mono uppercase tracking-wider text-cyan-600 dark:text-cyan-400 font-semibold flex items-center gap-1.5">
+                                    <span>Watch Video Masterclass (12:45)</span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                                </div>
+                                <div className="text-xs md:text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
+                                    Autonomous Enterprise Agent Architecture Teardown →
+                                </div>
+                            </div>
+                        </Link>
                     </div>
 
                     {/* Live Metric Pills */}

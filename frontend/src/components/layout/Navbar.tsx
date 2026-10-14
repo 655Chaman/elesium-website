@@ -57,6 +57,18 @@ export default function Navbar() {
                             AI Automation
                         </Link>
                         <Link
+                            to="/ai-automation-agency-india"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-600 dark:text-cyan-400"
+                        >
+                            India Enterprise
+                        </Link>
+                        <Link
+                            to="/videos"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                        >
+                            Masterclasses
+                        </Link>
+                        <Link
                             to="/signals"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
@@ -136,6 +148,20 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 AI Automation
+                            </Link>
+                            <Link
+                                to="/ai-automation-agency-india"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-cyan-600 dark:text-cyan-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                India Enterprise
+                            </Link>
+                            <Link
+                                to="/videos"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Masterclasses
                             </Link>
                             <Link
                                 to="/signals"
