@@ -198,6 +198,22 @@ def generate_ssg():
         "waitlist": {
             "title": "ele-in Early Access Waitlist | Autonomous AI LinkedIn Outreach",
             "desc": "Join the ele-in early access waitlist by Elesium. Autonomous AI agent taking over B2B LinkedIn outreach from lead generation to booked meetings."
+        },
+        "videos": {
+            "title": "Enterprise AI Architecture Masterclasses & Video Teardowns",
+            "desc": "Watch technical engineering breakdowns on deterministic multi-agent systems, sovereign private VPC deployments, and production enterprise workflows by Elesium."
+        },
+        "videos/enterprise-ai-automation-india-2026": {
+            "title": "Enterprise AI Automation in India: Sovereign VPC Masterclass",
+            "desc": "How Indian enterprises deploy deterministic multi-agent systems in sovereign private VPCs. Full technical architecture breakdown, benchmarks, and transcript."
+        },
+        "videos/langgraph-vs-n8n-enterprise-agents": {
+            "title": "LangGraph vs n8n for Enterprise AI Workflows: Deterministic State Management",
+            "desc": "LangGraph vs n8n architectural comparison for enterprise AI workflows. State persistence, error recovery, cyclical DAGs, and production SLAs."
+        },
+        "videos/bfsi-autonomous-loan-underwriting": {
+            "title": "Autonomous Loan Underwriting Architecture: 100-Page PDFs in 18 Minutes",
+            "desc": "How an Indian NBFC deployed custom VLM and LangGraph multi-agent reconciliation to compress loan underwriting from 48 hours to 18 minutes."
         }
     }
     

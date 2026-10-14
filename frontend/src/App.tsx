@@ -20,6 +20,7 @@ const MarketSignals = lazy(() => import('./components/pages/MarketSignals'))
 const Resources = lazy(() => import('./components/pages/Resources'))
 const ResourceDetail = lazy(() => import('./components/pages/ResourceDetail'))
 const Waitlist = lazy(() => import('./components/pages/Waitlist'))
+const VideoMirror = lazy(() => import('./components/pages/VideoMirror'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -76,6 +77,8 @@ function App() {
                             <Route path="/resources/:slug" element={<ResourceDetail />} />
                             <Route path="/ai-automation" element={<AIAutomation />} />
                             <Route path="/ai-automation-agency-india" element={<AIAutomationIndia />} />
+                            <Route path="/videos" element={<VideoMirror />} />
+                            <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />
                         </Routes>
                     </Suspense>

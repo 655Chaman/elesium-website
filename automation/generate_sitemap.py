@@ -30,6 +30,10 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/ai-automation", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/resources", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/ai-automation-agency-india", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/videos", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/videos/enterprise-ai-automation-india-2026", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/videos/langgraph-vs-n8n-enterprise-agents", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/videos/bfsi-autonomous-loan-underwriting", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/waitlist", "priority": "0.8", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/signals", "priority": "0.9", "changefreq": "daily"},
     ]

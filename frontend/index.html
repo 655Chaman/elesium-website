@@ -37,23 +37,106 @@
   <meta name="twitter:description" content="India's premier AI engineering firm. We replace manual bottlenecks with deterministic multi-agent systems and private VPC infrastructure delivering 3x+ cash-flow ROI in 90 days." />
   <meta name="twitter:image" content="https://elesium.online/og-image.png" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD Knowledge Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
-    "name": "Elesium",
-    "url": "https://elesium.online",
-    "logo": "https://elesium.online/favicon.png",
-    "description": "India's leading AI automation agency building custom agentic AI infrastructure for enterprise businesses",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bangalore",
-      "addressCountry": "IN"
-    },
-    "areaServed": ["India", "United States", "United Kingdom", "Global"],
-    "serviceType": "AI Automation Agency",
-    "sameAs": []
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+        "@id": "https://elesium.online/#organization",
+        "name": "Elesium",
+        "alternateName": ["Elesium Online", "Elesium AI Engineering"],
+        "legalName": "Elesium Online",
+        "url": "https://elesium.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://elesium.online/og-image.png",
+          "width": "1200",
+          "height": "630"
+        },
+        "image": "https://elesium.online/og-image.png",
+        "description": "India's premier AI engineering firm building deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise workflows, delivering an audited 3x–5x cash-flow ROI in 90 days.",
+        "telephone": "+91-8317329312",
+        "email": "chamansyed655@gmail.com",
+        "foundingDate": "2024",
+        "priceRange": "$$$",
+        "currenciesAccepted": "INR, USD, EUR, GBP",
+        "paymentAccepted": "Wire Transfer, Corporate Invoicing",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Koramangala 4th Block",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560034",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 12.9352,
+          "longitude": 77.6245
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "Country", "name": "United States" },
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Place", "name": "Global" }
+        ],
+        "serviceType": [
+          "Enterprise AI Automation",
+          "Autonomous Agent Systems",
+          "Private VPC LLM Deployment",
+          "Deterministic Workflow Automation"
+        ],
+        "sameAs": [
+          "https://www.goodfirms.co/company/elesium-online",
+          "https://clutch.co/profile/elesium",
+          "https://www.linkedin.com/in/chaman-elesium",
+          "https://github.com/655Chaman/elesium-website",
+          "https://elesium.online"
+        ],
+        "knowsAbout": [
+          "LangGraph",
+          "Multi-Agent Systems",
+          "Private VPC Infrastructure",
+          "SAP S/4HANA Integration",
+          "BFSI Loan Underwriting AI",
+          "DPDP Act 2023 Compliance",
+          "Deterministic AI",
+          "Enterprise Agentic Workflows"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Elesium Enterprise AI Architecture",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "BFSI Autonomous Loan Underwriting Pipeline",
+                "description": "Multi-agent document audit and CAM generation cutting underwriting cycles from 48 hours to 18 minutes."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SAP S/4HANA Predictive Supply Chain Agents",
+                "description": "Autonomous multi-echelon inventory optimizer slashing enterprise stockouts by 40%."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Autonomous Data Migration & Client Onboarding Co-Pilot",
+                "description": "Automated schema harmonization cutting enterprise SaaS onboarding from 3 weeks to 4 days."
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
   </script>
 
