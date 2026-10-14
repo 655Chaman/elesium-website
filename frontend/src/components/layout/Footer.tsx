@@ -46,17 +46,62 @@ export default function DownloadFooter() {
                         </div>
                     </div>
 
-                    {/* Right: tagline */}
-                    <div className="hidden md:flex flex-col items-end gap-2 text-right max-w-xs">
-                        <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600 uppercase">
-                            Enterprise AI Engineering | India & Global
-                        </span>
-                        <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">
-                            Bangalore, India<br />
-                            Architecting autonomous systems for Indian & Global Enterprises.<br />
-                            Exclusive intake. Hard ROI focus.<br />
-                            Multi-Agent Infrastructure & Private LLM Deployments.
-                        </p>
+                    {/* Right: tagline + verified badges */}
+                    <div className="flex flex-col items-start md:items-end gap-4 text-left md:text-right max-w-sm">
+                        <div className="flex flex-col gap-2">
+                            <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600 uppercase">
+                                Enterprise AI Engineering | India & Global
+                            </span>
+                            <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">
+                                Bangalore, India<br />
+                                Architecting autonomous systems for Indian & Global Enterprises.<br />
+                                Exclusive intake. Hard ROI focus.<br />
+                                Multi-Agent Infrastructure & Private LLM Deployments.
+                            </p>
+                        </div>
+
+                        {/* Directory Authority Badges (GoodFirms & Clutch) */}
+                        <div className="flex flex-wrap items-center gap-3 pt-2">
+                            <a
+                                href="https://www.goodfirms.co/company/elesium-online"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] hover:border-amber-500/50 dark:hover:border-amber-400/50 hover:bg-amber-500/[0.05] transition-all duration-300"
+                                title="Elesium Online on GoodFirms — Top AI Company"
+                            >
+                                <div className="w-5 h-5 rounded-md bg-amber-500/20 flex items-center justify-center text-amber-500 dark:text-amber-400 font-bold text-[10px]">
+                                    ★
+                                </div>
+                                <div className="flex flex-col text-left">
+                                    <span className="text-[9px] font-mono tracking-wider uppercase text-gray-400 dark:text-gray-500 group-hover:text-amber-500 transition-colors">
+                                        GoodFirms
+                                    </span>
+                                    <span className="text-[11px] font-semibold text-gray-900 dark:text-white">
+                                        Verified AI Agency
+                                    </span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://clutch.co/profile/elesium"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] hover:border-red-500/50 dark:hover:border-red-400/50 hover:bg-red-500/[0.05] transition-all duration-300"
+                                title="Elesium on Clutch — Verified AI Partner"
+                            >
+                                <div className="w-5 h-5 rounded-md bg-red-500/20 flex items-center justify-center text-red-500 dark:text-red-400 font-bold text-[10px]">
+                                    C
+                                </div>
+                                <div className="flex flex-col text-left">
+                                    <span className="text-[9px] font-mono tracking-wider uppercase text-gray-400 dark:text-gray-500 group-hover:text-red-500 transition-colors">
+                                        Clutch
+                                    </span>
+                                    <span className="text-[11px] font-semibold text-gray-900 dark:text-white">
+                                        Verified Partner
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
