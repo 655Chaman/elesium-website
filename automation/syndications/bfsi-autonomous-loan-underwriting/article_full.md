@@ -49,6 +49,111 @@ A technical breakdown of Elesium's production loan underwriting pipeline deploye
 - Human-in-the-loop executive approval portal with source highlighting
 
 
+## Architectural Schematic & Execution Topology
+
+### Production Pipeline Graph
+
+```mermaid
+graph TD
+    A[100-Page Financial Package: PDF / Scans] --> B[Multi-Head LayoutLMv3 Extraction Engine]
+    
+    subgraph Multi_Source_Triad [Deterministic Triad Cross-Verification]
+        B --> C1[Data Stream 1: Bank Statement Credits]
+        B --> C2[Data Stream 2: GSTR-2A/3B Tax Returns]
+        B --> C3[Data Stream 3: Balance Sheet & ITR Filings]
+        
+        C1 <--> C2
+        C2 <--> C3
+        C1 <--> C3
+    end
+    
+    Multi_Source_Triad --> D[Automated CAM Ratio Engine: DSCR, MPBF, Current Ratio]
+    D --> E{Risk Threshold Gate}
+    E -->|Clean Audit| F[Auto-Generated Credit Appraisal Memo in PDFKit]
+    E -->|Discrepancy > 15%| G[Interactive Highlighting Review Portal]
+    F --> H[Sanction Letter Dispatch in 18 Minutes]
+```
+
+### Sovereign System Architecture Schematic
+
+```text
++---------------------------------------------------------------------------------------------------+
+|                        FINANCIAL AUDIT TRIAD ARCHITECTURE (18-MINUTE UNDERWRITING)                |
+|                                                                                                   |
+|  [100-Page PDF Docket] -> [VLM Coordinate OCR Ingestion]                                          |
+|                                 │                                                                 |
+|               ┌─────────────────┴─────────────────┐                                               |
+|               ▼                                   ▼                                               |
+|      [Banking Stream Credits]           [GSTR-3B Tax Filings]                                     |
+|      ₹14.2 Crore Inflow                 ₹14.0 Crore Declared Turnover                             |
+|               │                                   │                                               |
+|               └─────────────────┬─────────────────┘                                               |
+|                                 ▼                                                                 |
+|         [Reconciliation Variance: 1.4% (AUDIT PASSED)]                                            |
+|                                 ▼                                                                 |
+|         [Deterministic CAM Engine: DSCR = 1.84, MPBF = ₹3.50 Crore]                               |
+|                                 ▼                                                                 |
+|         [Sanction Letter Issued in 18 Minutes (vs. 48 Hours Baseline)]                            |
++---------------------------------------------------------------------------------------------------+
+```
+
+## Institutional Credit Appraisal Memo (CAM) & Ratio Computation Engine
+
+```python
+"""
+Deterministic CAM Financial Ratio Computation Engine
+Implements Tandon Committee MPBF (Method 2) and DSCR validation with Pydantic v2.
+"""
+from pydantic import BaseModel, Field
+
+class CommercialBorrowerProfile(BaseModel):
+    borrower_name: str
+    annual_noi_inr: float = Field(..., description="Net Operating Income in INR")
+    annual_debt_service_inr: float = Field(..., description="Principal + Interest payments")
+    current_assets_inr: float = Field(..., description="Cash, Inventories, Receivables")
+    current_liabilities_inr: float = Field(..., description="Short-term liabilities")
+    raw_material_cycle_days: int
+
+class CAMRatioEvaluator:
+    @staticmethod
+    def calculate_dscr(profile: CommercialBorrowerProfile) -> float:
+        """Debt Service Coverage Ratio (DSCR) = NOI / Total Debt Service"""
+        if profile.annual_debt_service_inr <= 0:
+            return 99.9
+        return round(profile.annual_noi_inr / profile.annual_debt_service_inr, 2)
+
+    @staticmethod
+    def calculate_current_ratio(profile: CommercialBorrowerProfile) -> float:
+        """Current Ratio = Current Assets / Current Liabilities"""
+        if profile.current_liabilities_inr <= 0:
+            return 99.9
+        return round(profile.current_assets_inr / profile.current_liabilities_inr, 2)
+
+    @staticmethod
+    def calculate_tandon_mpbf_method_2(profile: CommercialBorrowerProfile) -> float:
+        """
+        Tandon Committee Maximum Permissible Bank Finance (Method 2):
+        MPBF = 75% of Working Capital Gap (Current Assets - Current Liabilities)
+        """
+        wc_gap = profile.current_assets_inr - profile.current_liabilities_inr
+        return round(0.75 * max(0.0, wc_gap), 2)
+
+# Production evaluation invocation:
+profile = CommercialBorrowerProfile(
+    borrower_name="Apex Auto Component Tech Ltd",
+    annual_noi_inr=45000000.0,
+    annual_debt_service_inr=24000000.0,
+    current_assets_inr=80000000.0,
+    current_liabilities_inr=35000000.0,
+    raw_material_cycle_days=45
+)
+dscr = CAMRatioEvaluator.calculate_dscr(profile)
+cr = CAMRatioEvaluator.calculate_current_ratio(profile)
+mpbf = CAMRatioEvaluator.calculate_tandon_mpbf_method_2(profile)
+
+print(f"CAM Audit Output: DSCR: {dscr} | Current Ratio: {cr} | MPBF: ₹{mpbf:,.2f}")
+```
+
 ## Video Key Moments & Timestamp Breakdown
 
 - **`00:00` — The Underwriting Bottleneck in Indian Lending**: Why manual credit appraisal reviews cap loan book expansion and cause severe operational drag.

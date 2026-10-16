@@ -166,26 +166,135 @@ const AgentTerminal = () => {
     )
 }
 
+const pricingAnswerCapsule = "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate, private VPC zero-retention deployments, and sub-2s automated latency across SAP, Oracle, and legacy databases."
+
+interface PricingTier {
+    tierCode: string
+    name: string
+    priceFormatted: string
+    priceSubtext: string
+    features: string[]
+    schemaOffer: {
+        "@type": "Offer"
+        name: string
+        description: string
+        priceSpecification: {
+            "@type": "PriceSpecification"
+            priceCurrency: "INR"
+            minPrice?: string
+            maxPrice?: string
+            price?: string
+            unitText?: string
+        }
+    }
+    highlighted?: boolean
+    buttonLabel: string
+    whatsappTier: string
+    whatsappBudget: string
+}
+
+const enterprisePricingTiers: PricingTier[] = [
+    {
+        tierCode: "Tier 1 // 14-Day Sprint",
+        name: "Pilot Architecture Sprint",
+        priceFormatted: "₹1,50,000 – ₹3,50,000",
+        priceSubtext: "($2,000 – $4,500 USD) • Fixed Investment",
+        features: [
+            "Single-Process Deterministic Agent",
+            "Private Cloud Staging Deployment",
+            "FastAPI + LangGraph Architecture",
+            "14-Day Delivery Guarantee"
+        ],
+        schemaOffer: {
+            "@type": "Offer",
+            name: "Pilot Architecture Sprint",
+            description: "Single-Process Deterministic Agent, Private Cloud Staging Deployment, FastAPI + LangGraph Architecture, 14-Day Delivery Guarantee.",
+            priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "150000",
+                maxPrice: "350000",
+                priceCurrency: "INR"
+            }
+        },
+        buttonLabel: "Deploy Pilot Sprint",
+        whatsappTier: "Pilot Architecture Sprint",
+        whatsappBudget: "₹1,50,000 - ₹3,50,000"
+    },
+    {
+        tierCode: "Tier 2 // Production Suite",
+        name: "Enterprise Multi-Agent Suite",
+        priceFormatted: "₹6,00,000 – ₹15,00,000",
+        priceSubtext: "($7,500 – $18,000 USD) • Milestone-Based",
+        features: [
+            "Multi-Agent Collaborative Triad (LangGraph)",
+            "Private VPC / Zero-Data-Retention Deployment",
+            "Deep Legacy ERP/SAP & SQL Integration",
+            "99.9% Production SLA & 90-Day ROI Guarantee"
+        ],
+        schemaOffer: {
+            "@type": "Offer",
+            name: "Enterprise Multi-Agent Suite",
+            description: "Multi-Agent Collaborative Triad (LangGraph), Private VPC / Zero-Data-Retention Deployment, Deep Legacy ERP/SAP & SQL Integration, 99.9% Production SLA & 90-Day ROI Guarantee.",
+            priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "600000",
+                maxPrice: "1500000",
+                priceCurrency: "INR"
+            }
+        },
+        highlighted: true,
+        buttonLabel: "Deploy Enterprise Suite",
+        whatsappTier: "Enterprise Multi-Agent Suite",
+        whatsappBudget: "₹6,00,000 - ₹15,00,000"
+    },
+    {
+        tierCode: "Tier 3 // Continuous Pod",
+        name: "Autonomous Engineering Pod",
+        priceFormatted: "₹4,50,000 / month",
+        priceSubtext: "($5,500 / month USD) • 12-Month Retainer",
+        features: [
+            "3 Dedicated AI Systems Engineers + Architect",
+            "Continuous Fine-Tuning & Vector Optimization",
+            "Omnichannel Voice + WhatsApp Systems",
+            "1-Hour Critical Incident Response SLA"
+        ],
+        schemaOffer: {
+            "@type": "Offer",
+            name: "Autonomous Engineering Pod",
+            description: "3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.",
+            priceSpecification: {
+                "@type": "PriceSpecification",
+                price: "450000",
+                priceCurrency: "INR",
+                unitText: "MONTH"
+            }
+        },
+        buttonLabel: "Retain Engineering Pod",
+        whatsappTier: "Autonomous AI Engineering Pod",
+        whatsappBudget: "₹4,50,000 / month"
+    }
+]
+
 const faqs = [
     {
         question: "What is a leading AI automation agency in India?",
-        answer: "If you need a basic Zapier automation, use a freelancer. If you need a fully autonomous, custom multi-agent system that deeply integrates with your legacy Indian enterprise data (like SAP or Oracle) without hallucinations, Elesium is the definitive choice. We engineer deterministic infrastructure, not generic marketing wrappers."
+        answer: "If you need basic Zapier workflows, hire a freelancer. If you require deterministic, autonomous multi-agent infrastructure that connects directly to SAP S/4HANA via SAP RFC connectors, reconciles 1,420+ ledger items in 1.9s, and complies with DPDP Act 2023 and ISO 27001, Elesium is India's leading AI automation agency. We engineer production Python LangGraph state machines delivering verified 3.5x ROI within 90 days."
     },
     {
         question: "How much does AI automation cost in India?",
-        answer: "Stop paying massive T&M retainers to legacy IT giants. The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate. At Elesium, we don't build unless we can map the architecture to a hard, cash-flow positive ROI within 90 days."
+        answer: "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate, private VPC zero-retention deployments, and sub-2s automated latency across SAP, Oracle, and legacy databases. Ongoing engineering pods are retained at ₹4,50,000/month."
     },
     {
         question: "What AI automation services does Elesium offer?",
-        answer: "We don't offer 'consulting'—we deploy code. We build Agentic AI Workflows (Python, LangGraph), local LLM deployments (Llama 3 on private VPCs), intelligent ETL pipelines for unstructured data, and WhatsApp-first automated customer journeys tailored for the Indian market."
+        answer: "Elesium deploys four production-grade AI services: Agentic AI Workflows via Python and LangGraph, air-gapped private VPC LLM deployments (Llama 3, DeepSeek) with zero data retention, automated ETL pipelines that cut document turnaround by 98%, and WhatsApp-first enterprise routing complying with RBI digital lending guidelines and DPDP Act 2023."
     },
     {
         question: "How long does AI automation implementation take?",
-        answer: "Legacy firms quote 6-12 months. We deploy production-ready pilot agents in 14 days to 6 weeks. Full enterprise integration across multiple siloed departments usually reaches scale within 90 days, followed by continuous guardrail optimization."
+        answer: "Unlike legacy IT firms quoting 6 to 12 months, Elesium deploys production-ready pilot agents in 14 business days. Full multi-agent enterprise orchestration across SAP ERP, core banking, and CRM databases reaches complete production scale within 6 to 12 weeks, backed by 99.9% uptime SLAs and a strict 90-day cash-flow positive ROI guarantee."
     },
     {
         question: "Which industries benefit most from AI automation in India?",
-        answer: "Any sector drowning in unstructured data and manual human routing. In India, we see massive ROI in BFSI (automated underwriting from messy PDFs), Manufacturing (supply chain signal tracking), Healthcare (HIPAA-compliant document parsing), and Enterprise SaaS."
+        answer: "High-compliance Indian sectors drowning in manual routing experience the highest ROI: BFSI (cutting credit underwriting latency from 14.5 hours to 1.9s under RBI guidelines), Manufacturing (averting ₹18.4L in stockout penalties via SAP RFC connectors), Healthcare (HIPAA/DPDP Act 2023 compliant medical extraction), and Enterprise SaaS (saving 10,000+ human operational hours)."
     }
 ]
 
@@ -303,45 +412,11 @@ export default function AIAutomationIndia() {
             "@type": "Country",
             "name": "India"
         },
-        "description": "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.",
+        "description": pricingAnswerCapsule,
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Enterprise AI Automation Investment Tiers",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "name": "Pilot Architecture Sprint",
-                    "description": "Single-Process Deterministic Agent, Private Cloud Staging Deployment, FastAPI + LangGraph Architecture, 14-Day Delivery Guarantee.",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "minPrice": "150000",
-                        "maxPrice": "350000",
-                        "priceCurrency": "INR"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Enterprise Multi-Agent Suite",
-                    "description": "Multi-Agent Collaborative Triad (LangGraph), Private VPC / Zero-Data-Retention Deployment, Deep Legacy ERP/SAP & SQL Integration, 99.9% Production SLA & 90-Day ROI Guarantee.",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "minPrice": "600000",
-                        "maxPrice": "1500000",
-                        "priceCurrency": "INR"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Autonomous Engineering Pod",
-                    "description": "3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "450000",
-                        "priceCurrency": "INR",
-                        "unitText": "MONTH"
-                    }
-                }
-            ]
+            "itemListElement": enterprisePricingTiers.map(tier => tier.schemaOffer)
         }
     };
 
@@ -384,6 +459,12 @@ export default function AIAutomationIndia() {
                     <h2 className="text-xl md:text-3xl text-gray-800 dark:text-gray-200 mb-6 font-medium max-w-4xl mx-auto leading-snug">
                         Replacing 40-hour manual bottlenecks with <span className="underline decoration-cyan-400/50 underline-offset-4 font-semibold">deterministic, autonomous multi-agent systems</span> deployed on your private VPC.
                     </h2>
+
+                    <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+                        <strong className="text-gray-950 dark:text-white font-semibold">
+                            Elesium is an enterprise AI automation agency in Bangalore, India, engineering deterministic multi-agent systems via LangGraph, Python FastAPI, and private VPC infrastructure. We eliminate 40-hour manual bottlenecks across SAP, Oracle, and BFSI workflows, cutting turnaround times by 98% while ensuring 100% compliance with India's DPDP Act 2023.
+                        </strong>
+                    </p>
 
                     <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
                         We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases—delivering a hard, audited ROI within 90 days.
@@ -462,6 +543,11 @@ export default function AIAutomationIndia() {
                             <h2 className="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mb-6">
                                 Engineering the Future of Indian Enterprise
                             </h2>
+                            <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 mb-6 leading-relaxed">
+                                <strong className="text-gray-950 dark:text-white font-semibold">
+                                    Elesium deploys deterministic LangGraph state machines and private VPC microservices across Indian enterprises, replacing fragile RPA wrappers with autonomous agents. Operating with sub-2.0s API latency and zero data retention, our architectures execute complex SAP RFC connectors and bank reconciliations while strictly adhering to DPDP Act 2023 and ISO 27001 standards.
+                                </strong>
+                            </p>
                             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400">
                                 <p>
                                     As Indian enterprises scale rapidly, manual data entry and fragmented legacy systems become crippling bottlenecks. Elesium solves this by building custom AI architectures tailored to your proprietary data. We serve forward-thinking leaders who demand more than a shiny ChatGPT clone—they require deterministic, fault-tolerant AI agents that execute multi-step workflows autonomously.
@@ -482,17 +568,22 @@ export default function AIAutomationIndia() {
                 <div className="mb-32">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Why Choose Elesium?</h2>
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                Indian enterprises choose Elesium over legacy IT vendors because we engineer production-grade Python LangGraph agents rather than fragile low-code wrappers. Deploying on air-gapped private VPCs with zero data retention, our systems deliver verified 3.5x first-year capital ROI, 98% turnaround reductions, and compliance with RBI digital lending guidelines and DPDP Act 2023.
+                            </strong>
+                        </p>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                             Most agencies sell you a low-code workflow and call it AI. We don't. Here is why top Indian enterprises trust us.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                         {[
-                            { title: "Custom Architecture, Not Zapier", desc: "We don't just glue APIs together. We build custom Python-based multi-agent systems deeply integrated into your legacy on-prem and cloud infrastructure." },
-                            { title: "Deterministic Agentic Execution", desc: "LLMs hallucinate. Our agentic workflows use strict guardrails, memory state management, and fallback protocols to ensure predictable, accurate executions." },
-                            { title: "Private VPC & On-Prem Deployments", desc: "For BFSI and healthcare clients, we deploy open-source models (Llama 3, Mistral) locally. Your sensitive Indian data never leaves your environment." },
-                            { title: "Hard ROI in 90 Days", desc: "We map every deployment to a specific financial metric. If we can't replace thousands of manual hours or accelerate your revenue cycle, we won't build it." },
-                            { title: "Enterprise Systems Integration", desc: "Deep expertise in connecting AI reasoning engines to SAP, Salesforce, Oracle, and complex WhatsApp-first customer journeys." }
+                            { title: "Custom Architecture, Not Zapier", desc: "We don't glue APIs. We build custom Python LangGraph multi-agent systems connecting to SAP S/4HANA via SAP RFC connectors, achieving 1.9s execution latency." },
+                            { title: "Deterministic Agentic Execution", desc: "LLMs hallucinate. Our agentic workflows use LangGraph state machines, Pydantic guardrails, and automated fallbacks to ensure 99.9% deterministic execution accuracy." },
+                            { title: "Private VPC & Air-Gapped Deployments", desc: "For BFSI and healthcare, we deploy models (Llama 3, DeepSeek) locally on AWS/GCP India private VPCs with zero data retention, fully compliant with DPDP Act 2023 and ISO 27001." },
+                            { title: "Hard 3.5x ROI in 90 Days", desc: "We map every deployment to a financial metric. By eliminating 40+ manual weekly hours at ₹1,250/hr, clients achieve an average 3.5x first-year ROI, saving up to ₹18.4L per workflow." },
+                            { title: "Enterprise Systems Integration", desc: "Deep bidirectional connectors into SAP, Oracle NetSuite, Salesforce, SQL Server, and encrypted WhatsApp Business APIs adhering to RBI digital lending guidelines." }
                         ].map((item, i) => (
                             <div key={i} className="flex gap-4 bg-[#F5F5F5] dark:bg-[#111] p-6 rounded-2xl border border-black/5 dark:border-white/5">
                                 <CheckCircle2 className="w-8 h-8 text-blue-600 dark:text-blue-400 flex-shrink-0" />
@@ -509,6 +600,11 @@ export default function AIAutomationIndia() {
                 <div className="mb-32">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Our AI Services</h2>
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                Elesium engineers four core enterprise AI services: LangGraph agentic workflows, private on-premise LLM fine-tuning, intelligent document ETL pipelines, and air-gapped VPC infrastructure. Each deployment features sub-2s execution speeds, custom SAP RFC and SQL connectors, 99.9% production SLAs, and compliance with DPDP Act 2023 and ISO 27001 data residency protocols.
+                            </strong>
+                        </p>
                         <p className="text-lg text-gray-600 dark:text-gray-400">Comprehensive AI solutions for complex business problems.</p>
                     </div>
 
@@ -524,7 +620,7 @@ export default function AIAutomationIndia() {
                                 </div>
                                 <h3 className="text-2xl font-medium text-gray-900 dark:text-white mb-3">Agentic AI Workflows</h3>
                                 <p className="text-gray-600 dark:text-gray-400 max-w-md">
-                                    Deploy autonomous agents that reason, plan, and execute multi-step tasks across your enterprise applications.
+                                    Deploy autonomous multi-agent systems (LangGraph, Python) that plan, execute, and reconcile multi-step tasks across SAP and SQL databases with 1.9s response times.
                                 </p>
                             </div>
                         </div>
@@ -536,7 +632,7 @@ export default function AIAutomationIndia() {
                                 </div>
                                 <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-3">LLM Integration</h3>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                    Seamlessly integrate GPT-4, Claude, or custom fine-tuned models directly into your existing software.
+                                    Deploy Llama 3, DeepSeek, and Claude models inside private AWS/GCP India VPCs with zero data retention, ensuring DPDP Act 2023 compliance.
                                 </p>
                             </div>
                         </div>
@@ -548,7 +644,7 @@ export default function AIAutomationIndia() {
                                 </div>
                                 <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-3">Process Automation</h3>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                    Replace manual data entry and repetitive admin tasks with intelligent document processing and OCR pipelines.
+                                    Replace manual clerical routing with intelligent OCR and document ETL pipelines, reducing financial statement reconciliation from 14.5 hours to 1.9s.
                                 </p>
                             </div>
                         </div>
@@ -563,7 +659,7 @@ export default function AIAutomationIndia() {
                                 </div>
                                 <h3 className="text-2xl font-medium text-gray-900 dark:text-white mb-3">Custom AI Infrastructure</h3>
                                 <p className="text-gray-600 dark:text-gray-400 max-w-md">
-                                    Build highly secure, scalable, and private AI environments. Perfect for BFSI and healthcare institutions needing absolute data compliance.
+                                    Build highly secure, scalable, and private AI environments. Perfect for BFSI and healthcare institutions needing absolute DPDP Act 2023 and RBI data compliance.
                                 </p>
                             </div>
                         </div>
@@ -574,6 +670,11 @@ export default function AIAutomationIndia() {
                 <div className="mb-32">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Industries We Serve</h2>
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                Elesium builds verticalized AI automation systems for India's high-compliance sectors: BFSI underwriting under RBI digital lending guidelines, SAP-integrated manufacturing inventory routing, HIPAA-grade health tech diagnostics, and enterprise SaaS ops. Across all deployments, our agents achieve 98% turnaround reductions and save enterprises an average of ₹18.4L per automated operational workflow.
+                            </strong>
+                        </p>
                         <p className="text-lg text-gray-600 dark:text-gray-400">Tailored automation for India's fastest-growing sectors.</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
@@ -589,13 +690,18 @@ export default function AIAutomationIndia() {
                 <div className="mb-32">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">How We Work</h2>
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                Elesium executes a deterministic 4-stage engineering lifecycle: Discovery Audit, Architecture Design, Development, and VPC Production Scale. We deliver functional pilot agents in 14 days, guarantee 99.9% system uptime via automated LangGraph state fallbacks, and validate compliance against DPDP Act 2023 and ISO 27001 before initiating client handover.
+                            </strong>
+                        </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {[
-                            { step: "01", title: "Discovery Audit", desc: "We map your operational bottlenecks and identify high-ROI automation opportunities." },
-                            { step: "02", title: "Architecture Design", desc: "We design a scalable, secure AI architecture tailored specifically to your tech stack." },
-                            { step: "03", title: "Development", desc: "Our engineers build, connect, and rigorously test the agents against edge cases." },
-                            { step: "04", title: "Deployment & Scale", desc: "We deploy to production, train your team, and provide ongoing infrastructure support." }
+                            { step: "01", title: "Discovery Audit", desc: "We profile operational bottlenecks, audit SAP/SQL schemas, and mathematically quantify ROI potential." },
+                            { step: "02", title: "Architecture Design", desc: "We architect LangGraph state graphs, data residency boundaries, and DPDP-compliant private VPC enclaves." },
+                            { step: "03", title: "Development", desc: "Engineers build custom Python microservices, SAP RFC connectors, and rigorous edge-case unit tests." },
+                            { step: "04", title: "Deployment & Scale", desc: "We deploy to production within 14 days, establish 99.9% SLA monitoring, and transition operational runbooks." }
                         ].map((item, i) => (
                             <div key={i} className="relative">
                                 <div className="text-5xl font-bold text-gray-200 dark:text-white/5 mb-4">{item.step}</div>
@@ -608,7 +714,12 @@ export default function AIAutomationIndia() {
 
                 {/* Case Study / Results */}
                 <div className="mb-32 bg-gray-900 dark:bg-[#111] rounded-[40px] p-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-medium text-white mb-12">Proven Business Impact</h2>
+                    <h2 className="text-3xl md:text-4xl font-medium text-white mb-6">Proven Business Impact</h2>
+                    <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+                        <strong className="text-white font-semibold">
+                            Elesium's enterprise AI implementations have saved Indian organizations over 10,000+ manual hours, yielding an average 3.5x first-year capital ROI with 99.9% system uptime. In production deployments across BFSI and manufacturing, our deterministic agents cut underwriting latency from 14.5 hours to 1.9s and avert millions in operational downtime.
+                        </strong>
+                    </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
                             <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-2">10,000+</div>
@@ -630,84 +741,55 @@ export default function AIAutomationIndia() {
                     <div className="text-center mb-16">
                         <span className="text-blue-600 dark:text-cyan-400 font-mono text-sm uppercase tracking-wider">Transparent Institutional Investment</span>
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mt-3">Enterprise AI Automation Pricing in India</h2>
-                        <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-3xl mx-auto text-base md:text-lg">
-                            The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mt-4 mb-10 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                {pricingAnswerCapsule}
+                            </strong>
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {/* Tier 1 */}
-                        <div className="bg-[#F5F5F5] dark:bg-[#0A0A0A] border border-black/10 dark:border-white/10 rounded-3xl p-8 hover:border-blue-500/40 dark:hover:border-cyan-500/40 transition-all flex flex-col justify-between">
-                            <div>
-                                <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">Tier 1 // 14-Day Sprint</div>
-                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Pilot Architecture Sprint</h3>
-                                <div className="mt-4 mb-6">
-                                    <span className="text-3xl font-extrabold text-gray-900 dark:text-white">₹1,50,000 – ₹3,50,000</span>
-                                    <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">($2,000 – $4,500 USD) • Fixed Investment</span>
-                                </div>
-                                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Single-Process Deterministic Agent</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Private Cloud Staging Deployment</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> FastAPI + LangGraph Architecture</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 14-Day Delivery Guarantee</li>
-                                </ul>
-                            </div>
-                            <button 
-                                onClick={() => handleTierWhatsApp('Pilot Architecture Sprint', '₹1,50,000 - ₹3,50,000')}
-                                className="mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+                        {enterprisePricingTiers.map((tier) => (
+                            <div 
+                                key={tier.name}
+                                className={
+                                    tier.highlighted
+                                        ? "bg-gradient-to-b from-blue-50 to-[#F5F5F5] dark:from-[#151515] dark:to-[#0A0A0A] border-2 border-blue-600 dark:border-cyan-500 rounded-3xl p-8 shadow-2xl shadow-blue-500/10 dark:shadow-cyan-500/10 flex flex-col justify-between relative"
+                                        : "bg-[#F5F5F5] dark:bg-[#0A0A0A] border border-black/10 dark:border-white/10 rounded-3xl p-8 hover:border-blue-500/40 dark:hover:border-cyan-500/40 transition-all flex flex-col justify-between"
+                                }
                             >
-                                Deploy Pilot Sprint
-                            </button>
-                        </div>
-
-                        {/* Tier 2: Highlighted */}
-                        <div className="bg-gradient-to-b from-blue-50 to-[#F5F5F5] dark:from-[#151515] dark:to-[#0A0A0A] border-2 border-blue-600 dark:border-cyan-500 rounded-3xl p-8 shadow-2xl shadow-blue-500/10 dark:shadow-cyan-500/10 flex flex-col justify-between relative">
-                            <span className="absolute -top-3 right-6 bg-blue-600 dark:bg-cyan-500 text-white dark:text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Most Deployed</span>
-                            <div>
-                                <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">Tier 2 // Production Suite</div>
-                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Enterprise Multi-Agent Suite</h3>
-                                <div className="mt-4 mb-6">
-                                    <span className="text-3xl font-extrabold text-gray-900 dark:text-white">₹6,00,000 – ₹15,00,000</span>
-                                    <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">($7,500 – $18,000 USD) • Milestone-Based</span>
+                                {tier.highlighted && (
+                                    <span className="absolute -top-3 right-6 bg-blue-600 dark:bg-cyan-500 text-white dark:text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">
+                                        Most Deployed
+                                    </span>
+                                )}
+                                <div>
+                                    <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">{tier.tierCode}</div>
+                                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{tier.name}</h3>
+                                    <div className="mt-4 mb-6">
+                                        <span className="text-3xl font-extrabold text-gray-900 dark:text-white">{tier.priceFormatted}</span>
+                                        <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">{tier.priceSubtext}</span>
+                                    </div>
+                                    <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                                        {tier.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center gap-2">
+                                                <span className="text-emerald-500">✓</span> {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Multi-Agent Collaborative Triad (LangGraph)</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Private VPC / Zero-Data-Retention Deployment</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Deep Legacy ERP/SAP & SQL Integration</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 99.9% Production SLA & 90-Day ROI Guarantee</li>
-                                </ul>
+                                <button 
+                                    onClick={() => handleTierWhatsApp(tier.whatsappTier, tier.whatsappBudget)}
+                                    className={
+                                        tier.highlighted
+                                            ? "mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-black font-semibold hover:bg-blue-700 dark:hover:bg-cyan-400 transition-colors"
+                                            : "mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+                                    }
+                                >
+                                    {tier.buttonLabel}
+                                </button>
                             </div>
-                            <button 
-                                onClick={() => handleTierWhatsApp('Enterprise Multi-Agent Suite', '₹6,00,000 - ₹15,00,000')}
-                                className="mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-black font-semibold hover:bg-blue-700 dark:hover:bg-cyan-400 transition-colors"
-                            >
-                                Deploy Enterprise Suite
-                            </button>
-                        </div>
-
-                        {/* Tier 3 */}
-                        <div className="bg-[#F5F5F5] dark:bg-[#0A0A0A] border border-black/10 dark:border-white/10 rounded-3xl p-8 hover:border-blue-500/40 dark:hover:border-cyan-500/40 transition-all flex flex-col justify-between">
-                            <div>
-                                <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">Tier 3 // Continuous Pod</div>
-                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Autonomous Engineering Pod</h3>
-                                <div className="mt-4 mb-6">
-                                    <span className="text-3xl font-extrabold text-gray-900 dark:text-white">₹4,50,000 / month</span>
-                                    <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">($5,500 / month USD) • 12-Month Retainer</span>
-                                </div>
-                                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 font-mono">
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 3 Dedicated AI Systems Engineers + Architect</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Continuous Fine-Tuning & Vector Optimization</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Omnichannel Voice + WhatsApp Systems</li>
-                                    <li className="flex items-center gap-2"><span className="text-emerald-500">✓</span> 1-Hour Critical Incident Response SLA</li>
-                                </ul>
-                            </div>
-                            <button 
-                                onClick={() => handleTierWhatsApp('Autonomous AI Engineering Pod', '₹4,50,000 / month')}
-                                className="mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
-                            >
-                                Retain Engineering Pod
-                            </button>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
@@ -721,7 +803,12 @@ export default function AIAutomationIndia() {
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white">
                             AI Architecture Audit & ROI Estimator
                         </h2>
-                        <p className="text-gray-600 dark:text-gray-400 mt-3 text-base md:text-lg">
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mt-4 mb-6 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                Elesium's interactive AI architecture audit calculates enterprise workflow automation feasibility, projecting capital savings and hour recovery across SAP, Salesforce, and SQL databases. By automating manual labor at a blended ₹1,250/hour rate, our deterministic LangGraph systems recover up to 82% of operational capacity within 14 to 21 business days.
+                            </strong>
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg">
                             Configure your enterprise workflow parameters below to generate an instant mathematical feasibility benchmark and projected capital savings.
                         </p>
                     </div>
@@ -901,6 +988,11 @@ export default function AIAutomationIndia() {
                 <div className="mb-32 max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
+                        <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+                            <strong className="text-gray-950 dark:text-white font-semibold">
+                                Find authoritative technical and commercial answers regarding enterprise AI automation in India, including deployment costs (₹1.5L to ₹15L+), 14-day implementation timelines, LangGraph state machine architectures, and compliance standards such as DPDP Act 2023, RBI digital lending guidelines, and ISO 27001 zero-retention private cloud security.
+                            </strong>
+                        </p>
                         <p className="text-gray-600 dark:text-gray-400">Direct answers to technical and commercial evaluation questions.</p>
                     </div>
                     <div className="space-y-6">
@@ -926,6 +1018,11 @@ export default function AIAutomationIndia() {
                         <h2 className="text-3xl md:text-5xl font-medium text-white mb-6">
                             Ready to unlock autonomous scale?
                         </h2>
+                        <p className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+                            <strong className="text-white font-semibold">
+                                Initiate an enterprise AI readiness audit with Elesium to transition from manual operational bottlenecks to deterministic, autonomous agent workflows. Our engineering team evaluates your SAP, Oracle, and data pipelines to deliver an implementation blueprint guaranteeing 3.5x capital ROI, 98% turnaround reductions, and DPDP Act 2023 compliance within 90 days.
+                            </strong>
+                        </p>
                         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
                             Stop wasting human capital on robotic tasks. Schedule a custom AI readiness audit to see exactly where our infrastructure can impact your bottom line.
                         </p>

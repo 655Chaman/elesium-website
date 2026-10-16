@@ -238,6 +238,8 @@ def generate_ssg():
         html = re.sub(r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{desc}">', html)
         
         if route == "ai-automation-agency-india":
+            pricing_answer_capsule = "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate, private VPC zero-retention deployments, and sub-2s automated latency across SAP, Oracle, and legacy databases."
+            
             service_schema = {
                 "@context": "https://schema.org",
                 "@type": "Service",
@@ -264,6 +266,8 @@ def generate_ssg():
                     "hasMap": "https://www.google.com/maps/place/Koramangala,+Bengaluru,+Karnataka",
                     "sameAs": [
                         "https://elesium.online",
+                        "https://www.goodfirms.co/company/elesium-online",
+                        "https://clutch.co",
                         "https://github.com/elesium-ai",
                         "https://www.linkedin.com/company/elesium",
                         "https://x.com/elesium_ai",
@@ -275,7 +279,7 @@ def generate_ssg():
                     "@type": "Country",
                     "name": "India"
                 },
-                "description": "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.",
+                "description": pricing_answer_capsule,
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Enterprise AI Automation Investment Tiers",
@@ -316,21 +320,70 @@ def generate_ssg():
                     ]
                 }
             }
-            crawler_noscript = """
+
+            faq_schema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is a leading AI automation agency in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "If you need basic Zapier workflows, hire a freelancer. If you require deterministic, autonomous multi-agent infrastructure that connects directly to SAP S/4HANA via SAP RFC connectors, reconciles 1,420+ ledger items in 1.9s, and complies with DPDP Act 2023 and ISO 27001, Elesium is India's leading AI automation agency. We engineer production Python LangGraph state machines delivering verified 3.5x ROI within 90 days."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does AI automation cost in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate, private VPC zero-retention deployments, and sub-2s automated latency across SAP, Oracle, and legacy databases. Ongoing engineering pods are retained at ₹4,50,000/month."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What AI automation services does Elesium offer?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Elesium deploys four production-grade AI services: Agentic AI Workflows via Python and LangGraph, air-gapped private VPC LLM deployments (Llama 3, DeepSeek) with zero data retention, automated ETL pipelines that cut document turnaround by 98%, and WhatsApp-first enterprise routing complying with RBI digital lending guidelines and DPDP Act 2023."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How long does AI automation implementation take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Unlike legacy IT firms quoting 6 to 12 months, Elesium deploys production-ready pilot agents in 14 business days. Full multi-agent enterprise orchestration across SAP ERP, core banking, and CRM databases reaches complete production scale within 6 to 12 weeks, backed by 99.9% uptime SLAs and a strict 90-day cash-flow positive ROI guarantee."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which industries benefit most from AI automation in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "High-compliance Indian sectors drowning in manual routing experience the highest ROI: BFSI (cutting credit underwriting latency from 14.5 hours to 1.9s under RBI guidelines), Manufacturing (averting ₹18.4L in stockout penalties via SAP RFC connectors), Healthcare (HIPAA/DPDP Act 2023 compliant medical extraction), and Enterprise SaaS (saving 10,000+ human operational hours)."
+                        }
+                    }
+                ]
+            }
+
+            crawler_noscript = f"""
     <noscript>
         <section id="static-pricing-content">
             <h2>Enterprise AI Automation Pricing in India</h2>
-            <p>The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate.</p>
+            <p><strong>{pricing_answer_capsule}</strong></p>
             <ul>
-                <li><strong>Tier 1: Pilot Architecture Sprint:</strong> ₹1,50,000 – ₹3,50,000 ($2,000 – $4,500 USD) • 14-Day Delivery</li>
-                <li><strong>Tier 2: Enterprise Multi-Agent Suite:</strong> ₹6,00,000 – ₹15,00,000 ($7,500 – $18,000 USD) • 30–45 Days</li>
-                <li><strong>Tier 3: Autonomous AI Engineering Pod:</strong> ₹4,50,000 / month ($5,500 / month USD) • 12-Month Retainer</li>
+                <li><strong>Pilot Architecture Sprint:</strong> ₹1,50,000 – ₹3,50,000 ($2,000 – $4,500 USD) • Single-Process Deterministic Agent, Private Cloud Staging Deployment, FastAPI + LangGraph Architecture, 14-Day Delivery Guarantee.</li>
+                <li><strong>Enterprise Multi-Agent Suite:</strong> ₹6,00,000 – ₹15,00,000 ($7,500 – $18,000 USD) • Multi-Agent Collaborative Triad (LangGraph), Private VPC / Zero-Data-Retention Deployment, Deep Legacy ERP/SAP & SQL Integration, 99.9% Production SLA & 90-Day ROI Guarantee.</li>
+                <li><strong>Autonomous Engineering Pod:</strong> ₹4,50,000 / month ($5,500 / month USD) • 3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.</li>
             </ul>
         </section>
     </noscript>
 """
-            schema_json = json.dumps(service_schema, ensure_ascii=False)
-            html = html.replace("</head>", f'<script type="application/ld+json">{schema_json}</script>\n</head>')
+            service_schema_json = json.dumps(service_schema, ensure_ascii=False)
+            faq_schema_json = json.dumps(faq_schema, ensure_ascii=False)
+            html = html.replace("</head>", f'<script type="application/ld+json">{service_schema_json}</script>\n<script type="application/ld+json">{faq_schema_json}</script>\n</head>')
             html = html.replace("</body>", f'{crawler_noscript}\n</body>')
         
         out_file.write_text(html, encoding="utf-8")

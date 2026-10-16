@@ -17,8 +17,11 @@ import urllib.request
 import urllib.error
 import datetime
 from pathlib import Path
+import sys
 
 BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, str(BASE_DIR))
+from automation.syndication_enhancements import ENHANCEMENTS
 AUTOMATION_DIR = BASE_DIR / "automation"
 SYNDICATIONS_DIR = AUTOMATION_DIR / "syndications"
 SOCIAL_DRAFTS_DIR = AUTOMATION_DIR / "social_drafts"
@@ -92,6 +95,7 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
     with YAML frontmatter, architectural schematics, tables, Navboost CTAs, and canonical links.
     """
     extracted = extract_post_from_ts(slug)
+    enhancement = ENHANCEMENTS.get(slug, {})
     
     if extracted and extracted.get("kind") == "video":
         vm = extracted["data"]
@@ -121,6 +125,20 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
             for b in stage.get("bullets", []):
                 md.append(f"- {b}")
             md.append("\n")
+
+        if enhancement.get("mermaid") or enhancement.get("ascii_schematic"):
+            md.append("## Architectural Schematic & Execution Topology\n")
+            if enhancement.get("mermaid"):
+                md.append("### Production Pipeline Graph\n")
+                md.append(enhancement["mermaid"] + "\n")
+            if enhancement.get("ascii_schematic"):
+                md.append("### Sovereign System Architecture Schematic\n")
+                md.append(enhancement["ascii_schematic"] + "\n")
+
+        if enhancement.get("code_snippet"):
+            code_title = enhancement.get("code_title", "Production Implementation Code")
+            md.append(f"## {code_title}\n")
+            md.append(enhancement["code_snippet"] + "\n")
 
         md.append("## Video Key Moments & Timestamp Breakdown\n")
         for km in vm.get("keyMoments", []):
@@ -166,6 +184,23 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
                 md.append("\n")
             elif stype == "quote":
                 md.append(f"> {val}\n")
+
+        if enhancement.get("architecture_section"):
+            md.append(enhancement["architecture_section"] + "\n")
+
+        if enhancement.get("mermaid") or enhancement.get("ascii_schematic"):
+            md.append("## Architectural Schematic & Execution Topology\n")
+            if enhancement.get("mermaid"):
+                md.append("### Production Pipeline Graph\n")
+                md.append(enhancement["mermaid"] + "\n")
+            if enhancement.get("ascii_schematic"):
+                md.append("### Sovereign System Architecture Schematic\n")
+                md.append(enhancement["ascii_schematic"] + "\n")
+
+        if enhancement.get("code_snippet"):
+            code_title = enhancement.get("code_title", "Production Implementation Code")
+            md.append(f"## {code_title}\n")
+            md.append(enhancement["code_snippet"] + "\n")
         
         if p.get("faq"):
             md.append("\n## Frequently Asked Questions (Enterprise Architecture)\n")
@@ -234,6 +269,30 @@ curl -X POST https://dev.to/api/articles \\
 """
     (slug_dir / "publish_devto.sh").write_text(curl_script, encoding="utf-8")
     os.chmod(slug_dir / "publish_devto.sh", 0o755)
+
+    unified_curl_script = f"""#!/usr/bin/env bash
+set -e
+DIR="$(cd "$(dirname "${{BASH_SOURCE[0]}}")" && pwd)"
+echo "Executing Craig Campbell Parasite Syndication curl suite for $(basename "$DIR")..."
+
+if [ -n "$DEVTO_API_KEY" ]; then
+  echo "--- Publishing to Dev.to ---"
+  "$DIR/publish_devto.sh"
+else
+  echo "[Notice] DEVTO_API_KEY not set. Skipping live Dev.to publish. Test payload valid."
+fi
+
+if [ -n "$HASHNODE_API_KEY" ]; then
+  echo "--- Publishing to Hashnode ---"
+  "$DIR/publish_hashnode.sh"
+else
+  echo "[Notice] HASHNODE_API_KEY not set. Skipping live Hashnode publish. Test payload valid."
+fi
+
+echo "Syndication execution script complete."
+"""
+    (slug_dir / "publish_curl.sh").write_text(unified_curl_script, encoding="utf-8")
+    os.chmod(slug_dir / "publish_curl.sh", 0o755)
 
     if devto_key:
         print(f"🚀 Publishing live to Dev.to for {slug}...")

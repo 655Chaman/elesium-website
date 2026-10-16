@@ -49,6 +49,91 @@ A comprehensive architectural teardown of how Indian enterprises are moving away
 - Real-time webhook notifications to executive Slack / Teams
 
 
+## Architectural Schematic & Execution Topology
+
+### Production Pipeline Graph
+
+```mermaid
+graph TD
+    Client[Enterprise Core: SAP S/4HANA / Finacle / Oracle] -->|mTLS 1.3 Ingress| IngestionGW[Sovereign Ingestion Gateway]
+    
+    subgraph Sovereign_VPC [AWS ap-south-1 Mumbai Sovereign VPC Boundary]
+        IngestionGW --> PII_Vault[DPDP Act PII Sanitization & Hash Vault]
+        PII_Vault --> LangGraph_Core[Deterministic LangGraph Multi-Agent Core]
+        
+        LangGraph_Core <--> Local_Llama[Self-Hosted Llama 3 70B Quantized Engine]
+        LangGraph_Core <--> State_Store[(PostgreSQL 16 High-Availability Cluster)]
+        LangGraph_Core <--> Hybrid_Vector[(Pinecone / pgvector Hybrid Store)]
+    end
+    
+    LangGraph_Core -->|Transactional Two-Phase Commit| SAP_Writeback[SAP OData RFC ERP Connector]
+    LangGraph_Core -->|Secured Audit Log| Webhook[Executive Audit & Ops Webhook]
+```
+
+### Sovereign System Architecture Schematic
+
+```text
++---------------------------------------------------------------------------------------------------+
+|                        SOVEREIGN VPC ARCHITECTURE (AWS ap-south-1 MUMBAI)                         |
+|                                                                                                   |
+|  [Enterprise Client Perimeter]                                                                    |
+|        │ mTLS 1.3 Authenticated Handshake                                                         |
+|  ┌─────▼───────────────────────── PRIVATE SOVEREIGN VPC ────────────────────────────────────────┐ |
+|  │ [FastAPI Gateway: Port 8443]                                                                 │ |
+|  │        │ (PII Redaction & Tokenization Vault - DPDP Act 2023)                                │ |
+|  │ [Deterministic LangGraph State DAG] <─────> [Self-Hosted Llama-3-70B Weights]                │ |
+|  │        │ (ACID State Machine Transitions)                                                    │ |
+|  │ [PostgreSQL 16 Replication Cluster]                                                          │ |
+|  └─────┬────────────────────────────────────────────────────────────────────────────────────────┘ |
+|        ▼ Two-Phase Commit Writeback                                                               |
+|  [SAP S/4HANA & Core Banking Ledgers]                                                             |
++---------------------------------------------------------------------------------------------------+
+```
+
+## Production Sovereign Ingestion Gateway with FastAPI & DPDP Tokenization
+
+```python
+"""
+Sovereign Ingestion Gateway & DPDP Act 2023 Compliance Router
+Deployed inside AWS ap-south-1 with zero external data egress.
+"""
+import os
+import hashlib
+from fastapi import FastAPI, HTTPException, Security, status
+from fastapi.security.api_key import APIKeyHeader
+from pydantic import BaseModel, Field
+
+gateway_app = FastAPI(title="Elesium Sovereign Ingestion Gateway", version="2026.3")
+API_KEY_HEADER = APIKeyHeader(name="X-Elesium-VPC-Auth")
+
+class EnterpriseDocket(BaseModel):
+    docket_id: str = Field(..., pattern=r"^DKT-[0-9]{8}$")
+    borrower_pan: str = Field(..., min_length=10, max_length=10)
+    financial_payload_base64: str
+    callback_webhook_url: str
+
+@gateway_app.post("/v1/enterprise/ingest", status_code=status.HTTP_202_ACCEPTED)
+async def ingest_sovereign_docket(
+    docket: EnterpriseDocket,
+    auth_token: str = Security(API_KEY_HEADER)
+):
+    if auth_token != os.getenv("SOVEREIGN_VPC_INGRESS_SECRET"):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid VPC token")
+
+    # Cryptographic one-way tokenization under DPDP Act 2023
+    salt = os.getenv("PII_HASH_SALT", "elesium_sovereign_salt")
+    tokenized_pan = "PAN-TOK-" + hashlib.sha256((docket.borrower_pan + salt).encode()).hexdigest()[:12]
+
+    # Dispatch to background LangGraph orchestration...
+    return {
+        "status": "ACCEPTED_IN_SOVEREIGN_VPC",
+        "docket_id": docket.docket_id,
+        "tokenized_pan": tokenized_pan,
+        "datacenter_region": "aws-ap-south-1-mumbai",
+        "retention_policy": "ZERO_DATA_RETENTION"
+    }
+```
+
 ## Video Key Moments & Timestamp Breakdown
 
 - **`00:00` — The Enterprise AI Trap: Why Prompt Wrappers Fail**: Why probabilistic chat tools create compounding errors when exposed to enterprise ERPs and accounting databases.
