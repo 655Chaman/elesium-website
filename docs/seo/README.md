@@ -10,6 +10,8 @@ This directory contains the operational manuals for new technical and growth rec
 
 | Manual | Primary Audience | What It Covers |
 | :--- | :--- | :--- |
+| **[`PORTABLE_SOFTWARE_SEO_ENGINE.md`](./PORTABLE_SOFTWARE_SEO_ENGINE.md)** | **Founders, CTOs, Growth Leads** | **The Universal 7-Engine Drop-in Framework: Navboost behavioral telemetry, GoodFirms/Clutch algorithm crack, The Mirror video parasite, Craig Campbell syndication, and the 14-day launch checklist for ANY new software.** |
+| **[`SEO_ROCKSTARS_MASTER_IMPLEMENTATION_PLAN.md`](./SEO_ROCKSTARS_MASTER_IMPLEMENTATION_PLAN.md)** | Technical Architects & Algo Leads | Exhaustive mathematical formulas and code specifications from Ted Kubaitis, Shaun Mitchell, Dan Kurtz, Chad Michael, Joe Lau, and Matt McDermott. |
 | **[`1_TECHNICAL_AND_AUTOMATION_PLAYBOOK.md`](./1_TECHNICAL_AND_AUTOMATION_PLAYBOOK.md)** | Software Engineers, DevOps, Technical SEO | React SSG pre-rendering architecture, 5-phase linear orchestrator, 3-agent writing assembly line, IndexNow pings, and GitHub Actions CI/CD. |
 | **[`2_CONTENT_AND_OFFPAGE_PLAYBOOK.md`](./2_CONTENT_AND_OFFPAGE_PLAYBOOK.md)** | Content Writers, Growth Marketers, PR Leads | India enterprise positioning, GEO (Answer Capsules & Tables), WhatsApp intake protocol (+91 8317329312), directory submissions, and social syndication. |
 
