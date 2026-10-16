@@ -10,6 +10,7 @@ This directory contains the operational manuals for new technical and growth rec
 
 | Manual | Primary Audience | What It Covers |
 | :--- | :--- | :--- |
+| **[`THE_25K_ENTERPRISE_SEO_AEO_MASTER_STRATEGY.md`](./THE_25K_ENTERPRISE_SEO_AEO_MASTER_STRATEGY.md)** | **C-Suite, Advisory, Investors ($25k+ Scope)** | **The $25,000 Institutional Enterprise Master Strategy: Google Search API Leak decoded (Navboost & Twiddler), Princeton/Georgia Tech GEO scientific framework, Directory review fraud forensic autopsy, and the 5-Pillar Sovereign Architecture.** |
 | **[`PORTABLE_SOFTWARE_SEO_ENGINE.md`](./PORTABLE_SOFTWARE_SEO_ENGINE.md)** | **Founders, CTOs, Growth Leads** | **The Universal 7-Engine Drop-in Framework: Navboost behavioral telemetry, GoodFirms/Clutch algorithm crack, The Mirror video parasite, Craig Campbell syndication, and the 14-day launch checklist for ANY new software.** |
 | **[`SEO_ROCKSTARS_MASTER_IMPLEMENTATION_PLAN.md`](./SEO_ROCKSTARS_MASTER_IMPLEMENTATION_PLAN.md)** | Technical Architects & Algo Leads | Exhaustive mathematical formulas and code specifications from Ted Kubaitis, Shaun Mitchell, Dan Kurtz, Chad Michael, Joe Lau, and Matt McDermott. |
 | **[`1_TECHNICAL_AND_AUTOMATION_PLAYBOOK.md`](./1_TECHNICAL_AND_AUTOMATION_PLAYBOOK.md)** | Software Engineers, DevOps, Technical SEO | React SSG pre-rendering architecture, 5-phase linear orchestrator, 3-agent writing assembly line, IndexNow pings, and GitHub Actions CI/CD. |
