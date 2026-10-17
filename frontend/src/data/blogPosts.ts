@@ -31,6 +31,27 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
 
     {
+        id: 75,
+        slug: "cost-of-enterprise-ai-automation-india",
+        category: 'AI Automation',
+        title: "The Guide to Keyword: cost of enterprise AI automation India\nDraft:\nFallback content generated due to API errors.",
+        date: 'October 17, 2026',
+        readTime: '8 min read',
+        excerpt: "Placeholder excerpt.",
+        intro: "Placeholder intro.",
+        metaDescription: "Placeholder meta.",
+        image: "https://image.pollinations.ai/prompt/Enterprise%20AI%20automation%20data%20visualization%2C%20high%20tech%2C%20corporate%20dashboard%2C%20clean%20minimal%2C%20relevant%20to%20cost%20of%20enterprise%20AI%20automation%20India?width=1200&height=630&nologo=true",
+        internalLinks: ["ai-automation-cost-india-2026-pricing", "top-ai-automation-agencies-india-2026"],
+        faq: [],
+        sections: [
+    {
+        "type": "paragraph",
+        "value": "Placeholder content."
+    }
+]
+    },
+
+    {
         id: 74,
         slug: 'top-ai-automation-agencies-india-2026',
         category: 'India AI Market',

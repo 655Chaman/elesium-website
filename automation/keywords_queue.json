@@ -4,8 +4,8 @@
     "keyword": "cost of enterprise AI automation India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-17T05:13:52.702650",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "AI_OVERVIEW",
     "triage_channel": "ANSWER_CAPSULES_AND_TABLES"
@@ -302,5 +302,103 @@
     "triage_channel": "TECHNICAL_WHITE_PAPER",
     "status": "pending",
     "source": "GSC_DAY2_PATTERN_ENGINE"
+  },
+  {
+    "keyword": "Enterprise Benefits Of Web Development Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/benefits-of-web-development/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Javascript Frameworks Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/javascript-frameworks/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Angularjs Vs Jquery Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/angularjs-vs-jquery/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Nlp For Chatbot Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/nlp-for-chatbot/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Is Ios App Development A Good Career Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/is-ios-app-development-a-good-career/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Top 6 Facts You Didnt Know About Bespoke Software Development Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/top-6-facts-you-didnt-know-about-bespoke-software-development/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Frontend Developers Vs Backend Developers Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/frontend-developers-vs-backend-developers/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Java Vs Cpp Vs C Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/java-vs-cpp-vs-c/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Java Most Preferred Programming Language Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://nimapinfotech.com/blog/java-most-preferred-programming-language/",
+    "added_at": "2026-10-17T05:13:49Z"
+  },
+  {
+    "keyword": "Enterprise Best Construction Accounting Software Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://www.invensis.net/blog/best-construction-accounting-software",
+    "added_at": "2026-10-17T05:13:51Z"
+  },
+  {
+    "keyword": "Enterprise Property Management Accounting Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://www.invensis.net/blog/property-management-accounting",
+    "added_at": "2026-10-17T05:13:51Z"
+  },
+  {
+    "keyword": "Enterprise Intercompany Accounting Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://www.invensis.net/blog/intercompany-accounting",
+    "added_at": "2026-10-17T05:13:51Z"
+  },
+  {
+    "keyword": "Enterprise Workflow Automation with AI in India: Overcoming Integration Challenges",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://www.invensis.net/blog/what-is-accounting-automation",
+    "added_at": "2026-10-17T05:13:51Z"
+  },
+  {
+    "keyword": "Enterprise What Is Classified Balance Sheet Solutions for Indian IT Leaders: 2026 Guide",
+    "status": "PENDING",
+    "source": "COMPETITOR_OUTRANK",
+    "original_competitor_url": "https://www.invensis.net/blog/what-is-classified-balance-sheet",
+    "added_at": "2026-10-17T05:13:51Z"
   }
 ]
