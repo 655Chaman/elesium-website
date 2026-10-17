@@ -15,8 +15,8 @@
     "keyword": "LangGraph multi-agent systems Bangalore",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-17T12:38:02.216813",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "LOCAL_PACK",
     "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT"
