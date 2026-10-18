@@ -26,8 +26,8 @@
     "keyword": "private VPC AI deployment Indian BFSI",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-18T12:55:14.999440",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
     "triage_channel": "TECHNICAL_WHITE_PAPER"

@@ -31,6 +31,27 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
 
     {
+        id: 77,
+        slug: "private-vpc-ai-deployment-indian-bfsi",
+        category: 'AI Automation',
+        title: "The Guide to Keyword: private VPC AI deployment Indian BFSI\nDraft:\nFallback content generated due to API errors.",
+        date: 'October 18, 2026',
+        readTime: '8 min read',
+        excerpt: "Placeholder excerpt.",
+        intro: "Placeholder intro.",
+        metaDescription: "Placeholder meta.",
+        image: "https://image.pollinations.ai/prompt/Enterprise%20AI%20automation%20data%20visualization%2C%20high%20tech%2C%20corporate%20dashboard%2C%20clean%20minimal%2C%20relevant%20to%20private%20VPC%20AI%20deployment%20Indian%20BFSI?width=1200&height=630&nologo=true",
+        internalLinks: ["ai-automation-roi-india-case-studies-2026", "ai-automation-cost-india-2026-pricing"],
+        faq: [],
+        sections: [
+    {
+        "type": "paragraph",
+        "value": "Placeholder content."
+    }
+]
+    },
+
+    {
         id: 76,
         slug: "langgraph-multi-agent-systems-bangalore",
         category: 'AI Automation',
