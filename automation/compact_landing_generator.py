@@ -56,7 +56,8 @@ ACRONYMS = {
     "CFO", "VP", "NBFC", "SEBI", "RBI", "CAD", "PLC", "PACS", "WMS", "TMS",
     "ITAR", "FOQA", "BVLOS", "MRO", "FOD", "BESS", "PV", "ISO", "ISOs", "IPP",
     "EV", "EPA", "CPCB", "SIEM", "SOC", "SBOM", "PAM", "PQC", "DevSecOps",
-    "CICD", "eBPF", "DBAs", "IAM", "FMCW", "HPA", "MRV", "ESG", "NRC"
+    "CICD", "eBPF", "DBAs", "IAM", "FMCW", "HPA", "MRV", "ESG", "NRC",
+    "ADCS", "SEU", "SAR", "LEO", "RFID", "SSA", "RIA", "RIAs", "LPA", "HNW", "ETF", "ETFs", "NLP", "KYC", "PE"
 }
 
 def smart_title(text: str) -> str:
