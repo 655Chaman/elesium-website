@@ -531,6 +531,14 @@ class UnifiedSeoRunner:
             if token_embed_ssg.exists():
                 self.log(f"Verified pre-rendered Token Leakage Simulator embed SSG: {token_embed_ssg}", level="SUCCESS")
 
+            # Verify DPDP Audit Simulator SSG routes
+            dpdp_tool_ssg = FRONTEND_DIR / "dist" / "tools" / "dpdp-act-2023-audit-simulator" / "index.html"
+            dpdp_embed_ssg = FRONTEND_DIR / "dist" / "embed" / "dpdp-audit-simulator" / "index.html"
+            if dpdp_tool_ssg.exists():
+                self.log(f"Verified pre-rendered DPDP Audit Simulator tool SSG: {dpdp_tool_ssg}", level="SUCCESS")
+            if dpdp_embed_ssg.exists():
+                self.log(f"Verified pre-rendered DPDP Audit Simulator embed SSG: {dpdp_embed_ssg}", level="SUCCESS")
+
             # Verify Architecture Battlecards SSG routes (/compare and /compare/:slug)
             compare_hub = FRONTEND_DIR / "dist" / "compare" / "index.html"
             if compare_hub.exists():

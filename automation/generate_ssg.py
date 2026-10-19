@@ -967,6 +967,56 @@ def render_token_leakage_embed_semantic_html():
 </div>
 """
 
+def render_dpdp_audit_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/dpdp-act-2023-audit-simulator.
+    """
+    return """
+<div id="prerendered-dpdp-audit-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#f59e0b;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Statutory Compliance &amp; Data Sovereignty</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">DPDP Act 2023 Enterprise Statutory Audit Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate Data Protection Board of India (DPBI) statutory penalty liabilities up to &#8377;250 Crore per violation, evaluate cross-border LLM leakage risks, and deploy sovereign MeitY-empaneled local VPC safe harbors.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">DPDP Act Statutory Penalty Schedule (Section 33)</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Security Safeguards Failure (Section 8(5))</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Statutory fine up to &#8377;250 Crore ($28.5M USD) for failure to take reasonable security safeguards to prevent personal data breach. Public cloud API prompt logging directly violates Section 8 safeguards.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Statutory Ceiling: &#8377;250 Crore per Occurrence</div>
+        </div>
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Elesium Sovereign Safe Harbor</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Air-gapped open-weight LLMs hosted exclusively inside MeitY-empaneled Indian data centers (AWS Mumbai / GCP Delhi / CtrlS) with sub-10ms localized PII redaction and cryptographic audit trails.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#6ee7b7;">Statutory Safe Harbor: Zero Cross-Border Egress</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_dpdp_audit_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/dpdp-audit-simulator.
+    """
+    return """
+<div id="prerendered-dpdp-audit-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">DPDP Act 2023 Statutory Audit Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate DPBI statutory penalties and cross-border inference liabilities.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Audit your enterprise AI stack against the Digital Personal Data Protection Act 2023 and evaluate sovereign local VPC deployment checklists.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#f59e0b;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2107,6 +2157,14 @@ def generate_ssg():
         "embed/token-leakage-simulator": {
             "title": "Multi-Agent Token Leakage Simulator Widget",
             "desc": "Embeddable interactive multi-agent token leakage, runaway spend, and circuit breaker efficiency simulator."
+        },
+        "tools/dpdp-act-2023-audit-simulator": {
+            "title": "DPDP Act 2023 Enterprise Statutory Audit Simulator",
+            "desc": "Simulate DPDP Act 2023 statutory penalties (up to ₹250 Crore), cross-border inference liabilities, and sovereign local VPC safe harbor checklists."
+        },
+        "embed/dpdp-audit-simulator": {
+            "title": "DPDP Act 2023 Statutory Audit Simulator Widget",
+            "desc": "Embeddable interactive DPDP Act 2023 statutory audit, penalty liability, and sovereign VPC checklist simulator."
         }
     }
 
@@ -2676,6 +2734,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(token_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/dpdp-act-2023-audit-simulator":
+            tool_content = render_dpdp_audit_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            dpdp_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "DPDP Act 2023 Enterprise Statutory Audit Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "DPDP Audit Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(dpdp_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/dpdp-audit-simulator":
+            embed_content = render_dpdp_audit_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            dpdp_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "DPDP Act 2023 Statutory Audit Simulator Widget",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(dpdp_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

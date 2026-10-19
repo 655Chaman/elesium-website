@@ -99,6 +99,12 @@ export default function Navbar() {
                             Token Leakage
                         </Link>
                         <Link
+                            to="/tools/dpdp-act-2023-audit-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-500 dark:text-amber-400"
+                        >
+                            DPDP Audit
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -227,6 +233,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Token Leakage Simulator
+                            </Link>
+                            <Link
+                                to="/tools/dpdp-act-2023-audit-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-amber-500 dark:text-amber-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                DPDP Act 2023 Simulator
                             </Link>
                             <Link
                                 to="/compare"

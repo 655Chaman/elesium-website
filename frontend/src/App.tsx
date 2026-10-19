@@ -33,6 +33,8 @@ const AgenticArchitectureGrader = lazy(() => import('./components/pages/AgenticA
 const EmbedArchitectureGrader = lazy(() => import('./components/pages/EmbedArchitectureGrader'))
 const MultiAgentTokenLeakageSimulator = lazy(() => import('./components/pages/MultiAgentTokenLeakageSimulator'))
 const EmbedTokenLeakageSimulator = lazy(() => import('./components/pages/EmbedTokenLeakageSimulator'))
+const DpdpStatutoryAuditSimulator = lazy(() => import('./components/pages/DpdpStatutoryAuditSimulator'))
+const EmbedDpdpAuditSimulator = lazy(() => import('./components/pages/EmbedDpdpAuditSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -111,6 +113,9 @@ function App() {
                             <Route path="/tools/multi-agent-token-leakage-simulator" element={<MultiAgentTokenLeakageSimulator />} />
                             <Route path="/tools/token-leakage-simulator" element={<Navigate to="/tools/multi-agent-token-leakage-simulator" replace />} />
                             <Route path="/embed/token-leakage-simulator" element={<EmbedTokenLeakageSimulator />} />
+                            <Route path="/tools/dpdp-act-2023-audit-simulator" element={<DpdpStatutoryAuditSimulator />} />
+                            <Route path="/tools/dpdp-audit-simulator" element={<Navigate to="/tools/dpdp-act-2023-audit-simulator" replace />} />
+                            <Route path="/embed/dpdp-audit-simulator" element={<EmbedDpdpAuditSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
