@@ -1632,9 +1632,13 @@ def generate_ssg():
                     "sameAs": [
                         "https://elesium.online",
                         "https://www.goodfirms.co/company/elesium-online",
-                        "https://clutch.co",
-                        "https://github.com/elesium-ai",
-                        "https://www.linkedin.com/company/elesium",
+                        "https://clutch.co/profile/elesium-online",
+                        "https://www.g2.com/products/elesium-ai-automation-platform",
+                        "https://www.trustpilot.com/review/elesium.online",
+                        "https://www.crunchbase.com/organization/elesium-online",
+                        "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
+                        "https://github.com/655Chaman/elesium-website",
+                        "https://www.linkedin.com/in/chaman-elesium",
                         "https://x.com/elesium_ai",
                         "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e",
                         "https://www.wikidata.org/wiki/Q11660"

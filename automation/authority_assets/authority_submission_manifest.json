@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-10-19 14:23:33 IST",
+  "canonical_root": "https://elesium.online",
+  "solutions_hub": "https://elesium.online/solutions",
+  "roi_calculator": "https://elesium.online/tools/enterprise-ai-roi-calculator",
+  "embed_calculator": "https://elesium.online/embed/roi-calculator",
+  "channels": {
+    "b2b_directories": {
+      "status": "READY",
+      "platforms_count": 6,
+      "profiles": [
+        {
+          "name": "Clutch.co",
+          "dr": 92,
+          "profile_url": "https://clutch.co/profile/elesium-online",
+          "status": "Ready for Review Submission"
+        },
+        {
+          "name": "GoodFirms",
+          "dr": 86,
+          "profile_url": "https://www.goodfirms.co/company/elesium-online",
+          "status": "Appeal Dossier & Specification Ready"
+        },
+        {
+          "name": "G2.com",
+          "dr": 91,
+          "profile_url": "https://www.g2.com/products/elesium-ai-automation-platform",
+          "status": "Ready for Category Claiming"
+        },
+        {
+          "name": "Crunchbase",
+          "dr": 91,
+          "profile_url": "https://www.crunchbase.com/organization/elesium-online",
+          "status": "Verified Entity Payload Ready"
+        },
+        {
+          "name": "Semrush Local",
+          "dr": 90,
+          "profile_url": "https://elesium.online",
+          "status": "70+ Citation CSV Feed Exported"
+        },
+        {
+          "name": "Trustpilot",
+          "dr": 93,
+          "profile_url": "https://www.trustpilot.com/review/elesium.online",
+          "status": "Commercial Domain Verified"
+        }
+      ],
+      "nap_consistency": "100% PARITY ASSERTED"
+    },
+    "product_hunt_launch": {
+      "status": "READY",
+      "product_name": "Enterprise AI ROI Calculator",
+      "tagline": "Calculate enterprise AI labor savings, payback & TCO",
+      "tagline_length_chars": 52,
+      "gallery_slides_count": 6,
+      "slides_directory": "automation/authority_assets/product_hunt/slides",
+      "twitter_thread_count": 6,
+      "betalist_payload_ready": true
+    },
+    "editorial_pr_engine": {
+      "status": "READY",
+      "intake_platforms": [
+        "Connectively (HARO)",
+        "Featured.com",
+        "Source of Sources (SOS)",
+        "Help a B2B Writer"
+      ],
+      "active_pitches_count": 5,
+      "sturm_compliance_score": "100/100",
+      "lead_architect": "Chaman Shah",
+      "hard_metrics_enforced": [
+        "1.9s latency",
+        "\u20b918.4L savings",
+        "98% error cut"
+      ]
+    },
+    "meetup_takeovers": {
+      "status": "READY",
+      "target_cities": [
+        "Bangalore",
+        "Mumbai",
+        "Delhi NCR",
+        "Hyderabad",
+        "Pune"
+      ],
+      "dossier_file": "automation/authority_assets/meetups/meetup_takeover_dossier.json"
+    }
+  },
+  "asset_verification": {
+    "total_required": 21,
+    "total_present": 21,
+    "status": "ALL CONFIRMED"
+  }
+}

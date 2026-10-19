@@ -334,8 +334,60 @@ export default function Waitlist() {
                             <div className="text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-2">
                                 Institutional Track Record
                             </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <div className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                                 Trusted by industrial leaders including <strong className="text-gray-900 dark:text-white">Herculan B.V. (Netherlands)</strong>, regional BFSI lenders, and logistics fleets across India and EMEA.
+                            </div>
+
+                            {/* Corroborated Entity Chips */}
+                            <div className="grid grid-cols-2 gap-2 pt-2 border-t border-gray-200/40 dark:border-white/5">
+                                <a
+                                    href="https://clutch.co/profile/elesium-online"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
+                                >
+                                    <span className="text-xs font-mono text-amber-500">★</span>
+                                    <div>
+                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">Clutch 5.0</div>
+                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">Verified Partner</div>
+                                    </div>
+                                </a>
+                                <a
+                                    href="https://www.goodfirms.co/company/elesium-online"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
+                                >
+                                    <span className="text-xs font-mono text-emerald-500">✓</span>
+                                    <div>
+                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">GoodFirms</div>
+                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">Top AI Agency</div>
+                                    </div>
+                                </a>
+                                <a
+                                    href="https://www.g2.com/products/elesium-ai-automation-platform"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
+                                >
+                                    <span className="text-xs font-mono text-blue-500">G2</span>
+                                    <div>
+                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">G2 Crowd</div>
+                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">High Performer</div>
+                                    </div>
+                                </a>
+                                <a
+                                    href="https://www.trustpilot.com/review/elesium.online"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
+                                >
+                                    <span className="text-xs font-mono text-emerald-500">★</span>
+                                    <div>
+                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">Trustpilot</div>
+                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">4.9 / 5.0 Score</div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 

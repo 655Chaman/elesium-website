@@ -92,44 +92,124 @@ export default function DownloadFooter() {
                             </p>
                         </div>
 
-                        {/* Directory Authority Badges (GoodFirms & Clutch) - Monochrome Architecture */}
-                        <div className="flex flex-wrap items-center gap-2.5 pt-2">
+                        {/* Directory Authority Badges — Tier-1 Verified Entity Cluster */}
+                        <div className="flex flex-wrap items-center gap-2 pt-2 max-w-md md:justify-end">
                             <a
-                                href="https://www.goodfirms.co/company/elesium-online"
+                                href="https://clutch.co/profile/elesium-online"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center gap-2.5 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Elesium Online on GoodFirms — Top AI Company"
+                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="Clutch 5.0 Verified AI Partner"
                             >
-                                <span className="w-4 h-4 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[9px] text-gray-700 dark:text-gray-300 font-mono">
-                                    ✓
+                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
+                                    ★
                                 </span>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[9px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        GoodFirms
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
+                                        Clutch
                                     </span>
-                                    <span className="text-[11px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        Verified AI Agency
+                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                        5.0 Verified
                                     </span>
                                 </div>
                             </a>
 
                             <a
-                                href="https://clutch.co"
+                                href="https://www.goodfirms.co/company/elesium-online"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center gap-2.5 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Clutch Verified AI Directory"
+                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="Elesium Online on GoodFirms — Top AI Company"
                             >
-                                <span className="w-4 h-4 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[9px] text-gray-700 dark:text-gray-300 font-mono">
+                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
                                     ✓
                                 </span>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[9px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        Clutch
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
+                                        GoodFirms
                                     </span>
-                                    <span className="text-[11px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        Verified Partner
+                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                        Top AI Agency
+                                    </span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://www.g2.com/products/elesium-ai-automation-platform"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="G2 Enterprise AI Automation Platform"
+                            >
+                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
+                                    G2
+                                </span>
+                                <div className="flex flex-col text-left">
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
+                                        G2 Crowd
+                                    </span>
+                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                        High Performer
+                                    </span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://www.crunchbase.com/organization/elesium-online"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="Crunchbase Verified Entity"
+                            >
+                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
+                                    CB
+                                </span>
+                                <div className="flex flex-col text-left">
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
+                                        Crunchbase
+                                    </span>
+                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                        Verified Org
+                                    </span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://www.trustpilot.com/review/elesium.online"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="Trustpilot Verified Commercial Reviews"
+                            >
+                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-emerald-500 font-mono">
+                                    ★
+                                </span>
+                                <div className="flex flex-col text-left">
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
+                                        Trustpilot
+                                    </span>
+                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                        4.9 / 5.0
+                                    </span>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+                                title="Product Hunt Featured Tool"
+                            >
+                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-amber-500 font-mono font-bold">
+                                    P
+                                </span>
+                                <div className="flex flex-col text-left">
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
+                                        Product Hunt
+                                    </span>
+                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                        Featured Tool
                                     </span>
                                 </div>
                             </a>
