@@ -1,0 +1,2446 @@
+[
+  {
+    "slug": "ai-automation-agency-for-logistics",
+    "keyword": "AI automation agency for logistics",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'ai-automation-agency-for-logistics' matches keyword 'AI automation agency for logistics', single H1 'AI Automation Agency for Logistics \u2014 Autonomous Fleet Dispatch & ERP Synchronization', and title.",
+        "details": {
+          "slug": "ai-automation-agency-for-logistics",
+          "keyword": "AI automation agency for logistics",
+          "h1": "AI Automation Agency for Logistics \u2014 Autonomous Fleet Dispatch & ERP Synchronization",
+          "title": "AI Automation Agency for Logistics \u2014 Autonomous Fleet Dispatch & ERP Synchronization | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "AI Automation Agency for Logistics \u2014 Autonomous Fleet Dispatch &amp; ERP Synchronization",
+          "dom_title": "AI Automation Agency for Logistics \u2014 Autonomous Fleet Dispatch & ERP Synchronization | Elesium",
+          "expected_slug": "ai-automation-agency-for-logistics"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 418 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 418,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "AI automation agency for logistics",
+          "calculated_score": 97,
+          "recorded_score": 97,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10547) -> Intro (10739) -> CTA (11048) -> Hero Graphic (11261).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10547,
+          "intro_pos": 10739,
+          "cta_pos": 11048,
+          "hero_img_pos": 11261,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "ai-automation-agency-for-logistics",
+          "target_url": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (18781 bytes), self-referential canonical 'https://elesium.online/solutions/ai-automation-agency-for-logistics', rich semantic root.",
+        "details": {
+          "slug": "ai-automation-agency-for-logistics",
+          "expected_canonical": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 18781,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
+          "root_char_count": 8615
+        }
+      }
+    }
+  },
+  {
+    "slug": "autonomous-dispatch-software-for-freight-carriers",
+    "keyword": "autonomous dispatch software for freight carriers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'autonomous-dispatch-software-for-freight-carriers' matches keyword 'autonomous dispatch software for freight carriers', single H1 'Autonomous Dispatch Software for Freight Carriers \u2014 Real-time Telematics & Dynamic Route Planning', and title.",
+        "details": {
+          "slug": "autonomous-dispatch-software-for-freight-carriers",
+          "keyword": "autonomous dispatch software for freight carriers",
+          "h1": "Autonomous Dispatch Software for Freight Carriers \u2014 Real-time Telematics & Dynamic Route Planning",
+          "title": "Autonomous Dispatch Software for Freight Carriers \u2014 Real-time Telematics & Dynamic Route Planning | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Autonomous Dispatch Software for Freight Carriers \u2014 Real-time Telematics &amp; Dynamic Route Planning",
+          "dom_title": "Autonomous Dispatch Software for Freight Carriers \u2014 Real-time Telematics & Dynamic Route Planning | Elesium",
+          "expected_slug": "autonomous-dispatch-software-for-freight-carriers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 419 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 419,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "autonomous dispatch software for freight carriers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10725) -> Intro (10930) -> CTA (11251) -> Hero Graphic (11470).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10725,
+          "intro_pos": 10930,
+          "cta_pos": 11251,
+          "hero_img_pos": 11470,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "autonomous-dispatch-software-for-freight-carriers",
+          "target_url": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19032 bytes), self-referential canonical 'https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers', rich semantic root.",
+        "details": {
+          "slug": "autonomous-dispatch-software-for-freight-carriers",
+          "expected_canonical": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19032,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
+          "root_char_count": 8681
+        }
+      }
+    }
+  },
+  {
+    "slug": "deterministic-warehouse-automation-for-3pl-providers",
+    "keyword": "deterministic warehouse automation for 3PL providers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'deterministic-warehouse-automation-for-3pl-providers' matches keyword 'deterministic warehouse automation for 3PL providers', single H1 'Deterministic Warehouse Automation for 3PL Providers \u2014 WMS State Machines & Inventory Accuracy', and title.",
+        "details": {
+          "slug": "deterministic-warehouse-automation-for-3pl-providers",
+          "keyword": "deterministic warehouse automation for 3PL providers",
+          "h1": "Deterministic Warehouse Automation for 3PL Providers \u2014 WMS State Machines & Inventory Accuracy",
+          "title": "Deterministic Warehouse Automation for 3PL Providers \u2014 WMS State Machines & Inventory Accuracy | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Deterministic Warehouse Automation for 3PL Providers \u2014 WMS State Machines &amp; Inventory Accuracy",
+          "dom_title": "Deterministic Warehouse Automation for 3PL Providers \u2014 WMS State Machines & Inventory Accuracy | Elesium",
+          "expected_slug": "deterministic-warehouse-automation-for-3pl-providers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 420 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 420,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "deterministic warehouse automation for 3PL providers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10750) -> Intro (10952) -> CTA (11276) -> Hero Graphic (11492).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10750,
+          "intro_pos": 10952,
+          "cta_pos": 11276,
+          "hero_img_pos": 11492,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "deterministic-warehouse-automation-for-3pl-providers",
+          "target_url": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19063 bytes), self-referential canonical 'https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers', rich semantic root.",
+        "details": {
+          "slug": "deterministic-warehouse-automation-for-3pl-providers",
+          "expected_canonical": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19063,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
+          "root_char_count": 8703
+        }
+      }
+    }
+  },
+  {
+    "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+    "keyword": "fleet route optimization agents for supply chain directors",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'fleet-route-optimization-agents-for-supply-chain-directors' matches keyword 'fleet route optimization agents for supply chain directors', single H1 'Fleet Route Optimization Agents for Supply Chain Directors \u2014 Multi-depot Routing & Fuel Cost Elimination', and title.",
+        "details": {
+          "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+          "keyword": "fleet route optimization agents for supply chain directors",
+          "h1": "Fleet Route Optimization Agents for Supply Chain Directors \u2014 Multi-depot Routing & Fuel Cost Elimination",
+          "title": "Fleet Route Optimization Agents for Supply Chain Directors \u2014 Multi-depot Routing & Fuel Cost Elimination | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Fleet Route Optimization Agents for Supply Chain Directors \u2014 Multi-depot Routing &amp; Fuel Cost Elimination",
+          "dom_title": "Fleet Route Optimization Agents for Supply Chain Directors \u2014 Multi-depot Routing & Fuel Cost Elimination | Elesium",
+          "expected_slug": "fleet-route-optimization-agents-for-supply-chain-directors"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 428 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 428,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "fleet route optimization agents for supply chain directors",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10851) -> Intro (11063) -> CTA (11393) -> Hero Graphic (11608).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10851,
+          "intro_pos": 11063,
+          "cta_pos": 11393,
+          "hero_img_pos": 11608,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+          "target_url": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19197 bytes), self-referential canonical 'https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors', rich semantic root.",
+        "details": {
+          "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+          "expected_canonical": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19197,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
+          "root_char_count": 8739
+        }
+      }
+    }
+  },
+  {
+    "slug": "custom-edi-parser-agents-for-freight-forwarders",
+    "keyword": "custom EDI parser agents for freight forwarders",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'custom-edi-parser-agents-for-freight-forwarders' matches keyword 'custom EDI parser agents for freight forwarders', single H1 'Custom EDI Parser Agents for Freight Forwarders \u2014 Deterministic Ansi X12 & Edifact Extraction', and title.",
+        "details": {
+          "slug": "custom-edi-parser-agents-for-freight-forwarders",
+          "keyword": "custom EDI parser agents for freight forwarders",
+          "h1": "Custom EDI Parser Agents for Freight Forwarders \u2014 Deterministic Ansi X12 & Edifact Extraction",
+          "title": "Custom EDI Parser Agents for Freight Forwarders \u2014 Deterministic Ansi X12 & Edifact Extraction | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Custom EDI Parser Agents for Freight Forwarders \u2014 Deterministic Ansi X12 &amp; Edifact Extraction",
+          "dom_title": "Custom EDI Parser Agents for Freight Forwarders \u2014 Deterministic Ansi X12 & Edifact Extraction | Elesium",
+          "expected_slug": "custom-edi-parser-agents-for-freight-forwarders"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 424 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 424,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "custom EDI parser agents for freight forwarders",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10697) -> Intro (10898) -> CTA (11217) -> Hero Graphic (11431).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10697,
+          "intro_pos": 10898,
+          "cta_pos": 11217,
+          "hero_img_pos": 11431,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "custom-edi-parser-agents-for-freight-forwarders",
+          "target_url": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (18987 bytes), self-referential canonical 'https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders', rich semantic root.",
+        "details": {
+          "slug": "custom-edi-parser-agents-for-freight-forwarders",
+          "expected_canonical": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 18987,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
+          "root_char_count": 8672
+        }
+      }
+    }
+  },
+  {
+    "slug": "deterministic-loan-underwriting-agents-for-bfsi",
+    "keyword": "deterministic loan underwriting agents for BFSI",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'deterministic-loan-underwriting-agents-for-bfsi' matches keyword 'deterministic loan underwriting agents for BFSI', single H1 'Deterministic Loan Underwriting Agents for BFSI \u2014 Sub-second Credit Scoring & RBI Compliance', and title.",
+        "details": {
+          "slug": "deterministic-loan-underwriting-agents-for-bfsi",
+          "keyword": "deterministic loan underwriting agents for BFSI",
+          "h1": "Deterministic Loan Underwriting Agents for BFSI \u2014 Sub-second Credit Scoring & RBI Compliance",
+          "title": "Deterministic Loan Underwriting Agents for BFSI \u2014 Sub-second Credit Scoring & RBI Compliance | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Deterministic Loan Underwriting Agents for BFSI \u2014 Sub-second Credit Scoring &amp; RBI Compliance",
+          "dom_title": "Deterministic Loan Underwriting Agents for BFSI \u2014 Sub-second Credit Scoring & RBI Compliance | Elesium",
+          "expected_slug": "deterministic-loan-underwriting-agents-for-bfsi"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 416 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 416,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "deterministic loan underwriting agents for BFSI",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10690) -> Intro (10890) -> CTA (11209) -> Hero Graphic (11426).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10690,
+          "intro_pos": 10890,
+          "cta_pos": 11209,
+          "hero_img_pos": 11426,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "deterministic-loan-underwriting-agents-for-bfsi",
+          "target_url": "https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (18973 bytes), self-referential canonical 'https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi', rich semantic root.",
+        "details": {
+          "slug": "deterministic-loan-underwriting-agents-for-bfsi",
+          "expected_canonical": "https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 18973,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi",
+          "root_char_count": 8663
+        }
+      }
+    }
+  },
+  {
+    "slug": "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+    "keyword": "sub-200ms ledger reconciliation agents for fintechs",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'sub-200ms-ledger-reconciliation-agents-for-fintechs' matches keyword 'sub-200ms ledger reconciliation agents for fintechs', single H1 'Sub-200ms Ledger Reconciliation Agents for Fintechs \u2014 Cryptographic Settlement & Zero Ledger Drift', and title.",
+        "details": {
+          "slug": "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+          "keyword": "sub-200ms ledger reconciliation agents for fintechs",
+          "h1": "Sub-200ms Ledger Reconciliation Agents for Fintechs \u2014 Cryptographic Settlement & Zero Ledger Drift",
+          "title": "Sub-200ms Ledger Reconciliation Agents for Fintechs \u2014 Cryptographic Settlement & Zero Ledger Drift | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Sub-200ms Ledger Reconciliation Agents for Fintechs \u2014 Cryptographic Settlement &amp; Zero Ledger Drift",
+          "dom_title": "Sub-200ms Ledger Reconciliation Agents for Fintechs \u2014 Cryptographic Settlement & Zero Ledger Drift | Elesium",
+          "expected_slug": "sub-200ms-ledger-reconciliation-agents-for-fintechs"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 415 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 415,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "sub-200ms ledger reconciliation agents for fintechs",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10753) -> Intro (10959) -> CTA (11282) -> Hero Graphic (11500).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10753,
+          "intro_pos": 10959,
+          "cta_pos": 11282,
+          "hero_img_pos": 11500,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+          "target_url": "https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19059 bytes), self-referential canonical 'https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs', rich semantic root.",
+        "details": {
+          "slug": "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+          "expected_canonical": "https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19059,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs",
+          "root_char_count": 8687
+        }
+      }
+    }
+  },
+  {
+    "slug": "aml-compliance-automation-software-for-private-banks",
+    "keyword": "AML compliance automation software for private banks",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'aml-compliance-automation-software-for-private-banks' matches keyword 'AML compliance automation software for private banks', single H1 'AML Compliance Automation Software for Private Banks \u2014 Sanctions Screening & Real-time Sar Generation', and title.",
+        "details": {
+          "slug": "aml-compliance-automation-software-for-private-banks",
+          "keyword": "AML compliance automation software for private banks",
+          "h1": "AML Compliance Automation Software for Private Banks \u2014 Sanctions Screening & Real-time Sar Generation",
+          "title": "AML Compliance Automation Software for Private Banks \u2014 Sanctions Screening & Real-time Sar Generation | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "AML Compliance Automation Software for Private Banks \u2014 Sanctions Screening &amp; Real-time Sar Generation",
+          "dom_title": "AML Compliance Automation Software for Private Banks \u2014 Sanctions Screening & Real-time Sar Generation | Elesium",
+          "expected_slug": "aml-compliance-automation-software-for-private-banks"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 423 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 423,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "AML compliance automation software for private banks",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10771) -> Intro (10980) -> CTA (11307) -> Hero Graphic (11522).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10771,
+          "intro_pos": 10980,
+          "cta_pos": 11307,
+          "hero_img_pos": 11522,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "aml-compliance-automation-software-for-private-banks",
+          "target_url": "https://elesium.online/solutions/aml-compliance-automation-software-for-private-banks",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19087 bytes), self-referential canonical 'https://elesium.online/solutions/aml-compliance-automation-software-for-private-banks', rich semantic root.",
+        "details": {
+          "slug": "aml-compliance-automation-software-for-private-banks",
+          "expected_canonical": "https://elesium.online/solutions/aml-compliance-automation-software-for-private-banks",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19087,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/aml-compliance-automation-software-for-private-banks",
+          "root_char_count": 8692
+        }
+      }
+    }
+  },
+  {
+    "slug": "automated-trade-surveillance-systems-for-brokerages",
+    "keyword": "automated trade surveillance systems for brokerages",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'automated-trade-surveillance-systems-for-brokerages' matches keyword 'automated trade surveillance systems for brokerages', single H1 'Automated Trade Surveillance Systems for Brokerages \u2014 Order Book Anomaly Detection & SEBI Audit Trails', and title.",
+        "details": {
+          "slug": "automated-trade-surveillance-systems-for-brokerages",
+          "keyword": "automated trade surveillance systems for brokerages",
+          "h1": "Automated Trade Surveillance Systems for Brokerages \u2014 Order Book Anomaly Detection & SEBI Audit Trails",
+          "title": "Automated Trade Surveillance Systems for Brokerages \u2014 Order Book Anomaly Detection & SEBI Audit Trails | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Automated Trade Surveillance Systems for Brokerages \u2014 Order Book Anomaly Detection &amp; SEBI Audit Trails",
+          "dom_title": "Automated Trade Surveillance Systems for Brokerages \u2014 Order Book Anomaly Detection & SEBI Audit Trails | Elesium",
+          "expected_slug": "automated-trade-surveillance-systems-for-brokerages"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 416 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 416,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "automated trade surveillance systems for brokerages",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10764) -> Intro (10974) -> CTA (11297) -> Hero Graphic (11512).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10764,
+          "intro_pos": 10974,
+          "cta_pos": 11297,
+          "hero_img_pos": 11512,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "automated-trade-surveillance-systems-for-brokerages",
+          "target_url": "https://elesium.online/solutions/automated-trade-surveillance-systems-for-brokerages",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19071 bytes), self-referential canonical 'https://elesium.online/solutions/automated-trade-surveillance-systems-for-brokerages', rich semantic root.",
+        "details": {
+          "slug": "automated-trade-surveillance-systems-for-brokerages",
+          "expected_canonical": "https://elesium.online/solutions/automated-trade-surveillance-systems-for-brokerages",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19071,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/automated-trade-surveillance-systems-for-brokerages",
+          "root_char_count": 8679
+        }
+      }
+    }
+  },
+  {
+    "slug": "statutory-audit-trail-generators-for-nbfc-compliance-officers",
+    "keyword": "statutory audit trail generators for NBFC compliance officers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'statutory-audit-trail-generators-for-nbfc-compliance-officers' matches keyword 'statutory audit trail generators for NBFC compliance officers', single H1 'Statutory Audit Trail Generators for NBFC Compliance Officers \u2014 Immutable State Logging & DPDP Act 2023 Validation', and title.",
+        "details": {
+          "slug": "statutory-audit-trail-generators-for-nbfc-compliance-officers",
+          "keyword": "statutory audit trail generators for NBFC compliance officers",
+          "h1": "Statutory Audit Trail Generators for NBFC Compliance Officers \u2014 Immutable State Logging & DPDP Act 2023 Validation",
+          "title": "Statutory Audit Trail Generators for NBFC Compliance Officers \u2014 Immutable State Logging & DPDP Act 2023 Validation | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Statutory Audit Trail Generators for NBFC Compliance Officers \u2014 Immutable State Logging &amp; DPDP Act 2023 Validation",
+          "dom_title": "Statutory Audit Trail Generators for NBFC Compliance Officers \u2014 Immutable State Logging & DPDP Act 2023 Validation | Elesium",
+          "expected_slug": "statutory-audit-trail-generators-for-nbfc-compliance-officers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 426 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 426,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "statutory audit trail generators for NBFC compliance officers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10904) -> Intro (11126) -> CTA (11459) -> Hero Graphic (11681).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10904,
+          "intro_pos": 11126,
+          "cta_pos": 11459,
+          "hero_img_pos": 11681,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "statutory-audit-trail-generators-for-nbfc-compliance-officers",
+          "target_url": "https://elesium.online/solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19270 bytes), self-referential canonical 'https://elesium.online/solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers', rich semantic root.",
+        "details": {
+          "slug": "statutory-audit-trail-generators-for-nbfc-compliance-officers",
+          "expected_canonical": "https://elesium.online/solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19270,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers",
+          "root_char_count": 8738
+        }
+      }
+    }
+  },
+  {
+    "slug": "predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+    "keyword": "predictive maintenance multi-agent systems for manufacturing plants",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'predictive-maintenance-multi-agent-systems-for-manufacturing-plants' matches keyword 'predictive maintenance multi-agent systems for manufacturing plants', single H1 'Predictive Maintenance Multi-agent Systems for Manufacturing Plants \u2014 Vibration Telemetry Analysis & Zero Unplanned Downtime', and title.",
+        "details": {
+          "slug": "predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+          "keyword": "predictive maintenance multi-agent systems for manufacturing plants",
+          "h1": "Predictive Maintenance Multi-agent Systems for Manufacturing Plants \u2014 Vibration Telemetry Analysis & Zero Unplanned Downtime",
+          "title": "Predictive Maintenance Multi-agent Systems for Manufacturing Plants \u2014 Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Predictive Maintenance Multi-agent Systems for Manufacturing Plants \u2014 Vibration Telemetry Analysis &amp; Zero Unplanned Downtime",
+          "dom_title": "Predictive Maintenance Multi-agent Systems for Manufacturing Plants \u2014 Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium",
+          "expected_slug": "predictive-maintenance-multi-agent-systems-for-manufacturing-plants"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 422 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 422,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "predictive maintenance multi-agent systems for manufacturing plants",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (11021) -> Intro (11253) -> CTA (11592) -> Hero Graphic (11812).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 11021,
+          "intro_pos": 11253,
+          "cta_pos": 11592,
+          "hero_img_pos": 11812,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+          "target_url": "https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19376 bytes), self-referential canonical 'https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants', rich semantic root.",
+        "details": {
+          "slug": "predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+          "expected_canonical": "https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19376,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
+          "root_char_count": 8746
+        }
+      }
+    }
+  },
+  {
+    "slug": "computer-vision-defect-inspection-agents-for-automotive-suppliers",
+    "keyword": "computer vision defect inspection agents for automotive suppliers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'computer-vision-defect-inspection-agents-for-automotive-suppliers' matches keyword 'computer vision defect inspection agents for automotive suppliers', single H1 'Computer Vision Defect Inspection Agents for Automotive Suppliers \u2014 Sub-millimeter Surface Defect Classification', and title.",
+        "details": {
+          "slug": "computer-vision-defect-inspection-agents-for-automotive-suppliers",
+          "keyword": "computer vision defect inspection agents for automotive suppliers",
+          "h1": "Computer Vision Defect Inspection Agents for Automotive Suppliers \u2014 Sub-millimeter Surface Defect Classification",
+          "title": "Computer Vision Defect Inspection Agents for Automotive Suppliers \u2014 Sub-millimeter Surface Defect Classification | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Computer Vision Defect Inspection Agents for Automotive Suppliers \u2014 Sub-millimeter Surface Defect Classification",
+          "dom_title": "Computer Vision Defect Inspection Agents for Automotive Suppliers \u2014 Sub-millimeter Surface Defect Classification | Elesium",
+          "expected_slug": "computer-vision-defect-inspection-agents-for-automotive-suppliers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 425 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 425,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "computer vision defect inspection agents for automotive suppliers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10935) -> Intro (11151) -> CTA (11490) -> Hero Graphic (11711).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10935,
+          "intro_pos": 11151,
+          "cta_pos": 11490,
+          "hero_img_pos": 11711,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "computer-vision-defect-inspection-agents-for-automotive-suppliers",
+          "target_url": "https://elesium.online/solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19271 bytes), self-referential canonical 'https://elesium.online/solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers', rich semantic root.",
+        "details": {
+          "slug": "computer-vision-defect-inspection-agents-for-automotive-suppliers",
+          "expected_canonical": "https://elesium.online/solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19271,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers",
+          "root_char_count": 8717
+        }
+      }
+    }
+  },
+  {
+    "slug": "scada-telemetry-anomaly-detection-for-industrial-operators",
+    "keyword": "SCADA telemetry anomaly detection for industrial operators",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'scada-telemetry-anomaly-detection-for-industrial-operators' matches keyword 'SCADA telemetry anomaly detection for industrial operators', single H1 'SCADA Telemetry Anomaly Detection for Industrial Operators \u2014 PLC Sensor Stream Filtering & Early Warning Alerts', and title.",
+        "details": {
+          "slug": "scada-telemetry-anomaly-detection-for-industrial-operators",
+          "keyword": "SCADA telemetry anomaly detection for industrial operators",
+          "h1": "SCADA Telemetry Anomaly Detection for Industrial Operators \u2014 PLC Sensor Stream Filtering & Early Warning Alerts",
+          "title": "SCADA Telemetry Anomaly Detection for Industrial Operators \u2014 PLC Sensor Stream Filtering & Early Warning Alerts | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "SCADA Telemetry Anomaly Detection for Industrial Operators \u2014 PLC Sensor Stream Filtering &amp; Early Warning Alerts",
+          "dom_title": "SCADA Telemetry Anomaly Detection for Industrial Operators \u2014 PLC Sensor Stream Filtering & Early Warning Alerts | Elesium",
+          "expected_slug": "scada-telemetry-anomaly-detection-for-industrial-operators"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 425 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 425,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "SCADA telemetry anomaly detection for industrial operators",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10884) -> Intro (11103) -> CTA (11435) -> Hero Graphic (11653).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10884,
+          "intro_pos": 11103,
+          "cta_pos": 11435,
+          "hero_img_pos": 11653,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "scada-telemetry-anomaly-detection-for-industrial-operators",
+          "target_url": "https://elesium.online/solutions/scada-telemetry-anomaly-detection-for-industrial-operators",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19192 bytes), self-referential canonical 'https://elesium.online/solutions/scada-telemetry-anomaly-detection-for-industrial-operators', rich semantic root.",
+        "details": {
+          "slug": "scada-telemetry-anomaly-detection-for-industrial-operators",
+          "expected_canonical": "https://elesium.online/solutions/scada-telemetry-anomaly-detection-for-industrial-operators",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19192,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/scada-telemetry-anomaly-detection-for-industrial-operators",
+          "root_char_count": 8699
+        }
+      }
+    }
+  },
+  {
+    "slug": "bill-of-materials-optimization-software-for-oem-engineers",
+    "keyword": "bill of materials optimization software for OEM engineers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'bill-of-materials-optimization-software-for-oem-engineers' matches keyword 'bill of materials optimization software for OEM engineers', single H1 'Bill of Materials Optimization Software for OEM Engineers \u2014 Supplier Cost Discrepancy & Lifecycle Matching', and title.",
+        "details": {
+          "slug": "bill-of-materials-optimization-software-for-oem-engineers",
+          "keyword": "bill of materials optimization software for OEM engineers",
+          "h1": "Bill of Materials Optimization Software for OEM Engineers \u2014 Supplier Cost Discrepancy & Lifecycle Matching",
+          "title": "Bill of Materials Optimization Software for OEM Engineers \u2014 Supplier Cost Discrepancy & Lifecycle Matching | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Bill of Materials Optimization Software for OEM Engineers \u2014 Supplier Cost Discrepancy &amp; Lifecycle Matching",
+          "dom_title": "Bill of Materials Optimization Software for OEM Engineers \u2014 Supplier Cost Discrepancy & Lifecycle Matching | Elesium",
+          "expected_slug": "bill-of-materials-optimization-software-for-oem-engineers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 425 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 425,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "bill of materials optimization software for OEM engineers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10853) -> Intro (11067) -> CTA (11396) -> Hero Graphic (11611).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10853,
+          "intro_pos": 11067,
+          "cta_pos": 11396,
+          "hero_img_pos": 11611,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "bill-of-materials-optimization-software-for-oem-engineers",
+          "target_url": "https://elesium.online/solutions/bill-of-materials-optimization-software-for-oem-engineers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19145 bytes), self-referential canonical 'https://elesium.online/solutions/bill-of-materials-optimization-software-for-oem-engineers', rich semantic root.",
+        "details": {
+          "slug": "bill-of-materials-optimization-software-for-oem-engineers",
+          "expected_canonical": "https://elesium.online/solutions/bill-of-materials-optimization-software-for-oem-engineers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19145,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/bill-of-materials-optimization-software-for-oem-engineers",
+          "root_char_count": 8685
+        }
+      }
+    }
+  },
+  {
+    "slug": "inventory-replenishment-state-machines-for-chemical-manufacturers",
+    "keyword": "inventory replenishment state machines for chemical manufacturers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'inventory-replenishment-state-machines-for-chemical-manufacturers' matches keyword 'inventory replenishment state machines for chemical manufacturers', single H1 'Inventory Replenishment State Machines for Chemical Manufacturers \u2014 Hazardous Material Buffer Sizing & Lead-time Guardrails', and title.",
+        "details": {
+          "slug": "inventory-replenishment-state-machines-for-chemical-manufacturers",
+          "keyword": "inventory replenishment state machines for chemical manufacturers",
+          "h1": "Inventory Replenishment State Machines for Chemical Manufacturers \u2014 Hazardous Material Buffer Sizing & Lead-time Guardrails",
+          "title": "Inventory Replenishment State Machines for Chemical Manufacturers \u2014 Hazardous Material Buffer Sizing & Lead-time Guardrails | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Inventory Replenishment State Machines for Chemical Manufacturers \u2014 Hazardous Material Buffer Sizing &amp; Lead-time Guardrails",
+          "dom_title": "Inventory Replenishment State Machines for Chemical Manufacturers \u2014 Hazardous Material Buffer Sizing & Lead-time Guardrails | Elesium",
+          "expected_slug": "inventory-replenishment-state-machines-for-chemical-manufacturers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 420 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 420,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "inventory replenishment state machines for chemical manufacturers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10977) -> Intro (11208) -> CTA (11545) -> Hero Graphic (11766).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10977,
+          "intro_pos": 11208,
+          "cta_pos": 11545,
+          "hero_img_pos": 11766,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "inventory-replenishment-state-machines-for-chemical-manufacturers",
+          "target_url": "https://elesium.online/solutions/inventory-replenishment-state-machines-for-chemical-manufacturers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19324 bytes), self-referential canonical 'https://elesium.online/solutions/inventory-replenishment-state-machines-for-chemical-manufacturers', rich semantic root.",
+        "details": {
+          "slug": "inventory-replenishment-state-machines-for-chemical-manufacturers",
+          "expected_canonical": "https://elesium.online/solutions/inventory-replenishment-state-machines-for-chemical-manufacturers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19324,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/inventory-replenishment-state-machines-for-chemical-manufacturers",
+          "root_char_count": 8715
+        }
+      }
+    }
+  },
+  {
+    "slug": "deterministic-clinical-documentation-agents-for-hospital-networks",
+    "keyword": "deterministic clinical documentation agents for hospital networks",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'deterministic-clinical-documentation-agents-for-hospital-networks' matches keyword 'deterministic clinical documentation agents for hospital networks', single H1 'Deterministic Clinical Documentation Agents for Hospital Networks \u2014 EHR Ambient Transcription & Structured Icd-10 Coding', and title.",
+        "details": {
+          "slug": "deterministic-clinical-documentation-agents-for-hospital-networks",
+          "keyword": "deterministic clinical documentation agents for hospital networks",
+          "h1": "Deterministic Clinical Documentation Agents for Hospital Networks \u2014 EHR Ambient Transcription & Structured Icd-10 Coding",
+          "title": "Deterministic Clinical Documentation Agents for Hospital Networks \u2014 EHR Ambient Transcription & Structured Icd-10 Coding | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Deterministic Clinical Documentation Agents for Hospital Networks \u2014 EHR Ambient Transcription &amp; Structured Icd-10 Coding",
+          "dom_title": "Deterministic Clinical Documentation Agents for Hospital Networks \u2014 EHR Ambient Transcription & Structured Icd-10 Coding | Elesium",
+          "expected_slug": "deterministic-clinical-documentation-agents-for-hospital-networks"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 423 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 423,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "deterministic clinical documentation agents for hospital networks",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10968) -> Intro (11196) -> CTA (11533) -> Hero Graphic (11758).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10968,
+          "intro_pos": 11196,
+          "cta_pos": 11533,
+          "hero_img_pos": 11758,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "deterministic-clinical-documentation-agents-for-hospital-networks",
+          "target_url": "https://elesium.online/solutions/deterministic-clinical-documentation-agents-for-hospital-networks",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19331 bytes), self-referential canonical 'https://elesium.online/solutions/deterministic-clinical-documentation-agents-for-hospital-networks', rich semantic root.",
+        "details": {
+          "slug": "deterministic-clinical-documentation-agents-for-hospital-networks",
+          "expected_canonical": "https://elesium.online/solutions/deterministic-clinical-documentation-agents-for-hospital-networks",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19331,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/deterministic-clinical-documentation-agents-for-hospital-networks",
+          "root_char_count": 8737
+        }
+      }
+    }
+  },
+  {
+    "slug": "dicom-triage-automation-agents-for-radiology-groups",
+    "keyword": "DICOM triage automation agents for radiology groups",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'dicom-triage-automation-agents-for-radiology-groups' matches keyword 'DICOM triage automation agents for radiology groups', single H1 'DICOM Triage Automation Agents for Radiology Groups \u2014 PACS Routing & Acute Pathology Prioritization', and title.",
+        "details": {
+          "slug": "dicom-triage-automation-agents-for-radiology-groups",
+          "keyword": "DICOM triage automation agents for radiology groups",
+          "h1": "DICOM Triage Automation Agents for Radiology Groups \u2014 PACS Routing & Acute Pathology Prioritization",
+          "title": "DICOM Triage Automation Agents for Radiology Groups \u2014 PACS Routing & Acute Pathology Prioritization | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "DICOM Triage Automation Agents for Radiology Groups \u2014 PACS Routing &amp; Acute Pathology Prioritization",
+          "dom_title": "DICOM Triage Automation Agents for Radiology Groups \u2014 PACS Routing & Acute Pathology Prioritization | Elesium",
+          "expected_slug": "dicom-triage-automation-agents-for-radiology-groups"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 420 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 420,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "DICOM triage automation agents for radiology groups",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10737) -> Intro (10944) -> CTA (11267) -> Hero Graphic (11484).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10737,
+          "intro_pos": 10944,
+          "cta_pos": 11267,
+          "hero_img_pos": 11484,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "dicom-triage-automation-agents-for-radiology-groups",
+          "target_url": "https://elesium.online/solutions/dicom-triage-automation-agents-for-radiology-groups",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19015 bytes), self-referential canonical 'https://elesium.online/solutions/dicom-triage-automation-agents-for-radiology-groups', rich semantic root.",
+        "details": {
+          "slug": "dicom-triage-automation-agents-for-radiology-groups",
+          "expected_canonical": "https://elesium.online/solutions/dicom-triage-automation-agents-for-radiology-groups",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19015,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/dicom-triage-automation-agents-for-radiology-groups",
+          "root_char_count": 8638
+        }
+      }
+    }
+  },
+  {
+    "slug": "hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+    "keyword": "HIPAA compliant patient intake agents for specialty clinics",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'hipaa-compliant-patient-intake-agents-for-specialty-clinics' matches keyword 'HIPAA compliant patient intake agents for specialty clinics', single H1 'HIPAA Compliant Patient Intake Agents for Specialty Clinics \u2014 Air-gapped Form Parsing & Identity Verification', and title.",
+        "details": {
+          "slug": "hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+          "keyword": "HIPAA compliant patient intake agents for specialty clinics",
+          "h1": "HIPAA Compliant Patient Intake Agents for Specialty Clinics \u2014 Air-gapped Form Parsing & Identity Verification",
+          "title": "HIPAA Compliant Patient Intake Agents for Specialty Clinics \u2014 Air-gapped Form Parsing & Identity Verification | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "HIPAA Compliant Patient Intake Agents for Specialty Clinics \u2014 Air-gapped Form Parsing &amp; Identity Verification",
+          "dom_title": "HIPAA Compliant Patient Intake Agents for Specialty Clinics \u2014 Air-gapped Form Parsing & Identity Verification | Elesium",
+          "expected_slug": "hipaa-compliant-patient-intake-agents-for-specialty-clinics"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 424 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 424,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "HIPAA compliant patient intake agents for specialty clinics",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10850) -> Intro (11067) -> CTA (11398) -> Hero Graphic (11615).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10850,
+          "intro_pos": 11067,
+          "cta_pos": 11398,
+          "hero_img_pos": 11615,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+          "target_url": "https://elesium.online/solutions/hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19170 bytes), self-referential canonical 'https://elesium.online/solutions/hipaa-compliant-patient-intake-agents-for-specialty-clinics', rich semantic root.",
+        "details": {
+          "slug": "hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+          "expected_canonical": "https://elesium.online/solutions/hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19170,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/hipaa-compliant-patient-intake-agents-for-specialty-clinics",
+          "root_char_count": 8679
+        }
+      }
+    }
+  },
+  {
+    "slug": "prior-authorization-automation-software-for-healthcare-ctos",
+    "keyword": "prior authorization automation software for healthcare CTOs",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'prior-authorization-automation-software-for-healthcare-ctos' matches keyword 'prior authorization automation software for healthcare CTOs', single H1 'Prior Authorization Automation Software for Healthcare Ctos \u2014 Clinical Guidelines Verification & Sub-hour Claims Decisioning', and title.",
+        "details": {
+          "slug": "prior-authorization-automation-software-for-healthcare-ctos",
+          "keyword": "prior authorization automation software for healthcare CTOs",
+          "h1": "Prior Authorization Automation Software for Healthcare Ctos \u2014 Clinical Guidelines Verification & Sub-hour Claims Decisioning",
+          "title": "Prior Authorization Automation Software for Healthcare Ctos \u2014 Clinical Guidelines Verification & Sub-hour Claims Decisioning | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Prior Authorization Automation Software for Healthcare Ctos \u2014 Clinical Guidelines Verification &amp; Sub-hour Claims Decisioning",
+          "dom_title": "Prior Authorization Automation Software for Healthcare Ctos \u2014 Clinical Guidelines Verification & Sub-hour Claims Decisioning | Elesium",
+          "expected_slug": "prior-authorization-automation-software-for-healthcare-ctos"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 423 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 423,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "prior authorization automation software for healthcare CTOs",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10937) -> Intro (11169) -> CTA (11500) -> Hero Graphic (11720).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10937,
+          "intro_pos": 11169,
+          "cta_pos": 11500,
+          "hero_img_pos": 11720,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "prior-authorization-automation-software-for-healthcare-ctos",
+          "target_url": "https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19275 bytes), self-referential canonical 'https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos', rich semantic root.",
+        "details": {
+          "slug": "prior-authorization-automation-software-for-healthcare-ctos",
+          "expected_canonical": "https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19275,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos",
+          "root_char_count": 8709
+        }
+      }
+    }
+  },
+  {
+    "slug": "clinical-trial-patient-matching-agents-for-biotech-sponsors",
+    "keyword": "clinical trial patient matching agents for biotech sponsors",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'clinical-trial-patient-matching-agents-for-biotech-sponsors' matches keyword 'clinical trial patient matching agents for biotech sponsors', single H1 'Clinical Trial Patient Matching Agents for Biotech Sponsors \u2014 Genomic Eligibility Parsing & Protocol Acceleration', and title.",
+        "details": {
+          "slug": "clinical-trial-patient-matching-agents-for-biotech-sponsors",
+          "keyword": "clinical trial patient matching agents for biotech sponsors",
+          "h1": "Clinical Trial Patient Matching Agents for Biotech Sponsors \u2014 Genomic Eligibility Parsing & Protocol Acceleration",
+          "title": "Clinical Trial Patient Matching Agents for Biotech Sponsors \u2014 Genomic Eligibility Parsing & Protocol Acceleration | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Clinical Trial Patient Matching Agents for Biotech Sponsors \u2014 Genomic Eligibility Parsing &amp; Protocol Acceleration",
+          "dom_title": "Clinical Trial Patient Matching Agents for Biotech Sponsors \u2014 Genomic Eligibility Parsing & Protocol Acceleration | Elesium",
+          "expected_slug": "clinical-trial-patient-matching-agents-for-biotech-sponsors"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 425 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 425,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "clinical trial patient matching agents for biotech sponsors",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10876) -> Intro (11097) -> CTA (11428) -> Hero Graphic (11645).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10876,
+          "intro_pos": 11097,
+          "cta_pos": 11428,
+          "hero_img_pos": 11645,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "clinical-trial-patient-matching-agents-for-biotech-sponsors",
+          "target_url": "https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-biotech-sponsors",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19200 bytes), self-referential canonical 'https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-biotech-sponsors', rich semantic root.",
+        "details": {
+          "slug": "clinical-trial-patient-matching-agents-for-biotech-sponsors",
+          "expected_canonical": "https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-biotech-sponsors",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19200,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-biotech-sponsors",
+          "root_char_count": 8689
+        }
+      }
+    }
+  },
+  {
+    "slug": "private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+    "keyword": "private VPC air-gapped LLM deployment for defense contractors",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'private-vpc-air-gapped-llm-deployment-for-defense-contractors' matches keyword 'private VPC air-gapped LLM deployment for defense contractors', single H1 'Private VPC Air-gapped LLM Deployment for Defense Contractors \u2014 Zero Internet Egress & Hardware-encrypted Inference', and title.",
+        "details": {
+          "slug": "private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+          "keyword": "private VPC air-gapped LLM deployment for defense contractors",
+          "h1": "Private VPC Air-gapped LLM Deployment for Defense Contractors \u2014 Zero Internet Egress & Hardware-encrypted Inference",
+          "title": "Private VPC Air-gapped LLM Deployment for Defense Contractors \u2014 Zero Internet Egress & Hardware-encrypted Inference | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Private VPC Air-gapped LLM Deployment for Defense Contractors \u2014 Zero Internet Egress &amp; Hardware-encrypted Inference",
+          "dom_title": "Private VPC Air-gapped LLM Deployment for Defense Contractors \u2014 Zero Internet Egress & Hardware-encrypted Inference | Elesium",
+          "expected_slug": "private-vpc-air-gapped-llm-deployment-for-defense-contractors"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 427 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 427,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "private VPC air-gapped LLM deployment for defense contractors",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10910) -> Intro (11133) -> CTA (11468) -> Hero Graphic (11686).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10910,
+          "intro_pos": 11133,
+          "cta_pos": 11468,
+          "hero_img_pos": 11686,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+          "target_url": "https://elesium.online/solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19226 bytes), self-referential canonical 'https://elesium.online/solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors', rich semantic root.",
+        "details": {
+          "slug": "private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+          "expected_canonical": "https://elesium.online/solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19226,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+          "root_char_count": 8689
+        }
+      }
+    }
+  },
+  {
+    "slug": "sap-erp-agentic-workflow-integration-for-enterprise-cios",
+    "keyword": "SAP ERP agentic workflow integration for enterprise CIOs",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'sap-erp-agentic-workflow-integration-for-enterprise-cios' matches keyword 'SAP ERP agentic workflow integration for enterprise CIOs', single H1 'SAP ERP Agentic Workflow Integration for Enterprise Cios \u2014 Rfc Bapi Automation & Real-time Purchase Order Reconciliation', and title.",
+        "details": {
+          "slug": "sap-erp-agentic-workflow-integration-for-enterprise-cios",
+          "keyword": "SAP ERP agentic workflow integration for enterprise CIOs",
+          "h1": "SAP ERP Agentic Workflow Integration for Enterprise Cios \u2014 Rfc Bapi Automation & Real-time Purchase Order Reconciliation",
+          "title": "SAP ERP Agentic Workflow Integration for Enterprise Cios \u2014 Rfc Bapi Automation & Real-time Purchase Order Reconciliation | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "SAP ERP Agentic Workflow Integration for Enterprise Cios \u2014 Rfc Bapi Automation &amp; Real-time Purchase Order Reconciliation",
+          "dom_title": "SAP ERP Agentic Workflow Integration for Enterprise Cios \u2014 Rfc Bapi Automation & Real-time Purchase Order Reconciliation | Elesium",
+          "expected_slug": "sap-erp-agentic-workflow-integration-for-enterprise-cios"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 430 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 430,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "SAP ERP agentic workflow integration for enterprise CIOs",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10892) -> Intro (11120) -> CTA (11450) -> Hero Graphic (11669).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10892,
+          "intro_pos": 11120,
+          "cta_pos": 11450,
+          "hero_img_pos": 11669,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "sap-erp-agentic-workflow-integration-for-enterprise-cios",
+          "target_url": "https://elesium.online/solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19194 bytes), self-referential canonical 'https://elesium.online/solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios', rich semantic root.",
+        "details": {
+          "slug": "sap-erp-agentic-workflow-integration-for-enterprise-cios",
+          "expected_canonical": "https://elesium.online/solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19194,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios",
+          "root_char_count": 8672
+        }
+      }
+    }
+  },
+  {
+    "slug": "salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+    "keyword": "Salesforce custom autonomous agents for enterprise sales teams",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'salesforce-custom-autonomous-agents-for-enterprise-sales-teams' matches keyword 'Salesforce custom autonomous agents for enterprise sales teams', single H1 'Salesforce Custom Autonomous Agents for Enterprise Sales Teams \u2014 CRM Entity Enrichment & Deterministic Follow-up Workflows', and title.",
+        "details": {
+          "slug": "salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+          "keyword": "Salesforce custom autonomous agents for enterprise sales teams",
+          "h1": "Salesforce Custom Autonomous Agents for Enterprise Sales Teams \u2014 CRM Entity Enrichment & Deterministic Follow-up Workflows",
+          "title": "Salesforce Custom Autonomous Agents for Enterprise Sales Teams \u2014 CRM Entity Enrichment & Deterministic Follow-up Workflows | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Salesforce Custom Autonomous Agents for Enterprise Sales Teams \u2014 CRM Entity Enrichment &amp; Deterministic Follow-up Workflows",
+          "dom_title": "Salesforce Custom Autonomous Agents for Enterprise Sales Teams \u2014 CRM Entity Enrichment & Deterministic Follow-up Workflows | Elesium",
+          "expected_slug": "salesforce-custom-autonomous-agents-for-enterprise-sales-teams"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 429 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 429,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "Salesforce custom autonomous agents for enterprise sales teams",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10947) -> Intro (11177) -> CTA (11513) -> Hero Graphic (11731).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10947,
+          "intro_pos": 11177,
+          "cta_pos": 11513,
+          "hero_img_pos": 11731,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+          "target_url": "https://elesium.online/solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19274 bytes), self-referential canonical 'https://elesium.online/solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams', rich semantic root.",
+        "details": {
+          "slug": "salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+          "expected_canonical": "https://elesium.online/solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19274,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
+          "root_char_count": 8694
+        }
+      }
+    }
+  },
+  {
+    "slug": "cryptographic-state-audit-trails-dpdp-act-2023",
+    "keyword": "cryptographic state audit trails DPDP Act 2023",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'cryptographic-state-audit-trails-dpdp-act-2023' matches keyword 'cryptographic state audit trails DPDP Act 2023', single H1 'Cryptographic State Audit Trails DPDP Act 2023 \u2014 Verifiable Consent Logs & Indian Regulatory Compliance', and title.",
+        "details": {
+          "slug": "cryptographic-state-audit-trails-dpdp-act-2023",
+          "keyword": "cryptographic state audit trails DPDP Act 2023",
+          "h1": "Cryptographic State Audit Trails DPDP Act 2023 \u2014 Verifiable Consent Logs & Indian Regulatory Compliance",
+          "title": "Cryptographic State Audit Trails DPDP Act 2023 \u2014 Verifiable Consent Logs & Indian Regulatory Compliance | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Cryptographic State Audit Trails DPDP Act 2023 \u2014 Verifiable Consent Logs &amp; Indian Regulatory Compliance",
+          "dom_title": "Cryptographic State Audit Trails DPDP Act 2023 \u2014 Verifiable Consent Logs & Indian Regulatory Compliance | Elesium",
+          "expected_slug": "cryptographic-state-audit-trails-dpdp-act-2023"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 424 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 424,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "cryptographic state audit trails DPDP Act 2023",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10742) -> Intro (10953) -> CTA (11271) -> Hero Graphic (11496).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10742,
+          "intro_pos": 10953,
+          "cta_pos": 11271,
+          "hero_img_pos": 11496,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "cryptographic-state-audit-trails-dpdp-act-2023",
+          "target_url": "https://elesium.online/solutions/cryptographic-state-audit-trails-dpdp-act-2023",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (18989 bytes), self-referential canonical 'https://elesium.online/solutions/cryptographic-state-audit-trails-dpdp-act-2023', rich semantic root.",
+        "details": {
+          "slug": "cryptographic-state-audit-trails-dpdp-act-2023",
+          "expected_canonical": "https://elesium.online/solutions/cryptographic-state-audit-trails-dpdp-act-2023",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 18989,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/cryptographic-state-audit-trails-dpdp-act-2023",
+          "root_char_count": 8632
+        }
+      }
+    }
+  },
+  {
+    "slug": "deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+    "keyword": "deterministic invoice reconciliation software for enterprise controllers",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'deterministic-invoice-reconciliation-software-for-enterprise-controllers' matches keyword 'deterministic invoice reconciliation software for enterprise controllers', single H1 'Deterministic Invoice Reconciliation Software for Enterprise Controllers \u2014 3-way Po Matching & Autonomous Exception Handling', and title.",
+        "details": {
+          "slug": "deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+          "keyword": "deterministic invoice reconciliation software for enterprise controllers",
+          "h1": "Deterministic Invoice Reconciliation Software for Enterprise Controllers \u2014 3-way Po Matching & Autonomous Exception Handling",
+          "title": "Deterministic Invoice Reconciliation Software for Enterprise Controllers \u2014 3-way Po Matching & Autonomous Exception Handling | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Deterministic Invoice Reconciliation Software for Enterprise Controllers \u2014 3-way Po Matching &amp; Autonomous Exception Handling",
+          "dom_title": "Deterministic Invoice Reconciliation Software for Enterprise Controllers \u2014 3-way Po Matching & Autonomous Exception Handling | Elesium",
+          "expected_slug": "deterministic-invoice-reconciliation-software-for-enterprise-controllers"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 422 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 422,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "deterministic invoice reconciliation software for enterprise controllers",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (11051) -> Intro (11283) -> CTA (11627) -> Hero Graphic (11846).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 11051,
+          "intro_pos": 11283,
+          "cta_pos": 11627,
+          "hero_img_pos": 11846,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+          "target_url": "https://elesium.online/solutions/deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19417 bytes), self-referential canonical 'https://elesium.online/solutions/deterministic-invoice-reconciliation-software-for-enterprise-controllers', rich semantic root.",
+        "details": {
+          "slug": "deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+          "expected_canonical": "https://elesium.online/solutions/deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19417,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/deterministic-invoice-reconciliation-software-for-enterprise-controllers",
+          "root_char_count": 8747
+        }
+      }
+    }
+  },
+  {
+    "slug": "multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+    "keyword": "multi-agent LangGraph workflow engineering for enterprise CTOs",
+    "all_gates_passed": true,
+    "gates": {
+      "gate_1_tri_alignment": {
+        "passed": true,
+        "message": "Tri-Alignment verified: slug 'multi-agent-langgraph-workflow-engineering-for-enterprise-ctos' matches keyword 'multi-agent LangGraph workflow engineering for enterprise CTOs', single H1 'Multi-agent Langgraph Workflow Engineering for Enterprise Ctos \u2014 Cyclic State Graph Orchestration & Zero Hallucination Traps', and title.",
+        "details": {
+          "slug": "multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+          "keyword": "multi-agent LangGraph workflow engineering for enterprise CTOs",
+          "h1": "Multi-agent Langgraph Workflow Engineering for Enterprise Ctos \u2014 Cyclic State Graph Orchestration & Zero Hallucination Traps",
+          "title": "Multi-agent Langgraph Workflow Engineering for Enterprise Ctos \u2014 Cyclic State Graph Orchestration & Zero Hallucination Traps | Elesium",
+          "single_h1_in_dom": true,
+          "slug_keyword_match": true,
+          "h1_keyword_match": true,
+          "title_keyword_match": true,
+          "dom_h1": "Multi-agent Langgraph Workflow Engineering for Enterprise Ctos \u2014 Cyclic State Graph Orchestration &amp; Zero Hallucination Traps",
+          "dom_title": "Multi-agent Langgraph Workflow Engineering for Enterprise Ctos \u2014 Cyclic State Graph Orchestration & Zero Hallucination Traps | Elesium",
+          "expected_slug": "multi-agent-langgraph-workflow-engineering-for-enterprise-ctos"
+        }
+      },
+      "gate_2_word_count": {
+        "passed": true,
+        "message": "Gate 2 PASS: 425 words (window 400\u2013550), 16 paragraphs, max 1 sents/p, 100.0% single-sentence.",
+        "details": {
+          "total_words": 425,
+          "word_count_in_window": true,
+          "total_paragraphs": 16,
+          "single_sentence_count": 16,
+          "single_sentence_ratio": 1.0,
+          "violating_paragraphs_count": 0,
+          "max_sentences_per_paragraph": 1
+        }
+      },
+      "gate_3_moz_sweet_spot": {
+        "passed": true,
+        "message": "Gate 3 PASS: Moz score 97/100 in sweet spot (96\u201398). All 4 anchor points verified.",
+        "details": {
+          "keyword": "multi-agent LangGraph workflow engineering for enterprise CTOs",
+          "calculated_score": 97,
+          "recorded_score": 96,
+          "target_range": "96-98",
+          "in_sweet_spot": true,
+          "hits_100": false,
+          "hook_present": true,
+          "title_present": true,
+          "desc_present": true,
+          "alt_present": true
+        }
+      },
+      "gate_4_mobile_geometry": {
+        "passed": true,
+        "message": "Gate 4 PASS: Mobile Geometry verified: H1 (10966) -> Intro (11198) -> CTA (11532) -> Hero Graphic (11761).",
+        "details": {
+          "dom_checked": true,
+          "h1_pos": 10966,
+          "intro_pos": 11198,
+          "cta_pos": 11532,
+          "hero_img_pos": 11761,
+          "cta_precedes_hero": true,
+          "h1_precedes_intro": true,
+          "intro_precedes_cta": true
+        }
+      },
+      "gate_5_crawl_depth": {
+        "passed": true,
+        "message": "Gate 5 PASS: No orphan. Linked in /solutions hub, present in sitemap.xml, crawl depth = 2 clicks (<= 2).",
+        "details": {
+          "slug": "multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+          "target_url": "https://elesium.online/solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+          "linked_in_hub": true,
+          "anchor_text_valid": true,
+          "indexed_in_sitemap": true,
+          "crawl_depth": 2,
+          "max_allowed_depth": 2
+        }
+      },
+      "gate_6_semantic_ssg": {
+        "passed": true,
+        "message": "Gate 6 PASS: Static SSG pre-rendered (19302 bytes), self-referential canonical 'https://elesium.online/solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos', rich semantic root.",
+        "details": {
+          "slug": "multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+          "expected_canonical": "https://elesium.online/solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+          "file_exists_on_disk": true,
+          "file_size_bytes": 19302,
+          "has_semantic_root": true,
+          "canonical_matches": true,
+          "found_canonical": "https://elesium.online/solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
+          "root_char_count": 8712
+        }
+      }
+    }
+  }
+]

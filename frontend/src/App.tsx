@@ -21,6 +21,10 @@ const Resources = lazy(() => import('./components/pages/Resources'))
 const ResourceDetail = lazy(() => import('./components/pages/ResourceDetail'))
 const Waitlist = lazy(() => import('./components/pages/Waitlist'))
 const VideoMirror = lazy(() => import('./components/pages/VideoMirror'))
+const SolutionsHub = lazy(() => import('./components/pages/SolutionsHub'))
+const SolutionDetail = lazy(() => import('./components/pages/SolutionDetail'))
+const EnterpriseRoiCalculator = lazy(() => import('./components/pages/EnterpriseRoiCalculator'))
+const EmbedRoiCalculator = lazy(() => import('./components/pages/EmbedRoiCalculator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -47,6 +51,7 @@ function HomePage() {
 
 function App() {
     const location = useLocation();
+    const isEmbed = location.pathname.startsWith('/embed');
 
     // Since we're using React Router now, the Navbar and Footer are rendered once outside Routes
     // and we only animate the inner content changing.
@@ -61,7 +66,7 @@ function App() {
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
             <SmoothScroll />
             <NoiseOverlay />
-            {!location.pathname.startsWith('/resources') && <Navbar />}
+            {!location.pathname.startsWith('/resources') && !isEmbed && <Navbar />}
 
             <div className="flex-1 min-h-[100vh] flex flex-col relative">
                 <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
@@ -80,12 +85,17 @@ function App() {
                             <Route path="/videos" element={<VideoMirror />} />
                             <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />
+                            <Route path="/solutions" element={<SolutionsHub />} />
+                            <Route path="/solutions/:slug" element={<SolutionDetail />} />
+                            <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
+                            <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator" replace />} />
+                            <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
             </div>
 
-            <DownloadFooter />
+            {!isEmbed && <DownloadFooter />}
         </div>
     )
 }

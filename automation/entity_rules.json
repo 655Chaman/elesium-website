@@ -44,6 +44,18 @@
       "wikidata_qid": "Q7935071",
       "productontology_url": "http://www.productontology.org/id/Virtual_private_cloud",
       "canonical_term": "Private VPC Isolation"
+    },
+    {
+      "name": "pgvector",
+      "wikidata_qid": "Q118288590",
+      "productontology_url": "http://www.productontology.org/id/Vector_database",
+      "canonical_term": "PostgreSQL Vector Similarity Search"
+    },
+    {
+      "name": "DPDP Act 2023",
+      "wikidata_qid": "Q121364402",
+      "productontology_url": "http://www.productontology.org/id/Data_privacy",
+      "canonical_term": "Digital Personal Data Protection Act 2023"
     }
   ],
   "geographic_entities": {

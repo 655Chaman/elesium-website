@@ -6,12 +6,18 @@ import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { resourcesData } from '../../data/resourcesData'
+import { 
+    ArchitecturePlayground, 
+    BlueprintDownloadCard 
+} from '../interactive'
+import { useDwellTelemetry } from '../../hooks/useDwellTelemetry'
 
 export default function ResourceDetail() {
     const { slug } = useParams();
     const navigate = useNavigate();
     const [markdownContent, setMarkdownContent] = useState<string>('');
     const [loading, setLoading] = useState(true);
+    const { activeDwellSeconds, scrollDepthPercent, interactionCount, isGoodClick, isLastLongestClickEligible, trackInteraction } = useDwellTelemetry(slug || 'resource-detail');
 
     const resource = slug ? resourcesData.find(r => r.slug === slug) : null;
 
@@ -144,6 +150,31 @@ export default function ResourceDetail() {
                                     {markdownContent}
                                 </ReactMarkdown>
                             )}
+                        </div>
+
+                        {/* Interactive Behavioral Dwell Hook: Architecture Simulator */}
+                        <div className="mt-12">
+                            <ArchitecturePlayground onTelemetry={trackInteraction} />
+                        </div>
+
+                        {/* Interactive Blueprint Download Card */}
+                        <BlueprintDownloadCard onTelemetry={trackInteraction} />
+
+                        {/* Live Telemetry Transparency Status Bar */}
+                        <div className="my-10 p-4 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
+                            <div className="flex items-center gap-3">
+                                <span className="flex items-center gap-1.5">
+                                    <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 animate-pulse' : 'bg-cyan-400'}`} />
+                                    Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
+                                </span>
+                                <span className="hidden sm:inline">|</span>
+                                <span className="hidden sm:inline">Scroll: <strong className="text-black dark:text-white">{scrollDepthPercent}%</strong></span>
+                                <span className="hidden sm:inline">|</span>
+                                <span className="hidden sm:inline">Interactions: <strong className="text-black dark:text-white">{interactionCount}</strong></span>
+                            </div>
+                            <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold">
+                                {isLastLongestClickEligible ? 'Navboost High-Retention Verified (180s+)' : isGoodClick ? 'Navboost GoodClick Active (120s+)' : 'Logging Session Telemetry'}
+                            </span>
                         </div>
 
                         {/* Article Footer Navigation */}

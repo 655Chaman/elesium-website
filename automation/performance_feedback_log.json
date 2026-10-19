@@ -1,7 +1,225 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "version": "1.0.0",
-  "last_feedback_sync": "2026-10-10T02:00:00Z",
+  "version": "2.0.0",
+  "last_feedback_sync": "2026-10-19T04:31:48.642396+00:00",
+  "architecture_phase": "Stage 9.1 Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer",
+  "total_urls_monitored": 121,
+  "performance_tiers_summary": {
+    "ELITE_LEADER": {
+      "count": 3,
+      "percentage": "2.5%",
+      "action": "100% lock, monitored for freshness"
+    },
+    "STRIKING_DISTANCE": {
+      "count": 85,
+      "percentage": "70.2%",
+      "action": "Highest-ROI tier! Google already understands the URL; automated entity & link push into Top 3"
+    },
+    "UNDERPERFORMING": {
+      "count": 33,
+      "percentage": "27.3%",
+      "action": "Scheduled for keyword cannibalization audits and structural expansions"
+    }
+  },
+  "striking_distance_reinforcements_applied": 85,
+  "top_striking_distance_targets": [
+    {
+      "url": "https://elesium.online/",
+      "keyword": "Enterprise AI Automation Agency India",
+      "current_position": 5.3,
+      "projected_position": 2.1,
+      "moz_score": 96,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 1
+    },
+    {
+      "url": "https://elesium.online/markets",
+      "keyword": "best ai automation agency in india for manufacturing",
+      "current_position": 11.3,
+      "projected_position": 2.8,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 3
+    },
+    {
+      "url": "https://elesium.online/how-we-work",
+      "keyword": "private vpc ai deployment india dpdp compliant",
+      "current_position": 6.8,
+      "projected_position": 2.1,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
+      "url": "https://elesium.online/ai-automation",
+      "keyword": "Autonomous AI Engineering Multi-Agent Systems",
+      "current_position": 8.0,
+      "projected_position": 2.5,
+      "moz_score": 96,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
+      "url": "https://elesium.online/resources",
+      "keyword": "Enterprise AI Automation Engineering Whitepapers",
+      "current_position": 5.3,
+      "projected_position": 2.1,
+      "moz_score": 96,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 1
+    },
+    {
+      "url": "https://elesium.online/ai-automation-agency-india",
+      "keyword": "we need custom ai agent development bangalore",
+      "current_position": 5.2,
+      "projected_position": 2.0,
+      "moz_score": 96,
+      "capsule_word_count": 44,
+      "missing_entities": [
+        "pgvector"
+      ],
+      "link_boosts_required": 1
+    },
+    {
+      "url": "https://elesium.online/videos",
+      "keyword": "Enterprise AI Automation Video Case Studies",
+      "current_position": 8.4,
+      "projected_position": 2.9,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
+      "url": "https://elesium.online/videos/enterprise-ai-automation-india-2026",
+      "keyword": "Enterprise AI Automation India 2026 Video Breakdown",
+      "current_position": 10.4,
+      "projected_position": 2.8,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 3
+    },
+    {
+      "url": "https://elesium.online/videos/langgraph-vs-n8n-enterprise-agents",
+      "keyword": "LangGraph vs n8n Enterprise Agents Video",
+      "current_position": 6.5,
+      "projected_position": 2.1,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
+      "url": "https://elesium.online/videos/bfsi-autonomous-loan-underwriting",
+      "keyword": "BFSI Autonomous Loan Underwriting Video",
+      "current_position": 4.2,
+      "projected_position": 1.8,
+      "moz_score": 96,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 1
+    },
+    {
+      "url": "https://elesium.online/waitlist",
+      "keyword": "Enterprise AI Automation Pilot Waitlist",
+      "current_position": 9.6,
+      "projected_position": 4.1,
+      "moz_score": 96,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
+      "url": "https://elesium.online/signals",
+      "keyword": "Market Intelligence AI Automation Signals",
+      "current_position": 5.4,
+      "projected_position": 2.2,
+      "moz_score": 96,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "LangGraph",
+        "FastAPI",
+        "pgvector",
+        "DPDP Act 2023"
+      ],
+      "link_boosts_required": 1
+    },
+    {
+      "url": "https://elesium.online/solutions",
+      "keyword": "Enterprise AI Automation High-Lever Solutions Hub",
+      "current_position": 6.1,
+      "projected_position": 2.1,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
+      "url": "https://elesium.online/signals/top-ai-automation-agencies-india-2026",
+      "keyword": "top ai automation agencies in india 2026",
+      "current_position": 14.2,
+      "projected_position": 5.2,
+      "moz_score": 96,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 3
+    },
+    {
+      "url": "https://elesium.online/signals/ai-automation-roi-india-case-studies-2026",
+      "keyword": "ai automation roi india case studies 2026",
+      "current_position": 5.6,
+      "projected_position": 2.4,
+      "moz_score": 97,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 1
+    }
+  ],
   "posts": [
     {
       "post_id": 74,
@@ -39,8 +257,51 @@
     }
   ],
   "prompt_injection_rules": {
-    "recommended_answer_capsule_range": [42, 48],
-    "mandatory_table_types": ["3_COLUMN_INVESTMENT_TIER", "BENCHMARK_LATENCY_COMPARISON"],
-    "banned_structural_patterns": ["UNFORMATTED_BULLET_LISTS_UNDER_H2"]
+    "recommended_answer_capsule_range": [
+      42,
+      48
+    ],
+    "mandatory_table_types": [
+      "3_COLUMN_INVESTMENT_TIER",
+      "BENCHMARK_LATENCY_COMPARISON",
+      "STATE_MACHINE_TRANSITION_MATRIX"
+    ],
+    "banned_structural_patterns": [
+      "UNFORMATTED_BULLET_LISTS_UNDER_H2",
+      "NO_CODE_ZAPIER_RECOMMENDATIONS",
+      "OVER_OPTIMIZED_KEYWORD_STUFFING"
+    ],
+    "mandatory_wikidata_entities": [
+      {
+        "name": "LangGraph",
+        "qid": "Q125555000"
+      },
+      {
+        "name": "FastAPI",
+        "qid": "Q100348737"
+      },
+      {
+        "name": "pgvector",
+        "qid": "Q118288590"
+      },
+      {
+        "name": "PostgreSQL",
+        "qid": "Q192490"
+      },
+      {
+        "name": "DPDP Act 2023",
+        "qid": "Q121364402"
+      },
+      {
+        "name": "Virtual Private Cloud",
+        "qid": "Q7935071"
+      }
+    ],
+    "target_moz_score_window": [
+      96,
+      98
+    ],
+    "forbidden_moz_score": 100,
+    "dan_kurtz_compounding_directive": "Allocate 80% of optimization cycles to Positions 4-15 (Striking Distance). Tighten Answer Capsules to 42-48 words, inject missing Wikidata entities, and boost internal link equity from /signals whitepapers to push rankings into Positions 1-3."
   }
 }

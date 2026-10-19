@@ -1,0 +1,97 @@
+{
+  "title": "Directory NAP & Commercial Deep-Link Parity Report",
+  "total_platforms": 6,
+  "all_passed": true,
+  "canonical_reference": {
+    "brand_name": "Elesium",
+    "legal_name": "Elesium Online",
+    "street_address": "Koramangala 4th Block",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "postal_code": "560034",
+    "country": "India",
+    "country_code": "IN",
+    "latitude": 12.9352,
+    "longitude": 77.6245,
+    "phone": "+91-8317329312",
+    "email": "contact@elesium.online",
+    "website": "https://elesium.online",
+    "solutions_hub": "https://elesium.online/solutions",
+    "founder_name": "Chaman Shah",
+    "founder_title": "Principal AI Systems Architect",
+    "founding_year": 2024,
+    "company_size": "10-49",
+    "hourly_rate": "$25 - $49 / hr",
+    "min_project_size": "$10,000+",
+    "primary_category": "Software Company",
+    "secondary_categories": [
+      "Artificial Intelligence Development",
+      "Enterprise Workflow Automation",
+      "Computer Consulting"
+    ],
+    "tagline": "Replacing 40-hour manual bottlenecks with deterministic, sovereign multi-agent AI systems.",
+    "short_description": "India's premier enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days."
+  },
+  "platforms": [
+    {
+      "platform": "Clutch.co",
+      "dr": 92,
+      "nap_valid": true,
+      "validation_errors": [],
+      "bofu_links_count": 5,
+      "markdown_file": "clutch_profile_solutions.md",
+      "json_file": "clutch_profile_submission.json",
+      "csv_file": null
+    },
+    {
+      "platform": "GoodFirms",
+      "dr": 86,
+      "nap_valid": true,
+      "validation_errors": [],
+      "bofu_links_count": 5,
+      "markdown_file": "goodfirms_profile_solutions.md",
+      "json_file": "goodfirms_profile_submission.json",
+      "csv_file": null
+    },
+    {
+      "platform": "G2",
+      "dr": 91,
+      "nap_valid": true,
+      "validation_errors": [],
+      "bofu_links_count": 5,
+      "markdown_file": "g2_profile_solutions.md",
+      "json_file": "g2_profile_submission.json",
+      "csv_file": null
+    },
+    {
+      "platform": "Crunchbase",
+      "dr": 91,
+      "nap_valid": true,
+      "validation_errors": [],
+      "bofu_links_count": 5,
+      "markdown_file": "crunchbase_profile_solutions.md",
+      "json_file": "crunchbase_profile_submission.json",
+      "csv_file": null
+    },
+    {
+      "platform": "Semrush Local / Yext",
+      "dr": 90,
+      "nap_valid": true,
+      "validation_errors": [],
+      "bofu_links_count": 5,
+      "markdown_file": "semrush_local_citations.md",
+      "json_file": "semrush_local_citations.json",
+      "csv_file": "semrush_local_citations.csv"
+    },
+    {
+      "platform": "Trustpilot",
+      "dr": 93,
+      "nap_valid": true,
+      "validation_errors": [],
+      "bofu_links_count": 5,
+      "markdown_file": "trustpilot_profile_solutions.md",
+      "json_file": "trustpilot_profile_submission.json",
+      "csv_file": null
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "title": "Meetup Group Scout & Takeover Dossier",
+  "coverage_cities": [
+    "Bangalore",
+    "Mumbai",
+    "Delhi",
+    "Hyderabad",
+    "Pune"
+  ],
+  "total_groups_scouted": 5,
+  "total_audience_reach": 17540,
+  "speaker_credentials": {
+    "name": "Chaman Shah",
+    "title": "Principal AI Systems Architect",
+    "company": "Elesium",
+    "phone": "+91-8317329312",
+    "email": "contact@elesium.online",
+    "solutions_hub": "https://elesium.online/solutions",
+    "signals_hub": "https://elesium.online/signals",
+    "linkedin": "https://www.linkedin.com/in/chaman-elesium"
+  },
+  "groups": [
+    {
+      "group_id": "BLR-MT-01",
+      "city": "Bangalore",
+      "group_name": "Bangalore Enterprise AI & Python Architects",
+      "member_count": 4250,
+      "dormant_months": 8,
+      "status": "Needs Organizer",
+      "current_organizer_name": "Karthik N.",
+      "meetup_url": "https://www.meetup.com/bangalore-enterprise-ai-python",
+      "topic_tags": [
+        "Artificial Intelligence",
+        "Python",
+        "Enterprise Architecture",
+        "LangGraph"
+      ],
+      "proposed_rebrand": "Bangalore Sovereign AI & Multi-Agent Engineering Guild",
+      "opportunity_tier": "Tier 1"
+    },
+    {
+      "group_id": "BOM-MT-02",
+      "city": "Mumbai",
+      "group_name": "Mumbai FinTech & Algorithmic Automation Builders",
+      "member_count": 3180,
+      "dormant_months": 7,
+      "status": "Needs Organizer",
+      "current_organizer_name": "Rohan Mehta",
+      "meetup_url": "https://www.meetup.com/mumbai-fintech-automation",
+      "topic_tags": [
+        "Fintech",
+        "BFSI",
+        "Document Processing",
+        "Automated Underwriting"
+      ],
+      "proposed_rebrand": "Mumbai BFSI AI & Quantitative Workflow Guild",
+      "opportunity_tier": "Tier 1"
+    },
+    {
+      "group_id": "DEL-MT-03",
+      "city": "Delhi",
+      "group_name": "Delhi NCR Cloud Native & Microservices Developers",
+      "member_count": 5120,
+      "dormant_months": 11,
+      "status": "Organizer Stepped Down",
+      "current_organizer_name": "Vikas Sharma",
+      "meetup_url": "https://www.meetup.com/delhi-ncr-cloud-native",
+      "topic_tags": [
+        "Cloud Infrastructure",
+        "Kubernetes",
+        "Private VPC",
+        "Enterprise Software"
+      ],
+      "proposed_rebrand": "Delhi NCR Sovereign Cloud & Enterprise AI Guild",
+      "opportunity_tier": "Tier 1"
+    },
+    {
+      "group_id": "HYD-MT-04",
+      "city": "Hyderabad",
+      "group_name": "Hyderabad Data Engineering & Distributed Systems",
+      "member_count": 2840,
+      "dormant_months": 9,
+      "status": "Needs Organizer",
+      "current_organizer_name": "Srinivas Rao",
+      "meetup_url": "https://www.meetup.com/hyderabad-data-distributed-systems",
+      "topic_tags": [
+        "Data Pipelines",
+        "PostgreSQL",
+        "ETL",
+        "High-Throughput Systems"
+      ],
+      "proposed_rebrand": "Hyderabad High-Throughput AI & Data Infrastructure Guild",
+      "opportunity_tier": "Tier 2"
+    },
+    {
+      "group_id": "PUN-MT-05",
+      "city": "Pune",
+      "group_name": "Pune Industrial IoT & Smart Manufacturing Tech",
+      "member_count": 2150,
+      "dormant_months": 10,
+      "status": "Needs Organizer",
+      "current_organizer_name": "Anand Joshi",
+      "meetup_url": "https://www.meetup.com/pune-industrial-iot-manufacturing",
+      "topic_tags": [
+        "Industrial Automation",
+        "Manufacturing",
+        "Supply Chain",
+        "SAP Integration"
+      ],
+      "proposed_rebrand": "Pune Autonomous Industrial & Manufacturing AI Guild",
+      "opportunity_tier": "Tier 2"
+    }
+  ]
+}

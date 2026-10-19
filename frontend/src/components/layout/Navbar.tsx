@@ -51,6 +51,12 @@ export default function Navbar() {
                             Markets
                         </Link>
                         <Link
+                            to="/solutions"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-600 dark:text-emerald-400"
+                        >
+                            Solutions
+                        </Link>
+                        <Link
                             to="/ai-automation"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
@@ -73,6 +79,12 @@ export default function Navbar() {
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
                             Market Signals
+                        </Link>
+                        <Link
+                            to="/tools/enterprise-ai-roi-calculator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-600 dark:text-amber-400"
+                        >
+                            ROI Calculator
                         </Link>
                         <Link
                             to="/resources"
@@ -143,6 +155,13 @@ export default function Navbar() {
                                 Markets
                             </Link>
                             <Link
+                                to="/solutions"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Solutions
+                            </Link>
+                            <Link
                                 to="/ai-automation"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
@@ -169,6 +188,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Market Signals
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-ai-roi-calculator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-amber-600 dark:text-amber-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                ROI Calculator
                             </Link>
                             <Link
                                 to="/resources"

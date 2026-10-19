@@ -1,17 +1,23 @@
 import { Link } from 'react-router-dom'
 
 export default function DownloadFooter() {
-    const handleNavigation = () => {
-        // no-op if no longer needed, keeping for structure
-    };
-
     const footerSections = [
+        { name: 'Solutions Hub', path: '/solutions' },
         { name: 'How We Work', path: '/how-we-work' },
         { name: 'Markets', path: '/markets' },
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'India Enterprise', path: '/ai-automation-agency-india' },
+        { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
+    ];
+
+    const highLeverSolutions = [
+        { name: 'AI Automation Agency for Logistics', path: '/solutions/ai-automation-agency-for-logistics' },
+        { name: 'Autonomous Loan Underwriting AI for NBFCs', path: '/solutions/autonomous-loan-underwriting-ai-for-nbfcs' },
+        { name: 'Deterministic Multi-Agent Systems for Manufacturing ERP', path: '/solutions/deterministic-multi-agent-systems-for-manufacturing-erp' },
+        { name: 'Private VPC Air-Gapped LLM Deployment for Healthcare', path: '/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare' },
+        { name: 'SAP S/4HANA Autonomous AI Integration Agency', path: '/solutions/sap-s4hana-autonomous-ai-integration-agency' },
     ];
 
     return (
@@ -19,31 +25,54 @@ export default function DownloadFooter() {
             <div className="max-w-[95%] mx-auto px-5 md:px-6 flex flex-col min-h-[40vh] md:min-h-[80vh] justify-between">
 
                 {/* Top Section */}
-                <div className="flex flex-col md:flex-row justify-between w-full items-start gap-8 md:gap-0">
+                <div className="flex flex-col lg:flex-row justify-between w-full items-start gap-8 lg:gap-0">
 
-                    <div className="flex gap-24 md:gap-32 pr-4 md:pr-12">
-                        <div className="flex flex-col gap-6">
+                    <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 md:gap-24 pr-4 md:pr-12">
+                        {/* Explore Column */}
+                        <div className="flex flex-col gap-5">
                             <h4 className="font-normal text-lg text-gray-900 dark:text-white">Explore</h4>
-                            <ul className="flex flex-col gap-4">
+                            <ul className="flex flex-col gap-3.5">
                                 {footerSections.map((item) => (
                                     <li key={item.name}>
-                                        {item.path ? (
-                                            <Link
-                                                to={item.path}
-                                                className={`text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        ) : (
-                                            <button
-                                                onClick={() => handleNavigation()}
-                                                className={`text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[15px] text-left`}
-                                            >
-                                                {item.name}
-                                            </button>
-                                        )}
+                                        <Link
+                                            to={item.path}
+                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[14px] text-left"
+                                        >
+                                            {item.name}
+                                        </Link>
                                     </li>
                                 ))}
+                            </ul>
+                        </div>
+
+                        {/* High-Lever Solutions Column (1-Click Crawl Depth from Homepage) */}
+                        <div className="flex flex-col gap-5 max-w-sm">
+                            <div className="flex items-center gap-2">
+                                <h4 className="font-normal text-lg text-gray-900 dark:text-white">Solutions</h4>
+                                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                    BOFU
+                                </span>
+                            </div>
+                            <ul className="flex flex-col gap-3">
+                                {highLeverSolutions.map((item) => (
+                                    <li key={item.name}>
+                                        <Link
+                                            to={item.path}
+                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[13px] text-left line-clamp-1"
+                                            title={item.name}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                                <li className="pt-1">
+                                    <Link
+                                        to="/solutions"
+                                        className="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                                    >
+                                        View All 20 Sovereign Workflows →
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

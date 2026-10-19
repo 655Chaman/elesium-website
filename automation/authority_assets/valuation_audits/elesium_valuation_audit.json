@@ -1,0 +1,47 @@
+{
+  "financial_inputs": {
+    "annual_revenue": 24000000.0,
+    "reported_net_income": 7500000.0,
+    "founder_draw_total": 3000000.0,
+    "market_replacement_salary": 3000000.0,
+    "calculated_sde": 10500000.0,
+    "normalized_ebitda": 7500000.0,
+    "currency": "INR"
+  },
+  "scorecard": {
+    "pillar_1_earnings_quality": {
+      "score": 3,
+      "max": 3,
+      "notes": "Elite 28%+ normalized margins, clean accrual books, audited P&L ready."
+    },
+    "pillar_2_owner_independence": {
+      "score": 3,
+      "max": 3,
+      "notes": "Full owner independence (<4 hrs/wk). Business passes Yosemite 30-Day Test autonomously."
+    },
+    "pillar_3_revenue_quality": {
+      "score": 3,
+      "max": 3,
+      "notes": "Elite revenue quality: 75%+ contracted retainers, max client <=15%, NRR > 110%."
+    },
+    "pillar_4_systems_and_ip": {
+      "score": 3,
+      "max": 3,
+      "notes": "Complete Decision Frameworks; IP Carve-Out separating proprietary agent IP from service contracts."
+    },
+    "total_score": 12,
+    "max_score": 12,
+    "readiness_grade": "Institutional Grade"
+  },
+  "valuation_outcomes": {
+    "baseline_multiple": 2.8,
+    "baseline_multiple_basis": "SDE",
+    "baseline_valuation": 29400000.0,
+    "derisked_multiple": 5.2,
+    "derisked_multiple_basis": "EBITDA",
+    "derisked_valuation": 39000000.0,
+    "value_creation_delta": 9600000.0,
+    "multiple_expansion_ratio": 1.33
+  },
+  "strategic_action_plan": []
+}

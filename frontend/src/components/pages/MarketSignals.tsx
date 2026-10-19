@@ -1,16 +1,34 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink } from 'lucide-react'
+import { ArrowLeft, ArrowRight, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { blogPosts } from '../../data/blogPosts'
+import { blogPosts, getMatchedSolutionSlug } from '../../data/blogPosts'
+import { getSolutionBySlug, solutionsData, SolutionRecord } from '../../data/solutionsData'
+import { 
+    ArchitecturePlayground, 
+    InteractiveRoiCalculator, 
+    InteractiveCodeBlock, 
+    InteractiveMermaid, 
+    ExecutiveAudioBriefing, 
+    BlueprintDownloadCard 
+} from '../interactive'
+import { useDwellTelemetry } from '../../hooks/useDwellTelemetry'
 
 export default function MarketSignals() {
     const { slug } = useParams();
     const navigate = useNavigate();
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const { activeDwellSeconds, scrollDepthPercent, interactionCount, isGoodClick, isLastLongestClickEligible, trackInteraction } = useDwellTelemetry(slug || 'signals-directory');
 
     const activeArticle = slug ? blogPosts.find(post => post.slug === slug) : null;
+
+    // System 1 -> System 2 Topical Equity Bridge: Match signal to commercial solution
+    const matchedSolution: SolutionRecord | undefined = React.useMemo(() => {
+        if (!activeArticle) return undefined;
+        const targetSlug = getMatchedSolutionSlug(activeArticle);
+        return getSolutionBySlug(targetSlug) || solutionsData[0];
+    }, [activeArticle]);
 
     // Pillar 1: Find related posts for internal linking
     const relatedPosts = activeArticle?.internalLinks
@@ -239,6 +257,10 @@ export default function MarketSignals() {
                                         <Clock className="h-3.5 w-3.5" />
                                         {activeArticle.readTime}
                                     </span>
+                                    <span className="flex items-center gap-1.5 text-gray-700 dark:text-gray-300">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                        By {activeArticle.author?.name || 'Chaman Shah'} ({activeArticle.author?.role || 'Principal AI Systems Architect'})
+                                    </span>
                                 </div>
 
                                 {/* Title */}
@@ -247,108 +269,254 @@ export default function MarketSignals() {
                                 </h1>
 
                                 {/* Intro */}
-                                <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-normal border-b border-gray-100 dark:border-white/5 pb-10 mb-10">
+                                {/* Intro */}
+                                <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-normal border-b border-gray-100 dark:border-white/5 pb-10 mb-8">
                                     {activeArticle.intro}
                                 </p>
 
-                                {/* Dynamic Sections */}
-                                <div className="space-y-8">
+                                {/* Behavioral Dwell Hook 1: Executive Timestamped Audio Synthesis Briefing */}
+                                <ExecutiveAudioBriefing 
+                                    postTitle={activeArticle.title.replace(/\*\*/g, '')}
+                                    onTelemetry={trackInteraction} 
+                                />
+
+                                {/* Dynamic Sections with Interactive Assets */}
+                                <div className="space-y-8 mt-10">
                                     {activeArticle.sections.map((section, sIdx) => {
-                                        switch (section.type) {
-                                            case 'heading':
-                                                return (
-                                                    <h2 key={sIdx} className="text-xl md:text-2xl font-bold text-black dark:text-white tracking-tight mt-10 mb-4">
-                                                        {section.value as string}
-                                                    </h2>
-                                                );
-                                            case 'paragraph':
-                                                return (
-                                                    <p key={sIdx} className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
-                                                        {section.value as string}
-                                                    </p>
-                                                );
-                                            case 'list':
-                                                return (
-                                                    <ul key={sIdx} className="space-y-4 my-6 pl-1">
-                                                        {(section.value as string[]).map((item, iIdx) => {
-                                                            const [boldPart, rest] = item.includes(':') ? item.split(':', 2) : [null, item];
-                                                            return (
-                                                                <li key={iIdx} className="flex items-start gap-3 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                                                                    <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
-                                                                    <span>
-                                                                        {boldPart ? (
-                                                                            <>
-                                                                                <strong className="font-semibold text-black dark:text-white">{boldPart}</strong>:
-                                                                                {rest}
-                                                                            </>
-                                                                        ) : item}
-                                                                    </span>
-                                                                </li>
-                                                            );
-                                                        })}
-                                                    </ul>
-                                                );
-                                            case 'quote':
-                                                return (
-                                                    <blockquote key={sIdx} className="border-l-2 border-blue-500 pl-6 my-8 py-1">
-                                                        <p className="text-base md:text-lg italic text-gray-800 dark:text-gray-200 leading-relaxed">
+                                        // Auto-injection checkpoints for high dwell-time if not explicitly present
+                                        const shouldInjectPlayground = sIdx === 2 && !activeArticle.sections.some(s => s.type === 'playground');
+                                        const shouldInjectRoiCalculator = sIdx === Math.min(5, activeArticle.sections.length - 1) && !activeArticle.sections.some(s => s.type === 'roi_calculator');
+
+                                        const renderedSection = (() => {
+                                            switch (section.type) {
+                                                case 'heading':
+                                                    return (
+                                                        <h2 key={sIdx} className="text-xl md:text-2xl font-bold text-black dark:text-white tracking-tight mt-10 mb-4">
+                                                            {section.value as string}
+                                                        </h2>
+                                                    );
+                                                case 'paragraph':
+                                                    return (
+                                                        <p key={sIdx} className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                                                             {section.value as string}
                                                         </p>
-                                                    </blockquote>
-                                                );
-                                            case 'metric':
-                                                return (
-                                                    <div key={sIdx} className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
-                                                        {(section.value as { label: string; value: string; description: string }[]).map((metric, mIdx) => (
-                                                            <div key={mIdx} className="bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-lg p-5 flex flex-col justify-between">
-                                                                <div>
-                                                                    <div className="text-3xl md:text-4xl font-bold text-black dark:text-white tracking-tight mb-1">
-                                                                        {metric.value}
+                                                    );
+                                                case 'list':
+                                                    return (
+                                                        <ul key={sIdx} className="space-y-4 my-6 pl-1">
+                                                            {(section.value as string[]).map((item, iIdx) => {
+                                                                const [boldPart, rest] = item.includes(':') ? item.split(':', 2) : [null, item];
+                                                                return (
+                                                                    <li key={iIdx} className="flex items-start gap-3 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                                                                        <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
+                                                                        <span>
+                                                                            {boldPart ? (
+                                                                                <>
+                                                                                    <strong className="font-semibold text-black dark:text-white">{boldPart}</strong>:
+                                                                                    {rest}
+                                                                                </>
+                                                                            ) : item}
+                                                                        </span>
+                                                                    </li>
+                                                                );
+                                                            })}
+                                                        </ul>
+                                                    );
+                                                case 'quote':
+                                                    return (
+                                                        <blockquote key={sIdx} className="border-l-2 border-blue-500 pl-6 my-8 py-1">
+                                                            <p className="text-base md:text-lg italic text-gray-800 dark:text-gray-200 leading-relaxed">
+                                                                {section.value as string}
+                                                            </p>
+                                                        </blockquote>
+                                                    );
+                                                case 'metric':
+                                                    return (
+                                                        <div key={sIdx} className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+                                                            {(section.value as { label: string; value: string; description: string }[]).map((metric, mIdx) => (
+                                                                <div key={mIdx} className="bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-lg p-5 flex flex-col justify-between">
+                                                                    <div>
+                                                                        <div className="text-3xl md:text-4xl font-bold text-black dark:text-white tracking-tight mb-1">
+                                                                            {metric.value}
+                                                                        </div>
+                                                                        <div className="text-[11px] font-semibold text-blue-600 dark:text-blue-400 tracking-[0.06em] uppercase mb-3">
+                                                                            {metric.label}
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="text-[11px] font-semibold text-blue-600 dark:text-blue-400 tracking-[0.06em] uppercase mb-3">
-                                                                        {metric.label}
+                                                                    <div className="text-xs text-gray-500 dark:text-gray-400 leading-normal">
+                                                                        {metric.description}
                                                                     </div>
                                                                 </div>
-                                                                <div className="text-xs text-gray-500 dark:text-gray-400 leading-normal">
-                                                                    {metric.description}
+                                                            ))}
+                                                        </div>
+                                                    );
+                                                case 'playground':
+                                                    return (
+                                                        <ArchitecturePlayground 
+                                                            key={sIdx} 
+                                                            defaultPreset={(section.preset as any) || (activeArticle.category.includes('India') ? 'bfsi' : 'supply_chain')}
+                                                            onTelemetry={trackInteraction} 
+                                                        />
+                                                    );
+                                                case 'roi_calculator':
+                                                    return (
+                                                        <InteractiveRoiCalculator 
+                                                            key={sIdx} 
+                                                            defaultCurrency={activeArticle.category.includes('India') ? 'INR' : 'USD'}
+                                                            onTelemetry={trackInteraction} 
+                                                        />
+                                                    );
+                                                case 'code_block':
+                                                    return (
+                                                        <InteractiveCodeBlock 
+                                                            key={sIdx} 
+                                                            tabs={section.props?.tabs || [{ label: 'Architecture Payload', language: 'json', content: typeof section.value === 'string' ? section.value : JSON.stringify(section.value, null, 2) }]}
+                                                            title={section.props?.title}
+                                                            complianceBadge={section.props?.complianceBadge}
+                                                            onTelemetry={trackInteraction} 
+                                                        />
+                                                    );
+                                                case 'mermaid':
+                                                    return (
+                                                        <InteractiveMermaid 
+                                                            key={sIdx} 
+                                                            title={section.props?.title} 
+                                                            diagramDsl={section.props?.diagramDsl} 
+                                                            onTelemetry={trackInteraction} 
+                                                        />
+                                                    );
+                                                case 'audio_briefing':
+                                                    return (
+                                                        <ExecutiveAudioBriefing 
+                                                            key={sIdx} 
+                                                            postTitle={activeArticle.title.replace(/\*\*/g, '')}
+                                                            onTelemetry={trackInteraction} 
+                                                        />
+                                                    );
+                                                case 'blueprint_download':
+                                                    return (
+                                                        <BlueprintDownloadCard 
+                                                            key={sIdx} 
+                                                            onTelemetry={trackInteraction} 
+                                                        />
+                                                    );
+                                                case 'faq':
+                                                    return (
+                                                        <div key={sIdx} className="my-8 space-y-3">
+                                                            {(section.value as { q: string; a: string }[]).map((item, fIdx) => (
+                                                                <div key={fIdx} className="border border-gray-100 dark:border-white/5 rounded-lg overflow-hidden">
+                                                                    <button
+                                                                        onClick={() => setOpenFaq(openFaq === fIdx ? null : fIdx)}
+                                                                        className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                                                                    >
+                                                                        {item.q}
+                                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-blue-500 transition-transform duration-200 ${openFaq === fIdx ? 'rotate-180' : ''}`} />
+                                                                    </button>
+                                                                    <AnimatePresence>
+                                                                        {openFaq === fIdx && (
+                                                                            <motion.div
+                                                                                initial={{ height: 0, opacity: 0 }}
+                                                                                animate={{ height: 'auto', opacity: 1 }}
+                                                                                exit={{ height: 0, opacity: 0 }}
+                                                                                transition={{ duration: 0.2 }}
+                                                                                className="overflow-hidden"
+                                                                            >
+                                                                                <p className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.a}</p>
+                                                                            </motion.div>
+                                                                        )}
+                                                                    </AnimatePresence>
                                                                 </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                );
-                                            case 'faq':
-                                                return (
-                                                    <div key={sIdx} className="my-8 space-y-3">
-                                                        {(section.value as { q: string; a: string }[]).map((item, fIdx) => (
-                                                            <div key={fIdx} className="border border-gray-100 dark:border-white/5 rounded-lg overflow-hidden">
-                                                                <button
-                                                                    onClick={() => setOpenFaq(openFaq === fIdx ? null : fIdx)}
-                                                                    className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
-                                                                >
-                                                                    {item.q}
-                                                                    <ChevronDown className={`h-4 w-4 flex-shrink-0 text-blue-500 transition-transform duration-200 ${openFaq === fIdx ? 'rotate-180' : ''}`} />
-                                                                </button>
-                                                                <AnimatePresence>
-                                                                    {openFaq === fIdx && (
-                                                                        <motion.div
-                                                                            initial={{ height: 0, opacity: 0 }}
-                                                                            animate={{ height: 'auto', opacity: 1 }}
-                                                                            exit={{ height: 0, opacity: 0 }}
-                                                                            transition={{ duration: 0.2 }}
-                                                                            className="overflow-hidden"
-                                                                        >
-                                                                            <p className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.a}</p>
-                                                                        </motion.div>
-                                                                    )}
-                                                                </AnimatePresence>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                );
-                                            default:
-                                                return null;
-                                        }
+                                                            ))}
+                                                        </div>
+                                                    );
+                                                default:
+                                                    return null;
+                                            }
+                                        })();
+
+                                        return (
+                                            <React.Fragment key={sIdx}>
+                                                {renderedSection}
+                                                {shouldInjectPlayground && (
+                                                    <ArchitecturePlayground 
+                                                        defaultPreset={activeArticle.category.includes('India') ? 'bfsi' : 'supply_chain'}
+                                                        onTelemetry={trackInteraction} 
+                                                    />
+                                                )}
+                                                {shouldInjectRoiCalculator && (
+                                                    <InteractiveRoiCalculator 
+                                                        defaultCurrency={activeArticle.category.includes('India') ? 'INR' : 'USD'}
+                                                        onTelemetry={trackInteraction} 
+                                                    />
+                                                )}
+                                            </React.Fragment>
+                                        );
                                     })}
+                                </div>
+
+                                {/* Behavioral Dwell Hook 4: Production Architecture Blueprint Download */}
+                                <BlueprintDownloadCard onTelemetry={trackInteraction} />
+
+                                {/* System 1 -> System 2 Topical Equity Bridge: High-Converting Commercial Solution Callout */}
+                                {matchedSolution && (
+                                    <div className="my-10 p-6 sm:p-8 rounded-2xl border-2 border-emerald-500/30 bg-emerald-50/50 dark:bg-emerald-950/20 backdrop-blur-sm relative overflow-hidden">
+                                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+
+                                        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-3">
+                                            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                            <span className="font-semibold">Deploy This Architecture in Production</span>
+                                            <span className="text-gray-400 text-[10px] hidden sm:inline">| Sovereign Commercial Implementation</span>
+                                        </div>
+
+                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                                            Operationalize This Architecture with Private VPC Isolation
+                                        </h3>
+
+                                        <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                            Need to operationalize this architecture? Deploy Elesium&apos;s{' '}
+                                            <Link
+                                                to={`/solutions/${matchedSolution.slug}`}
+                                                className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
+                                            >
+                                                {matchedSolution.h1}
+                                                <ExternalLink className="w-3.5 h-3.5 inline" />
+                                            </Link>{' '}
+                                            with dedicated private VPC isolation and an audited 90-day cash-flow ROI.
+                                        </p>
+
+                                        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-emerald-500/20 text-xs font-mono">
+                                            <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400">
+                                                <span className="flex items-center gap-1.5"><span className="text-emerald-500">✓</span> Private VPC Isolated</span>
+                                                <span className="flex items-center gap-1.5"><span className="text-emerald-500">✓</span> Sub-200ms Latency SLA</span>
+                                                <span className="flex items-center gap-1.5"><span className="text-emerald-500">✓</span> DPDP Act 2023 Compliant</span>
+                                            </div>
+
+                                            <Link
+                                                to={`/solutions/${matchedSolution.slug}`}
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs font-mono tracking-wide transition-colors shadow-sm"
+                                            >
+                                                <span>Deploy Production Solution</span>
+                                                <ArrowRight className="w-3.5 h-3.5" />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Live Dwell & Navboost Telemetry Status Bar */}
+                                <div className="my-10 p-4 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
+                                    <div className="flex items-center gap-3">
+                                        <span className="flex items-center gap-1.5">
+                                            <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 animate-pulse' : 'bg-cyan-400'}`} />
+                                            Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
+                                        </span>
+                                        <span className="hidden sm:inline">|</span>
+                                        <span className="hidden sm:inline">Scroll: <strong className="text-black dark:text-white">{scrollDepthPercent}%</strong></span>
+                                        <span className="hidden sm:inline">|</span>
+                                        <span className="hidden sm:inline">Interactions: <strong className="text-black dark:text-white">{interactionCount}</strong></span>
+                                    </div>
+                                    <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold">
+                                        {isLastLongestClickEligible ? 'Navboost High-Retention Verified (180s+)' : isGoodClick ? 'Navboost GoodClick Active (120s+)' : 'Logging Session Telemetry'}
+                                    </span>
                                 </div>
 
                                 {/* Pillar 5: FAQ Section */}

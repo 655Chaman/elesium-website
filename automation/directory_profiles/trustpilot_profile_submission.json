@@ -1,0 +1,54 @@
+{
+  "platform": "Trustpilot",
+  "dr": 93,
+  "company_name": "Elesium",
+  "brand_name": "Elesium",
+  "legal_name": "Elesium Online",
+  "street_address": "Koramangala 4th Block",
+  "city": "Bengaluru",
+  "state": "Karnataka",
+  "postal_code": "560034",
+  "country": "India",
+  "phone": "+91-8317329312",
+  "website": "https://elesium.online",
+  "founder_name": "Chaman Shah",
+  "founding_year": 2024,
+  "solutions_hub": "https://elesium.online/solutions",
+  "primary_category": "Software & Computer Consulting",
+  "secondary_categories": [
+    "Internet Marketing & AI Automation",
+    "Computer Support & Services"
+  ],
+  "bofu_case_studies": [
+    {
+      "title": "AI Automation Agency for Logistics & Supply Chain",
+      "url": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
+      "slug": "ai-automation-agency-for-logistics",
+      "key_metric": "82% faster manifest clearance, sub-200ms BoL parsing"
+    },
+    {
+      "title": "Autonomous Dispatch Software for Freight Carriers",
+      "url": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
+      "slug": "autonomous-dispatch-software-for-freight-carriers",
+      "key_metric": "Dynamic route optimization cutting fuel overhead by 22%"
+    },
+    {
+      "title": "Deterministic Warehouse Automation for 3PL Providers",
+      "url": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
+      "slug": "deterministic-warehouse-automation-for-3pl-providers",
+      "key_metric": "98% error cut in multi-depot WMS reconciliation"
+    },
+    {
+      "title": "Fleet Route Optimization Agents for Supply Chain Directors",
+      "url": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
+      "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+      "key_metric": "40% reduction in stockouts and missed delivery SLAs"
+    },
+    {
+      "title": "Custom EDI Parser Agents for Freight Forwarders",
+      "url": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
+      "slug": "custom-edi-parser-agents-for-freight-forwarders",
+      "key_metric": "Automated EDI 214/310 conversion in 1.9s latency"
+    }
+  ]
+}

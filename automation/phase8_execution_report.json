@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-19 09:31:27 IST",
+  "all_passed": true,
+  "elapsed_seconds": 0.01,
+  "results": {
+    "expert_quote_matcher": {
+      "status": "PASSED",
+      "details": "1-3 sentences/para, zero fluff, hard metrics (1.9s, \u20b918.4L, 98% cut), Chaman Shah credentials, deep anchors"
+    },
+    "directory_profile_syncer": {
+      "status": "PASSED",
+      "details": "6 directories (Clutch, GoodFirms, G2, Crunchbase, Semrush, Trustpilot) with 100% NAP match & top 5 BOFU links"
+    },
+    "meetup_group_scout": {
+      "status": "PASSED",
+      "details": "5 tech hubs (Bangalore, Mumbai, Delhi, Hyderabad, Pune) with takeover pitches & co-hosting backlink playbooks"
+    },
+    "product_hunt_launcher": {
+      "status": "PASSED",
+      "details": "Tagline <60 chars verified, 6-slide gallery specs, maker comment, tweet thread, outreach copy & BetaList payload"
+    },
+    "asset_integrity": {
+      "status": "PASSED",
+      "verified_files": 20
+    }
+  }
+}
