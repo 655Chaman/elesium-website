@@ -36,7 +36,7 @@ export default function Navbar() {
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400"
                         >
                             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            ele-in
+                            Book Audit
                         </Link>
                         <Link
                             to="/how-we-work"
@@ -138,7 +138,7 @@ export default function Navbar() {
                                 className="text-2xl font-semibold text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10 flex items-center gap-3"
                             >
                                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                ele-in
+                                Book Architecture Audit
                             </Link>
                             <Link
                                 to="/how-we-work"

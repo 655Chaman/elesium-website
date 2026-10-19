@@ -151,12 +151,19 @@ export default function SolutionDetail() {
 
                         {/* 3. Primary CTA Button (Strictly ABOVE Graphic on Mobile) */}
                         <div className="flex flex-wrap items-center gap-3.5 mb-8 lg:mb-10">
-                            <button
-                                onClick={openWhatsApp}
+                            <Link
+                                to={`/waitlist?solution=${solution.slug}`}
                                 className="px-6 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-medium text-sm transition-all duration-200 flex items-center gap-2 shadow-sm"
                             >
-                                {solution.hero.ctaText || solution.primaryCtaText}
+                                {solution.hero.ctaText || solution.primaryCtaText || 'Schedule Architecture Audit'}
                                 <ArrowRight className="w-4 h-4" />
+                            </Link>
+
+                            <button
+                                onClick={openWhatsApp}
+                                className="px-4 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-xs sm:text-sm transition-all flex items-center gap-1.5 text-gray-700 dark:text-gray-300"
+                            >
+                                <span>WhatsApp Desk</span>
                             </button>
 
                             <ExpandableScreen>
@@ -548,13 +555,13 @@ export default function SolutionDetail() {
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-                        <button
-                            onClick={openWhatsApp}
+                        <Link
+                            to={`/waitlist?solution=${solution.slug}`}
                             className="px-6 py-3.5 rounded-xl bg-white text-black hover:bg-gray-100 font-medium text-sm transition-all flex items-center gap-2"
                         >
                             {solution.primaryCtaText || 'Schedule Architecture Audit'}
                             <ArrowRight className="w-4 h-4" />
-                        </button>
+                        </Link>
 
                         <ExpandableScreen>
                             <ExpandableScreenTrigger>

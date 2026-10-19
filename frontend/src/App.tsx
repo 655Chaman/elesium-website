@@ -85,6 +85,8 @@ function App() {
                             <Route path="/videos" element={<VideoMirror />} />
                             <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />
+                            <Route path="/audit" element={<Waitlist />} />
+                            <Route path="/book-audit" element={<Waitlist />} />
                             <Route path="/solutions" element={<SolutionsHub />} />
                             <Route path="/solutions/:slug" element={<SolutionDetail />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />

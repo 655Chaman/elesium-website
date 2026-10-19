@@ -317,7 +317,7 @@ export default function EmbedRoiCalculator() {
 
                     {/* Direct CTA Button */}
                     <a
-                        href="https://elesium.online/waitlist"
+                        href={`https://elesium.online/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=embed-calculator`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs md:text-sm tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all duration-200"

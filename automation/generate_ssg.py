@@ -1559,8 +1559,12 @@ def generate_ssg():
             "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
         },
         "waitlist": {
-            "title": "ele-in Early Access Waitlist | Autonomous AI LinkedIn Outreach",
-            "desc": "Join the ele-in early access waitlist by Elesium. Autonomous AI agent taking over B2B LinkedIn outreach from lead generation to booked meetings."
+            "title": "Schedule Sovereign Enterprise AI Architecture Audit | Elesium",
+            "desc": "Book a 90-minute technical scope, data sovereignty risk analysis, and deterministic multi-agent roadmap led by Chaman Shah (Principal AI Systems Architect). Confidential and governed by a mutual NDA."
+        },
+        "audit": {
+            "title": "Schedule Sovereign Enterprise AI Architecture Audit | Elesium",
+            "desc": "Book a 90-minute technical scope, data sovereignty risk analysis, and deterministic multi-agent roadmap led by Chaman Shah (Principal AI Systems Architect). Confidential and governed by a mutual NDA."
         },
         "tools/enterprise-ai-roi-calculator": {
             "title": "Enterprise AI ROI Calculator: Model Labor Savings & Payback",

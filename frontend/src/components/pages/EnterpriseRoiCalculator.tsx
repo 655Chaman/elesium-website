@@ -614,10 +614,11 @@ export default function EnterpriseRoiCalculator() {
                                 </ExpandableScreen>
 
                                 <Link
-                                    to="/waitlist"
-                                    className="w-full sm:w-auto text-center px-5 py-3 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 text-xs font-mono transition-colors"
+                                    to={`/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=roi-calculator`}
+                                    className="w-full sm:w-auto text-center px-5 py-3 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 text-xs font-mono transition-colors flex items-center justify-center gap-1.5"
                                 >
-                                    Join ele-in Early Access →
+                                    <span>Lock In These Projected Savings</span>
+                                    <span>→</span>
                                 </Link>
                             </div>
                         </div>
