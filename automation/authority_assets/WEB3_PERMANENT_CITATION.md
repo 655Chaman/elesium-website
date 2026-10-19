@@ -1,9 +1,9 @@
 # Elesium Sovereign Web3 & Decentralized Entity Ledger
 
 > **Methodology:** Matt McDermott (*SEO Rockstars 2026: Web3 & Decentralized Platforms*)  
-> **Master IPFS Content Identifier (CID):** `QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r`  
-> **Master SHA-256 Hash:** `ec10116eb01db46e0e3530cdff571e5d88a83dd71eefcb05f724e65083945e9b`  
-> **Total Cryptographically Anchored Routes:** `142` URLs  
+> **Master IPFS Content Identifier (CID):** `QmauX1kvt7uM137BKFbyKBprqBoSEdRNUmEVkiBgbXtnkJ`  
+> **Master SHA-256 Hash:** `bab7b5534d1c8f534e8c8fb6743e48b757ebcc63bcdafc2209d752fb379531fb`  
+> **Total Cryptographically Anchored Routes:** `193` URLs  
 
 ---
 
@@ -11,8 +11,8 @@
 
 - **ENS Domain**: `elesium.eth` ([Limo Gateway](https://elesium.eth.limo))
 - **Unstoppable Domain**: `elesium.crypto`
-- **Cloudflare IPFS Gateway**: [https://cloudflare-ipfs.com/ipfs/QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r](https://cloudflare-ipfs.com/ipfs/QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r)
-- **Global IPFS Gateway**: [https://ipfs.io/ipfs/QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r](https://ipfs.io/ipfs/QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r)
+- **Cloudflare IPFS Gateway**: [https://cloudflare-ipfs.com/ipfs/QmauX1kvt7uM137BKFbyKBprqBoSEdRNUmEVkiBgbXtnkJ](https://cloudflare-ipfs.com/ipfs/QmauX1kvt7uM137BKFbyKBprqBoSEdRNUmEVkiBgbXtnkJ)
+- **Global IPFS Gateway**: [https://ipfs.io/ipfs/QmauX1kvt7uM137BKFbyKBprqBoSEdRNUmEVkiBgbXtnkJ](https://ipfs.io/ipfs/QmauX1kvt7uM137BKFbyKBprqBoSEdRNUmEVkiBgbXtnkJ)
 
 ---
 
@@ -23,9 +23,9 @@ Every publication on `elesium.online` is compiled into a deterministic pre-rende
 | Route Category | URLs Verified | Primary Hash Standard | Permanent Storage Gateway |
 | :--- | :--- | :--- | :--- |
 | **Market Signals (System 1)** | 64 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Compact Solutions (System 2)** | 51 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Compact Solutions (System 2)** | 101 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
 | **Video Masterclasses & Scripts** | 15 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Interactive Micro-SaaS Tools** | 1 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Interactive Micro-SaaS Tools** | 2 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
 
 ---
 
@@ -33,17 +33,17 @@ Every publication on `elesium.online` is compiled into a deterministic pre-rende
 
 | URL | Path Suffix | SHA-256 Digest | IPFS CID |
 | :--- | :--- | :--- | :--- |
-| `https://elesium.online/` | `home` | `a7d3e87799ba0e70...` | `QmZdnCzkeGggSFc1...` |
-| `https://elesium.online/ai-automation` | `ai-automation` | `a63d7d766b665b4f...` | `QmZXamatevgRakxX...` |
-| `https://elesium.online/ai-automation-agency-india` | `ai-automation-agency-india` | `b6a7139e79d68b7c...` | `Qmadeg3SMsKPdMv9...` |
-| `https://elesium.online/audit` | `audit` | `d2de9162d891774b...` | `QmcXoAbYtK2wNiop...` |
-| `https://elesium.online/how-we-work` | `how-we-work` | `c54360f7d2dcc98a...` | `QmbcgcgvXtW1bgVt...` |
-| `https://elesium.online/markets` | `markets` | `05b35d74967f4c1c...` | `QmNiuNxYCZMrDCFJ...` |
-| `https://elesium.online/resources` | `resources` | `4380839153bb5bd4...` | `QmSt9gc6og1ts7wh...` |
+| `https://elesium.online/` | `home` | `62714eb704b7012c...` | `QmUxvsd91HCiPhjX...` |
+| `https://elesium.online/ai-automation` | `ai-automation` | `ca5a8778ac387689...` | `QmbxZ8S4UM7Vwrw5...` |
+| `https://elesium.online/ai-automation-agency-india` | `ai-automation-agency-india` | `291a4460ffe16572...` | `QmR76ezixpkvKTni...` |
+| `https://elesium.online/audit` | `audit` | `59e3f9b596c61429...` | `QmUPYckisFowLNSc...` |
+| `https://elesium.online/how-we-work` | `how-we-work` | `64505ae5e066c9d4...` | `QmV6EYc97QLUkAsq...` |
+| `https://elesium.online/markets` | `markets` | `0c779843a5a28fb9...` | `QmPBKNY991xSHiwS...` |
+| `https://elesium.online/resources` | `resources` | `514033d3dc549062...` | `QmTopWmT5Y9c4FE5...` |
 | `https://elesium.online/signals` | `signals` | `447febb6f48b8f0a...` | `QmSx3ZppGbdTCsd7...` |
-| `https://elesium.online/signals/accelerating-enterprise-sales-cycles-with-outbound-sale-48` | `signals/accelerating-enterprise-sales-cycles-with-outbound-sale-48` | `a3f61256015bf71d...` | `QmZNgnr51fVJPYxH...` |
-| `https://elesium.online/signals/accelerating-high-ticket-b2b-sales-with-signal-dri-ii-59` | `signals/accelerating-high-ticket-b2b-sales-with-signal-dri-ii-59` | `9535fd69a874a3bc...` | `QmYP7CsMQPQkzktt...` |
-| `https://elesium.online/signals/ai-automation-cost-india-2026-pricing` | `signals/ai-automation-cost-india-2026-pricing` | `371193848621bb3f...` | `QmS3cgF8cbSXgi5B...` |
-| `https://elesium.online/signals/ai-automation-roi-india-case-studies-2026` | `signals/ai-automation-roi-india-case-studies-2026` | `14c5d8abf3449d01...` | `QmPjjqfSMa2G8BiF...` |
+| `https://elesium.online/signals/accelerating-enterprise-sales-cycles-with-outbound-sale-48` | `signals/accelerating-enterprise-sales-cycles-with-outbound-sale-48` | `9848633846192f95...` | `QmYb6hXVu9GxCQ2W...` |
+| `https://elesium.online/signals/accelerating-high-ticket-b2b-sales-with-signal-dri-ii-59` | `signals/accelerating-high-ticket-b2b-sales-with-signal-dri-ii-59` | `2339fa8290bd355f...` | `QmQiAFmiGghXsMWu...` |
+| `https://elesium.online/signals/ai-automation-cost-india-2026-pricing` | `signals/ai-automation-cost-india-2026-pricing` | `a18988c6067fc1d9...` | `QmZDDz5QREUR34ut...` |
+| `https://elesium.online/signals/ai-automation-roi-india-case-studies-2026` | `signals/ai-automation-roi-india-case-studies-2026` | `2d7a87bfdb37cf1c...` | `QmRQBRSyKheVUaCY...` |
 
-*(... and 130 additional URLs tracked in web3.json)*
+*(... and 181 additional URLs tracked in web3.json)*

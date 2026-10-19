@@ -25,6 +25,8 @@ const SolutionsHub = lazy(() => import('./components/pages/SolutionsHub'))
 const SolutionDetail = lazy(() => import('./components/pages/SolutionDetail'))
 const EnterpriseRoiCalculator = lazy(() => import('./components/pages/EnterpriseRoiCalculator'))
 const EmbedRoiCalculator = lazy(() => import('./components/pages/EmbedRoiCalculator'))
+const MultiAgentLatencyEstimator = lazy(() => import('./components/pages/MultiAgentLatencyEstimator'))
+const EmbedLatencyEstimator = lazy(() => import('./components/pages/EmbedLatencyEstimator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -92,6 +94,9 @@ function App() {
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator" replace />} />
                             <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />
+                            <Route path="/tools/multi-agent-latency-token-cost-estimator" element={<MultiAgentLatencyEstimator />} />
+                            <Route path="/tools/latency-estimator" element={<Navigate to="/tools/multi-agent-latency-token-cost-estimator" replace />} />
+                            <Route path="/embed/latency-estimator" element={<EmbedLatencyEstimator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

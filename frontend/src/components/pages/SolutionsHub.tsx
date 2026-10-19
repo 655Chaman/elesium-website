@@ -11,6 +11,10 @@ import {
     Terminal,
     ArrowRight,
     ChevronRight,
+    Shield,
+    Plane,
+    Zap,
+    Pickaxe,
     Lock
 } from 'lucide-react'
 import { solutionCategories, getTopHighLeverSolutions, SolutionRecord } from '../../data/solutionsData'
@@ -27,7 +31,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Database,
     Network,
     Activity,
-    Terminal
+    Terminal,
+    Shield,
+    Plane,
+    Zap,
+    Pickaxe,
+    Lock
 }
 
 export default function SolutionsHub() {

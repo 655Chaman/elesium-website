@@ -53,7 +53,10 @@ FORBIDDEN_SUPERLATIVES = {
 ACRONYMS = {
     "AI", "BFSI", "ERP", "EDI", "AML", "SCADA", "OEM", "DICOM", "HIPAA",
     "EHR", "VPC", "LLM", "SAP", "CRM", "DPDP", "3PL", "CTO", "CIO", "CEO",
-    "CFO", "VP", "NBFC", "SEBI", "RBI", "CAD", "PLC", "PACS", "WMS", "TMS"
+    "CFO", "VP", "NBFC", "SEBI", "RBI", "CAD", "PLC", "PACS", "WMS", "TMS",
+    "ITAR", "FOQA", "BVLOS", "MRO", "FOD", "BESS", "PV", "ISO", "ISOs", "IPP",
+    "EV", "EPA", "CPCB", "SIEM", "SOC", "SBOM", "PAM", "PQC", "DevSecOps",
+    "CICD", "eBPF", "DBAs", "IAM", "FMCW", "HPA", "MRV", "ESG", "NRC"
 }
 
 def smart_title(text: str) -> str:
@@ -379,6 +382,176 @@ CATEGORY_ARCHITECTURES = {
             {"label": "Lease Parsing", "value": "< 45s", "desc": "Full contract ingestion and clause extraction across complex commercial leases."},
             {"label": "Term Accuracy", "value": "99.95%", "desc": "Deterministic financial calculation mapping for rent steps and CAM reconciliations."},
             {"label": "Underwrite Velocity", "value": "-75.0%", "desc": "Reduction in real estate closing due diligence and title verification timelines."}
+        ]
+    },
+    "GovTech & Sovereign Defense": {
+        "hero_subheadline": "Sovereign defense ministries and intelligence agencies deploy our air-gapped deterministic state machines for classified data extraction and mission-critical logistics.",
+        "hero_micro": "Every automated mission workflow operates in private air-gapped enclaves with zero external internet telemetry or data egress.",
+        "block1_title": "Air-Gapped Intelligence Processing & SCADA Isolation",
+        "block1_p1": "Classified defense networks require sovereign data pipelines that execute mission-critical extractions without public cloud dependency.",
+        "block1_p2": "Elesium implements air-gapped state machines that parse tactical sensor feeds and intelligence payloads in sub-second verification cycles.",
+        "block1_p3": "Our deterministic algorithms isolate SCADA control boundaries to prevent unauthorized lateral traversal across sensitive operational commands.",
+        "block1_bullets": [
+            "Sub-100ms classified document entity extraction and de-identification.",
+            "Air-gapped on-premise model execution with zero external data egress.",
+            "Immutable cryptographic audit trails complying with statutory defense guidelines.",
+            "Automated fallback to human command officers during uncalibrated signal disruption."
+        ],
+        "block1_img_alt": "Air-gapped defense intelligence and sovereign SCADA isolation topology",
+        "block2_title": "Statutory ITAR Compliance & Defense Supply Chain Guardrails",
+        "block2_p1": "Defense acquisition directives mandate rigid traceability across munitions manufacturing lists and sub-tier supplier flowdowns.",
+        "block2_p2": "Our compliance guardrail performs automated bill-of-materials obsolescence analysis to identify supply chain vulnerabilities months ahead of depot shortages.",
+        "block2_p3": "Multi-modal verification engines cross-reference technical drawing revisions against statutory export control boundaries before manufacturing release.",
+        "block2_bullets": [
+            "Automated ITAR munitions list classification and compliance verification.",
+            "Predictive DMSMS obsolescence tracking across complex defense assemblies.",
+            "Cryptographic proof of non-foreign data access across sovereign defense enclaves.",
+            "Deterministic public procurement bid-rigging anomaly detection state machines."
+        ],
+        "block2_img_alt": "ITAR defense supply chain compliance and procurement audit workflow",
+        "block3_title": "Sovereign Defense Specifications & Hardened SLAs",
+        "block3_intro": "Constructed for defense intelligence directors and military acquisition officers who require absolute data sovereignty and zero operational latency.",
+        "block3_note": "Every mission workflow executes within cryptographically sealed container enclaves that guarantee zero data leakage.",
+        "specs": [
+            {"label": "Enclave Latency", "value": "< 85ms", "desc": "Sub-second intelligence extraction across air-gapped server nodes."},
+            {"label": "Data Isolation", "value": "100.0%", "desc": "Zero external token egress verified by air-gapped firewall audits."},
+            {"label": "Audit Overhead", "value": "-82.0%", "desc": "Reduction in manual defense compliance documentation and ITAR reporting."}
+        ]
+    },
+    "Aerospace & Avionics": {
+        "hero_subheadline": "Commercial avionics manufacturers and satellite fleet operators deploy our deterministic telemetry engines to eliminate airborne anomalies and accelerate DO-178C certification.",
+        "hero_micro": "All flight data and orbital telemetry streams are validated against strict FAA and EASA mathematical tolerance boundaries.",
+        "block1_title": "Flight Data Anomaly Detection & Orbital Collision Avoidance",
+        "block1_p1": "High-velocity aerospace telemetry demands continuous mathematical validation to identify sensor drifts before airborne flight boundaries are exceeded.",
+        "block1_p2": "Elesium deploys deterministic telemetry state machines that ingest multi-channel flight data recorder streams to classify anomalies in real time.",
+        "block1_p3": "Our orbital conjunction engines calculate satellite trajectory adjustments to guarantee collision avoidance across dense low-Earth orbit constellations.",
+        "block1_bullets": [
+            "Sub-second FOQA flight data recorder anomaly isolation and incident alerting.",
+            "Deterministic orbital conjunction assessment and thruster burn calculation.",
+            "Sub-millimeter acoustic defect classification for jet engine turbine inspection.",
+            "Dynamic BVLOS drone airspace deconfliction under real-time weather constraints."
+        ],
+        "block1_img_alt": "Aerospace flight data recorder and orbital telemetry collision avoidance topology",
+        "block2_title": "DO-178C Formal Verification & Component MRO Telemetry",
+        "block2_p1": "Statutory aviation certification requires mathematical traceability between software execution branches and airworthiness safety objectives.",
+        "block2_p2": "Our avionics verification state machines automate formal code analysis to prove bounded execution loops and zero stack overflow conditions.",
+        "block2_p3": "Predictive maintenance algorithms monitor structural component stress telemetry to stage replacement inventory before scheduled overhaul cycles.",
+        "block2_bullets": [
+            "Automated DO-178C Level A through Level D statutory verification tracing.",
+            "Continuous turbine blade vibration monitoring and fatigue life modeling.",
+            "FAA Part 117 crew flight duty period and statutory rest norm calculation.",
+            "Real-time airport runway foreign object debris radar sensor classification."
+        ],
+        "block2_img_alt": "Avionics DO-178C formal verification and component MRO telemetry schema",
+        "block3_title": "Aerospace Operational Benchmarks & Airworthiness SLAs",
+        "block3_intro": "Calibrated for avionics chief engineers and airline safety directors who demand mathematical precision and zero flight delay penalties.",
+        "block3_note": "All flight telemetry processing operates within hard real-time latency ceilings that ensure deterministic response times.",
+        "specs": [
+            {"label": "Sensor Latency", "value": "< 45ms", "desc": "Deterministic processing of multi-axis avionics telemetry streams."},
+            {"label": "Anomaly Precision", "value": "99.999%", "desc": "Mathematical sensor drift isolation satisfying airworthiness standards."},
+            {"label": "MRO Downtime", "value": "-64.0%", "desc": "Reduction in unscheduled aircraft maintenance and component replacement delays."}
+        ]
+    },
+    "Renewable Energy & Power Grid": {
+        "hero_subheadline": "Power grid transmission operators and renewable energy asset managers deploy our deterministic state machines for sub-second microgrid balancing and battery dispatch.",
+        "hero_micro": "Dynamic line ratings and substation telemetry are processed in real time to prevent power transmission curtailment.",
+        "block1_title": "Microgrid Battery Dispatch & Day-Ahead Spot Market Bidding",
+        "block1_p1": "Fluctuating renewable generation curves introduce grid frequency instability that overwhelms manual utility dispatch consoles.",
+        "block1_p2": "Elesium implements deterministic battery energy storage state machines that balance microgrid frequency in sub-50ms dispatch cycles.",
+        "block1_p3": "Our algorithmic bidding engines forecast day-ahead nodal pricing to execute profitable wholesale power trades within statutory market boundaries.",
+        "block1_bullets": [
+            "Sub-50ms frequency response and battery energy storage dispatch execution.",
+            "Deterministic day-ahead spot market bidding with nodal constraint satisfaction.",
+            "Dynamic transmission line thermal capacity rating based on ambient sensor telemetry.",
+            "Automated transformer load balancing across high-capacity commercial EV fleet depots."
+        ],
+        "block1_img_alt": "Renewable microgrid battery dispatch and power transmission topology",
+        "block2_title": "Wind & Solar Degradation Detection with Substation Isolation",
+        "block2_p1": "Mechanical component fatigue in wind turbines and solar inverter thermal excursions cause millions in lost green energy generation.",
+        "block2_p2": "Our predictive telemetry agents analyze gearbox acoustic vibration signatures to detect bearing micro-spalling before catastrophic mechanical failure.",
+        "block2_p3": "Substation protection state machines monitor IEC 61850 network packets to isolate cyber-physical anomalies before transformer relays trip.",
+        "block2_bullets": [
+            "Continuous wind turbine gearbox acoustic vibration anomaly classification.",
+            "Solar PV string-level IV curve telemetry and automated soiling audit detection.",
+            "Hydroelectric turbine cavitation acoustic monitoring for runner life extension.",
+            "Statutory carbon credit verification with satellite flux telemetry corroboration."
+        ],
+        "block2_img_alt": "Wind turbine acoustic monitoring and substation SCADA protection schema",
+        "block3_title": "Grid Reliability Benchmarks & Utility Operational SLAs",
+        "block3_intro": "Constructed for power transmission operators and renewable project directors who require continuous grid frequency stability and zero power curtailment.",
+        "block3_note": "All energy dispatch algorithms operate with strict mathematical voltage guardrails that prevent equipment over-stress.",
+        "specs": [
+            {"label": "Dispatch Response", "value": "< 50ms", "desc": "Deterministic microgrid frequency stabilization and inverter control."},
+            {"label": "Grid Reliability", "value": "99.98%", "desc": "Continuous voltage and frequency compliance under dynamic wind and solar loads."},
+            {"label": "Curtailment Cut", "value": "-28.5%", "desc": "Reduction in wasted renewable energy generation through dynamic line rating."}
+        ]
+    },
+    "Heavy Industrial & Mining": {
+        "hero_subheadline": "Mining conglomerates and heavy industrial smelters deploy our deterministic telemetry agents to automate haul truck fleets and optimize mineral flotation circuits.",
+        "hero_micro": "Continuous acoustic telemetry and conveyor monitoring eliminate catastrophic equipment failures across extreme physical environments.",
+        "block1_title": "Autonomous Haul Fleet Telemetry & Flotation Reagent Optimization",
+        "block1_p1": "Extreme mining operational environments generate continuous equipment vibration that leads to unplanned excavator downtime and haulage bottlenecks.",
+        "block1_p2": "Elesium deploys deterministic haul truck dispatch engines that match loading shovels in sub-second cycles to maximize crushing circuit throughput.",
+        "block1_p3": "Our metallurgical vision agents analyze froth dynamics in real time to automate chemical reagent dosing and elevate mineral recovery yields.",
+        "block1_bullets": [
+            "Sub-second autonomous haul truck shovel matching and cycle time compression.",
+            "Computer vision froth surface telemetry for automated flotation reagent dosing.",
+            "Continuous blast furnace tuyere radar thermography and breakout prevention.",
+            "Underground mine ventilation-on-demand damper control delivering 40% power cuts."
+        ],
+        "block1_img_alt": "Autonomous mine haulage dispatch and mineral flotation circuit topology",
+        "block2_title": "Blast Furnace Thermal Telemetry & Conveyor Rip Detection",
+        "block2_p1": "Catastrophic conveyor belt rips and molten iron breakouts cause multi-million dollar plant shutdowns and severe safety emergencies.",
+        "block2_p2": "Our laser profilometry monitoring agents scan high-speed conveyor belts to isolate longitudinal rips before splices separate under load.",
+        "block2_p3": "Micro-seismic telemetry state machines triangulate rock stress anomalies to forecast seismic hazard events and safeguard underground crews.",
+        "block2_bullets": [
+            "Sub-second conveyor belt laser rip detection and emergency drive trip isolation.",
+            "Continuous hydraulic oil particle count and dielectric viscosity telemetry.",
+            "Real-time smelter emissions scrubbing monitoring ensuring statutory EPA compliance.",
+            "Ball mill acoustic loading telemetry optimizing specific grinding energy usage."
+        ],
+        "block2_img_alt": "Industrial conveyor rip detection and blast furnace thermal monitoring schema",
+        "block3_title": "Heavy Industrial Operational Benchmarks & Throughput SLAs",
+        "block3_intro": "Constructed for mine operations directors and metallurgical plant superintendents who require extreme equipment uptime and maximized mineral recovery.",
+        "block3_note": "All industrial telemetry agents operate on ruggedized edge compute nodes with complete offline survivability.",
+        "specs": [
+            {"label": "Dispatch Latency", "value": "< 150ms", "desc": "Real-time haul truck route optimization across open-pit haul networks."},
+            {"label": "Yield Recovery", "value": "+14.8%", "desc": "Measurable mineral concentrate recovery lift from automated reagent dosing."},
+            {"label": "Unplanned Stops", "value": "-72.0%", "desc": "Reduction in catastrophic conveyor rips and mechanical driveline failures."}
+        ]
+    },
+    "Enterprise Cybersecurity & Cloud Infrastructure": {
+        "hero_subheadline": "Chief Information Security Officers deploy our sovereign multi-agent state machines to automate zero-trust network policy enforcement and eradicate cloud compute waste.",
+        "hero_micro": "Cryptographic state checkpoints enforce continuous SOC 2 Type II evidence collection and instant lateral movement containment.",
+        "block1_title": "Zero-Trust Policy Enforcement & Lateral Movement Containment",
+        "block1_p1": "Modern cloud perimeters suffer from alert fatigue and credential theft that allow malicious actors to move laterally before SOC detection.",
+        "block1_p2": "Elesium implements deterministic eBPF security state machines that enforce micro-segmentation policies directly at the Linux kernel level.",
+        "block1_p3": "Our identity threat engines detect Active Directory kerberoasting attempts in sub-50ms cycles to automatically revoke compromised Kerberos tickets.",
+        "block1_bullets": [
+            "Sub-50ms honey-token triggers and automated Active Directory privilege revocation.",
+            "Kernel-level eBPF network micro-segmentation policy enforcement and containment.",
+            "Deterministic SIEM alert correlation eliminating 86% of false-positive noise.",
+            "Real-time database exfiltration canary tripwires with instant query throttling."
+        ],
+        "block1_img_alt": "Zero-trust network policy enforcement and identity threat detection topology",
+        "block2_title": "Cloud Compute Right-Sizing & Post-Quantum Cryptographic Migration",
+        "block2_p1": "Unmonitored cloud cluster scaling and legacy cryptographic algorithms introduce massive financial waste and future decrypt-now-harvest-later threats.",
+        "block2_p2": "Our FinOps optimization agents analyze live Kubernetes CPU and memory profiles to dynamically right-size pod resource limits without service disruption.",
+        "block2_p3": "Cryptographic migration state machines audit certificate inventories and automate the deployment of post-quantum Kyber and Dilithium cipher suites.",
+        "block2_bullets": [
+            "Autonomous Kubernetes pod resource right-sizing eliminating 38% of cloud spend.",
+            "Automated post-quantum cryptographic certificate inventory and cipher rotation.",
+            "Continuous multi-cloud SOC 2 Type II and ISO 27001 audit evidence compilation.",
+            "Deterministic CI/CD software bill-of-materials vulnerability gating."
+        ],
+        "block2_img_alt": "Kubernetes FinOps resource optimization and post-quantum cryptography schema",
+        "block3_title": "Enterprise Security Benchmarks & Infrastructure SLAs",
+        "block3_intro": "Engineered for enterprise CISOs and cloud platform directors who demand mathematically verified security boundaries and audited cloud cost reduction.",
+        "block3_note": "Every security containment action is executed with complete cryptographic audit logging and deterministic rollback capability.",
+        "specs": [
+            {"label": "Containment Time", "value": "< 95ms", "desc": "Automated network isolation of compromised workloads via eBPF filters."},
+            {"label": "Cloud Cost Cut", "value": "-38.5%", "desc": "Measured infrastructure spend reduction across production Kubernetes clusters."},
+            {"label": "SOC 2 Audit Prep", "value": "-90.0%", "desc": "Elimination of manual compliance evidence gathering through automated collectors."}
         ]
     }
 }
@@ -1366,8 +1539,8 @@ export type SolutionRecord = SolutionItem;
 export interface SolutionCategoryGroup {
   id: string;
   name: string;
-  icon: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database' | 'Network' | 'Activity' | 'Terminal';
-  iconName: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database' | 'Network' | 'Activity' | 'Terminal';
+  icon: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database' | 'Network' | 'Activity' | 'Terminal' | 'Shield' | 'Plane' | 'Zap' | 'Pickaxe' | 'Lock';
+  iconName: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database' | 'Network' | 'Activity' | 'Terminal' | 'Shield' | 'Plane' | 'Zap' | 'Pickaxe' | 'Lock';
   tagline: string;
   description: string;
   solutions: SolutionItem[];
@@ -1449,6 +1622,51 @@ export const solutionCategories: SolutionCategoryGroup[] = [
     tagline: 'Commercial Lease Abstraction & Municipal Title Deed Verification',
     description: 'Institutional commercial lease abstraction, CAM reconciliation, and automated municipal title search encumbrance verification.',
     solutions: solutionsData.filter(s => s.hubCategory === 'Legal & Real Estate Tech')
+  },
+  {
+    id: 'govtech',
+    name: 'GovTech & Sovereign Defense',
+    icon: 'Shield',
+    iconName: 'Shield',
+    tagline: 'Air-Gapped Classified Intelligence & ITAR Munitions Auditing',
+    description: 'Air-gapped tactical document de-identification, SCADA cyber-containment, and defense supply chain ITAR verification.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'GovTech & Sovereign Defense')
+  },
+  {
+    id: 'aerospace',
+    name: 'Aerospace & Avionics',
+    icon: 'Plane',
+    iconName: 'Plane',
+    tagline: 'FOQA Flight Data Anomaly Detection & DO-178C Certification',
+    description: 'Sub-second flight data recorder anomaly classification, satellite collision avoidance, and turbine blade acoustic defect triage.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Aerospace & Avionics')
+  },
+  {
+    id: 'energy',
+    name: 'Renewable Energy & Power Grid',
+    icon: 'Zap',
+    iconName: 'Zap',
+    tagline: 'Microgrid Battery Storage Dispatch & Substation Isolation',
+    description: 'Sub-50ms BESS frequency response, wind turbine gearbox acoustic monitoring, and transmission dynamic line rating.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Renewable Energy & Power Grid')
+  },
+  {
+    id: 'mining',
+    name: 'Heavy Industrial & Mining',
+    icon: 'Pickaxe',
+    iconName: 'Pickaxe',
+    tagline: 'Autonomous Mine Haulage Dispatch & Conveyor Rip Detection',
+    description: 'Sub-second autonomous haul truck shovel dispatch, flotation reagent dosing, and laser conveyor belt rip detection.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Heavy Industrial & Mining')
+  },
+  {
+    id: 'cybersecurity',
+    name: 'Enterprise Cybersecurity & Cloud Infrastructure',
+    icon: 'Lock',
+    iconName: 'Lock',
+    tagline: 'Zero-Trust eBPF Policy Enforcement & Kubernetes FinOps',
+    description: 'Kernel-level eBPF micro-segmentation, Active Directory kerberoasting containment, and FinOps cloud compute right-sizing.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Enterprise Cybersecurity & Cloud Infrastructure')
   }
 ];
 

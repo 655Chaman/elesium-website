@@ -236,7 +236,7 @@ def render_solutions_hub_semantic_html(solutions):
     """
     categories = {}
     for sol in solutions:
-        cat = sol.get("category", "Enterprise AI Solutions")
+        cat = sol.get("hubCategory") or sol.get("category", "Enterprise AI Solutions")
         if cat not in categories:
             categories[cat] = []
         categories[cat].append(sol)
@@ -586,6 +586,125 @@ def render_roi_calculator_embed_semantic_html():
   </main>
   <footer style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;text-align:center;font-size:0.75rem;font-family:monospace;color:#6b7280;">
     Powered by <a href="https://elesium.online" target="_blank" style="color:#60a5fa;text-decoration:none;font-weight:700;">Elesium</a> • Deterministic Enterprise AI Infrastructure
+  </footer>
+</div>
+"""
+
+def render_latency_estimator_tool_semantic_html():
+    """
+    Renders rich semantic HTML for /tools/multi-agent-latency-token-cost-estimator.
+    Provides complete crawlable mathematical formulas, production benchmarks, and FAQ schemas.
+    """
+    return """
+<div id="prerendered-latency-estimator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <header style="margin-bottom:2.5rem;">
+    <div style="color:#3b82f6;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Systems Architecture Benchmark Engine • Production SLAs</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Deterministic Multi-Agent Latency &amp; Token Cost Estimator</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#374151;margin-bottom:1.5rem;">
+      <strong>The Elesium Multi-Agent Latency &amp; Token Cost model calculates end-to-end P50 and P99 pipeline response latency, token throughput saturation, and sovereign private VPC cluster savings versus commercial cloud APIs (OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 1.5 Pro). Colocated private VPC deployments cut tail latency by 68% to 84% while eliminating per-token pricing for enterprise workloads.</strong>
+    </p>
+    <div style="margin:1.5rem 0;">
+      <a href="/audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Lock Architecture Benchmarks (Schedule Audit) &rarr;</a>
+    </div>
+  </header>
+  <main>
+    <section style="background:#030712;color:#ffffff;border:1px solid #1e3a8a;border-radius:1rem;padding:2rem;margin:2.5rem 0;">
+      <div style="font-size:0.75rem;font-family:monospace;color:#60a5fa;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">Production Baseline Benchmarks</div>
+      <h2 style="font-size:1.75rem;font-weight:700;margin:0 0 1rem 0;color:#ffffff;">LangGraph Multi-Agent Architecture Metrics (5 Nodes, 50k Tasks/Mo)</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1.5rem 0;">
+        <div style="background:rgba(255,255,255,0.05);padding:1rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:0.75rem;color:#9ca3af;font-family:monospace;">Public Cloud P50 Latency</div>
+          <div style="font-size:1.25rem;font-weight:700;color:#f59e0b;margin-top:0.25rem;">8,420 ms</div>
+          <div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">GPT-4o Multi-Tenant API</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);padding:1rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:0.75rem;color:#9ca3af;font-family:monospace;">Private VPC P50 Latency</div>
+          <div style="font-size:1.25rem;font-weight:700;color:#34d399;margin-top:0.25rem;">1,860 ms</div>
+          <div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">4x H100 TensorRT-LLM</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);padding:1rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:0.75rem;color:#9ca3af;font-family:monospace;">Latency Cut</div>
+          <div style="font-size:1.25rem;font-weight:700;color:#34d399;margin-top:0.25rem;">78% Faster</div>
+          <div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">Zero internet network hops</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);padding:1rem;border-radius:0.5rem;border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:0.75rem;color:#9ca3af;font-family:monospace;">Breakeven Crossover</div>
+          <div style="font-size:1.25rem;font-weight:700;color:#60a5fa;margin-top:0.25rem;">24,800 Tasks/Mo</div>
+          <div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">Full hardware parity</div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg, rgba(30,58,138,0.4), rgba(0,0,0,0.6));border:1px solid rgba(59,130,246,0.4);border-radius:0.75rem;padding:1.5rem;margin-top:1.5rem;">
+        <div style="font-size:0.875rem;color:#93c5fd;font-family:monospace;text-transform:uppercase;">Net Annual Compute Savings</div>
+        <div style="font-size:2.5rem;font-weight:900;color:#ffffff;margin:0.25rem 0;">$94,200 / year (₹82.4 Lakhs)</div>
+        <p style="color:#cbd5e1;font-size:0.875rem;margin:0.5rem 0 0 0;">Dedicated private VPC cluster replaces variable pay-per-token API fees with fixed hardware amortization and 100% data sovereignty.</p>
+      </div>
+    </section>
+
+    <section style="margin:2.5rem 0;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Deterministic Multi-Agent Latency Mathematics</h2>
+      <p style="color:#4b5563;line-height:1.7;">Multi-agent system latency is governed by physical compute boundaries rather than conversational prompts:</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;margin:1.5rem 0;">
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#2563eb;margin-top:0;">1. Step Execution Latency</h3>
+          <p style="font-family:monospace;font-size:0.875rem;background:#ffffff;padding:0.5rem;border:1px solid #e5e7eb;border-radius:0.25rem;margin:0.5rem 0;">T_step = TTFT + (Tokens_out / Speed_gen) + RTT_net + T_tool</p>
+          <p style="font-size:0.8125rem;color:#4b5563;margin:0;">Time to first token (TTFT) plus streaming generation time, network round-trip, and tool node execution.</p>
+        </div>
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#059669;margin-top:0;">2. DAG Parallelization Factor</h3>
+          <p style="font-family:monospace;font-size:0.875rem;background:#ffffff;padding:0.5rem;border:1px solid #e5e7eb;border-radius:0.25rem;margin:0.5rem 0;">Nodes_eff = 1 + (N - 1) × (1 - Parallel_Factor)</p>
+          <p style="font-size:0.8125rem;color:#4b5563;margin:0;">Parallel map-reduce reduces serial node compounding by executing non-dependent steps simultaneously.</p>
+        </div>
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#7c3aed;margin-top:0;">3. Breakeven Volume Threshold</h3>
+          <p style="font-family:monospace;font-size:0.875rem;background:#ffffff;padding:0.5rem;border:1px solid #e5e7eb;border-radius:0.25rem;margin:0.5rem 0;">Runs_be = Monthly_GPU_Lease / Cost_Per_Run_Public</p>
+          <p style="font-size:0.8125rem;color:#4b5563;margin:0;">The inflection point where leasing dedicated H100/H200 compute nodes becomes cheaper than paying public cloud token bills.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Technical Questions</h2>
+      <dl>
+        <div style="margin-bottom:1.5rem;">
+          <dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">Why is multi-agent pipeline latency compounded on public cloud APIs?</dt>
+          <dd style="color:#4b5563;line-height:1.6;margin:0;">Every agent step incurs public TLS handshakes (75–110ms) and multi-tenant queueing TTFT (250–450ms). In sequential architectures, 5 to 10 agent invocations easily balloon latency past 10 seconds. Colocating private VPC GPU clusters eliminates internet latency and yields sub-2s execution.</dd>
+        </div>
+        <div style="margin-bottom:1.5rem;">
+          <dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">How does private VPC continuous batching handle concurrent spikes?</dt>
+          <dd style="color:#4b5563;line-height:1.6;margin:0;">Using vLLM and TensorRT-LLM PagedAttention, requests are batched dynamically at the token level rather than sequence level. A 4x H100 cluster handles up to 8,800 generated tokens per second with zero queue stalling.</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+</div>
+"""
+
+def render_latency_estimator_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/latency-estimator iframe embeds.
+    """
+    return """
+<div id="prerendered-latency-estimator-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#030712;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem;margin-bottom:1.5rem;">
+    <div style="font-size:0.75rem;font-family:monospace;color:#60a5fa;text-transform:uppercase;">Elesium Systems Benchmark</div>
+    <h1 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin:0.25rem 0;">Deterministic Multi-Agent Latency &amp; Token Cost Estimator</h1>
+    <p style="font-size:0.875rem;color:#9ca3af;margin:0.25rem 0 0 0;">Interactive latency, throughput, and private VPC infrastructure cost calculator.</p>
+  </header>
+  <main>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:0.75rem;padding:1.5rem;margin-bottom:1.5rem;">
+      <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0;">Baseline Multi-Agent Metrics (5 Nodes, 50,000 Runs/Mo)</h2>
+      <ul style="list-style-type:none;padding:0;margin:1rem 0;color:#cbd5e1;font-size:0.875rem;line-height:1.8;">
+        <li>• <strong>Public Cloud API Latency (P50):</strong> 8,420 ms (OpenAI GPT-4o)</li>
+        <li>• <strong>Sovereign Private VPC Latency (P50):</strong> 1,860 ms (4x H100 TensorRT-LLM)</li>
+        <li>• <strong>Latency Improvement:</strong> 78% Faster with Zero Network Hops</li>
+        <li>• <strong>Breakeven Task Crossover:</strong> 24,800 Executions / Month</li>
+        <li>• <strong>Net Annual Cost Savings:</strong> $94,200 / year (₹82.4 Lakhs)</li>
+      </ul>
+      <p style="font-size:0.8125rem;color:#9ca3af;margin:0;">Interactive real-time sliders and DAG visualizer available in JavaScript-enabled browsers.</p>
+    </div>
+  </main>
+  <footer style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;text-align:center;font-size:0.75rem;font-family:monospace;color:#6b7280;">
+    Powered by <a href="https://elesium.online/solutions" target="_blank" style="color:#60a5fa;text-decoration:none;font-weight:700;">Elesium Enterprise AI Solutions</a>
   </footer>
 </div>
 """
@@ -1573,6 +1692,14 @@ def generate_ssg():
         "embed/roi-calculator": {
             "title": "Enterprise AI ROI Calculator (Interactive Embed Widget)",
             "desc": "Embeddable interactive enterprise AI ROI and payback calculator. Compute labor savings, operational throughput, and capital payback periods."
+        },
+        "tools/multi-agent-latency-token-cost-estimator": {
+            "title": "Deterministic Multi-Agent Latency & Token Cost Estimator",
+            "desc": "Calculate multi-agent pipeline P50/P99 latency, token consumption, and sovereign private VPC hosting savings vs public cloud APIs (OpenAI, Anthropic, Gemini)."
+        },
+        "embed/latency-estimator": {
+            "title": "Multi-Agent Latency & Cost Calculator (Interactive Embed Widget)",
+            "desc": "Embeddable interactive multi-agent latency, token generation speed, and private VPC infrastructure cost calculator."
         }
     }
 
@@ -1905,6 +2032,89 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/multi-agent-latency-token-cost-estimator":
+            tool_content = render_latency_estimator_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            latency_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Deterministic Multi-Agent Latency & Token Cost Estimator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/tools/multi-agent-latency-token-cost-estimator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Multi-Agent Latency Estimator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(latency_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/latency-estimator":
+            embed_content = render_latency_estimator_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            latency_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Multi-Agent Latency & Cost Calculator (Embed Widget)",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(latency_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

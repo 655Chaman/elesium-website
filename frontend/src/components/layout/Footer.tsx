@@ -8,6 +8,7 @@ export default function DownloadFooter() {
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'India Enterprise', path: '/ai-automation-agency-india' },
         { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator' },
+        { name: 'Multi-Agent Latency Estimator', path: '/tools/multi-agent-latency-token-cost-estimator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

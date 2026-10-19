@@ -87,6 +87,12 @@ export default function Navbar() {
                             ROI Calculator
                         </Link>
                         <Link
+                            to="/tools/multi-agent-latency-token-cost-estimator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-blue-500 dark:text-blue-400"
+                        >
+                            Latency Estimator
+                        </Link>
+                        <Link
                             to="/resources"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
                         >
@@ -195,6 +201,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-amber-600 dark:text-amber-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 ROI Calculator
+                            </Link>
+                            <Link
+                                to="/tools/multi-agent-latency-token-cost-estimator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-blue-500 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Latency Estimator
                             </Link>
                             <Link
                                 to="/resources"
