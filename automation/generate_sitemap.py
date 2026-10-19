@@ -44,6 +44,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-ai-roi-calculator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/multi-agent-latency-token-cost-estimator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/agentic-architecture-grader", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/multi-agent-token-leakage-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

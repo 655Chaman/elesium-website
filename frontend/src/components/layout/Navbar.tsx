@@ -93,6 +93,12 @@ export default function Navbar() {
                             Latency Estimator
                         </Link>
                         <Link
+                            to="/tools/multi-agent-token-leakage-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-rose-500 dark:text-rose-400"
+                        >
+                            Token Leakage
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -214,6 +220,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-blue-500 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Latency Estimator
+                            </Link>
+                            <Link
+                                to="/tools/multi-agent-token-leakage-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Token Leakage Simulator
                             </Link>
                             <Link
                                 to="/compare"

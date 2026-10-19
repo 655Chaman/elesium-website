@@ -31,6 +31,8 @@ const CompareHub = lazy(() => import('./components/pages/CompareHub'))
 const CompareDetail = lazy(() => import('./components/pages/CompareDetail'))
 const AgenticArchitectureGrader = lazy(() => import('./components/pages/AgenticArchitectureGrader'))
 const EmbedArchitectureGrader = lazy(() => import('./components/pages/EmbedArchitectureGrader'))
+const MultiAgentTokenLeakageSimulator = lazy(() => import('./components/pages/MultiAgentTokenLeakageSimulator'))
+const EmbedTokenLeakageSimulator = lazy(() => import('./components/pages/EmbedTokenLeakageSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -106,6 +108,9 @@ function App() {
                             <Route path="/tools/agentic-architecture-grader" element={<AgenticArchitectureGrader />} />
                             <Route path="/tools/architecture-grader" element={<Navigate to="/tools/agentic-architecture-grader" replace />} />
                             <Route path="/embed/architecture-grader" element={<EmbedArchitectureGrader />} />
+                            <Route path="/tools/multi-agent-token-leakage-simulator" element={<MultiAgentTokenLeakageSimulator />} />
+                            <Route path="/tools/token-leakage-simulator" element={<Navigate to="/tools/multi-agent-token-leakage-simulator" replace />} />
+                            <Route path="/embed/token-leakage-simulator" element={<EmbedTokenLeakageSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

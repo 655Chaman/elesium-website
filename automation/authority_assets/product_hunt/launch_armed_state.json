@@ -3,7 +3,7 @@
   "target_launch_pst": "2026-10-20T00:01:00-07:00",
   "target_launch_ist": "2026-10-20T12:31:00+05:30",
   "target_launch_utc": "2026-10-20T07:01:00Z",
-  "armed_at_utc": "2026-10-19T10:04:35.357450+00:00",
+  "armed_at_utc": "2026-10-19T11:38:41.160390+00:00",
   "tool_url": "https://elesium.online/tools/enterprise-ai-roi-calculator",
   "product_name": "Enterprise AI ROI Calculator",
   "auto_dispatch_cron": "31 12 20 10 * python3 automation/product_hunt_scheduler.py --execute-now"

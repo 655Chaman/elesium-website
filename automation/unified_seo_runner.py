@@ -523,6 +523,14 @@ class UnifiedSeoRunner:
             if grader_embed_ssg.exists():
                 self.log(f"Verified pre-rendered Architecture Grader embed SSG: {grader_embed_ssg}", level="SUCCESS")
 
+            # Verify Token Leakage Simulator SSG routes
+            token_tool_ssg = FRONTEND_DIR / "dist" / "tools" / "multi-agent-token-leakage-simulator" / "index.html"
+            token_embed_ssg = FRONTEND_DIR / "dist" / "embed" / "token-leakage-simulator" / "index.html"
+            if token_tool_ssg.exists():
+                self.log(f"Verified pre-rendered Token Leakage Simulator tool SSG: {token_tool_ssg}", level="SUCCESS")
+            if token_embed_ssg.exists():
+                self.log(f"Verified pre-rendered Token Leakage Simulator embed SSG: {token_embed_ssg}", level="SUCCESS")
+
             # Verify Architecture Battlecards SSG routes (/compare and /compare/:slug)
             compare_hub = FRONTEND_DIR / "dist" / "compare" / "index.html"
             if compare_hub.exists():
