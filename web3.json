@@ -78,13 +78,13 @@
     "unstoppable_domain": "elesium.crypto",
     "farcaster_handle": "@elesium",
     "lens_handle": "@elesium.lens",
-    "ipfs_master_cid": "QmbAdnSSCm8zKBoCzn4ScFCqKEMV6komJEJsebfUM6HpTj",
-    "master_sha256": "be971361fa7dc1a154564c71a75b934ad92afcf1e50b3db4dbf5f116e25e1fba",
-    "cloudflare_master_gateway": "https://cloudflare-ipfs.com/ipfs/QmbAdnSSCm8zKBoCzn4ScFCqKEMV6komJEJsebfUM6HpTj",
-    "ipfs_io_master_gateway": "https://ipfs.io/ipfs/QmbAdnSSCm8zKBoCzn4ScFCqKEMV6komJEJsebfUM6HpTj"
+    "ipfs_master_cid": "QmXYJtycKzsKUMFbP3ywCnXi1tqjRucw65GphChKbCBpqK",
+    "master_sha256": "88b5bff89c075e51a427284f3eb4e9bcc619849ba309751ae7b732e9a191ec8e",
+    "cloudflare_master_gateway": "https://cloudflare-ipfs.com/ipfs/QmXYJtycKzsKUMFbP3ywCnXi1tqjRucw65GphChKbCBpqK",
+    "ipfs_io_master_gateway": "https://ipfs.io/ipfs/QmXYJtycKzsKUMFbP3ywCnXi1tqjRucw65GphChKbCBpqK"
   },
   "url_registry_summary": {
-    "total_urls_anchored": 133,
+    "total_urls_anchored": 134,
     "signals_whitepapers_count": 64,
     "solutions_bofu_count": 43,
     "video_masterclasses_count": 15,
@@ -117,6 +117,15 @@
       "file_size_bytes": 16084,
       "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmceHx8hDFgeKgYTj8bYejyde3BgK8w2rhyMJDoVYmHoYM",
       "ipfs_io_gateway": "https://ipfs.io/ipfs/QmceHx8hDFgeKgYTj8bYejyde3BgK8w2rhyMJDoVYmHoYM"
+    },
+    {
+      "url": "https://elesium.online/audit",
+      "path_suffix": "audit",
+      "sha256": "1040842d3a52f013c11753fb04c5abb885c409b34cfcdb74a7f660af202b9860",
+      "ipfs_cid": "QmPS6Hr3cKRedwhSCAN3WDjgn8SeJZv98cvkujmt4wioVh",
+      "file_size_bytes": 8124,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPS6Hr3cKRedwhSCAN3WDjgn8SeJZv98cvkujmt4wioVh",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPS6Hr3cKRedwhSCAN3WDjgn8SeJZv98cvkujmt4wioVh"
     },
     {
       "url": "https://elesium.online/how-we-work",
@@ -1282,11 +1291,11 @@
     {
       "url": "https://elesium.online/waitlist",
       "path_suffix": "waitlist",
-      "sha256": "a4448be92ddc2276273bea00fff742190e31ae79dd57c70d4aa645016a677a5b",
-      "ipfs_cid": "QmZPtCFnRtE2oLq6cPjf5kaKZQYoFiMhkHhC8uc2S3FBUe",
-      "file_size_bytes": 8128,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZPtCFnRtE2oLq6cPjf5kaKZQYoFiMhkHhC8uc2S3FBUe",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZPtCFnRtE2oLq6cPjf5kaKZQYoFiMhkHhC8uc2S3FBUe"
+      "sha256": "e88af68c1deb5895f7a2117cfb1e555e2d9985d3316cca42b63109478e8406a5",
+      "ipfs_cid": "QmdzQCGTY5CwvcGUm8fH764CmFyPkQNYjdFTiXXg3pWEQc",
+      "file_size_bytes": 8127,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdzQCGTY5CwvcGUm8fH764CmFyPkQNYjdFTiXXg3pWEQc",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdzQCGTY5CwvcGUm8fH764CmFyPkQNYjdFTiXXg3pWEQc"
     }
   ]
 }
