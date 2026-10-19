@@ -1,0 +1,236 @@
+{
+  "protocol": "Elesium Official Product Hunt Scheduled Launch Kit v1.0",
+  "scheduled_launch_datetime_pst": "2026-10-20T00:01:00-07:00",
+  "scheduled_launch_datetime_ist": "2026-10-20T12:31:00+05:30",
+  "scheduled_launch_datetime_utc": "2026-10-20T07:01:00Z",
+  "launch_window_description": "Tuesday 12:01 AM PST — Daily Leaderboard Peak Visibility Cycle",
+  "product_listing": {
+    "product_name": "Enterprise AI ROI Calculator",
+    "tagline": "Calculate enterprise AI labor savings, payback & TCO",
+    "tagline_length_chars": 52,
+    "tagline_char_limit_verified": true,
+    "primary_url": "https://elesium.online/tools/enterprise-ai-roi-calculator",
+    "embed_route": "https://elesium.online/embed/roi-calculator",
+    "solutions_hub_url": "https://elesium.online/solutions",
+    "topics": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Productivity",
+      "Tech",
+      "Fintech"
+    ],
+    "pricing_type": "Free / Open-Access Enterprise Tool",
+    "maker": {
+      "name": "Chaman Shah",
+      "title": "Principal AI Systems Architect",
+      "organization": "Elesium",
+      "linkedin": "https://linkedin.com/company/elesium",
+      "twitter_handle": "@chamanshah_ai"
+    }
+  },
+  "maker_comment": "Hey Product Hunt community! 👋 I'm Chaman Shah, Principal AI Systems Architect at Elesium.\n\nOver the last 18 months, our engineering team has deployed production-grade multi-agent systems for mid-market and enterprise firms across India, the US, and Europe.\n\nHere is the brutal reality of enterprise AI in 2026: 80% of companies are hemorrhaging capital trying to patch together brittle Zapier wrappers and generic conversational chatbots. The moment transaction volumes surge or invoice formats drift, those systems fail silently, generating massive API bills and zero operational ROI.\n\nWe built the Enterprise AI ROI Calculator directly into our public engineering platform to give CFOs and CTOs an unvarnished, mathematical evaluation of agentic automation.\n\n🧮 What the calculator computes in 60 seconds:\n1. Net Annual Savings: Models manual analyst hours eliminated across underwriting, invoice parsing, and logistics manifests.\n2. Payback Period (Months): Compares initial VPC deployment capital against monthly labor savings and error penalty cuts.\n3. 3-Year TCO Comparison: Visualizes deterministic LangGraph private VPC hosting versus cumulative multi-tenant SaaS fees.\n4. CFO Investment Memo: Instantly generates a clean, downloadable business case summary for executive approval.\n\nIt is 100% free with zero paywalls or mandatory sign-ups:\n👉 Test the live calculator: https://elesium.online/tools/enterprise-ai-roi-calculator\n👉 Embed it on your own blog or docs: https://elesium.online/embed/roi-calculator\n👉 Explore our open architectural blueprints: https://elesium.online/solutions\n\nI will be here all day answering deep technical questions on deterministic state machines, private VPC open-weights LLMs, and real-world deployment telemetry. Let's discuss in the comments below!",
+  "gallery_assets": [
+    {
+      "slide_number": 0,
+      "name": "Product Thumbnail Glyph",
+      "dimensions": "240x240",
+      "path": "automation/authority_assets/product_hunt/slides/ph_thumbnail_glyph.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "slide_number": 1,
+      "name": "Gallery Slide 1 — Hero Value Prop",
+      "dimensions": "1270x760",
+      "path": "automation/authority_assets/product_hunt/slides/ph_slide_1_hero.svg",
+      "headline": "Compute True Enterprise AI ROI, Labor Savings & Payback in 60s"
+    },
+    {
+      "slide_number": 2,
+      "name": "Gallery Slide 2 — The Problem",
+      "dimensions": "1270x760",
+      "path": "automation/authority_assets/product_hunt/slides/ph_slide_2_problem.svg",
+      "headline": "Why 80% of Enterprise AI Fails: Brittle Wrappers vs Deterministic State Machines"
+    },
+    {
+      "slide_number": 3,
+      "name": "Gallery Slide 3 — Interactive Calculator",
+      "dimensions": "1270x760",
+      "path": "automation/authority_assets/product_hunt/slides/ph_slide_3_calculator.svg",
+      "headline": "Fine-Tune Team Size, Salary & Error Rates with Real-Time TCO Modeling"
+    },
+    {
+      "slide_number": 4,
+      "name": "Gallery Slide 4 — Sovereign Architecture",
+      "dimensions": "1270x760",
+      "path": "automation/authority_assets/product_hunt/slides/ph_slide_4_architecture.svg",
+      "headline": "Private VPC & On-Premise LLMs: Zero Data Retention under DPDP Act"
+    },
+    {
+      "slide_number": 5,
+      "name": "Gallery Slide 5 — CFO Investment Memo",
+      "dimensions": "1270x760",
+      "path": "automation/authority_assets/product_hunt/slides/ph_slide_5_memo.svg",
+      "headline": "One-Click Executive Business Case Export for Boardroom Approval"
+    }
+  ],
+  "twitter_launch_thread": [
+    {
+      "tweet_number": 1,
+      "publish_time_pst": "12:05 AM",
+      "content": "Tired of AI hype with zero cash-flow ROI? 📉\n\nWe launched the Enterprise AI ROI Calculator on @ProductHunt! 🚀\n\nCompute true labor savings, error payback & 3-yr TCO in 60s:\n👉 https://elesium.online/tools/enterprise-ai-roi-calculator\n\nWhy 80% of enterprise AI breaks at scale 🧵👇"
+    },
+    {
+      "tweet_number": 2,
+      "publish_time_pst": "12:06 AM",
+      "content": "1/ Here is the dirty secret of enterprise automation in 2026: Low-code tools like Zapier break the second transaction volume hits 10,000/mo.\n\nStochastic LLMs treated as linear API triggers fail on format variations, leading to silent data corruption and runaway cloud bills."
+    },
+    {
+      "tweet_number": 3,
+      "publish_time_pst": "12:07 AM",
+      "content": "2/ Our mathematical model evaluates 3 critical variables:\n\n• Manual analyst hours verifying documents or underwriting loans\n• Error penalties & regulatory rework (DPDP Act)\n• Infrastructure cost: Sovereign private VPCs vs public multi-tenant APIs"
+    },
+    {
+      "tweet_number": 4,
+      "publish_time_pst": "12:08 AM",
+      "content": "3/ Our calculator doesn't just output a vanity number. It computes:\n\n✓ Net Annual Cash Savings (₹ and $)\n✓ Exact Payback Horizon in Months\n✓ 3-Year Total Cost of Ownership Comparison\n✓ Instant CFO-ready investment memo export"
+    },
+    {
+      "tweet_number": 5,
+      "publish_time_pst": "12:09 AM",
+      "content": "4/ We also engineered a zero-friction embed route for bloggers, analysts, and tech publishers.\n\nEmbed the interactive tool directly onto your site with a single line of HTML:\nhttps://elesium.online/embed/roi-calculator"
+    },
+    {
+      "tweet_number": 6,
+      "publish_time_pst": "12:10 AM",
+      "content": "5/ The calculator is 100% free with zero gates or paywalls.\n\nCheck it out on Product Hunt today and let's discuss deterministic multi-agent architectures:\nhttps://www.producthunt.com/posts/enterprise-ai-roi-calculator\n\nEngineering blueprints: https://elesium.online/solutions"
+    }
+  ],
+  "vip_executive_outreach": [
+    {
+      "id": 1,
+      "vertical": "Logistics & Supply Chain",
+      "target_persona": "VP of Operations / Fleet Director",
+      "channel": "LinkedIn / WhatsApp",
+      "message": "Hi [Name], hope you're having a productive week. We just released an unvarnished financial model for logistics automation: the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It specifically models manual manifest reconciliation hours, detention/demurrage error costs, and 3-year TCO of air-gapped agent pods. We are live on Product Hunt today! Would love your take on how we modeled dispatch margins: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 2,
+      "vertical": "BFSI & Lending",
+      "target_persona": "Chief Risk Officer / Head of Underwriting",
+      "channel": "LinkedIn / Email",
+      "message": "Hi [Name], quick note: we just made our internal underwriting automation model public via the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It calculates the exact payback of sub-200ms loan appraisal state machines vs manual risk teams while modeling DPDP Act compliance savings. We just launched on Product Hunt today—would appreciate your feedback: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 3,
+      "vertical": "Healthcare AI",
+      "target_persona": "Chief Technology Officer / Clinical Systems VP",
+      "channel": "Email",
+      "message": "Hi [Name], wanted to share a tool we just published: the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It calculates analyst hours saved across prior-authorization workflows and compares private VPC hosting against commercial API charges. We're on Product Hunt today—would be grateful for your review: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 4,
+      "vertical": "Industrial Manufacturing",
+      "target_persona": "VP of Manufacturing / Plant Operations Head",
+      "channel": "LinkedIn",
+      "message": "Hi [Name], hope all is well. My engineering team at Elesium just open-sourced the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It helps industrial operators compute true payback on predictive maintenance and SCADA vision inspection systems. We're featured on Product Hunt today—take a look when you have a moment: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 5,
+      "vertical": "Corporate Finance",
+      "target_persona": "Enterprise Chief Financial Officer",
+      "channel": "Email",
+      "message": "Hi [Name], we built a calculator specifically to help CFOs see through enterprise AI vendor claims: the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It models 3-year TCO, net labor savings, and generates a one-click executive business case PDF. Live on Product Hunt today: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 6,
+      "vertical": "Treasury & Banking",
+      "target_persona": "Corporate Treasurer",
+      "channel": "LinkedIn",
+      "message": "Hi [Name], we just launched the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It factors in multi-entity cash pooling automation and currency clearing errors to show payback horizons in months. We are on Product Hunt today—would value your feedback: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 7,
+      "vertical": "Cross-Border Trade",
+      "target_persona": "Cross-Border Freight Forwarder Managing Director",
+      "channel": "WhatsApp / Email",
+      "message": "Hi [Name], quick share: we just published the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator) modeling customs bill of entry classification and HSN discrepancy elimination. It's live on Product Hunt today: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 8,
+      "vertical": "Pharma & Biotech",
+      "target_persona": "Oncology Biotech Sponsor / Clinical Trials Director",
+      "channel": "Email",
+      "message": "Hi [Name], our team at Elesium launched a public tool today: the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It models clinical trial cohort matching overhead and eCTD compilation hours. We'd love your feedback on Product Hunt: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 9,
+      "vertical": "Real Estate Tech & REITs",
+      "target_persona": "Institutional REIT Asset Manager / General Counsel",
+      "channel": "LinkedIn",
+      "message": "Hi [Name], we just launched the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It computes the payback of automated commercial lease abstraction and title search parsing across large real estate portfolios. Live on Product Hunt: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 10,
+      "vertical": "Telecom & Dark Fiber",
+      "target_persona": "Telecom Infrastructure Director / Network VP",
+      "channel": "Email",
+      "message": "Hi [Name], sharing a new release: the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It calculates the cash-flow impact of sub-second CDR billing reconciliation and cell tower energy optimization. We're on Product Hunt today: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 11,
+      "vertical": "Fiber Networks",
+      "target_persona": "Dark Fiber Carrier VP of Engineering",
+      "channel": "LinkedIn",
+      "message": "Hi [Name], our new tool calculates optical network OTDR fault isolation ROI and SLA penalty reduction in 60s: https://elesium.online/tools/enterprise-ai-roi-calculator. We just launched on Product Hunt today: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 12,
+      "vertical": "Pharma Regulatory",
+      "target_persona": "Pharma Compliance Director",
+      "channel": "Email",
+      "message": "Hi [Name], we launched an open financial model for pharmaceutical automation: the Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator). It factors in eCTD regulatory compilation and adverse event triage savings. Check our launch on Product Hunt: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 13,
+      "vertical": "Capital Markets",
+      "target_persona": "Head of Trading Technology / Brokerage COO",
+      "channel": "LinkedIn",
+      "message": "Hi [Name], we released an ROI calculator evaluating algorithmic trade surveillance and clearing reconciliation overhead: https://elesium.online/tools/enterprise-ai-roi-calculator. We're live on Product Hunt today: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 14,
+      "vertical": "NBFC & Vehicle Finance",
+      "target_persona": "NBFC Risk Head / Chief Credit Officer",
+      "channel": "WhatsApp / Email",
+      "message": "Hi [Name], sharing our Enterprise AI ROI Calculator (https://elesium.online/tools/enterprise-ai-roi-calculator) which models commercial vehicle appraisal turnaround and default reduction payback. We just went live on Product Hunt: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    {
+      "id": 15,
+      "vertical": "Cold Chain & Export",
+      "target_persona": "Perishable Food Exporter Managing Director",
+      "channel": "Email",
+      "message": "Hi [Name], our engineering team published an interactive calculator to evaluate multi-zone cold storage temperature telemetry payback: https://elesium.online/tools/enterprise-ai-roi-calculator. We're on Product Hunt today—would love your thoughts: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    }
+  ],
+  "community_distribution_payloads": {
+    "show_hn": {
+      "title": "Show HN: Enterprise AI ROI Calculator – Model 3-Year TCO, Labor Savings and Payback in 60s",
+      "url": "https://elesium.online/tools/enterprise-ai-roi-calculator",
+      "body": "Hey HN,\n\nWe built this calculator after seeing enterprise clients spend hundreds of thousands on brittle Zapier chains and multi-tenant LLM subscriptions that break at scale.\n\nThe calculator models:\n1. Manual analyst labor hours eliminated\n2. Operational error penalties and compliance rework costs\n3. 3-Year TCO: Private VPC LangGraph agent pods vs. public API token spend\n4. Payback period in months with an instant CFO investment memo export\n\nLive tool (zero sign-up): https://elesium.online/tools/enterprise-ai-roi-calculator\nEmbed route: https://elesium.online/embed/roi-calculator\nArchitecture blueprints: https://elesium.online/solutions\n\nWould appreciate technical feedback on our financial modeling assumptions."
+    },
+    "reddit_ai_agents": {
+      "subreddit": "r/AI_Agents",
+      "title": "We built a free tool to calculate 3-Year TCO and Payback for Enterprise Multi-Agent Systems",
+      "body": "One of the biggest hurdles when pitching autonomous agents to enterprise CTOs/CFOs is proving cash-flow ROI.\n\nWe open-sourced an interactive Enterprise AI ROI Calculator that factors in team size, average compensation, operational error rates, and private VPC infrastructure costs.\n\nCheck it out here: https://elesium.online/tools/enterprise-ai-roi-calculator\nEmbeddable widget: https://elesium.online/embed/roi-calculator\n\nLet us know what variables you'd like added to the model."
+    },
+    "indie_hackers": {
+      "channel": "Product Launch",
+      "title": "Launched our Enterprise AI ROI Calculator on Product Hunt today 🚀",
+      "body": "Hey Indie Hackers! We built an interactive Micro-SaaS calculator to help enterprise clients model agentic automation payback before writing a single line of code. We also created an embed route that serves as an organic backlink magnet. Check out our launch on Product Hunt: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    },
+    "discord_ai_engineers": {
+      "channel": "#showcase",
+      "message": "Hey everyone! 👋 We just launched our Enterprise AI ROI Calculator on Product Hunt. It models true labor savings, error rate reduction, and private VPC infrastructure TCO in 60 seconds with zero gates. Check it out: https://elesium.online/tools/enterprise-ai-roi-calculator | Support our launch: https://www.producthunt.com/posts/enterprise-ai-roi-calculator"
+    }
+  }
+}

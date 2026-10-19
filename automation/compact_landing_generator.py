@@ -278,6 +278,108 @@ CATEGORY_ARCHITECTURES = {
             {"label": "State Convergence", "value": "100.0%", "desc": "Mathematically bounded agent execution with zero unhandled edge states."},
             {"label": "Token OpEx Savings", "value": "-74.0%", "desc": "Self-hosted FP8 open weights on sovereign cloud private clusters."}
         ]
+    },
+    "Telecom & Infrastructure": {
+        "hero_subheadline": "Telecom network operations directors deploy our sub-second state engines to automate CDR billing reconciliation and optical fault isolation.",
+        "hero_micro": "Billion-event call detail record pipelines run on sovereign private VPC infrastructure with zero external data leakage.",
+        "block1_title": "High-Throughput CDR Reconciliation & Rating State Machines",
+        "block1_p1": "Traditional carrier billing systems incur massive revenue leakage from unrated CDR records and delayed roaming interconnect settlements.",
+        "block1_p2": "Elesium implements deterministic stream-processing state graphs that ingest carrier switches to reconcile billions of call records in real time.",
+        "block1_p3": "Our deterministic models eliminate unbilled network sessions by enforcing automated mediation logic before billing cycles finalize.",
+        "block1_bullets": [
+            "Sub-second call detail record rating across distributed telecom switch clusters.",
+            "Zero token egress with sovereign on-premise FP8 open-weight execution.",
+            "Bi-directional synchronization with legacy billing and mediation platforms.",
+            "Automated multi-carrier interconnect rating with deterministic discrepancy isolation."
+        ],
+        "block1_img_alt": "Deterministic telecom CDR billing reconciliation and rating engine topology",
+        "block2_title": "Optical Network Telemetry & Autonomous Fault Isolation",
+        "block2_p1": "Fiber optic route degradations and optical switch failures require immediate automated re-routing before customer enterprise SLAs breach.",
+        "block2_p2": "Our telemetry engine evaluates optical transport signals to isolate physical cable cuts and dispatch field repair teams autonomously.",
+        "block2_p3": "Cryptographic audit trails record verifiable latency metrics to ensure compliance with stringent telecom regulatory standards.",
+        "block2_bullets": [
+            "Real-time optical transport telemetry ingestion at millisecond intervals.",
+            "Deterministic fault isolation distinguishing fiber cuts from optical amplifier drift.",
+            "Automated circuit rerouting satisfying carrier-grade 99.999% uptime commitments.",
+            "Tamper-evident network incident logging complying with telecom statutory directives."
+        ],
+        "block2_img_alt": "Optical transport telemetry anomaly isolation and autonomous circuit rerouting schema",
+        "block3_title": "Carrier-Grade Performance Specifications & Network SLAs",
+        "block3_intro": "Constructed for telecom chief technology officers and network VP who require verifiable throughput and five-nines reliability.",
+        "block3_note": "All stream processing engines execute on dedicated high-memory nodes ensuring zero dropped records during network spikes.",
+        "specs": [
+            {"label": "Mediation Latency", "value": "< 140ms", "desc": "High-throughput CDR parsing across multi-region switch endpoints."},
+            {"label": "Billing Accuracy", "value": "99.99%", "desc": "Mathematically bounded rating verification with zero revenue leakage."},
+            {"label": "Settlement Cycle", "value": "-82.0%", "desc": "Acceleration of multi-carrier interconnect reconciliation cycles."}
+        ]
+    },
+    "Pharma & Life Sciences": {
+        "hero_subheadline": "Biotech clinical development leaders deploy our air-gapped matching graphs to accelerate trial cohort enrollment and automate regulatory submissions.",
+        "hero_micro": "Genomic indicators and patient records remain strictly isolated within private sovereign VPC hardware under global GCP standards.",
+        "block1_title": "Deterministic Clinical Trial Cohort Matching & Eligibility DAGs",
+        "block1_p1": "Oncology trial sponsors face costly study delays when manual chart reviews fail to identify eligible patient cohorts across hospital registries.",
+        "block1_p2": "Elesium engineers sovereign clinical matching state graphs that cross-reference trial inclusion criteria against de-identified patient records.",
+        "block1_p3": "Our deterministic parsers eliminate false eligibility classifications by enforcing rigid genomic biomarker and staging boundaries.",
+        "block1_bullets": [
+            "Sub-minute patient cohort matching across distributed oncology electronic records.",
+            "Air-gapped private VPC execution guaranteeing complete patient privacy and GCP compliance.",
+            "Direct parsing of complex genomic variant profiles and therapeutic history.",
+            "Automated screening logs compiling comprehensive trial audit packages."
+        ],
+        "block1_img_alt": "Clinical trial patient cohort matching and genomic eligibility workflow topology",
+        "block2_title": "Automated eCTD Compilation & Pharmacovigilance Safety Triage",
+        "block2_p1": "Submitting electronic Common Technical Documents to regulatory agencies requires flawless data consistency across thousands of trial reports.",
+        "block2_p2": "Our regulatory compilers validate documentation packets against FDA and EMA validation specifications to eliminate filing rejections.",
+        "block2_p3": "Adverse event reporting state machines triage patient safety signals in real time to accelerate mandatory statutory safety disclosures.",
+        "block2_bullets": [
+            "Automated eCTD Module 2 through 5 validation conforming to ICH guidelines.",
+            "Real-time pharmacovigilance adverse event triage with automated causality scoring.",
+            "Cryptographic state audit logs satisfying 21 CFR Part 11 electronic signature rules.",
+            "Instant escalation to medical safety officers during severe adverse event detection."
+        ],
+        "block2_img_alt": "eCTD regulatory dossier compilation and pharmacovigilance triage state graph",
+        "block3_title": "Clinical Development Specifications & Regulatory Compliance",
+        "block3_intro": "Engineered for biopharma chief medical officers and regulatory affairs heads who require absolute trial integrity and audit readiness.",
+        "block3_note": "Execution occurs exclusively within client-controlled private infrastructure satisfying international data sovereignty mandates.",
+        "specs": [
+            {"label": "Matching Latency", "value": "< 60s", "desc": "Full EHR cohort parsing against complex multi-arm clinical trial criteria."},
+            {"label": "Protocol Precision", "value": "100.0%", "desc": "Deterministic inclusion boundary verification with zero patient misclassification."},
+            {"label": "eCTD Compile Time", "value": "-68.0%", "desc": "Reduction in regulatory submission dossier preparation and auditing hours."}
+        ]
+    },
+    "Legal & Real Estate Tech": {
+        "hero_subheadline": "Institutional REIT managers and corporate counsels deploy our sovereign abstraction pipelines to parse commercial leases and municipal title chains.",
+        "hero_micro": "Contractual clauses and title deeds are analyzed in private VPC enclaves with zero external training retention.",
+        "block1_title": "Deterministic Commercial Lease Abstraction & CAM Reconciliation",
+        "block1_p1": "Real estate investment trusts suffer margin leakage from unverified common area maintenance charges and missed tenant escalation dates.",
+        "block1_p2": "Elesium deploys deterministic legal parsers that extract critical financial terms, renewal options, and co-tenancy covenants from complex leases.",
+        "block1_p3": "Our abstraction state machines eliminate manual data entry errors by cross-verifying lease provisions against property management databases.",
+        "block1_bullets": [
+            "Sub-second commercial lease clause abstraction across multi-hundred page portfolios.",
+            "Zero model retention ensuring complete confidentiality of tenant financial covenants.",
+            "Automated reconciliation of annual common area maintenance and operating expense billings.",
+            "Direct synchronization with Yardi, MRI, and enterprise property management systems."
+        ],
+        "block1_img_alt": "Commercial lease abstraction and CAM reconciliation state architecture",
+        "block2_title": "Municipal Title Search Parsing & Encumbrance Verification",
+        "block2_p1": "Real estate transactions stall when manual title searches miss hidden municipal liens, easement restrictions, or broken deed chains.",
+        "block2_p2": "Our title verification engines analyze municipal land registry records to establish immutable ownership chains and identify encumbrances.",
+        "block2_p3": "Cryptographic title audit reports give mortgage underwriters complete confidence in property ownership before loan disbursement.",
+        "block2_bullets": [
+            "Comprehensive chain-of-title reconstruction across historical registry deeds.",
+            "Deterministic identification of unreleased mortgages, tax liens, and court attachments.",
+            "Automated encumbrance certificate verification under statutory land registration acts.",
+            "Standardized title defect summaries with human underwriting verification gates."
+        ],
+        "block2_img_alt": "Municipal title search parsing and encumbrance verification workflow schema",
+        "block3_title": "Institutional Legal Specifications & Abstraction Benchmarks",
+        "block3_intro": "Constructed for REIT asset managers and chief legal counsels who require verifiable extraction accuracy and zero contractual oversights.",
+        "block3_note": "Every extracted legal term links directly to the source page and paragraph coordinate for instantaneous partner verification.",
+        "specs": [
+            {"label": "Lease Parsing", "value": "< 45s", "desc": "Full contract ingestion and clause extraction across complex commercial leases."},
+            {"label": "Term Accuracy", "value": "99.95%", "desc": "Deterministic financial calculation mapping for rent steps and CAM reconciliations."},
+            {"label": "Underwrite Velocity", "value": "-75.0%", "desc": "Reduction in real estate closing due diligence and title verification timelines."}
+        ]
     }
 }
 
@@ -1246,6 +1348,17 @@ export interface SolutionItem {
   jsonLdSchema: string;
   datePublished: string;
   dateModified: string;
+  whitepaperCitation?: TechnicalWhitepaperCitation;
+}
+
+export interface TechnicalWhitepaperCitation {
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+  category: string;
+  verifiedDate?: string;
+  keyFindings: string[];
 }
 
 export type SolutionRecord = SolutionItem;
@@ -1253,8 +1366,8 @@ export type SolutionRecord = SolutionItem;
 export interface SolutionCategoryGroup {
   id: string;
   name: string;
-  icon: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database';
-  iconName: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database';
+  icon: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database' | 'Network' | 'Activity' | 'Terminal';
+  iconName: 'Truck' | 'ShieldCheck' | 'Factory' | 'HeartPulse' | 'Database' | 'Network' | 'Activity' | 'Terminal';
   tagline: string;
   description: string;
   solutions: SolutionItem[];
@@ -1309,6 +1422,33 @@ export const solutionCategories: SolutionCategoryGroup[] = [
     tagline: 'Sovereign LangGraph State Machines & DPDP Act Compliance',
     description: 'Sovereign LangGraph multi-agent workflows, SAP S/4HANA RFC connectors, and DPDP Act 2023 compliance.',
     solutions: solutionsData.filter(s => s.hubCategory === 'ERP & Systems')
+  },
+  {
+    id: 'telecom',
+    name: 'Telecom & Infrastructure',
+    icon: 'Network',
+    iconName: 'Network',
+    tagline: 'Sub-Second CDR Billing Reconciliation & Optical Fault Isolation',
+    description: 'High-throughput call detail record reconciliation, automated carrier settlement, and autonomous optical network fault isolation.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Telecom & Infrastructure')
+  },
+  {
+    id: 'pharma',
+    name: 'Pharma & Life Sciences',
+    icon: 'Activity',
+    iconName: 'Activity',
+    tagline: 'Clinical Trial Cohort Matching & Automated eCTD Submission Dossiers',
+    description: 'Air-gapped oncology patient matching, automated eCTD regulatory compilation, and real-time pharmacovigilance safety triage.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Pharma & Life Sciences')
+  },
+  {
+    id: 'legal',
+    name: 'Legal & Real Estate Tech',
+    icon: 'Terminal',
+    iconName: 'Terminal',
+    tagline: 'Commercial Lease Abstraction & Municipal Title Deed Verification',
+    description: 'Institutional commercial lease abstraction, CAM reconciliation, and automated municipal title search encumbrance verification.',
+    solutions: solutionsData.filter(s => s.hubCategory === 'Legal & Real Estate Tech')
   }
 ];
 
@@ -1321,8 +1461,21 @@ export function getTopHighLeverSolutions(): SolutionItem[] {
 }
 """
 
+        whitepapers_path = AUTOMATION_DIR / "solution_whitepapers.json"
+        whitepapers_dict = {}
+        if whitepapers_path.exists():
+            with open(whitepapers_path, "r", encoding="utf-8") as f:
+                whitepapers_dict = json.load(f)
+
+        for rec in records:
+            if rec["slug"] in whitepapers_dict:
+                rec["whitepaperCitation"] = whitepapers_dict[rec["slug"]]
+
         formatted_json = json.dumps(records, indent=2)
-        ts_content = ts_comment + interfaces_decl + formatted_json + ";" + helpers_decl
+        whitepapers_json = json.dumps(whitepapers_dict, indent=2)
+        whitepapers_export = f"\n\nexport const solutionWhitepapers: Record<string, TechnicalWhitepaperCitation> = {whitepapers_json};\n"
+
+        ts_content = ts_comment + interfaces_decl + formatted_json + ";" + whitepapers_export + helpers_decl
 
         output_path.write_text(ts_content, encoding="utf-8")
         print(f"[+] Wrote {len(records)} solution records to {output_path}")

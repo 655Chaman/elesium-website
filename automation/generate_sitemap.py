@@ -73,12 +73,6 @@ def generate_sitemap():
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     solution_slugs = set()
 
-    if SOLUTIONS_TS_PATH.exists():
-        sol_content = SOLUTIONS_TS_PATH.read_text(encoding="utf-8")
-        sol_matches = re.findall(r'["\']?slug["\']?\s*:\s*["\']([^"\']+)["\']', sol_content)
-        for s in sol_matches:
-            solution_slugs.add(s)
-
     if COMPACT_QUEUE_PATH.exists():
         try:
             queue_items = json.loads(COMPACT_QUEUE_PATH.read_text(encoding="utf-8"))
@@ -88,6 +82,19 @@ def generate_sitemap():
                     solution_slugs.add(slug)
         except Exception as e:
             print(f"Notice reading {COMPACT_QUEUE_PATH}: {e}")
+
+    if SOLUTIONS_TS_PATH.exists():
+        sol_content = SOLUTIONS_TS_PATH.read_text(encoding="utf-8")
+        m = re.search(r'export const solutionsData:\s*(?:SolutionRecord|SolutionItem)\[\]\s*=\s*(\[[\s\S]*?\]);', sol_content)
+        if m:
+            try:
+                data = json.loads(m.group(1))
+                for item in data:
+                    s = item.get("slug")
+                    if s:
+                        solution_slugs.add(s)
+            except Exception as e:
+                print(f"Notice reading solutionsData JSON: {e}")
 
     for slug in sorted(solution_slugs):
         urls.append({

@@ -78,15 +78,15 @@
     "unstoppable_domain": "elesium.crypto",
     "farcaster_handle": "@elesium",
     "lens_handle": "@elesium.lens",
-    "ipfs_master_cid": "QmbvaE6v1qEpGHH4X86B8v3bfBqPjMoGUM8YAwJxWeCyq7",
-    "master_sha256": "c9d89bda9e3305ffc95bd656bde87ffcf8cc70949f51f467861bcbdb4af25f2e",
-    "cloudflare_master_gateway": "https://cloudflare-ipfs.com/ipfs/QmbvaE6v1qEpGHH4X86B8v3bfBqPjMoGUM8YAwJxWeCyq7",
-    "ipfs_io_master_gateway": "https://ipfs.io/ipfs/QmbvaE6v1qEpGHH4X86B8v3bfBqPjMoGUM8YAwJxWeCyq7"
+    "ipfs_master_cid": "QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r",
+    "master_sha256": "ec10116eb01db46e0e3530cdff571e5d88a83dd71eefcb05f724e65083945e9b",
+    "cloudflare_master_gateway": "https://cloudflare-ipfs.com/ipfs/QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r",
+    "ipfs_io_master_gateway": "https://ipfs.io/ipfs/QmeE98tqHAMH3VVjjcm5D13RqZdWXwaCx8u8ipEeajAn4r"
   },
   "url_registry_summary": {
-    "total_urls_anchored": 134,
+    "total_urls_anchored": 142,
     "signals_whitepapers_count": 64,
-    "solutions_bofu_count": 43,
+    "solutions_bofu_count": 51,
     "video_masterclasses_count": 15,
     "tools_count": 1
   },
@@ -94,65 +94,65 @@
     {
       "url": "https://elesium.online/",
       "path_suffix": "home",
-      "sha256": "a749b250bd4a3ab7c7b63dfae948fa2a36a6d972ead283cc922f120776b6446d",
-      "ipfs_cid": "QmZbfyNHaSgLijE52DavXoYadWQ2UWgqNmTanr5eTFJuqv",
+      "sha256": "a7d3e87799ba0e70f44db8b90d36231140dc3947ff0463bd9ca2b933a1389aa7",
+      "ipfs_cid": "QmZdnCzkeGggSFc16iA3Rm5Zrjd4Vcnoar63RW2oNivvFG",
       "file_size_bytes": 8246,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZbfyNHaSgLijE52DavXoYadWQ2UWgqNmTanr5eTFJuqv",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZbfyNHaSgLijE52DavXoYadWQ2UWgqNmTanr5eTFJuqv"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZdnCzkeGggSFc16iA3Rm5Zrjd4Vcnoar63RW2oNivvFG",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZdnCzkeGggSFc16iA3Rm5Zrjd4Vcnoar63RW2oNivvFG"
     },
     {
       "url": "https://elesium.online/ai-automation",
       "path_suffix": "ai-automation",
-      "sha256": "5c4a91c6461b3a11610a10d2b9a22f2a2a45cb13f4d939771752f2f942d6ffd9",
-      "ipfs_cid": "QmUYvAf6rtz96MwKSMxPReGzHtJmAu3d41BFvaW3aPeM28",
+      "sha256": "a63d7d766b665b4f13bced3df75467c4de45d1ba3cd82f89f294c14f611a0e7f",
+      "ipfs_cid": "QmZXamatevgRakxXJusxDdGgqpCiMNpoNdRJDNwsMfKk6a",
       "file_size_bytes": 8252,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUYvAf6rtz96MwKSMxPReGzHtJmAu3d41BFvaW3aPeM28",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUYvAf6rtz96MwKSMxPReGzHtJmAu3d41BFvaW3aPeM28"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZXamatevgRakxXJusxDdGgqpCiMNpoNdRJDNwsMfKk6a",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZXamatevgRakxXJusxDdGgqpCiMNpoNdRJDNwsMfKk6a"
     },
     {
       "url": "https://elesium.online/ai-automation-agency-india",
       "path_suffix": "ai-automation-agency-india",
-      "sha256": "3f409c1d3d2487deba06c72395e4bcaebd110a0671b55ca321f0bd81ad2fce80",
-      "ipfs_cid": "QmSbZY2WvsPUs6yVdn3aFinS1r5NbtDSQYRfXfsWwERFzF",
+      "sha256": "b6a7139e79d68b7c797fe37c9b2f947544a914e0ce247fd7ed3741597cc7d50a",
+      "ipfs_cid": "Qmadeg3SMsKPdMv9WiPKitZmGFK3yb9QJhYspJGxSJawiH",
       "file_size_bytes": 16528,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSbZY2WvsPUs6yVdn3aFinS1r5NbtDSQYRfXfsWwERFzF",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSbZY2WvsPUs6yVdn3aFinS1r5NbtDSQYRfXfsWwERFzF"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmadeg3SMsKPdMv9WiPKitZmGFK3yb9QJhYspJGxSJawiH",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmadeg3SMsKPdMv9WiPKitZmGFK3yb9QJhYspJGxSJawiH"
     },
     {
       "url": "https://elesium.online/audit",
       "path_suffix": "audit",
-      "sha256": "2683dc8723f4af45c71a2fe840b4f67aa3cd3f09de91b3097652d5c93e07d70a",
-      "ipfs_cid": "QmQvzpa1x15sm6So3bm1EQTjkfqAkgyRCV37jBv39hCZwP",
+      "sha256": "d2de9162d891774b45f8cc18b0c58324e5adf7e24b4a752c280bab0f14548cd9",
+      "ipfs_cid": "QmcXoAbYtK2wNiopvfj23JPRFCViUtXWm3oUBA81nBcaRE",
       "file_size_bytes": 8279,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQvzpa1x15sm6So3bm1EQTjkfqAkgyRCV37jBv39hCZwP",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQvzpa1x15sm6So3bm1EQTjkfqAkgyRCV37jBv39hCZwP"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcXoAbYtK2wNiopvfj23JPRFCViUtXWm3oUBA81nBcaRE",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcXoAbYtK2wNiopvfj23JPRFCViUtXWm3oUBA81nBcaRE"
     },
     {
       "url": "https://elesium.online/how-we-work",
       "path_suffix": "how-we-work",
-      "sha256": "608d7886110746757599ca54b43b20a0f85a5543f517bc22aabf657cbc7d8d21",
-      "ipfs_cid": "QmUqYxyv94235iQKVVao2qYJfNsSU4F3FzD5AwTQB1jPeQ",
+      "sha256": "c54360f7d2dcc98a3ea5d2cb6de5f0794463712a6463bdf010753070765f57aa",
+      "ipfs_cid": "QmbcgcgvXtW1bgVty6fBJF9nmE8giTEWqAGNj7ttkG7xTB",
       "file_size_bytes": 8251,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUqYxyv94235iQKVVao2qYJfNsSU4F3FzD5AwTQB1jPeQ",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUqYxyv94235iQKVVao2qYJfNsSU4F3FzD5AwTQB1jPeQ"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbcgcgvXtW1bgVty6fBJF9nmE8giTEWqAGNj7ttkG7xTB",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbcgcgvXtW1bgVty6fBJF9nmE8giTEWqAGNj7ttkG7xTB"
     },
     {
       "url": "https://elesium.online/markets",
       "path_suffix": "markets",
-      "sha256": "2ccfb14d7e585ad84e90e28bff323229cd3cc9ac5257840fde99b6afe506c901",
-      "ipfs_cid": "QmRMaLFBLox8rRCheQTeAvTv5gwP9bQcUp9RCjAgc4uVCc",
+      "sha256": "05b35d74967f4c1c18456f2cc7e1d12bbf8e4a5aa5b5f1684fea987fde8832ea",
+      "ipfs_cid": "QmNiuNxYCZMrDCFJnzHmW4asPNvWs3TGyXZiMi965bkMxD",
       "file_size_bytes": 8252,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRMaLFBLox8rRCheQTeAvTv5gwP9bQcUp9RCjAgc4uVCc",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRMaLFBLox8rRCheQTeAvTv5gwP9bQcUp9RCjAgc4uVCc"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNiuNxYCZMrDCFJnzHmW4asPNvWs3TGyXZiMi965bkMxD",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNiuNxYCZMrDCFJnzHmW4asPNvWs3TGyXZiMi965bkMxD"
     },
     {
       "url": "https://elesium.online/resources",
       "path_suffix": "resources",
-      "sha256": "cf1c5871039ec38775eddb5e4aaecc510190ae13ddbfee81812b9cd9f657918d",
-      "ipfs_cid": "QmcH8AvNkzovWYwmhGEUiY3WCbkFVaXoPjAAHvVbhBcAfN",
+      "sha256": "4380839153bb5bd4a83b491bd25bda9bf0f31ceb7e3cfedbe6e66a47ef4dda49",
+      "ipfs_cid": "QmSt9gc6og1ts7whWAAMYB6Vix8MKBFnAETaWmQrBusF6Y",
       "file_size_bytes": 8254,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcH8AvNkzovWYwmhGEUiY3WCbkFVaXoPjAAHvVbhBcAfN",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcH8AvNkzovWYwmhGEUiY3WCbkFVaXoPjAAHvVbhBcAfN"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSt9gc6og1ts7whWAAMYB6Vix8MKBFnAETaWmQrBusF6Y",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSt9gc6og1ts7whWAAMYB6Vix8MKBFnAETaWmQrBusF6Y"
     },
     {
       "url": "https://elesium.online/signals",
@@ -166,1136 +166,1208 @@
     {
       "url": "https://elesium.online/signals/accelerating-enterprise-sales-cycles-with-outbound-sale-48",
       "path_suffix": "signals/accelerating-enterprise-sales-cycles-with-outbound-sale-48",
-      "sha256": "60781578eb721b1f7c604ef2534b4833e5a1bca796f55c28c421f1525c932024",
-      "ipfs_cid": "QmUqE3vsDLySbECBBS6KG4JFYigdrTo8QjXzXP7rfN1rz7",
+      "sha256": "a3f61256015bf71d199f07b0b793d81465e0fa02f83d5ca8f19b6e183315b2e9",
+      "ipfs_cid": "QmZNgnr51fVJPYxHrxLj4LvNtRMik5uTvdxksCjdhbwppQ",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUqE3vsDLySbECBBS6KG4JFYigdrTo8QjXzXP7rfN1rz7",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUqE3vsDLySbECBBS6KG4JFYigdrTo8QjXzXP7rfN1rz7"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZNgnr51fVJPYxHrxLj4LvNtRMik5uTvdxksCjdhbwppQ",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZNgnr51fVJPYxHrxLj4LvNtRMik5uTvdxksCjdhbwppQ"
     },
     {
       "url": "https://elesium.online/signals/accelerating-high-ticket-b2b-sales-with-signal-dri-ii-59",
       "path_suffix": "signals/accelerating-high-ticket-b2b-sales-with-signal-dri-ii-59",
-      "sha256": "c59d815c0396e99b33de36d3a7dccf353da50a1e2fda50b1650a667428e212e9",
-      "ipfs_cid": "Qmbe4Kmqs1wwNjzvGrDXV2QqZ2WirWiGdeFH7s4RU3WnaL",
+      "sha256": "9535fd69a874a3bc37be89c4a84cf0d6cb98d6b46cdf086e6f1e18b34db55597",
+      "ipfs_cid": "QmYP7CsMQPQkzkttBcbGzx7WAaa8Fz3hzq2Dd8ZXgkWKE6",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmbe4Kmqs1wwNjzvGrDXV2QqZ2WirWiGdeFH7s4RU3WnaL",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmbe4Kmqs1wwNjzvGrDXV2QqZ2WirWiGdeFH7s4RU3WnaL"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYP7CsMQPQkzkttBcbGzx7WAaa8Fz3hzq2Dd8ZXgkWKE6",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYP7CsMQPQkzkttBcbGzx7WAaa8Fz3hzq2Dd8ZXgkWKE6"
     },
     {
       "url": "https://elesium.online/signals/ai-automation-cost-india-2026-pricing",
       "path_suffix": "signals/ai-automation-cost-india-2026-pricing",
-      "sha256": "2e25cee2257ddadaa4f9bcccc3ed10fad421001143c8ae7008198d5722cb06c6",
-      "ipfs_cid": "QmRSnuENfkLNHCzAKDnL4ejpy2aPpR73jWNZGmZRzrK72u",
+      "sha256": "371193848621bb3ff47e46c8344e654746c6404452fbc5cb051bea7288d7d4eb",
+      "ipfs_cid": "QmS3cgF8cbSXgi5BC5XUWLpigueFVwLrCVBAxdr61U9cZG",
       "file_size_bytes": 9938,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRSnuENfkLNHCzAKDnL4ejpy2aPpR73jWNZGmZRzrK72u",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRSnuENfkLNHCzAKDnL4ejpy2aPpR73jWNZGmZRzrK72u"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmS3cgF8cbSXgi5BC5XUWLpigueFVwLrCVBAxdr61U9cZG",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmS3cgF8cbSXgi5BC5XUWLpigueFVwLrCVBAxdr61U9cZG"
     },
     {
       "url": "https://elesium.online/signals/ai-automation-roi-india-case-studies-2026",
       "path_suffix": "signals/ai-automation-roi-india-case-studies-2026",
-      "sha256": "19196f4f018b87de1781e71bd1307697f7d02680ec39898d82414d6273edd204",
-      "ipfs_cid": "QmQ2dPxaHxQSWgR5Yk666aE5dcJ735PCzNn35oee7k1AVy",
+      "sha256": "14c5d8abf3449d016ba276f8fd3c84bcfc965e30f466fb23a3310770daebcd14",
+      "ipfs_cid": "QmPjjqfSMa2G8BiFYfaTxBEWE6WbD1APhG7xTY3JqyMqGF",
       "file_size_bytes": 9946,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQ2dPxaHxQSWgR5Yk666aE5dcJ735PCzNn35oee7k1AVy",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQ2dPxaHxQSWgR5Yk666aE5dcJ735PCzNn35oee7k1AVy"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPjjqfSMa2G8BiFYfaTxBEWE6WbD1APhG7xTY3JqyMqGF",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPjjqfSMa2G8BiFYfaTxBEWE6WbD1APhG7xTY3JqyMqGF"
     },
     {
       "url": "https://elesium.online/signals/b2b-buyer-intent-data-and-outbound-sales-platform--ii-55",
       "path_suffix": "signals/b2b-buyer-intent-data-and-outbound-sales-platform--ii-55",
-      "sha256": "d8ccdeabccd48227d4e29a4c83bdcdd450b3b76ef30e01595a87e86820a9f666",
-      "ipfs_cid": "QmcvwxeCoGxZEQ3BrQXioxSiZoESrFX6Jgz4zzTLmyJKsb",
+      "sha256": "dd21dddf03118145f27605dad770918572a62e1466dea30ee408e171670cf2bc",
+      "ipfs_cid": "QmdDrmBg3qE27cHTpyWxgiJ4wvTVnDF5ywS63t9HtBnmqd",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcvwxeCoGxZEQ3BrQXioxSiZoESrFX6Jgz4zzTLmyJKsb",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcvwxeCoGxZEQ3BrQXioxSiZoESrFX6Jgz4zzTLmyJKsb"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdDrmBg3qE27cHTpyWxgiJ4wvTVnDF5ywS63t9HtBnmqd",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdDrmBg3qE27cHTpyWxgiJ4wvTVnDF5ywS63t9HtBnmqd"
     },
     {
       "url": "https://elesium.online/signals/b2b-lead-generation-2026-how-elesium-s-signal-driv-ii-41",
       "path_suffix": "signals/b2b-lead-generation-2026-how-elesium-s-signal-driv-ii-41",
-      "sha256": "ccda8b63ece5ff691e63b681be49188c345cf28a64f6da0c7514ef789e619b57",
-      "ipfs_cid": "Qmc8KALLsqiDB1zLRcX1iDM2Ce9tPXNWqB8weBD92rWvp6",
+      "sha256": "98763a9f26475e46034c3151d06399956d8d6abaa8415e39e57988f4129cc5ae",
+      "ipfs_cid": "QmYboEz4TD2sTbHGnWuDBX66L5vki5PS4EnJwsSux3JH8q",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmc8KALLsqiDB1zLRcX1iDM2Ce9tPXNWqB8weBD92rWvp6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmc8KALLsqiDB1zLRcX1iDM2Ce9tPXNWqB8weBD92rWvp6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYboEz4TD2sTbHGnWuDBX66L5vki5PS4EnJwsSux3JH8q",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYboEz4TD2sTbHGnWuDBX66L5vki5PS4EnJwsSux3JH8q"
     },
     {
       "url": "https://elesium.online/signals/b2b-lead-generation-2026-how-elesium-s-signal-driven-ou-44",
       "path_suffix": "signals/b2b-lead-generation-2026-how-elesium-s-signal-driven-ou-44",
-      "sha256": "495fbc482b4c6245a056a79bd7e15bb96436c03d0d9ba394efc51846e053a587",
-      "ipfs_cid": "QmTH596cGyJ2sVvTx9isynzoMBcGJ1VuX6rYDWhKbkpZQA",
+      "sha256": "1213a5b2988a990b5f50dcefea8d9fda16d60dfdfffb42e6925ac6bacb1d0c55",
+      "ipfs_cid": "QmPZDRZN9VfMbWu8wrjwbx44ReUGGhijUzNdbNeRi7kzma",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTH596cGyJ2sVvTx9isynzoMBcGJ1VuX6rYDWhKbkpZQA",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTH596cGyJ2sVvTx9isynzoMBcGJ1VuX6rYDWhKbkpZQA"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPZDRZN9VfMbWu8wrjwbx44ReUGGhijUzNdbNeRi7kzma",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPZDRZN9VfMbWu8wrjwbx44ReUGGhijUzNdbNeRi7kzma"
     },
     {
       "url": "https://elesium.online/signals/b2b-lead-generation-2026-how-enterprise-sales-strategy--32",
       "path_suffix": "signals/b2b-lead-generation-2026-how-enterprise-sales-strategy--32",
-      "sha256": "06b2e8c19e978fb8bba2561233857b6003492d80c0ff2671f5b13e435283f9d4",
-      "ipfs_cid": "QmNnoPDoLMECSavPKVaTLPwM5mGd6gVCtxosrCNtmZbazw",
+      "sha256": "fd409bdfc3e28e78cda09267402dd738e113d10ace7aa78d8dbcc1dc800d59fb",
+      "ipfs_cid": "QmfPEzopvv6tAmqbV1tzwQBFqXSrsNR1snLdJme2N5LLvv",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNnoPDoLMECSavPKVaTLPwM5mGd6gVCtxosrCNtmZbazw",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNnoPDoLMECSavPKVaTLPwM5mGd6gVCtxosrCNtmZbazw"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfPEzopvv6tAmqbV1tzwQBFqXSrsNR1snLdJme2N5LLvv",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfPEzopvv6tAmqbV1tzwQBFqXSrsNR1snLdJme2N5LLvv"
     },
     {
       "url": "https://elesium.online/signals/b2b-lead-generation-2026-how-enterprise-sales-strategy--36",
       "path_suffix": "signals/b2b-lead-generation-2026-how-enterprise-sales-strategy--36",
-      "sha256": "af674049d56b4fd52260859be5edd28c922bebd4600b84d539723fd40b33a22d",
-      "ipfs_cid": "Qma9MNZECjCuyn567u4NVEYG1HpQZkhTACtB1SvthcuzW8",
+      "sha256": "bcf3f6ea9576c5bbd407ec6a13d64c07380d60a6ddbf826c570a10f771627a8e",
+      "ipfs_cid": "Qmb4F7vWk65NYZXC5rkp9qsovRtLJcrWo9qUoonLN8LnGD",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qma9MNZECjCuyn567u4NVEYG1HpQZkhTACtB1SvthcuzW8",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qma9MNZECjCuyn567u4NVEYG1HpQZkhTACtB1SvthcuzW8"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmb4F7vWk65NYZXC5rkp9qsovRtLJcrWo9qUoonLN8LnGD",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmb4F7vWk65NYZXC5rkp9qsovRtLJcrWo9qUoonLN8LnGD"
     },
     {
       "url": "https://elesium.online/signals/b2b-lead-generation-2026-how-signal-driven-outboun-ii-57",
       "path_suffix": "signals/b2b-lead-generation-2026-how-signal-driven-outboun-ii-57",
-      "sha256": "552af8447dcc0eb488b95e59f6e7c37db164a305401b8c4ebf6e0fe55f97ca40",
-      "ipfs_cid": "QmU57NDLNRimN3iDQnHMhxADBqdpt94Hn9FXrs671rwneB",
+      "sha256": "59b4fd1637c4db018585d32c92e8d8a43f52cb1f6787855dbca21a68506a8d0e",
+      "ipfs_cid": "QmUNq4YTVKi5woRECiwWcSmiGrQUfWqAFSnqFEdbqdhcYV",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmU57NDLNRimN3iDQnHMhxADBqdpt94Hn9FXrs671rwneB",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmU57NDLNRimN3iDQnHMhxADBqdpt94Hn9FXrs671rwneB"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUNq4YTVKi5woRECiwWcSmiGrQUfWqAFSnqFEdbqdhcYV",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUNq4YTVKi5woRECiwWcSmiGrQUfWqAFSnqFEdbqdhcYV"
     },
     {
       "url": "https://elesium.online/signals/b2b-market-intelligence-2026-07-05-ii-23",
       "path_suffix": "signals/b2b-market-intelligence-2026-07-05-ii-23",
-      "sha256": "39e1239374a318bb66b4071cd28896cb8b50b6f6e0ff501b4affb95f3c0e21b2",
-      "ipfs_cid": "QmSEb4a1xC1o8B1Uaue2BySpWaebBeQ7xznMatRVJZazJD",
+      "sha256": "0700a3d842e8806d37a8371b3989799be74b30700dd1118f7abd334cd92ddead",
+      "ipfs_cid": "QmNoz8TkS97duadYwGBpVf4erpkBSgGPQWH1uNq4gdSxMa",
       "file_size_bytes": 9944,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSEb4a1xC1o8B1Uaue2BySpWaebBeQ7xznMatRVJZazJD",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSEb4a1xC1o8B1Uaue2BySpWaebBeQ7xznMatRVJZazJD"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNoz8TkS97duadYwGBpVf4erpkBSgGPQWH1uNq4gdSxMa",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNoz8TkS97duadYwGBpVf4erpkBSgGPQWH1uNq4gdSxMa"
     },
     {
       "url": "https://elesium.online/signals/b2b-market-intelligence-2026-07-08-ii-31",
       "path_suffix": "signals/b2b-market-intelligence-2026-07-08-ii-31",
-      "sha256": "30a7a3da892e52a79ce744d684afb397e9bdefb15eb7da310fabac917e5fc65b",
-      "ipfs_cid": "QmRcaYKKAmKNCifSGr5nDoxoqdmgX6AZ1f238PdA2ctm62",
+      "sha256": "bd6d272718a2d38f928f324fd5644fbc0f4d83c034894abf260b8f7f5437cd15",
+      "ipfs_cid": "Qmb66JLsn1VGfzqL9BQ2qSWMRhMWPURS9c1su4VPJCT7LG",
       "file_size_bytes": 9944,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRcaYKKAmKNCifSGr5nDoxoqdmgX6AZ1f238PdA2ctm62",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRcaYKKAmKNCifSGr5nDoxoqdmgX6AZ1f238PdA2ctm62"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmb66JLsn1VGfzqL9BQ2qSWMRhMWPURS9c1su4VPJCT7LG",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmb66JLsn1VGfzqL9BQ2qSWMRhMWPURS9c1su4VPJCT7LG"
     },
     {
       "url": "https://elesium.online/signals/b2b-market-intelligence-2026-07-09-ii-33",
       "path_suffix": "signals/b2b-market-intelligence-2026-07-09-ii-33",
-      "sha256": "a8b4e597a3f4d68c8ecdf92fc4109c470d0e4e8abfe87942a3c5d0392242b1bc",
-      "ipfs_cid": "QmZhDBuYGUrb2oex54rwwUroZtnyjh7ReL2AMMoCZuGBqV",
+      "sha256": "ff401001fa40c60a5acd77d7b377fd393baf2725fe9fcec2831fbdd22103a63e",
+      "ipfs_cid": "QmfX3L5LnTNQAGHbtFc9s89qXBeRbPiZVnWwErQGahRFKK",
       "file_size_bytes": 9944,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZhDBuYGUrb2oex54rwwUroZtnyjh7ReL2AMMoCZuGBqV",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZhDBuYGUrb2oex54rwwUroZtnyjh7ReL2AMMoCZuGBqV"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfX3L5LnTNQAGHbtFc9s89qXBeRbPiZVnWwErQGahRFKK",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfX3L5LnTNQAGHbtFc9s89qXBeRbPiZVnWwErQGahRFKK"
     },
     {
       "url": "https://elesium.online/signals/b2b-market-intelligence-2026-07-10-34",
       "path_suffix": "signals/b2b-market-intelligence-2026-07-10-34",
-      "sha256": "43eb7944f09548a1044b5339948216e119813e0ce5102fd72d1c0e5622c2428e",
-      "ipfs_cid": "QmSunHAFcLr5VEhv17eK5tc23ZhoqEni8hn3pNZYBkpuFB",
+      "sha256": "d0e3fe2be9cce7c079f668956b978be3858f2b63cbc318bd98728d65a9ee356b",
+      "ipfs_cid": "QmcQ59aWyzAsGyPkVrUCCsvh24p5QLkRx6jN5ktNhtxTKg",
       "file_size_bytes": 9938,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSunHAFcLr5VEhv17eK5tc23ZhoqEni8hn3pNZYBkpuFB",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSunHAFcLr5VEhv17eK5tc23ZhoqEni8hn3pNZYBkpuFB"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcQ59aWyzAsGyPkVrUCCsvh24p5QLkRx6jN5ktNhtxTKg",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcQ59aWyzAsGyPkVrUCCsvh24p5QLkRx6jN5ktNhtxTKg"
     },
     {
       "url": "https://elesium.online/signals/b2b-market-intelligence-2026-07-10-ii-35",
       "path_suffix": "signals/b2b-market-intelligence-2026-07-10-ii-35",
-      "sha256": "91cd5760a000d473cd87951629002e3314e199f0ea132b6c418aa9c4852147bf",
-      "ipfs_cid": "QmY9oRvqyphFhYesRViWSEsn6UAbrxkaVrqCdbjB91Zq7c",
+      "sha256": "c0434b45dcbd9de141ba657f91a564a32a887f1dd219e4a5e5a8ccec3df3a607",
+      "ipfs_cid": "QmbHAW7KBBYp61MrcQSv2y5M7GbjNg2GKPtJdNB4E1rcog",
       "file_size_bytes": 9944,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmY9oRvqyphFhYesRViWSEsn6UAbrxkaVrqCdbjB91Zq7c",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmY9oRvqyphFhYesRViWSEsn6UAbrxkaVrqCdbjB91Zq7c"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbHAW7KBBYp61MrcQSv2y5M7GbjNg2GKPtJdNB4E1rcog",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbHAW7KBBYp61MrcQSv2y5M7GbjNg2GKPtJdNB4E1rcog"
     },
     {
       "url": "https://elesium.online/signals/b2b-partnership-platform-and-supply-chain-partner--ii-21",
       "path_suffix": "signals/b2b-partnership-platform-and-supply-chain-partner--ii-21",
-      "sha256": "6c3ddf2f8af5e70ea8f595cc2b0f9d6e98abaf0e6500912c41b20cce30754e58",
-      "ipfs_cid": "QmVdBTfsKq5eSGJ2EeMt4vz1P6ZogNyeqsuJJMGgGwGiAs",
+      "sha256": "4254e264daffce25b13fc53e53a9be6f5f08a08dac3d5d2f8453ae26c5decd14",
+      "ipfs_cid": "QmSoagxYMPfFqG4JNm4ALR4yaiyf1Hvx91NjLZDt4nbmmm",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVdBTfsKq5eSGJ2EeMt4vz1P6ZogNyeqsuJJMGgGwGiAs",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVdBTfsKq5eSGJ2EeMt4vz1P6ZogNyeqsuJJMGgGwGiAs"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSoagxYMPfFqG4JNm4ALR4yaiyf1Hvx91NjLZDt4nbmmm",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSoagxYMPfFqG4JNm4ALR4yaiyf1Hvx91NjLZDt4nbmmm"
     },
     {
       "url": "https://elesium.online/signals/b2b-partnership-programs-and-b2b-manufacturing-sales-ho-46",
       "path_suffix": "signals/b2b-partnership-programs-and-b2b-manufacturing-sales-ho-46",
-      "sha256": "35c1593d30b4c2baa3013cfef3548240e7721a91b999dab8fa84ab737ab9d0f4",
-      "ipfs_cid": "QmRxVKHFXpot4XwWn7ZqyHGyWifsVamgzELmHsXQ7jfQRy",
+      "sha256": "927f4c3c2804222ff1c4919b8d3ce0bcda160432c7eff27008f382401d5ea65c",
+      "ipfs_cid": "QmYCWpJ2p2u4KHm7Bo5fypF4Gwx3ugxYFLVxxehsMG7Mp7",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRxVKHFXpot4XwWn7ZqyHGyWifsVamgzELmHsXQ7jfQRy",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRxVKHFXpot4XwWn7ZqyHGyWifsVamgzELmHsXQ7jfQRy"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYCWpJ2p2u4KHm7Bo5fypF4Gwx3ugxYFLVxxehsMG7Mp7",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYCWpJ2p2u4KHm7Bo5fypF4Gwx3ugxYFLVxxehsMG7Mp7"
     },
     {
       "url": "https://elesium.online/signals/b2b-partnership-programs-and-enterprise-revenue-growth--58",
       "path_suffix": "signals/b2b-partnership-programs-and-enterprise-revenue-growth--58",
-      "sha256": "6af25c53f58759ef6802ff90c93dd4da47e6ec96f7cf1fd4976ff4645b186953",
-      "ipfs_cid": "QmVY8GeCA4shm3yoB2ZvCDAzpJRuD4fSxAmQjT2zyPemvz",
+      "sha256": "d21e5ecc68677dd4d2e9d0ce70a3295d0307c1e636371702c77644e1f6241ee4",
+      "ipfs_cid": "QmcUsBj1zSGHnMmkEA1S4N83G7usnuTrskvSZki85knNeP",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVY8GeCA4shm3yoB2ZvCDAzpJRuD4fSxAmQjT2zyPemvz",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVY8GeCA4shm3yoB2ZvCDAzpJRuD4fSxAmQjT2zyPemvz"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcUsBj1zSGHnMmkEA1S4N83G7usnuTrskvSZki85knNeP",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcUsBj1zSGHnMmkEA1S4N83G7usnuTrskvSZki85knNeP"
     },
     {
       "url": "https://elesium.online/signals/b2b-partnership-programs-and-enterprise-sales-stra-ii-63",
       "path_suffix": "signals/b2b-partnership-programs-and-enterprise-sales-stra-ii-63",
-      "sha256": "6c7a5120bc1efd8297e0721eb37eb3d97c05c0732fca91f4f108cb25907a1a0c",
-      "ipfs_cid": "QmVe6vEP6u9LxkEdVuycTKki4pU4PENdAabn88QRaySedh",
+      "sha256": "4317d48014a23a182a519904e71cd133883d63158548eaf79cc7d6c45a55b336",
+      "ipfs_cid": "QmSrZ6o7SQZvbV27b3nPDYL6b9RdXxfY7f2HM91fwNbVBb",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVe6vEP6u9LxkEdVuycTKki4pU4PENdAabn88QRaySedh",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVe6vEP6u9LxkEdVuycTKki4pU4PENdAabn88QRaySedh"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSrZ6o7SQZvbV27b3nPDYL6b9RdXxfY7f2HM91fwNbVBb",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSrZ6o7SQZvbV27b3nPDYL6b9RdXxfY7f2HM91fwNbVBb"
     },
     {
       "url": "https://elesium.online/signals/b2b-partnership-programs-and-revenue-operations-softwar-56",
       "path_suffix": "signals/b2b-partnership-programs-and-revenue-operations-softwar-56",
-      "sha256": "7877ebd19d9c970cb6b4d46f9b9bd81d918bcc893c1721582b815acb57079c8e",
-      "ipfs_cid": "QmWSuh6fs1GKu2LzN4SjYkRst4HqzrUKXLP2mrKmRDYwsB",
+      "sha256": "d0cb1738f1196f756ea5c50a670c2fa4a44cc18a2d6559b3c3440d5f60056b92",
+      "ipfs_cid": "QmcPh8DBcRhJqadA58d4YsX7QAaoSfTzHhQEw63bVYuH29",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWSuh6fs1GKu2LzN4SjYkRst4HqzrUKXLP2mrKmRDYwsB",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWSuh6fs1GKu2LzN4SjYkRst4HqzrUKXLP2mrKmRDYwsB"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcPh8DBcRhJqadA58d4YsX7QAaoSfTzHhQEw63bVYuH29",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcPh8DBcRhJqadA58d4YsX7QAaoSfTzHhQEw63bVYuH29"
     },
     {
       "url": "https://elesium.online/signals/b2b-pipeline-automation-software-and-executive-sal-ii-29",
       "path_suffix": "signals/b2b-pipeline-automation-software-and-executive-sal-ii-29",
-      "sha256": "b80284e2a736eaa8437ebe5b12120b9e159f4d05dde907606a1110c8aa903367",
-      "ipfs_cid": "QmaiwxGtcJfjTRKts7FgryD2fWAkWdY9y36D5JSufoXEyL",
+      "sha256": "c2fa9bc5c34fdac7372e4e05415853a0d579b078140e82cc8f8c54d30d31f852",
+      "ipfs_cid": "QmbTmScDSyWurjUePYBpKyj5aXMTsru7rN3oWKEpXLM62M",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmaiwxGtcJfjTRKts7FgryD2fWAkWdY9y36D5JSufoXEyL",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmaiwxGtcJfjTRKts7FgryD2fWAkWdY9y36D5JSufoXEyL"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbTmScDSyWurjUePYBpKyj5aXMTsru7rN3oWKEpXLM62M",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbTmScDSyWurjUePYBpKyj5aXMTsru7rN3oWKEpXLM62M"
     },
     {
       "url": "https://elesium.online/signals/b2b-pipeline-automation-software-and-executive-sales-in-ii-19",
       "path_suffix": "signals/b2b-pipeline-automation-software-and-executive-sales-in-ii-19",
-      "sha256": "5e9ff1af0d9d26149fbe8ee7b915721470a480026f1cbaa08b1355ea856e29e8",
-      "ipfs_cid": "QmUi2VHVzsSn9xafGw9JLnD1hkT5LfnDKxvapJhndy9diF",
+      "sha256": "351f55c1c049127547d7ce3396bf3b450885b4519983a6a1c556651693a7525d",
+      "ipfs_cid": "QmRv22iKZYMDXpZT5SpDUT2hT2WXiaNajghXn7Jr83aqUQ",
       "file_size_bytes": 9986,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUi2VHVzsSn9xafGw9JLnD1hkT5LfnDKxvapJhndy9diF",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUi2VHVzsSn9xafGw9JLnD1hkT5LfnDKxvapJhndy9diF"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRv22iKZYMDXpZT5SpDUT2hT2WXiaNajghXn7Jr83aqUQ",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRv22iKZYMDXpZT5SpDUT2hT2WXiaNajghXn7Jr83aqUQ"
     },
     {
       "url": "https://elesium.online/signals/b2b-pipeline-automation-software-and-executive-sales-in-ii-8",
       "path_suffix": "signals/b2b-pipeline-automation-software-and-executive-sales-in-ii-8",
-      "sha256": "cffccc1777c9f0b1ec35b4b2369977faf9cab29d125e8ac7bbecf6fdf5b39dcf",
-      "ipfs_cid": "QmcLYgHUjG3ELRGHWhrBen8gy7V1pCPe9eKoHrSMvz85E6",
+      "sha256": "05c9fc75fcade2d3a212adf50b51f5e30ab0b555adfbebf5db9bd8e61dd2100c",
+      "ipfs_cid": "QmNjFPKVXXbCxcoiGSvs3568essPHhHqS6FfgjDpGu8V8F",
       "file_size_bytes": 9984,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcLYgHUjG3ELRGHWhrBen8gy7V1pCPe9eKoHrSMvz85E6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcLYgHUjG3ELRGHWhrBen8gy7V1pCPe9eKoHrSMvz85E6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNjFPKVXXbCxcoiGSvs3568essPHhHqS6FfgjDpGu8V8F",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNjFPKVXXbCxcoiGSvs3568essPHhHqS6FfgjDpGu8V8F"
     },
     {
       "url": "https://elesium.online/signals/b2b-revenue-acceleration-and-customer-acquisition--ii-37",
       "path_suffix": "signals/b2b-revenue-acceleration-and-customer-acquisition--ii-37",
-      "sha256": "6e44cb3de5e013e9c644ea27ebe1076aa4cf6d19d01901bd79332d442086028d",
-      "ipfs_cid": "QmVm6Q33mdiKF7JpwDA5ZjzVE3rYXFxsqThAZnFwvu6mWc",
+      "sha256": "bed4fe5d9de4a74f2c6f67376366b4bb634d4afc93590a53b293a1677c139968",
+      "ipfs_cid": "QmbBaYYnAWi5zijRxd45buAGzm4fgAYss1KBN1zxHKjTu9",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVm6Q33mdiKF7JpwDA5ZjzVE3rYXFxsqThAZnFwvu6mWc",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVm6Q33mdiKF7JpwDA5ZjzVE3rYXFxsqThAZnFwvu6mWc"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbBaYYnAWi5zijRxd45buAGzm4fgAYss1KBN1zxHKjTu9",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbBaYYnAWi5zijRxd45buAGzm4fgAYss1KBN1zxHKjTu9"
     },
     {
       "url": "https://elesium.online/signals/b2b-revenue-acceleration-and-customer-acquisition--ii-39",
       "path_suffix": "signals/b2b-revenue-acceleration-and-customer-acquisition--ii-39",
-      "sha256": "1a6026034cbcbe04b572333b1ebd816fe56ba9a8033f4f3705094454c2154a1e",
-      "ipfs_cid": "QmQ7cLu6eofijZqtwTSywqnbwaswkWpHeShi18Z4j6vpqB",
+      "sha256": "6890d564f8eae9d10787082bf27d98718213258490cd8031ab0d27f8aea9a2cc",
+      "ipfs_cid": "QmVNqCec2tVgsvy2YQVEnsFYumifCahhWFe756NoGn1WxK",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQ7cLu6eofijZqtwTSywqnbwaswkWpHeShi18Z4j6vpqB",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQ7cLu6eofijZqtwTSywqnbwaswkWpHeShi18Z4j6vpqB"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVNqCec2tVgsvy2YQVEnsFYumifCahhWFe756NoGn1WxK",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVNqCec2tVgsvy2YQVEnsFYumifCahhWFe756NoGn1WxK"
     },
     {
       "url": "https://elesium.online/signals/b2b-revenue-acceleration-and-high-ticket-b2b-deals-how--24",
       "path_suffix": "signals/b2b-revenue-acceleration-and-high-ticket-b2b-deals-how--24",
-      "sha256": "7962ab1636f6b512fecfef6a8b2c5b86e9a831be1fa9d31633150ba974d480d0",
-      "ipfs_cid": "QmWWVJZxmQhhkJ8iZvJsaZF2q66kYjgwSWuDFJJDUZstBq",
+      "sha256": "117a2ce551e1693697d237f6f8c522f04b4ba1991da972f4eabe7fa580abab01",
+      "ipfs_cid": "QmPWsh9Ef6crHsc9UBP8kmE44KSM5VzWowHhsRfk8feEgG",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWWVJZxmQhhkJ8iZvJsaZF2q66kYjgwSWuDFJJDUZstBq",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWWVJZxmQhhkJ8iZvJsaZF2q66kYjgwSWuDFJJDUZstBq"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPWsh9Ef6crHsc9UBP8kmE44KSM5VzWowHhsRfk8feEgG",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPWsh9Ef6crHsc9UBP8kmE44KSM5VzWowHhsRfk8feEgG"
     },
     {
       "url": "https://elesium.online/signals/b2b-revenue-acceleration-and-high-ticket-deals-how-eles-22",
       "path_suffix": "signals/b2b-revenue-acceleration-and-high-ticket-deals-how-eles-22",
-      "sha256": "961439336db5697cd5254bd7f9a05790c0898bbf2a5acf2df2fdf61006d97e60",
-      "ipfs_cid": "QmYSVkSyD3jdi46ZVJj2NyERuPgWSG9oHUpvku1yM1s8mV",
+      "sha256": "b6f23333f65036155c4eacdfe4790127fadfce7c8a4108321d4598976eb0bba4",
+      "ipfs_cid": "Qmaeo7Xtocb86ARxpzudZRo4P4FTGvY6FmotgVsaTEmKqD",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYSVkSyD3jdi46ZVJj2NyERuPgWSG9oHUpvku1yM1s8mV",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYSVkSyD3jdi46ZVJj2NyERuPgWSG9oHUpvku1yM1s8mV"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmaeo7Xtocb86ARxpzudZRo4P4FTGvY6FmotgVsaTEmKqD",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmaeo7Xtocb86ARxpzudZRo4P4FTGvY6FmotgVsaTEmKqD"
     },
     {
       "url": "https://elesium.online/signals/b2b-revenue-acceleration-closing-high-ticket-deals-fast-20",
       "path_suffix": "signals/b2b-revenue-acceleration-closing-high-ticket-deals-fast-20",
-      "sha256": "f912ef15fafe7d1a59bb26dfcc937007de003e30d9a26e7f893dfb6024df3dfc",
-      "ipfs_cid": "Qmf6vyJXQNCynzhPDQK3YiFnzqQRVvt4po3HsYvLosm6Z9",
+      "sha256": "604c0a0472f20a389c38128fa501c0001e0f42d620abcfdfd5b5d6e3e7496f91",
+      "ipfs_cid": "QmUpZ6de6YMpywrfibjokP2Z6W8Zz7quDYcNhJcotQv3HJ",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmf6vyJXQNCynzhPDQK3YiFnzqQRVvt4po3HsYvLosm6Z9",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmf6vyJXQNCynzhPDQK3YiFnzqQRVvt4po3HsYvLosm6Z9"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUpZ6de6YMpywrfibjokP2Z6W8Zz7quDYcNhJcotQv3HJ",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUpZ6de6YMpywrfibjokP2Z6W8Zz7quDYcNhJcotQv3HJ"
     },
     {
       "url": "https://elesium.online/signals/business-matchmaking-service-and-revenue-operations-sof-40",
       "path_suffix": "signals/business-matchmaking-service-and-revenue-operations-sof-40",
-      "sha256": "ef799e8079173767020a68fa39fe083b8ec4b748c50832e1e06b475b640bc86d",
-      "ipfs_cid": "QmeTTi8LRCEjqpWHigC68SF174fKRd9NTTab3xrWXLHVBA",
+      "sha256": "c8390a70aac76c890c960611fbbd87ed7c59a568ba03643d13f6278a147a33cd",
+      "ipfs_cid": "QmbpEhLRhjU1aEzeGZQuaGw4Aoi7QaNCeqWdoz9srpTQo6",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeTTi8LRCEjqpWHigC68SF174fKRd9NTTab3xrWXLHVBA",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeTTi8LRCEjqpWHigC68SF174fKRd9NTTab3xrWXLHVBA"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbpEhLRhjU1aEzeGZQuaGw4Aoi7QaNCeqWdoz9srpTQo6",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbpEhLRhjU1aEzeGZQuaGw4Aoi7QaNCeqWdoz9srpTQo6"
     },
     {
       "url": "https://elesium.online/signals/buyer-intent-signals-platform-and-b2b-growth-hacking-ho-68",
       "path_suffix": "signals/buyer-intent-signals-platform-and-b2b-growth-hacking-ho-68",
-      "sha256": "d3e4836c039a701e63bf9148193db14fe04742c10d07bf75eb1e7530733dddc4",
-      "ipfs_cid": "QmcbnqDbEYpQJhUkZVJeL2mFfVZUgT33kFK23zkzA84tnX",
+      "sha256": "1f8da095f4b07de02fa90bd84a8ff231c7cd58b3a31cfbb5d9b581a002baaa2b",
+      "ipfs_cid": "QmQTpbzK1NDGzS9HMpriUQoH8igyTXiVXcDdbsCEbcjXAi",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcbnqDbEYpQJhUkZVJeL2mFfVZUgT33kFK23zkzA84tnX",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcbnqDbEYpQJhUkZVJeL2mFfVZUgT33kFK23zkzA84tnX"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQTpbzK1NDGzS9HMpriUQoH8igyTXiVXcDdbsCEbcjXAi",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQTpbzK1NDGzS9HMpriUQoH8igyTXiVXcDdbsCEbcjXAi"
     },
     {
       "url": "https://elesium.online/signals/connect-group-revenue-velocity-2",
       "path_suffix": "signals/connect-group-revenue-velocity-2",
-      "sha256": "7bd754e454ce8a17b8cbfdf746928e0180dc8be5a6eee5975e099469b401df10",
-      "ipfs_cid": "QmWg5JAT4KPFBqMZyrBjNfZ17YKmo7iZ7fYgvvBYtuBK5q",
+      "sha256": "fead1a14fbcd14ddbdc64b938b52f16cfe7e651960fc066a9f6fa6d9bba612f5",
+      "ipfs_cid": "QmfUoMf3DaLb3madC1V89whiWyaRENZ3vaGr8iKRLFVPSL",
       "file_size_bytes": 9928,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWg5JAT4KPFBqMZyrBjNfZ17YKmo7iZ7fYgvvBYtuBK5q",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWg5JAT4KPFBqMZyrBjNfZ17YKmo7iZ7fYgvvBYtuBK5q"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfUoMf3DaLb3madC1V89whiWyaRENZ3vaGr8iKRLFVPSL",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfUoMf3DaLb3madC1V89whiWyaRENZ3vaGr8iKRLFVPSL"
     },
     {
       "url": "https://elesium.online/signals/cost-of-enterprise-ai-automation-india",
       "path_suffix": "signals/cost-of-enterprise-ai-automation-india",
-      "sha256": "92186364dd992e1aa2e2f34f2f3bbcb2ef2c30b4b24ac2cea4234ec1d2286073",
-      "ipfs_cid": "QmYAwoVtwrgBgvLyzRxBkvBhmbSpSYuyEPPt4zKZxuWaH8",
+      "sha256": "53ced85c8d5283045e91e63539883984ea0eb93a2a1e657e836ea580e98a9894",
+      "ipfs_cid": "QmTyoUzHPQrTH54tbYee9CeivpEicvxzfvjkRHEyU5HPV5",
       "file_size_bytes": 9940,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYAwoVtwrgBgvLyzRxBkvBhmbSpSYuyEPPt4zKZxuWaH8",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYAwoVtwrgBgvLyzRxBkvBhmbSpSYuyEPPt4zKZxuWaH8"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTyoUzHPQrTH54tbYee9CeivpEicvxzfvjkRHEyU5HPV5",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTyoUzHPQrTH54tbYee9CeivpEicvxzfvjkRHEyU5HPV5"
     },
     {
       "url": "https://elesium.online/signals/elate-staffing-talent-density-4",
       "path_suffix": "signals/elate-staffing-talent-density-4",
-      "sha256": "1ee7c95049778710d6090ac062475ec1be3666ae2c388d728f3e234749abb04b",
-      "ipfs_cid": "QmQRHw6cruReZmArNXxnFYPaNsMse6DiaTU6YY82p4kbx6",
+      "sha256": "21c9dafc8b2409319baa04cdf049354b4e2eb2cd9dd430bb7c784a3a1a3ab223",
+      "ipfs_cid": "QmQcYgiLGbLwmPg3aqebhdiLiDrAJtcoaXQRN7RGAF81bQ",
       "file_size_bytes": 9926,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQRHw6cruReZmArNXxnFYPaNsMse6DiaTU6YY82p4kbx6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQRHw6cruReZmArNXxnFYPaNsMse6DiaTU6YY82p4kbx6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQcYgiLGbLwmPg3aqebhdiLiDrAJtcoaXQRN7RGAF81bQ",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQcYgiLGbLwmPg3aqebhdiLiDrAJtcoaXQRN7RGAF81bQ"
     },
     {
       "url": "https://elesium.online/signals/enterprise-dealflow-management-how-b2b-buyer-match-ii-47",
       "path_suffix": "signals/enterprise-dealflow-management-how-b2b-buyer-match-ii-47",
-      "sha256": "ffe56f39fb8cac4cd2bbf1a9c898ffe2ff17a8779797162922457f5eb442ba13",
-      "ipfs_cid": "QmfZZaupNUwNZnjbHAL8oGiuqebkJwupoEn1hGUpvYtfii",
+      "sha256": "6a16b70a94a57e232fc29f46faa350c652ba6ae014e3b54fc94e82f24a24f532",
+      "ipfs_cid": "QmVUn1oviwNmX8Bz95narEuTaQBxyfNGRz1v8vkYoduVbo",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfZZaupNUwNZnjbHAL8oGiuqebkJwupoEn1hGUpvYtfii",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfZZaupNUwNZnjbHAL8oGiuqebkJwupoEn1hGUpvYtfii"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVUn1oviwNmX8Bz95narEuTaQBxyfNGRz1v8vkYoduVbo",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVUn1oviwNmX8Bz95narEuTaQBxyfNGRz1v8vkYoduVbo"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-automation-and-ai-powered-lead-qualifi-28",
       "path_suffix": "signals/enterprise-sales-automation-and-ai-powered-lead-qualifi-28",
-      "sha256": "b1add2dd72d31e166fa76c5f603cee5f4fea26c23e6cf756cf2d6fe349ce67b3",
-      "ipfs_cid": "QmaJEbuPGZeb9tw1rEHwDgRQPyjgZed8HjUbkGDvHbqKZC",
+      "sha256": "8bcaaaeaca769a96c62780184aa7c3df98db732e4640a622ad2a962ea772cff5",
+      "ipfs_cid": "QmXkLcuKr9zYs26tSAJtUPVyaJx2fj4waWJVBsS1yKmgTN",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmaJEbuPGZeb9tw1rEHwDgRQPyjgZed8HjUbkGDvHbqKZC",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmaJEbuPGZeb9tw1rEHwDgRQPyjgZed8HjUbkGDvHbqKZC"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXkLcuKr9zYs26tSAJtUPVyaJx2fj4waWJVBsS1yKmgTN",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXkLcuKr9zYs26tSAJtUPVyaJx2fj4waWJVBsS1yKmgTN"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-automation-and-ai-powered-lead-qualificatio-13",
       "path_suffix": "signals/enterprise-sales-automation-and-ai-powered-lead-qualificatio-13",
-      "sha256": "e0a3b0a0fd35286d992d4e1799ea753aeeebf6346e01d21c1933e840106f1ec4",
-      "ipfs_cid": "QmdTYoUPtxxkKWtucifp8B9YFQPnVnw4y1TfJkb7UD6t8T",
+      "sha256": "e5b09d903b69d69e7a1721cbb192c595425d7e5c21c1d27a12714b5d2c564d59",
+      "ipfs_cid": "QmdoGGj6uUZMHQ6m57vbqHQyz6SMuhHWHVbRpgfcmSGoHS",
       "file_size_bytes": 9990,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdTYoUPtxxkKWtucifp8B9YFQPnVnw4y1TfJkb7UD6t8T",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdTYoUPtxxkKWtucifp8B9YFQPnVnw4y1TfJkb7UD6t8T"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdoGGj6uUZMHQ6m57vbqHQyz6SMuhHWHVbRpgfcmSGoHS",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdoGGj6uUZMHQ6m57vbqHQyz6SMuhHWHVbRpgfcmSGoHS"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-automation-and-ai-powered-lead-qualificatio-18",
       "path_suffix": "signals/enterprise-sales-automation-and-ai-powered-lead-qualificatio-18",
-      "sha256": "fcdc9c85cd9d6d20bca5588166f6f441d767e49fd19fb736522ac639f109738b",
-      "ipfs_cid": "QmfMiZPVvVzXrbPdQcFxxNKhMeNevDhXtEc1du9mPve9aS",
+      "sha256": "0433b95cd9eafa2506bf1ed77c424b13dc0fd3cffe30920cd74e5f2021583c27",
+      "ipfs_cid": "QmNd45uQfAUUMqWBFt8f2fW3iziXxn5et79CN3MnTkFeer",
       "file_size_bytes": 9990,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfMiZPVvVzXrbPdQcFxxNKhMeNevDhXtEc1du9mPve9aS",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfMiZPVvVzXrbPdQcFxxNKhMeNevDhXtEc1du9mPve9aS"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNd45uQfAUUMqWBFt8f2fW3iziXxn5et79CN3MnTkFeer",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNd45uQfAUUMqWBFt8f2fW3iziXxn5et79CN3MnTkFeer"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-strategy-2026-accelerating-high-ticket-54",
       "path_suffix": "signals/enterprise-sales-strategy-2026-accelerating-high-ticket-54",
-      "sha256": "3cde099b7ae9514f687ca86c18b8ffb6917717771de9c7ab9d4dfea95e126de4",
-      "ipfs_cid": "QmSSFYRHhuUXzvHa8VBdiEqXRR1zfqrwDoVPAJS5FWnHVu",
+      "sha256": "23c289c5cf422199daa7a91d8aba9f96fdf2fc734254f59b1e91d354f7d76966",
+      "ipfs_cid": "QmQkF2fWsLiEf8X6GhmyAJfueou6ckhwdkRjwfn7CbUyQR",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSSFYRHhuUXzvHa8VBdiEqXRR1zfqrwDoVPAJS5FWnHVu",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSSFYRHhuUXzvHa8VBdiEqXRR1zfqrwDoVPAJS5FWnHVu"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQkF2fWsLiEf8X6GhmyAJfueou6ckhwdkRjwfn7CbUyQR",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQkF2fWsLiEf8X6GhmyAJfueou6ckhwdkRjwfn7CbUyQR"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-strategy-2026-how-b2b-buyer-matching-p-30",
       "path_suffix": "signals/enterprise-sales-strategy-2026-how-b2b-buyer-matching-p-30",
-      "sha256": "d026d5dcfb2093aeff2cfb0dbf5718ea0c696ec90627fd3d2c01ad152bd0cfe7",
-      "ipfs_cid": "QmcMBres3GPmnVjK5gCR8o7hQduYWC7WJWz3qhfZo8DaYn",
+      "sha256": "ae20f80da45418ba2f6074978e892251a9dd4c47a04bade156681ed2b62f4880",
+      "ipfs_cid": "Qma4NokY7GQu5wdzBC9ubrCnuGk2ss3YUjF2x2EKQq8yhR",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcMBres3GPmnVjK5gCR8o7hQduYWC7WJWz3qhfZo8DaYn",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcMBres3GPmnVjK5gCR8o7hQduYWC7WJWz3qhfZo8DaYn"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qma4NokY7GQu5wdzBC9ubrCnuGk2ss3YUjF2x2EKQq8yhR",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qma4NokY7GQu5wdzBC9ubrCnuGk2ss3YUjF2x2EKQq8yhR"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-strategy-2026-how-signal-driven-o-ii-53",
       "path_suffix": "signals/enterprise-sales-strategy-2026-how-signal-driven-o-ii-53",
-      "sha256": "ae3be7442662800bd0e1411c7638c84df13cfe7208d29ea5a5358c8409c6fae1",
-      "ipfs_cid": "Qma4ndNBq1zqXietotonUMjrjFy93U4G9GaK89Eo2yGAPi",
+      "sha256": "164f188e161e2a24744ae11157dbf92f38db8551e23925ac1281a622089f9385",
+      "ipfs_cid": "QmPqjdbMhVo9osVicWwGbyEAaUzUvDtvZWiaVKb75SnBj2",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qma4ndNBq1zqXietotonUMjrjFy93U4G9GaK89Eo2yGAPi",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qma4ndNBq1zqXietotonUMjrjFy93U4G9GaK89Eo2yGAPi"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPqjdbMhVo9osVicWwGbyEAaUzUvDtvZWiaVKb75SnBj2",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPqjdbMhVo9osVicWwGbyEAaUzUvDtvZWiaVKb75SnBj2"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-strategy-and-b2b-buyer-intent-dat-ii-61",
       "path_suffix": "signals/enterprise-sales-strategy-and-b2b-buyer-intent-dat-ii-61",
-      "sha256": "06498c2de45d5cab45acd9d13890b7ddcb1a7ea07315eb3a9c9cf15eb744fe3e",
-      "ipfs_cid": "QmNmCCeLvETPATP6VQqdfgtZsntWGbPwKNFGQJJohLj1RF",
+      "sha256": "b906e01a6441b32dbe723b1c3039bebaf6dd70f1f693c2a5bb704238e95c0aad",
+      "ipfs_cid": "QmanvDP3FjykgW4HFXBKYsq7CP6bXhR1gueKshNmgsoYvY",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNmCCeLvETPATP6VQqdfgtZsntWGbPwKNFGQJJohLj1RF",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNmCCeLvETPATP6VQqdfgtZsntWGbPwKNFGQJJohLj1RF"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmanvDP3FjykgW4HFXBKYsq7CP6bXhR1gueKshNmgsoYvY",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmanvDP3FjykgW4HFXBKYsq7CP6bXhR1gueKshNmgsoYvY"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-strategy-and-b2b-buyer-matching-p-ii-65",
       "path_suffix": "signals/enterprise-sales-strategy-and-b2b-buyer-matching-p-ii-65",
-      "sha256": "569186ce61eabccc874cf947e78f7fd07fb85fbbb656fa244ca4ace8d0fa9bdf",
-      "ipfs_cid": "QmUAaUZWEEyRZDQaRBLT92A5ysXWsn3ZcjPw491gpk5znz",
+      "sha256": "cf07c8e59b69cf40f530a302c629470fc07acda885f01df9109beffecff6a0ac",
+      "ipfs_cid": "QmcGozFP1qRwYG4xiTEWmABAWtHkfKTXL9aWw1e6aNjFVV",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUAaUZWEEyRZDQaRBLT92A5ysXWsn3ZcjPw491gpk5znz",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUAaUZWEEyRZDQaRBLT92A5ysXWsn3ZcjPw491gpk5znz"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcGozFP1qRwYG4xiTEWmABAWtHkfKTXL9aWw1e6aNjFVV",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcGozFP1qRwYG4xiTEWmABAWtHkfKTXL9aWw1e6aNjFVV"
     },
     {
       "url": "https://elesium.online/signals/enterprise-sales-strategy-and-industrial-b2b-marketplac-42",
       "path_suffix": "signals/enterprise-sales-strategy-and-industrial-b2b-marketplac-42",
-      "sha256": "57038b532d4a1f8d7f847c59a6b06d78c8648640e63ea756ac9272208ed2b3c2",
-      "ipfs_cid": "QmUCKK9psmCtMixffrxDEHpbxWJmShWxDrC9LuQbMkSQQy",
+      "sha256": "3ee6590305c150877ba778bfc0c7b52b0bd74e377c51993269a61c57f9bbfa84",
+      "ipfs_cid": "QmSaBhzCTNTuwHkHiRq3duDhL58CdcWMmdT6qH1XDXhj7Z",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUCKK9psmCtMixffrxDEHpbxWJmShWxDrC9LuQbMkSQQy",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUCKK9psmCtMixffrxDEHpbxWJmShWxDrC9LuQbMkSQQy"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSaBhzCTNTuwHkHiRq3duDhL58CdcWMmdT6qH1XDXhj7Z",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSaBhzCTNTuwHkHiRq3duDhL58CdcWMmdT6qH1XDXhj7Z"
     },
     {
       "url": "https://elesium.online/signals/high-ticket-b2b-sales-and-b2b-buyer-intent-data-un-ii-43",
       "path_suffix": "signals/high-ticket-b2b-sales-and-b2b-buyer-intent-data-un-ii-43",
-      "sha256": "54887f05e98ef101874cfa1624398cea9c4b6a6caca95581b40e4d04be026fd7",
-      "ipfs_cid": "QmU2dg3pB2KGGkK8KgpRRwJHBfTWcx4wvUfu3Lo1JewAdC",
+      "sha256": "2be666d707e7ddf1e61fee7abbe4a996a68d4962e3e43d1c84c7bae99b55e7fe",
+      "ipfs_cid": "QmRJ21UVc75HkT2yFqtnPy9om9UWt4zzYfHHANxQ5DMCfw",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmU2dg3pB2KGGkK8KgpRRwJHBfTWcx4wvUfu3Lo1JewAdC",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmU2dg3pB2KGGkK8KgpRRwJHBfTWcx4wvUfu3Lo1JewAdC"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRJ21UVc75HkT2yFqtnPy9om9UWt4zzYfHHANxQ5DMCfw",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRJ21UVc75HkT2yFqtnPy9om9UWt4zzYfHHANxQ5DMCfw"
     },
     {
       "url": "https://elesium.online/signals/high-ticket-b2b-sales-in-manufacturing-the-power-of-sig-62",
       "path_suffix": "signals/high-ticket-b2b-sales-in-manufacturing-the-power-of-sig-62",
-      "sha256": "71e3b2ee867d765f6a89745c09d83086ab88495abea9c81ab7ab36681dcf310a",
-      "ipfs_cid": "QmW1EA64JUbYi5TFbhuHLM79Kf6mma78H2zpHiCsQF5fHs",
+      "sha256": "a3fec9b5eb46400b7c833cb5b3e8c368c2f04c46150e38f89ab10f02e3409e94",
+      "ipfs_cid": "QmZNpVxHvp7jjDLEAstvuJE9LbaczSmrQMn43mNS9nSyrb",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmW1EA64JUbYi5TFbhuHLM79Kf6mma78H2zpHiCsQF5fHs",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmW1EA64JUbYi5TFbhuHLM79Kf6mma78H2zpHiCsQF5fHs"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZNpVxHvp7jjDLEAstvuJE9LbaczSmrQMn43mNS9nSyrb",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZNpVxHvp7jjDLEAstvuJE9LbaczSmrQMn43mNS9nSyrb"
     },
     {
       "url": "https://elesium.online/signals/hippocratic-ai-dealflow-1",
       "path_suffix": "signals/hippocratic-ai-dealflow-1",
-      "sha256": "1a28799c56b4956676fb39409e13d773fa3bd2f26dd2f8f97aa279cb89d0f883",
-      "ipfs_cid": "QmQ6m76spCn7q2WsPq7pjoy6gtTppLbGAkfCv2cTJBW4ZG",
+      "sha256": "8159621f01b8537b94cb422dadc17fba9055a8195024b8c527a0a1c1f1580a41",
+      "ipfs_cid": "QmX3aMThLenJhpeQJKRCs292RJnwNTU2ALaFTEkYqRZzoJ",
       "file_size_bytes": 9914,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQ6m76spCn7q2WsPq7pjoy6gtTppLbGAkfCv2cTJBW4ZG",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQ6m76spCn7q2WsPq7pjoy6gtTppLbGAkfCv2cTJBW4ZG"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmX3aMThLenJhpeQJKRCs292RJnwNTU2ALaFTEkYqRZzoJ",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmX3aMThLenJhpeQJKRCs292RJnwNTU2ALaFTEkYqRZzoJ"
     },
     {
       "url": "https://elesium.online/signals/how-to-choose-ai-automation-agency-india",
       "path_suffix": "signals/how-to-choose-ai-automation-agency-india",
-      "sha256": "99bbf3154e63d5eb825dbc732cff825f3823ea5b649a1d2abdcf03aaaf9e9093",
-      "ipfs_cid": "QmYgmJysGhUgU2etmRZLd2Rzf94AroC7bdCLWRYPvmmARY",
+      "sha256": "cbee449f55feb8edaea0af3b2393bbea67a7ad9c452855c2b6a89f595215dd06",
+      "ipfs_cid": "Qmc4iCRBXPgsTwJ2Yc23XAcW8aj6teaYQXa1M1WYVEKVy7",
       "file_size_bytes": 9944,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYgmJysGhUgU2etmRZLd2Rzf94AroC7bdCLWRYPvmmARY",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYgmJysGhUgU2etmRZLd2Rzf94AroC7bdCLWRYPvmmARY"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmc4iCRBXPgsTwJ2Yc23XAcW8aj6teaYQXa1M1WYVEKVy7",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmc4iCRBXPgsTwJ2Yc23XAcW8aj6teaYQXa1M1WYVEKVy7"
     },
     {
       "url": "https://elesium.online/signals/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
       "path_suffix": "signals/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
-      "sha256": "147d3c608c7116ed3207f0ceeb5a7835f10549ff5e344532c74f14de1a23dcc7",
-      "ipfs_cid": "QmPidd54FJrm2rKTA4fks6n6s7BQZjZtaSw663S99t8cAA",
+      "sha256": "94e78ab6c19fe52cffd5b2122133dc290f30c3d695928e90acb8d34adec4e4b1",
+      "ipfs_cid": "QmYMupqYq6nZeyPrdshcVJmCmdiZjtcjUkugep1pLbznfS",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPidd54FJrm2rKTA4fks6n6s7BQZjZtaSw663S99t8cAA",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPidd54FJrm2rKTA4fks6n6s7BQZjZtaSw663S99t8cAA"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYMupqYq6nZeyPrdshcVJmCmdiZjtcjUkugep1pLbznfS",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYMupqYq6nZeyPrdshcVJmCmdiZjtcjUkugep1pLbznfS"
     },
     {
       "url": "https://elesium.online/signals/langgraph-multi-agent-systems-bangalore",
       "path_suffix": "signals/langgraph-multi-agent-systems-bangalore",
-      "sha256": "79fcf483f6468d598ee5b8ac1070c2ad4eef6c0f38051c6a00df1e6d74fd9710",
-      "ipfs_cid": "QmWYqkngBzZeB9mWbdYqFU7xCJYzwZRM4RvogP8eRS6gis",
+      "sha256": "f087423031ba4304f7e4edfdf09631dcc5245fe1ec20f3a44c1725a8b0c64c38",
+      "ipfs_cid": "QmeXaBQwJoENCAuhtMrGsaU5xBVFZTah8FsVKzWukr1PWX",
       "file_size_bytes": 9942,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWYqkngBzZeB9mWbdYqFU7xCJYzwZRM4RvogP8eRS6gis",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWYqkngBzZeB9mWbdYqFU7xCJYzwZRM4RvogP8eRS6gis"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeXaBQwJoENCAuhtMrGsaU5xBVFZTah8FsVKzWukr1PWX",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeXaBQwJoENCAuhtMrGsaU5xBVFZTah8FsVKzWukr1PWX"
     },
     {
       "url": "https://elesium.online/signals/manufacturing-buyers-platform-unlocking-high-conve-ii-67",
       "path_suffix": "signals/manufacturing-buyers-platform-unlocking-high-conve-ii-67",
-      "sha256": "5700a138a74d950bef38f17ab2817368003378b06333d10b3866acdb034d0701",
-      "ipfs_cid": "QmUCGjet7vscRozd9K5iGUqEQWjUgpKwNapbmgZpWoeh4k",
+      "sha256": "f00fb3a99154579195baddbac1b3e4555ccfc79ea58ff36d589626457c58c6f6",
+      "ipfs_cid": "QmeVkSh44JXXMHjVDRTYKnDaseNmWv1c6Qm91kvKthGgyK",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUCGjet7vscRozd9K5iGUqEQWjUgpKwNapbmgZpWoeh4k",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUCGjet7vscRozd9K5iGUqEQWjUgpKwNapbmgZpWoeh4k"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeVkSh44JXXMHjVDRTYKnDaseNmWv1c6Qm91kvKthGgyK",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeVkSh44JXXMHjVDRTYKnDaseNmWv1c6Qm91kvKthGgyK"
     },
     {
       "url": "https://elesium.online/signals/market-signals-sales-how-verified-buyer-matching-platfo-60",
       "path_suffix": "signals/market-signals-sales-how-verified-buyer-matching-platfo-60",
-      "sha256": "ee8fb670579174670ddbd894d00cac0ef2819b90dff0d2b883c5197488c69ab1",
-      "ipfs_cid": "QmePtqn5TUcNQHAqdiD6UYer27PztvjSBkMaXQE3TW18Rv",
+      "sha256": "a2929deef3cdfb5476f5886042dae0e41b131cfdc90d58059e3ad286c2fe58d1",
+      "ipfs_cid": "QmZHGRd4SBWCiWAf9p3Cb2sY9UyRYzG3MMKsMy1bkrncQx",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmePtqn5TUcNQHAqdiD6UYer27PztvjSBkMaXQE3TW18Rv",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmePtqn5TUcNQHAqdiD6UYer27PztvjSBkMaXQE3TW18Rv"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZHGRd4SBWCiWAf9p3Cb2sY9UyRYzG3MMKsMy1bkrncQx",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZHGRd4SBWCiWAf9p3Cb2sY9UyRYzG3MMKsMy1bkrncQx"
     },
     {
       "url": "https://elesium.online/signals/n8n-vs-langchain-vs-custom-agents-india-2026",
       "path_suffix": "signals/n8n-vs-langchain-vs-custom-agents-india-2026",
-      "sha256": "5b374ab00f06889e83ed87952378be966881e175774900da08ea296a1d8d5f5e",
-      "ipfs_cid": "QmUUii9pxAXGfBd1nspxqBhgNv4VgRJ9V4MbPJBzBihgW1",
+      "sha256": "262776f1edf4248ed8fd0f7ded6fd9bd14d2b447a9f970f5dbb6f1f42d0a092c",
+      "ipfs_cid": "QmQub72hgHouPyRuF6Vf8GvjMERd1eMVdzVVXHLCRWzZb1",
       "file_size_bytes": 9952,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUUii9pxAXGfBd1nspxqBhgNv4VgRJ9V4MbPJBzBihgW1",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUUii9pxAXGfBd1nspxqBhgNv4VgRJ9V4MbPJBzBihgW1"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQub72hgHouPyRuF6Vf8GvjMERd1eMVdzVVXHLCRWzZb1",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQub72hgHouPyRuF6Vf8GvjMERd1eMVdzVVXHLCRWzZb1"
     },
     {
       "url": "https://elesium.online/signals/revolutionizing-enterprise-sales-how-ai-powered-lead-qualifi-7",
       "path_suffix": "signals/revolutionizing-enterprise-sales-how-ai-powered-lead-qualifi-7",
-      "sha256": "32c6c8a99c79a4e419313dfab66d7ea51b33367b5dc5134a3fc9d560797a51ed",
-      "ipfs_cid": "QmRkru9P8RTpCZxuyGkwoFrZDm4RdhCY6snZwG6L6NYUaY",
+      "sha256": "13d1cc1d515f25b6822796d130279ad44e9744c4169abe7aaf20274787a0f184",
+      "ipfs_cid": "QmPg213fvHMDA6gqrgjqimLirD38285SKuPCzhs9ZfShMM",
       "file_size_bytes": 9988,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRkru9P8RTpCZxuyGkwoFrZDm4RdhCY6snZwG6L6NYUaY",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRkru9P8RTpCZxuyGkwoFrZDm4RdhCY6snZwG6L6NYUaY"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPg213fvHMDA6gqrgjqimLirD38285SKuPCzhs9ZfShMM",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPg213fvHMDA6gqrgjqimLirD38285SKuPCzhs9ZfShMM"
     },
     {
       "url": "https://elesium.online/signals/sales-cycle-reduction-and-industrial-b2b-marketplace-un-52",
       "path_suffix": "signals/sales-cycle-reduction-and-industrial-b2b-marketplace-un-52",
-      "sha256": "295efefda3562b618eba78b5f2fae14f2cfd6531b6458af460d96abd359cae2e",
-      "ipfs_cid": "QmR89SUtSwAvXViHuDfJp3wse63MAD8Cc2idkDXEV9WpkD",
+      "sha256": "d350e073daedc3fc8d4a536482188a20d73f6b7ba5e5a34029fcfb53cfc169bf",
+      "ipfs_cid": "QmcZYG8EnEYJD3nSq8DT7AcXBV6hMDAZBDgYLKe4Kpaug2",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmR89SUtSwAvXViHuDfJp3wse63MAD8Cc2idkDXEV9WpkD",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmR89SUtSwAvXViHuDfJp3wse63MAD8Cc2idkDXEV9WpkD"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcZYG8EnEYJD3nSq8DT7AcXBV6hMDAZBDgYLKe4Kpaug2",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcZYG8EnEYJD3nSq8DT7AcXBV6hMDAZBDgYLKe4Kpaug2"
     },
     {
       "url": "https://elesium.online/signals/supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
       "path_suffix": "signals/supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
-      "sha256": "ec565e45746e479cafb7af245b67eef93f21d00626eb5e5903f2a8d5f975c89e",
-      "ipfs_cid": "QmeFDJyXsHY2mtvYoK1UjJHi4kY9H4KDC11uiA8ZeV1Rpy",
+      "sha256": "172e88475475ad0c9398f3200d0b4601fba0e4b36d33806f38dde85b05f14c1b",
+      "ipfs_cid": "QmPu9Esgt6ABM7PShCvbRYJb3oWgv8WD5Mym4AynqDE3Wz",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeFDJyXsHY2mtvYoK1UjJHi4kY9H4KDC11uiA8ZeV1Rpy",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeFDJyXsHY2mtvYoK1UjJHi4kY9H4KDC11uiA8ZeV1Rpy"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPu9Esgt6ABM7PShCvbRYJb3oWgv8WD5Mym4AynqDE3Wz",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPu9Esgt6ABM7PShCvbRYJb3oWgv8WD5Mym4AynqDE3Wz"
     },
     {
       "url": "https://elesium.online/signals/supply-chain-partner-matching-and-industrial-b2b-m-ii-49",
       "path_suffix": "signals/supply-chain-partner-matching-and-industrial-b2b-m-ii-49",
-      "sha256": "d8c390a205998a60fbdf3095dc59faec9f7fd482015f549abdc7be3744883738",
-      "ipfs_cid": "QmcvojM2PyAxEMsm2Bkm8k6qfrfiHR5FK7DZXaU2oWagrj",
+      "sha256": "dcd2d7ae2164c65f06bd360d84b3dfbd0a3ccfceda1680e7ba186fdbe6aa35e4",
+      "ipfs_cid": "QmdCesbmhoR14p2rm8cT3SCHzZU9W5MUuREZPNyagscHLX",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcvojM2PyAxEMsm2Bkm8k6qfrfiHR5FK7DZXaU2oWagrj",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcvojM2PyAxEMsm2Bkm8k6qfrfiHR5FK7DZXaU2oWagrj"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdCesbmhoR14p2rm8cT3SCHzZU9W5MUuREZPNyagscHLX",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdCesbmhoR14p2rm8cT3SCHzZU9W5MUuREZPNyagscHLX"
     },
     {
       "url": "https://elesium.online/signals/talent-acquisition-platforms-and-b2b-buyer-intent--ii-45",
       "path_suffix": "signals/talent-acquisition-platforms-and-b2b-buyer-intent--ii-45",
-      "sha256": "cd37c79ae37c72dfd0d0f1fe691a8588b97d5849551de21eade5692a567c3520",
-      "ipfs_cid": "Qmc9jct2nTLA8nQdw5XjMwJ3hmEkhGrYSiGyVPNnX9ERfV",
+      "sha256": "ed58984c2f95e71f7a59d24b8e6b2c049ba2d26b704d35f65676cc69ff4db593",
+      "ipfs_cid": "QmeK9gqfagvi814ZMRr6g2AYXUbWL6Tc6MHMidgRuqYySr",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmc9jct2nTLA8nQdw5XjMwJ3hmEkhGrYSiGyVPNnX9ERfV",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmc9jct2nTLA8nQdw5XjMwJ3hmEkhGrYSiGyVPNnX9ERfV"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeK9gqfagvi814ZMRr6g2AYXUbWL6Tc6MHMidgRuqYySr",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeK9gqfagvi814ZMRr6g2AYXUbWL6Tc6MHMidgRuqYySr"
     },
     {
       "url": "https://elesium.online/signals/top-ai-automation-agencies-india-2026",
       "path_suffix": "signals/top-ai-automation-agencies-india-2026",
-      "sha256": "71427b25d7c38ff15d8cf370b2f39f7429aad9aeb361b7791bbe53187403cf97",
-      "ipfs_cid": "QmVxmaLS8vfsJ4RzjDzYU3korFnWEVaTAXiEwCCCR4L7Uz",
+      "sha256": "2d9ef5137c4faf95015d7d7a652a908f6ac90d366f5d5854420a53701041ba94",
+      "ipfs_cid": "QmRQjdzX1SZTkokAAKJaJsss74BTrnQoPvHeVLBd9t8ief",
       "file_size_bytes": 9938,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVxmaLS8vfsJ4RzjDzYU3korFnWEVaTAXiEwCCCR4L7Uz",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVxmaLS8vfsJ4RzjDzYU3korFnWEVaTAXiEwCCCR4L7Uz"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRQjdzX1SZTkokAAKJaJsss74BTrnQoPvHeVLBd9t8ief",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRQjdzX1SZTkokAAKJaJsss74BTrnQoPvHeVLBd9t8ief"
     },
     {
       "url": "https://elesium.online/signals/unlocking-business-matchmaking-service-and-b2b-gro-ii-51",
       "path_suffix": "signals/unlocking-business-matchmaking-service-and-b2b-gro-ii-51",
-      "sha256": "e6bd8371ba55f72cbef834faaf3866f611deaddc14463cef9f019878cd8570e7",
-      "ipfs_cid": "QmdsN5yrRy5wSrwRiDHbiTJJ1LqJdGU22r4XsuV9Kthsmx",
+      "sha256": "20ce7995b9f427febee6983259bc03892d093b98bbf61a5149ba7c14612fefca",
+      "ipfs_cid": "QmQYiN2ZiHnXB7mPS1aAmr3Bwk82s8fqrad55eKc2JERc5",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdsN5yrRy5wSrwRiDHbiTJJ1LqJdGU22r4XsuV9Kthsmx",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdsN5yrRy5wSrwRiDHbiTJJ1LqJdGU22r4XsuV9Kthsmx"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQYiN2ZiHnXB7mPS1aAmr3Bwk82s8fqrad55eKc2JERc5",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQYiN2ZiHnXB7mPS1aAmr3Bwk82s8fqrad55eKc2JERc5"
     },
     {
       "url": "https://elesium.online/signals/unlocking-enterprise-revenue-growth-and-customer-acquis-64",
       "path_suffix": "signals/unlocking-enterprise-revenue-growth-and-customer-acquis-64",
-      "sha256": "7bff77bd2a48c32672a0d569f73ae309aed55ffd8938ebcfe0e2c5be2a478582",
-      "ipfs_cid": "QmWggnxyXbMbNiWYrZxTT5LGHEjUBhKksJgLm5A5S3Y5bf",
+      "sha256": "887dc8bf8df49e58033ec71f0289e41fc058b016680876177a37c44c665b84d2",
+      "ipfs_cid": "QmXXTQBrFNJUmWq5axrfBWPZPQ7cYq8um6fYwYWCJFs7Zj",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWggnxyXbMbNiWYrZxTT5LGHEjUBhKksJgLm5A5S3Y5bf",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWggnxyXbMbNiWYrZxTT5LGHEjUBhKksJgLm5A5S3Y5bf"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXXTQBrFNJUmWq5axrfBWPZPQ7cYq8um6fYwYWCJFs7Zj",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXXTQBrFNJUmWq5axrfBWPZPQ7cYq8um6fYwYWCJFs7Zj"
     },
     {
       "url": "https://elesium.online/signals/unlocking-high-ticket-b2b-sales-how-elesium-s-signal-dr-38",
       "path_suffix": "signals/unlocking-high-ticket-b2b-sales-how-elesium-s-signal-dr-38",
-      "sha256": "f8a4e2a9de795ba2c1111d693d496de3a8ba32b7856a494a77236f0899ffeeba",
-      "ipfs_cid": "Qmf5FeJuUbTvsZkCRtMjbx5oeVHkbTfVjNSANWLggzj5Qu",
+      "sha256": "01cd2d1394eba1fb27d6583e45afdf057ee17e76b5b85bf5189a5d0aed87abc5",
+      "ipfs_cid": "QmNTgaMvLM54FhJxSNDSb9hJFBZ29Apugs5PG2iJK8nHcY",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmf5FeJuUbTvsZkCRtMjbx5oeVHkbTfVjNSANWLggzj5Qu",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmf5FeJuUbTvsZkCRtMjbx5oeVHkbTfVjNSANWLggzj5Qu"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNTgaMvLM54FhJxSNDSb9hJFBZ29Apugs5PG2iJK8nHcY",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNTgaMvLM54FhJxSNDSb9hJFBZ29Apugs5PG2iJK8nHcY"
     },
     {
       "url": "https://elesium.online/signals/unlocking-high-ticket-b2b-sales-how-elesium-s-signal-dr-50",
       "path_suffix": "signals/unlocking-high-ticket-b2b-sales-how-elesium-s-signal-dr-50",
-      "sha256": "c5e8511a19cbd199eb11cc9c45fb968961d0c6497e89edc134acbe570e340960",
-      "ipfs_cid": "QmbfCVGQpaobP11Jb5hHbUXmvnaY2qLHAPMu5rWLy9dJf1",
+      "sha256": "6f5e7c679df3b6616ffc99cb43f29660a393ad2891da6e82985f271ce6e51fbe",
+      "ipfs_cid": "QmVqPXZw6icathFYMHWXimezeNwzs39hADNEe3BtXopZLy",
       "file_size_bytes": 9980,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbfCVGQpaobP11Jb5hHbUXmvnaY2qLHAPMu5rWLy9dJf1",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbfCVGQpaobP11Jb5hHbUXmvnaY2qLHAPMu5rWLy9dJf1"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVqPXZw6icathFYMHWXimezeNwzs39hADNEe3BtXopZLy",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVqPXZw6icathFYMHWXimezeNwzs39hADNEe3BtXopZLy"
     },
     {
       "url": "https://elesium.online/signals/unlocking-high-ticket-sales-in-2026-how-signal-dri-ii-25",
       "path_suffix": "signals/unlocking-high-ticket-sales-in-2026-how-signal-dri-ii-25",
-      "sha256": "31ccabf3514d1b4368af746547ba6cf69748d0bd3df6a81f409c9fdfa3b8484c",
-      "ipfs_cid": "QmRh3hX38mKDoDNboyvSMKGkz8Z7qBpfPLtqMtd3P3LQju",
+      "sha256": "536c7948fa05185e640386baaf84cad3bac16a6ad0139c2ae1c488ffe01ea593",
+      "ipfs_cid": "QmTxJUykXaA5EsuAYhXibHaV8k9EVosy5pav6M7DcQNzTL",
       "file_size_bytes": 9976,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRh3hX38mKDoDNboyvSMKGkz8Z7qBpfPLtqMtd3P3LQju",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRh3hX38mKDoDNboyvSMKGkz8Z7qBpfPLtqMtd3P3LQju"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTxJUykXaA5EsuAYhXibHaV8k9EVosy5pav6M7DcQNzTL",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTxJUykXaA5EsuAYhXibHaV8k9EVosy5pav6M7DcQNzTL"
     },
     {
       "url": "https://elesium.online/signals/vention-manufacturing-dealflow-3",
       "path_suffix": "signals/vention-manufacturing-dealflow-3",
-      "sha256": "c21185c57fc589e0202553d86ff730ae6e36554016223434332228dcecdafeb1",
-      "ipfs_cid": "QmbQDJMDnVyMvkya5jVWvHZELYQZKsCrPi4kCHsxkBBrm6",
+      "sha256": "d05f435222b9bc6eca5589e8cbc37586f8f46c6f54c64e0f0978f236952a9579",
+      "ipfs_cid": "QmcN3m8hqTWqoyeWYKxh2Ahc7L5XLScmX1jWNQQakwUsAp",
       "file_size_bytes": 9928,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbQDJMDnVyMvkya5jVWvHZELYQZKsCrPi4kCHsxkBBrm6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbQDJMDnVyMvkya5jVWvHZELYQZKsCrPi4kCHsxkBBrm6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcN3m8hqTWqoyeWYKxh2Ahc7L5XLScmX1jWNQQakwUsAp",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcN3m8hqTWqoyeWYKxh2Ahc7L5XLScmX1jWNQQakwUsAp"
     },
     {
       "url": "https://elesium.online/solutions",
       "path_suffix": "solutions",
-      "sha256": "94e9359e900a9a1c77cf43ea5a3fff7e2a3f99f7dbbb95c79d2f0105565674c8",
-      "ipfs_cid": "QmYMwJNtYnvKkZapxdMojBGrHgCwKWGY4viHPrhVbu9PJP",
-      "file_size_bytes": 26716,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYMwJNtYnvKkZapxdMojBGrHgCwKWGY4viHPrhVbu9PJP",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYMwJNtYnvKkZapxdMojBGrHgCwKWGY4viHPrhVbu9PJP"
+      "sha256": "9fdabace89b938b7bf3273ca341fef332e0257ddb268f0e633b9cbf0f714d0f0",
+      "ipfs_cid": "QmZ6eyk7WyCnZfeKdvMwfReHVYh1oqFpK8NHxrR5C3ubTd",
+      "file_size_bytes": 43775,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZ6eyk7WyCnZfeKdvMwfReHVYh1oqFpK8NHxrR5C3ubTd",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZ6eyk7WyCnZfeKdvMwfReHVYh1oqFpK8NHxrR5C3ubTd"
     },
     {
       "url": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
       "path_suffix": "solutions/ai-automation-agency-for-logistics",
-      "sha256": "3e7c1ee9d929c5e10524714389b00087d22e17e735339d730d5e86dd4320a75e",
-      "ipfs_cid": "QmSYZm2JYnBgCqMuyhHi1jiKvvyuKLeSbm2VvnYovX17oT",
+      "sha256": "aad0952c42234795e4a7e809b99c564b9a69d51458fd9f2fa28e56dcb8881acc",
+      "ipfs_cid": "QmZqSVMomGF7b2HUT5xGcgmwwTM3foFxS45j9xdP8GqHFH",
       "file_size_bytes": 18936,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSYZm2JYnBgCqMuyhHi1jiKvvyuKLeSbm2VvnYovX17oT",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSYZm2JYnBgCqMuyhHi1jiKvvyuKLeSbm2VvnYovX17oT"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZqSVMomGF7b2HUT5xGcgmwwTM3foFxS45j9xdP8GqHFH",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZqSVMomGF7b2HUT5xGcgmwwTM3foFxS45j9xdP8GqHFH"
     },
     {
-      "url": "https://elesium.online/solutions/ai-automation-roi-india-case-studies-2026",
-      "path_suffix": "solutions/ai-automation-roi-india-case-studies-2026",
-      "sha256": "11612bccb5e2a5a5540de7eadfaeb44969c467829fe237ea1b59dbe26e850fff",
-      "ipfs_cid": "QmPWVaY2kw9pfLdbBsosK1V2tpQMjGiQmDQ6pRxi7XsiJr",
-      "file_size_bytes": 99,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPWVaY2kw9pfLdbBsosK1V2tpQMjGiQmDQ6pRxi7XsiJr",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPWVaY2kw9pfLdbBsosK1V2tpQMjGiQmDQ6pRxi7XsiJr"
+      "url": "https://elesium.online/solutions/air-cargo-unit-load-device-weight-balance-agents-for-aviation-freight-carriers",
+      "path_suffix": "solutions/air-cargo-unit-load-device-weight-balance-agents-for-aviation-freight-carriers",
+      "sha256": "dd50145e1f6cef100aec634b170916e86c41f15da01f061dae6393e087504214",
+      "ipfs_cid": "QmdEZdhPdCTTqR1iys8M41tNVqUNxxb6A9gmkbasNYmeXd",
+      "file_size_bytes": 19785,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdEZdhPdCTTqR1iys8M41tNVqUNxxb6A9gmkbasNYmeXd",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdEZdhPdCTTqR1iys8M41tNVqUNxxb6A9gmkbasNYmeXd"
+    },
+    {
+      "url": "https://elesium.online/solutions/algorithmic-trade-surveillance-systems-for-capital-market-brokerages",
+      "path_suffix": "solutions/algorithmic-trade-surveillance-systems-for-capital-market-brokerages",
+      "sha256": "e00d21020e5bd3442b0f7a5f5ab3e724e77ef4de1007bb9cb14402ece35f9028",
+      "ipfs_cid": "QmdRFeNVHz9fxj8GBGBsfQTdRRsBj3Bsn9VcJ8kmQXpyUK",
+      "file_size_bytes": 19546,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdRFeNVHz9fxj8GBGBsfQTdRRsBj3Bsn9VcJ8kmQXpyUK",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdRFeNVHz9fxj8GBGBsfQTdRRsBj3Bsn9VcJ8kmQXpyUK"
     },
     {
       "url": "https://elesium.online/solutions/aml-compliance-automation-software-for-private-banks",
       "path_suffix": "solutions/aml-compliance-automation-software-for-private-banks",
-      "sha256": "6939f707bb11f812102d75725ebc56789ba5b6ac99d7dabddbf06a96cbd6da30",
-      "ipfs_cid": "QmVRQnKwUHbLQ7uLqAZepXPMvCQMmwYpqt3gmzbBzsaPtb",
+      "sha256": "8b2926f21b9940c6072c3f52fc43c53b38693612352b8d9502390103b572790f",
+      "ipfs_cid": "QmXhsmtH8PiFM3nDgEoKDuk74yYbmbZ7cyWMfBRUGto6Dc",
       "file_size_bytes": 19242,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVRQnKwUHbLQ7uLqAZepXPMvCQMmwYpqt3gmzbBzsaPtb",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVRQnKwUHbLQ7uLqAZepXPMvCQMmwYpqt3gmzbBzsaPtb"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXhsmtH8PiFM3nDgEoKDuk74yYbmbZ7cyWMfBRUGto6Dc",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXhsmtH8PiFM3nDgEoKDuk74yYbmbZ7cyWMfBRUGto6Dc"
+    },
+    {
+      "url": "https://elesium.online/solutions/automated-contract-clause-deviation-detectors-for-enterprise-legal-counsels",
+      "path_suffix": "solutions/automated-contract-clause-deviation-detectors-for-enterprise-legal-counsels",
+      "sha256": "6be8eac5b59ebd2f78f0d13079cf7ea11cd91edc349404d8b8e924d3e439d61f",
+      "ipfs_cid": "QmVbtKsjm47hEdrbuLjZ8qx2BNUWYfYscZZ6vLxPezDYdC",
+      "file_size_bytes": 19729,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVbtKsjm47hEdrbuLjZ8qx2BNUWYfYscZZ6vLxPezDYdC",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVbtKsjm47hEdrbuLjZ8qx2BNUWYfYscZZ6vLxPezDYdC"
+    },
+    {
+      "url": "https://elesium.online/solutions/automated-ectd-regulatory-filing-compilation-software-for-pharma-compliance-directors",
+      "path_suffix": "solutions/automated-ectd-regulatory-filing-compilation-software-for-pharma-compliance-directors",
+      "sha256": "ba1786644f056d3d08cb93999be2f61d6668c7b29e8db615e7beab8be2418441",
+      "ipfs_cid": "Qmas5M5JP6YYqcAqMn44UDk7ZNhL248kaGPyAoBLss7BSY",
+      "file_size_bytes": 19897,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmas5M5JP6YYqcAqMn44UDk7ZNhL248kaGPyAoBLss7BSY",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmas5M5JP6YYqcAqMn44UDk7ZNhL248kaGPyAoBLss7BSY"
+    },
+    {
+      "url": "https://elesium.online/solutions/automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos",
+      "path_suffix": "solutions/automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos",
+      "sha256": "49e22de8aac2c0b16e2146466e096ab4fc176482f3885f387950d20e11c55a95",
+      "ipfs_cid": "QmTK4WHAWtn6iEdPqVYtjNg3ZM6vNPudQxQpWVsUw6kTZe",
+      "file_size_bytes": 19644,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTK4WHAWtn6iEdPqVYtjNg3ZM6vNPudQxQpWVsUw6kTZe",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTK4WHAWtn6iEdPqVYtjNg3ZM6vNPudQxQpWVsUw6kTZe"
     },
     {
       "url": "https://elesium.online/solutions/automated-trade-surveillance-systems-for-brokerages",
       "path_suffix": "solutions/automated-trade-surveillance-systems-for-brokerages",
-      "sha256": "bf0cc57add96752edfc2e875d6df579a1a08df938a4a202bc2fb3bdf77bf97be",
-      "ipfs_cid": "QmbCRshSQ1AqLSCdBavDKvKyTEcqMKhhFT36vLyBiL8Usw",
+      "sha256": "ebfea09638f98faf624d07fda5138ced14d284b8f4ac6419d4b158961c00bce9",
+      "ipfs_cid": "QmeDsiG2TuWnL7CE2nXpMx5rvMWfGheYhv8ocq436dUZkL",
       "file_size_bytes": 19226,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbCRshSQ1AqLSCdBavDKvKyTEcqMKhhFT36vLyBiL8Usw",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbCRshSQ1AqLSCdBavDKvKyTEcqMKhhFT36vLyBiL8Usw"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeDsiG2TuWnL7CE2nXpMx5rvMWfGheYhv8ocq436dUZkL",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeDsiG2TuWnL7CE2nXpMx5rvMWfGheYhv8ocq436dUZkL"
     },
     {
       "url": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
       "path_suffix": "solutions/autonomous-dispatch-software-for-freight-carriers",
-      "sha256": "4a49bfed3a8006b6402936e043a5f0c490e32db56eee5b2817777343d5f647a1",
-      "ipfs_cid": "QmTLe6yQrGrRf1P5K6LGdsPSuQ1QjNY9B6xmeDEZQ9oYy6",
+      "sha256": "004d278cba8e828fc3b1e32d43c9848790a8b33505954c6850402220cd9795c5",
+      "ipfs_cid": "QmNMpwnSuAZPgaL1hdojPzfryDfEipWp9kZMYqtdcyWLWY",
       "file_size_bytes": 19187,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTLe6yQrGrRf1P5K6LGdsPSuQ1QjNY9B6xmeDEZQ9oYy6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTLe6yQrGrRf1P5K6LGdsPSuQ1QjNY9B6xmeDEZQ9oYy6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNMpwnSuAZPgaL1hdojPzfryDfEipWp9kZMYqtdcyWLWY",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNMpwnSuAZPgaL1hdojPzfryDfEipWp9kZMYqtdcyWLWY"
     },
     {
-      "url": "https://elesium.online/solutions/b2b-partnership-platform-and-supply-chain-partner--ii-21",
-      "path_suffix": "solutions/b2b-partnership-platform-and-supply-chain-partner--ii-21",
-      "sha256": "2cf791c217f289ff66dbcb274193de3ed0a2744c774e1fa9ff7d792bfda8aa93",
-      "ipfs_cid": "QmRNBbk8GqniD9R4GMKeejqK3R4UQd7hVwsGHMvKNKrvAn",
-      "file_size_bytes": 114,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRNBbk8GqniD9R4GMKeejqK3R4UQd7hVwsGHMvKNKrvAn",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRNBbk8GqniD9R4GMKeejqK3R4UQd7hVwsGHMvKNKrvAn"
-    },
-    {
-      "url": "https://elesium.online/solutions/b2b-partnership-programs-and-b2b-manufacturing-sales-ho-46",
-      "path_suffix": "solutions/b2b-partnership-programs-and-b2b-manufacturing-sales-ho-46",
-      "sha256": "3de26250aad1fae21a7406a55d64193c91759dd58a23881419cf965a808db83b",
-      "ipfs_cid": "QmSWDo2GVmKsxTY8QVECnjKtmj5XmAQsxrAMagea5dTZEz",
-      "file_size_bytes": 116,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSWDo2GVmKsxTY8QVECnjKtmj5XmAQsxrAMagea5dTZEz",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSWDo2GVmKsxTY8QVECnjKtmj5XmAQsxrAMagea5dTZEz"
-    },
-    {
-      "url": "https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29",
-      "path_suffix": "solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29",
-      "sha256": "dba749ddc42e80f0252627e23d23f47330623e1adecefbfc4e9ec8b1bad991c1",
-      "ipfs_cid": "Qmd85wqCpDKFgQkua2jFm3Qn67v5HHqeV5QuLMZbdgSmrY",
-      "file_size_bytes": 114,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmd85wqCpDKFgQkua2jFm3Qn67v5HHqeV5QuLMZbdgSmrY",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmd85wqCpDKFgQkua2jFm3Qn67v5HHqeV5QuLMZbdgSmrY"
+      "url": "https://elesium.online/solutions/autonomous-optical-network-fault-isolation-software-for-dark-fiber-carriers",
+      "path_suffix": "solutions/autonomous-optical-network-fault-isolation-software-for-dark-fiber-carriers",
+      "sha256": "260daf2219233309f564f07ed03e04d47195dcab57e953425bde9055cacae079",
+      "ipfs_cid": "QmQuCJc6VNfYf99BT8Uk4RQ9vCi5dCwCd6cMC8FTSB8nde",
+      "file_size_bytes": 19680,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQuCJc6VNfYf99BT8Uk4RQ9vCi5dCwCd6cMC8FTSB8nde",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQuCJc6VNfYf99BT8Uk4RQ9vCi5dCwCd6cMC8FTSB8nde"
     },
     {
       "url": "https://elesium.online/solutions/bill-of-materials-optimization-software-for-oem-engineers",
       "path_suffix": "solutions/bill-of-materials-optimization-software-for-oem-engineers",
-      "sha256": "e5791367176a76be1cadf92e9b853455532e17b0355cf4ead1b90589273c11d4",
-      "ipfs_cid": "QmdnR9nphz4BdWXDAd2arAC2fmf3NgJjW9Lhb2EnoTuCv7",
+      "sha256": "28197da8a80008bbb69ad5c52ef39337accec784f4f8fc9fd6c5dbca1e56f186",
+      "ipfs_cid": "QmR3BZXmzk3WSiyAFEoLv78ZEd9D2DVzDMEW42VnE1oQyB",
       "file_size_bytes": 19300,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdnR9nphz4BdWXDAd2arAC2fmf3NgJjW9Lhb2EnoTuCv7",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdnR9nphz4BdWXDAd2arAC2fmf3NgJjW9Lhb2EnoTuCv7"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmR3BZXmzk3WSiyAFEoLv78ZEd9D2DVzDMEW42VnE1oQyB",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmR3BZXmzk3WSiyAFEoLv78ZEd9D2DVzDMEW42VnE1oQyB"
+    },
+    {
+      "url": "https://elesium.online/solutions/clinical-trial-patient-cohort-matching-agents-for-oncology-biotech-sponsors",
+      "path_suffix": "solutions/clinical-trial-patient-cohort-matching-agents-for-oncology-biotech-sponsors",
+      "sha256": "0c799f5e3608f6da5bed79b4c216293d837b61cce7d290e28eca36fd480666f4",
+      "ipfs_cid": "QmPBMAYyYtiDweNnnGtrmihzkTgH51TW3PWsFn5rXrMh1d",
+      "file_size_bytes": 19826,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPBMAYyYtiDweNnnGtrmihzkTgH51TW3PWsFn5rXrMh1d",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPBMAYyYtiDweNnnGtrmihzkTgH51TW3PWsFn5rXrMh1d"
     },
     {
       "url": "https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-biotech-sponsors",
       "path_suffix": "solutions/clinical-trial-patient-matching-agents-for-biotech-sponsors",
-      "sha256": "836d2fa688ceac8f40729c9c671d27d0863b1c12c9c74b6ceabc3d7906d2076d",
-      "ipfs_cid": "QmXBggYugMeWRvsxpd8FmVKN3mrDQhuRn9jX58zDYgjZJt",
+      "sha256": "0778f7d6ec699d320671852c6ca1a0849e5a48c6e14cec934dae478a8d6e230a",
+      "ipfs_cid": "QmNqpYkYYfSHpZh4F8sFfpK8FSgBesPYizt8rqgsrH8csK",
       "file_size_bytes": 19355,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXBggYugMeWRvsxpd8FmVKN3mrDQhuRn9jX58zDYgjZJt",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXBggYugMeWRvsxpd8FmVKN3mrDQhuRn9jX58zDYgjZJt"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNqpYkYYfSHpZh4F8sFfpK8FSgBesPYizt8rqgsrH8csK",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNqpYkYYfSHpZh4F8sFfpK8FSgBesPYizt8rqgsrH8csK"
+    },
+    {
+      "url": "https://elesium.online/solutions/cold-chain-temperature-excursion-auditing-agents-for-vaccine-distributors",
+      "path_suffix": "solutions/cold-chain-temperature-excursion-auditing-agents-for-vaccine-distributors",
+      "sha256": "30c821611b7ac0ccc3580c78fb096130bd69b6e1b1be86890fa50eb65a007fc2",
+      "ipfs_cid": "QmRd5GvZhMVEeeBNoRf4g7Vn8Pbx4pzcceEAH5nGXkkBXf",
+      "file_size_bytes": 19755,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRd5GvZhMVEeeBNoRf4g7Vn8Pbx4pzcceEAH5nGXkkBXf",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRd5GvZhMVEeeBNoRf4g7Vn8Pbx4pzcceEAH5nGXkkBXf"
+    },
+    {
+      "url": "https://elesium.online/solutions/cold-storage-multi-zone-climate-telemetry-automation-for-perishable-food-exporters",
+      "path_suffix": "solutions/cold-storage-multi-zone-climate-telemetry-automation-for-perishable-food-exporters",
+      "sha256": "0b45dc28f830d3ffa266fb6aefd917080fca21bfe2233f8cec5b84672dd20db2",
+      "ipfs_cid": "QmP6eyimohAgDW7mrkuehRbYHrHf12xxPvFmdwHgFVVBaq",
+      "file_size_bytes": 19856,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmP6eyimohAgDW7mrkuehRbYHrHf12xxPvFmdwHgFVVBaq",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmP6eyimohAgDW7mrkuehRbYHrHf12xxPvFmdwHgFVVBaq"
+    },
+    {
+      "url": "https://elesium.online/solutions/commercial-lease-abstraction-ai-agents-for-institutional-reit-asset-managers",
+      "path_suffix": "solutions/commercial-lease-abstraction-ai-agents-for-institutional-reit-asset-managers",
+      "sha256": "cfc1cb359656e1773346a157dce94c2df66b8de2f8f4d0d204f9fe569dfaefde",
+      "ipfs_cid": "QmcKeVg3WQ6jSt3kk3J4hKhn2dEfsSYqvzZBJ44pJmPWpM",
+      "file_size_bytes": 19740,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcKeVg3WQ6jSt3kk3J4hKhn2dEfsSYqvzZBJ44pJmPWpM",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcKeVg3WQ6jSt3kk3J4hKhn2dEfsSYqvzZBJ44pJmPWpM"
+    },
+    {
+      "url": "https://elesium.online/solutions/commercial-vehicle-loan-credit-appraisal-state-machines-for-nbfc-risk-heads",
+      "path_suffix": "solutions/commercial-vehicle-loan-credit-appraisal-state-machines-for-nbfc-risk-heads",
+      "sha256": "fd6033fd391353167ecd5619eaf6ea7192a7f4261b01e4451a27b3968d891390",
+      "ipfs_cid": "QmfPiwSx8UWeU9mJ4aBAKzrG3YBFRph8hsAg6M8yzdwbcB",
+      "file_size_bytes": 19712,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfPiwSx8UWeU9mJ4aBAKzrG3YBFRph8hsAg6M8yzdwbcB",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfPiwSx8UWeU9mJ4aBAKzrG3YBFRph8hsAg6M8yzdwbcB"
     },
     {
       "url": "https://elesium.online/solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers",
       "path_suffix": "solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers",
-      "sha256": "cb46ec47b48eb416315d2edcdb21dd11f03d5eeaf0f4b1d8a7964d1a1767ed11",
-      "ipfs_cid": "Qmc2ACNLy4VLut2zDC8h8uRtsxs1PCsGaRTrvNCKy8TkoS",
+      "sha256": "415c311ed123d805e7939a2747f2c515da37be043b4c86b1b6454a3fdb36d059",
+      "ipfs_cid": "QmSjnk9wqg7Pc57ncY23FJRcUs491SNQeYD3GjjeZKtXfn",
       "file_size_bytes": 19426,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmc2ACNLy4VLut2zDC8h8uRtsxs1PCsGaRTrvNCKy8TkoS",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmc2ACNLy4VLut2zDC8h8uRtsxs1PCsGaRTrvNCKy8TkoS"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSjnk9wqg7Pc57ncY23FJRcUs491SNQeYD3GjjeZKtXfn",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSjnk9wqg7Pc57ncY23FJRcUs491SNQeYD3GjjeZKtXfn"
     },
     {
-      "url": "https://elesium.online/solutions/cost-of-enterprise-ai-automation-india",
-      "path_suffix": "solutions/cost-of-enterprise-ai-automation-india",
-      "sha256": "d288fd9fdd10fb5efd67bd51417b0b32777c99f659efd2af5b020f2db015f257",
-      "ipfs_cid": "QmcWVUsXsFT4FWovxGNaruZuYSXC7QWFwkv1cW5WtSHhoU",
-      "file_size_bytes": 96,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcWVUsXsFT4FWovxGNaruZuYSXC7QWFwkv1cW5WtSHhoU",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcWVUsXsFT4FWovxGNaruZuYSXC7QWFwkv1cW5WtSHhoU"
+      "url": "https://elesium.online/solutions/container-demurrage-and-detention-auditing-software-for-ocean-freight-shippers",
+      "path_suffix": "solutions/container-demurrage-and-detention-auditing-software-for-ocean-freight-shippers",
+      "sha256": "66f1f20144d0b24cda86951709c226080896a9c894c692b8c14ef41f862e1d09",
+      "ipfs_cid": "QmVGWGkZiQsL7Th9QauT9pNtHCDW2sBT5McpSSEfrGgc32",
+      "file_size_bytes": 19762,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVGWGkZiQsL7Th9QauT9pNtHCDW2sBT5McpSSEfrGgc32",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVGWGkZiQsL7Th9QauT9pNtHCDW2sBT5McpSSEfrGgc32"
     },
     {
       "url": "https://elesium.online/solutions/cryptographic-state-audit-trails-dpdp-act-2023",
       "path_suffix": "solutions/cryptographic-state-audit-trails-dpdp-act-2023",
-      "sha256": "017f204dd663451e44de5d121d9a56ec6effd1c34a66c281f765e88cc433b107",
-      "ipfs_cid": "QmNSVYkfk1Bg72qgS3Y2T1xWHHRUTMajQGr8jx7bFe2DMQ",
+      "sha256": "7e8af52e3041481dd5db91180882975887f97a77240f476cbab0b4e1ed732cbf",
+      "ipfs_cid": "QmWrcyU5FdAnf96upDgRvMs278chpmkExe1BvWWHrqmUgW",
       "file_size_bytes": 19144,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNSVYkfk1Bg72qgS3Y2T1xWHHRUTMajQGr8jx7bFe2DMQ",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNSVYkfk1Bg72qgS3Y2T1xWHHRUTMajQGr8jx7bFe2DMQ"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWrcyU5FdAnf96upDgRvMs278chpmkExe1BvWWHrqmUgW",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWrcyU5FdAnf96upDgRvMs278chpmkExe1BvWWHrqmUgW"
     },
     {
       "url": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
       "path_suffix": "solutions/custom-edi-parser-agents-for-freight-forwarders",
-      "sha256": "248f528cd64aa31e89d85973282c6c42e845c4a003ef3a372d3377dd71a7a88c",
-      "ipfs_cid": "QmQoN9BARvnU4gih5HX7Yj9JQ41cwjws1YZS2ZpZqsCeJf",
+      "sha256": "d4b2ae5f9a3705d9fc6e7f69edafb392545e9025f4596f3e6a6ce25bc67c25fc",
+      "ipfs_cid": "QmcewAhKYUa79PnZH4U7gMM277uMAdNxsRoy5a1we4EdYF",
       "file_size_bytes": 19142,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQoN9BARvnU4gih5HX7Yj9JQ41cwjws1YZS2ZpZqsCeJf",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQoN9BARvnU4gih5HX7Yj9JQ41cwjws1YZS2ZpZqsCeJf"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcewAhKYUa79PnZH4U7gMM277uMAdNxsRoy5a1we4EdYF",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcewAhKYUa79PnZH4U7gMM277uMAdNxsRoy5a1we4EdYF"
+    },
+    {
+      "url": "https://elesium.online/solutions/customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders",
+      "path_suffix": "solutions/customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders",
+      "sha256": "f4b863481ea6bccf0a0ad47b356bb972afcedf7416ba70029904a95a6a8337a0",
+      "ipfs_cid": "QmeowG7K4z4wiuubicaaN92bafsnGHPrsDs6U3VG16AvpF",
+      "file_size_bytes": 19756,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeowG7K4z4wiuubicaaN92bafsnGHPrsDs6U3VG16AvpF",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeowG7K4z4wiuubicaaN92bafsnGHPrsDs6U3VG16AvpF"
+    },
+    {
+      "url": "https://elesium.online/solutions/deterministic-chemical-batch-synthesis-validation-software-for-api-manufacturers",
+      "path_suffix": "solutions/deterministic-chemical-batch-synthesis-validation-software-for-api-manufacturers",
+      "sha256": "e1982086584c784711aa07db762e20b3f044f207a0e638b2d65978523e083dee",
+      "ipfs_cid": "QmdXGyze7DtNoB4RM69LaDZnid229LEaLN1L17fdPAcw7s",
+      "file_size_bytes": 19789,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdXGyze7DtNoB4RM69LaDZnid229LEaLN1L17fdPAcw7s",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdXGyze7DtNoB4RM69LaDZnid229LEaLN1L17fdPAcw7s"
     },
     {
       "url": "https://elesium.online/solutions/deterministic-clinical-documentation-agents-for-hospital-networks",
       "path_suffix": "solutions/deterministic-clinical-documentation-agents-for-hospital-networks",
-      "sha256": "4aae474b9551a664890651fac78f847499dadaec6179cb83159e3dd9566dc79c",
-      "ipfs_cid": "QmTNB1eUtCYbZ3Qqn8n4Z3PBGxVpkjevnUx41g7HjB4mmV",
+      "sha256": "487aeb32151d586b72344fcf8b5ffa012189124f02e9b523b04211872a2f5c7e",
+      "ipfs_cid": "QmTDamq573cyArLEaAsyo2Sxwa7pjZe7Q9UGBPQ2RET89K",
       "file_size_bytes": 19486,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTNB1eUtCYbZ3Qqn8n4Z3PBGxVpkjevnUx41g7HjB4mmV",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTNB1eUtCYbZ3Qqn8n4Z3PBGxVpkjevnUx41g7HjB4mmV"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTDamq573cyArLEaAsyo2Sxwa7pjZe7Q9UGBPQ2RET89K",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTDamq573cyArLEaAsyo2Sxwa7pjZe7Q9UGBPQ2RET89K"
+    },
+    {
+      "url": "https://elesium.online/solutions/deterministic-interconnect-settlement-engines-for-mobile-network-operators",
+      "path_suffix": "solutions/deterministic-interconnect-settlement-engines-for-mobile-network-operators",
+      "sha256": "12021e62c9b8e7861c8a4d9b27e08ac7da49777538e755fc5f170c4ef1bcd036",
+      "ipfs_cid": "QmPYwvRTto37Kpbf7JJhdYNDffctKC52mmNXVNMFLFVgr1",
+      "file_size_bytes": 19678,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPYwvRTto37Kpbf7JJhdYNDffctKC52mmNXVNMFLFVgr1",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPYwvRTto37Kpbf7JJhdYNDffctKC52mmNXVNMFLFVgr1"
     },
     {
       "url": "https://elesium.online/solutions/deterministic-invoice-reconciliation-software-for-enterprise-controllers",
       "path_suffix": "solutions/deterministic-invoice-reconciliation-software-for-enterprise-controllers",
-      "sha256": "da8cb12307deab10ddd3320e69a8392da1de6ea0fcaf165bb0693244acbd9e8b",
-      "ipfs_cid": "Qmd3n1u8yx8Jstk2knyCuqGNiepFG2dQd1suhYpnSuPbWa",
+      "sha256": "58b53c680ef2097e98532200fc010f14f1a0afa29557437eaa4c4c8cfeac149f",
+      "ipfs_cid": "QmUJvsaqhzDi8jiXBeF5yiVwiyfjdKKqZ3NJgdC4q75bMG",
       "file_size_bytes": 19572,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmd3n1u8yx8Jstk2knyCuqGNiepFG2dQd1suhYpnSuPbWa",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmd3n1u8yx8Jstk2knyCuqGNiepFG2dQd1suhYpnSuPbWa"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUJvsaqhzDi8jiXBeF5yiVwiyfjdKKqZ3NJgdC4q75bMG",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUJvsaqhzDi8jiXBeF5yiVwiyfjdKKqZ3NJgdC4q75bMG"
     },
     {
       "url": "https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi",
       "path_suffix": "solutions/deterministic-loan-underwriting-agents-for-bfsi",
-      "sha256": "335dc8249567a4a102acf7784badd179f7abd2cdfd20846bd885e5a4eb9c544b",
-      "ipfs_cid": "QmRoASfHBy9p5sLtqzC1PsTZm6jQGsqRYzhFQR4YUs84j4",
+      "sha256": "a99d8998c722ebda2617048941b1bd7697407c06a74d70f4bc4ecbf16d2087b4",
+      "ipfs_cid": "QmZkkwKhyh3joKwioT1TXmSRbthTRKaRASnTNrp3QvgfRd",
       "file_size_bytes": 19128,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRoASfHBy9p5sLtqzC1PsTZm6jQGsqRYzhFQR4YUs84j4",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRoASfHBy9p5sLtqzC1PsTZm6jQGsqRYzhFQR4YUs84j4"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZkkwKhyh3joKwioT1TXmSRbthTRKaRASnTNrp3QvgfRd",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZkkwKhyh3joKwioT1TXmSRbthTRKaRASnTNrp3QvgfRd"
     },
     {
       "url": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
       "path_suffix": "solutions/deterministic-warehouse-automation-for-3pl-providers",
-      "sha256": "28984bb55be5f0d5e19b11321c357ee09a426a4ce8a6a67721c46ff75d82048e",
-      "ipfs_cid": "QmR57i3t2C1kM8RC52kipK7Aw9B8RjfzkppaFJQtE48Xjj",
+      "sha256": "5207bab7bfb17f78caf689ba54c7d5803081ada9e0f63664c7f0fcf58d304deb",
+      "ipfs_cid": "QmTrrybgoUdJgwc26cAKQzeL3NbdRqW88rbEb9oQwUUv1G",
       "file_size_bytes": 19218,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmR57i3t2C1kM8RC52kipK7Aw9B8RjfzkppaFJQtE48Xjj",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmR57i3t2C1kM8RC52kipK7Aw9B8RjfzkppaFJQtE48Xjj"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTrrybgoUdJgwc26cAKQzeL3NbdRqW88rbEb9oQwUUv1G",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTrrybgoUdJgwc26cAKQzeL3NbdRqW88rbEb9oQwUUv1G"
     },
     {
       "url": "https://elesium.online/solutions/dicom-triage-automation-agents-for-radiology-groups",
       "path_suffix": "solutions/dicom-triage-automation-agents-for-radiology-groups",
-      "sha256": "eff76d016b31e4090b8157c99a3399d7fcc76f18c9b8796a4f506960bf3cae9d",
-      "ipfs_cid": "QmeVNySaUKovChKQX6RwbBS73WxnQssKLEoB1TscGgvaYU",
+      "sha256": "ad70352bca16692a76865772341eef8e473e630341320e7f165f0fdcca1ad9e2",
+      "ipfs_cid": "Qma1gUhHRD3W7jqjSjtebM1MJw8xVCUGunVYkPRWU4X8yw",
       "file_size_bytes": 19170,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeVNySaUKovChKQX6RwbBS73WxnQssKLEoB1TscGgvaYU",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeVNySaUKovChKQX6RwbBS73WxnQssKLEoB1TscGgvaYU"
-    },
-    {
-      "url": "https://elesium.online/solutions/enterprise-sales-automation-and-ai-powered-lead-qualifi-28",
-      "path_suffix": "solutions/enterprise-sales-automation-and-ai-powered-lead-qualifi-28",
-      "sha256": "dc664c7859df24f22efd9b118805831a53dfff9f21e66d3d12848fe60812f1a3",
-      "ipfs_cid": "QmdAzsnwxCcV8148HLFRzFXAbvsLq19qvm2cAdNNUshdt6",
-      "file_size_bytes": 116,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdAzsnwxCcV8148HLFRzFXAbvsLq19qvm2cAdNNUshdt6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdAzsnwxCcV8148HLFRzFXAbvsLq19qvm2cAdNNUshdt6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qma1gUhHRD3W7jqjSjtebM1MJw8xVCUGunVYkPRWU4X8yw",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qma1gUhHRD3W7jqjSjtebM1MJw8xVCUGunVYkPRWU4X8yw"
     },
     {
       "url": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
       "path_suffix": "solutions/fleet-route-optimization-agents-for-supply-chain-directors",
-      "sha256": "ccc8fb6b548ff08ee014cb78bcf5120071ce93980421026bc46a7b23dcc5f7c8",
-      "ipfs_cid": "Qmc83dTomGBJUFhnSGdavFUvNbNpteUsAkYsQ7zo9AcRLK",
+      "sha256": "211545bb78c55296baf8bd2216d90074d2aea42e072b33dce8deb9f1032ada57",
+      "ipfs_cid": "QmQZnycoDhN6cAF2ViHiipkHCRK3Sa7rvbCsAMPJMr36Lv",
       "file_size_bytes": 19352,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmc83dTomGBJUFhnSGdavFUvNbNpteUsAkYsQ7zo9AcRLK",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmc83dTomGBJUFhnSGdavFUvNbNpteUsAkYsQ7zo9AcRLK"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQZnycoDhN6cAF2ViHiipkHCRK3Sa7rvbCsAMPJMr36Lv",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQZnycoDhN6cAF2ViHiipkHCRK3Sa7rvbCsAMPJMr36Lv"
     },
     {
-      "url": "https://elesium.online/solutions/high-ticket-b2b-sales-in-manufacturing-the-power-of-sig-62",
-      "path_suffix": "solutions/high-ticket-b2b-sales-in-manufacturing-the-power-of-sig-62",
-      "sha256": "e6f0b71600907592153d50b85b665b083919267ed38087bfdf34495c0aedb6ca",
-      "ipfs_cid": "Qmdt9NQ5uPmkmDUFTUw7KcgbYk3jsTarphSgsL18VQ83Ms",
-      "file_size_bytes": 116,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmdt9NQ5uPmkmDUFTUw7KcgbYk3jsTarphSgsL18VQ83Ms",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmdt9NQ5uPmkmDUFTUw7KcgbYk3jsTarphSgsL18VQ83Ms"
+      "url": "https://elesium.online/solutions/foreign-exchange-cross-currency-payment-clearing-agents-for-multinational-controllers",
+      "path_suffix": "solutions/foreign-exchange-cross-currency-payment-clearing-agents-for-multinational-controllers",
+      "sha256": "fdf83b7ad6bcb153f853e6981a170006f3cfd35d3a9b95ebdeae9961c9eaf02c",
+      "ipfs_cid": "QmfS3Ps5dbxkkYJM7RT81H8pX9dgA3n2x93HjaUv33FYiw",
+      "file_size_bytes": 19877,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfS3Ps5dbxkkYJM7RT81H8pX9dgA3n2x93HjaUv33FYiw",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfS3Ps5dbxkkYJM7RT81H8pX9dgA3n2x93HjaUv33FYiw"
     },
     {
       "url": "https://elesium.online/solutions/hipaa-compliant-patient-intake-agents-for-specialty-clinics",
       "path_suffix": "solutions/hipaa-compliant-patient-intake-agents-for-specialty-clinics",
-      "sha256": "c5ad073fde7ca6df7e4c80e228e5afee6bb8b8f7a47f0be437d29f6cb77aa641",
-      "ipfs_cid": "QmbeJ42wjbrgAoABc1saL6GGB6UCk4s9EBa15JtgXzosLk",
+      "sha256": "8e7171b32a52144bcd104e3f22ba9ecbc41f7a694bcf98aa46bbfa7d8aad200b",
+      "ipfs_cid": "QmXvgw5WhuqcsZiLAPwZJdVQfB5qSwauQBPErvXohpokFt",
       "file_size_bytes": 19325,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbeJ42wjbrgAoABc1saL6GGB6UCk4s9EBa15JtgXzosLk",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbeJ42wjbrgAoABc1saL6GGB6UCk4s9EBa15JtgXzosLk"
-    },
-    {
-      "url": "https://elesium.online/solutions/hippocratic-ai-dealflow-1",
-      "path_suffix": "solutions/hippocratic-ai-dealflow-1",
-      "sha256": "1bc4fa5c9bfdec6e7c4cbd5cd1f10c47dbc87c52ff6c27a80314356daec00b37",
-      "ipfs_cid": "QmQD3veJMJcVup6cY9ShppjNb5YyNizS8TqP5TousBPmti",
-      "file_size_bytes": 83,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQD3veJMJcVup6cY9ShppjNb5YyNizS8TqP5TousBPmti",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQD3veJMJcVup6cY9ShppjNb5YyNizS8TqP5TousBPmti"
-    },
-    {
-      "url": "https://elesium.online/solutions/how-to-choose-ai-automation-agency-india",
-      "path_suffix": "solutions/how-to-choose-ai-automation-agency-india",
-      "sha256": "24a62d028e72a333ea4200f244f23ed279e9d1b8b66474bc87e31a9b8311a58f",
-      "ipfs_cid": "QmQoiMT5GWAesBWZbJww57LyX3rRMhJme49rurJ1k7ZKKt",
-      "file_size_bytes": 98,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQoiMT5GWAesBWZbJww57LyX3rRMhJme49rurJ1k7ZKKt",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQoiMT5GWAesBWZbJww57LyX3rRMhJme49rurJ1k7ZKKt"
-    },
-    {
-      "url": "https://elesium.online/solutions/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
-      "path_suffix": "solutions/industrial-b2b-marketplace-trends-how-signal-drive-ii-69",
-      "sha256": "f702cddaed099f8d19a9ea41faeb6b1ea20ae69c927c166cdbe7fc28f615de14",
-      "ipfs_cid": "Qmexstd7yniaYPSw2vi9i8VokpmNutYPRsn4WHFCfj3YnP",
-      "file_size_bytes": 114,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmexstd7yniaYPSw2vi9i8VokpmNutYPRsn4WHFCfj3YnP",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmexstd7yniaYPSw2vi9i8VokpmNutYPRsn4WHFCfj3YnP"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXvgw5WhuqcsZiLAPwZJdVQfB5qSwauQBPErvXohpokFt",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXvgw5WhuqcsZiLAPwZJdVQfB5qSwauQBPErvXohpokFt"
     },
     {
       "url": "https://elesium.online/solutions/inventory-replenishment-state-machines-for-chemical-manufacturers",
       "path_suffix": "solutions/inventory-replenishment-state-machines-for-chemical-manufacturers",
-      "sha256": "28a46431bfd71fbc465ee096f9325ee084f2f3149f4fef6eb105ad84be0b0a75",
-      "ipfs_cid": "QmR5JQW7N3ymMcAKkBktd6VAQYiTYeNCDWw55kzr8MUxzx",
+      "sha256": "94905feff1da7425712a6a81042c62211f50dffff8d9bbd170a0fa1594b9f83d",
+      "ipfs_cid": "QmYLajZMQSuGNpG23BMFaAZSV8wLy2d9NLpWKLmzy7mYFv",
       "file_size_bytes": 19479,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmR5JQW7N3ymMcAKkBktd6VAQYiTYeNCDWw55kzr8MUxzx",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmR5JQW7N3ymMcAKkBktd6VAQYiTYeNCDWw55kzr8MUxzx"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYLajZMQSuGNpG23BMFaAZSV8wLy2d9NLpWKLmzy7mYFv",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYLajZMQSuGNpG23BMFaAZSV8wLy2d9NLpWKLmzy7mYFv"
     },
     {
-      "url": "https://elesium.online/solutions/manufacturing-buyers-platform-unlocking-high-conve-ii-67",
-      "path_suffix": "solutions/manufacturing-buyers-platform-unlocking-high-conve-ii-67",
-      "sha256": "2b6a69f73c57733ce3e017b9069e48512656cb51a50f0c1ed8a2519bea2d77e9",
-      "ipfs_cid": "QmRG8MTdNWGwxQ3STSPcJmofENGmjQMy7fQeS51ZY3ZaWt",
-      "file_size_bytes": 114,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRG8MTdNWGwxQ3STSPcJmofENGmjQMy7fQeS51ZY3ZaWt",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRG8MTdNWGwxQ3STSPcJmofENGmjQMy7fQeS51ZY3ZaWt"
+      "url": "https://elesium.online/solutions/maritime-bunker-fuel-optimization-state-machines-for-commercial-ship-owners",
+      "path_suffix": "solutions/maritime-bunker-fuel-optimization-state-machines-for-commercial-ship-owners",
+      "sha256": "b895e4d7bfd035f1a052295faf7fe1116f85925d8045306531fe943e19741f55",
+      "ipfs_cid": "QmamCHwTKjS8aBWWu6mdtERdgmxnXYxQKvaYLWhXGrCHo2",
+      "file_size_bytes": 19689,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmamCHwTKjS8aBWWu6mdtERdgmxnXYxQKvaYLWhXGrCHo2",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmamCHwTKjS8aBWWu6mdtERdgmxnXYxQKvaYLWhXGrCHo2"
     },
     {
       "url": "https://elesium.online/solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
       "path_suffix": "solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos",
-      "sha256": "0eac02f506da324ec8b8a69c777174ade1ed5242df2966a9a489e8445939b9db",
-      "ipfs_cid": "QmPKvYaHdRGC9eKtqchuwco17bfiJM7mSB6QNVojBiYnLJ",
+      "sha256": "0074754c0b88d33a8347e2c7de85f2fa34f0bd865bd3b884c622187e367a820a",
+      "ipfs_cid": "QmNNRhtQVsw2BWXn4Ka1CFZoWazy65Z9iiMbDJ1X46stiM",
       "file_size_bytes": 19457,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPKvYaHdRGC9eKtqchuwco17bfiJM7mSB6QNVojBiYnLJ",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPKvYaHdRGC9eKtqchuwco17bfiJM7mSB6QNVojBiYnLJ"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNNRhtQVsw2BWXn4Ka1CFZoWazy65Z9iiMbDJ1X46stiM",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNNRhtQVsw2BWXn4Ka1CFZoWazy65Z9iiMbDJ1X46stiM"
     },
     {
-      "url": "https://elesium.online/solutions/n8n-vs-langchain-vs-custom-agents-india-2026",
-      "path_suffix": "solutions/n8n-vs-langchain-vs-custom-agents-india-2026",
-      "sha256": "2d9a67cfad8f5b5d484a8477ca3563a8049f9b6b5d1f283849a00bee06294c12",
-      "ipfs_cid": "QmRQfcWEZsRYAgcM4FuaoF4BMEqHckWU3J5cSQwjbp7n1X",
-      "file_size_bytes": 102,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRQfcWEZsRYAgcM4FuaoF4BMEqHckWU3J5cSQwjbp7n1X",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRQfcWEZsRYAgcM4FuaoF4BMEqHckWU3J5cSQwjbp7n1X"
+      "url": "https://elesium.online/solutions/municipal-title-search-parsing-software-for-real-estate-conveyancers",
+      "path_suffix": "solutions/municipal-title-search-parsing-software-for-real-estate-conveyancers",
+      "sha256": "ca2f35301807b0077d611fc822d18a531f0f9bbee95692e16f6a00fcaad4db9e",
+      "ipfs_cid": "QmbwtpEq54awNyyvRgyZVSBDDoxCKtRKQmrEnjArd4W4FF",
+      "file_size_bytes": 19618,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbwtpEq54awNyyvRgyZVSBDDoxCKtRKQmrEnjArd4W4FF",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbwtpEq54awNyyvRgyZVSBDDoxCKtRKQmrEnjArd4W4FF"
+    },
+    {
+      "url": "https://elesium.online/solutions/pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads",
+      "path_suffix": "solutions/pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads",
+      "sha256": "15d5767f6ae9f960d5d82fd93825ca3f0be6f39c3bf7fdc6fb8b9efea6ec4d80",
+      "ipfs_cid": "QmPot4ND7wC9z7DKxFoNHY56pyZC2Vrqa3GQ76aygQ9hi7",
+      "file_size_bytes": 19855,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPot4ND7wC9z7DKxFoNHY56pyZC2Vrqa3GQ76aygQ9hi7",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPot4ND7wC9z7DKxFoNHY56pyZC2Vrqa3GQ76aygQ9hi7"
+    },
+    {
+      "url": "https://elesium.online/solutions/predictive-cell-tower-energy-optimization-agents-for-telecom-infrastructure-firms",
+      "path_suffix": "solutions/predictive-cell-tower-energy-optimization-agents-for-telecom-infrastructure-firms",
+      "sha256": "948329f1ae4c197b7d4620d68f68a9f20e675c876f036e9d907c85741ba3717b",
+      "ipfs_cid": "QmYLP3u4UCDX8prc34oUnshCntgy6ByFyrFK3CgqRJYSxS",
+      "file_size_bytes": 19735,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYLP3u4UCDX8prc34oUnshCntgy6ByFyrFK3CgqRJYSxS",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYLP3u4UCDX8prc34oUnshCntgy6ByFyrFK3CgqRJYSxS"
     },
     {
       "url": "https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
       "path_suffix": "solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
-      "sha256": "e0e7436939c2cc559b00bb2ded593f0e284bf618ca8f5102ca73daff62bd6c0e",
-      "ipfs_cid": "QmdUaZgXwVMPfChjmzDFoWNZFSrw55FjEhXHPyaefQ1tTF",
+      "sha256": "4714c1f5b42a306132757d2fa0a62d1d09725587ba80206636852ddb69c095be",
+      "ipfs_cid": "QmT881nCstuWMfvYxYnntnaTfKZK4XAyv7tLJEdo63J6xm",
       "file_size_bytes": 19531,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdUaZgXwVMPfChjmzDFoWNZFSrw55FjEhXHPyaefQ1tTF",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdUaZgXwVMPfChjmzDFoWNZFSrw55FjEhXHPyaefQ1tTF"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmT881nCstuWMfvYxYnntnaTfKZK4XAyv7tLJEdo63J6xm",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmT881nCstuWMfvYxYnntnaTfKZK4XAyv7tLJEdo63J6xm"
     },
     {
       "url": "https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos",
       "path_suffix": "solutions/prior-authorization-automation-software-for-healthcare-ctos",
-      "sha256": "2b97368528d5dd194651806b09694c8551734bf4962e5f7e52855fea3dbe0aea",
-      "ipfs_cid": "QmRGoySz6PzpwfwjECtBHRoHEmEPB3V4xicFYeeoNReXnR",
+      "sha256": "df3b843c73d18ad1917fcb289af10f407ee4ccb5b81078d7ee3fc1dfee4f6f80",
+      "ipfs_cid": "QmdN4GCZgfYPUu4rG4ZjEZPECjpCg9eDLyiT1PCRggFWud",
       "file_size_bytes": 19430,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRGoySz6PzpwfwjECtBHRoHEmEPB3V4xicFYeeoNReXnR",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRGoySz6PzpwfwjECtBHRoHEmEPB3V4xicFYeeoNReXnR"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdN4GCZgfYPUu4rG4ZjEZPECjpCg9eDLyiT1PCRggFWud",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdN4GCZgfYPUu4rG4ZjEZPECjpCg9eDLyiT1PCRggFWud"
     },
     {
       "url": "https://elesium.online/solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors",
       "path_suffix": "solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors",
-      "sha256": "00901d2dc61da525358903dcb75fa82d79a596aa185da09a826a82b580003d90",
-      "ipfs_cid": "QmNNrAWD95fJN2bLmqtgR7q8g1vzAq8148DDjGHPrG6Q39",
+      "sha256": "8e0e7cb7f43aaf0510ac02a04c67f3d04a3e4ec1445df786796b3a1e3499fc1c",
+      "ipfs_cid": "QmXuBR2qmeMx8tS7QNaXLcbumVkAwkst9mCXqsh6XkMzKu",
       "file_size_bytes": 19381,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNNrAWD95fJN2bLmqtgR7q8g1vzAq8148DDjGHPrG6Q39",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNNrAWD95fJN2bLmqtgR7q8g1vzAq8148DDjGHPrG6Q39"
-    },
-    {
-      "url": "https://elesium.online/solutions/sales-cycle-reduction-and-industrial-b2b-marketplace-un-52",
-      "path_suffix": "solutions/sales-cycle-reduction-and-industrial-b2b-marketplace-un-52",
-      "sha256": "7a37d2ad257bd11b54c6fb50dd75329c066a11b518469e519c62411148ef419c",
-      "ipfs_cid": "QmWZjpSbEhPaD61dvduYBBi63Rs1MfBxzWm726D9Ms9amZ",
-      "file_size_bytes": 116,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWZjpSbEhPaD61dvduYBBi63Rs1MfBxzWm726D9Ms9amZ",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWZjpSbEhPaD61dvduYBBi63Rs1MfBxzWm726D9Ms9amZ"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXuBR2qmeMx8tS7QNaXLcbumVkAwkst9mCXqsh6XkMzKu",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXuBR2qmeMx8tS7QNaXLcbumVkAwkst9mCXqsh6XkMzKu"
     },
     {
       "url": "https://elesium.online/solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
       "path_suffix": "solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams",
-      "sha256": "943e8d89698b1441e88b54ccffc0e7f110ff55ea005027f16057eb9d1f8da9eb",
-      "ipfs_cid": "QmYKLNTvXE9Qh6fWQe8QR26UzffVepuf3FVxCxUFx826hp",
+      "sha256": "47d9a376fa0d0a6571f9234b682e9a291a9dcffa43150a7bc469209b77cd8301",
+      "ipfs_cid": "QmTB88t7oyyhVYQAhvfcP6WBsdEJTFHhq5JYtaiSscybrp",
       "file_size_bytes": 19429,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYKLNTvXE9Qh6fWQe8QR26UzffVepuf3FVxCxUFx826hp",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYKLNTvXE9Qh6fWQe8QR26UzffVepuf3FVxCxUFx826hp"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTB88t7oyyhVYQAhvfcP6WBsdEJTFHhq5JYtaiSscybrp",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTB88t7oyyhVYQAhvfcP6WBsdEJTFHhq5JYtaiSscybrp"
     },
     {
       "url": "https://elesium.online/solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios",
       "path_suffix": "solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios",
-      "sha256": "415a3f3f8376258513d182a2817b559e2806a2db6b5204cb50d2fc381c47df9d",
-      "ipfs_cid": "QmSjm2PrcdRHpMoAMz27xn3tJsvTCnDWPFgAcVzgcbfssJ",
+      "sha256": "83ef05e523559488efd8c955bf1f1ade43f6aff355b71205e86822411b02323c",
+      "ipfs_cid": "QmXDfWbffBsAdyBPKVMH57GrmxiAy64wHZMnBazz1hcg19",
       "file_size_bytes": 19349,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSjm2PrcdRHpMoAMz27xn3tJsvTCnDWPFgAcVzgcbfssJ",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSjm2PrcdRHpMoAMz27xn3tJsvTCnDWPFgAcVzgcbfssJ"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXDfWbffBsAdyBPKVMH57GrmxiAy64wHZMnBazz1hcg19",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXDfWbffBsAdyBPKVMH57GrmxiAy64wHZMnBazz1hcg19"
     },
     {
       "url": "https://elesium.online/solutions/scada-telemetry-anomaly-detection-for-industrial-operators",
       "path_suffix": "solutions/scada-telemetry-anomaly-detection-for-industrial-operators",
-      "sha256": "c78fa53f7c22196fc7e45800edf2535e98dcab4335134466135875544aaaaa23",
-      "ipfs_cid": "Qmbmet7yarTqEUvMehRarEPXaFYcqBbdA6Xes6BJAajz3k",
+      "sha256": "2362044e2ef7cf1f7bdf002f24ce72c42749ed31ab11384ee1386bfa560f78a8",
+      "ipfs_cid": "QmQimfZ6aAarQZWsD5BjnFBG6VhZHz1BkXCoY9mJYYxjew",
       "file_size_bytes": 19347,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmbmet7yarTqEUvMehRarEPXaFYcqBbdA6Xes6BJAajz3k",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmbmet7yarTqEUvMehRarEPXaFYcqBbdA6Xes6BJAajz3k"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQimfZ6aAarQZWsD5BjnFBG6VhZHz1BkXCoY9mJYYxjew",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQimfZ6aAarQZWsD5BjnFBG6VhZHz1BkXCoY9mJYYxjew"
     },
     {
       "url": "https://elesium.online/solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers",
       "path_suffix": "solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers",
-      "sha256": "f21f5fde2839ba778c85d99c0d68b94433bfe193aba36613aabf20a16209efe0",
-      "ipfs_cid": "Qmedo7vS3LoLyTpAva39fYpLd3MrnAM6QEdccHcvnesQ3q",
+      "sha256": "c2a7a0529da848db25afa27b481ba61e615a16f9d99a01387c30a9f24ab12006",
+      "ipfs_cid": "QmbSW3zb4SSh5xKJrfjk9pWeQ7NAoJYEArn5QwXqEyAZ3B",
       "file_size_bytes": 19425,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmedo7vS3LoLyTpAva39fYpLd3MrnAM6QEdccHcvnesQ3q",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmedo7vS3LoLyTpAva39fYpLd3MrnAM6QEdccHcvnesQ3q"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbSW3zb4SSh5xKJrfjk9pWeQ7NAoJYEArn5QwXqEyAZ3B",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbSW3zb4SSh5xKJrfjk9pWeQ7NAoJYEArn5QwXqEyAZ3B"
+    },
+    {
+      "url": "https://elesium.online/solutions/statutory-encumbrance-certificate-verification-agents-for-mortgage-underwriters",
+      "path_suffix": "solutions/statutory-encumbrance-certificate-verification-agents-for-mortgage-underwriters",
+      "sha256": "2850d6a8c36447a5274b304bac504c8a91d1fd6483081ba5ad01f2c78509902e",
+      "ipfs_cid": "QmR42WcjTskj265tN2KnyeKPDsu1J5evSZ9TZQNzvRvKTT",
+      "file_size_bytes": 19827,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmR42WcjTskj265tN2KnyeKPDsu1J5evSZ9TZQNzvRvKTT",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmR42WcjTskj265tN2KnyeKPDsu1J5evSZ9TZQNzvRvKTT"
     },
     {
       "url": "https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs",
       "path_suffix": "solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs",
-      "sha256": "8a6bb7b4a6e98050a23784acba6c05ce689a719d25b6297ac85dbf6bb20688ce",
-      "ipfs_cid": "QmXezEkHJjHjFFBVgQXmVpYfRqVMi5akrxR7Xj13fbwJey",
+      "sha256": "45c4bbc9006eaf85474a980a69d8fb794afb32d26dd53593d81c4413945b7f0d",
+      "ipfs_cid": "QmT2zqFrmcrWyHbs24wdrbpZtrobARHAn4jfRMLN1ipsBS",
       "file_size_bytes": 19214,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXezEkHJjHjFFBVgQXmVpYfRqVMi5akrxR7Xj13fbwJey",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXezEkHJjHjFFBVgQXmVpYfRqVMi5akrxR7Xj13fbwJey"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmT2zqFrmcrWyHbs24wdrbpZtrobARHAn4jfRMLN1ipsBS",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmT2zqFrmcrWyHbs24wdrbpZtrobARHAn4jfRMLN1ipsBS"
     },
     {
-      "url": "https://elesium.online/solutions/supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
-      "path_suffix": "solutions/supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
-      "sha256": "f4d3ed96d6ac1f1fe844b6e245ccfca3dc9c1790263522fc3c4393d54417e996",
-      "ipfs_cid": "QmepMcoR3DMWzCBuaULkXsKm3eTsYKQLm71yiwxgXp3er9",
-      "file_size_bytes": 116,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmepMcoR3DMWzCBuaULkXsKm3eTsYKQLm71yiwxgXp3er9",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmepMcoR3DMWzCBuaULkXsKm3eTsYKQLm71yiwxgXp3er9"
+      "url": "https://elesium.online/solutions/sub-second-cdr-billing-reconciliation-agents-for-telecom-operators",
+      "path_suffix": "solutions/sub-second-cdr-billing-reconciliation-agents-for-telecom-operators",
+      "sha256": "253b047b1db8646947317be21d2735f4413b01ab8d310619313a2c7ee81881e8",
+      "ipfs_cid": "QmQqyzMihUVx9ejJfAkoGQ3uoMMNfzyJq3KEfKvBMX4Te7",
+      "file_size_bytes": 19478,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQqyzMihUVx9ejJfAkoGQ3uoMMNfzyJq3KEfKvBMX4Te7",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQqyzMihUVx9ejJfAkoGQ3uoMMNfzyJq3KEfKvBMX4Te7"
     },
     {
-      "url": "https://elesium.online/solutions/supply-chain-partner-matching-and-industrial-b2b-m-ii-49",
-      "path_suffix": "solutions/supply-chain-partner-matching-and-industrial-b2b-m-ii-49",
-      "sha256": "6d4ba561404fb7f1a351988bfa87d8a704153ecb3859aa9526e0e5815429581c",
-      "ipfs_cid": "QmVhJ3sWLfJFaE5FYF5J8KRVoMP47BeK4z1BRHpTo3cDAB",
-      "file_size_bytes": 114,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVhJ3sWLfJFaE5FYF5J8KRVoMP47BeK4z1BRHpTo3cDAB",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVhJ3sWLfJFaE5FYF5J8KRVoMP47BeK4z1BRHpTo3cDAB"
+      "url": "https://elesium.online/solutions/telecom-churn-prediction-state-machines-for-enterprise-broadband-providers",
+      "path_suffix": "solutions/telecom-churn-prediction-state-machines-for-enterprise-broadband-providers",
+      "sha256": "6b6d15d7bf85d44a3e5e6b5900ab79f9c56bc7846944313069528ee516c6fbe1",
+      "ipfs_cid": "QmVZzos6RKRrLEicQ3tGLbaZ2FFWYGWhnACYvV9cgEv1tU",
+      "file_size_bytes": 19682,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVZzos6RKRrLEicQ3tGLbaZ2FFWYGWhnACYvV9cgEv1tU",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVZzos6RKRrLEicQ3tGLbaZ2FFWYGWhnACYvV9cgEv1tU"
     },
     {
-      "url": "https://elesium.online/solutions/top-ai-automation-agencies-india-2026",
-      "path_suffix": "solutions/top-ai-automation-agencies-india-2026",
-      "sha256": "1b76811589edade3ce3f481292a31f7b4d77f502fae0d9e57387fd75529275c3",
-      "ipfs_cid": "QmQBrXJ3KEkJwpH1GthPTXLcySXnQrws4i39z3WCiXS8vW",
-      "file_size_bytes": 95,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQBrXJ3KEkJwpH1GthPTXLcySXnQrws4i39z3WCiXS8vW",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQBrXJ3KEkJwpH1GthPTXLcySXnQrws4i39z3WCiXS8vW"
+      "url": "https://elesium.online/solutions/treasury-multi-entity-cash-pooling-automation-engines-for-corporate-treasurers",
+      "path_suffix": "solutions/treasury-multi-entity-cash-pooling-automation-engines-for-corporate-treasurers",
+      "sha256": "c0517b4bce8af76e1050b76a1bf523d10da435d18d4c4ed8ba6e69356941c1d7",
+      "ipfs_cid": "QmbHP3sN3jRQFhs47q6pr8BKecHjEaMQYADhvaFJfPC3Bt",
+      "file_size_bytes": 19781,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbHP3sN3jRQFhs47q6pr8BKecHjEaMQYADhvaFJfPC3Bt",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbHP3sN3jRQFhs47q6pr8BKecHjEaMQYADhvaFJfPC3Bt"
     },
     {
-      "url": "https://elesium.online/solutions/vention-manufacturing-dealflow-3",
-      "path_suffix": "solutions/vention-manufacturing-dealflow-3",
-      "sha256": "f256510ed24c087464aa4dce8231068e63809c0f1c7821e6b1babae0c4021b92",
-      "ipfs_cid": "QmeediCwf5GgKi89sdNZ1wDiTZp4rca3zxwM8pDd5648QR",
-      "file_size_bytes": 90,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeediCwf5GgKi89sdNZ1wDiTZp4rca3zxwM8pDd5648QR",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeediCwf5GgKi89sdNZ1wDiTZp4rca3zxwM8pDd5648QR"
+      "url": "https://elesium.online/solutions/zoning-compliance-and-far-calculation-state-machines-for-commercial-developers",
+      "path_suffix": "solutions/zoning-compliance-and-far-calculation-state-machines-for-commercial-developers",
+      "sha256": "1f5deab3603458b25b0fe14bbf3b7f3f2fc54a38d3c0844b55d4c9daa1b5b095",
+      "ipfs_cid": "QmQT6QezX31e2uG1SeyZZBWcG3J7Mx9Pr4JMFp4o91DUNg",
+      "file_size_bytes": 19816,
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQT6QezX31e2uG1SeyZZBWcG3J7Mx9Pr4JMFp4o91DUNg",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQT6QezX31e2uG1SeyZZBWcG3J7Mx9Pr4JMFp4o91DUNg"
     },
     {
       "url": "https://elesium.online/tools/enterprise-ai-roi-calculator",
       "path_suffix": "tools/enterprise-ai-roi-calculator",
-      "sha256": "7649626428f31b83364f0ca01ab78b3a5e740c40acfb0d0ebafac146ba0ddca3",
-      "ipfs_cid": "QmWJPigAmcs7AdPLHTeGB7UJFwWEv4QGizen76gJ4XNHtE",
+      "sha256": "530e8a2b099a012c2c45ec6686c8ff37444fba746df3eb2c0925677d0dafcfea",
+      "ipfs_cid": "QmTvsQavh4bFmR5YHfmAa2F6P8M6tFG43tydtkAhknXRMb",
       "file_size_bytes": 26406,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmWJPigAmcs7AdPLHTeGB7UJFwWEv4QGizen76gJ4XNHtE",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmWJPigAmcs7AdPLHTeGB7UJFwWEv4QGizen76gJ4XNHtE"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTvsQavh4bFmR5YHfmAa2F6P8M6tFG43tydtkAhknXRMb",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTvsQavh4bFmR5YHfmAa2F6P8M6tFG43tydtkAhknXRMb"
     },
     {
       "url": "https://elesium.online/videos",
       "path_suffix": "videos",
-      "sha256": "0b3d5e3fcb43874d5f47517ca0823d206c045e63fbe996bb41488e96570c32fb",
-      "ipfs_cid": "QmP6XU8Nf4JJbLaV4w3bbepa32VQkfcqaMhJehBNkAcwdL",
+      "sha256": "b221669834c1908bf9a7609f4e14d549e221c2a2647cdc6db046c80529f648d0",
+      "ipfs_cid": "QmaKzpVBtTXjqYXtUAkGF7A9YsrCak9peUdM3byQnGLhZh",
       "file_size_bytes": 49170,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmP6XU8Nf4JJbLaV4w3bbepa32VQkfcqaMhJehBNkAcwdL",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmP6XU8Nf4JJbLaV4w3bbepa32VQkfcqaMhJehBNkAcwdL"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmaKzpVBtTXjqYXtUAkGF7A9YsrCak9peUdM3byQnGLhZh",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmaKzpVBtTXjqYXtUAkGF7A9YsrCak9peUdM3byQnGLhZh"
     },
     {
       "url": "https://elesium.online/videos/ai-automation-agency-for-logistics",
       "path_suffix": "videos/ai-automation-agency-for-logistics",
-      "sha256": "d1598e37fc6482eab586f0cade26d76c96e1017b0362b0860436e79637f89037",
-      "ipfs_cid": "QmcRs81oa6MUvEEac1LLsbZqhgw4JTWjhppTerHu4Pro98",
+      "sha256": "8f3302a2d5cad13d25c9fa7bc207a643dfc7499dc86d66f153690bfa32a7b059",
+      "ipfs_cid": "QmXye89fkL4rqg5Zsuk6pADay8BsCv2EsxztyjmdB69sa8",
       "file_size_bytes": 25780,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmcRs81oa6MUvEEac1LLsbZqhgw4JTWjhppTerHu4Pro98",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmcRs81oa6MUvEEac1LLsbZqhgw4JTWjhppTerHu4Pro98"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXye89fkL4rqg5Zsuk6pADay8BsCv2EsxztyjmdB69sa8",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXye89fkL4rqg5Zsuk6pADay8BsCv2EsxztyjmdB69sa8"
     },
     {
       "url": "https://elesium.online/videos/ai-automation-cost-india-2026-pricing",
       "path_suffix": "videos/ai-automation-cost-india-2026-pricing",
-      "sha256": "0805df31a5b5dd292e117c7e3e71fbe8b6aa511e1637998071c219bb29c989ee",
-      "ipfs_cid": "QmNsyAUfxhYw6Jxkt74VkuDndddoctapn4nhNjR4XuZFn5",
+      "sha256": "0ea41020571e97fcb2ddf1f7eb54508d5bbc0be84044d11601fd0064aedbd0b5",
+      "ipfs_cid": "QmPKoWrE3zHaCUsK7vEswWfpYLBH9RW7smw4TGEyfCKD6c",
       "file_size_bytes": 25310,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmNsyAUfxhYw6Jxkt74VkuDndddoctapn4nhNjR4XuZFn5",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmNsyAUfxhYw6Jxkt74VkuDndddoctapn4nhNjR4XuZFn5"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPKoWrE3zHaCUsK7vEswWfpYLBH9RW7smw4TGEyfCKD6c",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPKoWrE3zHaCUsK7vEswWfpYLBH9RW7smw4TGEyfCKD6c"
     },
     {
       "url": "https://elesium.online/videos/aml-compliance-automation-software-for-private-banks",
       "path_suffix": "videos/aml-compliance-automation-software-for-private-banks",
-      "sha256": "8549c7e25d773aed92cf61e97d7411908536fd4737d399f09bb67022ae5fcc4a",
-      "ipfs_cid": "QmXJxBi7Vh1gxP46royeGrkyrarvtzEYpwVq6mgJ5aXDW9",
+      "sha256": "43e7ae2b7908475da59b3c86c4593eae9deff3ad4c6d7cebaaf7b2a1efc8ffcc",
+      "ipfs_cid": "QmSuivaVJ2eGJ5w1bvqrRcdN3iQw4SZvFYpvNipR3dk723",
       "file_size_bytes": 26360,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXJxBi7Vh1gxP46royeGrkyrarvtzEYpwVq6mgJ5aXDW9",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXJxBi7Vh1gxP46royeGrkyrarvtzEYpwVq6mgJ5aXDW9"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSuivaVJ2eGJ5w1bvqrRcdN3iQw4SZvFYpvNipR3dk723",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSuivaVJ2eGJ5w1bvqrRcdN3iQw4SZvFYpvNipR3dk723"
     },
     {
       "url": "https://elesium.online/videos/autonomous-dispatch-software-for-freight-carriers",
       "path_suffix": "videos/autonomous-dispatch-software-for-freight-carriers",
-      "sha256": "c574fe295996f6b1cece7cc57f770a08de71c12e692f58d86ec1316135ef10b0",
-      "ipfs_cid": "QmbdSVfZbsFUzFm8veo6yTH3L2XA5meMF7Z1Zkve2AiKkK",
+      "sha256": "26ae86ae5e8a3c5ee51b2faa51d72cfe7e63ea849514c634b5e8a727cc7a67eb",
+      "ipfs_cid": "QmQweZ5JKkTTumczSZhUdvsPR2nfWLyYJaN5PKnHwWYvaN",
       "file_size_bytes": 26002,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmbdSVfZbsFUzFm8veo6yTH3L2XA5meMF7Z1Zkve2AiKkK",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmbdSVfZbsFUzFm8veo6yTH3L2XA5meMF7Z1Zkve2AiKkK"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmQweZ5JKkTTumczSZhUdvsPR2nfWLyYJaN5PKnHwWYvaN",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmQweZ5JKkTTumczSZhUdvsPR2nfWLyYJaN5PKnHwWYvaN"
     },
     {
       "url": "https://elesium.online/videos/bfsi-autonomous-loan-underwriting",
       "path_suffix": "videos/bfsi-autonomous-loan-underwriting",
-      "sha256": "2c2fb20f14b00130f3bdfd8b00c3e4b1b9c9dd52be2264b4b0080204cd9af824",
-      "ipfs_cid": "QmRK8q7nMo5CcDXCoEsthHcKhPhzFSLqjWZshDDqKuzfZd",
+      "sha256": "9588e6abb1b711abf6ec914985a4cc6aa659387f17d3e53c71908ac7105409c0",
+      "ipfs_cid": "QmYQNXqZVf5SuuhVJqz69Ge4Py1SBCUwushiDbXgY2ENjH",
       "file_size_bytes": 29859,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRK8q7nMo5CcDXCoEsthHcKhPhzFSLqjWZshDDqKuzfZd",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRK8q7nMo5CcDXCoEsthHcKhPhzFSLqjWZshDDqKuzfZd"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYQNXqZVf5SuuhVJqz69Ge4Py1SBCUwushiDbXgY2ENjH",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYQNXqZVf5SuuhVJqz69Ge4Py1SBCUwushiDbXgY2ENjH"
     },
     {
       "url": "https://elesium.online/videos/computer-vision-defect-inspection-agents-for-automotive-suppliers",
       "path_suffix": "videos/computer-vision-defect-inspection-agents-for-automotive-suppliers",
-      "sha256": "f367b760b3da6179685c95d4686bd20142de13d7998619d66bfae657ae7b94ba",
-      "ipfs_cid": "QmeioWNvHUwupf7qiuFwrYQBLvRs8Lhx4gWCtwkSyWrN7s",
+      "sha256": "4178f9e92df53b52baeb9c2da94988365b3f3efc43c0781c036b12c1a963944b",
+      "ipfs_cid": "QmSkECfLouCACZvCMQ7v8VWYFpbfmmoVXL3SHSrfBUCrpS",
       "file_size_bytes": 26647,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmeioWNvHUwupf7qiuFwrYQBLvRs8Lhx4gWCtwkSyWrN7s",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmeioWNvHUwupf7qiuFwrYQBLvRs8Lhx4gWCtwkSyWrN7s"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmSkECfLouCACZvCMQ7v8VWYFpbfmmoVXL3SHSrfBUCrpS",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmSkECfLouCACZvCMQ7v8VWYFpbfmmoVXL3SHSrfBUCrpS"
     },
     {
       "url": "https://elesium.online/videos/deterministic-loan-underwriting-agents-for-bfsi",
       "path_suffix": "videos/deterministic-loan-underwriting-agents-for-bfsi",
-      "sha256": "a2e0baa1608304cd4fd129a9ba972c2c436fc7db6ddcc0794a7c6b6a9fc2a545",
-      "ipfs_cid": "QmZJTWRP322gSm9wSrtjNcoii6NbrtFpEftubPdS9z1PV6",
+      "sha256": "d8d4231d1f09cd721f08bae02c57a2d138ff194ce0917dbf78aa0ee48e948e45",
+      "ipfs_cid": "Qmcw4PRbCWxZqipLqAMuhsxbDad4SdZ43ndXKV2x8z5eQC",
       "file_size_bytes": 26071,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZJTWRP322gSm9wSrtjNcoii6NbrtFpEftubPdS9z1PV6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZJTWRP322gSm9wSrtjNcoii6NbrtFpEftubPdS9z1PV6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qmcw4PRbCWxZqipLqAMuhsxbDad4SdZ43ndXKV2x8z5eQC",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qmcw4PRbCWxZqipLqAMuhsxbDad4SdZ43ndXKV2x8z5eQC"
     },
     {
       "url": "https://elesium.online/videos/deterministic-warehouse-automation-for-3pl-providers",
       "path_suffix": "videos/deterministic-warehouse-automation-for-3pl-providers",
-      "sha256": "9ff89d744b4aa7124bc99375f2c9c2ec4c24cd8a60c8cd2dce6d36603034ee7f",
-      "ipfs_cid": "QmZ77Qj9Zy561htFWG7WkpBNcrV7KqtGbdqfc276SJoYJi",
+      "sha256": "ad4fe331f480b9942cc560be6d862929a284fdd5bb21b94d801a6b82bfc4d528",
+      "ipfs_cid": "Qma1Btp9pAuzk4p6PKaD2BkMD86bdHPrh6UDjsFJow9N3Z",
       "file_size_bytes": 26097,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZ77Qj9Zy561htFWG7WkpBNcrV7KqtGbdqfc276SJoYJi",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZ77Qj9Zy561htFWG7WkpBNcrV7KqtGbdqfc276SJoYJi"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/Qma1Btp9pAuzk4p6PKaD2BkMD86bdHPrh6UDjsFJow9N3Z",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/Qma1Btp9pAuzk4p6PKaD2BkMD86bdHPrh6UDjsFJow9N3Z"
     },
     {
       "url": "https://elesium.online/videos/enterprise-ai-automation-india-2026",
       "path_suffix": "videos/enterprise-ai-automation-india-2026",
-      "sha256": "4ceafcfbefdd140ff8887590d0d5bb2bdb2b0b23268c4daa61665f26bcba0273",
-      "ipfs_cid": "QmTWuX5K7wxDrJPfLHwXoNUwk5VwPK3QGV3RAP4jTXQHVc",
+      "sha256": "4e93c814bcb2f0207d42f9dbaa730b1117a1dea5f01a5051dd91ecd1b2675794",
+      "ipfs_cid": "QmTdPD4RKTdFyNZk5PqK2zWPvmrXhEdzkqEZNsUCcjcZkX",
       "file_size_bytes": 32013,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTWuX5K7wxDrJPfLHwXoNUwk5VwPK3QGV3RAP4jTXQHVc",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTWuX5K7wxDrJPfLHwXoNUwk5VwPK3QGV3RAP4jTXQHVc"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTdPD4RKTdFyNZk5PqK2zWPvmrXhEdzkqEZNsUCcjcZkX",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTdPD4RKTdFyNZk5PqK2zWPvmrXhEdzkqEZNsUCcjcZkX"
     },
     {
       "url": "https://elesium.online/videos/enterprise-ai-roi-calculator",
       "path_suffix": "videos/enterprise-ai-roi-calculator",
-      "sha256": "a22981cdeb2cf06c87640b022d1e8377570ea4f9d4b32201e6c8ddcb03f70b74",
-      "ipfs_cid": "QmZFfTxbXC2i3P49BA8FoEnE1R3wnLVQpNzSkX2nzzTMaj",
+      "sha256": "ffae094dd814a82854750a8e0d9649ecbb2b6431a349e24038e0d99cae165404",
+      "ipfs_cid": "QmfYibEgmV3kfw84KqxyGcTeD4rbRJ3wAvBgLbNXDCsDFh",
       "file_size_bytes": 25585,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZFfTxbXC2i3P49BA8FoEnE1R3wnLVQpNzSkX2nzzTMaj",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZFfTxbXC2i3P49BA8FoEnE1R3wnLVQpNzSkX2nzzTMaj"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmfYibEgmV3kfw84KqxyGcTeD4rbRJ3wAvBgLbNXDCsDFh",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmfYibEgmV3kfw84KqxyGcTeD4rbRJ3wAvBgLbNXDCsDFh"
     },
     {
       "url": "https://elesium.online/videos/fleet-route-optimization-agents-for-supply-chain-directors",
       "path_suffix": "videos/fleet-route-optimization-agents-for-supply-chain-directors",
-      "sha256": "8b22122d0aaf092ff9b196e28338456a4c91305e7c0f1b798ba661839498f046",
-      "ipfs_cid": "QmXhmWevrhbAv2BwcQ8h8h5zV5xpzfrAUqqvVNMzvgphVf",
+      "sha256": "5e9a6406e830e08860f129c58dab7317a54c15ae9efbee8b964acdad721f0882",
+      "ipfs_cid": "QmUhwaRXKcMmRkPaV4qvs7hMPdBjww6ucNAAjZG7Q1ZMdj",
       "file_size_bytes": 26252,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmXhmWevrhbAv2BwcQ8h8h5zV5xpzfrAUqqvVNMzvgphVf",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmXhmWevrhbAv2BwcQ8h8h5zV5xpzfrAUqqvVNMzvgphVf"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUhwaRXKcMmRkPaV4qvs7hMPdBjww6ucNAAjZG7Q1ZMdj",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUhwaRXKcMmRkPaV4qvs7hMPdBjww6ucNAAjZG7Q1ZMdj"
     },
     {
       "url": "https://elesium.online/videos/langgraph-vs-n8n-enterprise-agents",
       "path_suffix": "videos/langgraph-vs-n8n-enterprise-agents",
-      "sha256": "115c411d90f6b741eecbbfbba58392b400c49e4e71f52239e815b0bc898230c8",
-      "ipfs_cid": "QmPWREL4bXYWjgba8SGeAQ3YZizcKvqSYG9A3eRuGoyu7V",
+      "sha256": "96638d09f671b16efb1998e21563015f2febf6d80b5e1be041a0efce87fd6e40",
+      "ipfs_cid": "QmYThubFwmc4MB2Q2JiHFxWj9iSd4TPzhTpiLcWAGBwBjd",
       "file_size_bytes": 29204,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmPWREL4bXYWjgba8SGeAQ3YZizcKvqSYG9A3eRuGoyu7V",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmPWREL4bXYWjgba8SGeAQ3YZizcKvqSYG9A3eRuGoyu7V"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYThubFwmc4MB2Q2JiHFxWj9iSd4TPzhTpiLcWAGBwBjd",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYThubFwmc4MB2Q2JiHFxWj9iSd4TPzhTpiLcWAGBwBjd"
     },
     {
       "url": "https://elesium.online/videos/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
       "path_suffix": "videos/predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
-      "sha256": "5dc8a97aaf0598f195e4db608122fd8b66ff8daa248aee38b6e29ac46aab3de0",
-      "ipfs_cid": "QmUek6HZ9innHR9LG3wNYmHQEUGrXedBVmc4sfxToEADUT",
+      "sha256": "5ab081a94385574710f4cd52ff5e8c028b099aac3e185a9a24a8d17d8dd8bdc6",
+      "ipfs_cid": "QmUSfWGzRPrYKzmgG9zFu4So54ps4ttW8HwmKDGbvRBEbF",
       "file_size_bytes": 26757,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUek6HZ9innHR9LG3wNYmHQEUGrXedBVmc4sfxToEADUT",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUek6HZ9innHR9LG3wNYmHQEUGrXedBVmc4sfxToEADUT"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmUSfWGzRPrYKzmgG9zFu4So54ps4ttW8HwmKDGbvRBEbF",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmUSfWGzRPrYKzmgG9zFu4So54ps4ttW8HwmKDGbvRBEbF"
     },
     {
       "url": "https://elesium.online/videos/prior-authorization-automation-software-for-healthcare-ctos",
       "path_suffix": "videos/prior-authorization-automation-software-for-healthcare-ctos",
-      "sha256": "9a07bedc357cb7f46543014404a9dde227adb37f78f4fc96240db40d96839592",
-      "ipfs_cid": "QmYhvLyVGJkGJ7WumVXiETFsWGy8Mp9sJfJfKfxVz8TaQR",
+      "sha256": "6d6c3c3a296cf1bfe124f2c011d1109ddfa9d55ce2796aab311d482f021ceea9",
+      "ipfs_cid": "QmVhnsZ33FQPZtmfHW1ZRumqHrvMBVsZMuvKjiqEyWdPJ8",
       "file_size_bytes": 26660,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmYhvLyVGJkGJ7WumVXiETFsWGy8Mp9sJfJfKfxVz8TaQR",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmYhvLyVGJkGJ7WumVXiETFsWGy8Mp9sJfJfKfxVz8TaQR"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmVhnsZ33FQPZtmfHW1ZRumqHrvMBVsZMuvKjiqEyWdPJ8",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmVhnsZ33FQPZtmfHW1ZRumqHrvMBVsZMuvKjiqEyWdPJ8"
     },
     {
       "url": "https://elesium.online/videos/sub-200ms-ledger-reconciliation-agents-for-fintechs",
       "path_suffix": "videos/sub-200ms-ledger-reconciliation-agents-for-fintechs",
-      "sha256": "e3b8d4fd9da8b828dc684c164a35ebcf0ecd7630a6a539ff2811b5ba800067b0",
-      "ipfs_cid": "QmdfaiuNpKqqdmeyMjEqxYwJgBikFchghRJpFmw5vJGQz3",
+      "sha256": "a8fa2df3251155c0f26460ba06440bb7c282301986efc4fc10cdb3443a97382e",
+      "ipfs_cid": "QmZiGTo23M4TqbhFoFsG9qasWAXyr1ocPmDCw86z9Udf8q",
       "file_size_bytes": 26095,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmdfaiuNpKqqdmeyMjEqxYwJgBikFchghRJpFmw5vJGQz3",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmdfaiuNpKqqdmeyMjEqxYwJgBikFchghRJpFmw5vJGQz3"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmZiGTo23M4TqbhFoFsG9qasWAXyr1ocPmDCw86z9Udf8q",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmZiGTo23M4TqbhFoFsG9qasWAXyr1ocPmDCw86z9Udf8q"
     },
     {
       "url": "https://elesium.online/waitlist",
       "path_suffix": "waitlist",
-      "sha256": "4d415102b193d9f548e55c58ebaa5a5b15bc0935c6fe0cb6fbdf016ebc7366ad",
-      "ipfs_cid": "QmTYDsKm81wVeCCPsDcEtbhfWubAi8PqZRKT54MVSbD4f6",
+      "sha256": "3422bda2d6653b3b44312bd052549e81bea11d7324f6f009988d4085c351257b",
+      "ipfs_cid": "QmRrAdmVGcijr76YXsXAhAyUhm9zBRJBw5tXZTKTGDcgXU",
       "file_size_bytes": 8282,
-      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmTYDsKm81wVeCCPsDcEtbhfWubAi8PqZRKT54MVSbD4f6",
-      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmTYDsKm81wVeCCPsDcEtbhfWubAi8PqZRKT54MVSbD4f6"
+      "cloudflare_gateway": "https://cloudflare-ipfs.com/ipfs/QmRrAdmVGcijr76YXsXAhAyUhm9zBRJBw5tXZTKTGDcgXU",
+      "ipfs_io_gateway": "https://ipfs.io/ipfs/QmRrAdmVGcijr76YXsXAhAyUhm9zBRJBw5tXZTKTGDcgXU"
     }
   ]
 }

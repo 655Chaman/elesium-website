@@ -6,11 +6,12 @@ import {
     Factory,
     HeartPulse,
     Database,
+    Network,
+    Activity,
+    Terminal,
     ArrowRight,
     ChevronRight,
-    Lock,
-    Network,
-    Terminal
+    Lock
 } from 'lucide-react'
 import { solutionCategories, getTopHighLeverSolutions, SolutionRecord } from '../../data/solutionsData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -23,7 +24,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     ShieldCheck,
     Factory,
     HeartPulse,
-    Database
+    Database,
+    Network,
+    Activity,
+    Terminal
 }
 
 export default function SolutionsHub() {
