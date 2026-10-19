@@ -27,6 +27,10 @@ const EnterpriseRoiCalculator = lazy(() => import('./components/pages/Enterprise
 const EmbedRoiCalculator = lazy(() => import('./components/pages/EmbedRoiCalculator'))
 const MultiAgentLatencyEstimator = lazy(() => import('./components/pages/MultiAgentLatencyEstimator'))
 const EmbedLatencyEstimator = lazy(() => import('./components/pages/EmbedLatencyEstimator'))
+const CompareHub = lazy(() => import('./components/pages/CompareHub'))
+const CompareDetail = lazy(() => import('./components/pages/CompareDetail'))
+const AgenticArchitectureGrader = lazy(() => import('./components/pages/AgenticArchitectureGrader'))
+const EmbedArchitectureGrader = lazy(() => import('./components/pages/EmbedArchitectureGrader'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -97,6 +101,11 @@ function App() {
                             <Route path="/tools/multi-agent-latency-token-cost-estimator" element={<MultiAgentLatencyEstimator />} />
                             <Route path="/tools/latency-estimator" element={<Navigate to="/tools/multi-agent-latency-token-cost-estimator" replace />} />
                             <Route path="/embed/latency-estimator" element={<EmbedLatencyEstimator />} />
+                            <Route path="/compare" element={<CompareHub />} />
+                            <Route path="/compare/:slug" element={<CompareDetail />} />
+                            <Route path="/tools/agentic-architecture-grader" element={<AgenticArchitectureGrader />} />
+                            <Route path="/tools/architecture-grader" element={<Navigate to="/tools/agentic-architecture-grader" replace />} />
+                            <Route path="/embed/architecture-grader" element={<EmbedArchitectureGrader />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

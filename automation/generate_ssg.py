@@ -29,6 +29,7 @@ SOLUTIONS_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "solutionsData.ts"
 COMPACT_QUEUE_PATH = BASE_DIR / "automation" / "compact_keywords_queue.json"
 VIDEOS_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "videoMasterclasses.ts"
 VIDEO_SCRIPTS_DIR = BASE_DIR / "automation" / "video_scripts"
+COMPARE_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "compareData.ts"
 
 def load_solutions_via_node():
     """
@@ -705,6 +706,213 @@ def render_latency_estimator_embed_semantic_html():
   </main>
   <footer style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;text-align:center;font-size:0.75rem;font-family:monospace;color:#6b7280;">
     Powered by <a href="https://elesium.online/solutions" target="_blank" style="color:#60a5fa;text-decoration:none;font-weight:700;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def load_compare_battlecards_via_node():
+    """
+    Loads all comparison battlecards from compareData.ts via Node bridge.
+    """
+    items = []
+    if COMPARE_TS_PATH.exists():
+        content = COMPARE_TS_PATH.read_text(encoding="utf-8")
+        code = content
+        code = re.sub(r'export\s+interface[\s\S]*?(?=export\s+const)', '', code)
+        code = re.sub(r'export\s+const\s+compareBattlecards:\s*CompareBattlecardItem\[\]\s*=', 'const compareBattlecards =', code)
+        code = re.sub(r'export\s+const\s+compareData[\s\S]*$', '', code)
+        code += '\nconsole.log(JSON.stringify(compareBattlecards));\n'
+        tmp_bridge = BASE_DIR / "frontend" / "src" / "data" / ".tmp_bridge_compare.cjs"
+        tmp_bridge.write_text(code, encoding="utf-8")
+        try:
+            res = subprocess.run(["node", str(tmp_bridge)], capture_output=True, text=True, check=True)
+            items = json.loads(res.stdout)
+            print(f"Loaded {len(items)} compare battlecards from compareData.ts via Node bridge.")
+        except Exception as e:
+            print(f"Node bridge error on compare: {e}")
+        finally:
+            if tmp_bridge.exists():
+                tmp_bridge.unlink()
+    return items
+
+def render_compare_hub_semantic_html(battlecards):
+    """
+    Renders clean semantic HTML for /compare hub.
+    """
+    cards_html = "".join(
+        f'<article style="margin-bottom:2rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">'
+        f'<div style="font-size:0.75rem;font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">{html.escape(b.get("category", ""))} &bull; Battlecard #{b.get("id", "")}</div>'
+        f'<h2 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0 0 0.75rem 0;"><a href="/compare/{html.escape(b.get("slug", ""))}" style="color:#111827;text-decoration:none;">{html.escape(b.get("title", ""))} &rarr;</a></h2>'
+        f'<div style="font-family:monospace;font-size:0.875rem;color:#4b5563;margin-bottom:0.75rem;"><span style="background:#f3f4f6;padding:0.25rem 0.5rem;border-radius:0.25rem;">{html.escape(b.get("entityALabel", ""))}</span> vs <span style="background:#f3f4f6;padding:0.25rem 0.5rem;border-radius:0.25rem;">{html.escape(b.get("entityBLabel", ""))}</span></div>'
+        f'<p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin-bottom:1rem;">{html.escape(b.get("verdictSummary", ""))}</p>'
+        f'<div style="display:flex;gap:1rem;font-size:0.85rem;color:#374151;margin-bottom:1rem;">'
+        + "".join(f'<div style="background:#f9fafb;padding:0.5rem 0.75rem;border-radius:0.5rem;border:1px solid #e5e7eb;"><strong>{html.escape(f.get("label", ""))}:</strong> {html.escape(f.get("value", ""))}</div>' for f in b.get("fastFacts", [])[:2])
+        + f'</div>'
+        f'<a href="/compare/{html.escape(b.get("slug", ""))}" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.5rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Inspect Comparison Matrix &rarr;</a>'
+        f'</article>'
+        for b in battlecards
+    )
+    return f"""
+<div id="prerendered-compare-hub" style="max-width:1000px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Elesium Enterprise AI Architecture Battlecards</div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Enterprise AI Framework &amp; Architecture Comparisons</h1>
+    <p style="font-size:1.2rem;line-height:1.6;color:#4b5563;max-width:800px;margin:0 auto;">Objective, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models. No vendor hype—only audited production latency benchmarks, token economics, and failure recovery protocols.</p>
+  </header>
+  <div style="background:linear-gradient(135deg,#1e1b4b,#0f172a);color:#ffffff;border-radius:1rem;padding:1.5rem;margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:center;">
+    <div>
+      <div style="color:#818cf8;font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:0.25rem;">Interactive Diagnostic Asset</div>
+      <h3 style="margin:0 0 0.5rem 0;font-size:1.25rem;font-weight:700;">1-Minute Enterprise Agentic Architecture Grader</h3>
+      <p style="margin:0;color:#cbd5e1;font-size:0.875rem;">Assess your stack across concurrency, topology, inference boundaries, state persistence, and DPDP compliance.</p>
+    </div>
+    <a href="/tools/agentic-architecture-grader" style="background:#2563eb;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;white-space:nowrap;margin-left:1rem;">Launch Grader &rarr;</a>
+  </div>
+  <main>
+    {cards_html}
+  </main>
+</div>
+"""
+
+def render_compare_detail_semantic_html(item):
+    """
+    Renders clean semantic HTML for /compare/:slug battlecard pages.
+    """
+    matrix_rows_html = "".join(
+        f'<tr style="border-bottom:1px solid #e5e7eb;">'
+        f'<td style="padding:0.75rem 1rem;font-weight:600;color:#111827;vertical-align:top;">{html.escape(r.get("dimension", ""))}</td>'
+        f'<td style="padding:0.75rem 1rem;color:#374151;vertical-align:top;">{html.escape(r.get("optionA", ""))}</td>'
+        f'<td style="padding:0.75rem 1rem;color:#374151;vertical-align:top;">{html.escape(r.get("optionB", ""))}</td>'
+        f'<td style="padding:0.75rem 1rem;vertical-align:top;">'
+        f'<span style="display:inline-block;padding:0.2rem 0.5rem;border-radius:0.25rem;font-size:0.75rem;font-weight:700;background:#ede9fe;color:#5b21b6;margin-bottom:0.25rem;">{html.escape(r.get("verdict", ""))}</span>'
+        f'<div style="font-size:0.8rem;color:#6b7280;line-height:1.4;">{html.escape(r.get("technicalExplanation", ""))}</div>'
+        f'</td>'
+        f'</tr>'
+        for r in item.get("matrix", [])
+    )
+    
+    pillars_html = "".join(
+        f'<div style="margin-bottom:2rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;">'
+        f'<div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#2563eb;text-transform:uppercase;margin-bottom:0.25rem;">Pillar 0{idx+1}</div>'
+        f'<h3 style="font-size:1.3rem;font-weight:800;color:#111827;margin:0 0 0.5rem 0;">{html.escape(p.get("title", ""))}</h3>'
+        f'<p style="font-size:0.9rem;color:#6b7280;margin:0 0 1rem 0;">{html.escape(p.get("subtitle", ""))}</p>'
+        + "".join(f'<p style="color:#374151;font-size:0.95rem;line-height:1.6;margin-bottom:0.75rem;">{html.escape(para)}</p>' for para in p.get("analysisParagraphs", []))
+        + f'</div>'
+        for idx, p in enumerate(item.get("pillars", []))
+    )
+
+    faqs_html = "".join(
+        f'<div style="margin-bottom:1rem;border-bottom:1px solid #e5e7eb;padding-bottom:1rem;">'
+        f'<h4 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">{html.escape(f.get("question", ""))}</h4>'
+        f'<p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">{html.escape(f.get("answer", ""))}</p>'
+        f'</div>'
+        for f in item.get("faqs", [])
+    )
+
+    return f"""
+<div id="prerendered-compare-detail" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <nav style="font-size:0.8rem;color:#6b7280;margin-bottom:1.5rem;">
+    <a href="/" style="color:#6b7280;text-decoration:none;">Home</a> &gt; 
+    <a href="/compare" style="color:#6b7280;text-decoration:none;">Architecture Comparisons</a> &gt; 
+    <span style="color:#111827;font-weight:600;">{html.escape(item.get("entityALabel", ""))} vs {html.escape(item.get("entityBLabel", ""))}</span>
+  </nav>
+  <header style="margin-bottom:2.5rem;">
+    <div style="font-size:0.8rem;font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">{html.escape(item.get("category", ""))}</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;color:#111827;margin:0 0 1.25rem 0;">{html.escape(item.get("h1", item.get("title", "")))}</h1>
+    <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:1rem;padding:1.5rem;margin-bottom:2rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#1e40af;margin:0 0 0.5rem 0;">Executive Engineering Verdict</h2>
+      <p style="color:#1e3a8a;font-size:1rem;line-height:1.6;margin:0;">{html.escape(item.get("verdictSummary", ""))}</p>
+    </div>
+  </header>
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:1rem;">Side-by-Side Comparison Matrix</h2>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;text-align:left;font-size:0.9rem;">
+        <thead>
+          <tr style="background:#f3f4f6;border-bottom:2px solid #e5e7eb;">
+            <th style="padding:0.75rem 1rem;font-weight:700;">Dimension</th>
+            <th style="padding:0.75rem 1rem;font-weight:700;">{html.escape(item.get("entityALabel", ""))}</th>
+            <th style="padding:0.75rem 1rem;font-weight:700;">{html.escape(item.get("entityBLabel", ""))}</th>
+            <th style="padding:0.75rem 1rem;font-weight:700;">Verdict &amp; Rationale</th>
+          </tr>
+        </thead>
+        <tbody>
+          {matrix_rows_html}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:1.5rem;">Deep Architectural Teardown Pillars</h2>
+    {pillars_html}
+  </section>
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:1rem;">Architecture Evaluation FAQs</h2>
+    {faqs_html}
+  </section>
+  <footer style="background:#111827;color:#ffffff;border-radius:1rem;padding:2rem;text-align:center;">
+    <h3 style="font-size:1.5rem;font-weight:700;margin:0 0 0.5rem 0;">Need an Architecture Audit for Your Enterprise Stack?</h3>
+    <p style="color:#9ca3af;font-size:0.95rem;margin:0 0 1.25rem 0;">Schedule a technical teardown with Chaman Shah, Principal AI Systems Architect.</p>
+    <a href="/waitlist" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Book Technical Audit &rarr;</a>
+  </footer>
+</div>
+"""
+
+def render_architecture_grader_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/agentic-architecture-grader.
+    """
+    return """
+<div id="prerendered-architecture-grader" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#030712;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#60a5fa;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Enterprise AI Diagnostics</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agentic Architecture Fragility &amp; Readiness Grader</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Audit your autonomous multi-agent systems across five critical engineering dimensions: workflow concurrency, orchestration topology, inference isolation, state persistence, and compliance guardrails. Calculates structural fragility, failure probability, and annual financial token waste.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">5-Dimension Diagnostic Evaluation</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
+        <div style="background:#030712;border:1px solid #1e293b;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#60a5fa;margin:0 0 0.5rem 0;">01. Workflow Concurrency</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Evaluates deterministic StateGraph FSMs vs unconstrained ReAct loops prone to recursive token burn.</p>
+        </div>
+        <div style="background:#030712;border:1px solid #1e293b;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#60a5fa;margin:0 0 0.5rem 0;">02. Orchestration Topology</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Assesses sandboxed DAGs with circuit breakers vs monolithic mega-prompts and uncontrolled swarms.</p>
+        </div>
+        <div style="background:#030712;border:1px solid #1e293b;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#60a5fa;margin:0 0 0.5rem 0;">03. Inference Boundary</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Measures dedicated private VPC vLLM clusters vs shared multi-tenant public APIs (OpenAI/Anthropic).</p>
+        </div>
+        <div style="background:#030712;border:1px solid #1e293b;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#60a5fa;margin:0 0 0.5rem 0;">04. State Persistence</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Audits PostgreSQL session checkpointers and cryptographic audit ledgers vs volatile RAM.</p>
+        </div>
+        <div style="background:#030712;border:1px solid #1e293b;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#60a5fa;margin:0 0 0.5rem 0;">05. Statutory Compliance</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Ensures compile-time Pydantic type validation and automated DPDP Act 2023 customer data redaction.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_architecture_grader_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/architecture-grader.
+    """
+    return """
+<div id="prerendered-architecture-grader-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#030712;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Enterprise Agentic Architecture Fragility Grader</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive diagnostic assessment for autonomous multi-agent systems.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Audit your enterprise agent stack across concurrency, topology, inference boundaries, state persistence, and DPDP Act 2023 compliance.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Evaluated via <a href="https://elesium.online/compare" target="_blank" style="color:#3b82f6;text-decoration:underline;">Elesium Architecture Battlecards</a>
   </footer>
 </div>
 """
@@ -1441,9 +1649,142 @@ def generate_ssg():
     hub_html = hub_html.replace("</head>", "\n" + "\n".join(hub_injections) + "\n</head>")
 
     hub_out_file.write_text(hub_html, encoding="utf-8")
-    hub_direct_file.write_text(hub_html, encoding="utf-8")
     print("Generated SSG for: /solutions (Hub)")
     print("✅ SSG complete for solutions.")
+
+    # Generate SSG for Architecture Comparisons (/compare and /compare/:slug)
+    print("Starting SSG Generation for architecture battlecards...")
+    battlecards = load_compare_battlecards_via_node()
+    print(f"Loaded {len(battlecards)} compare battlecards for SSG pre-rendering.")
+
+    # 1. /compare Hub Page
+    cmp_hub_canonical = "https://elesium.online/compare"
+    cmp_hub_title = "Enterprise AI Framework & Architecture Comparisons | Elesium"
+    cmp_hub_desc = "Objective, empirical evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models."
+
+    cmp_hub_out_dir = DIST_DIR / "compare"
+    cmp_hub_out_dir.mkdir(parents=True, exist_ok=True)
+    cmp_hub_out_file = cmp_hub_out_dir / "index.html"
+    cmp_hub_direct_file = DIST_DIR / "compare.html"
+
+    cmp_hub_html = base_html
+    cmp_hub_html = re.sub(r"<title>.*?</title>", f"<title>{cmp_hub_title}</title>", cmp_hub_html)
+    cmp_hub_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{cmp_hub_desc}" />', cmp_hub_html)
+    cmp_hub_html = replace_canonical(cmp_hub_html, cmp_hub_canonical)
+    cmp_hub_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{cmp_hub_title}" />', cmp_hub_html)
+    cmp_hub_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{cmp_hub_desc}" />', cmp_hub_html)
+    cmp_hub_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{cmp_hub_canonical}" />', cmp_hub_html)
+    cmp_hub_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{cmp_hub_title}" />', cmp_hub_html)
+    cmp_hub_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{cmp_hub_desc}" />', cmp_hub_html)
+
+    cmp_hub_semantic = render_compare_hub_semantic_html(battlecards)
+    root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+    if root_pattern.search(cmp_hub_html):
+        cmp_hub_html = root_pattern.sub(lambda m: f'<div id="root">{cmp_hub_semantic}</div>', cmp_hub_html)
+    else:
+        cmp_hub_html = cmp_hub_html.replace('<div id="root"></div>', f'<div id="root">{cmp_hub_semantic}</div>')
+
+    cmp_collection_schema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": cmp_hub_title,
+        "description": cmp_hub_desc,
+        "url": cmp_hub_canonical,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Elesium",
+            "url": "https://elesium.online"
+        }
+    }
+    cmp_hub_html = cmp_hub_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(cmp_collection_schema, ensure_ascii=False)}</script>\n</head>')
+    cmp_hub_out_file.write_text(cmp_hub_html, encoding="utf-8")
+    cmp_hub_direct_file.write_text(cmp_hub_html, encoding="utf-8")
+    print("Generated SSG for: /compare (Hub)")
+
+    # 2. Individual Battlecard Pages (/compare/:slug)
+    for b in battlecards:
+        b_slug = b.get("slug")
+        b_title = b.get("title", f"{b_slug} | Elesium")
+        b_h1 = b.get("h1", b_title)
+        b_desc = b.get("metaDescription", "")
+        b_canonical = f"https://elesium.online/compare/{b_slug}"
+        b_date_pub = b.get("datePublished", "October 19, 2026")
+        b_date_mod = b.get("dateModified", "October 19, 2026")
+
+        b_out_dir = DIST_DIR / "compare" / b_slug
+        b_out_dir.mkdir(parents=True, exist_ok=True)
+        b_out_file = b_out_dir / "index.html"
+        b_direct_file = DIST_DIR / "compare" / f"{b_slug}.html"
+
+        b_html = base_html
+        b_html = re.sub(r"<title>.*?</title>", f"<title>{b_title} | Elesium</title>", b_html)
+        b_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{html.escape(b_desc)}" />', b_html)
+        b_html = replace_canonical(b_html, b_canonical)
+        b_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{b_title} | Elesium" />', b_html)
+        b_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{html.escape(b_desc)}" />', b_html)
+        b_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{b_canonical}" />', b_html)
+        b_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{b_title} | Elesium" />', b_html)
+        b_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{html.escape(b_desc)}" />', b_html)
+
+        b_semantic = render_compare_detail_semantic_html(b)
+        root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+        if root_pattern.search(b_html):
+            b_html = root_pattern.sub(lambda m: f'<div id="root">{b_semantic}</div>', b_html)
+        else:
+            b_html = b_html.replace('<div id="root"></div>', f'<div id="root">{b_semantic}</div>')
+
+        b_schema = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "TechArticle",
+                    "headline": b_title,
+                    "description": b_desc,
+                    "author": {
+                        "@type": "Person",
+                        "name": "Chaman Shah",
+                        "jobTitle": "Principal AI Systems Architect"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Elesium",
+                        "url": "https://elesium.online"
+                    },
+                    "mainEntityOfPage": b_canonical,
+                    "datePublished": b_date_pub,
+                    "dateModified": b_date_mod
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://elesium.online/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Architecture Comparisons",
+                            "item": "https://elesium.online/compare"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": b_h1,
+                            "item": b_canonical
+                        }
+                    ]
+                }
+            ]
+        }
+        b_html = b_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(b_schema, ensure_ascii=False)}</script>\n</head>')
+
+        b_out_file.write_text(b_html, encoding="utf-8")
+        b_direct_file.write_text(b_html, encoding="utf-8")
+        print(f"Generated SSG for: /compare/{b_slug}")
+    print("✅ SSG complete for architecture battlecards.")
 
     print("Starting SSG Generation for video routes...")
     videos = load_all_videos()
@@ -1700,6 +2041,14 @@ def generate_ssg():
         "embed/latency-estimator": {
             "title": "Multi-Agent Latency & Cost Calculator (Interactive Embed Widget)",
             "desc": "Embeddable interactive multi-agent latency, token generation speed, and private VPC infrastructure cost calculator."
+        },
+        "tools/agentic-architecture-grader": {
+            "title": "Enterprise Agentic Architecture Fragility & Readiness Grader",
+            "desc": "Interactive architectural diagnostic assessment evaluating enterprise AI agent deployments across workflow concurrency, orchestration topologies, inference boundaries, state persistence, and DPDP Act 2023 compliance."
+        },
+        "embed/architecture-grader": {
+            "title": "Enterprise Agentic Architecture Fragility Grader (Embed Widget)",
+            "desc": "Embeddable interactive enterprise AI architecture fragility and token leakage grader."
         }
     }
 
@@ -2115,6 +2464,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(latency_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/agentic-architecture-grader":
+            tool_content = render_architecture_grader_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            grader_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Agentic Architecture Fragility & Readiness Grader",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Architecture Grader",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(grader_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/architecture-grader":
+            embed_content = render_architecture_grader_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            grader_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Agentic Architecture Fragility Grader (Embed Widget)",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(grader_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

@@ -19,6 +19,7 @@ SOLUTIONS_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "solutionsData.
 COMPACT_QUEUE_PATH = BASE_DIR / "compact_keywords_queue.json"
 VIDEOS_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "videoMasterclasses.ts"
 VIDEO_SCRIPTS_DIR = BASE_DIR / "video_scripts"
+COMPARE_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "compareData.ts"
 SITEMAP_PATH = WEBSITE_ROOT / "frontend" / "public" / "sitemap.xml"
 
 # Website URL
@@ -39,8 +40,10 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/audit", "priority": "0.8", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/signals", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/solutions", "priority": "0.9", "changefreq": "daily"},
+        {"loc": f"{BASE_URL}/compare", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/tools/enterprise-ai-roi-calculator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/multi-agent-latency-token-cost-estimator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/agentic-architecture-grader", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
@@ -105,6 +108,24 @@ def generate_sitemap():
             "lastmod": today
         })
     print(f"Found {len(solution_slugs)} solution pages for sitemap.")
+
+    # Dynamic compare battlecards (Priority 0.9, Weekly changefreq)
+    compare_slugs = set()
+    if COMPARE_TS_PATH.exists():
+        cmp_content = COMPARE_TS_PATH.read_text(encoding="utf-8")
+        raw_cmp_slugs = re.findall(r'slug["\']?\s*:\s*["\']([^"\']+)["\']', cmp_content)
+        for s in raw_cmp_slugs:
+            if s and s != "string":  # exclude interface definition
+                compare_slugs.add(s)
+
+    for s in sorted(compare_slugs):
+        urls.append({
+            "loc": f"{BASE_URL}/compare/{s}",
+            "priority": "0.9",
+            "changefreq": "weekly",
+            "lastmod": today
+        })
+    print(f"Found {len(compare_slugs)} architecture battlecards for sitemap.")
 
     # Dynamic video routes (Priority 0.8, Weekly changefreq)
     seen_video_slugs = set()

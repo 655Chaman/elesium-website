@@ -515,6 +515,33 @@ class UnifiedSeoRunner:
             else:
                 self.log(f"Warning: Embed SSG output missing at {embed_ssg}", level="WARNING")
 
+            # Verify Architecture Grader SSG routes
+            grader_tool_ssg = FRONTEND_DIR / "dist" / "tools" / "agentic-architecture-grader" / "index.html"
+            grader_embed_ssg = FRONTEND_DIR / "dist" / "embed" / "architecture-grader" / "index.html"
+            if grader_tool_ssg.exists():
+                self.log(f"Verified pre-rendered Architecture Grader tool SSG: {grader_tool_ssg}", level="SUCCESS")
+            if grader_embed_ssg.exists():
+                self.log(f"Verified pre-rendered Architecture Grader embed SSG: {grader_embed_ssg}", level="SUCCESS")
+
+            # Verify Architecture Battlecards SSG routes (/compare and /compare/:slug)
+            compare_hub = FRONTEND_DIR / "dist" / "compare" / "index.html"
+            if compare_hub.exists():
+                c_html = compare_hub.read_text(encoding="utf-8")
+                if 'rel="canonical" href="https://elesium.online/compare"' in c_html and 'id="prerendered-compare-hub"' in c_html:
+                    self.log(f"Verified pre-rendered Compare Hub SSG: {compare_hub} (Canonical + Hub DOM)", level="SUCCESS")
+            
+            from generate_ssg import load_compare_battlecards_via_node
+            all_battlecards = load_compare_battlecards_via_node()
+            cmp_verified = 0
+            for b in all_battlecards:
+                b_slug = b.get("slug")
+                b_file = FRONTEND_DIR / "dist" / "compare" / b_slug / "index.html"
+                if b_file.exists():
+                    b_html = b_file.read_text(encoding="utf-8")
+                    if f'rel="canonical" href="https://elesium.online/compare/{b_slug}"' in b_html and "TechArticle" in b_html:
+                        cmp_verified += 1
+            self.log(f"Verified {cmp_verified}/{len(all_battlecards)} architecture battlecard routes (Canonical + TechArticle JSON-LD + Semantic DOM).", level="SUCCESS")
+
             # Verify Video SSG routes (/videos and /videos/:slug)
             video_hub = FRONTEND_DIR / "dist" / "videos" / "index.html"
             if video_hub.exists():

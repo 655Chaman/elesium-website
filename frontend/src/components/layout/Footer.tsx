@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 export default function DownloadFooter() {
     const footerSections = [
         { name: 'Solutions Hub', path: '/solutions' },
+        { name: 'Architecture Comparisons', path: '/compare' },
+        { name: 'Architecture Fragility Grader', path: '/tools/agentic-architecture-grader' },
         { name: 'How We Work', path: '/how-we-work' },
         { name: 'Markets', path: '/markets' },
         { name: 'AI Automation', path: '/ai-automation' },
@@ -20,6 +22,14 @@ export default function DownloadFooter() {
         { name: 'Deterministic Multi-Agent Systems for Manufacturing ERP', path: '/solutions/deterministic-multi-agent-systems-for-manufacturing-erp' },
         { name: 'Private VPC Air-Gapped LLM Deployment for Healthcare', path: '/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare' },
         { name: 'SAP S/4HANA Autonomous AI Integration Agency', path: '/solutions/sap-s4hana-autonomous-ai-integration-agency' },
+    ];
+
+    const battlecardLinks = [
+        { name: 'LangGraph vs CrewAI Enterprise', path: '/compare/langgraph-vs-crewai-enterprise' },
+        { name: 'Private VPC vLLM vs Azure OpenAI', path: '/compare/private-vpc-vllm-vs-azure-openai' },
+        { name: 'Custom Agents vs Zapier Enterprise', path: '/compare/custom-multi-agent-systems-vs-zapier-enterprise' },
+        { name: 'Deterministic FSM vs ReAct Loops', path: '/compare/deterministic-state-machines-vs-react-agents' },
+        { name: 'Elesium vs IT Consultancies', path: '/compare/elesium-vs-traditional-it-consultancies' },
     ];
 
     return (
@@ -73,6 +83,37 @@ export default function DownloadFooter() {
                                         className="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                     >
                                         View All 20 Sovereign Workflows →
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Architecture Comparisons Column */}
+                        <div className="flex flex-col gap-5 max-w-sm">
+                            <div className="flex items-center gap-2">
+                                <h4 className="font-normal text-lg text-gray-900 dark:text-white">Comparisons</h4>
+                                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                                    Vs Matrix
+                                </span>
+                            </div>
+                            <ul className="flex flex-col gap-3">
+                                {battlecardLinks.map((item) => (
+                                    <li key={item.name}>
+                                        <Link
+                                            to={item.path}
+                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[13px] text-left line-clamp-1"
+                                            title={item.name}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                                <li className="pt-1">
+                                    <Link
+                                        to="/compare"
+                                        className="text-xs font-mono text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1"
+                                    >
+                                        View All 6 Architecture Battlecards →
                                     </Link>
                                 </li>
                             </ul>
