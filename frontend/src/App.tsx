@@ -47,6 +47,8 @@ const EnterpriseVoiceAgentLatencySimulator = lazy(() => import('./components/pag
 const EmbedVoiceAgentLatencySimulator = lazy(() => import('./components/pages/EmbedVoiceAgentLatencySimulator'))
 const EnterpriseGraphRagBenchmark = lazy(() => import('./components/pages/EnterpriseGraphRagBenchmark'))
 const EmbedGraphRagBenchmark = lazy(() => import('./components/pages/EmbedGraphRagBenchmark'))
+const EnterpriseEventSourcingSimulator = lazy(() => import('./components/pages/EnterpriseEventSourcingSimulator'))
+const EmbedEventSourcingSimulator = lazy(() => import('./components/pages/EmbedEventSourcingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -146,6 +148,9 @@ function App() {
                             <Route path="/tools/enterprise-graphrag-memory-benchmark" element={<EnterpriseGraphRagBenchmark />} />
                             <Route path="/tools/graphrag-benchmark" element={<Navigate to="/tools/enterprise-graphrag-memory-benchmark" replace />} />
                             <Route path="/embed/graphrag-memory-benchmark" element={<EmbedGraphRagBenchmark />} />
+                            <Route path="/tools/enterprise-event-sourcing-audit-simulator" element={<EnterpriseEventSourcingSimulator />} />
+                            <Route path="/tools/event-sourcing-simulator" element={<Navigate to="/tools/enterprise-event-sourcing-audit-simulator" replace />} />
+                            <Route path="/embed/event-sourcing-audit-simulator" element={<EmbedEventSourcingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

@@ -65,7 +65,8 @@ ACRONYMS = {
     "VDE", "HTS", "REBCO", "NTM", "ECRH", "EFIT", "NBI", "ECE", "ELM", "RMP", "SOL", "ICRH", "VSWR", "MHD",
     "DO", "CER", "OUR", "TFF", "MAB", "HCP", "ELISA", "CFD", "CIP", "SIP", "SMB", "LNP", "MRNA", "CRISPR", "SPR",
     "VPD", "TDR", "TDT", "CGE", "CFPS", "MAGE", "YAC", "DLS", "UHTC", "SWBLI", "HGV", "RCS", "PDWE", "GNC", "TPS", "SCRAMJET",
-    "LOX", "LH2", "SST", "BCI", "MEA", "LFP", "EEG", "ECOG", "ALS", "EGS", "CO2", "PDC", "BHA"
+    "LOX", "LH2", "SST", "BCI", "MEA", "LFP", "EEG", "ECOG", "ALS", "EGS", "CO2", "PDC", "BHA",
+    "ECLSS", "QUBO", "AUV", "BOP", "LMRP", "HIPPS", "FPSO", "EVA"
 }
 
 def smart_title(text: str) -> str:

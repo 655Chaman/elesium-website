@@ -1317,6 +1317,56 @@ def render_graphrag_embed_semantic_html():
 </div>
 """
 
+def render_eventsourcing_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-event-sourcing-audit-simulator.
+    """
+    return """
+<div id="prerendered-event-sourcing-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Audit Telemetry &amp; State Integrity Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Event Sourcing &amp; Audit Ledger Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark Append-Only CQRS event stores vs mutable CRUD databases. Model SHA-256 cryptographic hash chains, sub-second time-travel replay, and DPDP Act 2023 compliance.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Cryptographic Auditability &amp; Time-Travel Forensics Benchmark</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Append-Only Event Store (CQRS)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Immutable typed events with SHA-256 Merkle chain linkages guarantee RPO=0s, 100% tamper detection, and sub-second deterministic time-travel debugging.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">RPO: 0.00s | Tamper Detection: 100% | DPDP Act: 98/100</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Mutable CRUD Database</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">In-place SQL UPDATE overwrites destroy historical causality, blinding compliance audits and making agent hallucination root-cause investigation impossible.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">RPO: 900s | Tamper Detection: 5% | DPDP Act: 38/100</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_eventsourcing_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/event-sourcing-audit-simulator.
+    """
+    return """
+<div id="prerendered-event-sourcing-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Event Sourcing Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating event sourcing recovery, SHA-256 Merkle chain integrity, and DPDP auditability.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark immutable event streams vs mutable database overwrites under agent hallucinations and network partition failures.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2513,6 +2563,14 @@ def generate_ssg():
         "embed/graphrag-memory-benchmark": {
             "title": "Enterprise GraphRAG Benchmark Sandbox",
             "desc": "Embeddable interactive widget calculating GraphRAG vs Vector DB indexing token costs, k-hop retrieval latency, and multi-hop reasoning accuracy."
+        },
+        "tools/enterprise-event-sourcing-audit-simulator": {
+            "title": "Enterprise Multi-Agent Event Sourcing & Audit Ledger Simulator",
+            "desc": "Simulate Append-Only Event Sourcing (CQRS) vs Mutable CRUD databases for autonomous multi-agent systems. Model SHA-256 cryptographic hash chains, time-travel replay, and DPDP Act 2023 compliance."
+        },
+        "embed/event-sourcing-audit-simulator": {
+            "title": "Multi-Agent Event Sourcing Sandbox",
+            "desc": "Embeddable interactive widget calculating event sourcing recovery, SHA-256 Merkle chain integrity, and DPDP auditability."
         }
     }
 
@@ -3621,6 +3679,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(graphrag_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-event-sourcing-audit-simulator":
+            tool_content = render_eventsourcing_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            eventsourcing_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Multi-Agent Event Sourcing & Audit Ledger Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Event Sourcing Audit Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(eventsourcing_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/event-sourcing-audit-simulator":
+            embed_content = render_eventsourcing_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            eventsourcing_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Multi-Agent Event Sourcing Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(eventsourcing_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

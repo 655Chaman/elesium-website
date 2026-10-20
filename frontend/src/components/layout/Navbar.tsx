@@ -141,6 +141,12 @@ export default function Navbar() {
                             GraphRAG
                         </Link>
                         <Link
+                            to="/tools/enterprise-event-sourcing-audit-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-500 dark:text-cyan-400"
+                        >
+                            Event Ledger
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -318,6 +324,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-500 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 GraphRAG Memory Benchmark
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-event-sourcing-audit-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-cyan-500 dark:text-cyan-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Event Sourcing Audit Simulator
                             </Link>
                             <Link
                                 to="/compare"

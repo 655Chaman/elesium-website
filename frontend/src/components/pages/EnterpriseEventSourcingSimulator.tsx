@@ -1,0 +1,615 @@
+import { useState, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import {
+  FileText,
+  Copy,
+  Check,
+  ChevronDown,
+  ArrowRight,
+  Code,
+  X,
+  Sliders,
+  Database,
+  ShieldAlert,
+  ShieldCheck,
+  History,
+  Lock,
+  RotateCcw,
+  AlertTriangle,
+  Zap
+} from 'lucide-react';
+import {
+  calculateEventSourcingSimulation,
+  EventSourcingInputs,
+  FailureScenario,
+  ComplianceFramework
+} from '../calculator/eventSourcingSimulatorModel';
+import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
+import { MandateApplicationForm } from '../features/WaitingListForm';
+
+export default function EnterpriseEventSourcingSimulator() {
+  // Inputs State
+  const [transactionVolume, setTransactionVolume] = useState<number>(50000);
+  const [concurrentAgents, setConcurrentAgents] = useState<number>(16);
+  const [snapshotFrequency, setSnapshotFrequency] = useState<number>(100);
+  const [failureScenario, setFailureScenario] = useState<FailureScenario>('hallucinated_tool_call');
+  const [complianceFramework, setComplianceFramework] = useState<ComplianceFramework>('dpdp_act_2023');
+
+  // Modals & Copy
+  const [isEmbedOpen, setIsEmbedOpen] = useState(false);
+  const [hasCopiedEmbed, setHasCopiedEmbed] = useState(false);
+  const [hasCopiedMemo, setHasCopiedMemo] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const inputs: EventSourcingInputs = useMemo(() => ({
+    transactionVolume,
+    concurrentAgents,
+    snapshotFrequency,
+    failureScenario,
+    complianceFramework
+  }), [
+    transactionVolume,
+    concurrentAgents,
+    snapshotFrequency,
+    failureScenario,
+    complianceFramework
+  ]);
+
+  const results = useMemo(() => {
+    return calculateEventSourcingSimulation(inputs);
+  }, [inputs]);
+
+  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/event-sourcing-audit-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;background:#020617;"></iframe><div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
+
+  const copyEmbedCode = () => {
+    navigator.clipboard.writeText(embedCodeSnippet);
+    setHasCopiedEmbed(true);
+    setTimeout(() => setHasCopiedEmbed(false), 3000);
+  };
+
+  const copyArchitecturalMemo = () => {
+    const memo = `
+================================================================================
+ELESIUM ARCHITECTURAL AUDIT: EVENT SOURCING VS MUTABLE STATE SIMULATION
+================================================================================
+Transaction Volume       : ${inputs.transactionVolume.toLocaleString()} events
+Concurrent Agents        : ${inputs.concurrentAgents} autonomous agents
+Snapshot Cadence         : Every ${inputs.snapshotFrequency} events
+Simulated Anomaly        : ${inputs.failureScenario}
+Statutory Framework      : ${inputs.complianceFramework}
+
+ARCHITECTURAL COMPARISON MATRIX:
+--------------------------------------------------------------------------------
+1. Legacy Mutable CRUD Database:
+   - Storage Size        : ${results.crudMetrics.storageFootprintMb} MB
+   - Append Latency      : ${results.crudMetrics.appendLatencyMs} ms (Pessimistic row locks)
+   - Forensics Recovery  : ${results.crudMetrics.timeToRootCauseDiagnosisMinutes} minutes (Manual log searching)
+   - Data Loss Risk (RPO): ${results.crudMetrics.recoveryPointObjectiveSeconds} seconds
+   - Tamper Detection    : ${results.crudMetrics.tamperDetectionProbabilityPct}% (In-place overwrite blinds audit)
+   - Statutory Readiness : ${results.crudMetrics.statutoryAuditReadinessScore} / 100
+
+2. Elesium Append-Only Event Store (CQRS + SHA-256 Merkle Chain):
+   - Storage Size        : ${results.eventSourcingMetrics.storageFootprintMb} MB (Events + Snapshots)
+   - Append Latency      : ${results.eventSourcingMetrics.appendLatencyMs} ms (Append-only write log)
+   - Forensics Recovery  : ${results.eventSourcingMetrics.timeToRootCauseDiagnosisMinutes} minutes (Sub-second time-travel replay)
+   - Data Loss Risk (RPO): ${results.eventSourcingMetrics.recoveryPointObjectiveSeconds} seconds (Zero data loss)
+   - Tamper Detection    : ${results.eventSourcingMetrics.tamperDetectionProbabilityPct}% (Immediate Merkle mismatch flag)
+   - Statutory Readiness : ${results.eventSourcingMetrics.statutoryAuditReadinessScore} / 100
+
+FORENSIC OUTCOME:
+${results.forensicDiagnosticSummary}
+
+STATUTORY COMPLIANCE:
+${results.statutoryComplianceVerdict}
+Projected Annual Risk & Forensic Savings: $${results.annualForensicSavingsUsd.toLocaleString()} / year.
+================================================================================
+Audit generated by Elesium Sovereign Engineering Systems (https://elesium.online)
+`;
+    navigator.clipboard.writeText(memo);
+    setHasCopiedMemo(true);
+    setTimeout(() => setHasCopiedMemo(false), 3000);
+  };
+
+  const faqs = [
+    {
+      q: 'Why does traditional mutable CRUD fail in autonomous multi-agent systems?',
+      a: 'Traditional databases overwrite state in place via SQL UPDATE or NoSQL put operations. When multiple autonomous agents interact concurrently, an unconstrained agent hallucination or silent network drop overwrites prior states irreversibly. Post-mortem root-cause analysis is impossible because the exact intermediate causality that led to the corrupted state has been erased.'
+    },
+    {
+      q: 'How does Append-Only Event Sourcing (CQRS) guarantee time-travel debugging?',
+      a: 'In an event-sourced architecture, state is never mutated directly. Every action is recorded as an immutable, typed domain event in an append-only log. The current system state is simply an in-memory projection computed by replaying events from t=0. To debug any incident, the system can replay the exact sequence up to any specific millisecond or event index.'
+    },
+    {
+      q: 'How do SHA-256 Merkle hash chains satisfy the DPDP Act 2023?',
+      a: 'Under DPDP Act 2023 Section 8, data fiduciaries must prove lawful processing and maintain verifiable records of data operations. Each event in our event store carries the SHA-256 hash of the preceding event, the cryptographic signature of the acting agent, and an immutable timestamp. Any retroactive tampering invalidates the hash chain immediately, providing non-repudiation.'
+    },
+    {
+      q: 'Does Event Sourcing introduce prohibitive storage or read latency overhead?',
+      a: 'No. While raw event volume grows linearly, historical streams are compacted into periodic snapshot projections (e.g. every 100 events). Read queries read the pre-computed snapshot in sub-2ms, while write operations achieve sub-1.5ms append-only latency without row-level database locking.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 py-16 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>Enterprise Multi-Agent Event Sourcing & Audit Ledger Simulator | Elesium</title>
+        <meta
+          name="description"
+          content="Simulate Append-Only Event Sourcing (CQRS) vs Mutable CRUD databases for autonomous multi-agent systems. Model SHA-256 cryptographic hash chains, time-travel replay, and DPDP Act 2023 compliance."
+        />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-event-sourcing-audit-simulator" />
+      </Helmet>
+
+      {/* Header */}
+      <div className="max-w-7xl mx-auto mb-10">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-6">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-mono text-xs uppercase tracking-wider">
+                Micro-SaaS Engineering Benchmark • Wave 11
+              </span>
+              <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs uppercase tracking-wider">
+                Cryptographic Audit Ledger
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+              Multi-Agent Event Sourcing &amp; Audit Ledger Simulator
+            </h1>
+            <p className="mt-2 text-sm sm:text-base text-slate-400 max-w-3xl">
+              Model Append-Only <span className="font-mono text-cyan-400">CQRS</span> event streams, <span className="font-mono text-emerald-400">SHA-256 Merkle chains</span>, and deterministic time-travel replay to eliminate agent hallucination corruption and guarantee DPDP Act 2023 auditability.
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setIsEmbedOpen(true)}
+              className="px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs font-mono text-slate-300 hover:text-white flex items-center gap-2 transition-colors"
+            >
+              <Code className="w-4 h-4 text-cyan-400" />
+              Embed Tool
+            </button>
+            <button
+              onClick={copyArchitecturalMemo}
+              className="px-3.5 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors shadow-lg shadow-cyan-500/20"
+            >
+              {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              {hasCopiedMemo ? 'Memo Copied!' : 'Export Audit Memo'}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+        {/* Controls Column (5 cols) */}
+        <div className="lg:col-span-5 space-y-6">
+          <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-6 shadow-xl">
+            <h2 className="text-base font-bold text-white flex items-center gap-2 mb-5 pb-3 border-b border-slate-800">
+              <Sliders className="w-4 h-4 text-cyan-400" />
+              Agent Workload &amp; Failure Injection
+            </h2>
+
+            {/* Transaction Volume Slider */}
+            <div className="mb-6">
+              <div className="flex justify-between items-center mb-2">
+                <label className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                  <Database className="w-3.5 h-3.5 text-slate-400" />
+                  Transaction Event Volume
+                </label>
+                <span className="font-mono text-xs font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+                  {transactionVolume.toLocaleString()} events
+                </span>
+              </div>
+              <input
+                type="range"
+                min="5000"
+                max="500000"
+                step="5000"
+                value={transactionVolume}
+                onChange={(e) => setTransactionVolume(Number(e.target.value))}
+                className="w-full accent-cyan-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
+                <span>5k events</span>
+                <span>250k events</span>
+                <span>500k events</span>
+              </div>
+            </div>
+
+            {/* Concurrent Agents Slider */}
+            <div className="mb-6">
+              <div className="flex justify-between items-center mb-2">
+                <label className="text-xs font-semibold text-slate-300">
+                  Concurrent Autonomous Agents
+                </label>
+                <span className="font-mono text-xs font-bold text-slate-300">
+                  {concurrentAgents} workers
+                </span>
+              </div>
+              <input
+                type="range"
+                min="2"
+                max="64"
+                step="2"
+                value={concurrentAgents}
+                onChange={(e) => setConcurrentAgents(Number(e.target.value))}
+                className="w-full accent-cyan-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+              />
+            </div>
+
+            {/* Snapshot Cadence */}
+            <div className="mb-6">
+              <label className="block text-xs font-semibold text-slate-300 mb-2">
+                Projection Snapshot Frequency
+              </label>
+              <div className="grid grid-cols-4 gap-2">
+                {[25, 50, 100, 250].map((cadence) => (
+                  <button
+                    key={cadence}
+                    type="button"
+                    onClick={() => setSnapshotFrequency(cadence)}
+                    className={`py-2 px-2 rounded-xl border text-xs font-mono font-semibold transition-all ${
+                      snapshotFrequency === cadence
+                        ? 'bg-cyan-500/20 border-cyan-500 text-cyan-300'
+                        : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700'
+                    }`}
+                  >
+                    Every {cadence}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Simulated Failure Scenario */}
+            <div className="mb-6">
+              <label className="block text-xs font-semibold text-slate-300 mb-2 flex items-center gap-1.5">
+                <ShieldAlert className="w-3.5 h-3.5 text-slate-400" />
+                Simulated Failure Scenario
+              </label>
+              <div className="space-y-2">
+                {[
+                  {
+                    id: 'hallucinated_tool_call' as FailureScenario,
+                    label: 'Agent Hallucinated Parameter Mutation',
+                    desc: 'Agent overrides loan APR (-450bps) without human validation'
+                  },
+                  {
+                    id: 'tampered_payload' as FailureScenario,
+                    label: 'Cryptographic Payload Tampering',
+                    desc: 'Direct SQL update attempts to alter audit ledger state'
+                  },
+                  {
+                    id: 'concurrent_state_collision' as FailureScenario,
+                    label: 'Concurrent Aggregate Collision',
+                    desc: 'Two autonomous agents attempt conflicting simultaneous writes'
+                  },
+                  {
+                    id: 'network_partition' as FailureScenario,
+                    label: 'Mid-Transaction Network Drop',
+                    desc: 'Socket disconnects before secondary payment confirmation'
+                  }
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setFailureScenario(item.id)}
+                    className={`w-full p-3 rounded-xl border text-left transition-all ${
+                      failureScenario === item.id
+                        ? 'bg-cyan-500/15 border-cyan-500 text-white'
+                        : 'bg-slate-950/80 border-slate-800/80 text-slate-400 hover:border-slate-700'
+                    }`}
+                  >
+                    <div className="font-semibold text-xs flex items-center justify-between">
+                      <span>{item.label}</span>
+                      {failureScenario === item.id && <Check className="w-3.5 h-3.5 text-cyan-400" />}
+                    </div>
+                    <div className="text-[11px] text-slate-500 mt-0.5 leading-snug">{item.desc}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Compliance Framework */}
+            <div>
+              <label className="block text-xs font-semibold text-slate-300 mb-2 flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-slate-400" />
+                Statutory Compliance Framework
+              </label>
+              <select
+                value={complianceFramework}
+                onChange={(e) => setComplianceFramework(e.target.value as ComplianceFramework)}
+                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-cyan-500 font-mono"
+              >
+                <option value="dpdp_act_2023">DPDP Act 2023 (Digital Personal Data Protection, India)</option>
+                <option value="soc2_type2">SOC-2 Type II (Non-Repudiation &amp; Change Audit)</option>
+                <option value="rbi_cybersecurity">RBI Cyber Security Framework (BFSI Non-Repudiation)</option>
+                <option value="hipaa">HIPAA Audit Rule (Cryptographic Patient Access Ledger)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Results & Event Stream Visualizer (7 cols) */}
+        <div className="lg:col-span-7 space-y-6">
+          {/* Top Metric Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-5 shadow-lg">
+              <div className="flex items-center justify-between text-slate-400 text-xs font-mono mb-1">
+                <span>Recovery Point Objective</span>
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              </div>
+              <div className="text-3xl font-extrabold text-emerald-400 font-mono">
+                {results.eventSourcingMetrics.recoveryPointObjectiveSeconds}.00s
+              </div>
+              <p className="text-[11px] text-slate-400 mt-1">
+                Zero data loss vs CRUD 15-minute point-in-time window
+              </p>
+            </div>
+
+            <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-5 shadow-lg">
+              <div className="flex items-center justify-between text-slate-400 text-xs font-mono mb-1">
+                <span>Root-Cause Isolation</span>
+                <History className="w-4 h-4 text-cyan-400" />
+              </div>
+              <div className="text-3xl font-extrabold text-cyan-400 font-mono">
+                {results.eventSourcingMetrics.timeToRootCauseDiagnosisMinutes * 60}s
+              </div>
+              <p className="text-[11px] text-slate-400 mt-1">
+                Time-travel replay vs {results.crudMetrics.timeToRootCauseDiagnosisMinutes}min manual log search
+              </p>
+            </div>
+
+            <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-5 shadow-lg">
+              <div className="flex items-center justify-between text-slate-400 text-xs font-mono mb-1">
+                <span>Annual Forensic Savings</span>
+                <Zap className="w-4 h-4 text-purple-400" />
+              </div>
+              <div className="text-3xl font-extrabold text-purple-400 font-mono">
+                ${results.annualForensicSavingsUsd.toLocaleString()}
+              </div>
+              <p className="text-[11px] text-slate-400 mt-1">
+                Engineering hours saved &amp; statutory audit protection
+              </p>
+            </div>
+          </div>
+
+          {/* Cryptographic Event Chain Stream Visualizer */}
+          <div className="bg-slate-900/90 rounded-2xl border border-slate-800 p-5 shadow-xl">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <FileText className="w-4 h-4 text-cyan-400" />
+                <h3 className="font-bold text-sm text-white">Immutable SHA-256 Merkle Event Stream</h3>
+              </div>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                Live Append-Only Ledger
+              </span>
+            </div>
+
+            <div className="space-y-3 font-mono text-xs">
+              {results.simulatedEventStream.map((event) => {
+                const isTampered = event.isTampered;
+                const isConflict = event.status === 'ROLLED_BACK';
+                return (
+                  <div
+                    key={event.sequenceNumber}
+                    className={`p-3.5 rounded-xl border transition-all ${
+                      isTampered
+                        ? 'bg-rose-950/30 border-rose-500/50 text-rose-200'
+                        : isConflict
+                        ? 'bg-amber-950/25 border-amber-500/40 text-amber-200'
+                        : 'bg-slate-950/80 border-slate-800 text-slate-300'
+                    }`}
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+                      <div className="flex items-center gap-2">
+                        <span className="font-bold text-white text-[11px]">#{event.sequenceNumber}</span>
+                        <span className="text-cyan-400 font-semibold">{event.eventType}</span>
+                        <span className="text-slate-500 text-[10px]">by {event.agentId}</span>
+                      </div>
+                      <span
+                        className={`text-[10px] font-bold px-2 py-0.5 rounded ${
+                          event.status === 'COMMITTED'
+                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                            : event.status === 'TAMPER_DETECTED'
+                            ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30'
+                            : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                        }`}
+                      >
+                        {event.status}
+                      </span>
+                    </div>
+
+                    <div className="text-[11px] text-slate-400 mb-2 leading-relaxed">
+                      {event.details}
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px] text-slate-500 pt-2 border-t border-slate-800/60">
+                      <div>prev_hash: <span className="text-slate-400">{event.prevHash}</span></div>
+                      <div>event_hash: <span className={isTampered ? 'text-rose-400 font-bold' : 'text-slate-400'}>{event.eventHash}</span></div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Forensic Diagnostic Outcome */}
+          <div className="bg-slate-900/90 rounded-2xl border border-cyan-500/30 p-5 shadow-xl relative overflow-hidden">
+            <div className="flex items-center gap-2 mb-2">
+              <RotateCcw className="w-4 h-4 text-cyan-400" />
+              <h3 className="text-sm font-bold text-white">Forensic Root-Cause Diagnostic</h3>
+            </div>
+            <p className="text-xs text-slate-300 leading-relaxed mb-3">
+              {results.forensicDiagnosticSummary}
+            </p>
+            <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-emerald-400 font-mono">
+              ✓ {results.statutoryComplianceVerdict}
+            </div>
+          </div>
+
+          {/* Architecture Comparison Table */}
+          <div className="rounded-2xl border border-slate-800 overflow-hidden bg-slate-900/60 shadow-xl">
+            <table className="w-full text-left text-xs font-mono">
+              <thead className="bg-slate-950/90 text-slate-400 border-b border-slate-800">
+                <tr>
+                  <th className="p-3">Architectural Vector</th>
+                  <th className="p-3 text-rose-400">Mutable Database (CRUD)</th>
+                  <th className="p-3 text-cyan-400">Elesium Event Store (CQRS)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                <tr>
+                  <td className="p-3 font-semibold text-white">State Mutability</td>
+                  <td className="p-3 text-rose-300">In-Place Overwrite (UPDATE)</td>
+                  <td className="p-3 text-cyan-300">Immutable Append-Only Log</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-semibold text-white">Cryptographic Verification</td>
+                  <td className="p-3 text-rose-300">None (Arbitrary SQL edits)</td>
+                  <td className="p-3 text-cyan-300">SHA-256 Merkle Chain Link</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-semibold text-white">Forensic Replay Speed</td>
+                  <td className="p-3 text-rose-300">Non-Replayable (Lost States)</td>
+                  <td className="p-3 text-cyan-300">85,000 events / second</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-semibold text-white">Statutory Readiness</td>
+                  <td className="p-3 text-rose-300">{results.crudMetrics.statutoryAuditReadinessScore} / 100 (Audit Risk)</td>
+                  <td className="p-3 text-emerald-400 font-bold">{results.eventSourcingMetrics.statutoryAuditReadinessScore} / 100 (Fully Compliant)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      {/* Technical Deep Dive Section */}
+      <div className="max-w-7xl mx-auto mb-16 border-t border-slate-800 pt-12">
+        <h2 className="text-2xl font-bold text-white mb-6">
+          The Non-Repudiation Triad: How Event Sourcing Protects Autonomous Workflows
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-400 leading-relaxed">
+          <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <h3 className="font-bold text-sm text-slate-200 mb-2 flex items-center gap-2">
+              <History className="w-4 h-4 text-cyan-400" />
+              1. Deterministic Time-Travel
+            </h3>
+            <p>
+              When an autonomous agent crashes or outputs an unexpected action, traditional databases cannot answer what sequence of facts triggered the hallucination. In Event Sourcing, engineers replay the exact stream from any snapshot, deterministically stepping through each agent decision in microsecond increments.
+            </p>
+          </div>
+          <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <h3 className="font-bold text-sm text-slate-200 mb-2 flex items-center gap-2">
+              <Lock className="w-4 h-4 text-emerald-400" />
+              2. SHA-256 Merkle Ledger
+            </h3>
+            <p>
+              Every event payload is cryptographically hashed with its ancestor. If any rogue process or database administrator attempts to modify prior events in the storage layer, the downstream hash chain breaks instantly, alerting operations and preventing unauthorized financial or regulatory state pollution.
+            </p>
+          </div>
+          <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <h3 className="font-bold text-sm text-slate-200 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4 text-purple-400" />
+              3. DPDP Act 2023 Statutory Proof
+            </h3>
+            <p>
+              India's DPDP Act 2023 mandates strict accountability on personal data processing and purpose limitation. Our event store links every automated action directly to an explicit consent event ID, providing instantaneous mathematical proof of compliance during statutory regulatory inspections.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Interactive FAQ Accordion */}
+      <div className="max-w-4xl mx-auto mb-16 border-t border-slate-800 pt-12">
+        <h2 className="text-2xl font-bold text-white mb-6 text-center">
+          Frequently Asked Questions: Multi-Agent Event Sourcing
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((item, idx) => (
+            <div key={idx} className="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+              <button
+                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-slate-200 hover:text-white transition-colors"
+              >
+                <span>{item.q}</span>
+                <ChevronDown className={`w-4 h-4 text-slate-400 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : ''}`} />
+              </button>
+              {openFaq === idx && (
+                <div className="px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-4">
+                  {item.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action Card */}
+      <div className="max-w-5xl mx-auto">
+        <div className="rounded-3xl border border-cyan-500/30 bg-gradient-to-b from-slate-900 to-slate-950 p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-cyan-500/5 blur-3xl pointer-events-none" />
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+            Lock Down Your Multi-Agent State Integrity Today
+          </h2>
+          <p className="text-sm text-slate-400 max-w-2xl mx-auto mb-8">
+            Deploy Elesium's Sovereign Append-Only Event Store inside your private VPC. Eliminate agent hallucination corruption, achieve zero data loss (RPO=0), and guarantee statutory audit compliance.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <ExpandableScreen>
+              <ExpandableScreenTrigger>
+                <button className="px-6 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm flex items-center gap-2 transition-all shadow-lg shadow-cyan-500/20">
+                  Request Architecture Mandate
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </ExpandableScreenTrigger>
+              <ExpandableScreenContent>
+                <div className="max-w-2xl mx-auto p-6">
+                  <MandateApplicationForm />
+                </div>
+              </ExpandableScreenContent>
+            </ExpandableScreen>
+            <Link
+              to="/solutions"
+              className="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold text-sm transition-all"
+            >
+              Explore 440+ BOFU Solutions
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Embed Modal */}
+      {isEmbedOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 relative shadow-2xl">
+            <button
+              onClick={() => setIsEmbedOpen(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <Code className="w-5 h-5 text-cyan-400" />
+              Embed Event Sourcing Audit Simulator
+            </h3>
+            <p className="text-xs text-slate-400 mb-4">
+              Copy and paste this HTML snippet into your technical documentation, blog, or dashboard:
+            </p>
+            <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-cyan-300 break-all select-all mb-4">
+              {embedCodeSnippet}
+            </div>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={copyEmbedCode}
+                className="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
+              >
+                {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                {hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Code'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
