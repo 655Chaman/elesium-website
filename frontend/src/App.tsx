@@ -35,6 +35,8 @@ const MultiAgentTokenLeakageSimulator = lazy(() => import('./components/pages/Mu
 const EmbedTokenLeakageSimulator = lazy(() => import('./components/pages/EmbedTokenLeakageSimulator'))
 const DpdpStatutoryAuditSimulator = lazy(() => import('./components/pages/DpdpStatutoryAuditSimulator'))
 const EmbedDpdpAuditSimulator = lazy(() => import('./components/pages/EmbedDpdpAuditSimulator'))
+const EnterpriseGpuCostCalculator = lazy(() => import('./components/pages/EnterpriseGpuCostCalculator'))
+const EmbedGpuCostCalculator = lazy(() => import('./components/pages/EmbedGpuCostCalculator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -116,6 +118,9 @@ function App() {
                             <Route path="/tools/dpdp-act-2023-audit-simulator" element={<DpdpStatutoryAuditSimulator />} />
                             <Route path="/tools/dpdp-audit-simulator" element={<Navigate to="/tools/dpdp-act-2023-audit-simulator" replace />} />
                             <Route path="/embed/dpdp-audit-simulator" element={<EmbedDpdpAuditSimulator />} />
+                            <Route path="/tools/enterprise-gpu-finops-cost-calculator" element={<EnterpriseGpuCostCalculator />} />
+                            <Route path="/tools/gpu-cost-calculator" element={<Navigate to="/tools/enterprise-gpu-finops-cost-calculator" replace />} />
+                            <Route path="/embed/gpu-cost-calculator" element={<EmbedGpuCostCalculator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

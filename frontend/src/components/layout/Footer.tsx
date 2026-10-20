@@ -13,6 +13,7 @@ export default function DownloadFooter() {
         { name: 'Multi-Agent Latency Estimator', path: '/tools/multi-agent-latency-token-cost-estimator' },
         { name: 'Multi-Agent Token Leakage Simulator', path: '/tools/multi-agent-token-leakage-simulator' },
         { name: 'DPDP Act 2023 Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
+        { name: 'Enterprise GPU FinOps Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

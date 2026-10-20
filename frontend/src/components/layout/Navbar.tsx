@@ -105,6 +105,12 @@ export default function Navbar() {
                             DPDP Audit
                         </Link>
                         <Link
+                            to="/tools/enterprise-gpu-finops-cost-calculator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-500 dark:text-sky-400"
+                        >
+                            GPU FinOps
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -240,6 +246,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-amber-500 dark:text-amber-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 DPDP Act 2023 Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-gpu-finops-cost-calculator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-sky-500 dark:text-sky-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                GPU FinOps Calculator
                             </Link>
                             <Link
                                 to="/compare"

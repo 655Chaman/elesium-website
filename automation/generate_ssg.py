@@ -1017,6 +1017,56 @@ def render_dpdp_audit_embed_semantic_html():
 </div>
 """
 
+def render_gpu_finops_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-gpu-finops-cost-calculator.
+    """
+    return """
+<div id="prerendered-gpu-finops-calculator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#38bdf8;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Infrastructure Sizing &amp; Hardware Physics</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise GPU FinOps &amp; Throughput Calculator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Compare total cost of ownership, VRAM allocation, and continuous batch throughput of self-hosted sovereign GPU clusters (NVIDIA H100, H200, A100) vs closed hyperscaler API token consumption.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Hardware Roofline &amp; Continuous Batching Economics</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #38bdf840;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin:0 0 0.5rem 0;">Self-Hosted Sovereign H100 Cluster</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">3.35 TB/s HBM3 memory bandwidth per GPU. Achieves sub-30ms first-token latency, zero cloud token egress, and 65% to 84% lower operational costs at scale.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#bae6fd;">Throughput: 2,500+ Tokens/sec (PagedAttention Saturation)</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Hyperscaler Multi-Tenant APIs</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Subject to cross-border network jitter, unpredictable rate limits, and continuous OpEx scaling that exceeds self-hosted infrastructure past 50M tokens/month.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Breakeven Threshold: ~40M–80M Tokens/Month</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_gpu_finops_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/gpu-cost-calculator.
+    """
+    return """
+<div id="prerendered-gpu-finops-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Enterprise GPU FinOps &amp; Throughput Calculator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Compare self-hosted sovereign GPU clusters vs hyperscaler APIs.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Calculate VRAM sizing, memory bandwidth roofline throughput, and 3-year TCO for sovereign enterprise AI infrastructure.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2165,6 +2215,14 @@ def generate_ssg():
         "embed/dpdp-audit-simulator": {
             "title": "DPDP Act 2023 Statutory Audit Simulator Widget",
             "desc": "Embeddable interactive DPDP Act 2023 statutory audit, penalty liability, and sovereign VPC checklist simulator."
+        },
+        "tools/enterprise-gpu-finops-cost-calculator": {
+            "title": "Enterprise GPU FinOps & Throughput Calculator",
+            "desc": "Calculate 3-year TCO, VRAM sizing, and token throughput comparing self-hosted sovereign NVIDIA H100/H200 clusters against Claude 3.5 Sonnet and GPT-4o APIs."
+        },
+        "embed/gpu-cost-calculator": {
+            "title": "Enterprise GPU FinOps & Throughput Calculator Widget",
+            "desc": "Embeddable interactive GPU FinOps, VRAM sizing, and throughput calculator comparing sovereign clusters against hyperscaler APIs."
         }
     }
 
@@ -2811,6 +2869,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(dpdp_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-gpu-finops-cost-calculator":
+            tool_content = render_gpu_finops_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            gpu_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise GPU FinOps & Throughput Calculator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Enterprise GPU FinOps Calculator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(gpu_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/gpu-cost-calculator":
+            embed_content = render_gpu_finops_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            gpu_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise GPU FinOps & Throughput Calculator Widget",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(gpu_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")
