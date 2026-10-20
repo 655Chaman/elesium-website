@@ -1642,6 +1642,61 @@ def render_structured_output_embed_semantic_html():
 </div>
 """
 
+def render_tracing_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-tracing-opentelemetry-simulator.
+    """
+    return """
+<div id="prerendered-agent-tracing-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic Observability &amp; Distributed Tracing Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Tracing &amp; OpenTelemetry Span Overhead Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark OpenTelemetry W3C distributed trace-context propagation vs blocking APM exporters and unmonitored agent meshes. Calculate sub-1.5ms span batching, tail-based telemetry compression, and MTTR reduction.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Observability Architecture Comparison</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Async OpenTelemetry Pipeline</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Lock-free RingBuffer batches W3C spans asynchronously to ClickHouse in sub-1.5ms, isolating DAG execution from network jitter with 97% MTTR cut.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Critical Overhead: +1.4ms | MTTR: 6.5m | Tail Sampling: 80% Cost Cut</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Synchronous Blocking APM Exporter</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Blocking socket calls on every tool and LLM hop add 60ms to 180ms to P99 workflow response times while racking up steep SaaS ingestion fees.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Critical Overhead: +57.6ms | MTTR: 38m | Full Telemetry Markup</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unmonitored Black-Box Agent Mesh</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Zero distributed context forces manual stdout grep triage, leaving engineers blind to asynchronous race conditions and resulting in 4.2h average MTTR.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Critical Overhead: 0.0ms | MTTR: 252m (4.2h) | Blind Cascade Failures</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_tracing_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-tracing-opentelemetry-simulator.
+    """
+    return """
+<div id="prerendered-agent-tracing-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Tracing &amp; OpenTelemetry Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating span export latency overhead, tail-based sampling compression, and incident MTTR reduction.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark non-blocking RingBuffer OpenTelemetry batching vs blocking cloud APM exporters across varying agent workflow depths and sampling strategies.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2878,6 +2933,14 @@ def generate_ssg():
         "embed/structured-output-latency-simulator": {
             "title": "Structured Output & JSON Grammar Decoding Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating grammar logit masking, zero retry token wastage, and cloud API spend reductions."
+        },
+        "tools/enterprise-agent-tracing-opentelemetry-simulator": {
+            "title": "Enterprise Multi-Agent Tracing & OpenTelemetry Span Overhead Simulator",
+            "desc": "Simulate and benchmark OpenTelemetry W3C distributed trace-context propagation vs blocking APM exporters and unmonitored agent meshes. Calculate sub-1.5ms span batching, tail-based telemetry compression, and MTTR reduction."
+        },
+        "embed/agent-tracing-opentelemetry-simulator": {
+            "title": "Multi-Agent Tracing & OpenTelemetry Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating span export latency overhead, tail-based sampling compression, and incident MTTR reduction."
         }
     }
 
@@ -4371,6 +4434,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(structured_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-tracing-opentelemetry-simulator":
+            tool_content = render_tracing_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            tracing_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Multi-Agent Tracing & OpenTelemetry Span Overhead Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "OpenTelemetry Tracing Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(tracing_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-tracing-opentelemetry-simulator":
+            embed_content = render_tracing_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            tracing_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Multi-Agent Tracing & OpenTelemetry Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(tracing_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

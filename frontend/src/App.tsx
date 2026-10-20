@@ -57,6 +57,8 @@ const EnterpriseModelRoutingSimulator = lazy(() => import('./components/pages/En
 const EmbedModelRoutingSimulator = lazy(() => import('./components/pages/EmbedModelRoutingSimulator'))
 const EnterpriseStructuredOutputSimulator = lazy(() => import('./components/pages/EnterpriseStructuredOutputSimulator'))
 const EmbedStructuredOutputSimulator = lazy(() => import('./components/pages/EmbedStructuredOutputSimulator'))
+const EnterpriseAgentTracingSimulator = lazy(() => import('./components/pages/EnterpriseAgentTracingSimulator'))
+const EmbedAgentTracingSimulator = lazy(() => import('./components/pages/EmbedAgentTracingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -171,6 +173,9 @@ function App() {
                             <Route path="/tools/enterprise-structured-output-latency-simulator" element={<EnterpriseStructuredOutputSimulator />} />
                             <Route path="/tools/structured-output-latency-simulator" element={<Navigate to="/tools/enterprise-structured-output-latency-simulator" replace />} />
                             <Route path="/embed/structured-output-latency-simulator" element={<EmbedStructuredOutputSimulator />} />
+                            <Route path="/tools/enterprise-agent-tracing-opentelemetry-simulator" element={<EnterpriseAgentTracingSimulator />} />
+                            <Route path="/tools/agent-tracing-opentelemetry-simulator" element={<Navigate to="/tools/enterprise-agent-tracing-opentelemetry-simulator" replace />} />
+                            <Route path="/embed/agent-tracing-opentelemetry-simulator" element={<EmbedAgentTracingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

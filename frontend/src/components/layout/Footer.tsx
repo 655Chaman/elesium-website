@@ -24,6 +24,7 @@ export default function DownloadFooter() {
         { name: 'Semantic Cache & Token Deduplication Simulator', path: '/tools/enterprise-semantic-cache-simulator' },
         { name: 'Multi-Model Dynamic Routing & Arbitrage Simulator', path: '/tools/enterprise-model-routing-cost-arbitrage-simulator' },
         { name: 'Structured Output & Grammar Decoding Simulator', path: '/tools/enterprise-structured-output-latency-simulator' },
+        { name: 'Multi-Agent Distributed Tracing & OpenTelemetry Simulator', path: '/tools/enterprise-agent-tracing-opentelemetry-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
