@@ -9,9 +9,12 @@ import {
     ArrowRight, 
     Check, 
     MessageSquare,
-    ExternalLink
+    ExternalLink,
+    Calendar
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { CalendarBookingEmbed } from '../cro/CalendarBookingEmbed';
+import { TrustProofRibbon } from '../cro/TrustProofRibbon';
 
 // Fallback WhatsApp Engineering Desk
 const WHATSAPP_NUMBER = '918317329312';
@@ -120,6 +123,7 @@ export default function Waitlist() {
     const [isLoading, setIsLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [confirmationCode, setConfirmationCode] = useState('');
+    const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
     // Pre-select workflow if param updates
     useEffect(() => {
@@ -406,12 +410,24 @@ export default function Waitlist() {
                                     className="p-6 md:p-10 rounded-3xl bg-white dark:bg-[#0c0c0c] border border-gray-200 dark:border-white/10 shadow-xl space-y-6"
                                 >
                                     <div className="border-b border-gray-100 dark:border-white/5 pb-5">
-                                        <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                            Enterprise Intake & System Discovery
-                                        </h2>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                            Please provide your corporate credentials to route to the principal engineering desk.
-                                        </p>
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                            <div>
+                                                <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                    Enterprise Intake & System Discovery
+                                                </h2>
+                                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                                    Please provide your corporate credentials to route to the principal engineering desk.
+                                                </p>
+                                            </div>
+                                            <button
+                                                type="button"
+                                                onClick={() => setIsCalendarOpen(true)}
+                                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide transition shrink-0"
+                                            >
+                                                <Calendar className="w-3.5 h-3.5" />
+                                                <span>⚡ Instant Calendar Slot</span>
+                                            </button>
+                                        </div>
                                     </div>
 
                                     {/* Name & Email Row */}
@@ -710,16 +726,24 @@ export default function Waitlist() {
                                         </div>
                                     </div>
 
-                                    {/* Direct WhatsApp Engineering Dispatch */}
-                                    <div className="pt-2">
+                                    {/* Instant Calendar Booking Option */}
+                                    <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                        <button
+                                            type="button"
+                                            onClick={() => setIsCalendarOpen(true)}
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 text-black font-bold text-xs hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 transition-all"
+                                        >
+                                            <Calendar className="w-4 h-4" />
+                                            <span>Pick Immediate Slot on Cal.com</span>
+                                        </button>
                                         <a
                                             href={whatsappUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold tracking-wide transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold tracking-wide transition-all"
                                         >
                                             <MessageSquare className="w-4 h-4" />
-                                            <span>Fast-Track Coordination via WhatsApp Engineering Desk</span>
+                                            <span>WhatsApp Desk</span>
                                             <ExternalLink className="w-3.5 h-3.5" />
                                         </a>
                                     </div>
@@ -730,6 +754,27 @@ export default function Waitlist() {
 
                 </div>
 
+                {/* Trust Proof Ribbon */}
+                <div className="pt-8">
+                    <TrustProofRibbon />
+                </div>
+
+                {/* Calendar Booking Embed Modal */}
+                <CalendarBookingEmbed
+                    isOpen={isCalendarOpen}
+                    onClose={() => setIsCalendarOpen(false)}
+                    prefill={{
+                        name: fullName,
+                        email: workEmail,
+                        company: companyName,
+                        notes: notes
+                    }}
+                    context={{
+                        solutionSlug: solutionParam,
+                        simulatedRoi: roiParam,
+                        complianceFrameworks: selectedCompliance
+                    }}
+                />
             </div>
         </motion.div>
     );

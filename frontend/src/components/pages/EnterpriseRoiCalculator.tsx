@@ -29,6 +29,7 @@ import {
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton';
+import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseRoiCalculator() {
     const [currency, setCurrency] = useState<Currency>('INR');
@@ -811,6 +812,17 @@ export default function EnterpriseRoiCalculator() {
                     </div>
                 </div>
             )}
+
+            {/* Exit Intent Executive Memo Modal */}
+            <ExitIntentMemoModal
+                toolName="Enterprise AI ROI & TCO Calculator"
+                simulatedMetrics={[
+                    { label: 'Year 1 Net Savings', value: formatCurrency(results.netAnnualSavingsYear1, currency) },
+                    { label: 'Payback Period', value: `${results.paybackPeriodMonths} Months` },
+                    { label: 'Turnaround Cut', value: `${results.turnaroundAccelerationPct}%` },
+                    { label: '3-Year Sovereign TCO', value: formatCurrency(results.elesium3YearSpend, currency) }
+                ]}
+            />
         </div>
     );
 }

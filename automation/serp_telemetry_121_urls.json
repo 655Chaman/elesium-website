@@ -196,6 +196,48 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/business-process-automation-ai-bangalore",
+    "path": "/signals/business-process-automation-ai-bangalore",
+    "slug": "business-process-automation-ai-bangalore",
+    "target_keyword": "business process automation ai bangalore",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 19.8,
+    "impressions": 1788,
+    "clicks": 7,
+    "ctr": 0.004,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/signals/ai-driven-document-processing-india",
+    "path": "/signals/ai-driven-document-processing-india",
+    "slug": "ai-driven-document-processing-india",
+    "target_keyword": "ai driven document processing india",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 16.5,
+    "impressions": 2455,
+    "clicks": 21,
+    "ctr": 0.0089,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/signals/open-source-llm-deployment-on-premise-india",
+    "path": "/signals/open-source-llm-deployment-on-premise-india",
+    "slug": "open-source-llm-deployment-on-premise-india",
+    "target_keyword": "open source llm deployment on premise india",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 17.0,
+    "impressions": 1180,
+    "clicks": 1,
+    "ctr": 0.0011,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/signals/ai-automation-agency-for-legal-firms-india",
     "path": "/signals/ai-automation-agency-for-legal-firms-india",
     "slug": "ai-automation-agency-for-legal-firms-india",
@@ -1316,6 +1358,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms",
+    "path": "/solutions/aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms",
+    "slug": "aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms",
+    "target_keyword": "aadhaar e-kyc and pan verification fraud defense telemetry for digital lending platforms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.2,
+    "impressions": 3252,
+    "clicks": 34,
+    "ctr": 0.0106,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/ac-impedance-high-frequency-charge-transfer-resistance-monitors-for-flow-stacks",
     "path": "/solutions/ac-impedance-high-frequency-charge-transfer-resistance-monitors-for-flow-stacks",
     "slug": "ac-impedance-high-frequency-charge-transfer-resistance-monitors-for-flow-stacks",
@@ -1470,6 +1526,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/adversarial-agent-prompt-injection-byzantine-quarantine-telemetry-for-sovereign-clusters",
+    "path": "/solutions/adversarial-agent-prompt-injection-byzantine-quarantine-telemetry-for-sovereign-clusters",
+    "slug": "adversarial-agent-prompt-injection-byzantine-quarantine-telemetry-for-sovereign-clusters",
+    "target_keyword": "adversarial agent prompt-injection byzantine quarantine telemetry for sovereign clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 872,
+    "clicks": 36,
+    "ctr": 0.0413,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/aerodynamic-friction-boundary-layer-transition-calorimeter-heat-flux-monitors-for-spaceplanes",
     "path": "/solutions/aerodynamic-friction-boundary-layer-transition-calorimeter-heat-flux-monitors-for-spaceplanes",
     "slug": "aerodynamic-friction-boundary-layer-transition-calorimeter-heat-flux-monitors-for-spaceplanes",
@@ -1536,6 +1606,20 @@
     "impressions": 2596,
     "clicks": 29,
     "ctr": 0.0113,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/aes-256-gcm-authenticated-tag-verification-hardware-coprocessor-throughput-telemetry-for-sovereign-agents",
+    "path": "/solutions/aes-256-gcm-authenticated-tag-verification-hardware-coprocessor-throughput-telemetry-for-sovereign-agents",
+    "slug": "aes-256-gcm-authenticated-tag-verification-hardware-coprocessor-throughput-telemetry-for-sovereign-agents",
+    "target_keyword": "aes-256-gcm authenticated tag verification hardware coprocessor throughput telemetry for sovereign agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 2429,
+    "clicks": 20,
+    "ctr": 0.0084,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -1666,6 +1750,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/air-gapped-cryptographic-root-of-trust-cold-boot-bus-interposer-mitigation-telemetry-for-enterprise-ai",
+    "path": "/solutions/air-gapped-cryptographic-root-of-trust-cold-boot-bus-interposer-mitigation-telemetry-for-enterprise-ai",
+    "slug": "air-gapped-cryptographic-root-of-trust-cold-boot-bus-interposer-mitigation-telemetry-for-enterprise-ai",
+    "target_keyword": "air-gapped cryptographic root-of-trust cold-boot bus interposer mitigation telemetry for enterprise AI",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.4,
+    "impressions": 3314,
+    "clicks": 132,
+    "ctr": 0.0399,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies",
     "path": "/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies",
     "slug": "air-gapped-intelligence-extraction-software-for-defense-agencies",
@@ -1690,6 +1788,20 @@
     "impressions": 1561,
     "clicks": 8,
     "ctr": 0.0052,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/air-gapped-private-vpc-llama-3-70b-inference-node-deployment-telemetry-for-indian-data-fiduciaries",
+    "path": "/solutions/air-gapped-private-vpc-llama-3-70b-inference-node-deployment-telemetry-for-indian-data-fiduciaries",
+    "slug": "air-gapped-private-vpc-llama-3-70b-inference-node-deployment-telemetry-for-indian-data-fiduciaries",
+    "target_keyword": "air-gapped private vpc llama-3 70b inference node deployment telemetry for indian data fiduciaries",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.3,
+    "impressions": 1073,
+    "clicks": 12,
+    "ctr": 0.0121,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -2086,6 +2198,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/argon2id-memory-hardened-master-key-derivation-side-channel-immunity-telemetry-for-confidential-agents",
+    "path": "/solutions/argon2id-memory-hardened-master-key-derivation-side-channel-immunity-telemetry-for-confidential-agents",
+    "slug": "argon2id-memory-hardened-master-key-derivation-side-channel-immunity-telemetry-for-confidential-agents",
+    "target_keyword": "argon2id memory-hardened master key derivation side-channel immunity telemetry for confidential agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.9,
+    "impressions": 2749,
+    "clicks": 18,
+    "ctr": 0.0068,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/arrayed-waveguide-grating-awg-channel-passband-spectral-insertion-loss-center-wavelength-telemetry-for-dwdm-pics",
     "path": "/solutions/arrayed-waveguide-grating-awg-channel-passband-spectral-insertion-loss-center-wavelength-telemetry-for-dwdm-pics",
     "slug": "arrayed-waveguide-grating-awg-channel-passband-spectral-insertion-loss-center-wavelength-telemetry-for-dwdm-pics",
@@ -2096,6 +2222,20 @@
     "impressions": 3568,
     "clicks": 42,
     "ctr": 0.0119,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/asynchronous-bft-abft-multi-agent-state-consensus-and-leaderless-epoch-finality-telemetry",
+    "path": "/solutions/asynchronous-bft-abft-multi-agent-state-consensus-and-leaderless-epoch-finality-telemetry",
+    "slug": "asynchronous-bft-abft-multi-agent-state-consensus-and-leaderless-epoch-finality-telemetry",
+    "target_keyword": "asynchronous bft abft multi-agent state consensus and leaderless epoch finality telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 225,
+    "clicks": 1,
+    "ctr": 0.0058,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -2240,6 +2380,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/automated-bank-guarantee-e-bg-verification-and-stamping-telemetry-for-infrastructure-contractors",
+    "path": "/solutions/automated-bank-guarantee-e-bg-verification-and-stamping-telemetry-for-infrastructure-contractors",
+    "slug": "automated-bank-guarantee-e-bg-verification-and-stamping-telemetry-for-infrastructure-contractors",
+    "target_keyword": "automated bank guarantee e-bg verification and stamping telemetry for infrastructure contractors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.3,
+    "impressions": 533,
+    "clicks": 8,
+    "ctr": 0.0153,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/automated-borrow-fee-optimization-and-short-locate-software-for-equity-prime-brokerages",
     "path": "/solutions/automated-borrow-fee-optimization-and-short-locate-software-for-equity-prime-brokerages",
     "slug": "automated-borrow-fee-optimization-and-short-locate-software-for-equity-prime-brokerages",
@@ -2250,6 +2404,20 @@
     "impressions": 281,
     "clicks": 10,
     "ctr": 0.0372,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/automated-byzantine-validator-slashing-and-quarantine-telemetry-for-autonomous-agent-governance",
+    "path": "/solutions/automated-byzantine-validator-slashing-and-quarantine-telemetry-for-autonomous-agent-governance",
+    "slug": "automated-byzantine-validator-slashing-and-quarantine-telemetry-for-autonomous-agent-governance",
+    "target_keyword": "automated byzantine validator slashing and quarantine telemetry for autonomous agent governance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 1776,
+    "clicks": 68,
+    "ctr": 0.0387,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -2338,6 +2506,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/automated-export-drawback-calculation-and-dgft-portal-synchronization-telemetry-for-manufacturing-exporters",
+    "path": "/solutions/automated-export-drawback-calculation-and-dgft-portal-synchronization-telemetry-for-manufacturing-exporters",
+    "slug": "automated-export-drawback-calculation-and-dgft-portal-synchronization-telemetry-for-manufacturing-exporters",
+    "target_keyword": "automated export drawback calculation and dgft portal synchronization telemetry for manufacturing exporters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 1402,
+    "clicks": 50,
+    "ctr": 0.0363,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/automated-fiber-placement-compaction-force-load-cell-pressure-distribution-telemetry-for-double-curvature-mandrels",
     "path": "/solutions/automated-fiber-placement-compaction-force-load-cell-pressure-distribution-telemetry-for-double-curvature-mandrels",
     "slug": "automated-fiber-placement-compaction-force-load-cell-pressure-distribution-telemetry-for-double-curvature-mandrels",
@@ -2404,6 +2586,20 @@
     "impressions": 3397,
     "clicks": 50,
     "ctr": 0.0149,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/automated-gst-audit-trail-generation-and-section-16-eligibility-verification-telemetry-for-corporate-fiduciaries",
+    "path": "/solutions/automated-gst-audit-trail-generation-and-section-16-eligibility-verification-telemetry-for-corporate-fiduciaries",
+    "slug": "automated-gst-audit-trail-generation-and-section-16-eligibility-verification-telemetry-for-corporate-fiduciaries",
+    "target_keyword": "automated gst audit trail generation and section 16 eligibility verification telemetry for corporate fiduciaries",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.4,
+    "impressions": 1564,
+    "clicks": 8,
+    "ctr": 0.0054,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -2688,6 +2884,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/autonomous-gst-tax-invoice-irn-invoice-reference-number-extraction-telemetry-for-enterprise-sap-erp",
+    "path": "/solutions/autonomous-gst-tax-invoice-irn-invoice-reference-number-extraction-telemetry-for-enterprise-sap-erp",
+    "slug": "autonomous-gst-tax-invoice-irn-invoice-reference-number-extraction-telemetry-for-enterprise-sap-erp",
+    "target_keyword": "autonomous gst tax invoice irn invoice reference number extraction telemetry for enterprise sap erp",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.5,
+    "impressions": 2675,
+    "clicks": 27,
+    "ctr": 0.0101,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/autonomous-lunar-rover-battery-depth-of-discharge-cryogenic-thermal-chamber-telemetry-for-cold-traps",
     "path": "/solutions/autonomous-lunar-rover-battery-depth-of-discharge-cryogenic-thermal-chamber-telemetry-for-cold-traps",
     "slug": "autonomous-lunar-rover-battery-depth-of-discharge-cryogenic-thermal-chamber-telemetry-for-cold-traps",
@@ -2828,6 +3038,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/awq-4-bit-activation-aware-weight-quantization-perplexity-preservation-telemetry-for-local-mistral-models",
+    "path": "/solutions/awq-4-bit-activation-aware-weight-quantization-perplexity-preservation-telemetry-for-local-mistral-models",
+    "slug": "awq-4-bit-activation-aware-weight-quantization-perplexity-preservation-telemetry-for-local-mistral-models",
+    "target_keyword": "awq 4-bit activation-aware weight quantization perplexity preservation telemetry for local mistral models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 2331,
+    "clicks": 73,
+    "ctr": 0.0315,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/b2b-buyer-intent-data-and-outbound-sales-platform--ii-55",
     "path": "/solutions/b2b-buyer-intent-data-and-outbound-sales-platform--ii-55",
     "slug": "b2b-buyer-intent-data-and-outbound-sales-platform--ii-55",
@@ -2838,6 +3062,20 @@
     "impressions": 1551,
     "clicks": 15,
     "ctr": 0.0102,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
+    "path": "/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
+    "slug": "b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
+    "target_keyword": "b2b e-way bill qr code cryptographic signature verification latency telemetry for logistics clearing agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.6,
+    "impressions": 3886,
+    "clicks": 24,
+    "ctr": 0.0063,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -3174,6 +3412,20 @@
     "impressions": 3642,
     "clicks": 56,
     "ctr": 0.0155,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/bellandur-gcc-sub-second-payroll-tax-calculation-and-provident-fund-statutory-filing-telemetry",
+    "path": "/solutions/bellandur-gcc-sub-second-payroll-tax-calculation-and-provident-fund-statutory-filing-telemetry",
+    "slug": "bellandur-gcc-sub-second-payroll-tax-calculation-and-provident-fund-statutory-filing-telemetry",
+    "target_keyword": "bellandur gcc sub-second payroll tax calculation and provident fund statutory filing telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 3022,
+    "clicks": 59,
+    "ctr": 0.0198,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -3878,6 +4130,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cert-in-6-hour-cybersecurity-incident-reporting-and-automated-forensic-state-capture-telemetry",
+    "path": "/solutions/cert-in-6-hour-cybersecurity-incident-reporting-and-automated-forensic-state-capture-telemetry",
+    "slug": "cert-in-6-hour-cybersecurity-incident-reporting-and-automated-forensic-state-capture-telemetry",
+    "target_keyword": "cert-in 6-hour cybersecurity incident reporting and automated forensic state capture telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.1,
+    "impressions": 3781,
+    "clicks": 45,
+    "ctr": 0.0121,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/chemical-mechanical-planarization-wafer-topography-erosion-modeling-software-for-fab-process-engineers",
     "path": "/solutions/chemical-mechanical-planarization-wafer-topography-erosion-modeling-software-for-fab-process-engineers",
     "slug": "chemical-mechanical-planarization-wafer-topography-erosion-modeling-software-for-fab-process-engineers",
@@ -3902,6 +4168,20 @@
     "impressions": 1849,
     "clicks": 19,
     "ctr": 0.0106,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
+    "path": "/solutions/chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
+    "slug": "chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
+    "target_keyword": "chunked prefill and decode execution interleaving latency jitter mitigation telemetry for vllm clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.6,
+    "impressions": 1266,
+    "clicks": 16,
+    "ctr": 0.0133,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -4494,6 +4774,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/common-criteria-eal6-plus-formally-verified-microcode-security-telemetry-for-government-air-gapped-vaults",
+    "path": "/solutions/common-criteria-eal6-plus-formally-verified-microcode-security-telemetry-for-government-air-gapped-vaults",
+    "slug": "common-criteria-eal6-plus-formally-verified-microcode-security-telemetry-for-government-air-gapped-vaults",
+    "target_keyword": "common criteria eal6 plus formally verified microcode security telemetry for government air-gapped vaults",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.1,
+    "impressions": 2491,
+    "clicks": 50,
+    "ctr": 0.0204,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/competition-commission-of-india-cci-merger-antitrust-market-concentration-telemetry-for-antitrust-counsels",
     "path": "/solutions/competition-commission-of-india-cci-merger-antitrust-market-concentration-telemetry-for-antitrust-counsels",
     "slug": "competition-commission-of-india-cci-merger-antitrust-market-concentration-telemetry-for-antitrust-counsels",
@@ -4756,6 +5050,20 @@
     "impressions": 2966,
     "clicks": 47,
     "ctr": 0.0161,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/continuous-dynamic-iteration-level-batching-queue-scheduling-telemetry-for-private-enterprise-vllm-engines",
+    "path": "/solutions/continuous-dynamic-iteration-level-batching-queue-scheduling-telemetry-for-private-enterprise-vllm-engines",
+    "slug": "continuous-dynamic-iteration-level-batching-queue-scheduling-telemetry-for-private-enterprise-vllm-engines",
+    "target_keyword": "continuous dynamic iteration-level batching queue scheduling telemetry for private enterprise vllm engines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.7,
+    "impressions": 2587,
+    "clicks": 15,
+    "ctr": 0.0059,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -5026,6 +5334,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/corporate-vendor-tds-section-194q-compliance-deduction-telemetry-for-accounting-controllers",
+    "path": "/solutions/corporate-vendor-tds-section-194q-compliance-deduction-telemetry-for-accounting-controllers",
+    "slug": "corporate-vendor-tds-section-194q-compliance-deduction-telemetry-for-accounting-controllers",
+    "target_keyword": "corporate vendor tds section 194q compliance deduction telemetry for accounting controllers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 1106,
+    "clicks": 6,
+    "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cost-of-enterprise-ai-automation-india",
     "path": "/solutions/cost-of-enterprise-ai-automation-india",
     "slug": "cost-of-enterprise-ai-automation-india",
@@ -5124,6 +5446,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cross-border-swift-mt103-and-iso-20022-xml-message-parsing-telemetry-for-enterprise-treasury",
+    "path": "/solutions/cross-border-swift-mt103-and-iso-20022-xml-message-parsing-telemetry-for-enterprise-treasury",
+    "slug": "cross-border-swift-mt103-and-iso-20022-xml-message-parsing-telemetry-for-enterprise-treasury",
+    "target_keyword": "cross-border swift mt103 and iso 20022 xml message parsing telemetry for enterprise treasury",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 3783,
+    "clicks": 59,
+    "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cross-docking-pallet-assignment-qubo-optimizers-for-distribution-centers",
     "path": "/solutions/cross-docking-pallet-assignment-qubo-optimizers-for-distribution-centers",
     "slug": "cross-docking-pallet-assignment-qubo-optimizers-for-distribution-centers",
@@ -5134,6 +5470,20 @@
     "impressions": 273,
     "clicks": 2,
     "ctr": 0.0092,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cross-region-wan-latency-jitter-packet-smoothing-telemetry-for-distributed-agent-consensus",
+    "path": "/solutions/cross-region-wan-latency-jitter-packet-smoothing-telemetry-for-distributed-agent-consensus",
+    "slug": "cross-region-wan-latency-jitter-packet-smoothing-telemetry-for-distributed-agent-consensus",
+    "target_keyword": "cross-region wan latency jitter packet smoothing telemetry for distributed agent consensus",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 2976,
+    "clicks": 36,
+    "ctr": 0.0122,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -5558,6 +5908,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cryptographic-validator-key-derivation-under-hsm-fips-140-3-enclaves-for-consensus-agents",
+    "path": "/solutions/cryptographic-validator-key-derivation-under-hsm-fips-140-3-enclaves-for-consensus-agents",
+    "slug": "cryptographic-validator-key-derivation-under-hsm-fips-140-3-enclaves-for-consensus-agents",
+    "target_keyword": "cryptographic validator key derivation under hsm fips 140-3 enclaves for consensus agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.9,
+    "impressions": 2879,
+    "clicks": 35,
+    "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cubesat-adcs-sensor-calibration-software-for-smallsat-operators",
     "path": "/solutions/cubesat-adcs-sensor-calibration-software-for-smallsat-operators",
     "slug": "cubesat-adcs-sensor-calibration-software-for-smallsat-operators",
@@ -5680,6 +6044,20 @@
     "impressions": 201,
     "clicks": 1,
     "ctr": 0.0052,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/debit-note-and-credit-note-reconciliation-with-original-tax-invoice-telemetry-for-sap-s4hana-workflows",
+    "path": "/solutions/debit-note-and-credit-note-reconciliation-with-original-tax-invoice-telemetry-for-sap-s4hana-workflows",
+    "slug": "debit-note-and-credit-note-reconciliation-with-original-tax-invoice-telemetry-for-sap-s4hana-workflows",
+    "target_keyword": "debit note and credit note reconciliation with original tax invoice telemetry for sap s4hana workflows",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.0,
+    "impressions": 1920,
+    "clicks": 5,
+    "ctr": 0.0029,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -6538,6 +6916,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/differential-power-analysis-dpa-side-channel-attack-attenuation-telemetry-for-cryptographic-coprocessors",
+    "path": "/solutions/differential-power-analysis-dpa-side-channel-attack-attenuation-telemetry-for-cryptographic-coprocessors",
+    "slug": "differential-power-analysis-dpa-side-channel-attack-attenuation-telemetry-for-cryptographic-coprocessors",
+    "target_keyword": "differential power analysis dpa side-channel attack attenuation telemetry for cryptographic coprocessors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.7,
+    "impressions": 3857,
+    "clicks": 71,
+    "ctr": 0.0186,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/differential-privacy-dpsgd-per-sample-gradient-clipping-norm-telemetry-for-federated-clinical-trial-records",
     "path": "/solutions/differential-privacy-dpsgd-per-sample-gradient-clipping-norm-telemetry-for-federated-clinical-trial-records",
     "slug": "differential-privacy-dpsgd-per-sample-gradient-clipping-norm-telemetry-for-federated-clinical-trial-records",
@@ -6874,6 +7266,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/distributed-state-machine-deadlock-circuit-breaker-telemetry-for-autonomous-orchestration-pipelines",
+    "path": "/solutions/distributed-state-machine-deadlock-circuit-breaker-telemetry-for-autonomous-orchestration-pipelines",
+    "slug": "distributed-state-machine-deadlock-circuit-breaker-telemetry-for-autonomous-orchestration-pipelines",
+    "target_keyword": "distributed state machine deadlock circuit breaker telemetry for autonomous orchestration pipelines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 3626,
+    "clicks": 19,
+    "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/district-heating-and-cooling-energy-load-balancing-agents-for-smart-cities",
     "path": "/solutions/district-heating-and-cooling-energy-load-balancing-agents-for-smart-cities",
     "slug": "district-heating-and-cooling-energy-load-balancing-agents-for-smart-cities",
@@ -7010,6 +7416,20 @@
     "impressions": 3356,
     "clicks": 48,
     "ctr": 0.0146,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dpdp-act-2023-section-8-statutory-personal-data-tokenization-hardware-telemetry-for-data-fiduciaries",
+    "path": "/solutions/dpdp-act-2023-section-8-statutory-personal-data-tokenization-hardware-telemetry-for-data-fiduciaries",
+    "slug": "dpdp-act-2023-section-8-statutory-personal-data-tokenization-hardware-telemetry-for-data-fiduciaries",
+    "target_keyword": "dpdp act 2023 section 8 statutory personal data tokenization hardware telemetry for data fiduciaries",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.2,
+    "impressions": 3012,
+    "clicks": 35,
+    "ctr": 0.0117,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7210,6 +7630,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/duplicate-invoice-number-detection-and-hash-fingerprint-collision-defense-telemetry-for-high-volume-billing",
+    "path": "/solutions/duplicate-invoice-number-detection-and-hash-fingerprint-collision-defense-telemetry-for-high-volume-billing",
+    "slug": "duplicate-invoice-number-detection-and-hash-fingerprint-collision-defense-telemetry-for-high-volume-billing",
+    "target_keyword": "duplicate invoice number detection and hash-fingerprint collision defense telemetry for high-volume billing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.1,
+    "impressions": 721,
+    "clicks": 6,
+    "ctr": 0.0097,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dynamic-geofencing-and-urban-canyon-gnss-multipath-mitigation-controllers-for-air-taxis",
     "path": "/solutions/dynamic-geofencing-and-urban-canyon-gnss-multipath-mitigation-controllers-for-air-taxis",
     "slug": "dynamic-geofencing-and-urban-canyon-gnss-multipath-mitigation-controllers-for-air-taxis",
@@ -7234,6 +7668,20 @@
     "impressions": 1370,
     "clicks": 17,
     "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-merchant-fee-escrow-settlement-telemetry-for-multi-vendor-retail-marketplaces",
+    "path": "/solutions/dynamic-merchant-fee-escrow-settlement-telemetry-for-multi-vendor-retail-marketplaces",
+    "slug": "dynamic-merchant-fee-escrow-settlement-telemetry-for-multi-vendor-retail-marketplaces",
+    "target_keyword": "dynamic merchant fee escrow settlement telemetry for multi-vendor retail marketplaces",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 3446,
+    "clicks": 24,
+    "ctr": 0.0072,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7294,6 +7742,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/e-invoicing-json-schema-v1-04-compliance-and-digital-signature-extraction-telemetry-for-tax-audit-readiness",
+    "path": "/solutions/e-invoicing-json-schema-v1-04-compliance-and-digital-signature-extraction-telemetry-for-tax-audit-readiness",
+    "slug": "e-invoicing-json-schema-v1-04-compliance-and-digital-signature-extraction-telemetry-for-tax-audit-readiness",
+    "target_keyword": "e-invoicing json schema v1-04 compliance and digital signature extraction telemetry for tax audit readiness",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.9,
+    "impressions": 3279,
+    "clicks": 38,
+    "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/earth-observation-satellite-automated-tasking-and-cloud-cover-prediction-software-for-remote-sensing-constellation-operators",
     "path": "/solutions/earth-observation-satellite-automated-tasking-and-cloud-cover-prediction-software-for-remote-sensing-constellation-operators",
     "slug": "earth-observation-satellite-automated-tasking-and-cloud-cover-prediction-software-for-remote-sensing-constellation-operators",
@@ -7304,6 +7766,20 @@
     "impressions": 739,
     "clicks": 12,
     "ctr": 0.0172,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ecdsa-secp256k1-projective-point-blinding-side-channel-resistance-telemetry-for-autonomous-transaction-signers",
+    "path": "/solutions/ecdsa-secp256k1-projective-point-blinding-side-channel-resistance-telemetry-for-autonomous-transaction-signers",
+    "slug": "ecdsa-secp256k1-projective-point-blinding-side-channel-resistance-telemetry-for-autonomous-transaction-signers",
+    "target_keyword": "ecdsa secp256k1 projective point blinding side-channel resistance telemetry for autonomous transaction signers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 1153,
+    "clicks": 12,
+    "ctr": 0.011,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7430,6 +7906,34 @@
     "impressions": 2946,
     "clicks": 24,
     "ctr": 0.0082,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises",
+    "path": "/solutions/electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises",
+    "slug": "electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises",
+    "target_keyword": "electronic city edge iot scada and sap erp synchronization telemetry for manufacturing enterprises",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.1,
+    "impressions": 3491,
+    "clicks": 147,
+    "ctr": 0.0422,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/electronic-city-phase-1-factory-line-machine-vision-defect-classification-telemetry-for-smt-assembly",
+    "path": "/solutions/electronic-city-phase-1-factory-line-machine-vision-defect-classification-telemetry-for-smt-assembly",
+    "slug": "electronic-city-phase-1-factory-line-machine-vision-defect-classification-telemetry-for-smt-assembly",
+    "target_keyword": "electronic city phase 1 factory line machine vision defect classification telemetry for smt assembly",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 2106,
+    "clicks": 15,
+    "ctr": 0.0072,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7616,6 +8120,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/environmental-failure-protection-efp-voltage-and-thermal-spike-zeroization-telemetry-for-secure-cryptoprocessors",
+    "path": "/solutions/environmental-failure-protection-efp-voltage-and-thermal-spike-zeroization-telemetry-for-secure-cryptoprocessors",
+    "slug": "environmental-failure-protection-efp-voltage-and-thermal-spike-zeroization-telemetry-for-secure-cryptoprocessors",
+    "target_keyword": "environmental failure protection efp voltage and thermal spike zeroization telemetry for secure cryptoprocessors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.1,
+    "impressions": 2161,
+    "clicks": 13,
+    "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/ephemeral-payload-hmac-sha256-hashing-and-token-masking-telemetry-for-sovereign-n8n-webhooks",
     "path": "/solutions/ephemeral-payload-hmac-sha256-hashing-and-token-masking-telemetry-for-sovereign-n8n-webhooks",
     "slug": "ephemeral-payload-hmac-sha256-hashing-and-token-masking-telemetry-for-sovereign-n8n-webhooks",
@@ -7626,6 +8144,20 @@
     "impressions": 2934,
     "clicks": 30,
     "ctr": 0.0104,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/epistemic-uncertainty-quorum-verification-telemetry-for-autonomous-credit-underwriting-swarms",
+    "path": "/solutions/epistemic-uncertainty-quorum-verification-telemetry-for-autonomous-credit-underwriting-swarms",
+    "slug": "epistemic-uncertainty-quorum-verification-telemetry-for-autonomous-credit-underwriting-swarms",
+    "target_keyword": "epistemic uncertainty quorum verification telemetry for autonomous credit underwriting swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.4,
+    "impressions": 234,
+    "clicks": 2,
+    "ctr": 0.0125,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8260,6 +8792,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fastag-commercial-toll-fleet-reconciliation-and-discrepancy-clearing-telemetry-for-logistics-carriers",
+    "path": "/solutions/fastag-commercial-toll-fleet-reconciliation-and-discrepancy-clearing-telemetry-for-logistics-carriers",
+    "slug": "fastag-commercial-toll-fleet-reconciliation-and-discrepancy-clearing-telemetry-for-logistics-carriers",
+    "target_keyword": "fastag commercial toll fleet reconciliation and discrepancy clearing telemetry for logistics carriers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.4,
+    "impressions": 2294,
+    "clicks": 56,
+    "ctr": 0.0248,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fed-batch-amino-acid-nutrient-depletion-prediction-and-feed-forward-software-for-mammalian-cell-culture",
     "path": "/solutions/fed-batch-amino-acid-nutrient-depletion-prediction-and-feed-forward-software-for-mammalian-cell-culture",
     "slug": "fed-batch-amino-acid-nutrient-depletion-prediction-and-feed-forward-software-for-mammalian-cell-culture",
@@ -8372,6 +8918,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fips-140-3-level-4-active-physical-zeroization-tamper-envelope-telemetry-for-banking-security-modules",
+    "path": "/solutions/fips-140-3-level-4-active-physical-zeroization-tamper-envelope-telemetry-for-banking-security-modules",
+    "slug": "fips-140-3-level-4-active-physical-zeroization-tamper-envelope-telemetry-for-banking-security-modules",
+    "target_keyword": "fips 140-3 level 4 active physical zeroization tamper envelope telemetry for banking security modules",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.1,
+    "impressions": 1011,
+    "clicks": 11,
+    "ctr": 0.0114,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fire-smoke-particulate-ionization-discrimination-agents-for-orbital-stations",
     "path": "/solutions/fire-smoke-particulate-ionization-discrimination-agents-for-orbital-stations",
     "slug": "fire-smoke-particulate-ionization-discrimination-agents-for-orbital-stations",
@@ -8438,6 +8998,20 @@
     "impressions": 1960,
     "clicks": 11,
     "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/flashinfer-fused-multi-head-attention-kernel-cuda-compute-efficiency-telemetry-for-on-premise-generative-ai",
+    "path": "/solutions/flashinfer-fused-multi-head-attention-kernel-cuda-compute-efficiency-telemetry-for-on-premise-generative-ai",
+    "slug": "flashinfer-fused-multi-head-attention-kernel-cuda-compute-efficiency-telemetry-for-on-premise-generative-ai",
+    "target_keyword": "flashinfer fused multi-head attention kernel cuda compute efficiency telemetry for on-premise generative AI",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.3,
+    "impressions": 2483,
+    "clicks": 64,
+    "ctr": 0.026,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8792,6 +9366,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fp8-e4m3-mixed-precision-matrix-multiplication-tensor-core-saturation-telemetry-for-hopper-h100-inference",
+    "path": "/solutions/fp8-e4m3-mixed-precision-matrix-multiplication-tensor-core-saturation-telemetry-for-hopper-h100-inference",
+    "slug": "fp8-e4m3-mixed-precision-matrix-multiplication-tensor-core-saturation-telemetry-for-hopper-h100-inference",
+    "target_keyword": "fp8 e4m3 mixed-precision matrix multiplication tensor core saturation telemetry for hopper h100 inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 3739,
+    "clicks": 112,
+    "ctr": 0.03,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fpga-tick-to-trade-kernel-execution-latency-optimization-software-for-proprietary-trading-desks",
     "path": "/solutions/fpga-tick-to-trade-kernel-execution-latency-optimization-software-for-proprietary-trading-desks",
     "slug": "fpga-tick-to-trade-kernel-execution-latency-optimization-software-for-proprietary-trading-desks",
@@ -9030,6 +9618,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/game-theoretic-byzantine-3f-plus-1-fault-tolerance-thresholding-telemetry-for-autonomous-clusters",
+    "path": "/solutions/game-theoretic-byzantine-3f-plus-1-fault-tolerance-thresholding-telemetry-for-autonomous-clusters",
+    "slug": "game-theoretic-byzantine-3f-plus-1-fault-tolerance-thresholding-telemetry-for-autonomous-clusters",
+    "target_keyword": "game-theoretic byzantine 3f-plus-1 fault tolerance thresholding telemetry for autonomous clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.0,
+    "impressions": 2780,
+    "clicks": 13,
+    "ctr": 0.0048,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/gas-diffusion-layer-carbon-fiber-intrusion-impedance-telemetry-for-fuel-cell-stacks",
     "path": "/solutions/gas-diffusion-layer-carbon-fiber-intrusion-impedance-telemetry-for-fuel-cell-stacks",
     "slug": "gas-diffusion-layer-carbon-fiber-intrusion-impedance-telemetry-for-fuel-cell-stacks",
@@ -9142,6 +9744,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/gossip-about-gossip-dag-hashgraph-state-synchronization-telemetry-for-high-frequency-trading-agents",
+    "path": "/solutions/gossip-about-gossip-dag-hashgraph-state-synchronization-telemetry-for-high-frequency-trading-agents",
+    "slug": "gossip-about-gossip-dag-hashgraph-state-synchronization-telemetry-for-high-frequency-trading-agents",
+    "target_keyword": "gossip-about-gossip dag hashgraph state synchronization telemetry for high-frequency trading agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 2733,
+    "clicks": 56,
+    "ctr": 0.0206,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/government-pension-fund-statutory-disbursement-audit-agents-for-fiduciaries",
     "path": "/solutions/government-pension-fund-statutory-disbursement-audit-agents-for-fiduciaries",
     "slug": "government-pension-fund-statutory-disbursement-audit-agents-for-fiduciaries",
@@ -9166,6 +9782,20 @@
     "impressions": 2711,
     "clicks": 34,
     "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/gpu-hbm3-high-bandwidth-memory-thermal-throttling-and-power-cap-telemetry-for-dense-inference-racks",
+    "path": "/solutions/gpu-hbm3-high-bandwidth-memory-thermal-throttling-and-power-cap-telemetry-for-dense-inference-racks",
+    "slug": "gpu-hbm3-high-bandwidth-memory-thermal-throttling-and-power-cap-telemetry-for-dense-inference-racks",
+    "target_keyword": "gpu hbm3 high bandwidth memory thermal throttling and power cap telemetry for dense inference racks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.5,
+    "impressions": 315,
+    "clicks": 12,
+    "ctr": 0.0393,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -9380,6 +10010,62 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/gst-e-invoicing-irp-portal-automated-json-payload-generation-telemetry-for-high-volume-billing",
+    "path": "/solutions/gst-e-invoicing-irp-portal-automated-json-payload-generation-telemetry-for-high-volume-billing",
+    "slug": "gst-e-invoicing-irp-portal-automated-json-payload-generation-telemetry-for-high-volume-billing",
+    "target_keyword": "gst e-invoicing irp portal automated json payload generation telemetry for high-volume billing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.6,
+    "impressions": 1156,
+    "clicks": 15,
+    "ctr": 0.0132,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/gst-rule-36-4-automated-input-tax-credit-matching-and-vendor-2b-reconciliation-telemetry",
+    "path": "/solutions/gst-rule-36-4-automated-input-tax-credit-matching-and-vendor-2b-reconciliation-telemetry",
+    "slug": "gst-rule-36-4-automated-input-tax-credit-matching-and-vendor-2b-reconciliation-telemetry",
+    "target_keyword": "gst rule 36-4 automated input tax credit matching and vendor 2b reconciliation telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.8,
+    "impressions": 1738,
+    "clicks": 24,
+    "ctr": 0.014,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/gstr-2b-automatic-input-tax-credit-itc-reconciliation-mismatch-resolution-telemetry-for-corporate-tax-teams",
+    "path": "/solutions/gstr-2b-automatic-input-tax-credit-itc-reconciliation-mismatch-resolution-telemetry-for-corporate-tax-teams",
+    "slug": "gstr-2b-automatic-input-tax-credit-itc-reconciliation-mismatch-resolution-telemetry-for-corporate-tax-teams",
+    "target_keyword": "gstr-2b automatic input tax credit itc reconciliation mismatch resolution telemetry for corporate tax teams",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 1052,
+    "clicks": 43,
+    "ctr": 0.0413,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/guidance-grammars-and-constrained-json-output-schema-enforcement-overhead-telemetry-for-local-function-calling",
+    "path": "/solutions/guidance-grammars-and-constrained-json-output-schema-enforcement-overhead-telemetry-for-local-function-calling",
+    "slug": "guidance-grammars-and-constrained-json-output-schema-enforcement-overhead-telemetry-for-local-function-calling",
+    "target_keyword": "guidance grammars and constrained json output schema enforcement overhead telemetry for local function calling",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.8,
+    "impressions": 2668,
+    "clicks": 18,
+    "ctr": 0.0071,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hafnium-oxide-hfox-filamentary-reram-cycle-to-cycle-resistance-variance-telemetry-for-neuromorphic-chips",
     "path": "/solutions/hafnium-oxide-hfox-filamentary-reram-cycle-to-cycle-resistance-variance-telemetry-for-neuromorphic-chips",
     "slug": "hafnium-oxide-hfox-filamentary-reram-cycle-to-cycle-resistance-variance-telemetry-for-neuromorphic-chips",
@@ -9460,6 +10146,20 @@
     "impressions": 3533,
     "clicks": 143,
     "ctr": 0.0406,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hardware-security-module-pkcs11-air-gapped-cryptographic-key-derivation-telemetry-for-autonomous-agents",
+    "path": "/solutions/hardware-security-module-pkcs11-air-gapped-cryptographic-key-derivation-telemetry-for-autonomous-agents",
+    "slug": "hardware-security-module-pkcs11-air-gapped-cryptographic-key-derivation-telemetry-for-autonomous-agents",
+    "target_keyword": "hardware security module pkcs11 air-gapped cryptographic key derivation telemetry for autonomous agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 2592,
+    "clicks": 107,
+    "ctr": 0.0413,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -9642,6 +10342,20 @@
     "impressions": 3116,
     "clicks": 41,
     "ctr": 0.0132,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/high-concurrency-ondc-merchant-catalog-reconciliation-and-dynamic-order-routing-telemetry",
+    "path": "/solutions/high-concurrency-ondc-merchant-catalog-reconciliation-and-dynamic-order-routing-telemetry",
+    "slug": "high-concurrency-ondc-merchant-catalog-reconciliation-and-dynamic-order-routing-telemetry",
+    "target_keyword": "high-concurrency ondc merchant catalog reconciliation and dynamic order routing telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.5,
+    "impressions": 3295,
+    "clicks": 46,
+    "ctr": 0.0142,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -10150,6 +10864,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/high-throughput-upi-2-0-merchant-dispute-settlement-and-chargeback-defense-telemetry-for-fintechs",
+    "path": "/solutions/high-throughput-upi-2-0-merchant-dispute-settlement-and-chargeback-defense-telemetry-for-fintechs",
+    "slug": "high-throughput-upi-2-0-merchant-dispute-settlement-and-chargeback-defense-telemetry-for-fintechs",
+    "target_keyword": "high-throughput upi 2-0 merchant dispute settlement and chargeback defense telemetry for fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 2883,
+    "clicks": 44,
+    "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/high-ticket-b2b-sales-and-b2b-buyer-intent-data-un-ii-43",
     "path": "/solutions/high-ticket-b2b-sales-and-b2b-buyer-intent-data-un-ii-43",
     "slug": "high-ticket-b2b-sales-and-b2b-buyer-intent-data-un-ii-43",
@@ -10370,6 +11098,20 @@
     "impressions": 1077,
     "clicks": 22,
     "ctr": 0.0213,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hsn-code-classification-and-gst-slab-rate-optical-recognition-confidence-telemetry-for-accounts-payable",
+    "path": "/solutions/hsn-code-classification-and-gst-slab-rate-optical-recognition-confidence-telemetry-for-accounts-payable",
+    "slug": "hsn-code-classification-and-gst-slab-rate-optical-recognition-confidence-telemetry-for-accounts-payable",
+    "target_keyword": "hsn code classification and gst slab rate optical recognition confidence telemetry for accounts payable",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.9,
+    "impressions": 3159,
+    "clicks": 49,
+    "ctr": 0.0156,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11172,6 +11914,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+    "path": "/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+    "slug": "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+    "target_keyword": "indian customs icegate automated bill of entry tariff reconciliation telemetry for freight forwarders",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.8,
+    "impressions": 2968,
+    "clicks": 18,
+    "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/induced-seismicity-traffic-light-system-controllers-for-geothermal-regulators",
     "path": "/solutions/induced-seismicity-traffic-light-system-controllers-for-geothermal-regulators",
     "slug": "induced-seismicity-traffic-light-system-controllers-for-geothermal-regulators",
@@ -11322,6 +12078,34 @@
     "impressions": 2219,
     "clicks": 82,
     "ctr": 0.0373,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/inter-state-igst-vs-intra-state-cgst-sgst-place-of-supply-determination-telemetry-for-autonomous-erp-agents",
+    "path": "/solutions/inter-state-igst-vs-intra-state-cgst-sgst-place-of-supply-determination-telemetry-for-autonomous-erp-agents",
+    "slug": "inter-state-igst-vs-intra-state-cgst-sgst-place-of-supply-determination-telemetry-for-autonomous-erp-agents",
+    "target_keyword": "inter-state igst vs intra-state cgst sgst place of supply determination telemetry for autonomous erp agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 781,
+    "clicks": 20,
+    "ctr": 0.0265,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/inter-token-generation-time-itgt-decode-memory-bandwidth-saturation-telemetry-for-enterprise-code-models",
+    "path": "/solutions/inter-token-generation-time-itgt-decode-memory-bandwidth-saturation-telemetry-for-enterprise-code-models",
+    "slug": "inter-token-generation-time-itgt-decode-memory-bandwidth-saturation-telemetry-for-enterprise-code-models",
+    "target_keyword": "inter-token generation time itgt decode memory bandwidth saturation telemetry for enterprise code models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 3183,
+    "clicks": 49,
+    "ctr": 0.0156,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11560,6 +12344,20 @@
     "impressions": 714,
     "clicks": 7,
     "ctr": 0.0104,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/langgraph-cyclical-state-machine-exception-recovery-and-circuit-breaker-telemetry-for-enterprise-operations",
+    "path": "/solutions/langgraph-cyclical-state-machine-exception-recovery-and-circuit-breaker-telemetry-for-enterprise-operations",
+    "slug": "langgraph-cyclical-state-machine-exception-recovery-and-circuit-breaker-telemetry-for-enterprise-operations",
+    "target_keyword": "langgraph cyclical state machine exception recovery and circuit breaker telemetry for enterprise operations",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.0,
+    "impressions": 2260,
+    "clicks": 26,
+    "ctr": 0.0119,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -12852,6 +13650,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/merkle-patricia-state-trie-cryptographic-root-verification-and-sub-kilobyte-proof-telemetry",
+    "path": "/solutions/merkle-patricia-state-trie-cryptographic-root-verification-and-sub-kilobyte-proof-telemetry",
+    "slug": "merkle-patricia-state-trie-cryptographic-root-verification-and-sub-kilobyte-proof-telemetry",
+    "target_keyword": "merkle patricia state trie cryptographic root verification and sub-kilobyte proof telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.8,
+    "impressions": 1958,
+    "clicks": 29,
+    "ctr": 0.0153,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/merkle-proof-sub-kilobyte-serialization-telemetry-for-edge-iot-and-factory-microcontrollers",
+    "path": "/solutions/merkle-proof-sub-kilobyte-serialization-telemetry-for-edge-iot-and-factory-microcontrollers",
+    "slug": "merkle-proof-sub-kilobyte-serialization-telemetry-for-edge-iot-and-factory-microcontrollers",
+    "target_keyword": "merkle proof sub-kilobyte serialization telemetry for edge iot and factory microcontrollers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.8,
+    "impressions": 1838,
+    "clicks": 46,
+    "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/metabolic-carbon-dioxide-production-forecasting-agents-for-crew-workouts",
     "path": "/solutions/metabolic-carbon-dioxide-production-forecasting-agents-for-crew-workouts",
     "slug": "metabolic-carbon-dioxide-production-forecasting-agents-for-crew-workouts",
@@ -13580,6 +14406,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-page-tabular-line-item-bounding-box-coordinates-extraction-telemetry-for-complex-industrial-invoices",
+    "path": "/solutions/multi-page-tabular-line-item-bounding-box-coordinates-extraction-telemetry-for-complex-industrial-invoices",
+    "slug": "multi-page-tabular-line-item-bounding-box-coordinates-extraction-telemetry-for-complex-industrial-invoices",
+    "target_keyword": "multi-page tabular line-item bounding box coordinates extraction telemetry for complex industrial invoices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 3833,
+    "clicks": 78,
+    "ctr": 0.0206,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-unit-activity-drift-compensation-algorithms-for-chronic-implants",
     "path": "/solutions/multi-unit-activity-drift-compensation-algorithms-for-chronic-implants",
     "slug": "multi-unit-activity-drift-compensation-algorithms-for-chronic-implants",
@@ -13590,6 +14430,34 @@
     "impressions": 2111,
     "clicks": 36,
     "ctr": 0.0171,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-validator-leaderless-consensus-telemetry-for-core-banking-transaction-switches",
+    "path": "/solutions/multi-validator-leaderless-consensus-telemetry-for-core-banking-transaction-switches",
+    "slug": "multi-validator-leaderless-consensus-telemetry-for-core-banking-transaction-switches",
+    "target_keyword": "multi-validator leaderless consensus telemetry for core banking transaction switches",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 2705,
+    "clicks": 68,
+    "ctr": 0.0255,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multicurrency-forex-arbitrage-hedging-and-real-time-state-reconciliation-telemetry-for-export-enterprises",
+    "path": "/solutions/multicurrency-forex-arbitrage-hedging-and-real-time-state-reconciliation-telemetry-for-export-enterprises",
+    "slug": "multicurrency-forex-arbitrage-hedging-and-real-time-state-reconciliation-telemetry-for-export-enterprises",
+    "target_keyword": "multicurrency forex arbitrage hedging and real-time state reconciliation telemetry for export enterprises",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 3492,
+    "clicks": 71,
+    "ctr": 0.0205,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14630,6 +15498,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/ondc-logistics-partner-sla-breach-automated-penalty-adjudication-telemetry-for-quick-commerce-networks",
+    "path": "/solutions/ondc-logistics-partner-sla-breach-automated-penalty-adjudication-telemetry-for-quick-commerce-networks",
+    "slug": "ondc-logistics-partner-sla-breach-automated-penalty-adjudication-telemetry-for-quick-commerce-networks",
+    "target_keyword": "ondc logistics partner sla breach automated penalty adjudication telemetry for quick commerce networks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 3193,
+    "clicks": 43,
+    "ctr": 0.0135,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ondc-network-transaction-settlement-and-automated-dispute-arbitration-telemetry-for-retail-merchants",
+    "path": "/solutions/ondc-network-transaction-settlement-and-automated-dispute-arbitration-telemetry-for-retail-merchants",
+    "slug": "ondc-network-transaction-settlement-and-automated-dispute-arbitration-telemetry-for-retail-merchants",
+    "target_keyword": "ondc network transaction settlement and automated dispute arbitration telemetry for retail merchants",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.8,
+    "impressions": 2438,
+    "clicks": 52,
+    "ctr": 0.0215,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos",
     "path": "/solutions/open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos",
     "slug": "open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos",
@@ -14644,6 +15540,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/open-source-vllm-kubernetes-ray-cluster-autoscaling-and-cold-start-latency-telemetry-for-private-vpc-ai",
+    "path": "/solutions/open-source-vllm-kubernetes-ray-cluster-autoscaling-and-cold-start-latency-telemetry-for-private-vpc-ai",
+    "slug": "open-source-vllm-kubernetes-ray-cluster-autoscaling-and-cold-start-latency-telemetry-for-private-vpc-ai",
+    "target_keyword": "open-source vllm kubernetes ray cluster autoscaling and cold-start latency telemetry for private vpc AI",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 3602,
+    "clicks": 71,
+    "ctr": 0.0198,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/operando-synchroton-x-ray-computed-tomography-battery-swelling-software-for-advanced-cell-researchers",
     "path": "/solutions/operando-synchroton-x-ray-computed-tomography-battery-swelling-software-for-advanced-cell-researchers",
     "slug": "operando-synchroton-x-ray-computed-tomography-battery-swelling-software-for-advanced-cell-researchers",
@@ -14654,6 +15564,20 @@
     "impressions": 1649,
     "clicks": 33,
     "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
+    "path": "/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
+    "slug": "optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
+    "target_keyword": "optical character recognition ocr degradation handling for thermal print transport bills and warehouse receipts",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 3955,
+    "clicks": 51,
+    "ctr": 0.0129,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14742,6 +15666,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/optimistic-fraud-proof-challenge-window-and-state-rollback-telemetry-for-multi-agent-ledgers",
+    "path": "/solutions/optimistic-fraud-proof-challenge-window-and-state-rollback-telemetry-for-multi-agent-ledgers",
+    "slug": "optimistic-fraud-proof-challenge-window-and-state-rollback-telemetry-for-multi-agent-ledgers",
+    "target_keyword": "optimistic fraud proof challenge window and state rollback telemetry for multi-agent ledgers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.2,
+    "impressions": 1782,
+    "clicks": 9,
+    "ctr": 0.0056,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/options-volatility-surface-arbitrage-and-skew-recalibration-software-for-derivatives-traders",
     "path": "/solutions/options-volatility-surface-arbitrage-and-skew-recalibration-software-for-derivatives-traders",
     "slug": "options-volatility-surface-arbitrage-and-skew-recalibration-software-for-derivatives-traders",
@@ -14766,6 +15704,20 @@
     "impressions": 573,
     "clicks": 23,
     "ctr": 0.0406,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/oracle-cloud-erp-automated-ledger-reconciliation-and-general-ledger-balance-verification-telemetry",
+    "path": "/solutions/oracle-cloud-erp-automated-ledger-reconciliation-and-general-ledger-balance-verification-telemetry",
+    "slug": "oracle-cloud-erp-automated-ledger-reconciliation-and-general-ledger-balance-verification-telemetry",
+    "target_keyword": "oracle cloud erp automated ledger reconciliation and general ledger balance verification telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.1,
+    "impressions": 3361,
+    "clicks": 125,
+    "ctr": 0.0372,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14938,6 +15890,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/outer-ring-road-gcc-cross-border-vendor-clearing-and-swift-message-reconciliation-telemetry",
+    "path": "/solutions/outer-ring-road-gcc-cross-border-vendor-clearing-and-swift-message-reconciliation-telemetry",
+    "slug": "outer-ring-road-gcc-cross-border-vendor-clearing-and-swift-message-reconciliation-telemetry",
+    "target_keyword": "outer ring road gcc cross-border vendor clearing and swift message reconciliation telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 415,
+    "clicks": 12,
+    "ctr": 0.0305,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/oxygen-generation-assembly-pem-electrolyzer-efficiency-agents-for-eclss",
     "path": "/solutions/oxygen-generation-assembly-pem-electrolyzer-efficiency-agents-for-eclss",
     "slug": "oxygen-generation-assembly-pem-electrolyzer-efficiency-agents-for-eclss",
@@ -15018,6 +15984,34 @@
     "impressions": 3469,
     "clicks": 69,
     "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pci-dss-v4-req-3-5-dual-control-split-knowledge-cryptographic-key-management-telemetry-for-fintech-agents",
+    "path": "/solutions/pci-dss-v4-req-3-5-dual-control-split-knowledge-cryptographic-key-management-telemetry-for-fintech-agents",
+    "slug": "pci-dss-v4-req-3-5-dual-control-split-knowledge-cryptographic-key-management-telemetry-for-fintech-agents",
+    "target_keyword": "pci-dss v4 req 3-5 dual-control split-knowledge cryptographic key management telemetry for fintech agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 3993,
+    "clicks": 53,
+    "ctr": 0.0135,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pcie-cryptoki-hardware-bus-latency-and-pipelined-session-arbitration-telemetry-for-enterprise-hsms",
+    "path": "/solutions/pcie-cryptoki-hardware-bus-latency-and-pipelined-session-arbitration-telemetry-for-enterprise-hsms",
+    "slug": "pcie-cryptoki-hardware-bus-latency-and-pipelined-session-arbitration-telemetry-for-enterprise-hsms",
+    "target_keyword": "pcie cryptoki hardware bus latency and pipelined session arbitration telemetry for enterprise hsms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 703,
+    "clicks": 5,
+    "ctr": 0.0085,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15316,6 +16310,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/physically-unclonable-function-puf-silicon-biometric-key-reconstruction-telemetry-for-hardened-security-modules",
+    "path": "/solutions/physically-unclonable-function-puf-silicon-biometric-key-reconstruction-telemetry-for-hardened-security-modules",
+    "slug": "physically-unclonable-function-puf-silicon-biometric-key-reconstruction-telemetry-for-hardened-security-modules",
+    "target_keyword": "physically unclonable function puf silicon biometric key reconstruction telemetry for hardened security modules",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 3106,
+    "clicks": 29,
+    "ctr": 0.0096,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/piezoelectric-droplet-on-demand-microfluidic-oligo-synthesizer-nozzle-health-software-for-biofoundry-leads",
     "path": "/solutions/piezoelectric-droplet-on-demand-microfluidic-oligo-synthesizer-nozzle-health-software-for-biofoundry-leads",
     "slug": "piezoelectric-droplet-on-demand-microfluidic-oligo-synthesizer-nozzle-health-software-for-biofoundry-leads",
@@ -15340,6 +16348,20 @@
     "impressions": 2482,
     "clicks": 16,
     "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pipeline-parallel-bubble-overhead-and-cross-node-infiniband-telemetry-for-405b-parameter-foundation-models",
+    "path": "/solutions/pipeline-parallel-bubble-overhead-and-cross-node-infiniband-telemetry-for-405b-parameter-foundation-models",
+    "slug": "pipeline-parallel-bubble-overhead-and-cross-node-infiniband-telemetry-for-405b-parameter-foundation-models",
+    "target_keyword": "pipeline parallel bubble overhead and cross-node infiniband telemetry for 405b parameter foundation models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.3,
+    "impressions": 3743,
+    "clicks": 38,
+    "ctr": 0.0103,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15582,6 +16604,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/post-quantum-ml-kem-768-lattice-key-encapsulation-mechanism-telemetry-for-enterprise-hsm-modules",
+    "path": "/solutions/post-quantum-ml-kem-768-lattice-key-encapsulation-mechanism-telemetry-for-enterprise-hsm-modules",
+    "slug": "post-quantum-ml-kem-768-lattice-key-encapsulation-mechanism-telemetry-for-enterprise-hsm-modules",
+    "target_keyword": "post-quantum ml-kem-768 lattice key encapsulation mechanism telemetry for enterprise hsm modules",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.5,
+    "impressions": 2215,
+    "clicks": 55,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/post-quantum-ml-kem-key-encapsulation-telemetry-for-sovereign-agent-communication",
     "path": "/solutions/post-quantum-ml-kem-key-encapsulation-telemetry-for-sovereign-agent-communication",
     "slug": "post-quantum-ml-kem-key-encapsulation-telemetry-for-sovereign-agent-communication",
@@ -15718,6 +16754,20 @@
     "impressions": 3683,
     "clicks": 131,
     "ctr": 0.0356,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/prefix-caching-and-multi-turn-conversational-prompt-reuse-efficiency-telemetry-for-customer-support-agents",
+    "path": "/solutions/prefix-caching-and-multi-turn-conversational-prompt-reuse-efficiency-telemetry-for-customer-support-agents",
+    "slug": "prefix-caching-and-multi-turn-conversational-prompt-reuse-efficiency-telemetry-for-customer-support-agents",
+    "target_keyword": "prefix caching and multi-turn conversational prompt reuse efficiency telemetry for customer support agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 1895,
+    "clicks": 20,
+    "ctr": 0.0108,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15872,6 +16922,20 @@
     "impressions": 2129,
     "clicks": 22,
     "ctr": 0.0106,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pydantic-v2-strict-schema-invariant-enforcement-telemetry-for-corporate-procurement-pipelines",
+    "path": "/solutions/pydantic-v2-strict-schema-invariant-enforcement-telemetry-for-corporate-procurement-pipelines",
+    "slug": "pydantic-v2-strict-schema-invariant-enforcement-telemetry-for-corporate-procurement-pipelines",
+    "target_keyword": "pydantic v2 strict schema invariant enforcement telemetry for corporate procurement pipelines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 1997,
+    "clicks": 29,
+    "ctr": 0.0149,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -16240,6 +17304,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+    "path": "/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+    "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+    "target_keyword": "rbi cyber security framework categorized air-gapped core banking hsm telemetry for payment processors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.2,
+    "impressions": 1542,
+    "clicks": 5,
+    "ctr": 0.0038,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/rbi-liberalised-remittance-scheme-lrs-automated-compliance-verification-telemetry-for-private-banks",
+    "path": "/solutions/rbi-liberalised-remittance-scheme-lrs-automated-compliance-verification-telemetry-for-private-banks",
+    "slug": "rbi-liberalised-remittance-scheme-lrs-automated-compliance-verification-telemetry-for-private-banks",
+    "target_keyword": "rbi liberalised remittance scheme lrs automated compliance verification telemetry for private banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.7,
+    "impressions": 1827,
+    "clicks": 24,
+    "ctr": 0.0136,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/re-usable-spaceplane-landing-gear-door-ceramic-seal-thermal-seepage-monitors-for-re-entry",
     "path": "/solutions/re-usable-spaceplane-landing-gear-door-ceramic-seal-thermal-seepage-monitors-for-re-entry",
     "slug": "re-usable-spaceplane-landing-gear-door-ceramic-seal-thermal-seepage-monitors-for-re-entry",
@@ -16506,6 +17598,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/reverse-charge-mechanism-rcm-identification-and-tax-liability-routing-telemetry-for-enterprise-finance",
+    "path": "/solutions/reverse-charge-mechanism-rcm-identification-and-tax-liability-routing-telemetry-for-enterprise-finance",
+    "slug": "reverse-charge-mechanism-rcm-identification-and-tax-liability-routing-telemetry-for-enterprise-finance",
+    "target_keyword": "reverse charge mechanism rcm identification and tax liability routing telemetry for enterprise finance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 3869,
+    "clicks": 32,
+    "ctr": 0.0084,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/reversible-solid-oxide-cell-rsoc-mode-switching-thermal-transient-mitigation-agents-for-microgrids",
     "path": "/solutions/reversible-solid-oxide-cell-rsoc-mode-switching-thermal-transient-mitigation-agents-for-microgrids",
     "slug": "reversible-solid-oxide-cell-rsoc-mode-switching-thermal-transient-mitigation-agents-for-microgrids",
@@ -16516,6 +17622,20 @@
     "impressions": 3727,
     "clicks": 93,
     "ctr": 0.0252,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/rfc-5869-hkdf-sha512-streaming-ephemeral-tokenization-latency-telemetry-for-sovereign-agent-vaults",
+    "path": "/solutions/rfc-5869-hkdf-sha512-streaming-ephemeral-tokenization-latency-telemetry-for-sovereign-agent-vaults",
+    "slug": "rfc-5869-hkdf-sha512-streaming-ephemeral-tokenization-latency-telemetry-for-sovereign-agent-vaults",
+    "target_keyword": "rfc 5869 hkdf-sha512 streaming ephemeral tokenization latency telemetry for sovereign agent vaults",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 1626,
+    "clicks": 15,
+    "ctr": 0.0096,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -16702,6 +17822,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/rotary-position-embedding-rope-long-context-extrapolation-perplexity-telemetry-for-128k-context-llm-servers",
+    "path": "/solutions/rotary-position-embedding-rope-long-context-extrapolation-perplexity-telemetry-for-128k-context-llm-servers",
+    "slug": "rotary-position-embedding-rope-long-context-extrapolation-perplexity-telemetry-for-128k-context-llm-servers",
+    "target_keyword": "rotary position embedding rope long-context extrapolation perplexity telemetry for 128k context llm servers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 213,
+    "clicks": 2,
+    "ctr": 0.0135,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/rov-hot-stab-fluid-injection-hydraulic-flushing-controllers-for-skids",
     "path": "/solutions/rov-hot-stab-fluid-injection-hydraulic-flushing-controllers-for-skids",
     "slug": "rov-hot-stab-fluid-injection-hydraulic-flushing-controllers-for-skids",
@@ -16796,6 +17930,20 @@
     "impressions": 1162,
     "clicks": 7,
     "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/row-level-security-postgresql-immutable-consensus-audit-log-storage-telemetry-for-banking-fiduciaries",
+    "path": "/solutions/row-level-security-postgresql-immutable-consensus-audit-log-storage-telemetry-for-banking-fiduciaries",
+    "slug": "row-level-security-postgresql-immutable-consensus-audit-log-storage-telemetry-for-banking-fiduciaries",
+    "target_keyword": "row-level security postgresql immutable consensus audit log storage telemetry for banking fiduciaries",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.8,
+    "impressions": 448,
+    "clicks": 14,
+    "ctr": 0.0327,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -16968,6 +18116,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sap-s4hana-rfc-sub-200ms-idempotent-commit-telemetry-for-corporate-accounting-pipelines",
+    "path": "/solutions/sap-s4hana-rfc-sub-200ms-idempotent-commit-telemetry-for-corporate-accounting-pipelines",
+    "slug": "sap-s4hana-rfc-sub-200ms-idempotent-commit-telemetry-for-corporate-accounting-pipelines",
+    "target_keyword": "sap s4hana rfc sub-200ms idempotent commit telemetry for corporate accounting pipelines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 1836,
+    "clicks": 38,
+    "ctr": 0.0211,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sar-ocean-wind-vector-and-wave-height-sea-state-estimation-software-for-offshore-meteorological-forecasters",
     "path": "/solutions/sar-ocean-wind-vector-and-wave-height-sea-state-estimation-software-for-offshore-meteorological-forecasters",
     "slug": "sar-ocean-wind-vector-and-wave-height-sea-state-estimation-software-for-offshore-meteorological-forecasters",
@@ -16992,6 +18154,20 @@
     "impressions": 2995,
     "clicks": 38,
     "ctr": 0.0129,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sarjapur-tech-park-vendor-compliance-and-msme-statutory-45-day-clearance-tracking-telemetry",
+    "path": "/solutions/sarjapur-tech-park-vendor-compliance-and-msme-statutory-45-day-clearance-tracking-telemetry",
+    "slug": "sarjapur-tech-park-vendor-compliance-and-msme-statutory-45-day-clearance-tracking-telemetry",
+    "target_keyword": "sarjapur tech park vendor compliance and msme statutory 45-day clearance tracking telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 3756,
+    "clicks": 79,
+    "ctr": 0.0211,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -17794,6 +18970,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/section-63-bsa-digital-electronic-evidence-admissibility-and-sha-256-state-hashing-telemetry",
+    "path": "/solutions/section-63-bsa-digital-electronic-evidence-admissibility-and-sha-256-state-hashing-telemetry",
+    "slug": "section-63-bsa-digital-electronic-evidence-admissibility-and-sha-256-state-hashing-telemetry",
+    "target_keyword": "section 63 bsa digital electronic evidence admissibility and sha-256 state hashing telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.7,
+    "impressions": 2827,
+    "clicks": 32,
+    "ctr": 0.0115,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/secure-multi-party-computation-threshold-telemetry-for-cross-border-syndicated-loans",
     "path": "/solutions/secure-multi-party-computation-threshold-telemetry-for-cross-border-syndicated-loans",
     "slug": "secure-multi-party-computation-threshold-telemetry-for-cross-border-syndicated-loans",
@@ -17934,6 +19124,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sez-special-economic-zone-zero-rated-supply-bond-and-lut-declaration-extraction-telemetry-for-exporters",
+    "path": "/solutions/sez-special-economic-zone-zero-rated-supply-bond-and-lut-declaration-extraction-telemetry-for-exporters",
+    "slug": "sez-special-economic-zone-zero-rated-supply-bond-and-lut-declaration-extraction-telemetry-for-exporters",
+    "target_keyword": "sez special economic zone zero-rated supply bond and lut declaration extraction telemetry for exporters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.3,
+    "impressions": 863,
+    "clicks": 17,
+    "ctr": 0.0198,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/shamir-threshold-secret-sharing-telemetry-for-private-multi-party-loan-underwriting",
     "path": "/solutions/shamir-threshold-secret-sharing-telemetry-for-private-multi-party-loan-underwriting",
     "slug": "shamir-threshold-secret-sharing-telemetry-for-private-multi-party-loan-underwriting",
@@ -17944,6 +19148,20 @@
     "impressions": 1813,
     "clicks": 37,
     "ctr": 0.0206,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sharded-state-trie-parallel-execution-telemetry-for-multi-tenant-enterprise-erp-backbones",
+    "path": "/solutions/sharded-state-trie-parallel-execution-telemetry-for-multi-tenant-enterprise-erp-backbones",
+    "slug": "sharded-state-trie-parallel-execution-telemetry-for-multi-tenant-enterprise-erp-backbones",
+    "target_keyword": "sharded state trie parallel execution telemetry for multi-tenant enterprise erp backbones",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.4,
+    "impressions": 3874,
+    "clicks": 53,
+    "ctr": 0.0139,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -19068,6 +20286,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sovereign-indian-rupee-trade-settlement-and-vostro-account-reconciliation-telemetry-for-cross-border-banks",
+    "path": "/solutions/sovereign-indian-rupee-trade-settlement-and-vostro-account-reconciliation-telemetry-for-cross-border-banks",
+    "slug": "sovereign-indian-rupee-trade-settlement-and-vostro-account-reconciliation-telemetry-for-cross-border-banks",
+    "target_keyword": "sovereign indian rupee trade settlement and vostro account reconciliation telemetry for cross-border banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.0,
+    "impressions": 1010,
+    "clicks": 43,
+    "ctr": 0.0431,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sovereign-national-id-credential-revocation-registry-software-for-digital-ministries",
     "path": "/solutions/sovereign-national-id-credential-revocation-registry-software-for-digital-ministries",
     "slug": "sovereign-national-id-credential-revocation-registry-software-for-digital-ministries",
@@ -19572,6 +20804,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/speculative-decoding-draft-model-verification-acceptance-rate-telemetry-for-on-premise-deepseek-v2-inference",
+    "path": "/solutions/speculative-decoding-draft-model-verification-acceptance-rate-telemetry-for-on-premise-deepseek-v2-inference",
+    "slug": "speculative-decoding-draft-model-verification-acceptance-rate-telemetry-for-on-premise-deepseek-v2-inference",
+    "target_keyword": "speculative decoding draft model verification acceptance rate telemetry for on-premise deepseek-v2 inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 1206,
+    "clicks": 6,
+    "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/spike-timing-dependent-plasticity-stdp-on-chip-synaptic-weight-update-telemetry-for-neuromorphic-agents",
     "path": "/solutions/spike-timing-dependent-plasticity-stdp-on-chip-synaptic-weight-update-telemetry-for-neuromorphic-agents",
     "slug": "spike-timing-dependent-plasticity-stdp-on-chip-synaptic-weight-update-telemetry-for-neuromorphic-agents",
@@ -19792,6 +21038,20 @@
     "impressions": 900,
     "clicks": 8,
     "ctr": 0.0094,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/statutory-withholding-tax-tds-section-194q-automated-deduction-validation-telemetry-for-high-value-procurement",
+    "path": "/solutions/statutory-withholding-tax-tds-section-194q-automated-deduction-validation-telemetry-for-high-value-procurement",
+    "slug": "statutory-withholding-tax-tds-section-194q-automated-deduction-validation-telemetry-for-high-value-procurement",
+    "target_keyword": "statutory withholding tax tds section 194q automated deduction validation telemetry for high-value procurement",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 403,
+    "clicks": 5,
+    "ctr": 0.0126,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -20184,6 +21444,20 @@
     "impressions": 2504,
     "clicks": 32,
     "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-50ms-finality-state-commitment-telemetry-for-sovereign-private-multi-agent-clusters",
+    "path": "/solutions/sub-50ms-finality-state-commitment-telemetry-for-sovereign-private-multi-agent-clusters",
+    "slug": "sub-50ms-finality-state-commitment-telemetry-for-sovereign-private-multi-agent-clusters",
+    "target_keyword": "sub-50ms finality state commitment telemetry for sovereign private multi-agent clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 3149,
+    "clicks": 29,
+    "ctr": 0.0094,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -21938,6 +23212,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/supplier-gstin-checksum-validation-and-suspended-registration-detection-telemetry-for-automated-vendor-portals",
+    "path": "/solutions/supplier-gstin-checksum-validation-and-suspended-registration-detection-telemetry-for-automated-vendor-portals",
+    "slug": "supplier-gstin-checksum-validation-and-suspended-registration-detection-telemetry-for-automated-vendor-portals",
+    "target_keyword": "supplier gstin checksum validation and suspended registration detection telemetry for automated vendor portals",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.1,
+    "impressions": 531,
+    "clicks": 13,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
     "path": "/solutions/supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
     "slug": "supply-chain-partner-matching-and-high-ticket-b2b-sales-66",
@@ -22330,6 +23618,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/tensor-parallel-inter-gpu-nvlink-collective-communication-all-reduce-latency-telemetry-for-llama-70b-inference",
+    "path": "/solutions/tensor-parallel-inter-gpu-nvlink-collective-communication-all-reduce-latency-telemetry-for-llama-70b-inference",
+    "slug": "tensor-parallel-inter-gpu-nvlink-collective-communication-all-reduce-latency-telemetry-for-llama-70b-inference",
+    "target_keyword": "tensor parallel inter-gpu nvlink collective communication all-reduce latency telemetry for llama-70b inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.8,
+    "impressions": 2768,
+    "clicks": 69,
+    "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/terminal-deoxynucleotidyl-transferase-tdt-enzymatic-dna-synthesis-coupling-efficiency-software-for-oligo-leads",
     "path": "/solutions/terminal-deoxynucleotidyl-transferase-tdt-enzymatic-dna-synthesis-coupling-efficiency-software-for-oligo-leads",
     "slug": "terminal-deoxynucleotidyl-transferase-tdt-enzymatic-dna-synthesis-coupling-efficiency-software-for-oligo-leads",
@@ -22526,6 +23828,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap",
+    "path": "/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap",
+    "slug": "three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap",
+    "target_keyword": "three-way invoice purchase order goods receipt po-grn matching tolerance telemetry for enterprise sap",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 3715,
+    "clicks": 59,
+    "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/time-to-first-spike-ttfs-temporal-latency-arbitration-telemetry-for-neuromorphic-sensory-processors",
     "path": "/solutions/time-to-first-spike-ttfs-temporal-latency-arbitration-telemetry-for-neuromorphic-sensory-processors",
     "slug": "time-to-first-spike-ttfs-temporal-latency-arbitration-telemetry-for-neuromorphic-sensory-processors",
@@ -22536,6 +23852,20 @@
     "impressions": 1297,
     "clicks": 21,
     "ctr": 0.0165,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/time-to-first-token-ttft-prompt-prefill-latency-arbitration-telemetry-for-air-gapped-legal-llm-deployments",
+    "path": "/solutions/time-to-first-token-ttft-prompt-prefill-latency-arbitration-telemetry-for-air-gapped-legal-llm-deployments",
+    "slug": "time-to-first-token-ttft-prompt-prefill-latency-arbitration-telemetry-for-air-gapped-legal-llm-deployments",
+    "target_keyword": "time to first token ttft prompt prefill latency arbitration telemetry for air-gapped legal llm deployments",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.6,
+    "impressions": 2146,
+    "clicks": 24,
+    "ctr": 0.0112,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -23198,6 +24528,48 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/triton-custom-decode-kernel-register-pressure-and-sm-occupancy-telemetry-for-sovereign-on-premise-llms",
+    "path": "/solutions/triton-custom-decode-kernel-register-pressure-and-sm-occupancy-telemetry-for-sovereign-on-premise-llms",
+    "slug": "triton-custom-decode-kernel-register-pressure-and-sm-occupancy-telemetry-for-sovereign-on-premise-llms",
+    "target_keyword": "triton custom decode kernel register pressure and sm occupancy telemetry for sovereign on-premise llms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.3,
+    "impressions": 1723,
+    "clicks": 17,
+    "ctr": 0.0103,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/triton-vllm-pagedattention-kv-cache-allocation-and-sub-20ms-ttft-optimization-telemetry",
+    "path": "/solutions/triton-vllm-pagedattention-kv-cache-allocation-and-sub-20ms-ttft-optimization-telemetry",
+    "slug": "triton-vllm-pagedattention-kv-cache-allocation-and-sub-20ms-ttft-optimization-telemetry",
+    "target_keyword": "triton vllm pagedattention kv-cache allocation and sub-20ms ttft optimization telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.5,
+    "impressions": 1455,
+    "clicks": 26,
+    "ctr": 0.0181,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/true-random-number-generator-trng-continuous-entropy-health-monitoring-telemetry-for-sovereign-crypto-enclaves",
+    "path": "/solutions/true-random-number-generator-trng-continuous-entropy-health-monitoring-telemetry-for-sovereign-crypto-enclaves",
+    "slug": "true-random-number-generator-trng-continuous-entropy-health-monitoring-telemetry-for-sovereign-crypto-enclaves",
+    "target_keyword": "true random number generator trng continuous entropy health monitoring telemetry for sovereign crypto enclaves",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.5,
+    "impressions": 1595,
+    "clicks": 28,
+    "ctr": 0.0181,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/tungsten-monoblock-castellated-gap-halo-current-shunt-voltage-sensor-telemetry-for-fusion-divertor-plates",
     "path": "/solutions/tungsten-monoblock-castellated-gap-halo-current-shunt-voltage-sensor-telemetry-for-fusion-divertor-plates",
     "slug": "tungsten-monoblock-castellated-gap-halo-current-shunt-voltage-sensor-telemetry-for-fusion-divertor-plates",
@@ -23590,6 +24962,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/vernacular-invoice-ocr-tokenization-telemetry-for-tier-2-and-tier-3-indian-retail-distributors",
+    "path": "/solutions/vernacular-invoice-ocr-tokenization-telemetry-for-tier-2-and-tier-3-indian-retail-distributors",
+    "slug": "vernacular-invoice-ocr-tokenization-telemetry-for-tier-2-and-tier-3-indian-retail-distributors",
+    "target_keyword": "vernacular invoice ocr tokenization telemetry for tier-2 and tier-3 indian retail distributors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.7,
+    "impressions": 1117,
+    "clicks": 13,
+    "ctr": 0.0117,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/vernacular-voice-nlu-hindi-hinglish-speech-recognition-accuracy-telemetry-for-e-commerce-checkout",
     "path": "/solutions/vernacular-voice-nlu-hindi-hinglish-speech-recognition-accuracy-telemetry-for-e-commerce-checkout",
     "slug": "vernacular-voice-nlu-hindi-hinglish-speech-recognition-accuracy-telemetry-for-e-commerce-checkout",
@@ -23684,6 +25070,20 @@
     "impressions": 241,
     "clicks": 1,
     "ctr": 0.0042,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/vllm-pagedattention-non-contiguous-physical-memory-kv-cache-fragmentation-telemetry-for-on-premise-clusters",
+    "path": "/solutions/vllm-pagedattention-non-contiguous-physical-memory-kv-cache-fragmentation-telemetry-for-on-premise-clusters",
+    "slug": "vllm-pagedattention-non-contiguous-physical-memory-kv-cache-fragmentation-telemetry-for-on-premise-clusters",
+    "target_keyword": "vllm pagedattention non-contiguous physical memory kv cache fragmentation telemetry for on-premise clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.2,
+    "impressions": 3052,
+    "clicks": 32,
+    "ctr": 0.0106,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -23884,6 +25284,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/whitefield-aerospace-and-medical-device-multilingual-document-ingestion-telemetry-for-regulatory-compliance",
+    "path": "/solutions/whitefield-aerospace-and-medical-device-multilingual-document-ingestion-telemetry-for-regulatory-compliance",
+    "slug": "whitefield-aerospace-and-medical-device-multilingual-document-ingestion-telemetry-for-regulatory-compliance",
+    "target_keyword": "whitefield aerospace and medical device multilingual document ingestion telemetry for regulatory compliance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 2549,
+    "clicks": 63,
+    "ctr": 0.025,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/whitefield-sez-automated-customs-e-way-bill-verification-and-consignment-clearance-telemetry",
+    "path": "/solutions/whitefield-sez-automated-customs-e-way-bill-verification-and-consignment-clearance-telemetry",
+    "slug": "whitefield-sez-automated-customs-e-way-bill-verification-and-consignment-clearance-telemetry",
+    "target_keyword": "whitefield sez automated customs e-way bill verification and consignment clearance telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.6,
+    "impressions": 916,
+    "clicks": 27,
+    "ctr": 0.0304,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/wildland-urban-interface-wildfire-burn-perimeter-and-smoke-spread-software-for-disaster-response-agencies",
     "path": "/solutions/wildland-urban-interface-wildfire-burn-perimeter-and-smoke-spread-software-for-disaster-response-agencies",
     "slug": "wildland-urban-interface-wildfire-burn-perimeter-and-smoke-spread-software-for-disaster-response-agencies",
@@ -24020,6 +25448,20 @@
     "impressions": 2953,
     "clicks": 91,
     "ctr": 0.031,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-knowledge-stark-validity-state-rollup-proof-verification-telemetry-for-private-enterprise-ledgers",
+    "path": "/solutions/zero-knowledge-stark-validity-state-rollup-proof-verification-telemetry-for-private-enterprise-ledgers",
+    "slug": "zero-knowledge-stark-validity-state-rollup-proof-verification-telemetry-for-private-enterprise-ledgers",
+    "target_keyword": "zero-knowledge stark validity state rollup proof verification telemetry for private enterprise ledgers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.7,
+    "impressions": 2977,
+    "clicks": 32,
+    "ctr": 0.0109,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },

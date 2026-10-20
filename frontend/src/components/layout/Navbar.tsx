@@ -285,6 +285,12 @@ export default function Navbar() {
                             Agent HSM PKCS#11
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-graph-consensus-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
+                        >
+                            Graph Consensus
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -630,6 +636,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Agent HSM PKCS#11 Air-Gapped Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-graph-consensus-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Agent Graph Consensus &amp; State Verifier Simulator
                             </Link>
                             <Link
                                 to="/compare"

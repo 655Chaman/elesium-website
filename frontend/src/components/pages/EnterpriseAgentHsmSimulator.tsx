@@ -26,6 +26,7 @@ import {
 } from '../calculator/agentHsmModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentHsmSimulator() {
   // Inputs State
@@ -812,6 +813,17 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             </div>
           </div>
         )}
+
+        {/* Exit Intent Executive Memo Modal */}
+        <ExitIntentMemoModal
+          toolName="Hardware Security Module (HSM) PKCS#11 Simulator"
+          simulatedMetrics={[
+            { label: 'Key Derivation Latency', value: `${results.keyDerivationLatencyMicroseconds} µs` },
+            { label: 'Tokenization Throughput', value: `${results.tokenizationThroughputOpsPerSec.toLocaleString()} ops/s` },
+            { label: 'Physical Tamper Envelope', value: `${results.physicalTamperDetectionResistanceYears} Years` },
+            { label: 'Compliance Index', value: `${results.complianceScorePercent}%` }
+          ]}
+        />
       </div>
     </div>
   );

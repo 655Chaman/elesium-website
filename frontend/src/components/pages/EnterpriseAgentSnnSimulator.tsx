@@ -22,6 +22,7 @@ import {
 } from '../calculator/agentSnnModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentSnnSimulator() {
   // Inputs State
@@ -738,6 +739,17 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
           </div>
         </div>
       )}
+
+      {/* Exit Intent Executive Memo Modal */}
+      <ExitIntentMemoModal
+        toolName="Spiking Neural Network (SNN) LIF Neuromorphic Simulator"
+        simulatedMetrics={[
+          { label: 'Energy Reduction', value: `${results.neuromorphicPowerReductionFactor}x` },
+          { label: 'Temporal Decision Latency', value: `${results.temporalLatencyMs} ms` },
+          { label: 'Event Sparsity', value: `${results.eventSparsityPercent}%` },
+          { label: 'Annual OPEX Savings', value: `${currency === 'INR' ? '₹' : '$'}${results.annualPowerCostSavings.toLocaleString()}` }
+        ]}
+      />
     </div>
   );
 }

@@ -95,6 +95,8 @@ const EnterpriseAgentSnnSimulator = lazy(() => import('./components/pages/Enterp
 const EmbedAgentSnnSimulator = lazy(() => import('./components/pages/EmbedAgentSnnSimulator'))
 const EnterpriseAgentHsmSimulator = lazy(() => import('./components/pages/EnterpriseAgentHsmSimulator'))
 const EmbedAgentHsmSimulator = lazy(() => import('./components/pages/EmbedAgentHsmSimulator'))
+const EnterpriseAgentGraphConsensusSimulator = lazy(() => import('./components/pages/EnterpriseAgentGraphConsensusSimulator'))
+const EmbedAgentGraphConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentGraphConsensusSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -266,6 +268,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-hsm-pkcs11-simulator" element={<EnterpriseAgentHsmSimulator />} />
                             <Route path="/tools/agent-hsm-pkcs11-simulator" element={<Navigate to="/tools/enterprise-agent-hsm-pkcs11-simulator" replace />} />
                             <Route path="/embed/agent-hsm-pkcs11-simulator" element={<EmbedAgentHsmSimulator />} />
+                            <Route path="/tools/enterprise-agent-graph-consensus-simulator" element={<EnterpriseAgentGraphConsensusSimulator />} />
+                            <Route path="/tools/agent-graph-consensus-simulator" element={<Navigate to="/tools/enterprise-agent-graph-consensus-simulator" replace />} />
+                            <Route path="/embed/agent-graph-consensus-simulator" element={<EmbedAgentGraphConsensusSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
