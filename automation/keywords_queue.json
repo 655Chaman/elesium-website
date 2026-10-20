@@ -268,11 +268,12 @@
     "keyword": "agentic AI solutions for IT ops Bangalore",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T23:05:31.021931",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "LOCAL_PACK",
-    "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT"
+    "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT",
+    "published_slug": "agentic-ai-solutions-for-it-ops-bangalore"
   },
   {
     "id": 24,

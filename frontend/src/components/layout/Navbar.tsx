@@ -315,6 +315,12 @@ export default function Navbar() {
                             LLM Security Guardrails
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-aiops-incident-remediation-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
+                        >
+                            AIOps Incident Remediation
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -695,6 +701,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 LLM Security &amp; NeMo Guardrails Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-aiops-incident-remediation-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                AIOps Incident Remediation &amp; Chaos Simulator
                             </Link>
                             <Link
                                 to="/compare"

@@ -105,6 +105,8 @@ const EnterpriseAgentOndcRetailSimulator = lazy(() => import('./components/pages
 const EmbedAgentOndcRetailSimulator = lazy(() => import('./components/pages/EmbedAgentOndcRetailSimulator'))
 const EnterpriseAgentNemoGuardrailSimulator = lazy(() => import('./components/pages/EnterpriseAgentNemoGuardrailSimulator'))
 const EmbedAgentNemoGuardrailSimulator = lazy(() => import('./components/pages/EmbedAgentNemoGuardrailSimulator'))
+const EnterpriseAgentAiOpsSimulator = lazy(() => import('./components/pages/EnterpriseAgentAiOpsSimulator'))
+const EmbedAgentAiOpsSimulator = lazy(() => import('./components/pages/EmbedAgentAiOpsSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -291,6 +293,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-nemo-guardrails-simulator" element={<EnterpriseAgentNemoGuardrailSimulator />} />
                             <Route path="/tools/agent-nemo-guardrails-simulator" element={<Navigate to="/tools/enterprise-agent-nemo-guardrails-simulator" replace />} />
                             <Route path="/embed/agent-nemo-guardrails-simulator" element={<EmbedAgentNemoGuardrailSimulator />} />
+                            <Route path="/tools/enterprise-agent-aiops-incident-remediation-simulator" element={<EnterpriseAgentAiOpsSimulator />} />
+                            <Route path="/tools/agent-aiops-incident-remediation-simulator" element={<Navigate to="/tools/enterprise-agent-aiops-incident-remediation-simulator" replace />} />
+                            <Route path="/embed/agent-aiops-incident-remediation-simulator" element={<EmbedAgentAiOpsSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

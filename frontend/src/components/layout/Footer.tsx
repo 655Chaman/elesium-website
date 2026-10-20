@@ -48,6 +48,7 @@ export default function DownloadFooter() {
         { name: '21 CFR Part 11 eBMR Validation Simulator', path: '/tools/enterprise-agent-cfr-part-11-validation-simulator' },
         { name: 'ONDC Retail Inventory & Pricing Simulator', path: '/tools/enterprise-agent-ondc-retail-inventory-simulator' },
         { name: 'LLM Security Guardrails & NeMo Simulator', path: '/tools/enterprise-agent-nemo-guardrails-simulator' },
+        { name: 'AIOps Incident Remediation & Chaos Simulator', path: '/tools/enterprise-agent-aiops-incident-remediation-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
