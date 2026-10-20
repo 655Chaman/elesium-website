@@ -65,6 +65,8 @@ const EnterpriseAgentDynamicReplanningSimulator = lazy(() => import('./component
 const EmbedAgentDynamicReplanningSimulator = lazy(() => import('./components/pages/EmbedAgentDynamicReplanningSimulator'))
 const EnterpriseAgentConsensusSimulator = lazy(() => import('./components/pages/EnterpriseAgentConsensusSimulator'))
 const EmbedAgentConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentConsensusSimulator'))
+const EnterpriseAgentSandboxVerificationSimulator = lazy(() => import('./components/pages/EnterpriseAgentSandboxVerificationSimulator'))
+const EmbedAgentSandboxVerificationSimulator = lazy(() => import('./components/pages/EmbedAgentSandboxVerificationSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -191,6 +193,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-consensus-byzantine-fault-simulator" element={<EnterpriseAgentConsensusSimulator />} />
                             <Route path="/tools/agent-consensus-byzantine-fault-simulator" element={<Navigate to="/tools/enterprise-agent-consensus-byzantine-fault-simulator" replace />} />
                             <Route path="/embed/agent-consensus-byzantine-fault-simulator" element={<EmbedAgentConsensusSimulator />} />
+                            <Route path="/tools/enterprise-agent-sandbox-formal-verification-simulator" element={<EnterpriseAgentSandboxVerificationSimulator />} />
+                            <Route path="/tools/agent-sandbox-formal-verification-simulator" element={<Navigate to="/tools/enterprise-agent-sandbox-formal-verification-simulator" replace />} />
+                            <Route path="/embed/agent-sandbox-formal-verification-simulator" element={<EmbedAgentSandboxVerificationSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

@@ -48,7 +48,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                         initial={{ opacity: 0, scale: 0.96, y: 15 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.96, y: 15 }}
-                        className="relative w-full max-w-lg bg-[#0D0D0D] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl z-10 text-white font-sans overflow-hidden"
+                        className="relative w-full max-w-lg bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 shadow-2xl z-10 text-slate-100 font-sans overflow-hidden"
                     >
                         {/* Background glow */}
                         <div className="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />

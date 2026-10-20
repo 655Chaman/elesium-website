@@ -1862,6 +1862,61 @@ def render_consensus_embed_semantic_html():
 </div>
 """
 
+def render_sandbox_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-sandbox-formal-verification-simulator.
+    """
+    return """
+<div id="prerendered-agent-sandbox-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic Sandbox &amp; AST Verifier Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Sandboxed Code Execution &amp; Formal Verification Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark autonomous code sandbox architectures. Contrast unconstrained host execution against naive Docker container overhead and sovereign KVM microVMs with sub-45ms cold boot, 0.00% breakout vulnerability, and Z3 formal AST verification.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Sandbox Architecture Comparison</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Sovereign MicroVM &amp; Formal AST</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Hardware-enforced KVM microVM isolation boots in 42ms with 0.00% breakout vulnerability, eBPF seccomp syscall filtering, and 99.99% Z3 formal AST verification.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Cold Boot: 42ms | Breakout Risk: 0.00% | RAM: 28MB/worker</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Naive Docker Container Spawn &amp; IPC</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Heavy 2,100ms container cold boot stalls agent execution loops; shared Linux kernel remains susceptible to container-escape zero-days and 480MB RAM bloat.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Cold Boot: 2,100ms | Breakout Risk: 0.66% | RAM: 480MB/worker</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unconstrained Host Subprocess Execution</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Immediate 2ms execution speed, but zero kernel isolation leaves the entire enterprise VPC vulnerable to arbitrary code execution, credential theft, and RCE.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Cold Boot: 2.0ms | Breakout Risk: 5.50% | High VPC Breach Exposure</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_sandbox_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-sandbox-formal-verification-simulator.
+    """
+    return """
+<div id="prerendered-agent-sandbox-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Code Sandbox &amp; Formal Verification Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating KVM microVM cold boot speedup, zero kernel escape isolation, and formal AST proof coverage.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark sovereign KVM microVMs with eBPF syscall filtering vs naive Docker container spawning and unconstrained host execution.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3130,6 +3185,14 @@ def generate_ssg():
         "embed/agent-consensus-byzantine-fault-simulator": {
             "title": "Multi-Agent Consensus & Byzantine Fault Tolerance Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating Byzantine fault tolerance quorum verification latency, hallucination suppression, and token expense arbitrage."
+        },
+        "tools/enterprise-agent-sandbox-formal-verification-simulator": {
+            "title": "Enterprise Multi-Agent Sandboxed Code Execution & Formal Verification Simulator",
+            "desc": "Simulate and benchmark autonomous agent code sandbox isolation. Compare unconstrained host execution against naive Docker containers and sovereign microVMs with sub-45ms cold boot, 0.00% breakout vulnerability, and formal AST verification."
+        },
+        "embed/agent-sandbox-formal-verification-simulator": {
+            "title": "Multi-Agent Code Sandbox & Formal Verification Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating KVM microVM cold boot speedup, zero kernel escape isolation, and formal AST proof coverage."
         }
     }
 
@@ -4931,6 +4994,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(consensus_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-sandbox-formal-verification-simulator":
+            tool_content = render_sandbox_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            sandbox_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Multi-Agent Sandboxed Code Execution & Formal Verification Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Sandbox & Formal Verifier",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(sandbox_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-sandbox-formal-verification-simulator":
+            embed_content = render_sandbox_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            sandbox_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Multi-Agent Code Sandbox & Formal Verification Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(sandbox_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

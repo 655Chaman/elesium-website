@@ -168,7 +168,7 @@ export function ExpandableScreenContent({
                 <motion.div
                     layoutId={layoutId}
                     className={cn(
-                        "fixed inset-0 z-[100] flex h-screen w-screen flex-col overflow-hidden bg-white shadow-2xl dark:bg-black",
+                        "fixed inset-0 z-[100] flex h-screen w-screen flex-col overflow-y-auto bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 shadow-2xl",
                         className
                     )}
                     initial={{ opacity: 0 }}

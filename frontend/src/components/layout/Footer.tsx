@@ -28,6 +28,7 @@ export default function DownloadFooter() {
         { name: 'Agent State Snapshot & Rollback Simulator', path: '/tools/enterprise-agent-state-snapshot-rollback-simulator' },
         { name: 'Agent Dynamic Re-Planning Simulator', path: '/tools/enterprise-agent-dynamic-replanning-simulator' },
         { name: 'Multi-Agent Consensus & Byzantine Fault Simulator', path: '/tools/enterprise-agent-consensus-byzantine-fault-simulator' },
+        { name: 'Agent Sandbox Execution & Formal Verifier', path: '/tools/enterprise-agent-sandbox-formal-verification-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
