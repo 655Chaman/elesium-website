@@ -41,6 +41,8 @@ const EnterpriseVectorDbBenchmark = lazy(() => import('./components/pages/Enterp
 const EmbedVectorDbBenchmark = lazy(() => import('./components/pages/EmbedVectorDbBenchmark'))
 const EnterpriseKvCacheSimulator = lazy(() => import('./components/pages/EnterpriseKvCacheSimulator'))
 const EmbedKvCacheSimulator = lazy(() => import('./components/pages/EmbedKvCacheSimulator'))
+const EnterpriseAgentDeadlockVisualizer = lazy(() => import('./components/pages/EnterpriseAgentDeadlockVisualizer'))
+const EmbedAgentDeadlockVisualizer = lazy(() => import('./components/pages/EmbedAgentDeadlockVisualizer'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -131,6 +133,9 @@ function App() {
                             <Route path="/tools/enterprise-llm-context-kv-cache-simulator" element={<EnterpriseKvCacheSimulator />} />
                             <Route path="/tools/kv-cache-simulator" element={<Navigate to="/tools/enterprise-llm-context-kv-cache-simulator" replace />} />
                             <Route path="/embed/kv-cache-simulator" element={<EmbedKvCacheSimulator />} />
+                            <Route path="/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer" element={<EnterpriseAgentDeadlockVisualizer />} />
+                            <Route path="/tools/agent-deadlock-visualizer" element={<Navigate to="/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer" replace />} />
+                            <Route path="/embed/agent-deadlock-visualizer" element={<EmbedAgentDeadlockVisualizer />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

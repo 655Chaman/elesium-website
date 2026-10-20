@@ -1167,6 +1167,56 @@ def render_kv_cache_embed_semantic_html():
 </div>
 """
 
+def render_deadlock_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer.
+    """
+    return """
+<div id="prerendered-agent-deadlock-visualizer" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#f43f5e;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Deterministic Agentic Reliability Sandbox</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Deadlock &amp; FSM Circuit Breaker Visualizer</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate directed dependency cycles, cascading API rate-limit thundering herds, and deterministic finite state machine circuit breakers under high concurrency.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Agent Dependency Graph &amp; Mutex Deadlock Analysis</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unconstrained ReAct Circular Wait</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Unregulated tool execution creates directed cycles (A → B → C → A). Agents spin indefinitely waiting for mutual locks, burning hundreds of thousands of tokens.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">MTTR: Infinite (Manual Intervention Required)</div>
+        </div>
+        <div style="background:#020617;border:1px solid #38bdf840;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin:0 0 0.5rem 0;">FSM Circuit Breaker &amp; Exponential Jitter</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Trips after consecutive 429/503 timeouts, failing fast in under 45ms and serving deterministic heuristics with zero runaway token leakage.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#bae6fd;">MTTR: Sub-5s Automatic Resiliency</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_deadlock_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-deadlock-visualizer.
+    """
+    return """
+<div id="prerendered-agent-deadlock-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Deadlock &amp; FSM Breaker Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate multi-agent circular wait deadlocks, exponential backoff with full jitter, and deterministic FSM circuit breaker fallbacks.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Detect directed cycles with Tarjan DFS algorithms and test sliding-window circuit breakers against upstream LLM rate limits.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#f43f5e;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2339,6 +2389,14 @@ def generate_ssg():
         "embed/kv-cache-simulator": {
             "title": "Enterprise LLM Context Window Cache & KV Eviction Widget",
             "desc": "Embeddable interactive LLM context window, PagedAttention KV cache allocation, and TTFT latency simulator."
+        },
+        "tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer": {
+            "title": "Enterprise Multi-Agent Deadlock & FSM Circuit Breaker Visualizer",
+            "desc": "Simulate directed dependency cycles, cascading API rate-limit thundering herds, and deterministic finite state machine circuit breakers under high concurrency."
+        },
+        "embed/agent-deadlock-visualizer": {
+            "title": "Multi-Agent Deadlock & FSM Circuit Breaker Sandbox",
+            "desc": "Embeddable interactive widget simulating multi-agent circular wait deadlocks, exponential backoff with full jitter, and deterministic FSM circuit breaker fallbacks."
         }
     }
 
@@ -3216,6 +3274,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(kv_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer":
+            tool_content = render_deadlock_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            deadlock_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Multi-Agent Deadlock & FSM Circuit Breaker Visualizer",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Deadlock & Circuit Breaker Visualizer",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(deadlock_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-deadlock-visualizer":
+            embed_content = render_deadlock_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            deadlock_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Multi-Agent Deadlock & FSM Circuit Breaker Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(deadlock_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

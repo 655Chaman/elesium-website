@@ -60,7 +60,10 @@ ACRONYMS = {
     "ADCS", "SEU", "SAR", "LEO", "RFID", "SSA", "RIA", "RIAs", "LPA", "HNW", "ETF", "ETFs", "NLP", "KYC", "PE",
     "AMR", "SLAM", "ICP", "ROV", "USBL", "MPPT", "PEM", "V2G", "AUC", "HPLC", "TFA", "GMP", "VAV", "FOC", "IMU", "PID", "FBRM", "API", "APIs", "USP", "HVAC",
     "FIX", "FPGA", "CME", "ITCH", "DMA", "VWAP", "TWAP", "FX", "EUV", "CMP", "ALD", "FOUP", "VOC", "GEOINT", "NDVI", "DSM", "AIS", "HFT",
-    "QPU", "NISQ", "AWG", "SEI", "SSB", "DWDM", "EDFA", "OTDR", "PMD", "ROADM", "FEC", "QAM", "DSP", "WDM", "OSNR", "BER", "EVM"
+    "QPU", "NISQ", "AWG", "SEI", "SSB", "DWDM", "EDFA", "OTDR", "PMD", "ROADM", "FEC", "QAM", "DSP", "WDM", "OSNR", "BER", "EVM",
+    "RTK", "GNSS", "VIO", "ORCA", "QOS", "MEMS", "RF", "GPS", "UAM", "VTOL", "ESC", "RPM", "LIDAR",
+    "VDE", "HTS", "REBCO", "NTM", "ECRH", "EFIT", "NBI", "ECE", "ELM", "RMP", "SOL", "ICRH", "VSWR", "MHD",
+    "DO", "CER", "OUR", "TFF", "MAB", "HCP", "ELISA", "CFD", "CIP", "SIP", "SMB", "LNP", "MRNA", "CRISPR", "SPR"
 }
 
 def smart_title(text: str) -> str:
