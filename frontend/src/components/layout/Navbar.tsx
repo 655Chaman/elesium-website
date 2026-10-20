@@ -111,6 +111,12 @@ export default function Navbar() {
                             GPU FinOps
                         </Link>
                         <Link
+                            to="/tools/enterprise-vector-db-latency-benchmark"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-indigo-500 dark:text-indigo-400"
+                        >
+                            Vector DB Benchmark
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -253,6 +259,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-sky-500 dark:text-sky-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 GPU FinOps Calculator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-vector-db-latency-benchmark"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-indigo-500 dark:text-indigo-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Vector DB Benchmark
                             </Link>
                             <Link
                                 to="/compare"

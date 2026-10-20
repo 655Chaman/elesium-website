@@ -14,6 +14,7 @@ export default function DownloadFooter() {
         { name: 'Multi-Agent Token Leakage Simulator', path: '/tools/multi-agent-token-leakage-simulator' },
         { name: 'DPDP Act 2023 Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
         { name: 'Enterprise GPU FinOps Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
+        { name: 'Enterprise Vector DB Benchmark', path: '/tools/enterprise-vector-db-latency-benchmark' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

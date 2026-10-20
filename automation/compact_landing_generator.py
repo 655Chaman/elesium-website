@@ -58,7 +58,8 @@ ACRONYMS = {
     "EV", "EPA", "CPCB", "SIEM", "SOC", "SBOM", "PAM", "PQC", "DevSecOps",
     "CICD", "eBPF", "DBAs", "IAM", "FMCW", "HPA", "MRV", "ESG", "NRC",
     "ADCS", "SEU", "SAR", "LEO", "RFID", "SSA", "RIA", "RIAs", "LPA", "HNW", "ETF", "ETFs", "NLP", "KYC", "PE",
-    "AMR", "SLAM", "ICP", "ROV", "USBL", "MPPT", "PEM", "V2G", "AUC", "HPLC", "TFA", "GMP", "VAV", "FOC", "IMU", "PID", "FBRM", "API", "APIs", "USP", "HVAC"
+    "AMR", "SLAM", "ICP", "ROV", "USBL", "MPPT", "PEM", "V2G", "AUC", "HPLC", "TFA", "GMP", "VAV", "FOC", "IMU", "PID", "FBRM", "API", "APIs", "USP", "HVAC",
+    "FIX", "FPGA", "CME", "ITCH", "DMA", "VWAP", "TWAP", "FX", "EUV", "CMP", "ALD", "FOUP", "VOC", "GEOINT", "NDVI", "DSM", "AIS", "HFT"
 }
 
 def smart_title(text: str) -> str:

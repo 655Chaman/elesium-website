@@ -37,6 +37,8 @@ const DpdpStatutoryAuditSimulator = lazy(() => import('./components/pages/DpdpSt
 const EmbedDpdpAuditSimulator = lazy(() => import('./components/pages/EmbedDpdpAuditSimulator'))
 const EnterpriseGpuCostCalculator = lazy(() => import('./components/pages/EnterpriseGpuCostCalculator'))
 const EmbedGpuCostCalculator = lazy(() => import('./components/pages/EmbedGpuCostCalculator'))
+const EnterpriseVectorDbBenchmark = lazy(() => import('./components/pages/EnterpriseVectorDbBenchmark'))
+const EmbedVectorDbBenchmark = lazy(() => import('./components/pages/EmbedVectorDbBenchmark'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -121,6 +123,9 @@ function App() {
                             <Route path="/tools/enterprise-gpu-finops-cost-calculator" element={<EnterpriseGpuCostCalculator />} />
                             <Route path="/tools/gpu-cost-calculator" element={<Navigate to="/tools/enterprise-gpu-finops-cost-calculator" replace />} />
                             <Route path="/embed/gpu-cost-calculator" element={<EmbedGpuCostCalculator />} />
+                            <Route path="/tools/enterprise-vector-db-latency-benchmark" element={<EnterpriseVectorDbBenchmark />} />
+                            <Route path="/tools/vector-db-benchmark" element={<Navigate to="/tools/enterprise-vector-db-latency-benchmark" replace />} />
+                            <Route path="/embed/vector-db-benchmark" element={<EmbedVectorDbBenchmark />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
