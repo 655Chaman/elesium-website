@@ -184,22 +184,24 @@
     "keyword": "open source LLM deployment on-premise India",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T19:45:05.546045",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "open-source-llm-deployment-on-premise-india"
   },
   {
     "id": 17,
     "keyword": "AI driven document processing India",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T19:45:05.546045",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "ai-driven-document-processing-india"
   },
   {
     "id": 18,

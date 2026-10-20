@@ -1,0 +1,1 @@
+whitepapers/publish_whitepaper_78_79.py

@@ -93,6 +93,8 @@ const EnterpriseAgentMemristorCrossbarSimulator = lazy(() => import('./component
 const EmbedAgentMemristorCrossbarSimulator = lazy(() => import('./components/pages/EmbedAgentMemristorCrossbarSimulator'))
 const EnterpriseAgentSnnSimulator = lazy(() => import('./components/pages/EnterpriseAgentSnnSimulator'))
 const EmbedAgentSnnSimulator = lazy(() => import('./components/pages/EmbedAgentSnnSimulator'))
+const EnterpriseAgentHsmSimulator = lazy(() => import('./components/pages/EnterpriseAgentHsmSimulator'))
+const EmbedAgentHsmSimulator = lazy(() => import('./components/pages/EmbedAgentHsmSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -261,6 +263,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-snn-neuromorphic-simulator" element={<EnterpriseAgentSnnSimulator />} />
                             <Route path="/tools/agent-snn-neuromorphic-simulator" element={<Navigate to="/tools/enterprise-agent-snn-neuromorphic-simulator" replace />} />
                             <Route path="/embed/agent-snn-neuromorphic-simulator" element={<EmbedAgentSnnSimulator />} />
+                            <Route path="/tools/enterprise-agent-hsm-pkcs11-simulator" element={<EnterpriseAgentHsmSimulator />} />
+                            <Route path="/tools/agent-hsm-pkcs11-simulator" element={<Navigate to="/tools/enterprise-agent-hsm-pkcs11-simulator" replace />} />
+                            <Route path="/embed/agent-hsm-pkcs11-simulator" element={<EmbedAgentHsmSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

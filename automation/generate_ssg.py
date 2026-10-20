@@ -2501,6 +2501,49 @@ def render_snn_embed_semantic_html():
 </div>
 """
 
+def render_hsm_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-hsm-pkcs11-simulator.
+    """
+    return """
+<div id="prerendered-agent-hsm-pkcs11-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Hardware Security Modules &amp; PKCS#11 Sovereign Cryptography</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Hardware Security Module (HSM) PKCS#11 Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate FIPS 140-3 Level 4 physical tamper-detection envelopes, PKCS#11 cryptographic session tokenization, and air-gapped key derivation for sovereign enterprise AI agent clusters under India's DPDP Act 2023.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">HSM Cryptographic Performance &amp; Tamper Zeroization Matrix</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>FIPS 140-3 Level 4 Zeroization:</strong> Active physical potting mesh detects drilling, thermal probing, and laser fault injection, triggering sub-10ns cryptographic zeroization of master root keys.</li>
+        <li><strong>PKCS#11 Hardware Session Tokenization:</strong> Pipelined hardware coprocessors sustain &gt;12,000 tokenization ops/second with sub-45µs key derivation latency across PCIe Gen4 interconnects.</li>
+        <li><strong>Air-Gapped Sovereign Data Protection:</strong> Guarantees zero plain-text key exposure to host memory, eliminating side-channel leakage and complying with DPDP Act 2023 Section 8 and RBI Cyber Security Frameworks.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_hsm_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-hsm-pkcs11-simulator.
+    """
+    return """
+<div id="prerendered-agent-hsm-pkcs11-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent HSM PKCS#11 Air-Gapped Key Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Hardware Security Module (HSM) FIPS 140-3 key derivation latency, physical tamper zeroization, and tokenization throughput.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark air-gapped cryptographic coprocessor throughput and physical security boundaries across sovereign enterprise AI agent deployments.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3881,6 +3924,14 @@ def generate_ssg():
         "embed/agent-snn-neuromorphic-simulator": {
             "title": "Agent SNN Neuromorphic & LIF Event Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating event-driven Leaky Integrate-and-Fire dynamics, Address-Event Representation, and synaptic sparsity."
+        },
+        "tools/enterprise-agent-hsm-pkcs11-simulator": {
+            "title": "Enterprise Autonomous Agent Hardware Security Module (HSM) PKCS#11 Simulator",
+            "desc": "Simulate FIPS 140-3 Level 4 physical tamper-detection envelopes, PKCS#11 cryptographic session tokenization, and air-gapped key derivation for sovereign enterprise AI agent clusters."
+        },
+        "embed/agent-hsm-pkcs11-simulator": {
+            "title": "Agent HSM PKCS#11 Air-Gapped Key Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating Hardware Security Module (HSM) FIPS 140-3 key derivation latency, physical tamper zeroization, and tokenization throughput."
         }
     }
 
@@ -6832,6 +6883,89 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(snn_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-hsm-pkcs11-simulator":
+            tool_content = render_hsm_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            hsm_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent Hardware Security Module (HSM) PKCS#11 Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent HSM PKCS#11 Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(hsm_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-hsm-pkcs11-simulator":
+            embed_content = render_hsm_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            hsm_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent HSM PKCS#11 Air-Gapped Key Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(hsm_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

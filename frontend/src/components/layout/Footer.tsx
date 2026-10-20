@@ -42,6 +42,7 @@ export default function DownloadFooter() {
         { name: 'Agent Silicon Photonics & Optical GEMM Simulator', path: '/tools/enterprise-agent-photonic-compute-simulator' },
         { name: 'Agent Memristor Crossbar & AIMC Simulator', path: '/tools/enterprise-agent-memristor-crossbar-simulator' },
         { name: 'Agent SNN Neuromorphic & LIF Event Simulator', path: '/tools/enterprise-agent-snn-neuromorphic-simulator' },
+        { name: 'Agent HSM PKCS#11 Air-Gapped Simulator', path: '/tools/enterprise-agent-hsm-pkcs11-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
