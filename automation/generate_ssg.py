@@ -1117,6 +1117,56 @@ def render_vector_db_embed_semantic_html():
 </div>
 """
 
+def render_kv_cache_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-llm-context-kv-cache-simulator.
+    """
+    return """
+<div id="prerendered-kv-cache-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#38bdf8;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Inference Architecture &amp; Memory Management Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise LLM Context Window Cache &amp; KV Eviction Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate LLM KV cache memory allocation, PagedAttention fragmentation, Automatic Prefix Caching hit ratios, and TTFT latency across multi-turn enterprise agent workflows.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">KV Cache Architecture &amp; Prefill Optimization</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #38bdf840;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin:0 0 0.5rem 0;">Automatic Prefix Caching (RadixAttention)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Caches shared system prompt SOPs and historical turn key-value tensors in a radix tree. Cuts Time-To-First-Token (TTFT) by 80% to 92% across multi-turn agent loops.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#bae6fd;">Efficiency: Sub-25ms TTFT on Repeated Context</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Naive Contiguous Buffer Allocation</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Pre-allocates maximum context VRAM upfront, suffering from 68%+ virtual memory fragmentation and recomputing entire prompt histories on every turn.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Fragmentation: 68%+ VRAM Waste</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_kv_cache_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/kv-cache-simulator.
+    """
+    return """
+<div id="prerendered-kv-cache-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">LLM Context Window &amp; KV Cache Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate PagedAttention, Prefix Caching, and TTFT latency across multi-turn workflows.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark VRAM allocation, RadixAttention hit ratios, and monthly cloud cost for enterprise LLM agent deployments.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2281,6 +2331,14 @@ def generate_ssg():
         "embed/vector-db-benchmark": {
             "title": "Enterprise Vector DB & RAG Latency Benchmark Widget",
             "desc": "Embeddable interactive vector database and enterprise RAG latency, memory footprint, and 3-year TCO benchmark simulator."
+        },
+        "tools/enterprise-llm-context-kv-cache-simulator": {
+            "title": "Enterprise LLM Context Window Cache & KV Eviction Simulator",
+            "desc": "Simulate LLM KV cache memory allocation, PagedAttention fragmentation, Automatic Prefix Caching hit ratios, and TTFT latency across multi-turn enterprise agent workflows."
+        },
+        "embed/kv-cache-simulator": {
+            "title": "Enterprise LLM Context Window Cache & KV Eviction Widget",
+            "desc": "Embeddable interactive LLM context window, PagedAttention KV cache allocation, and TTFT latency simulator."
         }
     }
 
@@ -3081,6 +3139,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(vdb_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-llm-context-kv-cache-simulator":
+            tool_content = render_kv_cache_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            kv_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise LLM Context Window Cache & KV Eviction Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "LLM Context Window KV Cache Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(kv_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/kv-cache-simulator":
+            embed_content = render_kv_cache_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            kv_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise LLM Context Window Cache & KV Eviction Widget",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(kv_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

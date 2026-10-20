@@ -39,6 +39,8 @@ const EnterpriseGpuCostCalculator = lazy(() => import('./components/pages/Enterp
 const EmbedGpuCostCalculator = lazy(() => import('./components/pages/EmbedGpuCostCalculator'))
 const EnterpriseVectorDbBenchmark = lazy(() => import('./components/pages/EnterpriseVectorDbBenchmark'))
 const EmbedVectorDbBenchmark = lazy(() => import('./components/pages/EmbedVectorDbBenchmark'))
+const EnterpriseKvCacheSimulator = lazy(() => import('./components/pages/EnterpriseKvCacheSimulator'))
+const EmbedKvCacheSimulator = lazy(() => import('./components/pages/EmbedKvCacheSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -126,6 +128,9 @@ function App() {
                             <Route path="/tools/enterprise-vector-db-latency-benchmark" element={<EnterpriseVectorDbBenchmark />} />
                             <Route path="/tools/vector-db-benchmark" element={<Navigate to="/tools/enterprise-vector-db-latency-benchmark" replace />} />
                             <Route path="/embed/vector-db-benchmark" element={<EmbedVectorDbBenchmark />} />
+                            <Route path="/tools/enterprise-llm-context-kv-cache-simulator" element={<EnterpriseKvCacheSimulator />} />
+                            <Route path="/tools/kv-cache-simulator" element={<Navigate to="/tools/enterprise-llm-context-kv-cache-simulator" replace />} />
+                            <Route path="/embed/kv-cache-simulator" element={<EmbedKvCacheSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

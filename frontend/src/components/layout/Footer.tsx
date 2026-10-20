@@ -15,6 +15,7 @@ export default function DownloadFooter() {
         { name: 'DPDP Act 2023 Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
         { name: 'Enterprise GPU FinOps Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
         { name: 'Enterprise Vector DB Benchmark', path: '/tools/enterprise-vector-db-latency-benchmark' },
+        { name: 'LLM Context Window KV Cache Simulator', path: '/tools/enterprise-llm-context-kv-cache-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

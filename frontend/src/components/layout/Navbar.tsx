@@ -117,6 +117,12 @@ export default function Navbar() {
                             Vector DB Benchmark
                         </Link>
                         <Link
+                            to="/tools/enterprise-llm-context-kv-cache-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-500 dark:text-emerald-400"
+                        >
+                            KV Cache
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -266,6 +272,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-indigo-500 dark:text-indigo-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Vector DB Benchmark
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-llm-context-kv-cache-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-emerald-500 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                KV Cache Simulator
                             </Link>
                             <Link
                                 to="/compare"

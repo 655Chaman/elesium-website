@@ -48,6 +48,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/dpdp-act-2023-audit-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-gpu-finops-cost-calculator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-vector-db-latency-benchmark", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-llm-context-kv-cache-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
