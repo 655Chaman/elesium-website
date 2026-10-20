@@ -2372,6 +2372,49 @@ def render_post_quantum_embed_semantic_html():
 </div>
 """
 
+def render_photonic_compute_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-photonic-compute-simulator.
+    """
+    return """
+<div id="prerendered-agent-photonic-compute-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Coherent Silicon Photonics &amp; Optical Neural Network GEMM</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Optical Neural Network &amp; Silicon Photonics Compute Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Benchmark coherent optical matrix multiplication (GEMM) using Mach-Zehnder Interferometer (MZI) meshes and Wavelength Division Multiplexing (WDM). Simulate in-flight waveguide time-of-flight latency, electro-optic conversions, and femtojoule-per-MAC energy efficiency against electronic GPU baselines.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">Optical Matrix Compute Performance Matrix</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>In-Flight Waveguide Latency:</strong> Light propagates through silicon waveguides at ~1.22x10⁸ m/s, completing a 256x256 Clements matrix multiply in 180 picoseconds of physical flight time.</li>
+        <li><strong>Energy Efficiency:</strong> Optical computing consumes &lt;20 fJ/MAC for passive tensor operations, delivering &gt;20x total power reduction over 4nm electronic GPUs.</li>
+        <li><strong>Dense WDM Parallelism:</strong> Simultaneous transmission across up to 32 ITU C-band wavelengths unlocks hundreds of Tera-Operations Per Second (TOPS) per square millimeter of die area.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_photonic_compute_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-photonic-compute-simulator.
+    """
+    return """
+<div id="prerendered-agent-photonic-compute-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Silicon Photonics &amp; Optical GEMM Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating coherent optical neural network matrix acceleration, in-flight waveguide latency, and WDM energy efficiency.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark in-flight optical matrix multiplication and electro-optic conversion latencies across enterprise autonomous agent architectures.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3728,6 +3771,14 @@ def generate_ssg():
         "embed/agent-post-quantum-simulator": {
             "title": "Agent Post-Quantum Cryptography & ML-KEM Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating autonomous agent NIST FIPS 203 / 204 lattice cryptography, Module-LWE polynomial noise, and HNDL quantum threat exposure."
+        },
+        "tools/enterprise-agent-photonic-compute-simulator": {
+            "title": "Enterprise Autonomous Agent Optical Neural Network & Silicon Photonics Matrix Compute Latency Simulator",
+            "desc": "Simulate silicon photonics optical neural networks, Clements MZI unitary meshes, in-flight waveguide latency, and WDM matrix multiply acceleration for enterprise autonomous agents."
+        },
+        "embed/agent-photonic-compute-simulator": {
+            "title": "Agent Silicon Photonics & Optical GEMM Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating coherent optical neural network matrix acceleration, in-flight waveguide latency, and WDM energy efficiency."
         }
     }
 
@@ -6428,6 +6479,90 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(post_quantum_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-photonic-compute-simulator":
+            tool_content = render_photonic_compute_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            photonic_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent Optical Neural Network & Silicon Photonics Matrix Compute Latency Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "browserRequirements": "Requires JavaScript. Requires HTML5.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Silicon Photonics & Optical GEMM Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(photonic_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-photonic-compute-simulator":
+            embed_content = render_photonic_compute_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            photonic_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent Silicon Photonics & Optical GEMM Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(photonic_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

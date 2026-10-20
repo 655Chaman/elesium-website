@@ -148,11 +148,12 @@
     "keyword": "conversational AI agents for e-commerce India",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T17:25:16.384786",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "conversational-ai-agents-for-e-commerce-india"
   },
   {
     "id": 14,

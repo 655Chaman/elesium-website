@@ -39,6 +39,7 @@ export default function DownloadFooter() {
         { name: 'Agent Differential Privacy & Gradient Sanitizer', path: '/tools/enterprise-agent-differential-privacy-simulator' },
         { name: 'Agent Byzantine Consensus & SecAgg Simulator', path: '/tools/enterprise-agent-byzantine-consensus-simulator' },
         { name: 'Agent Post-Quantum Cryptography & ML-KEM Simulator', path: '/tools/enterprise-agent-post-quantum-simulator' },
+        { name: 'Agent Silicon Photonics & Optical GEMM Simulator', path: '/tools/enterprise-agent-photonic-compute-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

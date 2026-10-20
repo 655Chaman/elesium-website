@@ -87,6 +87,8 @@ const EnterpriseAgentByzantineConsensusSimulator = lazy(() => import('./componen
 const EmbedAgentByzantineConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentByzantineConsensusSimulator'))
 const EnterpriseAgentPostQuantumSimulator = lazy(() => import('./components/pages/EnterpriseAgentPostQuantumSimulator'))
 const EmbedAgentPostQuantumSimulator = lazy(() => import('./components/pages/EmbedAgentPostQuantumSimulator'))
+const EnterpriseAgentPhotonicComputeSimulator = lazy(() => import('./components/pages/EnterpriseAgentPhotonicComputeSimulator'))
+const EmbedAgentPhotonicComputeSimulator = lazy(() => import('./components/pages/EmbedAgentPhotonicComputeSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -246,6 +248,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-post-quantum-simulator" element={<EnterpriseAgentPostQuantumSimulator />} />
                             <Route path="/tools/agent-post-quantum-simulator" element={<Navigate to="/tools/enterprise-agent-post-quantum-simulator" replace />} />
                             <Route path="/embed/agent-post-quantum-simulator" element={<EmbedAgentPostQuantumSimulator />} />
+                            <Route path="/tools/enterprise-agent-photonic-compute-simulator" element={<EnterpriseAgentPhotonicComputeSimulator />} />
+                            <Route path="/tools/agent-photonic-compute-simulator" element={<Navigate to="/tools/enterprise-agent-photonic-compute-simulator" replace />} />
+                            <Route path="/embed/agent-photonic-compute-simulator" element={<EmbedAgentPhotonicComputeSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
