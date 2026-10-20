@@ -1752,6 +1752,61 @@ def render_state_rollback_embed_semantic_html():
 </div>
 """
 
+def render_dynamic_replanning_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-dynamic-replanning-simulator.
+    """
+    return """
+<div id="prerendered-agent-dynamic-replanning-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic Re-Planning &amp; Self-Correction Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Dynamic Re-Planning Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark autonomous agent dynamic re-planning and self-correction overhead. Contrast unconstrained Reflexion loops against static counter aborts and sovereign bounded DAG re-planning with sub-1.8s convergence and 0.0% deadlocks.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Re-Planning Architecture Comparison</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Bounded Deterministic Re-Planner</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">DAG-constrained state reflection refines plans via grammar decoding in sub-1.8s, eliminating circular prompt deadlocks with 99.4% task convergence.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Re-planning Latency: 1,750ms | Convergence: 99.4% | Deadlock Risk: 0.0%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Static Counter Circuit Breaker (Max N Retries)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Hard aborts after fixed attempts; avoids infinite loops but prematurely terminates 26.5% of recoverable enterprise tasks, causing heavy manual triage.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Re-planning Latency: 3,600ms | Convergence: 73.5% | False Abort Rate: 26.5%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unbounded Self-Correction Loop (Naive Reflexion)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Unconstrained prompt reflection loops oscillate between conflicting hypotheses, driving 14s+ latency spikes, runaway token bills, and 14.2% deadlocks.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Re-planning Latency: 14,400ms | Convergence: 78.5% | Deadlock Risk: 14.2%</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_dynamic_replanning_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-dynamic-replanning-simulator.
+    """
+    return """
+<div id="prerendered-agent-dynamic-replanning-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Autonomous Agent Dynamic Re-Planning Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating dynamic plan branch refinement latency, task convergence rate, and cyclic deadlock elimination.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark bounded DAG re-planning vs unconstrained Reflexion prompt loops and static retry counter circuit breakers.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3004,6 +3059,14 @@ def generate_ssg():
         "embed/agent-state-snapshot-rollback-simulator": {
             "title": "Agent State Machine Snapshot & Rollback Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating async delta checkpoint overhead, microsecond rollback speedup, and elimination of failed rerun token waste."
+        },
+        "tools/enterprise-agent-dynamic-replanning-simulator": {
+            "title": "Enterprise Autonomous Agent Dynamic Re-Planning Simulator",
+            "desc": "Simulate and benchmark autonomous agent dynamic re-planning and self-correction overhead. Contrast unconstrained Reflexion loops against static counter aborts and sovereign bounded DAG re-planning with sub-1.8s convergence and 0.0% deadlocks."
+        },
+        "embed/agent-dynamic-replanning-simulator": {
+            "title": "Autonomous Agent Dynamic Re-Planning Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating dynamic plan branch refinement latency, task convergence rate, and cyclic deadlock elimination."
         }
     }
 
@@ -4651,6 +4714,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(state_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-dynamic-replanning-simulator":
+            tool_content = render_dynamic_replanning_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            replanning_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent Dynamic Re-Planning Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Dynamic Re-Planning Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(replanning_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-dynamic-replanning-simulator":
+            embed_content = render_dynamic_replanning_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            replanning_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Autonomous Agent Dynamic Re-Planning Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(replanning_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

@@ -1,0 +1,35 @@
+{
+  "brand_name": "Elesium",
+  "domain_url": "https://elesium.online",
+  "tagline": "Enterprise AI Automation Agency & Sovereign Multi-Agent Infrastructure",
+  "geo_focus": "India & Global",
+  "primary_industry": "Enterprise AI Systems & Sovereign Multi-Agent Automation",
+  "hub_categories": [
+    "Logistics & Supply Chain",
+    "BFSI & Underwriting",
+    "Industrial Manufacturing",
+    "Healthcare AI",
+    "Decarbonization & Clean Tech",
+    "Space Exploration & Robotics",
+    "Offshore LNG & Marine Cryogenics"
+  ],
+  "target_personas": [
+    "Logistics Directors & Fleet Operations VPs",
+    "Chief Technology Officers & Principal AI Architects",
+    "Chief Risk Officers & Compliance Directors",
+    "Supply Chain Superintendents",
+    "Electrolysis Plant Directors & Clean Hydrogen Leads"
+  ],
+  "its_toasted_capabilities": [
+    "Deterministic Finite State Machine agent fallbacks with sub-1.5ms Delta WAL checkpointing",
+    "Sub-200ms transaction ledger reconciliation and zero-copy streaming",
+    "Private air-gapped VPC deployment with zero third-party cloud data leakage",
+    "Dynamic token cost arbitrage and semantic caching saving 85%+ in API spend",
+    "Deterministic constrained decoding logit masking with zero retry token wastage"
+  ],
+  "primary_cta": "Schedule Architecture Audit",
+  "conversion_route": "/waitlist",
+  "frontend_framework": "vite_react",
+  "dist_dir": "frontend/dist",
+  "indexnow_key": "c8d4529f76a147e09641c8f49f50e82b"
+}
