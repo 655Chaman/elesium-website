@@ -1367,6 +1367,61 @@ def render_eventsourcing_embed_semantic_html():
 </div>
 """
 
+def render_firewall_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-prompt-injection-firewall-simulator.
+    """
+    return """
+<div id="prerendered-prompt-firewall-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#f43f5e;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic Boundary &amp; AST Firewall Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agentic Prompt Injection &amp; Boundary Firewall Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark deterministic AST grammar syntax firewalls vs secondary guardrail LLMs. Model sub-2ms zero-allocation boundary checks against indirect prompt injection, tool parameter SQLi, and token smuggling.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Defense Architecture Benchmark</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Elesium AST Syntax Firewall</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Deterministic pre-execution AST parsing and Pydantic schema whitelist boundaries validate payloads in sub-2ms with zero token overhead and near-absolute 99.8% block rates.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a7f3d0;">Latency: 1.2ms | Block Rate: 99.8% | Security Cost: $0/mo</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Secondary Guardrail LLM (Llama-Guard-3 / NeMo)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Secondary model evaluation adds 220-280ms latency penalties, duplicates 100% of token consumption, and suffers from 5.2% false positives on legitimate SQL and code.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Latency: 240ms | Block Rate: 84.0% | False Positive: 5.2%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Naive Direct LLM Ingestion</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Zero input sanitization permits prompt injections, markdown image JWT leaks, and parameter SQLi, resulting in full agent tool compromise.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Latency: 0.0ms | Block Rate: 0.0% | Compromise Risk: Critical</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_firewall_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/prompt-injection-firewall-simulator.
+    """
+    return """
+<div id="prerendered-prompt-firewall-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Prompt Injection &amp; Boundary Defense Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating prompt firewall latency, AST defense verification, and guardrail token overhead.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark deterministic AST syntax firewalls vs secondary guardrail models under indirect prompt injections, tool parameter SQLi, and token smuggling attacks.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#f43f5e;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2571,6 +2626,14 @@ def generate_ssg():
         "embed/event-sourcing-audit-simulator": {
             "title": "Multi-Agent Event Sourcing Sandbox",
             "desc": "Embeddable interactive widget calculating event sourcing recovery, SHA-256 Merkle chain integrity, and DPDP auditability."
+        },
+        "tools/enterprise-prompt-injection-firewall-simulator": {
+            "title": "Enterprise Agentic Prompt Injection & Boundary Firewall Simulator",
+            "desc": "Simulate deterministic AST grammar syntax firewalls vs secondary guardrail LLMs. Benchmark sub-2ms boundary checks, indirect prompt injection defense, and tool parameter SQLi protection."
+        },
+        "embed/prompt-injection-firewall-simulator": {
+            "title": "Prompt Injection & Boundary Defense Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating prompt firewall latency, AST defense verification, and guardrail token overhead."
         }
     }
 
@@ -3756,6 +3819,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(eventsourcing_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-prompt-injection-firewall-simulator":
+            tool_content = render_firewall_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            firewall_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Agentic Prompt Injection & Boundary Firewall Simulator",
+                "url": canonical_url,
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Prompt Injection Firewall Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(firewall_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/prompt-injection-firewall-simulator":
+            embed_content = render_firewall_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            firewall_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Prompt Injection & Boundary Defense Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(firewall_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

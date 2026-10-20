@@ -1,0 +1,747 @@
+#!/usr/bin/env python3
+"""
+Ingest Wave 13 Commercial BOFU Keywords (IDs 491 to 540).
+Appends 50 high-lever commercial solution pages to automation/compact_keywords_queue.json:
+- 17 Hyperscale Data Center Direct-to-Chip Liquid Cooling Telemetry (IDs 491-507)
+- 17 Autonomous eVTOL Urban Air Mobility Airspace Deconfliction (IDs 508-524)
+- 16 Solid-State Lithium-Metal Battery Dry Electrode Roll-to-Roll Calendering (IDs 525-540)
+"""
+
+import json
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+QUEUE_PATH = BASE_DIR / "automation" / "compact_keywords_queue.json"
+
+wave_13_keywords = [
+    # -------------------------------------------------------------------------
+    # Hyperscale Data Center Direct-to-Chip Liquid Cooling Telemetry (IDs 491-507)
+    # -------------------------------------------------------------------------
+    {
+        "id": 491,
+        "keyword": "direct-to-chip liquid cooling cdu differential pressure telemetry agents",
+        "slug": "direct-to-chip-liquid-cooling-cdu-differential-pressure-telemetry-agents",
+        "key_benefit": "Sub-0.5kPa Coolant Distribution Unit Pressure Drop Tracking & Pump VFD Cavitation Guard",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Hyperscale Thermal Systems Engineers & Data Center Infrastructure Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit CDU Differential Pressure"
+    },
+    {
+        "id": 492,
+        "keyword": "cold plate microchannel thermal resistance optimizers for ai accelerator clusters",
+        "slug": "cold-plate-microchannel-thermal-resistance-optimizers-for-ai-accelerator-clusters",
+        "key_benefit": "Sub-0.02 C/W Thermal Impedance Maintenance & High-Flux 1000W TDP GPU Die Heat Sinking",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "AI Cluster Thermal Architects & High-Density Compute Infrastructure Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cold Plate Thermal Resistance"
+    },
+    {
+        "id": 493,
+        "keyword": "quick disconnect dry-break coupling leak detection telemetry for server racks",
+        "slug": "quick-disconnect-dry-break-coupling-leak-detection-telemetry-for-server-racks",
+        "key_benefit": "Continuous Optoelectronic Point-Leak Sensing & Sub-Milliliter Drip Containment Shutdown",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Mission-Critical Facilities Directors & Hyperscale Server Hardware Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Server Leak Detection Telemetry"
+    },
+    {
+        "id": 494,
+        "keyword": "two-phase dielectric immersion boiling heat flux controllers for dense computing",
+        "slug": "two-phase-dielectric-immersion-boiling-heat-flux-controllers-for-dense-computing",
+        "key_benefit": "Critical Heat Flux Boundary Prevention & Sub-Boiling Condenser Reflux Pressure Balancing",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Liquid Immersion Cooling Specialists & Next-Gen Compute Hardware Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Immersion Boiling Heat Flux"
+    },
+    {
+        "id": 495,
+        "keyword": "rack manifold balanced flow distribution controllers for direct liquid cooling",
+        "slug": "rack-manifold-balanced-flow-distribution-controllers-for-direct-liquid-cooling",
+        "key_benefit": "Dynamic Modulating Control Valve Balancing & Uniform Liter-Per-Minute Blade Delivery",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Mechanical Infrastructure Engineers & Liquid Cooled Supercomputing Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Rack Manifold Flow Distribution"
+    },
+    {
+        "id": 496,
+        "keyword": "facility water system plate heat exchanger approach temperature trackers for data centers",
+        "slug": "facility-water-system-plate-heat-exchanger-approach-temperature-trackers-for-data-centers",
+        "key_benefit": "Sub-1.5 C Heat Exchanger Approach Monitoring & Bio-Fouling Thermal Drift Diagnostics",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Central Plant Operations Managers & Data Center Energy Efficiency Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Heat Exchanger Approach Temperature"
+    },
+    {
+        "id": 497,
+        "keyword": "coolant electrical conductivity and ph degradation monitors for d2c loops",
+        "slug": "coolant-electrical-conductivity-and-ph-degradation-monitors-for-d2c-loops",
+        "key_benefit": "Sub-0.5 uS/cm Dielectric Threshold Safeguarding & Deionizing Polishing Resin Lifetime Prediction",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Cooling Fluid Chemistry Specialists & Server Reliability Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Coolant Conductivity Degradation"
+    },
+    {
+        "id": 498,
+        "keyword": "server chassis drip tray optoelectronic moisture telemetry for high-density clusters",
+        "slug": "server-chassis-drip-tray-optoelectronic-moisture-telemetry-for-high-density-clusters",
+        "key_benefit": "Optical Refractive Film Moisture Detection & Microsecond Autonomous Power Cutoff",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Hyperscale Site Reliability Engineers & Server Hardware Safety Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Drip Tray Moisture Telemetry"
+    },
+    {
+        "id": 499,
+        "keyword": "warm water cooling pue optimization agents for hyperscale ai facilities",
+        "slug": "warm-water-cooling-pue-optimization-agents-for-hyperscale-ai-facilities",
+        "key_benefit": "45 C ASHRAE W4 Inlet Chiller-Free Heat Rejection & Sub-1.08 Data Center PUE Attainment",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Data Center Sustainability Directors & Enterprise FinOps Energy Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Warm Water Cooling PUE"
+    },
+    {
+        "id": 500,
+        "keyword": "dielectric fluid breakdown voltage telemetry agents for single-phase immersion tanks",
+        "slug": "dielectric-fluid-breakdown-voltage-telemetry-agents-for-single-phase-immersion-tanks",
+        "key_benefit": "45kV ASTM D877 Dielectric Strength Continuous Monitoring & Particulate Contamination Warning",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Immersion Cooling Facility Managers & High-Density Cluster Architects",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Fluid Breakdown Voltage"
+    },
+    {
+        "id": 501,
+        "keyword": "thermal interface material pump-out degradation monitors for bare-die gpus",
+        "slug": "thermal-interface-material-pump-out-degradation-monitors-for-bare-die-gpus",
+        "key_benefit": "Indium-Gallium Liquid Metal and Phase-Change TIM Voiding Detection & Junction Delta-T Tracking",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "GPU Reliability Verification Engineers & Hardware Packaging Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit TIM Degradation Telemetry"
+    },
+    {
+        "id": 502,
+        "keyword": "dynamic rack load transient thermal buffering controllers for llm training runs",
+        "slug": "dynamic-rack-load-transient-thermal-buffering-controllers-for-llm-training-runs",
+        "key_benefit": "Feedforward In-Row Buffer Storage Management & Zero Junction Thermal Spikes During Weight Checkpoints",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "AI Infrastructure Performance Architects & Cluster Operations Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Thermal Buffering Control"
+    },
+    {
+        "id": 503,
+        "keyword": "secondary cooling loop dissolved oxygen degasification controllers for copper cold plates",
+        "slug": "secondary-cooling-loop-dissolved-oxygen-degasification-controllers-for-copper-cold-plates",
+        "key_benefit": "Sub-10ppb Dissolved Oxygen Maintenance & Elimination of Copper Microchannel Pitting Corrosion",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Closed-Loop Mechanical Maintenance Leads & Supercomputing Reliability Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Dissolved Oxygen Degasification"
+    },
+    {
+        "id": 504,
+        "keyword": "return loop glycol concentration refractometry telemetry for outdoor dry coolers",
+        "slug": "return-loop-glycol-concentration-refractometry-telemetry-for-outdoor-dry-coolers",
+        "key_benefit": "Real-Time Propylene Glycol Brix Tracking & Freeze Protection Down to -30 C Without Heat Transfer Penalty",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Thermal Fluid Plant Engineers & Cold-Climate Data Center Operators",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Glycol Refractometry Telemetry"
+    },
+    {
+        "id": 505,
+        "keyword": "cdu dual-canned motor pump vibration and bearing wear monitors for tier iv facilities",
+        "slug": "cdu-dual-canned-motor-pump-vibration-and-bearing-wear-monitors-for-tier-iv-facilities",
+        "key_benefit": "Sub-0.8mm/s ISO Vibration Threshold Supervision & Seamless Hot-Standby Pump Autonomous Failover",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Tier IV Facility Operations Engineers & Critical Mechanical Equipment Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit CDU Pump Vibration Monitoring"
+    },
+    {
+        "id": 506,
+        "keyword": "vapor chamber sintered wick capillary dryout guard telemetry for dense asics",
+        "slug": "vapor-chamber-sintered-wick-capillary-dryout-guard-telemetry-for-dense-asics",
+        "key_benefit": "Infrared Thermal Transient Mapping & Capillary Limit Margin Preservation on High-Heat-Flux ASICs",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Custom Silicon Packaging Architects & Thermal Engineering Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Vapor Chamber Capillary Guard"
+    },
+    {
+        "id": 507,
+        "keyword": "bypass valve fast-actuating pressure relief controllers for d2c liquid manifolds",
+        "slug": "bypass-valve-fast-actuating-pressure-relief-controllers-for-d2c-liquid-manifolds",
+        "key_benefit": "Sub-50ms Water Hammer Hydraulic Surge Damping & Cold Plate Burst Pressure Protection",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Fluid Power Hydraulic Engineers & High-Performance Computing Safety Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Manifold Pressure Relief Control"
+    },
+
+    # -------------------------------------------------------------------------
+    # Autonomous eVTOL Urban Air Mobility Airspace Deconfliction (IDs 508-524)
+    # -------------------------------------------------------------------------
+    {
+        "id": 508,
+        "keyword": "4d trajectory strategic conflict detection and resolution agents for evtol fleets",
+        "slug": "4d-trajectory-strategic-conflict-detection-and-resolution-agents-for-evtol-fleets",
+        "key_benefit": "Sub-500ms Spatial Corridor Conflict Solving & 4D Spatiotemporal Airspace Separation Guarantee",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Urban Air Mobility Airspace Architects & eVTOL Fleet Navigation Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit 4D Trajectory Deconfliction"
+    },
+    {
+        "id": 509,
+        "keyword": "vertiport terminal area sequencing and spacing controllers for urban air mobility",
+        "slug": "vertiport-terminal-area-sequencing-and-spacing-controllers-for-urban-air-mobility",
+        "key_benefit": "Dynamic Hover-In-Place Metering & Sub-30-Second Touchdown Slot Turnaround Optimization",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Vertiport Operations Directors & UAM Terminal Air Traffic Managers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Vertiport Sequencing Controllers"
+    },
+    {
+        "id": 510,
+        "keyword": "micro-weather wind shear and building gust envelope predictors for low-altitude corridors",
+        "slug": "micro-weather-wind-shear-and-building-gust-envelope-predictors-for-low-altitude-corridors",
+        "key_benefit": "Urban Canyon LiDAR Wind Vector Fusion & Autonomous Turbulence Evasion Trajectory Injection",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aviation Meteorology Specialists & Autonomous Flight Safety Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Micro-Weather Wind Shear Prediction"
+    },
+    {
+        "id": 511,
+        "keyword": "distributed electric propulsion thrust vectoring fault tolerance agents for evtol",
+        "slug": "distributed-electric-propulsion-thrust-vectoring-fault-tolerance-agents-for-evtol",
+        "key_benefit": "Sub-15ms Single Motor Flameout Re-Allocation & Level Flight Stability Recovery Under Failure",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Flight Control Systems Leads & Electric Propulsion Avionics Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Electric Propulsion Fault Tolerance"
+    },
+    {
+        "id": 512,
+        "keyword": "lithium-silicon battery thermal runaway containment telemetry for aviation packs",
+        "slug": "lithium-silicon-battery-thermal-runaway-containment-telemetry-for-aviation-packs",
+        "key_benefit": "Aero-Cell Gas Venting Pressure Spike Diagnostics & Pyro-Switch Bus Disconnection in Sub-10ms",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aviation Battery Safety Engineers & High-Voltage Powertrain Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Battery Thermal Containment"
+    },
+    {
+        "id": 513,
+        "keyword": "acoustic footprint noise abatement flight path synthesis controllers for city skies",
+        "slug": "acoustic-footprint-noise-abatement-flight-path-synthesis-controllers-for-city-skies",
+        "key_benefit": "Sub-65dBA Ground Noise Footprint Synthesis & Dynamic Rotor RPM Phase Synchronization",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aeroacoustics Engineers & Urban Flight Environmental Compliance Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Noise Abatement Flight Path"
+    },
+    {
+        "id": 514,
+        "keyword": "detect-and-avoid radar lidar and optical sensor fusion telemetry for bvlos evtol",
+        "slug": "detect-and-avoid-radar-lidar-and-optical-sensor-fusion-telemetry-for-bvlos-evtol",
+        "key_benefit": "360-Degree Non-Cooperative Intruder Tracking & Sub-100ms Collision Avoidance Maneuver Trigger",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Autonomy Perception Architects & BVLOS Flight Systems Certification Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Detect-and-Avoid Sensor Fusion"
+    },
+    {
+        "id": 515,
+        "keyword": "command and control cellular 5g and satellite dual-link handover telemetry for uam",
+        "slug": "command-and-control-cellular-5g-and-satellite-dual-link-handover-telemetry-for-uam",
+        "key_benefit": "Zero-Packet-Loss C2 Link Transition & Sub-20ms Control Latency Across Dense Urban Cell Towers",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aviation Datalink Engineers & Telecommunications UAM Integration Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit C2 Dual-Link Handover Telemetry"
+    },
+    {
+        "id": 516,
+        "keyword": "electric rotor aerodynamic wake vortex spacing monitors for vertiport approach corridors",
+        "slug": "electric-rotor-aerodynamic-wake-vortex-spacing-monitors-for-vertiport-approach-corridors",
+        "key_benefit": "Doppler Lidar Vortex Decay Tracking & Dynamic Trailing Separation Reduction for High Throughput",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Terminal Airway Capacity Planners & Aerodynamic Wake Safety Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Wake Vortex Spacing Telemetry"
+    },
+    {
+        "id": 517,
+        "keyword": "emergency autorotation and ballistic parachute trigger telemetry agents for evtol",
+        "slug": "emergency-autorotation-and-ballistic-parachute-trigger-telemetry-agents-for-evtol",
+        "key_benefit": "Sub-200ms Inertial Catastrophic Descent Recognition & Autonomous Pyrotechnic Chute Deployment",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Emergency Recovery Avionics Leads & Airworthiness Certification Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Ballistic Parachute Telemetry"
+    },
+    {
+        "id": 518,
+        "keyword": "dynamic geofencing and urban canyon gnss multipath mitigation controllers for air taxis",
+        "slug": "dynamic-geofencing-and-urban-canyon-gnss-multipath-mitigation-controllers-for-air-taxis",
+        "key_benefit": "3D Building Facade Multipath Rejection & Sub-Meter Autonomous Corroboration via Visual Odometry",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Precise Positioning GNSS Engineers & Urban Navigation Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Dynamic Geofencing Controllers"
+    },
+    {
+        "id": 519,
+        "keyword": "automated vertiport pad foreign object debris scanning monitors for rapid turnaround",
+        "slug": "automated-vertiport-pad-foreign-object-debris-scanning-monitors-for-rapid-turnaround",
+        "key_benefit": "Millimeter-Wave Radar & Computer Vision FOD Detection Across TLOF Surface in Sub-10 Seconds",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Vertiport Ground Operations Managers & Aviation Infrastructure Safety Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Vertiport FOD Scanning"
+    },
+    {
+        "id": 520,
+        "keyword": "passenger cabin center-of-gravity weight distribution balance controllers for evtol",
+        "slug": "passenger-cabin-center-of-gravity-weight-distribution-balance-controllers-for-evtol",
+        "key_benefit": "Real-Time Seat Strain Gauge Telemetry & Trim Tab Pre-Set Optimization Before Lift-Off",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aircraft Weight and Balance Engineers & Flight Management Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Weight & Balance Controllers"
+    },
+    {
+        "id": 521,
+        "keyword": "high-voltage 800v bus solid-state circuit breaker arc fault isolation controllers for evtol",
+        "slug": "high-voltage-800v-bus-solid-state-circuit-breaker-arc-fault-isolation-controllers-for-evtol",
+        "key_benefit": "Sub-5-Microsecond SiC Solid-State Fault Cleaving & Electrical Bus Fire Prevention",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aviation Power Electronics Engineers & High-Voltage Aircraft Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Solid-State Arc Isolation"
+    },
+    {
+        "id": 522,
+        "keyword": "crosswind gust yaw stability active flap allocation controllers for transition flight",
+        "slug": "crosswind-gust-yaw-stability-active-flap-allocation-controllers-for-transition-flight",
+        "key_benefit": "Sub-20ms Differential Flaperon Deflection & Seamless Hover-to-Wingborne Cruise Conversion",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aeroelasticity Flight Dynamics Leads & eVTOL Control Laws Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Crosswind Yaw Stability"
+    },
+    {
+        "id": 523,
+        "keyword": "cooperative surveillance ads-b rebroadcast validation telemetry for low-altitude corridors",
+        "slug": "cooperative-surveillance-ads-b-rebroadcast-validation-telemetry-for-low-altitude-corridors",
+        "key_benefit": "Spoof-Resistant Cryptographic ADS-B Corroboration & Multilateration Urban Aircraft Tracking",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Surveillance Systems Engineers & Air Traffic Cybersecurity Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit ADS-B Rebroadcast Telemetry"
+    },
+    {
+        "id": 524,
+        "keyword": "ground taxi autonomous tug rendezvous coordination agents for vertiport gates",
+        "slug": "ground-taxi-autonomous-tug-rendezvous-coordination-agents-for-vertiport-gates",
+        "key_benefit": "Automated Wheel-Lifting Tug Interlocking & Zero Battery Rotor Power Consumption During Apron Taxi",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Vertiport Ground Handling Leads & Autonomous GSE Fleet Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Ground Tug Coordination"
+    },
+
+    # -------------------------------------------------------------------------
+    # Solid-State Lithium-Metal Battery Dry Electrode Roll-to-Roll Calendering (IDs 525-540)
+    # -------------------------------------------------------------------------
+    {
+        "id": 525,
+        "keyword": "dry electrode powder ptfe fibrillization shear mixing controllers for battery lines",
+        "slug": "dry-electrode-powder-ptfe-fibrillization-shear-mixing-controllers-for-battery-lines",
+        "key_benefit": "Continuous High-Shear Torque Feedback Tuning & Uniform Binder Web Network Formation Without Solvents",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Solid-State Battery Process Engineers & Dry Electrode Manufacturing Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit PTFE Fibrillization Mixing"
+    },
+    {
+        "id": 526,
+        "keyword": "roll-to-roll calendering gap thickness laser confocal gauge telemetry for dry films",
+        "slug": "roll-to-roll-calendering-gap-thickness-laser-confocal-gauge-telemetry-for-dry-films",
+        "key_benefit": "Sub-0.5-Micron Closed-Loop Hydraulic Nip Gap Tuning & Elimination of Cross-Web Thickness Drift",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Precision Calendering Automation Leads & Battery Web Processing Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Calendering Laser Gauge Telemetry"
+    },
+    {
+        "id": 527,
+        "keyword": "solid electrolyte separator sulfide thin film web tension balancing controllers",
+        "slug": "solid-electrolyte-separator-sulfide-thin-film-web-tension-balancing-controllers",
+        "key_benefit": "Sub-0.1N Load Cell Tension Control & Prevention of Micro-Tears in 15-Micron Sulfide Separator Webs",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Solid Electrolyte Web Handling Engineers & Next-Gen Cell Assembly Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Sulfide Separator Web Tension"
+    },
+    {
+        "id": 528,
+        "keyword": "lithium metal anode ultra-thin foil roll slitting burr inspection monitors",
+        "slug": "lithium-metal-anode-ultra-thin-foil-roll-slitting-burr-inspection-monitors",
+        "key_benefit": "Sub-2-Micron Laser Line Profile Edge Burr Detection & Elimination of Solid-State Short Circuits",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Lithium Foil Conversion Quality Leads & Anode Web Slitting Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Lithium Foil Slitting Burrs"
+    },
+    {
+        "id": 529,
+        "keyword": "dry cathode active material binder agglomerate detection telemetry for roll compaction",
+        "slug": "dry-cathode-active-material-binder-agglomerate-detection-telemetry-for-roll-compaction",
+        "key_benefit": "Continuous Terahertz Non-Destructive Scanning & Instantaneous Roller Nip Auto-Relief",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Battery Electrode Quality Engineers & NDT Process Automation Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Binder Agglomerate Detection"
+    },
+    {
+        "id": 530,
+        "keyword": "heated compaction roller thermal gradient induction profiling controllers for dry films",
+        "slug": "heated-compaction-roller-thermal-gradient-induction-profiling-controllers-for-dry-films",
+        "key_benefit": "Multi-Zone 0.2 C Inductive Surface Heating & Consistent 180 C Binder Cross-Linking Uniformity",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Thermal Roll Calendering Specialists & Electrode Finishing Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Heated Calendering Profiling"
+    },
+    {
+        "id": 531,
+        "keyword": "continuous web speed tension wrinkle suppression controllers for battery dry coating",
+        "slug": "continuous-web-speed-tension-wrinkle-suppression-controllers-for-battery-dry-coating",
+        "key_benefit": "Bowing Roller Differential Speed Modulation & 100m/min Flawless Web Flatness Maintenance",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "High-Speed Web Handling Leads & Battery Gigafactory Operations Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Web Wrinkle Suppression"
+    },
+    {
+        "id": 532,
+        "keyword": "solid-state cell pouch vacuum sealing hermeticity leak testing telemetry for dry lines",
+        "slug": "solid-state-cell-pouch-vacuum-sealing-hermeticity-leak-testing-telemetry-for-dry-lines",
+        "key_benefit": "Sub-10^-8 mbar*l/s Helium Mass Spectrometry Leak Detection & Ingress-Proof Pack Sealing",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Pouch Cell Assembly Quality Leads & Hermetic Sealing Process Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Pouch Vacuum Sealing Hermeticity"
+    },
+    {
+        "id": 533,
+        "keyword": "isostatic stack pressure consolidation tracking monitors for solid-state batteries",
+        "slug": "isostatic-stack-pressure-consolidation-tracking-monitors-for-solid-state-batteries",
+        "key_benefit": "Sub-50kPa Hydrostatic Uniform Pressing Telemetry & Complete Interfacial Void Elimination",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Cell Formation and Consolidation Leads & Solid-State Pack Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Stack Pressure Consolidation"
+    },
+    {
+        "id": 534,
+        "keyword": "dry electrode mass loading beta-ray areal density telemetry agents for gigafactories",
+        "slug": "dry-electrode-mass-loading-beta-ray-areal-density-telemetry-agents-for-gigafactories",
+        "key_benefit": "Sub-0.25% Krypton-85 Radiometric Mass Loading Verification & Real-Time Nip Motor Closed-Loop Feedback",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Gigafactory Metrology Directors & Online Quality Control Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Beta-Ray Mass Loading Telemetry"
+    },
+    {
+        "id": 535,
+        "keyword": "sulfide electrolyte argon inert glovebox moisture telemetry agents for solid-state lines",
+        "slug": "sulfide-electrolyte-argon-inert-glovebox-moisture-telemetry-agents-for-solid-state-lines",
+        "key_benefit": "Sub-0.1ppm H2O and O2 Dew Point Tracking & Hydrogen Sulfide H2S Gas Generation Prevention",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Dry Room Atmospheric Control Leads & Chemical Hazards Safety Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Inert Glovebox Moisture Telemetry"
+    },
+    {
+        "id": 536,
+        "keyword": "anode-separator interfacial impedance ultrasonic scanning monitors for dry pouch cells",
+        "slug": "anode-separator-interfacial-impedance-ultrasonic-scanning-monitors-for-dry-pouch-cells",
+        "key_benefit": "Acoustic Reflection Delamination Mapping & Sub-5-Ohm Solid Electrolyte Contact Verification",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Battery Non-Destructive Testing Engineers & Advanced Cell Evaluation Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Interfacial Ultrasonic Scanning"
+    },
+    {
+        "id": 537,
+        "keyword": "calendering roll edge curl defect machine vision inspection agents for dry electrodes",
+        "slug": "calendering-roll-edge-curl-defect-machine-vision-inspection-agents-for-dry-electrodes",
+        "key_benefit": "3D Structured Light Edge Lift Detection & Automated Edge Trimmer Micro-Positioning",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Electrode Web Slitting Supervisors & Vision Inspection Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Edge Curl Vision Inspection"
+    },
+    {
+        "id": 538,
+        "keyword": "solvent-free electrostatic powder deposition charge controllers for dry battery coating",
+        "slug": "solvent-free-electrostatic-powder-deposition-charge-controllers-for-dry-battery-coating",
+        "key_benefit": "Sub-100V Corona Cloud Potential Regulation & 99.5% Powder Transfer Efficiency onto Current Collector",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Electrostatic Deposition Specialists & Dry Coating R&D Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Electrostatic Powder Deposition"
+    },
+    {
+        "id": 539,
+        "keyword": "solid-state tab ultrasonic wedge bonding joint resistance monitors for battery packs",
+        "slug": "solid-state-tab-ultrasonic-wedge-bonding-joint-resistance-monitors-for-battery-packs",
+        "key_benefit": "Sub-0.05-Micro-Ohm Bond Joint Resistance Verification & Dynamic Frequency Resonance Lock",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Ultrasonic Welding Automation Leads & Battery Interconnect Process Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Tab Ultrasonic Bonding Telemetry"
+    },
+    {
+        "id": 540,
+        "keyword": "dry film delamination peel strength real-time force sensing monitors for current collectors",
+        "slug": "dry-film-delamination-peel-strength-real-time-force-sensing-monitors-for-current-collectors",
+        "key_benefit": "180-Degree Adhesion Peel Force Tracking & Sub-0.01N/mm Current Collector Primer Bond Security",
+        "category": "Solutions",
+        "hub_category": "Industrial Manufacturing",
+        "target_persona": "Dry Electrode Adhesion Scientists & Quality Assurance Managers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Film Peel Strength Monitoring"
+    }
+]
+
+def main():
+    with open(QUEUE_PATH, "r", encoding="utf-8") as f:
+        existing = json.load(f)
+    
+    existing_ids = {x["id"] for x in existing}
+    added = 0
+    for kw in wave_13_keywords:
+        if kw["id"] not in existing_ids:
+            existing.append(kw)
+            added += 1
+            
+    with open(QUEUE_PATH, "w", encoding="utf-8") as f:
+        json.dump(existing, f, indent=2, ensure_ascii=False)
+        
+    print(f"Successfully ingested {added} new keywords. Total queue length: {len(existing)}")
+
+if __name__ == "__main__":
+    main()

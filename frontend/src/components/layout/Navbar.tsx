@@ -147,6 +147,12 @@ export default function Navbar() {
                             Event Ledger
                         </Link>
                         <Link
+                            to="/tools/enterprise-prompt-injection-firewall-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-rose-500 dark:text-rose-400"
+                        >
+                            Prompt Firewall
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -331,6 +337,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-cyan-500 dark:text-cyan-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Event Sourcing Audit Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-prompt-injection-firewall-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Prompt Injection Firewall
                             </Link>
                             <Link
                                 to="/compare"

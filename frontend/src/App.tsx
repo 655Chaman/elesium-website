@@ -49,6 +49,8 @@ const EnterpriseGraphRagBenchmark = lazy(() => import('./components/pages/Enterp
 const EmbedGraphRagBenchmark = lazy(() => import('./components/pages/EmbedGraphRagBenchmark'))
 const EnterpriseEventSourcingSimulator = lazy(() => import('./components/pages/EnterpriseEventSourcingSimulator'))
 const EmbedEventSourcingSimulator = lazy(() => import('./components/pages/EmbedEventSourcingSimulator'))
+const EnterprisePromptFirewallSimulator = lazy(() => import('./components/pages/EnterprisePromptFirewallSimulator'))
+const EmbedPromptFirewallSimulator = lazy(() => import('./components/pages/EmbedPromptFirewallSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -151,6 +153,9 @@ function App() {
                             <Route path="/tools/enterprise-event-sourcing-audit-simulator" element={<EnterpriseEventSourcingSimulator />} />
                             <Route path="/tools/event-sourcing-simulator" element={<Navigate to="/tools/enterprise-event-sourcing-audit-simulator" replace />} />
                             <Route path="/embed/event-sourcing-audit-simulator" element={<EmbedEventSourcingSimulator />} />
+                            <Route path="/tools/enterprise-prompt-injection-firewall-simulator" element={<EnterprisePromptFirewallSimulator />} />
+                            <Route path="/tools/prompt-injection-firewall-simulator" element={<Navigate to="/tools/enterprise-prompt-injection-firewall-simulator" replace />} />
+                            <Route path="/embed/prompt-injection-firewall-simulator" element={<EmbedPromptFirewallSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
