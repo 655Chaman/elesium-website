@@ -18,6 +18,7 @@ export default function DownloadFooter() {
         { name: 'LLM Context Window KV Cache Simulator', path: '/tools/enterprise-llm-context-kv-cache-simulator' },
         { name: 'Agent Deadlock & FSM Circuit Breaker Visualizer', path: '/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer' },
         { name: 'Voice Agent VAD & Turn-Taking Latency Simulator', path: '/tools/enterprise-voice-agent-latency-simulator' },
+        { name: 'GraphRAG vs Vector DB Benchmark', path: '/tools/enterprise-graphrag-memory-benchmark' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

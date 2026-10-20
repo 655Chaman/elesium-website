@@ -1267,6 +1267,56 @@ def render_voice_embed_semantic_html():
 </div>
 """
 
+def render_graphrag_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-graphrag-memory-benchmark.
+    """
+    return """
+<div id="prerendered-graphrag-benchmark" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#10b981;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic Memory &amp; Knowledge Graph Telemetry</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise GraphRAG vs Vector DB Benchmark</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark indexing token multipliers, k-hop retrieval latency, and multi-hop reasoning accuracy comparing Dense Vector RAG, Hybrid BM25+Dense, and Knowledge Graph Triplet Extraction.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Retrieval Architecture Comparison &amp; Multi-Hop Accuracy</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Knowledge Graph Triplet Extraction (GraphRAG)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Hierarchical Leiden community clusters and k-hop subgraph traversal achieve 95% multi-hop reasoning accuracy across enterprise corpora, eliminating cross-document entity blindness.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a7f3d0;">Accuracy: 95% | Latency: 380ms | Triplet Extraction</div>
+        </div>
+        <div style="background:#020617;border:1px solid #38bdf840;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin:0 0 0.5rem 0;">Hybrid BM25 + Dense Vector RAG</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Reciprocal Rank Fusion with cross-encoder reranking delivers fast point lookups for technical IDs, but lacks graph topology for relational reasoning.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#bae6fd;">Accuracy: 61% | Latency: 70ms | Point Lookup</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_graphrag_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/graphrag-memory-benchmark.
+    """
+    return """
+<div id="prerendered-graphrag-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">GraphRAG vs Vector DB Benchmark Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating indexing token costs, k-hop retrieval latency, and multi-hop accuracy.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark Dense Vector RAG, Hybrid BM25+Dense, and GraphRAG across enterprise document sizes and query complexity.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2455,6 +2505,14 @@ def generate_ssg():
         "embed/voice-agent-latency-simulator": {
             "title": "Voice Agent Turn-Taking Latency Sandbox",
             "desc": "Embeddable interactive widget calculating voice agent latency across WebRTC, VAD silence, streaming ASR, and TTS."
+        },
+        "tools/enterprise-graphrag-memory-benchmark": {
+            "title": "Enterprise GraphRAG vs Vector DB Benchmark",
+            "desc": "Empirical benchmark simulator comparing Dense Vector RAG, Hybrid BM25+Dense, and Knowledge Graph Triplet Extraction (GraphRAG). Model indexing token multipliers, k-hop latency, and multi-hop accuracy."
+        },
+        "embed/graphrag-memory-benchmark": {
+            "title": "Enterprise GraphRAG Benchmark Sandbox",
+            "desc": "Embeddable interactive widget calculating GraphRAG vs Vector DB indexing token costs, k-hop retrieval latency, and multi-hop reasoning accuracy."
         }
     }
 
@@ -3486,6 +3544,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(voice_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-graphrag-memory-benchmark":
+            tool_content = render_graphrag_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            graphrag_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise GraphRAG vs Vector DB Benchmark",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "GraphRAG Benchmark",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(graphrag_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/graphrag-memory-benchmark":
+            embed_content = render_graphrag_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            graphrag_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "GraphRAG vs Vector DB Benchmark Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(graphrag_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

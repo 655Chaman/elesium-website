@@ -45,6 +45,8 @@ const EnterpriseAgentDeadlockVisualizer = lazy(() => import('./components/pages/
 const EmbedAgentDeadlockVisualizer = lazy(() => import('./components/pages/EmbedAgentDeadlockVisualizer'))
 const EnterpriseVoiceAgentLatencySimulator = lazy(() => import('./components/pages/EnterpriseVoiceAgentLatencySimulator'))
 const EmbedVoiceAgentLatencySimulator = lazy(() => import('./components/pages/EmbedVoiceAgentLatencySimulator'))
+const EnterpriseGraphRagBenchmark = lazy(() => import('./components/pages/EnterpriseGraphRagBenchmark'))
+const EmbedGraphRagBenchmark = lazy(() => import('./components/pages/EmbedGraphRagBenchmark'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -141,6 +143,9 @@ function App() {
                             <Route path="/tools/enterprise-voice-agent-latency-simulator" element={<EnterpriseVoiceAgentLatencySimulator />} />
                             <Route path="/tools/voice-agent-latency-simulator" element={<Navigate to="/tools/enterprise-voice-agent-latency-simulator" replace />} />
                             <Route path="/embed/voice-agent-latency-simulator" element={<EmbedVoiceAgentLatencySimulator />} />
+                            <Route path="/tools/enterprise-graphrag-memory-benchmark" element={<EnterpriseGraphRagBenchmark />} />
+                            <Route path="/tools/graphrag-benchmark" element={<Navigate to="/tools/enterprise-graphrag-memory-benchmark" replace />} />
+                            <Route path="/embed/graphrag-memory-benchmark" element={<EmbedGraphRagBenchmark />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

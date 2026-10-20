@@ -51,6 +51,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-llm-context-kv-cache-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-voice-agent-latency-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-graphrag-memory-benchmark", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
