@@ -23,6 +23,7 @@ export default function DownloadFooter() {
         { name: 'Prompt Injection Firewall Simulator', path: '/tools/enterprise-prompt-injection-firewall-simulator' },
         { name: 'Semantic Cache & Token Deduplication Simulator', path: '/tools/enterprise-semantic-cache-simulator' },
         { name: 'Multi-Model Dynamic Routing & Arbitrage Simulator', path: '/tools/enterprise-model-routing-cost-arbitrage-simulator' },
+        { name: 'Structured Output & Grammar Decoding Simulator', path: '/tools/enterprise-structured-output-latency-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

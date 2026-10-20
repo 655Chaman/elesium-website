@@ -1587,6 +1587,61 @@ def render_routing_embed_semantic_html():
 </div>
 """
 
+def render_structured_output_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-structured-output-latency-simulator.
+    """
+    return """
+<div id="prerendered-structured-output-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#38bdf8;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Deterministic Grammar Decoding &amp; Schema Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Structured Output &amp; JSON Grammar Decoding Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark deterministic constrained decoding (Outlines, vLLM XGrammar, GBNF) vs unconstrained prompt generation and Pydantic retry loops. Calculate sub-5ms vocabulary logit masking, zero retry token wastage, and cloud cost arbitrage.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Grammar Decoding Architecture Comparison</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #38bdf840;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin:0 0 0.5rem 0;">Elesium Constrained Decoding (XGrammar / Outlines)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">GPU-accelerated context-free grammar masks invalid token logits in sub-5μs per token, guaranteeing 0.0% JSON parse exceptions and zero retry token wastage.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#bae6fd;">Syntax Failures: 0.0% | Retries: 0 | Latency: 380ms</div>
+        </div>
+        <div style="background:#020617;border:1px solid #818cf840;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#818cf8;margin:0 0 0.5rem 0;">Cloud Vendor Function Calling API</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Server-side proprietary masking provides schema enforcement but charges steep cloud token rates ($10/1M output) with +95ms masking TTFT overhead.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#c7d2fe;">Syntax Failures: 1.2% | Latency: 515ms | Premium Pricing</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unconstrained Prompt + Pydantic Retries</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Missing quotes and trailing commas cause frequent syntax exceptions (8%–18%), triggering costly re-prompts that multiply latency and token consumption.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Syntax Failures: 8.6% | Latency: 720ms | Wasted Tokens: 1.4x</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_structured_output_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/structured-output-latency-simulator.
+    """
+    return """
+<div id="prerendered-structured-output-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Structured Output &amp; JSON Grammar Decoding Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating grammar logit masking, zero retry token wastage, and cloud API spend reductions.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark deterministic context-free grammar decoding (Outlines / XGrammar) vs unconstrained generation and Pydantic retries under varying schema depths and query volumes.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2815,6 +2870,14 @@ def generate_ssg():
         "embed/model-routing-cost-arbitrage-simulator": {
             "title": "Multi-Model Dynamic Routing & Arbitrage Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating dynamic model routing distribution, token cost arbitrage, and cluster latency cuts."
+        },
+        "tools/enterprise-structured-output-latency-simulator": {
+            "title": "Enterprise Structured Output & JSON Grammar Decoding Simulator",
+            "desc": "Simulate and benchmark deterministic constrained decoding (Outlines, vLLM XGrammar, GBNF) vs unconstrained prompt generation and Pydantic retry loops. Calculate sub-5ms vocabulary logit masking, zero retry token wastage, and cloud cost arbitrage."
+        },
+        "embed/structured-output-latency-simulator": {
+            "title": "Structured Output & JSON Grammar Decoding Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating grammar logit masking, zero retry token wastage, and cloud API spend reductions."
         }
     }
 
@@ -4231,6 +4294,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(routing_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-structured-output-latency-simulator":
+            tool_content = render_structured_output_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            structured_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Structured Output & JSON Grammar Decoding Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Structured Output Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(structured_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/structured-output-latency-simulator":
+            embed_content = render_structured_output_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            structured_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Structured Output & JSON Grammar Decoding Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(structured_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

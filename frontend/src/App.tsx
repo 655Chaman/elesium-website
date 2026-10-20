@@ -55,6 +55,8 @@ const EnterpriseSemanticCacheSimulator = lazy(() => import('./components/pages/E
 const EmbedSemanticCacheSimulator = lazy(() => import('./components/pages/EmbedSemanticCacheSimulator'))
 const EnterpriseModelRoutingSimulator = lazy(() => import('./components/pages/EnterpriseModelRoutingSimulator'))
 const EmbedModelRoutingSimulator = lazy(() => import('./components/pages/EmbedModelRoutingSimulator'))
+const EnterpriseStructuredOutputSimulator = lazy(() => import('./components/pages/EnterpriseStructuredOutputSimulator'))
+const EmbedStructuredOutputSimulator = lazy(() => import('./components/pages/EmbedStructuredOutputSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -166,6 +168,9 @@ function App() {
                             <Route path="/tools/enterprise-model-routing-cost-arbitrage-simulator" element={<EnterpriseModelRoutingSimulator />} />
                             <Route path="/tools/model-routing-cost-arbitrage-simulator" element={<Navigate to="/tools/enterprise-model-routing-cost-arbitrage-simulator" replace />} />
                             <Route path="/embed/model-routing-cost-arbitrage-simulator" element={<EmbedModelRoutingSimulator />} />
+                            <Route path="/tools/enterprise-structured-output-latency-simulator" element={<EnterpriseStructuredOutputSimulator />} />
+                            <Route path="/tools/structured-output-latency-simulator" element={<Navigate to="/tools/enterprise-structured-output-latency-simulator" replace />} />
+                            <Route path="/embed/structured-output-latency-simulator" element={<EmbedStructuredOutputSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
