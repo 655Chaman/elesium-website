@@ -2630,6 +2630,49 @@ def render_abdm_fhir_embed_semantic_html():
 </div>
 """
 
+def render_cfr_part_11_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-cfr-part-11-validation-simulator.
+    """
+    return """
+<div id="prerendered-agent-cfr-part-11-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Pharmaceutical Validation &amp; 21 CFR Part 11 Compliance</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">CDSCO &amp; US FDA 21 CFR Part 11 eBMR Validation Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate cryptographic Merkle audit trail verification, GAMP 5 data integrity compliance, and automated batch release cycle acceleration across Indian formulation plants and active pharmaceutical ingredient (API) facilities.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">GAMP 5 Data Integrity &amp; Batch Release Benchmarks</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>Continuous Merkle Audit Chains:</strong> Hashes sensor telemetry and manual actions with SHA-256, mathematically preventing Form 483 audit trail citations.</li>
+        <li><strong>Chromatography CDS Integration:</strong> Directly verifies Waters Empower 3 and Chromeleon peak integrations, eliminating manual transcription errors.</li>
+        <li><strong>Air-Gapped Private VPC Deployment:</strong> Safeguards Master Formula Records (MFR) and drug substance synthesis IP on dedicated local NVIDIA accelerators.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_cfr_part_11_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-cfr-part-11-validation-simulator.
+    """
+    return """
+<div id="prerendered-agent-cfr-part-11-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">21 CFR Part 11 &amp; CDSCO eBMR Validation Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Electronic Batch Record verification latency, tamper detection confidence, and annual validation OPEX savings.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate pharmaceutical computerized system validation (CSV) and cryptographic audit trail integrity across sovereign life sciences manufacturing clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign Life Sciences AI</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -4034,6 +4077,14 @@ def generate_ssg():
         "embed/agent-abdm-fhir-privacy-simulator": {
             "title": "ABDM FHIR Clinical Privacy & De-Identification Sandbox",
             "desc": "Interactive embed widget calculating HL7 FHIR de-identification latency, differential privacy epsilon budgets, and re-identification risk."
+        },
+        "tools/enterprise-agent-cfr-part-11-validation-simulator": {
+            "title": "CDSCO & US FDA 21 CFR Part 11 eBMR Validation Simulator",
+            "desc": "Simulate pharmaceutical Electronic Batch Manufacturing Record (eBMR) verification, GAMP 5 audit trail integrity, and CDSCO/FDA compliance telemetry."
+        },
+        "embed/agent-cfr-part-11-validation-simulator": {
+            "title": "21 CFR Part 11 & CDSCO eBMR Validation Sandbox",
+            "desc": "Interactive embed widget calculating Electronic Batch Record verification latency, tamper detection confidence, and annual validation OPEX savings."
         }
     }
 
@@ -7234,6 +7285,89 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(abdm_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-cfr-part-11-validation-simulator":
+            tool_content = render_cfr_part_11_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            cfr_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "CDSCO & US FDA 21 CFR Part 11 eBMR Validation Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "21 CFR Part 11 eBMR Validation Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(cfr_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-cfr-part-11-validation-simulator":
+            embed_content = render_cfr_part_11_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            cfr_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "21 CFR Part 11 & CDSCO eBMR Validation Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(cfr_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

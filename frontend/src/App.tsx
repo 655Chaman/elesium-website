@@ -99,6 +99,8 @@ const EnterpriseAgentGraphConsensusSimulator = lazy(() => import('./components/p
 const EmbedAgentGraphConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentGraphConsensusSimulator'))
 const EnterpriseAgentAbdmFhirSimulator = lazy(() => import('./components/pages/EnterpriseAgentAbdmFhirSimulator'))
 const EmbedAgentAbdmFhirSimulator = lazy(() => import('./components/pages/EmbedAgentAbdmFhirSimulator'))
+const EnterpriseAgentCfrPart11Simulator = lazy(() => import('./components/pages/EnterpriseAgentCfrPart11Simulator'))
+const EmbedAgentCfrPart11Simulator = lazy(() => import('./components/pages/EmbedAgentCfrPart11Simulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -276,6 +278,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-abdm-fhir-privacy-simulator" element={<EnterpriseAgentAbdmFhirSimulator />} />
                             <Route path="/tools/agent-abdm-fhir-privacy-simulator" element={<Navigate to="/tools/enterprise-agent-abdm-fhir-privacy-simulator" replace />} />
                             <Route path="/embed/agent-abdm-fhir-privacy-simulator" element={<EmbedAgentAbdmFhirSimulator />} />
+                            <Route path="/tools/enterprise-agent-cfr-part-11-validation-simulator" element={<EnterpriseAgentCfrPart11Simulator />} />
+                            <Route path="/tools/agent-cfr-part-11-validation-simulator" element={<Navigate to="/tools/enterprise-agent-cfr-part-11-validation-simulator" replace />} />
+                            <Route path="/embed/agent-cfr-part-11-validation-simulator" element={<EmbedAgentCfrPart11Simulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

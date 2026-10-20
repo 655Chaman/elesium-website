@@ -45,6 +45,7 @@ export default function DownloadFooter() {
         { name: 'Agent HSM PKCS#11 Air-Gapped Simulator', path: '/tools/enterprise-agent-hsm-pkcs11-simulator' },
         { name: 'Agent Graph Consensus & State Verifier Simulator', path: '/tools/enterprise-agent-graph-consensus-simulator' },
         { name: 'ABDM FHIR Clinical Privacy Simulator', path: '/tools/enterprise-agent-abdm-fhir-privacy-simulator' },
+        { name: '21 CFR Part 11 eBMR Validation Simulator', path: '/tools/enterprise-agent-cfr-part-11-validation-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

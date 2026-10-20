@@ -297,6 +297,12 @@ export default function Navbar() {
                             ABDM FHIR Privacy
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-cfr-part-11-validation-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
+                        >
+                            21 CFR Part 11 eBMR
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -656,6 +662,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 ABDM FHIR Clinical Privacy &amp; De-Identification Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-cfr-part-11-validation-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                21 CFR Part 11 &amp; CDSCO eBMR Validation Simulator
                             </Link>
                             <Link
                                 to="/compare"
