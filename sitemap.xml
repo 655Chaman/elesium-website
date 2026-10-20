@@ -187,6 +187,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-sandbox-formal-verification-simulator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/langgraph-multi-agent-systems-bangalore</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -2245,6 +2251,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/electro-hydraulic-control-pod-directional-control-valve-spool-displacement-lvdt-telemetry-for-subsea-actuators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/electrocorticography-speech-synthesis-neural-decoders-for-als-therapeutics</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2449,6 +2461,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/flinak-secondary-coolant-salt-electromagnetic-induction-flowmeter-non-wetted-velocity-telemetry-for-msr-loops</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/flng-loading-arm-boom-structural-deflection-and-wave-swell-dynamic-bending-telemetry-for-offshore-terminals</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2630,6 +2648,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/ground-taxi-autonomous-tug-rendezvous-coordination-agents-for-vertiport-gates</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/hastelloy-n-vessel-neutron-irradiation-helium-embrittlement-high-temperature-tensile-rupture-telemetry-for-msr-vessels</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/hastelloy-n-weld-filler-uns-n10003-intergranular-stress-corrosion-crack-propagation-acoustic-emission-telemetry-for-msr</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3133,6 +3163,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/liquid-fluoride-salt-containment-vessel-ultrasonic-guided-wave-wall-thinning-and-pitting-corrosion-telemetry-for-licensing</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/liquid-fuel-molten-fluoride-salt-bubbling-off-gas-xenon-135-noble-gas-stripping-gamma-spectrometer-telemetry</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/liquid-fuel-msr-delayed-neutron-precursor-drift-spatial-flux-tilt-compensated-ion-chamber-telemetry-for-reactivity</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/liquid-hydrogen-turbopump-bearing-vibration-analysers-for-flight-software</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3433,6 +3481,60 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/molten-chloride-fast-reactor-mcfr-actinide-chloride-salt-volatility-and-sodium-vapour-cold-trap-telemetry-for-burners</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-fluoride-fuel-salt-online-spectrophotometric-uranium-4-to-uranium-3-ratio-optical-fiber-probe-telemetry</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-continuous-chemical-processing-reductive-extraction-bismuth-contactor-interface-level-telemetry-for-thorium</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-core-nuclear-graphite-moderator-dimensional-shrinkage-and-wigner-energy-release-telemetry-for-thermal-msrs</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-reactor-cantilever-sump-pump-molten-salt-hydrodynamic-bearing-vibration-and-gas-seal-telemetry-for-cores</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-reactor-decay-heat-removal-system-thermo-siphon-natural-circulation-loop-temperature-telemetry-for-station-blackout</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-reactor-freeze-valve-active-cooling-blower-temperature-triggered-passive-gravity-drain-telemetry-for-safety</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-reactor-hastelloy-n-alloy-flibe-fluoride-salt-redox-potential-telemetry-for-tellurium-embrittlement</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/molten-salt-reactor-tritium-permeation-through-nickel-superalloy-heat-exchanger-tubes-getter-bed-telemetry-for-capture</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/monoclonal-antibody-mab-glycosylation-microfluidic-capillary-electrophoresis-software-for-qc-laboratories</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3464,6 +3566,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/mrna-lipid-nanoparticle-encapsulation-microfluidics-telemetry-software-for-vaccine-manufacturers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/msr-primary-heat-exchanger-hastelloy-n-tube-wall-chromium-depletion-electrochemical-probe-telemetry-for-smrs</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4141,6 +4249,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/recompressor-sco2-split-flow-ratio-thermodynamic-recuperator-pinch-point-temperature-telemetry-for-brayton-cycles</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/reconfigurable-optical-add-drop-multiplexer-roadm-wavelength-routing-telemetry-software-for-optical-backbone-architects</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -4412,6 +4526,54 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/scada-telemetry-anomaly-detection-for-industrial-operators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-axial-compressor-stator-variable-vane-angle-aerodynamic-hysteresis-torque-telemetry-for-brayton-turbines</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-cooling-tower-direct-air-cooled-heat-exchanger-ambient-wind-crossflow-performance-telemetry-for-arid-plants</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-gas-purity-gas-chromatograph-moisture-and-light-hydrocarbon-contaminant-telemetry-for-closed-loop-stability</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-main-compressor-near-critical-pseudocritical-point-density-fluctuation-inlet-telemetry-for-surge-margin</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-printed-circuit-heat-exchanger-pche-microchannel-differential-pressure-loss-telemetry-for-brayton-loops</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-turbine-casing-high-temperature-haynes-282-creep-relaxation-and-thermal-stress-telemetry-for-brayton-casings</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-turbine-labyrinth-seal-clearance-capacitive-displacement-probe-telemetry-for-high-density-turbomachinery</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sco2-turbine-rotor-high-frequency-sub-synchronous-vibration-rotordynamics-telemetry-for-supercritical-shafts</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5041,6 +5203,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/subsea-blowout-preventer-blind-shear-ram-lock-position-ultrasonic-verification-telemetry-for-deepwater-drilling</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/subsea-blowout-preventer-hydraulic-shear-ram-pressure-agents-for-drilling</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -5095,6 +5263,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/subsea-chemical-injection-metering-valve-cimv-micro-flow-rate-corrosion-inhibitor-telemetry-for-flowline-scale</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-choke-valve-acoustic-sand-detector-particle-impingement-erosion-rate-telemetry-for-high-rate-gas-wells</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/subsea-christmas-tree-choke-valve-cavitation-trackers-for-offshore-operators</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -5108,6 +5288,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/subsea-cryogenic-transfer-manifold-breakaway-coupling-pre-tension-bolt-ultrasonic-telemetry-for-flng-vessels</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-electric-actuator-brushless-dc-motor-torque-feedback-and-resolver-position-telemetry-for-all-electric-trees</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-electrical-flying-lead-insulation-resistance-degradation-dielectric-time-domain-reflectometry-telemetry-for-trees</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5143,7 +5335,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/subsea-gas-hydrate-dissociation-differential-acoustic-velocity-and-pipe-skin-temperature-telemetry-for-tiebacks</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/subsea-hydraulic-accumulator-nitrogen-pre-charge-pressure-telemetry-for-bop-stacks</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-hydraulic-fluid-particulate-contamination-laser-particle-counter-iso-4406-cleanliness-telemetry-for-mux-pods</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5168,6 +5372,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/subsea-magnetic-anomaly-detection-pipeline-tracking-controllers-for-autonomous-inspection-auvs</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-manifold-multi-bore-clamp-connector-metal-to-metal-seal-contact-stress-telemetry-for-hpht-production</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5209,6 +5419,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/subsea-pig-receiver-acoustic-pig-signaller-electromagnetic-passage-detection-telemetry-for-intelligent-pigging</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-pipeline-tie-in-spool-galvanic-sacrificial-anode-electric-field-potential-gradient-telemetry-for-cp-surveys</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-production-riser-vortex-induced-vibration-helical-strake-hydrodynamic-drag-and-fatigue-telemetry-for-deepwater</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-production-tree-electro-hydraulic-multiplex-control-pod-accumulator-hydraulic-pressure-decay-telemetry-for-deepwater</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/subsea-rov-acoustic-telemetry-positioning-software-for-offshore-drilling-engineers</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -5239,6 +5473,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/subsea-umbilical-cable-optical-time-domain-reflectometry-otdr-fiber-strain-and-attenuation-telemetry-for-step-outs</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/subsea-vertical-riser-air-lift-multiphase-flow-gas-injection-rate-differential-pressure-telemetry-for-nodule-recovery</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -5251,7 +5491,25 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/subsea-wellhead-annular-pressure-build-up-thermal-expansion-transducer-telemetry-for-deepwater-casing-strings</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/subsea-wellhead-casing-hanger-seal-assembly-thermal-cycling-integrity-monitors</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-wellhead-fatigue-monitoring-triaxial-inclinometer-and-dynamic-bending-strain-telemetry-for-drilling-risers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/subsea-wet-gas-flowmeter-dual-energy-gamma-ray-attenuation-water-liquid-ratio-telemetry-for-real-time-allocation</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5335,7 +5593,55 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/supercritical-carbon-dioxide-dry-gas-seal-dynamic-groove-leakage-flow-telemetry-for-high-pressure-compressors</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-carbon-dioxide-solar-central-receiver-molten-salt-to-sco2-heat-transfer-pinch-telemetry-for-csp</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-co2-brayton-cycle-radial-inflow-turbine-aerodynamic-expansion-efficiency-telemetry-for-sco2-plants</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-co2-combustor-oxy-fuel-direct-fired-allam-cycle-soot-and-flame-ionization-telemetry-for-zero-emissions</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-co2-cycle-inventory-management-bypass-valve-cavitation-noise-acoustic-emission-telemetry-for-loops</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/supercritical-co2-geothermal-working-fluid-plume-trackers-for-heat-mining</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-co2-piping-thermal-shock-and-flow-accelerated-erosion-ultrasonic-wall-thickness-telemetry-for-headers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-co2-power-loop-rapid-depressurization-joule-thomson-refrigeration-dry-ice-icing-telemetry-for-relief-valves</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/supercritical-co2-turbine-foil-gas-bearing-hydrodynamic-lift-off-and-thermal-runaway-telemetry-for-high-speed-shafts</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
