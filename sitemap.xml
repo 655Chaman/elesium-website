@@ -301,6 +301,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-nemo-guardrails-simulator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/signals/llm-security-guardrails-for-enterprise-india</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/retail-inventory-automation-ai-india</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1099,6 +1111,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/algorithmic-trading-sub-millisecond-market-order-execution-telemetry-for-institutional-brokerage-houses</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/all-solid-state-pouch-cell-stack-isostatic-press-hydraulic-compaction-pressure-transducer-telemetry-for-layer-adhesion</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1285,6 +1303,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/automated-adversarial-red-teaming-fuzzer-telemetry-for-enterprise-foundation-model-deployments</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/automated-anti-money-laundering-aml-str-filing-anomaly-telemetry-for-digital-cooperative-banks</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/automated-bank-guarantee-e-bg-verification-and-stamping-telemetry-for-infrastructure-contractors</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1441,6 +1471,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/automated-pci-dss-v4-0-network-segmentation-validation-telemetry-for-enterprise-card-processing-data-centers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/automated-probe-card-needle-scrub-mark-alignment-inspection-software-for-wafer-sort-test-engineers</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1454,6 +1490,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/automated-suspicious-transaction-reporting-str-clustering-telemetry-for-securities-brokerages</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -1478,6 +1520,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/automotive-paint-shop-surface-defect-inspection-agents-for-assembly-plants</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/autonomous-agent-system-prompt-extraction-defense-telemetry-for-proprietary-b2b-saas-platforms</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -1747,6 +1795,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/biometric-fingerprint-template-irreversible-cryptographic-hashing-telemetry-for-corporate-access-control</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/biopharmaceutical-sterile-filtration-integrity-testing-automated-software-for-fill-finish-facilities</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1945,6 +1999,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/card-network-tokenization-cryptogram-generation-telemetry-for-payment-switch-operators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/cashless-insurance-dispute-arbitration-and-ombudsman-claim-dossier-telemetry-for-medical-grievance-cells</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2030,6 +2090,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/chemical-mechanical-planarization-wafer-topography-erosion-modeling-software-for-fab-process-engineers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/children-personal-data-verifiable-parental-consent-verification-telemetry-for-edtech-portals</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -2389,6 +2455,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/consent-manager-artifact-itemized-withdrawal-synchronization-telemetry-for-telecommunications-operators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/contactor-fan-array-volumetric-air-flow-rate-energy-optimization-agents-for-carbon-capture</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2569,6 +2641,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/core-banking-finacle-api-call-cryptographic-signature-verification-telemetry-for-private-banks</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/core-insurance-claim-settlement-fraud-anomaly-machine-learning-telemetry-for-general-insurance-firms</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/corporate-employee-payroll-pii-ephemeral-session-tokenization-telemetry-for-enterprise-hrms-suites</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/corporate-tpa-tariff-package-dispute-defense-and-automated-deduction-reconciliation-telemetry-for-hospital-billing</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2593,6 +2683,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/credit-bureau-cibil-score-fetch-encrypted-channel-telemetry-for-automated-micro-loan-apps</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/crispr-mrna-lipid-nanoparticle-lnp-encapsulation-efficiency-fluorometry-software-for-rna-formulation-labs</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2612,6 +2708,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/cross-border-data-egress-prevention-and-data-residency-audit-telemetry-for-cloud-n8n-instances</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/cross-border-data-transfer-exclusion-zone-verification-telemetry-for-multinational-cloud-infrastructure</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -2870,6 +2972,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/dark-store-picker-route-optimization-in-store-pathfinding-telemetry-for-micro-fulfillment-centers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/data-processor-contractual-indemnity-automated-verification-telemetry-for-corporate-procurement-suites</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3355,6 +3463,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/digital-lending-lsp-recovery-agent-geo-tracking-and-grievance-telemetry-for-regulated-entities</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/digital-personal-data-protection-dpdp-act-consent-notice-audit-trail-telemetry-for-legal-privacy-officers</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3499,6 +3613,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dpdp-act-2023-72-hour-mandatory-breach-notification-automated-dispatch-telemetry-for-cyber-defense-centers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dpdp-act-2023-cryptographic-audit-trail-webhook-payload-sanitization-telemetry-for-n8n-pipelines</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3602,6 +3722,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/dynamic-algorithmic-shelf-life-pricing-depreciation-telemetry-for-packaged-dairy-distributors</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/dynamic-context-window-delimiter-sandboxing-telemetry-for-multi-tenant-enterprise-copilots</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3745,6 +3871,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/electronic-health-record-abdm-abha-id-anonymization-telemetry-for-private-hospital-chains</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3799,7 +3931,37 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/enterprise-fine-tuned-llm-weight-poisoning-detection-telemetry-for-private-training-pipelines</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-llm-hallucination-factual-groundness-verification-telemetry-for-healthcare-diagnostic-copilots</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/enterprise-self-hosted-n8n-private-vpc-workflow-orchestration-latency-telemetry-for-indian-enterprises</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-semantic-firewall-zero-width-steganography-filter-telemetry-for-sovereign-banking-llms</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-tool-calling-parameter-exfiltration-circuit-breaker-telemetry-for-autonomous-sales-agents</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-vector-store-metadata-poisoning-isolation-telemetry-for-retrieval-augmented-generation</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4154,6 +4316,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/fiber-polarization-mode-dispersion-pmd-dgd-differential-group-delay-telemetry-software-for-high-bit-rate-transport-leads</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fintech-llm-sandbox-air-gapped-test-bed-deterministic-telemetry-for-algorithmic-trading-desks</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4562,6 +4730,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/germanium-on-silicon-pin-photodetector-optical-to-electrical-conversion-latency-telemetry-for-agent-inference</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/goods-and-services-tax-gstin-supplier-invoice-privacy-scrub-telemetry-for-b2b-ecommerce-marketplaces</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5617,7 +5791,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/indian-dpdp-act-2023-section-8-5-reasonable-security-safeguards-telemetry-for-enterprise-data-fiduciaries</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/indian-gst-rule-36-4-input-tax-credit-automated-supplier-invoice-reconciliation-telemetry-for-retail-corporations</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/indian-passport-and-driving-license-ocr-automated-masking-telemetry-for-air-travel-booking-portals</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5863,6 +6049,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/langgraph-conditional-security-verification-node-telemetry-for-multi-agent-supply-chain-workflows</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/langgraph-cyclical-state-machine-exception-recovery-and-circuit-breaker-telemetry-for-enterprise-operations</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -6074,6 +6266,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/lithography-wafer-edge-focus-tracking-chromatic-confocal-sensor-displacement-telemetry-for-topography-compensation</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/llama-guard-3-8b-local-awq-quantized-guardrail-latency-telemetry-for-private-vpc-deployments</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -6769,6 +6967,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/multi-turn-crescendo-jailbreak-adversarial-detection-telemetry-for-enterprise-conversational-agents</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/multi-unit-activity-drift-compensation-algorithms-for-chronic-implants</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -7100,6 +7304,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/nursing-medication-administration-record-emar-barcode-verification-telemetry-for-patient-safety</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/nvidia-nemo-guardrails-colang-2-flow-deterministic-interception-telemetry-for-enterprise-ai-teams</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -7580,6 +7790,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/perishable-seafood-cold-store-ammonia-sensor-telemetry-for-coastal-aquaculture-export-terminals</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/permanent-account-number-pan-card-regex-hashing-telemetry-for-mutual-fund-distributors</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8203,6 +8419,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/rag-indirect-prompt-injection-document-poisoning-sanitization-telemetry-for-legal-enterprise-discovery</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/ramon-and-brillouin-distributed-fiber-temperature-and-strain-monitoring-software-for-buried-submarine-cables</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -8210,6 +8432,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/rbi-it-governance-master-direction-automated-compliance-scoring-telemetry-for-tier-1-nbfcs</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8408,6 +8642,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/rfc-5869-hkdf-sha512-streaming-ephemeral-tokenization-latency-telemetry-for-sovereign-agent-vaults</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/right-to-be-forgotten-automated-database-purge-attestation-telemetry-for-consumer-lending-apps</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -9127,6 +9367,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/significant-data-fiduciary-sdf-algorithmic-impact-assessment-telemetry-for-large-consumer-tech-platforms</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/silica-tile-reaction-cured-glass-coating-micro-crack-laser-interferometry-for-tps-inspection</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -9577,6 +9823,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/sovereign-private-key-multi-party-computation-mpc-signing-telemetry-for-digital-asset-custodians</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/space-debris-laser-ranging-trajectory-prediction-software-for-ssa-operators</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -9853,6 +10105,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/sql-injection-translation-layer-mitigation-telemetry-for-natural-language-database-query-agents</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/stack-coolant-ethylene-glycol-electrical-conductivity-deionizing-monitors-for-fuel-cells</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -10069,6 +10327,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/sub-15ms-prompt-injection-firewall-semantic-intercept-telemetry-for-financial-copilot-architectures</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -10076,6 +10340,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/sub-50ms-finality-state-commitment-telemetry-for-sovereign-private-multi-agent-clusters</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sub-millisecond-verhoeff-checksum-aadhaar-number-redaction-telemetry-for-banking-customer-onboarding</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -10855,6 +11125,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/swift-iso-20022-message-syntax-validation-and-fraud-detection-telemetry-for-international-banking-hubs</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/swine-individual-feed-intake-rfid-electronic-sow-feeder-telemetry-software-for-pork-production-leads</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -10940,6 +11216,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/synthetic-metabolic-pathway-enzyme-cascade-stoichiometric-flux-balance-software-for-bio-manufacturers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/tamil-and-telugu-vernacular-conversational-safety-filter-telemetry-for-state-citizen-portals</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -11365,6 +11647,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/treasury-foreign-exchange-rate-hedging-trade-slip-reconciliation-telemetry-for-multinational-corporations</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/treasury-multi-entity-cash-pooling-automation-engines-for-corporate-treasurers</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -11491,6 +11779,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/unstructured-pdf-loan-contract-sensitive-financial-entity-redaction-telemetry-for-commercial-banks</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/upi-switch-transaction-failure-anomaly-machine-vision-telemetry-for-payment-aggregators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/urban-air-mobility-uam-vertiport-automated-air-traffic-deconfliction-software-for-airport-authority-directors</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -11587,6 +11887,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/vernacular-hinglish-adversarial-jailbreak-intent-classifier-telemetry-for-indian-consumer-fintechs</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/vernacular-invoice-ocr-tokenization-telemetry-for-tier-2-and-tier-3-indian-retail-distributors</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -11642,6 +11948,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/voice-first-order-cancellation-and-automated-refund-webhook-telemetry-for-omnichannel-retail</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/voice-recording-customer-audio-pii-scrubbing-telemetry-for-bpo-contact-center-enterprises</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
