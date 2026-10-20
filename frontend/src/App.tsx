@@ -71,6 +71,8 @@ const EnterpriseAgentMemoryDriftSimulator = lazy(() => import('./components/page
 const EmbedAgentMemoryDriftSimulator = lazy(() => import('./components/pages/EmbedAgentMemoryDriftSimulator'))
 const EnterpriseAgentSelfHealingCanarySimulator = lazy(() => import('./components/pages/EnterpriseAgentSelfHealingCanarySimulator'))
 const EmbedAgentSelfHealingCanarySimulator = lazy(() => import('./components/pages/EmbedAgentSelfHealingCanarySimulator'))
+const EnterpriseAgentPromptOptimizerSimulator = lazy(() => import('./components/pages/EnterpriseAgentPromptOptimizerSimulator'))
+const EmbedAgentPromptOptimizerSimulator = lazy(() => import('./components/pages/EmbedAgentPromptOptimizerSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -206,6 +208,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-self-healing-canary-simulator" element={<EnterpriseAgentSelfHealingCanarySimulator />} />
                             <Route path="/tools/agent-self-healing-canary-simulator" element={<Navigate to="/tools/enterprise-agent-self-healing-canary-simulator" replace />} />
                             <Route path="/embed/agent-self-healing-canary-simulator" element={<EmbedAgentSelfHealingCanarySimulator />} />
+                            <Route path="/tools/enterprise-agent-prompt-optimizer-simulator" element={<EnterpriseAgentPromptOptimizerSimulator />} />
+                            <Route path="/tools/agent-prompt-optimizer-simulator" element={<Navigate to="/tools/enterprise-agent-prompt-optimizer-simulator" replace />} />
+                            <Route path="/embed/agent-prompt-optimizer-simulator" element={<EmbedAgentPromptOptimizerSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

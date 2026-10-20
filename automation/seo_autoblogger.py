@@ -54,8 +54,8 @@ def call_llm(system_prompt: str, user_prompt: str, expected_json: bool = False, 
     nvidia_api_key = os.environ.get("NVIDIA_API_KEY")
 
     gemini_models = [
-        "gemini-flash-latest",
         "gemini-flash-lite-latest",
+        "gemini-flash-latest",
         "gemini-2.5-flash",
         "gemini-2.5-pro"
     ]

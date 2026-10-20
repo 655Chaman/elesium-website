@@ -1,27 +1,27 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "2.0.0",
-  "last_feedback_sync": "2026-10-20T09:07:41.353272+00:00",
+  "last_feedback_sync": "2026-10-20T09:21:04.521417+00:00",
   "architecture_phase": "Stage 9.1 Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer",
-  "total_urls_monitored": 1158,
+  "total_urls_monitored": 1209,
   "performance_tiers_summary": {
     "ELITE_LEADER": {
       "count": 3,
-      "percentage": "0.3%",
+      "percentage": "0.2%",
       "action": "100% lock, monitored for freshness"
     },
     "STRIKING_DISTANCE": {
-      "count": 1120,
-      "percentage": "96.7%",
+      "count": 1171,
+      "percentage": "96.9%",
       "action": "Highest-ROI tier! Google already understands the URL; automated entity & link push into Top 3"
     },
     "UNDERPERFORMING": {
       "count": 35,
-      "percentage": "3.0%",
+      "percentage": "2.9%",
       "action": "Scheduled for keyword cannibalization audits and structural expansions"
     }
   },
-  "striking_distance_reinforcements_applied": 1120,
+  "striking_distance_reinforcements_applied": 1171,
   "top_striking_distance_targets": [
     {
       "url": "https://elesium.online/",
@@ -192,6 +192,19 @@
       "link_boosts_required": 2
     },
     {
+      "url": "https://elesium.online/signals/roi-of-ai-agents-in-indian-manufacturing",
+      "keyword": "roi of ai agents in indian manufacturing",
+      "current_position": 6.5,
+      "projected_position": 2.1,
+      "moz_score": 97,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 2
+    },
+    {
       "url": "https://elesium.online/signals/top-ai-automation-agencies-india-2026",
       "keyword": "top ai automation agencies in india 2026",
       "current_position": 14.2,
@@ -203,19 +216,6 @@
         "pgvector"
       ],
       "link_boosts_required": 3
-    },
-    {
-      "url": "https://elesium.online/signals/ai-automation-roi-india-case-studies-2026",
-      "keyword": "ai automation roi india case studies 2026",
-      "current_position": 5.6,
-      "projected_position": 2.4,
-      "moz_score": 97,
-      "capsule_word_count": 45,
-      "missing_entities": [
-        "FastAPI",
-        "pgvector"
-      ],
-      "link_boosts_required": 1
     }
   ],
   "posts": [
