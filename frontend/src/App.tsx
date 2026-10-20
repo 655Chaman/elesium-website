@@ -43,6 +43,8 @@ const EnterpriseKvCacheSimulator = lazy(() => import('./components/pages/Enterpr
 const EmbedKvCacheSimulator = lazy(() => import('./components/pages/EmbedKvCacheSimulator'))
 const EnterpriseAgentDeadlockVisualizer = lazy(() => import('./components/pages/EnterpriseAgentDeadlockVisualizer'))
 const EmbedAgentDeadlockVisualizer = lazy(() => import('./components/pages/EmbedAgentDeadlockVisualizer'))
+const EnterpriseVoiceAgentLatencySimulator = lazy(() => import('./components/pages/EnterpriseVoiceAgentLatencySimulator'))
+const EmbedVoiceAgentLatencySimulator = lazy(() => import('./components/pages/EmbedVoiceAgentLatencySimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -136,6 +138,9 @@ function App() {
                             <Route path="/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer" element={<EnterpriseAgentDeadlockVisualizer />} />
                             <Route path="/tools/agent-deadlock-visualizer" element={<Navigate to="/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer" replace />} />
                             <Route path="/embed/agent-deadlock-visualizer" element={<EmbedAgentDeadlockVisualizer />} />
+                            <Route path="/tools/enterprise-voice-agent-latency-simulator" element={<EnterpriseVoiceAgentLatencySimulator />} />
+                            <Route path="/tools/voice-agent-latency-simulator" element={<Navigate to="/tools/enterprise-voice-agent-latency-simulator" replace />} />
+                            <Route path="/embed/voice-agent-latency-simulator" element={<EmbedVoiceAgentLatencySimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

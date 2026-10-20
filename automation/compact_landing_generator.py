@@ -63,7 +63,8 @@ ACRONYMS = {
     "QPU", "NISQ", "AWG", "SEI", "SSB", "DWDM", "EDFA", "OTDR", "PMD", "ROADM", "FEC", "QAM", "DSP", "WDM", "OSNR", "BER", "EVM",
     "RTK", "GNSS", "VIO", "ORCA", "QOS", "MEMS", "RF", "GPS", "UAM", "VTOL", "ESC", "RPM", "LIDAR",
     "VDE", "HTS", "REBCO", "NTM", "ECRH", "EFIT", "NBI", "ECE", "ELM", "RMP", "SOL", "ICRH", "VSWR", "MHD",
-    "DO", "CER", "OUR", "TFF", "MAB", "HCP", "ELISA", "CFD", "CIP", "SIP", "SMB", "LNP", "MRNA", "CRISPR", "SPR"
+    "DO", "CER", "OUR", "TFF", "MAB", "HCP", "ELISA", "CFD", "CIP", "SIP", "SMB", "LNP", "MRNA", "CRISPR", "SPR",
+    "VPD", "TDR", "TDT", "CGE", "CFPS", "MAGE", "YAC", "DLS", "UHTC", "SWBLI", "HGV", "RCS", "PDWE", "GNC", "TPS", "SCRAMJET"
 }
 
 def smart_title(text: str) -> str:

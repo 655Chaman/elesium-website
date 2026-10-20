@@ -129,6 +129,12 @@ export default function Navbar() {
                             Deadlock Breaker
                         </Link>
                         <Link
+                            to="/tools/enterprise-voice-agent-latency-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-500 dark:text-purple-400"
+                        >
+                            Voice Latency
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -292,6 +298,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Deadlock Breaker Visualizer
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-voice-agent-latency-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-purple-500 dark:text-purple-400 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Voice Agent Latency Simulator
                             </Link>
                             <Link
                                 to="/compare"

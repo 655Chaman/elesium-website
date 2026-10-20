@@ -1217,6 +1217,56 @@ def render_deadlock_embed_semantic_html():
 </div>
 """
 
+def render_voice_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-voice-agent-latency-simulator.
+    """
+    return """
+<div id="prerendered-voice-agent-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#c084fc;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Conversational Telephony &amp; Audio Telemetry Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Real-Time Voice Agent VAD &amp; Turn-Taking Latency Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark real-time voice agent latency across WebRTC transport, Silero VAD silence hangover, streaming ASR, LLM TTFT, and neural TTS synthesis.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Audio Pipeline Decomposition &amp; Sub-500ms Turnaround Benchmark</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #c084fc40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#c084fc;margin:0 0 0.5rem 0;">Streaming Audio &amp; Semantic Turn-Taking</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Sub-120ms streaming Whisper ASR paired with prefix-cached LLMs and Cartesia Sonic TTS delivers sub-400ms end-to-end turnaround with zero conversational collision.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#e9d5ff;">Turnaround: 380ms (Human-Parity Fluidity)</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Legacy Batch REST Pipeline</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Batch audio recording, cold prompt evaluation, and non-streaming TTS introduce 1,200ms+ lag, resulting in severe user hesitation and frequent interruptions.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Turnaround: 1,450ms (Collision Zone)</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_voice_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/voice-agent-latency-simulator.
+    """
+    return """
+<div id="prerendered-voice-agent-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Voice Agent Turn-Taking Latency Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating voice agent latency across WebRTC, VAD silence, streaming ASR, and TTS.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark turn-taking latency, Silero VAD thresholds, and monthly telephony cloud opex vs sovereign GPU clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#c084fc;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2397,6 +2447,14 @@ def generate_ssg():
         "embed/agent-deadlock-visualizer": {
             "title": "Multi-Agent Deadlock & FSM Circuit Breaker Sandbox",
             "desc": "Embeddable interactive widget simulating multi-agent circular wait deadlocks, exponential backoff with full jitter, and deterministic FSM circuit breaker fallbacks."
+        },
+        "tools/enterprise-voice-agent-latency-simulator": {
+            "title": "Enterprise Real-Time Voice Agent VAD & Turn-Taking Latency Simulator",
+            "desc": "Simulate and benchmark real-time voice agent latency across WebRTC transport, Silero VAD silence hangover, streaming ASR, LLM TTFT, and neural TTS synthesis."
+        },
+        "embed/voice-agent-latency-simulator": {
+            "title": "Voice Agent Turn-Taking Latency Sandbox",
+            "desc": "Embeddable interactive widget calculating voice agent latency across WebRTC, VAD silence, streaming ASR, and TTS."
         }
     }
 
@@ -3351,6 +3409,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(deadlock_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-voice-agent-latency-simulator":
+            tool_content = render_voice_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            voice_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Real-Time Voice Agent VAD & Turn-Taking Latency Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Architecture Comparisons",
+                        "item": "https://elesium.online/compare"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Voice Agent Latency Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(voice_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/voice-agent-latency-simulator":
+            embed_content = render_voice_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            voice_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Voice Agent Turn-Taking Latency Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(voice_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")
