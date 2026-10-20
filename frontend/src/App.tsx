@@ -97,6 +97,8 @@ const EnterpriseAgentHsmSimulator = lazy(() => import('./components/pages/Enterp
 const EmbedAgentHsmSimulator = lazy(() => import('./components/pages/EmbedAgentHsmSimulator'))
 const EnterpriseAgentGraphConsensusSimulator = lazy(() => import('./components/pages/EnterpriseAgentGraphConsensusSimulator'))
 const EmbedAgentGraphConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentGraphConsensusSimulator'))
+const EnterpriseAgentAbdmFhirSimulator = lazy(() => import('./components/pages/EnterpriseAgentAbdmFhirSimulator'))
+const EmbedAgentAbdmFhirSimulator = lazy(() => import('./components/pages/EmbedAgentAbdmFhirSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -271,6 +273,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-graph-consensus-simulator" element={<EnterpriseAgentGraphConsensusSimulator />} />
                             <Route path="/tools/agent-graph-consensus-simulator" element={<Navigate to="/tools/enterprise-agent-graph-consensus-simulator" replace />} />
                             <Route path="/embed/agent-graph-consensus-simulator" element={<EmbedAgentGraphConsensusSimulator />} />
+                            <Route path="/tools/enterprise-agent-abdm-fhir-privacy-simulator" element={<EnterpriseAgentAbdmFhirSimulator />} />
+                            <Route path="/tools/agent-abdm-fhir-privacy-simulator" element={<Navigate to="/tools/enterprise-agent-abdm-fhir-privacy-simulator" replace />} />
+                            <Route path="/embed/agent-abdm-fhir-privacy-simulator" element={<EmbedAgentAbdmFhirSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

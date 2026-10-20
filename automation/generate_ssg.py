@@ -2581,8 +2581,51 @@ def render_graph_consensus_embed_semantic_html():
   <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark distributed state verification and Byzantine fault tolerance across sovereign enterprise AI agent clusters.</p>
   </main>
-  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#10b981;text-decoration:underline;">
     Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_abdm_fhir_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-abdm-fhir-privacy-simulator.
+    """
+    return """
+<div id="prerendered-agent-abdm-fhir-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#10b981;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Clinical Healthcare Privacy &amp; ABDM Interoperability</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise ABDM FHIR Clinical Privacy &amp; De-Identification Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate HL7 FHIR R4 clinical record de-identification, Laplace differential privacy epsilon budgets, and ABDM consent manager telemetry under India's DPDP Act 2023.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Clinical De-Identification &amp; Statutory Protection Benchmarks</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>Laplace Differential Privacy:</strong> Calibrates mathematical perturbation noise (ε &lt; 1.5) preventing re-identification while preserving diagnostic AI accuracy.</li>
+        <li><strong>ABDM M1/M2/M3 FHIR Bundling:</strong> Implements seamless ABHA identification, Health Information Provider (HIP) publishing, and consent-driven HIU records.</li>
+        <li><strong>IRDAI 100% Cashless Pre-Auth:</strong> Accelerates patient discharge clearance from 5 hours to under 35 minutes via National Health Claims Exchange (NHCX).</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_abdm_fhir_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-abdm-fhir-privacy-simulator.
+    """
+    return """
+<div id="prerendered-agent-abdm-fhir-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">ABDM FHIR Clinical Privacy &amp; De-Identification Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating HL7 FHIR de-identification latency, differential privacy epsilon budgets, and re-identification risk.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark healthcare data privacy and ABDM consent exchange telemetry across sovereign hospital private VPC clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Sovereign Healthcare AI</a>
   </footer>
 </div>
 """
@@ -3983,6 +4026,14 @@ def generate_ssg():
         "embed/agent-graph-consensus-simulator": {
             "title": "Agent Graph Consensus & State Verifier Sandbox",
             "desc": "Interactive embed widget calculating Asynchronous BFT commit latency, DAG gossip overhead, and Byzantine fault resistance."
+        },
+        "tools/enterprise-agent-abdm-fhir-privacy-simulator": {
+            "title": "Enterprise ABDM FHIR Clinical Privacy & De-Identification Simulator",
+            "desc": "Simulate HL7 FHIR R4 clinical record de-identification, Laplace differential privacy epsilon budgets, and ABDM consent manager telemetry under India's DPDP Act 2023."
+        },
+        "embed/agent-abdm-fhir-privacy-simulator": {
+            "title": "ABDM FHIR Clinical Privacy & De-Identification Sandbox",
+            "desc": "Interactive embed widget calculating HL7 FHIR de-identification latency, differential privacy epsilon budgets, and re-identification risk."
         }
     }
 
@@ -7100,6 +7151,89 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(consensus_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-abdm-fhir-privacy-simulator":
+            tool_content = render_abdm_fhir_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            abdm_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise ABDM FHIR Clinical Privacy & De-Identification Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "ABDM FHIR Privacy Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(abdm_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-abdm-fhir-privacy-simulator":
+            embed_content = render_abdm_fhir_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            abdm_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "ABDM FHIR Clinical Privacy & De-Identification Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(abdm_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")
