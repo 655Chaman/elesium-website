@@ -255,6 +255,12 @@ export default function Navbar() {
                             Byzantine Consensus
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-post-quantum-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
+                        >
+                            Post-Quantum
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -565,6 +571,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Agent Byzantine Consensus &amp; SecAgg Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-post-quantum-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Agent Post-Quantum Cryptography &amp; ML-KEM Simulator
                             </Link>
                             <Link
                                 to="/compare"

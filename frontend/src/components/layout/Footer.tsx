@@ -38,6 +38,7 @@ export default function DownloadFooter() {
         { name: 'Agent Epistemic Uncertainty & OOD Calibrator', path: '/tools/enterprise-agent-epistemic-ood-simulator' },
         { name: 'Agent Differential Privacy & Gradient Sanitizer', path: '/tools/enterprise-agent-differential-privacy-simulator' },
         { name: 'Agent Byzantine Consensus & SecAgg Simulator', path: '/tools/enterprise-agent-byzantine-consensus-simulator' },
+        { name: 'Agent Post-Quantum Cryptography & ML-KEM Simulator', path: '/tools/enterprise-agent-post-quantum-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

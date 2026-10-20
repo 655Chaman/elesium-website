@@ -2329,6 +2329,49 @@ def render_byzantine_consensus_embed_semantic_html():
 </div>
 """
 
+def render_post_quantum_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-post-quantum-simulator.
+    """
+    return """
+<div id="prerendered-agent-post-quantum-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#10b981;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Post-Quantum Lattice Cryptography &amp; Attestation Lab</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Post-Quantum Cryptography &amp; ML-KEM/Dilithium Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark autonomous agent state checkpoint encryption against cryptanalytically relevant quantum computers (CRQC). Test NIST FIPS 203 (ML-KEM / Kyber-768) and FIPS 204 (ML-DSA / Dilithium) lattice-based Module-LWE attestation to eliminate Harvest Now Decrypt Later (HNDL) exposure.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Post-Quantum Cryptographic Suite Performance Matrix</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>Legacy RSA-2048 / ECDSA P-256:</strong> NIST Level 0. 100% vulnerable to Shor's algorithm on CRQC quantum hardware. High Harvest Now Decrypt Later risk.</li>
+        <li><strong>Hybrid X25519 + ML-KEM-768:</strong> NIST Level 3. Dual classical and post-quantum lattice security with sub-0.45ms encapsulation latency.</li>
+        <li><strong>Elesium Pure ML-KEM-768 &amp; ML-DSA-65 Enclave:</strong> NIST Level 3/5 military-grade Module-LWE lattice hardness, zero quantum breach exposure, and 100% DPDP Act 2023 Section 8(4) and NIST post-quantum compliance.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_post_quantum_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-post-quantum-simulator.
+    """
+    return """
+<div id="prerendered-agent-post-quantum-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Post-Quantum Cryptography &amp; ML-KEM Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent NIST FIPS 203 / 204 lattice cryptography, Module-LWE polynomial noise, and HNDL quantum threat exposure.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark post-quantum key encapsulation (ML-KEM) and digital signatures (ML-DSA) across enterprise autonomous agent architectures.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3677,6 +3720,14 @@ def generate_ssg():
         "embed/agent-byzantine-consensus-simulator": {
             "title": "Agent Byzantine Consensus & SecAgg Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating multi-agent federated Byzantine fault tolerance, Multi-Krum/Bulyan filtering, and cryptographic Secure Aggregation (SecAgg)."
+        },
+        "tools/enterprise-agent-post-quantum-simulator": {
+            "title": "Enterprise Autonomous Agent Post-Quantum Cryptography & ML-KEM/Dilithium Simulator",
+            "desc": "Simulate and benchmark autonomous agent state checkpoint encryption against cryptanalytically relevant quantum computers (CRQC). Test NIST FIPS 203 (ML-KEM / Kyber-768) and FIPS 204 (ML-DSA / Dilithium) lattice-based Module-LWE attestation to eliminate Harvest Now Decrypt Later (HNDL) exposure."
+        },
+        "embed/agent-post-quantum-simulator": {
+            "title": "Agent Post-Quantum Cryptography & ML-KEM Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating autonomous agent NIST FIPS 203 / 204 lattice cryptography, Module-LWE polynomial noise, and HNDL quantum threat exposure."
         }
     }
 
@@ -6293,6 +6344,90 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(byzantine_consensus_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-post-quantum-simulator":
+            tool_content = render_post_quantum_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            post_quantum_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent Post-Quantum Cryptography & ML-KEM/Dilithium Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "browserRequirements": "Requires JavaScript. Requires HTML5.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Post-Quantum Cryptography & ML-KEM Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(post_quantum_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-post-quantum-simulator":
+            embed_content = render_post_quantum_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            post_quantum_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent Post-Quantum Cryptography & ML-KEM Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(post_quantum_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

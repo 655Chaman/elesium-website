@@ -133,14 +133,15 @@
   },
   {
     "id": 12,
-    "keyword": "secure AI infrastructure for Indian banks",
+    "keyword": "AI automation agency for manufacturing India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T17:12:22.841419",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "ai-automation-agency-for-manufacturing-india"
   },
   {
     "id": 13,

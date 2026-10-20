@@ -85,6 +85,8 @@ const EnterpriseAgentDifferentialPrivacySimulator = lazy(() => import('./compone
 const EmbedAgentDifferentialPrivacySimulator = lazy(() => import('./components/pages/EmbedAgentDifferentialPrivacySimulator'))
 const EnterpriseAgentByzantineConsensusSimulator = lazy(() => import('./components/pages/EnterpriseAgentByzantineConsensusSimulator'))
 const EmbedAgentByzantineConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentByzantineConsensusSimulator'))
+const EnterpriseAgentPostQuantumSimulator = lazy(() => import('./components/pages/EnterpriseAgentPostQuantumSimulator'))
+const EmbedAgentPostQuantumSimulator = lazy(() => import('./components/pages/EmbedAgentPostQuantumSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -241,6 +243,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-byzantine-consensus-simulator" element={<EnterpriseAgentByzantineConsensusSimulator />} />
                             <Route path="/tools/agent-byzantine-consensus-simulator" element={<Navigate to="/tools/enterprise-agent-byzantine-consensus-simulator" replace />} />
                             <Route path="/embed/agent-byzantine-consensus-simulator" element={<EmbedAgentByzantineConsensusSimulator />} />
+                            <Route path="/tools/enterprise-agent-post-quantum-simulator" element={<EnterpriseAgentPostQuantumSimulator />} />
+                            <Route path="/tools/agent-post-quantum-simulator" element={<Navigate to="/tools/enterprise-agent-post-quantum-simulator" replace />} />
+                            <Route path="/embed/agent-post-quantum-simulator" element={<EmbedAgentPostQuantumSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
