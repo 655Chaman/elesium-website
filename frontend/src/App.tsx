@@ -53,6 +53,8 @@ const EnterprisePromptFirewallSimulator = lazy(() => import('./components/pages/
 const EmbedPromptFirewallSimulator = lazy(() => import('./components/pages/EmbedPromptFirewallSimulator'))
 const EnterpriseSemanticCacheSimulator = lazy(() => import('./components/pages/EnterpriseSemanticCacheSimulator'))
 const EmbedSemanticCacheSimulator = lazy(() => import('./components/pages/EmbedSemanticCacheSimulator'))
+const EnterpriseModelRoutingSimulator = lazy(() => import('./components/pages/EnterpriseModelRoutingSimulator'))
+const EmbedModelRoutingSimulator = lazy(() => import('./components/pages/EmbedModelRoutingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -161,6 +163,9 @@ function App() {
                             <Route path="/tools/enterprise-semantic-cache-simulator" element={<EnterpriseSemanticCacheSimulator />} />
                             <Route path="/tools/semantic-cache-simulator" element={<Navigate to="/tools/enterprise-semantic-cache-simulator" replace />} />
                             <Route path="/embed/semantic-cache-simulator" element={<EmbedSemanticCacheSimulator />} />
+                            <Route path="/tools/enterprise-model-routing-cost-arbitrage-simulator" element={<EnterpriseModelRoutingSimulator />} />
+                            <Route path="/tools/model-routing-cost-arbitrage-simulator" element={<Navigate to="/tools/enterprise-model-routing-cost-arbitrage-simulator" replace />} />
+                            <Route path="/embed/model-routing-cost-arbitrage-simulator" element={<EmbedModelRoutingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

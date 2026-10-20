@@ -1,0 +1,747 @@
+#!/usr/bin/env python3
+"""
+Ingest Wave 15 Commercial BOFU Keywords (IDs 591 to 640).
+Appends 50 high-lever commercial solution pages to automation/compact_keywords_queue.json:
+- 17 Hypersonic Scramjet Plasma Ignition & Boundary Layer Shockwave Telemetry (IDs 591-607)
+- 17 Grid-Scale Flow Battery Vanadium Electrolyte Redox Potential Balancing (IDs 608-624)
+- 16 Subsea High-Voltage Direct Current (HVDC) Cable Sea-Ground Return Telemetry (IDs 625-640)
+"""
+
+import json
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+QUEUE_PATH = BASE_DIR / "automation" / "compact_keywords_queue.json"
+
+wave_15_keywords = [
+    # -------------------------------------------------------------------------
+    # Hypersonic Scramjet Plasma Ignition & Boundary Layer Shockwave Telemetry (IDs 591-607)
+    # -------------------------------------------------------------------------
+    {
+        "id": 591,
+        "keyword": "scramjet isolator shock train forward propagation unstart prevention controllers",
+        "slug": "scramjet-isolator-shock-train-forward-propagation-unstart-prevention-controllers",
+        "key_benefit": "Sub-5ms High-Frequency Wall Pressure Transducer Wavelet Analysis & Rapid Bleed Valve Unstart Guard",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Hypersonic Propulsion Engineers & High-Speed Aerodynamics Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Scramjet Isolator Unstart Control"
+    },
+    {
+        "id": 592,
+        "keyword": "nanosecond repetitively pulsed plasma ignition controllers for supersonic combustors",
+        "slug": "nanosecond-repetitively-pulsed-plasma-ignition-controllers-for-supersonic-combustors",
+        "key_benefit": "100kHz Non-Equilibrium Plasma Filament Discharge & Mach 6 Supersonic Flameholding Assurance",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Plasma Aerodynamics Specialists & Hypersonic Combustor Design Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit NRP Plasma Ignition Control"
+    },
+    {
+        "id": 593,
+        "keyword": "boundary layer transition shockwave interaction telemetry for hypersonic vehicles",
+        "slug": "boundary-layer-transition-shockwave-interaction-telemetry-for-hypersonic-vehicles",
+        "key_benefit": "Surface Heat Flux SWBLI Separation Bubble Diagnostics & Aerodynamic Flap Thermal Safeguard",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aerothermodynamics Leads & Hypersonic Vehicle Systems Architects",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit SWBLI Boundary Layer Telemetry"
+    },
+    {
+        "id": 594,
+        "keyword": "magnetohydrodynamic mhd energy bypass acceleration controllers for scramjet ducts",
+        "slug": "magnetohydrodynamic-mhd-energy-bypass-acceleration-controllers-for-scramjet-ducts",
+        "key_benefit": "Inlet Hall Ionization Enthalpy Extraction & Exhaust Nozzle Lorentz Force Velocity Augmentation",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Advanced Propulsion Systems Leads & Hypersonic Plasma Physics Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit MHD Energy Bypass Control"
+    },
+    {
+        "id": 595,
+        "keyword": "hydrocarbon endothermic fuel regenerative cooling heat flux monitors for scramjet liners",
+        "slug": "hydrocarbon-endothermic-fuel-regenerative-cooling-heat-flux-monitors-for-scramjet-liners",
+        "key_benefit": "Supercritical Catalytic Cracking Endothermic Heat Sink Telemetry & Combustor Coking Guard",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Hypersonic Thermal Protection Leads & Rocket Fuel Systems Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Regenerative Cooling Heat Flux"
+    },
+    {
+        "id": 596,
+        "keyword": "ceramic matrix composite leading edge optical pyrometry telemetry for glide bodies",
+        "slug": "ceramic-matrix-composite-leading-edge-optical-pyrometry-telemetry-for-glide-bodies",
+        "key_benefit": "Dual-Wavelength Infrared Thermometry Beyond 2200 C & C/SiC Stagnation Point Oxidation Guard",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "High-Temperature Materials Engineers & Hypersonic Aeroshell Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit CMC Pyrometry Telemetry"
+    },
+    {
+        "id": 597,
+        "keyword": "strut-injected hydrogen supersonic combustion flame holding monitors for scramjets",
+        "slug": "strut-injected-hydrogen-supersonic-combustion-flame-holding-monitors-for-scramjets",
+        "key_benefit": "Sub-Millisecond OH Chemiluminescence Flame Tracking & Supersonic Mixing Shear Layer Stability",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Supersonic Combustion Researchers & Propulsion Avionics Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Hydrogen Flameholding Telemetry"
+    },
+    {
+        "id": 598,
+        "keyword": "active transpiration cooling porous matrix pressure telemetry for hypersonic strakes",
+        "slug": "active-transpiration-cooling-porous-matrix-pressure-telemetry-for-hypersonic-strakes",
+        "key_benefit": "Gaseous Coolant Pore Evaporation Darcy Flow Balancing & Extreme Heat Flux Barrier Preservation",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Active Thermal Protection Engineers & High-Mach Aerodynamic Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Transpiration Cooling Telemetry"
+    },
+    {
+        "id": 599,
+        "keyword": "flaperon ceramic seal aerodynamic flutter vibration telemetry for hypersonic re-entry",
+        "slug": "flaperon-ceramic-seal-aerodynamic-flutter-vibration-telemetry-for-hypersonic-re-entry",
+        "key_benefit": "Fiber-Bragg Grating High-Temperature Strain Sensing & Aeroelastic Flutter Divergence Prevention",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Hypersonic Aeroelasticity Leads & Flight Control Actuation Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Flaperon Flutter Telemetry"
+    },
+    {
+        "id": 600,
+        "keyword": "microwave plasma stealth electron density telemetry for hypersonic communications",
+        "slug": "microwave-plasma-stealth-electron-density-telemetry-for-hypersonic-communications",
+        "key_benefit": "Plasma Sheath Attenuation Mitigation & Continuous X-Band Magnetic Window RF Transmission",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Hypersonic Telecommunications Leads & Plasma Physics RF Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Plasma Sheath Telemetry"
+    },
+    {
+        "id": 601,
+        "keyword": "supersonic intake variable cowl actuation margin controllers for wide-mach cruise",
+        "slug": "supersonic-intake-variable-cowl-actuation-margin-controllers-for-wide-mach-cruise",
+        "key_benefit": "Multi-Ramp Oblique Shock Wave Trajectory Alignment & Maximum Total Pressure Recovery",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Inlet Aerodynamics Engineers & Hypersonic Flight Control Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Variable Cowl Actuation"
+    },
+    {
+        "id": 602,
+        "keyword": "high-g stage separation pyrotechnic shock sensor telemetry for hypersonic boosters",
+        "slug": "high-g-stage-separation-pyrotechnic-shock-sensor-telemetry-for-hypersonic-boosters",
+        "key_benefit": "10,000g Piezoresistive Shock Response Spectrum SRS Analysis & Avionics Shock Isolation Verification",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Stage Separation Systems Engineers & Launch Vehicle Dynamics Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Pyrotechnic Shock Telemetry"
+    },
+    {
+        "id": 603,
+        "keyword": "scramjet nozzle expansion ramp acoustic fatigue strain tracking for hypersonic exhaust",
+        "slug": "scramjet-nozzle-expansion-ramp-acoustic-fatigue-strain-tracking-for-hypersonic-exhaust",
+        "key_benefit": "175dB Acoustic Pressure Fluctuation Telemetry & Asymmetric Nozzle Boundary Layer Separation Guard",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Aeroacoustics Structural Engineers & Nozzle Aerodynamics Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Nozzle Acoustic Fatigue Telemetry"
+    },
+    {
+        "id": 604,
+        "keyword": "aerodynamic heating refractory coating spallation vision inspection for hypersonic craft",
+        "slug": "aerodynamic-heating-refractory-coating-spallation-vision-inspection-for-hypersonic-craft",
+        "key_benefit": "Pre-Flight Autonomous Laser Shearography Scanning & Micro-Delamination Debonding Identification",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Thermal Barrier Coating Quality Leads & Non-Destructive Testing Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Refractory Coating Inspection"
+    },
+    {
+        "id": 605,
+        "keyword": "mach-adaptive pitot-static sensor probe pneumatic lag compensation controllers",
+        "slug": "mach-adaptive-pitot-static-sensor-probe-pneumatic-lag-compensation-controllers",
+        "key_benefit": "High-Mach Dynamic Pressure Calibration & Sub-2ms Air Data Computer Altitude Correction",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Air Data Systems Engineers & High-Speed Flight Test Instrumentation Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Pitot-Static Lag Compensation"
+    },
+    {
+        "id": 606,
+        "keyword": "scramjet combustor cavity flameholder residence time telemetry for stable combustion",
+        "slug": "scramjet-combustor-cavity-flameholder-residence-time-telemetry-for-stable-combustion",
+        "key_benefit": "Vortex Recirculation Dwell Time Optimization & Elimination of Supersonic Blowout",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Combustion Instability Analysts & Hypersonic Powerplant Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cavity Flameholder Telemetry"
+    },
+    {
+        "id": 607,
+        "keyword": "hypersonic glide trajectory angle-of-attack heat-load minimization controllers",
+        "slug": "hypersonic-glide-trajectory-angle-of-attack-heat-load-minimization-controllers",
+        "key_benefit": "Continuous Aerothermal Integrated Heat Load Flight Path Shaping & Skip Glide Range Maximization",
+        "category": "Solutions",
+        "hub_category": "Aerospace & Avionics",
+        "target_persona": "Guidance Navigation and Control GNC Leads & Trajectory Optimization Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Trajectory Heat Load Control"
+    },
+
+    # -------------------------------------------------------------------------
+    # Grid-Scale Flow Battery Vanadium Electrolyte Redox Potential Balancing (IDs 608-624)
+    # -------------------------------------------------------------------------
+    {
+        "id": 608,
+        "keyword": "vanadium flow battery electrolyte state-of-charge uv-vis spectrophotometry telemetry",
+        "slug": "vanadium-flow-battery-electrolyte-state-of-charge-uv-vis-spectrophotometry-telemetry",
+        "key_benefit": "Real-Time V2+/V3+ and V4+/V5+ Valency Peak Absorption Tracking & Sub-1% SOC Calibration",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Flow Battery Electrochemistry Leads & Grid Energy Storage System Operators",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Flow Battery SOC Telemetry"
+    },
+    {
+        "id": 609,
+        "keyword": "vanadium ion cross-contamination rebalancing electrochemical cell controllers",
+        "slug": "vanadium-ion-cross-contamination-rebalancing-electrochemical-cell-controllers",
+        "key_benefit": "Autonomous Asymmetric Capacity Degradation Recovery & In-Situ Oxidation State Normalization",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Vanadium Redox Battery Asset Managers & Long-Duration Storage Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Electrolyte Rebalancing Control"
+    },
+    {
+        "id": 610,
+        "keyword": "membrane hydraulic osmotic water crossover shunt current telemetry for flow batteries",
+        "slug": "membrane-hydraulic-osmotic-water-crossover-shunt-current-telemetry-for-flow-batteries",
+        "key_benefit": "Ion-Exchange Membrane Water Transference Balancing & Elimination of Tank Overflow Hazards",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Flow Battery Membrane Scientists & Balance of Plant Reliability Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Osmotic Water Crossover Telemetry"
+    },
+    {
+        "id": 611,
+        "keyword": "zero-gap interdigitated serpentine flow frame pressure drop optimizers for vrfb",
+        "slug": "zero-gap-interdigitated-serpentine-flow-frame-pressure-drop-optimizers-for-vrfb",
+        "key_benefit": "Electrolyte Fluid Flow Distribution Balancing & Sub-0.3Bar Hydraulic Pumping Loss Minimization",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "VRFB Mechanical Packaging Engineers & Flow Field Design Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Flow Frame Pressure Drop"
+    },
+    {
+        "id": 612,
+        "keyword": "carbon felt electrode electrochemical activation thermal oxidation telemetry for stacks",
+        "slug": "carbon-felt-electrode-electrochemical-activation-thermal-oxidation-telemetry-for-stacks",
+        "key_benefit": "Oxygen Functional Group Density Optimization & Sub-50mOhm*cm2 Area Specific Resistance",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Electrode Manufacturing Process Leads & BESS Performance Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Carbon Felt Activation Telemetry"
+    },
+    {
+        "id": 613,
+        "keyword": "electrolyte reservoir inert gas blanket hydrogen venting controllers for flow batteries",
+        "slug": "electrolyte-reservoir-inert-gas-blanket-hydrogen-venting-controllers-for-flow-batteries",
+        "key_benefit": "Nitrogen Blanket Positive Pressure Regulation & Sub-10ppm Hydrogen Gas Evolution Exhaust",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Flow Battery Safety Compliance Officers & Substation Facility Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Inert Gas Hydrogen Venting"
+    },
+    {
+        "id": 614,
+        "keyword": "variable frequency pump flow rate stoichiometric optimization agents for flow stacks",
+        "slug": "variable-frequency-pump-flow-rate-stoichiometric-optimization-agents-for-flow-stacks",
+        "key_benefit": "State-of-Charge Adaptive Flow Pumping & 5% Round-Trip Energy Efficiency System Boost",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Flow Battery Control Systems Leads & Industrial Power Optimization Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit VFD Pump Stoichiometry"
+    },
+    {
+        "id": 615,
+        "keyword": "shunt current parasitic loss thermal hotspot tracking monitors for multi-cell stacks",
+        "slug": "shunt-current-parasitic-loss-thermal-hotspot-tracking-monitors-for-multi-cell-stacks",
+        "key_benefit": "Manifold Electrical Channel Resistor Sizing & Internal Electrolyte Corrosion Elimination",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Stack Thermal Management Engineers & Electrical Power System Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Shunt Current Parasitic Telemetry"
+    },
+    {
+        "id": 616,
+        "keyword": "multi-cell stack voltage uniformity half-cell reference electrode monitors for vrfb",
+        "slug": "multi-cell-stack-voltage-uniformity-half-cell-reference-electrode-monitors-for-vrfb",
+        "key_benefit": "Individual Cell Anode vs Cathode Half-Cell Potential Isolation & Micro-Short Circuit Detection",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Flow Battery Diagnostic Engineers & Power Substation Maintenance Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Stack Voltage Uniformity"
+    },
+    {
+        "id": 617,
+        "keyword": "positive electrolyte vanadium pentoxide thermal precipitation prevention controllers",
+        "slug": "positive-electrolyte-vanadium-pentoxide-thermal-precipitation-prevention-controllers",
+        "key_benefit": "Heat Exchanger Loop Cooling Interlocking & V2O5 Slurry Clogging Elimination Above 40 C",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Electrolyte Chemical Engineers & Thermal Stability Technical Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Vanadium Precipitation Control"
+    },
+    {
+        "id": 618,
+        "keyword": "titanium clad copper current collector terminal contact resistance monitors for vrfb",
+        "slug": "titanium-clad-copper-current-collector-terminal-contact-resistance-monitors-for-vrfb",
+        "key_benefit": "Sub-0.1mOhm Busbar Junction Resistance Tracking & Severe Terminal Overheating Elimination",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Electrical Packaging Engineers & Long-Duration Energy Storage Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Current Collector Resistance"
+    },
+    {
+        "id": 619,
+        "keyword": "continuous open-circuit voltage ocv stack state-of-charge calibration telemetry for bms",
+        "slug": "continuous-open-circuit-voltage-ocv-stack-state-of-charge-calibration-telemetry-for-bms",
+        "key_benefit": "Dedicated Pilot Cell Nernst Equation Potential Tracking & Real-Time Battery State-of-Health",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "BMS Software Architects & Energy Storage System Calibration Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit OCV Calibration Telemetry"
+    },
+    {
+        "id": 620,
+        "keyword": "electrolyte pipe electrostatic charge dissipation grounding telemetry for flow battery yards",
+        "slug": "electrolyte-pipe-electrostatic-charge-dissipation-grounding-telemetry-for-flow-battery-yards",
+        "key_benefit": "Continuous Ground Fault Loop Impedance Verification & Static Discharge Spark Suppression",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Industrial Plant Safety Directors & Substation Grounding Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Electrostatic Grounding Telemetry"
+    },
+    {
+        "id": 621,
+        "keyword": "automated chemical re-reduction oxalic acid dosing telemetry for flow battery capacity",
+        "slug": "automated-chemical-re-reduction-oxalic-acid-dosing-telemetry-for-flow-battery-capacity",
+        "key_benefit": "Positive Electrolyte Air-Oxidation Re-Reduction & Precision Chemical Dosing Metering",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Electrolyte Rejuvenation Specialists & Asset Life Extension Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Chemical Re-Reduction Dosing"
+    },
+    {
+        "id": 622,
+        "keyword": "flow battery stack gasket compressive creep relaxation monitors for long-duration assets",
+        "slug": "flow-battery-stack-gasket-compressive-creep-relaxation-monitors-for-long-duration-assets",
+        "key_benefit": "EPDM Gasket Degradation Tracking & Real-Time Acidic Electrolyte Seal Integrity Assurance",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Mechanical Reliability Engineers & Flow Battery Plant Asset Managers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Gasket Creep Relaxation Telemetry"
+    },
+    {
+        "id": 623,
+        "keyword": "membrane fouling sulfate scale cleaning cycle controllers for vanadium redox stacks",
+        "slug": "membrane-fouling-sulfate-scale-cleaning-cycle-controllers-for-vanadium-redox-stacks",
+        "key_benefit": "Autonomous Reverse-Flush Descaling Protocol & 99% Membrane Proton Permeability Restoration",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Operations and Maintenance Leads & Energy Storage Plant Superintendents",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Membrane Descaling Control"
+    },
+    {
+        "id": 624,
+        "keyword": "ac impedance high-frequency charge transfer resistance monitors for flow stacks",
+        "slug": "ac-impedance-high-frequency-charge-transfer-resistance-monitors-for-flow-stacks",
+        "key_benefit": "In-Operando Dynamic Electrochemical Impedance Spectroscopy EIS & Internal Ohmic Resistance Mapping",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Electrochemical Diagnostics Leads & Advanced Battery Analytics Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Stack AC Impedance Telemetry"
+    },
+
+    # -------------------------------------------------------------------------
+    # Subsea High-Voltage Direct Current (HVDC) Cable Sea-Ground Return Telemetry (IDs 625-640)
+    # -------------------------------------------------------------------------
+    {
+        "id": 625,
+        "keyword": "monopolar sea-ground return electrode anode chlorine evolution telemetry for hvdc",
+        "slug": "monopolar-sea-ground-return-electrode-anode-chlorine-evolution-telemetry-for-hvdc",
+        "key_benefit": "Sub-PPM Chlorine Gas Evolution Tracking & Environmental Marine Habitat Discharge Compliance",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "HVDC Transmission Systems Leads & Marine Environmental Compliance Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Sea Electrode Chlorine Telemetry"
+    },
+    {
+        "id": 626,
+        "keyword": "subsea xlpe hvdc cable space charge acoustic pulse monitoring telemetry for links",
+        "slug": "subsea-xlpe-hvdc-cable-space-charge-acoustic-pulse-monitoring-telemetry-for-links",
+        "key_benefit": "Pulsed Electro-Acoustic PEA Internal Charge Profiling & Electrical Treeing Dielectric Breakdown Guard",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Power Cable Asset Leads & HVDC Insulation Systems Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit XLPE Space Charge Telemetry"
+    },
+    {
+        "id": 627,
+        "keyword": "dynamic sea-cable touchdown point distributed fiber-optic dts strain telemetry for hvdc",
+        "slug": "dynamic-sea-cable-touchdown-point-distributed-fiber-optic-dts-strain-telemetry-for-hvdc",
+        "key_benefit": "Distributed Temperature & Strain Sensing DTS/BOTDA Profiling & Bending Fatigue Stress Alarm",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Offshore Wind Transmission Leads & Subsea Cable Integrity Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Dynamic Cable Touchdown Telemetry"
+    },
+    {
+        "id": 628,
+        "keyword": "offshore converter station symmetrical monopole dc voltage unbalance controllers",
+        "slug": "offshore-converter-station-symmetrical-monopole-dc-voltage-unbalance-controllers",
+        "key_benefit": "Sub-10ms Pole-to-Ground Potential Balancing & Cable Insulation Overvoltage Stress Prevention",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "HVDC Converter Control Engineers & Offshore Grid Substation Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Monopole Voltage Unbalance"
+    },
+    {
+        "id": 629,
+        "keyword": "titanium sea electrode cathode hydrogen embrittlement diagnostics for subsea returns",
+        "slug": "titanium-sea-electrode-cathode-hydrogen-embrittlement-diagnostics-for-subsea-returns",
+        "key_benefit": "Cathodic Overpotential Monitoring & Prevention of Hydride Phase Titanium Micro-Cracking",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Electrochemical Corrosion Specialists & Subsea Power Grid Asset Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cathode Hydrogen Embrittlement"
+    },
+    {
+        "id": 630,
+        "keyword": "subsea cable lead alloy sheath fatigue micro-cracking detection for floating offshore",
+        "slug": "subsea-cable-lead-alloy-sheath-fatigue-micro-cracking-detection-for-floating-offshore",
+        "key_benefit": "Wave Cyclic Mechanical Strain Monitoring & Water Ingress Barrier Longevity Assurance",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Cable Mechanical Leads & Offshore Marine Energy Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cable Sheath Fatigue Detection"
+    },
+    {
+        "id": 631,
+        "keyword": "deepwater seabed cable burial depth magnetic tracking telemetry for anchor drag guard",
+        "slug": "deepwater-seabed-cable-burial-depth-magnetic-tracking-telemetry-for-anchor-drag-guard",
+        "key_benefit": "AC Tone Magnetic Field Cable Localization & Continuous 2-Meter Seabed Trench Burial Verification",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Survey and Inspection Leads & Marine Asset Protection Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Seabed Cable Burial Tracking"
+    },
+    {
+        "id": 632,
+        "keyword": "seabed earth return current dc corrosion mitigation controllers for offshore pipelines",
+        "slug": "seabed-earth-return-current-dc-corrosion-mitigation-controllers-for-offshore-pipelines",
+        "key_benefit": "Stray DC Current Electrolytic Interference Cancellation & Subsea Steel Pipeline Wall Protection",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Pipeline Integrity Engineers & Marine Cathodic Protection Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Earth Return DC Corrosion"
+    },
+    {
+        "id": 633,
+        "keyword": "subsea cable armor wire corrosion electrochemical potential logging agents for hvdc",
+        "slug": "subsea-cable-armor-wire-corrosion-electrochemical-potential-logging-agents-for-hvdc",
+        "key_benefit": "Galvanic Zinc Coating Loss Monitoring & High-Tensile Steel Armor Structural Safeguard",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Cable Maintenance Leads & Marine Corrosion Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cable Armor Corrosion Logging"
+    },
+    {
+        "id": 634,
+        "keyword": "converter transformer dc bias magnetic core saturation telemetry for hvdc interconnects",
+        "slug": "converter-transformer-dc-bias-magnetic-core-saturation-telemetry-for-hvdc-interconnects",
+        "key_benefit": "Neutral DC Current Harmonic Distortion Profiling & Transformer Magnetostriction Vibration Alarm",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Power Transformer Reliability Leads & Grid Substation Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Converter Transformer DC Bias"
+    },
+    {
+        "id": 635,
+        "keyword": "high-voltage subsea cable splice partial discharge vhf monitoring telemetry for offshore",
+        "slug": "high-voltage-subsea-cable-splice-partial-discharge-vhf-monitoring-telemetry-for-offshore",
+        "key_benefit": "Sub-5pC High-Frequency Partial Discharge Localization & Factory Joint Insulation Breakdown Alert",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "High-Voltage Testing Leads & Offshore Wind Grid Asset Managers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cable Splice Partial Discharge"
+    },
+    {
+        "id": 636,
+        "keyword": "subsea cable armor mechanical tensile shock load monitoring for seabed landslides",
+        "slug": "subsea-cable-armor-mechanical-tensile-shock-load-monitoring-for-seabed-landslides",
+        "key_benefit": "Dynamic Tension Transducer Shock Profiling & Subsea Seismic Displacement Early Warning",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Geotechnical Subsea Engineers & Marine Grid Infrastructure Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cable Tensile Shock Monitoring"
+    },
+    {
+        "id": 637,
+        "keyword": "hvdc optical communication fiber raman otdr strain profiling telemetry for sea links",
+        "slug": "hvdc-optical-communication-fiber-raman-otdr-strain-profiling-telemetry-for-sea-links",
+        "key_benefit": "Real-Time Optical Time-Domain Reflectometry & Sub-Meter Localization of Subsea Cable Tension Spikes",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Fiber-Optic Sensor Specialists & Telecommunications Infrastructure Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Raman OTDR Strain Telemetry"
+    },
+    {
+        "id": 638,
+        "keyword": "subsea electrode marine environmental chlorine biocide dispersion telemetry agents",
+        "slug": "subsea-electrode-marine-environmental-chlorine-biocide-dispersion-telemetry-agents",
+        "key_benefit": "Residual Oxidant Dispersion Plume Hydrodynamic Modeling & Zero Marine Flora Toxicity Guarantee",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Environmental Marine Scientists & Subsea Power Grid Compliance Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Biocide Dispersion Telemetry"
+    },
+    {
+        "id": 639,
+        "keyword": "cable termination gas-insulated switchgear sf6 gas density telemetry for hvdc platforms",
+        "slug": "cable-termination-gas-insulated-switchgear-sf6-gas-density-telemetry-for-hvdc-platforms",
+        "key_benefit": "Temperature-Compensated Pressure Density Sensor Fusion & Micro-Leakage Arc Flash Prevention",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Gas-Insulated Switchgear Leads & Offshore Substation Safety Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit GIS SF6 Gas Density Telemetry"
+    },
+    {
+        "id": 640,
+        "keyword": "sea return seabed current path geomagnetic interference monitoring agents for hvdc grids",
+        "slug": "sea-return-seabed-current-path-geomagnetic-interference-monitoring-agents-for-hvdc-grids",
+        "key_benefit": "Tri-Axial Fluxgate Magnetometer Array Telemetry & Navigational Compass Deviation Compensation",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Geomagnetic Survey Specialists & Maritime Navigation Safety Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Geomagnetic Interference Telemetry"
+    }
+]
+
+def main():
+    with open(QUEUE_PATH, "r", encoding="utf-8") as f:
+        existing = json.load(f)
+    
+    existing_ids = {x["id"] for x in existing}
+    added = 0
+    for kw in wave_15_keywords:
+        if kw["id"] not in existing_ids:
+            existing.append(kw)
+            added += 1
+            
+    with open(QUEUE_PATH, "w", encoding="utf-8") as f:
+        json.dump(existing, f, indent=2, ensure_ascii=False)
+        
+    print(f"Successfully ingested {added} new keywords. Total queue length: {len(existing)}")
+
+if __name__ == "__main__":
+    main()

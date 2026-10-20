@@ -55,6 +55,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-event-sourcing-audit-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-prompt-injection-firewall-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-semantic-cache-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-model-routing-cost-arbitrage-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
