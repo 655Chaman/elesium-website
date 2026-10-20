@@ -201,6 +201,12 @@ export default function Navbar() {
                             Sandbox Verifier
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-memory-drift-compression-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
+                        >
+                            Memory Drift
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -448,6 +454,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Agent Sandbox Verifier
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-memory-drift-compression-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Agent Memory Drift Simulator
                             </Link>
                             <Link
                                 to="/compare"

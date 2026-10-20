@@ -67,6 +67,8 @@ const EnterpriseAgentConsensusSimulator = lazy(() => import('./components/pages/
 const EmbedAgentConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentConsensusSimulator'))
 const EnterpriseAgentSandboxVerificationSimulator = lazy(() => import('./components/pages/EnterpriseAgentSandboxVerificationSimulator'))
 const EmbedAgentSandboxVerificationSimulator = lazy(() => import('./components/pages/EmbedAgentSandboxVerificationSimulator'))
+const EnterpriseAgentMemoryDriftSimulator = lazy(() => import('./components/pages/EnterpriseAgentMemoryDriftSimulator'))
+const EmbedAgentMemoryDriftSimulator = lazy(() => import('./components/pages/EmbedAgentMemoryDriftSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -196,6 +198,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-sandbox-formal-verification-simulator" element={<EnterpriseAgentSandboxVerificationSimulator />} />
                             <Route path="/tools/agent-sandbox-formal-verification-simulator" element={<Navigate to="/tools/enterprise-agent-sandbox-formal-verification-simulator" replace />} />
                             <Route path="/embed/agent-sandbox-formal-verification-simulator" element={<EmbedAgentSandboxVerificationSimulator />} />
+                            <Route path="/tools/enterprise-agent-memory-drift-compression-simulator" element={<EnterpriseAgentMemoryDriftSimulator />} />
+                            <Route path="/tools/agent-memory-drift-compression-simulator" element={<Navigate to="/tools/enterprise-agent-memory-drift-compression-simulator" replace />} />
+                            <Route path="/embed/agent-memory-drift-compression-simulator" element={<EmbedAgentMemoryDriftSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

@@ -54,11 +54,10 @@ def call_llm(system_prompt: str, user_prompt: str, expected_json: bool = False, 
     nvidia_api_key = os.environ.get("NVIDIA_API_KEY")
 
     gemini_models = [
+        "gemini-2.5-flash",
         "gemini-flash-latest",
-        "gemini-3.5-flash",
-        "gemini-3.7-flash",
         "gemini-flash-lite-latest",
-        "gemini-3.8-flash"
+        "gemini-2.5-pro"
     ]
 
     # 1. Primary: Gemini Active Model Pool
