@@ -81,6 +81,8 @@ const EnterpriseAgentHomomorphicEnclaveSimulator = lazy(() => import('./componen
 const EmbedAgentHomomorphicEnclaveSimulator = lazy(() => import('./components/pages/EmbedAgentHomomorphicEnclaveSimulator'))
 const EnterpriseAgentEpistemicOodSimulator = lazy(() => import('./components/pages/EnterpriseAgentEpistemicOodSimulator'))
 const EmbedAgentEpistemicOodSimulator = lazy(() => import('./components/pages/EmbedAgentEpistemicOodSimulator'))
+const EnterpriseAgentDifferentialPrivacySimulator = lazy(() => import('./components/pages/EnterpriseAgentDifferentialPrivacySimulator'))
+const EmbedAgentDifferentialPrivacySimulator = lazy(() => import('./components/pages/EmbedAgentDifferentialPrivacySimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -231,6 +233,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-epistemic-ood-simulator" element={<EnterpriseAgentEpistemicOodSimulator />} />
                             <Route path="/tools/agent-epistemic-ood-simulator" element={<Navigate to="/tools/enterprise-agent-epistemic-ood-simulator" replace />} />
                             <Route path="/embed/agent-epistemic-ood-simulator" element={<EmbedAgentEpistemicOodSimulator />} />
+                            <Route path="/tools/enterprise-agent-differential-privacy-simulator" element={<EnterpriseAgentDifferentialPrivacySimulator />} />
+                            <Route path="/tools/agent-differential-privacy-simulator" element={<Navigate to="/tools/enterprise-agent-differential-privacy-simulator" replace />} />
+                            <Route path="/embed/agent-differential-privacy-simulator" element={<EmbedAgentDifferentialPrivacySimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

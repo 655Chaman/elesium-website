@@ -112,11 +112,12 @@
     "keyword": "AI automation agency for logistics India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T16:18:50.367580",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "ai-automation-agency-for-logistics-india"
   },
   {
     "id": 11,
