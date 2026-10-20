@@ -1697,6 +1697,61 @@ def render_tracing_embed_semantic_html():
 </div>
 """
 
+def render_state_rollback_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-state-snapshot-rollback-simulator.
+    """
+    return """
+<div id="prerendered-agent-state-rollback-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic State Persistence &amp; Zero-Downtime Rollback Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agentic State Machine Snapshot &amp; Rollback Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark multi-agent state persistence across uncheckpointed volatile meshes, synchronous Postgres JSONB commits, and sovereign async Delta WAL pipelines. Calculate sub-1.5ms overhead, microsecond rollback, and elimination of failed rerun token waste.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">State Persistence Architecture Comparison</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Sovereign Delta WAL Checkpointer</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Async JSON Patch / MsgPack Delta WAL commits in sub-1.5ms off the critical path, enabling microsecond O(1) state pointer rollback with 93% storage compaction.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Commit Overhead: +1.4ms | Rollback: 11ms | Storage Compaction: 93.5%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Synchronous Relational Checkpointing (Postgres JSONB)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Blocking DB commits on every node transition add 25ms to 40ms to critical-path latency, suffering from O(N^2) payload bloat and slow cold state deserialization.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Commit Overhead: +28.5ms | Rollback: 1,450ms | O(N^2) Storage Bloat</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Volatile In-Memory Mesh (Uncheckpointed)</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Zero persistence overhead during nominal runs, but tool exceptions, API timeouts, or human rejections abort entire DAGs, forcing 100% full reruns from scratch.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Commit Overhead: 0.0ms | Turnaround: 18-45s (Full Re-run) | 100% Token Loss</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_state_rollback_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-state-snapshot-rollback-simulator.
+    """
+    return """
+<div id="prerendered-agent-state-rollback-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent State Machine Snapshot &amp; Rollback Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating async delta checkpoint overhead, microsecond rollback speedup, and elimination of failed rerun token waste.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark append-only Delta WAL state persistence vs blocking relational JSONB commits and volatile uncheckpointed agent execution meshes.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -2941,6 +2996,14 @@ def generate_ssg():
         "embed/agent-tracing-opentelemetry-simulator": {
             "title": "Multi-Agent Tracing & OpenTelemetry Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating span export latency overhead, tail-based sampling compression, and incident MTTR reduction."
+        },
+        "tools/enterprise-agent-state-snapshot-rollback-simulator": {
+            "title": "Enterprise Agentic State Machine Snapshot & Rollback Simulator",
+            "desc": "Simulate and benchmark multi-agent state persistence across uncheckpointed volatile meshes, synchronous Postgres JSONB commits, and sovereign async Delta WAL pipelines. Calculate sub-1.5ms overhead, microsecond rollback, and elimination of failed rerun token waste."
+        },
+        "embed/agent-state-snapshot-rollback-simulator": {
+            "title": "Agent State Machine Snapshot & Rollback Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating async delta checkpoint overhead, microsecond rollback speedup, and elimination of failed rerun token waste."
         }
     }
 
@@ -4511,6 +4574,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(tracing_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-state-snapshot-rollback-simulator":
+            tool_content = render_state_rollback_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            state_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Agentic State Machine Snapshot & Rollback Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent State Snapshot & Rollback Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(state_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-state-snapshot-rollback-simulator":
+            embed_content = render_state_rollback_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            state_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent State Machine Snapshot & Rollback Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(state_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

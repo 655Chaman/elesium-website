@@ -58,6 +58,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-model-routing-cost-arbitrage-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-structured-output-latency-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-tracing-opentelemetry-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-state-snapshot-rollback-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

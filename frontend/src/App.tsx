@@ -59,6 +59,8 @@ const EnterpriseStructuredOutputSimulator = lazy(() => import('./components/page
 const EmbedStructuredOutputSimulator = lazy(() => import('./components/pages/EmbedStructuredOutputSimulator'))
 const EnterpriseAgentTracingSimulator = lazy(() => import('./components/pages/EnterpriseAgentTracingSimulator'))
 const EmbedAgentTracingSimulator = lazy(() => import('./components/pages/EmbedAgentTracingSimulator'))
+const EnterpriseAgentStateRollbackSimulator = lazy(() => import('./components/pages/EnterpriseAgentStateRollbackSimulator'))
+const EmbedAgentStateRollbackSimulator = lazy(() => import('./components/pages/EmbedAgentStateRollbackSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -176,6 +178,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-tracing-opentelemetry-simulator" element={<EnterpriseAgentTracingSimulator />} />
                             <Route path="/tools/agent-tracing-opentelemetry-simulator" element={<Navigate to="/tools/enterprise-agent-tracing-opentelemetry-simulator" replace />} />
                             <Route path="/embed/agent-tracing-opentelemetry-simulator" element={<EmbedAgentTracingSimulator />} />
+                            <Route path="/tools/enterprise-agent-state-snapshot-rollback-simulator" element={<EnterpriseAgentStateRollbackSimulator />} />
+                            <Route path="/tools/agent-state-snapshot-rollback-simulator" element={<Navigate to="/tools/enterprise-agent-state-snapshot-rollback-simulator" replace />} />
+                            <Route path="/embed/agent-state-snapshot-rollback-simulator" element={<EmbedAgentStateRollbackSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

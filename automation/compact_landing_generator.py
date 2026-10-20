@@ -66,7 +66,7 @@ ACRONYMS = {
     "DO", "CER", "OUR", "TFF", "MAB", "HCP", "ELISA", "CFD", "CIP", "SIP", "SMB", "LNP", "MRNA", "CRISPR", "SPR",
     "VPD", "TDR", "TDT", "CGE", "CFPS", "MAGE", "YAC", "DLS", "UHTC", "SWBLI", "HGV", "RCS", "PDWE", "GNC", "TPS", "SCRAMJET",
     "LOX", "LH2", "SST", "BCI", "MEA", "LFP", "EEG", "ECOG", "ALS", "EGS", "CO2", "PDC", "BHA",
-    "ECLSS", "QUBO", "AUV", "BOP", "LMRP", "HIPPS", "FPSO", "EVA", "CDU", "PUE", "TIM", "PTFE", "ADSB", "EVTOL", "D2C", "SNN", "STDP", "GDL", "CCM", "HER", "HOR", "HVDC", "NRP", "OCV", "XLPE", "DTS", "SF6", "VHF", "GIS", "FBG", "DEA", "CTE", "AFP", "NDT", "DVL", "INS", "SAS", "ADCP", "OFDM", "MAD", "DAC", "VTSA", "RCC", "RCG", "RTV", "HPHT", "MUX", "VBR", "LVDT", "EDS", "H2S"
+    "ECLSS", "QUBO", "AUV", "BOP", "LMRP", "HIPPS", "FPSO", "EVA", "CDU", "PUE", "TIM", "PTFE", "ADSB", "EVTOL", "D2C", "SNN", "STDP", "GDL", "CCM", "HER", "HOR", "HVDC", "NRP", "OCV", "XLPE", "DTS", "SF6", "VHF", "GIS", "FBG", "DEA", "CTE", "AFP", "NDT", "DVL", "INS", "SAS", "ADCP", "OFDM", "MAD", "DAC", "VTSA", "RCC", "RCG", "RTV", "HPHT", "MUX", "VBR", "LVDT", "EDS", "H2S", "SOEC", "YSZ", "LSCF", "ASR", "LHSV", "TRN", "DEM", "RTG", "RHU", "FLNG", "LNG", "BOG", "ESD", "QCDC", "PERC", "PLET"
 }
 
 def smart_title(text: str) -> str:

@@ -25,6 +25,7 @@ export default function DownloadFooter() {
         { name: 'Multi-Model Dynamic Routing & Arbitrage Simulator', path: '/tools/enterprise-model-routing-cost-arbitrage-simulator' },
         { name: 'Structured Output & Grammar Decoding Simulator', path: '/tools/enterprise-structured-output-latency-simulator' },
         { name: 'Multi-Agent Distributed Tracing & OpenTelemetry Simulator', path: '/tools/enterprise-agent-tracing-opentelemetry-simulator' },
+        { name: 'Agent State Snapshot & Rollback Simulator', path: '/tools/enterprise-agent-state-snapshot-rollback-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
