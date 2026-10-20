@@ -244,11 +244,12 @@
     "keyword": "retail inventory automation AI India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T22:03:05.554904",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "retail-inventory-automation-ai-india"
   },
   {
     "id": 22,

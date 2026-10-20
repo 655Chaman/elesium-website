@@ -79,6 +79,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-graph-consensus-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-abdm-fhir-privacy-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-cfr-part-11-validation-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-ondc-retail-inventory-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

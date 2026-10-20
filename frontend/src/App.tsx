@@ -101,6 +101,8 @@ const EnterpriseAgentAbdmFhirSimulator = lazy(() => import('./components/pages/E
 const EmbedAgentAbdmFhirSimulator = lazy(() => import('./components/pages/EmbedAgentAbdmFhirSimulator'))
 const EnterpriseAgentCfrPart11Simulator = lazy(() => import('./components/pages/EnterpriseAgentCfrPart11Simulator'))
 const EmbedAgentCfrPart11Simulator = lazy(() => import('./components/pages/EmbedAgentCfrPart11Simulator'))
+const EnterpriseAgentOndcRetailSimulator = lazy(() => import('./components/pages/EnterpriseAgentOndcRetailSimulator'))
+const EmbedAgentOndcRetailSimulator = lazy(() => import('./components/pages/EmbedAgentOndcRetailSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -281,6 +283,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-cfr-part-11-validation-simulator" element={<EnterpriseAgentCfrPart11Simulator />} />
                             <Route path="/tools/agent-cfr-part-11-validation-simulator" element={<Navigate to="/tools/enterprise-agent-cfr-part-11-validation-simulator" replace />} />
                             <Route path="/embed/agent-cfr-part-11-validation-simulator" element={<EmbedAgentCfrPart11Simulator />} />
+                            <Route path="/tools/enterprise-agent-ondc-retail-inventory-simulator" element={<EnterpriseAgentOndcRetailSimulator />} />
+                            <Route path="/tools/agent-ondc-retail-inventory-simulator" element={<Navigate to="/tools/enterprise-agent-ondc-retail-inventory-simulator" replace />} />
+                            <Route path="/embed/agent-ondc-retail-inventory-simulator" element={<EmbedAgentOndcRetailSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
