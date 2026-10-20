@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "2.0.0",
-  "last_feedback_sync": "2026-10-20T08:05:47.673958+00:00",
+  "last_feedback_sync": "2026-10-20T09:07:41.353272+00:00",
   "architecture_phase": "Stage 9.1 Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer",
-  "total_urls_monitored": 1056,
+  "total_urls_monitored": 1158,
   "performance_tiers_summary": {
     "ELITE_LEADER": {
       "count": 3,
@@ -11,17 +11,17 @@
       "action": "100% lock, monitored for freshness"
     },
     "STRIKING_DISTANCE": {
-      "count": 1020,
-      "percentage": "96.6%",
+      "count": 1120,
+      "percentage": "96.7%",
       "action": "Highest-ROI tier! Google already understands the URL; automated entity & link push into Top 3"
     },
     "UNDERPERFORMING": {
-      "count": 33,
-      "percentage": "3.1%",
+      "count": 35,
+      "percentage": "3.0%",
       "action": "Scheduled for keyword cannibalization audits and structural expansions"
     }
   },
-  "striking_distance_reinforcements_applied": 1020,
+  "striking_distance_reinforcements_applied": 1120,
   "top_striking_distance_targets": [
     {
       "url": "https://elesium.online/",

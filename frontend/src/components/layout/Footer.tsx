@@ -30,6 +30,7 @@ export default function DownloadFooter() {
         { name: 'Multi-Agent Consensus & Byzantine Fault Simulator', path: '/tools/enterprise-agent-consensus-byzantine-fault-simulator' },
         { name: 'Agent Sandbox Execution & Formal Verifier', path: '/tools/enterprise-agent-sandbox-formal-verification-simulator' },
         { name: 'Agent Memory Drift & Context Compression Simulator', path: '/tools/enterprise-agent-memory-drift-compression-simulator' },
+        { name: 'Agent Self-Healing & Statistical Canary Simulator', path: '/tools/enterprise-agent-self-healing-canary-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

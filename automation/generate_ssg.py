@@ -1972,6 +1972,61 @@ def render_memory_drift_embed_semantic_html():
 </div>
 """
 
+def render_self_healing_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-self-healing-canary-simulator.
+    """
+    return """
+<div id="prerendered-agent-self-healing-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Reliability &amp; Self-Healing Systems Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Self-Healing Pipeline &amp; Regression Canary Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Model and benchmark enterprise autonomous agent failure resilience. Quantify Mean Time to Detect (MTTD), Mean Time to Recover (MTTR), and token burn arbitrage between unmonitored rollouts, naive retry loops, and sovereign statistical shadow canaries with sub-320ms automated rollback.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Failure Resilience &amp; Self-Healing Benchmark</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Sovereign Canary &amp; AST Rollback</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Statistical shadow canary verification (5% partition), Kolmogorov-Smirnov drift detection in sub-9 seconds, and automated sub-320ms golden state rollback.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">MTTD: 9s | MTTR: 320ms | Cascade Risk: 0.02% | Recovery: 99.98%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Naive Rule-Based Exception Retry Loops</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Fixed retries on deterministic failures trigger infinite death loops, burning 4x-10x tokens, exhausting API quotas, and stalling downstream task queues.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">MTTD: 120 mins | MTTR: 30 mins | Cascade Risk: 52.0% | Death Loops</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unmonitored Monolithic Agent Rollout</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Zero runtime telemetry; undetected tool schema drift corrupts production databases silently, causing 24-hour average detection lag and manual fire drills.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">MTTD: 1,440 mins (24h) | MTTR: 2 hrs | Cascade Risk: 88.5% | Severe Outage</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_self_healing_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-self-healing-canary-simulator.
+    """
+    return """
+<div id="prerendered-agent-self-healing-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Self-Healing Pipeline &amp; Regression Canary Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating autonomous agent self-healing recovery, statistical shadow canary drift detection, and automated rollback.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark sovereign shadow canary pipelines with sub-320ms automated rollback against naive retry death loops and unmonitored monolithic agent rollouts.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3256,6 +3311,14 @@ def generate_ssg():
         "embed/agent-memory-drift-compression-simulator": {
             "title": "Agent Memory Drift & Long-Horizon Context Compression Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating hierarchical semantic compression, context amnesia mitigation, and token expense arbitrage."
+        },
+        "tools/enterprise-agent-self-healing-canary-simulator": {
+            "title": "Enterprise Autonomous Agent Self-Healing Pipeline & Regression Canary Simulator",
+            "desc": "Simulate and benchmark autonomous agent self-healing architectures. Compare unmonitored monolithic rollouts against naive retry death loops and sovereign statistical shadow canaries with sub-320ms rollback."
+        },
+        "embed/agent-self-healing-canary-simulator": {
+            "title": "Agent Self-Healing Pipeline & Regression Canary Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating autonomous agent self-healing recovery, statistical shadow canary drift detection, and automated rollback."
         }
     }
 
@@ -5212,6 +5275,84 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(memory_drift_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-self-healing-canary-simulator":
+            tool_content = render_self_healing_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            self_healing_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Self-Healing Canary Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(self_healing_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-self-healing-canary-simulator":
+            embed_content = render_self_healing_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            self_healing_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent Self-Healing Pipeline & Regression Canary Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(self_healing_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

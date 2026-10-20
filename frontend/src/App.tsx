@@ -69,6 +69,8 @@ const EnterpriseAgentSandboxVerificationSimulator = lazy(() => import('./compone
 const EmbedAgentSandboxVerificationSimulator = lazy(() => import('./components/pages/EmbedAgentSandboxVerificationSimulator'))
 const EnterpriseAgentMemoryDriftSimulator = lazy(() => import('./components/pages/EnterpriseAgentMemoryDriftSimulator'))
 const EmbedAgentMemoryDriftSimulator = lazy(() => import('./components/pages/EmbedAgentMemoryDriftSimulator'))
+const EnterpriseAgentSelfHealingCanarySimulator = lazy(() => import('./components/pages/EnterpriseAgentSelfHealingCanarySimulator'))
+const EmbedAgentSelfHealingCanarySimulator = lazy(() => import('./components/pages/EmbedAgentSelfHealingCanarySimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -201,6 +203,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-memory-drift-compression-simulator" element={<EnterpriseAgentMemoryDriftSimulator />} />
                             <Route path="/tools/agent-memory-drift-compression-simulator" element={<Navigate to="/tools/enterprise-agent-memory-drift-compression-simulator" replace />} />
                             <Route path="/embed/agent-memory-drift-compression-simulator" element={<EmbedAgentMemoryDriftSimulator />} />
+                            <Route path="/tools/enterprise-agent-self-healing-canary-simulator" element={<EnterpriseAgentSelfHealingCanarySimulator />} />
+                            <Route path="/tools/agent-self-healing-canary-simulator" element={<Navigate to="/tools/enterprise-agent-self-healing-canary-simulator" replace />} />
+                            <Route path="/embed/agent-self-healing-canary-simulator" element={<EmbedAgentSelfHealingCanarySimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

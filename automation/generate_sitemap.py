@@ -63,6 +63,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-consensus-byzantine-fault-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-sandbox-formal-verification-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-memory-drift-compression-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-self-healing-canary-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
