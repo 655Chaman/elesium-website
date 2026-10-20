@@ -83,6 +83,8 @@ const EnterpriseAgentEpistemicOodSimulator = lazy(() => import('./components/pag
 const EmbedAgentEpistemicOodSimulator = lazy(() => import('./components/pages/EmbedAgentEpistemicOodSimulator'))
 const EnterpriseAgentDifferentialPrivacySimulator = lazy(() => import('./components/pages/EnterpriseAgentDifferentialPrivacySimulator'))
 const EmbedAgentDifferentialPrivacySimulator = lazy(() => import('./components/pages/EmbedAgentDifferentialPrivacySimulator'))
+const EnterpriseAgentByzantineConsensusSimulator = lazy(() => import('./components/pages/EnterpriseAgentByzantineConsensusSimulator'))
+const EmbedAgentByzantineConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentByzantineConsensusSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -236,6 +238,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-differential-privacy-simulator" element={<EnterpriseAgentDifferentialPrivacySimulator />} />
                             <Route path="/tools/agent-differential-privacy-simulator" element={<Navigate to="/tools/enterprise-agent-differential-privacy-simulator" replace />} />
                             <Route path="/embed/agent-differential-privacy-simulator" element={<EmbedAgentDifferentialPrivacySimulator />} />
+                            <Route path="/tools/enterprise-agent-byzantine-consensus-simulator" element={<EnterpriseAgentByzantineConsensusSimulator />} />
+                            <Route path="/tools/agent-byzantine-consensus-simulator" element={<Navigate to="/tools/enterprise-agent-byzantine-consensus-simulator" replace />} />
+                            <Route path="/embed/agent-byzantine-consensus-simulator" element={<EmbedAgentByzantineConsensusSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

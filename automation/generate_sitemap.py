@@ -70,6 +70,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-homomorphic-enclave-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-epistemic-ood-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-differential-privacy-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-byzantine-consensus-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

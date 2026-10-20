@@ -124,11 +124,12 @@
     "keyword": "hire AI automation engineers Bangalore",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T16:40:13.485610",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "LOCAL_PACK",
-    "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT"
+    "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT",
+    "published_slug": "hire-ai-automation-engineers-bangalore"
   },
   {
     "id": 12,
