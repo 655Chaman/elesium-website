@@ -1807,6 +1807,61 @@ def render_dynamic_replanning_embed_semantic_html():
 </div>
 """
 
+def render_consensus_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-consensus-byzantine-fault-simulator.
+    """
+    return """
+<div id="prerendered-agent-consensus-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Agentic Quorum &amp; BFT Verification Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Consensus &amp; Byzantine Fault Tolerance Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark multi-agent consensus protocols. Contrast single-agent hallucination risks and naive N-way LLM majority voting against sovereign Byzantine fault-tolerant (BFT) state-machine quorum achieving sub-450ms verification, 99.98% decision accuracy, and 68% token savings.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Consensus Architecture Comparison</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Sovereign BFT Quorum</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Cryptographic BFT state-machine verification achieves 99.98% decision accuracy in sub-450ms with 3f + 1 Byzantine fault tolerance and 68% token savings.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Overhead: +420ms | Error Rate: 0.02% | BFT Tolerance: 3f + 1 Quorum</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Naive N-Way LLM Majority Voting</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Prompts N peer LLMs followed by LLM-as-a-judge arbitration; incurs 4,800ms+ latency penalties and quadruples LLM token bills without eliminating correlated drift.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fde68a;">Overhead: +4,800ms | Error Rate: 2.0% | Token Bloat: 400%+</div>
+        </div>
+        <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Single-Agent Dictator Execution</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Zero consensus latency overhead, but leaves mission-critical enterprise workflows completely exposed to single-node hallucinations and 12.5%+ catastrophic drift.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Overhead: 0.0ms | Error Rate: 12.5% | Byzantine Tolerance: 0</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_consensus_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-consensus-byzantine-fault-simulator.
+    """
+    return """
+<div id="prerendered-agent-consensus-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Consensus &amp; Byzantine Fault Tolerance Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating Byzantine fault tolerance quorum verification latency, hallucination suppression, and token expense arbitrage.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark sovereign BFT state-machine quorum vs naive N-way LLM majority voting and single-agent execution.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3067,6 +3122,14 @@ def generate_ssg():
         "embed/agent-dynamic-replanning-simulator": {
             "title": "Autonomous Agent Dynamic Re-Planning Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating dynamic plan branch refinement latency, task convergence rate, and cyclic deadlock elimination."
+        },
+        "tools/enterprise-agent-consensus-byzantine-fault-simulator": {
+            "title": "Enterprise Multi-Agent Consensus & Byzantine Fault Tolerance Simulator",
+            "desc": "Simulate and benchmark multi-agent consensus protocols. Contrast single-agent hallucination risks and naive N-way LLM majority voting against sovereign Byzantine fault-tolerant (BFT) state-machine quorum achieving sub-450ms verification, 99.98% decision accuracy, and 68% token savings."
+        },
+        "embed/agent-consensus-byzantine-fault-simulator": {
+            "title": "Multi-Agent Consensus & Byzantine Fault Tolerance Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating Byzantine fault tolerance quorum verification latency, hallucination suppression, and token expense arbitrage."
         }
     }
 
@@ -4791,6 +4854,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(replanning_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-consensus-byzantine-fault-simulator":
+            tool_content = render_consensus_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            consensus_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Multi-Agent Consensus & Byzantine Fault Tolerance Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Consensus & BFT Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(consensus_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-consensus-byzantine-fault-simulator":
+            embed_content = render_consensus_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            consensus_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Multi-Agent Consensus & Byzantine Fault Tolerance Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(consensus_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

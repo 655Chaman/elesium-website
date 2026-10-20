@@ -63,6 +63,8 @@ const EnterpriseAgentStateRollbackSimulator = lazy(() => import('./components/pa
 const EmbedAgentStateRollbackSimulator = lazy(() => import('./components/pages/EmbedAgentStateRollbackSimulator'))
 const EnterpriseAgentDynamicReplanningSimulator = lazy(() => import('./components/pages/EnterpriseAgentDynamicReplanningSimulator'))
 const EmbedAgentDynamicReplanningSimulator = lazy(() => import('./components/pages/EmbedAgentDynamicReplanningSimulator'))
+const EnterpriseAgentConsensusSimulator = lazy(() => import('./components/pages/EnterpriseAgentConsensusSimulator'))
+const EmbedAgentConsensusSimulator = lazy(() => import('./components/pages/EmbedAgentConsensusSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -186,6 +188,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-dynamic-replanning-simulator" element={<EnterpriseAgentDynamicReplanningSimulator />} />
                             <Route path="/tools/agent-dynamic-replanning-simulator" element={<Navigate to="/tools/enterprise-agent-dynamic-replanning-simulator" replace />} />
                             <Route path="/embed/agent-dynamic-replanning-simulator" element={<EmbedAgentDynamicReplanningSimulator />} />
+                            <Route path="/tools/enterprise-agent-consensus-byzantine-fault-simulator" element={<EnterpriseAgentConsensusSimulator />} />
+                            <Route path="/tools/agent-consensus-byzantine-fault-simulator" element={<Navigate to="/tools/enterprise-agent-consensus-byzantine-fault-simulator" replace />} />
+                            <Route path="/embed/agent-consensus-byzantine-fault-simulator" element={<EmbedAgentConsensusSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
