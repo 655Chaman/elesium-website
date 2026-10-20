@@ -33,6 +33,7 @@ export default function DownloadFooter() {
         { name: 'Agent Self-Healing & Statistical Canary Simulator', path: '/tools/enterprise-agent-self-healing-canary-simulator' },
         { name: 'Agent Continuous Prompt Optimizer Simulator', path: '/tools/enterprise-agent-prompt-optimizer-simulator' },
         { name: 'Agent Speculative Decoding & Latency Arbitrage Simulator', path: '/tools/enterprise-agent-speculative-decoding-simulator' },
+        { name: 'Agent ZK-Proof State Attestation Simulator', path: '/tools/enterprise-agent-zk-attestation-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

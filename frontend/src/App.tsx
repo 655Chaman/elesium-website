@@ -75,6 +75,8 @@ const EnterpriseAgentPromptOptimizerSimulator = lazy(() => import('./components/
 const EmbedAgentPromptOptimizerSimulator = lazy(() => import('./components/pages/EmbedAgentPromptOptimizerSimulator'))
 const EnterpriseAgentSpeculativeDecodingSimulator = lazy(() => import('./components/pages/EnterpriseAgentSpeculativeDecodingSimulator'))
 const EmbedAgentSpeculativeDecodingSimulator = lazy(() => import('./components/pages/EmbedAgentSpeculativeDecodingSimulator'))
+const EnterpriseAgentZkAttestationSimulator = lazy(() => import('./components/pages/EnterpriseAgentZkAttestationSimulator'))
+const EmbedAgentZkAttestationSimulator = lazy(() => import('./components/pages/EmbedAgentZkAttestationSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -216,6 +218,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-speculative-decoding-simulator" element={<EnterpriseAgentSpeculativeDecodingSimulator />} />
                             <Route path="/tools/agent-speculative-decoding-simulator" element={<Navigate to="/tools/enterprise-agent-speculative-decoding-simulator" replace />} />
                             <Route path="/embed/agent-speculative-decoding-simulator" element={<EmbedAgentSpeculativeDecodingSimulator />} />
+                            <Route path="/tools/enterprise-agent-zk-attestation-simulator" element={<EnterpriseAgentZkAttestationSimulator />} />
+                            <Route path="/tools/agent-zk-attestation-simulator" element={<Navigate to="/tools/enterprise-agent-zk-attestation-simulator" replace />} />
+                            <Route path="/embed/agent-zk-attestation-simulator" element={<EmbedAgentZkAttestationSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

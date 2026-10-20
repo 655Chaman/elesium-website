@@ -76,11 +76,12 @@
     "keyword": "custom LLM fine-tuning for healthcare India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T15:31:24.268649",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "custom-llm-fine-tuning-for-healthcare-india"
   },
   {
     "id": 8,

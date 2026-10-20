@@ -196,6 +196,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/custom-llm-fine-tuning-for-healthcare-india",
+    "path": "/signals/custom-llm-fine-tuning-for-healthcare-india",
+    "slug": "custom-llm-fine-tuning-for-healthcare-india",
+    "target_keyword": "custom llm fine tuning for healthcare india",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 15.9,
+    "impressions": 349,
+    "clicks": 2,
+    "ctr": 0.0062,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/signals/generative-ai-integration-services-mumbai",
     "path": "/signals/generative-ai-integration-services-mumbai",
     "slug": "generative-ai-integration-services-mumbai",
@@ -3122,6 +3136,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/carbon-nanotube-euv-pellicle-thermo-mechanical-deflection-laser-doppler-vibrometry-telemetry-for-burst-protection",
+    "path": "/solutions/carbon-nanotube-euv-pellicle-thermo-mechanical-deflection-laser-doppler-vibrometry-telemetry-for-burst-protection",
+    "slug": "carbon-nanotube-euv-pellicle-thermo-mechanical-deflection-laser-doppler-vibrometry-telemetry-for-burst-protection",
+    "target_keyword": "carbon nanotube EUV pellicle thermo-mechanical deflection laser Doppler vibrometry telemetry for burst protection",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 2365,
+    "clicks": 13,
+    "ctr": 0.0058,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/casing-pressure-buildup-pilot-operated-relief-valve-controllers-for-subsea-wellheads",
     "path": "/solutions/casing-pressure-buildup-pilot-operated-relief-valve-controllers-for-subsea-wellheads",
     "slug": "casing-pressure-buildup-pilot-operated-relief-valve-controllers-for-subsea-wellheads",
@@ -4256,6 +4284,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cryogenic-fuel-tank-composite-overwrapped-pressure-vessel-copv-optical-fiber-distributed-strain-telemetry-for-cryogenic-chilldown",
+    "path": "/solutions/cryogenic-fuel-tank-composite-overwrapped-pressure-vessel-copv-optical-fiber-distributed-strain-telemetry-for-cryogenic-chilldown",
+    "slug": "cryogenic-fuel-tank-composite-overwrapped-pressure-vessel-copv-optical-fiber-distributed-strain-telemetry-for-cryogenic-chilldown",
+    "target_keyword": "cryogenic fuel tank composite overwrapped pressure vessel COPV optical fiber distributed strain telemetry for cryogenic chilldown",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 3775,
+    "clicks": 60,
+    "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cryogenic-hemt-amplifier-noise-temperature-y-factor-calibration-software-for-microwave-quantum-engineers",
     "path": "/solutions/cryogenic-hemt-amplifier-noise-temperature-y-factor-calibration-software-for-microwave-quantum-engineers",
     "slug": "cryogenic-hemt-amplifier-noise-temperature-y-factor-calibration-software-for-microwave-quantum-engineers",
@@ -4294,6 +4336,20 @@
     "impressions": 1374,
     "clicks": 14,
     "ctr": 0.0104,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cryogenic-liquid-methane-regenerative-cooling-channel-high-pressure-differential-flow-transmitter-telemetry-for-coking-suppression",
+    "path": "/solutions/cryogenic-liquid-methane-regenerative-cooling-channel-high-pressure-differential-flow-transmitter-telemetry-for-coking-suppression",
+    "slug": "cryogenic-liquid-methane-regenerative-cooling-channel-high-pressure-differential-flow-transmitter-telemetry-for-coking-suppression",
+    "target_keyword": "cryogenic liquid methane regenerative cooling channel high-pressure differential flow transmitter telemetry for coking suppression",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.5,
+    "impressions": 795,
+    "clicks": 14,
+    "ctr": 0.0181,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -4760,6 +4816,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/deepwater-electric-subsea-control-module-e-scm-dual-redundant-canopen-fieldbus-communications-packet-error-rate-telemetry",
+    "path": "/solutions/deepwater-electric-subsea-control-module-e-scm-dual-redundant-canopen-fieldbus-communications-packet-error-rate-telemetry",
+    "slug": "deepwater-electric-subsea-control-module-e-scm-dual-redundant-canopen-fieldbus-communications-packet-error-rate-telemetry",
+    "target_keyword": "deepwater electric subsea control module e-SCM dual-redundant CANopen fieldbus communications packet error rate telemetry",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.2,
+    "impressions": 462,
+    "clicks": 1,
+    "ctr": 0.0038,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/deepwater-riser-joint-syntactic-foam-buoyancy-module-hydrostatic-pressure-sensor-telemetry-for-water-ingress-detection",
+    "path": "/solutions/deepwater-riser-joint-syntactic-foam-buoyancy-module-hydrostatic-pressure-sensor-telemetry-for-water-ingress-detection",
+    "slug": "deepwater-riser-joint-syntactic-foam-buoyancy-module-hydrostatic-pressure-sensor-telemetry-for-water-ingress-detection",
+    "target_keyword": "deepwater riser joint syntactic foam buoyancy module hydrostatic pressure sensor telemetry for water ingress detection",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 526,
+    "clicks": 2,
+    "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/deepwater-seabed-cable-burial-depth-magnetic-tracking-telemetry-for-anchor-drag-guard",
     "path": "/solutions/deepwater-seabed-cable-burial-depth-magnetic-tracking-telemetry-for-anchor-drag-guard",
     "slug": "deepwater-seabed-cable-burial-depth-magnetic-tracking-telemetry-for-anchor-drag-guard",
@@ -4770,6 +4854,34 @@
     "impressions": 2602,
     "clicks": 17,
     "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/deepwater-seabed-template-dual-axis-gyro-inclinometer-and-acoustic-positioning-transponder-telemetry-for-wellbore-verticality",
+    "path": "/solutions/deepwater-seabed-template-dual-axis-gyro-inclinometer-and-acoustic-positioning-transponder-telemetry-for-wellbore-verticality",
+    "slug": "deepwater-seabed-template-dual-axis-gyro-inclinometer-and-acoustic-positioning-transponder-telemetry-for-wellbore-verticality",
+    "target_keyword": "deepwater seabed template dual-axis gyro inclinometer and acoustic positioning transponder telemetry for wellbore verticality",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.5,
+    "impressions": 1375,
+    "clicks": 19,
+    "ctr": 0.0142,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/deepwater-subsea-separator-gravity-vessel-interface-level-nucleonic-density-profiler-telemetry-for-emulsion-layer-tracking",
+    "path": "/solutions/deepwater-subsea-separator-gravity-vessel-interface-level-nucleonic-density-profiler-telemetry-for-emulsion-layer-tracking",
+    "slug": "deepwater-subsea-separator-gravity-vessel-interface-level-nucleonic-density-profiler-telemetry-for-emulsion-layer-tracking",
+    "target_keyword": "deepwater subsea separator gravity vessel interface level nucleonic density profiler telemetry for emulsion layer tracking",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.9,
+    "impressions": 1949,
+    "clicks": 62,
+    "ctr": 0.0323,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -5978,6 +6090,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/euv-pulse-to-pulse-energy-stability-high-speed-diamond-photodiode-array-telemetry-for-critical-dimension-uniformity",
+    "path": "/solutions/euv-pulse-to-pulse-energy-stability-high-speed-diamond-photodiode-array-telemetry-for-critical-dimension-uniformity",
+    "slug": "euv-pulse-to-pulse-energy-stability-high-speed-diamond-photodiode-array-telemetry-for-critical-dimension-uniformity",
+    "target_keyword": "EUV pulse-to-pulse energy stability high-speed diamond photodiode array telemetry for critical dimension uniformity",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 2889,
+    "clicks": 40,
+    "ctr": 0.0141,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/euv-reticle-pod-dynamic-slit-scanning-hydrogen-gas-flow-boundary-layer-telemetry-for-particle-mitigation",
     "path": "/solutions/euv-reticle-pod-dynamic-slit-scanning-hydrogen-gas-flow-boundary-layer-telemetry-for-particle-mitigation",
     "slug": "euv-reticle-pod-dynamic-slit-scanning-hydrogen-gas-flow-boundary-layer-telemetry-for-particle-mitigation",
@@ -5988,6 +6114,34 @@
     "impressions": 337,
     "clicks": 4,
     "ctr": 0.0136,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/euv-reticle-pod-inner-environment-ultra-high-purity-argon-purge-mass-flow-controller-telemetry-for-molecular-contamination",
+    "path": "/solutions/euv-reticle-pod-inner-environment-ultra-high-purity-argon-purge-mass-flow-controller-telemetry-for-molecular-contamination",
+    "slug": "euv-reticle-pod-inner-environment-ultra-high-purity-argon-purge-mass-flow-controller-telemetry-for-molecular-contamination",
+    "target_keyword": "EUV reticle pod inner environment ultra-high purity argon purge mass flow controller telemetry for molecular contamination",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 3896,
+    "clicks": 150,
+    "ctr": 0.0387,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/euv-scanner-illuminator-pupil-shaping-mirror-array-mems-tilt-angle-capacitive-sensor-telemetry-for-dipole-illumination",
+    "path": "/solutions/euv-scanner-illuminator-pupil-shaping-mirror-array-mems-tilt-angle-capacitive-sensor-telemetry-for-dipole-illumination",
+    "slug": "euv-scanner-illuminator-pupil-shaping-mirror-array-mems-tilt-angle-capacitive-sensor-telemetry-for-dipole-illumination",
+    "target_keyword": "EUV scanner illuminator pupil shaping mirror array MEMS tilt angle capacitive sensor telemetry for dipole illumination",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 2989,
+    "clicks": 28,
+    "ctr": 0.0094,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -6016,6 +6170,20 @@
     "impressions": 506,
     "clicks": 5,
     "ctr": 0.0112,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/euv-wafer-stage-dual-chuck-magnetic-levitation-planar-motor-sub-nanometer-laser-heterodyne-encoder-telemetry-for-overlay-accuracy",
+    "path": "/solutions/euv-wafer-stage-dual-chuck-magnetic-levitation-planar-motor-sub-nanometer-laser-heterodyne-encoder-telemetry-for-overlay-accuracy",
+    "slug": "euv-wafer-stage-dual-chuck-magnetic-levitation-planar-motor-sub-nanometer-laser-heterodyne-encoder-telemetry-for-overlay-accuracy",
+    "target_keyword": "EUV wafer stage dual-chuck magnetic levitation planar motor sub-nanometer laser heterodyne encoder telemetry for overlay accuracy",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.1,
+    "impressions": 2451,
+    "clicks": 27,
+    "ctr": 0.0114,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -6212,6 +6380,20 @@
     "impressions": 2376,
     "clicks": 28,
     "ctr": 0.0122,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/extreme-ultraviolet-spectral-purity-filter-silicon-zirconium-membrane-transmission-telemetry-for-out-of-band-ir-suppression",
+    "path": "/solutions/extreme-ultraviolet-spectral-purity-filter-silicon-zirconium-membrane-transmission-telemetry-for-out-of-band-ir-suppression",
+    "slug": "extreme-ultraviolet-spectral-purity-filter-silicon-zirconium-membrane-transmission-telemetry-for-out-of-band-ir-suppression",
+    "target_keyword": "extreme ultraviolet spectral purity filter silicon zirconium membrane transmission telemetry for out-of-band IR suppression",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.7,
+    "impressions": 337,
+    "clicks": 10,
+    "ctr": 0.0302,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7406,6 +7588,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/high-na-euv-lithography-anamorphic-projection-optics-thermal-wavefront-distortion-interferometer-telemetry-for-aberration-control",
+    "path": "/solutions/high-na-euv-lithography-anamorphic-projection-optics-thermal-wavefront-distortion-interferometer-telemetry-for-aberration-control",
+    "slug": "high-na-euv-lithography-anamorphic-projection-optics-thermal-wavefront-distortion-interferometer-telemetry-for-aberration-control",
+    "target_keyword": "high-NA EUV lithography anamorphic projection optics thermal wavefront distortion interferometer telemetry for aberration control",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.0,
+    "impressions": 2610,
+    "clicks": 25,
+    "ctr": 0.0098,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/high-na-euv-multi-layer-molybdenum-silicon-mirror-actinic-reflectance-degradation-x-ray-reflectometry-telemetry",
     "path": "/solutions/high-na-euv-multi-layer-molybdenum-silicon-mirror-actinic-reflectance-degradation-x-ray-reflectometry-telemetry",
     "slug": "high-na-euv-multi-layer-molybdenum-silicon-mirror-actinic-reflectance-degradation-x-ray-reflectometry-telemetry",
@@ -7476,6 +7672,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/high-na-euv-reticle-masking-blade-piezoelectric-actuator-linear-variable-differential-transformer-lvdt-telemetry-for-exposure-slit-alignment",
+    "path": "/solutions/high-na-euv-reticle-masking-blade-piezoelectric-actuator-linear-variable-differential-transformer-lvdt-telemetry-for-exposure-slit-alignment",
+    "slug": "high-na-euv-reticle-masking-blade-piezoelectric-actuator-linear-variable-differential-transformer-lvdt-telemetry-for-exposure-slit-alignment",
+    "target_keyword": "high-NA EUV reticle masking blade piezoelectric actuator linear variable differential transformer LVDT telemetry for exposure slit alignment",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.1,
+    "impressions": 2241,
+    "clicks": 21,
+    "ctr": 0.0097,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/high-nickel-nmc-cathode-single-crystal-microcrack-propagation-software-for-battery-degradation-engineers",
     "path": "/solutions/high-nickel-nmc-cathode-single-crystal-microcrack-propagation-software-for-battery-degradation-engineers",
     "slug": "high-nickel-nmc-cathode-single-crystal-microcrack-propagation-software-for-battery-degradation-engineers",
@@ -7490,6 +7700,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/high-power-carbon-dioxide-drive-laser-master-oscillator-power-amplifier-pulse-timing-jitter-telemetry-for-droplet-synchronization",
+    "path": "/solutions/high-power-carbon-dioxide-drive-laser-master-oscillator-power-amplifier-pulse-timing-jitter-telemetry-for-droplet-synchronization",
+    "slug": "high-power-carbon-dioxide-drive-laser-master-oscillator-power-amplifier-pulse-timing-jitter-telemetry-for-droplet-synchronization",
+    "target_keyword": "high-power carbon dioxide drive laser master oscillator power amplifier pulse timing jitter telemetry for droplet synchronization",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.5,
+    "impressions": 2735,
+    "clicks": 27,
+    "ctr": 0.0101,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/high-power-pulsed-co2-laser-amplifier-target-tracking-focal-position-telemetry-for-euv-tin-droplet-generators",
     "path": "/solutions/high-power-pulsed-co2-laser-amplifier-target-tracking-focal-position-telemetry-for-euv-tin-droplet-generators",
     "slug": "high-power-pulsed-co2-laser-amplifier-target-tracking-focal-position-telemetry-for-euv-tin-droplet-generators",
@@ -7500,6 +7724,20 @@
     "impressions": 979,
     "clicks": 24,
     "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/high-power-tin-droplet-laser-produced-plasma-lpp-debris-mitigation-hydrogen-buffer-gas-flow-telemetry-for-collector-mirror-reflectivity",
+    "path": "/solutions/high-power-tin-droplet-laser-produced-plasma-lpp-debris-mitigation-hydrogen-buffer-gas-flow-telemetry-for-collector-mirror-reflectivity",
+    "slug": "high-power-tin-droplet-laser-produced-plasma-lpp-debris-mitigation-hydrogen-buffer-gas-flow-telemetry-for-collector-mirror-reflectivity",
+    "target_keyword": "high-power tin droplet laser-produced plasma LPP debris mitigation hydrogen buffer gas flow telemetry for collector mirror reflectivity",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.8,
+    "impressions": 1378,
+    "clicks": 51,
+    "ctr": 0.0377,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7994,6 +8232,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hypersonic-aerodynamic-control-fin-ceramic-matrix-composite-torque-tube-torsional-fiber-bragg-grating-telemetry-for-flutter-mitigation",
+    "path": "/solutions/hypersonic-aerodynamic-control-fin-ceramic-matrix-composite-torque-tube-torsional-fiber-bragg-grating-telemetry-for-flutter-mitigation",
+    "slug": "hypersonic-aerodynamic-control-fin-ceramic-matrix-composite-torque-tube-torsional-fiber-bragg-grating-telemetry-for-flutter-mitigation",
+    "target_keyword": "hypersonic aerodynamic control fin ceramic matrix composite torque tube torsional fiber Bragg grating telemetry for flutter mitigation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.8,
+    "impressions": 758,
+    "clicks": 16,
+    "ctr": 0.0215,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hypersonic-aerospike-nose-cone-surface-heat-flux-heat-sink-slug-calorimeter-telemetry-for-peak-deceleration-heating",
     "path": "/solutions/hypersonic-aerospike-nose-cone-surface-heat-flux-heat-sink-slug-calorimeter-telemetry-for-peak-deceleration-heating",
     "slug": "hypersonic-aerospike-nose-cone-surface-heat-flux-heat-sink-slug-calorimeter-telemetry-for-peak-deceleration-heating",
@@ -8036,6 +8288,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hypersonic-airframe-structural-titanium-aluminide-honeycomb-core-acoustic-emission-sensor-telemetry-for-thermal-micro-cracking",
+    "path": "/solutions/hypersonic-airframe-structural-titanium-aluminide-honeycomb-core-acoustic-emission-sensor-telemetry-for-thermal-micro-cracking",
+    "slug": "hypersonic-airframe-structural-titanium-aluminide-honeycomb-core-acoustic-emission-sensor-telemetry-for-thermal-micro-cracking",
+    "target_keyword": "hypersonic airframe structural titanium aluminide honeycomb core acoustic emission sensor telemetry for thermal micro-cracking",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.6,
+    "impressions": 3896,
+    "clicks": 118,
+    "ctr": 0.0304,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hypersonic-boundary-layer-bleed-slot-porous-panel-suction-mass-flow-sensor-telemetry-for-shock-wave-turbulent-boundary-layer-interaction",
+    "path": "/solutions/hypersonic-boundary-layer-bleed-slot-porous-panel-suction-mass-flow-sensor-telemetry-for-shock-wave-turbulent-boundary-layer-interaction",
+    "slug": "hypersonic-boundary-layer-bleed-slot-porous-panel-suction-mass-flow-sensor-telemetry-for-shock-wave-turbulent-boundary-layer-interaction",
+    "target_keyword": "hypersonic boundary layer bleed slot porous panel suction mass flow sensor telemetry for shock-wave turbulent boundary layer interaction",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 246,
+    "clicks": 1,
+    "ctr": 0.0072,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hypersonic-boundary-layer-transition-infrared-thermography-crossflow-instability-software-for-flight-test",
     "path": "/solutions/hypersonic-boundary-layer-transition-infrared-thermography-crossflow-instability-software-for-flight-test",
     "slug": "hypersonic-boundary-layer-transition-infrared-thermography-crossflow-instability-software-for-flight-test",
@@ -8074,6 +8354,20 @@
     "impressions": 3936,
     "clicks": 83,
     "ctr": 0.0211,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hypersonic-boundary-layer-transition-surface-mounted-atomic-layer-thermopile-heat-flux-gauge-telemetry-for-laminar-turbulent-transition",
+    "path": "/solutions/hypersonic-boundary-layer-transition-surface-mounted-atomic-layer-thermopile-heat-flux-gauge-telemetry-for-laminar-turbulent-transition",
+    "slug": "hypersonic-boundary-layer-transition-surface-mounted-atomic-layer-thermopile-heat-flux-gauge-telemetry-for-laminar-turbulent-transition",
+    "target_keyword": "hypersonic boundary layer transition surface-mounted atomic layer thermopile heat flux gauge telemetry for laminar-turbulent transition",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 3675,
+    "clicks": 47,
+    "ctr": 0.0129,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8144,6 +8438,20 @@
     "impressions": 3767,
     "clicks": 22,
     "ctr": 0.0059,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hypersonic-nosecone-stagnation-point-pitot-static-multi-hole-probe-differential-pressure-transducer-telemetry-for-freestream-mach-number",
+    "path": "/solutions/hypersonic-nosecone-stagnation-point-pitot-static-multi-hole-probe-differential-pressure-transducer-telemetry-for-freestream-mach-number",
+    "slug": "hypersonic-nosecone-stagnation-point-pitot-static-multi-hole-probe-differential-pressure-transducer-telemetry-for-freestream-mach-number",
+    "target_keyword": "hypersonic nosecone stagnation point pitot-static multi-hole probe differential pressure transducer telemetry for freestream Mach number",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 2435,
+    "clicks": 31,
+    "ctr": 0.0129,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8228,6 +8536,20 @@
     "impressions": 3494,
     "clicks": 43,
     "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hypersonic-vehicle-carbon-carbon-leading-edge-ultra-high-temperature-dual-wavelength-pyrometer-telemetry-for-thermal-protection-boundary",
+    "path": "/solutions/hypersonic-vehicle-carbon-carbon-leading-edge-ultra-high-temperature-dual-wavelength-pyrometer-telemetry-for-thermal-protection-boundary",
+    "slug": "hypersonic-vehicle-carbon-carbon-leading-edge-ultra-high-temperature-dual-wavelength-pyrometer-telemetry-for-thermal-protection-boundary",
+    "target_keyword": "hypersonic vehicle carbon-carbon leading edge ultra-high temperature dual-wavelength pyrometer telemetry for thermal protection boundary",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.0,
+    "impressions": 780,
+    "clicks": 29,
+    "ctr": 0.0381,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8750,6 +9072,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/laser-absorption-spectroscopy-scramjet-combustor-water-vapor-column-density-and-gas-temperature-telemetry-for-combustion-efficiency",
+    "path": "/solutions/laser-absorption-spectroscopy-scramjet-combustor-water-vapor-column-density-and-gas-temperature-telemetry-for-combustion-efficiency",
+    "slug": "laser-absorption-spectroscopy-scramjet-combustor-water-vapor-column-density-and-gas-temperature-telemetry-for-combustion-efficiency",
+    "target_keyword": "laser absorption spectroscopy scramjet combustor water vapor column density and gas temperature telemetry for combustion efficiency",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 1733,
+    "clicks": 30,
+    "ctr": 0.0176,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/last-mile-time-window-delivery-routing-qubo-agents-for-courier-networks",
     "path": "/solutions/last-mile-time-window-delivery-routing-qubo-agents-for-courier-networks",
     "slug": "last-mile-time-window-delivery-routing-qubo-agents-for-courier-networks",
@@ -8998,6 +9334,48 @@
     "impressions": 371,
     "clicks": 4,
     "ctr": 0.0114,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/lithography-immersion-wafer-bevel-defect-darkfield-scatterometry-telemetry-for-edge-bead-removal-validation",
+    "path": "/solutions/lithography-immersion-wafer-bevel-defect-darkfield-scatterometry-telemetry-for-edge-bead-removal-validation",
+    "slug": "lithography-immersion-wafer-bevel-defect-darkfield-scatterometry-telemetry-for-edge-bead-removal-validation",
+    "target_keyword": "lithography immersion wafer bevel defect darkfield scatterometry telemetry for edge-bead removal validation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.6,
+    "impressions": 916,
+    "clicks": 14,
+    "ctr": 0.0162,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/lithography-reticle-inspection-deep-ultraviolet-actinic-dark-field-tdi-sensor-telemetry-for-sub-10nm-phase-defect-detection",
+    "path": "/solutions/lithography-reticle-inspection-deep-ultraviolet-actinic-dark-field-tdi-sensor-telemetry-for-sub-10nm-phase-defect-detection",
+    "slug": "lithography-reticle-inspection-deep-ultraviolet-actinic-dark-field-tdi-sensor-telemetry-for-sub-10nm-phase-defect-detection",
+    "target_keyword": "lithography reticle inspection deep ultraviolet actinic dark-field TDI sensor telemetry for sub-10nm phase defect detection",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.7,
+    "impressions": 1067,
+    "clicks": 14,
+    "ctr": 0.0136,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/lithography-wafer-edge-focus-tracking-chromatic-confocal-sensor-displacement-telemetry-for-topography-compensation",
+    "path": "/solutions/lithography-wafer-edge-focus-tracking-chromatic-confocal-sensor-displacement-telemetry-for-topography-compensation",
+    "slug": "lithography-wafer-edge-focus-tracking-chromatic-confocal-sensor-displacement-telemetry-for-topography-compensation",
+    "target_keyword": "lithography wafer edge focus tracking chromatic confocal sensor displacement telemetry for topography compensation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.3,
+    "impressions": 3613,
+    "clicks": 55,
+    "ctr": 0.0153,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11004,6 +11382,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/photolithography-chemical-amplified-resist-bake-hotplate-multi-zone-rtd-temperature-uniformity-telemetry-for-line-edge-roughness",
+    "path": "/solutions/photolithography-chemical-amplified-resist-bake-hotplate-multi-zone-rtd-temperature-uniformity-telemetry-for-line-edge-roughness",
+    "slug": "photolithography-chemical-amplified-resist-bake-hotplate-multi-zone-rtd-temperature-uniformity-telemetry-for-line-edge-roughness",
+    "target_keyword": "photolithography chemical amplified resist bake hotplate multi-zone RTD temperature uniformity telemetry for line edge roughness",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.4,
+    "impressions": 3024,
+    "clicks": 77,
+    "ctr": 0.0257,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/photonic-quantum-circuit-beam-splitter-phase-drift-interferometry-software-for-optical-quantum-computing-labs",
     "path": "/solutions/photonic-quantum-circuit-beam-splitter-phase-drift-interferometry-software-for-optical-quantum-computing-labs",
     "slug": "photonic-quantum-circuit-beam-splitter-phase-drift-interferometry-software-for-optical-quantum-computing-labs",
@@ -12530,6 +12922,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/scramjet-cavity-flameholder-supersonic-fuel-injection-strut-strain-gauge-load-cell-telemetry-for-aerothermal-vibration-fatigue",
+    "path": "/solutions/scramjet-cavity-flameholder-supersonic-fuel-injection-strut-strain-gauge-load-cell-telemetry-for-aerothermal-vibration-fatigue",
+    "slug": "scramjet-cavity-flameholder-supersonic-fuel-injection-strut-strain-gauge-load-cell-telemetry-for-aerothermal-vibration-fatigue",
+    "target_keyword": "scramjet cavity flameholder supersonic fuel injection strut strain gauge load cell telemetry for aerothermal vibration fatigue",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 3213,
+    "clicks": 56,
+    "ctr": 0.0176,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/scramjet-combustor-cavity-flameholder-acoustic-cavity-resonance-hydroxyl-planar-laser-induced-fluorescence-telemetry",
     "path": "/solutions/scramjet-combustor-cavity-flameholder-acoustic-cavity-resonance-hydroxyl-planar-laser-induced-fluorescence-telemetry",
     "slug": "scramjet-combustor-cavity-flameholder-acoustic-cavity-resonance-hydroxyl-planar-laser-induced-fluorescence-telemetry",
@@ -12614,6 +13020,48 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/scramjet-exhaust-nozzle-expansion-ramp-radiative-heat-flux-thin-film-heat-gauge-array-telemetry-for-thrust-vectoring-performance",
+    "path": "/solutions/scramjet-exhaust-nozzle-expansion-ramp-radiative-heat-flux-thin-film-heat-gauge-array-telemetry-for-thrust-vectoring-performance",
+    "slug": "scramjet-exhaust-nozzle-expansion-ramp-radiative-heat-flux-thin-film-heat-gauge-array-telemetry-for-thrust-vectoring-performance",
+    "target_keyword": "scramjet exhaust nozzle expansion ramp radiative heat flux thin-film heat gauge array telemetry for thrust vectoring performance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 3065,
+    "clicks": 17,
+    "ctr": 0.0058,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/scramjet-fuel-line-cavity-acoustic-resonance-piezoresistive-dynamic-pressure-sensor-telemetry-for-combustion-instability-suppression",
+    "path": "/solutions/scramjet-fuel-line-cavity-acoustic-resonance-piezoresistive-dynamic-pressure-sensor-telemetry-for-combustion-instability-suppression",
+    "slug": "scramjet-fuel-line-cavity-acoustic-resonance-piezoresistive-dynamic-pressure-sensor-telemetry-for-combustion-instability-suppression",
+    "target_keyword": "scramjet fuel line cavity acoustic resonance piezoresistive dynamic pressure sensor telemetry for combustion instability suppression",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 1947,
+    "clicks": 19,
+    "ctr": 0.0099,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/scramjet-fuel-manifold-electro-mechanical-proportional-metering-valve-cryogenic-mass-flowmeter-telemetry-for-stoichiometric-fuel-air-ratio",
+    "path": "/solutions/scramjet-fuel-manifold-electro-mechanical-proportional-metering-valve-cryogenic-mass-flowmeter-telemetry-for-stoichiometric-fuel-air-ratio",
+    "slug": "scramjet-fuel-manifold-electro-mechanical-proportional-metering-valve-cryogenic-mass-flowmeter-telemetry-for-stoichiometric-fuel-air-ratio",
+    "target_keyword": "scramjet fuel manifold electro-mechanical proportional metering valve cryogenic mass flowmeter telemetry for stoichiometric fuel-air ratio",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.7,
+    "impressions": 1447,
+    "clicks": 23,
+    "ctr": 0.0163,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/scramjet-fuel-strut-cavity-flameholding-supersonic-combustion-pressure-software-for-propulsion-engineers",
     "path": "/solutions/scramjet-fuel-strut-cavity-flameholding-supersonic-combustion-pressure-software-for-propulsion-engineers",
     "slug": "scramjet-fuel-strut-cavity-flameholding-supersonic-combustion-pressure-software-for-propulsion-engineers",
@@ -12642,6 +13090,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/scramjet-igniter-torch-hydrogen-oxygen-premix-manifold-flash-back-ionization-probe-telemetry-for-flame-holding-stability",
+    "path": "/solutions/scramjet-igniter-torch-hydrogen-oxygen-premix-manifold-flash-back-ionization-probe-telemetry-for-flame-holding-stability",
+    "slug": "scramjet-igniter-torch-hydrogen-oxygen-premix-manifold-flash-back-ionization-probe-telemetry-for-flame-holding-stability",
+    "target_keyword": "scramjet igniter torch hydrogen-oxygen premix manifold flash-back ionization probe telemetry for flame holding stability",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 713,
+    "clicks": 7,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/scramjet-inlet-cowl-lip-thermal-blunting-aerothermodynamic-radiative-emission-spectrometer-telemetry-for-mach-8",
     "path": "/solutions/scramjet-inlet-cowl-lip-thermal-blunting-aerothermodynamic-radiative-emission-spectrometer-telemetry-for-mach-8",
     "slug": "scramjet-inlet-cowl-lip-thermal-blunting-aerothermodynamic-radiative-emission-spectrometer-telemetry-for-mach-8",
@@ -12652,6 +13114,34 @@
     "impressions": 1851,
     "clicks": 58,
     "ctr": 0.0315,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/scramjet-inlet-variable-geometry-cowl-lip-hydraulic-linear-variable-displacement-transducer-lvdt-telemetry-for-shock-on-lip-control",
+    "path": "/solutions/scramjet-inlet-variable-geometry-cowl-lip-hydraulic-linear-variable-displacement-transducer-lvdt-telemetry-for-shock-on-lip-control",
+    "slug": "scramjet-inlet-variable-geometry-cowl-lip-hydraulic-linear-variable-displacement-transducer-lvdt-telemetry-for-shock-on-lip-control",
+    "target_keyword": "scramjet inlet variable geometry cowl lip hydraulic linear variable displacement transducer LVDT telemetry for shock-on-lip control",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.8,
+    "impressions": 3648,
+    "clicks": 32,
+    "ctr": 0.009,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/scramjet-isolator-pseudo-shock-wave-boundary-layer-separation-dynamic-piezo-resistive-pressure-transducer-array-telemetry-for-unstart-prevention",
+    "path": "/solutions/scramjet-isolator-pseudo-shock-wave-boundary-layer-separation-dynamic-piezo-resistive-pressure-transducer-array-telemetry-for-unstart-prevention",
+    "slug": "scramjet-isolator-pseudo-shock-wave-boundary-layer-separation-dynamic-piezo-resistive-pressure-transducer-array-telemetry-for-unstart-prevention",
+    "target_keyword": "scramjet isolator pseudo-shock wave boundary layer separation dynamic piezo-resistive pressure transducer array telemetry for unstart prevention",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 2723,
+    "clicks": 34,
+    "ctr": 0.0126,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -12722,6 +13212,20 @@
     "impressions": 2342,
     "clicks": 28,
     "ctr": 0.0123,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/scramjet-plasma-assisted-ignition-spark-discharge-sub-nanosecond-pulse-current-transformer-telemetry-for-high-altitude-relight",
+    "path": "/solutions/scramjet-plasma-assisted-ignition-spark-discharge-sub-nanosecond-pulse-current-transformer-telemetry-for-high-altitude-relight",
+    "slug": "scramjet-plasma-assisted-ignition-spark-discharge-sub-nanosecond-pulse-current-transformer-telemetry-for-high-altitude-relight",
+    "target_keyword": "scramjet plasma-assisted ignition spark discharge sub-nanosecond pulse current transformer telemetry for high-altitude relight",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.2,
+    "impressions": 2352,
+    "clicks": 40,
+    "ctr": 0.0173,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14770,6 +15274,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/subsea-all-electric-blowout-preventer-bop-ram-actuator-brushless-dc-motor-torque-and-resolver-angle-telemetry-for-emergency-shearing",
+    "path": "/solutions/subsea-all-electric-blowout-preventer-bop-ram-actuator-brushless-dc-motor-torque-and-resolver-angle-telemetry-for-emergency-shearing",
+    "slug": "subsea-all-electric-blowout-preventer-bop-ram-actuator-brushless-dc-motor-torque-and-resolver-angle-telemetry-for-emergency-shearing",
+    "target_keyword": "subsea all-electric blowout preventer BOP ram actuator brushless DC motor torque and resolver angle telemetry for emergency shearing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 562,
+    "clicks": 8,
+    "ctr": 0.0155,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/subsea-blowout-preventer-blind-shear-ram-lock-position-ultrasonic-verification-telemetry-for-deepwater-drilling",
     "path": "/solutions/subsea-blowout-preventer-blind-shear-ram-lock-position-ultrasonic-verification-telemetry-for-deepwater-drilling",
     "slug": "subsea-blowout-preventer-blind-shear-ram-lock-position-ultrasonic-verification-telemetry-for-deepwater-drilling",
@@ -14952,6 +15470,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/subsea-cathodic-protection-electric-field-gradient-rotating-silver-silver-chloride-reference-electrode-telemetry-for-pipeline-corrosion",
+    "path": "/solutions/subsea-cathodic-protection-electric-field-gradient-rotating-silver-silver-chloride-reference-electrode-telemetry-for-pipeline-corrosion",
+    "slug": "subsea-cathodic-protection-electric-field-gradient-rotating-silver-silver-chloride-reference-electrode-telemetry-for-pipeline-corrosion",
+    "target_keyword": "subsea cathodic protection electric field gradient rotating silver-silver chloride reference electrode telemetry for pipeline corrosion",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.8,
+    "impressions": 1848,
+    "clicks": 11,
+    "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/subsea-chemical-injection-metering-valve-cimv-micro-flow-rate-corrosion-inhibitor-telemetry-for-flowline-scale",
     "path": "/solutions/subsea-chemical-injection-metering-valve-cimv-micro-flow-rate-corrosion-inhibitor-telemetry-for-flowline-scale",
     "slug": "subsea-chemical-injection-metering-valve-cimv-micro-flow-rate-corrosion-inhibitor-telemetry-for-flowline-scale",
@@ -14990,6 +15522,20 @@
     "impressions": 3455,
     "clicks": 86,
     "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/subsea-christmas-tree-choke-valve-ceramic-trim-erosion-ultrasonic-thickness-monitoring-transducer-telemetry-for-sand-production",
+    "path": "/solutions/subsea-christmas-tree-choke-valve-ceramic-trim-erosion-ultrasonic-thickness-monitoring-transducer-telemetry-for-sand-production",
+    "slug": "subsea-christmas-tree-choke-valve-ceramic-trim-erosion-ultrasonic-thickness-monitoring-transducer-telemetry-for-sand-production",
+    "target_keyword": "subsea christmas tree choke valve ceramic trim erosion ultrasonic thickness monitoring transducer telemetry for sand production",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 1426,
+    "clicks": 22,
+    "ctr": 0.0161,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15092,6 +15638,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/subsea-dynamic-electrical-umbilical-optical-fiber-distributed-acoustic-sensing-das-telemetry-for-vortex-induced-vibration",
+    "path": "/solutions/subsea-dynamic-electrical-umbilical-optical-fiber-distributed-acoustic-sensing-das-telemetry-for-vortex-induced-vibration",
+    "slug": "subsea-dynamic-electrical-umbilical-optical-fiber-distributed-acoustic-sensing-das-telemetry-for-vortex-induced-vibration",
+    "target_keyword": "subsea dynamic electrical umbilical optical fiber distributed acoustic sensing DAS telemetry for vortex-induced vibration",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 2938,
+    "clicks": 49,
+    "ctr": 0.0169,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/subsea-electric-actuator-brushless-dc-motor-torque-feedback-and-resolver-position-telemetry-for-all-electric-trees",
     "path": "/solutions/subsea-electric-actuator-brushless-dc-motor-torque-feedback-and-resolver-position-telemetry-for-all-electric-trees",
     "slug": "subsea-electric-actuator-brushless-dc-motor-torque-feedback-and-resolver-position-telemetry-for-all-electric-trees",
@@ -15102,6 +15662,20 @@
     "impressions": 885,
     "clicks": 6,
     "ctr": 0.0068,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/subsea-electric-actuator-spring-return-failsafe-mechanism-linear-displacement-potentiometer-telemetry-for-valve-closure-verification",
+    "path": "/solutions/subsea-electric-actuator-spring-return-failsafe-mechanism-linear-displacement-potentiometer-telemetry-for-valve-closure-verification",
+    "slug": "subsea-electric-actuator-spring-return-failsafe-mechanism-linear-displacement-potentiometer-telemetry-for-valve-closure-verification",
+    "target_keyword": "subsea electric actuator spring-return failsafe mechanism linear displacement potentiometer telemetry for valve closure verification",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.7,
+    "impressions": 3127,
+    "clicks": 62,
+    "ctr": 0.02,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15204,6 +15778,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/subsea-high-integrity-pressure-protection-system-hipps-triple-modular-redundant-pressure-transmitter-telemetry-for-overpressure-isolation",
+    "path": "/solutions/subsea-high-integrity-pressure-protection-system-hipps-triple-modular-redundant-pressure-transmitter-telemetry-for-overpressure-isolation",
+    "slug": "subsea-high-integrity-pressure-protection-system-hipps-triple-modular-redundant-pressure-transmitter-telemetry-for-overpressure-isolation",
+    "target_keyword": "subsea high-integrity pressure protection system HIPPS triple modular redundant pressure transmitter telemetry for overpressure isolation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.9,
+    "impressions": 3649,
+    "clicks": 73,
+    "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/subsea-hydraulic-accumulator-nitrogen-pre-charge-pressure-telemetry-for-bop-stacks",
     "path": "/solutions/subsea-hydraulic-accumulator-nitrogen-pre-charge-pressure-telemetry-for-bop-stacks",
     "slug": "subsea-hydraulic-accumulator-nitrogen-pre-charge-pressure-telemetry-for-bop-stacks",
@@ -15246,6 +15834,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/subsea-hydraulic-power-unit-accumulator-bank-bladder-nitrogen-pre-charge-pressure-transducer-telemetry-for-emergency-storage-reserve",
+    "path": "/solutions/subsea-hydraulic-power-unit-accumulator-bank-bladder-nitrogen-pre-charge-pressure-transducer-telemetry-for-emergency-storage-reserve",
+    "slug": "subsea-hydraulic-power-unit-accumulator-bank-bladder-nitrogen-pre-charge-pressure-transducer-telemetry-for-emergency-storage-reserve",
+    "target_keyword": "subsea hydraulic power unit accumulator bank bladder nitrogen pre-charge pressure transducer telemetry for emergency storage reserve",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.1,
+    "impressions": 301,
+    "clicks": 1,
+    "ctr": 0.0042,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/subsea-inductive-wireless-power-transfer-coil-misalignment-thermal-telemetry-for-auv-docking",
     "path": "/solutions/subsea-inductive-wireless-power-transfer-coil-misalignment-thermal-telemetry-for-auv-docking",
     "slug": "subsea-inductive-wireless-power-transfer-coil-misalignment-thermal-telemetry-for-auv-docking",
@@ -15256,6 +15858,20 @@
     "impressions": 3776,
     "clicks": 46,
     "ctr": 0.0122,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/subsea-jumper-thermal-insulation-aerogel-jacket-distributed-temperature-sensing-dts-optical-fiber-telemetry-for-hydrate-blockage-prevention",
+    "path": "/solutions/subsea-jumper-thermal-insulation-aerogel-jacket-distributed-temperature-sensing-dts-optical-fiber-telemetry-for-hydrate-blockage-prevention",
+    "slug": "subsea-jumper-thermal-insulation-aerogel-jacket-distributed-temperature-sensing-dts-optical-fiber-telemetry-for-hydrate-blockage-prevention",
+    "target_keyword": "subsea jumper thermal insulation aerogel jacket distributed temperature sensing DTS optical fiber telemetry for hydrate blockage prevention",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.0,
+    "impressions": 2230,
+    "clicks": 55,
+    "ctr": 0.0249,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15298,6 +15914,20 @@
     "impressions": 2466,
     "clicks": 32,
     "ctr": 0.0133,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/subsea-manifold-multiphase-flow-meter-dual-energy-gamma-ray-densitometer-telemetry-for-water-cut-and-gas-oil-ratio-calculation",
+    "path": "/solutions/subsea-manifold-multiphase-flow-meter-dual-energy-gamma-ray-densitometer-telemetry-for-water-cut-and-gas-oil-ratio-calculation",
+    "slug": "subsea-manifold-multiphase-flow-meter-dual-energy-gamma-ray-densitometer-telemetry-for-water-cut-and-gas-oil-ratio-calculation",
+    "target_keyword": "subsea manifold multiphase flow meter dual-energy gamma-ray densitometer telemetry for water cut and gas-oil ratio calculation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 2242,
+    "clicks": 34,
+    "ctr": 0.0155,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15396,6 +16026,20 @@
     "impressions": 1936,
     "clicks": 21,
     "ctr": 0.0113,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/subsea-pipeline-end-termination-plet-mudmat-suction-pile-differential-settlement-tiltmeter-telemetry-for-seabed-geotechnics",
+    "path": "/solutions/subsea-pipeline-end-termination-plet-mudmat-suction-pile-differential-settlement-tiltmeter-telemetry-for-seabed-geotechnics",
+    "slug": "subsea-pipeline-end-termination-plet-mudmat-suction-pile-differential-settlement-tiltmeter-telemetry-for-seabed-geotechnics",
+    "target_keyword": "subsea pipeline end termination PLET mudmat suction pile differential settlement tiltmeter telemetry for seabed geotechnics",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.4,
+    "impressions": 1104,
+    "clicks": 5,
+    "ctr": 0.0046,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15582,6 +16226,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/subsea-wellhead-connector-hydraulic-locking-ring-collet-dog-latch-acoustic-transponder-telemetry-for-fatigue-load-monitoring",
+    "path": "/solutions/subsea-wellhead-connector-hydraulic-locking-ring-collet-dog-latch-acoustic-transponder-telemetry-for-fatigue-load-monitoring",
+    "slug": "subsea-wellhead-connector-hydraulic-locking-ring-collet-dog-latch-acoustic-transponder-telemetry-for-fatigue-load-monitoring",
+    "target_keyword": "subsea wellhead connector hydraulic locking ring collet dog latch acoustic transponder telemetry for fatigue load monitoring",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 3216,
+    "clicks": 124,
+    "ctr": 0.0387,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/subsea-wellhead-fatigue-monitoring-triaxial-inclinometer-and-dynamic-bending-strain-telemetry-for-drilling-risers",
     "path": "/solutions/subsea-wellhead-fatigue-monitoring-triaxial-inclinometer-and-dynamic-bending-strain-telemetry-for-drilling-risers",
     "slug": "subsea-wellhead-fatigue-monitoring-triaxial-inclinometer-and-dynamic-bending-strain-telemetry-for-drilling-risers",
@@ -15592,6 +16250,20 @@
     "impressions": 1747,
     "clicks": 20,
     "ctr": 0.0115,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/subsea-wet-gas-compressor-active-magnetic-bearing-gap-eddy-current-sensor-telemetry-for-rotor-dynamic-stability",
+    "path": "/solutions/subsea-wet-gas-compressor-active-magnetic-bearing-gap-eddy-current-sensor-telemetry-for-rotor-dynamic-stability",
+    "slug": "subsea-wet-gas-compressor-active-magnetic-bearing-gap-eddy-current-sensor-telemetry-for-rotor-dynamic-stability",
+    "target_keyword": "subsea wet-gas compressor active magnetic bearing gap eddy-current sensor telemetry for rotor dynamic stability",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 3108,
+    "clicks": 36,
+    "ctr": 0.0119,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -17388,6 +18060,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/wafer-clamp-electrostatic-chuck-multi-zone-helium-backside-cooling-pressure-transducer-telemetry-for-chucking-flatness",
+    "path": "/solutions/wafer-clamp-electrostatic-chuck-multi-zone-helium-backside-cooling-pressure-transducer-telemetry-for-chucking-flatness",
+    "slug": "wafer-clamp-electrostatic-chuck-multi-zone-helium-backside-cooling-pressure-transducer-telemetry-for-chucking-flatness",
+    "target_keyword": "wafer clamp electrostatic chuck multi-zone helium backside cooling pressure transducer telemetry for chucking flatness",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.9,
+    "impressions": 3679,
+    "clicks": 137,
+    "ctr": 0.0373,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/wafer-edge-exclusion-bevel-defect-inspection-computer-vision-software-for-semiconductor-packaging-engineers",
     "path": "/solutions/wafer-edge-exclusion-bevel-defect-inspection-computer-vision-software-for-semiconductor-packaging-engineers",
     "slug": "wafer-edge-exclusion-bevel-defect-inspection-computer-vision-software-for-semiconductor-packaging-engineers",
@@ -17402,6 +18088,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/wafer-notch-optical-alignment-dual-axis-laser-triangulation-sensor-telemetry-for-litho-pre-alignment-repeatable-indexing",
+    "path": "/solutions/wafer-notch-optical-alignment-dual-axis-laser-triangulation-sensor-telemetry-for-litho-pre-alignment-repeatable-indexing",
+    "slug": "wafer-notch-optical-alignment-dual-axis-laser-triangulation-sensor-telemetry-for-litho-pre-alignment-repeatable-indexing",
+    "target_keyword": "wafer notch optical alignment dual-axis laser triangulation sensor telemetry for litho pre-alignment repeatable indexing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.9,
+    "impressions": 3459,
+    "clicks": 40,
+    "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/wafer-overlay-error-alignment-and-reticle-stage-correction-software-for-semiconductor-lithography-directors",
     "path": "/solutions/wafer-overlay-error-alignment-and-reticle-stage-correction-software-for-semiconductor-lithography-directors",
     "slug": "wafer-overlay-error-alignment-and-reticle-stage-correction-software-for-semiconductor-lithography-directors",
@@ -17412,6 +18112,20 @@
     "impressions": 2603,
     "clicks": 92,
     "ctr": 0.0356,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/wafer-stage-vacuum-chamber-ultra-high-vacuum-turbomolecular-pump-magnetic-bearing-vibration-telemetry-for-jitter-isolation",
+    "path": "/solutions/wafer-stage-vacuum-chamber-ultra-high-vacuum-turbomolecular-pump-magnetic-bearing-vibration-telemetry-for-jitter-isolation",
+    "slug": "wafer-stage-vacuum-chamber-ultra-high-vacuum-turbomolecular-pump-magnetic-bearing-vibration-telemetry-for-jitter-isolation",
+    "target_keyword": "wafer stage vacuum chamber ultra-high vacuum turbomolecular pump magnetic bearing vibration telemetry for jitter isolation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.7,
+    "impressions": 2657,
+    "clicks": 43,
+    "ctr": 0.0165,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
