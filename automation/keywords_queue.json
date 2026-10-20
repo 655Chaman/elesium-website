@@ -160,11 +160,12 @@
     "keyword": "AI workflow automation using n8n India",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T18:19:00.907843",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "ai-workflow-automation-using-n8n-india"
   },
   {
     "id": 15,

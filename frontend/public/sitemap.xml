@@ -259,6 +259,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-memristor-crossbar-simulator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/signals/ai-workflow-automation-using-n8n-india</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/conversational-ai-agents-for-e-commerce-india</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -709,7 +721,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/1t1r-one-transistor-one-resistor-crossbar-sneak-path-leakage-current-suppression-telemetry-for-reram</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/4d-trajectory-strategic-conflict-detection-and-resolution-agents-for-evtol-fleets</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/5g-direct-to-device-ntn-non-terrestrial-network-phased-array-antenna-gain-telemetry-from-haps</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -853,6 +877,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/air-gapped-n8n-docker-swarm-cluster-zero-data-egress-verification-telemetry-for-bfsi-compliance</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/air-traffic-flow-management-runway-spacing-qubo-agents-for-slot-coordinators</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -943,7 +973,25 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/analog-in-memory-computing-reram-crossbar-vector-matrix-multiply-latency-telemetry-for-autonomous-agents</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/analog-memristive-weight-write-verify-closed-loop-pulse-programming-telemetry-for-edge-accelerators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/analog-subthreshold-refractory-period-calibration-agents-for-ultra-low-power-edge-ai</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/analog-to-digital-converter-peripheral-power-dissipation-amortization-telemetry-for-crossbar-cores</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -1273,6 +1321,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/autonomous-stratospheric-station-keeping-wind-drift-compensation-telemetry-for-solar-powered-haps</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/autonomous-subsea-docking-station-optical-marker-visual-servoing-controllers-for-resident-auvs</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1442,6 +1496,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/boundary-layer-transition-shockwave-interaction-telemetry-for-hypersonic-vehicles</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/brushless-dc-motor-bldc-stratospheric-low-density-air-propeller-thrust-efficiency-telemetry-for-haps</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -1897,6 +1957,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/conductive-bridging-ram-cbram-silver-ion-filament-formation-jitter-telemetry-for-low-power-edge-vision</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/conformal-prediction-non-conformity-set-coverage-telemetry-for-automated-loan-underwriting-default-risk</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2095,6 +2161,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/cross-border-data-egress-prevention-and-data-residency-audit-telemetry-for-cloud-n8n-instances</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/cross-border-regulatory-compliance-mapping-software-for-multinational-general-counsels</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -2114,6 +2186,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/crossbar-memristor-conductance-programming-margin-telemetry-for-analog-snns</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/crossbar-parasitic-wire-resistance-ir-drop-voltage-attenuation-telemetry-for-1024x1024-arrays</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -2288,6 +2366,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/custom-python-code-execution-node-memory-sandboxing-telemetry-for-self-hosted-enterprise-n8n</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -2869,6 +2953,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dpdp-act-2023-cryptographic-audit-trail-webhook-payload-sanitization-telemetry-for-n8n-pipelines</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/drift-resilient-neural-network-weight-quantization-mapping-telemetry-for-analog-in-memory-inference</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/drillship-dynamic-positioning-thruster-allocation-agents-for-subsea-drilling</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3073,7 +3169,25 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/emergency-stratospheric-glide-descent-trajectory-energy-dissipation-telemetry-for-solar-uavs</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/energy-based-out-of-distribution-score-telemetry-for-corporate-debt-covenant-breach-early-warning</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-self-hosted-n8n-private-vpc-workflow-orchestration-latency-telemetry-for-indian-enterprises</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ephemeral-payload-hmac-sha256-hashing-and-token-masking-telemetry-for-sovereign-n8n-webhooks</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3253,6 +3367,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/exponential-backoff-retry-and-circuit-breaker-fault-tolerance-telemetry-for-mission-critical-n8n</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/extreme-ultraviolet-lithography-source-tin-droplet-plasma-stability-software-for-scanner-maintenance-engineers</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3368,6 +3488,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/federated-secure-aggregation-dropout-recovery-telemetry-for-distributed-core-banking</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ferroelectric-fefet-gate-polarization-switching-endurance-telemetry-for-sovereign-in-memory-accelerators</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3805,6 +3931,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/hafnium-oxide-hfox-filamentary-reram-cycle-to-cycle-resistance-variance-telemetry-for-neuromorphic-chips</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/halide-solid-electrolyte-dry-ball-milling-planetary-motion-vibration-accelerometer-spectrum-telemetry-for-mechanochemical-kinetics</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -3812,6 +3944,24 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/hall-probe-magnetic-flux-density-vector-mapping-telemetry-for-particle-accelerator-dipole-magnets</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/haps-day-night-energy-balance-state-of-charge-margin-telemetry-for-perpetual-stratospheric-flight</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/haps-lightweight-avionics-flight-control-actuator-current-draw-telemetry-under-stratospheric-turbulence</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/haps-satellite-link-laser-optical-communications-pointing-acquisition-and-tracking-pat-telemetry</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3860,6 +4010,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/hemt-cryogenic-low-noise-amplifier-gain-compression-telemetry-for-quantum-readout-chains</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/high-altitude-payload-bay-thermal-management-heat-pipe-rejection-telemetry-for-telecom-transceivers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/high-altitude-pseudo-satellite-lithium-sulfur-battery-pack-thermal-insulation-telemetry-at-minus-70c</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4124,6 +4286,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/hollow-fiber-module-lumen-pressure-differential-bioburden-filtration-integrity-pressure-hold-telemetry-for-vaccines</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/horizontal-worker-pod-auto-scaling-and-memory-consumption-telemetry-for-high-throughput-n8n</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4453,6 +4621,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/immutable-append-only-postgresql-audit-log-commit-latency-telemetry-for-certified-n8n-workflows</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/in-phase-quadrature-mixer-microwave-pulse-skew-telemetry-for-quantum-gate-fidelity</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -4466,6 +4640,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/in-vessel-beryllium-first-wall-erosion-laser-induced-breakdown-spectroscopy-for-fusion</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/inbound-webhook-mtls-mutual-authentication-handshake-latency-telemetry-for-enterprise-n8n-gateways</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4585,6 +4765,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/johnson-nyquist-thermal-noise-signal-to-noise-ratio-degradation-telemetry-for-analog-computing-tiles</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/josephson-junction-array-dynamic-resistance-fluctuation-telemetry-for-superconducting-voltage-standards</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -4604,6 +4790,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/kill-and-choke-manifold-high-pressure-valve-seat-erosion-monitors-for-well-kill-ops</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/kirchhoff-current-law-bitline-analog-current-summation-settling-time-telemetry-for-crossbar-arrays</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4658,6 +4850,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/leading-edge-non-equilibrium-catalytic-atom-recombination-heat-flux-controllers-for-hypersonics</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/leaky-integrate-and-fire-lif-neuromorphic-neuron-membrane-potential-leakage-telemetry-for-event-vision</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4825,6 +5023,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/local-ollama-vllm-private-llm-node-execution-latency-telemetry-for-self-hosted-n8n-pipelines</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/localized-cell-voltage-reversal-degradation-early-warning-monitors-for-series-stacks</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -4832,6 +5036,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/locomotive-maintenance-turnaround-scheduling-qubo-agents-for-freight-rails</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/long-endurance-solar-electric-haps-structural-load-factor-telemetry-under-stratospheric-gust-encounters</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5089,6 +5299,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/maximum-power-point-tracking-mppt-solar-array-efficiency-telemetry-under-high-altitude-albedo-radiation</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/membership-inference-attack-mia-shadow-model-confidence-score-telemetry-for-rare-disease-genomic-diagnostic-agents</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -5108,6 +5324,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/membrane-hydraulic-osmotic-water-crossover-shunt-current-telemetry-for-flow-batteries</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/memristor-analog-matrix-multiplication-femtojoule-per-synaptic-op-telemetry-for-sovereign-edge-models</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/memristor-conductance-drift-power-law-relaxation-compensation-telemetry-for-edge-ai-inference</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5474,6 +5702,36 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/municipal-wastewater-treatment-aeration-optimization-state-machines-for-plant-operators</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/n8n-core-to-worker-websocket-heartbeat-liveness-detection-telemetry-for-distributed-cloud-clusters</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/n8n-redis-bullmq-worker-queue-task-dispatch-throughput-telemetry-for-high-concurrency-workflows</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/n8n-sap-erp-purchase-order-webhook-automated-reconciliation-latency-telemetry-for-manufacturing-plants</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -6031,6 +6289,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/perovskite-silicon-tandem-solar-cell-radiation-hardness-telemetry-for-high-altitude-endurance</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/pharmaceutical-cleanroom-hvac-differential-pressure-cascade-software-for-containment-facility-directors</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -6038,6 +6302,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/phase-change-memory-pcm-structural-relaxation-conductance-drift-tracking-telemetry-for-deep-neural-nets</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -6200,6 +6470,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/post-trade-settlement-failure-reconciliation-engines-for-prime-brokerages</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/postgresql-pgvector-semantic-rag-node-query-retrieval-latency-telemetry-for-self-hosted-n8n</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -7843,6 +8119,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/spike-timing-dependent-plasticity-stdp-synaptic-weight-tuning-energy-dissipation-telemetry-for-snn-chips</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/spike-train-poisson-inter-spike-interval-entropy-tracking-monitors-for-anomaly-detection</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -8018,6 +8300,24 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/straddle-carrier-dispatch-and-clash-avoidance-qubo-agents-for-maritime-ports</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/stratospheric-haps-perovskite-solar-cell-conversion-efficiency-telemetry-at-20km-altitude</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/stratospheric-ozone-uv-degradation-resistant-polymer-film-surface-telemetry-for-solar-wings</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/stratospheric-wind-shear-jet-stream-boundary-layer-velocity-telemetry-for-haps-path-planning</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8606,6 +8906,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/subsurface-metallic-airframe-titanium-substructure-conductive-soak-back-controllers-for-tps</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/successive-approximation-sar-adc-quantization-noise-floor-telemetry-for-analog-vmm-crossbars</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -9326,6 +9632,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/ultra-high-temperature-ceramic-zirconium-diboride-ablation-telemetry-for-re-entry-nose-cones</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ultra-lightweight-carbon-fiber-composite-wing-spar-aeroelastic-flutter-telemetry-for-haps-uavs</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

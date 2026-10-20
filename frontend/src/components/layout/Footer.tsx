@@ -40,6 +40,7 @@ export default function DownloadFooter() {
         { name: 'Agent Byzantine Consensus & SecAgg Simulator', path: '/tools/enterprise-agent-byzantine-consensus-simulator' },
         { name: 'Agent Post-Quantum Cryptography & ML-KEM Simulator', path: '/tools/enterprise-agent-post-quantum-simulator' },
         { name: 'Agent Silicon Photonics & Optical GEMM Simulator', path: '/tools/enterprise-agent-photonic-compute-simulator' },
+        { name: 'Agent Memristor Crossbar & AIMC Simulator', path: '/tools/enterprise-agent-memristor-crossbar-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

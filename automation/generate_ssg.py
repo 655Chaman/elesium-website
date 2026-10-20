@@ -2415,6 +2415,49 @@ def render_photonic_compute_embed_semantic_html():
 </div>
 """
 
+def render_memristor_crossbar_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-memristor-crossbar-simulator.
+    """
+    return """
+<div id="prerendered-agent-memristor-crossbar-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#10b981;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Analog In-Memory Computing &amp; ReRAM Crossbars</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Analog Neuromorphic Crossbar Memristor Compute Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Benchmark analog in-memory computing (AIMC) using Resistive RAM (ReRAM) and Phase-Change Memory (PCM) crossbar arrays. Simulate single-step Kirchhoff/Ohm Vector-Matrix Multiplication (VMM), power-law conductance drift, and femtojoule-per-synaptic-op energy scaling against digital GPU baselines.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Analog Neuromorphic In-Memory Computing Performance Matrix</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>Single-Step VMM Accumulation:</strong> Analog currents sum across bitlines in a single cycle via Kirchhoff's Current Law, completing a 256x256 matrix multiply in sub-3.5ns without memory bus transfers.</li>
+        <li><strong>Energy Efficiency:</strong> Consumes &lt;65 fJ per synaptic operation, delivering over 35x lower power dissipation compared to 4nm digital GPU tensor cores.</li>
+        <li><strong>Conductance Drift Resilience:</strong> Power-law relaxation dynamics are compensated via drift-resilient neural weight mapping and scheduled closed-loop write-verify refresh routines.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_memristor_crossbar_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-memristor-crossbar-simulator.
+    """
+    return """
+<div id="prerendered-agent-memristor-crossbar-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Memristor Crossbar &amp; AIMC Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating analog in-memory computing (AIMC), ReRAM vector-matrix multiplication, and conductance drift dynamics.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark analog Kirchhoff bitline current summation and memristive conductance retention across enterprise autonomous agent architectures.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3779,6 +3822,14 @@ def generate_ssg():
         "embed/agent-photonic-compute-simulator": {
             "title": "Agent Silicon Photonics & Optical GEMM Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating coherent optical neural network matrix acceleration, in-flight waveguide latency, and WDM energy efficiency."
+        },
+        "tools/enterprise-agent-memristor-crossbar-simulator": {
+            "title": "Enterprise Autonomous Agent Analog Neuromorphic Crossbar Memristor Compute Simulator",
+            "desc": "Simulate analog in-memory computing (AIMC), ReRAM memristor crossbar vector-matrix multiplication, conductance drift power-law dynamics, and sub-nanosecond neuromorphic acceleration."
+        },
+        "embed/agent-memristor-crossbar-simulator": {
+            "title": "Agent Memristor Crossbar & AIMC Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating analog in-memory computing (AIMC), ReRAM vector-matrix multiplication, and conductance drift dynamics."
         }
     }
 
@@ -6563,6 +6614,90 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(photonic_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-memristor-crossbar-simulator":
+            tool_content = render_memristor_crossbar_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            memristor_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent Analog Neuromorphic Crossbar Memristor Compute Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "browserRequirements": "Requires JavaScript. Requires HTML5.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Memristor Crossbar & AIMC Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(memristor_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-memristor-crossbar-simulator":
+            embed_content = render_memristor_crossbar_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            memristor_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent Memristor Crossbar & AIMC Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(memristor_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

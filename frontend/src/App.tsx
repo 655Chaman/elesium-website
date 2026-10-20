@@ -89,6 +89,8 @@ const EnterpriseAgentPostQuantumSimulator = lazy(() => import('./components/page
 const EmbedAgentPostQuantumSimulator = lazy(() => import('./components/pages/EmbedAgentPostQuantumSimulator'))
 const EnterpriseAgentPhotonicComputeSimulator = lazy(() => import('./components/pages/EnterpriseAgentPhotonicComputeSimulator'))
 const EmbedAgentPhotonicComputeSimulator = lazy(() => import('./components/pages/EmbedAgentPhotonicComputeSimulator'))
+const EnterpriseAgentMemristorCrossbarSimulator = lazy(() => import('./components/pages/EnterpriseAgentMemristorCrossbarSimulator'))
+const EmbedAgentMemristorCrossbarSimulator = lazy(() => import('./components/pages/EmbedAgentMemristorCrossbarSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -251,6 +253,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-photonic-compute-simulator" element={<EnterpriseAgentPhotonicComputeSimulator />} />
                             <Route path="/tools/agent-photonic-compute-simulator" element={<Navigate to="/tools/enterprise-agent-photonic-compute-simulator" replace />} />
                             <Route path="/embed/agent-photonic-compute-simulator" element={<EmbedAgentPhotonicComputeSimulator />} />
+                            <Route path="/tools/enterprise-agent-memristor-crossbar-simulator" element={<EnterpriseAgentMemristorCrossbarSimulator />} />
+                            <Route path="/tools/agent-memristor-crossbar-simulator" element={<Navigate to="/tools/enterprise-agent-memristor-crossbar-simulator" replace />} />
+                            <Route path="/embed/agent-memristor-crossbar-simulator" element={<EmbedAgentMemristorCrossbarSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
