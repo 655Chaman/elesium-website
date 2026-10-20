@@ -51,6 +51,8 @@ const EnterpriseEventSourcingSimulator = lazy(() => import('./components/pages/E
 const EmbedEventSourcingSimulator = lazy(() => import('./components/pages/EmbedEventSourcingSimulator'))
 const EnterprisePromptFirewallSimulator = lazy(() => import('./components/pages/EnterprisePromptFirewallSimulator'))
 const EmbedPromptFirewallSimulator = lazy(() => import('./components/pages/EmbedPromptFirewallSimulator'))
+const EnterpriseSemanticCacheSimulator = lazy(() => import('./components/pages/EnterpriseSemanticCacheSimulator'))
+const EmbedSemanticCacheSimulator = lazy(() => import('./components/pages/EmbedSemanticCacheSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -156,6 +158,9 @@ function App() {
                             <Route path="/tools/enterprise-prompt-injection-firewall-simulator" element={<EnterprisePromptFirewallSimulator />} />
                             <Route path="/tools/prompt-injection-firewall-simulator" element={<Navigate to="/tools/enterprise-prompt-injection-firewall-simulator" replace />} />
                             <Route path="/embed/prompt-injection-firewall-simulator" element={<EmbedPromptFirewallSimulator />} />
+                            <Route path="/tools/enterprise-semantic-cache-simulator" element={<EnterpriseSemanticCacheSimulator />} />
+                            <Route path="/tools/semantic-cache-simulator" element={<Navigate to="/tools/enterprise-semantic-cache-simulator" replace />} />
+                            <Route path="/embed/semantic-cache-simulator" element={<EmbedSemanticCacheSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

@@ -1,9 +1,9 @@
 # Elesium Sovereign Web3 & Decentralized Entity Ledger
 
 > **Methodology:** Matt McDermott (*SEO Rockstars 2026: Web3 & Decentralized Platforms*)  
-> **Master IPFS Content Identifier (CID):** `QmZNDYYY2mviARXWovHgSckvAq93fikw6gYuAMAVWEnYB2`  
-> **Master SHA-256 Hash:** `a3d74388c1c31203dc940e12bd3806628d709a4e75c6d0814040bbf91c713319`  
-> **Total Cryptographically Anchored Routes:** `656` URLs  
+> **Master IPFS Content Identifier (CID):** `QmZ5BnZnV35m8Xsc8rcUzVbh8CHR4ucnHLGkKooddnrNto`  
+> **Master SHA-256 Hash:** `9f7a66e8f8534d3530fdc57f93fccc2258a7b842cc5d9d1eba9ec2e2d32551a8`  
+> **Total Cryptographically Anchored Routes:** `707` URLs  
 
 ---
 
@@ -11,8 +11,8 @@
 
 - **ENS Domain**: `elesium.eth` ([Limo Gateway](https://elesium.eth.limo))
 - **Unstoppable Domain**: `elesium.crypto`
-- **Cloudflare IPFS Gateway**: [https://cloudflare-ipfs.com/ipfs/QmZNDYYY2mviARXWovHgSckvAq93fikw6gYuAMAVWEnYB2](https://cloudflare-ipfs.com/ipfs/QmZNDYYY2mviARXWovHgSckvAq93fikw6gYuAMAVWEnYB2)
-- **Global IPFS Gateway**: [https://ipfs.io/ipfs/QmZNDYYY2mviARXWovHgSckvAq93fikw6gYuAMAVWEnYB2](https://ipfs.io/ipfs/QmZNDYYY2mviARXWovHgSckvAq93fikw6gYuAMAVWEnYB2)
+- **Cloudflare IPFS Gateway**: [https://cloudflare-ipfs.com/ipfs/QmZ5BnZnV35m8Xsc8rcUzVbh8CHR4ucnHLGkKooddnrNto](https://cloudflare-ipfs.com/ipfs/QmZ5BnZnV35m8Xsc8rcUzVbh8CHR4ucnHLGkKooddnrNto)
+- **Global IPFS Gateway**: [https://ipfs.io/ipfs/QmZ5BnZnV35m8Xsc8rcUzVbh8CHR4ucnHLGkKooddnrNto](https://ipfs.io/ipfs/QmZ5BnZnV35m8Xsc8rcUzVbh8CHR4ucnHLGkKooddnrNto)
 
 ---
 
@@ -23,9 +23,9 @@ Every publication on `elesium.online` is compiled into a deterministic pre-rende
 | Route Category | URLs Verified | Primary Hash Standard | Permanent Storage Gateway |
 | :--- | :--- | :--- | :--- |
 | **Market Signals (System 1)** | 64 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Compact Solutions (System 2)** | 540 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Compact Solutions (System 2)** | 590 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
 | **Video Masterclasses & Scripts** | 15 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Interactive Micro-SaaS Tools** | 13 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Interactive Micro-SaaS Tools** | 14 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
 
 ---
 
@@ -33,17 +33,17 @@ Every publication on `elesium.online` is compiled into a deterministic pre-rende
 
 | URL | Path Suffix | SHA-256 Digest | IPFS CID |
 | :--- | :--- | :--- | :--- |
-| `https://elesium.online/` | `home` | `70c9c83faa693440...` | `QmVvvq2hHQevzvF5...` |
-| `https://elesium.online/ai-automation` | `ai-automation` | `9bb108ff4456f31a...` | `QmYpQUR1SPZFRDZN...` |
-| `https://elesium.online/ai-automation-agency-india` | `ai-automation-agency-india` | `bcb97bd2a8c79cbf...` | `Qmb3MQ7vaBtqricP...` |
-| `https://elesium.online/audit` | `audit` | `4e3086eb1e129cb0...` | `QmTbsRkQ28ipJYVK...` |
-| `https://elesium.online/compare` | `compare` | `8016822207010090...` | `QmWxeoRwWrnYnHdQ...` |
-| `https://elesium.online/compare/custom-multi-agent-systems-vs-zapier-enterprise` | `compare/custom-multi-agent-systems-vs-zapier-enterprise` | `f67c167c54a8c310...` | `QmevpkHVFpAkzRGC...` |
-| `https://elesium.online/compare/deterministic-state-machines-vs-react-agents` | `compare/deterministic-state-machines-vs-react-agents` | `de1e4acec2fed52a...` | `QmdHi1UdoJ2XozhU...` |
-| `https://elesium.online/compare/elesium-vs-big-4-consulting-firms` | `compare/elesium-vs-big-4-consulting-firms` | `09b041986ad474db...` | `QmNzUG5KnEmgxU9f...` |
-| `https://elesium.online/compare/elesium-vs-traditional-it-consultancies` | `compare/elesium-vs-traditional-it-consultancies` | `edb2b5e631e01582...` | `QmeLXPNATDDKsajD...` |
-| `https://elesium.online/compare/fastapi-async-worker-vs-celery-redis-llm` | `compare/fastapi-async-worker-vs-celery-redis-llm` | `5d2dd32f990ad063...` | `QmUcP9qmFucFATEF...` |
-| `https://elesium.online/compare/langgraph-vs-autogen-studio-multi-agent` | `compare/langgraph-vs-autogen-studio-multi-agent` | `128de5f7e1b73718...` | `QmPb5YVDCb976HKw...` |
-| `https://elesium.online/compare/langgraph-vs-crewai-enterprise` | `compare/langgraph-vs-crewai-enterprise` | `ad380d9ab72943cc...` | `QmZzppDgx1TTqxFd...` |
+| `https://elesium.online/` | `home` | `3090dbde438dd49f...` | `QmRcEPk76MhUnR77...` |
+| `https://elesium.online/ai-automation` | `ai-automation` | `669c7cfe0e912003...` | `QmVFChBuH8eabGwv...` |
+| `https://elesium.online/ai-automation-agency-india` | `ai-automation-agency-india` | `469338bad194df73...` | `QmT69TAUuuZZ8K9T...` |
+| `https://elesium.online/audit` | `audit` | `567f91fa015dd1aa...` | `QmUAJbUpwPECDzAA...` |
+| `https://elesium.online/compare` | `compare` | `6241d9d18134d6d0...` | `QmUxCuK6MidX1oGj...` |
+| `https://elesium.online/compare/custom-multi-agent-systems-vs-zapier-enterprise` | `compare/custom-multi-agent-systems-vs-zapier-enterprise` | `1306003f578c2859...` | `QmPcumDFp197hVQu...` |
+| `https://elesium.online/compare/deterministic-state-machines-vs-react-agents` | `compare/deterministic-state-machines-vs-react-agents` | `f79c959da46f96f1...` | `Qmf1DtrsztwBJFY7...` |
+| `https://elesium.online/compare/elesium-vs-big-4-consulting-firms` | `compare/elesium-vs-big-4-consulting-firms` | `ebd4f74d4b69ee67...` | `QmeDEsDyTPWCNt7G...` |
+| `https://elesium.online/compare/elesium-vs-traditional-it-consultancies` | `compare/elesium-vs-traditional-it-consultancies` | `e976664055957207...` | `Qme3zR6DzGKH1NhD...` |
+| `https://elesium.online/compare/fastapi-async-worker-vs-celery-redis-llm` | `compare/fastapi-async-worker-vs-celery-redis-llm` | `2088c4eeb3bdd586...` | `QmQXeiSXAmc2gGmV...` |
+| `https://elesium.online/compare/langgraph-vs-autogen-studio-multi-agent` | `compare/langgraph-vs-autogen-studio-multi-agent` | `18bde8e89936a25f...` | `QmQ1ET91VJ9VQLkM...` |
+| `https://elesium.online/compare/langgraph-vs-crewai-enterprise` | `compare/langgraph-vs-crewai-enterprise` | `7b649aa687b8d643...` | `QmWeKqADMa3SiCTo...` |
 
-*(... and 644 additional URLs tracked in web3.json)*
+*(... and 695 additional URLs tracked in web3.json)*

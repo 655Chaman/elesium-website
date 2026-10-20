@@ -21,6 +21,7 @@ export default function DownloadFooter() {
         { name: 'GraphRAG vs Vector DB Benchmark', path: '/tools/enterprise-graphrag-memory-benchmark' },
         { name: 'Event Sourcing & Audit Ledger Simulator', path: '/tools/enterprise-event-sourcing-audit-simulator' },
         { name: 'Prompt Injection Firewall Simulator', path: '/tools/enterprise-prompt-injection-firewall-simulator' },
+        { name: 'Semantic Cache & Token Deduplication Simulator', path: '/tools/enterprise-semantic-cache-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

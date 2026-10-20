@@ -1217,6 +1217,61 @@ def render_deadlock_embed_semantic_html():
 </div>
 """
 
+def render_cache_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-semantic-cache-simulator.
+    """
+    return """
+<div id="prerendered-semantic-cache-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">FinOps &amp; Low-Latency Cache Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise AI Semantic Cache &amp; Embedding Deduplication Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark in-memory semantic vector caching (Redis Stack, Milvus, pgvector) vs uncached multi-agent LLM invocations. Model cosine similarity thresholds, sub-10ms lookup latencies, and token cost reductions.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Cache &amp; Token Architecture Benchmark</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Sovereign Semantic Cache</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Dense vector embedding matching with dynamic TTL and partition namespaces returns pre-computed responses in sub-10ms, cutting monthly LLM bills by 35% to 50%.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Hit Rate: 38.5% | Lookup: 7.2ms | Cost Reduction: 42%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Direct Cache Hit</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">In-memory HNSW vector index lookups completely bypass upstream LLM inference, delivering sub-10ms TTFT with zero token consumption.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a7f3d0;">Latency: 3.2ms | Token Overhead: 0.0x | Cost: $0</div>
+        </div>
+        <div style="background:#020617;border:1px solid #64748b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#94a3b8;margin:0 0 0.5rem 0;">Raw Uncached LLM Ingestion</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Every query triggers a full forward-pass token generation, racking up high cloud API token costs and 1200ms+ inference latency.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#cbd5e1;">Latency: 1250ms | Hit Rate: 0% | Full Token Cost</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_cache_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/semantic-cache-simulator.
+    """
+    return """
+<div id="prerendered-semantic-cache-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Semantic Cache &amp; Token Deduplication Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating semantic cache hit rates, vector lookup latencies, and LLM token cost reductions.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark in-memory semantic vector caching vs uncached LLM calls under varying cosine similarity thresholds and query volumes.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def render_voice_tool_semantic_html():
     """
     Renders clean semantic HTML for /tools/enterprise-voice-agent-latency-simulator.
@@ -1418,6 +1473,61 @@ def render_firewall_embed_semantic_html():
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
     Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#f43f5e;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_cache_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-semantic-cache-simulator.
+    """
+    return """
+<div id="prerendered-semantic-cache-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">FinOps &amp; Low-Latency Cache Lab</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise AI Semantic Cache &amp; Embedding Deduplication Simulator</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark in-memory semantic vector caching (Redis Stack, Milvus, pgvector) vs uncached multi-agent LLM invocations. Model cosine similarity thresholds, sub-10ms lookup latencies, and token cost reductions.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Cache &amp; Token Architecture Benchmark</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#020617;border:1px solid #06b6d440;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin:0 0 0.5rem 0;">Elesium Sovereign Semantic Cache</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Dense vector embedding matching with dynamic TTL and partition namespaces returns pre-computed responses in sub-10ms, cutting monthly LLM bills by 35% to 50%.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a5f3fc;">Hit Rate: 38.5% | Lookup: 7.2ms | Cost Reduction: 42%</div>
+        </div>
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Direct Cache Hit</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">In-memory HNSW vector index lookups completely bypass upstream LLM inference, delivering sub-10ms TTFT with zero token consumption.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#a7f3d0;">Latency: 3.2ms | Token Overhead: 0.0x | Cost: $0</div>
+        </div>
+        <div style="background:#020617;border:1px solid #64748b40;border-radius:0.75rem;padding:1.25rem;">
+          <h3 style="font-size:1.1rem;font-weight:700;color:#94a3b8;margin:0 0 0.5rem 0;">Raw Uncached LLM Ingestion</h3>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Every query triggers a full forward-pass token generation, racking up high cloud API token costs and 1200ms+ inference latency.</p>
+          <div style="font-family:monospace;font-size:0.8rem;color:#cbd5e1;">Latency: 1250ms | Hit Rate: 0% | Full Token Cost</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_cache_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/semantic-cache-simulator.
+    """
+    return """
+<div id="prerendered-semantic-cache-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Semantic Cache &amp; Token Deduplication Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating semantic cache hit rates, vector lookup latencies, and LLM token cost reductions.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark in-memory semantic vector caching vs uncached LLM calls under varying cosine similarity thresholds and query volumes.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
   </footer>
 </div>
 """
@@ -2634,6 +2744,14 @@ def generate_ssg():
         "embed/prompt-injection-firewall-simulator": {
             "title": "Prompt Injection & Boundary Defense Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating prompt firewall latency, AST defense verification, and guardrail token overhead."
+        },
+        "tools/enterprise-semantic-cache-simulator": {
+            "title": "Enterprise AI Agent Semantic Cache & Embedding Deduplication Simulator",
+            "desc": "Simulate in-memory semantic vector caching (Redis Stack, Milvus, pgvector) vs uncached LLM calls. Model cosine similarity thresholds, sub-10ms lookup latencies, and token cost reductions."
+        },
+        "embed/semantic-cache-simulator": {
+            "title": "Semantic Cache & Token Deduplication Simulator Sandbox",
+            "desc": "Embeddable interactive widget calculating semantic cache hit rates, vector lookup latencies, and LLM token cost reductions."
         }
     }
 
@@ -3896,6 +4014,83 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(firewall_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-semantic-cache-simulator":
+            tool_content = render_cache_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            cache_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise AI Agent Semantic Cache & Embedding Deduplication Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Interactive Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Semantic Cache Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(cache_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/semantic-cache-simulator":
+            embed_content = render_cache_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            cache_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Semantic Cache & Token Deduplication Simulator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(cache_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

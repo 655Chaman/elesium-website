@@ -1,0 +1,747 @@
+#!/usr/bin/env python3
+"""
+Ingest Wave 14 Commercial BOFU Keywords (IDs 541 to 590).
+Appends 50 high-lever commercial solution pages to automation/compact_keywords_queue.json:
+- 17 Neuromorphic Spiking Neural Network Edge Inference Telemetry (IDs 541-557)
+- 17 Deepwater Subsea Wellhead Autonomous Blowout Preventer Hydraulic Interlocks (IDs 558-574)
+- 16 Hydrogen Fuel Cell PEM Bipolar Plate Stamping & Leakage Diagnostics (IDs 575-590)
+"""
+
+import json
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+QUEUE_PATH = BASE_DIR / "automation" / "compact_keywords_queue.json"
+
+wave_14_keywords = [
+    # -------------------------------------------------------------------------
+    # Neuromorphic Spiking Neural Network Edge Inference Telemetry (IDs 541-557)
+    # -------------------------------------------------------------------------
+    {
+        "id": 541,
+        "keyword": "neuromorphic event-based spike raster rate encoding telemetry for edge sensors",
+        "slug": "neuromorphic-event-based-spike-raster-rate-encoding-telemetry-for-edge-sensors",
+        "key_benefit": "Asynchronous Microsecond Temporal Contrast Spike Stream Encoding & Sub-10mW Sensor Telemetry",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Neuromorphic Hardware Architects & Edge AI Perception Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Neuromorphic Spike Raster Telemetry"
+    },
+    {
+        "id": 542,
+        "keyword": "leaky integrate-and-fire membrane potential tracking monitors for snn chips",
+        "slug": "leaky-integrate-and-fire-membrane-potential-tracking-monitors-for-snn-chips",
+        "key_benefit": "Sub-Threshold Voltage Leak Rate Calibration & Deterministic Threshold Firing Margin Verification",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Spiking Silicon Design Leads & Mixed-Signal Neuromorphic Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit LIF Membrane Potential Tracking"
+    },
+    {
+        "id": 543,
+        "keyword": "synaptic weight plasticity drift telemetry agents for on-device learning",
+        "slug": "synaptic-weight-plasticity-drift-telemetry-agents-for-on-device-learning",
+        "key_benefit": "Spike-Timing-Dependent Plasticity STDP Weight Retention Tracking & Non-Volatile Memory Guard",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Edge Autonomy Research Leads & Neuromorphic Chip Verification Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Synaptic Plasticity Drift Telemetry"
+    },
+    {
+        "id": 544,
+        "keyword": "asynchronous event-driven neuromorphic core routing controllers for low-power socs",
+        "slug": "asynchronous-event-driven-neuromorphic-core-routing-controllers-for-low-power-socs",
+        "key_benefit": "Network-on-Chip Spike Packet Arbitration & Sub-1ns Core-to-Core Interconnect Latency",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Asynchronous Silicon Architects & Low-Power SoC Integration Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Neuromorphic Core Routing"
+    },
+    {
+        "id": 545,
+        "keyword": "crossbar memristor conductance programming margin telemetry for analog snns",
+        "slug": "crossbar-memristor-conductance-programming-margin-telemetry-for-analog-snns",
+        "key_benefit": "Sub-0.5% Target Conductance Write-Verify Convergence & Resistive Crossbar Sneak-Path Suppression",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Analog Neuromorphic Compute Leads & Memristor Memory Device Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Crossbar Conductance Telemetry"
+    },
+    {
+        "id": 546,
+        "keyword": "dynamic vision sensor optical flow temporal event density monitors for high-speed drones",
+        "slug": "dynamic-vision-sensor-optical-flow-temporal-event-density-monitors-for-high-speed-drones",
+        "key_benefit": "Million-Event-Per-Second Background Noise Filtering & Sub-500us Optical Flow Vector Extraction",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Robotics Perception Engineers & High-Speed Autonomous Drone Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit DVS Optical Flow Density"
+    },
+    {
+        "id": 547,
+        "keyword": "synaptic fan-out spike multicast arbitration controllers for dense neural fabrics",
+        "slug": "synaptic-fan-out-spike-multicast-arbitration-controllers-for-dense-neural-fabrics",
+        "key_benefit": "10,000-to-1 Post-Synaptic Tree Fan-Out Collision Handling & Zero-Drop Spike Packet Dispatch",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Massive-Parallel Neuromorphic Architects & Deep Learning Silicon Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Spike Multicast Arbitration"
+    },
+    {
+        "id": 548,
+        "keyword": "neuromorphic hardware fault-tolerant defective synapse re-mapping agents",
+        "slug": "neuromorphic-hardware-fault-tolerant-defective-synapse-re-mapping-agents",
+        "key_benefit": "Stuck-At Fault Cell Identification & Autonomous Real-Time Graph Topology Healing",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Reliability and Fault-Tolerant Silicon Engineers & Neuromorphic QA Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Synapse Re-Mapping Telemetry"
+    },
+    {
+        "id": 549,
+        "keyword": "temporal spike latency jitter synchronization monitors for acoustic cochlea chips",
+        "slug": "temporal-spike-latency-jitter-synchronization-monitors-for-acoustic-cochlea-chips",
+        "key_benefit": "Sub-100ps Inter-Spike Time Jitter Stabilization & Binaural Audio Localization Accuracy",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Bio-Inspired Acoustic Engineers & Audio DSP Neuromorphic Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Spike Latency Jitter Telemetry"
+    },
+    {
+        "id": 550,
+        "keyword": "analog subthreshold refractory period calibration agents for ultra-low-power edge ai",
+        "slug": "analog-subthreshold-refractory-period-calibration-agents-for-ultra-low-power-edge-ai",
+        "key_benefit": "Temperature-Compensated Thermal Voltage Drift Correction & Constant Absolute Refractory Guard",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Subthreshold Analog Circuit Leads & Ultra-Low-Power Silicon Designers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Refractory Period Calibration"
+    },
+    {
+        "id": 551,
+        "keyword": "spike train poisson inter-spike interval entropy tracking monitors for anomaly detection",
+        "slug": "spike-train-poisson-inter-spike-interval-entropy-tracking-monitors-for-anomaly-detection",
+        "key_benefit": "Shannon Entropy Spike Regularity Analysis & Sub-Millisecond Industrial Vibration Anomaly Detection",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Industrial Edge Predictive Maintenance Leads & Anomaly Detection Architects",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Spike Train Entropy Telemetry"
+    },
+    {
+        "id": 552,
+        "keyword": "neuromorphic radar micro-doppler gesture recognition telemetry for automotive cabins",
+        "slug": "neuromorphic-radar-micro-doppler-gesture-recognition-telemetry-for-automotive-cabins",
+        "key_benefit": "60GHz FMCW Radar Event Encoding & Sub-5ms Human Gesture Classification at 250uW Power",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Automotive In-Cabin Sensing Leads & Radar Signal Processing Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Neuromorphic Radar Telemetry"
+    },
+    {
+        "id": 553,
+        "keyword": "spiking neural network surrogate gradient quantization verification agents for deployment",
+        "slug": "spiking-neural-network-surrogate-gradient-quantization-verification-agents-for-deployment",
+        "key_benefit": "Integer-4 Bit Weight and Membrane Threshold Quantization Proof & Zero Accuracy Degradation",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "SNN Compilation Engineers & Embedded Model Optimization Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Surrogate Gradient Quantization"
+    },
+    {
+        "id": 554,
+        "keyword": "biological spike phase locking neural resonance controllers for brain-computer interfaces",
+        "slug": "biological-spike-phase-locking-neural-resonance-controllers-for-brain-computer-interfaces",
+        "key_benefit": "Closed-Loop Cortical Phase Locking & Real-Time Bidirectional Neural Stimulation Telemetry",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Neural Engineering Directors & Brain-Computer Interface Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Neural Phase Locking Control"
+    },
+    {
+        "id": 555,
+        "keyword": "ultra-low sub-milliwatt edge tensor power dissipation telemetry for wearables",
+        "slug": "ultra-low-sub-milliwatt-edge-tensor-power-dissipation-telemetry-for-wearables",
+        "key_benefit": "Picojoule-Per-Synaptic-Event Dynamic Power Measurement & Multi-Month Coin-Cell Operation",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Wearable Electronics Hardware Leads & Ultra-Low-Power Silicon Architects",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Sub-Milliwatt Power Telemetry"
+    },
+    {
+        "id": 556,
+        "keyword": "event-based tactile e-skin slip detection telemetry for humanoid robot grippers",
+        "slug": "event-based-tactile-e-skin-slip-detection-telemetry-for-humanoid-robot-grippers",
+        "key_benefit": "Sub-2ms High-Frequency Frictional Micro-Vibration Detection & Autonomous Slip Recovery Grip",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Humanoid Robotics Manipulation Leads & Tactile Sensing Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Tactile E-Skin Slip Telemetry"
+    },
+    {
+        "id": 557,
+        "keyword": "neuromorphic spiking graph neural network link prediction monitors for fraud streams",
+        "slug": "neuromorphic-spiking-graph-neural-network-link-prediction-monitors-for-fraud-streams",
+        "key_benefit": "Continuous Spatio-Temporal Event Graph Streaming & Microsecond Financial Fraud Detection",
+        "category": "Solutions",
+        "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",
+        "target_persona": "Graph Autonomy Systems Architects & Real-Time Fraud Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Spiking Graph Link Prediction"
+    },
+
+    # -------------------------------------------------------------------------
+    # Deepwater Subsea Wellhead Autonomous BOP Hydraulic Interlocks (IDs 558-574)
+    # -------------------------------------------------------------------------
+    {
+        "id": 558,
+        "keyword": "deadman auto-shear acoustic signal trigger verification agents for subsea bop",
+        "slug": "deadman-auto-shear-acoustic-signal-trigger-verification-agents-for-subsea-bop",
+        "key_benefit": "Dual-Redundant Hydrophone Telemetry & Sub-2-Second Automated Blind Shear Ram Activation",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Well Control Engineers & Offshore Drilling Safety Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Deadman Auto-Shear Telemetry"
+    },
+    {
+        "id": 559,
+        "keyword": "subsea hydraulic accumulator nitrogen pre-charge pressure telemetry for bop stacks",
+        "slug": "subsea-hydraulic-accumulator-nitrogen-pre-charge-pressure-telemetry-for-bop-stacks",
+        "key_benefit": "Boyle's Law Ambient Hydrostatic Depth Compensation & 5000psi Rapid Discharge Assurance",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Hydraulic Systems Leads & Deepwater Equipment Reliability Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Hydraulic Accumulator Telemetry"
+    },
+    {
+        "id": 560,
+        "keyword": "blind shear ram drill pipe cutting shear force margin monitors for ultra-deepwater",
+        "slug": "blind-shear-ram-drill-pipe-cutting-shear-force-margin-monitors-for-ultra-deepwater",
+        "key_benefit": "Real-Time Hydraulic Cylinder Pressure Transducer Profiling & 1.25x API 16D Shearing Margin",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Deepwater Well Integrity Leads & Blowout Preventer Technical Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Blind Shear Ram Shearing Margin"
+    },
+    {
+        "id": 561,
+        "keyword": "variable bore ram annular elastomer extrusion gap trackers for high-pressure wells",
+        "slug": "variable-bore-ram-annular-elastomer-extrusion-gap-trackers-for-high-pressure-wells",
+        "key_benefit": "20,000psi Differential Pressure Packing Seal Fatigue Diagnostics & Blowout Barrier Verification",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Pressure Control Engineers & Deepwater Drilling Superintendents",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Annular Elastomer Extrusion"
+    },
+    {
+        "id": 562,
+        "keyword": "lower marine riser package hydraulic connector locking pin position telemetry for lmrp",
+        "slug": "lower-marine-riser-package-hydraulic-connector-locking-pin-position-telemetry-for-lmrp",
+        "key_benefit": "LVDT Micro-Position Pin Verification & Emergency Riser Physical Disconnect Confirmation",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "LMRP Operations Engineers & Subsea Mechanical Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit LMRP Connector Pin Telemetry"
+    },
+    {
+        "id": 563,
+        "keyword": "multiplex electro-hydraulic control pod solenoid response time diagnostics for subsea bop",
+        "slug": "multiplex-electro-hydraulic-control-pod-solenoid-response-time-diagnostics-for-subsea-bop",
+        "key_benefit": "Sub-50ms Pilot Solenoid Coil Current Signature Analysis & Sticking Valve Early Warning",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "MUX Control Systems Engineers & Subsea Electronics Instrumentation Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit MUX Pod Solenoid Response"
+    },
+    {
+        "id": 564,
+        "keyword": "subsea wellhead casing hanger seal assembly thermal cycling integrity monitors",
+        "slug": "subsea-wellhead-casing-hanger-seal-assembly-thermal-cycling-integrity-monitors",
+        "key_benefit": "B-Annulus Temperature Gradient Strain Telemetry & Sustained Casing Pressure Prevention",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Wellhead Systems Reliability Leads & Subsea Production Safety Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Wellhead Seal Assembly Telemetry"
+    },
+    {
+        "id": 565,
+        "keyword": "kill and choke manifold high-pressure valve seat erosion monitors for well kill ops",
+        "slug": "kill-and-choke-manifold-high-pressure-valve-seat-erosion-monitors-for-well-kill-ops",
+        "key_benefit": "Acoustic Cavitation Emission Sensing & Tungsten Carbide Gate Seat Leakage Diagnostics",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Manifold Maintenance Leads & Well Intervention Supervisors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Choke Valve Seat Erosion"
+    },
+    {
+        "id": 566,
+        "keyword": "hydraulic conduit shuttle valve seat differential pressure telemetry for subsea pods",
+        "slug": "hydraulic-conduit-shuttle-valve-seat-differential-pressure-telemetry-for-subsea-pods",
+        "key_benefit": "Yellow vs Blue Pod Redundant Hydraulic Shuttle Shift Position Corroboration & Seat Bypass Warning",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Hydraulics Reliability Leads & Control Systems Technicians",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Shuttle Valve Seat Telemetry"
+    },
+    {
+        "id": 567,
+        "keyword": "rov hot-stab hydraulic override intervention pressure logging agents for emergency well shut-in",
+        "slug": "rov-hot-stab-hydraulic-override-intervention-pressure-logging-agents-for-emergency-well-shut-in",
+        "key_benefit": "High-Flow ROV Hot-Stab Pressure Curve Verification & Backup Mechanical Shear Ram Lock Confirmation",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "ROV Intervention Supervisors & Subsea Field Emergency Response Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit ROV Hot-Stab Intervention"
+    },
+    {
+        "id": 568,
+        "keyword": "deepwater benthic boundary layer hydrate crystallization prevention controllers for bop cavities",
+        "slug": "deepwater-benthic-boundary-layer-hydrate-crystallization-prevention-controllers-for-bop-cavities",
+        "key_benefit": "Thermodynamic Hydrate Dissociation Curve Telemetry & Autonomous Glycol Injection Metering",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Flow Assurance Technical Leads & Subsea Thermal Protection Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Hydrate Crystallization Control"
+    },
+    {
+        "id": 569,
+        "keyword": "wellbore annulus gas kick micro-differential flow detection telemetry for deepwater rigs",
+        "slug": "wellbore-annulus-gas-kick-micro-differential-flow-detection-telemetry-for-deepwater-rigs",
+        "key_benefit": "Sub-0.25bbl Influx Detection via Coriolis Flow Meter Mass Balance & Rapid Kick Enclosure",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Managed Pressure Drilling Engineers & Rig Floor Safety Superintendents",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Gas Kick Micro-Differential Flow"
+    },
+    {
+        "id": 570,
+        "keyword": "riser emergency disconnect sequence dynamic tension relief controllers for drillships",
+        "slug": "riser-emergency-disconnect-sequence-dynamic-tension-relief-controllers-for-drillships",
+        "key_benefit": "Sub-150ms Hydro-Pneumatic Tensioner Recoil Damping & Anti-Collision Riser Separation Guard",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Marine Operations Leads & Dynamic Positioning Rig Superintendents",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Riser EDS Tension Relief"
+    },
+    {
+        "id": 571,
+        "keyword": "subsea bop stack inclination and vortex-induced vibration telemetry for ocean currents",
+        "slug": "subsea-bop-stack-inclination-and-vortex-induced-vibration-telemetry-for-ocean-currents",
+        "key_benefit": "Fiber-Optic Gyroscopic Tilt Sensing & Wellhead Fatigue Stress Cycle Accumulation Tracking",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Structural Dynamics Engineers & Marine Riser Integrity Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit BOP Stack Vibration Telemetry"
+    },
+    {
+        "id": 572,
+        "keyword": "casing pressure buildup pilot-operated relief valve controllers for subsea wellheads",
+        "slug": "casing-pressure-buildup-pilot-operated-relief-valve-controllers-for-subsea-wellheads",
+        "key_benefit": "Subsea Annular Pressure Bleed-Off Regulation & Wellhead Structural Buckling Prevention",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Well Control Systems Leads & Subsea Asset Integrity Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Casing Relief Valve Control"
+    },
+    {
+        "id": 573,
+        "keyword": "shear ram blade edge metallurgical embrittlement ultrasonic telemetry for sour gas wells",
+        "slug": "shear-ram-blade-edge-metallurgical-embrittlement-ultrasonic-telemetry-for-sour-gas-wells",
+        "key_benefit": "Continuous In-Situ Ultrasonic Surface Acoustic Wave NDT & H2S Sulfide Stress Cracking Guard",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Metallurgical Integrity Engineers & Sour Gas Well Operations Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Shear Ram Embrittlement Telemetry"
+    },
+    {
+        "id": 574,
+        "keyword": "subsea bop control umbilical armored cable insulation resistance monitors for deep fields",
+        "slug": "subsea-bop-control-umbilical-armored-cable-insulation-resistance-monitors-for-deep-fields",
+        "key_benefit": "Line Insulation Monitoring High-Voltage Guard Circuit Telemetry & Water Ingress Detection",
+        "category": "Solutions",
+        "hub_category": "Energy & Utilities",
+        "target_persona": "Subsea Electrical Systems Engineers & Control Umbilical Integrity Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit BOP Umbilical Insulation Telemetry"
+    },
+
+    # -------------------------------------------------------------------------
+    # Hydrogen Fuel Cell PEM Bipolar Plate Stamping & Leakage Diagnostics (IDs 575-590)
+    # -------------------------------------------------------------------------
+    {
+        "id": 575,
+        "keyword": "ultra-thin titanium bipolar plate stamping springback compensation controllers",
+        "slug": "ultra-thin-titanium-bipolar-plate-stamping-springback-compensation-controllers",
+        "key_benefit": "Sub-5-Micron Microchannel Depth Precision & Elimination of Flow Field Flow Channel Distortion",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Fuel Cell Manufacturing Process Leads & Bipolar Plate Stamping Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Bipolar Plate Stamping Control"
+    },
+    {
+        "id": 576,
+        "keyword": "flow field serpentine microchannel depth laser profilometry telemetry for pem plates",
+        "slug": "flow-field-serpentine-microchannel-depth-laser-profilometry-telemetry-for-pem-plates",
+        "key_benefit": "Inline Confocal Laser 3D Topography Scanning & Channel-to-Rib Height Deviation Detection",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Fuel Cell Metrology Engineers & Automated Quality Inspection Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Microchannel Depth Profilometry"
+    },
+    {
+        "id": 577,
+        "keyword": "gas diffusion layer carbon fiber intrusion impedance telemetry for fuel cell stacks",
+        "slug": "gas-diffusion-layer-carbon-fiber-intrusion-impedance-telemetry-for-fuel-cell-stacks",
+        "key_benefit": "Contact Resistance Measurement & Elimination of GDL Puncture into Ultra-Thin Catalyst Membranes",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Electrochemical Stack Design Leads & GDL Material Scientists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit GDL Intrusion Impedance Telemetry"
+    },
+    {
+        "id": 578,
+        "keyword": "membrane electrode assembly catalyst coated membrane alignment monitors for gigafactories",
+        "slug": "membrane-electrode-assembly-catalyst-coated-membrane-alignment-monitors-for-gigafactories",
+        "key_benefit": "Sub-10-Micron Sub-Gasket Edge Alignment Vision Tracking & Elimination of Overlap Shunts",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "MEA Assembly Automation Engineers & Cleanroom Gigafactory Production Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit MEA CCM Alignment Telemetry"
+    },
+    {
+        "id": 579,
+        "keyword": "fuel cell stack pneumatic tie-rod compressive strain balancing controllers",
+        "slug": "fuel-cell-stack-pneumatic-tie-rod-compressive-strain-balancing-controllers",
+        "key_benefit": "Dynamic Multi-Point Piezoelectric Bolt Load Balancing & Uniform 1.2MPa Gasket Sealing Pressure",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Fuel Cell Mechanical Packaging Leads & Stack Compression Process Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Tie-Rod Compressive Strain Control"
+    },
+    {
+        "id": 580,
+        "keyword": "hydrogen crossover electrochemical current density telemetry for pem degradation",
+        "slug": "hydrogen-crossover-electrochemical-current-density-telemetry-for-pem-degradation",
+        "key_benefit": "Sub-1mA/cm2 Permeation Current Density Diagnostics & Early Pin-Hole Membrane Rupture Guard",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Fuel Cell Durability Engineers & Electrochemical Diagnostics Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Hydrogen Crossover Telemetry"
+    },
+    {
+        "id": 581,
+        "keyword": "cathode water flooding high-frequency ac impedance monitors for automotive fuel cells",
+        "slug": "cathode-water-flooding-high-frequency-ac-impedance-monitors-for-automotive-fuel-cells",
+        "key_benefit": "Real-Time 1kHz Nyquist Plot Inversion & Sub-Second Cathode Gas Purge Blowout Trigger",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Fuel Cell Control Systems Leads & Automotive Powertrain Software Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cathode Flooding Impedance"
+    },
+    {
+        "id": 582,
+        "keyword": "anode gas purge cycle differential pressure balancing controllers for hydrogen recirc",
+        "slug": "anode-gas-purge-cycle-differential-pressure-balancing-controllers-for-hydrogen-recirc",
+        "key_benefit": "Nitrogen Accumulation Desorption Timing & Dynamic Anode Differential Pressure Stabilization",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Hydrogen Fuel Delivery Systems Leads & BOP Fluidic Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Anode Gas Purge Balancing"
+    },
+    {
+        "id": 583,
+        "keyword": "bipolar plate conductive carbon pvd coating corrosion resistance telemetry for pem",
+        "slug": "bipolar-plate-conductive-carbon-pvd-coating-corrosion-resistance-telemetry-for-pem",
+        "key_benefit": "Sub-1uA/cm2 Anodic Dissolution Current Monitoring & Sub-10mOhm*cm2 Interfacial Resistance",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Surface Coating Specialists & Fuel Cell Material Durability Directors",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Bipolar Plate PVD Telemetry"
+    },
+    {
+        "id": 584,
+        "keyword": "sub-ppm hydrogen sensor exhaust gas leak detection telemetry for stationary fuel cells",
+        "slug": "sub-ppm-hydrogen-sensor-exhaust-gas-leak-detection-telemetry-for-stationary-fuel-cells",
+        "key_benefit": "Pellistor and Thermal Conductivity Sensor Fusion & Microsecond Emergency Hydrogen Shutoff",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Hydrogen Safety Compliance Officers & Stationary Fuel Cell Operations Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Hydrogen Exhaust Leak Telemetry"
+    },
+    {
+        "id": 585,
+        "keyword": "reformate fuel cell carbon monoxide catalytic poison recovery agents for h2 fuel cells",
+        "slug": "reformate-fuel-cell-carbon-monoxide-catalytic-poison-recovery-agents-for-h2-fuel-cells",
+        "key_benefit": "Autonomous Air-Bleed Anode Pulse Injection & Platinum-Ruthenium Catalyst Desorption Recovery",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Fuel Cell Chemistry Leads & Stationary Reformate System Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit CO Catalytic Poison Recovery"
+    },
+    {
+        "id": 586,
+        "keyword": "proton exchange membrane ohmic resistance drying degradation monitors for heavy trucks",
+        "slug": "proton-exchange-membrane-ohmic-resistance-drying-degradation-monitors-for-heavy-trucks",
+        "key_benefit": "High-Frequency Resistance HFR Tracking & Feedforward Humidifier Water Vapor Injection",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Commercial Vehicle Fuel Cell Leads & Powertrain Thermal Management Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Membrane Ohmic Resistance"
+    },
+    {
+        "id": 587,
+        "keyword": "high-pressure hydrogen injector pulse-width modulation metering controllers for stacks",
+        "slug": "high-pressure-hydrogen-injector-pulse-width-modulation-metering-controllers-for-stacks",
+        "key_benefit": "Sub-5ms Ejector-Free Proportional Injection & Elimination of Anode Pressure Surges",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Hydrogen Control Electronics Leads & Powertrain Calibration Specialists",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Hydrogen Injector PWM Control"
+    },
+    {
+        "id": 588,
+        "keyword": "stack coolant ethylene glycol electrical conductivity deionizing monitors for fuel cells",
+        "slug": "stack-coolant-ethylene-glycol-electrical-conductivity-deionizing-monitors-for-fuel-cells",
+        "key_benefit": "Sub-2uS/cm Dielectric Threshold Safeguarding & Deionizer Bypass Resin Saturation Alert",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Thermal Fluid Reliability Engineers & Fuel Cell Coolant Systems Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Coolant Deionizing Telemetry"
+    },
+    {
+        "id": 589,
+        "keyword": "localized cell voltage reversal degradation early warning monitors for series stacks",
+        "slug": "localized-cell-voltage-reversal-degradation-early-warning-monitors-for-series-stacks",
+        "key_benefit": "Individual Cell Voltage Monitoring CVM & Carbon Corrosion Carbon Support Oxidation Guard",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Cell Voltage Monitoring CVM Leads & Battery/Fuel Cell Electronics Engineers",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit Cell Voltage Reversal Warning"
+    },
+    {
+        "id": 590,
+        "keyword": "fuel cell end plate structural deflection finite element telemetry for heavy duty stacks",
+        "slug": "fuel-cell-end-plate-structural-deflection-finite-element-telemetry-for-heavy-duty-stacks",
+        "key_benefit": "Laser Displacment Strain Corroboration & Prevention of Peripheral Contact Pressure Loss",
+        "category": "Solutions",
+        "hub_category": "Renewable Energy & Power Grid",
+        "target_persona": "Structural Simulation Specialists & Heavy-Duty Stack Packaging Leads",
+        "intent": "High-Lever BOFU",
+        "search_volume_tier": "Low-Competition (0-50)",
+        "moz_target_score": 97,
+        "status": "PENDING",
+        "primary_cta": "Audit End Plate Structural Deflection"
+    }
+]
+
+def main():
+    with open(QUEUE_PATH, "r", encoding="utf-8") as f:
+        existing = json.load(f)
+    
+    existing_ids = {x["id"] for x in existing}
+    added = 0
+    for kw in wave_14_keywords:
+        if kw["id"] not in existing_ids:
+            existing.append(kw)
+            added += 1
+            
+    with open(QUEUE_PATH, "w", encoding="utf-8") as f:
+        json.dump(existing, f, indent=2, ensure_ascii=False)
+        
+    print(f"Successfully ingested {added} new keywords. Total queue length: {len(existing)}")
+
+if __name__ == "__main__":
+    main()

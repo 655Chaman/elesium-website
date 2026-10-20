@@ -153,6 +153,12 @@ export default function Navbar() {
                             Prompt Firewall
                         </Link>
                         <Link
+                            to="/tools/enterprise-semantic-cache-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
+                        >
+                            Semantic Cache
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -344,6 +350,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Prompt Injection Firewall
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-semantic-cache-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Semantic Cache Simulator
                             </Link>
                             <Link
                                 to="/compare"
