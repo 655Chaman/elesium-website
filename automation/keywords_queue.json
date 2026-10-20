@@ -64,11 +64,12 @@
     "keyword": "generative AI integration services Mumbai",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T15:01:56.647188",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "LOCAL_PACK",
-    "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT"
+    "triage_channel": "GEO_MICRO_ZONE_ALIGNMENT",
+    "published_slug": "generative-ai-integration-services-mumbai"
   },
   {
     "id": 7,

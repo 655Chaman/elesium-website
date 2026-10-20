@@ -73,6 +73,8 @@ const EnterpriseAgentSelfHealingCanarySimulator = lazy(() => import('./component
 const EmbedAgentSelfHealingCanarySimulator = lazy(() => import('./components/pages/EmbedAgentSelfHealingCanarySimulator'))
 const EnterpriseAgentPromptOptimizerSimulator = lazy(() => import('./components/pages/EnterpriseAgentPromptOptimizerSimulator'))
 const EmbedAgentPromptOptimizerSimulator = lazy(() => import('./components/pages/EmbedAgentPromptOptimizerSimulator'))
+const EnterpriseAgentSpeculativeDecodingSimulator = lazy(() => import('./components/pages/EnterpriseAgentSpeculativeDecodingSimulator'))
+const EmbedAgentSpeculativeDecodingSimulator = lazy(() => import('./components/pages/EmbedAgentSpeculativeDecodingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -211,6 +213,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-prompt-optimizer-simulator" element={<EnterpriseAgentPromptOptimizerSimulator />} />
                             <Route path="/tools/agent-prompt-optimizer-simulator" element={<Navigate to="/tools/enterprise-agent-prompt-optimizer-simulator" replace />} />
                             <Route path="/embed/agent-prompt-optimizer-simulator" element={<EmbedAgentPromptOptimizerSimulator />} />
+                            <Route path="/tools/enterprise-agent-speculative-decoding-simulator" element={<EnterpriseAgentSpeculativeDecodingSimulator />} />
+                            <Route path="/tools/agent-speculative-decoding-simulator" element={<Navigate to="/tools/enterprise-agent-speculative-decoding-simulator" replace />} />
+                            <Route path="/embed/agent-speculative-decoding-simulator" element={<EmbedAgentSpeculativeDecodingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
