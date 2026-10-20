@@ -273,6 +273,12 @@ export default function Navbar() {
                             Memristor Crossbar
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-snn-neuromorphic-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
+                        >
+                            SNN Neuromorphic
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -604,6 +610,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Agent Memristor Crossbar &amp; AIMC Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-snn-neuromorphic-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Agent SNN Neuromorphic &amp; LIF Event Simulator
                             </Link>
                             <Link
                                 to="/compare"

@@ -169,14 +169,15 @@
   },
   {
     "id": 15,
-    "keyword": "scale AI operations enterprise India",
+    "keyword": "AI automation agency for legal firms India",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T18:33:16.450453",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "ai-automation-agency-for-legal-firms-india"
   },
   {
     "id": 16,

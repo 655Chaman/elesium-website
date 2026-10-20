@@ -41,6 +41,7 @@ export default function DownloadFooter() {
         { name: 'Agent Post-Quantum Cryptography & ML-KEM Simulator', path: '/tools/enterprise-agent-post-quantum-simulator' },
         { name: 'Agent Silicon Photonics & Optical GEMM Simulator', path: '/tools/enterprise-agent-photonic-compute-simulator' },
         { name: 'Agent Memristor Crossbar & AIMC Simulator', path: '/tools/enterprise-agent-memristor-crossbar-simulator' },
+        { name: 'Agent SNN Neuromorphic & LIF Event Simulator', path: '/tools/enterprise-agent-snn-neuromorphic-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

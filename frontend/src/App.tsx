@@ -91,6 +91,8 @@ const EnterpriseAgentPhotonicComputeSimulator = lazy(() => import('./components/
 const EmbedAgentPhotonicComputeSimulator = lazy(() => import('./components/pages/EmbedAgentPhotonicComputeSimulator'))
 const EnterpriseAgentMemristorCrossbarSimulator = lazy(() => import('./components/pages/EnterpriseAgentMemristorCrossbarSimulator'))
 const EmbedAgentMemristorCrossbarSimulator = lazy(() => import('./components/pages/EmbedAgentMemristorCrossbarSimulator'))
+const EnterpriseAgentSnnSimulator = lazy(() => import('./components/pages/EnterpriseAgentSnnSimulator'))
+const EmbedAgentSnnSimulator = lazy(() => import('./components/pages/EmbedAgentSnnSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -256,6 +258,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-memristor-crossbar-simulator" element={<EnterpriseAgentMemristorCrossbarSimulator />} />
                             <Route path="/tools/agent-memristor-crossbar-simulator" element={<Navigate to="/tools/enterprise-agent-memristor-crossbar-simulator" replace />} />
                             <Route path="/embed/agent-memristor-crossbar-simulator" element={<EmbedAgentMemristorCrossbarSimulator />} />
+                            <Route path="/tools/enterprise-agent-snn-neuromorphic-simulator" element={<EnterpriseAgentSnnSimulator />} />
+                            <Route path="/tools/agent-snn-neuromorphic-simulator" element={<Navigate to="/tools/enterprise-agent-snn-neuromorphic-simulator" replace />} />
+                            <Route path="/embed/agent-snn-neuromorphic-simulator" element={<EmbedAgentSnnSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
