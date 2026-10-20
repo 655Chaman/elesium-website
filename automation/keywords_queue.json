@@ -100,11 +100,12 @@
     "keyword": "enterprise RAG implementation cost India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-20T16:08:39.176166",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "AI_OVERVIEW",
-    "triage_channel": "ANSWER_CAPSULES_AND_TABLES"
+    "triage_channel": "ANSWER_CAPSULES_AND_TABLES",
+    "published_slug": "enterprise-rag-implementation-cost-india"
   },
   {
     "id": 10,

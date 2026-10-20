@@ -35,6 +35,7 @@ export default function DownloadFooter() {
         { name: 'Agent Speculative Decoding & Latency Arbitrage Simulator', path: '/tools/enterprise-agent-speculative-decoding-simulator' },
         { name: 'Agent ZK-Proof State Attestation Simulator', path: '/tools/enterprise-agent-zk-attestation-simulator' },
         { name: 'Agent Confidential Enclave & FHE Simulator', path: '/tools/enterprise-agent-homomorphic-enclave-simulator' },
+        { name: 'Agent Epistemic Uncertainty & OOD Calibrator', path: '/tools/enterprise-agent-epistemic-ood-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

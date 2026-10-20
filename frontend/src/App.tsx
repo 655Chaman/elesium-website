@@ -79,6 +79,8 @@ const EnterpriseAgentZkAttestationSimulator = lazy(() => import('./components/pa
 const EmbedAgentZkAttestationSimulator = lazy(() => import('./components/pages/EmbedAgentZkAttestationSimulator'))
 const EnterpriseAgentHomomorphicEnclaveSimulator = lazy(() => import('./components/pages/EnterpriseAgentHomomorphicEnclaveSimulator'))
 const EmbedAgentHomomorphicEnclaveSimulator = lazy(() => import('./components/pages/EmbedAgentHomomorphicEnclaveSimulator'))
+const EnterpriseAgentEpistemicOodSimulator = lazy(() => import('./components/pages/EnterpriseAgentEpistemicOodSimulator'))
+const EmbedAgentEpistemicOodSimulator = lazy(() => import('./components/pages/EmbedAgentEpistemicOodSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -226,6 +228,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-homomorphic-enclave-simulator" element={<EnterpriseAgentHomomorphicEnclaveSimulator />} />
                             <Route path="/tools/agent-homomorphic-enclave-simulator" element={<Navigate to="/tools/enterprise-agent-homomorphic-enclave-simulator" replace />} />
                             <Route path="/embed/agent-homomorphic-enclave-simulator" element={<EmbedAgentHomomorphicEnclaveSimulator />} />
+                            <Route path="/tools/enterprise-agent-epistemic-ood-simulator" element={<EnterpriseAgentEpistemicOodSimulator />} />
+                            <Route path="/tools/agent-epistemic-ood-simulator" element={<Navigate to="/tools/enterprise-agent-epistemic-ood-simulator" replace />} />
+                            <Route path="/embed/agent-epistemic-ood-simulator" element={<EmbedAgentEpistemicOodSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

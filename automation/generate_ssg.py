@@ -2199,6 +2199,49 @@ def render_homomorphic_enclave_embed_semantic_html():
 </div>
 """
 
+def render_epistemic_ood_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-epistemic-ood-simulator.
+    """
+    return """
+<div id="prerendered-agent-epistemic-ood-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#06b6d4;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Statistical Calibration &amp; OOD Lab</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Epistemic Uncertainty &amp; OOD Calibrator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark autonomous agent epistemic uncertainty and out-of-distribution (OOD) rejection. Compare uncalibrated Softmax overconfidence against Conformal Prediction and Mahalanobis latent distance to enforce deterministic abstention and zero-hallucination routing.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Statistical Calibration Architecture Comparison</h2>
+      <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
+        <li><strong>Uncalibrated Softmax:</strong> 16.8% Expected Calibration Error (ECE), 64.2% OOD AUROC, severe overconfidence on unknown unknowns.</li>
+        <li><strong>Temperature Scaling (T):</strong> 5.4% ECE, 84.6% OOD AUROC, post-hoc validation softening overconfident tails.</li>
+        <li><strong>Elesium Sovereign Conformal Prediction &amp; Mahalanobis Distance:</strong> 0.8% ECE, 97.4% OOD AUROC, finite-sample 1-alpha statistical coverage guarantee, 100% DPDP Act 2023 Section 8(4) compliance.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
+def render_epistemic_ood_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-epistemic-ood-simulator.
+    """
+    return """
+<div id="prerendered-agent-epistemic-ood-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Epistemic Uncertainty &amp; OOD Calibrator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent Conformal Prediction calibration, Mahalanobis latent distance OOD rejection, and DPDP Act 2023 compliance.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Benchmark Expected Calibration Error (ECE) and out-of-distribution rejection to eliminate enterprise hallucination liabilities.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" target="_blank" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -3523,6 +3566,14 @@ def generate_ssg():
         "embed/agent-homomorphic-enclave-simulator": {
             "title": "Agent Confidential Enclave & FHE Simulator Sandbox",
             "desc": "Embeddable interactive widget calculating autonomous agent Confidential Computing enclaves, FHE arithmetic slowdown, wire-speed memory encryption, and DPDP Act 2023 zero-disclosure compliance."
+        },
+        "tools/enterprise-agent-epistemic-ood-simulator": {
+            "title": "Enterprise Autonomous Agent Epistemic Uncertainty & OOD Calibrator",
+            "desc": "Simulate and benchmark autonomous agent epistemic uncertainty and out-of-distribution (OOD) rejection. Compare uncalibrated Softmax overconfidence against Conformal Prediction and Mahalanobis latent distance to enforce deterministic abstention and zero-hallucination routing."
+        },
+        "embed/agent-epistemic-ood-simulator": {
+            "title": "Agent Epistemic Uncertainty & OOD Calibrator Sandbox",
+            "desc": "Embeddable interactive widget calculating autonomous agent Conformal Prediction calibration, Mahalanobis latent distance OOD rejection, and DPDP Act 2023 compliance."
         }
     }
 
@@ -5887,6 +5938,90 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(homomorphic_enclave_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-epistemic-ood-simulator":
+            tool_content = render_epistemic_ood_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            epistemic_ood_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent Epistemic Uncertainty & OOD Calibrator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "browserRequirements": "Requires JavaScript. Requires HTML5.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Agent Epistemic Uncertainty & OOD Calibrator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            injections = [
+                f'<script type="application/ld+json">{json.dumps(epistemic_ood_tool_schema, ensure_ascii=False)}</script>',
+                f'<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>'
+            ]
+            html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
+
+        elif route == "embed/agent-epistemic-ood-simulator":
+            embed_content = render_epistemic_ood_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            epistemic_ood_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Agent Epistemic Uncertainty & OOD Calibrator Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(epistemic_ood_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

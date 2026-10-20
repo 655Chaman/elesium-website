@@ -237,6 +237,12 @@ export default function Navbar() {
                             Confidential Enclave
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-epistemic-ood-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
+                        >
+                            OOD Calibrator
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -526,6 +532,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Agent Confidential Enclave Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-epistemic-ood-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Agent Epistemic Uncertainty &amp; OOD Calibrator
                             </Link>
                             <Link
                                 to="/compare"
