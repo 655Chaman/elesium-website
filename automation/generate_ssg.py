@@ -3656,6 +3656,53 @@ def render_prefill_decode_embed_semantic_html():
 </div>
 """
 
+def render_pipeline_parallelism_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-pipeline-parallelism-simulator.
+    """
+    return """
+<div id="prerendered-agent-pipeline-parallelism-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#818cf8;font-family:monospace;margin-bottom:0.5rem;">TOOLS / PIPELINE PARALLELISM / TOOL #60</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Pipeline Parallelism & 1F1B Bubble Minimizer Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model 1F1B micro-batch schedules, cross-node GPUDirect RDMA activation transport, and zero-bubble interleaving to eliminate GPU idle bubbles and achieve sub-10ms inter-stage latency.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#818cf8;margin-top:0;">Pipeline Parallelism Telemetry Profile</h2>
+      <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Interleaves forward and backward passes across pipeline ranks to eliminate execution bubbles and sustain 95%+ cluster utilization.</p>
+      <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;font-family:monospace;font-size:0.85rem;">
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Cluster Utilization: <strong>94%+ Guaranteed</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Inter-Stage Latency: <strong>Sub-10ms P2P RDMA</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Bubble Fraction: <strong>Down to 5.8% (1F1B-I)</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid #1e293b;font-size:0.85rem;color:#64748b;text-align:right;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#818cf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_pipeline_parallelism_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-pipeline-parallelism-simulator.
+    """
+    return """
+<div id="prerendered-agent-pipeline-parallelism-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Pipeline Parallelism Simulator</h1>
+    <div style="font-size:0.8rem;color:#818cf8;font-family:monospace;">1F1B Micro-Batching · Bubble Minimizer · Sub-10ms P2P Buffer</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Model 1F1B micro-batch schedules, cross-node GPUDirect RDMA activation transport, and zero-bubble interleaving to eliminate GPU idle bubbles and achieve sub-10ms inter-stage latency.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#818cf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -5236,6 +5283,14 @@ def generate_ssg():
         "embed/agent-prefill-decode-disaggregation-simulator": {
             "title": "Embed: Prefill-Decode Disaggregation Simulator",
             "desc": "Interactive embed widget modeling prefill-decode disaggregation, zero-copy RDMA KV-cache network transport, and sub-15ms TTFT SLAs."
+        },
+        "tools/enterprise-agent-pipeline-parallelism-simulator": {
+            "title": "Enterprise Pipeline Parallelism & 1F1B Bubble Minimizer Simulator",
+            "desc": "Model 1F1B micro-batch schedules, cross-node GPUDirect RDMA activation transport, and zero-bubble interleaving to eliminate GPU idle bubbles and achieve sub-10ms inter-stage latency."
+        },
+        "embed/agent-pipeline-parallelism-simulator": {
+            "title": "Embed: Pipeline Parallelism Simulator",
+            "desc": "Interactive embed widget modeling 1F1B micro-batch schedules, cross-node GPUDirect RDMA activation transport, and sub-10ms inter-stage latency."
         }
     }
 
@@ -10224,6 +10279,84 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(prefill_decode_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-pipeline-parallelism-simulator":
+            tool_content = render_pipeline_parallelism_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            pipeline_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0.00",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Pipeline Parallelism Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(pipeline_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-pipeline-parallelism-simulator":
+            embed_content = render_pipeline_parallelism_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            pipeline_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Pipeline Parallelism Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(pipeline_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

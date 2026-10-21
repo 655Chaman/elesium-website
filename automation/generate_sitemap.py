@@ -100,6 +100,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-kvcache-memory-compaction-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-speculative-verification-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-prefill-decode-disaggregation-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-pipeline-parallelism-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

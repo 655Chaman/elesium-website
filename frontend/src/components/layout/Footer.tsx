@@ -67,6 +67,7 @@ export default function DownloadFooter() {
         { name: 'KV-Cache Memory Compaction Simulator', path: '/tools/enterprise-agent-kvcache-memory-compaction-simulator' },
         { name: 'Speculative Verification Simulator', path: '/tools/enterprise-agent-speculative-verification-simulator' },
         { name: 'Prefill-Decode Disaggregation Simulator', path: '/tools/enterprise-agent-prefill-decode-disaggregation-simulator' },
+        { name: 'Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-pipeline-parallelism-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

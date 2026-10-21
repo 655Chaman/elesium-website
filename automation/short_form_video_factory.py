@@ -3783,6 +3783,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "FastAPI • Prometheus • OpenTelemetry • Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-37",
+            "slug": "enterprise-agent-pipeline-parallelism-simulator",
+            "keyword": "pipeline parallelism 1f1b schedule bubble elimination",
+            "key_benefit": "Zero-Interference Cross-Node Micro-Batching & <10ms Latency",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & Distributed Systems Architects",
+            "youtube_id": "PipelinePP61k",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A multi-node GPU telemetry dashboard displaying 1F1B interleaved execution eliminating idle pipeline bubbles with sub-10ms inter-stage latency.",
+                            "voiceover": "Looking for pipeline parallelism 1F1B scheduling and bubble elimination to maximize multi-node GPU cluster utilization?",
+                            "caption": "PIPELINE PARALLELISM 1F1B SCHEDULE BUBBLE ELIMINATION"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A distributed 405B parameter model suffering 40% idle time as GPUs wait for sequential pipeline stage barriers.",
+                            "voiceover": "Naive pipeline schedules leave early GPU stages sitting completely idle, wasting up to 45% of costly cluster compute.",
+                            "caption": "PIPELINE IDLE BUBBLES // 45% WASTED GPU TIME"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated timeline showing interleaved 1F1B micro-batches alternating forward and backward passes across GPUDirect RDMA ring buffers.",
+                            "voiceover": "Elesium deploys interleaved 1F1B micro-batch scheduling with GPUDirect RDMA, cutting bubble time and streaming activations in sub-3.2ms.",
+                            "caption": "INTERLEAVED 1F1B // GPUDIRECT RDMA ACTIVATION BUFFERS"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A metrics HUD highlighting 94.2% cluster utilization, 3.4x throughput multiplier, and 82 Lakh INR annual recovered compute value.",
+                            "voiceover": "We boost GPU cluster utilization to 94.2%, multiply throughput by 3.4x, and recover over 82 Lakhs in annual compute capital per cluster.",
+                            "caption": "94.2% UTILIZATION // 3.4X THROUGHPUT // ₹82L VALUE RECOVERED"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Pipeline Parallelism Simulator UI with interactive micro-batch sliders and instant architecture audit booking.",
+                            "voiceover": "Eliminate idle bubbles across your multi-node clusters today. Run the Pipeline Parallelism simulator on elesium.online.",
+                            "caption": "SIMULATE PIPELINE PARALLELISM AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Cluster Utilization",
+                            "value": "94.2%",
+                            "detail": "Active compute core",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Bubble Fraction",
+                            "value": "5.8%",
+                            "detail": "Interleaved 1F1B",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Throughput",
+                            "value": "3.4x",
+                            "detail": "vs Single-node baseline",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹82L",
+                            "detail": "Per GPU cluster",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Multi-Stage Layer Partitioning & Pinned Ring Buffers",
+                            "bullets": [
+                                    "Partitioning 70B to 405B parameter models across sequential GPU nodes",
+                                    "Allocating pinned GPU memory ring buffers to prevent memory fragmentation",
+                                    "Balancing layer compute latencies across heterogeneous GPU ranks"
+                            ],
+                            "techStack": "PyTorch 2.4 • CUDA 12.4 • Megatron-LM • DeepSpeed"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "1F1B Interleaved Micro-Batch Scheduling",
+                            "bullets": [
+                                    "Interleaving forward and backward micro-batches to bound peak activation memory",
+                                    "Configuring virtual stage multiplier v=2 to shrink idle bubble time by 2x",
+                                    "Executing asynchronous steady-state scheduling across all pipeline stages"
+                            ],
+                            "techStack": "1F1B Scheduler • Zero-Bubble Micro-Batching • Megatron Core"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sovereign GPUDirect RDMA Activation Streaming",
+                            "bullets": [
+                                    "Bypassing host CPU memory using RoCE v2 and InfiniBand point-to-point transfers",
+                                    "Guaranteeing sub-10ms inter-stage latency across multi-chassis clusters",
+                                    "Deploying inside sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "GPUDirect RDMA • UCX • InfiniBand • Sovereign VPC"
+                    }
+            ]
     }
 ]
 

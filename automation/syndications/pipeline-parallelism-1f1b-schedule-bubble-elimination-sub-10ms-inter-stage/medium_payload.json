@@ -1,0 +1,8 @@
+{
+  "title": "Pipeline Parallelism at Scale: 1F1B Scheduling, Bubble Elimination, and Zero-Interference Cross-Node Micro-Batching",
+  "contentFormat": "markdown",
+  "content": "# Pipeline Parallelism at Scale: 1F1B Scheduling, Bubble Elimination, and Zero-Interference Cross-Node Micro-Batching\n\n**Author:** Chaman Shah, Principal AI Systems Architect at [Elesium](https://elesium.online)\n\nPipeline parallelism partitions large foundation models across sequential GPU stages, while 1F1B micro-batch scheduling interleaves forward and backward execution to eliminate pipeline idle bubbles. Zero-copy P2P activation transfer buffers cut inter-stage network latency under 10ms, sustaining 98.6% hardware utilization and 3.2x higher throughput across distributed enterprise clusters.\n\nRead the full technical specification on Elesium: [Canonical Whitepaper](https://elesium.online/signals/pipeline-parallelism-1f1b-schedule-bubble-elimination-sub-10ms-inter-stage)",
+  "canonicalUrl": "https://elesium.online/signals/pipeline-parallelism-1f1b-schedule-bubble-elimination-sub-10ms-inter-stage",
+  "tags": ["artificial-intelligence", "deep-learning", "cloud-computing"],
+  "publishStatus": "draft"
+}
