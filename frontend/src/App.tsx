@@ -117,6 +117,8 @@ const EnterpriseAgentIndustrialIotSimulator = lazy(() => import('./components/pa
 const EmbedAgentIndustrialIotSimulator = lazy(() => import('./components/pages/EmbedAgentIndustrialIotSimulator'))
 const EnterpriseAgentTallyErpSimulator = lazy(() => import('./components/pages/EnterpriseAgentTallyErpSimulator'))
 const EmbedAgentTallyErpSimulator = lazy(() => import('./components/pages/EmbedAgentTallyErpSimulator'))
+const EnterpriseAgentSmartContractSimulator = lazy(() => import('./components/pages/EnterpriseAgentSmartContractSimulator'))
+const EmbedAgentSmartContractSimulator = lazy(() => import('./components/pages/EmbedAgentSmartContractSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -321,6 +323,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-tally-erp-xml-simulator" element={<EnterpriseAgentTallyErpSimulator />} />
                             <Route path="/tools/agent-tally-erp-xml-simulator" element={<Navigate to="/tools/enterprise-agent-tally-erp-xml-simulator" replace />} />
                             <Route path="/embed/agent-tally-erp-xml-simulator" element={<EmbedAgentTallyErpSimulator />} />
+                            <Route path="/tools/enterprise-agent-smart-contract-formal-verification-simulator" element={<EnterpriseAgentSmartContractSimulator />} />
+                            <Route path="/tools/agent-smart-contract-formal-verification-simulator" element={<Navigate to="/tools/enterprise-agent-smart-contract-formal-verification-simulator" replace />} />
+                            <Route path="/embed/agent-smart-contract-formal-verification-simulator" element={<EmbedAgentSmartContractSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

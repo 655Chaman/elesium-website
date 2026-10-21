@@ -54,6 +54,7 @@ export default function DownloadFooter() {
         { name: 'MCP Multi-Server Tool Routing Simulator', path: '/tools/enterprise-agent-mcp-tool-routing-simulator' },
         { name: 'Industrial IoT & OPC-UA Simulator', path: '/tools/enterprise-agent-industrial-iot-opc-ua-simulator' },
         { name: 'Tally ERP XML & GST Reconciliation Simulator', path: '/tools/enterprise-agent-tally-erp-xml-simulator' },
+        { name: 'Smart Contract Formal Verification Simulator', path: '/tools/enterprise-agent-smart-contract-formal-verification-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

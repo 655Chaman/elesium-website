@@ -2353,6 +2353,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "CAN Bus \u2022 ZeroMQ \u2022 Embedded Linux \u2022 OpenTelemetry"
                     }
             ]
+    },
+    {
+            "id": "sfv-24",
+            "slug": "enterprise-agent-smart-contract-formal-verification-simulator",
+            "keyword": "smart contract formal verification agent",
+            "key_benefit": "Automated SMT Theorem Proving & ZK Invariant Verification",
+            "industry": "Web3, Blockchain & Cryptographic Security",
+            "target_persona": "DeFi Protocol Architects & Chief Risk Officers",
+            "youtube_id": "Scf7vP113m",
+            "hero_image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "Terminal screen running SMT-LIB solver queries over decentralized smart contract bytecode with green SAT badges.",
+                            "voiceover": "Searching for a smart contract formal verification agent that mathematically eliminates reentrancy hacks?",
+                            "caption": "SMART CONTRACT FORMAL VERIFICATION AGENT"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "DeFi dashboard showing a 40-million-dollar flashloan exploit draining liquidity pool reserves in a single block.",
+                            "voiceover": "Manual audit reports take 8 weeks and still miss subtle reentrancy loops, exposing millions of dollars in TVL to catastrophic flashloan exploits.",
+                            "caption": "8-WEEK MANUAL AUDITS STILL MISS REENTRANCY HACKS"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "SMT constraint pipeline graph: Translating Solidity AST into mathematical theorems proved via Z3 and generating Groth16 ZK receipts.",
+                            "voiceover": "Elesium deploys deterministic formal verification agents. We translate Solidity ASTs into SMT mathematical formulas, proving protocol invariants in under 15 seconds.",
+                            "caption": "SMT-LIB CONSTRAINT SOLVER // PROVEN IN 15 SECONDS"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "Security analytics dashboard showing 99.8% exploit interception, 99.4% invariant coverage, and zero false positives.",
+                            "voiceover": "Achieved 99.4% mathematical invariant coverage, intercepted 99.8% of synthetic flashloan attacks, and saved protocols over $45M in potential capital loss.",
+                            "caption": "99.4% INVARIANT COVERAGE // $45M CAPITAL PROTECTED"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Action",
+                            "visual": "Avatar gesturing to the online smart contract formal verification tool at elesium.online.",
+                            "voiceover": "Verify your smart contract invariants right now at elesium.online.",
+                            "caption": "SIMULATE FORMAL VERIFICATION // ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Verification Speed",
+                            "value": "<15s",
+                            "detail": "SMT solver latency",
+                            "color": "#00D7FF"
+                    },
+                    {
+                            "label": "Invariant Coverage",
+                            "value": "99.4%",
+                            "detail": "Formal state space",
+                            "color": "#10C387"
+                    },
+                    {
+                            "label": "Exploit Block",
+                            "value": "99.8%",
+                            "detail": "Zero-day resilience",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Gas Optimization",
+                            "value": "-18%",
+                            "detail": "Preserved invariants",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "AST & Control Flow Graph Extraction",
+                            "bullets": [
+                                    "EVM bytecode and Solidity AST decomposition into intermediate representation",
+                                    "Automated detection of delegatecall and unchecked low-level call patterns",
+                                    "Strict typing and storage layout collision verification"
+                            ],
+                            "techStack": "Solc \u2022 Slither AST \u2022 Python 3.12 \u2022 Pydantic v2"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "SMT-LIB Theorem Prover & Constraint Solving",
+                            "bullets": [
+                                    "Translating business rules into first-order logic formulas for Z3 / CVC5",
+                                    "Symbolic execution traversing 100% of reachable transaction execution paths",
+                                    "Automated synthesis of concrete exploit calldata on invariant violation"
+                            ],
+                            "techStack": "Z3 Theorem Prover \u2022 Halmos \u2022 Certora \u2022 C++"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Zero-Knowledge Proof & CI/CD Gate",
+                            "bullets": [
+                                    "Generating Groth16 / Halo2 cryptographic receipts for private algorithmic logic",
+                                    "Automated GitHub Actions pull request blocking on failed invariants",
+                                    "Immutable cryptographic audit log export for institutional underwriting"
+                            ],
+                            "techStack": "SnarkJS \u2022 Rust Halo2 \u2022 GitHub Actions \u2022 OpenTelemetry"
+                    }
+            ]
     }
 ]
 

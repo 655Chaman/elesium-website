@@ -87,6 +87,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-mcp-tool-routing-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-industrial-iot-opc-ua-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-tally-erp-xml-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-smart-contract-formal-verification-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
