@@ -361,6 +361,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-ptq-quantization-perplexity-simulator</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/signals/enterprise-autonomous-llm-post-training-quantization-awq-fp8-calibration</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/enterprise-autonomous-llm-speculative-decoding-verification-kernels</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -997,6 +1009,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/activation-aware-weight-quantization-calibration-agents-protecting-salient-outlier-channels</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/active-directory-kerberoasting-containment-agents-for-security-operations</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -1502,6 +1520,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/attitude-control-thruster-pulse-width-modulation-tuners-for-satellite-buses</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/autoawq-enterprise-integration-agents-for-continuous-fine-tuned-model-compression-pipelines</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -2414,6 +2438,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/awq-4-bit-activation-aware-weight-quantization-perplexity-preservation-telemetry-for-local-mistral-models</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/awq-4-bit-weight-quantization-deployment-agents-for-sovereign-on-premise-llama-3-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/awq-quantized-deepseek-r1-reasoning-model-deployment-agents-for-air-gapped-defense-servers</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4369,6 +4405,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/delayed-scaling-factor-updates-calibration-agents-for-fp8-gemm-training-and-inference</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dense-wdm-multi-wavelength-optical-channel-power-extinction-ratio-telemetry-for-optical-neural-networks</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5059,6 +5101,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dynamic-quantization-activation-scaling-agents-for-varying-batch-size-inference-workloads</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dynamic-rack-load-transient-thermal-buffering-controllers-for-llm-training-runs</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5342,6 +5390,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/enterprise-fine-tuned-llm-weight-poisoning-detection-telemetry-for-private-training-pipelines</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-gpu-cluster-energy-consumption-reduction-agents-via-dynamic-model-bitwidth-switching</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -6115,7 +6169,25 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/fp8-e4m3-kv-cache-quantization-agents-doubling-concurrent-agent-context-window-length</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/fp8-e4m3-mixed-precision-matrix-multiplication-tensor-core-saturation-telemetry-for-hopper-h100-inference</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fp8-e5m2-vs-e4m3-format-selection-agents-balancing-dynamic-range-and-precision-on-h100-racks</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -6128,6 +6200,30 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fp8-quantized-model-deployment-agents-for-21-cfr-part-11-pharmaceutical-audit-trail-analysis</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fp8-quantized-model-serving-for-abdm-fhir-r4-json-schema-payload-validation-in-healthcare</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fp8-quantized-model-vram-allocation-downscaling-agents-cutting-cloud-infrastructure-spend-by-58-percent</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/fp8-weight-activation-quantization-agents-preserving-sub-1-percent-perplexity-degradation</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -7705,6 +7801,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/int4-gptq-second-order-error-compensation-agents-for-large-parameter-enterprise-models</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/int4-quantized-model-deployment-agents-for-industrial-edge-iot-opc-ua-anomaly-detection</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/int4-quantized-model-deployment-agents-on-single-consumer-rtx-4090-servers-in-india</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/int4-quantized-onnx-runtime-export-agents-for-low-latency-local-desktop-copilot-swarms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/int8-gemm-tensor-core-hardware-acceleration-agents-for-enterprise-legacy-t4-and-a100-gpus</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/intensive-care-unit-icu-multimodal-vital-signs-telemetry-and-early-septic-shock-alerts-for-critical-care</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -8084,6 +8210,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/lattice-learning-with-errors-parameter-set-security-margin-telemetry-for-healthcare-data-meshes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/layer-wise-quantization-error-budget-allocation-agents-preventing-cumulative-error-cascades</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8587,6 +8719,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/marlin-optimized-int4-kernel-integration-agents-accelerating-gpu-matrix-vector-products</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/mass-spectrometry-quantitative-phosphoproteomics-kinase-substrate-enrichment-software-for-drug-discovery</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -8858,6 +8996,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/mitsubishi-melsec-mc-protocol-telemetry-gateway-for-automotive-tier-2-press-stamping-shops</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixed-precision-quantization-orchestration-agents-keeping-first-and-last-transformer-layers-fp16</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -9386,6 +9530,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/nariman-point-institutional-asset-management-algorithmic-trade-audit-agents-for-sebi-regulated-funds</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/native-fp8-transformer-engine-deployment-agents-achieving-2x-throughput-on-nvidia-hopper-gpus</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -10159,6 +10309,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/per-channel-weight-scale-factor-calibration-agents-minimizing-quantization-rounding-noise</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/per-tensor-vs-per-channel-activation-smoothing-agents-for-zero-loss-enterprise-int8-serving</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/perfusion-bioreactor-antifoam-addition-rate-bubble-capacitance-probe-foaming-level-telemetry-for-aero-fermenters</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -10573,6 +10735,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/post-training-quantization-benchmark-testing-agents-comparing-awq-gptq-and-bitsandbytes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/post-training-quantization-for-smart-contract-formal-verification-query-parsing-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/post-training-quantization-perplexity-regression-monitoring-agents-for-enterprise-agent-swarms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/post-training-quantization-runbooks-for-sovereign-private-cloud-installations-in-bangalore-and-mumbai</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/postgresql-connection-pool-pgpool-pgbouncer-saturation-auto-recovery-telemetry-for-core-transactional-ledgers</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -10843,7 +11029,85 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/quantization-aware-training-qat-fallback-orchestration-agents-when-post-training-quantization-fails</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-cross-attention-key-value-compression-agents-for-dense-document-rag-pipelines</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-deepseek-r1-671b-mixture-of-experts-deployment-agents-fitting-on-single-8x-h100-node</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/quantized-embedding-dimension-reduction-agents-for-edge-constrained-mobile-devices</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-kv-cache-memory-compression-agents-preventing-out-of-memory-crashes-during-peak-traffic</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-llama-cpp-gguf-migration-agents-for-private-bank-on-premise-branch-computers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-llm-agent-clusters-for-ondc-multi-seller-catalog-translation-across-vernacular-languages</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-llm-agents-for-banking-fraud-detection-graph-traversal-under-strict-15ms-latency</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-model-accuracy-validation-agents-against-mmlu-gsm8k-and-human-eval-benchmarks</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-model-canary-release-agents-monitoring-production-perplexity-on-live-customer-queries</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-model-regression-testing-agents-verifying-zero-drift-in-structured-json-schema-outputs</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-multi-modal-llm-vision-encoder-compression-agents-for-high-speed-image-inspection</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-rotary-position-embedding-calibration-agents-preventing-long-context-degradation</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/quantized-speculative-draft-model-pairing-agents-minimizing-draft-inference-vram-footprint</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -12355,6 +12619,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/smoothquant-calibration-dataset-curation-agents-ensuring-zero-domain-specific-accuracy-loss</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/smoothquant-w8a8-mathematical-migration-agents-shifting-activation-outliers-into-weights</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/smr-control-rod-boron-carbide-absorption-reactivity-insertion-margin-telemetry-for-reactor-trip-controllers</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -12704,6 +12980,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/sovereign-on-premise-llm-data-residency-attestation-agents-under-dpdp-act-2023-guidelines</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sovereign-on-premise-qwen-2-5-72b-int4-awq-deployment-agents-under-indian-dpdp-act-compliance</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -14341,6 +14623,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/symmetric-vs-asymmetric-int8-quantization-comparison-agents-for-low-power-edge-inferencing</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/synaptic-fan-out-spike-multicast-arbitration-controllers-for-dense-neural-fabrics</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -14654,6 +14942,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/tensorrt-llm-in-flight-batching-and-kv-cache-paging-telemetry-for-mission-critical-enterprise-apis</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/tensorrt-llm-int8-weight-activation-calibration-agents-with-per-tensor-dynamic-scaling</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -15433,6 +15727,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/vllm-int4-awq-inference-engine-tuning-agents-maximizing-tokens-per-second-on-dual-a100-nodes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/vllm-pagedattention-non-contiguous-physical-memory-kv-cache-fragmentation-telemetry-for-on-premise-clusters</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -15464,6 +15764,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/vpc-flow-logs-nat-gateway-egress-data-transfer-cost-anomaly-detection-telemetry-for-cloud-accounts</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/w4a16-weight-only-quantization-pipeline-orchestration-agents-for-sub-20ms-token-responses</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/w8a8-quantized-model-deployment-agents-for-sub-10ms-high-frequency-financial-sentiment-feeds</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -15962,6 +16274,12 @@
   </url>
   <url>
     <loc>https://elesium.online/videos/enterprise-agent-medusa-speculative-tree-simulator</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/videos/enterprise-agent-ptq-quantization-perplexity-simulator</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
