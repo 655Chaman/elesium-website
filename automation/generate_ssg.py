@@ -3468,6 +3468,53 @@ def render_multi_lora_embed_semantic_html():
 </div>
 """
 
+def render_mixture_of_depths_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-mixture-of-depths-simulator.
+    """
+    return """
+<div id="prerendered-agent-mixture-of-depths-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;margin-bottom:0.5rem;">TOOLS / COMPUTE OPTIMIZATION / TOOL #56</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Mixture-of-Depths Dynamic Compute Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Mixture-of-Depths conditional compute routing, token-level early exits, static tensor shape memory allocation, and sub-50% FLOP reduction on enterprise LLM clusters.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Mixture-of-Depths Architecture Profile</h2>
+      <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Dynamically route easy tokens through residual bypass connections while concentrating full multi-head attention and MLP compute capacity on high-entropy reasoning tokens.</p>
+      <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;font-family:monospace;font-size:0.85rem;">
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">FLOP Reduction: <strong>Up to -50% FLOPs</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Inference Speedup: <strong>1.5x - 1.8x Decode Throughput</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Tensor Shape: <strong>Static Hardware-Aligned</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid #1e293b;font-size:0.85rem;color:#64748b;text-align:right;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#38bdf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_mixture_of_depths_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-mixture-of-depths-simulator.
+    """
+    return """
+<div id="prerendered-agent-mixture-of-depths-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Mixture-of-Depths Dynamic Compute Simulator</h1>
+    <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Conditional Capacity Allocation · Sub-50% FLOP Reduction</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate conditional capacity allocation, learned top-k token routing, static-shape residual bypass streams, and sub-50% FLOP reduction across enterprise AI clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#38bdf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -5016,6 +5063,14 @@ def generate_ssg():
         "embed/agent-multi-lora-routing-simulator": {
             "title": "Multi-LoRA Adapter Routing Simulator",
             "desc": "Interactive embed widget calculating multi-LoRA VRAM savings, task switching latency, and batched SGMV execution throughput."
+        },
+        "tools/enterprise-agent-mixture-of-depths-simulator": {
+            "title": "Enterprise Autonomous Agent Mixture-of-Depths (MoD) Simulator",
+            "desc": "Simulate Mixture-of-Depths dynamic compute routing, conditional capacity allocation, token-level early exits, and sub-50% FLOP reduction on enterprise LLM clusters."
+        },
+        "embed/agent-mixture-of-depths-simulator": {
+            "title": "Embed: Mixture-of-Depths Dynamic Compute Simulator",
+            "desc": "Interactive embed widget calculating conditional compute capacity, residual token bypass, sub-50% FLOP reduction, and annual cluster FinOps savings."
         }
     }
 
@@ -9689,6 +9744,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(multi_lora_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-mixture-of-depths-simulator":
+            tool_content = render_mixture_of_depths_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            mixture_of_depths_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/tools"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": title,
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(mixture_of_depths_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-mixture-of-depths-simulator":
+            embed_content = render_mixture_of_depths_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            mixture_of_depths_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Mixture-of-Depths Dynamic Compute Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(mixture_of_depths_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

@@ -397,6 +397,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-mixture-of-depths-simulator</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/signals/mixture-of-depths-dynamic-compute-routing-conditional-capacity-allocation</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/multi-lora-dynamic-adapter-switching-zero-copy-weight-swapping</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -1111,7 +1123,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/adaptive-depth-token-classifiers-for-high-throughput-telecom-5g-routers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/adaptive-threshold-alif-spike-frequency-adaptation-dynamics-telemetry-for-autonomous-edge-controllers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/adaptive-token-capacity-balancers-for-sudden-market-volatility-surges</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3649,6 +3673,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/conditional-attention-block-dispatchers-for-enterprise-semantic-search-graphs</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/conditional-capacity-allocation-controllers-for-sovereign-insurance-claims-copilots</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/conditional-capacity-routers-for-automotive-autonomous-driving-simulation-logs</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/conditional-compute-allocation-daemons-for-automated-cyber-penetration-testing</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/conditional-mlp-block-execution-plugins-for-tensorrt-llm-and-sglang</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/conduction-cooled-cryocooler-cold-head-4k-stage-temperature-oscillation-telemetry-for-dry-magnets</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5413,6 +5467,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dynamic-compute-allocation-frameworks-for-preventing-multi-agent-latency-spikes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dynamic-context-window-delimiter-sandboxing-telemetry-for-multi-tenant-enterprise-copilots</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5456,6 +5516,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/dynamic-kv-split-size-auto-tuning-agents-adapting-block-sizes-to-prompt-length-distribution</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/dynamic-layer-skipping-controllers-for-enterprise-legal-document-discovery</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5569,6 +5635,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dynamic-routing-latency-sla-monitors-for-enterprise-cto-offices</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dynamic-sea-cable-touchdown-point-distributed-fiber-optic-dts-strain-telemetry-for-hvdc</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5582,6 +5654,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/dynamic-speculative-window-k-parameter-auto-tuning-agents-for-varying-prompt-complexities</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/dynamic-token-routing-load-balancers-for-distributed-multi-node-clusters</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5624,6 +5702,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/eagle-recurrent-feature-verification-agents-for-complex-multi-step-agentic-reasoning</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/early-exit-confidence-calibrators-for-pharmaceutical-molecular-property-prediction</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8983,6 +9067,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/layer-skip-threshold-calibrators-for-maintaining-statutory-dpdp-compliance</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/layer-wise-quantization-error-budget-allocation-agents-preventing-cumulative-error-cascades</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -9002,6 +9092,24 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/leaky-integrate-and-fire-membrane-potential-tracking-monitors-for-snn-chips</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/learned-router-gradient-stability-monitors-for-continuous-fine-tuning-pipelines</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/learned-router-loss-weight-stabilizers-for-multi-task-enterprise-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/learned-router-threshold-tuners-for-real-time-algorithmic-forex-trading</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -9793,6 +9901,108 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-auto-scalers-for-sudden-financial-market-volatility-surges</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-compute-controllers-for-autonomous-chemical-process-control</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-cost-reduction-consultants-for-generative-ai-scaleups</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-dynamic-compute-allocators-for-high-concurrency-agent-swarms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-dynamic-task-multiplexers-for-automated-cyber-threat-hunting</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-execution-schedulers-for-autonomous-supply-chain-dispatch</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-kv-cache-memory-managers-for-non-participating-token-steps</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-memory-fragmentation-analyzers-for-distributed-edge-ai-gateways</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-performance-profilers-for-enterprise-vllm-and-mistral-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-router-health-monitors-for-sovereign-enterprise-ai-datacenters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-routing-controllers-for-high-concurrency-freight-logistics</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-routing-plugins-for-tensorrt-llm-and-sglang-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-security-enclaves-for-rbi-and-dpdp-act-compliant-private-banks</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-stability-evaluators-for-sovereign-private-vpc-defense-intelligences</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-telemetry-routers-for-commercial-maritime-container-fleets</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-token-throughput-benchmarks-for-sovereign-ai-labs-in-india</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/mixture-of-depths-token-throughput-profilers-for-tier-4-cloud-datacenters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/ml-dsa-87-high-assurance-state-machine-signature-telemetry-for-aerospace-mission-flight-controllers</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -10274,6 +10484,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/multi-stream-circular-ring-kv-allocators-for-enterprise-erp-transaction-feeds</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/multi-stream-mixture-of-depths-allocators-for-enterprise-erp-transaction-feeds</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -11348,6 +11564,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/per-tensor-vs-per-channel-activation-smoothing-agents-for-zero-loss-enterprise-int8-serving</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/per-token-compute-cost-analyzers-for-enterprise-multi-tenant-kubernetes</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -12632,6 +12854,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/renyi-differential-privacy-rdp-moments-accountant-privacy-budget-epsilon-telemetry-for-genomic-biobank-data</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/residual-bypass-connection-routers-for-zero-compute-token-pass-through</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/residual-bypass-token-routing-modules-for-hospital-clinical-record-summarization</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -14215,6 +14449,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/sovereign-dynamic-compute-serving-architectures-for-private-on-premise-nvidia-h100-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/sovereign-email-drafting-assistants-for-indian-corporate-law-firms-with-confidential-case-protection</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -14240,6 +14480,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sovereign-mixture-of-depths-deployment-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sovereign-mixture-of-depths-deployment-blueprints-for-tier-4-datacenters-in-pune-and-bangalore</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -14839,6 +15091,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/static-tensor-shape-memory-allocators-for-non-uniform-transformer-routing</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/statutory-audit-trail-generators-for-nbfc-compliance-officers</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -15079,6 +15337,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/sub-10ms-token-routing-decision-engines-for-high-frequency-banking-feeds</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/sub-15ms-mcp-tool-call-caching-agents-with-automated-redis-kv-ttl-invalidation</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -15122,6 +15386,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/sub-30ms-time-to-first-token-prefix-caching-architectures-for-live-voice-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sub-50-percent-flop-reduction-engines-for-private-bank-risk-assessment</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -16723,7 +16993,49 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/token-difficulty-score-evaluators-for-adaptive-compute-resource-governance</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/token-level-early-exit-routers-for-low-latency-customer-support-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/token-level-routing-telemetry-routers-for-commercial-maritime-container-fleets</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/token-routing-entropy-monitors-for-conversational-voice-streaming-runtimes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/token-routing-perplexity-divergence-detectors-for-mission-critical-aerospace</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/tooling-coefficient-of-thermal-expansion-differential-strain-compensation-telemetry-for-wing-spars</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/top-k-routing-probability-estimators-for-industrial-scada-anomaly-detection</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/top-k-token-capacity-padding-daemons-for-avoiding-gpu-synchronization-stalls</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -17870,6 +18182,12 @@
   </url>
   <url>
     <loc>https://elesium.online/videos/enterprise-agent-multi-lora-routing-simulator</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/videos/enterprise-agent-mixture-of-depths-simulator</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -5125,6 +5125,156 @@ export const videoMasterclasses: VideoMasterclass[] = [
             }
         ],
         "fullTranscript": "Looking for multi-LoRA dynamic adapter switching and zero-copy weight swapping to eliminate GPU model replication? Deploying dedicated 70B models for legal, financial, and code agents multiplies cloud GPU spend by 10x and causes severe VRAM fragmentation. Elesium deploys unified paged GPU memory pools with Batched Segment GEMV kernels, routing hundreds of specialized LoRA adapters in-flight with zero memory reallocation. We slash task switching latency to 4.8 milliseconds, cut GPU memory footprint by 88%, and save over 57 Lakhs annually in datacenter hardware OPEX. Consolidate your enterprise multi-agent serving clusters today. Run the Multi-LoRA Routing simulator on elesium.online."
+    },
+    {
+        "id": "sfv-33",
+        "slug": "enterprise-agent-mixture-of-depths-simulator",
+        "title": "Mixture Of Depths Dynamic Compute Allocation Token Early Exit \u2014 Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium",
+        "youtubeId": "MixDepths57k",
+        "duration": "0:30",
+        "durationIso": "PT30S",
+        "uploadDate": "2026-10-19T08:00:00+05:30",
+        "industry": "Enterprise Infrastructure & Dynamic Compute Acceleration",
+        "category": "30s Short-Form Breakdown",
+        "videoType": "short",
+        "keyword": "mixture of depths dynamic compute allocation token early exit",
+        "keyBenefit": "Conditional Capacity Allocation & Sub-50% FLOP Reduction",
+        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "targetPersona": "Chief Technology Officers & LLM Serving Infrastructure Architects",
+        "executiveSummary": "A 30-second technical architecture breakdown of mixture of depths dynamic compute allocation token early exit for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
+        "roiMetrics": [
+            {
+                "label": "FLOP Reduction",
+                "value": "48.5%",
+                "detail": "Sub-50% compute budget",
+                "color": "#10B981"
+            },
+            {
+                "label": "Decode Speedup",
+                "value": "1.72x",
+                "detail": "Hardware-aligned prefill",
+                "color": "#06B6D4"
+            },
+            {
+                "label": "Token Capacity",
+                "value": "50%",
+                "detail": "Top-k selected tokens",
+                "color": "#C387FF"
+            },
+            {
+                "label": "Annual Savings",
+                "value": "\u20b964L",
+                "detail": "Per H100 cluster",
+                "color": "#FBBF24"
+            }
+        ],
+        "keyMoments": [
+            {
+                "time": "00:00",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "description": "Looking for Mixture-of-Depths dynamic compute allocation and token early exits to slash enterprise LLM inference FLOPs?"
+            },
+            {
+                "time": "00:03",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "description": "Spending millions running full multi-head attention and MLP layers on punctuation and routine words causes extreme datacenter power waste."
+            },
+            {
+                "time": "00:08",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "description": "Elesium implements conditional capacity allocation with static tensor shapes, dynamically routing non-participating tokens around transformer blocks via residual bypass paths."
+            },
+            {
+                "time": "00:18",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "description": "We slash total inference FLOPs by over 48%, accelerate decode throughput by 1.7x, and save over 64 Lakhs annually per enterprise serving cluster."
+            },
+            {
+                "time": "00:26",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "description": "Calibrate your dynamic compute budget today. Run the Mixture-of-Depths simulator on elesium.online."
+            }
+        ],
+        "architectureStages": [
+            {
+                "stage": "Stage 01",
+                "name": "Learned Router & Top-k Probability Estimation",
+                "bullets": [
+                    "Projecting token hidden states through a linear router weight to predict scalar routing weights",
+                    "Selecting the top-k tokens per sequence according to the statutory capacity factor C",
+                    "Preserving residual bypass paths for unselected tokens with zero compute overhead"
+                ],
+                "techStack": "PyTorch 2.4 \u2022 CUDA 12.4 \u2022 Triton \u2022 C++20"
+            },
+            {
+                "stage": "Stage 02",
+                "name": "Static-Shape Hardware-Aligned Tensor Dispatch",
+                "bullets": [
+                    "Packing selected tokens into contiguous static tensor shapes to eliminate dynamic GPU kernel recompilation",
+                    "Executing standard FlashAttention-2 and MLP operations on reduced token batches",
+                    "Scatter-adding routed outputs back into the original sequence tensor stream"
+                ],
+                "techStack": "vLLM \u2022 TensorRT-LLM \u2022 SGLang \u2022 Custom CUDA"
+            },
+            {
+                "stage": "Stage 03",
+                "name": "Sovereign Enterprise FinOps Governance",
+                "bullets": [
+                    "Monitoring per-token entropy and perplexity degradation across statutory enterprise tasks",
+                    "Enforcing air-gapped data residency compliant with Indian DPDP Act 2023",
+                    "Deploying on sovereign private VPCs in Mumbai and Bangalore datacenters"
+                ],
+                "techStack": "FastAPI \u2022 Prometheus \u2022 OpenTelemetry \u2022 Sovereign VPC"
+            }
+        ],
+        "timecodes": [
+            {
+                "time": "00:00 - 00:03",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "visual": "A terminal telemetry monitor displaying Mixture-of-Depths token routing graphs with conditional capacity allocation bypassing 50% of FLOPs.",
+                "voiceover": "Looking for Mixture-of-Depths dynamic compute allocation and token early exits to slash enterprise LLM inference FLOPs?",
+                "caption": "MIXTURE OF DEPTHS DYNAMIC COMPUTE ALLOCATION TOKEN EARLY EXIT"
+            },
+            {
+                "time": "00:03 - 00:08",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "visual": "An enterprise AI cluster dashboard showing GPUs pinned at 100% compute load processing trivial tokens, driving up cloud bills by crores.",
+                "voiceover": "Spending millions running full multi-head attention and MLP layers on punctuation and routine words causes extreme datacenter power waste.",
+                "caption": "TRIVIAL TOKEN COMPUTE WASTE // EXPLODING CLUSTER OPEX"
+            },
+            {
+                "time": "00:08 - 00:18",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "visual": "An animated architecture flow showing a learned top-k router selecting high-entropy tokens while residual bypass connections carry easy tokens forward.",
+                "voiceover": "Elesium implements conditional capacity allocation with static tensor shapes, dynamically routing non-participating tokens around transformer blocks via residual bypass paths.",
+                "caption": "CONDITIONAL CAPACITY ROUTING // STATIC HARDWARE TENSORS"
+            },
+            {
+                "time": "00:18 - 00:26",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "visual": "A metrics HUD highlighting 48.5% total FLOP reduction, 1.72x decode speedup, and 64 Lakh INR annual cluster FinOps savings.",
+                "voiceover": "We slash total inference FLOPs by over 48%, accelerate decode throughput by 1.7x, and save over 64 Lakhs annually per enterprise serving cluster.",
+                "caption": "SUB-50% FLOP REDUCTION // 1.7X SPEEDUP // \u20b964L FINOPS SAVINGS"
+            },
+            {
+                "time": "00:26 - 00:30",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "visual": "The Elesium Mixture-of-Depths Simulator UI with interactive capacity factor sliders and instant architecture audit booking.",
+                "voiceover": "Calibrate your dynamic compute budget today. Run the Mixture-of-Depths simulator on elesium.online.",
+                "caption": "SIMULATE MIXTURE-OF-DEPTHS AT ELESIUM.ONLINE"
+            }
+        ],
+        "fullTranscript": "Looking for Mixture-of-Depths dynamic compute allocation and token early exits to slash enterprise LLM inference FLOPs? Spending millions running full multi-head attention and MLP layers on punctuation and routine words causes extreme datacenter power waste. Elesium implements conditional capacity allocation with static tensor shapes, dynamically routing non-participating tokens around transformer blocks via residual bypass paths. We slash total inference FLOPs by over 48%, accelerate decode throughput by 1.7x, and save over 64 Lakhs annually per enterprise serving cluster. Calibrate your dynamic compute budget today. Run the Mixture-of-Depths simulator on elesium.online."
     }
 ];
 

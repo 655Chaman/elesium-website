@@ -135,6 +135,8 @@ const EnterpriseAgentSlidingWindowSimulator = lazy(() => import('./components/pa
 const EmbedAgentSlidingWindowSimulator = lazy(() => import('./components/pages/EmbedAgentSlidingWindowSimulator'))
 const EnterpriseAgentMultiLoraSimulator = lazy(() => import('./components/pages/EnterpriseAgentMultiLoraSimulator'))
 const EmbedAgentMultiLoraSimulator = lazy(() => import('./components/pages/EmbedAgentMultiLoraSimulator'))
+const EnterpriseAgentMixtureOfDepthsSimulator = lazy(() => import('./components/pages/EnterpriseAgentMixtureOfDepthsSimulator'))
+const EmbedAgentMixtureOfDepthsSimulator = lazy(() => import('./components/pages/EmbedAgentMixtureOfDepthsSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -366,6 +368,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-multi-lora-routing-simulator" element={<EnterpriseAgentMultiLoraSimulator />} />
                             <Route path="/tools/agent-multi-lora-routing-simulator" element={<Navigate to="/tools/enterprise-agent-multi-lora-routing-simulator" replace />} />
                             <Route path="/embed/agent-multi-lora-routing-simulator" element={<EmbedAgentMultiLoraSimulator />} />
+                            <Route path="/tools/enterprise-agent-mixture-of-depths-simulator" element={<EnterpriseAgentMixtureOfDepthsSimulator />} />
+                            <Route path="/tools/agent-mixture-of-depths-simulator" element={<Navigate to="/tools/enterprise-agent-mixture-of-depths-simulator" replace />} />
+                            <Route path="/embed/agent-mixture-of-depths-simulator" element={<EmbedAgentMixtureOfDepthsSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

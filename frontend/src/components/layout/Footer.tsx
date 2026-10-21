@@ -63,6 +63,7 @@ export default function DownloadFooter() {
         { name: 'Chunked Cross-Attention Simulator', path: '/tools/enterprise-agent-chunked-cross-attention-simulator' },
         { name: 'Sliding-Window Attention & Ring KV Simulator', path: '/tools/enterprise-agent-sliding-window-attention-simulator' },
         { name: 'Multi-LoRA Dynamic Adapter Routing Simulator', path: '/tools/enterprise-agent-multi-lora-routing-simulator' },
+        { name: 'Mixture-of-Depths Dynamic Compute Simulator', path: '/tools/enterprise-agent-mixture-of-depths-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

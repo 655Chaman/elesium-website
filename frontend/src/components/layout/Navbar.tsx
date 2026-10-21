@@ -405,6 +405,12 @@ export default function Navbar() {
                             MultiLoRA
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-mixture-of-depths-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-teal-400 dark:text-teal-300"
+                        >
+                            MixDepths
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -890,6 +896,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-amber-400 dark:text-amber-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Multi-LoRA Dynamic Adapter Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-mixture-of-depths-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-teal-400 dark:text-teal-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Mixture-of-Depths Dynamic Compute Simulator
                             </Link>
                             <Link
                                 to="/compare"
