@@ -2946,6 +2946,54 @@ def render_mcp_routing_embed_semantic_html():
 </div>
 """
 
+def render_industrial_iot_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-industrial-iot-opc-ua-simulator.
+    """
+    return """
+<div id="prerendered-agent-industrial-iot-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#10b981;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Shopfloor Telemetry Engine #45</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Edge Industrial IoT Protocol Translation &amp; OPC-UA Latency Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate deterministic OPC-UA, Profinet, and EtherCAT fieldbus translation, sub-10ms edge neural anomaly detection, and closed-loop SAP ERP shopfloor dispatch.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Edge Protocol Translation &amp; Telemetry Architecture</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Deterministic Fieldbus Translation</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Converts legacy Siemens S7, Modbus, and Profinet signals into async OPC-UA binary streams with sub-5ms jitter across 100+ PLCs.</p>
+        </div>
+        <div style="background:#020617;border:1px solid #6366f140;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#6366f1;margin:0 0 0.5rem 0;">Sub-10ms Spindle Anomaly Inference</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Executes quantized INT8 CNN autoencoders on Jetson AGX Orin nodes to catch bearing wear and tool chatter before catastrophic seizure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_industrial_iot_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-industrial-iot-opc-ua-simulator.
+    """
+    return """
+<div id="prerendered-agent-industrial-iot-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Edge Industrial IoT Protocol &amp; OPC-UA Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating fieldbus translation latency, spindle anomaly detection, and unplanned downtime reduction.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate deterministic OPC-UA, Profinet, and EtherCAT fieldbus translation, sub-10ms edge neural anomaly detection, and closed-loop SAP ERP shopfloor dispatch.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Smart Manufacturing AI</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -4406,6 +4454,14 @@ def generate_ssg():
         "embed/agent-mcp-tool-routing-simulator": {
             "title": "MCP Tool Routing & Context Pruning Sandbox",
             "desc": "Interactive embed widget calculating multi-server discovery latency, tokens saved, and tool precision."
+        },
+        "tools/enterprise-agent-industrial-iot-opc-ua-simulator": {
+            "title": "Enterprise Autonomous Agent Edge Industrial IoT Protocol Translation & OPC-UA Latency Simulator",
+            "desc": "Simulate deterministic OPC-UA, Profinet, and EtherCAT fieldbus translation, sub-10ms edge neural anomaly detection, and closed-loop SAP ERP shopfloor dispatch."
+        },
+        "embed/agent-industrial-iot-opc-ua-simulator": {
+            "title": "Edge Industrial IoT Protocol & OPC-UA Sandbox",
+            "desc": "Interactive embed widget calculating fieldbus translation latency, spindle anomaly detection, and unplanned downtime reduction."
         }
     }
 
@@ -8175,6 +8231,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(mcp_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-industrial-iot-opc-ua-simulator":
+            tool_content = render_industrial_iot_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            industrial_iot_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/solutions"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Industrial IoT OPC-UA Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(industrial_iot_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-industrial-iot-opc-ua-simulator":
+            embed_content = render_industrial_iot_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            industrial_iot_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Edge Industrial IoT Protocol & OPC-UA Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(industrial_iot_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

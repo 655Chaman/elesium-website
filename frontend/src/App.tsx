@@ -113,6 +113,8 @@ const EnterpriseAgentChunkedPrefillSimulator = lazy(() => import('./components/p
 const EmbedAgentChunkedPrefillSimulator = lazy(() => import('./components/pages/EmbedAgentChunkedPrefillSimulator'))
 const EnterpriseAgentMcpToolRoutingSimulator = lazy(() => import('./components/pages/EnterpriseAgentMcpToolRoutingSimulator'))
 const EmbedAgentMcpToolRoutingSimulator = lazy(() => import('./components/pages/EmbedAgentMcpToolRoutingSimulator'))
+const EnterpriseAgentIndustrialIotSimulator = lazy(() => import('./components/pages/EnterpriseAgentIndustrialIotSimulator'))
+const EmbedAgentIndustrialIotSimulator = lazy(() => import('./components/pages/EmbedAgentIndustrialIotSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -311,6 +313,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-mcp-tool-routing-simulator" element={<EnterpriseAgentMcpToolRoutingSimulator />} />
                             <Route path="/tools/agent-mcp-tool-routing-simulator" element={<Navigate to="/tools/enterprise-agent-mcp-tool-routing-simulator" replace />} />
                             <Route path="/embed/agent-mcp-tool-routing-simulator" element={<EmbedAgentMcpToolRoutingSimulator />} />
+                            <Route path="/tools/enterprise-agent-industrial-iot-opc-ua-simulator" element={<EnterpriseAgentIndustrialIotSimulator />} />
+                            <Route path="/tools/agent-industrial-iot-opc-ua-simulator" element={<Navigate to="/tools/enterprise-agent-industrial-iot-opc-ua-simulator" replace />} />
+                            <Route path="/embed/agent-industrial-iot-opc-ua-simulator" element={<EmbedAgentIndustrialIotSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
