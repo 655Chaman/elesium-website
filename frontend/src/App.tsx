@@ -123,6 +123,8 @@ const EnterpriseAgentPagedAttentionSimulator = lazy(() => import('./components/p
 const EmbedAgentPagedAttentionSimulator = lazy(() => import('./components/pages/EmbedAgentPagedAttentionSimulator'))
 const EnterpriseAgentMedusaSpeculativeSimulator = lazy(() => import('./components/pages/EnterpriseAgentMedusaSpeculativeSimulator'))
 const EmbedAgentMedusaSpeculativeSimulator = lazy(() => import('./components/pages/EmbedAgentMedusaSpeculativeSimulator'))
+const EnterpriseAgentPtqQuantizationSimulator = lazy(() => import('./components/pages/EnterpriseAgentPtqQuantizationSimulator'))
+const EmbedAgentPtqQuantizationSimulator = lazy(() => import('./components/pages/EmbedAgentPtqQuantizationSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -336,6 +338,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-medusa-speculative-tree-simulator" element={<EnterpriseAgentMedusaSpeculativeSimulator />} />
                             <Route path="/tools/agent-medusa-speculative-tree-simulator" element={<Navigate to="/tools/enterprise-agent-medusa-speculative-tree-simulator" replace />} />
                             <Route path="/embed/agent-medusa-speculative-tree-simulator" element={<EmbedAgentMedusaSpeculativeSimulator />} />
+                            <Route path="/tools/enterprise-agent-ptq-quantization-perplexity-simulator" element={<EnterpriseAgentPtqQuantizationSimulator />} />
+                            <Route path="/tools/agent-ptq-quantization-perplexity-simulator" element={<Navigate to="/tools/enterprise-agent-ptq-quantization-perplexity-simulator" replace />} />
+                            <Route path="/embed/agent-ptq-quantization-perplexity-simulator" element={<EmbedAgentPtqQuantizationSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

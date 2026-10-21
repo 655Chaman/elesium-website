@@ -57,6 +57,7 @@ export default function DownloadFooter() {
         { name: 'Smart Contract Formal Verification Simulator', path: '/tools/enterprise-agent-smart-contract-formal-verification-simulator' },
         { name: 'GPU VRAM PagedAttention & KV-Cache Simulator', path: '/tools/enterprise-agent-pagedattention-cache-simulator' },
         { name: 'Medusa Speculative Tree Simulator', path: '/tools/enterprise-agent-medusa-speculative-tree-simulator' },
+        { name: 'LLM FP8 vs INT4 Quantization Simulator', path: '/tools/enterprise-agent-ptq-quantization-perplexity-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

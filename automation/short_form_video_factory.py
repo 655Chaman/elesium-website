@@ -2683,6 +2683,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "LangGraph \u2022 Redis \u2022 Pydantic v2 \u2022 Private VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-27",
+            "slug": "enterprise-agent-ptq-quantization-perplexity-simulator",
+            "keyword": "post training quantization awq fp8 calibration",
+            "key_benefit": "AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & LLM Runtime Engineers",
+            "youtube_id": "PtqQ499v8k",
+            "hero_image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A dual terminal display showing unquantized 140GB Llama-3 70B compressed down to 38GB with sub-1% perplexity metrics.",
+                            "voiceover": "Searching for post training quantization AWQ FP8 calibration to compress 70B models into single GPUs?",
+                            "caption": "POST TRAINING QUANTIZATION AWQ FP8 CALIBRATION"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "An enterprise cloud billing dashboard showing massive GPU cluster sprawl and memory bandwidth saturation.",
+                            "voiceover": "Running unquantized FP16 LLMs burns millions in cloud compute, wasting high-bandwidth memory transfers on uncompressed weights.",
+                            "caption": "FP16 GPU CLUSTER SPRAWL // 140GB WEIGHT BOTTLENECKS"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated diagram showing salient channels scaled up before INT4 quantization and SmoothQuant shifting activation outliers.",
+                            "voiceover": "Elesium deploys AWQ salient-channel protection and Hopper FP8 tensor cores, slashing VRAM by 58% while preserving sub-1% perplexity.",
+                            "caption": "AWQ SALIENT CHANNEL SCALING // HOPPER FP8 E4M3 KERNELS"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A live telemetry dashboard showing 2.35x speedup, 58% VRAM reduction, and 22 Lakh INR annual infrastructure savings.",
+                            "voiceover": "We cut GPU node counts by 66%, boost token generation speed by 2.3x, and deliver 22 Lakhs in annual cloud FinOps savings.",
+                            "caption": "66% NODE CONSOLIDATION // 2.35X GENERATION SPEEDUP"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium FP8 vs INT4 Quantization Simulator interface with interactive sliders and instant audit mandate booking.",
+                            "voiceover": "Calculate your enterprise model quantization savings today. Run the PTQ simulator on elesium.online.",
+                            "caption": "SIMULATE MODEL QUANTIZATION AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "VRAM Reduction",
+                            "value": "58%",
+                            "detail": "140GB down to 38GB",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Perplexity Drift",
+                            "value": "+0.84%",
+                            "detail": "Sub-1% SLA preserved",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Throughput Gain",
+                            "value": "2.35x",
+                            "detail": "Native FP8 tensor cores",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹22L",
+                            "detail": "FinOps cloud consolidation",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Activation-Aware Salient Outlier Protection",
+                            "bullets": [
+                                    "Profiling activation magnitudes across calibration sequence to isolate top 1% salient channels",
+                                    "Per-channel scale factor optimization minimizing quantization rounding error",
+                                    "Zero runtime inference latency overhead via scale absorption into layer normalization"
+                            ],
+                            "techStack": "AutoAWQ \u2022 PyTorch 2.4 \u2022 CUDA 12.4 \u2022 Python 3.12"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "SmoothQuant W8A8 & Native FP8 Tensor Core Compilation",
+                            "bullets": [
+                                    "Mathematically migrating activation outlier difficulty into weights via diagonal scaling",
+                                    "Compiling Hopper FP8 E4M3 matrix multiplication kernels for 2x arithmetic density",
+                                    "FP8 KV cache memory compression doubling concurrent agent swarm context length"
+                            ],
+                            "techStack": "TensorRT-LLM \u2022 Marlin INT4 \u2022 Triton \u2022 vLLM"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sovereign Air-Gapped Private VPC Deployment",
+                            "bullets": [
+                                    "Consolidating 70B models onto single 80GB GPU nodes in Bangalore and Mumbai datacenters",
+                                    "100% on-premise local data residency complying with Indian DPDP Act 2023",
+                                    "Deterministic structured JSON grammar enforcement with zero token schema drift"
+                            ],
+                            "techStack": "LangGraph \u2022 Redis \u2022 Pydantic v2 \u2022 Sovereign VPC"
+                    }
+            ]
     }
 ]
 
