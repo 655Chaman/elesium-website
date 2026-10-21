@@ -107,6 +107,8 @@ const EnterpriseAgentNemoGuardrailSimulator = lazy(() => import('./components/pa
 const EmbedAgentNemoGuardrailSimulator = lazy(() => import('./components/pages/EmbedAgentNemoGuardrailSimulator'))
 const EnterpriseAgentAiOpsSimulator = lazy(() => import('./components/pages/EnterpriseAgentAiOpsSimulator'))
 const EmbedAgentAiOpsSimulator = lazy(() => import('./components/pages/EmbedAgentAiOpsSimulator'))
+const EnterpriseAgentVectorShardingSimulator = lazy(() => import('./components/pages/EnterpriseAgentVectorShardingSimulator'))
+const EmbedAgentVectorShardingSimulator = lazy(() => import('./components/pages/EmbedAgentVectorShardingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -296,6 +298,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-aiops-incident-remediation-simulator" element={<EnterpriseAgentAiOpsSimulator />} />
                             <Route path="/tools/agent-aiops-incident-remediation-simulator" element={<Navigate to="/tools/enterprise-agent-aiops-incident-remediation-simulator" replace />} />
                             <Route path="/embed/agent-aiops-incident-remediation-simulator" element={<EmbedAgentAiOpsSimulator />} />
+                            <Route path="/tools/enterprise-agent-vector-db-sharding-simulator" element={<EnterpriseAgentVectorShardingSimulator />} />
+                            <Route path="/tools/agent-vector-db-sharding-simulator" element={<Navigate to="/tools/enterprise-agent-vector-db-sharding-simulator" replace />} />
+                            <Route path="/embed/agent-vector-db-sharding-simulator" element={<EmbedAgentVectorShardingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

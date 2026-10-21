@@ -277,14 +277,15 @@
   },
   {
     "id": 24,
-    "keyword": "reduce operational cost with AI India",
+    "keyword": "AI workflow automation agency Mumbai",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-21T05:40:57.864656",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "AI_OVERVIEW",
-    "triage_channel": "ANSWER_CAPSULES_AND_TABLES"
+    "triage_channel": "ANSWER_CAPSULES_AND_TABLES",
+    "published_slug": "ai-workflow-automation-agency-mumbai"
   },
   {
     "id": 25,

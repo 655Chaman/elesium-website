@@ -196,6 +196,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/ai-workflow-automation-agency-mumbai",
+    "path": "/signals/ai-workflow-automation-agency-mumbai",
+    "slug": "ai-workflow-automation-agency-mumbai",
+    "target_keyword": "ai workflow automation agency mumbai",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 26.7,
+    "impressions": 2777,
+    "clicks": 18,
+    "ctr": 0.0068,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/signals/agentic-ai-solutions-for-it-ops-bangalore",
     "path": "/signals/agentic-ai-solutions-for-it-ops-bangalore",
     "slug": "agentic-ai-solutions-for-it-ops-bangalore",
@@ -1830,6 +1844,34 @@
     "impressions": 1621,
     "clicks": 6,
     "ctr": 0.0042,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/agent-conversation-recursive-summarization-token-decay-mitigation-telemetry-for-enterprise-slack-bots",
+    "path": "/solutions/agent-conversation-recursive-summarization-token-decay-mitigation-telemetry-for-enterprise-slack-bots",
+    "slug": "agent-conversation-recursive-summarization-token-decay-mitigation-telemetry-for-enterprise-slack-bots",
+    "target_keyword": "agent conversation recursive summarization token decay mitigation telemetry for enterprise slack bots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 2166,
+    "clicks": 11,
+    "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/agent-memory-eviction-fifo-lru-policy-optimization-telemetry-for-long-horizon-autonomous-goal-planners",
+    "path": "/solutions/agent-memory-eviction-fifo-lru-policy-optimization-telemetry-for-long-horizon-autonomous-goal-planners",
+    "slug": "agent-memory-eviction-fifo-lru-policy-optimization-telemetry-for-long-horizon-autonomous-goal-planners",
+    "target_keyword": "agent memory eviction fifo lru policy optimization telemetry for long horizon autonomous goal planners",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 1945,
+    "clicks": 15,
+    "ctr": 0.0079,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -3696,6 +3738,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/bandra-kurla-complex-corporate-loan-syndication-autonomous-agents-for-commercial-bank-consortiums",
+    "path": "/solutions/bandra-kurla-complex-corporate-loan-syndication-autonomous-agents-for-commercial-bank-consortiums",
+    "slug": "bandra-kurla-complex-corporate-loan-syndication-autonomous-agents-for-commercial-bank-consortiums",
+    "target_keyword": "bandra kurla complex corporate loan syndication autonomous agents for commercial bank consortiums",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.7,
+    "impressions": 827,
+    "clicks": 4,
+    "ctr": 0.0059,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/bare-metal-linux-kernel-thp-transparent-huge-pages-compaction-latency-telemetry-for-memory-intensive-databases",
     "path": "/solutions/bare-metal-linux-kernel-thp-transparent-huge-pages-compaction-latency-telemetry-for-memory-intensive-databases",
     "slug": "bare-metal-linux-kernel-thp-transparent-huge-pages-compaction-latency-telemetry-for-memory-intensive-databases",
@@ -4154,6 +4210,20 @@
     "impressions": 2011,
     "clicks": 16,
     "ctr": 0.0084,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/bombay-stock-exchange-bse-low-latency-colocation-drop-copy-audit-telemetry-for-proprietary-trading-firms",
+    "path": "/solutions/bombay-stock-exchange-bse-low-latency-colocation-drop-copy-audit-telemetry-for-proprietary-trading-firms",
+    "slug": "bombay-stock-exchange-bse-low-latency-colocation-drop-copy-audit-telemetry-for-proprietary-trading-firms",
+    "target_keyword": "bombay stock exchange bse low latency colocation drop copy audit telemetry for proprietary trading firms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 2299,
+    "clicks": 30,
+    "ctr": 0.0134,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -4760,6 +4830,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/chromadb-duckdb-distributed-file-lock-recovery-and-multi-process-concurrency-telemetry-for-local-llm-nodes",
+    "path": "/solutions/chromadb-duckdb-distributed-file-lock-recovery-and-multi-process-concurrency-telemetry-for-local-llm-nodes",
+    "slug": "chromadb-duckdb-distributed-file-lock-recovery-and-multi-process-concurrency-telemetry-for-local-llm-nodes",
+    "target_keyword": "chromadb duckdb distributed file lock recovery and multi process concurrency telemetry for local llm nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.0,
+    "impressions": 3830,
+    "clicks": 47,
+    "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
     "path": "/solutions/chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
     "slug": "chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
@@ -4770,6 +4854,20 @@
     "impressions": 1266,
     "clicks": 16,
     "ctr": 0.0133,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cibil-bureau-pull-anomaly-and-synthetic-identity-auto-detection-telemetry-for-retail-banking-portals",
+    "path": "/solutions/cibil-bureau-pull-anomaly-and-synthetic-identity-auto-detection-telemetry-for-retail-banking-portals",
+    "slug": "cibil-bureau-pull-anomaly-and-synthetic-identity-auto-detection-telemetry-for-retail-banking-portals",
+    "target_keyword": "cibil bureau pull anomaly and synthetic identity auto detection telemetry for retail banking portals",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.1,
+    "impressions": 1591,
+    "clicks": 23,
+    "ctr": 0.0147,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -5194,6 +5292,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cohere-rerank-v3-cross-encoder-inference-latency-and-token-truncation-telemetry-for-enterprise-rag",
+    "path": "/solutions/cohere-rerank-v3-cross-encoder-inference-latency-and-token-truncation-telemetry-for-enterprise-rag",
+    "slug": "cohere-rerank-v3-cross-encoder-inference-latency-and-token-truncation-telemetry-for-enterprise-rag",
+    "target_keyword": "cohere rerank v3 cross encoder inference latency and token truncation telemetry for enterprise rag",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.0,
+    "impressions": 2810,
+    "clicks": 56,
+    "ctr": 0.0202,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/coherent-64-qam-constellation-error-vector-magnitude-evm-degradation-software-for-subsea-dsp-engineers",
     "path": "/solutions/coherent-64-qam-constellation-error-vector-magnitude-evm-degradation-software-for-subsea-dsp-engineers",
     "slug": "coherent-64-qam-constellation-error-vector-magnitude-evm-degradation-software-for-subsea-dsp-engineers",
@@ -5442,6 +5554,20 @@
     "impressions": 2737,
     "clicks": 104,
     "ctr": 0.0382,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/commercial-lease-abstraction-and-cam-audit-autonomous-agents-for-mumbai-institutional-reits",
+    "path": "/solutions/commercial-lease-abstraction-and-cam-audit-autonomous-agents-for-mumbai-institutional-reits",
+    "slug": "commercial-lease-abstraction-and-cam-audit-autonomous-agents-for-mumbai-institutional-reits",
+    "target_keyword": "commercial lease abstraction and cam audit autonomous agents for mumbai institutional reits",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 1649,
+    "clicks": 23,
+    "ctr": 0.0141,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -6118,6 +6244,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/corporate-tds-194q-section-auto-reconciliation-and-26as-matching-agents-for-mumbai-industrial-giants",
+    "path": "/solutions/corporate-tds-194q-section-auto-reconciliation-and-26as-matching-agents-for-mumbai-industrial-giants",
+    "slug": "corporate-tds-194q-section-auto-reconciliation-and-26as-matching-agents-for-mumbai-industrial-giants",
+    "target_keyword": "corporate tds 194q section auto reconciliation and 26as matching agents for mumbai industrial giants",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 2348,
+    "clicks": 27,
+    "ctr": 0.0119,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/corporate-tpa-tariff-package-dispute-defense-and-automated-deduction-reconciliation-telemetry-for-hospital-billing",
     "path": "/solutions/corporate-tpa-tariff-package-dispute-defense-and-automated-deduction-reconciliation-telemetry-for-hospital-billing",
     "slug": "corporate-tpa-tariff-package-dispute-defense-and-automated-deduction-reconciliation-telemetry-for-hospital-billing",
@@ -6128,6 +6268,20 @@
     "impressions": 1386,
     "clicks": 7,
     "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/corporate-treasury-foreign-exchange-fx-hedging-multi-agent-swarms-for-multinational-conglomerates",
+    "path": "/solutions/corporate-treasury-foreign-exchange-fx-hedging-multi-agent-swarms-for-multinational-conglomerates",
+    "slug": "corporate-treasury-foreign-exchange-fx-hedging-multi-agent-swarms-for-multinational-conglomerates",
+    "target_keyword": "corporate treasury foreign exchange fx hedging multi agent swarms for multinational conglomerates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.9,
+    "impressions": 619,
+    "clicks": 13,
+    "ctr": 0.0217,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8190,6 +8344,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/distributed-cosine-similarity-scatter-gather-network-fanout-jitter-telemetry-for-multi-agent-swarms",
+    "path": "/solutions/distributed-cosine-similarity-scatter-gather-network-fanout-jitter-telemetry-for-multi-agent-swarms",
+    "slug": "distributed-cosine-similarity-scatter-gather-network-fanout-jitter-telemetry-for-multi-agent-swarms",
+    "target_keyword": "distributed cosine similarity scatter gather network fanout jitter telemetry for multi agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 3752,
+    "clicks": 93,
+    "ctr": 0.0248,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/distributed-electric-propulsion-thrust-vectoring-fault-tolerance-agents-for-evtol",
     "path": "/solutions/distributed-electric-propulsion-thrust-vectoring-fault-tolerance-agents-for-evtol",
     "slug": "distributed-electric-propulsion-thrust-vectoring-fault-tolerance-agents-for-evtol",
@@ -8382,6 +8550,20 @@
     "impressions": 3356,
     "clicks": 48,
     "ctr": 0.0146,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dpdp-act-2023-financial-consent-ledger-immutable-verification-agents-for-private-banking-clients",
+    "path": "/solutions/dpdp-act-2023-financial-consent-ledger-immutable-verification-agents-for-private-banking-clients",
+    "slug": "dpdp-act-2023-financial-consent-ledger-immutable-verification-agents-for-private-banking-clients",
+    "target_keyword": "dpdp act 2023 financial consent ledger immutable verification agents for private banking clients",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.9,
+    "impressions": 2479,
+    "clicks": 38,
+    "ctr": 0.0156,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -8816,6 +8998,20 @@
     "impressions": 2363,
     "clicks": 84,
     "ctr": 0.0356,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/elastic-search-dense-vector-indexing-throttle-and-segment-merge-memory-telemetry-for-enterprise-search-clusters",
+    "path": "/solutions/elastic-search-dense-vector-indexing-throttle-and-segment-merge-memory-telemetry-for-enterprise-search-clusters",
+    "slug": "elastic-search-dense-vector-indexing-throttle-and-segment-merge-memory-telemetry-for-enterprise-search-clusters",
+    "target_keyword": "elastic-search dense vector indexing throttle and segment merge memory telemetry for enterprise search clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 3543,
+    "clicks": 30,
+    "ctr": 0.0085,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -9334,6 +9530,20 @@
     "impressions": 2934,
     "clicks": 30,
     "ctr": 0.0104,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/episodic-memory-state-snapshotting-and-memory-decay-pruning-telemetry-for-long-running-multi-agent-swarms",
+    "path": "/solutions/episodic-memory-state-snapshotting-and-memory-decay-pruning-telemetry-for-long-running-multi-agent-swarms",
+    "slug": "episodic-memory-state-snapshotting-and-memory-decay-pruning-telemetry-for-long-running-multi-agent-swarms",
+    "target_keyword": "episodic memory state snapshotting and memory decay pruning telemetry for long running multi agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.9,
+    "impressions": 1069,
+    "clicks": 8,
+    "ctr": 0.0075,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -10262,6 +10472,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/flashrank-on-device-local-cross-encoder-reranking-telemetry-for-zero-egress-air-gapped-llm-networks",
+    "path": "/solutions/flashrank-on-device-local-cross-encoder-reranking-telemetry-for-zero-egress-air-gapped-llm-networks",
+    "slug": "flashrank-on-device-local-cross-encoder-reranking-telemetry-for-zero-egress-air-gapped-llm-networks",
+    "target_keyword": "flashrank on device local cross encoder reranking telemetry for zero egress air gapped llm networks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.1,
+    "impressions": 2251,
+    "clicks": 45,
+    "ctr": 0.0204,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
     "path": "/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
     "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
@@ -10650,6 +10874,20 @@
     "impressions": 3168,
     "clicks": 103,
     "ctr": 0.0327,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp16-to-int8-scalar-vector-quantization-recall-preservation-telemetry-for-high-density-ai-clusters",
+    "path": "/solutions/fp16-to-int8-scalar-vector-quantization-recall-preservation-telemetry-for-high-density-ai-clusters",
+    "slug": "fp16-to-int8-scalar-vector-quantization-recall-preservation-telemetry-for-high-density-ai-clusters",
+    "target_keyword": "fp16 to int8 scalar vector quantization recall preservation telemetry for high density ai clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.1,
+    "impressions": 201,
+    "clicks": 3,
+    "ctr": 0.0199,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11154,6 +11392,20 @@
     "impressions": 2711,
     "clicks": 34,
     "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/gpu-accelerated-faiss-index-rebuilding-and-cuda-stream-memory-fragmentation-telemetry-for-ai-supercomputers",
+    "path": "/solutions/gpu-accelerated-faiss-index-rebuilding-and-cuda-stream-memory-fragmentation-telemetry-for-ai-supercomputers",
+    "slug": "gpu-accelerated-faiss-index-rebuilding-and-cuda-stream-memory-fragmentation-telemetry-for-ai-supercomputers",
+    "target_keyword": "gpu accelerated faiss index rebuilding and cuda stream memory fragmentation telemetry for ai supercomputers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.9,
+    "impressions": 3379,
+    "clicks": 39,
+    "ctr": 0.0118,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -12894,6 +13146,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hybrid-dense-sparse-bm25-reciprocal-rank-fusion-rrf-scoring-telemetry-for-legal-discovery-search-engines",
+    "path": "/solutions/hybrid-dense-sparse-bm25-reciprocal-rank-fusion-rrf-scoring-telemetry-for-legal-discovery-search-engines",
+    "slug": "hybrid-dense-sparse-bm25-reciprocal-rank-fusion-rrf-scoring-telemetry-for-legal-discovery-search-engines",
+    "target_keyword": "hybrid dense sparse bm25 reciprocal rank fusion rrf scoring telemetry for legal discovery search engines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.7,
+    "impressions": 617,
+    "clicks": 6,
+    "ctr": 0.0109,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hybrid-otec-desalination-vacuum-flash-evaporator-fresh-water-production-yield-telemetry-for-island-grids",
     "path": "/solutions/hybrid-otec-desalination-vacuum-flash-evaporator-fresh-water-production-yield-telemetry-for-island-grids",
     "slug": "hybrid-otec-desalination-vacuum-flash-evaporator-fresh-water-production-yield-telemetry-for-island-grids",
@@ -13916,6 +14182,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/insurance-motor-claim-surveyor-video-tampering-and-deepfake-forensics-agents-for-general-insurers",
+    "path": "/solutions/insurance-motor-claim-surveyor-video-tampering-and-deepfake-forensics-agents-for-general-insurers",
+    "slug": "insurance-motor-claim-surveyor-video-tampering-and-deepfake-forensics-agents-for-general-insurers",
+    "target_keyword": "insurance motor claim surveyor video tampering and deepfake forensics agents for general insurers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.7,
+    "impressions": 1937,
+    "clicks": 48,
+    "ctr": 0.025,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/intensive-care-unit-icu-multimodal-vital-signs-telemetry-and-early-septic-shock-alerts-for-critical-care",
     "path": "/solutions/intensive-care-unit-icu-multimodal-vital-signs-telemetry-and-early-septic-shock-alerts-for-critical-care",
     "slug": "intensive-care-unit-icu-multimodal-vital-signs-telemetry-and-early-septic-shock-alerts-for-critical-care",
@@ -14150,6 +14430,20 @@
     "impressions": 759,
     "clicks": 10,
     "ctr": 0.0134,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ivf-pq-centroid-clustering-vector-quantization-memory-compression-telemetry-for-search-infrastructure-engineers",
+    "path": "/solutions/ivf-pq-centroid-clustering-vector-quantization-memory-compression-telemetry-for-search-infrastructure-engineers",
+    "slug": "ivf-pq-centroid-clustering-vector-quantization-memory-compression-telemetry-for-search-infrastructure-engineers",
+    "target_keyword": "ivf pq centroid clustering vector quantization memory compression telemetry for search infrastructure engineers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 2009,
+    "clicks": 16,
+    "ctr": 0.0084,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14504,6 +14798,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/langgraph-vector-store-connection-pool-retry-and-circuit-breaker-telemetry-for-autonomous-rag-workflows",
+    "path": "/solutions/langgraph-vector-store-connection-pool-retry-and-circuit-breaker-telemetry-for-autonomous-rag-workflows",
+    "slug": "langgraph-vector-store-connection-pool-retry-and-circuit-breaker-telemetry-for-autonomous-rag-workflows",
+    "target_keyword": "langgraph vector store connection pool retry and circuit breaker telemetry for autonomous rag workflows",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.4,
+    "impressions": 2024,
+    "clicks": 15,
+    "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/langmuir-probe-array-scrape-off-layer-sol-plasma-density-telemetry-software-for-fusion-physicists",
     "path": "/solutions/langmuir-probe-array-scrape-off-layer-sol-plasma-density-telemetry-software-for-fusion-physicists",
     "slug": "langmuir-probe-array-scrape-off-layer-sol-plasma-density-telemetry-software-for-fusion-physicists",
@@ -14528,6 +14836,20 @@
     "impressions": 3815,
     "clicks": 54,
     "ctr": 0.0142,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/langsmith-tracing-latency-anomaly-suppression-and-span-sampling-telemetry-for-high-throughput-production-agents",
+    "path": "/solutions/langsmith-tracing-latency-anomaly-suppression-and-span-sampling-telemetry-for-high-throughput-production-agents",
+    "slug": "langsmith-tracing-latency-anomaly-suppression-and-span-sampling-telemetry-for-high-throughput-production-agents",
+    "target_keyword": "langsmith tracing latency anomaly suppression and span sampling telemetry for high throughput production agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.9,
+    "impressions": 2279,
+    "clicks": 28,
+    "ctr": 0.0125,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15022,6 +15344,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/llamaindex-vector-cache-eviction-and-query-embedding-deduplication-telemetry-for-enterprise-search-portals",
+    "path": "/solutions/llamaindex-vector-cache-eviction-and-query-embedding-deduplication-telemetry-for-enterprise-search-portals",
+    "slug": "llamaindex-vector-cache-eviction-and-query-embedding-deduplication-telemetry-for-enterprise-search-portals",
+    "target_keyword": "llamaindex vector cache eviction and query embedding deduplication telemetry for enterprise search portals",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.2,
+    "impressions": 3922,
+    "clicks": 32,
+    "ctr": 0.0082,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/local-field-potential-phase-amplitude-coupling-analysers-for-epilepsy-research",
     "path": "/solutions/local-field-potential-phase-amplitude-coupling-analysers-for-epilepsy-research",
     "slug": "local-field-potential-phase-amplitude-coupling-analysers-for-epilepsy-research",
@@ -15158,6 +15494,20 @@
     "impressions": 1227,
     "clicks": 30,
     "ctr": 0.0252,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/lower-parel-fintech-instant-credit-appraisal-multi-agent-systems-for-digital-lending-apps",
+    "path": "/solutions/lower-parel-fintech-instant-credit-appraisal-multi-agent-systems-for-digital-lending-apps",
+    "slug": "lower-parel-fintech-instant-credit-appraisal-multi-agent-systems-for-digital-lending-apps",
+    "target_keyword": "lower parel fintech instant credit appraisal multi agent systems for digital lending apps",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.6,
+    "impressions": 3576,
+    "clicks": 108,
+    "ctr": 0.0304,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15834,6 +16184,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/memgraph-real-time-financial-fraud-ring-cycle-detection-telemetry-for-anti-money-laundering-units",
+    "path": "/solutions/memgraph-real-time-financial-fraud-ring-cycle-detection-telemetry-for-anti-money-laundering-units",
+    "slug": "memgraph-real-time-financial-fraud-ring-cycle-detection-telemetry-for-anti-money-laundering-units",
+    "target_keyword": "memgraph real time financial fraud ring cycle detection telemetry for anti money laundering units",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 1423,
+    "clicks": 8,
+    "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/memristor-analog-matrix-multiplication-femtojoule-per-synaptic-op-telemetry-for-sovereign-edge-models",
     "path": "/solutions/memristor-analog-matrix-multiplication-femtojoule-per-synaptic-op-telemetry-for-sovereign-edge-models",
     "slug": "memristor-analog-matrix-multiplication-femtojoule-per-synaptic-op-telemetry-for-sovereign-edge-models",
@@ -16096,6 +16460,20 @@
     "impressions": 2242,
     "clicks": 34,
     "ctr": 0.0155,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/milvus-distributed-proxy-query-coordinator-latency-optimization-telemetry-for-generative-ai-platforms",
+    "path": "/solutions/milvus-distributed-proxy-query-coordinator-latency-optimization-telemetry-for-generative-ai-platforms",
+    "slug": "milvus-distributed-proxy-query-coordinator-latency-optimization-telemetry-for-generative-ai-platforms",
+    "target_keyword": "milvus distributed proxy query coordinator latency optimization telemetry for generative ai platforms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 1056,
+    "clicks": 22,
+    "ctr": 0.0211,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -16604,6 +16982,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-hop-graphrag-reasoning-path-validation-and-hallucination-suppression-telemetry-for-medical-diagnostics",
+    "path": "/solutions/multi-hop-graphrag-reasoning-path-validation-and-hallucination-suppression-telemetry-for-medical-diagnostics",
+    "slug": "multi-hop-graphrag-reasoning-path-validation-and-hallucination-suppression-telemetry-for-medical-diagnostics",
+    "target_keyword": "multi hop graphrag reasoning path validation and hallucination suppression telemetry for medical diagnostics",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.0,
+    "impressions": 860,
+    "clicks": 17,
+    "ctr": 0.0199,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-layer-insulation-hypervelocity-debris-flash-thermal-radiative-dissipation-bolometer-telemetry-for-satellites",
     "path": "/solutions/multi-layer-insulation-hypervelocity-debris-flash-thermal-radiative-dissipation-bolometer-telemetry-for-satellites",
     "slug": "multi-layer-insulation-hypervelocity-debris-flash-thermal-radiative-dissipation-bolometer-telemetry-for-satellites",
@@ -16870,6 +17262,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/mutual-fund-nav-recalculation-error-and-portfolio-concentration-breaker-agents-for-asset-managers",
+    "path": "/solutions/mutual-fund-nav-recalculation-error-and-portfolio-concentration-breaker-agents-for-asset-managers",
+    "slug": "mutual-fund-nav-recalculation-error-and-portfolio-concentration-breaker-agents-for-asset-managers",
+    "target_keyword": "mutual fund nav recalculation error and portfolio concentration breaker agents for asset managers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.4,
+    "impressions": 664,
+    "clicks": 17,
+    "ctr": 0.0257,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers",
     "path": "/solutions/n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers",
     "slug": "n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers",
@@ -17038,6 +17444,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/nariman-point-institutional-asset-management-algorithmic-trade-audit-agents-for-sebi-regulated-funds",
+    "path": "/solutions/nariman-point-institutional-asset-management-algorithmic-trade-audit-agents-for-sebi-regulated-funds",
+    "slug": "nariman-point-institutional-asset-management-algorithmic-trade-audit-agents-for-sebi-regulated-funds",
+    "target_keyword": "nariman point institutional asset management algorithmic trade audit agents for sebi regulated funds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 1216,
+    "clicks": 47,
+    "ctr": 0.0387,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/naval-fleet-maintenance-predictive-telemetry-engines-for-shipyard-commanders",
     "path": "/solutions/naval-fleet-maintenance-predictive-telemetry-engines-for-shipyard-commanders",
     "slug": "naval-fleet-maintenance-predictive-telemetry-engines-for-shipyard-commanders",
@@ -17048,6 +17468,34 @@
     "impressions": 2831,
     "clicks": 26,
     "ctr": 0.0092,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/nbfc-co-lending-underwriting-deterministic-state-machine-agents-for-priority-sector-lending-quotas",
+    "path": "/solutions/nbfc-co-lending-underwriting-deterministic-state-machine-agents-for-priority-sector-lending-quotas",
+    "slug": "nbfc-co-lending-underwriting-deterministic-state-machine-agents-for-priority-sector-lending-quotas",
+    "target_keyword": "nbfc co lending underwriting deterministic state machine agents for priority sector lending quotas",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.7,
+    "impressions": 1817,
+    "clicks": 24,
+    "ctr": 0.0136,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/neo4j-knowledge-graph-entity-resolution-and-relationship-link-prediction-telemetry-for-enterprise-intelligence",
+    "path": "/solutions/neo4j-knowledge-graph-entity-resolution-and-relationship-link-prediction-telemetry-for-enterprise-intelligence",
+    "slug": "neo4j-knowledge-graph-entity-resolution-and-relationship-link-prediction-telemetry-for-enterprise-intelligence",
+    "target_keyword": "neo4j knowledge graph entity resolution and relationship link prediction telemetry for enterprise intelligence",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 1419,
+    "clicks": 42,
+    "ctr": 0.03,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -18704,6 +19152,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/pgvector-hnsw-index-memory-saturation-and-parallel-query-scatter-gather-telemetry-for-database-administrators",
+    "path": "/solutions/pgvector-hnsw-index-memory-saturation-and-parallel-query-scatter-gather-telemetry-for-database-administrators",
+    "slug": "pgvector-hnsw-index-memory-saturation-and-parallel-query-scatter-gather-telemetry-for-database-administrators",
+    "target_keyword": "pgvector hnsw index memory saturation and parallel query scatter gather telemetry for database administrators",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.4,
+    "impressions": 3784,
+    "clicks": 17,
+    "ctr": 0.0046,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/pharma-cleanroom-air-velocity-and-laminar-flow-hood-smoke-test-telemetry-for-nabh-accreditation",
     "path": "/solutions/pharma-cleanroom-air-velocity-and-laminar-flow-hood-smoke-test-telemetry-for-nabh-accreditation",
     "slug": "pharma-cleanroom-air-velocity-and-laminar-flow-hood-smoke-test-telemetry-for-nabh-accreditation",
@@ -18970,6 +19432,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/phoenix-arize-llm-evaluation-drift-monitoring-and-automated-golden-dataset-curation-telemetry-for-ai-teams",
+    "path": "/solutions/phoenix-arize-llm-evaluation-drift-monitoring-and-automated-golden-dataset-curation-telemetry-for-ai-teams",
+    "slug": "phoenix-arize-llm-evaluation-drift-monitoring-and-automated-golden-dataset-curation-telemetry-for-ai-teams",
+    "target_keyword": "phoenix arize llm evaluation drift monitoring and automated golden dataset curation telemetry for ai teams",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.6,
+    "impressions": 3736,
+    "clicks": 93,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/photolithography-chemical-amplified-resist-bake-hotplate-multi-zone-rtd-temperature-uniformity-telemetry-for-line-edge-roughness",
     "path": "/solutions/photolithography-chemical-amplified-resist-bake-hotplate-multi-zone-rtd-temperature-uniformity-telemetry-for-line-edge-roughness",
     "slug": "photolithography-chemical-amplified-resist-bake-hotplate-multi-zone-rtd-temperature-uniformity-telemetry-for-line-edge-roughness",
@@ -19064,6 +19540,20 @@
     "impressions": 1860,
     "clicks": 13,
     "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pinecone-serverless-partition-auto-rebalancing-and-cold-storage-vector-retrieval-telemetry-for-fintech-apps",
+    "path": "/solutions/pinecone-serverless-partition-auto-rebalancing-and-cold-storage-vector-retrieval-telemetry-for-fintech-apps",
+    "slug": "pinecone-serverless-partition-auto-rebalancing-and-cold-storage-vector-retrieval-telemetry-for-fintech-apps",
+    "target_keyword": "pinecone serverless partition auto rebalancing and cold storage vector retrieval telemetry for fintech apps",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 3259,
+    "clicks": 62,
+    "ctr": 0.0191,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -19642,6 +20132,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/private-sovereign-lora-adapter-hot-swapping-and-vram-eviction-race-condition-telemetry-for-enterprise-llms",
+    "path": "/solutions/private-sovereign-lora-adapter-hot-swapping-and-vram-eviction-race-condition-telemetry-for-enterprise-llms",
+    "slug": "private-sovereign-lora-adapter-hot-swapping-and-vram-eviction-race-condition-telemetry-for-enterprise-llms",
+    "target_keyword": "private sovereign lora adapter hot swapping and vram eviction race condition telemetry for enterprise llms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.7,
+    "impressions": 1757,
+    "clicks": 67,
+    "ctr": 0.0382,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
     "path": "/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
     "slug": "private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
@@ -19792,6 +20296,20 @@
     "impressions": 1984,
     "clicks": 12,
     "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/qdrant-payload-index-sharding-and-tenant-isolation-telemetry-for-multi-tenant-saas-enterprises",
+    "path": "/solutions/qdrant-payload-index-sharding-and-tenant-isolation-telemetry-for-multi-tenant-saas-enterprises",
+    "slug": "qdrant-payload-index-sharding-and-tenant-isolation-telemetry-for-multi-tenant-saas-enterprises",
+    "target_keyword": "qdrant payload index sharding and tenant isolation telemetry for multi tenant saas enterprises",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.9,
+    "impressions": 3769,
+    "clicks": 45,
+    "ctr": 0.0122,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -20258,6 +20776,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/rbi-master-direction-on-it-governance-section-12-telemetry-agents-for-schedule-commercial-banks-in-india",
+    "path": "/solutions/rbi-master-direction-on-it-governance-section-12-telemetry-agents-for-schedule-commercial-banks-in-india",
+    "slug": "rbi-master-direction-on-it-governance-section-12-telemetry-agents-for-schedule-commercial-banks-in-india",
+    "target_keyword": "rbi master direction on it governance section 12 telemetry agents for schedule commercial banks in india",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 873,
+    "clicks": 15,
+    "ctr": 0.0176,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/re-usable-spaceplane-landing-gear-door-ceramic-seal-thermal-seepage-monitors-for-re-entry",
     "path": "/solutions/re-usable-spaceplane-landing-gear-door-ceramic-seal-thermal-seepage-monitors-for-re-entry",
     "slug": "re-usable-spaceplane-landing-gear-door-ceramic-seal-thermal-seepage-monitors-for-re-entry",
@@ -20422,6 +20954,20 @@
     "impressions": 1179,
     "clicks": 35,
     "ctr": 0.03,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/redis-vl-in-memory-vector-cache-invalidation-and-sub-millisecond-retrieval-telemetry-for-trading-desks",
+    "path": "/solutions/redis-vl-in-memory-vector-cache-invalidation-and-sub-millisecond-retrieval-telemetry-for-trading-desks",
+    "slug": "redis-vl-in-memory-vector-cache-invalidation-and-sub-millisecond-retrieval-telemetry-for-trading-desks",
+    "target_keyword": "redis-vl in memory vector cache invalidation and sub millisecond retrieval telemetry for trading desks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.7,
+    "impressions": 2047,
+    "clicks": 13,
+    "ctr": 0.0067,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -21476,6 +22022,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/scann-anisotropic-vector-quantization-score-threshold-pruning-telemetry-for-hyper-scale-retrieval-fleets",
+    "path": "/solutions/scann-anisotropic-vector-quantization-score-threshold-pruning-telemetry-for-hyper-scale-retrieval-fleets",
+    "slug": "scann-anisotropic-vector-quantization-score-threshold-pruning-telemetry-for-hyper-scale-retrieval-fleets",
+    "target_keyword": "scann anisotropic vector quantization score threshold pruning telemetry for hyper scale retrieval fleets",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 673,
+    "clicks": 7,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sco2-axial-compressor-stator-variable-vane-angle-aerodynamic-hysteresis-torque-telemetry-for-brayton-turbines",
     "path": "/solutions/sco2-axial-compressor-stator-variable-vane-angle-aerodynamic-hysteresis-torque-telemetry-for-brayton-turbines",
     "slug": "sco2-axial-compressor-stator-variable-vane-angle-aerodynamic-hysteresis-torque-telemetry-for-brayton-turbines",
@@ -22064,6 +22624,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sebi-automated-algorithmic-order-book-spoofing-inspection-telemetry-for-mumbai-stock-brokerages",
+    "path": "/solutions/sebi-automated-algorithmic-order-book-spoofing-inspection-telemetry-for-mumbai-stock-brokerages",
+    "slug": "sebi-automated-algorithmic-order-book-spoofing-inspection-telemetry-for-mumbai-stock-brokerages",
+    "target_keyword": "sebi automated algorithmic order book spoofing inspection telemetry for mumbai stock brokerages",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 2742,
+    "clicks": 99,
+    "ctr": 0.0363,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sebi-insider-trading-prohibition-compliance-trading-window-audit-telemetry-for-listed-enterprise-legal-teams",
     "path": "/solutions/sebi-insider-trading-prohibition-compliance-trading-window-audit-telemetry-for-listed-enterprise-legal-teams",
     "slug": "sebi-insider-trading-prohibition-compliance-trading-window-audit-telemetry-for-listed-enterprise-legal-teams",
@@ -22088,6 +22662,20 @@
     "impressions": 2960,
     "clicks": 112,
     "ctr": 0.0381,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/section-63-bsa-2023-digital-banking-evidence-hashing-and-cryptographic-audit-trails-for-indian-courts",
+    "path": "/solutions/section-63-bsa-2023-digital-banking-evidence-hashing-and-cryptographic-audit-trails-for-indian-courts",
+    "slug": "section-63-bsa-2023-digital-banking-evidence-hashing-and-cryptographic-audit-trails-for-indian-courts",
+    "target_keyword": "section 63 bsa 2023 digital banking evidence hashing and cryptographic audit trails for indian courts",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.9,
+    "impressions": 3879,
+    "clicks": 60,
+    "ctr": 0.0156,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -22186,6 +22774,20 @@
     "impressions": 3883,
     "clicks": 33,
     "ctr": 0.0085,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/semantic-cache-kv-store-warm-up-and-exact-match-hit-ratio-telemetry-for-enterprise-llm-cost-routers",
+    "path": "/solutions/semantic-cache-kv-store-warm-up-and-exact-match-hit-ratio-telemetry-for-enterprise-llm-cost-routers",
+    "slug": "semantic-cache-kv-store-warm-up-and-exact-match-hit-ratio-telemetry-for-enterprise-llm-cost-routers",
+    "target_keyword": "semantic cache kv store warm up and exact match hit ratio telemetry for enterprise llm cost routers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.1,
+    "impressions": 2311,
+    "clicks": 29,
+    "ctr": 0.0128,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -24692,6 +25294,20 @@
     "impressions": 2504,
     "clicks": 32,
     "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-50ms-contextual-query-expansion-and-hypothetical-document-embedding-hyde-telemetry-for-customer-portals",
+    "path": "/solutions/sub-50ms-contextual-query-expansion-and-hypothetical-document-embedding-hyde-telemetry-for-customer-portals",
+    "slug": "sub-50ms-contextual-query-expansion-and-hypothetical-document-embedding-hyde-telemetry-for-customer-portals",
+    "target_keyword": "sub 50ms contextual query expansion and hypothetical document embedding hyde telemetry for customer portals",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.5,
+    "impressions": 1445,
+    "clicks": 13,
+    "ctr": 0.0092,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -27804,6 +28420,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/trade-finance-letter-of-credit-lc-automated-verification-agents-for-indian-export-import-banks",
+    "path": "/solutions/trade-finance-letter-of-credit-lc-automated-verification-agents-for-indian-export-import-banks",
+    "slug": "trade-finance-letter-of-credit-lc-automated-verification-agents-for-indian-export-import-banks",
+    "target_keyword": "trade finance letter of credit lc automated verification agents for indian export import banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 3523,
+    "clicks": 21,
+    "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/transmon-qubit-t1-relaxation-and-t2-dephasing-decoherence-tracking-software-for-qpu-characterization-scientists",
     "path": "/solutions/transmon-qubit-t1-relaxation-and-t2-dephasing-decoherence-tracking-software-for-qpu-characterization-scientists",
     "slug": "transmon-qubit-t1-relaxation-and-t2-dephasing-decoherence-tracking-software-for-qpu-characterization-scientists",
@@ -27926,6 +28556,20 @@
     "impressions": 1723,
     "clicks": 17,
     "ctr": 0.0103,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/triton-inference-server-tensor-parallelism-kv-cache-memory-fragmentation-telemetry-for-deep-learning-clusters",
+    "path": "/solutions/triton-inference-server-tensor-parallelism-kv-cache-memory-fragmentation-telemetry-for-deep-learning-clusters",
+    "slug": "triton-inference-server-tensor-parallelism-kv-cache-memory-fragmentation-telemetry-for-deep-learning-clusters",
+    "target_keyword": "triton inference server tensor parallelism kv cache memory fragmentation telemetry for deep learning clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.9,
+    "impressions": 729,
+    "clicks": 8,
+    "ctr": 0.0122,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -28168,6 +28812,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+    "path": "/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+    "slug": "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+    "target_keyword": "upi merchant chargeback dispute arbitration autonomous agents for mumbai payment aggregators",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 3416,
+    "clicks": 35,
+    "ctr": 0.0105,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/upi-switch-transaction-failure-anomaly-machine-vision-telemetry-for-payment-aggregators",
     "path": "/solutions/upi-switch-transaction-failure-anomaly-machine-vision-telemetry-for-payment-aggregators",
     "slug": "upi-switch-transaction-failure-anomaly-machine-vision-telemetry-for-payment-aggregators",
@@ -28392,6 +29050,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/vector-database-cluster-sharding-and-hnsw-graph-indexing-telemetry-for-enterprise-rag-architects",
+    "path": "/solutions/vector-database-cluster-sharding-and-hnsw-graph-indexing-telemetry-for-enterprise-rag-architects",
+    "slug": "vector-database-cluster-sharding-and-hnsw-graph-indexing-telemetry-for-enterprise-rag-architects",
+    "target_keyword": "vector database cluster sharding and hnsw graph indexing telemetry for enterprise rag architects",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.0,
+    "impressions": 840,
+    "clicks": 2,
+    "ctr": 0.0029,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/vector-scaling-probability-calibration-telemetry-for-automated-invoice-factoring-risk-assessment",
     "path": "/solutions/vector-scaling-probability-calibration-telemetry-for-automated-invoice-factoring-risk-assessment",
     "slug": "vector-scaling-probability-calibration-telemetry-for-automated-invoice-factoring-risk-assessment",
@@ -28532,6 +29204,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/vespa-tensor-evaluation-pipeline-latency-and-ranking-phase-prune-telemetry-for-industrial-search-engines",
+    "path": "/solutions/vespa-tensor-evaluation-pipeline-latency-and-ranking-phase-prune-telemetry-for-industrial-search-engines",
+    "slug": "vespa-tensor-evaluation-pipeline-latency-and-ranking-phase-prune-telemetry-for-industrial-search-engines",
+    "target_keyword": "vespa tensor evaluation pipeline latency and ranking phase prune telemetry for industrial search engines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.1,
+    "impressions": 411,
+    "clicks": 17,
+    "ctr": 0.0422,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/victoriametrics-time-series-storage-ingestion-throttling-mitigation-telemetry-for-high-ingestion-clusters",
     "path": "/solutions/victoriametrics-time-series-storage-ingestion-throttling-mitigation-telemetry-for-high-ingestion-clusters",
     "slug": "victoriametrics-time-series-storage-ingestion-throttling-mitigation-telemetry-for-high-ingestion-clusters",
@@ -28570,6 +29256,20 @@
     "impressions": 241,
     "clicks": 1,
     "ctr": 0.0042,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/vllm-continuous-batching-p99-latency-stabilization-and-preemption-queue-telemetry-for-private-gpu-clouds",
+    "path": "/solutions/vllm-continuous-batching-p99-latency-stabilization-and-preemption-queue-telemetry-for-private-gpu-clouds",
+    "slug": "vllm-continuous-batching-p99-latency-stabilization-and-preemption-queue-telemetry-for-private-gpu-clouds",
+    "target_keyword": "vllm continuous batching p99 latency stabilization and preemption queue telemetry for private gpu clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.6,
+    "impressions": 1666,
+    "clicks": 13,
+    "ctr": 0.0082,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -28766,6 +29466,20 @@
     "impressions": 1775,
     "clicks": 32,
     "ctr": 0.0181,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/weaviate-multi-tenant-shard-allocation-and-disk-backed-hnsw-telemetry-for-sovereign-private-clouds",
+    "path": "/solutions/weaviate-multi-tenant-shard-allocation-and-disk-backed-hnsw-telemetry-for-sovereign-private-clouds",
+    "slug": "weaviate-multi-tenant-shard-allocation-and-disk-backed-hnsw-telemetry-for-sovereign-private-clouds",
+    "target_keyword": "weaviate multi tenant shard allocation and disk backed hnsw telemetry for sovereign private clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.9,
+    "impressions": 1529,
+    "clicks": 10,
+    "ctr": 0.0068,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
