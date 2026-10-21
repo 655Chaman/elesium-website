@@ -385,6 +385,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-sliding-window-attention-simulator</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/signals/streaming-llm-inference-sliding-window-attention-ring-kv-eviction</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/high-throughput-chunked-cross-attention-distributed-rag-sharding</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -1580,6 +1592,36 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/atmospheric-re-entry-vehicle-stagnation-point-heat-flux-slug-calorimeter-software-for-aero-engineers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/attention-sink-positional-embedding-anchors-for-continuous-code-generation-copilots</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/attention-sink-preservation-frameworks-for-preventing-llm-perplexity-collapse</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/attention-sink-preservation-runtimes-for-autonomous-chemical-process-control</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/attention-sink-stability-evaluators-for-sovereign-private-vpc-defense-intelligences</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/attention-sink-verification-pipelines-for-rbi-and-dpdp-act-compliant-private-banks</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -2839,6 +2881,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/bounded-ring-buffer-kv-allocators-for-continuous-hospital-icu-patient-monitoring</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/bounded-vram-streaming-inference-engines-for-private-on-premise-nvidia-h100-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/brushless-dc-motor-bldc-stratospheric-low-density-air-propeller-thrust-efficiency-telemetry-for-haps</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -3182,6 +3236,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/cilium-bpf-service-load-balancing-packet-drop-anomaly-telemetry-for-multi-cloud-kubernetes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/circular-kv-buffer-memory-bound-checkers-for-cloud-fintech-regulatory-compliance</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/circular-ring-kv-buffer-eviction-modules-for-infinite-streaming-large-language-models</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -3589,6 +3655,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/constant-memory-sliding-window-log-parsers-for-distributed-enterprise-kubernetes-pods</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/constant-vram-streaming-llm-inference-architectures-for-smart-electric-grid-sensors</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/consul-service-discovery-health-check-flapping-suppression-telemetry-for-hybrid-enterprise-networks</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -3697,6 +3775,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/continuous-inference-streaming-llm-runtimes-for-enterprise-financial-tickers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/continuous-metallurgical-ladle-slag-detection-agents-for-blast-furnace-supervisors</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -3728,6 +3812,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/continuous-pharmaceutical-twin-screw-wet-granulation-torque-telemetry-software-for-oral-dosage-plants</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/continuous-streaming-agent-latency-sla-calculators-for-high-concurrency-erp-bots</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/continuous-telemetry-anomaly-detection-agents-for-semiconductor-fabrication-cleanrooms</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5395,6 +5491,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dynamic-ring-buffer-resizing-controllers-for-bursty-enterprise-api-request-loads</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dynamic-sea-cable-touchdown-point-distributed-fiber-optic-dts-strain-telemetry-for-hvdc</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5420,6 +5522,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/dynamic-vision-sensor-optical-flow-temporal-event-density-monitors-for-high-speed-drones</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/dynamic-window-size-adaptation-algorithms-for-enterprise-customer-support-chats</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -7183,6 +7291,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/hardware-accelerated-ring-buffer-drivers-for-arm-grace-hopper-gh200-servers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/hardware-security-module-pkcs11-air-gapped-cryptographic-key-derivation-telemetry-for-autonomous-agents</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -7274,6 +7388,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/hierarchical-prefix-caching-routers-for-multi-agent-orchestration-platforms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/hierarchical-sliding-window-attention-controllers-for-long-horizon-multi-agent-swarms</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8293,7 +8413,25 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/infinite-horizon-attention-sink-optimizers-for-automotive-autonomous-driving-simulators</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/infinite-horizon-prompt-context-managers-for-autonomous-supply-chain-logistics</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/inflatable-spacecraft-habitat-kevlar-restraint-layer-hypervelocity-micrometeoroid-penetration-resistive-wire-mesh-telemetry</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/initial-token-anchor-caching-daemons-for-long-conversation-autonomous-sales-agents</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -9619,6 +9757,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/modular-circular-buffer-kv-allocators-for-real-time-smart-city-traffic-controllers</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/modular-ring-buffer-eviction-plugins-for-tensorrt-llm-and-sglang-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/module-lwe-polynomial-ring-lattice-attestation-telemetry-for-autonomous-state-checkpoints</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -9926,6 +10076,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/multi-stream-circular-ring-kv-allocators-for-enterprise-erp-transaction-feeds</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -12109,6 +12265,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/real-time-sliding-window-query-filters-for-automated-cyber-threat-hunting-swarms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/real-time-sliding-window-sentiment-evaluators-for-algorithmic-high-frequency-trading</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/real-time-token-spend-forecasting-and-budget-overrun-killswitch-telemetry-for-enterprise-ai-teams</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -12320,6 +12488,30 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/right-to-be-forgotten-automated-database-purge-attestation-telemetry-for-consumer-lending-apps</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ring-buffer-kv-cache-auto-scalers-for-sudden-financial-market-volatility-surges</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ring-buffer-kv-cache-health-monitors-for-sovereign-enterprise-ai-datacenters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ring-buffer-memory-fragmentation-analyzers-for-distributed-edge-ai-gateway-appliances</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ring-kv-eviction-memory-controllers-for-high-concurrency-freight-logistics-telematics</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -13273,7 +13465,73 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-cost-reduction-consultants-for-generative-ai-scaleups</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-kv-allocators-for-healthcare-patient-vital-monitoring</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/sliding-window-attention-kv-cache-offloading-agents-for-edge-gpu-multi-agent-deployments</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-latency-sla-monitoring-daemons-for-enterprise-cto-offices</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-memory-defragmenters-for-multi-tenant-cloud-kubernetes</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-performance-profilers-for-enterprise-vllm-and-mistral-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-streaming-agents-for-high-velocity-iot-telemetry</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-telemetry-routers-for-commercial-maritime-container-fleets</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-attention-token-reuse-benchmarks-for-sovereign-ai-labs-in-india</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-token-cache-buffers-for-real-time-conversational-voice-bots</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-token-memory-bounds-for-statutory-legal-compliance-discovery</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sliding-window-token-streaming-accelerators-for-telecom-5g-packet-inspection</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -13772,6 +14030,24 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/sovereign-private-key-multi-party-computation-mpc-signing-telemetry-for-digital-asset-custodians</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sovereign-sliding-window-deployment-blueprints-for-tier-4-datacenters-in-pune-and-bangalore</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sovereign-streaming-llm-deployment-blueprints-for-tier-4-datacenters-in-bangalore-and-chennai</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -14479,6 +14755,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/streaming-token-window-managers-for-industrial-chemical-reactor-telemetry</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/structured-note-derivative-payoff-simulation-software-for-wealth-platforms</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -14588,6 +14870,24 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/sub-50ms-finality-state-commitment-telemetry-for-sovereign-private-multi-agent-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sub-5ms-token-generation-streaming-agents-for-network-anomaly-surveillance</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sub-5ms-token-generation-streaming-clusters-for-automated-algorithmic-forex-arbitrage</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/sub-5ms-token-streaming-runtimes-for-real-time-broadcast-media-transcription</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -16909,6 +17209,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/zero-overhead-kv-tensor-sharing-runtimes-for-enterprise-supply-chain-agent-networks</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -16916,6 +17222,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/zero-prefill-latency-prefix-caching-solutions-for-real-time-algorithmic-trading-bots</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/zero-reallocation-ring-kv-memory-pools-for-high-frequency-banking-transactions</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -17234,6 +17546,12 @@
   </url>
   <url>
     <loc>https://elesium.online/videos/enterprise-agent-chunked-cross-attention-simulator</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/videos/enterprise-agent-sliding-window-attention-simulator</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
