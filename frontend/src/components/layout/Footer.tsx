@@ -70,6 +70,7 @@ export default function DownloadFooter() {
         { name: 'Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-pipeline-parallelism-simulator' },
         { name: 'Tensor Parallelism Simulator', path: '/tools/enterprise-agent-tensor-parallelism-simulator' },
         { name: 'Sequence Parallelism Simulator', path: '/tools/enterprise-agent-sequence-parallelism-simulator' },
+        { name: 'Expert Parallelism Simulator', path: '/tools/enterprise-agent-expert-parallelism-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

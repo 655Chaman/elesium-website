@@ -4113,6 +4113,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "NVLink 4 900 GB/s • InfiniBand NDR 400 GB/s • Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-40",
+            "slug": "enterprise-agent-expert-parallelism-simulator",
+            "keyword": "expert parallelism moe dynamic dispatch all to all overlap",
+            "key_benefit": "Sub-8ms Sparse MoE Inference & Top-k Routing Optimization",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & Distributed Systems Architects",
+            "youtube_id": "ExpPP64k",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A multi-GPU telemetry dashboard displaying sparse MoE dynamic token dispatch overlapping all-to-all collective communication with sub-8ms latency.",
+                            "voiceover": "Looking for expert parallelism with MoE dynamic dispatch and all-to-all overlap to run sparse foundation models with sub-8ms step latency?",
+                            "caption": "EXPERT PARALLELISM MOE DYNAMIC DISPATCH OVERLAP"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A distributed MoE model stalling on synchronous all-to-all barriers, wasting 40% of compute cycles waiting for remote expert token transfers.",
+                            "voiceover": "Cross-GPU all-to-all communication barriers stall sparse MoE clusters, burning up to 40% of compute cycles waiting for remote expert token transfers.",
+                            "caption": "ALL-TO-ALL BARRIERS // 40% STALLED COMPUTE"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated timeline showing top-k gating routing tokens into non-blocking NCCL all-to-all streams overlapped with attention projection GEMMs.",
+                            "voiceover": "Elesium shards expert networks across GPU ranks, overlapping non-blocking NCCL all-to-all dispatch and combine streams with self-attention projection GEMMs.",
+                            "caption": "EXPERT SHARDING // ASYNC ALL-TO-ALL DISPATCH OVERLAP"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A metrics HUD highlighting 95.2% communication overlap efficiency, sub-7.2ms forward step latency, and 82 Lakh INR annual GPU FinOps savings per node.",
+                            "voiceover": "We achieve 95.2% communication overlap efficiency, sustain sub-7.2ms forward step latencies, and recover over 82 Lakhs in annual GPU FinOps savings per node.",
+                            "caption": "95.2% OVERLAP // SUB-7.2MS LATENCY // ₹82L FINOPS SAVINGS"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Expert Parallelism Simulator UI with interactive EP degree and top-k sliders and instant architecture audit booking.",
+                            "voiceover": "Eliminate MoE dispatch bottlenecks across your GPU clusters today. Run the Expert Parallelism simulator on elesium.online.",
+                            "caption": "SIMULATE EXPERT PARALLELISM AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Step Latency",
+                            "value": "7.2ms",
+                            "detail": "P99 Forward Step",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Overlap Ratio",
+                            "value": "95.2%",
+                            "detail": "All-to-All Wire",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Experts / GPU",
+                            "value": "8",
+                            "detail": "64 Total Experts",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹82L",
+                            "detail": "Per GPU Cluster",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Top-k Dynamic Gating & Expert Sharding",
+                            "bullets": [
+                                    "Routing tokens dynamically to top-k active experts using softmax gating with auxiliary balancing loss",
+                                    "Sharding feed-forward expert networks across N distributed GPU ranks (EP degree)",
+                                    "Enforcing dynamic capacity factor multipliers to eliminate token drop risk under peak concurrency"
+                            ],
+                            "techStack": "PyTorch 2.4 • CUDA 12.4 • Megatron Core • DeepSeek MoE"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Asynchronous All-to-All Dispatch & Combine Streams",
+                            "bullets": [
+                                    "Pipelining token dispatch into micro-batches over non-blocking NCCL all-to-all streams",
+                                    "Overlapping cross-GPU token exchange with self-attention projection GEMM computations",
+                                    "Combining expert outputs concurrently with residual stream additions"
+                            ],
+                            "techStack": "NCCL 2.21 • CUDA Non-Blocking Streams • Pipelined Micro-Batches"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sovereign NVLink 4 & InfiniBand Fabric",
+                            "bullets": [
+                                    "Saturating 900 GB/s NVLink intra-node meshes and 400 GB/s InfiniBand NDR inter-node networks",
+                                    "Slashing cross-rank all-to-all dispatch latency under 1.8ms at wire speed",
+                                    "Deploying inside sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "NVLink 4 900 GB/s • InfiniBand NDR 400 GB/s • Sovereign VPC"
+                    }
+            ]
     }
 ]
 
