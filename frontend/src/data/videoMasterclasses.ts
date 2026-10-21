@@ -5575,6 +5575,156 @@ export const videoMasterclasses: VideoMasterclass[] = [
             }
         ],
         "fullTranscript": "Looking for speculative decoding tree-based draft verification and branch pruning to accelerate enterprise LLM decode throughput? Autoregressive generation reloads entire model weights for every single token, throttling GPU throughput and multiplying cloud spend. Elesium deploys tree-based draft verification with dynamic branch pruning, verifying branched candidate paths in a single sub-8ms CUDA pass. We accelerate decode throughput by 2.8x, accept up to 4.2 tokens per forward pass, and save over 68 Lakhs annually per enterprise cluster. Accelerate your enterprise model serving today. Run the Speculative Verification simulator on elesium.online."
+    },
+    {
+        "id": "sfv-36",
+        "slug": "enterprise-agent-prefill-decode-disaggregation-simulator",
+        "title": "Prefill Decode Disaggregation Chunked Prompt Execution Ttft \u2014 Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium",
+        "youtubeId": "PDDisagg60k",
+        "duration": "0:30",
+        "durationIso": "PT30S",
+        "uploadDate": "2026-10-19T08:00:00+05:30",
+        "industry": "Enterprise Infrastructure & High-Performance AI",
+        "category": "30s Short-Form Breakdown",
+        "videoType": "short",
+        "keyword": "prefill decode disaggregation chunked prompt execution ttft",
+        "keyBenefit": "Zero-Interference K-V Transport & Sub-15ms TTFT",
+        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
+        "executiveSummary": "A 30-second technical architecture breakdown of prefill decode disaggregation chunked prompt execution ttft for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
+        "roiMetrics": [
+            {
+                "label": "P99 TTFT",
+                "value": "12.4ms",
+                "detail": "Sub-15ms verified SLA",
+                "color": "#10B981"
+            },
+            {
+                "label": "TTFT Speedup",
+                "value": "14.6x",
+                "detail": "vs Unified baseline",
+                "color": "#06B6D4"
+            },
+            {
+                "label": "HOL Stalls",
+                "value": "0.05%",
+                "detail": "Near-zero interference",
+                "color": "#C387FF"
+            },
+            {
+                "label": "Annual Savings",
+                "value": "\u20b976L",
+                "detail": "Per GPU cluster",
+                "color": "#FBBF24"
+            }
+        ],
+        "keyMoments": [
+            {
+                "time": "00:00",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "description": "Looking for prefill-decode disaggregation and chunked prompt execution to eliminate head-of-line blocking and achieve sub-15ms TTFT?"
+            },
+            {
+                "time": "00:03",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "description": "Unified inference forces prompt prefilling and token decoding onto the same GPUs, causing catastrophic head-of-line stalls."
+            },
+            {
+                "time": "00:08",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "description": "Elesium physically disaggregates prefill and decode workers, streaming chunked KV-tensors over zero-copy RDMA in sub-1.2 milliseconds."
+            },
+            {
+                "time": "00:18",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "description": "We cut Time-to-First-Token by 14.6x under 15ms, eliminate 99.4% of scheduling stalls, and save over 76 Lakhs annually per enterprise cluster."
+            },
+            {
+                "time": "00:26",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "description": "Eliminate inference stalls in your enterprise infrastructure today. Run the Prefill-Decode Disaggregation simulator on elesium.online."
+            }
+        ],
+        "architectureStages": [
+            {
+                "stage": "Stage 01",
+                "name": "Distributed Chunked Prompt Prefilling",
+                "bullets": [
+                    "Partitioning long enterprise prompts into 512-token contiguous execution chunks",
+                    "Saturating dedicated compute-heavy H100 tensor cores without interfering with ongoing generation",
+                    "Eliminating batch-level queuing delays for multi-tenant conversational swarms"
+                ],
+                "techStack": "PyTorch 2.4 \u2022 CUDA 12.4 \u2022 vLLM \u2022 SGLang Chunked Prefill"
+            },
+            {
+                "stage": "Stage 02",
+                "name": "Zero-Copy RDMA KV-Cache Network Transport",
+                "bullets": [
+                    "Bypassing host CPU memory buffers via RoCE v2 and InfiniBand direct memory access",
+                    "Transferring computed key-value page blocks directly between GPU HBM in sub-1.2ms",
+                    "Maintaining continuous inter-token decode cadences without network jitter"
+                ],
+                "techStack": "RoCE v2 \u2022 InfiniBand RDMA \u2022 GPUDirect RDMA \u2022 UCX"
+            },
+            {
+                "stage": "Stage 03",
+                "name": "Sovereign Disaggregated Multi-Tenant Decoupling",
+                "bullets": [
+                    "Sizing prefill and decode worker pools independently for optimal GPU capital efficiency",
+                    "Guaranteeing strict sub-15ms TTFT SLAs for streaming conversational voice agents",
+                    "Deploying inside sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                ],
+                "techStack": "FastAPI \u2022 Prometheus \u2022 OpenTelemetry \u2022 Sovereign VPC"
+            }
+        ],
+        "timecodes": [
+            {
+                "time": "00:00 - 00:03",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "visual": "A terminal telemetry monitor displaying distributed prefill and decode worker pools transferring KV-cache blocks over RoCE v2 with sub-15ms TTFT.",
+                "voiceover": "Looking for prefill-decode disaggregation and chunked prompt execution to eliminate head-of-line blocking and achieve sub-15ms TTFT?",
+                "caption": "PREFILL DECODE DISAGGREGATION CHUNKED PROMPT EXECUTION TTFT"
+            },
+            {
+                "time": "00:03 - 00:08",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "visual": "An enterprise multi-tenant LLM cluster stalling ongoing decode requests whenever a 4,000-token prompt arrives, spiking inter-token latency by 400%.",
+                "voiceover": "Unified inference forces prompt prefilling and token decoding onto the same GPUs, causing catastrophic head-of-line stalls.",
+                "caption": "HEAD OF LINE BLOCKING // SPIKING INTER-TOKEN LATENCY"
+            },
+            {
+                "time": "00:08 - 00:18",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "visual": "An animated cluster architecture diagram showing dedicated compute-heavy prefill instances transferring KV-caches via zero-copy RDMA to memory-dense decode instances.",
+                "voiceover": "Elesium physically disaggregates prefill and decode workers, streaming chunked KV-tensors over zero-copy RDMA in sub-1.2 milliseconds.",
+                "caption": "PHYSICAL DISAGGREGATION // ZERO-COPY RDMA KV TRANSPORT"
+            },
+            {
+                "time": "00:18 - 00:26",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "visual": "A metrics HUD highlighting 12.4ms P99 TTFT, 14.6x latency reduction, 0.05% stalls, and 76 Lakh INR annual cluster FinOps savings.",
+                "voiceover": "We cut Time-to-First-Token by 14.6x under 15ms, eliminate 99.4% of scheduling stalls, and save over 76 Lakhs annually per enterprise cluster.",
+                "caption": "12.4MS TTFT // 14.6X SPEEDUP // \u20b976L FINOPS SAVINGS"
+            },
+            {
+                "time": "00:26 - 00:30",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "visual": "The Elesium Prefill-Decode Disaggregation Simulator UI with interactive GPU pool sliders and instant architecture audit booking.",
+                "voiceover": "Eliminate inference stalls in your enterprise infrastructure today. Run the Prefill-Decode Disaggregation simulator on elesium.online.",
+                "caption": "SIMULATE DISAGGREGATED INFERENCE AT ELESIUM.ONLINE"
+            }
+        ],
+        "fullTranscript": "Looking for prefill-decode disaggregation and chunked prompt execution to eliminate head-of-line blocking and achieve sub-15ms TTFT? Unified inference forces prompt prefilling and token decoding onto the same GPUs, causing catastrophic head-of-line stalls. Elesium physically disaggregates prefill and decode workers, streaming chunked KV-tensors over zero-copy RDMA in sub-1.2 milliseconds. We cut Time-to-First-Token by 14.6x under 15ms, eliminate 99.4% of scheduling stalls, and save over 76 Lakhs annually per enterprise cluster. Eliminate inference stalls in your enterprise infrastructure today. Run the Prefill-Decode Disaggregation simulator on elesium.online."
     }
 ];
 

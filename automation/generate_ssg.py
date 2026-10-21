@@ -3609,6 +3609,53 @@ def render_speculative_verification_embed_semantic_html():
 </div>
 """
 
+def render_prefill_decode_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-prefill-decode-disaggregation-simulator.
+    """
+    return """
+<div id="prerendered-agent-prefill-decode-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#10b981;font-family:monospace;margin-bottom:0.5rem;">TOOLS / INFERENCE DISAGGREGATION / TOOL #59</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Prefill-Decode Disaggregation Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model distributed chunked prompt prefilling, zero-copy RDMA KV-cache network transport, and dedicated decode pools to eliminate head-of-line blocking and guarantee sub-15ms TTFT SLAs.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Disaggregated Inference Telemetry Profile</h2>
+      <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Physically decouples compute-intensive prompt prefill from memory-bandwidth-bound token decode across dedicated GPU clusters.</p>
+      <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;font-family:monospace;font-size:0.85rem;">
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">P99 TTFT Latency: <strong>Sub-15ms Guaranteed</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Latency Reduction: <strong>Up to 14.6x vs Unified</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">HOL Stalls Eliminated: <strong>99.4% Efficiency</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid #1e293b;font-size:0.85rem;color:#64748b;text-align:right;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_prefill_decode_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-prefill-decode-disaggregation-simulator.
+    """
+    return """
+<div id="prerendered-agent-prefill-decode-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Prefill-Decode Disaggregation Simulator</h1>
+    <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">Chunked Prompt Prefill · Zero-Copy RDMA KV Transport · Sub-15ms TTFT</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Model distributed chunked prompt prefilling, zero-copy RDMA KV-cache network transport, and dedicated decode pools to eliminate head-of-line blocking and guarantee sub-15ms TTFT SLAs.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -5181,6 +5228,14 @@ def generate_ssg():
         "embed/agent-speculative-verification-simulator": {
             "title": "Embed: Speculative Verification Simulator",
             "desc": "Interactive embed widget calculating tree-based draft verification, non-uniform branch pruning, and single-pass CUDA verification kernels."
+        },
+        "tools/enterprise-agent-prefill-decode-disaggregation-simulator": {
+            "title": "Enterprise Prefill-Decode Disaggregation Simulator",
+            "desc": "Simulate prefill-decode disaggregation (PD-Disagg), chunked prompt execution, and zero-copy RDMA KV-cache network transport to eliminate head-of-line blocking and achieve sub-15ms TTFT."
+        },
+        "embed/agent-prefill-decode-disaggregation-simulator": {
+            "title": "Embed: Prefill-Decode Disaggregation Simulator",
+            "desc": "Interactive embed widget modeling prefill-decode disaggregation, zero-copy RDMA KV-cache network transport, and sub-15ms TTFT SLAs."
         }
     }
 
@@ -10091,6 +10146,84 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(speculative_verification_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-prefill-decode-disaggregation-simulator":
+            tool_content = render_prefill_decode_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            prefill_decode_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0.00",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Prefill-Decode Disaggregation Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(prefill_decode_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-prefill-decode-disaggregation-simulator":
+            embed_content = render_prefill_decode_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            prefill_decode_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Prefill-Decode Disaggregation Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(prefill_decode_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

@@ -141,6 +141,8 @@ const EnterpriseAgentKvCacheCompactionSimulator = lazy(() => import('./component
 const EmbedAgentKvCacheCompactionSimulator = lazy(() => import('./components/pages/EmbedAgentKvCacheCompactionSimulator'))
 const EnterpriseAgentSpeculativeVerificationSimulator = lazy(() => import('./components/pages/EnterpriseAgentSpeculativeVerificationSimulator'))
 const EmbedAgentSpeculativeVerificationSimulator = lazy(() => import('./components/pages/EmbedAgentSpeculativeVerificationSimulator'))
+const EnterpriseAgentPrefillDecodeSimulator = lazy(() => import('./components/pages/EnterpriseAgentPrefillDecodeSimulator'))
+const EmbedAgentPrefillDecodeSimulator = lazy(() => import('./components/pages/EmbedAgentPrefillDecodeSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -381,6 +383,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-speculative-verification-simulator" element={<EnterpriseAgentSpeculativeVerificationSimulator />} />
                             <Route path="/tools/agent-speculative-verification-simulator" element={<Navigate to="/tools/enterprise-agent-speculative-verification-simulator" replace />} />
                             <Route path="/embed/agent-speculative-verification-simulator" element={<EmbedAgentSpeculativeVerificationSimulator />} />
+                            <Route path="/tools/enterprise-agent-prefill-decode-disaggregation-simulator" element={<EnterpriseAgentPrefillDecodeSimulator />} />
+                            <Route path="/tools/agent-prefill-decode-disaggregation-simulator" element={<Navigate to="/tools/enterprise-agent-prefill-decode-disaggregation-simulator" replace />} />
+                            <Route path="/embed/agent-prefill-decode-disaggregation-simulator" element={<EmbedAgentPrefillDecodeSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

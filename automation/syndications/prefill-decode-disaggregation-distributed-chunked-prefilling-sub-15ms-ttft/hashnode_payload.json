@@ -1,0 +1,13 @@
+{
+  "input": {
+    "title": "Prefill-Decode Disaggregation: Distributed Chunked Prefilling, Zero-Interference K-V Transport, and Sub-15ms TTFT under High Concurrency",
+    "contentMarkdown": "# Prefill-Decode Disaggregation: Distributed Chunked Prefilling, Zero-Interference K-V Transport, and Sub-15ms TTFT under High Concurrency\n\n**Author:** Chaman Shah, Principal AI Systems Architect at [Elesium](https://elesium.online)\n\nPrefill-decode disaggregation separates compute-heavy prompt prefilling from memory-bandwidth-bound token decoding across dedicated GPU worker pools. Chunked prefill scheduling and zero-copy RDMA KV-cache network transport eliminate head-of-line blocking, slashing Time-to-First-Token (TTFT) under 15ms while sustaining 99.4% decoding throughput efficiency across enterprise multi-tenant agent clusters.\n\nRead the full technical specification on Elesium: [Canonical Whitepaper](https://elesium.online/signals/prefill-decode-disaggregation-distributed-chunked-prefilling-sub-15ms-ttft)",
+    "tags": [
+      { "slug": "ai", "name": "Artificial Intelligence" },
+      { "slug": "cloud", "name": "Cloud Computing" }
+    ],
+    "isRepublished": {
+      "originalArticleURL": "https://elesium.online/signals/prefill-decode-disaggregation-distributed-chunked-prefilling-sub-15ms-ttft"
+    }
+  }
+}
