@@ -3138,6 +3138,54 @@ def render_pagedattention_embed_semantic_html():
 </div>
 """
 
+def render_medusa_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-medusa-speculative-tree-simulator.
+    """
+    return """
+<div id="prerendered-agent-medusa-speculative-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#f59e0b;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Sovereign AI Acceleration Engine #49</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Medusa Multi-Head Tree-Attention &amp; Speculative Verification Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate candidate token tree generation, parallel verification kernels, rejection sampling acceptance rates, and sub-15ms per-token latencies across enterprise GPU clusters.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Medusa Multi-Head Tree-Attention Telemetry</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
+        <div style="background:#020617;border:1px solid #f59e0b40;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#f59e0b;margin:0 0 0.5rem 0;">Medusa Multi-Token Heads</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Generates candidate token trees directly from target model activations, eliminating auxiliary draft model VRAM footprint and memory bandwidth contention.</p>
+        </div>
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">Parallel Rejection Sampling Verification</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Verifies multiple candidate tokens concurrently in a single forward pass, slashing per-token generation latency below 15ms with 100% distribution fidelity.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_medusa_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-medusa-speculative-tree-simulator.
+    """
+    return """
+<div id="prerendered-agent-medusa-speculative-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Medusa Speculative Tree Simulator</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Medusa multi-head tree attention speedups, token latencies, and verification rates.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate candidate token tree generation, parallel verification kernels, rejection sampling acceptance rates, and sub-15ms per-token latencies across enterprise GPU clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#f59e0b;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -4630,6 +4678,14 @@ def generate_ssg():
         "embed/agent-pagedattention-cache-simulator": {
             "title": "GPU VRAM PagedAttention Allocator",
             "desc": "Interactive embed widget calculating GPU VRAM utilization, TTFT latency, and multi-agent concurrency capacity."
+        },
+        "tools/enterprise-agent-medusa-speculative-tree-simulator": {
+            "title": "Enterprise Autonomous Agent Medusa Multi-Head Tree-Attention & Speculative Verification Simulator",
+            "desc": "Simulate candidate token tree generation, parallel verification kernels, rejection sampling acceptance rates, and sub-15ms per-token latencies across enterprise GPU clusters."
+        },
+        "embed/agent-medusa-speculative-tree-simulator": {
+            "title": "Medusa Speculative Tree Simulator",
+            "desc": "Interactive embed widget calculating Medusa multi-head tree attention speedups, token latencies, and verification rates."
         }
     }
 
@@ -8729,6 +8785,92 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(pa_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-medusa-speculative-tree-simulator":
+            tool_content = render_medusa_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            medusa_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Enterprise Autonomous Agent Medusa Multi-Head Tree-Attention & Speculative Verification Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "Medusa Multi-Head Tree-Attention Decoding",
+                    "Parallel Rejection Sampling Verification Kernels",
+                    "Zero Auxiliary Model VRAM Footprint",
+                    "Sub-15ms Per-Token Latency Acceleration",
+                    "DPDP Act 2023 Air-Gapped Private VPC Compatibility"
+                ],
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Enterprise Solutions",
+                        "item": "https://elesium.online/solutions"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Medusa Speculative Tree Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(medusa_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-medusa-speculative-tree-simulator":
+            embed_content = render_medusa_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            medusa_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Medusa Speculative Tree Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(medusa_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

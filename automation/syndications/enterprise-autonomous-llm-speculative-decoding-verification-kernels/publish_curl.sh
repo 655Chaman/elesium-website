@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Syndication curl script
+echo "Syndication bundle ready for https://elesium.online/signals/enterprise-autonomous-llm-speculative-decoding-verification-kernels"

@@ -121,6 +121,8 @@ const EnterpriseAgentSmartContractSimulator = lazy(() => import('./components/pa
 const EmbedAgentSmartContractSimulator = lazy(() => import('./components/pages/EmbedAgentSmartContractSimulator'))
 const EnterpriseAgentPagedAttentionSimulator = lazy(() => import('./components/pages/EnterpriseAgentPagedAttentionSimulator'))
 const EmbedAgentPagedAttentionSimulator = lazy(() => import('./components/pages/EmbedAgentPagedAttentionSimulator'))
+const EnterpriseAgentMedusaSpeculativeSimulator = lazy(() => import('./components/pages/EnterpriseAgentMedusaSpeculativeSimulator'))
+const EmbedAgentMedusaSpeculativeSimulator = lazy(() => import('./components/pages/EmbedAgentMedusaSpeculativeSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -331,6 +333,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-pagedattention-cache-simulator" element={<EnterpriseAgentPagedAttentionSimulator />} />
                             <Route path="/tools/agent-pagedattention-cache-simulator" element={<Navigate to="/tools/enterprise-agent-pagedattention-cache-simulator" replace />} />
                             <Route path="/embed/agent-pagedattention-cache-simulator" element={<EmbedAgentPagedAttentionSimulator />} />
+                            <Route path="/tools/enterprise-agent-medusa-speculative-tree-simulator" element={<EnterpriseAgentMedusaSpeculativeSimulator />} />
+                            <Route path="/tools/agent-medusa-speculative-tree-simulator" element={<Navigate to="/tools/enterprise-agent-medusa-speculative-tree-simulator" replace />} />
+                            <Route path="/embed/agent-medusa-speculative-tree-simulator" element={<EmbedAgentMedusaSpeculativeSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

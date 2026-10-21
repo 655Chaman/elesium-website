@@ -2573,6 +2573,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "LangGraph \u2022 Redis \u2022 Pydantic v2 \u2022 Private VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-26",
+            "slug": "enterprise-agent-medusa-speculative-tree-simulator",
+            "keyword": "speculative decoding draft model verification kernels",
+            "key_benefit": "Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & LLM Runtime Engineers",
+            "youtube_id": "Med5Sp499m",
+            "hero_image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A terminal screen showing per-token generation latency dropping from 35ms to 11ms with green verification checkmarks.",
+                            "voiceover": "Searching for speculative decoding draft model verification kernels to achieve sub-15ms token latencies?",
+                            "caption": "SPECULATIVE DECODING DRAFT MODEL VERIFICATION KERNELS"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A latency comparison graph showing traditional autoregressive generation stalling on memory bandwidth while tensor cores sit idle.",
+                            "voiceover": "Autoregressive decoding leaves ninety percent of your GPU compute idle, bottlenecking real-time enterprise agent swarms on memory transfers.",
+                            "caption": "90% OF GPU COMPUTE WASTED IN AUTOREGRESSIVE LOOPS"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated Medusa candidate token tree evaluated concurrently in a single forward pass with zero auxiliary draft models.",
+                            "voiceover": "Elesium deploys Medusa multi-head tree-attention, verifying multiple speculative token branches in parallel with zero accuracy degradation.",
+                            "caption": "MEDUSA TREE ATTENTION // PARALLEL REJECTION SAMPLING"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A performance dashboard showing 3.1x speedup, 86.8% tree acceptance, and $112k annual compute savings.",
+                            "voiceover": "We achieve 3.1x faster token generation, maintain eighty-six percent acceptance rates, and triple throughput per H100 node.",
+                            "caption": "3.1X TOKEN SPEEDUP // 86.8% ACCEPTANCE RATE"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Medusa simulator interface with copyable embed modal and instant consultation booking.",
+                            "voiceover": "Accelerate your enterprise LLM inference today. Run the Medusa simulator on elesium.online.",
+                            "caption": "SIMULATE SPECULATIVE DECODING AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Token Latency",
+                            "value": "11.2ms",
+                            "detail": "Sub-15ms generation",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Speedup Gain",
+                            "value": "3.1x",
+                            "detail": "vs vanilla autoregressive",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Tree Acceptance",
+                            "value": "86.8%",
+                            "detail": "Rejection sampling match",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "$112k",
+                            "detail": "Hardware consolidation",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Medusa Multi-Head Candidate Tree Proposal",
+                            "bullets": [
+                                    "Lightweight feed-forward decoding heads attached directly to base model layer",
+                                    "Simultaneous generation of candidate token branches across depth 1 to 4",
+                                    "Zero auxiliary draft model checkpoint VRAM consumption"
+                            ],
+                            "techStack": "CUDA 12.4 \u2022 Medusa Heads \u2022 C++20 \u2022 PyTorch 2.4"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "2D Tree-Attention Mask Compilation",
+                            "bullets": [
+                                    "Compiling candidate sequence paths into specialized 2D tree-attention masks",
+                                    "Parallel verification of all proposed branches in a single forward pass",
+                                    "Eliminating cross-model synchronization latency and kernel bubbles"
+                            ],
+                            "techStack": "TensorRT-LLM \u2022 Tree-Attention \u2022 Triton \u2022 OpenTelemetry"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Exact Rejection Sampling & State Sync",
+                            "bullets": [
+                                    "Executing modified rejection sampling to guarantee 100% distribution fidelity",
+                                    "Instant resample from residual distribution on candidate rejection",
+                                    "Continuous logging of branch acceptance for self-tuning temperature loops"
+                            ],
+                            "techStack": "LangGraph \u2022 Redis \u2022 Pydantic v2 \u2022 Private VPC"
+                    }
+            ]
     }
 ]
 
