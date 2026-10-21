@@ -60,6 +60,7 @@ export default function DownloadFooter() {
         { name: 'LLM FP8 vs INT4 Quantization Simulator', path: '/tools/enterprise-agent-ptq-quantization-perplexity-simulator' },
         { name: 'FlashDecoding & Sequence Parallelism Simulator', path: '/tools/enterprise-agent-flashdecoding-parallelism-simulator' },
         { name: 'KV Cache Prefix Caching Simulator', path: '/tools/enterprise-agent-kvcache-prefix-caching-simulator' },
+        { name: 'Chunked Cross-Attention Simulator', path: '/tools/enterprise-agent-chunked-cross-attention-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

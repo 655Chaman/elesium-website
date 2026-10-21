@@ -3013,6 +3013,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "Kubernetes \u2022 Helm \u2022 OpenTelemetry \u2022 Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-30",
+            "slug": "enterprise-agent-chunked-cross-attention-simulator",
+            "keyword": "chunked cross attention document sharding enterprise rag",
+            "key_benefit": "Distributed Document Sharding & Sub-Second Query Reasoning",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & Distributed Systems Engineers",
+            "youtube_id": "CrssAttn54k",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A terminal telemetry monitor showing query reasoning latency dropping from 1840ms to 185ms with green checkmarks.",
+                            "voiceover": "Looking for chunked cross-attention document sharding to eliminate RAG context window latency blowup?",
+                            "caption": "CHUNKED CROSS ATTENTION DOCUMENT SHARDING ENTERPRISE RAG"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A GPU cluster monitor showing memory out-of-memory errors and quadratic self-attention stalls over 500k concatenated tokens.",
+                            "voiceover": "Concatenating massive document corpora into prompt contexts triggers quadratic attention stalls, causing multi-second query latency and memory out-of-memory errors.",
+                            "caption": "QUADRATIC ATTENTION BLOWUP // MULTI-SECOND RAG STALLS"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated diagram showing document shards distributed across NVLink GPU nodes with asynchronous cross-attention kernels and fused log-sum-exp reduction.",
+                            "voiceover": "Elesium deploys chunked cross-attention and tensor-parallel document sharding, executing asynchronous linear attention kernels across NVLink nodes with fused log-sum-exp reduction.",
+                            "caption": "PARALLEL SHARD ATTENTION // FUSED NVLINK REDUCTION"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A performance dashboard showing 10.2x speedup, 185ms latency, 76% memory cut, and 42 Lakh INR annual FinOps savings.",
+                            "voiceover": "We slash query reasoning latency from 1.8 seconds down to 185 milliseconds, cut memory footprint by 76%, and save over 42 Lakhs in annual GPU FinOps spend.",
+                            "caption": "10X RAG SPEEDUP // 185MS LATENCY // ₹42L FINOPS SAVINGS"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Chunked Cross-Attention Simulator interface with interactive corpus sliders and instant audit booking.",
+                            "voiceover": "Supercharge your enterprise document retrieval pipelines today. Run the Chunked Cross-Attention simulator on elesium.online.",
+                            "caption": "SIMULATE CHUNKED CROSS-ATTENTION AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Query Latency",
+                            "value": "185ms",
+                            "detail": "At 500k context",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Speedup Factor",
+                            "value": "10.2x",
+                            "detail": "vs quadratic RAG",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Memory Cut",
+                            "value": "-76%",
+                            "detail": "Decoupled KV shards",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹42L",
+                            "detail": "GPU FinOps reduction",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Corpus Ingestion & Shard Partitioning",
+                            "bullets": [
+                                    "Partitioning multi-gigabyte document corpora into 1024-token discrete tensor shards",
+                                    "Pre-encoding key-value representations and storing in persistent GPU memory pools",
+                                    "Enabling dynamic document shard insertion with zero re-indexing downtime"
+                            ],
+                            "techStack": "Triton \u2022 CUDA 12.4 \u2022 PyTorch 2.4 \u2022 FAISS Sharding"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Parallel Asynchronous Cross-Attention",
+                            "bullets": [
+                                    "Executing linear cross-attention over localized document shards simultaneously",
+                                    "Decoupling user query token generation from retrieved corpus representations",
+                                    "Achieving full Streaming Multiprocessor saturation across tensor-parallel nodes"
+                            ],
+                            "techStack": "TensorRT-LLM \u2022 vLLM \u2022 C++20 \u2022 Shared Memory IPC"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Fused Log-Sum-Exp NVLink Reduction",
+                            "bullets": [
+                                    "Streaming partial softmax logit maximums over high-bandwidth NVLink interconnects",
+                                    "Computing exact global attention weights without materializing full attention matrices",
+                                    "Deploying on sovereign air-gapped VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "Megatron-LM \u2022 NVLink 4/5 \u2022 OpenTelemetry \u2022 Sovereign VPC"
+                    }
+            ]
     }
 ]
 
