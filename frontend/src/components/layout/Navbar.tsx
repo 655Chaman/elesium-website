@@ -417,6 +417,12 @@ export default function Navbar() {
                             KVCompact
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-speculative-verification-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
+                        >
+                            SpecVerify
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -916,6 +922,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 KV-Cache Memory Compaction Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-speculative-verification-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Speculative Verification Simulator
                             </Link>
                             <Link
                                 to="/compare"

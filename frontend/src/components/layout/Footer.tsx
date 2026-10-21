@@ -65,6 +65,7 @@ export default function DownloadFooter() {
         { name: 'Multi-LoRA Dynamic Adapter Routing Simulator', path: '/tools/enterprise-agent-multi-lora-routing-simulator' },
         { name: 'Mixture-of-Depths Dynamic Compute Simulator', path: '/tools/enterprise-agent-mixture-of-depths-simulator' },
         { name: 'KV-Cache Memory Compaction Simulator', path: '/tools/enterprise-agent-kvcache-memory-compaction-simulator' },
+        { name: 'Speculative Verification Simulator', path: '/tools/enterprise-agent-speculative-verification-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
