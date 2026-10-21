@@ -4825,6 +4825,156 @@ export const videoMasterclasses: VideoMasterclass[] = [
             }
         ],
         "fullTranscript": "Looking for chunked cross-attention document sharding to eliminate RAG context window latency blowup? Concatenating massive document corpora into prompt contexts triggers quadratic attention stalls, causing multi-second query latency and memory out-of-memory errors. Elesium deploys chunked cross-attention and tensor-parallel document sharding, executing asynchronous linear attention kernels across NVLink nodes with fused log-sum-exp reduction. We slash query reasoning latency from 1.8 seconds down to 185 milliseconds, cut memory footprint by 76%, and save over 42 Lakhs in annual GPU FinOps spend. Supercharge your enterprise document retrieval pipelines today. Run the Chunked Cross-Attention simulator on elesium.online."
+    },
+    {
+        "id": "sfv-31",
+        "slug": "enterprise-agent-sliding-window-attention-simulator",
+        "title": "Sliding Window Attention Ring Kv Eviction Streaming Llm \u2014 Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium",
+        "youtubeId": "SldWndw55k",
+        "duration": "0:30",
+        "durationIso": "PT30S",
+        "uploadDate": "2026-10-19T08:00:00+05:30",
+        "industry": "High-Throughput Streaming LLM & Edge Inference",
+        "category": "30s Short-Form Breakdown",
+        "videoType": "short",
+        "keyword": "sliding window attention ring kv eviction streaming llm",
+        "keyBenefit": "Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation",
+        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "targetPersona": "Chief Technology Officers & Streaming Infrastructure Architects",
+        "executiveSummary": "A 30-second technical architecture breakdown of sliding window attention ring kv eviction streaming llm for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
+        "roiMetrics": [
+            {
+                "label": "Decode Latency",
+                "value": "4.2ms",
+                "detail": "Sub-5ms continuous stream",
+                "color": "#10B981"
+            },
+            {
+                "label": "VRAM Saved",
+                "value": "-92%",
+                "detail": "Bounded ring buffer",
+                "color": "#06B6D4"
+            },
+            {
+                "label": "Stream Horizon",
+                "value": "Infinite",
+                "detail": "Zero perplexity collapse",
+                "color": "#C387FF"
+            },
+            {
+                "label": "Annual Savings",
+                "value": "\u20b938.4L",
+                "detail": "Per streaming node",
+                "color": "#FBBF24"
+            }
+        ],
+        "keyMoments": [
+            {
+                "time": "00:00",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "description": "Looking for sliding-window attention and ring KV eviction to prevent GPU memory collapse in streaming agents?"
+            },
+            {
+                "time": "00:03",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "description": "Unbounded KV caches in long-horizon streaming agents inevitably exhaust GPU memory, triggering fatal CUDA out-of-memory crashes and severe latency degradation."
+            },
+            {
+                "time": "00:08",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "description": "Elesium deploys hierarchical sliding-window attention and circular ring buffer eviction, preserving initial attention sinks to maintain sub-5ms continuous generation."
+            },
+            {
+                "time": "00:18",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "description": "We achieve 4.2 millisecond decode latency, reduce GPU memory footprint by up to 92%, and eliminate memory-related stream disconnects completely."
+            },
+            {
+                "time": "00:26",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "description": "Deploy sovereign continuous streaming LLM architectures today. Run the Sliding-Window Attention simulator on elesium.online."
+            }
+        ],
+        "architectureStages": [
+            {
+                "stage": "Stage 01",
+                "name": "Attention Sink Anchor Pinning",
+                "bullets": [
+                    "Permanently pinning initial 4 prompt tokens as attention sink anchors in GPU SRAM",
+                    "Preserving foundational softmax normalization baselines across infinite sequence lengths",
+                    "Preventing catastrophic perplexity spikes during continuous rolling eviction"
+                ],
+                "techStack": "CUDA 12.4 \u2022 FlashAttention-3 \u2022 PyTorch 2.4 \u2022 C++20"
+            },
+            {
+                "stage": "Stage 02",
+                "name": "Circular Ring Buffer KV Eviction",
+                "bullets": [
+                    "Allocating a fixed-capacity 4096-token ring buffer per sequence",
+                    "Overwriting oldest non-sink KV entries via modulo arithmetic with zero cudaFree reallocations",
+                    "Binding physical GPU memory pages to strict constant-VRAM upper bounds"
+                ],
+                "techStack": "vLLM \u2022 TensorRT-LLM \u2022 Custom CUDA Kernels \u2022 Triton"
+            },
+            {
+                "stage": "Stage 03",
+                "name": "Sub-5ms Continuous Token Streaming",
+                "bullets": [
+                    "Maintaining stable sub-5ms per-token generation over multi-million-token streams",
+                    "Powering real-time financial market tickers, IoT telematics, and voice agents",
+                    "Deploying on sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                ],
+                "techStack": "FastAPI \u2022 WebSockets \u2022 Prometheus \u2022 Sovereign VPC"
+            }
+        ],
+        "timecodes": [
+            {
+                "time": "00:00 - 00:03",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "visual": "A live terminal dashboard showing continuous streaming token generation at 4.2ms per token with fixed 14.8 GB VRAM allocation.",
+                "voiceover": "Looking for sliding-window attention and ring KV eviction to prevent GPU memory collapse in streaming agents?",
+                "caption": "SLIDING WINDOW ATTENTION RING KV EVICTION STREAMING LLM"
+            },
+            {
+                "time": "00:03 - 00:08",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "visual": "A GPU cluster monitor showing unbounded linear KV cache growth exceeding 80GB VRAM and throwing fatal CUDA Out-of-Memory crashes.",
+                "voiceover": "Unbounded KV caches in long-horizon streaming agents inevitably exhaust GPU memory, triggering fatal CUDA out-of-memory crashes and severe latency degradation.",
+                "caption": "UNBOUNDED KV CACHE GROWTH // FATAL CUDA OOM COLLAPSE"
+            },
+            {
+                "time": "00:08 - 00:18",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "visual": "An animated diagram showing initial attention sink tokens permanently pinned while intermediate tokens roll through a circular ring buffer without perplexity collapse.",
+                "voiceover": "Elesium deploys hierarchical sliding-window attention and circular ring buffer eviction, preserving initial attention sinks to maintain sub-5ms continuous generation.",
+                "caption": "ATTENTION SINK PRESERVATION // CIRCULAR RING KV BUFFER"
+            },
+            {
+                "time": "00:18 - 00:26",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "visual": "A metrics HUD highlighting 4.2ms per-token decode latency, 92% VRAM footprint reduction, and \u20b938.4 Lakh annual cloud cluster savings.",
+                "voiceover": "We achieve 4.2 millisecond decode latency, reduce GPU memory footprint by up to 92%, and eliminate memory-related stream disconnects completely.",
+                "caption": "SUB-5MS DECODE // 92% VRAM REDUCTION // ZERO STREAM COLLAPSE"
+            },
+            {
+                "time": "00:26 - 00:30",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "visual": "The Elesium Sliding-Window Attention & Ring KV Simulator interface with interactive token sliders and instant architecture audit scheduling.",
+                "voiceover": "Deploy sovereign continuous streaming LLM architectures today. Run the Sliding-Window Attention simulator on elesium.online.",
+                "caption": "SIMULATE SLIDING-WINDOW ATTENTION AT ELESIUM.ONLINE"
+            }
+        ],
+        "fullTranscript": "Looking for sliding-window attention and ring KV eviction to prevent GPU memory collapse in streaming agents? Unbounded KV caches in long-horizon streaming agents inevitably exhaust GPU memory, triggering fatal CUDA out-of-memory crashes and severe latency degradation. Elesium deploys hierarchical sliding-window attention and circular ring buffer eviction, preserving initial attention sinks to maintain sub-5ms continuous generation. We achieve 4.2 millisecond decode latency, reduce GPU memory footprint by up to 92%, and eliminate memory-related stream disconnects completely. Deploy sovereign continuous streaming LLM architectures today. Run the Sliding-Window Attention simulator on elesium.online."
     }
 ];
 

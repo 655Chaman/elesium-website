@@ -3123,6 +3123,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "Megatron-LM \u2022 NVLink 4/5 \u2022 OpenTelemetry \u2022 Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-31",
+            "slug": "enterprise-agent-sliding-window-attention-simulator",
+            "keyword": "sliding window attention ring kv eviction streaming llm",
+            "key_benefit": "Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation",
+            "industry": "High-Throughput Streaming LLM & Edge Inference",
+            "target_persona": "Chief Technology Officers & Streaming Infrastructure Architects",
+            "youtube_id": "SldWndw55k",
+            "hero_image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A live terminal dashboard showing continuous streaming token generation at 4.2ms per token with fixed 14.8 GB VRAM allocation.",
+                            "voiceover": "Looking for sliding-window attention and ring KV eviction to prevent GPU memory collapse in streaming agents?",
+                            "caption": "SLIDING WINDOW ATTENTION RING KV EVICTION STREAMING LLM"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A GPU cluster monitor showing unbounded linear KV cache growth exceeding 80GB VRAM and throwing fatal CUDA Out-of-Memory crashes.",
+                            "voiceover": "Unbounded KV caches in long-horizon streaming agents inevitably exhaust GPU memory, triggering fatal CUDA out-of-memory crashes and severe latency degradation.",
+                            "caption": "UNBOUNDED KV CACHE GROWTH // FATAL CUDA OOM COLLAPSE"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated diagram showing initial attention sink tokens permanently pinned while intermediate tokens roll through a circular ring buffer without perplexity collapse.",
+                            "voiceover": "Elesium deploys hierarchical sliding-window attention and circular ring buffer eviction, preserving initial attention sinks to maintain sub-5ms continuous generation.",
+                            "caption": "ATTENTION SINK PRESERVATION // CIRCULAR RING KV BUFFER"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A metrics HUD highlighting 4.2ms per-token decode latency, 92% VRAM footprint reduction, and ₹38.4 Lakh annual cloud cluster savings.",
+                            "voiceover": "We achieve 4.2 millisecond decode latency, reduce GPU memory footprint by up to 92%, and eliminate memory-related stream disconnects completely.",
+                            "caption": "SUB-5MS DECODE // 92% VRAM REDUCTION // ZERO STREAM COLLAPSE"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Sliding-Window Attention & Ring KV Simulator interface with interactive token sliders and instant architecture audit scheduling.",
+                            "voiceover": "Deploy sovereign continuous streaming LLM architectures today. Run the Sliding-Window Attention simulator on elesium.online.",
+                            "caption": "SIMULATE SLIDING-WINDOW ATTENTION AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Decode Latency",
+                            "value": "4.2ms",
+                            "detail": "Sub-5ms continuous stream",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "VRAM Saved",
+                            "value": "-92%",
+                            "detail": "Bounded ring buffer",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Stream Horizon",
+                            "value": "Infinite",
+                            "detail": "Zero perplexity collapse",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹38.4L",
+                            "detail": "Per streaming node",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Attention Sink Anchor Pinning",
+                            "bullets": [
+                                    "Permanently pinning initial 4 prompt tokens as attention sink anchors in GPU SRAM",
+                                    "Preserving foundational softmax normalization baselines across infinite sequence lengths",
+                                    "Preventing catastrophic perplexity spikes during continuous rolling eviction"
+                            ],
+                            "techStack": "CUDA 12.4 \u2022 FlashAttention-3 \u2022 PyTorch 2.4 \u2022 C++20"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Circular Ring Buffer KV Eviction",
+                            "bullets": [
+                                    "Allocating a fixed-capacity 4096-token ring buffer per sequence",
+                                    "Overwriting oldest non-sink KV entries via modulo arithmetic with zero cudaFree reallocations",
+                                    "Binding physical GPU memory pages to strict constant-VRAM upper bounds"
+                            ],
+                            "techStack": "vLLM \u2022 TensorRT-LLM \u2022 Custom CUDA Kernels \u2022 Triton"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sub-5ms Continuous Token Streaming",
+                            "bullets": [
+                                    "Maintaining stable sub-5ms per-token generation over multi-million-token streams",
+                                    "Powering real-time financial market tickers, IoT telematics, and voice agents",
+                                    "Deploying on sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "FastAPI \u2022 WebSockets \u2022 Prometheus \u2022 Sovereign VPC"
+                    }
+            ]
     }
 ]
 

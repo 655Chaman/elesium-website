@@ -131,6 +131,8 @@ const EnterpriseAgentPrefixCachingSimulator = lazy(() => import('./components/pa
 const EmbedAgentPrefixCachingSimulator = lazy(() => import('./components/pages/EmbedAgentPrefixCachingSimulator'))
 const EnterpriseAgentCrossAttentionSimulator = lazy(() => import('./components/pages/EnterpriseAgentCrossAttentionSimulator'))
 const EmbedAgentCrossAttentionSimulator = lazy(() => import('./components/pages/EmbedAgentCrossAttentionSimulator'))
+const EnterpriseAgentSlidingWindowSimulator = lazy(() => import('./components/pages/EnterpriseAgentSlidingWindowSimulator'))
+const EmbedAgentSlidingWindowSimulator = lazy(() => import('./components/pages/EmbedAgentSlidingWindowSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -356,6 +358,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-chunked-cross-attention-simulator" element={<EnterpriseAgentCrossAttentionSimulator />} />
                             <Route path="/tools/agent-chunked-cross-attention-simulator" element={<Navigate to="/tools/enterprise-agent-chunked-cross-attention-simulator" replace />} />
                             <Route path="/embed/agent-chunked-cross-attention-simulator" element={<EmbedAgentCrossAttentionSimulator />} />
+                            <Route path="/tools/enterprise-agent-sliding-window-attention-simulator" element={<EnterpriseAgentSlidingWindowSimulator />} />
+                            <Route path="/tools/agent-sliding-window-attention-simulator" element={<Navigate to="/tools/enterprise-agent-sliding-window-attention-simulator" replace />} />
+                            <Route path="/embed/agent-sliding-window-attention-simulator" element={<EmbedAgentSlidingWindowSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

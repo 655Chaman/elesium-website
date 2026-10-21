@@ -94,6 +94,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-flashdecoding-parallelism-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-kvcache-prefix-caching-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-chunked-cross-attention-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-sliding-window-attention-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
