@@ -109,6 +109,8 @@ const EnterpriseAgentAiOpsSimulator = lazy(() => import('./components/pages/Ente
 const EmbedAgentAiOpsSimulator = lazy(() => import('./components/pages/EmbedAgentAiOpsSimulator'))
 const EnterpriseAgentVectorShardingSimulator = lazy(() => import('./components/pages/EnterpriseAgentVectorShardingSimulator'))
 const EmbedAgentVectorShardingSimulator = lazy(() => import('./components/pages/EmbedAgentVectorShardingSimulator'))
+const EnterpriseAgentChunkedPrefillSimulator = lazy(() => import('./components/pages/EnterpriseAgentChunkedPrefillSimulator'))
+const EmbedAgentChunkedPrefillSimulator = lazy(() => import('./components/pages/EmbedAgentChunkedPrefillSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -301,6 +303,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-vector-db-sharding-simulator" element={<EnterpriseAgentVectorShardingSimulator />} />
                             <Route path="/tools/agent-vector-db-sharding-simulator" element={<Navigate to="/tools/enterprise-agent-vector-db-sharding-simulator" replace />} />
                             <Route path="/embed/agent-vector-db-sharding-simulator" element={<EmbedAgentVectorShardingSimulator />} />
+                            <Route path="/tools/enterprise-agent-chunked-prefill-radix-attention-simulator" element={<EnterpriseAgentChunkedPrefillSimulator />} />
+                            <Route path="/tools/agent-chunked-prefill-radix-attention-simulator" element={<Navigate to="/tools/enterprise-agent-chunked-prefill-radix-attention-simulator" replace />} />
+                            <Route path="/embed/agent-chunked-prefill-radix-attention-simulator" element={<EmbedAgentChunkedPrefillSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

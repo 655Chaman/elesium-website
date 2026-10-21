@@ -292,11 +292,12 @@
     "keyword": "custom GPT alternatives for enterprise India",
     "intent": "Informational",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-21T06:08:38.566412",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "custom-gpt-alternatives-for-enterprise-india"
   },
   {
     "id": 26,

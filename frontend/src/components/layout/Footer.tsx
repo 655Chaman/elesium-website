@@ -50,6 +50,7 @@ export default function DownloadFooter() {
         { name: 'LLM Security Guardrails & NeMo Simulator', path: '/tools/enterprise-agent-nemo-guardrails-simulator' },
         { name: 'AIOps Incident Remediation & Chaos Simulator', path: '/tools/enterprise-agent-aiops-incident-remediation-simulator' },
         { name: 'Vector DB Sharding & HNSW Latency Simulator', path: '/tools/enterprise-agent-vector-db-sharding-simulator' },
+        { name: 'Chunked Prefill & Radix Attention Simulator', path: '/tools/enterprise-agent-chunked-prefill-radix-attention-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
