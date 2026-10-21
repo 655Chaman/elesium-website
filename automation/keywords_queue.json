@@ -304,11 +304,12 @@
     "keyword": "enterprise grade AI automation pipeline India",
     "intent": "Commercial",
     "category": "AI Automation",
-    "status": "PENDING",
-    "used_at": null,
+    "status": "USED",
+    "used_at": "2026-10-21T06:22:22.089474",
     "interaction_depth_tier": 1,
     "dominant_serp_feature": "ORGANIC_TOP",
-    "triage_channel": "TECHNICAL_WHITE_PAPER"
+    "triage_channel": "TECHNICAL_WHITE_PAPER",
+    "published_slug": "enterprise-grade-ai-automation-pipeline-india"
   },
   {
     "keyword": "best ai automation agency in india for manufacturing",

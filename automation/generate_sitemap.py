@@ -84,6 +84,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-aiops-incident-remediation-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-vector-db-sharding-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-chunked-prefill-radix-attention-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-mcp-tool-routing-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

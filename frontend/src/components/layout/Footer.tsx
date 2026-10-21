@@ -51,6 +51,7 @@ export default function DownloadFooter() {
         { name: 'AIOps Incident Remediation & Chaos Simulator', path: '/tools/enterprise-agent-aiops-incident-remediation-simulator' },
         { name: 'Vector DB Sharding & HNSW Latency Simulator', path: '/tools/enterprise-agent-vector-db-sharding-simulator' },
         { name: 'Chunked Prefill & Radix Attention Simulator', path: '/tools/enterprise-agent-chunked-prefill-radix-attention-simulator' },
+        { name: 'MCP Multi-Server Tool Routing Simulator', path: '/tools/enterprise-agent-mcp-tool-routing-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

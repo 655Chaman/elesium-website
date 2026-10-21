@@ -111,6 +111,8 @@ const EnterpriseAgentVectorShardingSimulator = lazy(() => import('./components/p
 const EmbedAgentVectorShardingSimulator = lazy(() => import('./components/pages/EmbedAgentVectorShardingSimulator'))
 const EnterpriseAgentChunkedPrefillSimulator = lazy(() => import('./components/pages/EnterpriseAgentChunkedPrefillSimulator'))
 const EmbedAgentChunkedPrefillSimulator = lazy(() => import('./components/pages/EmbedAgentChunkedPrefillSimulator'))
+const EnterpriseAgentMcpToolRoutingSimulator = lazy(() => import('./components/pages/EnterpriseAgentMcpToolRoutingSimulator'))
+const EmbedAgentMcpToolRoutingSimulator = lazy(() => import('./components/pages/EmbedAgentMcpToolRoutingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -306,6 +308,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-chunked-prefill-radix-attention-simulator" element={<EnterpriseAgentChunkedPrefillSimulator />} />
                             <Route path="/tools/agent-chunked-prefill-radix-attention-simulator" element={<Navigate to="/tools/enterprise-agent-chunked-prefill-radix-attention-simulator" replace />} />
                             <Route path="/embed/agent-chunked-prefill-radix-attention-simulator" element={<EmbedAgentChunkedPrefillSimulator />} />
+                            <Route path="/tools/enterprise-agent-mcp-tool-routing-simulator" element={<EnterpriseAgentMcpToolRoutingSimulator />} />
+                            <Route path="/tools/agent-mcp-tool-routing-simulator" element={<Navigate to="/tools/enterprise-agent-mcp-tool-routing-simulator" replace />} />
+                            <Route path="/embed/agent-mcp-tool-routing-simulator" element={<EmbedAgentMcpToolRoutingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
