@@ -2463,6 +2463,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "SnarkJS \u2022 Rust Halo2 \u2022 GitHub Actions \u2022 OpenTelemetry"
                     }
             ]
+    },
+    {
+            "id": "sfv-25",
+            "slug": "enterprise-agent-pagedattention-cache-simulator",
+            "keyword": "gpu vram pagedattention allocator",
+            "key_benefit": "Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut",
+            "industry": "Enterprise Infrastructure & High-Performance GPU Serving",
+            "target_persona": "Chief Technology Officers & LLM Platform Directors",
+            "youtube_id": "PvRamP489k",
+            "hero_image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A terminal screen flashing GPU Out-Of-Memory CUDA error across an 8x H100 cluster.",
+                            "voiceover": "Searching for a GPU VRAM PagedAttention allocator to stop enterprise agent swarms from crashing your cluster?",
+                            "caption": "GPU VRAM PAGEDATTENTION ALLOCATOR"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A memory allocation visualizer highlighting 65% idle, wasted VRAM reserved for worst-case token lengths.",
+                            "voiceover": "Traditional PyTorch contiguous allocation pre-reserves memory for 4,000 tokens, wasting sixty-five percent of your H100 VRAM and causing out-of-memory crashes.",
+                            "caption": "CONTIGUOUS MEMORY PRE-ALLOCATION WASTES 65% VRAM"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated block table routing virtual sequence tokens into non-contiguous physical GPU pages in real time.",
+                            "voiceover": "Elesium's PagedAttention partitions KV cache into discrete virtual blocks, while chunked prefill co-schedules decodes to decouple latency.",
+                            "caption": "PAGEDATTENTION VIRTUAL BLOCKS // CHUNKED PREFILL"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A high-contrast metric card showing 96.8% memory utilization and 74% lower Time-to-First-Token.",
+                            "voiceover": "We achieve ninety-six percent VRAM utilization, slash Time-to-First-Token by seventy-four percent, and triple concurrency per GPU node.",
+                            "caption": "96.8% VRAM UTILIZATION // 74% FASTER TTFT"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "Elesium's sovereign private VPC deployment dashboard with a single frictionless booking button.",
+                            "voiceover": "Eliminate GPU memory fragmentation. Run the PagedAttention simulator on elesium.online.",
+                            "caption": "SIMULATE YOUR VRAM AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "VRAM Utilization",
+                            "value": "96.8%",
+                            "detail": "Virtual block paging",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "TTFT Latency Cut",
+                            "value": "-74%",
+                            "detail": "Chunked prefill",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Concurrency Boost",
+                            "value": "3.89x",
+                            "detail": "Streams per H100",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Cluster OPEX Cut",
+                            "value": "-68%",
+                            "detail": "Annual GPU savings",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Virtual Page Table Block Allocation",
+                            "bullets": [
+                                    "Partitioning KV cache into 16-token non-contiguous physical memory blocks",
+                                    "Decoupling logical sequence progression from physical VRAM layouts",
+                                    "Zero internal and external fragmentation across multi-tenant GPU memory"
+                            ],
+                            "techStack": "CUDA 12.4 \u2022 vLLM \u2022 C++20 \u2022 PyTorch 2.4"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Chunked Prefill & Iteration-Level Batching",
+                            "bullets": [
+                                    "Dividing 8,000-token prompts into 512-token compute chunks",
+                                    "Co-scheduling prompt prefill with ongoing token decode passes",
+                                    "Eliminating tensor core starvation and p99 inference latency spikes"
+                            ],
+                            "techStack": "TensorRT-LLM \u2022 In-Flight Batching \u2022 Triton \u2022 OpenTelemetry"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Copy-on-Write Multi-Agent State Sharing",
+                            "bullets": [
+                                    "Sharing physical prompt memory across parallel reasoning branches",
+                                    "Allocating new physical blocks only when an agent diverges in generation",
+                                    "Slashing multi-agent tree-of-thought memory consumption by 55%"
+                            ],
+                            "techStack": "LangGraph \u2022 Redis \u2022 Pydantic v2 \u2022 Private VPC"
+                    }
+            ]
     }
 ]
 

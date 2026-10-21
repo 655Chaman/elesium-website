@@ -119,6 +119,8 @@ const EnterpriseAgentTallyErpSimulator = lazy(() => import('./components/pages/E
 const EmbedAgentTallyErpSimulator = lazy(() => import('./components/pages/EmbedAgentTallyErpSimulator'))
 const EnterpriseAgentSmartContractSimulator = lazy(() => import('./components/pages/EnterpriseAgentSmartContractSimulator'))
 const EmbedAgentSmartContractSimulator = lazy(() => import('./components/pages/EmbedAgentSmartContractSimulator'))
+const EnterpriseAgentPagedAttentionSimulator = lazy(() => import('./components/pages/EnterpriseAgentPagedAttentionSimulator'))
+const EmbedAgentPagedAttentionSimulator = lazy(() => import('./components/pages/EmbedAgentPagedAttentionSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -326,6 +328,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-smart-contract-formal-verification-simulator" element={<EnterpriseAgentSmartContractSimulator />} />
                             <Route path="/tools/agent-smart-contract-formal-verification-simulator" element={<Navigate to="/tools/enterprise-agent-smart-contract-formal-verification-simulator" replace />} />
                             <Route path="/embed/agent-smart-contract-formal-verification-simulator" element={<EmbedAgentSmartContractSimulator />} />
+                            <Route path="/tools/enterprise-agent-pagedattention-cache-simulator" element={<EnterpriseAgentPagedAttentionSimulator />} />
+                            <Route path="/tools/agent-pagedattention-cache-simulator" element={<Navigate to="/tools/enterprise-agent-pagedattention-cache-simulator" replace />} />
+                            <Route path="/embed/agent-pagedattention-cache-simulator" element={<EmbedAgentPagedAttentionSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

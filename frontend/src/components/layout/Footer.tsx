@@ -55,6 +55,7 @@ export default function DownloadFooter() {
         { name: 'Industrial IoT & OPC-UA Simulator', path: '/tools/enterprise-agent-industrial-iot-opc-ua-simulator' },
         { name: 'Tally ERP XML & GST Reconciliation Simulator', path: '/tools/enterprise-agent-tally-erp-xml-simulator' },
         { name: 'Smart Contract Formal Verification Simulator', path: '/tools/enterprise-agent-smart-contract-formal-verification-simulator' },
+        { name: 'GPU VRAM PagedAttention & KV-Cache Simulator', path: '/tools/enterprise-agent-pagedattention-cache-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
