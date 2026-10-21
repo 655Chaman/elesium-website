@@ -125,6 +125,8 @@ const EnterpriseAgentMedusaSpeculativeSimulator = lazy(() => import('./component
 const EmbedAgentMedusaSpeculativeSimulator = lazy(() => import('./components/pages/EmbedAgentMedusaSpeculativeSimulator'))
 const EnterpriseAgentPtqQuantizationSimulator = lazy(() => import('./components/pages/EnterpriseAgentPtqQuantizationSimulator'))
 const EmbedAgentPtqQuantizationSimulator = lazy(() => import('./components/pages/EmbedAgentPtqQuantizationSimulator'))
+const EnterpriseAgentFlashDecodingSimulator = lazy(() => import('./components/pages/EnterpriseAgentFlashDecodingSimulator'))
+const EmbedAgentFlashDecodingSimulator = lazy(() => import('./components/pages/EmbedAgentFlashDecodingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -341,6 +343,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-ptq-quantization-perplexity-simulator" element={<EnterpriseAgentPtqQuantizationSimulator />} />
                             <Route path="/tools/agent-ptq-quantization-perplexity-simulator" element={<Navigate to="/tools/enterprise-agent-ptq-quantization-perplexity-simulator" replace />} />
                             <Route path="/embed/agent-ptq-quantization-perplexity-simulator" element={<EmbedAgentPtqQuantizationSimulator />} />
+                            <Route path="/tools/enterprise-agent-flashdecoding-parallelism-simulator" element={<EnterpriseAgentFlashDecodingSimulator />} />
+                            <Route path="/tools/agent-flashdecoding-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-flashdecoding-parallelism-simulator" replace />} />
+                            <Route path="/embed/agent-flashdecoding-parallelism-simulator" element={<EmbedAgentFlashDecodingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

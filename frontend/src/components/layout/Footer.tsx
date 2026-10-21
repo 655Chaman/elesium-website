@@ -58,6 +58,7 @@ export default function DownloadFooter() {
         { name: 'GPU VRAM PagedAttention & KV-Cache Simulator', path: '/tools/enterprise-agent-pagedattention-cache-simulator' },
         { name: 'Medusa Speculative Tree Simulator', path: '/tools/enterprise-agent-medusa-speculative-tree-simulator' },
         { name: 'LLM FP8 vs INT4 Quantization Simulator', path: '/tools/enterprise-agent-ptq-quantization-perplexity-simulator' },
+        { name: 'FlashDecoding & Sequence Parallelism Simulator', path: '/tools/enterprise-agent-flashdecoding-parallelism-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

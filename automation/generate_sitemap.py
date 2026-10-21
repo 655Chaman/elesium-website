@@ -91,6 +91,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-pagedattention-cache-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-medusa-speculative-tree-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-ptq-quantization-perplexity-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-flashdecoding-parallelism-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
