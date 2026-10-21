@@ -381,6 +381,12 @@ export default function Navbar() {
                             FlashDecode
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-kvcache-prefix-caching-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-teal-400 dark:text-teal-300"
+                        >
+                            PrefixCache
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -838,6 +844,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-blue-400 dark:text-blue-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 FlashDecoding &amp; Sequence Parallelism Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-kvcache-prefix-caching-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-teal-400 dark:text-teal-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                KV Cache Prefix Caching Simulator
                             </Link>
                             <Link
                                 to="/compare"

@@ -3280,6 +3280,53 @@ def render_flashdecoding_embed_semantic_html():
 </div>
 """
 
+def render_prefix_caching_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-kvcache-prefix-caching-simulator.
+    """
+    return """
+<div id="prerendered-agent-prefix-caching-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;margin-bottom:0.5rem;">TOOLS / INFRASTRUCTURE & COMPUTE / TOOL #52</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise LLM KV Cache Prefix Caching & Radix Attention Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Radix tree KV reuse, zero-copy memory page sharing, and prefill compute elimination across high-concurrency multi-agent clusters. Quantify TTFT latency acceleration, redundant VRAM savings, and annual FinOps payback.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Radix Tree Prefix Caching Execution Profile</h2>
+      <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Simulate shared system prompt and RAG context reuse across NVIDIA H100 and Blackwell clusters for Llama-3 70B and DeepSeek-R1 671B MoE architectures.</p>
+      <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;font-family:monospace;font-size:0.85rem;">
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Prefix Hit Rate: <strong>Up to 99.2%</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Prefill Latency Cut: <strong>-85% TTFT</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Zero-Copy Memory: <strong>Sub-30ms SLA</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid #1e293b;font-size:0.85rem;color:#64748b;text-align:right;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#38bdf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_prefix_caching_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-kvcache-prefix-caching-simulator.
+    """
+    return """
+<div id="prerendered-agent-prefix-caching-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">KV Cache Prefix Caching Simulator</h1>
+    <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Radix Attention · Zero-Copy Memory · TTFT Acceleration</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate Radix tree KV reuse, zero-copy memory page sharing, prefill compute elimination, and TTFT latency acceleration for multi-tenant agent clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#38bdf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -4796,6 +4843,14 @@ def generate_ssg():
         "embed/agent-flashdecoding-parallelism-simulator": {
             "title": "FlashDecoding & Sequence Parallelism Simulator",
             "desc": "Interactive embed widget calculating FlashDecoding split-KV speedups, RingAttention sequence parallelism, and long-context latency."
+        },
+        "tools/enterprise-agent-kvcache-prefix-caching-simulator": {
+            "title": "Enterprise Agent KV Cache Prefix Caching Simulator",
+            "desc": "Simulate Radix tree KV reuse, zero-copy memory virtualization, prefill compute elimination, and TTFT latency acceleration for multi-tenant agent clusters."
+        },
+        "embed/agent-kvcache-prefix-caching-simulator": {
+            "title": "KV Cache Prefix Caching Simulator",
+            "desc": "Interactive embed widget calculating Radix tree prefix hit rates, zero-copy memory page savings, and sub-30ms TTFT latency."
         }
     }
 
@@ -9153,6 +9208,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(flashdecoding_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-kvcache-prefix-caching-simulator":
+            tool_content = render_prefix_caching_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            prefix_caching_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Enterprise Tools",
+                        "item": "https://elesium.online/tools/enterprise-ai-roi-calculator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": title,
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(prefix_caching_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-kvcache-prefix-caching-simulator":
+            embed_content = render_prefix_caching_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            prefix_caching_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "KV Cache Prefix Caching Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(prefix_caching_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

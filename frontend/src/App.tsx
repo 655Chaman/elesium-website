@@ -127,6 +127,8 @@ const EnterpriseAgentPtqQuantizationSimulator = lazy(() => import('./components/
 const EmbedAgentPtqQuantizationSimulator = lazy(() => import('./components/pages/EmbedAgentPtqQuantizationSimulator'))
 const EnterpriseAgentFlashDecodingSimulator = lazy(() => import('./components/pages/EnterpriseAgentFlashDecodingSimulator'))
 const EmbedAgentFlashDecodingSimulator = lazy(() => import('./components/pages/EmbedAgentFlashDecodingSimulator'))
+const EnterpriseAgentPrefixCachingSimulator = lazy(() => import('./components/pages/EnterpriseAgentPrefixCachingSimulator'))
+const EmbedAgentPrefixCachingSimulator = lazy(() => import('./components/pages/EmbedAgentPrefixCachingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -346,6 +348,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-flashdecoding-parallelism-simulator" element={<EnterpriseAgentFlashDecodingSimulator />} />
                             <Route path="/tools/agent-flashdecoding-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-flashdecoding-parallelism-simulator" replace />} />
                             <Route path="/embed/agent-flashdecoding-parallelism-simulator" element={<EmbedAgentFlashDecodingSimulator />} />
+                            <Route path="/tools/enterprise-agent-kvcache-prefix-caching-simulator" element={<EnterpriseAgentPrefixCachingSimulator />} />
+                            <Route path="/tools/agent-kvcache-prefix-caching-simulator" element={<Navigate to="/tools/enterprise-agent-kvcache-prefix-caching-simulator" replace />} />
+                            <Route path="/embed/agent-kvcache-prefix-caching-simulator" element={<EmbedAgentPrefixCachingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

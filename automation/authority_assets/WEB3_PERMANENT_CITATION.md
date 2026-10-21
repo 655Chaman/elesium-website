@@ -1,9 +1,9 @@
 # Elesium Sovereign Web3 & Decentralized Entity Ledger
 
 > **Methodology:** Matt McDermott (*SEO Rockstars 2026: Web3 & Decentralized Platforms*)  
-> **Master IPFS Content Identifier (CID):** `QmSwH4Pr5mG4NMDf3kqVcijSeFU4EmvDgcyKXcueYYDJpj`  
-> **Master SHA-256 Hash:** `444d98973a4f701189abe13d484b8ed29b36854a69abe69fefc87da7a37fe7a4`  
-> **Total Cryptographically Anchored Routes:** `2767` URLs  
+> **Master IPFS Content Identifier (CID):** `QmNykuFoNZL8XmgZBL8wrn3RCNfkzFREf6Y73qVcDKZFSD`  
+> **Master SHA-256 Hash:** `09817dd3c465c9b7ab763c61443be91cdd0ddabfa340e9e4f352b727cb79b60e`  
+> **Total Cryptographically Anchored Routes:** `2820` URLs  
 
 ---
 
@@ -11,8 +11,8 @@
 
 - **ENS Domain**: `elesium.eth` ([Limo Gateway](https://elesium.eth.limo))
 - **Unstoppable Domain**: `elesium.crypto`
-- **Cloudflare IPFS Gateway**: [https://cloudflare-ipfs.com/ipfs/QmSwH4Pr5mG4NMDf3kqVcijSeFU4EmvDgcyKXcueYYDJpj](https://cloudflare-ipfs.com/ipfs/QmSwH4Pr5mG4NMDf3kqVcijSeFU4EmvDgcyKXcueYYDJpj)
-- **Global IPFS Gateway**: [https://ipfs.io/ipfs/QmSwH4Pr5mG4NMDf3kqVcijSeFU4EmvDgcyKXcueYYDJpj](https://ipfs.io/ipfs/QmSwH4Pr5mG4NMDf3kqVcijSeFU4EmvDgcyKXcueYYDJpj)
+- **Cloudflare IPFS Gateway**: [https://cloudflare-ipfs.com/ipfs/QmNykuFoNZL8XmgZBL8wrn3RCNfkzFREf6Y73qVcDKZFSD](https://cloudflare-ipfs.com/ipfs/QmNykuFoNZL8XmgZBL8wrn3RCNfkzFREf6Y73qVcDKZFSD)
+- **Global IPFS Gateway**: [https://ipfs.io/ipfs/QmNykuFoNZL8XmgZBL8wrn3RCNfkzFREf6Y73qVcDKZFSD](https://ipfs.io/ipfs/QmNykuFoNZL8XmgZBL8wrn3RCNfkzFREf6Y73qVcDKZFSD)
 
 ---
 
@@ -22,10 +22,10 @@ Every publication on `elesium.online` is compiled into a deterministic pre-rende
 
 | Route Category | URLs Verified | Primary Hash Standard | Permanent Storage Gateway |
 | :--- | :--- | :--- | :--- |
-| **Market Signals (System 1)** | 95 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Compact Solutions (System 2)** | 2565 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Video Masterclasses & Scripts** | 32 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
-| **Interactive Micro-SaaS Tools** | 51 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Market Signals (System 1)** | 96 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Compact Solutions (System 2)** | 2615 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Video Masterclasses & Scripts** | 33 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
+| **Interactive Micro-SaaS Tools** | 52 | SHA-256 + IPFS CIDv0 | Cloudflare IPFS Mirror |
 
 ---
 
@@ -33,17 +33,17 @@ Every publication on `elesium.online` is compiled into a deterministic pre-rende
 
 | URL | Path Suffix | SHA-256 Digest | IPFS CID |
 | :--- | :--- | :--- | :--- |
-| `https://elesium.online/` | `home` | `950f6386e72a8fa8...` | `QmYNX4ogNH18oC3o...` |
-| `https://elesium.online/ai-automation` | `ai-automation` | `5ff8a8491df1f9ec...` | `QmUoHMXL3k2hPYvG...` |
-| `https://elesium.online/ai-automation-agency-india` | `ai-automation-agency-india` | `30c3772f480a752f...` | `QmRd19e51c9TZ6XD...` |
-| `https://elesium.online/audit` | `audit` | `8999ef1e732173b5...` | `QmXbnhoA6MqebW1W...` |
-| `https://elesium.online/compare` | `compare` | `35189880eed7d5a8...` | `QmRuv524GwoRLPtJ...` |
-| `https://elesium.online/compare/custom-multi-agent-systems-vs-zapier-enterprise` | `compare/custom-multi-agent-systems-vs-zapier-enterprise` | `4368dd4dc206c574...` | `QmSsnmVeppBVzNJZ...` |
-| `https://elesium.online/compare/deterministic-state-machines-vs-react-agents` | `compare/deterministic-state-machines-vs-react-agents` | `0012e47b215fc249...` | `QmNLwRCxTXbQm3ni...` |
-| `https://elesium.online/compare/elesium-vs-big-4-consulting-firms` | `compare/elesium-vs-big-4-consulting-firms` | `15a684b8d68466ec...` | `QmPoAYL17EtB3jRt...` |
-| `https://elesium.online/compare/elesium-vs-traditional-it-consultancies` | `compare/elesium-vs-traditional-it-consultancies` | `1020030bedded60c...` | `QmPRbYWuWwVeYZv2...` |
-| `https://elesium.online/compare/fastapi-async-worker-vs-celery-redis-llm` | `compare/fastapi-async-worker-vs-celery-redis-llm` | `f39a5b6f4f82e55b...` | `QmejaJ2TqbuZsKaw...` |
-| `https://elesium.online/compare/langgraph-vs-autogen-studio-multi-agent` | `compare/langgraph-vs-autogen-studio-multi-agent` | `5f85026c8e2a0e84...` | `QmUmX5JoSAvJafGB...` |
-| `https://elesium.online/compare/langgraph-vs-crewai-enterprise` | `compare/langgraph-vs-crewai-enterprise` | `8e2e446cd1ac0a2d...` | `QmXufXD4Cy5Hokr6...` |
+| `https://elesium.online/` | `home` | `5ed158baa48d732e...` | `QmUinBQrDXz4MCvM...` |
+| `https://elesium.online/ai-automation` | `ai-automation` | `3c06ee699c86bfc7...` | `QmSNyJSRuq739DoR...` |
+| `https://elesium.online/ai-automation-agency-india` | `ai-automation-agency-india` | `640976e6cead0be6...` | `QmV59rEk86Gh21NR...` |
+| `https://elesium.online/audit` | `audit` | `d19cdbb3e8df2715...` | `QmcSteLatxDnXgMY...` |
+| `https://elesium.online/compare` | `compare` | `dd2aba34ffa4b3fb...` | `QmdDzbhSrffojzn6...` |
+| `https://elesium.online/compare/custom-multi-agent-systems-vs-zapier-enterprise` | `compare/custom-multi-agent-systems-vs-zapier-enterprise` | `d7adae32822a7a6b...` | `QmcrZy84n2sRpT4D...` |
+| `https://elesium.online/compare/deterministic-state-machines-vs-react-agents` | `compare/deterministic-state-machines-vs-react-agents` | `b36167f6d95bc64e...` | `QmaQsqKUYhY81T1G...` |
+| `https://elesium.online/compare/elesium-vs-big-4-consulting-firms` | `compare/elesium-vs-big-4-consulting-firms` | `1f4ffe0eab4f5607...` | `QmQSt6Q1MP1SG9hV...` |
+| `https://elesium.online/compare/elesium-vs-traditional-it-consultancies` | `compare/elesium-vs-traditional-it-consultancies` | `4ce5249c62f2da84...` | `QmTWpMF1UanPB6i4...` |
+| `https://elesium.online/compare/fastapi-async-worker-vs-celery-redis-llm` | `compare/fastapi-async-worker-vs-celery-redis-llm` | `93f717473f859f14...` | `QmYJFAnis116d1y8...` |
+| `https://elesium.online/compare/langgraph-vs-autogen-studio-multi-agent` | `compare/langgraph-vs-autogen-studio-multi-agent` | `0052742b136f202c...` | `QmNMudcaDBB9eGBk...` |
+| `https://elesium.online/compare/langgraph-vs-crewai-enterprise` | `compare/langgraph-vs-crewai-enterprise` | `9ba34c6b02712b1c...` | `QmYpCKncDVN4rjzW...` |
 
-*(... and 2755 additional URLs tracked in web3.json)*
+*(... and 2808 additional URLs tracked in web3.json)*
