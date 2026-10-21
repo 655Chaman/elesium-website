@@ -333,13 +333,14 @@
     "dominant_above_fold_feature": "ORGANIC_STRIKING",
     "interaction_depth_score": 1,
     "triage_channel": "TECHNICAL_WHITE_PAPER",
-    "status": "PENDING",
+    "status": "USED",
     "source": "GSC_DAY2_PATTERN_ENGINE",
     "id": 28,
     "intent": "Informational",
     "category": "AI Automation",
-    "used_at": null,
+    "used_at": "2026-10-21T06:59:45.027616",
     "interaction_depth_tier": 1,
-    "dominant_serp_feature": "ORGANIC_STRIKING"
+    "dominant_serp_feature": "ORGANIC_STRIKING",
+    "published_slug": "how-to-automate-tally-erp-with-llm-agents"
   }
 ]

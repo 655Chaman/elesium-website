@@ -2994,6 +2994,54 @@ def render_industrial_iot_embed_semantic_html():
 </div>
 """
 
+def render_tally_erp_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-tally-erp-xml-simulator.
+    """
+    return """
+<div id="prerendered-agent-tally-erp-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2.5rem;text-align:center;">
+    <div style="color:#10b981;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Sovereign FinOps Gateway Engine #46</div>
+    <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Tally ERP / Prime XML Gateway &amp; Ledger Reconciliation Simulator</h1>
+    <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate TDL XML-over-HTTP port 9000 voucher ingestion, layout-aware invoice OCR, straight-through processing (STP) rates, and statutory GST Rule 36(4) Input Tax Credit reconciliation.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
+      <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Tally Prime XML &amp; GST Rule 36(4) Telemetry</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
+        <div style="background:#020617;border:1px solid #10b98140;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#10b981;margin:0 0 0.5rem 0;">TDL XML-over-HTTP (Port 9000)</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Connects directly to Tally Prime's local HTTP server to generate strict double-entry XML voucher envelopes with sub-40ms execution.</p>
+        </div>
+        <div style="background:#020617;border:1px solid #6366f140;border-radius:0.75rem;padding:1rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:#6366f1;margin:0 0 0.5rem 0;">GST Rule 36(4) Verification</h3>
+          <p style="font-size:0.85rem;color:#94a3b8;margin:0;">Cross-references vendor invoice lines against live GSTR-2B ITC returns, halting payment posting to prevent statutory 18% tax penalties.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def render_tally_erp_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-tally-erp-xml-simulator.
+    """
+    return """
+<div id="prerendered-agent-tally-erp-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="border-bottom:1px solid #1e293b;padding-bottom:1rem;margin-bottom:1.5rem;">
+    <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Tally ERP LLM Agent Reconciliation Sandbox</h1>
+    <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Tally Prime XML-over-HTTP port 9000 latency, straight-through processing rates, and GST Rule 36(4) verification.</p>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate TDL XML-over-HTTP port 9000 voucher ingestion, layout-aware invoice OCR, straight-through processing (STP) rates, and statutory GST Rule 36(4) Input Tax Credit reconciliation.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -4462,6 +4510,14 @@ def generate_ssg():
         "embed/agent-industrial-iot-opc-ua-simulator": {
             "title": "Edge Industrial IoT Protocol & OPC-UA Sandbox",
             "desc": "Interactive embed widget calculating fieldbus translation latency, spindle anomaly detection, and unplanned downtime reduction."
+        },
+        "tools/enterprise-agent-tally-erp-xml-simulator": {
+            "title": "Enterprise Autonomous Agent Tally ERP / Prime XML Gateway & Ledger Reconciliation Simulator",
+            "desc": "Simulate TDL XML-over-HTTP port 9000 voucher ingestion, layout-aware invoice OCR, straight-through processing (STP) rates, and statutory GST Rule 36(4) Input Tax Credit reconciliation."
+        },
+        "embed/agent-tally-erp-xml-simulator": {
+            "title": "Tally ERP LLM Agent Reconciliation Sandbox",
+            "desc": "Interactive embed widget calculating Tally Prime XML-over-HTTP port 9000 latency, straight-through processing rates, and GST Rule 36(4) verification."
         }
     }
 
@@ -8310,6 +8366,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(industrial_iot_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-tally-erp-xml-simulator":
+            tool_content = render_tally_erp_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            tally_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": title,
+                "url": canonical_url,
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/solutions"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Tally ERP XML Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(tally_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-tally-erp-xml-simulator":
+            embed_content = render_tally_erp_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            tally_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Tally ERP LLM Agent Reconciliation Sandbox",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(tally_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

@@ -115,6 +115,8 @@ const EnterpriseAgentMcpToolRoutingSimulator = lazy(() => import('./components/p
 const EmbedAgentMcpToolRoutingSimulator = lazy(() => import('./components/pages/EmbedAgentMcpToolRoutingSimulator'))
 const EnterpriseAgentIndustrialIotSimulator = lazy(() => import('./components/pages/EnterpriseAgentIndustrialIotSimulator'))
 const EmbedAgentIndustrialIotSimulator = lazy(() => import('./components/pages/EmbedAgentIndustrialIotSimulator'))
+const EnterpriseAgentTallyErpSimulator = lazy(() => import('./components/pages/EnterpriseAgentTallyErpSimulator'))
+const EmbedAgentTallyErpSimulator = lazy(() => import('./components/pages/EmbedAgentTallyErpSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -316,6 +318,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-industrial-iot-opc-ua-simulator" element={<EnterpriseAgentIndustrialIotSimulator />} />
                             <Route path="/tools/agent-industrial-iot-opc-ua-simulator" element={<Navigate to="/tools/enterprise-agent-industrial-iot-opc-ua-simulator" replace />} />
                             <Route path="/embed/agent-industrial-iot-opc-ua-simulator" element={<EmbedAgentIndustrialIotSimulator />} />
+                            <Route path="/tools/enterprise-agent-tally-erp-xml-simulator" element={<EnterpriseAgentTallyErpSimulator />} />
+                            <Route path="/tools/agent-tally-erp-xml-simulator" element={<Navigate to="/tools/enterprise-agent-tally-erp-xml-simulator" replace />} />
+                            <Route path="/embed/agent-tally-erp-xml-simulator" element={<EmbedAgentTallyErpSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

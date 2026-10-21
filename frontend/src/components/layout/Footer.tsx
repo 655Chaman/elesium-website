@@ -53,6 +53,7 @@ export default function DownloadFooter() {
         { name: 'Chunked Prefill & Radix Attention Simulator', path: '/tools/enterprise-agent-chunked-prefill-radix-attention-simulator' },
         { name: 'MCP Multi-Server Tool Routing Simulator', path: '/tools/enterprise-agent-mcp-tool-routing-simulator' },
         { name: 'Industrial IoT & OPC-UA Simulator', path: '/tools/enterprise-agent-industrial-iot-opc-ua-simulator' },
+        { name: 'Tally ERP XML & GST Reconciliation Simulator', path: '/tools/enterprise-agent-tally-erp-xml-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
