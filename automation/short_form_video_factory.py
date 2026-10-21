@@ -4223,6 +4223,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "NVLink 4 900 GB/s • InfiniBand NDR 400 GB/s • Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-41",
+            "slug": "enterprise-agent-context-parallelism-simulator",
+            "keyword": "context parallelism ring kv communication overlap 2m tokens",
+            "key_benefit": "Sub-12ms 2M-Token Steps & Ring Attention KV Overlap",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & Distributed Systems Architects",
+            "youtube_id": "CtxPP65k",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A multi-GPU telemetry dashboard displaying Ring Attention streaming KV chunks across GPU ranks with sub-12ms latency on 2M token contexts.",
+                            "voiceover": "Searching for context parallelism with Ring KV communication overlap to run two-million-token LLM inference without out-of-memory crashes?",
+                            "caption": "CONTEXT PARALLELISM RING KV COMMUNICATION OVERLAP"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A single GPU node crashing with CUDA out-of-memory errors as context size exceeds 128k tokens, consuming over 512 GB of KV memory.",
+                            "voiceover": "Unpartitioned KV caches explode past 512 gigabytes at two-million tokens, causing immediate CUDA out-of-memory crashes on single GPU nodes.",
+                            "caption": "512 GB KV CACHE // CATASTROPHIC OOM CRASH"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated ring topology diagram showing peer-to-peer KV block shifts on CUDA Stream 2 overlapping concurrently with local attention GEMMs on Stream 0.",
+                            "voiceover": "Elesium shards the sequence dimension across GPU ranks, streaming peer-to-peer Ring KV chunks concurrently with local matrix multiplication.",
+                            "caption": "RING ATTENTION // ASYNC P2P KV SHIFT OVERLAP"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A telemetry HUD highlighting 96.4% communication overlap efficiency, sub-10.4ms forward step latency, and zero OOM across 2,097,152 tokens.",
+                            "voiceover": "We achieve 96.4% communication overlap efficiency, sustain sub-10.4ms forward steps, and eliminate OOM crashes across 2M tokens.",
+                            "caption": "96.4% OVERLAP // SUB-10.4MS LATENCY // 2M TOKENS ZERO OOM"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Context Parallelism Simulator UI with interactive sequence horizon and CP degree sliders and instant architecture audit booking.",
+                            "voiceover": "Unlock two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online.",
+                            "caption": "SIMULATE CONTEXT PARALLELISM AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Step Latency",
+                            "value": "10.4ms",
+                            "detail": "P99 Forward Step",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Overlap Ratio",
+                            "value": "96.4%",
+                            "detail": "P2P Wire Overlap",
+                            "color": "#14B8A6"
+                    },
+                    {
+                            "label": "Max Context",
+                            "value": "2,097,152",
+                            "detail": "Tokens Zero OOM",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹94L",
+                            "detail": "Per GPU Cluster",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Sequence Dimension Sharding & Causal Block-Triangular Pruning",
+                            "bullets": [
+                                    "Partitioning the sequence dimension across CP discrete GPU ranks into equal token chunks",
+                                    "Pruning upper-triangular masked blocks dynamically in autoregressive causal decoding",
+                                    "Slashing redundant attention FLOPs by up to 55% across multi-GPU clusters"
+                            ],
+                            "techStack": "FlashAttention-3 • Causal Mask Pruning • Ring Topology"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Asynchronous Peer-to-Peer Ring KV Streams",
+                            "bullets": [
+                                    "Shifting Key-Value chunks sequentially along the logical GPU ring via non-blocking NCCL send/recv",
+                                    "Overlapping cross-GPU ring communication on CUDA Stream 2 with local attention GEMMs on Stream 0",
+                                    "Absorbing 96%+ of KV transport latency completely behind local computation"
+                            ],
+                            "techStack": "NCCL P2P • CUDA Stream 2 • Double-Buffered KV Ring"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sovereign High-Bandwidth Interconnect Fabric",
+                            "bullets": [
+                                    "Saturating 900 GB/s NVLink 4 intra-node meshes and 400 Gbps InfiniBand NDR inter-node fabrics",
+                                    "Sustaining continuous multi-hour 2M+ context reasoning without accuracy degradation",
+                                    "Deploying inside sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "NVLink 4 900 GB/s • InfiniBand NDR 400 GB/s • Sovereign VPC"
+                    }
+            ]
     }
 ]
 

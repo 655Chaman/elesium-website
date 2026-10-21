@@ -151,6 +151,8 @@ const EnterpriseAgentSequenceParallelismSimulator = lazy(() => import('./compone
 const EmbedAgentSequenceParallelismSimulator = lazy(() => import('./components/pages/EmbedAgentSequenceParallelismSimulator'))
 const EnterpriseAgentExpertParallelismSimulator = lazy(() => import('./components/pages/EnterpriseAgentExpertParallelismSimulator'))
 const EmbedAgentExpertParallelismSimulator = lazy(() => import('./components/pages/EmbedAgentExpertParallelismSimulator'))
+const EnterpriseAgentContextParallelismSimulator = lazy(() => import('./components/pages/EnterpriseAgentContextParallelismSimulator'))
+const EmbedAgentContextParallelismSimulator = lazy(() => import('./components/pages/EmbedAgentContextParallelismSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -406,6 +408,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-expert-parallelism-simulator" element={<EnterpriseAgentExpertParallelismSimulator />} />
                             <Route path="/tools/agent-expert-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-expert-parallelism-simulator" replace />} />
                             <Route path="/embed/agent-expert-parallelism-simulator" element={<EmbedAgentExpertParallelismSimulator />} />
+                            <Route path="/tools/enterprise-agent-context-parallelism-simulator" element={<EnterpriseAgentContextParallelismSimulator />} />
+                            <Route path="/tools/agent-context-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-context-parallelism-simulator" replace />} />
+                            <Route path="/embed/agent-context-parallelism-simulator" element={<EmbedAgentContextParallelismSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
