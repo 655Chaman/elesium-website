@@ -3233,6 +3233,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "FastAPI \u2022 WebSockets \u2022 Prometheus \u2022 Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-32",
+            "slug": "enterprise-agent-multi-lora-routing-simulator",
+            "keyword": "multi lora dynamic adapter switching zero copy weight swapping",
+            "key_benefit": "Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & Multi-Tenant Serving Engineers",
+            "youtube_id": "MltLora56k",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A terminal telemetry monitor showing multi-LoRA task switching latency dropping to 4.8ms with zero PCIe transfer stalls.",
+                            "voiceover": "Looking for multi-LoRA dynamic adapter switching and zero-copy weight swapping to eliminate GPU model replication?",
+                            "caption": "MULTI LORA DYNAMIC ADAPTER SWITCHING ZERO COPY WEIGHT SWAPPING"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A cloud datacenter dashboard showing dozens of redundant 70B model instances idling and exhausting millions in GPU spend.",
+                            "voiceover": "Deploying dedicated 70B models for legal, financial, and code agents multiplies cloud GPU spend by 10x and causes severe VRAM fragmentation.",
+                            "caption": "MULTI-MODEL VRAM REPLICATION // 10X CLOUD SPEND EXPLOSION"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated diagram showing a shared foundation model instance dynamically executing batched Segment GEMV kernels over paged LoRA memory pools.",
+                            "voiceover": "Elesium deploys unified paged GPU memory pools with Batched Segment GEMV kernels, routing hundreds of specialized LoRA adapters in-flight with zero memory reallocation.",
+                            "caption": "PAGED ADAPTER MEMORY POOL // BATCHED SGMV DISPATCH"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A metrics HUD highlighting 4.8ms task switching latency, 88% VRAM reduction, and 57 Lakh INR annual cluster FinOps savings.",
+                            "voiceover": "We slash task switching latency to 4.8 milliseconds, cut GPU memory footprint by 88%, and save over 57 Lakhs annually in datacenter hardware OPEX.",
+                            "caption": "SUB-10MS SWITCHING // -88% VRAM // ₹57L FINOPS SAVINGS"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Multi-LoRA Routing Simulator interface with interactive adapter sliders and instant architecture audit scheduling.",
+                            "voiceover": "Consolidate your enterprise multi-agent serving clusters today. Run the Multi-LoRA Routing simulator on elesium.online.",
+                            "caption": "SIMULATE MULTI-LORA ROUTING AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Switching Latency",
+                            "value": "4.8ms",
+                            "detail": "Sub-10ms task switch",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "VRAM Saved",
+                            "value": "-88%",
+                            "detail": "Paged unified pool",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Active Adapters",
+                            "value": "100+",
+                            "detail": "Single base model",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹57L",
+                            "detail": "Per serving cluster",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Paged Unified Adapter Pool Allocation",
+                            "bullets": [
+                                    "Pre-allocating 2MB memory pages in GPU HBM for rank-decomposed delta weights Delta W = B x A",
+                                    "Eliminating external memory fragmentation across heterogeneous adapter ranks (r=8 to r=64)",
+                                    "Supporting dynamic adapter registration and eviction with zero base model downtime"
+                            ],
+                            "techStack": "CUDA 12.4 \u2022 S-LoRA \u2022 PyTorch 2.4 \u2022 C++20"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Batched Segment GEMV (SGMV) Kernel Dispatch",
+                            "bullets": [
+                                    "Executing dynamic adapter matrix multiplications directly using memory pointers",
+                                    "Coalescing multi-tenant user requests into unified foundation model forward passes",
+                                    "Eliminating blocking host-to-device PCIe adapter weight transfer stalls"
+                            ],
+                            "techStack": "Punica \u2022 TensorRT-LLM \u2022 vLLM \u2022 Custom CUDA Kernels"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sub-10ms Sovereign Task Multiplexing",
+                            "bullets": [
+                                    "Routing enterprise agent queries across isolated statutory adapters with sub-10ms switching",
+                                    "Isolating proprietary tenant adapter checkpoints in air-gapped memory enclaves",
+                                    "Deploying on sovereign private VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "FastAPI \u2022 OpenTelemetry \u2022 Prometheus \u2022 Sovereign VPC"
+                    }
+            ]
     }
 ]
 

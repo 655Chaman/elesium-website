@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "2.0.0",
-  "last_feedback_sync": "2026-10-21T05:07:45.977663+00:00",
+  "last_feedback_sync": "2026-10-21T10:59:25.497730+00:00",
   "architecture_phase": "Stage 9.1 Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer",
-  "total_urls_monitored": 2763,
+  "total_urls_monitored": 2865,
   "performance_tiers_summary": {
     "ELITE_LEADER": {
       "count": 3,
@@ -11,17 +11,17 @@
       "action": "100% lock, monitored for freshness"
     },
     "STRIKING_DISTANCE": {
-      "count": 2702,
+      "count": 2803,
       "percentage": "97.8%",
       "action": "Highest-ROI tier! Google already understands the URL; automated entity & link push into Top 3"
     },
     "UNDERPERFORMING": {
-      "count": 58,
+      "count": 59,
       "percentage": "2.1%",
       "action": "Scheduled for keyword cannibalization audits and structural expansions"
     }
   },
-  "striking_distance_reinforcements_applied": 2702,
+  "striking_distance_reinforcements_applied": 2803,
   "top_striking_distance_targets": [
     {
       "url": "https://elesium.online/",
@@ -189,6 +189,19 @@
       "link_boosts_required": 2
     },
     {
+      "url": "https://elesium.online/signals/high-throughput-chunked-cross-attention-distributed-rag-sharding",
+      "keyword": "high throughput chunked cross attention distributed rag sharding",
+      "current_position": 11.9,
+      "projected_position": 2.9,
+      "moz_score": 97,
+      "capsule_word_count": 45,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 3
+    },
+    {
       "url": "https://elesium.online/signals/multi-tenant-llm-prefix-caching-radix-trees-zero-copy-kvcache",
       "keyword": "multi tenant llm prefix caching radix trees zero copy kvcache",
       "current_position": 5.5,
@@ -200,19 +213,6 @@
         "pgvector"
       ],
       "link_boosts_required": 1
-    },
-    {
-      "url": "https://elesium.online/signals/enterprise-autonomous-llm-post-training-quantization-awq-fp8-calibration",
-      "keyword": "enterprise autonomous llm post training quantization awq fp8 calibration",
-      "current_position": 6.2,
-      "projected_position": 2.1,
-      "moz_score": 97,
-      "capsule_word_count": 45,
-      "missing_entities": [
-        "FastAPI",
-        "pgvector"
-      ],
-      "link_boosts_required": 2
     }
   ],
   "posts": [

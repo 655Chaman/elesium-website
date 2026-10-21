@@ -62,6 +62,7 @@ export default function DownloadFooter() {
         { name: 'KV Cache Prefix Caching Simulator', path: '/tools/enterprise-agent-kvcache-prefix-caching-simulator' },
         { name: 'Chunked Cross-Attention Simulator', path: '/tools/enterprise-agent-chunked-cross-attention-simulator' },
         { name: 'Sliding-Window Attention & Ring KV Simulator', path: '/tools/enterprise-agent-sliding-window-attention-simulator' },
+        { name: 'Multi-LoRA Dynamic Adapter Routing Simulator', path: '/tools/enterprise-agent-multi-lora-routing-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },

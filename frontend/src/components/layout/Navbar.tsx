@@ -399,6 +399,12 @@ export default function Navbar() {
                             SlideWindow
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-multi-lora-routing-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-400 dark:text-amber-300"
+                        >
+                            MultiLoRA
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -877,6 +883,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Sliding-Window Attention Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-multi-lora-routing-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-amber-400 dark:text-amber-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                Multi-LoRA Dynamic Adapter Simulator
                             </Link>
                             <Link
                                 to="/compare"

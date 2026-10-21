@@ -133,6 +133,8 @@ const EnterpriseAgentCrossAttentionSimulator = lazy(() => import('./components/p
 const EmbedAgentCrossAttentionSimulator = lazy(() => import('./components/pages/EmbedAgentCrossAttentionSimulator'))
 const EnterpriseAgentSlidingWindowSimulator = lazy(() => import('./components/pages/EnterpriseAgentSlidingWindowSimulator'))
 const EmbedAgentSlidingWindowSimulator = lazy(() => import('./components/pages/EmbedAgentSlidingWindowSimulator'))
+const EnterpriseAgentMultiLoraSimulator = lazy(() => import('./components/pages/EnterpriseAgentMultiLoraSimulator'))
+const EmbedAgentMultiLoraSimulator = lazy(() => import('./components/pages/EmbedAgentMultiLoraSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -361,6 +363,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-sliding-window-attention-simulator" element={<EnterpriseAgentSlidingWindowSimulator />} />
                             <Route path="/tools/agent-sliding-window-attention-simulator" element={<Navigate to="/tools/enterprise-agent-sliding-window-attention-simulator" replace />} />
                             <Route path="/embed/agent-sliding-window-attention-simulator" element={<EmbedAgentSlidingWindowSimulator />} />
+                            <Route path="/tools/enterprise-agent-multi-lora-routing-simulator" element={<EnterpriseAgentMultiLoraSimulator />} />
+                            <Route path="/tools/agent-multi-lora-routing-simulator" element={<Navigate to="/tools/enterprise-agent-multi-lora-routing-simulator" replace />} />
+                            <Route path="/embed/agent-multi-lora-routing-simulator" element={<EmbedAgentMultiLoraSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
