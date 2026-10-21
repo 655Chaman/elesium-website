@@ -355,6 +355,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/tools/enterprise-agent-medusa-speculative-tree-simulator</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/signals/enterprise-autonomous-llm-speculative-decoding-verification-kernels</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/signals/enterprise-autonomous-llm-inference-gpu-pagedattention-kv-cache</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -1430,6 +1442,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/asynchronous-byzantine-agreement-telemetry-for-institutional-custody-smart-contracts</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/asynchronous-draft-generation-agents-decoupled-across-separate-low-cost-gpu-nodes</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -4027,6 +4045,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/cuda-kernel-fusion-agents-for-speculative-token-verification-on-nvidia-h100-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/cuda-stream-asynchronous-kernel-overlap-scheduling-agents-for-multi-model-agent-pipelines</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5005,6 +5029,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dynamic-medusa-head-freezing-agents-based-on-real-time-gpu-thermal-headroom-in-india</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dynamic-merchant-fee-escrow-settlement-telemetry-for-multi-vendor-retail-marketplaces</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5047,6 +5077,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/dynamic-speculative-window-k-parameter-auto-tuning-agents-for-varying-prompt-complexities</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/dynamic-vision-sensor-dvs-asynchronous-micro-second-pixel-event-stream-telemetry-for-high-speed-industrial-sorting</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -5066,6 +5102,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/e-invoicing-json-schema-v1-04-compliance-and-digital-signature-extraction-telemetry-for-tax-audit-readiness</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/eagle-feature-level-speculative-tree-decoding-integration-agents-for-real-time-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/eagle-recurrent-feature-verification-agents-for-complex-multi-step-agentic-reasoning</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -5342,6 +5390,24 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/enterprise-semantic-firewall-zero-width-steganography-filter-telemetry-for-sovereign-banking-llms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-speculative-decoding-private-vpc-migration-runbooks-for-indian-enterprises</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-speculative-decoding-token-cost-arbitrage-agents-maximizing-throughput-per-watt</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/enterprise-speculative-decoding-traffic-router-agents-dynamically-enabling-speculation-on-load</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -6043,6 +6109,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/fp8-calibrated-medusa-heads-deployment-agents-for-high-density-h100-datacenter-racks</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/fp8-e4m3-mixed-precision-matrix-multiplication-tensor-core-saturation-telemetry-for-hopper-h100-inference</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -6284,6 +6356,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/gpu-accelerated-msm-and-ntt-computation-agents-for-enterprise-zk-prover-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/gpu-cluster-consolidation-agents-leveraging-speculative-decoding-to-cut-server-node-count</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8245,7 +8323,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/lookahead-decoding-parallel-n-gram-branch-verification-agents-for-enterprise-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/lorawan-reefer-container-temperature-variance-telemetry-for-interstate-cold-chain-freight-operators</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/lossless-speculative-decoding-agents-preserving-100-percent-greedy-sampling-determinism</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -8576,6 +8666,30 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/medical-record-department-mrd-physical-paper-archive-digitization-and-ocr-indexing-telemetry</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/medusa-multi-candidate-tree-pruning-agents-maximizing-accepted-tokens-per-forward-pass</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/medusa-multi-head-speculative-decoding-heads-fine-tuning-agents-for-enterprise-llms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/medusa-self-speculative-decoding-deployment-agents-with-zero-auxiliary-model-overhead</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/medusa-tree-attention-2d-mask-compilation-agents-for-tensorrt-llm-engine-generation</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -9043,6 +9157,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/multi-modal-speculative-decoding-agents-verifying-image-token-features-concurrently</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/multi-model-mcp-tool-calling-compatibility-bridges-for-deepseek-r1-and-llama-3</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -9416,6 +9536,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/nginx-ingress-controller-upstream-timed-out-504-error-auto-rerouting-telemetry-for-ecommerce-portals</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/ngram-prompt-cache-lookup-speculative-verification-agents-for-structured-json-extraction</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -10639,6 +10765,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/prompt-lookup-decoding-agents-for-repetitive-enterprise-document-extraction-workflows</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/promql-metric-scraping-and-grafana-dashboard-telemetry-for-enterprise-multi-agent-swarms</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -11084,6 +11216,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/reinforced-carbon-carbon-leading-edge-oxidation-barrier-spallation-telemetry-for-hypersonics</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/rejection-sampling-draft-token-verification-agents-for-zero-accuracy-loss-llm-serving</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -12127,6 +12265,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/small-draft-model-distillation-agents-for-domain-specific-enterprise-agent-swarms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/small-molecule-active-pharmaceutical-ingredient-crystallization-polymorphism-software-for-process-chemists</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -12787,6 +12931,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-deployment-agents-for-sovereign-on-premise-qwen-2-5-72b-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-draft-model-fallback-agents-on-low-token-acceptance-confidence</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/speculative-decoding-draft-model-verification-acceptance-rate-telemetry-for-on-premise-deepseek-v2-inference</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -12794,6 +12950,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/speculative-decoding-draft-model-verification-agents-for-enterprise-chat-gateways</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-draft-model-verification-kernels-for-sub-15ms-enterprise-agents</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -12811,6 +12973,126 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-energy-consumption-telemetry-export-agents-for-esg-compliance-in-india</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-abdm-fhir-r4-json-schema-payload-validation-under-10ms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-algorithmic-trading-agents-with-strict-sub-25ms-execution-slas</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-banking-fraud-investigation-graph-query-generation-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-cyber-threat-intelligence-parsing-under-sub-second-deadlines</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-deepseek-r1-reasoning-traces-accelerating-math-step-proofs</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-enterprise-medical-record-diagnostic-summarization-under-dpdp</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-high-concurrency-customer-support-ticket-auto-triage-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-industrial-opc-ua-alarm-event-root-cause-deduction-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-ondc-e-commerce-catalog-search-query-expansion-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-pharma-21-cfr-part-11-audit-trail-timestamp-verification-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-real-time-logistics-dispatch-route-recalculation-under-50ms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-sap-s4hana-automated-invoice-line-item-generation-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-smart-contract-solc-bytecode-formal-verification-solver-queries</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-tallyprime-bulk-voucher-export-agents-under-port-9000-xml</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-for-voice-agent-audio-token-synthesis-with-zero-conversational-jitter</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-regression-benchmark-agents-verifying-zero-token-output-drift</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-decoding-sla-enforcement-agents-ensuring-p99-token-latency-under-20ms</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-draft-kv-cache-re-use-agents-slashing-duplicate-prefix-memory-allocations</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-draft-token-rejection-logging-agents-for-continuous-draft-model-fine-tuning</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/speculative-mcp-tool-dispatch-agents-for-high-concurrency-enterprise-agent-swarms</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -12818,6 +13100,18 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/speculative-token-rejection-rate-and-rollback-compute-waste-telemetry-for-autonomous-legal-drafting-agents</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-tree-candidate-routing-agents-balancing-latency-vs-gpu-tensor-core-load</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/speculative-verification-benchmark-testing-agents-for-quantized-llama-3-70b-inference</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -14365,6 +14659,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/tensorrt-llm-speculative-decoding-pipeline-integration-agents-for-private-banking-vpcs</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/terminal-deoxynucleotidyl-transferase-tdt-enzymatic-dna-synthesis-coupling-efficiency-software-for-oligo-leads</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -14761,6 +15061,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/solutions/tree-attention-custom-cuda-kernel-optimization-agents-for-parallel-candidate-verification</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/solutions/trie-prefix-index-tool-selection-latency-optimization-telemetry-for-real-time-autonomous-agents</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -15134,6 +15440,12 @@
   </url>
   <url>
     <loc>https://elesium.online/solutions/vllm-ray-distributed-tensor-parallelism-all-reduce-latency-jitter-telemetry-for-multi-node-gpu-clusters</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/solutions/vllm-speculative-decoding-acceptance-rate-telemetry-monitoring-agents-for-ai-platforms</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -15644,6 +15956,12 @@
   </url>
   <url>
     <loc>https://elesium.online/videos/enterprise-agent-pagedattention-cache-simulator</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/videos/enterprise-agent-medusa-speculative-tree-simulator</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
