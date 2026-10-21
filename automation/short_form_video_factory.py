@@ -4003,6 +4003,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "NVLink 4 900 GB/s • NVSwitch • Sovereign VPC"
                     }
             ]
+    },
+    {
+            "id": "sfv-39",
+            "slug": "enterprise-agent-sequence-parallelism-simulator",
+            "keyword": "sequence parallelism ring self attention distributed qkv",
+            "key_benefit": "1M+ Context Token Inference & Sub-10ms Step Latency",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & Distributed Systems Architects",
+            "youtube_id": "SeqPP63k",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "A multi-GPU cluster dashboard displaying Ring Self-Attention scaling sequence length past one million tokens with sub-10ms step latency.",
+                            "voiceover": "Looking for sequence parallelism with ring self-attention to scale extreme-context LLM inference past one million tokens without OOM crashes?",
+                            "caption": "SEQUENCE PARALLELISM RING SELF ATTENTION 1M CONTEXT"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "visual": "A 70B parameter model crashing with CUDA Out Of Memory at 128k context as activation memory exceeds single GPU VRAM.",
+                            "voiceover": "Quadratic attention memory causes single GPUs to crash at 128k tokens, bottlenecking long-context legal discovery and enterprise telemetry.",
+                            "caption": "QUADRATIC ATTENTION MEMORY // 128K TOKEN OOM CEILING"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "visual": "An animated ring topology showing Key-Value blocks streaming asynchronously across GPU ranks while local QKV attention compute overlaps communication.",
+                            "voiceover": "Elesium shards sequence dimensions across GPU clusters, streaming Key-Value tensor blocks in a non-blocking peer-to-peer ring to overlap communication with tensor cores.",
+                            "caption": "RING SELF-ATTENTION // NON-BLOCKING P2P KV OVERLAP"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "visual": "A metrics HUD highlighting 96.8% communication overlap efficiency, sub-9.4ms per-step latency, and 74 Lakh INR annual GPU FinOps savings.",
+                            "voiceover": "We achieve 96.8% communication overlap efficiency, sustain sub-10ms per-token step latencies, and recover over 74 Lakhs in annual GPU FinOps savings.",
+                            "caption": "96.8% OVERLAP // SUB-10MS LATENCY // ₹74L FINOPS SAVINGS"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Call to Action",
+                            "visual": "The Elesium Sequence Parallelism Simulator UI with interactive SP degree and context length sliders and instant architecture audit booking.",
+                            "voiceover": "Shatter the context memory wall on your enterprise GPU clusters today. Run the Sequence Parallelism simulator on elesium.online.",
+                            "caption": "SIMULATE SEQUENCE PARALLELISM AT ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Step Latency",
+                            "value": "9.4ms",
+                            "detail": "P99 Forward Step",
+                            "color": "#10B981"
+                    },
+                    {
+                            "label": "Overlap Ratio",
+                            "value": "96.8%",
+                            "detail": "P2P Ring Overlap",
+                            "color": "#06B6D4"
+                    },
+                    {
+                            "label": "Max Context",
+                            "value": "1,048,576",
+                            "detail": "Tokens Zero OOM",
+                            "color": "#C387FF"
+                    },
+                    {
+                            "label": "Annual Savings",
+                            "value": "₹74L",
+                            "detail": "Per GPU Cluster",
+                            "color": "#FBBF24"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Uniform Sequence Sharding & Local Query Partitioning",
+                            "bullets": [
+                                    "Partitioning token sequence length S uniformly into S/N chunks across N distributed GPUs",
+                                    "Bounding per-GPU activation and key-value memory allocations linearly",
+                                    "Holding invariant local query projections Q_i throughout ring shift iterations"
+                            ],
+                            "techStack": "PyTorch 2.4 • CUDA 12.4 • Megatron-LM • FlashAttention-3"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Asynchronous Ring Self-Attention P2P Streaming",
+                            "bullets": [
+                                    "Streaming Key-Value blocks (K_j, V_j) in a logical peer-to-peer ring across neighbor ranks",
+                                    "Overlapping non-blocking NCCL P2P communication with local chunked GEMM attention compute",
+                                    "Achieving over 96% communication overlap ratio on high-speed fabrics"
+                            ],
+                            "techStack": "NCCL 2.21 • CUDA P2P Streams • RingAttention Kernel"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Sovereign Private Cloud & High-Bandwidth Fabric",
+                            "bullets": [
+                                    "Deploying over 900 GB/s NVLink intra-node meshes and 400 GB/s InfiniBand NDR inter-node fabrics",
+                                    "Sustaining continuous multi-hour 1M+ context reasoning without accuracy degradation",
+                                    "Deploying inside sovereign air-gapped private VPCs compliant with Indian DPDP Act 2023"
+                            ],
+                            "techStack": "NVLink 4 900 GB/s • InfiniBand NDR 400 GB/s • Sovereign VPC"
+                    }
+            ]
     }
 ]
 
