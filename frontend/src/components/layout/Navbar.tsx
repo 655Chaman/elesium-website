@@ -411,6 +411,12 @@ export default function Navbar() {
                             MixDepths
                         </Link>
                         <Link
+                            to="/tools/enterprise-agent-kvcache-memory-compaction-simulator"
+                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
+                        >
+                            KVCompact
+                        </Link>
+                        <Link
                             to="/compare"
                             className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
                         >
@@ -903,6 +909,13 @@ export default function Navbar() {
                                 className="text-2xl font-medium text-left text-teal-400 dark:text-teal-300 py-4 border-b border-gray-100 dark:border-white/10"
                             >
                                 Mixture-of-Depths Dynamic Compute Simulator
+                            </Link>
+                            <Link
+                                to="/tools/enterprise-agent-kvcache-memory-compaction-simulator"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
+                            >
+                                KV-Cache Memory Compaction Simulator
                             </Link>
                             <Link
                                 to="/compare"

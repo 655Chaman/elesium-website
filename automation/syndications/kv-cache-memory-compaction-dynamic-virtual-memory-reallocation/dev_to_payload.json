@@ -1,0 +1,9 @@
+{
+  "article": {
+    "title": "KV-Cache Memory Compaction: Dynamic Virtual Memory Re-allocation, Paged Block Compaction, and Zero-Copy Defragmentation",
+    "published": true,
+    "body_markdown": "# KV-Cache Memory Compaction: Dynamic Virtual Memory Re-allocation, Paged Block Compaction, and Zero-Copy Defragmentation\n\n**Author:** Chaman Shah, Principal AI Systems Architect at [Elesium](https://elesium.online)\n**Canonical Source:** [https://elesium.online/signals/kv-cache-memory-compaction-dynamic-virtual-memory-reallocation](https://elesium.online/signals/kv-cache-memory-compaction-dynamic-virtual-memory-reallocation)\n\n## Executive Summary\n\nKV-Cache memory compaction dynamically eliminates GPU memory fragmentation by re-allocating virtual page blocks into contiguous physical High-Bandwidth Memory (HBM) using zero-copy CUDA memory descriptors. This defragmentation architecture increases serving concurrency by 3.4x, prevents out-of-memory crashes, and slashes multi-tenant inference operational costs across enterprise clusters.\n\n## Key Architectural Capabilities\n\n1. **Dynamic Virtual Memory Re-allocation**: 2-level page table decoupling logical sequence token positions from physical HBM addresses.\n2. **Zero-Copy CUDA Virtual Descriptors**: `cuMemMap` zero-copy address remapping eliminating memory fragmentation without active token decoding stalls.\n3. **Multi-Tenant Concurrency Expansion**: 3.4x higher concurrent request throughput on NVIDIA H100 GPU clusters.\n\n*Explore the interactive [KV-Cache Memory Compaction Simulator](https://elesium.online/tools/enterprise-agent-kvcache-memory-compaction-simulator) and evaluate sovereign agent architectures at [Elesium Enterprise AI Solutions](https://elesium.online/solutions).*",
+    "tags": ["ai", "machinelearning", "cuda", "vllm"],
+    "canonical_url": "https://elesium.online/signals/kv-cache-memory-compaction-dynamic-virtual-memory-reallocation"
+  }
+}

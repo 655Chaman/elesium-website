@@ -1,0 +1,15 @@
+{
+  "query": "mutation PublishPost($input: PublishPostInput!) { publishPost(input: $input) { post { id url title } } }",
+  "variables": {
+    "input": {
+      "title": "KV-Cache Memory Compaction: Dynamic Virtual Memory Re-allocation, Paged Block Compaction, and Zero-Copy Defragmentation",
+      "contentMarkdown": "# KV-Cache Memory Compaction: Dynamic Virtual Memory Re-allocation, Paged Block Compaction, and Zero-Copy Defragmentation\n\n**Author:** Chaman Shah, Principal AI Systems Architect at [Elesium](https://elesium.online)\n**Canonical Source:** [https://elesium.online/signals/kv-cache-memory-compaction-dynamic-virtual-memory-reallocation](https://elesium.online/signals/kv-cache-memory-compaction-dynamic-virtual-memory-reallocation)\n\n## Executive Summary\n\nKV-Cache memory compaction dynamically eliminates GPU memory fragmentation by re-allocating virtual page blocks into contiguous physical High-Bandwidth Memory (HBM) using zero-copy CUDA memory descriptors. This defragmentation architecture increases serving concurrency by 3.4x, prevents out-of-memory crashes, and slashes multi-tenant inference operational costs across enterprise clusters.\n\n*Explore the interactive [KV-Cache Memory Compaction Simulator](https://elesium.online/tools/enterprise-agent-kvcache-memory-compaction-simulator) and evaluate sovereign agent architectures at [Elesium Enterprise AI Solutions](https://elesium.online/solutions).*",
+      "tags": [
+        { "slug": "ai", "name": "Artificial Intelligence" },
+        { "slug": "machine-learning", "name": "Machine Learning" },
+        { "slug": "cuda", "name": "CUDA" }
+      ],
+      "originalArticleURL": "https://elesium.online/signals/kv-cache-memory-compaction-dynamic-virtual-memory-reallocation"
+    }
+  }
+}

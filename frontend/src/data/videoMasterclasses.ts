@@ -5275,6 +5275,156 @@ export const videoMasterclasses: VideoMasterclass[] = [
             }
         ],
         "fullTranscript": "Looking for Mixture-of-Depths dynamic compute allocation and token early exits to slash enterprise LLM inference FLOPs? Spending millions running full multi-head attention and MLP layers on punctuation and routine words causes extreme datacenter power waste. Elesium implements conditional capacity allocation with static tensor shapes, dynamically routing non-participating tokens around transformer blocks via residual bypass paths. We slash total inference FLOPs by over 48%, accelerate decode throughput by 1.7x, and save over 64 Lakhs annually per enterprise serving cluster. Calibrate your dynamic compute budget today. Run the Mixture-of-Depths simulator on elesium.online."
+    },
+    {
+        "id": "sfv-34",
+        "slug": "enterprise-agent-kvcache-memory-compaction-simulator",
+        "title": "Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation \u2014 Paged Block Compaction & Zero-Copy Defragmentation | Elesium",
+        "youtubeId": "KVCacheCmp58k",
+        "duration": "0:30",
+        "durationIso": "PT30S",
+        "uploadDate": "2026-10-19T08:00:00+05:30",
+        "industry": "Enterprise Infrastructure & High-Performance AI",
+        "category": "30s Short-Form Breakdown",
+        "videoType": "short",
+        "keyword": "kv cache memory compaction dynamic virtual memory reallocation",
+        "keyBenefit": "Paged Block Compaction & Zero-Copy Defragmentation",
+        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "targetPersona": "Chief Technology Officers & LLM Serving Infrastructure Architects",
+        "executiveSummary": "A 30-second technical architecture breakdown of kv cache memory compaction dynamic virtual memory reallocation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
+        "roiMetrics": [
+            {
+                "label": "Concurrency Boost",
+                "value": "3.4x",
+                "detail": "Multi-tenant expansion",
+                "color": "#10B981"
+            },
+            {
+                "label": "Compacted Frag",
+                "value": "1.9%",
+                "detail": "From 38.4% raw holes",
+                "color": "#06B6D4"
+            },
+            {
+                "label": "OOM Crash Risk",
+                "value": "0.02%",
+                "detail": "Zero-OOM serving SLA",
+                "color": "#C387FF"
+            },
+            {
+                "label": "Annual Savings",
+                "value": "\u20b958L",
+                "detail": "Per 8x H100 node",
+                "color": "#FBBF24"
+            }
+        ],
+        "keyMoments": [
+            {
+                "time": "00:00",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "description": "Looking for KV-cache memory compaction and dynamic virtual memory reallocation to eliminate GPU out-of-memory aborts?"
+            },
+            {
+                "time": "00:03",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "description": "Completed tenant requests leave scattered memory holes in GPU HBM, triggering out-of-memory crashes even when gigabytes remain idle."
+            },
+            {
+                "time": "00:08",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "description": "Elesium deploys zero-copy CUDA virtual memory descriptors, re-allocating scattered physical pages into contiguous virtual buffers during inter-token decode windows."
+            },
+            {
+                "time": "00:18",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "description": "We expand serving concurrency by 3.4x, slash memory fragmentation to under 2.5%, and save over 58 Lakhs annually per enterprise cluster."
+            },
+            {
+                "time": "00:26",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "description": "Stop GPU out-of-memory crashes today. Run the KV-Cache Compaction simulator on elesium.online."
+            }
+        ],
+        "architectureStages": [
+            {
+                "stage": "Stage 01",
+                "name": "Dynamic Entropy & Memory Hole Detection",
+                "bullets": [
+                    "Continuously tracking GPU physical memory block allocation entropy across tenant request streams",
+                    "Identifying non-contiguous 2MB physical pages released by finished generation sequences",
+                    "Triggering asynchronous compaction when external fragmentation crosses threshold limits"
+                ],
+                "techStack": "CUDA 12.4 \u2022 vLLM \u2022 C++20 \u2022 PyTorch 2.4"
+            },
+            {
+                "stage": "Stage 02",
+                "name": "Zero-Copy CUDA cuMemMap Virtual Remapping",
+                "bullets": [
+                    "Leveraging CUDA Virtual Memory Management APIs to reserve and map virtual address descriptors",
+                    "Coalescing physical HBM memory pages without performing blocking host-to-device or device-to-device copies",
+                    "Preserving active attention tensor pointers with zero CUDA kernel invalidation"
+                ],
+                "techStack": "CUDA Driver APIs \u2022 TensorRT-LLM \u2022 SGLang \u2022 Custom Kernels"
+            },
+            {
+                "stage": "Stage 03",
+                "name": "Sovereign Enterprise FinOps Governance",
+                "bullets": [
+                    "Maximizing multi-tenant request density on sovereign private on-premise H100 clusters",
+                    "Enforcing strict statutory memory isolation compliant with Indian DPDP Act 2023",
+                    "Deploying within sovereign tier-4 datacenter VPCs in Mumbai and Bangalore"
+                ],
+                "techStack": "FastAPI \u2022 Prometheus \u2022 OpenTelemetry \u2022 Sovereign VPC"
+            }
+        ],
+        "timecodes": [
+            {
+                "time": "00:00 - 00:03",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "visual": "A terminal telemetry monitor showing GPU HBM external memory fragmentation dropping from 38% to 1.9% under zero-copy compaction.",
+                "voiceover": "Looking for KV-cache memory compaction and dynamic virtual memory reallocation to eliminate GPU out-of-memory aborts?",
+                "caption": "KV CACHE MEMORY COMPACTION DYNAMIC VIRTUAL MEMORY REALLOCATION"
+            },
+            {
+                "time": "00:03 - 00:08",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "visual": "A multi-tenant LLM cluster crashing with CUDA OOM errors while 35% of GPU memory sits idle in scattered non-contiguous blocks.",
+                "voiceover": "Completed tenant requests leave scattered memory holes in GPU HBM, triggering out-of-memory crashes even when gigabytes remain idle.",
+                "caption": "HBM MEMORY FRAGMENTATION // FATAL OOM CRASHES"
+            },
+            {
+                "time": "00:08 - 00:18",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "visual": "An animated 2-level page table diagram showing CUDA cuMemMap remapping physical pages into contiguous virtual tensor buffers with zero PCIe copies.",
+                "voiceover": "Elesium deploys zero-copy CUDA virtual memory descriptors, re-allocating scattered physical pages into contiguous virtual buffers during inter-token decode windows.",
+                "caption": "CUMEMMAP ZERO-COPY // CONTIGUOUS VIRTUAL PAGE REALLOCATION"
+            },
+            {
+                "time": "00:18 - 00:26",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "visual": "A metrics HUD highlighting 3.4x serving concurrency expansion, 0.02% OOM risk, and 58 Lakh INR annual cluster FinOps savings.",
+                "voiceover": "We expand serving concurrency by 3.4x, slash memory fragmentation to under 2.5%, and save over 58 Lakhs annually per enterprise cluster.",
+                "caption": "3.4X CONCURRENCY // <2.5% FRAGMENTATION // \u20b958L FINOPS SAVINGS"
+            },
+            {
+                "time": "00:26 - 00:30",
+                "seconds": 26,
+                "title": "Frictionless Conversion Call to Action",
+                "visual": "The Elesium KV-Cache Compaction Simulator UI with interactive concurrency sliders and instant architecture audit booking.",
+                "voiceover": "Stop GPU out-of-memory crashes today. Run the KV-Cache Compaction simulator on elesium.online.",
+                "caption": "SIMULATE KV-CACHE COMPACTION AT ELESIUM.ONLINE"
+            }
+        ],
+        "fullTranscript": "Looking for KV-cache memory compaction and dynamic virtual memory reallocation to eliminate GPU out-of-memory aborts? Completed tenant requests leave scattered memory holes in GPU HBM, triggering out-of-memory crashes even when gigabytes remain idle. Elesium deploys zero-copy CUDA virtual memory descriptors, re-allocating scattered physical pages into contiguous virtual buffers during inter-token decode windows. We expand serving concurrency by 3.4x, slash memory fragmentation to under 2.5%, and save over 58 Lakhs annually per enterprise cluster. Stop GPU out-of-memory crashes today. Run the KV-Cache Compaction simulator on elesium.online."
     }
 ];
 

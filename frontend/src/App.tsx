@@ -137,6 +137,8 @@ const EnterpriseAgentMultiLoraSimulator = lazy(() => import('./components/pages/
 const EmbedAgentMultiLoraSimulator = lazy(() => import('./components/pages/EmbedAgentMultiLoraSimulator'))
 const EnterpriseAgentMixtureOfDepthsSimulator = lazy(() => import('./components/pages/EnterpriseAgentMixtureOfDepthsSimulator'))
 const EmbedAgentMixtureOfDepthsSimulator = lazy(() => import('./components/pages/EmbedAgentMixtureOfDepthsSimulator'))
+const EnterpriseAgentKvCacheCompactionSimulator = lazy(() => import('./components/pages/EnterpriseAgentKvCacheCompactionSimulator'))
+const EmbedAgentKvCacheCompactionSimulator = lazy(() => import('./components/pages/EmbedAgentKvCacheCompactionSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -371,6 +373,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-mixture-of-depths-simulator" element={<EnterpriseAgentMixtureOfDepthsSimulator />} />
                             <Route path="/tools/agent-mixture-of-depths-simulator" element={<Navigate to="/tools/enterprise-agent-mixture-of-depths-simulator" replace />} />
                             <Route path="/embed/agent-mixture-of-depths-simulator" element={<EmbedAgentMixtureOfDepthsSimulator />} />
+                            <Route path="/tools/enterprise-agent-kvcache-memory-compaction-simulator" element={<EnterpriseAgentKvCacheCompactionSimulator />} />
+                            <Route path="/tools/agent-kvcache-memory-compaction-simulator" element={<Navigate to="/tools/enterprise-agent-kvcache-memory-compaction-simulator" replace />} />
+                            <Route path="/embed/agent-kvcache-memory-compaction-simulator" element={<EmbedAgentKvCacheCompactionSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
