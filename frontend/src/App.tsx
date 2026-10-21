@@ -145,6 +145,8 @@ const EnterpriseAgentPrefillDecodeSimulator = lazy(() => import('./components/pa
 const EmbedAgentPrefillDecodeSimulator = lazy(() => import('./components/pages/EmbedAgentPrefillDecodeSimulator'))
 const EnterpriseAgentPipelineParallelismSimulator = lazy(() => import('./components/pages/EnterpriseAgentPipelineParallelismSimulator'))
 const EmbedAgentPipelineParallelismSimulator = lazy(() => import('./components/pages/EmbedAgentPipelineParallelismSimulator'))
+const EnterpriseAgentTensorParallelismSimulator = lazy(() => import('./components/pages/EnterpriseAgentTensorParallelismSimulator'))
+const EmbedAgentTensorParallelismSimulator = lazy(() => import('./components/pages/EmbedAgentTensorParallelismSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -391,6 +393,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-pipeline-parallelism-simulator" element={<EnterpriseAgentPipelineParallelismSimulator />} />
                             <Route path="/tools/agent-pipeline-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-pipeline-parallelism-simulator" replace />} />
                             <Route path="/embed/agent-pipeline-parallelism-simulator" element={<EmbedAgentPipelineParallelismSimulator />} />
+                            <Route path="/tools/enterprise-agent-tensor-parallelism-simulator" element={<EnterpriseAgentTensorParallelismSimulator />} />
+                            <Route path="/tools/agent-tensor-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-tensor-parallelism-simulator" replace />} />
+                            <Route path="/embed/agent-tensor-parallelism-simulator" element={<EmbedAgentTensorParallelismSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

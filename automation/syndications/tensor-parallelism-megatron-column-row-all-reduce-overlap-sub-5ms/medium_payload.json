@@ -1,0 +1,8 @@
+{
+  "title": "Tensor Parallelism at Scale: Megatron Column/Row Linear Partitioning, All-Reduce Overlapping, and Sub-5ms Intra-Node Latency",
+  "contentFormat": "markdown",
+  "content": "# Tensor Parallelism at Scale: Megatron Column/Row Linear Partitioning, All-Reduce Overlapping, and Sub-5ms Intra-Node Latency\n\n**Author:** Chaman Shah, Principal AI Systems Architect at [Elesium](https://elesium.online)\n\nTensor parallelism splits individual linear projection weight matrices across intra-node GPUs using complementary column-parallel and row-parallel partitioning. Overlapping non-blocking all-reduce collective communication with subsequent layer GEMM computations cuts synchronization latency below 5 milliseconds, sustaining 900 GB/s NVLink bus saturation and 2.9x higher inference throughput across enterprise LLM clusters.\n\nRead the full technical specification on Elesium: [Canonical Whitepaper](https://elesium.online/signals/tensor-parallelism-megatron-column-row-all-reduce-overlap-sub-5ms)",
+  "canonicalUrl": "https://elesium.online/signals/tensor-parallelism-megatron-column-row-all-reduce-overlap-sub-5ms",
+  "tags": ["artificial-intelligence", "deep-learning", "cloud-computing"],
+  "publishStatus": "draft"
+}

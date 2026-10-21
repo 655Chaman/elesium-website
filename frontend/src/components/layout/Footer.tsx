@@ -68,6 +68,7 @@ export default function DownloadFooter() {
         { name: 'Speculative Verification Simulator', path: '/tools/enterprise-agent-speculative-verification-simulator' },
         { name: 'Prefill-Decode Disaggregation Simulator', path: '/tools/enterprise-agent-prefill-decode-disaggregation-simulator' },
         { name: 'Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-pipeline-parallelism-simulator' },
+        { name: 'Tensor Parallelism Simulator', path: '/tools/enterprise-agent-tensor-parallelism-simulator' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
         { name: 'Masterclasses', path: '/videos' },
         { name: 'Market Signals', path: '/signals' },
