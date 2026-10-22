@@ -181,16 +181,74 @@ class StrikingDistanceOptimizer:
         }
 
     # -------------------------------------------------------------------------
-    # 1. URL DISCOVERY ENGINE (All 121 Active URLs on elesium.online)
+    # 1. URL DISCOVERY ENGINE (All Active Production URLs on elesium.online)
     # -------------------------------------------------------------------------
     def discover_all_urls(self) -> List[Dict[str, Any]]:
         """
-        Gathers all 121 active URLs from static routes, dynamic blog posts,
-        and compact solution pages, matching generate_sitemap.py exactly.
+        Gathers all active production URLs from sitemap.xml, falling back
+        to scanning static routes, dynamic blog posts, and compact solutions.
         """
         urls: List[Dict[str, Any]] = []
 
-        # 14 Static Core URLs
+        # Queue lookup for solutions keywords
+        queue_slug_to_kw = {}
+        if COMPACT_QUEUE_PATH.exists():
+            try:
+                queue_items = json.loads(COMPACT_QUEUE_PATH.read_text(encoding="utf-8"))
+                for item in queue_items:
+                    s = item.get("slug")
+                    if s:
+                        queue_slug_to_kw[s] = item.get("keyword", s.replace("-", " "))
+            except Exception as e:
+                self._log(f"Notice reading compact queue: {e}")
+
+        # Primary source: sitemap.xml
+        sitemap_path = FRONTEND_DIR / "public" / "sitemap.xml"
+        if sitemap_path.exists():
+            try:
+                import xml.etree.ElementTree as ET
+                tree = ET.parse(sitemap_path)
+                root = tree.getroot()
+                ns = {"ns": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+                sitemap_locs = [elem.text.strip() for elem in root.findall(".//ns:loc", ns) if elem.text]
+                for loc in sitemap_locs:
+                    path = loc.replace(BASE_URL, "") if loc.startswith(BASE_URL) else loc
+                    slug = path.strip("/").split("/")[-1] if path != "/" else "home"
+                    cat = "static"
+                    t = "static"
+                    kw = slug.replace("-", " ")
+                    if "/signals/" in path:
+                        cat = "signal"
+                        t = "blog_whitepaper"
+                    elif "/solutions/" in path:
+                        cat = "solution"
+                        t = "compact_landing"
+                        kw = queue_slug_to_kw.get(slug, kw)
+                    elif "/tools/" in path:
+                        cat = "tool"
+                        t = "interactive_tool"
+                    elif "/embed/" in path:
+                        cat = "embed"
+                        t = "embed_tool"
+                    elif "/videos/" in path or path == "/videos":
+                        cat = "video"
+                        t = "video_masterclass"
+                    
+                    urls.append({
+                        "loc": loc,
+                        "path": path,
+                        "slug": slug,
+                        "target_keyword": kw,
+                        "category": cat,
+                        "type": t
+                    })
+                self._log(f"Discovered {len(urls)} URLs directly from sitemap.xml.")
+                self.urls = urls
+                return self.urls
+            except Exception as e:
+                self._log(f"Notice reading sitemap.xml: {e}")
+
+        # Fallback manual discovery if sitemap.xml is absent
         static_specs = [
             {"path": "/", "keyword": "Enterprise AI Automation Agency India", "type": "static"},
             {"path": "/markets", "keyword": "Enterprise AI Automation Markets India", "type": "static"},
@@ -218,7 +276,6 @@ class StrikingDistanceOptimizer:
                 "type": s["type"]
             })
 
-        # 64 Dynamic Blog Posts in /signals/{slug}
         if TS_BLOG_PATH.exists():
             content = TS_BLOG_PATH.read_text(encoding="utf-8")
             blocks = re.findall(
@@ -227,16 +284,7 @@ class StrikingDistanceOptimizer:
                 re.DOTALL
             )
             for slug, date_str in blocks:
-                # Format keyword from slug
                 kw = slug.replace("-", " ")
-                # Special high-intent cleanups
-                if "langgraph" in kw:
-                    kw = "LangGraph multi-agent systems Bangalore"
-                elif "cost of enterprise" in kw:
-                    kw = "cost of enterprise ai automation in india"
-                elif "top ai automation" in kw:
-                    kw = "top ai automation agencies in india 2026"
-
                 urls.append({
                     "loc": f"{BASE_URL}/signals/{slug}",
                     "path": f"/signals/{slug}",
@@ -246,28 +294,13 @@ class StrikingDistanceOptimizer:
                     "type": "blog_whitepaper",
                     "date": date_str
                 })
-            self._log(f"Discovered {len(blocks)} blog signals.")
 
-        # 43 Solution Pages in /solutions/{slug}
         solution_slugs = set()
-        queue_slug_to_kw = {}
-
         if TS_SOLUTIONS_PATH.exists():
             sol_content = TS_SOLUTIONS_PATH.read_text(encoding="utf-8")
             sol_matches = re.findall(r'["\']?slug["\']?\s*:\s*["\']([^"\']+)["\']', sol_content)
             for s in sol_matches:
                 solution_slugs.add(s)
-
-        if COMPACT_QUEUE_PATH.exists():
-            try:
-                queue_items = json.loads(COMPACT_QUEUE_PATH.read_text(encoding="utf-8"))
-                for item in queue_items:
-                    s = item.get("slug")
-                    if s:
-                        solution_slugs.add(s)
-                        queue_slug_to_kw[s] = item.get("keyword", s.replace("-", " "))
-            except Exception as e:
-                self._log(f"Notice reading compact queue: {e}")
 
         for slug in sorted(solution_slugs):
             kw = queue_slug_to_kw.get(slug, slug.replace("-", " "))
@@ -280,10 +313,6 @@ class StrikingDistanceOptimizer:
                 "type": "compact_landing"
             })
 
-        self._log(f"Discovered {len(solution_slugs)} solution pages.")
-        self._log(f"Total active URLs discovered: {len(urls)}")
-
-        # Deduplicate while preserving order
         unique_urls = []
         seen = set()
         for u in urls:
@@ -973,7 +1002,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer"
     )
-    parser.add_argument("--analyze", action="store_true", help="Analyze all 121 URLs and classify performance tiers")
+    parser.add_argument("--analyze", action="store_true", help="Analyze all active URLs and classify performance tiers")
     parser.add_argument("--optimize", action="store_true", help="Run full optimization cycle on Striking Distance URLs")
     parser.add_argument("--self-test", action="store_true", help="Execute complete automated test suite")
     parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
@@ -998,7 +1027,7 @@ def main():
         under = optimizer.tiers["UNDERPERFORMING"]
 
         print("\n=======================================================")
-        print(" ELESIUM PERFORMANCE TIERS BREAKDOWN (121 ACTIVE URLS)")
+        print(f" ELESIUM PERFORMANCE TIERS BREAKDOWN ({len(urls)} ACTIVE URLS)")
         print("=======================================================")
         print(f" 1. ELITE_LEADER     (Pos 1-3)  : {len(elite):3d} URLs ({len(elite)/len(urls)*100:.1f}%) — Monitored for freshness")
         print(f" 2. STRIKING_DISTANCE(Pos 4-15) : {len(striking):3d} URLs ({len(striking)/len(urls)*100:.1f}%) — High-ROI Top 3 Target")

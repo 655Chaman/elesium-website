@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "2.0.0",
-  "last_feedback_sync": "2026-10-22T06:07:00.286756+00:00",
+  "last_feedback_sync": "2026-10-22T06:37:16.705303+00:00",
   "architecture_phase": "Stage 9.1 Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer",
-  "total_urls_monitored": 3834,
+  "total_urls_monitored": 3986,
   "performance_tiers_summary": {
     "ELITE_LEADER": {
       "count": 3,
@@ -11,25 +11,25 @@
       "action": "100% lock, monitored for freshness"
     },
     "STRIKING_DISTANCE": {
-      "count": 3765,
-      "percentage": "98.2%",
+      "count": 3859,
+      "percentage": "96.8%",
       "action": "Highest-ROI tier! Google already understands the URL; automated entity & link push into Top 3"
     },
     "UNDERPERFORMING": {
-      "count": 66,
-      "percentage": "1.7%",
+      "count": 124,
+      "percentage": "3.1%",
       "action": "Scheduled for keyword cannibalization audits and structural expansions"
     }
   },
-  "striking_distance_reinforcements_applied": 3765,
+  "striking_distance_reinforcements_applied": 3859,
   "top_striking_distance_targets": [
     {
       "url": "https://elesium.online/",
-      "keyword": "Enterprise AI Automation Agency India",
+      "keyword": "home",
       "current_position": 5.3,
       "projected_position": 2.1,
-      "moz_score": 96,
-      "capsule_word_count": 48,
+      "moz_score": 97,
+      "capsule_word_count": 44,
       "missing_entities": [
         "FastAPI",
         "pgvector"
@@ -64,11 +64,11 @@
     },
     {
       "url": "https://elesium.online/ai-automation",
-      "keyword": "Autonomous AI Engineering Multi-Agent Systems",
+      "keyword": "ai automation",
       "current_position": 8.0,
       "projected_position": 2.5,
-      "moz_score": 96,
-      "capsule_word_count": 48,
+      "moz_score": 97,
+      "capsule_word_count": 45,
       "missing_entities": [
         "FastAPI",
         "pgvector"
@@ -77,11 +77,11 @@
     },
     {
       "url": "https://elesium.online/resources",
-      "keyword": "Enterprise AI Automation Engineering Whitepapers",
+      "keyword": "resources",
       "current_position": 5.3,
       "projected_position": 2.1,
-      "moz_score": 96,
-      "capsule_word_count": 48,
+      "moz_score": 97,
+      "capsule_word_count": 44,
       "missing_entities": [
         "FastAPI",
         "pgvector"
@@ -101,12 +101,12 @@
       "link_boosts_required": 1
     },
     {
-      "url": "https://elesium.online/videos",
-      "keyword": "Enterprise AI Automation Video Case Studies",
-      "current_position": 8.4,
-      "projected_position": 2.9,
-      "moz_score": 96,
-      "capsule_word_count": 45,
+      "url": "https://elesium.online/waitlist",
+      "keyword": "waitlist",
+      "current_position": 9.6,
+      "projected_position": 4.1,
+      "moz_score": 97,
+      "capsule_word_count": 44,
       "missing_entities": [
         "FastAPI",
         "pgvector"
@@ -114,62 +114,25 @@
       "link_boosts_required": 2
     },
     {
-      "url": "https://elesium.online/videos/enterprise-ai-automation-india-2026",
-      "keyword": "Enterprise AI Automation India 2026 Video Breakdown",
-      "current_position": 10.4,
+      "url": "https://elesium.online/audit",
+      "keyword": "audit",
+      "current_position": 10.9,
       "projected_position": 2.8,
-      "moz_score": 96,
-      "capsule_word_count": 45,
+      "moz_score": 97,
+      "capsule_word_count": 44,
       "missing_entities": [
+        "FastAPI",
         "pgvector"
       ],
       "link_boosts_required": 3
     },
     {
-      "url": "https://elesium.online/videos/langgraph-vs-n8n-enterprise-agents",
-      "keyword": "LangGraph vs n8n Enterprise Agents Video",
-      "current_position": 6.5,
-      "projected_position": 2.1,
-      "moz_score": 96,
-      "capsule_word_count": 45,
-      "missing_entities": [
-        "pgvector"
-      ],
-      "link_boosts_required": 2
-    },
-    {
-      "url": "https://elesium.online/videos/bfsi-autonomous-loan-underwriting",
-      "keyword": "BFSI Autonomous Loan Underwriting Video",
-      "current_position": 4.2,
-      "projected_position": 1.8,
-      "moz_score": 96,
-      "capsule_word_count": 48,
-      "missing_entities": [
-        "FastAPI",
-        "pgvector"
-      ],
-      "link_boosts_required": 1
-    },
-    {
-      "url": "https://elesium.online/waitlist",
-      "keyword": "Enterprise AI Automation Pilot Waitlist",
-      "current_position": 9.6,
-      "projected_position": 4.1,
-      "moz_score": 96,
-      "capsule_word_count": 48,
-      "missing_entities": [
-        "FastAPI",
-        "pgvector"
-      ],
-      "link_boosts_required": 2
-    },
-    {
       "url": "https://elesium.online/signals",
-      "keyword": "Market Intelligence AI Automation Signals",
+      "keyword": "signals",
       "current_position": 5.4,
       "projected_position": 2.2,
-      "moz_score": 96,
-      "capsule_word_count": 48,
+      "moz_score": 97,
+      "capsule_word_count": 44,
       "missing_entities": [
         "LangGraph",
         "FastAPI",
@@ -180,18 +143,28 @@
     },
     {
       "url": "https://elesium.online/solutions",
-      "keyword": "Enterprise AI Automation High-Lever Solutions Hub",
+      "keyword": "solutions",
       "current_position": 6.1,
       "projected_position": 2.1,
-      "moz_score": 96,
-      "capsule_word_count": 45,
+      "moz_score": 97,
+      "capsule_word_count": 44,
       "missing_entities": [],
       "link_boosts_required": 2
     },
     {
-      "url": "https://elesium.online/signals/dynamic-kv-cache-eviction-heavy-hitter-attention-sinks",
-      "keyword": "dynamic kv cache eviction heavy hitter attention sinks",
-      "current_position": 6.4,
+      "url": "https://elesium.online/compare",
+      "keyword": "compare",
+      "current_position": 3.8,
+      "projected_position": 1.8,
+      "moz_score": 97,
+      "capsule_word_count": 44,
+      "missing_entities": [],
+      "link_boosts_required": 1
+    },
+    {
+      "url": "https://elesium.online/tools/multi-agent-latency-token-cost-estimator",
+      "keyword": "multi agent latency token cost estimator",
+      "current_position": 6.7,
       "projected_position": 2.1,
       "moz_score": 97,
       "capsule_word_count": 45,
@@ -202,17 +175,42 @@
       "link_boosts_required": 2
     },
     {
-      "url": "https://elesium.online/signals/dynamic-tree-speculative-decoding-warp-divergence-pruning",
-      "keyword": "dynamic tree speculative decoding warp divergence pruning",
-      "current_position": 7.1,
-      "projected_position": 2.1,
+      "url": "https://elesium.online/tools/enterprise-gpu-finops-cost-calculator",
+      "keyword": "enterprise gpu finops cost calculator",
+      "current_position": 10.4,
+      "projected_position": 2.8,
+      "moz_score": 97,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI",
+        "pgvector"
+      ],
+      "link_boosts_required": 3
+    },
+    {
+      "url": "https://elesium.online/tools/enterprise-vector-db-latency-benchmark",
+      "keyword": "enterprise vector db latency benchmark",
+      "current_position": 14.2,
+      "projected_position": 5.2,
+      "moz_score": 97,
+      "capsule_word_count": 48,
+      "missing_entities": [
+        "FastAPI"
+      ],
+      "link_boosts_required": 3
+    },
+    {
+      "url": "https://elesium.online/tools/enterprise-llm-context-kv-cache-simulator",
+      "keyword": "enterprise llm context kv cache simulator",
+      "current_position": 5.1,
+      "projected_position": 1.9,
       "moz_score": 97,
       "capsule_word_count": 45,
       "missing_entities": [
         "FastAPI",
         "pgvector"
       ],
-      "link_boosts_required": 2
+      "link_boosts_required": 1
     }
   ],
   "posts": [
