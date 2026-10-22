@@ -4993,6 +4993,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "Custom Triton Kernel • PagedAttention Paging • DPDP Act 2023 Memory Shredder"
                     }
             ]
+    },
+    {
+            "id": "sfv-48",
+            "slug": "enterprise-agent-hierarchical-storage-paging-simulator",
+            "keyword": "hierarchical hbm-to-nvme kv-cache tiered storage paging daemons for enterprise llm clusters",
+            "key_benefit": "Sub-10ms Page Faults & 10M+ Context Window Scaling",
+            "industry": "Enterprise High-Performance Storage & Distributed LLM Infrastructure",
+            "target_persona": "Chief Technology Officers & Distributed Storage Architects",
+            "youtube_id": "hierarchStorage48",
+            "hero_image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "caption": "Hierarchical HBM-to-NVMe KV-Cache Tiered Storage Paging Daemons",
+                            "visual": "Three-tier memory hierarchy telemetry display showing real-time KV page flow between HBM3e, CXL 3.0 DRAM, and PCIe Gen5 NVMe arrays.",
+                            "voiceover": "Hierarchical HBM-to-NVMe KV-cache tiered storage paging daemons break the GPU memory wall for ten-million-token agent swarms."
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "caption": "The $1.5M GPU Hardware Expansion Cliff",
+                            "visual": "Rack-scale datacenter blueprint showing server node proliferation and extreme CapEx surge required to host uncompressed multi-million token contexts.",
+                            "voiceover": "Hosting ten million context tokens in pure GPU High Bandwidth Memory requires over a million dollars in redundant hardware clusters, creating prohibitive serving bills."
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "caption": "Asynchronous CUDA DMA Prefetch & CXL 3.0 Memory Pooling",
+                            "visual": "Animated architectural schematic showing dual CUDA streams overlapping decode GEMMs with asynchronous GPUDirect Storage DMA transfers.",
+                            "voiceover": "Our architecture pools warm context in CXL 3.0 DRAM and cold history on NVMe arrays, overlapping asynchronous CUDA DMA prefetches with active token generation."
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "caption": "6.4ms Page Faults & 76.4% Cluster Hardware Savings",
+                            "visual": "Benchmarking dashboard highlighting 6.4ms average page fault resolution, 7.8ms inter-token latency, and 76.4% hardware TCO reduction.",
+                            "voiceover": "This slashes page fault resolution to six point four milliseconds, sustains sub-eight millisecond inter-token latencies, and cuts cluster hardware procurement costs by seventy-six percent."
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion CTA",
+                            "caption": "Simulate Hierarchical Storage at Elesium.online",
+                            "visual": "Enterprise deployment portal featuring GPUDirect Storage, CXL 3.0, and DPDP Act 2023 compliance seals with an instant architecture audit CTA.",
+                            "voiceover": "Visit elesium dot online to simulate your hierarchical KV storage paging architecture and engineer your sovereign long-context infrastructure."
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "Page Fault Latency",
+                            "value": "6.4 ms",
+                            "detail": "Sub-10ms Servicing",
+                            "color": "emerald"
+                    },
+                    {
+                            "label": "Inter-Token Latency",
+                            "value": "7.8 ms",
+                            "detail": "Sub-8ms Real-Time",
+                            "color": "cyan"
+                    },
+                    {
+                            "label": "Max Context Window",
+                            "value": "10.0M tok",
+                            "detail": "Hierarchical Paging",
+                            "color": "indigo"
+                    },
+                    {
+                            "label": "Hardware CapEx Savings",
+                            "value": "76.4%",
+                            "detail": "Procurement Delta",
+                            "color": "amber"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Hot-Warm-Cold Memory Tier Classification",
+                            "bullets": [
+                                    "Pinning initial attention sinks and active decoding windows in 3.35 TB/s GPU HBM3e",
+                                    "Buffering intermediate multi-agent conversational branches in 256 GB/s CXL 3.0 shared DRAM",
+                                    "Streaming inactive historical session contexts into striped PCIe Gen5 NVMe solid-state arrays"
+                            ],
+                            "techStack": "HBM3e Hot Tier • CXL 3.0 Memory Pool • PCIe Gen5 NVMe Array"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Asynchronous CUDA DMA Stream & Prefetch Orchestration",
+                            "bullets": [
+                                    "Scheduling non-blocking GPUDirect Storage DMA transfers on dedicated CUDA stream channels",
+                                    "Predicting upcoming token block lookaheads via speculative branch tracking engines",
+                                    "Eliminating Host-to-Device transfer stalls to sustain sub-8ms inter-token decoding times"
+                            ],
+                            "techStack": "GPUDirect Storage (GDS) • Dedicated DMA Streams • Lookahead Prefetch"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Statutory Zero-Remanence Ephemeral Purging & Paged Storage",
+                            "bullets": [
+                                    "Enforcing line-rate hardware AES-XTS-256 encryption on all paged NVMe blocks",
+                                    "Instant cryptographic key destruction in host HSM upon session termination under DPDP Act 2023",
+                                    "Guaranteeing mathematical zero-remanence on physical solid-state drives for banking and defense"
+                            ],
+                            "techStack": "AES-XTS-256 Encryption • Hardware HSM Shredder • DPDP Act 2023 Compliance"
+                    }
+            ]
     }
 ]
 
