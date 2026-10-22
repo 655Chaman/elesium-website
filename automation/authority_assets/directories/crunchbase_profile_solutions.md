@@ -5,8 +5,8 @@
 - **Legal Name:** Elesium Online
 - **Website:** https://elesium.online
 - **Solutions Hub Link:** https://elesium.online/solutions
-- **Headquarters:** Bengaluru, Karnataka, India
-- **Postal Code:** 560034
+- **Headquarters:** Shivamogga, Karnataka, India
+- **Postal Code:** 577205
 - **Operating Status:** Active
 - **Founding Date:** 2024
 - **Company Type:** For Profit (B2B Enterprise)

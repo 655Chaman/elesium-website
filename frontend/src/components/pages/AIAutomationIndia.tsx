@@ -337,18 +337,18 @@ export default function AIAutomationIndia() {
         "priceRange": "₹1,50,000 - ₹15,00,000+",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Koramangala 4th Block",
-            "addressLocality": "Bangalore",
+            "streetAddress": "Main Road",
+            "addressLocality": "Shivamogga",
             "addressRegion": "Karnataka",
-            "postalCode": "560034",
+            "postalCode": "577205",
             "addressCountry": "IN"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 12.9352,
-            "longitude": 77.6245
+            "latitude": 13.9299,
+            "longitude": 75.5681
         },
-        "hasMap": "https://www.google.com/maps/place/Koramangala,+Bengaluru,+Karnataka",
+        "hasMap": "https://www.google.com/maps/place/Shivamogga,+Karnataka+577205",
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -429,10 +429,10 @@ export default function AIAutomationIndia() {
             "telephone": "+91-8317329312",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Koramangala 4th Block",
-                "addressLocality": "Bangalore",
+                "streetAddress": "Main Road",
+                "addressLocality": "Shivamogga",
                 "addressRegion": "Karnataka",
-                "postalCode": "560034",
+                "postalCode": "577205",
                 "addressCountry": "IN"
             }
         },
@@ -1184,7 +1184,7 @@ export default function AIAutomationIndia() {
                                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
                             >
                                 <Calendar className="w-4 h-4 text-emerald-400" />
-                                <span>Schedule Calendar Review</span>
+                                <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
                         </div>
                     </div>

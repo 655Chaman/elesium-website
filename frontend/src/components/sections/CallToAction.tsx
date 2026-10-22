@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion'
-import { MessageSquare, ArrowRight, Calendar } from 'lucide-react'
+import { MessageSquare, ArrowRight, Sparkles } from 'lucide-react'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -48,13 +48,13 @@ export default function CallToAction() {
                         </h2>
 
                         <p className="text-base sm:text-lg text-gray-300 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                            No sales gatekeepers. Speak directly with our Principal AI Systems Architect in Bengaluru to evaluate sovereign private VPC infrastructure, LangGraph state machines, and statutory DPDP Act compliance.
+                            No sales gatekeepers. Speak directly with our Principal AI Systems Architect in Shivamogga, Karnataka via WhatsApp to evaluate sovereign private VPC infrastructure, LangGraph state machines, and statutory DPDP Act compliance.
                         </p>
 
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-xl text-sm transition-all shadow-lg group"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-sm transition-all shadow-lg group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -63,10 +63,10 @@ export default function CallToAction() {
 
                             <Link
                                 to="/waitlist"
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-xl text-sm transition-all"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
                             >
-                                <Calendar className="w-4 h-4 text-emerald-400" />
-                                <span>Schedule Calendar Review</span>
+                                <Sparkles className="w-4 h-4 text-emerald-400" />
+                                <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
                         </div>
 

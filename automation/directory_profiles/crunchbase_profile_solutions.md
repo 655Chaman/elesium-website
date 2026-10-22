@@ -9,7 +9,7 @@
 - **Legal Name:** Elesium Online
 - **Official Website:** https://elesium.online
 - **Solutions Hub Link:** https://elesium.online/solutions
-- **Headquarters:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+- **Headquarters:** Main Road, Shivamogga, Karnataka 577205, India
 - **Direct Phone:** +91-8317329312
 - **Key Leadership:** Chaman Shah (Principal AI Systems Architect)
 - **Founding Year:** 2024

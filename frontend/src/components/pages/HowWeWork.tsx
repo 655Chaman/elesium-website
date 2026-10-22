@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft, CheckCircle2, XCircle, MessageSquare, ArrowRight, Calendar } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, XCircle, MessageSquare, ArrowRight } from 'lucide-react'
 import { useNavigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -101,8 +101,7 @@ export default function HowWeWork() {
                             to="/waitlist"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-800 dark:text-gray-200 font-medium px-6 py-4 rounded-full text-sm transition-all"
                         >
-                            <Calendar className="w-4 h-4 text-emerald-500" />
-                            <span>Schedule Calendar Review</span>
+                            <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
                 </motion.div>
@@ -230,8 +229,7 @@ export default function HowWeWork() {
                             to="/waitlist"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-800 dark:text-gray-200 font-medium px-6 py-4 rounded-full text-sm transition-all"
                         >
-                            <Calendar className="w-4 h-4 text-emerald-500" />
-                            <span>Schedule Calendar Review</span>
+                            <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
                 </motion.div>

@@ -7,7 +7,7 @@
 - **Central Solutions Hub:** https://elesium.online/solutions
 - **Direct Phone:** +91-8317329312
 - **Corporate Email:** contact@elesium.online
-- **Office Location:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+- **Office Location:** Main Road, Shivamogga, Karnataka 577205, India
 - **Founded:** 2024
 - **Employees:** 10-49
 - **Average Hourly Rate:** $25 - $49 / hr

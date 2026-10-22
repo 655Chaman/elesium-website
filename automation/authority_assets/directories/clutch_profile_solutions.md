@@ -7,7 +7,7 @@
 - **Solutions Hub (Target Landing URL):** https://elesium.online/solutions
 - **Tagline:** Replacing 40-hour manual bottlenecks with deterministic, sovereign multi-agent AI systems.
 - **Founded:** 2024
-- **Headquarters:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+- **Headquarters:** Main Road, Shivamogga, Karnataka 577205, India
 - **Direct Phone:** +91-8317329312
 - **Inquiry Email:** contact@elesium.online
 - **Company Size:** 10-49

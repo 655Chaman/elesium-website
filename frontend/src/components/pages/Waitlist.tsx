@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
     ShieldCheck, 
     Lock, 
-    Clock, 
     CheckCircle2, 
     ArrowRight, 
     Check, 
     MessageSquare,
     ExternalLink,
-    Calendar
+    Cpu,
+    Server,
+    Layers
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { CalendarBookingEmbed } from '../cro/CalendarBookingEmbed';
 import { TrustProofRibbon } from '../cro/TrustProofRibbon';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
 
@@ -31,7 +31,7 @@ const EXECUTIVE_ROLES = [
     'Director of Digital Transformation / IT'
 ];
 
-// Workflow Domains mapping to Elesium's Core Systems
+// Workflow Domains for ele-in SaaS Platform
 const WORKFLOW_DOMAINS = [
     { id: 'logistics-erp', label: 'Logistics ERP & Autonomous Fleet Dispatch' },
     { id: 'bfsi-underwriting', label: 'BFSI Loan Underwriting & CAM Generation' },
@@ -42,13 +42,12 @@ const WORKFLOW_DOMAINS = [
     { id: 'custom-langgraph', label: 'Custom LangGraph Multi-Agent State Machine' }
 ];
 
-// Monthly Operational Spend Tiers
-const SPEND_TIERS = [
-    { id: 'inr-5-15l', label: '₹5 Lakhs – ₹15 Lakhs / month (India)' },
-    { id: 'inr-15-50l', label: '₹15 Lakhs – ₹50 Lakhs / month (India)' },
-    { id: 'inr-50l-plus', label: '₹50 Lakhs+ / month (Enterprise India)' },
-    { id: 'usd-10-50k', label: '$10,000 – $50,000 / month (Global Enterprise)' },
-    { id: 'usd-50k-plus', label: '$50,000+ / month (Global Enterprise)' }
+// Infrastructure / Deployment Preferences for ele-in
+const HOSTING_PREFERENCES = [
+    { id: 'private-vpc', label: 'Private VPC (AWS / Azure / GCP Dedicated Enclave)' },
+    { id: 'air-gapped-on-prem', label: 'Air-Gapped On-Premise GPU Cluster (CtrlS / Yotta / Nxtra)' },
+    { id: 'sovereign-cloud', label: 'Elesium Sovereign Cloud (Indian Datacenters - DPDP 2023 Compliant)' },
+    { id: 'hybrid', label: 'Hybrid Multi-Cloud Enterprise Mesh' }
 ];
 
 // Compliance and Infrastructure Constraints
@@ -114,18 +113,16 @@ export default function Waitlist() {
     const [companyWebsite, setCompanyWebsite] = useState('');
     const [role, setRole] = useState(EXECUTIVE_ROLES[0]);
     const [workflow, setWorkflow] = useState(defaultWorkflow);
-    const [monthlySpend, setMonthlySpend] = useState(SPEND_TIERS[1].label);
+    const [hostingPreference, setHostingPreference] = useState(HOSTING_PREFERENCES[0].label);
     const [selectedCompliance, setSelectedCompliance] = useState<string[]>([
         'DPDP Act 2023 (India)',
         'Air-Gapped Private VPC (Zero External LLM Leakage)'
     ]);
-    const [timeline, setTimeline] = useState('Immediate (Next 30 Days)');
     const [notes, setNotes] = useState('');
 
     const [isLoading, setIsLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [confirmationCode, setConfirmationCode] = useState('');
-    const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
     // Pre-select workflow if param updates
     useEffect(() => {
@@ -152,7 +149,7 @@ export default function Waitlist() {
         if (!workEmail || !fullName || !companyName) return;
 
         setIsLoading(true);
-        const code = `ELS-AUDIT-2026-${Math.random().toString(16).substring(2, 8).toUpperCase()}`;
+        const code = `ELE-IN-2026-${Math.random().toString(16).substring(2, 8).toUpperCase()}`;
         setConfirmationCode(code);
 
         const payload = {
@@ -161,12 +158,12 @@ export default function Waitlist() {
             company: companyName.trim(),
             website: companyWebsite.trim() || 'N/A',
             role: role,
-            usecase: `[${workflow}] ${notes ? '- Notes: ' + notes : ''} | Compliance: ${selectedCompliance.join(', ')}`,
-            revenue: monthlySpend,
+            usecase: `[ele-in SaaS Waitlist] Target Workflow: ${workflow} | Hosting: ${hostingPreference} ${notes ? '| Notes: ' + notes : ''}`,
+            revenue: hostingPreference,
             certifications: selectedCompliance.join(', '),
-            readiness: timeline,
-            targetPartner: solutionParam ? `Referred by /solutions/${solutionParam}` : 'Direct Audit Portal',
-            leadSource: 'Enterprise Architecture Audit Portal',
+            readiness: 'SaaS Alpha Waitlist',
+            targetPartner: solutionParam ? `Referred by /solutions/${solutionParam}` : 'ele-in SaaS Portal',
+            leadSource: 'ele-in SaaS Product Waitlist',
             attributionSource: refParam || (solutionParam ? `/solutions/${solutionParam}` : (roiParam ? `/tools/enterprise-ai-roi-calculator` : '/waitlist')),
             confirmationCode: code,
             roiImported: roiParam ? `₹${roiParam} Lakhs/yr` : undefined,
@@ -185,23 +182,22 @@ export default function Waitlist() {
             if (response && response.ok) {
                 setSubmitted(true);
             } else {
-                // If backend is waking up or temporarily unreachable, still acknowledge gracefully and provide direct WhatsApp route
-                console.warn('[AUDIT INTAKE] Server offline or non-200. Persisting locally and providing instant engineering bridge.');
+                console.warn('[ele-in WAITLIST] Server acknowledgment fallback. Recorded locally.');
                 setSubmitted(true);
             }
         } catch (error) {
-            console.error('Audit submission error:', error);
+            console.error('ele-in waitlist submission error:', error);
             setSubmitted(true);
         } finally {
             setIsLoading(false);
         }
     };
 
-    // WhatsApp Direct Fallback link
+    // WhatsApp Fallback link
     const whatsappUrl = useMemo(() => {
-        const msg = `Hello Chaman,\n\nI just scheduled an Enterprise Architecture Audit on elesium.online.\n\n• Confirmation Ref: ${confirmationCode || 'ELS-AUDIT'}\n• Name: ${fullName}\n• Company: ${companyName}\n• Role: ${role}\n• Target Workflow: ${workflow}\n• Scale/Spend: ${monthlySpend}\n\nLooking forward to reviewing the technical scope under mutual NDA.`;
+        const msg = `Hello Chaman,\n\nI just joined the ele-in SaaS product waitlist on elesium.online.\n\n• Confirmation Ref: ${confirmationCode || 'ELE-IN-WAITLIST'}\n• Name: ${fullName}\n• Company: ${companyName}\n• Role: ${role}\n• Planned Workflow: ${workflow}\n• Hosting Preference: ${hostingPreference}\n\nLooking forward to accessing the private alpha tenant.`;
         return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-    }, [confirmationCode, fullName, companyName, role, workflow, monthlySpend]);
+    }, [confirmationCode, fullName, companyName, role, workflow, hostingPreference]);
 
     const inputClass =
         'w-full px-4 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/[0.04] text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:ring-2 focus:ring-emerald-500/50 dark:focus:ring-emerald-400/50 outline-none transition-all text-[14px]';
@@ -211,7 +207,7 @@ export default function Waitlist() {
 
     return (
         <motion.div 
-            key="audit-booking-portal"
+            key="ele-in-waitlist-portal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -219,13 +215,16 @@ export default function Waitlist() {
             className="relative min-h-[100vh] pt-28 pb-24 px-6 md:px-12 bg-gray-50 dark:bg-[#070707] text-gray-900 dark:text-white font-sans"
         >
             <Helmet>
-                <title>Schedule Sovereign Enterprise AI Architecture Audit | Elesium</title>
-                <meta name="description" content="Book a 90-minute technical scope, data sovereignty risk analysis, and deterministic multi-agent roadmap led by Chaman Shah (Principal AI Systems Architect). Confidential and governed by a mutual NDA." />
+                <title>ele-in Early Access Waitlist | Sovereign Enterprise AI SaaS Platform | Elesium</title>
+                <meta
+                    name="description"
+                    content="Join the exclusive private alpha waitlist for ele-in, Elesium's autonomous multi-agent enterprise SaaS platform. Deploy sovereign, deterministic AI workflows with zero prompt leakage and statutory DPDP Act compliance."
+                />
                 <link rel="canonical" href="https://elesium.online/waitlist" />
+                <meta property="og:title" content="ele-in Early Access Waitlist | Sovereign Enterprise AI SaaS" />
+                <meta property="og:description" content="Request private alpha access to ele-in, India's most advanced autonomous enterprise AI SaaS operating system by Elesium." />
+                <meta property="og:url" content="https://elesium.online/waitlist" />
             </Helmet>
-
-            {/* Ambient Background Glow */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/5 rounded-full blur-[140px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 
@@ -237,8 +236,8 @@ export default function Waitlist() {
                         className="mb-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 text-xs font-mono"
                     >
                         <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 " />
-                            <span className="text-emerald-400 font-bold uppercase tracking-wider">Contextual Technical Scope Ingested:</span>
+                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                            <span className="text-emerald-400 font-bold uppercase tracking-wider">Solution Blueprint Ingested:</span>
                             {formattedSolutionTitle && (
                                 <span className="text-gray-200 font-sans font-semibold">
                                     {formattedSolutionTitle}
@@ -257,165 +256,97 @@ export default function Waitlist() {
                 {/* Two-Column Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                     
-                    {/* Left Column: Strategic Credentials & Audit Protocol */}
+                    {/* Left Column: ele-in Platform Overview */}
                     <div className="lg:col-span-5 space-y-8">
                         <div>
                             {/* Live Badge */}
                             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-[11px] font-mono tracking-wider uppercase mb-6">
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                4 Enterprise Audit Windows Open for Q4 2026
+                                ele-in // Private Alpha Cohort Open
                             </div>
 
                             <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-5">
-                                Sovereign Enterprise AI <br className="hidden sm:block" />
-                                Architecture Audit
+                                ele-in <br className="hidden sm:block" />
+                                Sovereign AI Platform
                             </h1>
 
                             <p className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed">
-                                A 90-minute technical discovery and threat-modeling session conducted directly by <strong className="text-gray-900 dark:text-white font-semibold">Chaman Shah</strong> (Principal AI Systems Architect). Confidential, governed by a pre-executed mutual NDA, and delivered with a deterministic LangGraph DAG blueprint.
+                                <strong className="text-gray-900 dark:text-white font-semibold">ele-in</strong> is Elesium's autonomous multi-agent enterprise SaaS platform. Built for engineering teams, CTOs, and operations leaders to deploy deterministic, sovereign AI agents across legacy enterprise workflows with zero token leakage.
                             </p>
                         </div>
 
-                        {/* Audit Deliverables Card */}
+                        {/* ele-in Core SaaS Architecture Pillars */}
                         <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.03] border border-gray-200/80 dark:border-white/10 shadow-sm space-y-4">
                             <h3 className="text-xs font-mono font-semibold tracking-wider uppercase text-gray-400">
-                                What You Receive in the 90-Minute Audit
+                                What ele-in Delivers Out of the Box
                             </h3>
                             <div className="space-y-3.5 text-[14px]">
                                 <div className="flex items-start gap-3">
                                     <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
-                                        <Check className="w-4 h-4" />
+                                        <Layers className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Bottleneck & Latency Forensics</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Analysis of current manual workflows, SAP/Salesforce handoffs, and error cascades.</span>
+                                        <strong className="text-gray-900 dark:text-white font-medium block">Visual Multi-Agent Canvas</strong>
+                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Orchestrate LangGraph cyclic state machines, human-in-the-loop gates, and deterministic fallbacks visually.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
-                                        <Check className="w-4 h-4" />
+                                        <ShieldCheck className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Sovereign Data & VPC Threat Model</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Architectural isolation roadmap conforming to DPDP Act 2023 and RBI/SEBI guidelines.</span>
+                                        <strong className="text-gray-900 dark:text-white font-medium block">Air-Gapped Sovereign Privacy</strong>
+                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Local PII scrubbing (Verhoeff Aadhaar / PAN) and 100% compliance with India's DPDP Act 2023.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
-                                        <Check className="w-4 h-4" />
+                                        <Cpu className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Deterministic LangGraph DAG Blueprint</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">State-machine architecture with explicit fallback loops and audited 90-day cash-flow ROI.</span>
+                                        <strong className="text-gray-900 dark:text-white font-medium block">Sub-200ms Execution Latency</strong>
+                                        <span className="text-gray-500 dark:text-gray-400 text-xs">High-throughput streaming engine with automated rollback checkpoints and verifiable state receipts.</span>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
+                                        <Server className="w-4 h-4" />
+                                    </div>
+                                    <div>
+                                        <strong className="text-gray-900 dark:text-white font-medium block">Turnkey ERP &amp; Banking Bridges</strong>
+                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Pre-built connectors into SAP S/4HANA, Salesforce, Tally ERP, and Core Banking APIs.</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* SLA & Governance Badges */}
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="p-4 rounded-xl bg-white/40 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 flex items-center gap-3">
-                                <ShieldCheck className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                                <div>
-                                    <span className="text-xs font-semibold block text-gray-900 dark:text-white">Mutual NDA</span>
-                                    <span className="text-[11px] text-gray-500 dark:text-gray-400">Signed prior to session</span>
-                                </div>
+                        {/* Enterprise Consulting & Custom Architecture Notice */}
+                        <div className="p-5 rounded-2xl bg-white/[0.02] border border-gray-200/80 dark:border-white/10 space-y-3">
+                            <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                <span className="text-xs font-semibold text-gray-900 dark:text-white">Need Custom Enterprise Deployment Today?</span>
                             </div>
-                            <div className="p-4 rounded-xl bg-white/40 dark:bg-white/[0.02] border border-gray-200/60 dark:border-white/5 flex items-center gap-3">
-                                <Clock className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                                <div>
-                                    <span className="text-xs font-semibold block text-gray-900 dark:text-white">4-Hour SLA</span>
-                                    <span className="text-[11px] text-gray-500 dark:text-gray-400">Guaranteed response</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Direct WhatsApp Callout */}
-                        <div className="p-4 rounded-2xl bg-white/[0.02] border border-gray-200/80 dark:border-white/10 flex items-center justify-between gap-4">
-                            <div>
-                                <span className="text-xs font-semibold block text-gray-900 dark:text-white">Prefer Instant Scoping?</span>
-                                <span className="text-[11px] text-gray-500 dark:text-gray-400">Direct WhatsApp with Lead Architect</span>
-                            </div>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                                Looking for custom sovereign VPC engineering, dedicated on-premise GPU pods, or immediate technical scoping? All enterprise appointments route exclusively through our WhatsApp engineering desk.
+                            </p>
                             <button
                                 type="button"
                                 onClick={openWhatsApp}
-                                className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2 whitespace-nowrap"
+                                className="w-full py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center justify-center gap-2"
                             >
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                <span>Chat on WhatsApp</span>
+                                <span>Chat on WhatsApp with Lead Architect</span>
                             </button>
-                        </div>
-
-                        {/* Client Verification Proof */}
-                        <div className="p-5 rounded-xl border border-gray-200/60 dark:border-white/5 bg-gray-100/50 dark:bg-white/[0.01]">
-                            <div className="text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-2">
-                                Institutional Track Record
-                            </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                Trusted by industrial leaders including <strong className="text-gray-900 dark:text-white">Herculan B.V. (Netherlands)</strong>, regional BFSI lenders, and logistics fleets across India and EMEA.
-                            </div>
-
-                            {/* Corroborated Entity Chips */}
-                            <div className="grid grid-cols-2 gap-2 pt-2 border-t border-gray-200/40 dark:border-white/5">
-                                <a
-                                    href="https://clutch.co/profile/elesium-online"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
-                                >
-                                    <span className="text-xs font-mono text-amber-500">★</span>
-                                    <div>
-                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">Clutch 5.0</div>
-                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">Verified Partner</div>
-                                    </div>
-                                </a>
-                                <a
-                                    href="https://www.goodfirms.co/company/elesium-online"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
-                                >
-                                    <span className="text-xs font-mono text-emerald-500">✓</span>
-                                    <div>
-                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">GoodFirms</div>
-                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">Top AI Agency</div>
-                                    </div>
-                                </a>
-                                <a
-                                    href="https://www.g2.com/products/elesium-ai-automation-platform"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
-                                >
-                                    <span className="text-xs font-mono text-blue-500">G2</span>
-                                    <div>
-                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">G2 Crowd</div>
-                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">High Performer</div>
-                                    </div>
-                                </a>
-                                <a
-                                    href="https://www.trustpilot.com/review/elesium.online"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-lg bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/5 hover:border-gray-400 dark:hover:border-white/20 transition-all flex items-center gap-2"
-                                >
-                                    <span className="text-xs font-mono text-emerald-500">★</span>
-                                    <div>
-                                        <div className="text-[10px] font-bold text-gray-900 dark:text-white">Trustpilot</div>
-                                        <div className="text-[9px] text-gray-500 dark:text-gray-400">4.9 / 5.0 Score</div>
-                                    </div>
-                                </a>
-                            </div>
                         </div>
 
                     </div>
 
-                    {/* Right Column: High-Trust Enterprise Intake Form */}
+                    {/* Right Column: ele-in Waitlist Form */}
                     <div className="lg:col-span-7">
                         <AnimatePresence mode="wait">
                             {!submitted ? (
                                 <motion.form
-                                    key="audit-form"
+                                    key="ele-in-form"
                                     initial={{ opacity: 0, y: 15 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.98 }}
@@ -426,20 +357,15 @@ export default function Waitlist() {
                                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                                             <div>
                                                 <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                    Enterprise Intake & System Discovery
+                                                    Request Early Access to ele-in
                                                 </h2>
                                                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                                    Please provide your corporate credentials to route to the principal engineering desk.
+                                                    Enter your corporate details to join the private alpha cohort.
                                                 </p>
                                             </div>
-                                            <button
-                                                type="button"
-                                                onClick={() => setIsCalendarOpen(true)}
-                                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-xs font-semibold tracking-wide transition shrink-0"
-                                            >
-                                                <Calendar className="w-3.5 h-3.5" />
-                                                <span>Instant Calendar Slot</span>
-                                            </button>
+                                            <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold">
+                                                Alpha Batch 2026
+                                            </span>
                                         </div>
                                     </div>
 
@@ -447,7 +373,7 @@ export default function Waitlist() {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <label htmlFor="fullName" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Full Name & Title <span className="text-emerald-500">*</span>
+                                                Full Name &amp; Title <span className="text-emerald-500">*</span>
                                             </label>
                                             <input
                                                 required
@@ -496,149 +422,125 @@ export default function Waitlist() {
                                                 id="companyName"
                                                 value={companyName}
                                                 onChange={e => setCompanyName(e.target.value)}
-                                                placeholder="e.g. Maersk Logistics India"
+                                                placeholder="e.g. Acme Logistics India"
                                                 className={inputClass}
                                                 disabled={isLoading}
                                             />
                                         </div>
                                         <div>
                                             <label htmlFor="companyWebsite" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Domain / LinkedIn Profile
+                                                Company Website
                                             </label>
                                             <input
                                                 type="text"
                                                 id="companyWebsite"
                                                 value={companyWebsite}
                                                 onChange={e => setCompanyWebsite(e.target.value)}
-                                                placeholder="company.com"
+                                                placeholder="https://acmelogistics.in"
                                                 className={inputClass}
                                                 disabled={isLoading}
                                             />
                                         </div>
                                     </div>
 
-                                    {/* Role & Primary Workflow Row */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                        <div>
-                                            <label htmlFor="role" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Executive Role / Seniority <span className="text-emerald-500">*</span>
-                                            </label>
-                                            <div className="relative">
-                                                <select
-                                                    id="role"
-                                                    value={role}
-                                                    onChange={e => setRole(e.target.value)}
-                                                    className={selectClass}
-                                                    disabled={isLoading}
-                                                >
-                                                    {EXECUTIVE_ROLES.map(r => (
-                                                        <option key={r} value={r}>{r}</option>
-                                                    ))}
-                                                </select>
-                                                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-xs">▼</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label htmlFor="workflow" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Target Automation Domain <span className="text-emerald-500">*</span>
-                                            </label>
-                                            <div className="relative">
-                                                <select
-                                                    id="workflow"
-                                                    value={workflow}
-                                                    onChange={e => setWorkflow(e.target.value)}
-                                                    className={selectClass}
-                                                    disabled={isLoading}
-                                                >
-                                                    {WORKFLOW_DOMAINS.map(w => (
-                                                        <option key={w.id} value={w.label}>{w.label}</option>
-                                                    ))}
-                                                </select>
-                                                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-xs">▼</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Spend Tier & Timeline Row */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                        <div>
-                                            <label htmlFor="monthlySpend" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Operational Spend / Scale <span className="text-emerald-500">*</span>
-                                            </label>
-                                            <div className="relative">
-                                                <select
-                                                    id="monthlySpend"
-                                                    value={monthlySpend}
-                                                    onChange={e => setMonthlySpend(e.target.value)}
-                                                    className={selectClass}
-                                                    disabled={isLoading}
-                                                >
-                                                    {SPEND_TIERS.map(s => (
-                                                        <option key={s.id} value={s.label}>{s.label}</option>
-                                                    ))}
-                                                </select>
-                                                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-xs">▼</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label htmlFor="timeline" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Deployment Horizon <span className="text-emerald-500">*</span>
-                                            </label>
-                                            <div className="relative">
-                                                <select
-                                                    id="timeline"
-                                                    value={timeline}
-                                                    onChange={e => setTimeline(e.target.value)}
-                                                    className={selectClass}
-                                                    disabled={isLoading}
-                                                >
-                                                    <option value="Immediate (Next 30 Days)">Immediate (Next 30 Days)</option>
-                                                    <option value="Q4 2026 Scheduled">Q4 2026 Scheduled</option>
-                                                    <option value="Exploratory Architecture Review">Exploratory Architecture Review</option>
-                                                </select>
-                                                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-xs">▼</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Security & Compliance Requirements */}
+                                    {/* Executive Role Selection */}
                                     <div>
-                                        <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-3">
-                                            Required Regulatory & Security Frameworks
+                                        <label htmlFor="role" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                            Your Role in the Enterprise <span className="text-emerald-500">*</span>
                                         </label>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                        <select
+                                            id="role"
+                                            value={role}
+                                            onChange={e => setRole(e.target.value)}
+                                            className={selectClass}
+                                            disabled={isLoading}
+                                        >
+                                            {EXECUTIVE_ROLES.map(r => (
+                                                <option key={r} value={r} className="bg-white dark:bg-[#121212] text-gray-900 dark:text-white">
+                                                    {r}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    {/* Workflow Domain Selection */}
+                                    <div>
+                                        <label htmlFor="workflow" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                            Primary Workflow for ele-in <span className="text-emerald-500">*</span>
+                                        </label>
+                                        <select
+                                            id="workflow"
+                                            value={workflow}
+                                            onChange={e => setWorkflow(e.target.value)}
+                                            className={selectClass}
+                                            disabled={isLoading}
+                                        >
+                                            {WORKFLOW_DOMAINS.map(w => (
+                                                <option key={w.id} value={w.label} className="bg-white dark:bg-[#121212] text-gray-900 dark:text-white">
+                                                    {w.label}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    {/* Hosting / Deployment Preference */}
+                                    <div>
+                                        <label htmlFor="hostingPreference" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                            Target Hosting Environment <span className="text-emerald-500">*</span>
+                                        </label>
+                                        <select
+                                            id="hostingPreference"
+                                            value={hostingPreference}
+                                            onChange={e => setHostingPreference(e.target.value)}
+                                            className={selectClass}
+                                            disabled={isLoading}
+                                        >
+                                            {HOSTING_PREFERENCES.map(h => (
+                                                <option key={h.id} value={h.label} className="bg-white dark:bg-[#121212] text-gray-900 dark:text-white">
+                                                    {h.label}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    {/* Statutory Compliance Checklist */}
+                                    <div>
+                                        <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                            Statutory &amp; Security Constraints
+                                        </label>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                                             {COMPLIANCE_STANDARDS.map(standard => {
-                                                const checked = selectedCompliance.includes(standard);
+                                                const isChecked = selectedCompliance.includes(standard);
                                                 return (
                                                     <button
-                                                        key={standard}
                                                         type="button"
+                                                        key={standard}
                                                         onClick={() => toggleCompliance(standard)}
-                                                        className={`text-left px-3.5 py-2.5 rounded-xl text-xs font-medium border transition-all flex items-center justify-between ${
-                                                            checked 
-                                                                ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400 font-semibold' 
-                                                                : 'bg-white/40 dark:bg-white/[0.02] border-gray-200 dark:border-white/5 text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-white/10'
+                                                        className={`p-3 rounded-xl border text-left text-xs font-medium transition-all flex items-center justify-between ${
+                                                            isChecked
+                                                                ? 'border-emerald-500/50 bg-emerald-500/10 text-gray-900 dark:text-white'
+                                                                : 'border-gray-200 dark:border-white/10 hover:border-gray-300 dark:hover:border-white/20 text-gray-600 dark:text-gray-400'
                                                         }`}
                                                     >
                                                         <span>{standard}</span>
-                                                        {checked && <Check className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0 ml-2" />}
+                                                        {isChecked && <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />}
                                                     </button>
                                                 );
                                             })}
                                         </div>
                                     </div>
 
-                                    {/* Workflow Overview & System Details */}
+                                    {/* Brief Notes */}
                                     <div>
                                         <label htmlFor="notes" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                            Workflow Context / Existing Infrastructure (Optional)
+                                            Current Bottleneck &amp; Specific Use Case
                                         </label>
                                         <textarea
                                             id="notes"
                                             rows={3}
                                             value={notes}
                                             onChange={e => setNotes(e.target.value)}
-                                            placeholder="e.g. Ingesting 2,000 PDF invoices daily into SAP S/4HANA with 4 manual clerks. Seeking sub-2s automated verification and ledger sync."
+                                            placeholder="e.g. Need to replace manual invoice data extraction into SAP S/4HANA with sub-200ms verification..."
                                             className={inputClass}
                                             disabled={isLoading}
                                         />
@@ -647,32 +549,32 @@ export default function Waitlist() {
                                     {/* Submit Button */}
                                     <button
                                         type="submit"
-                                        disabled={isLoading}
-                                        className="w-full h-14 rounded-2xl bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-bold text-base flex items-center justify-center gap-3 shadow-md disabled:opacity-60 transition-all cursor-pointer group"
+                                        disabled={isLoading || !fullName || !workEmail || !companyName}
+                                        className="w-full py-4 px-6 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isLoading ? (
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-5 h-5 border-2 border-white dark:border-black border-t-transparent rounded-full animate-spin" />
-                                                <span>Routing to Principal Desk...</span>
-                                            </div>
+                                            <span className="flex items-center gap-2">
+                                                <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                                                <span>Registering Priority Node...</span>
+                                            </span>
                                         ) : (
                                             <>
-                                                <span>Request Architecture Audit & NDA</span>
-                                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                                <span>Join ele-in Early Access Waitlist</span>
+                                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                             </>
                                         )}
                                     </button>
 
-                                    {/* Mutual Confidentiality Footnote */}
+                                    {/* Footnote */}
                                     <div className="flex items-center justify-center gap-2 text-center text-[11px] text-gray-400 dark:text-gray-500 pt-2">
                                         <Lock className="w-3.5 h-3.5 text-emerald-400" />
-                                        <span>Enterprise Confidentiality Guarantee. All inquiries protected by Mutual NDA.</span>
+                                        <span>Corporate Privacy Guarantee. Zero third-party telemetry or public LLM leakage.</span>
                                     </div>
                                 </motion.form>
                             ) : (
                                 /* Confirmation Screen */
                                 <motion.div
-                                    key="audit-confirmation"
+                                    key="ele-in-confirmation"
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.4 }}
@@ -680,7 +582,6 @@ export default function Waitlist() {
                                 >
                                     {/* Success Ring */}
                                     <div className="relative flex items-center justify-center h-20 w-20 mx-auto">
-                                        <span className=" absolute inline-flex h-16 w-16 rounded-full bg-emerald-500/20 opacity-75" />
                                         <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                                             <CheckCircle2 className="w-8 h-8" />
                                         </span>
@@ -688,21 +589,25 @@ export default function Waitlist() {
 
                                     <div>
                                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
-                                            Transmission Ingested // Priority Status
+                                            Priority Node Registered // ele-in Alpha
                                         </div>
                                         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
-                                            Architecture Audit Scheduled
+                                            You Are On The ele-in Waitlist
                                         </h3>
                                         <p className="text-[15px] text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto leading-relaxed">
-                                            Your technical scope dossier has been assigned to <strong className="text-gray-900 dark:text-white font-medium">Chaman Shah</strong> (Principal AI Systems Architect).
+                                            Your private tenant allocation has been staged. As alpha slots open, an onboarding key will be dispatched to <strong className="text-gray-900 dark:text-white font-medium">{workEmail}</strong>.
                                         </p>
                                     </div>
 
                                     {/* Technical Ingestion Receipt */}
                                     <div className="w-full max-w-md mx-auto bg-gray-50 dark:bg-black/60 border border-gray-200 dark:border-white/10 rounded-2xl p-5 text-left font-mono text-xs space-y-2.5">
                                         <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
-                                            <span className="text-gray-400">CONFIRMATION REF</span>
+                                            <span className="text-gray-400">WAITLIST REF</span>
                                             <span className="text-emerald-400 font-bold">{confirmationCode}</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                                            <span className="text-gray-400">PRODUCT</span>
+                                            <span className="text-white font-medium">ele-in (SaaS)</span>
                                         </div>
                                         <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
                                             <span className="text-gray-400">ORGANIZATION</span>
@@ -712,34 +617,21 @@ export default function Waitlist() {
                                             <span className="text-gray-400">TARGET WORKFLOW</span>
                                             <span className="text-white truncate max-w-[200px]">{workflow}</span>
                                         </div>
-                                        <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
-                                            <span className="text-gray-400">LEAD ARCHITECT</span>
-                                            <span className="text-white">Chaman Shah</span>
-                                        </div>
                                         <div className="flex justify-between pt-1">
-                                            <span className="text-gray-400">RESPONSE SLA</span>
-                                            <span className="text-emerald-400 font-semibold">&lt; 4 Business Hours</span>
+                                            <span className="text-gray-400">STATUS</span>
+                                            <span className="text-emerald-400 font-semibold">Priority Alpha Queue</span>
                                         </div>
                                     </div>
 
-                                    {/* Next Steps Progression */}
-                                    <div className="max-w-md mx-auto text-left space-y-3 pt-2">
-                                        <h4 className="text-xs font-mono font-semibold uppercase text-gray-400 tracking-wider">
-                                            Next Steps in the Verification Loop:
-                                        </h4>
-                                        <div className="text-xs text-gray-500 dark:text-gray-400 space-y-2">
-                                            <p className="flex items-start gap-2">
-                                                <span className="text-emerald-400 font-bold">1.</span>
-                                                <span>A standard mutual NDA draft will be transmitted to <strong className="text-white">{workEmail}</strong>.</span>
-                                            </p>
-                                            <p className="flex items-start gap-2">
-                                                <span className="text-emerald-400 font-bold">2.</span>
-                                                <span>Our engineering desk will dispatch the calendar invite for the 90-minute technical scoping session.</span>
-                                            </p>
-                                        </div>
+                                    {/* Direct WhatsApp Callout for Immediate Scoping */}
+                                    <div className="max-w-md mx-auto p-4 rounded-2xl bg-white/[0.02] border border-white/10 text-left space-y-2">
+                                        <span className="text-xs font-semibold text-white block">Need Custom Architecture or Immediate Deployment?</span>
+                                        <p className="text-[11px] text-gray-400">
+                                            All enterprise audits and custom multi-agent scoping sessions route directly through our Lead Architect on WhatsApp.
+                                        </p>
                                     </div>
 
-                                    {/* Instant Calendar Booking & WhatsApp Options */}
+                                    {/* Actions */}
                                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                         <button
                                             type="button"
@@ -749,14 +641,6 @@ export default function Waitlist() {
                                             <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                             <span>Chat on WhatsApp</span>
                                         </button>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsCalendarOpen(true)}
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-gray-200 dark:border-white/20 bg-transparent text-gray-900 dark:text-white font-medium text-xs hover:bg-gray-100 dark:hover:bg-white/5 transition-all"
-                                        >
-                                            <Calendar className="w-4 h-4 text-emerald-400" />
-                                            <span>Pick Slot on Cal.com</span>
-                                        </button>
                                         <a
                                             href={whatsappUrl}
                                             target="_blank"
@@ -764,7 +648,7 @@ export default function Waitlist() {
                                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 text-xs font-medium transition-all"
                                         >
                                             <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-                                            <span>Direct Link</span>
+                                            <span>Direct WhatsApp Link</span>
                                             <ExternalLink className="w-3 h-3 text-gray-400" />
                                         </a>
                                     </div>
@@ -779,23 +663,6 @@ export default function Waitlist() {
                 <div className="pt-8">
                     <TrustProofRibbon />
                 </div>
-
-                {/* Calendar Booking Embed Modal */}
-                <CalendarBookingEmbed
-                    isOpen={isCalendarOpen}
-                    onClose={() => setIsCalendarOpen(false)}
-                    prefill={{
-                        name: fullName,
-                        email: workEmail,
-                        company: companyName,
-                        notes: notes
-                    }}
-                    context={{
-                        solutionSlug: solutionParam,
-                        simulatedRoi: roiParam,
-                        complianceFrameworks: selectedCompliance
-                    }}
-                />
             </div>
             <WhatsAppModal />
         </motion.div>

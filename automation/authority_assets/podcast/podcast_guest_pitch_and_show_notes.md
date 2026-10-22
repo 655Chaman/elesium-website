@@ -12,7 +12,7 @@
 - **Name:** Chaman Shah
 - **Title:** Principal AI Systems Architect
 - **Company:** Elesium (https://elesium.online)
-- **Location:** Bengaluru, India
+- **Location:** Shivamogga, India
 - **Headshot:** https://elesium.online/team/chaman-shah-architect.webp
 - **LinkedIn:** https://www.linkedin.com/in/chaman-elesium
 - **One-Sentence Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online), an enterprise AI engineering firm that deploys deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing enterprises.

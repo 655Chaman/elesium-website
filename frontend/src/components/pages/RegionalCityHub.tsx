@@ -6,8 +6,7 @@ import {
     CheckCircle2,
     ArrowRight,
     TrendingUp,
-    MessageSquare,
-    Calendar
+    MessageSquare
 } from 'lucide-react'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -410,8 +409,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             to="/waitlist"
                             className="px-5 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-sm transition-all flex items-center gap-2 text-gray-700 dark:text-gray-300"
                         >
-                            <Calendar className="w-3.5 h-3.5 text-emerald-500" />
-                            <span>Schedule Calendar Review</span>
+                            <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
                 </header>
@@ -558,8 +556,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             to="/waitlist"
                             className="px-6 py-4 rounded-xl border border-white/20 hover:bg-white/10 font-medium text-sm transition-all flex items-center gap-2 text-white"
                         >
-                            <Calendar className="w-4 h-4 text-emerald-400" />
-                            <span>Schedule Calendar Review</span>
+                            <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
                 </section>

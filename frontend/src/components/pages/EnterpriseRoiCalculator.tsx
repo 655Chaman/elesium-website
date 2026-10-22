@@ -638,7 +638,7 @@ export default function EnterpriseRoiCalculator() {
                                     to={`/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=roi-calculator`}
                                     className="px-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 text-xs font-mono transition-colors"
                                 >
-                                    Detailed Waitlist &rarr;
+                                    ele-in SaaS Waitlist &rarr;
                                 </Link>
                             </div>
                         </div>

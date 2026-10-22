@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { X, ShieldCheck, Terminal, ArrowRight, MessageSquare, Calendar } from 'lucide-react';
+import { X, ShieldCheck, Terminal, ArrowRight, MessageSquare, Sparkles } from 'lucide-react';
 import logo from '../../assets/LOGO_NEW.png';
 
 interface WhatsAppModalProps {
@@ -86,7 +86,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                         Direct Engineering Intake
                                     </h3>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">
-                                        Bengaluru Sovereign AI Systems Architecture Desk
+                                        Sovereign AI Systems Architecture Desk · Shivamogga, Karnataka
                                     </p>
                                 </div>
                             </div>
@@ -164,8 +164,8 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                     onClick={onClose}
                                     className="inline-flex items-center gap-1 hover:text-gray-900 dark:hover:text-white transition-colors text-emerald-600 dark:text-emerald-400 font-medium"
                                 >
-                                    <Calendar className="w-3.5 h-3.5" />
-                                    <span>Schedule calendar review &rarr;</span>
+                                    <Sparkles className="w-3.5 h-3.5" />
+                                    <span>Join ele-in SaaS waitlist &rarr;</span>
                                 </Link>
                             </div>
                         </form>

@@ -6728,16 +6728,16 @@ def generate_ssg():
                     "telephone": "+91-8317329312",
                     "address": {
                         "@type": "PostalAddress",
-                        "streetAddress": "Koramangala 4th Block",
-                        "addressLocality": "Bangalore",
+                        "streetAddress": "Main Road",
+                        "addressLocality": "Shivamogga",
                         "addressRegion": "Karnataka",
-                        "postalCode": "560034",
+                        "postalCode": "577205",
                         "addressCountry": "IN"
                     },
                     "geo": {
                         "@type": "GeoCoordinates",
-                        "latitude": 12.9352,
-                        "longitude": 77.6245
+                        "latitude": 13.9299,
+                        "longitude": 75.5681
                     },
                     "hasMap": "https://www.google.com/maps/place/Koramangala,+Bengaluru,+Karnataka",
                     "founder": {

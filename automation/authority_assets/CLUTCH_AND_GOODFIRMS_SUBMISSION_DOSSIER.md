@@ -14,9 +14,9 @@
 * **Avg Hourly Rate:** $50 - $99 / hr
 * **Employees:** 10 - 49
 * **Founded:** 2024
-* **Headquarters:** Building 42, 80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034, India
+* **Headquarters:** Main Road, Shivamogga, Karnataka 577205, India
 * **Phone:** +91-8317329312
-* **Contact Email:** chamansyed655@gmail.com
+* **Contact Email:** contact@elesium.online
 * **Website:** https://elesium.online
 * **Focus Areas:**
   - Artificial Intelligence (60%)

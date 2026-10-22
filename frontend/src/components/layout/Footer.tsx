@@ -12,7 +12,7 @@ export default function DownloadFooter() {
         { name: 'Architecture Comparisons', path: '/compare' },
         { name: 'Video Masterclasses', path: '/videos' },
         { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india' },
-        { name: 'Schedule Architecture Audit', path: '/waitlist' },
+        { name: 'ele-in SaaS Platform (Waitlist)', path: '/waitlist' },
     ];
 
     const featuredTools = [
@@ -59,14 +59,14 @@ export default function DownloadFooter() {
                             Direct Principal Systems Architect Pairing
                         </h3>
                         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Zero sales friction. Connect directly with our core engineering desk in Bengaluru via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
+                            Zero sales friction. Connect directly with our core engineering desk in Shivamogga, Karnataka via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
                         </p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto shrink-0">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp</span>
@@ -74,9 +74,9 @@ export default function DownloadFooter() {
                         </button>
                         <Link
                             to="/waitlist"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-xl text-sm transition-all text-gray-800 dark:text-gray-200"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-full text-sm transition-all text-gray-800 dark:text-gray-200"
                         >
-                            <span>Schedule Review &rarr;</span>
+                            <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
                 </div>
@@ -227,7 +227,7 @@ export default function DownloadFooter() {
                         <Link to="/authors/chaman-shah" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
                         <Link to="/ai-automation-agency-india" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
                         <Link to="/resources" className="hover:text-black dark:hover:text-white transition">Resources</Link>
-                        <Link to="/waitlist" className="hover:text-black dark:hover:text-white transition">Contact &amp; Audit</Link>
+                        <Link to="/waitlist" className="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</Link>
                         <Link to="/sitemap.xml" className="hover:text-black dark:hover:text-white transition">Sitemap</Link>
                     </div>
                 </div>

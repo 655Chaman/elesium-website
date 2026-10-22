@@ -8,7 +8,7 @@
 ## 1. Canonical Syndication Record
 - **Business Name:** Elesium
 - **Legal Name:** Elesium Online
-- **Address:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+- **Address:** Main Road, Shivamogga, Karnataka 577205, India
 - **Phone:** +91-8317329312
 - **Website:** https://elesium.online
 - **Founder:** Chaman Shah

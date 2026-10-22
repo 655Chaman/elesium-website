@@ -57,7 +57,7 @@ export default function Solutions() {
                         <div className="pt-6 border-t border-gray-200/80 dark:border-white/5 flex flex-col sm:flex-row items-center gap-3">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3 rounded-xl text-sm transition-all shadow-sm"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3 rounded-full text-sm transition-all shadow-sm"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp</span>
@@ -67,7 +67,7 @@ export default function Solutions() {
                                 to="/waitlist"
                                 className="w-full sm:w-auto text-center px-4 py-3 text-xs text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
                             >
-                                Or Schedule Review &rarr;
+                                ele-in SaaS Waitlist &rarr;
                             </Link>
                         </div>
                     </motion.div>
@@ -94,7 +94,7 @@ export default function Solutions() {
                         <div className="pt-6 border-t border-gray-200/80 dark:border-white/5 flex flex-col sm:flex-row items-center gap-3">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3 rounded-xl text-sm transition-all shadow-sm"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3 rounded-full text-sm transition-all shadow-sm"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp</span>
@@ -104,7 +104,7 @@ export default function Solutions() {
                                 to="/waitlist"
                                 className="w-full sm:w-auto text-center px-4 py-3 text-xs text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
                             >
-                                Or Schedule Review &rarr;
+                                ele-in SaaS Waitlist &rarr;
                             </Link>
                         </div>
                     </motion.div>

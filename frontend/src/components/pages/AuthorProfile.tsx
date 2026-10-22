@@ -74,8 +74,9 @@ export default function AuthorProfile() {
     ],
     'address': {
       '@type': 'PostalAddress',
-      'addressLocality': 'Bengaluru',
+      'addressLocality': 'Shivamogga',
       'addressRegion': 'Karnataka',
+      'postalCode': '577205',
       'addressCountry': 'IN'
     },
     'knowsAbout': [
@@ -131,7 +132,7 @@ export default function AuthorProfile() {
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Verified Author & Systems Architect
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs font-mono text-gray-500 dark:text-gray-400">
-                  <MapPin className="w-3.5 h-3.5" /> Bengaluru, Karnataka, India
+                  <MapPin className="w-3.5 h-3.5" /> Shivamogga, Karnataka, India
                 </span>
               </div>
 

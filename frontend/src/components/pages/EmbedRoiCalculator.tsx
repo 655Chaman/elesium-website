@@ -315,16 +315,26 @@ export default function EmbedRoiCalculator() {
                         </div>
                     </div>
 
-                    {/* Direct CTA Button */}
-                    <a
-                        href={`https://elesium.online/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=embed-calculator`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs md:text-sm tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all duration-200"
-                    >
-                        Schedule Architecture Audit to Lock These Savings
-                        <ArrowUpRight className="w-4 h-4" />
-                    </a>
+                    {/* Direct CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
+                        <a
+                            href={`https://wa.me/918317329312?text=${encodeURIComponent(`Hello Elesium Engineering Team,\n\nI calculated an estimated annual ROI savings of ${currency === 'INR' ? '₹' : '$'}${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) + ' Lakhs' : (results.netAnnualSavingsYear1 / 1000).toFixed(0) + 'k'} on the Enterprise ROI Calculator.\n\nI would like to initiate an Architecture Audit via WhatsApp.`)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs md:text-sm tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all duration-200"
+                        >
+                            Chat on WhatsApp to Lock ROI
+                            <ArrowUpRight className="w-4 h-4" />
+                        </a>
+                        <a
+                            href={`https://elesium.online/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=embed-calculator`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto py-2.5 px-4 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide flex items-center justify-center gap-1.5 transition-all duration-200"
+                        >
+                            ele-in SaaS Waitlist &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
 

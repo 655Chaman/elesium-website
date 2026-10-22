@@ -60,6 +60,12 @@ export default function Navbar() {
                             Engineering Tools
                         </Link>
                         <Link
+                            to="/waitlist"
+                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
+                        >
+                            ele-in (SaaS)
+                        </Link>
+                        <Link
                             to="/ai-automation-agency-india"
                             className="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1"
                         >
@@ -169,7 +175,7 @@ export default function Navbar() {
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="w-full py-2.5 px-4 rounded-xl border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-medium text-center text-xs"
                                 >
-                                    Or Schedule Calendar Review &rarr;
+                                    ele-in SaaS Waitlist &rarr;
                                 </Link>
                             </div>
                         </div>

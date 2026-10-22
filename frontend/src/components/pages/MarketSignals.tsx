@@ -602,7 +602,7 @@ export default function MarketSignals() {
                                         Evaluate This Whitepaper Architecture for Your Enterprise
                                     </h3>
                                     <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
-                                        Connect directly with our Principal AI Systems Architect in Bengaluru to model hardware sizing, latency envelopes, and private VPC deployment parameters.
+                                        Connect directly with our Principal AI Systems Architect to model hardware sizing, latency envelopes, and private VPC deployment parameters.
                                     </p>
                                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                         <button
@@ -617,7 +617,7 @@ export default function MarketSignals() {
                                             to="/waitlist"
                                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-xl text-sm transition-all"
                                         >
-                                            <span>Schedule Calendar Review &rarr;</span>
+                                            <span>ele-in SaaS Waitlist &rarr;</span>
                                         </Link>
                                     </div>
                                 </div>

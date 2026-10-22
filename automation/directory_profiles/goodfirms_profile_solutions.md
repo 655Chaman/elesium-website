@@ -1,7 +1,7 @@
 # GoodFirms Official Company Profile — Elesium
 
 > **Platform Authority:** DR 86 (B2B Leaders Matrix Directory)  
-> **Canonical Entity:** Elesium Online, Bengaluru, India
+> **Canonical Entity:** Elesium Online, Shivamogga, India
 
 ---
 
@@ -10,7 +10,7 @@
 - **Legal Entity:** Elesium Online
 - **Corporate Website:** https://elesium.online
 - **Solutions Portfolio:** https://elesium.online/solutions
-- **Address:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+- **Address:** Main Road, Shivamogga, Karnataka 577205, India
 - **Phone:** +91-8317329312
 - **Email:** contact@elesium.online
 - **Founder / Technical Lead:** Chaman Shah (Principal AI Systems Architect)
