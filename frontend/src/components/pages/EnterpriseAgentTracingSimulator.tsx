@@ -25,8 +25,10 @@ import {
 } from '../calculator/agentTracingSimulatorModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentTracingSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyWorkflows, setMonthlyWorkflows] = useState<number>(500000);
   const [avgSpansPerWorkflow, setAvgSpansPerWorkflow] = useState<number>(24);
@@ -194,6 +196,13 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
               <span className="text-cyan-400 font-medium">Multi-Agent Tracing &amp; OTel Simulator</span>
             </div>
             <div className="flex items-center space-x-3">
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
                 className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium border border-slate-700/60 transition-all"
@@ -405,7 +414,7 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
                 <div className="mt-4 flex items-center space-x-3">
                   <button
                     onClick={copyArchitecturalMemo}
-                    className="w-full inline-flex items-center justify-center space-x-2 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors"
+                    className="w-full inline-flex items-center justify-center space-x-2 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors"
                   >
                     {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-cyan-400" />}
                     <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Audit Memo'}</span>
@@ -471,7 +480,7 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
                   <div className="border border-cyan-500/40 bg-cyan-950/20 rounded-xl p-4 relative">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
-                        <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 " />
                         <span className="text-sm font-bold text-white">Elesium Async OpenTelemetry Pipeline (Sovereign VPC)</span>
                       </div>
                       <span className="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded-md">
@@ -583,7 +592,7 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
                   Deploy sovereign private ClickHouse / Jaeger observability pipelines with non-blocking RingBuffer batching. Isolate agentic failures in under 10 minutes.
                 </p>
                 <ExpandableScreen>
-                  <ExpandableScreenTrigger className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-400 hover:to-sky-400 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">
+                  <ExpandableScreenTrigger className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 hover:from-cyan-400 hover:to-sky-400 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">
                     <span>Schedule Observability Architecture Audit</span>
                     <ArrowRight className="w-4 h-4" />
                   </ExpandableScreenTrigger>
@@ -667,6 +676,7 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
           </div>
         )}
       </div>
+          <WhatsAppModal />
     </>
   );
 }

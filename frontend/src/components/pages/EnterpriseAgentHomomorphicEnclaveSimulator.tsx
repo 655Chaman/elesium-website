@@ -21,8 +21,10 @@ import {
 } from '../calculator/agentHomomorphicEnclaveModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentHomomorphicEnclaveSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyInferenceQueriesMillions, setMonthlyInferenceQueriesMillions] = useState<number>(5);
   const [contextLengthTokens, setContextLengthTokens] = useState<number>(2048);
@@ -134,6 +136,13 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
           <span className="text-slate-200">Confidential Enclave &amp; FHE Simulator</span>
         </div>
         <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
           onClick={() => setIsEmbedOpen(true)}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-medium text-slate-200 transition-all"
         >
@@ -320,7 +329,7 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
             <div className="pt-4 border-t border-slate-800 flex gap-3">
               <button
                 onClick={copyExecutiveMemo}
-                className="flex-1 py-3 px-4 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition-all flex items-center justify-center gap-2"
+                className="flex-1 py-3 px-4 rounded-full border border-slate-700 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition-all flex items-center justify-center gap-2"
               >
                 {hasCopiedMemo ? (
                   <>
@@ -477,7 +486,7 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
               <div className="absolute top-0 right-0 bg-gradient-to-l from-emerald-500 to-transparent w-32 h-1" />
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-400 " />
                   <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
                     {results.sovereignEnclave.name}
                     <HardDrive className="w-4 h-4 text-emerald-400" />
@@ -606,7 +615,7 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-all"
+                className="px-4 py-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-all"
               >
                 {hasCopiedEmbed ? (
                   <>
@@ -624,6 +633,7 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

@@ -181,19 +181,49 @@ class InstantIndexer:
 
         # Support both standard sitemap namespace and un-namespaced tags
         namespaces = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-        loc_elements = root.findall(".//sm:loc", namespaces)
-        if not loc_elements:
-            loc_elements = root.findall(".//loc")
 
+        # If this is a sitemapindex, inspect child sitemaps on disk
+        is_sitemap_index = "sitemapindex" in root.tag.lower()
         extracted_urls: List[str] = []
         seen = set()
 
-        for elem in loc_elements:
-            if elem.text:
-                url = elem.text.strip()
-                if url and url.startswith(f"https://{self.host}") and url not in seen:
-                    seen.add(url)
-                    extracted_urls.append(url)
+        if is_sitemap_index:
+            self.log("Detected sitemapindex. Recursively resolving child sitemaps on disk...", level="INFO")
+            loc_elements = root.findall(".//sm:loc", namespaces) or root.findall(".//loc")
+            for elem in loc_elements:
+                if elem.text:
+                    sub_url = elem.text.strip()
+                    sub_filename = sub_url.split("/")[-1]
+                    sub_path = self.sitemap_path.parent / sub_filename
+                    if sub_path.exists():
+                        try:
+                            sub_tree = ET.parse(sub_path)
+                            sub_root = sub_tree.getroot()
+                            sub_locs = sub_root.findall(".//sm:loc", namespaces) or sub_root.findall(".//loc")
+                            for sub_elem in sub_locs:
+                                if sub_elem.text:
+                                    u = sub_elem.text.strip()
+                                    if u and u.startswith(f"https://{self.host}") and u not in seen:
+                                        seen.add(u)
+                                        extracted_urls.append(u)
+                        except Exception as e:
+                            self.log(f"Error parsing child sitemap {sub_path}: {e}", level="WARNING")
+                    else:
+                        # Add the sub-sitemap URL itself if file doesn't exist locally
+                        if sub_url not in seen:
+                            seen.add(sub_url)
+                            extracted_urls.append(sub_url)
+        else:
+            loc_elements = root.findall(".//sm:loc", namespaces)
+            if not loc_elements:
+                loc_elements = root.findall(".//loc")
+
+            for elem in loc_elements:
+                if elem.text:
+                    url = elem.text.strip()
+                    if url and url.startswith(f"https://{self.host}") and url not in seen:
+                        seen.add(url)
+                        extracted_urls.append(url)
 
         self.log(f"Discovered {len(extracted_urls)} active URLs for host '{self.host}' in sitemap.", level="SUCCESS")
 

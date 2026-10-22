@@ -26,8 +26,10 @@ import {
 } from '../calculator/agentDeadlockSimulatorModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentDeadlockVisualizer() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Simulation Controls State
   const [scenario, setScenario] = useState<ScenarioPreset>('cyclic_deadlock');
   const [agentCount, setAgentCount] = useState<number>(4);
@@ -501,7 +503,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 <div className="flex items-center gap-2 text-xs font-mono">
                   {results.hasDeadlock ? (
                     <span className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40">
-                      <AlertTriangle className="w-3.5 h-3.5 text-rose-400 animate-pulse" />
+                      <AlertTriangle className="w-3.5 h-3.5 text-rose-400 " />
                       DIRECTED CYCLE DETECTED
                     </span>
                   ) : (
@@ -559,7 +561,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                         stroke={isDeadlocked ? '#f43f5e' : '#38bdf8'}
                         strokeWidth={isDeadlocked ? '1.5' : '1'}
                         strokeDasharray={isDeadlocked ? '3,2' : undefined}
-                        className={isDeadlocked ? 'animate-pulse' : ''}
+                        className={isDeadlocked ? '' : ''}
                         markerEnd={isDeadlocked ? 'url(#arrow-cycle)' : 'url(#arrow-active)'}
                       />
                     );
@@ -578,7 +580,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     }}
                     className={`p-2.5 rounded-xl border transition-all shadow-md z-10 flex flex-col items-center max-w-[130px] sm:max-w-[160px] text-center ${
                       node.status === 'DEADLOCKED'
-                        ? 'bg-rose-950/90 border-rose-500 shadow-rose-950/60 ring-2 ring-rose-500/40 animate-pulse'
+                        ? 'bg-rose-950/90 border-rose-500 shadow-rose-950/60 ring-2 ring-rose-500/40 '
                         : node.status === 'CIRCUIT_TRIPPED'
                         ? 'bg-amber-950/90 border-amber-500 shadow-amber-950/60'
                         : node.status === 'FALLBACK_SERVED'
@@ -688,6 +690,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
           <div className="flex items-center gap-3">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
             >
@@ -696,13 +705,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </button>
             <button
               onClick={copyArchitecturalMemo}
-              className="px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
+              className="px-4 py-2.5 rounded-full border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Brief'}
             </button>
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-xs font-mono font-bold text-white transition-all shadow-md shadow-rose-950 flex items-center gap-2">
+              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 hover:from-rose-600 hover:to-amber-600 text-xs font-mono font-bold text-white transition-all shadow-md shadow-rose-950 flex items-center gap-2">
                 <span>Schedule Architecture Audit</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </ExpandableScreenTrigger>
@@ -779,7 +788,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <div className="flex justify-end gap-3">
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
+                className="px-4 py-2 rounded-full bg-rose-500 hover:bg-rose-600 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Code'}
@@ -788,6 +797,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

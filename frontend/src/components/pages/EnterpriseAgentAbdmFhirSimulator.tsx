@@ -23,9 +23,11 @@ import {
 } from '../calculator/agentAbdmFhirModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentAbdmFhirSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [clinicalRecordVolumePerDay, setClinicalRecordVolumePerDay] = useState<number>(5000);
   const [fhirResourceComplexity, setFhirResourceComplexity] = useState<'basic_encounter_bundle' | 'longitudinal_inpatient_ehr' | 'genomic_multimodal_dicom' | 'full_abdm_health_record'>('full_abdm_health_record');
@@ -152,6 +154,13 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-700 transition"
             >
@@ -160,7 +169,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-700 transition"
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-700 transition"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4 text-emerald-400" /> : <Download className="w-4 h-4 text-emerald-400" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Audit Memo'}</span>
@@ -384,7 +393,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
             <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
               <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
                 <div className="flex items-center space-x-2">
-                  <Activity className="w-4 h-4 text-emerald-400 animate-pulse" />
+                  <Activity className="w-4 h-4 text-emerald-400 " />
                   <span className="text-xs font-bold text-white tracking-wide">De-Identification Latency &amp; Privacy Noise Oscilloscope</span>
                 </div>
                 <div className="flex items-center space-x-4 text-[10px]">
@@ -572,6 +581,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
           ]}
         />
       </div>
+          <WhatsAppModal />
     </div>
   );
 }

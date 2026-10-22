@@ -21,5 +21,7 @@ Allow: /
 
 # Sitemap & LLM Endpoints
 Sitemap: https://elesium.online/sitemap.xml
+Sitemap: https://elesium.online/sitemap-core.xml
+Sitemap: https://elesium.online/sitemap-solutions.xml
 # LLMs: https://elesium.online/llms.txt
 # LLMs-Full: https://elesium.online/llms-full.txt

@@ -18,8 +18,10 @@ import {
 } from '../calculator/agentDynamicReplanningSimulatorModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentDynamicReplanningSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyWorkflows, setMonthlyWorkflows] = useState<number>(250000);
   const [baselinePlanSteps, setBaselinePlanSteps] = useState<number>(14);
@@ -136,6 +138,13 @@ RECOMMENDATION: Replace unconstrained LLM self-reflection with DAG-constrained b
           </div>
           <div className="flex items-center gap-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors border border-slate-700 font-mono"
             >
@@ -657,6 +666,7 @@ RECOMMENDATION: Replace unconstrained LLM self-reflection with DAG-constrained b
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

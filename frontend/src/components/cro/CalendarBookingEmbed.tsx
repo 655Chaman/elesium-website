@@ -105,7 +105,7 @@ export function CalendarBookingEmbed({
             {(context.solutionSlug || context.simulatedRoi) && (
               <div className="px-6 py-2 bg-emerald-500/10 border-b border-emerald-500/20 text-xs font-mono flex items-center justify-between">
                 <span className="text-emerald-400 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 " />
                   Context Ingested: {context.solutionSlug || context.toolSource}
                 </span>
                 {context.simulatedRoi && (

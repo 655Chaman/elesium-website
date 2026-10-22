@@ -23,9 +23,11 @@ import {
 } from '../calculator/agentVectorShardingModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentVectorShardingSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [totalVectorsMillions, setTotalVectorsMillions] = useState<number>(50);
   const [shardCount, setShardCount] = useState<number>(8);
@@ -200,6 +202,13 @@ ARCHITECTURAL SAFEGUARDS:
 
           <div className="flex items-center space-x-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-600 transition-all shadow-sm"
             >
@@ -455,7 +464,7 @@ ARCHITECTURAL SAFEGUARDS:
           <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
             <div className="flex items-center justify-between mb-3 text-xs">
               <div className="flex items-center space-x-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 " />
                 <span className="font-semibold text-white">Live Query Latency Percentile Distribution (P10 to P99.9)</span>
               </div>
               <span className="text-slate-400 font-mono text-[11px]">Scatter-Gather Network Fanout</span>
@@ -519,7 +528,7 @@ ARCHITECTURAL SAFEGUARDS:
             </div>
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-lg shadow-emerald-500/20 flex items-center space-x-1.5 whitespace-nowrap">
+                <button className="px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-lg shadow-emerald-500/20 flex items-center space-x-1.5 whitespace-nowrap">
                   <span>Schedule Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -668,6 +677,7 @@ ARCHITECTURAL SAFEGUARDS:
           { label: 'Est. Annual Savings', value: `${currency === 'INR' ? '₹' : '$'}${results.annualLatencyCostSavings.toLocaleString()}` }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

@@ -22,9 +22,11 @@ import {
   HardwareCluster
 } from '../calculator/agentFlashDecodingModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentFlashDecodingSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [modelArchitecture, setModelArchitecture] = useState<ModelArchitecture>('llama_3_70b');
   const [contextLengthTokens, setContextLengthTokens] = useState<number>(65536);
@@ -133,6 +135,13 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
                 className="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-xs font-mono text-slate-300 hover:text-white hover:border-slate-600 transition"
               >
                 CURRENCY: <span className="text-sky-400 font-bold">{currency}</span>
+              </button>
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
@@ -399,7 +408,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={copyMemo}
-                className="flex-1 py-3 px-4 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-xs font-mono text-slate-200 transition flex items-center justify-center gap-2"
+                className="flex-1 py-3 px-4 rounded-full border border-slate-700 bg-slate-900 hover:bg-slate-800 text-xs font-mono text-slate-200 transition flex items-center justify-center gap-2"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-slate-400" />}
                 {hasCopiedMemo ? 'COPIED EXECUTIVE MEMO!' : 'COPY EXECUTIVE FINOPS MEMO'}
@@ -465,7 +474,30 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
             </p>
           </div>
           <div className="max-w-xl mx-auto">
-            <MandateApplicationForm />
+            {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm />
           </div>
         </div>
       </div>
@@ -495,7 +527,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
               </button>
               <button
                 onClick={copyEmbed}
-                className="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs font-mono transition flex items-center gap-1.5"
+                className="px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs font-mono transition flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Iframe Code'}
@@ -504,6 +536,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

@@ -20,8 +20,10 @@ import {
 } from '../calculator/agentSandboxVerificationModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentSandboxVerificationSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyCodeExecutions, setMonthlyCodeExecutions] = useState<number>(200000);
   const [avgExecutionTimeMs, setAvgExecutionTimeMs] = useState<number>(350);
@@ -141,6 +143,13 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
               <h2 className="text-lg font-bold text-white">Workload &amp; Sandbox Calibration Parameters</h2>
             </div>
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 transition-colors"
             >
@@ -435,6 +444,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

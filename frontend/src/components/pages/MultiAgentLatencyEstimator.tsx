@@ -441,7 +441,7 @@ export default function MultiAgentLatencyEstimator() {
                     </div>
                     <div className="w-full bg-slate-950 rounded-full h-3 overflow-hidden border border-slate-800">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-emerald-400 h-full rounded-full transition-all duration-500"
+                        className="border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 h-full rounded-full transition-all duration-500"
                         style={{
                           width: `${Math.max(12, 100 - results.latencyImprovementPct)}%`
                         }}
@@ -613,7 +613,7 @@ export default function MultiAgentLatencyEstimator() {
               </button>
               <button
                 onClick={copyEmbedSnippet}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/30 transition-all"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/30 transition-all"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied to Clipboard!' : 'Copy Embed Code'}</span>

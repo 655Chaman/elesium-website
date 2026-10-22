@@ -52,7 +52,7 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
         {/* Header */}
         <div className="border-b border-slate-800 pb-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Activity className="w-4 h-4 text-cyan-400 animate-pulse" />
+            <Activity className="w-4 h-4 text-cyan-400 " />
             <h1 className="text-base sm:text-lg font-bold text-white">
               Agent Self-Healing Pipeline &amp; Canary Simulator
             </h1>

@@ -169,7 +169,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
       {/* Status Bar */}
       <div className="p-2.5 rounded-lg bg-slate-900/70 border border-slate-800 flex items-center justify-between text-xs">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full bg-amber-400 "></span>
           <span className="text-slate-300 font-mono text-[11px]">{results.speculationStatus}</span>
         </div>
         <span className="text-amber-400 font-mono font-bold text-[11px]">

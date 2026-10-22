@@ -21,8 +21,10 @@ import {
 } from '../calculator/agentSelfHealingCanaryModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentSelfHealingCanarySimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyProductionInvocations, setMonthlyProductionInvocations] = useState<number>(250000);
   const [avgAgentChainDepth, setAvgAgentChainDepth] = useState<number>(8);
@@ -126,7 +128,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
           <div>
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-400 mb-1">
-              <Activity className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+              <Activity className="w-3.5 h-3.5 text-cyan-400 " />
               <span>Reliability &amp; Self-Healing Systems Lab</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
@@ -139,6 +141,13 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
 
           <div className="flex items-center gap-2 shrink-0">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition"
             >
@@ -551,6 +560,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

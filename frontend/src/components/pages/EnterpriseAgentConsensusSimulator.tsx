@@ -18,8 +18,10 @@ import {
 } from '../calculator/agentConsensusSimulatorModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentConsensusSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyDecisions, setMonthlyDecisions] = useState<number>(150000);
   const [validatorAgentCount, setValidatorAgentCount] = useState<number>(5);
@@ -136,6 +138,13 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
           </div>
           <div className="flex items-center gap-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors border border-slate-700 font-mono"
             >
@@ -635,6 +644,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

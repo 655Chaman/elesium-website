@@ -175,7 +175,7 @@ export default function EmbedAgentGraphConsensusSimulator() {
         <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
           <div className="flex items-center justify-between text-[10px] text-slate-400">
             <div className="flex items-center space-x-1.5">
-              <Activity className="w-3 h-3 text-emerald-400 animate-pulse" />
+              <Activity className="w-3 h-3 text-emerald-400 " />
               <span>Consensus Latency & Byzantine Fault Oscilloscope</span>
             </div>
             <div className="flex items-center space-x-3 text-[9px]">

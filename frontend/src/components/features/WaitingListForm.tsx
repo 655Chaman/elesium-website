@@ -204,7 +204,7 @@ export function MandateApplicationForm({
             <div className="flex flex-col items-center justify-center h-full text-center p-6 md:p-10 animate-in fade-in duration-500 bg-white dark:bg-black font-sans">
                 {/* Pulsing Success Ring */}
                 <div className="relative flex items-center justify-center h-20 w-20 mb-6">
-                    <span className="animate-ping absolute inline-flex h-16 w-16 rounded-full bg-emerald-500/20 opacity-75" />
+                    <span className=" absolute inline-flex h-16 w-16 rounded-full bg-emerald-500/20 opacity-75" />
                     <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 dark:text-emerald-400">
                         <CheckCircle2 className="h-7 w-7" />
                     </span>

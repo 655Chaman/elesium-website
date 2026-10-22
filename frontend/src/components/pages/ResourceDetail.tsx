@@ -135,7 +135,7 @@ export default function ResourceDetail() {
                             prose-hr:border-gray-100 dark:prose-hr:border-white/5 prose-hr:my-12
                         ">
                             {loading ? (
-                                <div className="flex animate-pulse space-x-4">
+                                <div className="flex  space-x-4">
                                     <div className="flex-1 space-y-6 py-1">
                                         <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded"></div>
                                         <div className="space-y-3">
@@ -167,7 +167,7 @@ export default function ResourceDetail() {
                         <div className="my-10 p-4 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
                             <div className="flex items-center gap-3">
                                 <span className="flex items-center gap-1.5">
-                                    <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 animate-pulse' : 'bg-cyan-400'}`} />
+                                    <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 ' : 'bg-cyan-400'}`} />
                                     Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
                                 </span>
                                 <span className="hidden sm:inline">|</span>

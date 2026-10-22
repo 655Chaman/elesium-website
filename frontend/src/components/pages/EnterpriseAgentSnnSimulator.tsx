@@ -22,9 +22,11 @@ import {
 } from '../calculator/agentSnnModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentSnnSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [neuronModel, setNeuronModel] = useState<'lif_standard' | 'alif_adaptive_threshold' | 'izhikevich_bifurcation' | 'glif_generalized'>('lif_standard');
   const [temporalEncodingScheme, setTemporalEncodingScheme] = useState<'rate_coding' | 'time_to_first_spike' | 'burst_phase_coding' | 'direct_event_aer'>('direct_event_aer');
@@ -184,6 +186,13 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
               >
                 Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+              </button>
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
@@ -680,7 +689,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
           </div>
           <ExpandableScreen>
             <ExpandableScreenTrigger>
-              <button className="px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-950/50 flex items-center space-x-2 transition shrink-0">
+              <button className="px-6 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-950/50 flex items-center space-x-2 transition shrink-0">
                 <span>Deploy Sovereign Architecture</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -750,6 +759,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
           { label: 'Annual OPEX Savings', value: `${currency === 'INR' ? '₹' : '$'}${results.annualPowerCostSavings.toLocaleString()}` }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

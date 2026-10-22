@@ -21,9 +21,11 @@ import {
   HardwareCluster
 } from '../calculator/agentMultiLoraModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentMultiLoraSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [baseModelFamily, setBaseModelFamily] = useState<BaseModelFamily>('llama_3_70b');
   const [numActiveAdapters, setNumActiveAdapters] = useState<number>(64);
@@ -141,6 +143,13 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
 
           <div className="mt-6 flex flex-wrap gap-3">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white text-xs font-mono transition"
             >
@@ -512,7 +521,30 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
               Consolidate your enterprise task fine-tuning across legal, BFSI, and logistics into a single sovereign foundation model cluster. Schedule an architecture review with our principal AI systems engineers.
             </p>
             <div className="text-left bg-slate-950 p-6 rounded-2xl border border-slate-800">
-              <MandateApplicationForm />
+              {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm />
             </div>
           </div>
         </div>
@@ -572,6 +604,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
           { label: 'Annual FinOps Savings', value: results.annualClusterSavings }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

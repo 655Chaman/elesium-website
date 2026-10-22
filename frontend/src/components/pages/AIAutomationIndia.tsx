@@ -476,7 +476,7 @@ export default function AIAutomationIndia() {
                     {/* Live Status Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-gray-200 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className=" absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
                         #1 Best Enterprise AI Company in India • Bengaluru • DPDP Act Compliant
@@ -505,7 +505,7 @@ export default function AIAutomationIndia() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-base transition-all shadow-md flex items-center justify-center gap-2 group"
+                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-base transition-all shadow-md flex items-center justify-center gap-2 group"
                         >
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -587,7 +587,7 @@ export default function AIAutomationIndia() {
                             </div>
                         </div>
                         <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 blur-[60px] rounded-[3rem]"></div>
+                            <div className="absolute inset-0 border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 blur-[60px] rounded-[3rem]"></div>
                             <AgentTerminal />
                         </div>
                     </div>
@@ -1108,7 +1108,7 @@ export default function AIAutomationIndia() {
 
                             <button
                                 onClick={handleTransmitIntake}
-                                className="mt-8 w-full py-4 px-6 rounded-xl bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-md group"
+                                className="mt-8 w-full py-4 px-6 rounded-full bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-md group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Transmit Architecture Intake to WhatsApp Desk</span>
@@ -1151,7 +1151,7 @@ export default function AIAutomationIndia() {
                     <div className="relative z-10 max-w-3xl mx-auto space-y-6">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                             <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span className=" absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                             </span>
                             <span className="uppercase tracking-widest text-emerald-400 font-semibold text-[11px]">

@@ -586,7 +586,14 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
 
                 {/* Direct Action Button */}
                 <div className="space-y-2">
-                  <ExpandableScreen>
+                  <button
+                    onClick={() => openWhatsApp()}
+                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Chat on WhatsApp</span>
+                  </button>
+                <ExpandableScreen>
                     <ExpandableScreenTrigger>
                       <InteractiveHoverButton className="w-full bg-blue-600 text-white border-blue-500 hover:bg-blue-500 py-3 text-xs sm:text-sm">
                         Schedule Architecture Remediation Audit

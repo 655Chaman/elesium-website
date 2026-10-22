@@ -53,7 +53,7 @@ export default function EmbedTokenLeakageSimulator() {
           {/* Header Bar */}
           <div className="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
             <div className="flex items-center gap-2">
-              <Flame className="w-4 h-4 text-rose-500 animate-pulse" />
+              <Flame className="w-4 h-4 text-rose-500 " />
               <span className="font-bold text-sm tracking-tight text-white">
                 Multi-Agent Token Leakage Simulator
               </span>

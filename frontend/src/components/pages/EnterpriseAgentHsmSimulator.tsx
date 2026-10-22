@@ -26,9 +26,11 @@ import {
 } from '../calculator/agentHsmModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentHsmSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [hsmSecurityLevel, setHsmSecurityLevel] = useState<'fips_140_3_level_4' | 'fips_140_2_level_3' | 'common_criteria_eal6_plus' | 'tpm_2_0_enclave'>('fips_140_3_level_4');
   const [cryptographicAlgorithm, setCryptographicAlgorithm] = useState<'aes_256_gcm' | 'rsa_4096_pss' | 'ecdsa_secp256k1' | 'ml_kem_768_post_quantum'>('ml_kem_768_post_quantum');
@@ -184,6 +186,13 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             {/* Quick Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
                 onClick={() => setIsEmbedOpen(true)}
                 className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white transition"
               >
@@ -193,7 +202,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
 
               <button
                 onClick={copyExecutiveMemo}
-                className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white transition"
+                className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-full text-xs font-medium bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white transition"
               >
                 {hasCopiedMemo ? (
                   <>
@@ -209,7 +218,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
               </button>
 
               <ExpandableScreen>
-                <ExpandableScreenTrigger className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-black hover:from-cyan-400 hover:to-blue-500 transition shadow-lg shadow-cyan-950/50 cursor-pointer">
+                <ExpandableScreenTrigger className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 text-black hover:from-cyan-400 hover:to-blue-500 transition shadow-lg shadow-cyan-950/50 cursor-pointer">
                   <span>Schedule HSM Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </ExpandableScreenTrigger>
@@ -795,7 +804,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                 </button>
                 <button
                   onClick={copyEmbedCode}
-                  className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
+                  className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
                 >
                   {hasCopiedEmbed ? (
                     <>
@@ -825,6 +834,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
           ]}
         />
       </div>
+          <WhatsAppModal />
     </div>
   );
 }

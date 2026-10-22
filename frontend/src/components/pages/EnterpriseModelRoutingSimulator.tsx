@@ -25,8 +25,10 @@ import {
 } from '../calculator/modelRoutingSimulatorModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseModelRoutingSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyQueryVolume, setMonthlyQueryVolume] = useState<number>(500000);
   const [routingStrategy, setRoutingStrategy] = useState<RoutingStrategy>('balanced_enterprise');
@@ -144,6 +146,13 @@ Audit performed via https://elesium.online/tools/enterprise-model-routing-cost-a
               <Shuffle className="w-3.5 h-3.5" /> Linkable Micro-SaaS Tool #15 &bull; FinOps &amp; Intelligent Dispatch
             </span>
             <div className="flex items-center gap-3">
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/60 transition"
@@ -509,6 +518,7 @@ Audit performed via https://elesium.online/tools/enterprise-model-routing-cost-a
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

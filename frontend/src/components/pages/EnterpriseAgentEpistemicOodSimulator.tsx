@@ -20,8 +20,10 @@ import {
 } from '../calculator/agentEpistemicOodModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentEpistemicOodSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [dailyQueries, setDailyQueries] = useState<number>(100000);
   const [oodContaminationRate, setOodContaminationRate] = useState<number>(8);
@@ -134,6 +136,13 @@ ${results.complianceStatus}`;
 
           <div className="flex flex-wrap items-center gap-4">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors"
             >
@@ -654,6 +663,7 @@ ${results.complianceStatus}`;
         </div>
       )}
 
+          <WhatsAppModal />
     </div>
   );
 }

@@ -15,6 +15,7 @@ import {
 import { Helmet } from 'react-helmet-async';
 import { CalendarBookingEmbed } from '../cro/CalendarBookingEmbed';
 import { TrustProofRibbon } from '../cro/TrustProofRibbon';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 // Fallback WhatsApp Engineering Desk
 const WHATSAPP_NUMBER = '918317329312';
@@ -60,6 +61,7 @@ const COMPLIANCE_STANDARDS = [
 ];
 
 export default function Waitlist() {
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     const [searchParams] = useSearchParams();
 
     // Contextual parameters passed from referring solution pages or ROI calculator
@@ -235,7 +237,7 @@ export default function Waitlist() {
                         className="mb-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 text-xs font-mono"
                     >
                         <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 " />
                             <span className="text-emerald-400 font-bold uppercase tracking-wider">Contextual Technical Scope Ingested:</span>
                             {formattedSolutionTitle && (
                                 <span className="text-gray-200 font-sans font-semibold">
@@ -326,6 +328,22 @@ export default function Waitlist() {
                                     <span className="text-[11px] text-gray-500 dark:text-gray-400">Guaranteed response</span>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* Direct WhatsApp Callout */}
+                        <div className="p-4 rounded-2xl bg-white/[0.02] border border-gray-200/80 dark:border-white/10 flex items-center justify-between gap-4">
+                            <div>
+                                <span className="text-xs font-semibold block text-gray-900 dark:text-white">Prefer Instant Scoping?</span>
+                                <span className="text-[11px] text-gray-500 dark:text-gray-400">Direct WhatsApp with Lead Architect</span>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={openWhatsApp}
+                                className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2 whitespace-nowrap"
+                            >
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                <span>Chat on WhatsApp</span>
+                            </button>
                         </div>
 
                         {/* Client Verification Proof */}
@@ -662,7 +680,7 @@ export default function Waitlist() {
                                 >
                                     {/* Success Ring */}
                                     <div className="relative flex items-center justify-center h-20 w-20 mx-auto">
-                                        <span className="animate-ping absolute inline-flex h-16 w-16 rounded-full bg-emerald-500/20 opacity-75" />
+                                        <span className=" absolute inline-flex h-16 w-16 rounded-full bg-emerald-500/20 opacity-75" />
                                         <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                                             <CheckCircle2 className="w-8 h-8" />
                                         </span>
@@ -721,25 +739,33 @@ export default function Waitlist() {
                                         </div>
                                     </div>
 
-                                    {/* Instant Calendar Booking Option */}
+                                    {/* Instant Calendar Booking & WhatsApp Options */}
                                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                         <button
                                             type="button"
-                                            onClick={() => setIsCalendarOpen(true)}
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 text-black font-bold text-xs hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 transition-all"
+                                            onClick={openWhatsApp}
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-black font-semibold text-xs hover:bg-neutral-200 shadow-sm transition-all"
                                         >
-                                            <Calendar className="w-4 h-4" />
-                                            <span>Pick Immediate Slot on Cal.com</span>
+                                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                            <span>Chat on WhatsApp</span>
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => setIsCalendarOpen(true)}
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-gray-200 dark:border-white/20 bg-transparent text-gray-900 dark:text-white font-medium text-xs hover:bg-gray-100 dark:hover:bg-white/5 transition-all"
+                                        >
+                                            <Calendar className="w-4 h-4 text-emerald-400" />
+                                            <span>Pick Slot on Cal.com</span>
                                         </button>
                                         <a
                                             href={whatsappUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold tracking-wide transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 text-xs font-medium transition-all"
                                         >
-                                            <MessageSquare className="w-4 h-4" />
-                                            <span>WhatsApp Desk</span>
-                                            <ExternalLink className="w-3.5 h-3.5" />
+                                            <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                                            <span>Direct Link</span>
+                                            <ExternalLink className="w-3 h-3 text-gray-400" />
                                         </a>
                                     </div>
                                 </motion.div>
@@ -771,6 +797,7 @@ export default function Waitlist() {
                     }}
                 />
             </div>
+            <WhatsAppModal />
         </motion.div>
     );
 }

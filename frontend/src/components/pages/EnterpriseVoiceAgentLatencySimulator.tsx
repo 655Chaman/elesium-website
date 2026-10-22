@@ -28,8 +28,10 @@ import {
 } from '../calculator/voiceAgentLatencyModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseVoiceAgentLatencySimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [sttEngine, setSttEngine] = useState<SttEngineKey>('deepgram_nova2');
   const [llmModel, setLlmModel] = useState<LlmModelKey>('groq_llama3_8b');
@@ -281,7 +283,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               <button
                 key={idx}
                 onClick={preset.action}
-                className="p-4 rounded-xl text-left border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-purple-950/20 transition-all"
+                className="p-4 rounded-full text-left border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-purple-950/20 transition-all"
               >
                 <div className="text-xs font-semibold text-white mb-1">{preset.title}</div>
                 <div className="text-[11px] text-slate-400 leading-normal">{preset.desc}</div>
@@ -644,6 +646,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
           <div className="flex items-center gap-3">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
             >
@@ -652,13 +661,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </button>
             <button
               onClick={copyArchitecturalMemo}
-              className="px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
+              className="px-4 py-2.5 rounded-full border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Dossier'}
             </button>
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-500 to-sky-500 hover:from-purple-600 hover:to-sky-600 text-xs font-mono font-bold text-white transition-all shadow-md shadow-purple-950 flex items-center gap-2">
+              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 hover:from-purple-600 hover:to-sky-600 text-xs font-mono font-bold text-white transition-all shadow-md shadow-purple-950 flex items-center gap-2">
                 <span>Schedule Voice Architecture Audit</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </ExpandableScreenTrigger>
@@ -735,7 +744,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <div className="flex justify-end gap-3">
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-xl bg-purple-500 hover:bg-purple-600 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
+                className="px-4 py-2 rounded-full bg-purple-500 hover:bg-purple-600 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Code'}
@@ -744,6 +753,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

@@ -481,7 +481,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               {results.recommendedArchitecture} By keeping vector embeddings in the same PostgreSQL cluster as your transactional business entities, you achieve zero network transit latency and eliminate the risk of unsynchronized state or third-party API rate limits.
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <ExpandableScreen>
+              <button
+                    onClick={() => openWhatsApp()}
+                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Chat on WhatsApp</span>
+                  </button>
+                <ExpandableScreen>
                 <ExpandableScreenTrigger>
                   <button className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition-colors flex items-center gap-2">
                     Schedule Sovereign RAG Architecture Audit

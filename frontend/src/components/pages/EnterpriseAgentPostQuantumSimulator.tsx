@@ -20,8 +20,10 @@ import {
 } from '../calculator/agentPostQuantumModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentPostQuantumSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [cryptographicSuite, setCryptographicSuite] = useState<'legacy_rsa_ecc' | 'hybrid_x25519_kyber768' | 'ml_kem_768_pure' | 'ml_kem_1024_military'>('ml_kem_768_pure');
   const [digitalSignatureScheme, setDigitalSignatureScheme] = useState<'ecdsa_p256' | 'ed25519' | 'ml_dsa_44' | 'ml_dsa_65' | 'ml_dsa_87'>('ml_dsa_65');
@@ -142,6 +144,13 @@ ${results.nistSecurityLevel >= 3
                 className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
               >
                 Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+              </button>
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
@@ -583,6 +592,7 @@ ${results.nistSecurityLevel >= 3
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

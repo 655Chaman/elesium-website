@@ -454,7 +454,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               {results.architecturalGuidance} By deploying self-hosted sovereign clusters with PagedAttention and Automatic Prefix Caching, your multi-agent workflows bypass multi-tenant cloud token tax, guaranteeing deterministic latency and complete DPDP Act 2023 compliance.
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <ExpandableScreen>
+              <button
+                    onClick={() => openWhatsApp()}
+                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Chat on WhatsApp</span>
+                  </button>
+                <ExpandableScreen>
                 <ExpandableScreenTrigger>
                   <button className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition-colors flex items-center gap-2">
                     Schedule Sovereign Inference Audit

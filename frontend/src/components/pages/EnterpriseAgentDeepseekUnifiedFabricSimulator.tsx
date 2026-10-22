@@ -17,9 +17,11 @@ import {
   DeepseekUnifiedFabricInputs
 } from '../calculator/agentDeepseekUnifiedFabricModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentDeepseekUnifiedFabricSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [clusterGpuCount, setClusterGpuCount] = useState<number>(256);
   const [servingArchitecture, setServingArchitecture] = useState<DeepseekUnifiedFabricInputs['servingArchitecture']>('grand_unified_fabric');
@@ -127,6 +129,13 @@ PERFORMANCE AUDIT METRICS:
               <span>Tool #75 · Megawatt Foundation Model Serving</span>
             </div>
             <div className="flex items-center gap-3">
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900/80 text-xs text-slate-300 hover:text-white hover:border-slate-600 transition"
@@ -272,7 +281,7 @@ PERFORMANCE AUDIT METRICS:
             <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 space-y-3">
               <button
                 onClick={copyMemo}
-                className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center justify-center gap-2 transition"
+                className="w-full py-2.5 px-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center justify-center gap-2 transition"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Technical Memo Copied!' : 'Copy Executive Architecture Memo'}</span>
@@ -427,7 +436,30 @@ PERFORMANCE AUDIT METRICS:
 
         {/* Mandate Lead Generation Form */}
         <div className="mt-12">
-          <MandateApplicationForm />
+          {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm />
         </div>
       </div>
 
@@ -462,7 +494,7 @@ PERFORMANCE AUDIT METRICS:
               </button>
               <button
                 onClick={copyEmbed}
-                className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center gap-1.5 transition"
+                className="px-4 py-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center gap-1.5 transition"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Embed Code'}</span>
@@ -482,6 +514,7 @@ PERFORMANCE AUDIT METRICS:
           { label: 'Projected OPEX Savings', value: `${currency === 'INR' ? '₹' : '$'}${results.annualClusterOpexSavings.toLocaleString()}`, detail: 'Power & compute amortization' }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

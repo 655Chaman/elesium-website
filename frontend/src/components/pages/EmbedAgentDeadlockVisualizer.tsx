@@ -87,7 +87,7 @@ export default function EmbedAgentDeadlockVisualizer() {
           </div>
           <div className="flex items-center gap-2">
             {results.hasDeadlock ? (
-              <span className="flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 animate-pulse">
+              <span className="flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 ">
                 <AlertTriangle className="w-3 h-3 text-rose-400" />
                 DEADLOCK
               </span>
@@ -168,7 +168,7 @@ export default function EmbedAgentDeadlockVisualizer() {
                   stroke={isDeadlocked ? '#f43f5e' : '#38bdf8'}
                   strokeWidth={isDeadlocked ? '1.5' : '1'}
                   strokeDasharray={isDeadlocked ? '3,2' : undefined}
-                  className={isDeadlocked ? 'animate-pulse' : ''}
+                  className={isDeadlocked ? '' : ''}
                   markerEnd={isDeadlocked ? 'url(#embed-arrow-cycle)' : 'url(#embed-arrow-active)'}
                 />
               );
@@ -186,7 +186,7 @@ export default function EmbedAgentDeadlockVisualizer() {
               }}
               className={`px-2 py-1.5 rounded-lg border text-center transition-all z-10 ${
                 node.status === 'DEADLOCKED'
-                  ? 'bg-rose-950/90 border-rose-500 text-rose-300 ring-1 ring-rose-500/50 animate-pulse'
+                  ? 'bg-rose-950/90 border-rose-500 text-rose-300 ring-1 ring-rose-500/50 '
                   : node.status === 'CIRCUIT_TRIPPED'
                   ? 'bg-amber-950/90 border-amber-500 text-amber-300'
                   : 'bg-slate-900/90 border-slate-700 text-slate-200'

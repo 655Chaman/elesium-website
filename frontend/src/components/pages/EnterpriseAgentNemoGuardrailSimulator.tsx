@@ -21,9 +21,11 @@ import {
 } from '../calculator/agentNemoGuardrailModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentNemoGuardrailSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [guardrailEngine, setGuardrailEngine] = useState<'nemo_colang_2' | 'llama_guard_3_8b' | 'lakera_v2_regex_hybrid' | 'custom_embeddings_svm'>('nemo_colang_2');
   const [concurrencyThroughputRps, setConcurrencyThroughputRps] = useState<number>(500);
@@ -188,6 +190,13 @@ SECURITY ASSURANCE PROTOCOLS:
 
           <div className="flex items-center space-x-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"
             >
@@ -574,6 +583,7 @@ SECURITY ASSURANCE PROTOCOLS:
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

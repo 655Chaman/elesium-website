@@ -22,9 +22,11 @@ import {
   CpAttentionMechanism
 } from '../calculator/agentContextParallelismModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentContextParallelismSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [modelArchitecture, setModelArchitecture] = useState<CpModelArchitecture>('llama_3_1_70b_128k');
   const [cpDegree, setCpDegree] = useState<CpDegree>(8);
@@ -154,7 +156,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
               <span className="text-slate-400">Tool #64</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">
-              <Network className="w-8 h-8 text-cyan-400 animate-pulse" />
+              <Network className="w-8 h-8 text-cyan-400 " />
               Context Parallelism &amp; Ring KV Overlap Simulator
             </h1>
             <p className="text-sm sm:text-base text-slate-400 mt-2 max-w-3xl">
@@ -177,6 +179,13 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
               <RotateCcw className="w-4 h-4" />
             </button>
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="px-3 py-1.5 rounded-lg border border-cyan-800/60 bg-cyan-950/40 text-xs font-semibold text-cyan-300 hover:bg-cyan-900/60 transition flex items-center gap-1.5"
             >
@@ -317,7 +326,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
               {/* Memo Export Button */}
               <button
                 onClick={copyExecutiveMemo}
-                className="w-full py-2.5 px-4 rounded-xl border border-slate-700 bg-slate-800 text-xs font-semibold text-slate-200 hover:text-white hover:border-slate-600 transition flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 rounded-full border border-slate-700 bg-slate-800 text-xs font-semibold text-slate-200 hover:text-white hover:border-slate-600 transition flex items-center justify-center gap-2"
               >
                 {hasCopiedMemo ? (
                   <>
@@ -459,7 +468,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
                         <div className="text-xs font-bold text-cyan-300">{(results.tokensPerGpu / 1024).toFixed(0)}k Tok</div>
                       </div>
                       {idx < Math.min(8, cpDegree) - 1 && (
-                        <ArrowRight className="w-3.5 h-3.5 text-teal-400 animate-pulse" />
+                        <ArrowRight className="w-3.5 h-3.5 text-teal-400 " />
                       )}
                     </div>
                   ))}
@@ -530,7 +539,30 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
         {/* Mandate Application Section */}
         <div id="audit" className="pt-8">
-          <MandateApplicationForm />
+          {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm />
         </div>
       </div>
 
@@ -574,6 +606,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
         toolName="Context Parallelism & Ring Attention Simulator"
         simulatedMetrics={simulatedMetricsForModal}
       />
+          <WhatsAppModal />
     </div>
   );
 }

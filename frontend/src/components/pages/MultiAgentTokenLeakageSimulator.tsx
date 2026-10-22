@@ -181,7 +181,7 @@ export default function MultiAgentTokenLeakageSimulator() {
           {/* Header Title Section */}
           <div className="mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono font-medium mb-4">
-              <Flame className="w-3.5 h-3.5 animate-pulse" />
+              <Flame className="w-3.5 h-3.5 " />
               <span>Interactive FinOps & Agent Architecture Simulator</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">

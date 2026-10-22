@@ -25,8 +25,10 @@ import {
 } from '../calculator/agent3DParallelismModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgent3DParallelismSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [modelArchitecture, setModelArchitecture] = useState<ThreeDModelArchitecture>('sovereign_100b_agent');
   const [tpDegree, setTpDegree] = useState<TpDegree>(8);
@@ -163,17 +165,24 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={handleReset}
-                className="px-4 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
+                className="px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 Reset Defaults
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="px-4 py-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 text-xs font-mono text-emerald-400 transition-all flex items-center gap-2"
+                className="px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
               >
                 <Code className="w-3.5 h-3.5" />
                 Embed Tool
+              </button>
+              <button
+                onClick={() => openWhatsApp()}
+                className="px-5 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                Chat on WhatsApp
               </button>
             </div>
           </div>
@@ -476,19 +485,26 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             </div>
 
             {/* Direct Conversion Actions */}
-            <div className="p-6 rounded-2xl border border-white/10 bg-gradient-to-r from-emerald-500/10 via-transparent to-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <h4 className="text-sm font-semibold text-white">Deploy 3D Distributed Mesh for Your Enterprise</h4>
                 <p className="text-xs text-gray-400 mt-1">Receive a validated Slurm job script and Megatron-DeepSpeed topology config.</p>
               </div>
 
-              <div className="flex items-center gap-3 w-full sm:w-auto">
+              <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
                 <button
                   onClick={copyMemo}
-                  className="px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="px-4 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}
+                </button>
+                <button
+                  onClick={() => openWhatsApp()}
+                  className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto"
+                >
+                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  Chat on WhatsApp
                 </button>
               </div>
             </div>
@@ -497,6 +513,28 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
 
         {/* Embedded Form Section */}
         <div className="mt-16 pt-12 border-t border-white/10">
+          <div className="max-w-4xl mx-auto mb-8 p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span>Direct Lead Architect Intake</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+              Ready to Validate Distributed Mesh Benchmarks in Production?
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+              Connect directly with our Principal Systems Architect on WhatsApp for a confidential 30-minute scoping review and custom Slurm topology memo.
+            </p>
+            <div className="pt-2 flex justify-center">
+              <button
+                onClick={() => openWhatsApp()}
+                className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp with Lead Architect</span>
+              </button>
+            </div>
+          </div>
+
           <div className="max-w-4xl mx-auto rounded-3xl border border-white/10 bg-[#0d0d12] overflow-hidden shadow-2xl">
             <MandateApplicationForm source="Tool #65: 3D Parallelism Simulator" />
           </div>
@@ -552,7 +590,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-mono font-semibold flex items-center gap-2"
+                className="px-4 py-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-mono font-semibold flex items-center gap-2"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}
@@ -572,6 +610,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
           { label: 'Cluster Scale', value: `${results.totalGpus} GPUs` }
         ]}
       />
+      <WhatsAppModal />
     </div>
   );
 }

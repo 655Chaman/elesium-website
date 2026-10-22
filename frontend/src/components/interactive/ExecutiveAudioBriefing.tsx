@@ -174,7 +174,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                     <div>
                         <div className="flex items-center gap-2">
                             <span className="text-[10px] font-mono uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20 flex items-center gap-1">
-                                <Radio className="h-2.5 w-2.5 animate-pulse" />
+                                <Radio className="h-2.5 w-2.5 " />
                                 Executive Audio Briefing
                             </span>
                             <span className="text-[10px] font-mono text-white/40">

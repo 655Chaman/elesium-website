@@ -23,9 +23,11 @@ import {
   AllReduceMode
 } from '../calculator/agentTensorParallelismModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentTensorParallelismSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [modelArchitecture, setModelArchitecture] = useState<ModelArchitecture>('llama_3_70b');
   const [tpDegree, setTpDegree] = useState<TpDegree>(8);
@@ -378,6 +380,13 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}
                 </button>
                 <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
                   onClick={() => setIsEmbedOpen(true)}
                   className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold border border-slate-700 transition-colors"
                 >
@@ -423,7 +432,30 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
             </p>
           </div>
           <div className="max-w-xl mx-auto">
-            <MandateApplicationForm />
+            {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm />
           </div>
         </div>
       </div>
@@ -478,6 +510,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           { label: 'Annual FinOps Savings', value: results.annualFinOpsSavings, detail: 'Throughput density' }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

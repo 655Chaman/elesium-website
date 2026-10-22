@@ -399,7 +399,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     <div className="flex flex-wrap items-center gap-4">
                         <button
                             onClick={openWhatsApp}
-                            className="px-6 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm group"
+                            className="px-6 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -548,7 +548,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="px-8 py-4 rounded-xl bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all flex items-center gap-2 shadow-md group"
+                            className="px-8 py-4 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all flex items-center gap-2 shadow-md group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp with Lead Architect</span>

@@ -22,9 +22,11 @@ import {
   HardwareCluster
 } from '../calculator/agentMedusaSpeculativeModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentMedusaSpeculativeSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [speculativeEngine, setSpeculativeEngine] = useState<SpeculativeEngine>('medusa_multi_head');
   const [targetModel, setTargetModel] = useState<TargetModel>('llama_3_70b');
@@ -382,12 +384,19 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={copyExecutiveMemo}
-                  className="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition shadow-lg shadow-amber-500/20"
+                  className="px-4 py-2.5 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition shadow-lg shadow-amber-500/20"
                 >
                   {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{hasCopiedMemo ? 'Copied Telemetry Memo!' : 'Copy Executive Audit Memo'}</span>
                 </button>
                 <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
                   onClick={() => setIsEmbedOpen(true)}
                   className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 border border-slate-700 transition"
                 >
@@ -400,7 +409,30 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
 
           {/* Consultation Lead Magnet */}
           <div className="mb-14">
-            <MandateApplicationForm />
+            {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm />
           </div>
 
           {/* Technical FAQ */}
@@ -484,6 +516,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           />
         </div>
       </div>
+          <WhatsAppModal />
     </>
   );
 }

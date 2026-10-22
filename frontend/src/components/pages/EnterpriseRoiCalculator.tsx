@@ -264,7 +264,7 @@ export default function EnterpriseRoiCalculator() {
                         <button
                             type="button"
                             onClick={handleExportCsv}
-                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 text-xs font-medium transition-all shadow-sm"
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 text-xs font-medium transition-all shadow-sm"
                         >
                             <Download className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
                             Export Business Case (CSV)

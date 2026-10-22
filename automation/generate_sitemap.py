@@ -21,15 +21,17 @@ VIDEOS_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "videoMasterclasse
 VIDEO_SCRIPTS_DIR = BASE_DIR / "video_scripts"
 COMPARE_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "compareData.ts"
 SITEMAP_PATH = WEBSITE_ROOT / "frontend" / "public" / "sitemap.xml"
+SITEMAP_CORE_PATH = WEBSITE_ROOT / "frontend" / "public" / "sitemap-core.xml"
+SITEMAP_SOLUTIONS_PATH = WEBSITE_ROOT / "frontend" / "public" / "sitemap-solutions.xml"
 
 # Website URL
 BASE_URL = "https://elesium.online"
 
 def generate_sitemap():
-    print(f"Generating sitemap.xml at {SITEMAP_PATH}...")
+    print(f"Generating hierarchical sitemap architecture at {SITEMAP_PATH}...")
     
-    # Base URLs that are static
-    urls = [
+    # Core high-authority URLs
+    core_urls = [
         {"loc": f"{BASE_URL}/", "priority": "1.0", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/markets", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/how-we-work", "priority": "0.9", "changefreq": "weekly"},
@@ -140,7 +142,7 @@ def generate_sitemap():
             except ValueError:
                 iso_date = today
                 
-            urls.append({
+            core_urls.append({
                 "loc": f"{BASE_URL}/signals/{slug}",
                 "priority": "0.8",
                 "changefreq": "weekly",
@@ -178,10 +180,11 @@ def generate_sitemap():
             except Exception as e:
                 print(f"Notice reading solutionsData JSON: {e}")
 
+    solution_urls = []
     for slug in sorted(solution_slugs):
-        urls.append({
+        solution_urls.append({
             "loc": f"{BASE_URL}/solutions/{slug}",
-            "priority": "0.9",
+            "priority": "0.7",
             "changefreq": "weekly",
             "lastmod": today
         })
@@ -197,7 +200,7 @@ def generate_sitemap():
                 compare_slugs.add(s)
 
     for s in sorted(compare_slugs):
-        urls.append({
+        core_urls.append({
             "loc": f"{BASE_URL}/compare/{s}",
             "priority": "0.9",
             "changefreq": "weekly",
@@ -243,7 +246,7 @@ def generate_sitemap():
                 video_entries.append((s, dt))
 
     # Gallery page
-    urls.append({
+    core_urls.append({
         "loc": f"{BASE_URL}/videos",
         "priority": "0.8",
         "changefreq": "weekly",
@@ -252,7 +255,7 @@ def generate_sitemap():
 
     # Video detail pages
     for s, dt in video_entries:
-        urls.append({
+        core_urls.append({
             "loc": f"{BASE_URL}/videos/{s}",
             "priority": "0.8",
             "changefreq": "weekly",
@@ -262,27 +265,47 @@ def generate_sitemap():
 
     today_default = datetime.datetime.now().strftime("%Y-%m-%d")
     
-    # Build XML
-    xml = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    ]
-    
-    for u in urls:
-        xml.append('  <url>')
-        xml.append(f'    <loc>{u["loc"]}</loc>')
-        if "lastmod" in u:
-            xml.append(f'    <lastmod>{u["lastmod"]}</lastmod>')
-        else:
-            xml.append(f'    <lastmod>{today_default}</lastmod>')
-        xml.append(f'    <changefreq>{u["changefreq"]}</changefreq>')
-        xml.append(f'    <priority>{u["priority"]}</priority>')
-        xml.append('  </url>')
-        
-    xml.append('</urlset>\n')
-    
-    SITEMAP_PATH.write_text("\n".join(xml), encoding="utf-8")
-    print(f"✅ Sitemap successfully generated with {len(urls)} total URLs.")
+    def build_urlset_xml(url_list):
+        xml_lines = [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        ]
+        for u in url_list:
+            xml_lines.append('  <url>')
+            xml_lines.append(f'    <loc>{u["loc"]}</loc>')
+            if "lastmod" in u:
+                xml_lines.append(f'    <lastmod>{u["lastmod"]}</lastmod>')
+            else:
+                xml_lines.append(f'    <lastmod>{today_default}</lastmod>')
+            xml_lines.append(f'    <changefreq>{u["changefreq"]}</changefreq>')
+            xml_lines.append(f'    <priority>{u["priority"]}</priority>')
+            xml_lines.append('  </url>')
+        xml_lines.append('</urlset>\n')
+        return "\n".join(xml_lines)
+
+    # 1. Write sitemap-core.xml
+    SITEMAP_CORE_PATH.write_text(build_urlset_xml(core_urls), encoding="utf-8")
+    print(f"✅ sitemap-core.xml generated with {len(core_urls)} high-authority URLs.")
+
+    # 2. Write sitemap-solutions.xml
+    SITEMAP_SOLUTIONS_PATH.write_text(build_urlset_xml(solution_urls), encoding="utf-8")
+    print(f"✅ sitemap-solutions.xml generated with {len(solution_urls)} solution URLs.")
+
+    # 3. Write master sitemapindex to sitemap.xml
+    sitemap_index_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>{BASE_URL}/sitemap-core.xml</loc>
+    <lastmod>{today_default}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>{BASE_URL}/sitemap-solutions.xml</loc>
+    <lastmod>{today_default}</lastmod>
+  </sitemap>
+</sitemapindex>
+"""
+    SITEMAP_PATH.write_text(sitemap_index_xml.strip() + "\n", encoding="utf-8")
+    print(f"✅ Master sitemap.xml index successfully generated with 2 sub-sitemaps ({len(core_urls) + len(solution_urls)} total URLs).")
 
 if __name__ == "__main__":
     generate_sitemap()

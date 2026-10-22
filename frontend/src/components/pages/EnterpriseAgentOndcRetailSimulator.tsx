@@ -21,9 +21,11 @@ import {
 } from '../calculator/agentOndcRetailModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentOndcRetailSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [catalogSkuCount, setCatalogSkuCount] = useState<number>(25000);
   const [ondcBuyerAppsConnected, setOndcBuyerAppsConnected] = useState<number>(8);
@@ -191,6 +193,13 @@ ARCHITECTURAL SAFEGUARDS:
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs font-semibold text-slate-200 transition-all shadow-sm"
             >
@@ -200,7 +209,7 @@ ARCHITECTURAL SAFEGUARDS:
 
             <button
               onClick={copyExecutiveMemo}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-xs font-semibold text-orange-300 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-xs font-semibold text-orange-300 transition-all"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-orange-400" />}
               <span>{hasCopiedMemo ? 'Audit Memo Copied!' : 'Copy Executive Audit Memo'}</span>
@@ -594,7 +603,7 @@ ARCHITECTURAL SAFEGUARDS:
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-xs"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-xs"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}</span>
@@ -603,6 +612,7 @@ ARCHITECTURAL SAFEGUARDS:
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

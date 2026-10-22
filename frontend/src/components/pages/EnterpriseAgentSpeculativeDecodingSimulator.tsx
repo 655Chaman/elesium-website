@@ -21,8 +21,10 @@ import {
 } from '../calculator/agentSpeculativeDecodingModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentSpeculativeDecodingSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [monthlyInferenceTokensMillions, setMonthlyInferenceTokensMillions] = useState<number>(250);
   const [targetModelParameterSizeB, setTargetModelParameterSizeB] = useState<number>(70);
@@ -154,6 +156,13 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
         </div>
         <div className="flex items-center gap-3">
           <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
             onClick={() => setIsEmbedOpen(true)}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-700 bg-slate-900 hover:bg-slate-800 text-xs font-mono text-slate-300 hover:text-white transition-colors"
           >
@@ -173,7 +182,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
       {/* Hero Headline */}
       <div className="max-w-7xl mx-auto mb-10 text-center sm:text-left">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4">
-          <Zap className="w-3.5 h-3.5 animate-pulse" />
+          <Zap className="w-3.5 h-3.5 " />
           Tool #25 • The Quarter-Century Asset
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
@@ -298,7 +307,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           {/* CTA In-Column */}
           <div className="pt-2">
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-mono text-sm font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all cursor-pointer">
+              <ExpandableScreenTrigger className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-mono text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 hover:from-cyan-400 hover:to-blue-500 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all cursor-pointer">
                 <span>Deploy Sovereign Speculative Decoding</span>
                 <ArrowRight className="w-4 h-4" />
               </ExpandableScreenTrigger>
@@ -383,7 +392,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           <div className="p-6 rounded-2xl border border-cyan-500/50 bg-gradient-to-br from-cyan-950/40 via-slate-900 to-blue-950/30 relative overflow-hidden shadow-2xl">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 " />
                 <h3 className="font-mono text-base font-bold text-cyan-200">
                   3. Elesium Sovereign Dynamic Speculative Decoding (Tree Verification)
                 </h3>
@@ -547,6 +556,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

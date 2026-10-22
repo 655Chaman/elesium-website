@@ -540,9 +540,16 @@ export default function EnterpriseGpuCostCalculator() {
 
                 {/* Primary Conversion CTA */}
                 <div className="space-y-3">
-                  <ExpandableScreen>
+                  <button
+                    onClick={() => openWhatsApp()}
+                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Chat on WhatsApp</span>
+                  </button>
+                <ExpandableScreen>
                     <ExpandableScreenTrigger>
-                      <button className="w-full py-3.5 px-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2">
+                      <button className="w-full py-3.5 px-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2">
                         <span>Deploy This Sovereign Cluster in Your VPC</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>

@@ -21,9 +21,11 @@ import {
   DecodeGpuType
 } from '../calculator/agentDisaggregatedPrefillModel';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentDisaggregatedPrefillSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [modelArchitecture, setModelArchitecture] = useState<DisaggregatedModelArchitecture>('sovereign_100b_agent');
   const [servingArchitecture, setServingArchitecture] = useState<ServingArchitecture>('disaggregated_rdma_roce');
@@ -168,6 +170,13 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
 
           <div className="flex items-center gap-3 shrink-0">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="px-3 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
             >
@@ -176,7 +185,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
             </button>
             <button
               onClick={resetDefaults}
-              className="px-3 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
+              className="px-3 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset</span>
@@ -416,7 +425,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <button
                   onClick={copyMemo}
-                  className="px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="px-4 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}
@@ -429,7 +438,30 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
         {/* Embedded Form Section */}
         <div className="mt-16 pt-12 border-t border-white/10">
           <div className="max-w-4xl mx-auto rounded-3xl border border-white/10 bg-[#0d0d12] overflow-hidden shadow-2xl">
-            <MandateApplicationForm source="Tool #68: Disaggregated Pre-fill Simulator" />
+            {/* Luxury Monochrome WhatsApp Conversion Card */}
+        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>Direct Lead Architect Intake</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+            Ready to Lock These Simulation Benchmarks in Production?
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
+          </p>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => openWhatsApp()}
+              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Chat on WhatsApp with Lead Architect</span>
+            </button>
+          </div>
+        </div>
+
+        <MandateApplicationForm source="Tool #68: Disaggregated Pre-fill Simulator" />
           </div>
         </div>
 
@@ -500,6 +532,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
           { label: 'FinOps Savings', value: results.annualFinOpsSavings }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

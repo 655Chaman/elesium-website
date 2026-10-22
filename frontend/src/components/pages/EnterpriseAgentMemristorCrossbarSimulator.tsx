@@ -22,8 +22,10 @@ import {
 } from '../calculator/agentMemristorCrossbarModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentMemristorCrossbarSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [memristorTechnology, setMemristorTechnology] = useState<'hfox_reram_crossbar' | 'pcm_chalcogenide_crossbar' | 'cbram_silver_electrolyte' | 'ferroelectric_fe_fet'>('hfox_reram_crossbar');
   const [crossbarDimension, setCrossbarDimension] = useState<64 | 128 | 256 | 512 | 1024>(256);
@@ -151,6 +153,13 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
               >
                 Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+              </button>
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
@@ -613,7 +622,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
           <div className="pt-2">
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-950/60 transition">
+                <button className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-950/60 transition">
                   <span>Schedule Neuromorphic Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -667,6 +676,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

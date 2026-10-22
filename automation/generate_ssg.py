@@ -362,6 +362,7 @@ def load_posts_via_node():
     code = content
     code = re.sub(r'export interface[\s\S]*?(?=export const)', '', code)
     code = re.sub(r'export const blogPosts:\s*BlogPost\[\]\s*=', 'const blogPosts =', code)
+    code = re.sub(r'export\s+function[\s\S]*$', '', code)
     code += '\nconsole.log(JSON.stringify(blogPosts));\n'
 
     tmp_bridge = BASE_DIR / "frontend" / "src" / "data" / ".tmp_bridge_ssg.cjs"
@@ -454,6 +455,78 @@ def render_post_semantic_html(post):
             f'</section>'
         )
 
+    answer_capsule_html = f"""
+    <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
+      <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">Architectural Answer Capsule • Verifiable Entity Retrieval</div>
+      <p style="font-size:1.05rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">{intro}</p>
+    </div>
+"""
+
+    slug_str = (post.get("slug") or "").lower()
+    if any(k in slug_str for k in ["kv-cache", "attention", "memory", "eviction"]):
+        tool_slug = "enterprise-llm-context-kv-cache-simulator"
+        tool_name = "Enterprise LLM KV-Cache Context & VRAM Simulator"
+        tool_metric = "4x Memory Compression Target"
+    elif any(k in slug_str for k in ["latency", "token", "speculative", "prefill", "parallel", "fp8"]):
+        tool_slug = "multi-agent-latency-token-cost-estimator"
+        tool_name = "Deterministic Multi-Agent Latency & Token Cost Estimator"
+        tool_metric = "Sub-200ms Execution SLA"
+    elif any(k in slug_str for k in ["leakage", "drift", "spend", "cost"]):
+        tool_slug = "multi-agent-token-leakage-simulator"
+        tool_name = "Multi-Agent Token Leakage & Quadratic Spend Simulator"
+        tool_metric = "-74% Token OpEx Savings"
+    elif any(k in slug_str for k in ["dpdp", "compliance", "audit", "privacy", "statutory"]):
+        tool_slug = "dpdp-act-2023-audit-simulator"
+        tool_name = "DPDP Act 2023 Statutory Audit & Penalty Liability Simulator"
+        tool_metric = "₹250 Cr Liability Safe-Harbor"
+    elif any(k in slug_str for k in ["gpu", "finops", "cluster"]):
+        tool_slug = "enterprise-gpu-finops-cost-calculator"
+        tool_name = "Enterprise GPU FinOps & Infrastructure Cost Calculator"
+        tool_metric = "3x-5x 90-Day ROI Guarantee"
+    elif any(k in slug_str for k in ["vector", "sharding", "rag"]):
+        tool_slug = "enterprise-vector-db-latency-benchmark"
+        tool_name = "Enterprise Vector DB P99 Latency & Recall Benchmark"
+        tool_metric = "< 12ms Recall Guarantee"
+    else:
+        tool_slug = "agentic-architecture-grader"
+        tool_name = "Enterprise Agentic Architecture Fragility & Readiness Grader"
+        tool_metric = "100.0% State Convergence"
+
+    simulator_embed_html = f"""
+    <aside class="interactive-simulator-callout" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-radius:0.75rem;padding:1.75rem;margin:2.5rem 0;color:#f8fafc;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
+        <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;color:#38bdf8;text-transform:uppercase;">⚡ Live Interactive Sandbox Telemetry</span>
+        <span style="font-size:0.75rem;color:#34d399;font-family:monospace;background:#064e3b;padding:0.2rem 0.5rem;border-radius:0.25rem;">{tool_metric}</span>
+      </div>
+      <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 0.5rem 0;color:#ffffff;">Model Your Enterprise State: {tool_name}</h3>
+      <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem;">Execute deterministic parameter simulations across concurrency thresholds, token degradation, and air-gapped private VPC compute bounds.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <a href="/tools/{tool_slug}" style="display:inline-block;background:#2563eb;color:#ffffff;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;">Launch Interactive Simulator &rarr;</a>
+        <a href="/waitlist" style="color:#38bdf8;text-decoration:underline;font-size:0.9rem;">Schedule Architecture Audit</a>
+      </div>
+    </aside>
+"""
+
+    topic_silo_footer_html = f"""
+    <footer style="margin-top:3rem;padding:2rem 1.5rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:0.75rem;">
+      <div style="font-size:0.75rem;font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">Sovereign Knowledge Silo • Topic Cluster Navigation</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+        <div>
+          <div style="font-size:0.8rem;color:#64748b;font-weight:600;">Parent Industry Hub:</div>
+          <a href="/ai-automation-agency-india" style="color:#0f172a;font-weight:700;text-decoration:none;">Enterprise AI Agency India &rarr;</a>
+        </div>
+        <div>
+          <div style="font-size:0.8rem;color:#64748b;font-weight:600;">Interactive Diagnostic:</div>
+          <a href="/tools/{tool_slug}" style="color:#0284c7;font-weight:700;text-decoration:none;">{tool_name} &rarr;</a>
+        </div>
+        <div>
+          <div style="font-size:0.8rem;color:#64748b;font-weight:600;">Architectural Protocols:</div>
+          <a href="/how-we-work" style="color:#10b981;font-weight:700;text-decoration:none;">Deterministic Methodology &rarr;</a>
+        </div>
+      </div>
+    </footer>
+"""
+
     article_html = f"""
 <div id="prerendered-article" style="max-width:800px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header>
@@ -462,14 +535,14 @@ def render_post_semantic_html(post):
     <div style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;">
       <time>{date}</time> • <span>{read_time}</span> • <span>Author: <a href="/authors/chaman-shah" style="color:#2563eb;text-decoration:underline;"><strong>{author_name}</strong></a> ({author_role})</span>
     </div>
-    <div style="font-size:1.125rem;line-height:1.7;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e5e7eb;color:#1f2937;">
-      <p><strong>{intro}</strong></p>
-    </div>
+    {answer_capsule_html}
   </header>
   <main class="article-body">
     {''.join(body_parts)}
+    {simulator_embed_html}
   </main>
   {''.join(faq_parts)}
+  {topic_silo_footer_html}
 </div>
 """
     return article_html
@@ -5273,10 +5346,25 @@ def generate_ssg():
         author_schema = {
             "@context": "https://schema.org",
             "@type": "Person",
+            "@id": "https://elesium.online/authors/chaman-shah#person",
             "name": "Chaman Shah",
             "jobTitle": "Principal AI Systems Architect",
+            "url": "https://elesium.online/authors/chaman-shah",
+            "image": "https://elesium.online/chaman-shah.png",
+            "sameAs": [
+                "https://github.com/655Chaman",
+                "https://linkedin.com/in/chaman-shah-elesium",
+                "https://x.com/chamanshah_ai"
+            ],
+            "knowsAbout": [
+                {"@type": "Thing", "name": "Artificial Intelligence", "sameAs": "https://www.wikidata.org/wiki/Q11660"},
+                {"@type": "Thing", "name": "Large Language Model", "sameAs": "https://www.wikidata.org/wiki/Q115305900"},
+                {"@type": "Thing", "name": "Distributed Computing", "sameAs": "https://www.wikidata.org/wiki/Q204481"},
+                {"@type": "Thing", "name": "Data Privacy", "sameAs": "https://www.wikidata.org/wiki/Q380208"}
+            ],
             "worksFor": {
                 "@type": "Organization",
+                "@id": "https://elesium.online/#organization",
                 "name": "Elesium",
                 "url": "https://elesium.online"
             }

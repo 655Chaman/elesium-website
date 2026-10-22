@@ -21,8 +21,10 @@ import {
 } from '../calculator/agentByzantineConsensusModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseAgentByzantineConsensusSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [totalNodes, setTotalNodes] = useState<number>(20);
   const [byzantineNodes, setByzantineNodes] = useState<number>(4);
@@ -152,6 +154,13 @@ ${results.toleranceConditionSatisfied
                 className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
               >
                 Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+              </button>
+              <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
@@ -457,7 +466,7 @@ ${results.toleranceConditionSatisfied
                       cy={results.consensusCentroid.y}
                       r="7"
                       fill="rgba(6, 182, 212, 0.25)"
-                      className="animate-pulse"
+                      className=""
                     />
                     <circle
                       cx={results.consensusCentroid.x}
@@ -697,6 +706,7 @@ ${results.toleranceConditionSatisfied
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

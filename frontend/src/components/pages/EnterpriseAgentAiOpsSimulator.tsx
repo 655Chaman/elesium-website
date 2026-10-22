@@ -20,9 +20,11 @@ import {
 } from '../calculator/agentAiOpsModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentAiOpsSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [clusterSizeNodes, setClusterSizeNodes] = useState<number>(120);
   const [chaosFaultVector, setChaosFaultVector] = useState<'pod_network_partition' | 'memory_leak_oom' | 'database_connection_starvation' | 'thread_deadlock_cascade'>('memory_leak_oom');
@@ -183,6 +185,13 @@ REMEDIATION & GOVERNANCE SAFEGUARDS:
 
           <div className="flex items-center space-x-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"
             >
@@ -547,6 +556,7 @@ REMEDIATION & GOVERNANCE SAFEGUARDS:
           </div>
         </div>
       )}
+          <WhatsAppModal />
     </div>
   );
 }

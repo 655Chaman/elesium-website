@@ -23,9 +23,11 @@ import {
 } from '../calculator/agentChunkedPrefillModel';
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen';
 import { MandateApplicationForm } from '../features/WaitingListForm';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
 
 export default function EnterpriseAgentChunkedPrefillSimulator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   // Inputs State
   const [concurrentUsers, setConcurrentUsers] = useState<number>(64);
   const [promptContextLength, setPromptContextLength] = useState<number>(8192);
@@ -202,6 +204,13 @@ TECHNICAL RECOMMENDATIONS:
 
           <div className="flex items-center space-x-2">
             <button
+                onClick={() => openWhatsApp()}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span>Chat on WhatsApp</span>
+              </button>
+              <button
               onClick={() => setIsEmbedOpen(true)}
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-600 transition-all shadow-sm"
             >
@@ -467,7 +476,7 @@ TECHNICAL RECOMMENDATIONS:
           <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
             <div className="flex items-center justify-between mb-3 text-xs">
               <div className="flex items-center space-x-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 " />
                 <span className="font-semibold text-white">Time-to-First-Token (TTFT) Scaling Curve (512 to 65k Context Depth)</span>
               </div>
               <span className="text-slate-400 font-mono text-[11px]">Chunk Interleaving</span>
@@ -531,7 +540,7 @@ TECHNICAL RECOMMENDATIONS:
             </div>
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="px-5 py-2.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-xs transition-all shadow-lg shadow-indigo-500/20 flex items-center space-x-1.5 whitespace-nowrap">
+                <button className="px-5 py-2.5 rounded-full bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-xs transition-all shadow-lg shadow-indigo-500/20 flex items-center space-x-1.5 whitespace-nowrap">
                   <span>Schedule Inference Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -680,6 +689,7 @@ TECHNICAL RECOMMENDATIONS:
           { label: 'Est. Annual Savings', value: `${currency === 'INR' ? '₹' : '$'}${results.annualComputeSavings.toLocaleString()}` }
         ]}
       />
+          <WhatsAppModal />
     </div>
   );
 }

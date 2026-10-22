@@ -235,7 +235,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                 <div>
                     <div className="flex items-center gap-2 mb-1.5">
                         <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 flex items-center gap-1">
-                            <Activity className="h-3 w-3 animate-pulse" />
+                            <Activity className="h-3 w-3 " />
                             Live Architecture Simulator
                         </span>
                         <span className="text-xs text-white/50 font-mono">
@@ -343,7 +343,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                                     : 'bg-cyan-500 hover:bg-cyan-400 text-black shadow-lg shadow-cyan-500/20 active:scale-95'
                             }`}
                         >
-                            <Play className={`h-4 w-4 ${isRunning ? 'animate-pulse' : 'fill-current'}`} />
+                            <Play className={`h-4 w-4 ${isRunning ? '' : 'fill-current'}`} />
                             {isRunning ? 'Executing Pipeline...' : 'Run Live Transaction'}
                         </button>
 

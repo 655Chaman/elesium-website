@@ -466,7 +466,7 @@ export default function MarketSignals() {
                                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
 
                                         <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-3">
-                                            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 " />
                                             <span className="font-semibold">Deploy This Architecture in Production</span>
                                             <span className="text-gray-400 text-[10px] hidden sm:inline">| Sovereign Commercial Implementation</span>
                                         </div>
@@ -497,7 +497,7 @@ export default function MarketSignals() {
                                             <div className="flex flex-wrap items-center gap-3">
                                                 <button
                                                     onClick={openWhatsApp}
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono tracking-wide transition-all shadow-sm group"
+                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono tracking-wide transition-all shadow-sm group"
                                                 >
                                                     <MessageSquare className="w-3.5 h-3.5 fill-current" />
                                                     <span>Chat on WhatsApp</span>
@@ -518,7 +518,7 @@ export default function MarketSignals() {
                                 <div className="my-10 p-4 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
                                     <div className="flex items-center gap-3">
                                         <span className="flex items-center gap-1.5">
-                                            <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 animate-pulse' : 'bg-cyan-400'}`} />
+                                            <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 ' : 'bg-cyan-400'}`} />
                                             Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
                                         </span>
                                         <span className="hidden sm:inline">|</span>
@@ -593,7 +593,7 @@ export default function MarketSignals() {
                                 <div className="mt-16 p-8 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
                                     <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
                                         <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                            <span className=" absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                                         </span>
                                         <span>Direct Principal Systems Pairing</span>
@@ -607,7 +607,7 @@ export default function MarketSignals() {
                                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                         <button
                                             onClick={openWhatsApp}
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md group"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
                                         >
                                             <MessageSquare className="w-4 h-4 fill-current" />
                                             <span>Chat on WhatsApp with Lead Architect</span>
