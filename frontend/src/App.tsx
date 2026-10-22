@@ -163,6 +163,8 @@ const EnterpriseAgentDisaggregatedPrefillSimulator = lazy(() => import('./compon
 const EmbedAgentDisaggregatedPrefillSimulator = lazy(() => import('./components/pages/EmbedAgentDisaggregatedPrefillSimulator'))
 const EnterpriseAgentSpeculativeTreeSimulator = lazy(() => import('./components/pages/EnterpriseAgentSpeculativeTreeSimulator'))
 const EmbedAgentSpeculativeTreeSimulator = lazy(() => import('./components/pages/EmbedAgentSpeculativeTreeSimulator'))
+const EnterpriseAgentKvCacheEvictionSimulator = lazy(() => import('./components/pages/EnterpriseAgentKvCacheEvictionSimulator'))
+const EmbedAgentKvCacheEvictionSimulator = lazy(() => import('./components/pages/EmbedAgentKvCacheEvictionSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -436,6 +438,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-speculative-tree-simulator" element={<EnterpriseAgentSpeculativeTreeSimulator />} />
                             <Route path="/tools/agent-speculative-tree-simulator" element={<Navigate to="/tools/enterprise-agent-speculative-tree-simulator" replace />} />
                             <Route path="/embed/agent-speculative-tree-simulator" element={<EmbedAgentSpeculativeTreeSimulator />} />
+                            <Route path="/tools/enterprise-agent-kv-cache-eviction-simulator" element={<EnterpriseAgentKvCacheEvictionSimulator />} />
+                            <Route path="/tools/agent-kv-cache-eviction-simulator" element={<Navigate to="/tools/enterprise-agent-kv-cache-eviction-simulator" replace />} />
+                            <Route path="/embed/agent-kv-cache-eviction-simulator" element={<EmbedAgentKvCacheEvictionSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

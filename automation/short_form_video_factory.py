@@ -4883,6 +4883,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "Warp Flattening • CUDA Warp Shuffles • Lossless Rejection Sampling"
                     }
             ]
+    },
+    {
+            "id": "sfv-47",
+            "slug": "enterprise-agent-kv-cache-eviction-simulator",
+            "keyword": "dynamic kv-cache eviction and attention sink compression daemons for 2m context llms",
+            "key_benefit": "4x Memory Compression & Sub-1% Perplexity Degradation",
+            "industry": "Enterprise Long-Context Inference & Sovereign GPU Clusters",
+            "target_persona": "Chief Technology Officers & Distributed Inference Architects",
+            "youtube_id": "kvEvict47",
+            "hero_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "caption": "Dynamic KV-Cache Eviction & Attention Sink Compression",
+                            "visual": "Dual-node H100 GPU cluster telemetry dashboard displaying real-time KV cache memory allocation and active context token counts.",
+                            "voiceover": "Dynamic KV-cache eviction and attention sink compression daemons unlock infinite two-million token context windows without OOM crashes."
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "caption": "The VRAM Memory Wall on Long Contexts",
+                            "visual": "Line chart showing VRAM utilization surging linearly with context length until an out-of-memory kernel exception halts the inference cluster.",
+                            "voiceover": "Standard uncompressed KV caches consume over two hundred gigabytes of high-bandwidth memory at million-token scales, collapsing multi-tenant concurrency."
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "caption": "H2O Heavy-Hitter Oracles & Initial Attention Sink Preservation",
+                            "visual": "Animated architectural schematic demonstrating StreamingLLM initial attention sink token preservation and Triton H2O cumulative score eviction oracles.",
+                            "voiceover": "Our architecture preserves initial attention sink tokens to stabilize softmax entropy while dynamically retaining heavy-hitter tokens via custom Triton eviction kernels."
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "caption": "4.2x Memory Compression & <0.8% Perplexity Shift",
+                            "visual": "Comparative benchmarks showing 4.2x VRAM compression ratio, sub-1% perplexity variance, and 4x concurrent stream density.",
+                            "voiceover": "This slashes VRAM requirements by over four-fold, sustains sub-one percent perplexity degradation, and quad-scales concurrent long-context agent swarms."
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion CTA",
+                            "caption": "Simulate KV-Cache Eviction at Elesium.online",
+                            "visual": "Clean enterprise landing console with vLLM, SGLang, and DPDP Act 2023 compliance seals, featuring a direct audit scheduling button.",
+                            "voiceover": "Visit elesium dot online to simulate your KV-cache eviction architecture and claim your sovereign long-context deployment roadmap."
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "VRAM Compression",
+                            "value": "4.2x Cut",
+                            "detail": "Dynamic Eviction",
+                            "color": "emerald"
+                    },
+                    {
+                            "label": "Perplexity Degradation",
+                            "value": "<0.8%",
+                            "detail": "Lossless Reasoning",
+                            "color": "cyan"
+                    },
+                    {
+                            "label": "Max Context Window",
+                            "value": "2.0M tok",
+                            "detail": "StreamingLLM Sinks",
+                            "color": "indigo"
+                    },
+                    {
+                            "label": "Cluster TCO Savings",
+                            "value": "64.2%",
+                            "detail": "Hardware Footprint",
+                            "color": "amber"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Attention Sink Preservation & Softmax Entropy Stabilization",
+                            "bullets": [
+                                    "Pinning initial 4-32 attention sink tokens to permanently absorb massive attention score allocation",
+                                    "Eliminating catastrophic softmax distribution collapse during long-running agentic conversations",
+                                    "Maintaining stable layer-norm variance across 2M-token continuous streaming sessions"
+                            ],
+                            "techStack": "StreamingLLM Protocol • Attention Sink Pinning • Softmax Stabilization"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "H2O Heavy-Hitter Activation Oracle & Cumulative Scoring",
+                            "bullets": [
+                                    "Calculating cumulative multi-head attention weights per token across dynamic context horizons",
+                                    "Identifying salient informational heavy hitters with sub-microsecond CUDA reduction kernels",
+                                    "Separating local sliding window tokens from long-range informational anchors"
+                            ],
+                            "techStack": "H2O Oracle • CUDA Reduction Kernels • Cumulative Score Tracking"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Triton Non-Contiguous Page Eviction & PagedAttention Compaction",
+                            "bullets": [
+                                    "Executing asynchronous non-contiguous KV page eviction directly inside GPU SRAM memory",
+                                    "Re-indexing PagedAttention virtual block tables without blocking active decoding threads",
+                                    "Enforcing statutory DPDP Act 2023 zero-remanence cryptographic memory shredding on evicted slots"
+                            ],
+                            "techStack": "Custom Triton Kernel • PagedAttention Paging • DPDP Act 2023 Memory Shredder"
+                    }
+            ]
     }
 ]
 
