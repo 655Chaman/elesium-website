@@ -161,6 +161,8 @@ const EnterpriseAgentAsyncCheckpointingSimulator = lazy(() => import('./componen
 const EmbedAgentAsyncCheckpointingSimulator = lazy(() => import('./components/pages/EmbedAgentAsyncCheckpointingSimulator'))
 const EnterpriseAgentDisaggregatedPrefillSimulator = lazy(() => import('./components/pages/EnterpriseAgentDisaggregatedPrefillSimulator'))
 const EmbedAgentDisaggregatedPrefillSimulator = lazy(() => import('./components/pages/EmbedAgentDisaggregatedPrefillSimulator'))
+const EnterpriseAgentSpeculativeTreeSimulator = lazy(() => import('./components/pages/EnterpriseAgentSpeculativeTreeSimulator'))
+const EmbedAgentSpeculativeTreeSimulator = lazy(() => import('./components/pages/EmbedAgentSpeculativeTreeSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -431,6 +433,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-disaggregated-prefill-simulator" element={<EnterpriseAgentDisaggregatedPrefillSimulator />} />
                             <Route path="/tools/agent-disaggregated-prefill-simulator" element={<Navigate to="/tools/enterprise-agent-disaggregated-prefill-simulator" replace />} />
                             <Route path="/embed/agent-disaggregated-prefill-simulator" element={<EmbedAgentDisaggregatedPrefillSimulator />} />
+                            <Route path="/tools/enterprise-agent-speculative-tree-simulator" element={<EnterpriseAgentSpeculativeTreeSimulator />} />
+                            <Route path="/tools/agent-speculative-tree-simulator" element={<Navigate to="/tools/enterprise-agent-speculative-tree-simulator" replace />} />
+                            <Route path="/embed/agent-speculative-tree-simulator" element={<EmbedAgentSpeculativeTreeSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

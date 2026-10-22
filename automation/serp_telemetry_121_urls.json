@@ -196,6 +196,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/disaggregated-prefill-chunked-kv-routing-cross-node-attention-paging",
+    "path": "/signals/disaggregated-prefill-chunked-kv-routing-cross-node-attention-paging",
+    "slug": "disaggregated-prefill-chunked-kv-routing-cross-node-attention-paging",
+    "target_keyword": "disaggregated prefill chunked kv routing cross node attention paging",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 24.4,
+    "impressions": 1994,
+    "clicks": 11,
+    "ctr": 0.0058,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/signals/asynchronous-gpu-checkpointing-non-blocking-memory-offload-slurm-failover",
+    "path": "/signals/asynchronous-gpu-checkpointing-non-blocking-memory-offload-slurm-failover",
+    "slug": "asynchronous-gpu-checkpointing-non-blocking-memory-offload-slurm-failover",
+    "target_keyword": "asynchronous gpu checkpointing non blocking memory offload slurm failover",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 14.2,
+    "impressions": 1892,
+    "clicks": 16,
+    "ctr": 0.0088,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/signals/fp8-mxfp8-microscaling-dynamic-block-exponent-shifting-sub-1-percent-perplexity",
     "path": "/signals/fp8-mxfp8-microscaling-dynamic-block-exponent-shifting-sub-1-percent-perplexity",
     "slug": "fp8-mxfp8-microscaling-dynamic-block-exponent-shifting-sub-1-percent-perplexity",
@@ -2604,6 +2632,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
+    "path": "/solutions/air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
+    "slug": "air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
+    "target_keyword": "air-gapped encrypted state checkpoint storage vault managers for defense ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.0,
+    "impressions": 2030,
+    "clicks": 64,
+    "ctr": 0.0319,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies",
     "path": "/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies",
     "slug": "air-gapped-intelligence-extraction-software-for-defense-agencies",
@@ -2698,6 +2740,20 @@
     "impressions": 2188,
     "clicks": 43,
     "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries",
+    "path": "/solutions/air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries",
+    "slug": "air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries",
+    "target_keyword": "air-gapped sovereign pre-fill and decode enclave architects for defense ministries",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.5,
+    "impressions": 655,
+    "clicks": 25,
+    "ctr": 0.0393,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -3486,6 +3542,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/asynchronous-checkpoint-latency-masking-controllers-for-distributed-transformer-clusters",
+    "path": "/solutions/asynchronous-checkpoint-latency-masking-controllers-for-distributed-transformer-clusters",
+    "slug": "asynchronous-checkpoint-latency-masking-controllers-for-distributed-transformer-clusters",
+    "target_keyword": "asynchronous checkpoint latency masking controllers for distributed transformer clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 1236,
+    "clicks": 26,
+    "ctr": 0.0211,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/asynchronous-cross-attention-query-routers-for-high-throughput-legal-contract-bots",
     "path": "/solutions/asynchronous-cross-attention-query-routers-for-high-throughput-legal-contract-bots",
     "slug": "asynchronous-cross-attention-query-routers-for-high-throughput-legal-contract-bots",
@@ -3598,6 +3668,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/asynchronous-gpu-checkpointing-memory-offload-daemons-for-slurm-clusters",
+    "path": "/solutions/asynchronous-gpu-checkpointing-memory-offload-daemons-for-slurm-clusters",
+    "slug": "asynchronous-gpu-checkpointing-memory-offload-daemons-for-slurm-clusters",
+    "target_keyword": "asynchronous gpu checkpointing memory offload daemons for slurm clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.1,
+    "impressions": 421,
+    "clicks": 3,
+    "ctr": 0.0078,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/asynchronous-host-to-device-lora-weight-prefetch-daemons-for-triton-servers",
     "path": "/solutions/asynchronous-host-to-device-lora-weight-prefetch-daemons-for-triton-servers",
     "slug": "asynchronous-host-to-device-lora-weight-prefetch-daemons-for-triton-servers",
@@ -3608,6 +3692,20 @@
     "impressions": 1650,
     "clicks": 16,
     "ctr": 0.0098,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/asynchronous-kv-cache-memory-state-offload-daemons-for-two-million-token-agents",
+    "path": "/solutions/asynchronous-kv-cache-memory-state-offload-daemons-for-two-million-token-agents",
+    "slug": "asynchronous-kv-cache-memory-state-offload-daemons-for-two-million-token-agents",
+    "target_keyword": "asynchronous kv-cache memory state offload daemons for two-million-token agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 1475,
+    "clicks": 23,
+    "ctr": 0.0159,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -3678,6 +3776,34 @@
     "impressions": 2521,
     "clicks": 93,
     "ctr": 0.0372,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/asynchronous-pipeline-state-checkpoint-synchronizers-for-405b-llama-clusters",
+    "path": "/solutions/asynchronous-pipeline-state-checkpoint-synchronizers-for-405b-llama-clusters",
+    "slug": "asynchronous-pipeline-state-checkpoint-synchronizers-for-405b-llama-clusters",
+    "target_keyword": "asynchronous pipeline state checkpoint synchronizers for 405b llama clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.5,
+    "impressions": 3085,
+    "clicks": 49,
+    "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/asynchronous-pre-fill-task-queue-schedulers-for-enterprise-slurm-supercomputing",
+    "path": "/solutions/asynchronous-pre-fill-task-queue-schedulers-for-enterprise-slurm-supercomputing",
+    "slug": "asynchronous-pre-fill-task-queue-schedulers-for-enterprise-slurm-supercomputing",
+    "target_keyword": "asynchronous pre-fill task queue schedulers for enterprise slurm supercomputing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 2343,
+    "clicks": 19,
+    "ctr": 0.0085,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -4592,6 +4718,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/automated-gpu-checkpoint-corruption-detection-and-self-healing-recovery-engines",
+    "path": "/solutions/automated-gpu-checkpoint-corruption-detection-and-self-healing-recovery-engines",
+    "slug": "automated-gpu-checkpoint-corruption-detection-and-self-healing-recovery-engines",
+    "target_keyword": "automated gpu checkpoint corruption detection and self-healing recovery engines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 3066,
+    "clicks": 29,
+    "ctr": 0.0096,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/automated-gpu-spot-instance-preemptive-checkpointing-agents-for-fault-tolerant-training",
     "path": "/solutions/automated-gpu-spot-instance-preemptive-checkpointing-agents-for-fault-tolerant-training",
     "slug": "automated-gpu-spot-instance-preemptive-checkpointing-agents-for-fault-tolerant-training",
@@ -4784,6 +4924,20 @@
     "impressions": 1697,
     "clicks": 21,
     "ctr": 0.0126,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/automated-kv-memory-corruption-detection-and-self-healing-daemons-for-slurm",
+    "path": "/solutions/automated-kv-memory-corruption-detection-and-self-healing-daemons-for-slurm",
+    "slug": "automated-kv-memory-corruption-detection-and-self-healing-daemons-for-slurm",
+    "target_keyword": "automated kv memory corruption detection and self-healing daemons for slurm",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 2249,
+    "clicks": 31,
+    "ctr": 0.0141,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -7546,6 +7700,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/causal-tree-state-snapshot-serialization-engines-for-multi-agent-reasoning-graphs",
+    "path": "/solutions/causal-tree-state-snapshot-serialization-engines-for-multi-agent-reasoning-graphs",
+    "slug": "causal-tree-state-snapshot-serialization-engines-for-multi-agent-reasoning-graphs",
+    "target_keyword": "causal tree state snapshot serialization engines for multi-agent reasoning graphs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.4,
+    "impressions": 2204,
+    "clicks": 16,
+    "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cd-sem-critical-dimension-line-edge-roughness-measurement-software-for-advanced-node-fab-engineers",
     "path": "/solutions/cd-sem-critical-dimension-line-edge-roughness-measurement-software-for-advanced-node-fab-engineers",
     "slug": "cd-sem-critical-dimension-line-edge-roughness-measurement-software-for-advanced-node-fab-engineers",
@@ -7868,6 +8036,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/chunked-kv-cache-page-migration-daemons-for-long-running-multi-agent-debates",
+    "path": "/solutions/chunked-kv-cache-page-migration-daemons-for-long-running-multi-agent-debates",
+    "slug": "chunked-kv-cache-page-migration-daemons-for-long-running-multi-agent-debates",
+    "target_keyword": "chunked kv cache page migration daemons for long-running multi-agent debates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.4,
+    "impressions": 2214,
+    "clicks": 67,
+    "ctr": 0.0307,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
     "path": "/solutions/chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
     "slug": "chunked-prefill-and-decode-execution-interleaving-latency-jitter-mitigation-telemetry-for-vllm-clusters",
@@ -7962,6 +8144,20 @@
     "impressions": 2505,
     "clicks": 12,
     "ctr": 0.0051,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/chunked-prompt-pre-fill-execution-daemons-for-two-million-token-agent-workflows",
+    "path": "/solutions/chunked-prompt-pre-fill-execution-daemons-for-two-million-token-agent-workflows",
+    "slug": "chunked-prompt-pre-fill-execution-daemons-for-two-million-token-agent-workflows",
+    "target_keyword": "chunked prompt pre-fill execution daemons for two-million-token agent workflows",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.1,
+    "impressions": 1381,
+    "clicks": 51,
+    "ctr": 0.0372,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -9436,6 +9632,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/continuous-asynchronous-agent-checkpoint-daemons-for-sovereign-defense-clouds",
+    "path": "/solutions/continuous-asynchronous-agent-checkpoint-daemons-for-sovereign-defense-clouds",
+    "slug": "continuous-asynchronous-agent-checkpoint-daemons-for-sovereign-defense-clouds",
+    "target_keyword": "continuous asynchronous agent checkpoint daemons for sovereign defense clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 502,
+    "clicks": 9,
+    "ctr": 0.0198,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/continuous-automated-red-teaming-agents-stress-testing-multi-agent-prompt-security-boundaries",
     "path": "/solutions/continuous-automated-red-teaming-agents-stress-testing-multi-agent-prompt-security-boundaries",
     "slug": "continuous-automated-red-teaming-agents-stress-testing-multi-agent-prompt-security-boundaries",
@@ -9740,6 +9950,20 @@
     "impressions": 2953,
     "clicks": 119,
     "ctr": 0.0406,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/continuous-pre-fill-node-health-monitors-and-failover-migrators-for-slurm-clusters",
+    "path": "/solutions/continuous-pre-fill-node-health-monitors-and-failover-migrators-for-slurm-clusters",
+    "slug": "continuous-pre-fill-node-health-monitors-and-failover-migrators-for-slurm-clusters",
+    "target_keyword": "continuous pre-fill node health monitors and failover migrators for slurm clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.7,
+    "impressions": 1127,
+    "clicks": 37,
+    "ctr": 0.0332,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -10416,6 +10640,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cross-cluster-kv-cache-replication-engines-for-zero-downtime-disaster-recovery",
+    "path": "/solutions/cross-cluster-kv-cache-replication-engines-for-zero-downtime-disaster-recovery",
+    "slug": "cross-cluster-kv-cache-replication-engines-for-zero-downtime-disaster-recovery",
+    "target_keyword": "cross-cluster kv cache replication engines for zero-downtime disaster recovery",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 2126,
+    "clicks": 71,
+    "ctr": 0.0337,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cross-cluster-kv-transport-telemetry-monitors-for-tier-4-datacenters-in-bangalore",
     "path": "/solutions/cross-cluster-kv-transport-telemetry-monitors-for-tier-4-datacenters-in-bangalore",
     "slug": "cross-cluster-kv-transport-telemetry-monitors-for-tier-4-datacenters-in-bangalore",
@@ -10468,6 +10706,20 @@
     "impressions": 2989,
     "clicks": 60,
     "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cross-datacenter-in-flight-agent-session-migrators-for-telecom-private-clouds",
+    "path": "/solutions/cross-datacenter-in-flight-agent-session-migrators-for-telecom-private-clouds",
+    "slug": "cross-datacenter-in-flight-agent-session-migrators-for-telecom-private-clouds",
+    "target_keyword": "cross-datacenter in-flight agent session migrators for telecom private clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.4,
+    "impressions": 1274,
+    "clicks": 39,
+    "ctr": 0.0307,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -10622,6 +10874,20 @@
     "impressions": 624,
     "clicks": 2,
     "ctr": 0.0046,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cross-node-kv-paged-attention-memory-routing-daemons-for-distributed-agent-swarms",
+    "path": "/solutions/cross-node-kv-paged-attention-memory-routing-daemons-for-distributed-agent-swarms",
+    "slug": "cross-node-kv-paged-attention-memory-routing-daemons-for-distributed-agent-swarms",
+    "target_keyword": "cross-node kv paged attention memory routing daemons for distributed agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.6,
+    "impressions": 2126,
+    "clicks": 23,
+    "ctr": 0.0112,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11326,6 +11592,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cuda-unified-memory-background-page-checkpoint-migrators-for-slurm-clusters",
+    "path": "/solutions/cuda-unified-memory-background-page-checkpoint-migrators-for-slurm-clusters",
+    "slug": "cuda-unified-memory-background-page-checkpoint-migrators-for-slurm-clusters",
+    "target_keyword": "cuda unified memory background page checkpoint migrators for slurm clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.6,
+    "impressions": 3606,
+    "clicks": 47,
+    "ctr": 0.0133,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cuda-virtual-memory-management-plugins-for-enterprise-vllm-and-sglang",
     "path": "/solutions/cuda-virtual-memory-management-plugins-for-enterprise-vllm-and-sglang",
     "slug": "cuda-virtual-memory-management-plugins-for-enterprise-vllm-and-sglang",
@@ -11634,6 +11914,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/decode-node-throughput-maximizers-via-disaggregated-pre-fill-isolation-for-banks",
+    "path": "/solutions/decode-node-throughput-maximizers-via-disaggregated-pre-fill-isolation-for-banks",
+    "slug": "decode-node-throughput-maximizers-via-disaggregated-pre-fill-isolation-for-banks",
+    "target_keyword": "decode node throughput maximizers via disaggregated pre-fill isolation for banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 3869,
+    "clicks": 32,
+    "ctr": 0.0084,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/decode-pool-throughput-optimizers-for-multi-tenant-enterprise-customer-service",
     "path": "/solutions/decode-pool-throughput-optimizers-for-multi-tenant-enterprise-customer-service",
     "slug": "decode-pool-throughput-optimizers-for-multi-tenant-enterprise-customer-service",
@@ -11658,6 +11952,20 @@
     "impressions": 355,
     "clicks": 5,
     "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dedicated-pre-fill-tensor-parallelism-pods-for-multi-tenant-private-vpc-clouds",
+    "path": "/solutions/dedicated-pre-fill-tensor-parallelism-pods-for-multi-tenant-private-vpc-clouds",
+    "slug": "dedicated-pre-fill-tensor-parallelism-pods-for-multi-tenant-private-vpc-clouds",
+    "target_keyword": "dedicated pre-fill tensor parallelism pods for multi-tenant private vpc clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.5,
+    "impressions": 2195,
+    "clicks": 22,
+    "ctr": 0.0101,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -12670,6 +12978,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/differential-agent-state-checkpoint-delta-generators-for-bandwidth-constrained-vpcs",
+    "path": "/solutions/differential-agent-state-checkpoint-delta-generators-for-bandwidth-constrained-vpcs",
+    "slug": "differential-agent-state-checkpoint-delta-generators-for-bandwidth-constrained-vpcs",
+    "target_keyword": "differential agent state checkpoint delta generators for bandwidth-constrained vpcs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 1953,
+    "clicks": 21,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/differential-power-analysis-dpa-side-channel-attack-attenuation-telemetry-for-cryptographic-coprocessors",
     "path": "/solutions/differential-power-analysis-dpa-side-channel-attack-attenuation-telemetry-for-cryptographic-coprocessors",
     "slug": "differential-power-analysis-dpa-side-channel-attack-attenuation-telemetry-for-cryptographic-coprocessors",
@@ -13104,6 +13426,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/disaggregated-pre-fill-and-decode-pod-orchestrators-for-enterprise-vllm-clusters",
+    "path": "/solutions/disaggregated-pre-fill-and-decode-pod-orchestrators-for-enterprise-vllm-clusters",
+    "slug": "disaggregated-pre-fill-and-decode-pod-orchestrators-for-enterprise-vllm-clusters",
+    "target_keyword": "disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 3586,
+    "clicks": 25,
+    "ctr": 0.0072,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/disaggregated-pre-fill-resource-partitioners-for-tier-4-colocation-datacenters",
+    "path": "/solutions/disaggregated-pre-fill-resource-partitioners-for-tier-4-colocation-datacenters",
+    "slug": "disaggregated-pre-fill-resource-partitioners-for-tier-4-colocation-datacenters",
+    "target_keyword": "disaggregated pre-fill resource partitioners for tier-4 colocation datacenters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.9,
+    "impressions": 1539,
+    "clicks": 33,
+    "ctr": 0.0217,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots",
     "path": "/solutions/disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots",
     "slug": "disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots",
@@ -13184,6 +13534,20 @@
     "impressions": 2654,
     "clicks": 41,
     "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/distributed-agent-checkpoint-consensus-verifiers-for-fault-tolerant-banking-clusters",
+    "path": "/solutions/distributed-agent-checkpoint-consensus-verifiers-for-fault-tolerant-banking-clusters",
+    "slug": "distributed-agent-checkpoint-consensus-verifiers-for-fault-tolerant-banking-clusters",
+    "target_keyword": "distributed agent checkpoint consensus verifiers for fault-tolerant banking clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.2,
+    "impressions": 272,
+    "clicks": 2,
+    "ctr": 0.0106,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -13352,6 +13716,20 @@
     "impressions": 3865,
     "clicks": 42,
     "ctr": 0.0109,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/distributed-kv-cache-eviction-and-compression-controllers-for-100b-agent-swarms",
+    "path": "/solutions/distributed-kv-cache-eviction-and-compression-controllers-for-100b-agent-swarms",
+    "slug": "distributed-kv-cache-eviction-and-compression-controllers-for-100b-agent-swarms",
+    "target_keyword": "distributed kv cache eviction and compression controllers for 100b agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 3919,
+    "clicks": 52,
+    "ctr": 0.0134,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -13799,6 +14177,34 @@
     "position": 13.8,
     "impressions": 3918,
     "clicks": 47,
+    "ctr": 0.0121,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
+    "path": "/solutions/dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
+    "slug": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
+    "target_keyword": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.4,
+    "impressions": 2334,
+    "clicks": 24,
+    "ctr": 0.0104,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dpdp-act-statutory-audit-trail-state-checkpoint-generators-for-fintechs",
+    "path": "/solutions/dpdp-act-statutory-audit-trail-state-checkpoint-generators-for-fintechs",
+    "slug": "dpdp-act-statutory-audit-trail-state-checkpoint-generators-for-fintechs",
+    "target_keyword": "dpdp-act-statutory-audit-trail-state-checkpoint-generators-for-fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.3,
+    "impressions": 553,
+    "clicks": 6,
     "ctr": 0.0121,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
@@ -14308,6 +14714,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dynamic-gpu-rank-remapping-and-state-restore-managers-for-degraded-slurm-nodes",
+    "path": "/solutions/dynamic-gpu-rank-remapping-and-state-restore-managers-for-degraded-slurm-nodes",
+    "slug": "dynamic-gpu-rank-remapping-and-state-restore-managers-for-degraded-slurm-nodes",
+    "target_keyword": "dynamic gpu rank remapping and state restore managers for degraded slurm nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.8,
+    "impressions": 1968,
+    "clicks": 27,
+    "ctr": 0.0139,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dynamic-kv-cache-compaction-plugins-for-private-vpc-defense-intelligences",
     "path": "/solutions/dynamic-kv-cache-compaction-plugins-for-private-vpc-defense-intelligences",
     "slug": "dynamic-kv-cache-compaction-plugins-for-private-vpc-defense-intelligences",
@@ -14332,6 +14752,20 @@
     "impressions": 2616,
     "clicks": 65,
     "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-kv-memory-pool-rebalancing-daemons-for-multi-node-vllm-deployments",
+    "path": "/solutions/dynamic-kv-memory-pool-rebalancing-daemons-for-multi-node-vllm-deployments",
+    "slug": "dynamic-kv-memory-pool-rebalancing-daemons-for-multi-node-vllm-deployments",
+    "target_keyword": "dynamic kv memory pool rebalancing daemons for multi-node vllm deployments",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.8,
+    "impressions": 1028,
+    "clicks": 8,
+    "ctr": 0.008,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14570,6 +15004,20 @@
     "impressions": 2227,
     "clicks": 22,
     "ctr": 0.0099,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-pre-fill-worker-autoscaling-engines-for-high-concurrency-fintech-bourses",
+    "path": "/solutions/dynamic-pre-fill-worker-autoscaling-engines-for-high-concurrency-fintech-bourses",
+    "slug": "dynamic-pre-fill-worker-autoscaling-engines-for-high-concurrency-fintech-bourses",
+    "target_keyword": "dynamic pre-fill worker autoscaling engines for high-concurrency fintech bourses",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 1433,
+    "clicks": 29,
+    "ctr": 0.0206,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15442,6 +15890,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/enterprise-agent-state-snapshot-lifecycle-and-retention-policy-managers-for-ctos",
+    "path": "/solutions/enterprise-agent-state-snapshot-lifecycle-and-retention-policy-managers-for-ctos",
+    "slug": "enterprise-agent-state-snapshot-lifecycle-and-retention-policy-managers-for-ctos",
+    "target_keyword": "enterprise agent state snapshot lifecycle and retention policy managers for ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.0,
+    "impressions": 1930,
+    "clicks": 21,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/enterprise-agent-token-budget-enforcement-agents-preventing-recursive-reasoning-runaway-spend",
     "path": "/solutions/enterprise-agent-token-budget-enforcement-agents-preventing-recursive-reasoning-runaway-spend",
     "slug": "enterprise-agent-token-budget-enforcement-agents-preventing-recursive-reasoning-runaway-spend",
@@ -15484,6 +15946,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/enterprise-asynchronous-checkpointing-architecture-auditors-for-fortune-500-cto-offices",
+    "path": "/solutions/enterprise-asynchronous-checkpointing-architecture-auditors-for-fortune-500-cto-offices",
+    "slug": "enterprise-asynchronous-checkpointing-architecture-auditors-for-fortune-500-cto-offices",
+    "target_keyword": "enterprise asynchronous checkpointing architecture auditors for fortune 500 cto offices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.6,
+    "impressions": 2066,
+    "clicks": 13,
+    "ctr": 0.0063,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/enterprise-context-parallelism-architecture-auditors-for-fortune-500-cto-offices",
     "path": "/solutions/enterprise-context-parallelism-architecture-auditors-for-fortune-500-cto-offices",
     "slug": "enterprise-context-parallelism-architecture-auditors-for-fortune-500-cto-offices",
@@ -15508,6 +15984,34 @@
     "impressions": 580,
     "clicks": 15,
     "ctr": 0.0269,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-disaggregated-pre-fill-architecture-auditors-for-fortune-500-cto-offices",
+    "path": "/solutions/enterprise-disaggregated-pre-fill-architecture-auditors-for-fortune-500-cto-offices",
+    "slug": "enterprise-disaggregated-pre-fill-architecture-auditors-for-fortune-500-cto-offices",
+    "target_keyword": "enterprise disaggregated pre-fill architecture auditors for fortune 500 cto offices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.9,
+    "impressions": 1349,
+    "clicks": 22,
+    "ctr": 0.0167,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-disaggregated-serving-finops-cost-reduction-auditors-for-fortune-500-ctos",
+    "path": "/solutions/enterprise-disaggregated-serving-finops-cost-reduction-auditors-for-fortune-500-ctos",
+    "slug": "enterprise-disaggregated-serving-finops-cost-reduction-auditors-for-fortune-500-ctos",
+    "target_keyword": "enterprise disaggregated serving finops cost reduction auditors for fortune 500 ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.7,
+    "impressions": 1477,
+    "clicks": 27,
+    "ctr": 0.0186,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15564,6 +16068,20 @@
     "impressions": 1448,
     "clicks": 20,
     "ctr": 0.0139,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-kv-cache-lifecycle-and-statutory-retention-policy-managers-for-ctos",
+    "path": "/solutions/enterprise-kv-cache-lifecycle-and-statutory-retention-policy-managers-for-ctos",
+    "slug": "enterprise-kv-cache-lifecycle-and-statutory-retention-policy-managers-for-ctos",
+    "target_keyword": "enterprise kv cache lifecycle and statutory retention policy managers for ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.7,
+    "impressions": 2617,
+    "clicks": 43,
+    "ctr": 0.0165,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15900,6 +16418,20 @@
     "impressions": 3455,
     "clicks": 44,
     "ctr": 0.0129,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ephemeral-gpu-spot-instance-eviction-survival-engines-for-enterprise-ai-agents",
+    "path": "/solutions/ephemeral-gpu-spot-instance-eviction-survival-engines-for-enterprise-ai-agents",
+    "slug": "ephemeral-gpu-spot-instance-eviction-survival-engines-for-enterprise-ai-agents",
+    "target_keyword": "ephemeral gpu spot instance eviction survival engines for enterprise ai agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 606,
+    "clicks": 4,
+    "ctr": 0.0072,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -19054,6 +19586,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/gpu-kernel-execution-and-background-state-offload-overlapping-orchestrators",
+    "path": "/solutions/gpu-kernel-execution-and-background-state-offload-overlapping-orchestrators",
+    "slug": "gpu-kernel-execution-and-background-state-offload-overlapping-orchestrators",
+    "target_keyword": "gpu kernel execution and background state offload overlapping orchestrators",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.6,
+    "impressions": 2656,
+    "clicks": 80,
+    "ctr": 0.0304,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/gpu-memory-swap-to-nvme-host-tier-management-agents-for-long-context-agent-sessions",
     "path": "/solutions/gpu-memory-swap-to-nvme-host-tier-management-agents-for-long-context-agent-sessions",
     "slug": "gpu-memory-swap-to-nvme-host-tier-management-agents-for-long-context-agent-sessions",
@@ -19824,6 +20370,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/heterogeneous-gpu-cluster-pre-fill-node-allocators-for-405b-llama-deployments",
+    "path": "/solutions/heterogeneous-gpu-cluster-pre-fill-node-allocators-for-405b-llama-deployments",
+    "slug": "heterogeneous-gpu-cluster-pre-fill-node-allocators-for-405b-llama-deployments",
+    "target_keyword": "heterogeneous gpu cluster pre-fill node allocators for 405b llama deployments",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.5,
+    "impressions": 1335,
+    "clicks": 27,
+    "ctr": 0.0209,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/heterogeneous-gpu-pipeline-partitioners-for-chemical-refinery-telemetry-monitoring",
     "path": "/solutions/heterogeneous-gpu-pipeline-partitioners-for-chemical-refinery-telemetry-monitoring",
     "slug": "heterogeneous-gpu-pipeline-partitioners-for-chemical-refinery-telemetry-monitoring",
@@ -19834,6 +20394,20 @@
     "impressions": 3939,
     "clicks": 46,
     "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/heterogeneous-h100-pre-fill-and-l40s-decode-pairing-architects-for-enterprise-ai",
+    "path": "/solutions/heterogeneous-h100-pre-fill-and-l40s-decode-pairing-architects-for-enterprise-ai",
+    "slug": "heterogeneous-h100-pre-fill-and-l40s-decode-pairing-architects-for-enterprise-ai",
+    "target_keyword": "heterogeneous h100 pre-fill and l40s decode pairing architects for enterprise ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 2075,
+    "clicks": 22,
+    "ctr": 0.0108,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -19862,6 +20436,20 @@
     "impressions": 556,
     "clicks": 7,
     "ctr": 0.0132,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hierarchical-hbm-to-host-ram-kv-cache-tiered-storage-allocators-for-ctos",
+    "path": "/solutions/hierarchical-hbm-to-host-ram-kv-cache-tiered-storage-allocators-for-ctos",
+    "slug": "hierarchical-hbm-to-host-ram-kv-cache-tiered-storage-allocators-for-ctos",
+    "target_keyword": "hierarchical hbm to host ram kv cache tiered storage allocators for ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.8,
+    "impressions": 3678,
+    "clicks": 138,
+    "ctr": 0.0377,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -21014,6 +21602,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/host-ram-circular-buffer-asynchronous-state-checkpoint-managers-for-fintechs",
+    "path": "/solutions/host-ram-circular-buffer-asynchronous-state-checkpoint-managers-for-fintechs",
+    "slug": "host-ram-circular-buffer-asynchronous-state-checkpoint-managers-for-fintechs",
+    "target_keyword": "host ram circular buffer asynchronous state checkpoint managers for fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 553,
+    "clicks": 7,
+    "ctr": 0.0135,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/hot-standby-gpu-cluster-in-flight-state-synchronization-daemons-for-tier-1-banks",
+    "path": "/solutions/hot-standby-gpu-cluster-in-flight-state-synchronization-daemons-for-tier-1-banks",
+    "slug": "hot-standby-gpu-cluster-in-flight-state-synchronization-daemons-for-tier-1-banks",
+    "target_keyword": "hot-standby gpu cluster in-flight state synchronization daemons for tier-1 banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.8,
+    "impressions": 3418,
+    "clicks": 47,
+    "ctr": 0.014,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hot-structure-carbon-silicon-carbide-control-surface-fastener-tension-telemetry-for-spaceplanes",
     "path": "/solutions/hot-structure-carbon-silicon-carbide-control-surface-fastener-tension-telemetry-for-spaceplanes",
     "slug": "hot-structure-carbon-silicon-carbide-control-surface-fastener-tension-telemetry-for-spaceplanes",
@@ -21980,6 +22596,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/immutable-blockchain-anchored-agent-state-snapshot-recorders-for-public-bourses",
+    "path": "/solutions/immutable-blockchain-anchored-agent-state-snapshot-recorders-for-public-bourses",
+    "slug": "immutable-blockchain-anchored-agent-state-snapshot-recorders-for-public-bourses",
+    "target_keyword": "immutable blockchain-anchored agent state snapshot recorders for public bourses",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.1,
+    "impressions": 2421,
+    "clicks": 12,
+    "ctr": 0.0052,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/immutable-document-shard-cryptographic-validation-daemons-for-statutory-compliance",
     "path": "/solutions/immutable-document-shard-cryptographic-validation-daemons-for-statutory-compliance",
     "slug": "immutable-document-shard-cryptographic-validation-daemons-for-statutory-compliance",
@@ -22060,6 +22690,48 @@
     "impressions": 1205,
     "clicks": 11,
     "ctr": 0.0092,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/in-flight-agent-context-migration-orchestrators-for-spot-instance-gpu-clusters",
+    "path": "/solutions/in-flight-agent-context-migration-orchestrators-for-spot-instance-gpu-clusters",
+    "slug": "in-flight-agent-context-migration-orchestrators-for-spot-instance-gpu-clusters",
+    "target_keyword": "in-flight agent context migration orchestrators for spot instance gpu clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.3,
+    "impressions": 2573,
+    "clicks": 79,
+    "ctr": 0.031,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/in-flight-agent-state-migration-controllers-for-preemptible-slurm-cloud-instances",
+    "path": "/solutions/in-flight-agent-state-migration-controllers-for-preemptible-slurm-cloud-instances",
+    "slug": "in-flight-agent-state-migration-controllers-for-preemptible-slurm-cloud-instances",
+    "target_keyword": "in-flight agent state migration controllers for preemptible slurm cloud instances",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 2061,
+    "clicks": 54,
+    "ctr": 0.0265,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/in-flight-multi-agent-conversation-state-migration-daemons-for-customer-service",
+    "path": "/solutions/in-flight-multi-agent-conversation-state-migration-daemons-for-customer-service",
+    "slug": "in-flight-multi-agent-conversation-state-migration-daemons-for-customer-service",
+    "target_keyword": "in-flight multi-agent conversation state migration daemons for customer service",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.8,
+    "impressions": 1928,
+    "clicks": 15,
+    "ctr": 0.008,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -22438,6 +23110,20 @@
     "impressions": 493,
     "clicks": 12,
     "ctr": 0.0248,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/infiniband-ndr-peer-to-peer-kv-tensor-streaming-controllers-for-tier-1-ai-labs",
+    "path": "/solutions/infiniband-ndr-peer-to-peer-kv-tensor-streaming-controllers-for-tier-1-ai-labs",
+    "slug": "infiniband-ndr-peer-to-peer-kv-tensor-streaming-controllers-for-tier-1-ai-labs",
+    "target_keyword": "infiniband ndr peer-to-peer kv tensor streaming controllers for tier 1 ai labs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.5,
+    "impressions": 1805,
+    "clicks": 35,
+    "ctr": 0.0199,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -24500,6 +25186,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/live-gpu-node-drain-and-active-agent-state-eviction-daemons-for-enterprise-devops",
+    "path": "/solutions/live-gpu-node-drain-and-active-agent-state-eviction-daemons-for-enterprise-devops",
+    "slug": "live-gpu-node-drain-and-active-agent-state-eviction-daemons-for-enterprise-devops",
+    "target_keyword": "live gpu node drain and active agent state eviction daemons for enterprise devops",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 2083,
+    "clicks": 17,
+    "ctr": 0.0085,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/llama-3-70b-awq-4-bit-quantization-agents-for-cost-effective-on-premise-enterprise-hosting",
     "path": "/solutions/llama-3-70b-awq-4-bit-quantization-agents-for-cost-effective-on-premise-enterprise-hosting",
     "slug": "llama-3-70b-awq-4-bit-quantization-agents-for-cost-effective-on-premise-enterprise-hosting",
@@ -24692,6 +25392,20 @@
     "impressions": 2182,
     "clicks": 33,
     "ctr": 0.0155,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/lossless-kv-cache-quantization-and-dequantization-stream-overlays-for-enterprise-ai",
+    "path": "/solutions/lossless-kv-cache-quantization-and-dequantization-stream-overlays-for-enterprise-ai",
+    "slug": "lossless-kv-cache-quantization-and-dequantization-stream-overlays-for-enterprise-ai",
+    "target_keyword": "lossless kv cache quantization and dequantization stream overlays for enterprise ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.9,
+    "impressions": 2029,
+    "clicks": 15,
+    "ctr": 0.0075,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -25840,6 +26554,20 @@
     "impressions": 1838,
     "clicks": 46,
     "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/merkle-tree-state-checkpoint-verification-daemons-for-autonomous-audit-agents",
+    "path": "/solutions/merkle-tree-state-checkpoint-verification-daemons-for-autonomous-audit-agents",
+    "slug": "merkle-tree-state-checkpoint-verification-daemons-for-autonomous-audit-agents",
+    "target_keyword": "merkle-tree state checkpoint verification daemons for autonomous audit agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.0,
+    "impressions": 390,
+    "clicks": 7,
+    "ctr": 0.0202,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -27048,6 +27776,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-datacenter-disaggregated-pre-fill-gateway-routers-for-telecom-private-clouds",
+    "path": "/solutions/multi-datacenter-disaggregated-pre-fill-gateway-routers-for-telecom-private-clouds",
+    "slug": "multi-datacenter-disaggregated-pre-fill-gateway-routers-for-telecom-private-clouds",
+    "target_keyword": "multi-datacenter disaggregated pre-fill gateway routers for telecom private clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.2,
+    "impressions": 2282,
+    "clicks": 15,
+    "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-frequency-radiofrequency-impedance-biomass-capacitance-telemetry-software-for-cell-culture-directors",
     "path": "/solutions/multi-frequency-radiofrequency-impedance-biomass-capacitance-telemetry-software-for-cell-culture-directors",
     "slug": "multi-frequency-radiofrequency-impedance-biomass-capacitance-telemetry-software-for-cell-culture-directors",
@@ -27650,6 +28392,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-region-sovereign-cloud-kv-cache-synchronization-engines-for-conglomerates",
+    "path": "/solutions/multi-region-sovereign-cloud-kv-cache-synchronization-engines-for-conglomerates",
+    "slug": "multi-region-sovereign-cloud-kv-cache-synchronization-engines-for-conglomerates",
+    "target_keyword": "multi-region sovereign cloud kv cache synchronization engines for conglomerates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 2315,
+    "clicks": 36,
+    "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-region-sovereign-cloud-state-checkpoint-replication-engines-for-conglomerates",
+    "path": "/solutions/multi-region-sovereign-cloud-state-checkpoint-replication-engines-for-conglomerates",
+    "slug": "multi-region-sovereign-cloud-state-checkpoint-replication-engines-for-conglomerates",
+    "target_keyword": "multi-region sovereign cloud state checkpoint replication engines for conglomerates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 1943,
+    "clicks": 16,
+    "ctr": 0.0085,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody",
     "path": "/solutions/multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody",
     "slug": "multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody",
@@ -27660,6 +28430,20 @@
     "impressions": 1307,
     "clicks": 8,
     "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-stream-asynchronous-gpu-memory-dump-managers-for-medical-ai-copilots",
+    "path": "/solutions/multi-stream-asynchronous-gpu-memory-dump-managers-for-medical-ai-copilots",
+    "slug": "multi-stream-asynchronous-gpu-memory-dump-managers-for-medical-ai-copilots",
+    "target_keyword": "multi-stream asynchronous gpu memory dump managers for medical ai copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 692,
+    "clicks": 14,
+    "ctr": 0.0205,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -27786,6 +28570,20 @@
     "impressions": 1833,
     "clicks": 16,
     "ctr": 0.0092,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-tenant-kv-cache-isolation-and-cryptographic-memory-shredders-for-banks",
+    "path": "/solutions/multi-tenant-kv-cache-isolation-and-cryptographic-memory-shredders-for-banks",
+    "slug": "multi-tenant-kv-cache-isolation-and-cryptographic-memory-shredders-for-banks",
+    "target_keyword": "multi-tenant kv cache isolation and cryptographic memory shredders for banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.0,
+    "impressions": 2080,
+    "clicks": 15,
+    "ctr": 0.0075,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -28798,6 +29596,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/non-blocking-cuda-stream-pinned-host-memory-checkpoint-offloaders-for-tier-1-labs",
+    "path": "/solutions/non-blocking-cuda-stream-pinned-host-memory-checkpoint-offloaders-for-tier-1-labs",
+    "slug": "non-blocking-cuda-stream-pinned-host-memory-checkpoint-offloaders-for-tier-1-labs",
+    "target_keyword": "non-blocking cuda stream pinned host memory checkpoint offloaders for tier 1 labs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.4,
+    "impressions": 3344,
+    "clicks": 29,
+    "ctr": 0.0089,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/non-blocking-lora-weight-eviction-daemons-for-bursty-multi-tenant-traffic",
     "path": "/solutions/non-blocking-lora-weight-eviction-daemons-for-bursty-multi-tenant-traffic",
     "slug": "non-blocking-lora-weight-eviction-daemons-for-bursty-multi-tenant-traffic",
@@ -28808,6 +29620,48 @@
     "impressions": 1021,
     "clicks": 7,
     "ctr": 0.0078,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/non-blocking-optimizer-state-host-memory-offloaders-for-deepseek-r1-clusters",
+    "path": "/solutions/non-blocking-optimizer-state-host-memory-offloaders-for-deepseek-r1-clusters",
+    "slug": "non-blocking-optimizer-state-host-memory-offloaders-for-deepseek-r1-clusters",
+    "target_keyword": "non-blocking optimizer state host memory offloaders for deepseek-r1 clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.9,
+    "impressions": 2819,
+    "clicks": 61,
+    "ctr": 0.0217,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/non-blocking-prompt-encoding-stream-synchronizers-for-autonomous-legal-copilots",
+    "path": "/solutions/non-blocking-prompt-encoding-stream-synchronizers-for-autonomous-legal-copilots",
+    "slug": "non-blocking-prompt-encoding-stream-synchronizers-for-autonomous-legal-copilots",
+    "target_keyword": "non-blocking prompt encoding stream synchronizers for autonomous legal copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.0,
+    "impressions": 3250,
+    "clicks": 80,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/non-blocking-vram-to-nvme-asynchronous-checkpoint-daemons-for-banking-swarms",
+    "path": "/solutions/non-blocking-vram-to-nvme-asynchronous-checkpoint-daemons-for-banking-swarms",
+    "slug": "non-blocking-vram-to-nvme-asynchronous-checkpoint-daemons-for-banking-swarms",
+    "target_keyword": "non-blocking vram to nvme asynchronous checkpoint daemons for banking swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.4,
+    "impressions": 784,
+    "clicks": 10,
+    "ctr": 0.0128,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -29130,6 +29984,20 @@
     "impressions": 1357,
     "clicks": 22,
     "ctr": 0.0165,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/nvlink-crossbar-kv-cache-transfer-accelerators-for-dense-eight-gpu-hgx-pods",
+    "path": "/solutions/nvlink-crossbar-kv-cache-transfer-accelerators-for-dense-eight-gpu-hgx-pods",
+    "slug": "nvlink-crossbar-kv-cache-transfer-accelerators-for-dense-eight-gpu-hgx-pods",
+    "target_keyword": "nvlink crossbar kv cache transfer accelerators for dense eight-gpu hgx pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.4,
+    "impressions": 2234,
+    "clicks": 89,
+    "ctr": 0.0399,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -30716,6 +31584,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/pcie-gen5-direct-kv-memory-dump-orchestrators-for-emergency-agent-state-saves",
+    "path": "/solutions/pcie-gen5-direct-kv-memory-dump-orchestrators-for-emergency-agent-state-saves",
+    "slug": "pcie-gen5-direct-kv-memory-dump-orchestrators-for-emergency-agent-state-saves",
+    "target_keyword": "pcie gen5 direct kv memory dump orchestrators for emergency agent state saves",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.6,
+    "impressions": 3396,
+    "clicks": 62,
+    "ctr": 0.0183,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pcie-gen5-direct-memory-access-asynchronous-state-snapshot-controllers-for-ai-vpcs",
+    "path": "/solutions/pcie-gen5-direct-memory-access-asynchronous-state-snapshot-controllers-for-ai-vpcs",
+    "slug": "pcie-gen5-direct-memory-access-asynchronous-state-snapshot-controllers-for-ai-vpcs",
+    "target_keyword": "pcie gen5 direct memory access asynchronous state snapshot controllers for ai vpcs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.0,
+    "impressions": 1600,
+    "clicks": 9,
+    "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/pebble-bed-core-axial-power-distribution-peaking-factor-mitigation-telemetry-for-modular-nuclear-reactors",
     "path": "/solutions/pebble-bed-core-axial-power-distribution-peaking-factor-mitigation-telemetry-for-modular-nuclear-reactors",
     "slug": "pebble-bed-core-axial-power-distribution-peaking-factor-mitigation-telemetry-for-modular-nuclear-reactors",
@@ -31794,6 +32690,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/point-in-time-agent-state-rollback-and-historical-replay-engines-for-compliance",
+    "path": "/solutions/point-in-time-agent-state-rollback-and-historical-replay-engines-for-compliance",
+    "slug": "point-in-time-agent-state-rollback-and-historical-replay-engines-for-compliance",
+    "target_keyword": "point-in-time agent state rollback and historical replay engines for compliance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 395,
+    "clicks": 4,
+    "ctr": 0.0108,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/point-in-time-prompt-execution-rollback-and-replay-engines-for-legal-compliance",
+    "path": "/solutions/point-in-time-prompt-execution-rollback-and-replay-engines-for-legal-compliance",
+    "slug": "point-in-time-prompt-execution-rollback-and-replay-engines-for-legal-compliance",
+    "target_keyword": "point-in-time prompt execution rollback and replay engines for legal compliance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 3365,
+    "clicks": 26,
+    "ctr": 0.0079,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/poisson-rate-coding-spike-train-variance-telemetry-for-noisy-edge-sensor-arbitration-agents",
     "path": "/solutions/poisson-rate-coding-spike-train-variance-telemetry-for-noisy-edge-sensor-arbitration-agents",
     "slug": "poisson-rate-coding-spike-train-variance-telemetry-for-noisy-edge-sensor-arbitration-agents",
@@ -32154,6 +33078,62 @@
     "impressions": 3409,
     "clicks": 85,
     "ctr": 0.025,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pre-failure-predictive-gpu-memory-state-migration-daemons-for-ai-clusters",
+    "path": "/solutions/pre-failure-predictive-gpu-memory-state-migration-daemons-for-ai-clusters",
+    "slug": "pre-failure-predictive-gpu-memory-state-migration-daemons-for-ai-clusters",
+    "target_keyword": "pre-failure predictive gpu memory state migration daemons for ai clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.5,
+    "impressions": 3215,
+    "clicks": 37,
+    "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pre-fill-batch-size-maximization-controllers-for-vernacular-invoice-processing",
+    "path": "/solutions/pre-fill-batch-size-maximization-controllers-for-vernacular-invoice-processing",
+    "slug": "pre-fill-batch-size-maximization-controllers-for-vernacular-invoice-processing",
+    "target_keyword": "pre-fill batch size maximization controllers for vernacular invoice processing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.0,
+    "impressions": 3300,
+    "clicks": 88,
+    "ctr": 0.0269,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pre-fill-compute-saturation-decoupling-controllers-for-deepseek-r1-reasoning-swarms",
+    "path": "/solutions/pre-fill-compute-saturation-decoupling-controllers-for-deepseek-r1-reasoning-swarms",
+    "slug": "pre-fill-compute-saturation-decoupling-controllers-for-deepseek-r1-reasoning-swarms",
+    "target_keyword": "pre-fill compute saturation decoupling controllers for deepseek-r1 reasoning swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.6,
+    "impressions": 3576,
+    "clicks": 47,
+    "ctr": 0.0132,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pre-fill-to-decode-load-balancing-proxy-daemons-for-sovereign-healthcare-networks",
+    "path": "/solutions/pre-fill-to-decode-load-balancing-proxy-daemons-for-sovereign-healthcare-networks",
+    "slug": "pre-fill-to-decode-load-balancing-proxy-daemons-for-sovereign-healthcare-networks",
+    "target_keyword": "pre-fill to decode load-balancing proxy daemons for sovereign healthcare networks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.4,
+    "impressions": 2224,
+    "clicks": 57,
+    "ctr": 0.0257,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -33488,6 +34468,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/radix-tree-kv-prefix-cache-sharing-synchronizers-across-heterogeneous-gpu-nodes",
+    "path": "/solutions/radix-tree-kv-prefix-cache-sharing-synchronizers-across-heterogeneous-gpu-nodes",
+    "slug": "radix-tree-kv-prefix-cache-sharing-synchronizers-across-heterogeneous-gpu-nodes",
+    "target_keyword": "radix tree kv prefix cache sharing synchronizers across heterogeneous gpu nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.8,
+    "impressions": 2248,
+    "clicks": 31,
+    "ctr": 0.0139,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/radix-tree-prefix-cache-reuse-agents-for-sub-12ms-time-to-first-token-agentic-workflows",
     "path": "/solutions/radix-tree-prefix-cache-reuse-agents-for-sub-12ms-time-to-first-token-agentic-workflows",
     "slug": "radix-tree-prefix-cache-reuse-agents-for-sub-12ms-time-to-first-token-agentic-workflows",
@@ -33628,6 +34622,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-disaggregated-ai-serving-engines-for-banks",
+    "path": "/solutions/rbi-cyber-security-framework-compliant-disaggregated-ai-serving-engines-for-banks",
+    "slug": "rbi-cyber-security-framework-compliant-disaggregated-ai-serving-engines-for-banks",
+    "target_keyword": "rbi cyber security framework compliant disaggregated ai serving engines for banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 2288,
+    "clicks": 27,
+    "ctr": 0.0119,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+    "path": "/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+    "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+    "target_keyword": "rbi cyber security framework compliant state disaster recovery engines for banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.8,
+    "impressions": 3008,
+    "clicks": 98,
+    "ctr": 0.0327,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
     "path": "/solutions/rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
     "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
@@ -33680,6 +34702,34 @@
     "impressions": 873,
     "clicks": 15,
     "ctr": 0.0176,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/rdma-roce-v2-direct-memory-kv-cache-transfer-engines-for-disaggregated-pods",
+    "path": "/solutions/rdma-roce-v2-direct-memory-kv-cache-transfer-engines-for-disaggregated-pods",
+    "slug": "rdma-roce-v2-direct-memory-kv-cache-transfer-engines-for-disaggregated-pods",
+    "target_keyword": "rdma roce-v2 direct memory kv cache transfer engines for disaggregated pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.7,
+    "impressions": 2027,
+    "clicks": 13,
+    "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/rdma-roce-v2-multi-node-in-flight-agent-state-transfer-daemons-for-tier-4-clouds",
+    "path": "/solutions/rdma-roce-v2-multi-node-in-flight-agent-state-transfer-daemons-for-tier-4-clouds",
+    "slug": "rdma-roce-v2-multi-node-in-flight-agent-state-transfer-daemons-for-tier-4-clouds",
+    "target_keyword": "rdma roce-v2 multi-node in-flight agent state transfer daemons for tier 4 clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 3035,
+    "clicks": 92,
+    "ctr": 0.0305,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -36764,6 +37814,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sha-256-cryptographic-kv-memory-verification-daemons-for-autonomous-audit-agents",
+    "path": "/solutions/sha-256-cryptographic-kv-memory-verification-daemons-for-autonomous-audit-agents",
+    "slug": "sha-256-cryptographic-kv-memory-verification-daemons-for-autonomous-audit-agents",
+    "target_keyword": "sha-256 cryptographic kv memory verification daemons for autonomous audit agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.8,
+    "impressions": 3518,
+    "clicks": 45,
+    "ctr": 0.013,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sha-256-cryptographic-state-checkpoint-integrity-verifiers-for-banking-agents",
+    "path": "/solutions/sha-256-cryptographic-state-checkpoint-integrity-verifiers-for-banking-agents",
+    "slug": "sha-256-cryptographic-state-checkpoint-integrity-verifiers-for-banking-agents",
+    "target_keyword": "sha-256 cryptographic state checkpoint integrity verifiers for banking agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 1678,
+    "clicks": 28,
+    "ctr": 0.0169,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/shamir-threshold-secret-sharing-telemetry-for-private-multi-party-loan-underwriting",
     "path": "/solutions/shamir-threshold-secret-sharing-telemetry-for-private-multi-party-loan-underwriting",
     "slug": "shamir-threshold-secret-sharing-telemetry-for-private-multi-party-loan-underwriting",
@@ -37222,6 +38300,20 @@
     "impressions": 1605,
     "clicks": 10,
     "ctr": 0.0068,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sla-guaranteed-prompt-ingestion-pipelines-for-enterprise-robotic-teleoperation",
+    "path": "/solutions/sla-guaranteed-prompt-ingestion-pipelines-for-enterprise-robotic-teleoperation",
+    "slug": "sla-guaranteed-prompt-ingestion-pipelines-for-enterprise-robotic-teleoperation",
+    "target_keyword": "sla-guaranteed prompt ingestion pipelines for enterprise robotic teleoperation",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.2,
+    "impressions": 432,
+    "clicks": 6,
+    "ctr": 0.015,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -40600,6 +41692,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/stateful-langgraph-checkpoint-migration-controllers-for-air-gapped-vpcs",
+    "path": "/solutions/stateful-langgraph-checkpoint-migration-controllers-for-air-gapped-vpcs",
+    "slug": "stateful-langgraph-checkpoint-migration-controllers-for-air-gapped-vpcs",
+    "target_keyword": "stateful langgraph checkpoint migration controllers for air-gapped vpcs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 681,
+    "clicks": 18,
+    "ctr": 0.0265,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/stateful-langgraph-kv-page-tracking-controllers-for-air-gapped-private-vpcs",
+    "path": "/solutions/stateful-langgraph-kv-page-tracking-controllers-for-air-gapped-private-vpcs",
+    "slug": "stateful-langgraph-kv-page-tracking-controllers-for-air-gapped-private-vpcs",
+    "target_keyword": "stateful langgraph kv page tracking controllers for air-gapped private vpcs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.2,
+    "impressions": 2922,
+    "clicks": 16,
+    "ctr": 0.0056,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/static-tensor-shape-memory-allocators-for-non-uniform-transformer-routing",
     "path": "/solutions/static-tensor-shape-memory-allocators-for-non-uniform-transformer-routing",
     "slug": "static-tensor-shape-memory-allocators-for-non-uniform-transformer-routing",
@@ -40624,6 +41744,34 @@
     "impressions": 3571,
     "clicks": 52,
     "ctr": 0.0147,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/statutory-data-residency-kv-cache-memory-encryptors-for-indian-enterprise-ai",
+    "path": "/solutions/statutory-data-residency-kv-cache-memory-encryptors-for-indian-enterprise-ai",
+    "slug": "statutory-data-residency-kv-cache-memory-encryptors-for-indian-enterprise-ai",
+    "target_keyword": "statutory data residency kv cache memory encryptors for indian enterprise ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.0,
+    "impressions": 2080,
+    "clicks": 7,
+    "ctr": 0.0038,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/statutory-data-residency-state-checkpoint-encryptors-for-indian-enterprise-ai",
+    "path": "/solutions/statutory-data-residency-state-checkpoint-encryptors-for-indian-enterprise-ai",
+    "slug": "statutory-data-residency-state-checkpoint-encryptors-for-indian-enterprise-ai",
+    "target_keyword": "statutory data residency state checkpoint encryptors for indian enterprise ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 955,
+    "clicks": 29,
+    "ctr": 0.0305,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -41104,6 +42252,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-1-minute-full-cluster-disaster-recovery-state-loaders-for-slurm-clouds",
+    "path": "/solutions/sub-1-minute-full-cluster-disaster-recovery-state-loaders-for-slurm-clouds",
+    "slug": "sub-1-minute-full-cluster-disaster-recovery-state-loaders-for-slurm-clouds",
+    "target_keyword": "sub-1-minute full cluster disaster recovery state loaders for slurm clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 2796,
+    "clicks": 40,
+    "ctr": 0.0146,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-1-percent-perplexity-degradation-quantization-auditors-for-enterprise-ai",
     "path": "/solutions/sub-1-percent-perplexity-degradation-quantization-auditors-for-enterprise-ai",
     "slug": "sub-1-percent-perplexity-degradation-quantization-auditors-for-enterprise-ai",
@@ -41146,6 +42308,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-100ms-in-flight-task-migration-engines-for-autonomous-robotic-fleet-erps",
+    "path": "/solutions/sub-100ms-in-flight-task-migration-engines-for-autonomous-robotic-fleet-erps",
+    "slug": "sub-100ms-in-flight-task-migration-engines-for-autonomous-robotic-fleet-erps",
+    "target_keyword": "sub-100ms in-flight task migration engines for autonomous robotic fleet erps",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.2,
+    "impressions": 2482,
+    "clicks": 65,
+    "ctr": 0.0262,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-100ms-multi-document-cross-attention-synthesizers-for-real-time-fraud-detection",
     "path": "/solutions/sub-100ms-multi-document-cross-attention-synthesizers-for-real-time-fraud-detection",
     "slug": "sub-100ms-multi-document-cross-attention-synthesizers-for-real-time-fraud-detection",
@@ -41160,6 +42336,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-100w-server-power-reduction-via-disaggregated-kv-memory-pooling-for-green-clouds",
+    "path": "/solutions/sub-100w-server-power-reduction-via-disaggregated-kv-memory-pooling-for-green-clouds",
+    "slug": "sub-100w-server-power-reduction-via-disaggregated-kv-memory-pooling-for-green-clouds",
+    "target_keyword": "sub-100w server power reduction via disaggregated kv memory pooling for green clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 1979,
+    "clicks": 59,
+    "ctr": 0.03,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-10ms-candidate-token-verification-engines-for-telecom-network-operations-centers",
     "path": "/solutions/sub-10ms-candidate-token-verification-engines-for-telecom-network-operations-centers",
     "slug": "sub-10ms-candidate-token-verification-engines-for-telecom-network-operations-centers",
@@ -41170,6 +42360,20 @@
     "impressions": 2139,
     "clicks": 25,
     "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-10ms-conversational-voice-agent-disaggregated-pipelines-for-tier-1-telecom",
+    "path": "/solutions/sub-10ms-conversational-voice-agent-disaggregated-pipelines-for-tier-1-telecom",
+    "slug": "sub-10ms-conversational-voice-agent-disaggregated-pipelines-for-tier-1-telecom",
+    "target_keyword": "sub-10ms conversational voice agent disaggregated pipelines for tier 1 telecom",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.5,
+    "impressions": 655,
+    "clicks": 6,
+    "ctr": 0.0101,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -41482,6 +42686,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-200ms-agent-session-failover-controllers-for-healthcare-diagnostic-copilots",
+    "path": "/solutions/sub-200ms-agent-session-failover-controllers-for-healthcare-diagnostic-copilots",
+    "slug": "sub-200ms-agent-session-failover-controllers-for-healthcare-diagnostic-copilots",
+    "target_keyword": "sub-200ms agent session failover controllers for healthcare diagnostic copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.6,
+    "impressions": 3636,
+    "clicks": 66,
+    "ctr": 0.0183,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-200ms-cash-less-health-insurance-claim-pre-authorization-agents-for-private-hospitals",
     "path": "/solutions/sub-200ms-cash-less-health-insurance-claim-pre-authorization-agents-for-private-hospitals",
     "slug": "sub-200ms-cash-less-health-insurance-claim-pre-authorization-agents-for-private-hospitals",
@@ -41538,6 +42756,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-2ms-cross-node-kv-cache-page-transfer-daemons-for-sovereign-bourses",
+    "path": "/solutions/sub-2ms-cross-node-kv-cache-page-transfer-daemons-for-sovereign-bourses",
+    "slug": "sub-2ms-cross-node-kv-cache-page-transfer-daemons-for-sovereign-bourses",
+    "target_keyword": "sub-2ms cross-node kv cache page transfer daemons for sovereign bourses",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.3,
+    "impressions": 2143,
+    "clicks": 55,
+    "ctr": 0.026,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-3-percent-pipeline-bubble-ratio-optimizers-for-enterprise-hpc-inference",
     "path": "/solutions/sub-3-percent-pipeline-bubble-ratio-optimizers-for-enterprise-hpc-inference",
     "slug": "sub-3-percent-pipeline-bubble-ratio-optimizers-for-enterprise-hpc-inference",
@@ -41580,6 +42812,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-4ms-time-to-first-token-optimization-consulting-services-for-private-banks",
+    "path": "/solutions/sub-4ms-time-to-first-token-optimization-consulting-services-for-private-banks",
+    "slug": "sub-4ms-time-to-first-token-optimization-consulting-services-for-private-banks",
+    "target_keyword": "sub-4ms time-to-first-token optimization consulting services for private banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 1659,
+    "clicks": 49,
+    "ctr": 0.03,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-4ms-time-to-first-token-pre-fill-streaming-engines-for-voice-ai-copilots",
+    "path": "/solutions/sub-4ms-time-to-first-token-pre-fill-streaming-engines-for-voice-ai-copilots",
+    "slug": "sub-4ms-time-to-first-token-pre-fill-streaming-engines-for-voice-ai-copilots",
+    "target_keyword": "sub-4ms time-to-first-token pre-fill streaming engines for voice ai copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.8,
+    "impressions": 1778,
+    "clicks": 38,
+    "ctr": 0.0215,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-50-percent-flop-reduction-engines-for-private-bank-risk-assessment",
     "path": "/solutions/sub-50-percent-flop-reduction-engines-for-private-bank-risk-assessment",
     "slug": "sub-50-percent-flop-reduction-engines-for-private-bank-risk-assessment",
@@ -41590,6 +42850,20 @@
     "impressions": 3267,
     "clicks": 24,
     "ctr": 0.0076,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-50ms-asynchronous-in-memory-state-checkpoint-snapshotters-for-trading-desks",
+    "path": "/solutions/sub-50ms-asynchronous-in-memory-state-checkpoint-snapshotters-for-trading-desks",
+    "slug": "sub-50ms-asynchronous-in-memory-state-checkpoint-snapshotters-for-trading-desks",
+    "target_keyword": "sub-50ms asynchronous in-memory state checkpoint snapshotters for trading desks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 1659,
+    "clicks": 22,
+    "ctr": 0.0134,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -41646,6 +42920,20 @@
     "impressions": 3149,
     "clicks": 29,
     "ctr": 0.0094,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-5ms-asynchronous-agent-dialogue-state-snapshotters-for-sovereign-bourses",
+    "path": "/solutions/sub-5ms-asynchronous-agent-dialogue-state-snapshotters-for-sovereign-bourses",
+    "slug": "sub-5ms-asynchronous-agent-dialogue-state-snapshotters-for-sovereign-bourses",
+    "target_keyword": "sub-5ms asynchronous agent dialogue state snapshotters for sovereign bourses",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.3,
+    "impressions": 793,
+    "clicks": 9,
+    "ctr": 0.0121,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -41856,6 +43144,34 @@
     "impressions": 3713,
     "clicks": 76,
     "ctr": 0.0206,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-dollar-per-checkpoint-cold-tier-state-archival-services-for-enterprise-ai",
+    "path": "/solutions/sub-dollar-per-checkpoint-cold-tier-state-archival-services-for-enterprise-ai",
+    "slug": "sub-dollar-per-checkpoint-cold-tier-state-archival-services-for-enterprise-ai",
+    "target_keyword": "sub-dollar-per-checkpoint cold tier state archival services for enterprise ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.4,
+    "impressions": 1664,
+    "clicks": 32,
+    "ctr": 0.0198,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-dollar-per-million-tokens-disaggregated-serving-cost-optimizers-for-enterprise",
+    "path": "/solutions/sub-dollar-per-million-tokens-disaggregated-serving-cost-optimizers-for-enterprise",
+    "slug": "sub-dollar-per-million-tokens-disaggregated-serving-cost-optimizers-for-enterprise",
+    "target_keyword": "sub-dollar-per-million-tokens disaggregated serving cost optimizers for enterprise",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.1,
+    "impressions": 2701,
+    "clicks": 9,
+    "ctr": 0.0034,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -47782,6 +49098,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-bubble-asynchronous-model-weight-checkpoint-serializers-for-100b-models",
+    "path": "/solutions/zero-bubble-asynchronous-model-weight-checkpoint-serializers-for-100b-models",
+    "slug": "zero-bubble-asynchronous-model-weight-checkpoint-serializers-for-100b-models",
+    "target_keyword": "zero-bubble asynchronous model weight checkpoint serializers for 100b models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 3363,
+    "clicks": 20,
+    "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-bubble-context-parallel-forward-schedulers-for-private-wealth-portfolio-rebalancing",
     "path": "/solutions/zero-bubble-context-parallel-forward-schedulers-for-private-wealth-portfolio-rebalancing",
     "slug": "zero-bubble-context-parallel-forward-schedulers-for-private-wealth-portfolio-rebalancing",
@@ -48016,6 +49346,34 @@
     "impressions": 1319,
     "clicks": 16,
     "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-copy-host-pinned-buffer-kv-transfer-allocators-for-sovereign-private-clouds",
+    "path": "/solutions/zero-copy-host-pinned-buffer-kv-transfer-allocators-for-sovereign-private-clouds",
+    "slug": "zero-copy-host-pinned-buffer-kv-transfer-allocators-for-sovereign-private-clouds",
+    "target_keyword": "zero-copy host pinned buffer kv transfer allocators for sovereign private clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.2,
+    "impressions": 282,
+    "clicks": 1,
+    "ctr": 0.0056,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-copy-host-pinned-memory-checkpoint-buffer-allocators-for-enterprise-ctos",
+    "path": "/solutions/zero-copy-host-pinned-memory-checkpoint-buffer-allocators-for-enterprise-ctos",
+    "slug": "zero-copy-host-pinned-memory-checkpoint-buffer-allocators-for-enterprise-ctos",
+    "target_keyword": "zero-copy host pinned memory checkpoint buffer allocators for enterprise ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.5,
+    "impressions": 2395,
+    "clicks": 94,
+    "ctr": 0.0393,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -48286,6 +49644,48 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-data-leakage-multi-agent-context-isolation-daemons-for-hospital-systems",
+    "path": "/solutions/zero-data-leakage-multi-agent-context-isolation-daemons-for-hospital-systems",
+    "slug": "zero-data-leakage-multi-agent-context-isolation-daemons-for-hospital-systems",
+    "target_keyword": "zero-data-leakage multi-agent context isolation daemons for hospital systems",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.0,
+    "impressions": 1250,
+    "clicks": 13,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-data-loss-gpu-checkpoint-replication-daemons-for-sovereign-healthcare-clouds",
+    "path": "/solutions/zero-data-loss-gpu-checkpoint-replication-daemons-for-sovereign-healthcare-clouds",
+    "slug": "zero-data-loss-gpu-checkpoint-replication-daemons-for-sovereign-healthcare-clouds",
+    "target_keyword": "zero-data-loss gpu checkpoint replication daemons for sovereign healthcare clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 3963,
+    "clicks": 61,
+    "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-downtime-gpu-node-failure-recovery-state-migrators-for-24-7-enterprise-agents",
+    "path": "/solutions/zero-downtime-gpu-node-failure-recovery-state-migrators-for-24-7-enterprise-agents",
+    "slug": "zero-downtime-gpu-node-failure-recovery-state-migrators-for-24-7-enterprise-agents",
+    "target_keyword": "zero-downtime gpu node failure recovery state migrators for 24-7 enterprise agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.1,
+    "impressions": 941,
+    "clicks": 3,
+    "ctr": 0.0034,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-fragmentation-lora-page-allocators-for-multi-tenant-cloud-kubernetes",
     "path": "/solutions/zero-fragmentation-lora-page-allocators-for-multi-tenant-cloud-kubernetes",
     "slug": "zero-fragmentation-lora-page-allocators-for-multi-tenant-cloud-kubernetes",
@@ -48338,6 +49738,20 @@
     "impressions": 3698,
     "clicks": 139,
     "ctr": 0.0377,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-interference-pre-fill-execution-enclaves-for-mission-critical-defense-ai",
+    "path": "/solutions/zero-interference-pre-fill-execution-enclaves-for-mission-critical-defense-ai",
+    "slug": "zero-interference-pre-fill-execution-enclaves-for-mission-critical-defense-ai",
+    "target_keyword": "zero-interference pre-fill execution enclaves for mission-critical defense ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.3,
+    "impressions": 3903,
+    "clicks": 101,
+    "ctr": 0.026,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -48464,6 +49878,20 @@
     "impressions": 2291,
     "clicks": 57,
     "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-packet-loss-in-flight-agent-state-socket-transfer-managers-for-bourses",
+    "path": "/solutions/zero-packet-loss-in-flight-agent-state-socket-transfer-managers-for-bourses",
+    "slug": "zero-packet-loss-in-flight-agent-state-socket-transfer-managers-for-bourses",
+    "target_keyword": "zero-packet-loss in-flight agent state socket transfer managers for bourses",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 1919,
+    "clicks": 57,
+    "ctr": 0.03,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
