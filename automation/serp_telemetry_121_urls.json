@@ -196,6 +196,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/fp8-mxfp8-microscaling-dynamic-block-exponent-shifting-sub-1-percent-perplexity",
+    "path": "/signals/fp8-mxfp8-microscaling-dynamic-block-exponent-shifting-sub-1-percent-perplexity",
+    "slug": "fp8-mxfp8-microscaling-dynamic-block-exponent-shifting-sub-1-percent-perplexity",
+    "target_keyword": "fp8 mxfp8 microscaling dynamic block exponent shifting sub 1 percent perplexity",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 23.2,
+    "impressions": 2002,
+    "clicks": 1,
+    "ctr": 0.0,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/signals/3d-parallelism-tensor-pipeline-zero3-interleaved-execution-100b-swarms",
     "path": "/signals/3d-parallelism-tensor-pipeline-zero3-interleaved-execution-100b-swarms",
     "slug": "3d-parallelism-tensor-pipeline-zero3-interleaved-execution-100b-swarms",
@@ -4536,6 +4550,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/automated-fp8-quantization-regression-testing-pipelines-for-enterprise-ci-cd",
+    "path": "/solutions/automated-fp8-quantization-regression-testing-pipelines-for-enterprise-ci-cd",
+    "slug": "automated-fp8-quantization-regression-testing-pipelines-for-enterprise-ci-cd",
+    "target_keyword": "automated fp8 quantization regression testing pipelines for enterprise ci cd",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.6,
+    "impressions": 3956,
+    "clicks": 52,
+    "ctr": 0.0132,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/automated-gas-fee-forward-hedging-agents-for-high-frequency-rollup-batch-submissions",
     "path": "/solutions/automated-gas-fee-forward-hedging-agents-for-high-frequency-rollup-batch-submissions",
     "slug": "automated-gas-fee-forward-hedging-agents-for-high-frequency-rollup-batch-submissions",
@@ -6860,6 +6888,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/blackwell-b200-second-gen-fp8-tensor-core-pipeline-managers-for-telecom-ai",
+    "path": "/solutions/blackwell-b200-second-gen-fp8-tensor-core-pipeline-managers-for-telecom-ai",
+    "slug": "blackwell-b200-second-gen-fp8-tensor-core-pipeline-managers-for-telecom-ai",
+    "target_keyword": "blackwell b200 second gen fp8 tensor core pipeline managers for telecom ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 217,
+    "clicks": 3,
+    "ctr": 0.0149,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/blast-furnace-thermal-anomaly-detection-software-for-steelmakers",
     "path": "/solutions/blast-furnace-thermal-anomaly-detection-software-for-steelmakers",
     "slug": "blast-furnace-thermal-anomaly-detection-software-for-steelmakers",
@@ -6898,6 +6940,48 @@
     "impressions": 3785,
     "clicks": 29,
     "ctr": 0.0079,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/block-dynamic-range-normalization-kernels-for-multi-tenant-private-clouds",
+    "path": "/solutions/block-dynamic-range-normalization-kernels-for-multi-tenant-private-clouds",
+    "slug": "block-dynamic-range-normalization-kernels-for-multi-tenant-private-clouds",
+    "target_keyword": "block dynamic range normalization kernels for multi tenant private clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.4,
+    "impressions": 1674,
+    "clicks": 23,
+    "ctr": 0.0139,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/block-exponent-underflow-recovery-monitors-for-high-concurrency-healthcare-rag",
+    "path": "/solutions/block-exponent-underflow-recovery-monitors-for-high-concurrency-healthcare-rag",
+    "slug": "block-exponent-underflow-recovery-monitors-for-high-concurrency-healthcare-rag",
+    "target_keyword": "block exponent underflow recovery monitors for high concurrency healthcare rag",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.7,
+    "impressions": 2407,
+    "clicks": 16,
+    "ctr": 0.0067,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/block-size-32-shared-dynamic-exponent-shifting-engines-for-blackwell-clusters",
+    "path": "/solutions/block-size-32-shared-dynamic-exponent-shifting-engines-for-blackwell-clusters",
+    "slug": "block-size-32-shared-dynamic-exponent-shifting-engines-for-blackwell-clusters",
+    "target_keyword": "block size 32 shared dynamic exponent shifting engines for blackwell clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.7,
+    "impressions": 3547,
+    "clicks": 23,
+    "ctr": 0.0067,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11354,6 +11438,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cutlass-fp8-fused-wgmma-matrix-multiplication-kernels-for-autonomous-robots",
+    "path": "/solutions/cutlass-fp8-fused-wgmma-matrix-multiplication-kernels-for-autonomous-robots",
+    "slug": "cutlass-fp8-fused-wgmma-matrix-multiplication-kernels-for-autonomous-robots",
+    "target_keyword": "cutlass fp8 fused wgmma matrix multiplication kernels for autonomous robots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 2727,
+    "clicks": 26,
+    "ctr": 0.0099,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/d-wave-quantum-annealing-vehicle-routing-problem-solvers-for-urban-fleets",
     "path": "/solutions/d-wave-quantum-annealing-vehicle-routing-problem-solvers-for-urban-fleets",
     "slug": "d-wave-quantum-annealing-vehicle-routing-problem-solvers-for-urban-fleets",
@@ -12092,6 +12190,20 @@
     "impressions": 1251,
     "clicks": 12,
     "ctr": 0.0102,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/delayed-fp8-scaling-factor-update-daemons-for-distributed-multi-node-clusters",
+    "path": "/solutions/delayed-fp8-scaling-factor-update-daemons-for-distributed-multi-node-clusters",
+    "slug": "delayed-fp8-scaling-factor-update-daemons-for-distributed-multi-node-clusters",
+    "target_keyword": "delayed fp8 scaling factor update daemons for distributed multi node clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.7,
+    "impressions": 3357,
+    "clicks": 62,
+    "ctr": 0.0186,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -13678,6 +13790,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dpdp-act-statutory-audit-trail-generators-for-fp8-quantized-medical-agents",
+    "path": "/solutions/dpdp-act-statutory-audit-trail-generators-for-fp8-quantized-medical-agents",
+    "slug": "dpdp-act-statutory-audit-trail-generators-for-fp8-quantized-medical-agents",
+    "target_keyword": "dpdp act statutory audit trail generators for fp8 quantized medical agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.8,
+    "impressions": 3918,
+    "clicks": 47,
+    "ctr": 0.0121,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/draft-token-probability-threshold-tuners-for-real-time-algorithmic-crypto-trading",
     "path": "/solutions/draft-token-probability-threshold-tuners-for-real-time-algorithmic-crypto-trading",
     "slug": "draft-token-probability-threshold-tuners-for-real-time-algorithmic-crypto-trading",
@@ -14308,6 +14434,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dynamic-mantissa-bit-allocation-daemons-for-non-stationary-time-series-agents",
+    "path": "/solutions/dynamic-mantissa-bit-allocation-daemons-for-non-stationary-time-series-agents",
+    "slug": "dynamic-mantissa-bit-allocation-daemons-for-non-stationary-time-series-agents",
+    "target_keyword": "dynamic mantissa bit allocation daemons for non stationary time series agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 2549,
+    "clicks": 23,
+    "ctr": 0.0094,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dynamic-mcp-parameter-validation-and-schema-coercion-agents-using-pydantic-v2",
     "path": "/solutions/dynamic-mcp-parameter-validation-and-schema-coercion-agents-using-pydantic-v2",
     "slug": "dynamic-mcp-parameter-validation-and-schema-coercion-agents-using-pydantic-v2",
@@ -14724,6 +14864,20 @@
     "impressions": 3279,
     "clicks": 38,
     "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/e4m3-forward-pass-and-e5m2-backward-gradient-controllers-for-sovereign-ai-clouds",
+    "path": "/solutions/e4m3-forward-pass-and-e5m2-backward-gradient-controllers-for-sovereign-ai-clouds",
+    "slug": "e4m3-forward-pass-and-e5m2-backward-gradient-controllers-for-sovereign-ai-clouds",
+    "target_keyword": "e4m3 forward pass and e5m2 backward gradient controllers for sovereign ai clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 2801,
+    "clicks": 74,
+    "ctr": 0.0265,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15372,6 +15526,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/enterprise-fp8-model-inference-architecture-auditors-for-fortune-500-cto-offices",
+    "path": "/solutions/enterprise-fp8-model-inference-architecture-auditors-for-fortune-500-cto-offices",
+    "slug": "enterprise-fp8-model-inference-architecture-auditors-for-fortune-500-cto-offices",
+    "target_keyword": "enterprise fp8 model inference architecture auditors for fortune 500 cto offices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.3,
+    "impressions": 2363,
+    "clicks": 9,
+    "ctr": 0.0042,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/enterprise-gpu-cluster-energy-consumption-reduction-agents-via-dynamic-model-bitwidth-switching",
     "path": "/solutions/enterprise-gpu-cluster-energy-consumption-reduction-agents-via-dynamic-model-bitwidth-switching",
     "slug": "enterprise-gpu-cluster-energy-consumption-reduction-agents-via-dynamic-model-bitwidth-switching",
@@ -15452,6 +15620,20 @@
     "impressions": 1724,
     "clicks": 44,
     "ctr": 0.0257,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-microscaling-architecture-auditors-for-fortune-500-cto-offices",
+    "path": "/solutions/enterprise-microscaling-architecture-auditors-for-fortune-500-cto-offices",
+    "slug": "enterprise-microscaling-architecture-auditors-for-fortune-500-cto-offices",
+    "target_keyword": "enterprise microscaling architecture auditors for fortune 500 cto offices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.3,
+    "impressions": 3543,
+    "clicks": 126,
+    "ctr": 0.0356,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -16884,6 +17066,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fifty-percent-vram-cost-reduction-services-for-air-gapped-defense-multi-agent-pods",
+    "path": "/solutions/fifty-percent-vram-cost-reduction-services-for-air-gapped-defense-multi-agent-pods",
+    "slug": "fifty-percent-vram-cost-reduction-services-for-air-gapped-defense-multi-agent-pods",
+    "target_keyword": "fifty percent vram cost reduction services for air gapped defense multi agent pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 1411,
+    "clicks": 44,
+    "ctr": 0.0315,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/finished-goods-pallet-automated-rfid-gate-scanning-and-sap-delivery-document-matching-in-bangalore",
     "path": "/solutions/finished-goods-pallet-automated-rfid-gate-scanning-and-sap-delivery-document-matching-in-bangalore",
     "slug": "finished-goods-pallet-automated-rfid-gate-scanning-and-sap-delivery-document-matching-in-bangalore",
@@ -17892,6 +18088,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/four-bit-weight-and-eight-bit-activation-microscaling-pipelines-for-tier-1-oems",
+    "path": "/solutions/four-bit-weight-and-eight-bit-activation-microscaling-pipelines-for-tier-1-oems",
+    "slug": "four-bit-weight-and-eight-bit-activation-microscaling-pipelines-for-tier-1-oems",
+    "target_keyword": "four bit weight and eight bit activation microscaling pipelines for tier 1 oems",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.4,
+    "impressions": 2924,
+    "clicks": 13,
+    "ctr": 0.0046,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fp16-to-int8-scalar-vector-quantization-recall-preservation-telemetry-for-high-density-ai-clusters",
     "path": "/solutions/fp16-to-int8-scalar-vector-quantization-recall-preservation-telemetry-for-high-density-ai-clusters",
     "slug": "fp16-to-int8-scalar-vector-quantization-recall-preservation-telemetry-for-high-density-ai-clusters",
@@ -17906,6 +18116,48 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fp8-activation-outlier-clipping-engines-for-high-stakes-clinical-diagnosis-copilots",
+    "path": "/solutions/fp8-activation-outlier-clipping-engines-for-high-stakes-clinical-diagnosis-copilots",
+    "slug": "fp8-activation-outlier-clipping-engines-for-high-stakes-clinical-diagnosis-copilots",
+    "target_keyword": "fp8 activation outlier clipping engines for high stakes clinical diagnosis copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.7,
+    "impressions": 3657,
+    "clicks": 68,
+    "ctr": 0.0186,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp8-attention-softmax-dynamic-scaling-numerical-stability-monitors",
+    "path": "/solutions/fp8-attention-softmax-dynamic-scaling-numerical-stability-monitors",
+    "slug": "fp8-attention-softmax-dynamic-scaling-numerical-stability-monitors",
+    "target_keyword": "fp8 attention softmax dynamic scaling numerical stability monitors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 1959,
+    "clicks": 28,
+    "ctr": 0.0144,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp8-batch-document-processing-accelerators-for-vernacular-gst-tax-compliance",
+    "path": "/solutions/fp8-batch-document-processing-accelerators-for-vernacular-gst-tax-compliance",
+    "slug": "fp8-batch-document-processing-accelerators-for-vernacular-gst-tax-compliance",
+    "target_keyword": "fp8 batch document processing accelerators for vernacular gst tax compliance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 1429,
+    "clicks": 20,
+    "ctr": 0.0141,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fp8-calibrated-medusa-heads-deployment-agents-for-high-density-h100-datacenter-racks",
     "path": "/solutions/fp8-calibrated-medusa-heads-deployment-agents-for-high-density-h100-datacenter-racks",
     "slug": "fp8-calibrated-medusa-heads-deployment-agents-for-high-density-h100-datacenter-racks",
@@ -17916,6 +18168,20 @@
     "impressions": 3534,
     "clicks": 73,
     "ctr": 0.0208,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp8-dynamic-range-scaling-factor-auto-calibration-daemons-for-private-vpc-llms",
+    "path": "/solutions/fp8-dynamic-range-scaling-factor-auto-calibration-daemons-for-private-vpc-llms",
+    "slug": "fp8-dynamic-range-scaling-factor-auto-calibration-daemons-for-private-vpc-llms",
+    "target_keyword": "fp8 dynamic range scaling factor auto calibration daemons for private vpc llms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.8,
+    "impressions": 318,
+    "clicks": 4,
+    "ctr": 0.0153,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -17962,6 +18228,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fp8-gemm-tensor-core-acceleration-controllers-for-enterprise-vllm-inference-clusters",
+    "path": "/solutions/fp8-gemm-tensor-core-acceleration-controllers-for-enterprise-vllm-inference-clusters",
+    "slug": "fp8-gemm-tensor-core-acceleration-controllers-for-enterprise-vllm-inference-clusters",
+    "target_keyword": "fp8 gemm tensor core acceleration controllers for enterprise vllm inference clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.1,
+    "impressions": 3581,
+    "clicks": 43,
+    "ctr": 0.0121,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india",
     "path": "/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india",
     "slug": "fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india",
@@ -17990,6 +18270,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fp8-kv-cache-memory-compression-controllers-for-two-million-token-rag-swarms",
+    "path": "/solutions/fp8-kv-cache-memory-compression-controllers-for-two-million-token-rag-swarms",
+    "slug": "fp8-kv-cache-memory-compression-controllers-for-two-million-token-rag-swarms",
+    "target_keyword": "fp8 kv cache memory compression controllers for two million token rag swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.7,
+    "impressions": 1267,
+    "clicks": 14,
+    "ctr": 0.0115,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving",
     "path": "/solutions/fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving",
     "slug": "fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving",
@@ -18000,6 +18294,20 @@
     "impressions": 3845,
     "clicks": 98,
     "ctr": 0.0255,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp8-post-training-quantization-calibration-data-selector-daemons-for-banking",
+    "path": "/solutions/fp8-post-training-quantization-calibration-data-selector-daemons-for-banking",
+    "slug": "fp8-post-training-quantization-calibration-data-selector-daemons-for-banking",
+    "target_keyword": "fp8 post training quantization calibration data selector daemons for banking",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.4,
+    "impressions": 1254,
+    "clicks": 17,
+    "ctr": 0.0139,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -18056,6 +18364,34 @@
     "impressions": 2823,
     "clicks": 23,
     "ctr": 0.0085,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp8-weight-and-activation-quantization-auditors-for-tier-1-indian-fintechs",
+    "path": "/solutions/fp8-weight-and-activation-quantization-auditors-for-tier-1-indian-fintechs",
+    "slug": "fp8-weight-and-activation-quantization-auditors-for-tier-1-indian-fintechs",
+    "target_keyword": "fp8 weight and activation quantization auditors for tier 1 indian fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.3,
+    "impressions": 2853,
+    "clicks": 26,
+    "ctr": 0.0092,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fp8-weight-caching-daemons-for-dynamic-multi-lora-adapter-swarms",
+    "path": "/solutions/fp8-weight-caching-daemons-for-dynamic-multi-lora-adapter-swarms",
+    "slug": "fp8-weight-caching-daemons-for-dynamic-multi-lora-adapter-swarms",
+    "target_keyword": "fp8 weight caching daemons for dynamic multi lora adapter swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.2,
+    "impressions": 1902,
+    "clicks": 7,
+    "ctr": 0.0038,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -18643,6 +18979,20 @@
     "position": 6.8,
     "impressions": 3898,
     "clicks": 97,
+    "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/gpu-failure-resilient-fp8-model-checkpoint-loaders-for-slurm-clusters",
+    "path": "/solutions/gpu-failure-resilient-fp8-model-checkpoint-loaders-for-slurm-clusters",
+    "slug": "gpu-failure-resilient-fp8-model-checkpoint-loaders-for-slurm-clusters",
+    "target_keyword": "gpu failure resilient fp8 model checkpoint loaders for slurm clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.8,
+    "impressions": 2398,
+    "clicks": 60,
     "ctr": 0.0251,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
@@ -24332,6 +24682,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/lossless-fp8-token-embedding-lookup-tables-for-enterprise-vector-search",
+    "path": "/solutions/lossless-fp8-token-embedding-lookup-tables-for-enterprise-vector-search",
+    "slug": "lossless-fp8-token-embedding-lookup-tables-for-enterprise-vector-search",
+    "target_keyword": "lossless fp8 token embedding lookup tables for enterprise vector search",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 2182,
+    "clicks": 33,
+    "ctr": 0.0155,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/lossless-speculative-decoding-agents-preserving-100-percent-greedy-sampling-determinism",
     "path": "/solutions/lossless-speculative-decoding-agents-preserving-100-percent-greedy-sampling-determinism",
     "slug": "lossless-speculative-decoding-agents-preserving-100-percent-greedy-sampling-determinism",
@@ -25630,6 +25994,34 @@
     "impressions": 1757,
     "clicks": 32,
     "ctr": 0.0186,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/microscaled-flashattention-3-triton-kernels-for-long-document-parsing",
+    "path": "/solutions/microscaled-flashattention-3-triton-kernels-for-long-document-parsing",
+    "slug": "microscaled-flashattention-3-triton-kernels-for-long-document-parsing",
+    "target_keyword": "microscaled flashattention-3 triton kernels for long document parsing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.0,
+    "impressions": 200,
+    "clicks": 1,
+    "ctr": 0.0048,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/microscaling-hardware-emulators-for-nvidia-jetson-and-edge-orin-robotics",
+    "path": "/solutions/microscaling-hardware-emulators-for-nvidia-jetson-and-edge-orin-robotics",
+    "slug": "microscaling-hardware-emulators-for-nvidia-jetson-and-edge-orin-robotics",
+    "target_keyword": "microscaling hardware emulators for nvidia jetson and edge orin robotics",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 3079,
+    "clicks": 41,
+    "ctr": 0.0134,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -27790,6 +28182,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/mxfp4-ultra-low-precision-weight-quantization-controllers-for-100b-models",
+    "path": "/solutions/mxfp4-ultra-low-precision-weight-quantization-controllers-for-100b-models",
+    "slug": "mxfp4-ultra-low-precision-weight-quantization-controllers-for-100b-models",
+    "target_keyword": "mxfp4 ultra low precision weight quantization controllers for 100b models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.0,
+    "impressions": 1730,
+    "clicks": 55,
+    "ctr": 0.0319,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/mxfp6-intermediate-activation-buffer-managers-for-deepseek-r1-reasoning",
+    "path": "/solutions/mxfp6-intermediate-activation-buffer-managers-for-deepseek-r1-reasoning",
+    "slug": "mxfp6-intermediate-activation-buffer-managers-for-deepseek-r1-reasoning",
+    "target_keyword": "mxfp6 intermediate activation buffer managers for deepseek r1 reasoning",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 1506,
+    "clicks": 14,
+    "ctr": 0.0096,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers",
     "path": "/solutions/n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers",
     "slug": "n8n-automated-right-to-erasure-consent-revocation-webhook-telemetry-for-dpdp-compliance-officers",
@@ -28574,6 +28994,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/nvidia-hopper-h100-fp8-transformer-engine-optimizers-for-tier-4-datacenters",
+    "path": "/solutions/nvidia-hopper-h100-fp8-transformer-engine-optimizers-for-tier-4-datacenters",
+    "slug": "nvidia-hopper-h100-fp8-transformer-engine-optimizers-for-tier-4-datacenters",
+    "target_keyword": "nvidia hopper h100 fp8 transformer engine optimizers for tier 4 datacenters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 1901,
+    "clicks": 50,
+    "ctr": 0.0265,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/nvidia-nemo-guardrails-colang-2-flow-deterministic-interception-telemetry-for-enterprise-ai-teams",
     "path": "/solutions/nvidia-nemo-guardrails-colang-2-flow-deterministic-interception-telemetry-for-enterprise-ai-teams",
     "slug": "nvidia-nemo-guardrails-colang-2-flow-deterministic-interception-telemetry-for-enterprise-ai-teams",
@@ -28892,6 +29326,34 @@
     "impressions": 3837,
     "clicks": 57,
     "ctr": 0.0149,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ocp-compliant-microscaling-validation-engines-for-sovereign-indian-banking",
+    "path": "/solutions/ocp-compliant-microscaling-validation-engines-for-sovereign-indian-banking",
+    "slug": "ocp-compliant-microscaling-validation-engines-for-sovereign-indian-banking",
+    "target_keyword": "ocp compliant microscaling validation engines for sovereign indian banking",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 1753,
+    "clicks": 19,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ocp-mxfp8-microscaling-format-parsers-for-distributed-agent-cluster-swarms",
+    "path": "/solutions/ocp-mxfp8-microscaling-format-parsers-for-distributed-agent-cluster-swarms",
+    "slug": "ocp-mxfp8-microscaling-format-parsers-for-distributed-agent-cluster-swarms",
+    "target_keyword": "ocp mxfp8 microscaling format parsers for distributed agent cluster swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 2892,
+    "clicks": 59,
+    "ctr": 0.0205,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -30376,6 +30838,20 @@
     "impressions": 3497,
     "clicks": 57,
     "ctr": 0.0165,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/per-vector-microscaling-scale-factor-caches-for-real-time-fraud-detection",
+    "path": "/solutions/per-vector-microscaling-scale-factor-caches-for-real-time-fraud-detection",
+    "slug": "per-vector-microscaling-scale-factor-caches-for-real-time-fraud-detection",
+    "target_keyword": "per vector microscaling scale factor caches for real time fraud detection",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 3619,
+    "clicks": 52,
+    "ctr": 0.0144,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -36260,6 +36736,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sglang-fp8-radix-attention-cache-orchestrators-for-high-concurrency-swarms",
+    "path": "/solutions/sglang-fp8-radix-attention-cache-orchestrators-for-high-concurrency-swarms",
+    "slug": "sglang-fp8-radix-attention-cache-orchestrators-for-high-concurrency-swarms",
+    "target_keyword": "sglang fp8 radix attention cache orchestrators for high concurrency swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 1143,
+    "clicks": 14,
+    "ctr": 0.0126,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sglang-radix-attention-tree-prefix-caching-and-ttft-latency-telemetry-for-enterprise-llm-clusters",
     "path": "/solutions/sglang-radix-attention-tree-prefix-caching-and-ttft-latency-telemetry-for-enterprise-llm-clusters",
     "slug": "sglang-radix-attention-tree-prefix-caching-and-ttft-latency-telemetry-for-enterprise-llm-clusters",
@@ -36312,6 +36802,20 @@
     "impressions": 2166,
     "clicks": 24,
     "ctr": 0.0112,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/shared-scale-factor-broadcast-overhead-mitigators-for-multi-gpu-nvlink-mesh",
+    "path": "/solutions/shared-scale-factor-broadcast-overhead-mitigators-for-multi-gpu-nvlink-mesh",
+    "slug": "shared-scale-factor-broadcast-overhead-mitigators-for-multi-gpu-nvlink-mesh",
+    "target_keyword": "shared scale factor broadcast overhead mitigators for multi gpu nvlink mesh",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.7,
+    "impressions": 2117,
+    "clicks": 24,
+    "ctr": 0.0117,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -40600,6 +41104,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-1-percent-perplexity-degradation-quantization-auditors-for-enterprise-ai",
+    "path": "/solutions/sub-1-percent-perplexity-degradation-quantization-auditors-for-enterprise-ai",
+    "slug": "sub-1-percent-perplexity-degradation-quantization-auditors-for-enterprise-ai",
+    "target_keyword": "sub 1 percent perplexity degradation quantization auditors for enterprise ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.6,
+    "impressions": 1186,
+    "clicks": 9,
+    "ctr": 0.0082,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-10-bps-perplexity-degradation-microscaling-calibration-suites-for-legal-ai",
+    "path": "/solutions/sub-10-bps-perplexity-degradation-microscaling-calibration-suites-for-legal-ai",
+    "slug": "sub-10-bps-perplexity-degradation-microscaling-calibration-suites-for-legal-ai",
+    "target_keyword": "sub 10 bps perplexity degradation microscaling calibration suites for legal ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 2655,
+    "clicks": 42,
+    "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-100ms-drug-interaction-cross-check-agents-for-oncology-outpatient-clinics",
     "path": "/solutions/sub-100ms-drug-interaction-cross-check-agents-for-oncology-outpatient-clinics",
     "slug": "sub-100ms-drug-interaction-cross-check-agents-for-oncology-outpatient-clinics",
@@ -40638,6 +41170,20 @@
     "impressions": 2139,
     "clicks": 25,
     "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-10ms-conversational-voice-agent-fp8-pipelines-for-tier-1-indian-telecom",
+    "path": "/solutions/sub-10ms-conversational-voice-agent-fp8-pipelines-for-tier-1-indian-telecom",
+    "slug": "sub-10ms-conversational-voice-agent-fp8-pipelines-for-tier-1-indian-telecom",
+    "target_keyword": "sub 10ms conversational voice agent fp8 pipelines for tier 1 indian telecom",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.5,
+    "impressions": 2435,
+    "clicks": 26,
+    "ctr": 0.0108,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -40810,6 +41356,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-150w-server-power-draw-capping-via-mxfp4-quantization-for-green-datacenters",
+    "path": "/solutions/sub-150w-server-power-draw-capping-via-mxfp4-quantization-for-green-datacenters",
+    "slug": "sub-150w-server-power-draw-capping-via-mxfp4-quantization-for-green-datacenters",
+    "target_keyword": "sub 150w server power draw capping via mxfp4 quantization for green datacenters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.5,
+    "impressions": 3965,
+    "clicks": 51,
+    "ctr": 0.0131,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-15ms-fp8-trade-settlement-reconciliation-agents-for-sovereign-bourses",
+    "path": "/solutions/sub-15ms-fp8-trade-settlement-reconciliation-agents-for-sovereign-bourses",
+    "slug": "sub-15ms-fp8-trade-settlement-reconciliation-agents-for-sovereign-bourses",
+    "target_keyword": "sub 15ms fp8 trade settlement reconciliation agents for sovereign bourses",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.9,
+    "impressions": 3879,
+    "clicks": 60,
+    "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-15ms-mcp-tool-call-caching-agents-with-automated-redis-kv-ttl-invalidation",
     "path": "/solutions/sub-15ms-mcp-tool-call-caching-agents-with-automated-redis-kv-ttl-invalidation",
     "slug": "sub-15ms-mcp-tool-call-caching-agents-with-automated-redis-kv-ttl-invalidation",
@@ -40876,6 +41450,20 @@
     "impressions": 3688,
     "clicks": 23,
     "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-2-dollar-per-million-tokens-fp8-cost-optimization-architects-for-enterprise",
+    "path": "/solutions/sub-2-dollar-per-million-tokens-fp8-cost-optimization-architects-for-enterprise",
+    "slug": "sub-2-dollar-per-million-tokens-fp8-cost-optimization-architects-for-enterprise",
+    "target_keyword": "sub 2 dollar per million tokens fp8 cost optimization architects for enterprise",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 3976,
+    "clicks": 41,
+    "ctr": 0.0105,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -40974,6 +41562,20 @@
     "impressions": 686,
     "clicks": 9,
     "ctr": 0.0133,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-4ms-fp8-time-to-first-token-engines-for-enterprise-underwriting-copilots",
+    "path": "/solutions/sub-4ms-fp8-time-to-first-token-engines-for-enterprise-underwriting-copilots",
+    "slug": "sub-4ms-fp8-time-to-first-token-engines-for-enterprise-underwriting-copilots",
+    "target_keyword": "sub 4ms fp8 time to first token engines for enterprise underwriting copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.5,
+    "impressions": 2285,
+    "clicks": 78,
+    "ctr": 0.0343,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -41146,6 +41748,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-6ms-microscaled-forward-pass-execution-daemons-for-autonomous-flight-erp",
+    "path": "/solutions/sub-6ms-microscaled-forward-pass-execution-daemons-for-autonomous-flight-erp",
+    "slug": "sub-6ms-microscaled-forward-pass-execution-daemons-for-autonomous-flight-erp",
+    "target_keyword": "sub 6ms microscaled forward pass execution daemons for autonomous flight erp",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.9,
+    "impressions": 1439,
+    "clicks": 31,
+    "ctr": 0.0217,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-8ms-3d-distributed-communication-overlap-daemons-for-100b-enterprise-llms",
     "path": "/solutions/sub-8ms-3d-distributed-communication-overlap-daemons-for-100b-enterprise-llms",
     "slug": "sub-8ms-3d-distributed-communication-overlap-daemons-for-100b-enterprise-llms",
@@ -41184,6 +41800,20 @@
     "impressions": 1283,
     "clicks": 16,
     "ctr": 0.0126,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+    "path": "/solutions/sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+    "slug": "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+    "target_keyword": "sub 8ms multimodal vision fp8 inference controllers for scada manufacturing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.8,
+    "impressions": 1428,
+    "clicks": 35,
+    "ctr": 0.0251,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -44296,6 +44926,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/tensorrt-llm-fp8-calibration-engines-for-autonomous-supply-chain-routing",
+    "path": "/solutions/tensorrt-llm-fp8-calibration-engines-for-autonomous-supply-chain-routing",
+    "slug": "tensorrt-llm-fp8-calibration-engines-for-autonomous-supply-chain-routing",
+    "target_keyword": "tensorrt llm fp8 calibration engines for autonomous supply chain routing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.6,
+    "impressions": 1906,
+    "clicks": 15,
+    "ctr": 0.0082,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/tensorrt-llm-fp8-quantization-deployment-agents-for-nvidia-h100-datacenter-clusters",
     "path": "/solutions/tensorrt-llm-fp8-quantization-deployment-agents-for-nvidia-h100-datacenter-clusters",
     "slug": "tensorrt-llm-fp8-quantization-deployment-agents-for-nvidia-h100-datacenter-clusters",
@@ -45626,6 +46270,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/triton-custom-fp8-grouped-gemm-kernels-for-mixture-of-experts-routing",
+    "path": "/solutions/triton-custom-fp8-grouped-gemm-kernels-for-mixture-of-experts-routing",
+    "slug": "triton-custom-fp8-grouped-gemm-kernels-for-mixture-of-experts-routing",
+    "target_keyword": "triton custom fp8 grouped gemm kernels for mixture of experts routing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.9,
+    "impressions": 1999,
+    "clicks": 24,
+    "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/triton-dynamic-sequence-batching-queue-latency-and-timeout-fallback-telemetry-for-financial-search-engines",
     "path": "/solutions/triton-dynamic-sequence-batching-queue-latency-and-timeout-fallback-telemetry-for-financial-search-engines",
     "slug": "triton-dynamic-sequence-batching-queue-latency-and-timeout-fallback-telemetry-for-financial-search-engines",
@@ -45818,6 +46476,20 @@
     "impressions": 1659,
     "clicks": 49,
     "ctr": 0.03,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/two-times-tensor-throughput-scaling-engines-for-70b-llama-inference-clusters",
+    "path": "/solutions/two-times-tensor-throughput-scaling-engines-for-70b-llama-inference-clusters",
+    "slug": "two-times-tensor-throughput-scaling-engines-for-70b-llama-inference-clusters",
+    "target_keyword": "two times tensor throughput scaling engines for 70b llama inference clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.1,
+    "impressions": 2901,
+    "clicks": 44,
+    "ctr": 0.0154,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -46574,6 +47246,20 @@
     "impressions": 451,
     "clicks": 5,
     "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/vllm-fp8-model-serving-optimization-consultants-for-private-datacenter-clouds",
+    "path": "/solutions/vllm-fp8-model-serving-optimization-consultants-for-private-datacenter-clouds",
+    "slug": "vllm-fp8-model-serving-optimization-consultants-for-private-datacenter-clouds",
+    "target_keyword": "vllm fp8 model serving optimization consultants for private datacenter clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 3476,
+    "clicks": 73,
+    "ctr": 0.0211,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -47726,6 +48412,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-latency-penalty-fp8-dequantization-stream-overlays-for-live-streaming-llm",
+    "path": "/solutions/zero-latency-penalty-fp8-dequantization-stream-overlays-for-live-streaming-llm",
+    "slug": "zero-latency-penalty-fp8-dequantization-stream-overlays-for-live-streaming-llm",
+    "target_keyword": "zero latency penalty fp8 dequantization stream overlays for live streaming llm",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.6,
+    "impressions": 2466,
+    "clicks": 49,
+    "ctr": 0.0199,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics",
     "path": "/solutions/zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics",
     "slug": "zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics",
@@ -47876,6 +48576,20 @@
     "impressions": 461,
     "clicks": 4,
     "ctr": 0.0097,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-underflow-fp8-exponent-bias-adjusters-for-automated-trading-agents",
+    "path": "/solutions/zero-underflow-fp8-exponent-bias-adjusters-for-automated-trading-agents",
+    "slug": "zero-underflow-fp8-exponent-bias-adjusters-for-automated-trading-agents",
+    "target_keyword": "zero underflow fp8 exponent bias adjusters for automated trading agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.0,
+    "impressions": 1270,
+    "clicks": 54,
+    "ctr": 0.0431,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },

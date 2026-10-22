@@ -157,6 +157,8 @@ const EnterpriseAgent3DParallelismSimulator = lazy(() => import('./components/pa
 const EmbedAgent3DParallelismSimulator = lazy(() => import('./components/pages/EmbedAgent3DParallelismSimulator'))
 const EnterpriseAgentFp8MicroscalingSimulator = lazy(() => import('./components/pages/EnterpriseAgentFp8MicroscalingSimulator'))
 const EmbedAgentFp8MicroscalingSimulator = lazy(() => import('./components/pages/EmbedAgentFp8MicroscalingSimulator'))
+const EnterpriseAgentAsyncCheckpointingSimulator = lazy(() => import('./components/pages/EnterpriseAgentAsyncCheckpointingSimulator'))
+const EmbedAgentAsyncCheckpointingSimulator = lazy(() => import('./components/pages/EmbedAgentAsyncCheckpointingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -421,6 +423,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-fp8-microscaling-simulator" element={<EnterpriseAgentFp8MicroscalingSimulator />} />
                             <Route path="/tools/agent-fp8-microscaling-simulator" element={<Navigate to="/tools/enterprise-agent-fp8-microscaling-simulator" replace />} />
                             <Route path="/embed/agent-fp8-microscaling-simulator" element={<EmbedAgentFp8MicroscalingSimulator />} />
+                            <Route path="/tools/enterprise-agent-async-checkpointing-simulator" element={<EnterpriseAgentAsyncCheckpointingSimulator />} />
+                            <Route path="/tools/agent-async-checkpointing-simulator" element={<Navigate to="/tools/enterprise-agent-async-checkpointing-simulator" replace />} />
+                            <Route path="/embed/agent-async-checkpointing-simulator" element={<EmbedAgentAsyncCheckpointingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
