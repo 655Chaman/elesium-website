@@ -387,7 +387,7 @@ def render_post_semantic_html(post):
     <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">{category}</div>
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">{title}</h1>
     <div style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;">
-      <time>{date}</time> • <span>{read_time}</span> • <span>Author: <strong>{author_name}</strong> ({author_role})</span>
+      <time>{date}</time> • <span>{read_time}</span> • <span>Author: <a href="/authors/chaman-shah" style="color:#2563eb;text-decoration:underline;"><strong>{author_name}</strong></a> ({author_role})</span>
     </div>
     <div style="font-size:1.125rem;line-height:1.7;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e5e7eb;color:#1f2937;">
       <p><strong>{intro}</strong></p>
@@ -4400,6 +4400,58 @@ def render_deepseek_serving_fabric_embed_semantic_html():
 </div>
 """
 
+def render_author_profile_semantic_html():
+    """
+    Renders rich semantic HTML for /authors/chaman-shah establishing verified E-E-A-T.
+    """
+    return """
+<div id="prerendered-author-profile" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav style="font-size:0.8rem;color:#6b7280;margin-bottom:1.5rem;font-family:monospace;">
+    <a href="/" style="color:#6b7280;text-decoration:none;">Home</a> &gt; 
+    <a href="/team" style="color:#6b7280;text-decoration:none;">Leadership</a> &gt; 
+    <span style="color:#111827;font-weight:600;">Chaman Shah</span>
+  </nav>
+  <header style="border-bottom:1px solid #e5e7eb;padding-bottom:2rem;margin-bottom:2rem;">
+    <span style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.05em;">Principal Systems Architect &amp; Founder</span>
+    <h1 style="font-size:2.75rem;font-weight:800;margin:0.5rem 0;color:#111827;">Chaman Shah</h1>
+    <p style="font-size:1.15rem;color:#4b5563;line-height:1.6;max-width:800px;">
+      Principal AI Systems Architect and Founder at Elesium, Bengaluru, Karnataka, India. Leading the engineering of sovereign multi-agent systems, dedicated private VPC inference infrastructure, and DPDP Act 2023 compliant automation across BFSI, manufacturing, and supply chain logistics in India.
+    </p>
+    <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="/waitlist" style="display:inline-block;padding:0.75rem 1.5rem;background:#059669;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Book Architecture Session &rarr;</a>
+      <a href="https://github.com/655Chaman" style="display:inline-block;padding:0.75rem 1.5rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">GitHub Profile</a>
+    </div>
+  </header>
+  <main>
+    <section style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Engineering &amp; Architecture Specializations</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
+        <li style="border:1px solid #e5e7eb;padding:1.25rem;border-radius:0.75rem;background:#f9fafb;">
+          <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 0.5rem 0;">Multi-Agent State Topologies</h3>
+          <p style="font-size:0.9rem;color:#4b5563;margin:0;">Architecture of cyclic LangGraph state machines, sub-200ms latency, and deterministic state recovery.</p>
+        </li>
+        <li style="border:1px solid #e5e7eb;padding:1.25rem;border-radius:0.75rem;background:#f9fafb;">
+          <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 0.5rem 0;">Private High-Throughput Inference</h3>
+          <p style="font-size:0.9rem;color:#4b5563;margin:0;">Air-gapped on-premise GPU clusters running vLLM, PagedAttention, and FP8 microscaling.</p>
+        </li>
+        <li style="border:1px solid #e5e7eb;padding:1.25rem;border-radius:0.75rem;background:#f9fafb;">
+          <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 0.5rem 0;">DPDP Act 2023 Statutory Governance</h3>
+          <p style="font-size:0.9rem;color:#4b5563;margin:0;">Consent artifact architecture, data principal verification, and zero-trust audit trails.</p>
+        </li>
+      </ul>
+    </section>
+    <section style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Authored Systems Whitepapers</h2>
+      <ul style="list-style:none;padding:0;line-height:2;">
+        <li><a href="/signals/open-source-llm-deployment-on-premise-india" style="color:#2563eb;font-weight:600;text-decoration:none;">• On-Premise Open-Source LLM Deployment in India: Sovereign Private Cloud &amp; DPDP Act 2023 &rarr;</a></li>
+        <li><a href="/signals/ai-driven-document-processing-india" style="color:#2563eb;font-weight:600;text-decoration:none;">• Enterprise AI-Driven Document Processing in India: Multimodal OCR &amp; GST Rule 36(4) &rarr;</a></li>
+        <li><a href="/signals/sub-200ms-ledger-reconciliation-agents-for-fintechs" style="color:#2563eb;font-weight:600;text-decoration:none;">• Sub-200ms Ledger Reconciliation: Python LangGraph State Machines for Core Banking &rarr;</a></li>
+      </ul>
+    </section>
+  </main>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag and self-referential hreflang tags.
@@ -6207,6 +6259,18 @@ def generate_ssg():
         "embed/agent-deepseek-v3-serving-fabric-simulator": {
             "title": "Embed: DeepSeek-V3 Unified Fabric Simulator",
             "desc": "Interactive embed widget modeling MLA compressed latents, DualPipe bidirectional overlap, and MTP speculative drafting."
+        },
+        "authors/chaman-shah": {
+            "title": "Chaman Shah — Principal AI Systems Architect & Founder",
+            "desc": "Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams deploying sovereign multi-agent architectures, private VPC vLLM clusters, and DPDP Act 2023 compliant automation across India."
+        },
+        "team/chaman-shah": {
+            "title": "Chaman Shah — Principal AI Systems Architect & Founder",
+            "desc": "Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams deploying sovereign multi-agent architectures, private VPC vLLM clusters, and DPDP Act 2023 compliant automation across India."
+        },
+        "team": {
+            "title": "Engineering Leadership & Systems Architects",
+            "desc": "Meet the engineering leadership and principal systems architects behind Elesium's sovereign multi-agent systems and enterprise AI automation infrastructure."
         }
     }
 
@@ -12453,6 +12517,78 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(serving_fabric_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route in ["authors/chaman-shah", "team/chaman-shah", "team"]:
+            author_content = render_author_profile_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{author_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{author_content}</div>')
+
+            author_person_schema = {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "@id": "https://elesium.online/authors/chaman-shah#person",
+                "name": "Chaman Shah",
+                "givenName": "Chaman",
+                "familyName": "Shah",
+                "jobTitle": "Principal AI Systems Architect & Founder",
+                "worksFor": {
+                    "@type": "Organization",
+                    "@id": "https://elesium.online/#organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online"
+                },
+                "url": "https://elesium.online/authors/chaman-shah",
+                "sameAs": [
+                    "https://github.com/655Chaman",
+                    "https://linkedin.com/in/chaman-shah-elesium",
+                    "https://x.com/chamanshah_ai"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Bengaluru",
+                    "addressRegion": "Karnataka",
+                    "addressCountry": "IN"
+                },
+                "knowsAbout": [
+                    "Enterprise Multi-Agent Systems",
+                    "LangGraph State Topology",
+                    "vLLM PagedAttention Inference",
+                    "DPDP Act 2023 Statutory Compliance",
+                    "Dedicated Private VPC Cloud Infrastructure",
+                    "SAP S/4HANA RFC Middleware",
+                    "Sub-200ms Financial Ledger Reconciliation"
+                ]
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Leadership",
+                        "item": "https://elesium.online/team"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Chaman Shah",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(author_person_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

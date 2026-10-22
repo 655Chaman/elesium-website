@@ -13,6 +13,7 @@ import Preloader from './components/ui/Preloader'
 // Lazy load heavy below-the-fold components and secondary pages
 const FeatureExplorer = lazy(() => import('./components/sections/FeatureExplorer'))
 const Solutions = lazy(() => import('./components/sections/Solutions'))
+const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
 const HowWeWork = lazy(() => import('./components/pages/HowWeWork'))
 const Industries = lazy(() => import('./components/pages/Industries'))
@@ -237,6 +238,10 @@ function App() {
                             <Route path="/waitlist" element={<Waitlist />} />
                             <Route path="/audit" element={<Waitlist />} />
                             <Route path="/book-audit" element={<Waitlist />} />
+                            <Route path="/authors/chaman-shah" element={<AuthorProfile />} />
+                            <Route path="/team/chaman-shah" element={<AuthorProfile />} />
+                            <Route path="/team" element={<AuthorProfile />} />
+                            <Route path="/author" element={<Navigate to="/authors/chaman-shah" replace />} />
                             <Route path="/solutions" element={<SolutionsHub />} />
                             <Route path="/solutions/:slug" element={<SolutionDetail />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />

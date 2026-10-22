@@ -17,7 +17,8 @@ import {
     CheckCircle2, 
     Layers, 
     Server, 
-    X
+    X,
+    FileText
 } from 'lucide-react';
 import { 
     calculateEnterpriseRoi, 
@@ -40,6 +41,7 @@ export default function EnterpriseRoiCalculator() {
 
     // Embed Modal State
     const [isEmbedModalOpen, setIsEmbedModalOpen] = useState(false);
+    const [isMemoModalOpen, setIsMemoModalOpen] = useState(false);
     const [hasCopiedEmbed, setHasCopiedEmbed] = useState(false);
     const [showEmbedPreview, setShowEmbedPreview] = useState(false);
 
@@ -264,6 +266,14 @@ export default function EnterpriseRoiCalculator() {
                         >
                             <Download className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
                             Export Business Case (CSV)
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => setIsMemoModalOpen(true)}
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs font-semibold transition-all shadow-sm"
+                        >
+                            <FileText className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                            Download Executive Memo
                         </button>
                     </div>
                 </div>
@@ -816,6 +826,8 @@ export default function EnterpriseRoiCalculator() {
             {/* Exit Intent Executive Memo Modal */}
             <ExitIntentMemoModal
                 toolName="Enterprise AI ROI & TCO Calculator"
+                isOpenOverride={isMemoModalOpen ? true : undefined}
+                onCloseOverride={() => setIsMemoModalOpen(false)}
                 simulatedMetrics={[
                     { label: 'Year 1 Net Savings', value: formatCurrency(results.netAnnualSavingsYear1, currency) },
                     { label: 'Payback Period', value: `${results.paybackPeriodMonths} Months` },

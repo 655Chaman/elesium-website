@@ -182,6 +182,8 @@ export default function DownloadFooter() {
                 <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-400">
                     <p>© {new Date().getFullYear()} Elesium Systems Pvt. Ltd. All rights reserved.</p>
                     <div className="flex items-center gap-4">
+                        <Link to="/authors/chaman-shah" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Principal Architect</Link>
+                        <Link to="/ai-automation-agency-india" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
                         <Link to="/resources" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Resources</Link>
                         <Link to="/waitlist" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Contact & Audit</Link>
                         <Link to="/sitemap.xml" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Sitemap</Link>

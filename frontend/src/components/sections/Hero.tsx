@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { TextAnimate } from '../ui/TextAnimate'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -88,6 +89,12 @@ export default function HeroSection() {
                         <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm" onClick={openWhatsApp}>
                             Initiate AI Audit
                         </InteractiveHoverButton>
+                        <Link 
+                            to="/waitlist" 
+                            className="h-10 px-5 text-xs sm:text-sm font-semibold rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-all flex items-center gap-1.5 shadow-sm"
+                        >
+                            Schedule Architecture Review &rarr;
+                        </Link>
                         <WhatsAppModal />
                     </motion.div>
                 </motion.div>
