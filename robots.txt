@@ -1,6 +1,7 @@
 # Robots.txt for elesium.online
 
 User-agent: *
+Disallow: /embed/
 Allow: /
 
 # LLM Crawler & Machine-Readable Manifests
