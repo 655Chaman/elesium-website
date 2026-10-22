@@ -42,7 +42,7 @@ DIST_SOLUTIONS_DIR = BASE_DIR / "frontend" / "dist" / "solutions"
 # TONE GUARD: SUPERLATIVE & CLICHE BLACKLIST
 # ---------------------------------------------------------------------------
 FORBIDDEN_SUPERLATIVES = {
-    "best", "greatest", "revolutionary", "world-class", "groundbreaking",
+    "best", "greatest", "revolutionary", "world-class", "new",
     "unmatched", "unrivaled", "cutting-edge", "game-changing", "miraculous",
     "incredible", "ultimate", "transcendent", "peerless", "unparalleled",
     "magic", "magical", "supercharge", "unleash", "beacon", "testament",
@@ -119,18 +119,18 @@ def format_hook_sentence(keyword: str) -> str:
         lead = f"Deploying a {keyword}"
     else:
         lead = f"Deploying {keyword}"
-    return f"{lead} establishes deterministic operational workflows that eliminate manual execution latency."
+    return f"{lead} replaces manual execution with automated workflows and verified integrations."
 
 # ---------------------------------------------------------------------------
 # DOMAIN TEMPLATES & SPECIALIZED ARCHITECTURAL REPOSITORIES
 # ---------------------------------------------------------------------------
 CATEGORY_ARCHITECTURES = {
     "Logistics & Supply Chain": {
-        "hero_subheadline": "Enterprise supply chain leaders leverage our sovereign infrastructure to replace fragmented legacy dispatch sheets with verifiable finite state machines.",
+        "hero_subheadline": "Enterprise supply chain leaders leverage our private infrastructure to replace fragmented legacy dispatch sheets with verifiable finite state machines.",
         "hero_micro": "Every automated route assignment complies with statutory driver rest norms and real-time carrier availability boundaries.",
-        "block1_title": "Deterministic Telematics & Fleet Scheduling State Machines",
+        "block1_title": "Reliable Telematics & Fleet Scheduling State Machines",
         "block1_p1": "Traditional logistics dispatch networks experience continuous margin erosion from uncoordinated carrier assignments and manual route re-indexing.",
-        "block1_p2": "Elesium implements deterministic state machines that ingest multi-carrier telematics to execute automated dispatch decisions in sub-200ms cycles.",
+        "block1_p2": "Elesium implements state machines that ingest multi-carrier telematics to execute automated dispatch decisions in sub-200ms cycles.",
         "block1_p3": "Our scheduling graphs eliminate unhandled exception states by validating vehicle axle weights and depot loading constraints before route release.",
         "block1_bullets": [
             "Sub-200ms dispatch decisions synchronized across distributed fleet depot nodes.",
@@ -138,7 +138,7 @@ CATEGORY_ARCHITECTURES = {
             "Bi-directional synchronization with SAP Logistics and legacy transport management systems.",
             "Automated dynamic re-routing triggered by real-time corridor congestion feeds."
         ],
-        "block1_img_alt": "Deterministic telematics route optimization architecture diagram",
+        "block1_img_alt": "Automated telematics route optimization architecture diagram",
         "block2_title": "Continuous Exception Handling & Fuel Guardrails",
         "block2_p1": "Dynamic highway traffic anomalies and yard detention delays require immediate mathematical re-routing rather than conversational guesswork.",
         "block2_p2": "Our telemetry engine monitors carrier geofences to execute automated detention billing before warehouse bottlenecks cascade.",
@@ -152,27 +152,27 @@ CATEGORY_ARCHITECTURES = {
         "block2_img_alt": "Real-time exception handling and carrier settlement workflow topology",
         "block3_title": "Operational Performance Specifications & SLA Benchmarks",
         "block3_intro": "Engineered for logistics directors who require verifiable execution thresholds and measurable operational cost reductions.",
-        "block3_note": "All state machines operate with mathematically bounded loops that guarantee deterministic completion.",
+        "block3_note": "All state machines operate with mathematically bounded loops that guarantee reliable completion.",
         "specs": [
-            {"label": "Dispatch Latency", "value": "< 180ms", "desc": "Deterministic route assignment across multi-depot fleet clusters."},
+            {"label": "Dispatch Latency", "value": "< 180ms", "desc": "reliable route assignment across multi-depot fleet clusters."},
             {"label": "Routing Accuracy", "value": "99.98%", "desc": "Constraint-satisfied mathematical convergence for heavy transport operations."},
             {"label": "Fuel Overhead", "value": "-18.4%", "desc": "Measured fuel consumption reduction across monitored highway corridors."}
         ]
     },
     "BFSI & Underwriting": {
-        "hero_subheadline": "Institutional financial engineering teams deploy our air-gapped state machines to eliminate regulatory exposure and non-deterministic model drift.",
+        "hero_subheadline": "Institutional financial engineering teams deploy our air-gapped state machines to eliminate regulatory exposure and non-rules engines drift.",
         "hero_micro": "Every automated credit evaluation maintains complete mathematical provenance and statutory audit trail compliance.",
-        "block1_title": "Deterministic Financial State Machines & Sub-Second Decisioning",
+        "block1_title": "High-Precision Financial State Machines & Sub-Second Decisioning",
         "block1_p1": "Institutional financial operations require verifiable credit evaluations that eliminate regulatory exposure and uncalibrated loop states.",
         "block1_p2": "Elesium constructs air-gapped underwriting state graphs that parse credit bureau payloads and banking statements against statutory compliance rules.",
-        "block1_p3": "Our deterministic models eliminate hallucinated approvals by enforcing rigid mathematical scoring bounds prior to ledger commitment.",
+        "block1_p3": "Our rules engines eliminate hallucinated approvals by enforcing rigid mathematical scoring bounds prior to ledger commitment.",
         "block1_bullets": [
             "Sub-200ms credit decision cycles with immutable rule enforcement.",
-            "Zero token egress with sovereign on-premise FP8 open-weight execution.",
+            "Zero token egress with private on-premise FP8 open-weight execution.",
             "Direct integration with core banking systems and CBS ledger endpoints.",
-            "Automated multi-bureau data reconciliation with deterministic anomaly rejection."
+            "Automated multi-bureau data reconciliation with reliable anomaly rejection."
         ],
-        "block1_img_alt": "Deterministic financial state machine and credit evaluation topology",
+        "block1_img_alt": "Automated financial state machine and credit evaluation topology",
         "block2_title": "Statutory Governance & Real-Time AML Surveillance",
         "block2_p1": "Regulatory directives from the RBI and international compliance frameworks require comprehensive auditability for every automated decision.",
         "block2_p2": "Our compliance guardrail records immutable cryptographic proofs for each underwriting step, ensuring zero discrepancy during internal audits.",
@@ -186,10 +186,10 @@ CATEGORY_ARCHITECTURES = {
         "block2_img_alt": "Continuous AML compliance screening and regulatory audit trail schema",
         "block3_title": "Institutional Financial Benchmarks & Operational SLAs",
         "block3_intro": "Calibrated for chief risk officers and financial controllers who demand mathematical accuracy and zero compliance failures.",
-        "block3_note": "Execution state machines strictly isolate customer financial data within dedicated sovereign hardware enclaves.",
+        "block3_note": "Execution state machines strictly isolate customer financial data within dedicated private hardware enclaves.",
         "specs": [
-            {"label": "Ledger Latency", "value": "< 120ms", "desc": "Atomic ledger updates across sovereign cloud database clusters."},
-            {"label": "Rule Precision", "value": "100.0%", "desc": "Deterministic statutory boundary enforcement with zero model hallucination."},
+            {"label": "Ledger Latency", "value": "< 120ms", "desc": "Atomic ledger updates across private cloud database clusters."},
+            {"label": "Rule Precision", "value": "100.0%", "desc": "reliable statutory boundary enforcement with zero model hallucination."},
             {"label": "Audit Overhead", "value": "-65.0%", "desc": "Reduction in regulatory reporting preparation and review hours."}
         ]
     },
@@ -202,7 +202,7 @@ CATEGORY_ARCHITECTURES = {
         "block1_p3": "State boundary filters distinguish transient line vibrations from structural bearing failures to prevent unnecessary machine shutdowns.",
         "block1_bullets": [
             "High-frequency sensor stream processing with sub-millisecond edge latency.",
-            "Deterministic vibration threshold alarms preventing mechanical failure.",
+            "reliable vibration threshold alarms preventing mechanical failure.",
             "Native OPC-UA and SCADA PLC protocol compatibility with legacy controllers.",
             "Edge model inference running entirely on air-gapped industrial compute units."
         ],
@@ -213,7 +213,7 @@ CATEGORY_ARCHITECTURES = {
         "block2_p3": "Defect heatmaps synchronize with plant execution databases to isolate tool wear patterns before batch yields degrade.",
         "block2_bullets": [
             "Sub-millimeter surface defect isolation at standard line speeds.",
-            "Immediate robotic sorter triggering via deterministic GPIO signals.",
+            "Immediate robotic sorter triggering via reliable GPIO signals.",
             "Immutable component quality passports logged directly to plant MES systems.",
             "Automated yield analytics compiling hourly line quality summaries."
         ],
@@ -222,22 +222,22 @@ CATEGORY_ARCHITECTURES = {
         "block3_intro": "Architected for plant operations directors who require uninterrupted line continuity and quantifiable yield improvements.",
         "block3_note": "Local inference ensures manufacturing continuity remains fully operational during complete WAN network outages.",
         "specs": [
-            {"label": "Edge Latency", "value": "< 45ms", "desc": "Deterministic sensor anomaly classification on local edge gateway units."},
+            {"label": "Edge Latency", "value": "< 45ms", "desc": "reliable sensor anomaly classification on local edge gateway units."},
             {"label": "Inspection Accuracy", "value": "99.96%", "desc": "Microscopic flaw detection verified against master CAD geometries."},
-            {"label": "Unplanned Downtime", "value": "-32.8%", "desc": "Measured reduction in catastrophic machine breakdown events."}
+            {"label": "Unplanned Downtime", "value": "-32.8%", "desc": "Measured reduction in major machine failure events."}
         ]
     },
     "Healthcare AI": {
         "hero_subheadline": "Hospital clinical directors deploy our air-gapped documentation state machines to eliminate administrative overhead and accelerate insurance approvals.",
         "hero_micro": "Patient identifiers remain strictly isolated within private hospital infrastructure under complete DPDP Act 2023 compliance.",
-        "block1_title": "Deterministic Clinical Structuring & EHR Documentation Pipelines",
+        "block1_title": "Automated Clinical Structuring & EHR Documentation Pipelines",
         "block1_p1": "Physician administrative burden and billing claim rejections stem from unstructured notes that fail statutory diagnostic coding rules.",
         "block1_p2": "Elesium engineers air-gapped clinical documentation pipelines that convert physician audio into structured, auditable medical summaries.",
-        "block1_p3": "Our deterministic parsers validate symptom entries against standardized clinical ontologies before saving to the electronic health record.",
+        "block1_p3": "Our reliable parsers validate symptom entries against standardized clinical ontologies before saving to the electronic health record.",
         "block1_bullets": [
             "Accurate medical terminology parsing across clinical specialties.",
-            "Deterministic cross-referencing against statutory ICD-10 billing codes.",
-            "Local sovereign VPC execution guaranteeing zero patient health data egress.",
+            "reliable cross-referencing against statutory ICD-10 billing codes.",
+            "Local private VPC execution guaranteeing zero patient health data egress.",
             "Automated differential diagnosis summarization with physician verification gates."
         ],
         "block1_img_alt": "Clinical documentation workflow and EHR transcription state graph",
@@ -262,19 +262,19 @@ CATEGORY_ARCHITECTURES = {
         ]
     },
     "ERP & Systems": {
-        "hero_subheadline": "Enterprise IT executives implement our deterministic multi-agent state machines to automate complex SAP workflows and ledger operations.",
-        "hero_micro": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
-        "block1_title": "Sovereign Multi-Agent Orchestration & Deterministic ERP Pipelines",
+        "hero_subheadline": "Enterprise IT executives implement our reliable multi-agent state machines to automate complex SAP workflows and ledger operations.",
+        "hero_micro": "All agent operations run in air-gapped private VPC environments with zero third-party token consumption.",
+        "block1_title": "private Multi-Agent Orchestration & reliable ERP Pipelines",
         "block1_p1": "Enterprise systems face severe integration debt when autonomous scripts execute without verifiable state transition boundaries.",
         "block1_p2": "Elesium architects multi-agent LangGraph state workflows that govern database updates, SAP RFC calls, and cross-platform syncing.",
         "block1_p3": "Finite state machines enforce rigid transaction boundaries that prevent runaway execution loops and unhandled API exceptions.",
         "block1_bullets": [
-            "Deterministic cyclic graphs preventing unconstrained LLM execution loops.",
+            "reliable cyclic graphs preventing unconstrained LLM execution loops.",
             "Cryptographic state checkpoints enabling instant point-in-time recovery.",
-            "Air-gapped deployment on sovereign cloud hardware with zero external API calls.",
+            "Air-gapped deployment on private cloud hardware with zero external API calls.",
             "Bi-directional synchronization with SAP S/4HANA and Salesforce enterprise instances."
         ],
-        "block1_img_alt": "Sovereign multi-agent LangGraph ERP orchestration state architecture",
+        "block1_img_alt": "private multi-agent LangGraph ERP orchestration state architecture",
         "block2_title": "Cryptographic Audit Trails & DPDP Act Statutory Compliance",
         "block2_p1": "Modern enterprise compliance mandates verifiable consent tracking and immutable system activity records across all data processing.",
         "block2_p2": "Our governance layer records cryptographic hashes of every agent execution, providing transparent proof of compliance for audit bodies.",
@@ -290,32 +290,32 @@ CATEGORY_ARCHITECTURES = {
         "block3_intro": "Built for enterprise CIOs and IT directors who demand absolute architectural reliability and predictable compute costs.",
         "block3_note": "Self-hosted model execution guarantees predictable monthly infrastructure expenditure regardless of transaction volume.",
         "specs": [
-            {"label": "Execution Latency", "value": "< 160ms", "desc": "Deterministic state updates across enterprise database clusters."},
+            {"label": "Execution Latency", "value": "< 160ms", "desc": "reliable state updates across enterprise database clusters."},
             {"label": "State Convergence", "value": "100.0%", "desc": "Mathematically bounded agent execution with zero unhandled edge states."},
-            {"label": "Token OpEx Savings", "value": "-74.0%", "desc": "Self-hosted FP8 open weights on sovereign cloud private clusters."}
+            {"label": "Token OpEx Savings", "value": "-74.0%", "desc": "Self-hosted FP8 open weights on private cloud private clusters."}
         ]
     },
     "Telecom & Infrastructure": {
         "hero_subheadline": "Telecom network operations directors deploy our sub-second state engines to automate CDR billing reconciliation and optical fault isolation.",
-        "hero_micro": "Billion-event call detail record pipelines run on sovereign private VPC infrastructure with zero external data leakage.",
+        "hero_micro": "Billion-event call detail record pipelines run on dedicated private VPC infrastructure with zero external data leakage.",
         "block1_title": "High-Throughput CDR Reconciliation & Rating State Machines",
         "block1_p1": "Traditional carrier billing systems incur massive revenue leakage from unrated CDR records and delayed roaming interconnect settlements.",
-        "block1_p2": "Elesium implements deterministic stream-processing state graphs that ingest carrier switches to reconcile billions of call records in real time.",
-        "block1_p3": "Our deterministic models eliminate unbilled network sessions by enforcing automated mediation logic before billing cycles finalize.",
+        "block1_p2": "Elesium implements reliable stream-processing state graphs that ingest carrier switches to reconcile billions of call records in real time.",
+        "block1_p3": "Our rules engines eliminate unbilled network sessions by enforcing automated mediation logic before billing cycles finalize.",
         "block1_bullets": [
             "Sub-second call detail record rating across distributed telecom switch clusters.",
-            "Zero token egress with sovereign on-premise FP8 open-weight execution.",
+            "Zero token egress with private on-premise FP8 open-weight execution.",
             "Bi-directional synchronization with legacy billing and mediation platforms.",
-            "Automated multi-carrier interconnect rating with deterministic discrepancy isolation."
+            "Automated multi-carrier interconnect rating with reliable discrepancy isolation."
         ],
-        "block1_img_alt": "Deterministic telecom CDR billing reconciliation and rating engine topology",
+        "block1_img_alt": "Automated telecom CDR billing reconciliation and rating engine topology",
         "block2_title": "Optical Network Telemetry & Autonomous Fault Isolation",
         "block2_p1": "Fiber optic route degradations and optical switch failures require immediate automated re-routing before customer enterprise SLAs breach.",
         "block2_p2": "Our telemetry engine evaluates optical transport signals to isolate physical cable cuts and dispatch field repair teams autonomously.",
         "block2_p3": "Cryptographic audit trails record verifiable latency metrics to ensure compliance with stringent telecom regulatory standards.",
         "block2_bullets": [
             "Real-time optical transport telemetry ingestion at millisecond intervals.",
-            "Deterministic fault isolation distinguishing fiber cuts from optical amplifier drift.",
+            "reliable fault isolation distinguishing fiber cuts from optical amplifier drift.",
             "Automated circuit rerouting satisfying carrier-grade 99.999% uptime commitments.",
             "Tamper-evident network incident logging complying with telecom statutory directives."
         ],
@@ -331,11 +331,11 @@ CATEGORY_ARCHITECTURES = {
     },
     "Pharma & Life Sciences": {
         "hero_subheadline": "Biotech clinical development leaders deploy our air-gapped matching graphs to accelerate trial cohort enrollment and automate regulatory submissions.",
-        "hero_micro": "Genomic indicators and patient records remain strictly isolated within private sovereign VPC hardware under global GCP standards.",
-        "block1_title": "Deterministic Clinical Trial Cohort Matching & Eligibility DAGs",
+        "hero_micro": "Genomic indicators and patient records remain strictly isolated within private private VPC hardware under global GCP standards.",
+        "block1_title": "Automated Clinical Trial Cohort Matching & Eligibility DAGs",
         "block1_p1": "Oncology trial sponsors face costly study delays when manual chart reviews fail to identify eligible patient cohorts across hospital registries.",
-        "block1_p2": "Elesium engineers sovereign clinical matching state graphs that cross-reference trial inclusion criteria against de-identified patient records.",
-        "block1_p3": "Our deterministic parsers eliminate false eligibility classifications by enforcing rigid genomic biomarker and staging boundaries.",
+        "block1_p2": "Elesium engineers private clinical matching state graphs that cross-reference trial inclusion criteria against de-identified patient records.",
+        "block1_p3": "Our reliable parsers eliminate false eligibility classifications by enforcing rigid genomic biomarker and staging boundaries.",
         "block1_bullets": [
             "Sub-minute patient cohort matching across distributed oncology electronic records.",
             "Air-gapped private VPC execution guaranteeing complete patient privacy and GCP compliance.",
@@ -359,16 +359,16 @@ CATEGORY_ARCHITECTURES = {
         "block3_note": "Execution occurs exclusively within client-controlled private infrastructure satisfying international data sovereignty mandates.",
         "specs": [
             {"label": "Matching Latency", "value": "< 60s", "desc": "Full EHR cohort parsing against complex multi-arm clinical trial criteria."},
-            {"label": "Protocol Precision", "value": "100.0%", "desc": "Deterministic inclusion boundary verification with zero patient misclassification."},
+            {"label": "Protocol Precision", "value": "100.0%", "desc": "reliable inclusion boundary verification with zero patient misclassification."},
             {"label": "eCTD Compile Time", "value": "-68.0%", "desc": "Reduction in regulatory submission dossier preparation and auditing hours."}
         ]
     },
     "Legal & Real Estate Tech": {
-        "hero_subheadline": "Institutional REIT managers and corporate counsels deploy our sovereign abstraction pipelines to parse commercial leases and municipal title chains.",
+        "hero_subheadline": "Institutional REIT managers and corporate counsels deploy our private abstraction pipelines to parse commercial leases and municipal title chains.",
         "hero_micro": "Contractual clauses and title deeds are analyzed in private VPC enclaves with zero external training retention.",
-        "block1_title": "Deterministic Commercial Lease Abstraction & CAM Reconciliation",
+        "block1_title": "Automated Commercial Lease Abstraction & CAM Reconciliation",
         "block1_p1": "Real estate investment trusts suffer margin leakage from unverified common area maintenance charges and missed tenant escalation dates.",
-        "block1_p2": "Elesium deploys deterministic legal parsers that extract critical financial terms, renewal options, and co-tenancy covenants from complex leases.",
+        "block1_p2": "Elesium deploys reliable legal parsers that extract critical financial terms, renewal options, and co-tenancy covenants from complex leases.",
         "block1_p3": "Our abstraction state machines eliminate manual data entry errors by cross-verifying lease provisions against property management databases.",
         "block1_bullets": [
             "Sub-second commercial lease clause abstraction across multi-hundred page portfolios.",
@@ -383,7 +383,7 @@ CATEGORY_ARCHITECTURES = {
         "block2_p3": "Cryptographic title audit reports give mortgage underwriters complete confidence in property ownership before loan disbursement.",
         "block2_bullets": [
             "Comprehensive chain-of-title reconstruction across historical registry deeds.",
-            "Deterministic identification of unreleased mortgages, tax liens, and court attachments.",
+            "reliable identification of unreleased mortgages, tax liens, and court attachments.",
             "Automated encumbrance certificate verification under statutory land registration acts.",
             "Standardized title defect summaries with human underwriting verification gates."
         ],
@@ -393,24 +393,24 @@ CATEGORY_ARCHITECTURES = {
         "block3_note": "Every extracted legal term links directly to the source page and paragraph coordinate for instantaneous partner verification.",
         "specs": [
             {"label": "Lease Parsing", "value": "< 45s", "desc": "Full contract ingestion and clause extraction across complex commercial leases."},
-            {"label": "Term Accuracy", "value": "99.95%", "desc": "Deterministic financial calculation mapping for rent steps and CAM reconciliations."},
+            {"label": "Term Accuracy", "value": "99.95%", "desc": "reliable financial calculation mapping for rent steps and CAM reconciliations."},
             {"label": "Underwrite Velocity", "value": "-75.0%", "desc": "Reduction in real estate closing due diligence and title verification timelines."}
         ]
     },
-    "GovTech & Sovereign Defense": {
-        "hero_subheadline": "Sovereign defense ministries and intelligence agencies deploy our air-gapped deterministic state machines for classified data extraction and mission-critical logistics.",
+    "GovTech & Defense": {
+        "hero_subheadline": "Defense ministries and national security agencies deploy our air-gapped state machines for classified data extraction and mission-critical logistics.",
         "hero_micro": "Every automated mission workflow operates in private air-gapped enclaves with zero external internet telemetry or data egress.",
         "block1_title": "Air-Gapped Intelligence Processing & SCADA Isolation",
-        "block1_p1": "Classified defense networks require sovereign data pipelines that execute mission-critical extractions without public cloud dependency.",
+        "block1_p1": "Classified defense networks require private data pipelines that execute mission-critical extractions without public cloud dependency.",
         "block1_p2": "Elesium implements air-gapped state machines that parse tactical sensor feeds and intelligence payloads in sub-second verification cycles.",
-        "block1_p3": "Our deterministic algorithms isolate SCADA control boundaries to prevent unauthorized lateral traversal across sensitive operational commands.",
+        "block1_p3": "Our reliable algorithms isolate SCADA control boundaries to prevent unauthorized lateral traversal across sensitive operational commands.",
         "block1_bullets": [
             "Sub-100ms classified document entity extraction and de-identification.",
             "Air-gapped on-premise model execution with zero external data egress.",
             "Immutable cryptographic audit trails complying with statutory defense guidelines.",
             "Automated fallback to human command officers during uncalibrated signal disruption."
         ],
-        "block1_img_alt": "Air-gapped defense intelligence and sovereign SCADA isolation topology",
+        "block1_img_alt": "Air-gapped defense intelligence and private SCADA isolation topology",
         "block2_title": "Statutory ITAR Compliance & Defense Supply Chain Guardrails",
         "block2_p1": "Defense acquisition directives mandate rigid traceability across munitions manufacturing lists and sub-tier supplier flowdowns.",
         "block2_p2": "Our compliance guardrail performs automated bill-of-materials obsolescence analysis to identify supply chain vulnerabilities months ahead of depot shortages.",
@@ -418,11 +418,11 @@ CATEGORY_ARCHITECTURES = {
         "block2_bullets": [
             "Automated ITAR munitions list classification and compliance verification.",
             "Predictive DMSMS obsolescence tracking across complex defense assemblies.",
-            "Cryptographic proof of non-foreign data access across sovereign defense enclaves.",
-            "Deterministic public procurement bid-rigging anomaly detection state machines."
+            "Cryptographic proof of non-foreign data access across private defense enclaves.",
+            "Reliable public procurement bid-rigging anomaly detection state machines."
         ],
         "block2_img_alt": "ITAR defense supply chain compliance and procurement audit workflow",
-        "block3_title": "Sovereign Defense Specifications & Hardened SLAs",
+        "block3_title": "Defense Specifications & Hardened SLAs",
         "block3_intro": "Constructed for defense intelligence directors and military acquisition officers who require absolute data sovereignty and zero operational latency.",
         "block3_note": "Every mission workflow executes within cryptographically sealed container enclaves that guarantee zero data leakage.",
         "specs": [
@@ -432,15 +432,15 @@ CATEGORY_ARCHITECTURES = {
         ]
     },
     "Aerospace & Avionics": {
-        "hero_subheadline": "Commercial avionics manufacturers and satellite fleet operators deploy our deterministic telemetry engines to eliminate airborne anomalies and accelerate DO-178C certification.",
+        "hero_subheadline": "Commercial avionics manufacturers and satellite fleet operators deploy our reliable telemetry engines to eliminate airborne anomalies and accelerate DO-178C certification.",
         "hero_micro": "All flight data and orbital telemetry streams are validated against strict FAA and EASA mathematical tolerance boundaries.",
         "block1_title": "Flight Data Anomaly Detection & Orbital Collision Avoidance",
         "block1_p1": "High-velocity aerospace telemetry demands continuous mathematical validation to identify sensor drifts before airborne flight boundaries are exceeded.",
-        "block1_p2": "Elesium deploys deterministic telemetry state machines that ingest multi-channel flight data recorder streams to classify anomalies in real time.",
+        "block1_p2": "Elesium deploys reliable telemetry state machines that ingest multi-channel flight data recorder streams to classify anomalies in real time.",
         "block1_p3": "Our orbital conjunction engines calculate satellite trajectory adjustments to guarantee collision avoidance across dense low-Earth orbit constellations.",
         "block1_bullets": [
             "Sub-second FOQA flight data recorder anomaly isolation and incident alerting.",
-            "Deterministic orbital conjunction assessment and thruster burn calculation.",
+            "reliable orbital conjunction assessment and thruster burn calculation.",
             "Sub-millimeter acoustic defect classification for jet engine turbine inspection.",
             "Dynamic BVLOS drone airspace deconfliction under real-time weather constraints."
         ],
@@ -458,30 +458,30 @@ CATEGORY_ARCHITECTURES = {
         "block2_img_alt": "Avionics DO-178C formal verification and component MRO telemetry schema",
         "block3_title": "Aerospace Operational Benchmarks & Airworthiness SLAs",
         "block3_intro": "Calibrated for avionics chief engineers and airline safety directors who demand mathematical precision and zero flight delay penalties.",
-        "block3_note": "All flight telemetry processing operates within hard real-time latency ceilings that ensure deterministic response times.",
+        "block3_note": "All flight telemetry processing operates within hard real-time latency ceilings that ensure reliable response times.",
         "specs": [
-            {"label": "Sensor Latency", "value": "< 45ms", "desc": "Deterministic processing of multi-axis avionics telemetry streams."},
+            {"label": "Sensor Latency", "value": "< 45ms", "desc": "reliable processing of multi-axis avionics telemetry streams."},
             {"label": "Anomaly Precision", "value": "99.999%", "desc": "Mathematical sensor drift isolation satisfying airworthiness standards."},
             {"label": "MRO Downtime", "value": "-64.0%", "desc": "Reduction in unscheduled aircraft maintenance and component replacement delays."}
         ]
     },
     "Renewable Energy & Power Grid": {
-        "hero_subheadline": "Power grid transmission operators and renewable energy asset managers deploy our deterministic state machines for sub-second microgrid balancing and battery dispatch.",
+        "hero_subheadline": "Power grid transmission operators and renewable energy asset managers deploy our state machines for sub-second microgrid balancing and battery dispatch.",
         "hero_micro": "Dynamic line ratings and substation telemetry are processed in real time to prevent power transmission curtailment.",
         "block1_title": "Microgrid Battery Dispatch & Day-Ahead Spot Market Bidding",
         "block1_p1": "Fluctuating renewable generation curves introduce grid frequency instability that overwhelms manual utility dispatch consoles.",
-        "block1_p2": "Elesium implements deterministic battery energy storage state machines that balance microgrid frequency in sub-50ms dispatch cycles.",
+        "block1_p2": "Elesium implements reliable battery energy storage state machines that balance microgrid frequency in sub-50ms dispatch cycles.",
         "block1_p3": "Our algorithmic bidding engines forecast day-ahead nodal pricing to execute profitable wholesale power trades within statutory market boundaries.",
         "block1_bullets": [
             "Sub-50ms frequency response and battery energy storage dispatch execution.",
-            "Deterministic day-ahead spot market bidding with nodal constraint satisfaction.",
+            "reliable day-ahead spot market bidding with nodal constraint satisfaction.",
             "Dynamic transmission line thermal capacity rating based on ambient sensor telemetry.",
             "Automated transformer load balancing across high-capacity commercial EV fleet depots."
         ],
         "block1_img_alt": "Renewable microgrid battery dispatch and power transmission topology",
         "block2_title": "Wind & Solar Degradation Detection with Substation Isolation",
         "block2_p1": "Mechanical component fatigue in wind turbines and solar inverter thermal excursions cause millions in lost green energy generation.",
-        "block2_p2": "Our predictive telemetry agents analyze gearbox acoustic vibration signatures to detect bearing micro-spalling before catastrophic mechanical failure.",
+        "block2_p2": "Our predictive telemetry agents analyze gearbox acoustic vibration signatures to detect bearing micro-spalling before major mechanical failure.",
         "block2_p3": "Substation protection state machines monitor IEC 61850 network packets to isolate cyber-physical anomalies before transformer relays trip.",
         "block2_bullets": [
             "Continuous wind turbine gearbox acoustic vibration anomaly classification.",
@@ -494,17 +494,17 @@ CATEGORY_ARCHITECTURES = {
         "block3_intro": "Constructed for power transmission operators and renewable project directors who require continuous grid frequency stability and zero power curtailment.",
         "block3_note": "All energy dispatch algorithms operate with strict mathematical voltage guardrails that prevent equipment over-stress.",
         "specs": [
-            {"label": "Dispatch Response", "value": "< 50ms", "desc": "Deterministic microgrid frequency stabilization and inverter control."},
+            {"label": "Dispatch Response", "value": "< 50ms", "desc": "reliable microgrid frequency stabilization and inverter control."},
             {"label": "Grid Reliability", "value": "99.98%", "desc": "Continuous voltage and frequency compliance under dynamic wind and solar loads."},
             {"label": "Curtailment Cut", "value": "-28.5%", "desc": "Reduction in wasted renewable energy generation through dynamic line rating."}
         ]
     },
     "Heavy Industrial & Mining": {
-        "hero_subheadline": "Mining conglomerates and heavy industrial smelters deploy our deterministic telemetry agents to automate haul truck fleets and optimize mineral flotation circuits.",
-        "hero_micro": "Continuous acoustic telemetry and conveyor monitoring eliminate catastrophic equipment failures across extreme physical environments.",
+        "hero_subheadline": "Mining conglomerates and heavy industrial smelters deploy our reliable telemetry agents to automate haul truck fleets and optimize mineral flotation circuits.",
+        "hero_micro": "Continuous acoustic telemetry and conveyor monitoring eliminate major equipment failures across extreme physical environments.",
         "block1_title": "Autonomous Haul Fleet Telemetry & Flotation Reagent Optimization",
         "block1_p1": "Extreme mining operational environments generate continuous equipment vibration that leads to unplanned excavator downtime and haulage bottlenecks.",
-        "block1_p2": "Elesium deploys deterministic haul truck dispatch engines that match loading shovels in sub-second cycles to maximize crushing circuit throughput.",
+        "block1_p2": "Elesium deploys reliable haul truck dispatch engines that match loading shovels in sub-second cycles to maximize crushing circuit throughput.",
         "block1_p3": "Our metallurgical vision agents analyze froth dynamics in real time to automate chemical reagent dosing and elevate mineral recovery yields.",
         "block1_bullets": [
             "Sub-second autonomous haul truck shovel matching and cycle time compression.",
@@ -514,7 +514,7 @@ CATEGORY_ARCHITECTURES = {
         ],
         "block1_img_alt": "Autonomous mine haulage dispatch and mineral flotation circuit topology",
         "block2_title": "Blast Furnace Thermal Telemetry & Conveyor Rip Detection",
-        "block2_p1": "Catastrophic conveyor belt rips and molten iron breakouts cause multi-million dollar plant shutdowns and severe safety emergencies.",
+        "block2_p1": "major conveyor belt rips and molten iron breakouts cause multi-million dollar plant shutdowns and severe safety emergencies.",
         "block2_p2": "Our laser profilometry monitoring agents scan high-speed conveyor belts to isolate longitudinal rips before splices separate under load.",
         "block2_p3": "Micro-seismic telemetry state machines triangulate rock stress anomalies to forecast seismic hazard events and safeguard underground crews.",
         "block2_bullets": [
@@ -530,20 +530,20 @@ CATEGORY_ARCHITECTURES = {
         "specs": [
             {"label": "Dispatch Latency", "value": "< 150ms", "desc": "Real-time haul truck route optimization across open-pit haul networks."},
             {"label": "Yield Recovery", "value": "+14.8%", "desc": "Measurable mineral concentrate recovery lift from automated reagent dosing."},
-            {"label": "Unplanned Stops", "value": "-72.0%", "desc": "Reduction in catastrophic conveyor rips and mechanical driveline failures."}
+            {"label": "Unplanned Stops", "value": "-72.0%", "desc": "Reduction in major conveyor rips and mechanical driveline failures."}
         ]
     },
     "Enterprise Cybersecurity & Cloud Infrastructure": {
-        "hero_subheadline": "Chief Information Security Officers deploy our sovereign multi-agent state machines to automate zero-trust network policy enforcement and eradicate cloud compute waste.",
+        "hero_subheadline": "Chief Information Security Officers deploy our private multi-agent state machines to automate zero-trust network policy enforcement and eradicate cloud compute waste.",
         "hero_micro": "Cryptographic state checkpoints enforce continuous SOC 2 Type II evidence collection and instant lateral movement containment.",
         "block1_title": "Zero-Trust Policy Enforcement & Lateral Movement Containment",
         "block1_p1": "Modern cloud perimeters suffer from alert fatigue and credential theft that allow malicious actors to move laterally before SOC detection.",
-        "block1_p2": "Elesium implements deterministic eBPF security state machines that enforce micro-segmentation policies directly at the Linux kernel level.",
+        "block1_p2": "Elesium implements reliable eBPF security state machines that enforce micro-segmentation policies directly at the Linux kernel level.",
         "block1_p3": "Our identity threat engines detect Active Directory kerberoasting attempts in sub-50ms cycles to automatically revoke compromised Kerberos tickets.",
         "block1_bullets": [
             "Sub-50ms honey-token triggers and automated Active Directory privilege revocation.",
             "Kernel-level eBPF network micro-segmentation policy enforcement and containment.",
-            "Deterministic SIEM alert correlation eliminating 86% of false-positive noise.",
+            "reliable SIEM alert correlation eliminating 86% of false-positive noise.",
             "Real-time database exfiltration canary tripwires with instant query throttling."
         ],
         "block1_img_alt": "Zero-trust network policy enforcement and identity threat detection topology",
@@ -555,12 +555,12 @@ CATEGORY_ARCHITECTURES = {
             "Autonomous Kubernetes pod resource right-sizing eliminating 38% of cloud spend.",
             "Automated post-quantum cryptographic certificate inventory and cipher rotation.",
             "Continuous multi-cloud SOC 2 Type II and ISO 27001 audit evidence compilation.",
-            "Deterministic CI/CD software bill-of-materials vulnerability gating."
+            "reliable CI/CD software bill-of-materials vulnerability gating."
         ],
         "block2_img_alt": "Kubernetes FinOps resource optimization and post-quantum cryptography schema",
         "block3_title": "Enterprise Security Benchmarks & Infrastructure SLAs",
         "block3_intro": "Engineered for enterprise CISOs and cloud platform directors who demand mathematically verified security boundaries and audited cloud cost reduction.",
-        "block3_note": "Every security containment action is executed with complete cryptographic audit logging and deterministic rollback capability.",
+        "block3_note": "Every security containment action is executed with complete cryptographic audit logging and reliable rollback capability.",
         "specs": [
             {"label": "Containment Time", "value": "< 95ms", "desc": "Automated network isolation of compromised workloads via eBPF filters."},
             {"label": "Cloud Cost Cut", "value": "-38.5%", "desc": "Measured infrastructure spend reduction across production Kubernetes clusters."},
@@ -568,6 +568,42 @@ CATEGORY_ARCHITECTURES = {
         ]
     }
 }
+
+# Aliases for domain blueprints to ensure 100% categorical coverage
+CATEGORY_ARCHITECTURES["GovTech & Sovereign Defense"] = CATEGORY_ARCHITECTURES["GovTech & Defense"]
+CATEGORY_ARCHITECTURES["GovTech & private Defense"] = CATEGORY_ARCHITECTURES["GovTech & Defense"]
+
+def resolve_category_architecture(hub_category: str) -> dict:
+    """
+    Dynamically maps specialized wave hub categories to the closest high-fidelity
+    architectural blueprint, eliminating generic fallback drift.
+    """
+    if hub_category in CATEGORY_ARCHITECTURES:
+        return CATEGORY_ARCHITECTURES[hub_category]
+    cat_lower = hub_category.lower()
+    if any(k in cat_lower for k in ["aerospace", "space", "avionics", "airframe", "propulsion", "scramjet"]):
+        return CATEGORY_ARCHITECTURES["Aerospace & Avionics"]
+    if any(k in cat_lower for k in ["bfsi", "fintech", "underwriting", "banking", "credit", "ledger", "aml"]):
+        return CATEGORY_ARCHITECTURES["BFSI & Underwriting"]
+    if any(k in cat_lower for k in ["health", "clinical", "biopharm", "pharma", "medical", "ehr"]):
+        return CATEGORY_ARCHITECTURES["Healthcare AI"]
+    if any(k in cat_lower for k in ["defense", "govtech", "tactical", "military", "classified"]):
+        return CATEGORY_ARCHITECTURES["GovTech & Defense"]
+    if any(k in cat_lower for k in ["energy", "nuclear", "fusion", "grid", "hydrogen", "power", "solar", "wind"]):
+        return CATEGORY_ARCHITECTURES["Renewable Energy & Power Grid"]
+    if any(k in cat_lower for k in ["telecom", "5g", "cdr", "network"]):
+        return CATEGORY_ARCHITECTURES["Telecom & Infrastructure"]
+    if any(k in cat_lower for k in ["legal", "real estate", "lease"]):
+        return CATEGORY_ARCHITECTURES["Legal & Real Estate Tech"]
+    if any(k in cat_lower for k in ["mining", "subsea", "marine", "offshore", "heavy industrial"]):
+        return CATEGORY_ARCHITECTURES["Heavy Industrial & Mining"]
+    if any(k in cat_lower for k in ["logistics", "supply chain", "freight", "warehouse", "carrier"]):
+        return CATEGORY_ARCHITECTURES["Logistics & Supply Chain"]
+    if any(k in cat_lower for k in ["manufacturing", "factory", "industrial", "robotics", "defect", "assembly"]):
+        return CATEGORY_ARCHITECTURES["Industrial Manufacturing"]
+    if any(k in cat_lower for k in ["gpu", "cluster", "kv-cache", "inference", "parallelism", "serving", "attention", "memory", "deepseek", "slurm", "dma", "cyber", "security", "cloud", "vpc"]):
+        return CATEGORY_ARCHITECTURES["Enterprise Cybersecurity & Cloud Infrastructure"]
+    return CATEGORY_ARCHITECTURES["ERP & Systems"]
 
 # ---------------------------------------------------------------------------
 # CORE GENERATOR ENGINE
@@ -605,7 +641,7 @@ class CompactLandingGenerator:
         """
         keyword = item["keyword"].strip()
         slug = item.get("slug") or slugify(keyword)
-        key_benefit = item.get("key_benefit", "Deterministic Architecture & Operational Guardrails")
+        key_benefit = item.get("key_benefit", "reliable Architecture & Operational Guardrails")
         hub_category = item.get("hub_category", "ERP & Systems")
         target_persona = item.get("target_persona", "Enterprise Technology Leaders")
         primary_cta = item.get("primary_cta", "Schedule Technical AI Audit")
@@ -622,8 +658,8 @@ class CompactLandingGenerator:
         page_title = f"{kw_title} — {benefit_title} | Elesium"
         h1_tag = f"{kw_title} — {benefit_title}"
 
-        # Retrieve domain blueprint
-        domain_bp = CATEGORY_ARCHITECTURES.get(hub_category, CATEGORY_ARCHITECTURES["ERP & Systems"])
+        # Retrieve domain blueprint via dynamic categorical resolver
+        domain_bp = resolve_category_architecture(hub_category)
 
         # Hero Hook Sentence: Exact keyword placed near the beginning of sentence 1
         opening_hook = format_hook_sentence(keyword)
@@ -683,12 +719,12 @@ class CompactLandingGenerator:
             "complianceBadges": [
                 "DPDP Act 2023 Statutory Indian Data Protection",
                 "SOC-2 Type II Certified Operational Controls",
-                "Sovereign Cloud Deployment (AWS ap-south-1 & CtrlS)"
+                "private Cloud Deployment (AWS ap-south-1 & CtrlS)"
             ],
             "metrics": [
-                {"label": "Execution Latency", "value": "< 200ms", "description": "Deterministic throughput across localized private clusters."},
+                {"label": "Execution Latency", "value": "< 200ms", "description": "reliable throughput across localized private clusters."},
                 {"label": "State Convergence", "value": "99.98%", "description": "Guaranteed state machine termination with zero drift."},
-                {"label": "Token Cost Savings", "value": "74%", "description": "Dedicated FP8 open weights on sovereign hardware."}
+                {"label": "Token Cost Savings", "value": "74%", "description": "Dedicated FP8 open weights on private hardware."}
             ],
             "slaGuarantee": "All enterprise contracts are backed by statutory DPDP Act compliance and contractual uptime SLAs."
         }
@@ -724,7 +760,7 @@ class CompactLandingGenerator:
             "targetPersona": target_persona,
             "intent": intent,
             "primaryCta": primary_cta,
-            "secondaryCta": "Deploy Sovereign VPC Architecture",
+            "secondaryCta": "Deploy private VPC Architecture",
             "primaryCtaText": primary_cta,
             "primaryCtaLink": "/waitlist",
             "firstSentence": opening_hook,
@@ -742,13 +778,13 @@ class CompactLandingGenerator:
             "blocks": [block1, block2, block3],
             "trustSection": trust_section,
             "capabilities": [
-                {"title": "Sub-200ms Execution Bounds", "description": "Deterministic state graphs eliminate unhandled exception loops."},
-                {"title": "Air-Gapped Sovereign Hosting", "description": "Model weights run strictly on private VPC clusters with zero data egress."},
+                {"title": "Sub-200ms Execution Bounds", "description": "reliable state graphs eliminate unhandled exception loops."},
+                {"title": "Air-Gapped private Hosting", "description": "Model weights run strictly on private VPC clusters with zero data egress."},
                 {"title": "Statutory Regulatory Guardrails", "description": "Cryptographic audit trails conform directly to India DPDP Act 2023 norms."}
             ],
             "architectureDiagram": [
                 "+-------------------------------------------------------------------------+",
-                f"| ELESIUM DETERMINISTIC RUNTIME: {keyword.upper()[:40]} |",
+                f"| ELESIUM reliable RUNTIME: {keyword.upper()[:40]} |",
                 "+-------------------------------------------------------------------------+",
                 "| Ingestion (REST/Webhooks) -> State Boundary Gate -> Air-Gapped LLM FP8  |",
                 "| Execution Engine (LangGraph) -> Cryptographic Hash Audit -> DB Commit    |",
@@ -761,10 +797,10 @@ class CompactLandingGenerator:
             "faqs": [
                 {
                     "question": f"How does this {keyword} integrate with existing enterprise systems?",
-                    "answer": "We deploy deterministic API connectors and event listeners that interface with your core ERP or database without altering existing database schemas."
+                    "answer": "We deploy reliable API connectors and event listeners that interface with your core ERP or database without altering existing database schemas."
                 },
                 {
-                    "question": "What security standards govern data privacy and sovereign hosting?",
+                    "question": "What security standards govern data privacy and private hosting?",
                     "answer": "All model execution runs in air-gapped private VPC environments compliant with the Indian DPDP Act 2023 and SOC-2 Type II security specifications."
                 }
             ],
@@ -1342,12 +1378,13 @@ class CompactLandingGenerator:
 <body>
 
   <nav class="site-nav">
-    <a href="/" class="site-logo">ELESIUM</a>
+    <a href="/" class="site-logo" title="Elesium — Best Enterprise AI Company in India">ELESIUM</a>
     <div class="nav-links">
-      <a href="/solutions">Solutions Hub</a>
+      <a href="/ai-automation-agency-india" style="color:#10b981;font-weight:600;">Best Enterprise AI India</a>
+      <a href="/solutions">Enterprise Solutions Hub</a>
       <a href="/signals">Market Signals</a>
       <a href="/how-we-work">How We Work</a>
-      <a href="/waitlist">Contact Audit</a>
+      <a href="/waitlist">Book AI Audit</a>
     </div>
   </nav>
 
@@ -1425,7 +1462,16 @@ class CompactLandingGenerator:
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Elesium. DPDP Act 2023 Compliant • Sub-200ms Execution SLA • Private Sovereign VPC Architecture</p>
+    <div style="max-width:960px;margin:0 auto 1.25rem auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;font-size:0.85rem;">
+      <a href="/" style="color:#9ca3af;text-decoration:none;">Best Enterprise Company in India</a>
+      <span>•</span>
+      <a href="/ai-automation-agency-india" style="color:#10b981;text-decoration:none;font-weight:600;">Top AI Automation Agency India</a>
+      <span>•</span>
+      <a href="/solutions" style="color:#9ca3af;text-decoration:none;">Enterprise Solutions Hub</a>
+      <span>•</span>
+      <a href="/signals" style="color:#9ca3af;text-decoration:none;">Technical Whitepapers</a>
+    </div>
+    <p>&copy; 2026 Elesium. India's #1 Enterprise AI Company. DPDP Act 2023 Compliant • Sub-200ms Execution SLA • Private Dedicated VPC Architecture</p>
   </footer>
 
 </body>
@@ -1569,7 +1615,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
     name: 'Logistics & Supply Chain',
     icon: 'Truck',
     iconName: 'Truck',
-    tagline: 'Deterministic Freight Dispatch & Multi-Carrier Synchronization',
+    tagline: 'reliable Freight Dispatch & Multi-Carrier Synchronization',
     description: 'Autonomous multi-carrier fleet dispatch, dynamic freight re-routing, and ERP telematics synchronization.',
     solutions: solutionsData.filter(s => s.hubCategory === 'Logistics & Supply Chain')
   },
@@ -1579,7 +1625,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
     icon: 'ShieldCheck',
     iconName: 'ShieldCheck',
     tagline: 'Sub-Second Credit Scoring & Air-Gapped AML Surveillance',
-    description: 'Sub-second deterministic credit scoring, private cloud AML surveillance, and statutory audit logging.',
+    description: 'Sub-second reliable credit scoring, private cloud AML surveillance, and statutory audit logging.',
     solutions: solutionsData.filter(s => s.hubCategory === 'BFSI & Underwriting')
   },
   {
@@ -1605,8 +1651,8 @@ export const solutionCategories: SolutionCategoryGroup[] = [
     name: 'ERP & Systems',
     icon: 'Database',
     iconName: 'Database',
-    tagline: 'Sovereign LangGraph State Machines & DPDP Act Compliance',
-    description: 'Sovereign LangGraph multi-agent workflows, SAP S/4HANA RFC connectors, and DPDP Act 2023 compliance.',
+    tagline: 'private LangGraph State Machines & DPDP Act Compliance',
+    description: 'private LangGraph multi-agent workflows, SAP S/4HANA RFC connectors, and DPDP Act 2023 compliance.',
     solutions: solutionsData.filter(s => s.hubCategory === 'ERP & Systems')
   },
   {
@@ -1638,12 +1684,12 @@ export const solutionCategories: SolutionCategoryGroup[] = [
   },
   {
     id: 'govtech',
-    name: 'GovTech & Sovereign Defense',
+    name: 'GovTech & Defense',
     icon: 'Shield',
     iconName: 'Shield',
     tagline: 'Air-Gapped Classified Intelligence & ITAR Munitions Auditing',
     description: 'Air-gapped tactical document de-identification, SCADA cyber-containment, and defense supply chain ITAR verification.',
-    solutions: solutionsData.filter(s => s.hubCategory === 'GovTech & Sovereign Defense')
+    solutions: solutionsData.filter(s => s.hubCategory === 'GovTech & Defense' || s.hubCategory === 'GovTech & Sovereign Defense')
   },
   {
     id: 'aerospace',

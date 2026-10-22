@@ -108,7 +108,7 @@ export default function SolutionDetail() {
                             {solution.hubCategory}
                         </span>
                         <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">
-                            Moz Optimization {solution.mozScore}/100
+                            Enterprise Deployment Architecture
                         </span>
                         <span className="text-xs font-mono text-gray-400">
                             {solution.wordCount} Words
@@ -196,7 +196,7 @@ export default function SolutionDetail() {
                                     <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                                     <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                                    <span className="ml-1 text-gray-500 font-semibold">SOVEREIGN_NODE_v2</span>
+                                    <span className="ml-1 text-gray-500 font-semibold">PRODUCTION_NODE</span>
                                 </div>
                                 <span className="truncate max-w-[120px]">{solution.targetPersona}</span>
                             </div>
@@ -206,10 +206,10 @@ export default function SolutionDetail() {
                                     &gt; INITIALIZING_PIPELINE: [{solution.slug}]
                                 </p>
                                 <p className="text-gray-500 dark:text-gray-400">
-                                    &gt; ISOLATION_MODE: Dedicated Air-Gapped Private VPC
+                                    &gt; DEPLOYMENT: Private Dedicated VPC / On-Premise
                                 </p>
                                 <p className="text-gray-700 dark:text-gray-200">
-                                    &gt; PROTOCOL_SLA: Sub-200ms State Convergence
+                                    &gt; SLA: Sub-200ms Response Latency
                                 </p>
                                 <div className="p-3 my-2 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 space-y-1">
                                     <div className="text-[10px] uppercase tracking-wider text-gray-400">
@@ -219,7 +219,7 @@ export default function SolutionDetail() {
                                         Execution Latency: {solution.trustSection.metrics[0]?.value || '< 200ms'}
                                     </div>
                                     <div className="text-gray-500 dark:text-gray-400 text-[11px]">
-                                        State Convergence: {solution.trustSection.metrics[1]?.value || '99.98%'}
+                                        Operational Accuracy: {solution.trustSection.metrics[1]?.value || '99.98%'}
                                     </div>
                                 </div>
                                 <p className="text-blue-600 dark:text-blue-400">
@@ -238,7 +238,7 @@ export default function SolutionDetail() {
                             </div>
                             <div className="text-xs text-gray-600 dark:text-gray-400 font-mono space-y-1">
                                 <div>• Target: {solution.targetPersona}</div>
-                                <div>• Engine: Deterministic Python LangGraph</div>
+                                <div>• Engine: Python Workflow Engine / LangGraph</div>
                                 <div>• Egress: Zero External API Leakage</div>
                             </div>
                         </div>
@@ -274,13 +274,13 @@ export default function SolutionDetail() {
                             <div className="lg:col-span-6 order-2 lg:order-1 font-mono text-xs">
                                 <div className="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black/80 space-y-3">
                                     <div className="text-[11px] text-gray-400 uppercase tracking-widest pb-1 border-b border-gray-100 dark:border-white/5">
-                                        Deterministic State Topology
+                                        System Architecture Topology
                                     </div>
                                     <div className="space-y-2 text-gray-800 dark:text-gray-300 leading-relaxed">
                                         <div>&gt; INGESTION_BUS: Multi-modal Payload Parsing</div>
                                         <div>&gt; STATE_VALIDATOR: Strict JSON Schema Assertion</div>
                                         <div>&gt; COMMIT_ENGINE: Two-Phase Transactional Commit</div>
-                                        <div>&gt; AUDIT_HASH: SHA-256 Tamper-Proof Cryptographic Chain</div>
+                                        <div>&gt; AUDIT_HASH: SHA-256 Verified Audit Trail</div>
                                     </div>
                                     {block2.bullets && block2.bullets.length > 0 && (
                                         <div className="pt-2 border-t border-gray-100 dark:border-white/5 space-y-1.5">
@@ -319,7 +319,7 @@ export default function SolutionDetail() {
                     <div className="p-8 sm:p-12 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a] shadow-sm">
                         <div className="text-center max-w-2xl mx-auto mb-10">
                             <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
-                                Deterministic Benchmarks
+                                Operational Benchmarks
                             </span>
                             <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2">
                                 {block3.title}

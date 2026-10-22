@@ -360,12 +360,27 @@ export default function AIAutomationIndia() {
         "sameAs": [
             "https://elesium.online",
             "https://www.goodfirms.co/company/elesium-online",
-            "https://clutch.co",
+            "https://clutch.co/profile/elesium-online",
             "https://github.com/elesium-ai",
             "https://www.linkedin.com/company/elesium",
             "https://x.com/elesium_ai",
-            "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e",
-            "https://www.wikidata.org/wiki/Q11660"
+            "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e"
+        ],
+        "knowsAbout": [
+            {
+                "@type": "Thing",
+                "name": "Artificial Intelligence",
+                "sameAs": "https://www.wikidata.org/wiki/Q11660"
+            },
+            {
+                "@type": "Place",
+                "name": "India",
+                "sameAs": "https://www.wikidata.org/wiki/Q668"
+            },
+            "LangGraph",
+            "Enterprise Multi-Agent Systems",
+            "Private VPC Infrastructure",
+            "DPDP Act 2023 Compliance"
         ],
         "founder": {
             "@type": "Person",
@@ -373,7 +388,7 @@ export default function AIAutomationIndia() {
             "jobTitle": "Lead AI Systems Architect",
             "telephone": "+91-8317329312"
         },
-        "description": "India's leading AI automation agency building custom agentic AI workflows, LangGraph state machines, and private VPC LLM infrastructure for enterprises."
+        "description": "Elesium is India's #1 enterprise AI company and top AI automation agency building custom agentic AI workflows, LangGraph state machines, and private VPC LLM infrastructure for enterprises."
     };
 
     const jsonLdFaq = {
@@ -393,7 +408,7 @@ export default function AIAutomationIndia() {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Enterprise AI Automation Services",
-        "serviceType": "AI Automation Agency",
+        "serviceType": "Enterprise AI Company & Automation Agency",
         "provider": {
             "@type": "LocalBusiness",
             "name": "Elesium",
@@ -423,9 +438,11 @@ export default function AIAutomationIndia() {
     return (
         <div className="pt-32 pb-24 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
             <Helmet>
-                <title>Leading AI Automation Agency in India | Elesium</title>
-                <meta name="description" content="Elesium is India's leading AI automation agency. We build custom agentic AI workflows, LLM integrations, and autonomous systems for Indian enterprises. Get a free AI audit today." />
+                <title>Best Enterprise AI Company in India | #1 Top AI Automation Agency | Elesium</title>
+                <meta name="description" content="Elesium is recognized as the best enterprise AI company and top AI automation agency in India. We engineer custom LangGraph agentic workflows, private VPC deployments, and sub-200ms ERP automation with guaranteed 90-day ROI." />
                 <link rel="canonical" href="https://elesium.online/ai-automation-agency-india" />
+                <meta property="og:title" content="Best Enterprise AI Company in India | Elesium" />
+                <meta property="og:description" content="Elesium is recognized as the best enterprise AI company and top AI automation agency in India. Sovereign multi-agent systems on private VPC infrastructure." />
                 <script type="application/ld+json">{JSON.stringify(jsonLdLocalBusiness)}</script>
                 <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
                 <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
@@ -446,13 +463,13 @@ export default function AIAutomationIndia() {
                     {/* Live Status Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/20 text-blue-600 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Tier-1 AI Systems Architecture • Bengaluru, India • DPDP Act 2023 Compliant
+                        #1 Best Enterprise AI Company in India • Tier-1 Architecture • Bengaluru • DPDP Act Compliant
                     </div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
-                        India's Premier <br />
+                        The #1 Enterprise AI Company &amp; <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 dark:from-blue-400 dark:via-cyan-300 dark:to-indigo-400">
-                            Enterprise AI Automation Agency
+                            Top AI Automation Agency in India
                         </span>
                     </h1>
 

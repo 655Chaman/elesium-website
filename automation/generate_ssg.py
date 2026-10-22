@@ -369,7 +369,7 @@ def render_post_semantic_html(post):
     if faqs:
         faq_items = "".join(
             f'<div style="margin-bottom:1.5rem;">'
-            f'<dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">{html.escape(f.get("q", ""))}</h4>'
+            f'<dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">{html.escape(f.get("q", ""))}</dt>'
             f'<dd style="color:#4b5563;line-height:1.6;margin:0;">{html.escape(f.get("a", ""))}</dd>'
             f'</div>'
             for f in faqs
@@ -4402,16 +4402,24 @@ def render_deepseek_serving_fabric_embed_semantic_html():
 
 def replace_canonical(html_content, target_url):
     """
-    Robust regex replacement for the canonical link tag.
+    Robust regex replacement for the canonical link tag and self-referential hreflang tags.
     Handles self-closing slashes (/>), whitespace, and single/double quotes.
+    Prevents Google from collapsing child pages into the root homepage.
     """
     pattern = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\'][^"\']*["\']\s*/?>', re.IGNORECASE)
     replacement = f'<link rel="canonical" href="{target_url}" />'
     if pattern.search(html_content):
-        return pattern.sub(replacement, html_content)
+        html_content = pattern.sub(replacement, html_content)
     else:
         # If no canonical tag existed, inject it before </head>
-        return html_content.replace("</head>", f'  {replacement}\n</head>')
+        html_content = html_content.replace("</head>", f'  {replacement}\n</head>')
+
+    # Update hreflang tags to be self-referential to target_url
+    hreflang_pattern = re.compile(r'<link\s+rel=["\']alternate["\']\s+hreflang=["\'](en|x-default)["\']\s+href=["\'][^"\']*["\']\s*/?>', re.IGNORECASE)
+    if hreflang_pattern.search(html_content):
+        html_content = hreflang_pattern.sub(f'<link rel="alternate" hreflang="\\1" href="{target_url}" />', html_content)
+
+    return html_content
 
 def load_all_videos():
     """
@@ -4953,6 +4961,97 @@ def generate_ssg():
         print(f"Generated SSG for: /signals/{slug}")
 
     print("✅ SSG complete for signals.")
+
+    # Generate /signals Hub Page (Fixes 404 on Googlebot crawl)
+    print("Generating SSG for /signals Hub...")
+    sig_hub_canonical = "https://elesium.online/signals"
+    sig_hub_title = "Enterprise AI Architecture Whitepapers & Market Signals | Elesium"
+    sig_hub_desc = "Peer-reviewed technical whitepapers and market intelligence for Chief Technology Officers and AI Systems Architects. Private VPC, multi-agent systems, and DPDP Act compliance."
+
+    sig_hub_out_dir = DIST_DIR / "signals"
+    sig_hub_out_dir.mkdir(parents=True, exist_ok=True)
+    sig_hub_out_file = sig_hub_out_dir / "index.html"
+    sig_hub_direct_file = DIST_DIR / "signals.html"
+
+    sig_hub_html = base_html
+    sig_hub_html = re.sub(r"<title>.*?</title>", f"<title>{sig_hub_title}</title>", sig_hub_html)
+    sig_hub_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{sig_hub_desc}" />', sig_hub_html)
+    sig_hub_html = replace_canonical(sig_hub_html, sig_hub_canonical)
+    sig_hub_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{sig_hub_title}" />', sig_hub_html)
+    sig_hub_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{sig_hub_desc}" />', sig_hub_html)
+    sig_hub_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{sig_hub_canonical}" />', sig_hub_html)
+
+    sig_items_html = "".join([
+        f'<li style="margin-bottom:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;">'
+        f'<span style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;">{html.escape(p.get("category", "Architecture"))} • {html.escape(p.get("date", "2026"))}</span>'
+        f'<h2 style="font-size:1.25rem;font-weight:700;margin:0.5rem 0;"><a href="/signals/{html.escape(p.get("slug", ""))}" style="color:#2563eb;text-decoration:none;">{html.escape(p.get("title", ""))} &rarr;</a></h2>'
+        f'<p style="color:#4b5563;font-size:0.9rem;line-height:1.5;">{html.escape(p.get("excerpt", p.get("metaDescription", "")))}</p>'
+        f'</li>'
+        for p in posts
+    ])
+    sig_semantic = f"""
+<div id="prerendered-signals-hub" style="max-width:1000px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <header style="margin-bottom:3rem;text-align:center;">
+    <div style="color:#059669;font-weight:600;text-transform:uppercase;font-size:0.875rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Elesium Systems Intelligence</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Enterprise AI Architecture Whitepapers &amp; Research</h1>
+    <p style="font-size:1.15rem;line-height:1.6;color:#4b5563;max-width:750px;margin:0 auto;">Peer-reviewed engineering blueprints on private VPC LLMs, KV-cache memory optimization, and statutory compliance.</p>
+  </header>
+  <main>
+    <ul style="list-style-type:none;padding:0;">{sig_items_html}</ul>
+  </main>
+</div>
+"""
+    root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+    if root_pattern.search(sig_hub_html):
+        sig_hub_html = root_pattern.sub(lambda m: f'<div id="root">{sig_semantic}</div>', sig_hub_html)
+    else:
+        sig_hub_html = sig_hub_html.replace('<div id="root"></div>', f'<div id="root">{sig_semantic}</div>')
+
+    sig_hub_out_file.write_text(sig_hub_html, encoding="utf-8")
+    sig_hub_direct_file.write_text(sig_hub_html, encoding="utf-8")
+    print("Generated SSG for: /signals (Hub)")
+
+    # Pre-render Homepage (dist/index.html) into <div id="root">
+    print("Pre-rendering semantic HTML into dist/index.html...")
+    hp_semantic = """
+<div id="prerendered-homepage" style="max-width:1200px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <header style="text-align:center;margin-bottom:3.5rem;">
+    <span style="font-size:0.85rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">#1 Best Enterprise AI Company in India</span>
+    <h1 style="font-size:3rem;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:1rem 0;">India's Best Enterprise AI Company &amp; Automation Agency</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;max-width:800px;margin:0 auto;">
+      Elesium engineers custom LangGraph multi-agent systems, dedicated private VPC LLM infrastructure, and autonomous workflows delivering verified 3x–5x ROI in 90 days.
+    </p>
+    <div style="margin-top:2rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+      <a href="/ai-automation-agency-india" style="display:inline-block;padding:0.75rem 1.5rem;background:#059669;color:#ffffff;font-weight:600;border-radius:0.75rem;text-decoration:none;">Best Enterprise AI India &rarr;</a>
+      <a href="/waitlist" style="display:inline-block;padding:0.75rem 1.5rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.75rem;text-decoration:none;">Book Architecture Audit</a>
+    </div>
+  </header>
+  <section style="margin-bottom:3rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+    <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;"><a href="/ai-automation-agency-india" style="color:#2563eb;text-decoration:none;">India Enterprise AI Deployments</a></h3>
+      <p style="color:#4b5563;font-size:0.95rem;">Sovereign multi-agent systems in Bangalore, Mumbai, and Delhi NCR compliant with DPDP Act 2023.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;"><a href="/solutions" style="color:#2563eb;text-decoration:none;">Enterprise Solutions Hub</a></h3>
+      <p style="color:#4b5563;font-size:0.95rem;">3,765 targeted workflow automations across logistics, BFSI, manufacturing, and ERP systems.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;"><a href="/signals" style="color:#2563eb;text-decoration:none;">Technical Architecture Whitepapers</a></h3>
+      <p style="color:#4b5563;font-size:0.95rem;">Deep technical guides on KV-cache memory, vLLM serving, and autonomous agent state machines.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;"><a href="/tools/enterprise-ai-roi-calculator" style="color:#2563eb;text-decoration:none;">Enterprise AI ROI Calculator</a></h3>
+      <p style="color:#4b5563;font-size:0.95rem;">Interactive 3-year TCO and payback period simulator with INR and USD currency support.</p>
+    </div>
+  </section>
+</div>
+"""
+    if root_pattern.search(base_html):
+        hp_html = root_pattern.sub(lambda m: f'<div id="root">{hp_semantic}</div>', base_html)
+    else:
+        hp_html = base_html.replace('<div id="root"></div>', f'<div id="root">{hp_semantic}</div>')
+    DIST_INDEX.write_text(hp_html, encoding="utf-8")
+    print("Pre-rendered dist/index.html with full semantic DOM.")
 
     print("Starting SSG Generation for System 2 Compact Solutions...")
     solutions = load_solutions_via_node()

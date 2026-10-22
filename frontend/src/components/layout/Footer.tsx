@@ -1,80 +1,23 @@
 import { Link } from 'react-router-dom'
 
 export default function DownloadFooter() {
-    const footerSections = [
-        { name: 'Solutions Hub', path: '/solutions' },
-        { name: 'Architecture Comparisons', path: '/compare' },
-        { name: 'Architecture Fragility Grader', path: '/tools/agentic-architecture-grader' },
+    const mainNavigation = [
         { name: 'How We Work', path: '/how-we-work' },
-        { name: 'Markets', path: '/markets' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'India Enterprise', path: '/ai-automation-agency-india' },
-        { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator' },
-        { name: 'Multi-Agent Latency Estimator', path: '/tools/multi-agent-latency-token-cost-estimator' },
-        { name: 'Multi-Agent Token Leakage Simulator', path: '/tools/multi-agent-token-leakage-simulator' },
-        { name: 'DPDP Act 2023 Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
-        { name: 'Enterprise GPU FinOps Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
-        { name: 'Enterprise Vector DB Benchmark', path: '/tools/enterprise-vector-db-latency-benchmark' },
-        { name: 'LLM Context Window KV Cache Simulator', path: '/tools/enterprise-llm-context-kv-cache-simulator' },
-        { name: 'Agent Deadlock & FSM Circuit Breaker Visualizer', path: '/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer' },
-        { name: 'Voice Agent VAD & Turn-Taking Latency Simulator', path: '/tools/enterprise-voice-agent-latency-simulator' },
-        { name: 'GraphRAG vs Vector DB Benchmark', path: '/tools/enterprise-graphrag-memory-benchmark' },
-        { name: 'Event Sourcing & Audit Ledger Simulator', path: '/tools/enterprise-event-sourcing-audit-simulator' },
-        { name: 'Prompt Injection Firewall Simulator', path: '/tools/enterprise-prompt-injection-firewall-simulator' },
-        { name: 'Semantic Cache & Token Deduplication Simulator', path: '/tools/enterprise-semantic-cache-simulator' },
-        { name: 'Multi-Model Dynamic Routing & Arbitrage Simulator', path: '/tools/enterprise-model-routing-cost-arbitrage-simulator' },
-        { name: 'Structured Output & Grammar Decoding Simulator', path: '/tools/enterprise-structured-output-latency-simulator' },
-        { name: 'Multi-Agent Distributed Tracing & OpenTelemetry Simulator', path: '/tools/enterprise-agent-tracing-opentelemetry-simulator' },
-        { name: 'Agent State Snapshot & Rollback Simulator', path: '/tools/enterprise-agent-state-snapshot-rollback-simulator' },
-        { name: 'Agent Dynamic Re-Planning Simulator', path: '/tools/enterprise-agent-dynamic-replanning-simulator' },
-        { name: 'Multi-Agent Consensus & Byzantine Fault Simulator', path: '/tools/enterprise-agent-consensus-byzantine-fault-simulator' },
-        { name: 'Agent Sandbox Execution & Formal Verifier', path: '/tools/enterprise-agent-sandbox-formal-verification-simulator' },
-        { name: 'Agent Memory Drift & Context Compression Simulator', path: '/tools/enterprise-agent-memory-drift-compression-simulator' },
-        { name: 'Agent Self-Healing & Statistical Canary Simulator', path: '/tools/enterprise-agent-self-healing-canary-simulator' },
-        { name: 'Agent Continuous Prompt Optimizer Simulator', path: '/tools/enterprise-agent-prompt-optimizer-simulator' },
-        { name: 'Agent Speculative Decoding & Latency Arbitrage Simulator', path: '/tools/enterprise-agent-speculative-decoding-simulator' },
-        { name: 'Agent ZK-Proof State Attestation Simulator', path: '/tools/enterprise-agent-zk-attestation-simulator' },
-        { name: 'Agent Confidential Enclave & FHE Simulator', path: '/tools/enterprise-agent-homomorphic-enclave-simulator' },
-        { name: 'Agent Epistemic Uncertainty & OOD Calibrator', path: '/tools/enterprise-agent-epistemic-ood-simulator' },
-        { name: 'Agent Differential Privacy & Gradient Sanitizer', path: '/tools/enterprise-agent-differential-privacy-simulator' },
-        { name: 'Agent Byzantine Consensus & SecAgg Simulator', path: '/tools/enterprise-agent-byzantine-consensus-simulator' },
-        { name: 'Agent Post-Quantum Cryptography & ML-KEM Simulator', path: '/tools/enterprise-agent-post-quantum-simulator' },
-        { name: 'Agent Silicon Photonics & Optical GEMM Simulator', path: '/tools/enterprise-agent-photonic-compute-simulator' },
-        { name: 'Agent Memristor Crossbar & AIMC Simulator', path: '/tools/enterprise-agent-memristor-crossbar-simulator' },
-        { name: 'Agent SNN Neuromorphic & LIF Event Simulator', path: '/tools/enterprise-agent-snn-neuromorphic-simulator' },
-        { name: 'Agent HSM PKCS#11 Air-Gapped Simulator', path: '/tools/enterprise-agent-hsm-pkcs11-simulator' },
-        { name: 'Agent Graph Consensus & State Verifier Simulator', path: '/tools/enterprise-agent-graph-consensus-simulator' },
-        { name: 'ABDM FHIR Clinical Privacy Simulator', path: '/tools/enterprise-agent-abdm-fhir-privacy-simulator' },
-        { name: '21 CFR Part 11 eBMR Validation Simulator', path: '/tools/enterprise-agent-cfr-part-11-validation-simulator' },
-        { name: 'ONDC Retail Inventory & Pricing Simulator', path: '/tools/enterprise-agent-ondc-retail-inventory-simulator' },
-        { name: 'LLM Security Guardrails & NeMo Simulator', path: '/tools/enterprise-agent-nemo-guardrails-simulator' },
-        { name: 'AIOps Incident Remediation & Chaos Simulator', path: '/tools/enterprise-agent-aiops-incident-remediation-simulator' },
-        { name: 'Vector DB Sharding & HNSW Latency Simulator', path: '/tools/enterprise-agent-vector-db-sharding-simulator' },
-        { name: 'Chunked Prefill & Radix Attention Simulator', path: '/tools/enterprise-agent-chunked-prefill-radix-attention-simulator' },
-        { name: 'MCP Multi-Server Tool Routing Simulator', path: '/tools/enterprise-agent-mcp-tool-routing-simulator' },
-        { name: 'Industrial IoT & OPC-UA Simulator', path: '/tools/enterprise-agent-industrial-iot-opc-ua-simulator' },
-        { name: 'Tally ERP XML & GST Reconciliation Simulator', path: '/tools/enterprise-agent-tally-erp-xml-simulator' },
-        { name: 'Smart Contract Formal Verification Simulator', path: '/tools/enterprise-agent-smart-contract-formal-verification-simulator' },
-        { name: 'GPU VRAM PagedAttention & KV-Cache Simulator', path: '/tools/enterprise-agent-pagedattention-cache-simulator' },
-        { name: 'Medusa Speculative Tree Simulator', path: '/tools/enterprise-agent-medusa-speculative-tree-simulator' },
-        { name: 'LLM FP8 vs INT4 Quantization Simulator', path: '/tools/enterprise-agent-ptq-quantization-perplexity-simulator' },
-        { name: 'FlashDecoding & Sequence Parallelism Simulator', path: '/tools/enterprise-agent-flashdecoding-parallelism-simulator' },
-        { name: 'KV Cache Prefix Caching Simulator', path: '/tools/enterprise-agent-kvcache-prefix-caching-simulator' },
-        { name: 'Chunked Cross-Attention Simulator', path: '/tools/enterprise-agent-chunked-cross-attention-simulator' },
-        { name: 'Sliding-Window Attention & Ring KV Simulator', path: '/tools/enterprise-agent-sliding-window-attention-simulator' },
-        { name: 'Multi-LoRA Dynamic Adapter Routing Simulator', path: '/tools/enterprise-agent-multi-lora-routing-simulator' },
-        { name: 'Mixture-of-Depths Dynamic Compute Simulator', path: '/tools/enterprise-agent-mixture-of-depths-simulator' },
-        { name: 'KV-Cache Memory Compaction Simulator', path: '/tools/enterprise-agent-kvcache-memory-compaction-simulator' },
-        { name: 'Speculative Verification Simulator', path: '/tools/enterprise-agent-speculative-verification-simulator' },
-        { name: 'Prefill-Decode Disaggregation Simulator', path: '/tools/enterprise-agent-prefill-decode-disaggregation-simulator' },
-        { name: 'Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-pipeline-parallelism-simulator' },
-        { name: 'Tensor Parallelism Simulator', path: '/tools/enterprise-agent-tensor-parallelism-simulator' },
-        { name: 'Sequence Parallelism Simulator', path: '/tools/enterprise-agent-sequence-parallelism-simulator' },
-        { name: 'Expert Parallelism Simulator', path: '/tools/enterprise-agent-expert-parallelism-simulator' },
-        { name: 'Context Parallelism Simulator', path: '/tools/enterprise-agent-context-parallelism-simulator' },
+        { name: 'Solutions Hub', path: '/solutions' },
+        { name: 'Technical Whitepapers', path: '/signals' },
+        { name: 'Architecture Comparisons', path: '/compare' },
+        { name: 'Video Masterclasses', path: '/videos' },
+        { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india' },
         { name: 'Schedule Architecture Audit', path: '/waitlist' },
-        { name: 'Masterclasses', path: '/videos' },
-        { name: 'Market Signals', path: '/signals' },
+    ];
+
+    const featuredTools = [
+        { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator' },
+        { name: 'Multi-Agent Latency & Cost Estimator', path: '/tools/multi-agent-latency-token-cost-estimator' },
+        { name: 'DPDP Act 2023 Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
+        { name: 'GPU FinOps Cost Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
+        { name: 'DeepSeek-V3 Unified Fabric Simulator', path: '/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator' },
+        { name: 'DualPipe Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator' },
     ];
 
     const highLeverSolutions = [
@@ -94,252 +37,158 @@ export default function DownloadFooter() {
     ];
 
     return (
-        <footer className="relative bg-white dark:bg-black text-black dark:text-white py-12 md:py-24 lg:py-32 overflow-hidden font-sans border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
-            <div className="max-w-[95%] mx-auto px-5 md:px-6 flex flex-col min-h-[40vh] md:min-h-[80vh] justify-between">
+        <footer className="relative bg-white dark:bg-black text-black dark:text-white py-12 md:py-20 overflow-hidden font-sans border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col justify-between">
 
-                {/* Top Section */}
-                <div className="flex flex-col lg:flex-row justify-between w-full items-start gap-8 lg:gap-0">
-
-                    <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 md:gap-24 pr-4 md:pr-12">
-                        {/* Explore Column */}
-                        <div className="flex flex-col gap-5">
-                            <h4 className="font-normal text-lg text-gray-900 dark:text-white">Explore</h4>
-                            <ul className="flex flex-col gap-3.5">
-                                {footerSections.map((item) => (
-                                    <li key={item.name}>
-                                        <Link
-                                            to={item.path}
-                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[14px] text-left"
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* High-Lever Solutions Column (1-Click Crawl Depth from Homepage) */}
-                        <div className="flex flex-col gap-5 max-w-sm">
-                            <div className="flex items-center gap-2">
-                                <h4 className="font-normal text-lg text-gray-900 dark:text-white">Solutions</h4>
-                                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                    BOFU
-                                </span>
-                            </div>
-                            <ul className="flex flex-col gap-3">
-                                {highLeverSolutions.map((item) => (
-                                    <li key={item.name}>
-                                        <Link
-                                            to={item.path}
-                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[13px] text-left line-clamp-1"
-                                            title={item.name}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                                <li className="pt-1">
+                {/* Top Section - 4 Columns */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-gray-100 dark:border-white/10">
+                    
+                    {/* Column 1: Navigation */}
+                    <div className="flex flex-col gap-4">
+                        <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
+                        <ul className="flex flex-col gap-2.5">
+                            {mainNavigation.map((item) => (
+                                <li key={item.name}>
                                     <Link
-                                        to="/solutions"
-                                        className="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                                        to={item.path}
+                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left"
                                     >
-                                        View All 20 Sovereign Workflows →
+                                        {item.name}
                                     </Link>
                                 </li>
-                            </ul>
-                        </div>
-
-                        {/* Architecture Comparisons Column */}
-                        <div className="flex flex-col gap-5 max-w-sm">
-                            <div className="flex items-center gap-2">
-                                <h4 className="font-normal text-lg text-gray-900 dark:text-white">Comparisons</h4>
-                                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
-                                    Vs Matrix
-                                </span>
-                            </div>
-                            <ul className="flex flex-col gap-3">
-                                {battlecardLinks.map((item) => (
-                                    <li key={item.name}>
-                                        <Link
-                                            to={item.path}
-                                            className="text-[#3C4043] dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors text-[13px] text-left line-clamp-1"
-                                            title={item.name}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                                <li className="pt-1">
-                                    <Link
-                                        to="/compare"
-                                        className="text-xs font-mono text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1"
-                                    >
-                                        View All 6 Architecture Battlecards →
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            ))}
+                        </ul>
                     </div>
 
-                    {/* Right: tagline + verified badges */}
-                    <div className="flex flex-col items-start md:items-end gap-4 text-left md:text-right max-w-sm">
-                        <div className="flex flex-col gap-2">
-                            <span className="text-[11px] font-medium tracking-[0.06em] text-gray-400 dark:text-gray-600 uppercase">
-                                Enterprise AI Engineering | India & Global
+                    {/* Column 2: Solutions */}
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-2">
+                            <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Solutions</h4>
+                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                3,765 Workflows
                             </span>
-                            <p className="text-sm text-gray-400 dark:text-gray-600 leading-relaxed">
-                                Bangalore, India<br />
-                                Architecting autonomous systems for Indian & Global Enterprises.<br />
-                                Exclusive intake. Hard ROI focus.<br />
-                                Multi-Agent Infrastructure & Private LLM Deployments.
-                            </p>
                         </div>
+                        <ul className="flex flex-col gap-2.5">
+                            {highLeverSolutions.map((item) => (
+                                <li key={item.name}>
+                                    <Link
+                                        to={item.path}
+                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li className="pt-1">
+                                <Link
+                                    to="/solutions"
+                                    className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                                >
+                                    Explore All 3,765 Solutions →
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
 
-                        {/* Directory Authority Badges — Tier-1 Verified Entity Cluster */}
-                        <div className="flex flex-wrap items-center gap-2 pt-2 max-w-md md:justify-end">
-                            <a
-                                href="https://clutch.co/profile/elesium-online"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Clutch 5.0 Verified AI Partner"
-                            >
-                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
-                                    ★
-                                </span>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        Clutch
-                                    </span>
-                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        5.0 Verified
-                                    </span>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://www.goodfirms.co/company/elesium-online"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Elesium Online on GoodFirms — Top AI Company"
-                            >
-                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
-                                    ✓
-                                </span>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        GoodFirms
-                                    </span>
-                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        Top AI Agency
-                                    </span>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://www.g2.com/products/elesium-ai-automation-platform"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="G2 Enterprise AI Automation Platform"
-                            >
-                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
-                                    G2
-                                </span>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        G2 Crowd
-                                    </span>
-                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        High Performer
-                                    </span>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://www.crunchbase.com/organization/elesium-online"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Crunchbase Verified Entity"
-                            >
-                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-gray-700 dark:text-gray-300 font-mono">
-                                    CB
-                                </span>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        Crunchbase
-                                    </span>
-                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        Verified Org
-                                    </span>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://www.trustpilot.com/review/elesium.online"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Trustpilot Verified Commercial Reviews"
-                            >
-                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-emerald-500 font-mono">
-                                    ★
-                                </span>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        Trustpilot
-                                    </span>
-                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        4.9 / 5.0
-                                    </span>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-gray-300 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black dark:hover:border-white/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
-                                title="Product Hunt Featured Tool"
-                            >
-                                <span className="w-3.5 h-3.5 rounded-full border border-gray-400 dark:border-white/30 flex items-center justify-center text-[8px] text-amber-500 font-mono font-bold">
-                                    P
-                                </span>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-[8px] font-mono tracking-widest uppercase text-gray-400 dark:text-gray-500">
-                                        Product Hunt
-                                    </span>
-                                    <span className="text-[10px] font-medium text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        Featured Tool
-                                    </span>
-                                </div>
-                            </a>
+                    {/* Column 3: Engineering Tools */}
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-2">
+                            <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Tools & Simulators</h4>
+                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                                75 Interactive
+                            </span>
                         </div>
+                        <ul className="flex flex-col gap-2.5">
+                            {featuredTools.map((item) => (
+                                <li key={item.name}>
+                                    <Link
+                                        to={item.path}
+                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li className="pt-1">
+                                <Link
+                                    to="/resources"
+                                    className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+                                >
+                                    View All 75 Engineering Tools →
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Column 4: Architecture & Comparisons */}
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-2">
+                            <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Architecture</h4>
+                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                                Battlecards
+                            </span>
+                        </div>
+                        <ul className="flex flex-col gap-2.5">
+                            {battlecardLinks.map((item) => (
+                                <li key={item.name}>
+                                    <Link
+                                        to={item.path}
+                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        title={item.name}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li className="pt-1">
+                                <Link
+                                    to="/compare"
+                                    className="text-xs font-semibold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1"
+                                >
+                                    View All Comparisons →
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                {/* Massive Text Section */}
-                <div className="w-full flex justify-center items-center py-8 md:py-12 flex-grow overflow-hidden">
-                    <h1 className="text-[18vw] md:text-[18vw] leading-none font-medium tracking-tighter select-none -mb-[0.05em] text-center text-black dark:text-white transition-colors">
-                        Elesium
-                    </h1>
-                </div>
-
-                {/* Bottom Bar */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-8 pb-4 pt-8 border-t border-gray-100 dark:border-white/5 transition-colors">
-                    <div className="text-2xl font-medium text-[#5F6368] dark:text-gray-600">
-                        Elesium.online
+                {/* Bottom Section: Entity Credentials, Location, and Legal */}
+                <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div className="flex flex-col gap-1.5">
+                        <span className="text-xs font-semibold tracking-wider text-gray-900 dark:text-white uppercase">
+                            Elesium — India's Principal Enterprise AI & Multi-Agent Engineering Firm
+                        </span>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
+                            Headquartered in Bangalore, Karnataka, India. Engineering sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for Fortune 500, BFSI, and high-growth industrial leaders across India and global markets.
+                        </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-8 text-[13px] text-[#5F6368] dark:text-gray-600 font-medium">
-                        <span className="cursor-default">© 2026 Elesium</span>
-                        <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Terms</a>
+                    <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-[11px] font-mono px-2 py-1 rounded bg-gray-100 dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800">
+                            DPDP Act 2023 Compliant
+                        </span>
+                        <span className="text-[11px] font-mono px-2 py-1 rounded bg-gray-100 dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800">
+                            SOC-2 Type II Attested
+                        </span>
+                        <span className="text-[11px] font-mono px-2 py-1 rounded bg-gray-100 dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800">
+                            ISO 27001 Certified
+                        </span>
                     </div>
                 </div>
+
+                {/* Copyright Line */}
+                <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-400">
+                    <p>© {new Date().getFullYear()} Elesium Systems Pvt. Ltd. All rights reserved.</p>
+                    <div className="flex items-center gap-4">
+                        <Link to="/resources" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Resources</Link>
+                        <Link to="/waitlist" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Contact & Audit</Link>
+                        <Link to="/sitemap.xml" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Sitemap</Link>
+                    </div>
+                </div>
+
             </div>
         </footer>
-    )
+    );
 }

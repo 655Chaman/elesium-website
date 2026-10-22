@@ -1,20 +1,15 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
-import { MandateApplicationForm } from '../features/WaitingListForm'
 import logo from '../../assets/LOGO_NEW.png'
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-
-
     return (
         <>
-            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style={{ height: '52px' }}>
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style={{ height: '56px' }}>
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-full flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center cursor-pointer">
@@ -25,1015 +20,138 @@ export default function Navbar() {
                             height="40"
                             loading="eager"
                             fetchPriority="high"
-                            className="h-8 md:h-10 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm"
+                            className="h-8 md:h-9 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm"
                         />
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center" style={{ gap: '4px' }}>
-                        <Link
-                            to="/waitlist"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400"
-                        >
-                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Book Audit
-                        </Link>
+                    <div className="hidden lg:flex items-center gap-1 xl:gap-2">
                         <Link
                             to="/how-we-work"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             How We Work
                         </Link>
                         <Link
-                            to="/markets"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
-                        >
-                            Markets
-                        </Link>
-                        <Link
                             to="/solutions"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-600 dark:text-emerald-400"
+                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             Solutions
                         </Link>
                         <Link
-                            to="/ai-automation"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                            to="/compare"
+                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
-                            AI Automation
-                        </Link>
-                        <Link
-                            to="/ai-automation-agency-india"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-600 dark:text-cyan-400"
-                        >
-                            India Enterprise
-                        </Link>
-                        <Link
-                            to="/videos"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
-                        >
-                            Masterclasses
+                            Architecture
                         </Link>
                         <Link
                             to="/signals"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             Market Signals
                         </Link>
                         <Link
-                            to="/tools/enterprise-ai-roi-calculator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-600 dark:text-amber-400"
-                        >
-                            ROI Calculator
-                        </Link>
-                        <Link
-                            to="/tools/multi-agent-latency-token-cost-estimator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-blue-500 dark:text-blue-400"
-                        >
-                            Latency Estimator
-                        </Link>
-                        <Link
-                            to="/tools/multi-agent-token-leakage-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-rose-500 dark:text-rose-400"
-                        >
-                            Token Leakage
-                        </Link>
-                        <Link
-                            to="/tools/dpdp-act-2023-audit-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-500 dark:text-amber-400"
-                        >
-                            DPDP Audit
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-gpu-finops-cost-calculator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-500 dark:text-sky-400"
-                        >
-                            GPU FinOps
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-vector-db-latency-benchmark"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-indigo-500 dark:text-indigo-400"
-                        >
-                            Vector DB Benchmark
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-llm-context-kv-cache-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-500 dark:text-emerald-400"
-                        >
-                            KV Cache
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-rose-500 dark:text-rose-400"
-                        >
-                            Deadlock Breaker
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-voice-agent-latency-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-500 dark:text-purple-400"
-                        >
-                            Voice Latency
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-graphrag-memory-benchmark"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-500 dark:text-emerald-400"
-                        >
-                            GraphRAG
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-event-sourcing-audit-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-500 dark:text-cyan-400"
-                        >
-                            Event Ledger
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-prompt-injection-firewall-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-rose-500 dark:text-rose-400"
-                        >
-                            Prompt Firewall
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-semantic-cache-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            Semantic Cache
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-model-routing-cost-arbitrage-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
-                        >
-                            Model Router
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-structured-output-latency-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
-                        >
-                            JSON Grammar
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-tracing-opentelemetry-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            OTel Tracing
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-state-snapshot-rollback-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            State Rollback
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-dynamic-replanning-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
-                        >
-                            Re-Planning
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-consensus-byzantine-fault-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            Consensus Quorum
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-sandbox-formal-verification-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Sandbox Verifier
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-memory-drift-compression-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
-                        >
-                            Memory Drift
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-self-healing-canary-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            Self-Healing
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-prompt-optimizer-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Prompt Optimizer
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-speculative-decoding-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-400 dark:text-amber-300"
-                        >
-                            Speculative Decoding
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-zk-attestation-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            ZK State Attestation
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-homomorphic-enclave-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Confidential Enclave
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-epistemic-ood-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            OOD Calibrator
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-differential-privacy-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
-                        >
-                            Differential Privacy
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-byzantine-consensus-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            Byzantine Consensus
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-post-quantum-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Post-Quantum
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-photonic-compute-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            Photonic Compute
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-memristor-crossbar-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Memristor Crossbar
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-snn-neuromorphic-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            SNN Neuromorphic
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-hsm-pkcs11-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Agent HSM PKCS#11
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-graph-consensus-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Graph Consensus
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-abdm-fhir-privacy-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            ABDM FHIR Privacy
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-cfr-part-11-validation-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            21 CFR Part 11 eBMR
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-ondc-retail-inventory-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-orange-400 dark:text-orange-300"
-                        >
-                            ONDC Retail Inventory
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-nemo-guardrails-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            LLM Security Guardrails
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-aiops-incident-remediation-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
-                        >
-                            AIOps Incident Remediation
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-vector-db-sharding-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Vector DB Sharding
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-chunked-prefill-radix-attention-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-indigo-400 dark:text-indigo-300"
-                        >
-                            Chunked Prefill
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-mcp-tool-routing-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-indigo-400 dark:text-indigo-300"
-                        >
-                            MCP Routing
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-industrial-iot-opc-ua-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Industrial IoT
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-tally-erp-xml-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            Tally ERP AI
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-smart-contract-formal-verification-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            Web3 Security
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-pagedattention-cache-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            GPU PagedAttn
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-medusa-speculative-tree-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-400 dark:text-amber-300"
-                        >
-                            Medusa Spec
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-ptq-quantization-perplexity-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
-                        >
-                            PTQ Quant
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-flashdecoding-parallelism-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-blue-400 dark:text-blue-300"
-                        >
-                            FlashDecode
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-kvcache-prefix-caching-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-teal-400 dark:text-teal-300"
-                        >
-                            PrefixCache
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-chunked-cross-attention-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-indigo-400 dark:text-indigo-300"
-                        >
-                            CrossAttend
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-sliding-window-attention-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
-                        >
-                            SlideWindow
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-multi-lora-routing-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-amber-400 dark:text-amber-300"
-                        >
-                            MultiLoRA
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-mixture-of-depths-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-teal-400 dark:text-teal-300"
-                        >
-                            MixDepths
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-kvcache-memory-compaction-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-sky-400 dark:text-sky-300"
-                        >
-                            KVCompact
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-speculative-verification-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-400 dark:text-purple-300"
-                        >
-                            SpecVerify
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-prefill-decode-disaggregation-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-emerald-400 dark:text-emerald-300"
-                        >
-                            PD-Disagg
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-pipeline-parallelism-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-indigo-400 dark:text-indigo-300"
-                        >
-                            PipelinePP
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-tensor-parallelism-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            TensorPP
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-sequence-parallelism-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-teal-400 dark:text-teal-300"
-                        >
-                            SeqPP
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-expert-parallelism-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-violet-400 dark:text-violet-300"
-                        >
-                            ExpPP
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-agent-context-parallelism-simulator"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-cyan-400 dark:text-cyan-300"
-                        >
-                            CtxPP
-                        </Link>
-                        <Link
-                            to="/compare"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white font-medium text-purple-600 dark:text-purple-400"
-                        >
-                            Compare Stacks
-                        </Link>
-                        <Link
                             to="/resources"
-                            className="btn-nav dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
-                            Resources
+                            Engineering Tools
+                        </Link>
+                        <Link
+                            to="/ai-automation-agency-india"
+                            className="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1"
+                        >
+                            <span>Best Enterprise AI India</span>
                         </Link>
                     </div>
 
-                    {/* CTA (Desktop) */}
-                    <div className="hidden md:flex items-center gap-6">
-                        <ExpandableScreen>
-                            <ExpandableScreenTrigger>
-                                <InteractiveHoverButton id="nav-mandate-cta" className="h-8 px-3 text-xs">
-                                    Apply Now
-                                </InteractiveHoverButton>
-                            </ExpandableScreenTrigger>
-                            <ExpandableScreenContent>
-                                <MandateApplicationForm source="Navbar CTA" />
-                            </ExpandableScreenContent>
-                        </ExpandableScreen>
+                    {/* Right CTA */}
+                    <div className="hidden lg:flex items-center gap-3">
+                        <Link
+                            to="/waitlist"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm hover:shadow-emerald-500/20 transition-all"
+                        >
+                            <span className="w-2 h-2 rounded-full bg-emerald-200 animate-pulse"></span>
+                            <span>Book Architecture Audit</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                        </Link>
                     </div>
 
-                    {/* Mobile Menu Toggle */}
-                    <div className="flex md:hidden items-center gap-4">
+                    {/* Mobile Menu Button */}
+                    <div className="flex lg:hidden">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="p-2 text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors z-50"
+                            className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 focus:outline-none"
                             aria-label="Toggle menu"
                         >
-                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
                 </div>
             </nav>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Drawer */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
+                        exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed inset-0 z-40 bg-white dark:bg-black pt-[60px] px-6 md:hidden flex flex-col items-center"
+                        className="fixed inset-x-0 top-[56px] z-40 bg-white dark:bg-[#07090e] border-b border-gray-200 dark:border-slate-800 shadow-2xl lg:hidden max-h-[85vh] overflow-y-auto px-6 py-6"
                     >
-                        <div className="flex flex-col w-full gap-6 mt-8">
-                            <Link
-                                to="/waitlist"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-semibold text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10 flex items-center gap-3"
-                            >
-                                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                Book Architecture Audit
-                            </Link>
+                        <div className="flex flex-col gap-4">
                             <Link
                                 to="/how-we-work"
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
+                                className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-slate-850"
                             >
                                 How We Work
                             </Link>
                             <Link
-                                to="/markets"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Markets
-                            </Link>
-                            <Link
                                 to="/solutions"
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-600 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
+                                className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-slate-850"
                             >
-                                Solutions
-                            </Link>
-                            <Link
-                                to="/ai-automation"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                AI Automation
-                            </Link>
-                            <Link
-                                to="/ai-automation-agency-india"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-600 dark:text-cyan-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                India Enterprise
-                            </Link>
-                            <Link
-                                to="/videos"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Masterclasses
-                            </Link>
-                            <Link
-                                to="/signals"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Market Signals
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-ai-roi-calculator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-amber-600 dark:text-amber-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                ROI Calculator
-                            </Link>
-                            <Link
-                                to="/tools/multi-agent-latency-token-cost-estimator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-blue-500 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Latency Estimator
-                            </Link>
-                            <Link
-                                to="/tools/multi-agent-token-leakage-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Token Leakage Simulator
-                            </Link>
-                            <Link
-                                to="/tools/dpdp-act-2023-audit-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-amber-500 dark:text-amber-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                DPDP Act 2023 Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-gpu-finops-cost-calculator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-sky-500 dark:text-sky-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                GPU FinOps Calculator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-vector-db-latency-benchmark"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-indigo-500 dark:text-indigo-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Vector DB Benchmark
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-llm-context-kv-cache-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-500 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                KV Cache Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Deadlock Breaker Visualizer
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-voice-agent-latency-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-500 dark:text-purple-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Voice Agent Latency Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-graphrag-memory-benchmark"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-500 dark:text-emerald-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                GraphRAG Memory Benchmark
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-event-sourcing-audit-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-500 dark:text-cyan-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Event Sourcing Audit Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-prompt-injection-firewall-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-rose-500 dark:text-rose-400 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Prompt Injection Firewall
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-semantic-cache-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Semantic Cache Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-model-routing-cost-arbitrage-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Model Routing Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-structured-output-latency-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Structured Output Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-tracing-opentelemetry-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                OpenTelemetry Tracing Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-state-snapshot-rollback-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent State Rollback Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-dynamic-replanning-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Dynamic Re-Planning Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-consensus-byzantine-fault-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Consensus Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-sandbox-formal-verification-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Sandbox Verifier
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-memory-drift-compression-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Memory Drift Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-self-healing-canary-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Self-Healing Canary Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-prompt-optimizer-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Prompt Optimizer Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-speculative-decoding-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-amber-400 dark:text-amber-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Speculative Decoding Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-zk-attestation-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent ZK State Attestation Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-homomorphic-enclave-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Confidential Enclave Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-epistemic-ood-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Epistemic Uncertainty &amp; OOD Calibrator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-differential-privacy-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Differential Privacy &amp; Gradient Sanitizer
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-byzantine-consensus-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Byzantine Consensus &amp; SecAgg Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-post-quantum-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Post-Quantum Cryptography &amp; ML-KEM Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-photonic-compute-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Silicon Photonics &amp; Optical GEMM Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-memristor-crossbar-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Memristor Crossbar &amp; AIMC Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-snn-neuromorphic-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent SNN Neuromorphic &amp; LIF Event Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-hsm-pkcs11-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent HSM PKCS#11 Air-Gapped Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-graph-consensus-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Agent Graph Consensus &amp; State Verifier Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-abdm-fhir-privacy-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                ABDM FHIR Clinical Privacy &amp; De-Identification Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-cfr-part-11-validation-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                21 CFR Part 11 &amp; CDSCO eBMR Validation Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-ondc-retail-inventory-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-orange-400 dark:text-orange-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                ONDC Retail Inventory &amp; Dynamic Pricing Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-nemo-guardrails-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                LLM Security &amp; NeMo Guardrails Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-aiops-incident-remediation-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                AIOps Incident Remediation &amp; Chaos Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-vector-db-sharding-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Vector DB Sharding &amp; HNSW Latency Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-chunked-prefill-radix-attention-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-indigo-400 dark:text-indigo-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Chunked Prefill &amp; Radix Attention Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-mcp-tool-routing-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-indigo-400 dark:text-indigo-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                MCP Multi-Server Tool Routing Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-industrial-iot-opc-ua-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Industrial IoT &amp; OPC-UA Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-tally-erp-xml-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Tally ERP XML &amp; GST Ingestion Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-smart-contract-formal-verification-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Smart Contract Formal Verification Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-pagedattention-cache-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                GPU VRAM PagedAttention &amp; KV-Cache Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-medusa-speculative-tree-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-amber-400 dark:text-amber-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Medusa Speculative Tree &amp; Verification Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-ptq-quantization-perplexity-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                LLM FP8 vs INT4 Quantization Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-flashdecoding-parallelism-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-blue-400 dark:text-blue-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                FlashDecoding &amp; Sequence Parallelism Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-kvcache-prefix-caching-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-teal-400 dark:text-teal-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                KV Cache Prefix Caching Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-chunked-cross-attention-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-indigo-400 dark:text-indigo-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Chunked Cross-Attention Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-sliding-window-attention-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Sliding-Window Attention Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-multi-lora-routing-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-amber-400 dark:text-amber-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Multi-LoRA Dynamic Adapter Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-mixture-of-depths-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-teal-400 dark:text-teal-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Mixture-of-Depths Dynamic Compute Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-kvcache-memory-compaction-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-sky-400 dark:text-sky-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                KV-Cache Memory Compaction Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-speculative-verification-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-400 dark:text-purple-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Speculative Verification Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-prefill-decode-disaggregation-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-emerald-400 dark:text-emerald-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Prefill-Decode Disaggregation Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-pipeline-parallelism-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-indigo-400 dark:text-indigo-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Pipeline Parallelism Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-tensor-parallelism-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Tensor Parallelism Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-sequence-parallelism-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-teal-400 dark:text-teal-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Sequence Parallelism Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-expert-parallelism-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-violet-400 dark:text-violet-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Expert Parallelism Simulator
-                            </Link>
-                            <Link
-                                to="/tools/enterprise-agent-context-parallelism-simulator"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-cyan-400 dark:text-cyan-300 py-4 border-b border-gray-100 dark:border-white/10"
-                            >
-                                Context Parallelism Simulator
+                                Solutions Hub (3,765 Workflows)
                             </Link>
                             <Link
                                 to="/compare"
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-purple-600 dark:text-purple-400 py-4 border-b border-gray-100 dark:border-white/10"
+                                className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-slate-850"
                             >
-                                Compare Stacks
+                                Architecture Comparisons
+                            </Link>
+                            <Link
+                                to="/signals"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-slate-850"
+                            >
+                                Technical Market Signals & Whitepapers
                             </Link>
                             <Link
                                 to="/resources"
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-2xl font-medium text-left text-blue-600 dark:text-blue-400 py-4 border-b border-gray-100 dark:border-white/10"
+                                className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-slate-850"
                             >
-                                Resources
+                                Interactive Engineering Tools (75 Simulators)
+                            </Link>
+                            <Link
+                                to="/ai-automation-agency-india"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-semibold text-emerald-600 dark:text-emerald-400 py-2 border-b border-gray-100 dark:border-slate-850"
+                            >
+                                Best Enterprise AI Company in India (Sovereign Deployments)
                             </Link>
 
-                            <div className="mt-8 w-full">
-                                <ExpandableScreen>
-                                    <ExpandableScreenTrigger>
-                                        <InteractiveHoverButton className="w-full justify-center h-10 text-sm">
-                                            Apply Now
-                                        </InteractiveHoverButton>
-                                    </ExpandableScreenTrigger>
-                                    <ExpandableScreenContent>
-                                        <MandateApplicationForm source="Navbar CTA (Mobile)" />
-                                    </ExpandableScreenContent>
-                                </ExpandableScreen>
+                            <div className="pt-4">
+                                <Link
+                                    to="/waitlist"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-center text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20"
+                                >
+                                    <span>Book Architecture Audit</span>
+                                    <ArrowUpRight className="w-4 h-4" />
+                                </Link>
                             </div>
                         </div>
                     </motion.div>

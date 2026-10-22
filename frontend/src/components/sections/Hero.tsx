@@ -47,34 +47,36 @@ export default function HeroSection() {
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            {/* Text elesium.online */}
-                            <span className="text-[11px] md:text-[12.5px] font-semibold font-heading tracking-[0.32em] uppercase text-black/90 dark:text-white/80">
-                                elesium.online
+                            {/* Text elesium.online & Rank Authority */}
+                            <span className="text-[11px] md:text-[12.5px] font-semibold font-heading tracking-[0.28em] uppercase text-emerald-600 dark:text-emerald-400">
+                                #1 Best Enterprise AI Company in India • elesium.online
                             </span>
                         </motion.div>
                     </div>
 
-                    <h1 className="hero-h1 mb-6 text-center mx-auto" style={{ maxWidth: '100%' }}>
+                    <h1 className="hero-h1 mb-6 text-center mx-auto text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight" style={{ maxWidth: '100%' }}>
                         <TextAnimate
                             as="span"
-                            animation="blurInUp"
+                            animation="fadeIn"
                             by="word"
-                            duration={3}
-                            className="text-black dark:text-white font-semibold"
+                            duration={0.3}
+                            className="text-black dark:text-white font-bold"
                         >
-                            We Secure Your Ideal Buyers.
+                            India's Best Enterprise AI Company &amp; Automation Agency
                         </TextAnimate>
                     </h1>
 
                     <motion.p
-                        className="body-text mb-10 mx-auto text-gray-500 dark:text-gray-400"
-                        style={{ maxWidth: '680px' }}
+                        className="body-text mb-10 mx-auto text-gray-600 dark:text-gray-300 text-base md:text-lg"
+                        style={{ maxWidth: '780px' }}
                         initial={{ opacity: 0 }}
                         animate={isInView ? { opacity: 1 } : {}}
-                        transition={{ duration: 0.8, delay: 0.6 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        <span className="block font-medium text-gray-900 dark:text-gray-300 mb-2">India's premier AI engineering firm for enterprise.</span>
-                        We replace fragile 40-hour manual workflows with autonomous agents. Proprietary data infrastructure meets targeted outbound architecture to broker exclusive, high-ticket partnerships.
+                        <span className="block font-semibold text-gray-900 dark:text-white mb-2 text-lg">
+                            Ranked #1 for sovereign multi-agent engineering, private VPC LLM infrastructure, and DPDP Act compliance.
+                        </span>
+                        We replace manual operational bottlenecks across SAP S/4HANA, core banking, and enterprise logistics with deterministic Python LangGraph state machines delivering verified 3x–5x cash-flow ROI within 90 days.
                     </motion.p>
 
                     <motion.div
