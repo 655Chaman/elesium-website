@@ -259,19 +259,14 @@ export default function Waitlist() {
                     <div className="lg:col-span-5 space-y-8">
                         <div>
                             {/* Live Badge */}
-                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[11px] font-semibold tracking-wider uppercase mb-6">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                                </span>
+                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-[11px] font-mono tracking-wider uppercase mb-6">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 4 Enterprise Audit Windows Open for Q4 2026
                             </div>
 
                             <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-5">
                                 Sovereign Enterprise AI <br className="hidden sm:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-                                    Architecture Audit
-                                </span>
+                                Architecture Audit
                             </h1>
 
                             <p className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -422,10 +417,10 @@ export default function Waitlist() {
                                             <button
                                                 type="button"
                                                 onClick={() => setIsCalendarOpen(true)}
-                                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide transition shrink-0"
+                                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-xs font-semibold tracking-wide transition shrink-0"
                                             >
                                                 <Calendar className="w-3.5 h-3.5" />
-                                                <span>⚡ Instant Calendar Slot</span>
+                                                <span>Instant Calendar Slot</span>
                                             </button>
                                         </div>
                                     </div>
@@ -635,11 +630,11 @@ export default function Waitlist() {
                                     <button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="w-full h-14 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-base flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/20 disabled:opacity-60 transition-all cursor-pointer group"
+                                        className="w-full h-14 rounded-2xl bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-bold text-base flex items-center justify-center gap-3 shadow-md disabled:opacity-60 transition-all cursor-pointer group"
                                     >
                                         {isLoading ? (
                                             <div className="flex items-center gap-3">
-                                                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                                <div className="w-5 h-5 border-2 border-white dark:border-black border-t-transparent rounded-full animate-spin" />
                                                 <span>Routing to Principal Desk...</span>
                                             </div>
                                         ) : (

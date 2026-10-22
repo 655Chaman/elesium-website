@@ -230,7 +230,7 @@ export function ExitIntentMemoModal({
                   <button
                     type="submit"
                     disabled={isLoading || (validation !== null && !validation.isAllowed)}
-                    className="w-full h-12 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 disabled:opacity-50 transition-all cursor-pointer"
+                    className="w-full h-12 rounded-full bg-white text-black hover:bg-neutral-200 font-bold text-sm flex items-center justify-center gap-2 shadow-sm disabled:opacity-50 transition-all cursor-pointer"
                   >
                     {isLoading ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -252,7 +252,6 @@ export function ExitIntentMemoModal({
               /* Success Confirmation */
               <div className="py-6 text-center space-y-6">
                 <div className="relative flex items-center justify-center h-16 w-16 mx-auto">
-                  <span className="animate-ping absolute inline-flex h-14 w-14 rounded-full bg-emerald-500/20 opacity-75" />
                   <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                     <CheckCircle2 className="w-6 h-6" />
                   </span>

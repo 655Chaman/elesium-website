@@ -53,7 +53,7 @@ function FeatureItem({ feature, index, total, scrollYProgress }: FeatureItemProp
             style={{ opacity }}
             className="col-start-1 row-start-1"
         >
-            <h3 className="section-h2 mb-4 text-center md:text-left dark:text-white">
+            <h3 className="section-h2 mb-4 text-center md:text-left text-black dark:text-white transition-colors">
                 {feature.title}
             </h3>
             <p className="body-text text-gray-600 dark:text-gray-400 max-w-lg mx-auto md:mx-0 text-center md:text-left">
@@ -83,7 +83,7 @@ export default function FeatureExplorer() {
         <section
             id="platform"
             ref={containerRef}
-            className="relative bg-white"
+            className="relative bg-white dark:bg-black transition-colors duration-300"
             style={{
                 height: isMobile ? 'auto' : '3571px',
                 paddingTop: isMobile ? '60px' : '120px',
@@ -109,4 +109,3 @@ export default function FeatureExplorer() {
         </section>
     )
 }
-

@@ -31,8 +31,10 @@ import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } fr
 import { MandateApplicationForm } from '../features/WaitingListForm';
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton';
 import { ExitIntentMemoModal } from '../cro/ExitIntentMemoModal';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function EnterpriseRoiCalculator() {
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     const [currency, setCurrency] = useState<Currency>('INR');
     const [teamSize, setTeamSize] = useState<number>(25);
     const [monthlySalary, setMonthlySalary] = useState<number>(75000);
@@ -611,12 +613,20 @@ export default function EnterpriseRoiCalculator() {
                                 </div>
                             </div>
 
-                            {/* Direct CTA Box with Modal Option */}
-                            <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                            {/* Direct CTA Box with WhatsApp & Modal Option */}
+                            <div className="pt-2 flex flex-wrap items-center gap-3">
+                                <button
+                                    onClick={openWhatsApp}
+                                    className="px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs transition-all flex items-center gap-2 shadow-sm"
+                                >
+                                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                    Chat on WhatsApp to Lock Projected ROI
+                                </button>
+
                                 <ExpandableScreen>
                                     <ExpandableScreenTrigger>
-                                        <InteractiveHoverButton className="w-full sm:w-auto h-12 px-6 text-sm font-semibold justify-center">
-                                            Schedule Architecture Audit to Lock These Savings
+                                        <InteractiveHoverButton className="h-10 px-5 text-xs font-medium justify-center border-gray-200 dark:border-white/10">
+                                            Submit Architecture Mandate
                                         </InteractiveHoverButton>
                                     </ExpandableScreenTrigger>
                                     <ExpandableScreenContent>
@@ -626,10 +636,9 @@ export default function EnterpriseRoiCalculator() {
 
                                 <Link
                                     to={`/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=roi-calculator`}
-                                    className="w-full sm:w-auto text-center px-5 py-3 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 text-xs font-mono transition-colors flex items-center justify-center gap-1.5"
+                                    className="px-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 text-xs font-mono transition-colors"
                                 >
-                                    <span>Lock In These Projected Savings</span>
-                                    <span>→</span>
+                                    Detailed Waitlist &rarr;
                                 </Link>
                             </div>
                         </div>
@@ -741,6 +750,42 @@ export default function EnterpriseRoiCalculator() {
                 </div>
             </div>
 
+            {/* Bottom Call to Action Card */}
+            <section className="px-6 md:px-12 max-w-[1440px] mx-auto pb-16">
+                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                    <div className="relative z-10 max-w-2xl space-y-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                            <span>CFO & CTO Architecture Audit Desk</span>
+                        </div>
+
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+                            Lock In Your Verified Enterprise ROI with Our Systems Pod
+                        </h2>
+
+                        <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
+                            Connect directly with our engineering architects to validate your headcount costs, legacy SaaS spend, and custom air-gapped deployment ROI in a confidential 30-minute review.
+                        </p>
+
+                        <div className="flex flex-wrap items-center gap-4 pt-2">
+                            <button
+                                onClick={openWhatsApp}
+                                className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
+                            >
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                Chat on WhatsApp with Lead Architect
+                                <ChevronRight className="w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                    </div>
+                </div>
+            </section>
+
             {/* 'Embed This Calculator' Modal */}
             {isEmbedModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
@@ -835,6 +880,7 @@ export default function EnterpriseRoiCalculator() {
                     { label: '3-Year Sovereign TCO', value: formatCurrency(results.elesium3YearSpend, currency) }
                 ]}
             />
+            <WhatsAppModal />
         </div>
     );
 }

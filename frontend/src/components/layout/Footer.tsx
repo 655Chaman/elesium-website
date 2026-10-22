@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
+import { MessageSquare, ArrowRight, ShieldCheck } from 'lucide-react'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 export default function DownloadFooter() {
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
+
     const mainNavigation = [
         { name: 'How We Work', path: '/how-we-work' },
-        { name: 'Solutions Hub', path: '/solutions' },
-        { name: 'Technical Whitepapers', path: '/signals' },
+        { name: 'Solutions Hub (3,765 Workflows)', path: '/solutions' },
+        { name: 'Technical Whitepapers & Research', path: '/signals' },
         { name: 'Architecture Comparisons', path: '/compare' },
         { name: 'Video Masterclasses', path: '/videos' },
         { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india' },
@@ -14,8 +18,8 @@ export default function DownloadFooter() {
     const featuredTools = [
         { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator' },
         { name: 'Multi-Agent Latency & Cost Estimator', path: '/tools/multi-agent-latency-token-cost-estimator' },
-        { name: 'DPDP Act 2023 Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
-        { name: 'GPU FinOps Cost Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
+        { name: 'DPDP Act 2023 Statutory Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
+        { name: 'GPU FinOps Cost & Cluster Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
         { name: 'DeepSeek-V3 Unified Fabric Simulator', path: '/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator' },
         { name: 'DualPipe Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator' },
     ];
@@ -33,25 +37,62 @@ export default function DownloadFooter() {
         { name: 'Private VPC vLLM vs Azure OpenAI', path: '/compare/private-vpc-vllm-vs-azure-openai' },
         { name: 'Custom Agents vs Zapier Enterprise', path: '/compare/custom-multi-agent-systems-vs-zapier-enterprise' },
         { name: 'Deterministic FSM vs ReAct Loops', path: '/compare/deterministic-state-machines-vs-react-agents' },
-        { name: 'Elesium vs IT Consultancies', path: '/compare/elesium-vs-traditional-it-consultancies' },
+        { name: 'Elesium vs Traditional IT Consultancies', path: '/compare/elesium-vs-traditional-it-consultancies' },
     ];
 
     return (
-        <footer className="relative bg-white dark:bg-black text-black dark:text-white py-12 md:py-20 overflow-hidden font-sans border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
+        <footer className="relative bg-white dark:bg-black text-black dark:text-white py-12 md:py-16 overflow-hidden font-sans border-t border-gray-200 dark:border-white/10 transition-colors duration-300">
+            <WhatsAppModal />
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col justify-between">
 
-                {/* Top Section - 4 Columns */}
+                {/* Top Conversion Bar: Direct WhatsApp Engineering Intake */}
+                <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gray-50/90 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                    <div className="space-y-2 max-w-2xl">
+                        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            <span>Direct Engineering Intake SLA</span>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Direct Principal Systems Architect Pairing
+                        </h3>
+                        <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Zero sales friction. Connect directly with our core engineering desk in Bengaluru via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto shrink-0">
+                        <button
+                            onClick={openWhatsApp}
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md group"
+                        >
+                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <span>Chat on WhatsApp</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                        </button>
+                        <Link
+                            to="/waitlist"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-xl text-sm transition-all text-gray-800 dark:text-gray-200"
+                        >
+                            <span>Schedule Review &rarr;</span>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 4-Column Navigation Layout */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-gray-100 dark:border-white/10">
                     
-                    {/* Column 1: Navigation */}
+                    {/* Column 1: Main Navigation */}
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
+                        <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
                         <ul className="flex flex-col gap-2.5">
                             {mainNavigation.map((item) => (
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left"
                                     >
                                         {item.name}
                                     </Link>
@@ -60,11 +101,11 @@ export default function DownloadFooter() {
                         </ul>
                     </div>
 
-                    {/* Column 2: Solutions */}
+                    {/* Column 2: Solutions Hub */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Solutions</h4>
-                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                            <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Enterprise Solutions</h4>
+                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                                 3,765 Workflows
                             </span>
                         </div>
@@ -73,7 +114,7 @@ export default function DownloadFooter() {
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -85,18 +126,18 @@ export default function DownloadFooter() {
                                     to="/solutions"
                                     className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
-                                    Explore All 3,765 Solutions →
+                                    Explore All 3,765 Solutions &rarr;
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Column 3: Engineering Tools */}
+                    {/* Column 3: Engineering Simulators */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Tools & Simulators</h4>
-                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
-                                75 Interactive
+                            <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Engineering Tools</h4>
+                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
+                                75 Simulators
                             </span>
                         </div>
                         <ul className="flex flex-col gap-2.5">
@@ -104,7 +145,7 @@ export default function DownloadFooter() {
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -114,19 +155,19 @@ export default function DownloadFooter() {
                             <li className="pt-1">
                                 <Link
                                     to="/resources"
-                                    className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+                                    className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
-                                    View All 75 Engineering Tools →
+                                    View All 75 Engineering Tools &rarr;
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Column 4: Architecture & Comparisons */}
+                    {/* Column 4: Architecture Battlecards */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-sm tracking-wider uppercase text-gray-900 dark:text-white">Architecture</h4>
-                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                            <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Architecture</h4>
+                            <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                                 Battlecards
                             </span>
                         </div>
@@ -135,7 +176,7 @@ export default function DownloadFooter() {
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-[#3C4043] dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -145,9 +186,9 @@ export default function DownloadFooter() {
                             <li className="pt-1">
                                 <Link
                                     to="/compare"
-                                    className="text-xs font-semibold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1"
+                                    className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
-                                    View All Comparisons →
+                                    View All Comparisons &rarr;
                                 </Link>
                             </li>
                         </ul>
@@ -158,7 +199,7 @@ export default function DownloadFooter() {
                 <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div className="flex flex-col gap-1.5">
                         <span className="text-xs font-semibold tracking-wider text-gray-900 dark:text-white uppercase">
-                            Elesium — India's Principal Enterprise AI & Multi-Agent Engineering Firm
+                            Elesium — India&apos;s Principal Enterprise AI &amp; Multi-Agent Engineering Firm
                         </span>
                         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
                             Headquartered in Bangalore, Karnataka, India. Engineering sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for Fortune 500, BFSI, and high-growth industrial leaders across India and global markets.
@@ -166,27 +207,28 @@ export default function DownloadFooter() {
                     </div>
 
                     <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-[11px] font-mono px-2 py-1 rounded bg-gray-100 dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800">
+                        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 flex items-center gap-1">
+                            <ShieldCheck className="w-3 h-3 text-emerald-500" />
                             DPDP Act 2023 Compliant
                         </span>
-                        <span className="text-[11px] font-mono px-2 py-1 rounded bg-gray-100 dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800">
+                        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                             SOC-2 Type II Attested
                         </span>
-                        <span className="text-[11px] font-mono px-2 py-1 rounded bg-gray-100 dark:bg-slate-900 text-gray-700 dark:text-slate-300 border border-gray-200 dark:border-slate-800">
+                        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                             ISO 27001 Certified
                         </span>
                     </div>
                 </div>
 
                 {/* Copyright Line */}
-                <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-400">
+                <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
                     <p>© {new Date().getFullYear()} Elesium Systems Pvt. Ltd. All rights reserved.</p>
-                    <div className="flex items-center gap-4">
-                        <Link to="/authors/chaman-shah" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Principal Architect</Link>
+                    <div className="flex items-center gap-4 flex-wrap">
+                        <Link to="/authors/chaman-shah" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
                         <Link to="/ai-automation-agency-india" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
-                        <Link to="/resources" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Resources</Link>
-                        <Link to="/waitlist" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Contact & Audit</Link>
-                        <Link to="/sitemap.xml" className="hover:text-gray-600 dark:hover:text-gray-300 transition">Sitemap</Link>
+                        <Link to="/resources" className="hover:text-black dark:hover:text-white transition">Resources</Link>
+                        <Link to="/waitlist" className="hover:text-black dark:hover:text-white transition">Contact &amp; Audit</Link>
+                        <Link to="/sitemap.xml" className="hover:text-black dark:hover:text-white transition">Sitemap</Link>
                     </div>
                 </div>
 

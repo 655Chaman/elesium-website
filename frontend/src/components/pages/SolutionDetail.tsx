@@ -12,7 +12,9 @@ import {
     Check,
     CheckCircle2,
     FileText,
-    BookOpen
+    BookOpen,
+    MessageSquare,
+    Calendar
 } from 'lucide-react'
 import { getSolutionBySlug, solutionsData, SolutionRecord } from '../../data/solutionsData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -152,20 +154,22 @@ export default function SolutionDetail() {
 
                         {/* 3. Primary CTA Button (Strictly ABOVE Graphic on Mobile) */}
                         <div className="flex flex-wrap items-center gap-3.5 mb-8 lg:mb-10">
-                            <Link
-                                to={`/waitlist?solution=${solution.slug}`}
-                                className="px-6 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-medium text-sm transition-all duration-200 flex items-center gap-2 shadow-sm"
-                            >
-                                {solution.hero.ctaText || solution.primaryCtaText || 'Schedule Architecture Audit'}
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-
                             <button
                                 onClick={openWhatsApp}
-                                className="px-4 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-xs sm:text-sm transition-all flex items-center gap-1.5 text-gray-700 dark:text-gray-300"
+                                className="px-6 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm group"
                             >
-                                <span>WhatsApp Desk</span>
+                                <MessageSquare className="w-4 h-4 fill-current" />
+                                <span>Chat on WhatsApp with Lead Architect</span>
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                             </button>
+
+                            <Link
+                                to={`/waitlist?solution=${solution.slug}`}
+                                className="px-5 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-xs sm:text-sm transition-all flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                            >
+                                <Calendar className="w-3.5 h-3.5 text-emerald-500" />
+                                <span>Schedule Review</span>
+                            </Link>
 
                             <ExpandableScreen>
                                 <ExpandableScreenTrigger>
@@ -556,24 +560,22 @@ export default function SolutionDetail() {
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                        <button
+                            onClick={openWhatsApp}
+                            className="px-8 py-4 rounded-xl bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all flex items-center gap-2 shadow-md group"
+                        >
+                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <span>Chat on WhatsApp with Lead Architect</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                        </button>
+
                         <Link
                             to={`/waitlist?solution=${solution.slug}`}
-                            className="px-6 py-3.5 rounded-xl bg-white text-black hover:bg-gray-100 font-medium text-sm transition-all flex items-center gap-2"
+                            className="px-6 py-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-medium text-sm transition-all flex items-center gap-2"
                         >
-                            {solution.primaryCtaText || 'Schedule Architecture Audit'}
-                            <ArrowRight className="w-4 h-4" />
+                            <Calendar className="w-4 h-4 text-emerald-400" />
+                            <span>Schedule Calendar Review</span>
                         </Link>
-
-                        <ExpandableScreen>
-                            <ExpandableScreenTrigger>
-                                <InteractiveHoverButton className="h-11 px-6 text-sm">
-                                    Submit Architecture Mandate
-                                </InteractiveHoverButton>
-                            </ExpandableScreenTrigger>
-                            <ExpandableScreenContent>
-                                <MandateApplicationForm source={`Bottom CTA: ${solution.h1}`} />
-                            </ExpandableScreenContent>
-                        </ExpandableScreen>
                     </div>
 
                     <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-gray-400">

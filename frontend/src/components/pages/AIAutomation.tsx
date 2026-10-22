@@ -67,7 +67,7 @@ const AgentTerminal = () => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         key={`terminal-line-${i}-${line.substring(0,5)}`}
-                        className={`${line.startsWith('[SUCCESS]') ? 'text-green-400' : line.startsWith('[OK]') ? 'text-blue-400' : 'text-gray-300'}`}
+                        className={`${line.startsWith('[SUCCESS]') ? 'text-emerald-400' : line.startsWith('[OK]') ? 'text-emerald-400' : 'text-gray-300'}`}
                     >
                         {line}
                     </motion.div>
@@ -135,8 +135,8 @@ export default function AIAutomation() {
                 </script>
             </Helmet>
             
-            {/* Background Glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-500/5 dark:bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+            {/* Subtle Monochrome Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-black/5 dark:bg-white/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
                 
@@ -150,7 +150,7 @@ export default function AIAutomation() {
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.1]">
                         Shift from Manual<br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
+                        <span className="text-gray-400 dark:text-gray-500">
                             to Autonomous.
                         </span>
                     </h1>
@@ -183,8 +183,8 @@ export default function AIAutomation() {
                                     "Automated error handling and retries"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-                                        <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                                            <Code2 className="w-3 h-3 text-blue-600 dark:text-blue-400" />
+                                        <div className="w-6 h-6 rounded-full bg-neutral-100 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                            <Code2 className="w-3 h-3 text-black dark:text-white" />
                                         </div>
                                         {item}
                                     </li>
@@ -192,7 +192,7 @@ export default function AIAutomation() {
                             </ul>
                         </div>
                         <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 blur-[60px] rounded-[3rem]"></div>
+                            <div className="absolute inset-0 bg-black/5 dark:bg-white/5 blur-[60px] rounded-[3rem]"></div>
                             <AgentTerminal />
                         </div>
                     </div>
@@ -301,31 +301,39 @@ export default function AIAutomation() {
                 </div>
 
                 {/* CTA Section */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-gray-900 dark:bg-white/5 rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden border border-black/10 dark:border-white/10"
-                >
-                    <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-medium text-white mb-6">
-                            Ready to unlock autonomous scale?
+                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                    <div className="relative z-10 max-w-2xl space-y-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                            <span>Private Sovereign VPC Deployment Protocol</span>
+                        </div>
+
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+                            Ready to unlock autonomous enterprise scale?
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-                            Stop wasting human capital on robotic tasks. Schedule a custom AI readiness audit to see exactly where our infrastructure can impact your bottom line.
+
+                        <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
+                            Stop wasting human capital on robotic, repetitive tasks. Schedule a direct engineering intake on WhatsApp to evaluate deterministic agentic architectures for your enterprise.
                         </p>
-                        <div className="flex justify-center">
-                            <button onClick={openWhatsApp} className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
-                                Request Private AI Audit
-                                <ArrowRight className="w-5 h-5" />
+
+                        <div className="flex flex-wrap items-center gap-4 pt-2">
+                            <button
+                                onClick={openWhatsApp}
+                                className="px-8 py-4 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm sm:text-base transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
+                            >
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                Chat on WhatsApp with Lead Architect
+                                <ArrowRight className="w-4 h-4" />
                             </button>
-                            <WhatsAppModal />
                         </div>
                     </div>
-                    {/* Decorative blurred blobs */}
-                    <div className="absolute top-[-20%] left-[-10%] w-[300px] h-[300px] bg-blue-500/30 blur-[100px] rounded-full"></div>
-                    <div className="absolute bottom-[-20%] right-[-10%] w-[300px] h-[300px] bg-cyan-500/30 blur-[100px] rounded-full"></div>
-                </motion.div>
+
+                    <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                    </div>
+                </div>
+                <WhatsAppModal />
 
             </div>
         </div>

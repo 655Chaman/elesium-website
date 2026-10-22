@@ -69,10 +69,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
 
                         {/* Brand pill matching hero section */}
                         <div className="flex items-center gap-2 mb-4 relative z-10">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                            </span>
+                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
                             <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
                                 #1 Enterprise AI In India • Direct Engineering Desk
                             </span>
@@ -147,7 +144,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
 
                             <button
                                 type="submit"
-                                className="w-full mt-2 inline-flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md group"
+                                className="w-full mt-2 inline-flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Connect via WhatsApp Desk</span>

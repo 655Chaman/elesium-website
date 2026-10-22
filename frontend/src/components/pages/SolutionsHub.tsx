@@ -122,7 +122,7 @@ export default function SolutionsHub() {
             {/* Clean, High-Trust Hero Header (Edward Sturm Module 6 & 10) */}
             <header className="max-w-6xl mx-auto px-6 mb-16 md:mb-24">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 mb-6">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
                     <span className="text-xs font-mono uppercase tracking-widest text-gray-600 dark:text-gray-300">
                         System 2 • Sovereign Solutions Directory
                     </span>
@@ -172,7 +172,7 @@ export default function SolutionsHub() {
                 <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-white/[0.02]">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
                         <div className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                             <h2 className="text-xs font-mono uppercase tracking-widest text-gray-500 dark:text-gray-400">
                                 High-Lever Enterprise Flagships (Direct 1-Click Access)
                             </h2>
@@ -292,14 +292,15 @@ export default function SolutionsHub() {
 
             {/* Bottom Call to Action Card (Sturm Module 6 & 10) */}
             <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-900 text-white dark:bg-white/[0.03] shadow-2xl">
+                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
                     <div className="relative z-10 max-w-2xl space-y-6">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
-                            <Lock className="w-3 h-3 text-emerald-400" />
+                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
                             <span>Private Sovereign VPC Deployment Protocol</span>
                         </div>
 
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
                             Request a Deterministic AI Architecture Audit for Your Enterprise
                         </h2>
 
@@ -312,15 +313,16 @@ export default function SolutionsHub() {
                         <div className="flex flex-wrap items-center gap-4 pt-2">
                             <button
                                 onClick={openWhatsApp}
-                                className="px-6 py-3 rounded-xl bg-white text-black hover:bg-gray-100 font-medium text-sm transition-all duration-200 flex items-center gap-2 shadow-sm"
+                                className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
                             >
-                                Schedule WhatsApp Technical Review
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                Chat on WhatsApp with Lead Architect
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
                             <ExpandableScreen>
                                 <ExpandableScreenTrigger>
-                                    <InteractiveHoverButton className="h-11 px-6 text-sm">
+                                    <InteractiveHoverButton className="h-12 px-6 text-sm border-white/20 text-white bg-transparent hover:bg-white/10">
                                         Submit Architecture Mandate
                                     </InteractiveHoverButton>
                                 </ExpandableScreenTrigger>
@@ -332,7 +334,7 @@ export default function SolutionsHub() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <Network className="w-96 h-96 text-white" />
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>

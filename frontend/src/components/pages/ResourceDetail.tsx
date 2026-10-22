@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, Calendar, Clock, Download } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Download, MessageSquare, ArrowRight } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { resourcesData } from '../../data/resourcesData'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { 
     ArchitecturePlayground, 
     BlueprintDownloadCard 
@@ -15,6 +16,7 @@ import { useDwellTelemetry } from '../../hooks/useDwellTelemetry'
 export default function ResourceDetail() {
     const { slug } = useParams();
     const navigate = useNavigate();
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     const [markdownContent, setMarkdownContent] = useState<string>('');
     const [loading, setLoading] = useState(true);
     const { activeDwellSeconds, scrollDepthPercent, interactionCount, isGoodClick, isLastLongestClickEligible, trackInteraction } = useDwellTelemetry(slug || 'resource-detail');
@@ -47,13 +49,14 @@ export default function ResourceDetail() {
         return (
             <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white pt-[120px] text-center">
                 <p className="text-gray-500">Resource not found.</p>
-                <button onClick={() => navigate('/resources')} className="text-blue-500 mt-4 inline-block">Back to Resources</button>
+                <button onClick={() => navigate('/resources')} className="text-emerald-500 hover:underline mt-4 inline-block">Back to Resources</button>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto pt-[52px] transition-colors duration-300">
+            <WhatsAppModal />
             <Helmet>
                 <title>{resource.title} | Resources | Elesium</title>
                 <meta name="description" content={resource.description} />
@@ -78,7 +81,7 @@ export default function ResourceDetail() {
                     >
                         {/* Meta Header */}
                         <div className="flex flex-wrap items-center gap-y-2 gap-x-4 mb-8 text-[11px] font-semibold text-gray-500 dark:text-gray-400 tracking-[0.06em] uppercase">
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full">
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white rounded-full">
                                 {resource.category}
                             </span>
                             <span className="flex items-center gap-1">
@@ -177,11 +180,41 @@ export default function ResourceDetail() {
                             </span>
                         </div>
 
+                        {/* Direct WhatsApp Engineering Intake Card */}
+                        <div className="my-12 p-8 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
+                            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                <span>Direct Engineering Intake SLA</span>
+                            </div>
+                            <h3 className="text-2xl font-bold tracking-tight text-white">
+                                Implement This Resource in Production
+                            </h3>
+                            <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                                Connect directly with our Principal AI Systems Architect in Bengaluru to deploy these tools inside your private VPC.
+                            </p>
+                            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                <button
+                                    onClick={openWhatsApp}
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                                >
+                                    <MessageSquare className="w-4 h-4 fill-current" />
+                                    <span>Chat on WhatsApp with Lead Architect</span>
+                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                                </button>
+                                <Link
+                                    to="/waitlist"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                                >
+                                    <span>Schedule Calendar Review &rarr;</span>
+                                </Link>
+                            </div>
+                        </div>
+
                         {/* Article Footer Navigation */}
                         <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">
                             <Link
                                 to="/resources"
-                                className="flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                                className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to All Resources

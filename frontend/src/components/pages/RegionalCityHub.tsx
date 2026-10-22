@@ -6,11 +6,9 @@ import {
     CheckCircle2,
     ArrowRight,
     TrendingUp,
-    PhoneCall
+    MessageSquare,
+    Calendar
 } from 'lucide-react'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
-import { MandateApplicationForm } from '../features/WaitingListForm'
-import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 export interface CityData {
@@ -399,32 +397,22 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                     {/* CTAs */}
                     <div className="flex flex-wrap items-center gap-4">
-                        <Link
-                            to="/waitlist"
-                            className="px-6 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-medium text-sm transition-all flex items-center gap-2 shadow-sm"
-                        >
-                            Schedule Architecture Audit
-                            <ArrowRight className="w-4 h-4" />
-                        </Link>
-
                         <button
                             onClick={openWhatsApp}
-                            className="px-5 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-sm transition-all flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                            className="px-6 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm group"
                         >
-                            <PhoneCall className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                            <span>WhatsApp Desk</span>
+                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <span>Chat on WhatsApp with Lead Architect</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
 
-                        <ExpandableScreen>
-                            <ExpandableScreenTrigger>
-                                <InteractiveHoverButton className="h-11 px-5 text-xs font-mono">
-                                    Submit Engineering Mandate
-                                </InteractiveHoverButton>
-                            </ExpandableScreenTrigger>
-                            <ExpandableScreenContent>
-                                <MandateApplicationForm source={`Regional Hub: ${cityData.h1}`} />
-                            </ExpandableScreenContent>
-                        </ExpandableScreen>
+                        <Link
+                            to="/waitlist"
+                            className="px-5 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-sm transition-all flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                        >
+                            <Calendar className="w-3.5 h-3.5 text-emerald-500" />
+                            <span>Schedule Calendar Review</span>
+                        </Link>
                     </div>
                 </header>
 
@@ -558,18 +546,20 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         Receive a comprehensive 3-year TCO memorandum and fixed-fee implementation blueprint.
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                        <button
+                            onClick={openWhatsApp}
+                            className="px-8 py-4 rounded-xl bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all flex items-center gap-2 shadow-md group"
+                        >
+                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <span>Chat on WhatsApp with Lead Architect</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                        </button>
                         <Link
                             to="/waitlist"
-                            className="px-6 py-3.5 rounded-xl bg-white text-black hover:bg-gray-100 font-medium text-sm transition-all flex items-center gap-2"
+                            className="px-6 py-4 rounded-xl border border-white/20 hover:bg-white/10 font-medium text-sm transition-all flex items-center gap-2 text-white"
                         >
-                            Schedule Architecture Audit
-                            <ArrowRight className="w-4 h-4" />
-                        </Link>
-                        <Link
-                            to="/tools/enterprise-ai-roi-calculator"
-                            className="px-5 py-3.5 rounded-xl border border-white/20 hover:bg-white/10 font-medium text-sm transition-all"
-                        >
-                            Simulate 3-Year TCO ROI
+                            <Calendar className="w-4 h-4 text-emerald-400" />
+                            <span>Schedule Calendar Review</span>
                         </Link>
                     </div>
                 </section>

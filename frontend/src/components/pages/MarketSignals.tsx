@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink } from 'lucide-react'
+import { ArrowLeft, ArrowRight, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink, MessageSquare } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { blogPosts, getMatchedSolutionSlug } from '../../data/blogPosts'
 import { getSolutionBySlug, solutionsData, SolutionRecord } from '../../data/solutionsData'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { 
     ArchitecturePlayground, 
     InteractiveRoiCalculator, 
@@ -18,6 +19,7 @@ import { useDwellTelemetry } from '../../hooks/useDwellTelemetry'
 export default function MarketSignals() {
     const { slug } = useParams();
     const navigate = useNavigate();
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const { activeDwellSeconds, scrollDepthPercent, interactionCount, isGoodClick, isLastLongestClickEligible, trackInteraction } = useDwellTelemetry(slug || 'signals-directory');
 
@@ -50,7 +52,8 @@ export default function MarketSignals() {
     };
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto pt-[52px] transition-colors duration-300">
+            <WhatsAppModal />
             {/* SEO Helmet — Pillar 2: JSON-LD Schema & GEO Meta Tags */}
             {activeArticle ? (
                 <Helmet>
@@ -491,13 +494,22 @@ export default function MarketSignals() {
                                                 <span className="flex items-center gap-1.5"><span className="text-emerald-500">✓</span> DPDP Act 2023 Compliant</span>
                                             </div>
 
-                                            <Link
-                                                to={`/solutions/${matchedSolution.slug}`}
-                                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs font-mono tracking-wide transition-colors shadow-sm"
-                                            >
-                                                <span>Deploy Production Solution</span>
-                                                <ArrowRight className="w-3.5 h-3.5" />
-                                            </Link>
+                                            <div className="flex flex-wrap items-center gap-3">
+                                                <button
+                                                    onClick={openWhatsApp}
+                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono tracking-wide transition-all shadow-sm group"
+                                                >
+                                                    <MessageSquare className="w-3.5 h-3.5 fill-current" />
+                                                    <span>Chat on WhatsApp</span>
+                                                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                                                </button>
+                                                <Link
+                                                    to={`/solutions/${matchedSolution.slug}`}
+                                                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-xs font-mono transition-all text-gray-700 dark:text-gray-300"
+                                                >
+                                                    <span>View Architecture Details &rarr;</span>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 )}
@@ -576,6 +588,39 @@ export default function MarketSignals() {
                                         </div>
                                     </div>
                                 )}
+
+                                {/* Bottom Architecture Action Card */}
+                                <div className="mt-16 p-8 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
+                                    <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                                        <span className="relative flex h-2 w-2">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                        </span>
+                                        <span>Direct Principal Systems Pairing</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold tracking-tight text-white">
+                                        Evaluate This Whitepaper Architecture for Your Enterprise
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                                        Connect directly with our Principal AI Systems Architect in Bengaluru to model hardware sizing, latency envelopes, and private VPC deployment parameters.
+                                    </p>
+                                    <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                        <button
+                                            onClick={openWhatsApp}
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md group"
+                                        >
+                                            <MessageSquare className="w-4 h-4 fill-current" />
+                                            <span>Chat on WhatsApp with Lead Architect</span>
+                                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                                        </button>
+                                        <Link
+                                            to="/waitlist"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-xl text-sm transition-all"
+                                        >
+                                            <span>Schedule Calendar Review &rarr;</span>
+                                        </Link>
+                                    </div>
+                                </div>
 
                                 {/* Article Footer Navigation */}
                                 <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">

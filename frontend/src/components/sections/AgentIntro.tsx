@@ -11,10 +11,10 @@ export default function AgentIntro() {
     const div2Ref = useRef<HTMLDivElement>(null)
     const div3Ref = useRef<HTMLDivElement>(null)
 
-    // Beam Colors
-    const pathColor = "rgba(100, 100, 100, 0.15)"
-    const gradientStartColor = "#4F46E5" // Indigo
-    const gradientStopColor = "#EC4899" // Pink
+    // Beam Colors - Subtle Monochrome & Emerald (No jarring pinks or indigos)
+    const pathColor = "rgba(100, 100, 100, 0.12)"
+    const gradientStartColor = "#10B981" // Emerald
+    const gradientStopColor = "#059669" // Deep Emerald
 
     return (
         <section
@@ -38,23 +38,23 @@ export default function AgentIntro() {
                     <div className="sticky top-0 h-screen flex flex-col items-center justify-center gap-24 py-12 w-full relative" ref={containerRef}>
                         {/* Node 1: Supply */}
                         <div className="flex flex-col items-center gap-2 z-10">
-                            <div ref={div1Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white shadow-lg hover:scale-105 transition-transform duration-300">
-                                <span className="text-base font-semibold text-gray-600 dark:text-white">Supply</span>
+                            <div ref={div1Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white/20 shadow-md hover:scale-105 transition-transform duration-300">
+                                <span className="text-sm font-semibold text-gray-800 dark:text-white uppercase tracking-wider">Supply</span>
                             </div>
                         </div>
 
                         {/* Node 2: Elesium */}
                         <div className="flex flex-col items-center gap-2 z-10">
-                            <div ref={div2Ref} className="h-32 w-32 rounded-full bg-black dark:bg-white flex items-center justify-center border-4 border-white dark:border-black shadow-2xl hover:scale-110 transition-transform duration-300 relative">
-                                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent to-white/10 dark:to-black/5" />
+                            <div ref={div2Ref} className="h-32 w-32 rounded-full bg-black dark:bg-white flex items-center justify-center border-4 border-gray-200 dark:border-white/20 shadow-2xl hover:scale-105 transition-transform duration-300 relative">
+                                <div className="absolute inset-0 rounded-full bg-black/5 dark:bg-white/5" />
                                 <span className="text-xl font-bold text-white dark:text-black tracking-tight uppercase">Elesium</span>
                             </div>
                         </div>
 
                         {/* Node 3: Demand */}
                         <div className="flex flex-col items-center gap-2 z-10">
-                            <div ref={div3Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white shadow-lg hover:scale-105 transition-transform duration-300">
-                                <span className="text-base font-semibold text-gray-600 dark:text-white">Demand</span>
+                            <div ref={div3Ref} className="h-20 w-20 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-200 dark:border-white/20 shadow-md hover:scale-105 transition-transform duration-300">
+                                <span className="text-sm font-semibold text-gray-800 dark:text-white uppercase tracking-wider">Demand</span>
                             </div>
                         </div>
 
@@ -65,7 +65,7 @@ export default function AgentIntro() {
                             toRef={div2Ref}
                             duration={4}
                             delay={0}
-                            pathWidth={5}
+                            pathWidth={4}
                             pathColor={pathColor}
                             gradientStartColor={gradientStartColor}
                             gradientStopColor={gradientStopColor}
@@ -81,7 +81,7 @@ export default function AgentIntro() {
                             toRef={div2Ref}
                             duration={4}
                             delay={2}
-                            pathWidth={5}
+                            pathWidth={4}
                             pathColor={pathColor}
                             gradientStartColor={gradientStartColor}
                             gradientStopColor={gradientStopColor}
@@ -98,7 +98,7 @@ export default function AgentIntro() {
                             toRef={div2Ref}
                             duration={4}
                             delay={0}
-                            pathWidth={5}
+                            pathWidth={4}
                             pathColor={pathColor}
                             gradientStartColor={gradientStartColor}
                             gradientStopColor={gradientStopColor}
@@ -115,7 +115,7 @@ export default function AgentIntro() {
                             toRef={div2Ref}
                             duration={4}
                             delay={2}
-                            pathWidth={5}
+                            pathWidth={4}
                             pathColor={pathColor}
                             gradientStartColor={gradientStartColor}
                             gradientStopColor={gradientStopColor}

@@ -1,80 +1,83 @@
 import { motion, useInView } from 'framer-motion'
-import { Mail, ArrowRight } from 'lucide-react'
-import Button from '../ui/Button'
+import { MessageSquare, ArrowRight, Calendar } from 'lucide-react'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
+import logo from '../../assets/LOGO_NEW.png'
 
 export default function CallToAction() {
     const ref = useRef(null)
-    const isInView = useInView(ref, { once: true, amount: 0.4 })
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp()
 
     return (
-        <section ref={ref} className="py-16 md:py-40 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 relative overflow-hidden">
-            {/* Animated background circles */}
-            <div className="absolute inset-0 opacity-10">
+        <section ref={ref} className="py-20 md:py-28 bg-white dark:bg-black transition-colors duration-300">
+            <WhatsAppModal />
+            <div className="max-w-5xl mx-auto px-6">
                 <motion.div
-                    animate={{
-                        scale: [1, 1.1, 1],
-                        rotate: [0, 90, 180],
-                    }}
-                    transition={{
-                        duration: 30,
-                        repeat: Infinity,
-                        ease: "linear",
-                    }}
-                    className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
-                />
-                <motion.div
-                    animate={{
-                        scale: [1.1, 1, 1.1],
-                        rotate: [180, 90, 0],
-                    }}
-                    transition={{
-                        duration: 35,
-                        repeat: Infinity,
-                        ease: "linear",
-                    }}
-                    className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
-                />
-            </div>
-
-            <div className="container mx-auto px-6 relative z-10 max-w-5xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-                    transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="relative rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] p-8 sm:p-16 text-center overflow-hidden shadow-2xl"
                 >
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm mb-8">
-                        <Mail className="text-white" size={36} />
+                    {/* Subtle watermark logo */}
+                    <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 pointer-events-none select-none opacity-[0.05] dark:opacity-[0.08]">
+                        <img
+                            src={logo}
+                            alt="Elesium Background Watermark"
+                            width="260"
+                            height="260"
+                            className="w-64 h-64 object-contain pointer-events-none select-none"
+                        />
                     </div>
 
-                    <h2 className="display-lg mb-6 text-white">
-                        Get started
-                    </h2>
-                    <p className="body-lg text-white/90 mb-12 max-w-3xl mx-auto">
-                        Connect with verified buyers and manufacturers across global markets.
-                    </p>
+                    <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+                        {/* Status badge */}
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            <span className="uppercase tracking-widest text-emerald-400 font-semibold text-[11px]">
+                                #1 Enterprise AI In India • Direct Principal Pairing
+                            </span>
+                        </div>
 
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ delay: 0.3, duration: 1 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                    >
-                        <Button
-                            variant="primary"
-                            className="bg-white text-brand-dark hover:bg-gray-100 group"
-                        >
-                            Contact sales
-                            <ArrowRight className="inline ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
-                        </Button>
-                        <Button
-                            variant="secondary"
-                            className="border-white text-white hover:bg-white hover:text-brand-dark"
-                        >
-                            Learn more
-                        </Button>
-                    </motion.div>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+                            Ready to Replace 40-Hour Bottlenecks with Deterministic AI?
+                        </h2>
+
+                        <p className="text-base sm:text-lg text-gray-300 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                            No sales gatekeepers. Speak directly with our Principal AI Systems Architect in Bengaluru to evaluate sovereign private VPC infrastructure, LangGraph state machines, and statutory DPDP Act compliance.
+                        </p>
+
+                        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-xl text-sm transition-all shadow-lg group"
+                            >
+                                <MessageSquare className="w-4 h-4 fill-current" />
+                                <span>Chat on WhatsApp with Lead Architect</span>
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                            </button>
+
+                            <Link
+                                to="/waitlist"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-xl text-sm transition-all"
+                            >
+                                <Calendar className="w-4 h-4 text-emerald-400" />
+                                <span>Schedule Calendar Review</span>
+                            </Link>
+                        </div>
+
+                        <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-gray-400">
+                            <span>Direct SLA: &lt; 4 Hour Response</span>
+                            <span>•</span>
+                            <span>Private Air-Gapped VPC</span>
+                            <span>•</span>
+                            <span>DPDP Act 2023 Compliant</span>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>

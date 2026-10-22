@@ -1,17 +1,20 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FileText, Download } from 'lucide-react'
+import { FileText, Download, MessageSquare, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { resourcesData } from '../../data/resourcesData'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 export default function Resources() {
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white overflow-y-auto pt-[52px]">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto pt-[52px] transition-colors duration-300">
+            <WhatsAppModal />
             <Helmet>
                 <title>AI Automation Resources & Guides | Elesium</title>
                 <meta name="description" content="Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency." />
@@ -87,7 +90,7 @@ export default function Resources() {
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-5 flex flex-col gap-1.5">
                                                 <Link to={resource.markdownFile ? `/resources/${resource.slug}` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
-                                                    <h3 className={`text-lg md:text-xl font-semibold text-black dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors' : ''}`}>
+                                                    <h3 className={`text-lg md:text-xl font-semibold text-black dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors' : ''}`}>
                                                         {resource.title}
                                                     </h3>
                                                 </Link>
@@ -98,7 +101,7 @@ export default function Resources() {
 
                                             {/* Category */}
                                             <div className="col-span-1 md:col-span-2 flex items-center mt-2 md:mt-0">
-                                                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400 uppercase">
+                                                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide bg-gray-100 text-gray-700 dark:bg-white/10 dark:text-gray-300 uppercase">
                                                     <FileText className="w-3.5 h-3.5 mr-2" />
                                                     {resource.category}
                                                 </span>
@@ -116,7 +119,7 @@ export default function Resources() {
                                                     href={resource.googleDriveLink}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:px-5 md:py-2.5 bg-gray-900 hover:bg-blue-600 dark:bg-white dark:hover:bg-blue-500 text-white dark:text-black dark:hover:text-white text-sm font-medium rounded-full transition-all duration-300"
+                                                    className="inline-flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:px-5 md:py-2.5 bg-gray-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black text-sm font-medium rounded-full transition-all duration-300"
                                                     title="Download PDF"
                                                 >
                                                     <Download className="h-4 w-4 md:mr-2" />
@@ -158,7 +161,7 @@ export default function Resources() {
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-5 flex flex-col gap-1.5">
                                                 <Link to={resource.markdownFile ? `/resources/${resource.slug}` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
-                                                    <h3 className={`text-lg md:text-xl font-semibold text-black dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors' : ''}`}>
+                                                    <h3 className={`text-lg md:text-xl font-semibold text-black dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors' : ''}`}>
                                                         {resource.title}
                                                     </h3>
                                                 </Link>
@@ -187,7 +190,7 @@ export default function Resources() {
                                                     href={resource.googleDriveLink}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:px-5 md:py-2.5 bg-gray-900 hover:bg-blue-600 dark:bg-white dark:hover:bg-blue-500 text-white dark:text-black dark:hover:text-white text-sm font-medium rounded-full transition-all duration-300"
+                                                    className="inline-flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:px-5 md:py-2.5 bg-gray-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black text-sm font-medium rounded-full transition-all duration-300"
                                                     title="Download Resource"
                                                 >
                                                     <Download className="h-4 w-4 md:mr-2" />
@@ -198,6 +201,36 @@ export default function Resources() {
                                     ))}
                                 </div>
                             </section>
+
+                            {/* Direct WhatsApp Intake Card */}
+                            <div className="mt-12 p-8 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
+                                <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                    <span>Direct Principal Systems Pairing</span>
+                                </div>
+                                <h3 className="text-2xl font-bold tracking-tight text-white">
+                                    Need a Bespoke Architecture Blueprint for Your Team?
+                                </h3>
+                                <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                                    Connect directly with our Principal AI Systems Architect in Bengaluru to review private VPC deployment feasibility.
+                                </p>
+                                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                    <button
+                                        onClick={openWhatsApp}
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                                    >
+                                        <MessageSquare className="w-4 h-4 fill-current" />
+                                        <span>Chat on WhatsApp with Lead Architect</span>
+                                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                                    </button>
+                                    <Link
+                                        to="/waitlist"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                                    >
+                                        <span>Schedule Calendar Review &rarr;</span>
+                                    </Link>
+                                </div>
+                            </div>
 
                         </div>
                     </motion.div>

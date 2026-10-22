@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft, Shield, TrendingUp, Zap, Activity, Cpu, Share2 } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Shield, TrendingUp, Zap, Activity, Cpu, Share2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 const industries = [
     {
@@ -74,6 +75,7 @@ const industries = [
 
 export default function Industries() {
     const navigate = useNavigate();
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto">
@@ -147,7 +149,44 @@ export default function Industries() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Bottom Call to Action Card */}
+                <section className="mt-20">
+                    <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                        <div className="relative z-10 max-w-2xl space-y-6">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                <span>Cross-Sector Enterprise Routing Desk</span>
+                            </div>
+
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+                                Deploy High-Throughput AI Workflows for Your Sector
+                            </h2>
+
+                            <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
+                                Schedule a 30-minute direct engineering evaluation. We map your domain data pipelines, evaluate regulatory compliance boundaries, and deliver an actionable deployment roadmap.
+                            </p>
+
+                            <div className="flex flex-wrap items-center gap-4 pt-2">
+                                <button
+                                    onClick={openWhatsApp}
+                                    className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
+                                >
+                                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                    Chat on WhatsApp with Lead Architect
+                                    <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
+                            <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                        </div>
+                    </div>
+                </section>
             </main>
+            <WhatsAppModal />
         </div>
     )
 }

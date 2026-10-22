@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CalendarBookingEmbed } from '../cro/CalendarBookingEmbed';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 const FEATURED_WHITEPAPERS = [
   {
@@ -48,6 +49,7 @@ const FEATURED_WHITEPAPERS = [
 ];
 
 export default function AuthorProfile() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   const authorSchema = {
@@ -119,14 +121,14 @@ export default function AuthorProfile() {
           <div className="flex flex-col md:flex-row gap-8 items-start">
             
             {/* Avatar / Visual Placeholder with Monogram */}
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white font-mono text-3xl sm:text-4xl font-bold shadow-lg shrink-0">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-mono text-3xl sm:text-4xl font-bold shadow-lg shrink-0">
               CS
             </div>
 
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
-                  <ShieldCheck className="w-3.5 h-3.5" /> Verified Author & Systems Architect
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white border border-gray-200 dark:border-white/10">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Verified Author & Systems Architect
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs font-mono text-gray-500 dark:text-gray-400">
                   <MapPin className="w-3.5 h-3.5" /> Bengaluru, Karnataka, India
@@ -136,7 +138,7 @@ export default function AuthorProfile() {
               <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 dark:text-white mb-2">
                 Chaman Shah
               </h1>
-              <p className="text-lg text-emerald-600 dark:text-emerald-400 font-medium mb-4">
+              <p className="text-lg text-gray-600 dark:text-gray-300 font-medium mb-4">
                 Principal AI Systems Architect & Founder, Elesium
               </p>
 
@@ -150,7 +152,7 @@ export default function AuthorProfile() {
                   href="https://github.com/655Chaman" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                 >
                   <Github className="w-4 h-4" /> GitHub / 655Chaman
                 </a>
@@ -158,7 +160,7 @@ export default function AuthorProfile() {
                   href="https://linkedin.com/in/chaman-shah-elesium" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                 >
                   <Linkedin className="w-4 h-4" /> LinkedIn Profile
                 </a>
@@ -166,17 +168,25 @@ export default function AuthorProfile() {
                   href="https://x.com/chamanshah_ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                 >
                   <Twitter className="w-4 h-4" /> @chamanshah_ai
                 </a>
                 
-                <button
-                  onClick={() => setIsCalendarOpen(true)}
-                  className="ml-auto inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs rounded-xl transition-all shadow-sm"
-                >
-                  <Calendar className="w-3.5 h-3.5" /> Book 30-Min Architecture Session
-                </button>
+                <div className="ml-auto flex items-center gap-3">
+                  <button
+                    onClick={() => openWhatsApp()}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-medium text-xs rounded-xl transition-all shadow-sm"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" /> Chat on WhatsApp
+                  </button>
+                  <button
+                    onClick={() => setIsCalendarOpen(true)}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white font-medium text-xs rounded-xl transition-all border border-gray-200 dark:border-white/10"
+                  >
+                    <Calendar className="w-3.5 h-3.5" /> Book 30-Min Session
+                  </button>
+                </div>
               </div>
 
             </div>
@@ -272,26 +282,48 @@ export default function AuthorProfile() {
         </div>
 
         {/* Direct Architecture Audit CTA */}
-        <div className="bg-gradient-to-br from-emerald-900 to-teal-950 rounded-3xl p-8 sm:p-10 text-white text-center shadow-lg">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Consult Directly with Principal Architect Chaman Shah
-          </h2>
-          <p className="text-emerald-100 max-w-2xl mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Review your enterprise system architecture, private VPC deployment parameters, and statutory DPDP Act 2023 compliance posture in an exclusive 30-minute technical evaluation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button
-              onClick={() => setIsCalendarOpen(true)}
-              className="px-6 py-3 bg-white text-emerald-950 hover:bg-emerald-50 font-semibold text-sm rounded-xl transition-all shadow"
-            >
-              Book 30-Minute Architecture Audit
-            </button>
-            <Link
-              to="/ai-automation-agency-india"
-              className="px-6 py-3 bg-emerald-800/80 hover:bg-emerald-700/80 text-white font-medium text-sm rounded-xl transition-all border border-emerald-600/50"
-            >
-              Explore India Enterprise Solutions Hub &rarr;
-            </Link>
+        <div className="relative overflow-hidden p-8 sm:p-12 md:p-14 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+          <div className="relative z-10 max-w-2xl space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Direct Systems Architect Consultation</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+              Consult Directly with Principal Architect Chaman Shah
+            </h2>
+
+            <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
+              Review your enterprise system architecture, private VPC deployment parameters, and statutory DPDP Act 2023 compliance posture directly with the systems engineering lead.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <button
+                onClick={() => openWhatsApp()}
+                className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                Chat on WhatsApp with Chaman
+              </button>
+              <button
+                onClick={() => setIsCalendarOpen(true)}
+                className="px-6 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-sm transition-all flex items-center gap-2"
+              >
+                <Calendar className="w-4 h-4 text-emerald-400" />
+                Schedule 30-Minute Briefing
+              </button>
+              <Link
+                to="/ai-automation-agency-india"
+                className="px-6 py-3.5 rounded-full border border-white/10 bg-transparent hover:bg-white/5 text-gray-400 hover:text-white font-medium text-xs transition-all"
+              >
+                Explore India Solutions Hub &rarr;
+              </Link>
+            </div>
+          </div>
+
+          <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
+            <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
           </div>
         </div>
 
@@ -306,6 +338,7 @@ export default function AuthorProfile() {
           solutionSlug: 'principal-architect-consultation'
         }}
       />
+      <WhatsAppModal />
     </div>
   );
 }

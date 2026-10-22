@@ -228,7 +228,7 @@ export function MandateApplicationForm({
                     <div className="flex justify-between border-b border-gray-200/60 dark:border-white/5 pb-2">
                         <span className="text-gray-400">STATUS</span>
                         <span className="text-emerald-500 font-semibold flex items-center gap-1.5">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
                             PRINCIPAL DISPATCH ACTIVE
                         </span>
                     </div>
@@ -311,7 +311,7 @@ export function MandateApplicationForm({
                                 : 'text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5'
                         }`}
                     >
-                        <FileText className="w-3.5 h-3.5 text-blue-500" />
+                        <FileText className="w-3.5 h-3.5 text-gray-900 dark:text-white" />
                         Sovereign Architecture Dossier
                     </button>
                 </div>

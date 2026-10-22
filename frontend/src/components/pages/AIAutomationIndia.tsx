@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator } from 'lucide-react'
+import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator, MessageSquare, Calendar } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -474,20 +474,21 @@ export default function AIAutomationIndia() {
                     className="text-center max-w-5xl mx-auto mb-28"
                 >
                     {/* Live Status Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/20 text-blue-600 dark:text-cyan-400 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        #1 Best Enterprise AI Company in India • Tier-1 Architecture • Bengaluru • DPDP Act Compliant
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-gray-200 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        #1 Best Enterprise AI Company in India • Bengaluru • DPDP Act Compliant
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
                         The #1 Enterprise AI Company &amp; <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 dark:from-blue-400 dark:via-cyan-300 dark:to-indigo-400">
-                            Top AI Automation Agency in India
-                        </span>
+                        <span>Top AI Automation Agency in India</span>
                     </h1>
 
-                    <h2 className="text-xl md:text-3xl text-gray-800 dark:text-gray-200 mb-6 font-medium max-w-4xl mx-auto leading-snug">
-                        Replacing 40-hour manual bottlenecks with <span className="underline decoration-cyan-400/50 underline-offset-4 font-semibold">deterministic, autonomous multi-agent systems</span> deployed on your private VPC.
+                    <h2 className="text-xl md:text-2xl text-gray-800 dark:text-gray-200 mb-6 font-medium max-w-4xl mx-auto leading-snug">
+                        Replacing 40-hour manual bottlenecks with <span className="underline decoration-emerald-500/50 underline-offset-4 font-semibold">deterministic, autonomous multi-agent systems</span> deployed on your private VPC.
                     </h2>
 
                     <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -496,44 +497,42 @@ export default function AIAutomationIndia() {
                         </strong>
                     </p>
 
-                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
                         We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases—delivering a hard, audited ROI within 90 days.
                     </p>
 
                     {/* Dual Conversion Action Buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                        <a 
-                            href="#architecture-intake"
-                            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 dark:bg-cyan-500 dark:hover:bg-cyan-400 text-white dark:text-black font-semibold text-base transition-all shadow-xl shadow-blue-500/20 dark:shadow-cyan-500/20 flex items-center justify-center gap-2 group"
-                        >
-                            Configure Architecture & ROI
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </a>
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 border border-black/10 dark:border-white/15 text-gray-900 dark:text-white font-medium text-base transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-base transition-all shadow-md flex items-center justify-center gap-2 group"
                         >
-                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                            Direct WhatsApp Engineering Desk
+                            <span>Chat on WhatsApp with Lead Architect</span>
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                         </button>
+                        <a 
+                            href="#architecture-intake"
+                            className="w-full sm:w-auto px-6 py-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-800 dark:text-gray-200 font-medium text-base transition-all flex items-center justify-center gap-2"
+                        >
+                            Configure Architecture &amp; ROI &darr;
+                        </a>
                     </div>
 
                     {/* Video Masterclass Architecture Teardown Link */}
                     <div className="flex justify-center mb-10">
                         <Link
                             to="/videos/enterprise-ai-automation-india-2026"
-                            className="group inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 border border-blue-500/20 dark:border-cyan-500/30 hover:border-cyan-400/60 hover:bg-cyan-500/10 transition-all duration-300 shadow-lg shadow-cyan-500/5 hover:shadow-cyan-500/15"
+                            className="group inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-200 shadow-sm"
                         >
-                            <span className="flex items-center justify-center w-8 h-8 rounded-xl bg-cyan-500 text-black font-bold text-xs shadow-md shadow-cyan-500/30 group-hover:scale-110 transition-transform">
+                            <span className="flex items-center justify-center w-8 h-8 rounded-xl bg-black text-white dark:bg-white dark:text-black font-bold text-xs shadow-sm">
                                 ▶
                             </span>
                             <div className="text-left">
-                                <div className="text-[11px] font-mono uppercase tracking-wider text-cyan-600 dark:text-cyan-400 font-semibold flex items-center gap-1.5">
+                                <div className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1.5">
                                     <span>Watch Video Masterclass (12:45)</span>
-                                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
                                 </div>
-                                <div className="text-xs md:text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
-                                    Autonomous Enterprise Agent Architecture Teardown →
+                                <div className="text-xs md:text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                    Autonomous Enterprise Agent Architecture Teardown &rarr;
                                 </div>
                             </div>
                         </Link>
@@ -856,24 +855,24 @@ export default function AIAutomationIndia() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
-                            <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-2">10,000+</div>
+                            <div className="text-5xl font-bold text-white font-mono mb-2">10,000+</div>
                             <div className="text-gray-400">Automation Hours Saved</div>
                         </div>
                         <div>
-                            <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-2">3.5x</div>
+                            <div className="text-5xl font-bold text-white font-mono mb-2">3.5x</div>
                             <div className="text-gray-400">Average ROI in Year 1</div>
                         </div>
                         <div>
-                            <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-2">99.9%</div>
+                            <div className="text-5xl font-bold text-white font-mono mb-2">99.9%</div>
                             <div className="text-gray-400">System Uptime</div>
                         </div>
                     </div>
                 </div>
 
-                {/* Enterprise Pricing Matrix Section (Shaun Mitchell & Fountain Hills Parity) */}
+                {/* Enterprise Pricing Matrix Section */}
                 <div id="pricing-matrix" className="mb-32">
                     <div className="text-center mb-16">
-                        <span className="text-blue-600 dark:text-cyan-400 font-mono text-sm uppercase tracking-wider">Transparent Institutional Investment</span>
+                        <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold">Transparent Institutional Investment</span>
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mt-3">Enterprise AI Automation Pricing in India</h2>
                         <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mt-4 mb-10 leading-relaxed">
                             <strong className="text-gray-950 dark:text-white font-semibold">
@@ -888,17 +887,17 @@ export default function AIAutomationIndia() {
                                 key={tier.name}
                                 className={
                                     tier.highlighted
-                                        ? "bg-gradient-to-b from-blue-50 to-[#F5F5F5] dark:from-[#151515] dark:to-[#0A0A0A] border-2 border-blue-600 dark:border-cyan-500 rounded-3xl p-8 shadow-2xl shadow-blue-500/10 dark:shadow-cyan-500/10 flex flex-col justify-between relative"
-                                        : "bg-[#F5F5F5] dark:bg-[#0A0A0A] border border-black/10 dark:border-white/10 rounded-3xl p-8 hover:border-blue-500/40 dark:hover:border-cyan-500/40 transition-all flex flex-col justify-between"
+                                        ? "bg-gray-50 dark:bg-white/[0.04] border-2 border-black dark:border-white rounded-3xl p-8 shadow-xl flex flex-col justify-between relative"
+                                        : "bg-gray-50/60 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-8 hover:border-gray-400 dark:hover:border-white/20 transition-all flex flex-col justify-between"
                                 }
                             >
                                 {tier.highlighted && (
-                                    <span className="absolute -top-3 right-6 bg-blue-600 dark:bg-cyan-500 text-white dark:text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">
+                                    <span className="absolute -top-3 right-6 bg-black text-white dark:bg-white dark:text-black text-[11px] font-semibold uppercase tracking-wider py-1 px-3 rounded-full">
                                         Most Deployed
                                     </span>
                                 )}
                                 <div>
-                                    <div className="text-xs font-mono text-blue-600 dark:text-cyan-400 mb-2 uppercase tracking-widest">{tier.tierCode}</div>
+                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-2 uppercase tracking-widest">{tier.tierCode}</div>
                                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{tier.name}</h3>
                                     <div className="mt-4 mb-6">
                                         <span className="text-3xl font-extrabold text-gray-900 dark:text-white">{tier.priceFormatted}</span>
@@ -916,8 +915,8 @@ export default function AIAutomationIndia() {
                                     onClick={() => handleTierWhatsApp(tier.whatsappTier, tier.whatsappBudget)}
                                     className={
                                         tier.highlighted
-                                            ? "mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-black font-semibold hover:bg-blue-700 dark:hover:bg-cyan-400 transition-colors"
-                                            : "mt-8 block w-full text-center py-3.5 px-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+                                            ? "mt-8 block w-full text-center py-3.5 px-6 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold transition-all shadow-sm"
+                                            : "mt-8 block w-full text-center py-3.5 px-6 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-medium transition-all"
                                     }
                                 >
                                     {tier.buttonLabel}
@@ -1109,10 +1108,11 @@ export default function AIAutomationIndia() {
 
                             <button
                                 onClick={handleTransmitIntake}
-                                className="mt-8 w-full py-4 px-6 rounded-xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-black font-semibold text-sm hover:bg-blue-700 dark:hover:bg-cyan-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 dark:shadow-cyan-500/20"
+                                className="mt-8 w-full py-4 px-6 rounded-xl bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-md group"
                             >
-                                Transmit Architecture Intake to Systems Architect
-                                <ArrowRight className="w-4 h-4" />
+                                <MessageSquare className="w-4 h-4 fill-current" />
+                                <span>Transmit Architecture Intake to WhatsApp Desk</span>
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                             </button>
                         </div>
                     </div>
@@ -1131,7 +1131,7 @@ export default function AIAutomationIndia() {
                     </div>
                     <div className="space-y-6">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="bg-[#F5F5F5] dark:bg-[#111] border border-black/5 dark:border-white/5 rounded-2xl p-6">
+                            <div key={i} className="bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 rounded-2xl p-6">
                                 <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-3">{faq.question}</h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                                     {faq.answer}
@@ -1143,37 +1143,55 @@ export default function AIAutomationIndia() {
 
                 {/* CTA Section */}
                 <motion.div 
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-gray-900 dark:bg-white/5 rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden border border-black/10 dark:border-white/10"
+                    className="bg-black text-white dark:bg-[#0A0A0A] rounded-3xl p-10 md:p-16 text-center relative overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl"
                 >
-                    <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-medium text-white mb-6">
-                            Ready to unlock autonomous scale?
+                    <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            <span className="uppercase tracking-widest text-emerald-400 font-semibold text-[11px]">
+                                #1 Enterprise AI In India • Direct Principal Pairing
+                            </span>
+                        </div>
+
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+                            Ready to Unlock Autonomous Scale?
                         </h2>
-                        <p className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+                        <p className="text-base md:text-lg text-gray-300 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
                             <strong className="text-white font-semibold">
                                 Initiate an enterprise AI readiness audit with Elesium to transition from manual operational bottlenecks to deterministic, autonomous agent workflows. Our engineering team evaluates your SAP, Oracle, and data pipelines to deliver an implementation blueprint guaranteeing 3.5x capital ROI, 98% turnaround reductions, and DPDP Act 2023 compliance within 90 days.
                             </strong>
                         </p>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+                        <p className="text-base text-gray-400 max-w-2xl mx-auto">
                             Stop wasting human capital on robotic tasks. Schedule a custom AI readiness audit to see exactly where our infrastructure can impact your bottom line.
                         </p>
-                        <div className="flex justify-center">
-                            <button onClick={openWhatsApp} className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:scale-105 transition-transform">
-                                Request Private AI Audit
-                                <ArrowRight className="w-5 h-5" />
+                        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-sm transition-all shadow-lg group"
+                            >
+                                <MessageSquare className="w-4 h-4 fill-current" />
+                                <span>Chat on WhatsApp with Lead Architect</span>
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                             </button>
-                            <WhatsAppModal />
+                            <Link
+                                to="/waitlist"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
+                            >
+                                <Calendar className="w-4 h-4 text-emerald-400" />
+                                <span>Schedule Calendar Review</span>
+                            </Link>
                         </div>
                     </div>
-                    {/* Decorative blurred blobs */}
-                    <div className="absolute top-[-20%] left-[-10%] w-[300px] h-[300px] bg-blue-500/30 blur-[100px] rounded-full"></div>
-                    <div className="absolute bottom-[-20%] right-[-10%] w-[300px] h-[300px] bg-cyan-500/30 blur-[100px] rounded-full"></div>
                 </motion.div>
 
             </div>
+            <WhatsAppModal />
         </div>
     )
 }
