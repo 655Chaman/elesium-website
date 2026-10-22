@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dpdp-guardrails"
+version = "0.1.0"
+authors = [
+  { name="Chaman Shah", email="chaman@elesium.online" },
+]
+description = "High-throughput DPDP Act 2023 compliant PII masking and verification guardrails for enterprise AI agents."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security",
+]
+keywords = ["dpdp", "india", "pii-masking", "aadhaar", "pan", "enterprise-ai", "langgraph", "fastapi"]
+
+[project.urls]
+"Homepage" = "https://elesium.online/ai-automation-agency-india"
+"Author Profile" = "https://elesium.online/authors/chaman-shah"
+"Repository" = "https://github.com/655Chaman/dpdp-guardrails"
+"Bug Tracker" = "https://github.com/655Chaman/dpdp-guardrails/issues"

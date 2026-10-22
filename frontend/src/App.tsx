@@ -14,6 +14,7 @@ import Preloader from './components/ui/Preloader'
 const FeatureExplorer = lazy(() => import('./components/sections/FeatureExplorer'))
 const Solutions = lazy(() => import('./components/sections/Solutions'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
+const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
 const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
 const HowWeWork = lazy(() => import('./components/pages/HowWeWork'))
 const Industries = lazy(() => import('./components/pages/Industries'))
@@ -233,6 +234,10 @@ function App() {
                             <Route path="/resources/:slug" element={<ResourceDetail />} />
                             <Route path="/ai-automation" element={<AIAutomation />} />
                             <Route path="/ai-automation-agency-india" element={<AIAutomationIndia />} />
+                            <Route path="/enterprise-ai-bangalore" element={<RegionalCityHub forcedCityId="bangalore" />} />
+                            <Route path="/enterprise-ai-mumbai" element={<RegionalCityHub forcedCityId="mumbai" />} />
+                            <Route path="/enterprise-ai-delhi-ncr" element={<RegionalCityHub forcedCityId="delhi-ncr" />} />
+                            <Route path="/enterprise-ai-pune" element={<RegionalCityHub forcedCityId="pune" />} />
                             <Route path="/videos" element={<VideoMirror />} />
                             <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />
@@ -251,6 +256,7 @@ function App() {
                             <Route path="/tools/latency-estimator" element={<Navigate to="/tools/multi-agent-latency-token-cost-estimator" replace />} />
                             <Route path="/embed/latency-estimator" element={<EmbedLatencyEstimator />} />
                             <Route path="/compare" element={<CompareHub />} />
+                            <Route path="/compare/elesium-vs-traditional-it-consultancies-tcs-infosys-wipro" element={<Navigate to="/compare/elesium-vs-traditional-it-consultancies" replace />} />
                             <Route path="/compare/:slug" element={<CompareDetail />} />
                             <Route path="/tools/agentic-architecture-grader" element={<AgenticArchitectureGrader />} />
                             <Route path="/tools/architecture-grader" element={<Navigate to="/tools/agentic-architecture-grader" replace />} />

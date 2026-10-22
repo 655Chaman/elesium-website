@@ -605,6 +605,64 @@ def resolve_category_architecture(hub_category: str) -> dict:
         return CATEGORY_ARCHITECTURES["Enterprise Cybersecurity & Cloud Infrastructure"]
     return CATEGORY_ARCHITECTURES["ERP & Systems"]
 
+ORDERED_CATEGORIES = [
+    "Enterprise Infrastructure",
+    "Industrial Manufacturing",
+    "BFSI & Underwriting",
+    "Logistics & Supply Chain",
+    "Enterprise Foundation Model Inference & DeepSeek Serving Clusters",
+    "ERP Integration",
+    "Enterprise Cybersecurity & Cloud Infrastructure",
+    "Healthcare & Regulated Systems",
+    "AI Agents & Autonomous Workflows",
+    "Healthcare AI",
+    "Energy & Utilities",
+    "Renewable Energy & Power Grid"
+]
+
+ROTATING_ANCHORS = [
+    "Enterprise AI automation agency in India",
+    "Sovereign AI engineering pod Bengaluru",
+    "Indian enterprise multi-agent architectures",
+    "BFSI & logistics AI automation India",
+    "DPDP Act 2023 compliant enterprise systems"
+]
+
+def get_rotating_anchor_text(category_name: str) -> str:
+    category_name = (category_name or "").strip()
+    try:
+        idx = ORDERED_CATEGORIES.index(category_name)
+    except ValueError:
+        cat_lower = category_name.lower()
+        if any(k in cat_lower for k in ["infrastructure", "industrial", "manufacturing"]):
+            idx = 0
+        elif any(k in cat_lower for k in ["logistics", "supply chain", "erp", "deepseek", "foundation"]):
+            idx = 3
+        elif any(k in cat_lower for k in ["security", "cyber", "agent", "workflow"]):
+            idx = 6
+        elif any(k in cat_lower for k in ["bfsi", "fintech", "banking", "health", "energy", "utility"]):
+            idx = 9
+        else:
+            idx = 12
+
+    if idx <= 2:
+        return ROTATING_ANCHORS[0]
+    elif idx <= 5:
+        return ROTATING_ANCHORS[1]
+    elif idx <= 8:
+        return ROTATING_ANCHORS[2]
+    elif idx <= 11:
+        return ROTATING_ANCHORS[3]
+    else:
+        return ROTATING_ANCHORS[4]
+
+def get_secondary_rotating_anchor_text(primary_anchor: str) -> str:
+    try:
+        curr_idx = ROTATING_ANCHORS.index(primary_anchor)
+    except ValueError:
+        curr_idx = 0
+    return ROTATING_ANCHORS[(curr_idx + 1) % len(ROTATING_ANCHORS)]
+
 # ---------------------------------------------------------------------------
 # CORE GENERATOR ENGINE
 # ---------------------------------------------------------------------------
@@ -1105,6 +1163,11 @@ class CompactLandingGenerator:
         hero_img = record["hero"]["heroImage"]
         hero_img_alt = html.escape(record["hero"]["heroImageAlt"])
 
+        # Dynamic Anchor Text Rotation (Categorical Anti-Overoptimization Gate)
+        cat_name = record.get("hubCategory") or record.get("category", "")
+        nav_anchor = html.escape(get_rotating_anchor_text(cat_name))
+        footer_anchor = html.escape(get_secondary_rotating_anchor_text(nav_anchor))
+
         # Format Blocks
         b1 = record["blocks"][0]
         b2 = record["blocks"][1]
@@ -1380,7 +1443,7 @@ class CompactLandingGenerator:
   <nav class="site-nav">
     <a href="/" class="site-logo" title="Elesium — Best Enterprise AI Company in India">ELESIUM</a>
     <div class="nav-links">
-      <a href="/ai-automation-agency-india" style="color:#10b981;font-weight:600;">Best Enterprise AI India</a>
+      <a href="/ai-automation-agency-india" style="color:#10b981;font-weight:600;">{nav_anchor}</a>
       <a href="/solutions">Enterprise Solutions Hub</a>
       <a href="/signals">Market Signals</a>
       <a href="/how-we-work">How We Work</a>
@@ -1465,7 +1528,7 @@ class CompactLandingGenerator:
     <div style="max-width:960px;margin:0 auto 1.25rem auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;font-size:0.85rem;">
       <a href="/" style="color:#9ca3af;text-decoration:none;">Best Enterprise Company in India</a>
       <span>•</span>
-      <a href="/ai-automation-agency-india" style="color:#10b981;text-decoration:none;font-weight:600;">Top AI Automation Agency India</a>
+      <a href="/ai-automation-agency-india" style="color:#10b981;text-decoration:none;font-weight:600;">{footer_anchor}</a>
       <span>•</span>
       <a href="/solutions" style="color:#9ca3af;text-decoration:none;">Enterprise Solutions Hub</a>
       <span>•</span>

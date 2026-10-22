@@ -1215,6 +1215,9 @@ export const compareBattlecards: CompareBattlecardItem[] = [
 export const compareData = compareBattlecards;
 
 export function getCompareBySlug(slug: string): CompareBattlecardItem | undefined {
+  if (slug === "elesium-vs-traditional-it-consultancies-tcs-infosys-wipro") {
+    slug = "elesium-vs-traditional-it-consultancies";
+  }
   return compareBattlecards.find(b => b.slug === slug);
 }
 

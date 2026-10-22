@@ -361,10 +361,13 @@ export default function AIAutomationIndia() {
             "https://elesium.online",
             "https://www.goodfirms.co/company/elesium-online",
             "https://clutch.co/profile/elesium-online",
-            "https://github.com/elesium-ai",
-            "https://www.linkedin.com/company/elesium",
-            "https://x.com/elesium_ai",
-            "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e"
+            "https://www.g2.com/products/elesium-ai-automation-platform",
+            "https://www.trustpilot.com/review/elesium.online",
+            "https://www.crunchbase.com/organization/elesium-online",
+            "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
+            "https://github.com/655Chaman/elesium-website",
+            "https://www.linkedin.com/in/chaman-elesium",
+            "https://x.com/elesium_ai"
         ],
         "knowsAbout": [
             {
@@ -384,9 +387,19 @@ export default function AIAutomationIndia() {
         ],
         "founder": {
             "@type": "Person",
-            "name": "Elesium AI Systems Architecture Team",
-            "jobTitle": "Lead AI Systems Architect",
+            "@id": "https://elesium.online/authors/chaman-shah#person",
+            "name": "Chaman Shah",
+            "givenName": "Chaman",
+            "familyName": "Shah",
+            "jobTitle": "Principal AI Systems Architect & Founder",
+            "url": "https://elesium.online/authors/chaman-shah",
             "telephone": "+91-8317329312"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "28",
+            "bestRating": "5"
         },
         "description": "Elesium is India's #1 enterprise AI company and top AI automation agency building custom agentic AI workflows, LangGraph state machines, and private VPC LLM infrastructure for enterprises."
     };
@@ -610,6 +623,110 @@ export default function AIAutomationIndia() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Competitive Comparison Matrix: Elesium vs Traditional IT & Big 4 */}
+                <div className="mb-32">
+                    <div className="text-center mb-12">
+                        <span className="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+                            Enterprise Architectural Evaluation
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mt-4 mb-6">
+                            Elesium vs Legacy IT &amp; Big 4 Consultancies
+                        </h2>
+                        <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            Indian enterprises are replacing bloated 18-month time-and-materials IT contracts with Elesium’s 14-day deterministic AI engineering pods. Compare the architectural, economic, and compliance realities below.
+                        </p>
+                    </div>
+
+                    <div className="max-w-5xl mx-auto overflow-hidden rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#111] shadow-sm">
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="border-b border-black/10 dark:border-white/10 bg-gray-50/75 dark:bg-white/[0.02]">
+                                        <th className="p-4 sm:p-5 text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400 w-1/4">Evaluation Dimension</th>
+                                        <th className="p-4 sm:p-5 text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20 w-5/12">
+                                            Elesium Sovereign Pods
+                                        </th>
+                                        <th className="p-4 sm:p-5 text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400 w-1/3">
+                                            Traditional IT (TCS, Infosys) &amp; Big 4
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-black/5 dark:divide-white/5 text-sm">
+                                    <tr>
+                                        <td className="p-4 sm:p-5 font-semibold text-gray-900 dark:text-white">Deployment Velocity</td>
+                                        <td className="p-4 sm:p-5 bg-emerald-50/30 dark:bg-emerald-950/10 text-gray-900 dark:text-emerald-300 font-medium">
+                                            14 to 30 days to live production deployment with calibrated Python LangGraph state machines.
+                                        </td>
+                                        <td className="p-4 sm:p-5 text-gray-600 dark:text-gray-400">
+                                            12 to 18 months discovery, committee sign-offs, and prolonged waterfall staging.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 sm:p-5 font-semibold text-gray-900 dark:text-white">Commercial Model &amp; SLA</td>
+                                        <td className="p-4 sm:p-5 bg-emerald-50/30 dark:bg-emerald-950/10 text-gray-900 dark:text-emerald-300 font-medium">
+                                            Contractually committed 90-day cash-flow ROI SLA with fixed-scope milestone delivery.
+                                        </td>
+                                        <td className="p-4 sm:p-5 text-gray-600 dark:text-gray-400">
+                                            Open-ended Time &amp; Materials (T&amp;M) billing that incentivizes scope creep and billable hour bloat.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 sm:p-5 font-semibold text-gray-900 dark:text-white">Code Ownership &amp; IP</td>
+                                        <td className="p-4 sm:p-5 bg-emerald-50/30 dark:bg-emerald-950/10 text-gray-900 dark:text-emerald-300 font-medium">
+                                            100% client-owned sovereign repository. Zero platform lock-in, zero per-seat license taxes.
+                                        </td>
+                                        <td className="p-4 sm:p-5 text-gray-600 dark:text-gray-400">
+                                            Proprietary framework lock-in, recurring multi-year managed service fees, and non-transferable IP.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 sm:p-5 font-semibold text-gray-900 dark:text-white">Engineering Seniority</td>
+                                        <td className="p-4 sm:p-5 bg-emerald-50/30 dark:bg-emerald-950/10 text-gray-900 dark:text-emerald-300 font-medium">
+                                            Direct daily pairing with Principal Systems Architects (Ex-Founders, Senior Systems Engineers).
+                                        </td>
+                                        <td className="p-4 sm:p-5 text-gray-600 dark:text-gray-400">
+                                            Pitched by partners; staffed by junior batch hires managed by non-technical account executives.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 sm:p-5 font-semibold text-gray-900 dark:text-white">DPDP &amp; Data Residency</td>
+                                        <td className="p-4 sm:p-5 bg-emerald-50/30 dark:bg-emerald-950/10 text-gray-900 dark:text-emerald-300 font-medium">
+                                            Air-gapped private VPC or on-premise FP8 execution with zero third-party token leakage. DPDP Act 2023 certified.
+                                        </td>
+                                        <td className="p-4 sm:p-5 text-gray-600 dark:text-gray-400">
+                                            Superficial third-party multi-tenant API wrappers with potential transatlantic data residency violations.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div className="p-6 bg-gray-50/50 dark:bg-white/[0.02] border-t border-black/10 dark:border-white/10 flex flex-wrap items-center justify-between gap-4">
+                            <div className="flex flex-wrap items-center gap-4">
+                                <Link
+                                    to="/compare/elesium-vs-traditional-it-consultancies"
+                                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                                >
+                                    Read Full TCS, Infosys &amp; Wipro Battlecard &rarr;
+                                </Link>
+                                <span className="text-gray-300 dark:text-gray-700 hidden sm:inline">•</span>
+                                <Link
+                                    to="/compare/elesium-vs-big-4-consulting-firms"
+                                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                                >
+                                    Read Big 4 (PwC, EY, Deloitte, KPMG) Battlecard &rarr;
+                                </Link>
+                            </div>
+                            <Link
+                                to="/compare"
+                                className="inline-flex items-center gap-1.5 text-xs font-mono text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+                            >
+                                View All 12 Architectural Battlecards &rarr;
+                            </Link>
+                        </div>
                     </div>
                 </div>
 

@@ -106,6 +106,57 @@ def load_solutions_via_node():
 
     return solutions
 
+ORDERED_CATEGORIES = [
+    "Enterprise Infrastructure",
+    "Industrial Manufacturing",
+    "BFSI & Underwriting",
+    "Logistics & Supply Chain",
+    "Enterprise Foundation Model Inference & DeepSeek Serving Clusters",
+    "ERP Integration",
+    "Enterprise Cybersecurity & Cloud Infrastructure",
+    "Healthcare & Regulated Systems",
+    "AI Agents & Autonomous Workflows",
+    "Healthcare AI",
+    "Energy & Utilities",
+    "Renewable Energy & Power Grid"
+]
+
+ROTATING_ANCHORS = [
+    "Enterprise AI automation agency in India",
+    "Sovereign AI engineering pod Bengaluru",
+    "Indian enterprise multi-agent architectures",
+    "BFSI & logistics AI automation India",
+    "DPDP Act 2023 compliant enterprise systems"
+]
+
+def get_rotating_anchor_text(category_name: str) -> str:
+    category_name = (category_name or "").strip()
+    try:
+        idx = ORDERED_CATEGORIES.index(category_name)
+    except ValueError:
+        cat_lower = category_name.lower()
+        if any(k in cat_lower for k in ["infrastructure", "industrial", "manufacturing"]):
+            idx = 0
+        elif any(k in cat_lower for k in ["logistics", "supply chain", "erp", "deepseek", "foundation"]):
+            idx = 3
+        elif any(k in cat_lower for k in ["security", "cyber", "agent", "workflow"]):
+            idx = 6
+        elif any(k in cat_lower for k in ["bfsi", "fintech", "banking", "health", "energy", "utility"]):
+            idx = 9
+        else:
+            idx = 12
+
+    if idx <= 2:
+        return ROTATING_ANCHORS[0]
+    elif idx <= 5:
+        return ROTATING_ANCHORS[1]
+    elif idx <= 8:
+        return ROTATING_ANCHORS[2]
+    elif idx <= 11:
+        return ROTATING_ANCHORS[3]
+    else:
+        return ROTATING_ANCHORS[4]
+
 def render_solution_semantic_html(sol):
     """
     Renders semantic HTML for an individual solution page according to Edward Sturm's
@@ -197,6 +248,9 @@ def render_solution_semantic_html(sol):
     trust_sla = trust_section.get("slaGuarantee", "Zero data retention guarantee. Deployable across dedicated AWS, GCP, or Azure private VPCs with DPDP Act 2023, ISO 27001, and SOC-2 Type II cryptographic state audit verification.")
     badges_html = "".join(f'<li style="color:#4b5563;margin-bottom:0.25rem;">• {html.escape(b)}</li>' for b in trust_badges)
 
+    cat_raw = sol.get("hubCategory") or sol.get("category", "")
+    rotating_anchor = html.escape(get_rotating_anchor_text(cat_raw))
+
     hero_img = hero.get("heroImage", f"/assets/solutions/{slug}-architecture.webp")
     hero_alt = html.escape(hero.get("heroImageAlt", h1))
 
@@ -224,6 +278,10 @@ def render_solution_semantic_html(sol):
       <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">{html.escape(trust_title)}</h3>
       <p style="color:#4b5563;margin-bottom:0.75rem;">{html.escape(trust_sla)}</p>
       <ul style="list-style-type:none;padding:0;margin:0;">{badges_html}</ul>
+      <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e5e7eb;font-size:0.875rem;">
+        <span style="color:#6b7280;">Sovereign Architecture Pod: </span>
+        <a href="/ai-automation-agency-india" style="color:#059669;font-weight:600;text-decoration:underline;">{rotating_anchor} &rarr;</a>
+      </div>
     </section>
     {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
   </main>
@@ -4452,6 +4510,239 @@ def render_author_profile_semantic_html():
 </div>
 """
 
+REGIONAL_CITY_DATA = {
+    "bangalore": {
+        "city_name": "Bengaluru (Bangalore)",
+        "region_name": "Karnataka Tech Corridor",
+        "slug": "enterprise-ai-bangalore",
+        "h1": "Best Enterprise AI Company in Bangalore",
+        "answer_capsule": "Elesium is Bengaluru's premier enterprise AI automation company, engineering sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-2s automated pipelines from our Koramangala engineering pod. We deliver contractually guaranteed 3x–5x ROI in 90 days with full DPDP Act 2023 statutory compliance.",
+        "hero_subtitle": "Engineering sovereign multi-agent systems, dedicated private VPC LLM clusters, and deterministic state machines for India's silicon capital.",
+        "address": {
+            "street": "Koramangala 4th Block",
+            "locality": "Bengaluru",
+            "region": "Karnataka",
+            "postal": "560034",
+            "lat": 12.9352,
+            "lng": 77.6245
+        },
+        "industries": ["High-Growth Enterprise SaaS", "Global Capability Centers (GCCs)", "DeepTech & Developer Infrastructure", "Venture-Backed FinTech Platforms"],
+        "case_title": "Autonomous Developer Operations & Multi-Repo Synthesis",
+        "case_client": "Tier-1 Bengaluru B2B SaaS (Series C)",
+        "case_metric": "84% reduction in incident MTTR and ₹22.4L saved in quarterly compute OPEX."
+    },
+    "mumbai": {
+        "city_name": "Mumbai (BKC & Nariman Point)",
+        "region_name": "Maharashtra Financial Capital",
+        "slug": "enterprise-ai-mumbai",
+        "h1": "Best Enterprise AI Company in Mumbai",
+        "answer_capsule": "Elesium is Mumbai's top enterprise AI automation company, delivering deterministic multi-agent architectures and sub-200ms ledger reconciliation for BFSI institutions, NBFCs, and conglomerates in BKC and Nariman Point. All systems strictly comply with RBI digital lending guidelines and DPDP Act 2023.",
+        "hero_subtitle": "Deploying deterministic multi-agent architectures, air-gapped ledger reconciliation, and RBI-compliant private cloud AI for India's financial hub.",
+        "address": {
+            "street": "Bandra Kurla Complex (BKC)",
+            "locality": "Mumbai",
+            "region": "Maharashtra",
+            "postal": "400051",
+            "lat": 19.0657,
+            "lng": 72.8687
+        },
+        "industries": ["Private Commercial Banking & NBFCs", "Institutional Asset Management & AMC", "General & Life Insurance Underwriting", "Large Conglomerate Treasury Operations"],
+        "case_title": "Automated Corporate Credit Underwriting & MCA Reconciliation",
+        "case_client": "Leading Mumbai NBFC (₹3,200 Cr AUM)",
+        "case_metric": "Cut loan underwriting latency from 14.5 hours down to 1.9 seconds with zero credit policy slippage."
+    },
+    "delhi-ncr": {
+        "city_name": "Delhi NCR (Gurugram & Noida)",
+        "region_name": "National Capital Region",
+        "slug": "enterprise-ai-delhi-ncr",
+        "h1": "Best Enterprise AI Company in Delhi NCR",
+        "answer_capsule": "Elesium is Delhi NCR's leading enterprise AI company, architecting automated logistics dispatch, GST Rule 36(4) invoice reconciliation, and sovereign GovTech multi-agent systems across Gurugram and Noida. Contractually committed 90-day ROI backed by private VPC deployments.",
+        "hero_subtitle": "Engineering autonomous logistics dispatch, GST input tax credit reconciliation, and sovereign AI infrastructure across Gurugram, Noida, and New Delhi.",
+        "address": {
+            "street": "Cyber City, DLF Phase 2",
+            "locality": "Gurugram",
+            "region": "Haryana",
+            "postal": "122002",
+            "lat": 28.4908,
+            "lng": 77.0903
+        },
+        "industries": ["Express Logistics & 3PL Freight Networks", "Automotive Tier-1 Manufacturing Corridors", "Omnichannel FMCG & Quick Commerce", "GovTech & Public Sector Enterprise Infrastructure"],
+        "case_title": "Automated Supply Chain Bill-of-Lading & Dispatch Engine",
+        "case_client": "Gurugram Freight & 3PL Logistics Operator",
+        "case_metric": "Yard dwell time slashed by 64% and eliminated ₹18.4L in quarterly demurrage penalties."
+    },
+    "pune": {
+        "city_name": "Pune (Hinjawadi & Chakan)",
+        "region_name": "Maharashtra Industrial Belt",
+        "slug": "enterprise-ai-pune",
+        "h1": "Best Enterprise AI Company in Pune",
+        "answer_capsule": "Elesium is Pune's leading enterprise AI company, engineering sub-50ms computer vision defect inspection, predictive machine telemetry, and bidirectional SAP RFC state machines for automotive OEMs and discrete manufacturing plants across Chakan and Hinjawadi. Delivering audited 3.5x ROI in 90 days.",
+        "hero_subtitle": "Deploying high-speed computer vision defect inspection, predictive IoT state machines, and SAP RFC automation across Chakan and Hinjawadi.",
+        "address": {
+            "street": "Rajiv Gandhi Infotech Park, Phase 1",
+            "locality": "Hinjawadi, Pune",
+            "region": "Maharashtra",
+            "postal": "411057",
+            "lat": 18.5913,
+            "lng": 73.7389
+        },
+        "industries": ["Automotive OEMs & Tier-1 Component Suppliers", "Discrete Precision Industrial Manufacturing", "Embedded Systems & IoT Telemetry Labs", "Specialty Chemical & Heavy Machinery Plants"],
+        "case_title": "Automotive Transmission Casing Defect Inspection System",
+        "case_client": "Chakan Automotive Component Tier-1 Manufacturer",
+        "case_metric": "Zero defective parts shipped over 180 production days; recovered ₹42.8L in avoided warranty penalties."
+    }
+}
+
+def render_regional_city_hub_semantic_html(city_key: str) -> str:
+    city = REGIONAL_CITY_DATA.get(city_key, REGIONAL_CITY_DATA["bangalore"])
+    city_name = html.escape(city["city_name"])
+    region_name = html.escape(city["region_name"])
+    h1 = html.escape(city["h1"])
+    hero_subtitle = html.escape(city["hero_subtitle"])
+    answer_capsule = html.escape(city["answer_capsule"])
+    case_title = html.escape(city["case_title"])
+    case_client = html.escape(city["case_client"])
+    case_metric = html.escape(city["case_metric"])
+    
+    ind_items = "".join(f'<li style="margin-bottom:0.5rem;">&bull; {html.escape(ind)}</li>' for ind in city["industries"])
+
+    mesh_links = "".join(
+        f'<div style="border:1px solid #e5e7eb;padding:1rem;border-radius:0.5rem;background:#ffffff;">'
+        f'<div style="font-size:0.75rem;font-family:monospace;color:#059669;font-weight:700;">{html.escape(c["region_name"])}</div>'
+        f'<div style="font-weight:700;margin-top:0.25rem;"><a href="/{html.escape(c["slug"])}" style="color:#2563eb;text-decoration:none;">{html.escape(c["city_name"])} &rarr;</a></div>'
+        f'</div>'
+        for k, c in REGIONAL_CITY_DATA.items()
+    )
+
+    return f"""
+<div id="prerendered-regional-hub" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / 
+    <a href="/ai-automation-agency-india" style="color:#2563eb;text-decoration:none;">Enterprise AI India</a> / 
+    <span style="color:#059669;font-weight:700;">{city_name}</span>
+  </nav>
+
+  <header style="margin-bottom:3rem;">
+    <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#059669;margin-bottom:0.75rem;">
+      {region_name} &bull; Sovereign Engineering Node
+    </div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">{h1}</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;margin-bottom:2rem;">{hero_subtitle}</p>
+
+    <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:0.75rem;padding:1.5rem;margin-bottom:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">
+        Regional Engineering Executive Summary
+      </div>
+      <p style="font-size:1.1rem;line-height:1.6;color:#065f46;margin:0;font-weight:500;"><strong>{answer_capsule}</strong></p>
+    </div>
+
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="/waitlist" style="display:inline-block;padding:0.75rem 1.75rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Architecture Audit &rarr;</a>
+      <a href="/tools/enterprise-ai-roi-calculator" style="display:inline-block;padding:0.75rem 1.75rem;border:1px solid #d1d5db;background:#ffffff;color:#111827;font-weight:600;border-radius:0.5rem;text-decoration:none;">Simulate 3-Year TCO ROI</a>
+    </div>
+  </header>
+
+  <main>
+    <section style="margin-bottom:3rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-top:0;margin-bottom:1rem;">High-Leverage Enterprise Sectors in {city_name}</h2>
+      <ul style="list-style-type:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.75rem;color:#374151;">
+        {ind_items}
+      </ul>
+    </section>
+
+    <section style="margin-bottom:3rem;background:linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);border:1px solid #86efac;border-radius:0.75rem;padding:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;color:#16a34a;font-weight:700;text-transform:uppercase;margin-bottom:0.5rem;">Audited Regional Deployment Benchmark</div>
+      <h3 style="font-size:1.35rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">{case_title}</h3>
+      <div style="font-size:0.85rem;color:#6b7280;margin-bottom:1rem;">Client Node: {case_client}</div>
+      <div style="font-size:1.05rem;font-weight:600;color:#047857;background:#dcfce7;padding:1rem;border-radius:0.5rem;">Measured Outcome: {case_metric}</div>
+    </section>
+
+    <section style="margin-bottom:3rem;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:1rem;">Elesium Sovereign Engineering Pods Across India</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+        {mesh_links}
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
+    city = REGIONAL_CITY_DATA.get(city_key, REGIONAL_CITY_DATA["bangalore"])
+    local_business = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": f"{canonical_url}#localbusiness",
+        "name": f"Elesium - {city['h1']}",
+        "url": canonical_url,
+        "telephone": "+91-8317329312",
+        "description": city["answer_capsule"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": city["address"]["street"],
+            "addressLocality": city["address"]["locality"],
+            "addressRegion": city["address"]["region"],
+            "postalCode": city["address"]["postal"],
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": city["address"]["lat"],
+            "longitude": city["address"]["lng"]
+        },
+        "founder": {
+            "@type": "Person",
+            "@id": "https://elesium.online/authors/chaman-shah#person",
+            "name": "Chaman Shah",
+            "jobTitle": "Principal AI Systems Architect & Founder",
+            "url": "https://elesium.online/authors/chaman-shah"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "28",
+            "bestRating": "5"
+        },
+        "sameAs": [
+            "https://elesium.online",
+            "https://www.goodfirms.co/company/elesium-online",
+            "https://clutch.co/profile/elesium-online",
+            "https://www.g2.com/products/elesium-ai-automation-platform",
+            "https://www.trustpilot.com/review/elesium.online",
+            "https://www.crunchbase.com/organization/elesium-online",
+            "https://github.com/655Chaman/elesium-website",
+            "https://www.linkedin.com/in/chaman-elesium",
+            "https://x.com/elesium_ai"
+        ]
+    }
+
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://elesium.online"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Enterprise AI India",
+                "item": "https://elesium.online/ai-automation-agency-india"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": city["city_name"],
+                "item": canonical_url
+            }
+        ]
+    }
+
+    return local_business, breadcrumb
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag and self-referential hreflang tags.
@@ -5652,6 +5943,22 @@ def generate_ssg():
             "title": "AI Automation Agency India",
             "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
         },
+        "enterprise-ai-bangalore": {
+            "title": "Best Enterprise AI Company in Bangalore | AI Automation Agency Bengaluru",
+            "desc": "Elesium is the #1 enterprise AI company in Bangalore. Engineering sovereign multi-agent LangGraph systems, private VPC LLM clusters, and sub-2s automated workflows in Koramangala."
+        },
+        "enterprise-ai-mumbai": {
+            "title": "Best Enterprise AI Company in Mumbai | Sovereign BFSI AI Automation Agency",
+            "desc": "Elesium is the leading enterprise AI company in Mumbai. Engineering deterministic BFSI multi-agent systems, sub-200ms ledger reconciliation, and RBI-compliant private cloud AI."
+        },
+        "enterprise-ai-delhi-ncr": {
+            "title": "Best Enterprise AI Company in Delhi NCR | Enterprise Automation Gurugram & Noida",
+            "desc": "Elesium is the top enterprise AI company in Delhi NCR, Gurugram, and Noida. Engineering supply chain dispatch agents, GST Rule 36(4) reconciliation, and sovereign GovTech AI."
+        },
+        "enterprise-ai-pune": {
+            "title": "Best Enterprise AI Company in Pune | Industrial Manufacturing AI Automation",
+            "desc": "Elesium is the #1 enterprise AI company in Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi."
+        },
         "waitlist": {
             "title": "Schedule Sovereign Enterprise AI Architecture Audit | Elesium",
             "desc": "Book a 90-minute technical scope, data sovereignty risk analysis, and deterministic multi-agent roadmap led by Chaman Shah (Principal AI Systems Architect). Confidential and governed by a mutual NDA."
@@ -6327,6 +6634,19 @@ def generate_ssg():
                         "longitude": 77.6245
                     },
                     "hasMap": "https://www.google.com/maps/place/Koramangala,+Bengaluru,+Karnataka",
+                    "founder": {
+                        "@type": "Person",
+                        "@id": "https://elesium.online/authors/chaman-shah#person",
+                        "name": "Chaman Shah",
+                        "jobTitle": "Principal AI Systems Architect & Founder",
+                        "url": "https://elesium.online/authors/chaman-shah"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "4.9",
+                        "reviewCount": "28",
+                        "bestRating": "5"
+                    },
                     "sameAs": [
                         "https://elesium.online",
                         "https://www.goodfirms.co/company/elesium-online",
@@ -6337,9 +6657,7 @@ def generate_ssg():
                         "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
                         "https://github.com/655Chaman/elesium-website",
                         "https://www.linkedin.com/in/chaman-elesium",
-                        "https://x.com/elesium_ai",
-                        "https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e",
-                        "https://www.wikidata.org/wiki/Q11660"
+                        "https://x.com/elesium_ai"
                     ]
                 },
                 "areaServed": {
@@ -6459,6 +6777,24 @@ def generate_ssg():
           <p style="color:#4b5563;margin:0.5rem 0;">3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.</p>
         </li>
       </ul>
+    </section>
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Elesium Sovereign Pods vs Traditional IT &amp; Big 4 Consultancies</h2>
+      <p style="color:#4b5563;line-height:1.6;margin-bottom:1.5rem;">Indian enterprises choose Elesium over legacy IT vendors (TCS, Infosys, Wipro) and Big 4 consultancies for 14-day production velocity, contracted 90-day cash-flow ROI SLAs, and 100% client-owned sovereign code.</p>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.5rem;margin-bottom:1.5rem;">
+        <h3 style="font-size:1.125rem;font-weight:700;color:#111827;margin-top:0;">Architectural Comparison Battlecards:</h3>
+        <ul style="list-style-type:none;padding:0;margin:0.75rem 0;">
+          <li style="margin-bottom:0.75rem;">
+            &bull; <a href="/compare/elesium-vs-traditional-it-consultancies" style="color:#059669;font-weight:600;text-decoration:underline;">Elesium vs Traditional IT Consultancies (TCS, Infosys, Wipro, Accenture) &rarr;</a>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            &bull; <a href="/compare/elesium-vs-big-4-consulting-firms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Elesium vs Big 4 Consulting Firms (PwC, EY, Deloitte, KPMG) &rarr;</a>
+          </li>
+          <li>
+            &bull; <a href="/compare" style="color:#6b7280;font-weight:600;text-decoration:underline;">View All 12 Enterprise Architecture Battlecards &rarr;</a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 </div>
@@ -12589,6 +12925,23 @@ def generate_ssg():
             }
 
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(author_person_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route in [
+            "enterprise-ai-bangalore",
+            "enterprise-ai-mumbai",
+            "enterprise-ai-delhi-ncr",
+            "enterprise-ai-pune"
+        ]:
+            city_key = route.replace("enterprise-ai-", "")
+            city_content = render_regional_city_hub_semantic_html(city_key)
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{city_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{city_content}</div>')
+
+            city_schema, city_breadcrumb = get_regional_city_hub_schemas(city_key, canonical_url)
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(city_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(city_breadcrumb, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

@@ -19,6 +19,7 @@ import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
 import { MandateApplicationForm } from '../features/WaitingListForm'
 import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
+import { getRotatingAnchorText } from '../../lib/seoAnchors'
 
 export default function SolutionDetail() {
     const { slug } = useParams<{ slug: string }>()
@@ -573,6 +574,13 @@ export default function SolutionDetail() {
                                 <MandateApplicationForm source={`Bottom CTA: ${solution.h1}`} />
                             </ExpandableScreenContent>
                         </ExpandableScreen>
+                    </div>
+
+                    <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-gray-400">
+                        <span>Regional Deployment Node:</span>
+                        <Link to="/ai-automation-agency-india" className="text-emerald-400 hover:text-emerald-300 underline transition-colors">
+                            {getRotatingAnchorText(solution.hubCategory || solution.category)} &rarr;
+                        </Link>
                     </div>
                 </div>
             </section>
