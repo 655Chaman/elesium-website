@@ -169,6 +169,8 @@ const EnterpriseAgentHierarchicalStoragePagingSimulator = lazy(() => import('./c
 const EmbedAgentHierarchicalStoragePagingSimulator = lazy(() => import('./components/pages/EmbedAgentHierarchicalStoragePagingSimulator'))
 const EnterpriseAgentMlaLatentProjectionSimulator = lazy(() => import('./components/pages/EnterpriseAgentMlaLatentProjectionSimulator'))
 const EmbedAgentMlaLatentProjectionSimulator = lazy(() => import('./components/pages/EmbedAgentMlaLatentProjectionSimulator'))
+const EnterpriseAgentMtpSpeculativeDraftSimulator = lazy(() => import('./components/pages/EnterpriseAgentMtpSpeculativeDraftSimulator'))
+const EmbedAgentMtpSpeculativeDraftSimulator = lazy(() => import('./components/pages/EmbedAgentMtpSpeculativeDraftSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -451,6 +453,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-mla-latent-projection-simulator" element={<EnterpriseAgentMlaLatentProjectionSimulator />} />
                             <Route path="/tools/agent-mla-latent-projection-simulator" element={<Navigate to="/tools/enterprise-agent-mla-latent-projection-simulator" replace />} />
                             <Route path="/embed/agent-mla-latent-projection-simulator" element={<EmbedAgentMlaLatentProjectionSimulator />} />
+                            <Route path="/tools/enterprise-agent-mtp-speculative-draft-simulator" element={<EnterpriseAgentMtpSpeculativeDraftSimulator />} />
+                            <Route path="/tools/agent-mtp-speculative-draft-simulator" element={<Navigate to="/tools/enterprise-agent-mtp-speculative-draft-simulator" replace />} />
+                            <Route path="/embed/agent-mtp-speculative-draft-simulator" element={<EmbedAgentMtpSpeculativeDraftSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

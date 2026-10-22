@@ -1806,6 +1806,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/multi-head-latent-attention-mla-deepseek-v3-r1",
+    "path": "/signals/multi-head-latent-attention-mla-deepseek-v3-r1",
+    "slug": "multi-head-latent-attention-mla-deepseek-v3-r1",
+    "target_keyword": "multi head latent attention mla deepseek v3 r1",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 6.1,
+    "impressions": 2431,
+    "clicks": 60,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
     "path": "/solutions/100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
     "slug": "100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
@@ -2702,6 +2716,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/air-gapped-defense-ministry-mla-inference-infrastructure-deployment-consultants",
+    "path": "/solutions/air-gapped-defense-ministry-mla-inference-infrastructure-deployment-consultants",
+    "slug": "air-gapped-defense-ministry-mla-inference-infrastructure-deployment-consultants",
+    "target_keyword": "air-gapped defense ministry mla inference infrastructure deployment consultants",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 2366,
+    "clicks": 38,
+    "ctr": 0.0161,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
     "path": "/solutions/air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
     "slug": "air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
@@ -3486,6 +3514,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/asymmetric-multi-head-latent-attention-dimension-tuners-for-legal-contract-analysis-swarms",
+    "path": "/solutions/asymmetric-multi-head-latent-attention-dimension-tuners-for-legal-contract-analysis-swarms",
+    "slug": "asymmetric-multi-head-latent-attention-dimension-tuners-for-legal-contract-analysis-swarms",
+    "target_keyword": "asymmetric multi-head latent attention dimension tuners for legal contract analysis swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 526,
+    "clicks": 5,
+    "ctr": 0.0096,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/asymmetric-pipeline-stage-balancers-for-high-concurrency-ecommerce-checkout-copilots",
     "path": "/solutions/asymmetric-pipeline-stage-balancers-for-high-concurrency-ecommerce-checkout-copilots",
     "slug": "asymmetric-pipeline-stage-balancers-for-high-concurrency-ecommerce-checkout-copilots",
@@ -3496,6 +3538,20 @@
     "impressions": 268,
     "clicks": 1,
     "ctr": 0.0071,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/asymmetric-positional-weight-projection-caches-for-low-power-edge-inference-devices",
+    "path": "/solutions/asymmetric-positional-weight-projection-caches-for-low-power-edge-inference-devices",
+    "slug": "asymmetric-positional-weight-projection-caches-for-low-power-edge-inference-devices",
+    "target_keyword": "asymmetric positional weight projection caches for low-power edge inference devices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.7,
+    "impressions": 1787,
+    "clicks": 35,
+    "ctr": 0.02,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -5288,6 +5344,20 @@
     "impressions": 1873,
     "clicks": 58,
     "ctr": 0.031,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/automated-memory-bandwidth-saturation-decouplers-for-mla-long-context-serving",
+    "path": "/solutions/automated-memory-bandwidth-saturation-decouplers-for-mla-long-context-serving",
+    "slug": "automated-memory-bandwidth-saturation-decouplers-for-mla-long-context-serving",
+    "target_keyword": "automated memory bandwidth saturation decouplers for mla long-context serving",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.1,
+    "impressions": 2931,
+    "clicks": 26,
+    "ctr": 0.0092,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -10164,6 +10234,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/continuous-mla-latent-compression-profiling-exporters-for-prometheus-monitoring-clusters",
+    "path": "/solutions/continuous-mla-latent-compression-profiling-exporters-for-prometheus-monitoring-clusters",
+    "slug": "continuous-mla-latent-compression-profiling-exporters-for-prometheus-monitoring-clusters",
+    "target_keyword": "continuous mla latent compression profiling exporters for prometheus monitoring clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 666,
+    "clicks": 3,
+    "ctr": 0.0055,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/continuous-open-circuit-voltage-ocv-stack-state-of-charge-calibration-telemetry-for-bms",
     "path": "/solutions/continuous-open-circuit-voltage-ocv-stack-state-of-charge-calibration-telemetry-for-bms",
     "slug": "continuous-open-circuit-voltage-ocv-stack-state-of-charge-calibration-telemetry-for-bms",
@@ -11130,6 +11214,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cross-head-latent-representation-sharing-controllers-for-multi-tenant-enterprise-clouds",
+    "path": "/solutions/cross-head-latent-representation-sharing-controllers-for-multi-tenant-enterprise-clouds",
+    "slug": "cross-head-latent-representation-sharing-controllers-for-multi-tenant-enterprise-clouds",
+    "target_keyword": "cross-head latent representation sharing controllers for multi-tenant enterprise clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 3432,
+    "clicks": 85,
+    "ctr": 0.0248,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cross-hospital-federated-learning-and-gradient-privacy-leakage-defense-telemetry-for-medical-consortia",
     "path": "/solutions/cross-hospital-federated-learning-and-gradient-privacy-leakage-defense-telemetry-for-medical-consortia",
     "slug": "cross-hospital-federated-learning-and-gradient-privacy-leakage-defense-telemetry-for-medical-consortia",
@@ -11140,6 +11238,20 @@
     "impressions": 2748,
     "clicks": 68,
     "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cross-layer-positional-embedding-deduplication-managers-for-high-concurrency-b2b-copilots",
+    "path": "/solutions/cross-layer-positional-embedding-deduplication-managers-for-high-concurrency-b2b-copilots",
+    "slug": "cross-layer-positional-embedding-deduplication-managers-for-high-concurrency-b2b-copilots",
+    "target_keyword": "cross-layer positional embedding deduplication managers for high-concurrency b2b copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.9,
+    "impressions": 2949,
+    "clicks": 35,
+    "ctr": 0.0122,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -11816,6 +11928,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cryptographic-multi-tenant-mla-session-isolation-managers-for-sovereign-health-clouds",
+    "path": "/solutions/cryptographic-multi-tenant-mla-session-isolation-managers-for-sovereign-health-clouds",
+    "slug": "cryptographic-multi-tenant-mla-session-isolation-managers-for-sovereign-health-clouds",
+    "target_keyword": "cryptographic multi-tenant mla session isolation managers for sovereign health clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.6,
+    "impressions": 236,
+    "clicks": 3,
+    "ctr": 0.0162,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cryptographic-request-signing-agents-for-secure-b2b-mcp-communication-meshes",
     "path": "/solutions/cryptographic-request-signing-agents-for-secure-b2b-mcp-communication-meshes",
     "slug": "cryptographic-request-signing-agents-for-secure-b2b-mcp-communication-meshes",
@@ -12334,6 +12460,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/decoupled-positional-key-value-memory-fragmentation-auditors-for-enterprise-slurm-nodes",
+    "path": "/solutions/decoupled-positional-key-value-memory-fragmentation-auditors-for-enterprise-slurm-nodes",
+    "slug": "decoupled-positional-key-value-memory-fragmentation-auditors-for-enterprise-slurm-nodes",
+    "target_keyword": "decoupled positional key-value memory fragmentation auditors for enterprise slurm nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 1192,
+    "clicks": 49,
+    "ctr": 0.0413,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/decoupled-positional-query-key-inner-product-evaluators-in-custom-triton-kernels",
+    "path": "/solutions/decoupled-positional-query-key-inner-product-evaluators-in-custom-triton-kernels",
+    "slug": "decoupled-positional-query-key-inner-product-evaluators-in-custom-triton-kernels",
+    "target_keyword": "decoupled positional query-key inner product evaluators in custom triton kernels",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.6,
+    "impressions": 766,
+    "clicks": 10,
+    "ctr": 0.0133,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/decoupled-query-document-cross-attention-modules-for-sovereign-healthcare-diagnostic-agents",
     "path": "/solutions/decoupled-query-document-cross-attention-modules-for-sovereign-healthcare-diagnostic-agents",
     "slug": "decoupled-query-document-cross-attention-modules-for-sovereign-healthcare-diagnostic-agents",
@@ -12344,6 +12498,34 @@
     "impressions": 355,
     "clicks": 5,
     "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/decoupled-rotary-position-embedding-rope-vector-isolation-managers-for-mla-architectures",
+    "path": "/solutions/decoupled-rotary-position-embedding-rope-vector-isolation-managers-for-mla-architectures",
+    "slug": "decoupled-rotary-position-embedding-rope-vector-isolation-managers-for-mla-architectures",
+    "target_keyword": "decoupled rotary position embedding rope vector isolation managers for mla architectures",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.4,
+    "impressions": 3144,
+    "clicks": 20,
+    "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dedicated-positional-key-vector-cache-allocators-for-64-dimension-decoupled-rope-pipelines",
+    "path": "/solutions/dedicated-positional-key-vector-cache-allocators-for-64-dimension-decoupled-rope-pipelines",
+    "slug": "dedicated-positional-key-vector-cache-allocators-for-64-dimension-decoupled-rope-pipelines",
+    "target_keyword": "dedicated positional key vector cache allocators for 64-dimension decoupled rope pipelines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.9,
+    "impressions": 719,
+    "clicks": 21,
+    "ctr": 0.03,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14588,6 +14770,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dpdp-act-2023-statutory-data-residency-verified-mla-serving-daemons-for-fintechs",
+    "path": "/solutions/dpdp-act-2023-statutory-data-residency-verified-mla-serving-daemons-for-fintechs",
+    "slug": "dpdp-act-2023-statutory-data-residency-verified-mla-serving-daemons-for-fintechs",
+    "target_keyword": "dpdp act 2023 statutory data residency verified mla serving daemons for fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 279,
+    "clicks": 4,
+    "ctr": 0.0144,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dpdp-act-compliant-prompt-data-residency-validators-for-tiered-memory-llm-pipelines",
     "path": "/solutions/dpdp-act-compliant-prompt-data-residency-validators-for-tiered-memory-llm-pipelines",
     "slug": "dpdp-act-compliant-prompt-data-residency-validators-for-tiered-memory-llm-pipelines",
@@ -15512,6 +15708,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dynamic-mla-compression-ratio-adaptation-engines-based-on-prompt-factual-density",
+    "path": "/solutions/dynamic-mla-compression-ratio-adaptation-engines-based-on-prompt-factual-density",
+    "slug": "dynamic-mla-compression-ratio-adaptation-engines-based-on-prompt-factual-density",
+    "target_keyword": "dynamic mla compression ratio adaptation engines based on prompt factual density",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 2493,
+    "clicks": 33,
+    "ctr": 0.0135,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dynamic-model-weight-unloading-agents-for-cost-optimized-hybrid-cloud-inference-pods",
     "path": "/solutions/dynamic-model-weight-unloading-agents-for-cost-optimized-hybrid-cloud-inference-pods",
     "slug": "dynamic-model-weight-unloading-agents-for-cost-optimized-hybrid-cloud-inference-pods",
@@ -15778,6 +15988,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dynamic-sram-register-allocation-optimizers-for-mla-up-projection-gemm-operations",
+    "path": "/solutions/dynamic-sram-register-allocation-optimizers-for-mla-up-projection-gemm-operations",
+    "slug": "dynamic-sram-register-allocation-optimizers-for-mla-up-projection-gemm-operations",
+    "target_keyword": "dynamic sram register allocation optimizers for mla up-projection gemm operations",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.5,
+    "impressions": 3655,
+    "clicks": 91,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dynamic-token-routing-load-balancers-for-distributed-multi-node-clusters",
     "path": "/solutions/dynamic-token-routing-load-balancers-for-distributed-multi-node-clusters",
     "slug": "dynamic-token-routing-load-balancers-for-distributed-multi-node-clusters",
@@ -15942,6 +16166,20 @@
     "impressions": 3129,
     "clicks": 21,
     "ctr": 0.0068,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamically-scaled-base-frequency-calibrators-for-2m-context-decoupled-rope-serving",
+    "path": "/solutions/dynamically-scaled-base-frequency-calibrators-for-2m-context-decoupled-rope-serving",
+    "slug": "dynamically-scaled-base-frequency-calibrators-for-2m-context-decoupled-rope-serving",
+    "target_keyword": "dynamically scaled base frequency calibrators for 2m context decoupled rope serving",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.2,
+    "impressions": 3352,
+    "clicks": 29,
+    "ctr": 0.0088,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -16852,6 +17090,20 @@
     "impressions": 937,
     "clicks": 10,
     "ctr": 0.0109,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-mla-serving-finops-auditors-for-slashing-multi-million-token-cloud-gpu-bills",
+    "path": "/solutions/enterprise-mla-serving-finops-auditors-for-slashing-multi-million-token-cloud-gpu-bills",
+    "slug": "enterprise-mla-serving-finops-auditors-for-slashing-multi-million-token-cloud-gpu-bills",
+    "target_keyword": "enterprise mla serving finops auditors for slashing multi-million token cloud gpu bills",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.2,
+    "impressions": 2272,
+    "clicks": 19,
+    "ctr": 0.0088,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -19586,6 +19838,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fp8-latent-up-projection-weight-matrix-stream-decompressors-for-blackwell-b200-nodes",
+    "path": "/solutions/fp8-latent-up-projection-weight-matrix-stream-decompressors-for-blackwell-b200-nodes",
+    "slug": "fp8-latent-up-projection-weight-matrix-stream-decompressors-for-blackwell-b200-nodes",
+    "target_keyword": "fp8 latent up-projection weight matrix stream decompressors for blackwell b200 nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.6,
+    "impressions": 256,
+    "clicks": 2,
+    "ctr": 0.0113,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving",
     "path": "/solutions/fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving",
     "slug": "fp8-mixed-precision-inference-calibration-agents-for-enterprise-tensorrt-llm-serving",
@@ -19782,6 +20048,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fused-latent-up-projection-matrix-multiplication-kernels-for-w4a8-quantized-models",
+    "path": "/solutions/fused-latent-up-projection-matrix-multiplication-kernels-for-w4a8-quantized-models",
+    "slug": "fused-latent-up-projection-matrix-multiplication-kernels-for-w4a8-quantized-models",
+    "target_keyword": "fused latent up-projection matrix multiplication kernels for w4a8 quantized models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 3682,
+    "clicks": 72,
+    "ctr": 0.0198,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fused-log-sum-exp-cross-attention-reduction-kernels-for-nvidia-hopper-supercomputers",
     "path": "/solutions/fused-log-sum-exp-cross-attention-reduction-kernels-for-nvidia-hopper-supercomputers",
     "slug": "fused-log-sum-exp-cross-attention-reduction-kernels-for-nvidia-hopper-supercomputers",
@@ -19792,6 +20072,20 @@
     "impressions": 1783,
     "clicks": 12,
     "ctr": 0.0071,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fused-mla-latent-projection-and-flashattention-3-triton-kernels-for-hopper-h100-clusters",
+    "path": "/solutions/fused-mla-latent-projection-and-flashattention-3-triton-kernels-for-hopper-h100-clusters",
+    "slug": "fused-mla-latent-projection-and-flashattention-3-triton-kernels-for-hopper-h100-clusters",
+    "target_keyword": "fused mla latent projection and flashattention-3 triton kernels for hopper h100 clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.0,
+    "impressions": 3230,
+    "clicks": 28,
+    "ctr": 0.0088,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -21014,6 +21308,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hardware-accelerated-tensor-core-rope-rotation-kernels-for-sub-5ms-inter-token-decode",
+    "path": "/solutions/hardware-accelerated-tensor-core-rope-rotation-kernels-for-sub-5ms-inter-token-decode",
+    "slug": "hardware-accelerated-tensor-core-rope-rotation-kernels-for-sub-5ms-inter-token-decode",
+    "target_keyword": "hardware-accelerated tensor core rope rotation kernels for sub-5ms inter-token decode",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.0,
+    "impressions": 3630,
+    "clicks": 90,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hardware-enforced-aes-xts-256-tiered-kv-cache-storage-encryptors-for-sovereign-clouds",
     "path": "/solutions/hardware-enforced-aes-xts-256-tiered-kv-cache-storage-encryptors-for-sovereign-clouds",
     "slug": "hardware-enforced-aes-xts-256-tiered-kv-cache-storage-encryptors-for-sovereign-clouds",
@@ -21448,6 +21756,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hierarchical-mla-latent-page-table-synchronizers-for-multi-gpu-tensor-parallel-pods",
+    "path": "/solutions/hierarchical-mla-latent-page-table-synchronizers-for-multi-gpu-tensor-parallel-pods",
+    "slug": "hierarchical-mla-latent-page-table-synchronizers-for-multi-gpu-tensor-parallel-pods",
+    "target_keyword": "hierarchical mla latent page table synchronizers for multi-gpu tensor parallel pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.7,
+    "impressions": 1227,
+    "clicks": 40,
+    "ctr": 0.0332,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hierarchical-page-fault-telemetry-exporters-for-datadog-and-prometheus-monitoring",
     "path": "/solutions/hierarchical-page-fault-telemetry-exporters-for-datadog-and-prometheus-monitoring",
     "slug": "hierarchical-page-fault-telemetry-exporters-for-datadog-and-prometheus-monitoring",
@@ -21598,6 +21920,20 @@
     "impressions": 2680,
     "clicks": 72,
     "ctr": 0.0269,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/high-concurrency-mla-batching-schedulers-for-512-simultaneous-enterprise-streams",
+    "path": "/solutions/high-concurrency-mla-batching-schedulers-for-512-simultaneous-enterprise-streams",
+    "slug": "high-concurrency-mla-batching-schedulers-for-512-simultaneous-enterprise-streams",
+    "target_keyword": "high-concurrency mla batching schedulers for 512 simultaneous enterprise streams",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.4,
+    "impressions": 1694,
+    "clicks": 16,
+    "ctr": 0.0096,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -25116,6 +25452,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/joint-key-value-down-projection-matrix-optimizers-for-sovereign-deepseek-v3-enterprise-inference",
+    "path": "/solutions/joint-key-value-down-projection-matrix-optimizers-for-sovereign-deepseek-v3-enterprise-inference",
+    "slug": "joint-key-value-down-projection-matrix-optimizers-for-sovereign-deepseek-v3-enterprise-inference",
+    "target_keyword": "joint key-value down-projection matrix optimizers for sovereign deepseek-v3 enterprise inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.4,
+    "impressions": 1094,
+    "clicks": 19,
+    "ctr": 0.0178,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/josephson-junction-array-dynamic-resistance-fluctuation-telemetry-for-superconducting-voltage-standards",
     "path": "/solutions/josephson-junction-array-dynamic-resistance-fluctuation-telemetry-for-superconducting-voltage-standards",
     "slug": "josephson-junction-array-dynamic-resistance-fluctuation-telemetry-for-superconducting-voltage-standards",
@@ -25742,6 +26092,20 @@
     "impressions": 2898,
     "clicks": 62,
     "ctr": 0.0215,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/latent-vector-kv-cache-memory-allocators-for-512-dimension-compressed-representation-swarms",
+    "path": "/solutions/latent-vector-kv-cache-memory-allocators-for-512-dimension-compressed-representation-swarms",
+    "slug": "latent-vector-kv-cache-memory-allocators-for-512-dimension-compressed-representation-swarms",
+    "target_keyword": "latent vector kv-cache memory allocators for 512-dimension compressed representation swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.7,
+    "impressions": 3157,
+    "clicks": 39,
+    "ctr": 0.0126,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -26432,6 +26796,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/long-sequence-attention-entropy-stabilizers-for-decoupled-rope-multi-agent-debates",
+    "path": "/solutions/long-sequence-attention-entropy-stabilizers-for-decoupled-rope-multi-agent-debates",
+    "slug": "long-sequence-attention-entropy-stabilizers-for-decoupled-rope-multi-agent-debates",
+    "target_keyword": "long-sequence attention entropy stabilizers for decoupled rope multi-agent debates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 2452,
+    "clicks": 101,
+    "ctr": 0.0413,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/lookahead-decoding-parallel-n-gram-branch-verification-agents-for-enterprise-agents",
     "path": "/solutions/lookahead-decoding-parallel-n-gram-branch-verification-agents-for-enterprise-agents",
     "slug": "lookahead-decoding-parallel-n-gram-branch-verification-agents-for-enterprise-agents",
@@ -26498,6 +26876,20 @@
     "impressions": 2029,
     "clicks": 15,
     "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/lossless-mla-latent-cache-checkpointing-daemons-for-zero-downtime-cluster-failover",
+    "path": "/solutions/lossless-mla-latent-cache-checkpointing-daemons-for-zero-downtime-cluster-failover",
+    "slug": "lossless-mla-latent-cache-checkpointing-daemons-for-zero-downtime-cluster-failover",
+    "target_keyword": "lossless mla latent cache checkpointing daemons for zero-downtime cluster failover",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 3879,
+    "clicks": 55,
+    "ctr": 0.0144,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -26582,6 +26974,20 @@
     "impressions": 3017,
     "clicks": 56,
     "ctr": 0.0186,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/low-rank-projection-weight-cache-pre-warmer-daemons-for-instant-deepseek-r1-cold-starts",
+    "path": "/solutions/low-rank-projection-weight-cache-pre-warmer-daemons-for-instant-deepseek-r1-cold-starts",
+    "slug": "low-rank-projection-weight-cache-pre-warmer-daemons-for-instant-deepseek-r1-cold-starts",
+    "target_keyword": "low-rank projection weight cache pre-warmer daemons for instant deepseek-r1 cold starts",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.9,
+    "impressions": 1969,
+    "clicks": 24,
+    "ctr": 0.0122,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -28308,6 +28714,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves",
+    "path": "/solutions/mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves",
+    "slug": "mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves",
+    "target_keyword": "mla latent memory pool defragmentation managers for sovereign air-gapped defense enclaves",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.3,
+    "impressions": 3873,
+    "clicks": 35,
+    "ctr": 0.0092,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/modbus-tcp-binary-packet-parsing-agents-for-automotive-assembly-line-directors",
     "path": "/solutions/modbus-tcp-binary-packet-parsing-agents-for-automotive-assembly-line-directors",
     "slug": "modbus-tcp-binary-packet-parsing-agents-for-automotive-assembly-line-directors",
@@ -28994,6 +29414,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-gpu-tensor-parallel-mla-up-projection-all-reduce-communication-overlap-engines",
+    "path": "/solutions/multi-gpu-tensor-parallel-mla-up-projection-all-reduce-communication-overlap-engines",
+    "slug": "multi-gpu-tensor-parallel-mla-up-projection-all-reduce-communication-overlap-engines",
+    "target_keyword": "multi-gpu tensor parallel mla up-projection all-reduce communication overlap engines",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 3555,
+    "clicks": 45,
+    "ctr": 0.0129,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-gpu-vram-memory-pooling-agents-with-unified-virtual-addressing-for-enterprise-llms",
     "path": "/solutions/multi-gpu-vram-memory-pooling-agents-with-unified-virtual-addressing-for-enterprise-llms",
     "slug": "multi-gpu-vram-memory-pooling-agents-with-unified-virtual-addressing-for-enterprise-llms",
@@ -29004,6 +29438,20 @@
     "impressions": 3459,
     "clicks": 86,
     "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-head-latent-attention-mla-low-rank-kv-cache-compression-daemons-for-deepseek-clusters",
+    "path": "/solutions/multi-head-latent-attention-mla-low-rank-kv-cache-compression-daemons-for-deepseek-clusters",
+    "slug": "multi-head-latent-attention-mla-low-rank-kv-cache-compression-daemons-for-deepseek-clusters",
+    "target_keyword": "multi-head latent attention mla low-rank kv-cache compression daemons for deepseek clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 3106,
+    "clicks": 104,
+    "ctr": 0.0337,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -29606,6 +30054,20 @@
     "impressions": 1943,
     "clicks": 16,
     "ctr": 0.0085,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-session-legal-discovery-mla-context-rehydration-daemons-for-enterprise-law-firms",
+    "path": "/solutions/multi-session-legal-discovery-mla-context-rehydration-daemons-for-enterprise-law-firms",
+    "slug": "multi-session-legal-discovery-mla-context-rehydration-daemons-for-enterprise-law-firms",
+    "target_keyword": "multi-session legal discovery mla context rehydration daemons for enterprise law firms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.9,
+    "impressions": 339,
+    "clicks": 8,
+    "ctr": 0.0251,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -30842,6 +31304,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/ninety-percent-vram-footprint-reduction-architects-for-deepseek-v3-enterprise-inference-clusters",
+    "path": "/solutions/ninety-percent-vram-footprint-reduction-architects-for-deepseek-v3-enterprise-inference-clusters",
+    "slug": "ninety-percent-vram-footprint-reduction-architects-for-deepseek-v3-enterprise-inference-clusters",
+    "target_keyword": "ninety percent vram footprint reduction architects for deepseek-v3 enterprise inference clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.1,
+    "impressions": 3951,
+    "clicks": 98,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/nitrogen-vacancy-center-microwave-rabi-oscillation-frequency-pulse-length-telemetry-for-quantum-gate-fidelity-validation",
     "path": "/solutions/nitrogen-vacancy-center-microwave-rabi-oscillation-frequency-pulse-length-telemetry-for-quantum-gate-fidelity-validation",
     "slug": "nitrogen-vacancy-center-microwave-rabi-oscillation-frequency-pulse-length-telemetry-for-quantum-gate-fidelity-validation",
@@ -31944,6 +32420,20 @@
     "impressions": 2901,
     "clicks": 18,
     "ctr": 0.0064,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/online-mla-latent-up-projection-gemm-kernel-schedulers-for-low-vram-671b-serving",
+    "path": "/solutions/online-mla-latent-up-projection-gemm-kernel-schedulers-for-low-vram-671b-serving",
+    "slug": "online-mla-latent-up-projection-gemm-kernel-schedulers-for-low-vram-671b-serving",
+    "target_keyword": "online mla latent up-projection gemm kernel schedulers for low-vram 671b serving",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.9,
+    "impressions": 1679,
+    "clicks": 62,
+    "ctr": 0.0373,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -34566,6 +35056,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/predictive-mla-latent-vector-eviction-daemons-based-on-cross-attention-layer-variance",
+    "path": "/solutions/predictive-mla-latent-vector-eviction-daemons-based-on-cross-attention-layer-variance",
+    "slug": "predictive-mla-latent-vector-eviction-daemons-based-on-cross-attention-layer-variance",
+    "target_keyword": "predictive mla latent vector eviction daemons based on cross-attention layer variance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.7,
+    "impressions": 417,
+    "clicks": 5,
+    "ctr": 0.0126,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/predictive-page-table-pre-allocation-daemons-for-multi-turn-legal-contract-negotiation",
     "path": "/solutions/predictive-page-table-pre-allocation-daemons-for-multi-turn-legal-contract-negotiation",
     "slug": "predictive-page-table-pre-allocation-daemons-for-multi-turn-legal-contract-negotiation",
@@ -36050,6 +36554,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors",
+    "path": "/solutions/rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors",
+    "slug": "rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors",
+    "target_keyword": "rbi cyber security framework compliant mla latent memory isolation auditors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 3705,
+    "clicks": 94,
+    "ctr": 0.0255,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
     "path": "/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
     "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
@@ -36298,6 +36816,20 @@
     "impressions": 767,
     "clicks": 4,
     "ctr": 0.0059,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/real-time-mla-latent-attention-drift-detectors-for-long-running-autonomous-debate-swarms",
+    "path": "/solutions/real-time-mla-latent-attention-drift-detectors-for-long-running-autonomous-debate-swarms",
+    "slug": "real-time-mla-latent-attention-drift-detectors-for-long-running-autonomous-debate-swarms",
+    "target_keyword": "real-time mla latent attention drift detectors for long-running autonomous debate swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 1847,
+    "clicks": 18,
+    "ctr": 0.0099,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -37474,6 +38006,20 @@
     "impressions": 1669,
     "clicks": 41,
     "ctr": 0.025,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/rotary-embedding-catastrophic-phase-cancellation-mitigators-for-extreme-context-depths",
+    "path": "/solutions/rotary-embedding-catastrophic-phase-cancellation-mitigators-for-extreme-context-depths",
+    "slug": "rotary-embedding-catastrophic-phase-cancellation-mitigators-for-extreme-context-depths",
+    "target_keyword": "rotary embedding catastrophic phase cancellation mitigators for extreme context depths",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.1,
+    "impressions": 3571,
+    "clicks": 45,
+    "ctr": 0.0128,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -41538,6 +42084,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sovereign-private-vpc-deepseek-r1-mla-cluster-deployment-engineers-for-private-banks",
+    "path": "/solutions/sovereign-private-vpc-deepseek-r1-mla-cluster-deployment-engineers-for-private-banks",
+    "slug": "sovereign-private-vpc-deepseek-r1-mla-cluster-deployment-engineers-for-private-banks",
+    "target_keyword": "sovereign private vpc deepseek-r1 mla cluster deployment engineers for private banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 2725,
+    "clicks": 29,
+    "ctr": 0.0109,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi",
     "path": "/solutions/sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi",
     "slug": "sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi",
@@ -44100,6 +44660,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-100-microsecond-mla-latent-cache-re-indexing-daemons-for-continuous-multi-turn-dialogue",
+    "path": "/solutions/sub-100-microsecond-mla-latent-cache-re-indexing-daemons-for-continuous-multi-turn-dialogue",
+    "slug": "sub-100-microsecond-mla-latent-cache-re-indexing-daemons-for-continuous-multi-turn-dialogue",
+    "target_keyword": "sub-100 microsecond mla latent cache re-indexing daemons for continuous multi-turn dialogue",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 3206,
+    "clicks": 23,
+    "ctr": 0.0072,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-100ms-drug-interaction-cross-check-agents-for-oncology-outpatient-clinics",
     "path": "/solutions/sub-100ms-drug-interaction-cross-check-agents-for-oncology-outpatient-clinics",
     "slug": "sub-100ms-drug-interaction-cross-check-agents-for-oncology-outpatient-clinics",
@@ -44180,6 +44754,20 @@
     "impressions": 2288,
     "clicks": 16,
     "ctr": 0.0071,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-100w-green-datacenter-mla-cluster-deployment-advisors-for-environmental-compliance",
+    "path": "/solutions/sub-100w-green-datacenter-mla-cluster-deployment-advisors-for-environmental-compliance",
+    "slug": "sub-100w-green-datacenter-mla-cluster-deployment-advisors-for-environmental-compliance",
+    "target_keyword": "sub-100w green datacenter mla cluster deployment advisors for environmental compliance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 3187,
+    "clicks": 31,
+    "ctr": 0.0099,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -44306,6 +44894,20 @@
     "impressions": 1354,
     "clicks": 33,
     "ctr": 0.0248,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-10ms-inter-token-latency-schedulers-for-mla-compressed-405b-parameter-models",
+    "path": "/solutions/sub-10ms-inter-token-latency-schedulers-for-mla-compressed-405b-parameter-models",
+    "slug": "sub-10ms-inter-token-latency-schedulers-for-mla-compressed-405b-parameter-models",
+    "target_keyword": "sub-10ms inter-token latency schedulers for mla compressed 405b parameter models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.9,
+    "impressions": 1599,
+    "clicks": 24,
+    "ctr": 0.0156,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -45108,6 +45710,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-dollar-per-million-tokens-mla-inference-deployment-consultants-for-enterprise-swarms",
+    "path": "/solutions/sub-dollar-per-million-tokens-mla-inference-deployment-consultants-for-enterprise-swarms",
+    "slug": "sub-dollar-per-million-tokens-mla-inference-deployment-consultants-for-enterprise-swarms",
+    "target_keyword": "sub-dollar per million tokens mla inference deployment consultants for enterprise swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.8,
+    "impressions": 2588,
+    "clicks": 18,
+    "ctr": 0.0071,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-dollar-per-million-tokens-tiered-storage-deployment-consultants-for-enterprise-swarms",
     "path": "/solutions/sub-dollar-per-million-tokens-tiered-storage-deployment-consultants-for-enterprise-swarms",
     "slug": "sub-dollar-per-million-tokens-tiered-storage-deployment-consultants-for-enterprise-swarms",
@@ -45384,6 +46000,20 @@
     "impressions": 1985,
     "clicks": 10,
     "ctr": 0.0051,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-second-vernacular-invoice-parsing-mla-multi-agent-swarms-for-supply-chains",
+    "path": "/solutions/sub-second-vernacular-invoice-parsing-mla-multi-agent-swarms-for-supply-chains",
+    "slug": "sub-second-vernacular-invoice-parsing-mla-multi-agent-swarms-for-supply-chains",
+    "target_keyword": "sub-second vernacular invoice parsing mla multi-agent swarms for supply chains",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.2,
+    "impressions": 3692,
+    "clicks": 115,
+    "ctr": 0.0312,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -47946,6 +48576,20 @@
     "impressions": 2259,
     "clicks": 35,
     "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/ten-million-token-sovereign-mla-agent-swarm-architecture-advisors-for-enterprise-ctos",
+    "path": "/solutions/ten-million-token-sovereign-mla-agent-swarm-architecture-advisors-for-enterprise-ctos",
+    "slug": "ten-million-token-sovereign-mla-agent-swarm-architecture-advisors-for-enterprise-ctos",
+    "target_keyword": "ten-million-token sovereign mla agent swarm architecture advisors for enterprise ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 882,
+    "clicks": 13,
+    "ctr": 0.0155,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -51142,6 +51786,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/yarn-context-length-extension-controllers-for-decoupled-rope-mla-foundation-models",
+    "path": "/solutions/yarn-context-length-extension-controllers-for-decoupled-rope-mla-foundation-models",
+    "slug": "yarn-context-length-extension-controllers-for-decoupled-rope-mla-foundation-models",
+    "target_keyword": "yarn context length extension controllers for decoupled rope mla foundation models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.2,
+    "impressions": 3812,
+    "clicks": 78,
+    "ctr": 0.0205,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/yeast-artificial-chromosome-yac-homologous-recombination-assembly-fidelity-software-for-synthetic-genomics",
     "path": "/solutions/yeast-artificial-chromosome-yac-homologous-recombination-assembly-fidelity-software-for-synthetic-genomics",
     "slug": "yeast-artificial-chromosome-yac-homologous-recombination-assembly-fidelity-software-for-synthetic-genomics",
@@ -51492,6 +52150,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-copy-mla-latent-buffer-sharing-daemons-across-vllm-and-sglang-runtime-instances",
+    "path": "/solutions/zero-copy-mla-latent-buffer-sharing-daemons-across-vllm-and-sglang-runtime-instances",
+    "slug": "zero-copy-mla-latent-buffer-sharing-daemons-across-vllm-and-sglang-runtime-instances",
+    "target_keyword": "zero-copy mla latent buffer sharing daemons across vllm and sglang runtime instances",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.2,
+    "impressions": 2852,
+    "clicks": 49,
+    "ctr": 0.0173,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-copy-moe-dispatch-network-buffer-profilers-for-expert-parallel-microservices",
     "path": "/solutions/zero-copy-moe-dispatch-network-buffer-profilers-for-expert-parallel-microservices",
     "slug": "zero-copy-moe-dispatch-network-buffer-profilers-for-expert-parallel-microservices",
@@ -51772,6 +52444,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-downtime-rolling-cluster-upgrade-daemons-for-continuous-mla-inference-services",
+    "path": "/solutions/zero-downtime-rolling-cluster-upgrade-daemons-for-continuous-mla-inference-services",
+    "slug": "zero-downtime-rolling-cluster-upgrade-daemons-for-continuous-mla-inference-services",
+    "target_keyword": "zero-downtime rolling cluster upgrade daemons for continuous mla inference services",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.2,
+    "impressions": 852,
+    "clicks": 14,
+    "ctr": 0.0173,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-fragmentation-lora-page-allocators-for-multi-tenant-cloud-kubernetes",
     "path": "/solutions/zero-fragmentation-lora-page-allocators-for-multi-tenant-cloud-kubernetes",
     "slug": "zero-fragmentation-lora-page-allocators-for-multi-tenant-cloud-kubernetes",
@@ -51968,6 +52654,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-overhead-rope-frequency-calculation-daemons-for-million-token-streaming-agent-swarms",
+    "path": "/solutions/zero-overhead-rope-frequency-calculation-daemons-for-million-token-streaming-agent-swarms",
+    "slug": "zero-overhead-rope-frequency-calculation-daemons-for-million-token-streaming-agent-swarms",
+    "target_keyword": "zero-overhead rope frequency calculation daemons for million-token streaming agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.8,
+    "impressions": 2228,
+    "clicks": 22,
+    "ctr": 0.0103,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-overhead-speculative-draft-acceptance-trackers-for-multi-node-vllm-engines",
     "path": "/solutions/zero-overhead-speculative-draft-acceptance-trackers-for-multi-node-vllm-engines",
     "slug": "zero-overhead-speculative-draft-acceptance-trackers-for-multi-node-vllm-engines",
@@ -52034,6 +52734,20 @@
     "impressions": 3429,
     "clicks": 110,
     "ctr": 0.0323,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-remanence-cryptographic-erasure-verifiers-for-decoupled-rope-positional-memory",
+    "path": "/solutions/zero-remanence-cryptographic-erasure-verifiers-for-decoupled-rope-positional-memory",
+    "slug": "zero-remanence-cryptographic-erasure-verifiers-for-decoupled-rope-positional-memory",
+    "target_keyword": "zero-remanence cryptographic erasure verifiers for decoupled rope positional memory",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.8,
+    "impressions": 2528,
+    "clicks": 50,
+    "ctr": 0.0201,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },

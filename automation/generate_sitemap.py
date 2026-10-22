@@ -113,6 +113,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-kv-cache-eviction-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-hierarchical-storage-paging-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-mla-latent-projection-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-mtp-speculative-draft-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs
