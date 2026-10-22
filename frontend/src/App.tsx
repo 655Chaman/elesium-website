@@ -167,6 +167,8 @@ const EnterpriseAgentKvCacheEvictionSimulator = lazy(() => import('./components/
 const EmbedAgentKvCacheEvictionSimulator = lazy(() => import('./components/pages/EmbedAgentKvCacheEvictionSimulator'))
 const EnterpriseAgentHierarchicalStoragePagingSimulator = lazy(() => import('./components/pages/EnterpriseAgentHierarchicalStoragePagingSimulator'))
 const EmbedAgentHierarchicalStoragePagingSimulator = lazy(() => import('./components/pages/EmbedAgentHierarchicalStoragePagingSimulator'))
+const EnterpriseAgentMlaLatentProjectionSimulator = lazy(() => import('./components/pages/EnterpriseAgentMlaLatentProjectionSimulator'))
+const EmbedAgentMlaLatentProjectionSimulator = lazy(() => import('./components/pages/EmbedAgentMlaLatentProjectionSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -446,6 +448,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-hierarchical-storage-paging-simulator" element={<EnterpriseAgentHierarchicalStoragePagingSimulator />} />
                             <Route path="/tools/agent-hierarchical-storage-paging-simulator" element={<Navigate to="/tools/enterprise-agent-hierarchical-storage-paging-simulator" replace />} />
                             <Route path="/embed/agent-hierarchical-storage-paging-simulator" element={<EmbedAgentHierarchicalStoragePagingSimulator />} />
+                            <Route path="/tools/enterprise-agent-mla-latent-projection-simulator" element={<EnterpriseAgentMlaLatentProjectionSimulator />} />
+                            <Route path="/tools/agent-mla-latent-projection-simulator" element={<Navigate to="/tools/enterprise-agent-mla-latent-projection-simulator" replace />} />
+                            <Route path="/embed/agent-mla-latent-projection-simulator" element={<EmbedAgentMlaLatentProjectionSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
