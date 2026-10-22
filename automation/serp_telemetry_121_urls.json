@@ -1820,6 +1820,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/multi-token-prediction-mtp-deepseek-v3",
+    "path": "/signals/multi-token-prediction-mtp-deepseek-v3",
+    "slug": "multi-token-prediction-mtp-deepseek-v3",
+    "target_keyword": "multi token prediction mtp deepseek v3",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 9.9,
+    "impressions": 329,
+    "clicks": 4,
+    "ctr": 0.0122,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
     "path": "/solutions/100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
     "slug": "100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
@@ -2730,6 +2744,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/air-gapped-defense-ministry-mtp-inference-infrastructure-deployment-consultants",
+    "path": "/solutions/air-gapped-defense-ministry-mtp-inference-infrastructure-deployment-consultants",
+    "slug": "air-gapped-defense-ministry-mtp-inference-infrastructure-deployment-consultants",
+    "target_keyword": "air gapped defense ministry mtp inference infrastructure deployment consultants",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 2099,
+    "clicks": 40,
+    "ctr": 0.0191,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
     "path": "/solutions/air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
     "slug": "air-gapped-encrypted-state-checkpoint-storage-vault-managers-for-defense-ai",
@@ -3514,6 +3542,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/asymmetric-mtp-draft-model-dimension-scalers-for-heterogeneous-gpu-clusters",
+    "path": "/solutions/asymmetric-mtp-draft-model-dimension-scalers-for-heterogeneous-gpu-clusters",
+    "slug": "asymmetric-mtp-draft-model-dimension-scalers-for-heterogeneous-gpu-clusters",
+    "target_keyword": "asymmetric mtp draft model dimension scalers for heterogeneous gpu clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 933,
+    "clicks": 16,
+    "ctr": 0.0176,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/asymmetric-multi-head-latent-attention-dimension-tuners-for-legal-contract-analysis-swarms",
     "path": "/solutions/asymmetric-multi-head-latent-attention-dimension-tuners-for-legal-contract-analysis-swarms",
     "slug": "asymmetric-multi-head-latent-attention-dimension-tuners-for-legal-contract-analysis-swarms",
@@ -3902,6 +3944,20 @@
     "impressions": 2562,
     "clicks": 11,
     "ctr": 0.0046,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/asynchronous-multi-token-prediction-head-synchronizers-for-low-latency-batching",
+    "path": "/solutions/asynchronous-multi-token-prediction-head-synchronizers-for-low-latency-batching",
+    "slug": "asynchronous-multi-token-prediction-head-synchronizers-for-low-latency-batching",
+    "target_keyword": "asynchronous multi token prediction head synchronizers for low latency batching",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.5,
+    "impressions": 2225,
+    "clicks": 11,
+    "ctr": 0.0051,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -9366,6 +9422,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/complete-kv-cache-reuse-orchestrators-across-multi-token-prediction-depths",
+    "path": "/solutions/complete-kv-cache-reuse-orchestrators-across-multi-token-prediction-depths",
+    "slug": "complete-kv-cache-reuse-orchestrators-across-multi-token-prediction-depths",
+    "target_keyword": "complete kv cache reuse orchestrators across multi token prediction depths",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.7,
+    "impressions": 927,
+    "clicks": 18,
+    "ctr": 0.02,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/composite-overwrapped-pressure-vessel-burst-risk-trackers-for-range-safety",
     "path": "/solutions/composite-overwrapped-pressure-vessel-burst-risk-trackers-for-range-safety",
     "slug": "composite-overwrapped-pressure-vessel-burst-risk-trackers-for-range-safety",
@@ -10360,6 +10430,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/continuous-speculative-acceptance-telemetry-exporters-for-prometheus-monitoring-clusters",
+    "path": "/solutions/continuous-speculative-acceptance-telemetry-exporters-for-prometheus-monitoring-clusters",
+    "slug": "continuous-speculative-acceptance-telemetry-exporters-for-prometheus-monitoring-clusters",
+    "target_keyword": "continuous speculative acceptance telemetry exporters for prometheus monitoring clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.0,
+    "impressions": 1890,
+    "clicks": 31,
+    "ctr": 0.0169,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/continuous-streaming-agent-latency-sla-calculators-for-high-concurrency-erp-bots",
     "path": "/solutions/continuous-streaming-agent-latency-sla-calculators-for-high-concurrency-erp-bots",
     "slug": "continuous-streaming-agent-latency-sla-calculators-for-high-concurrency-erp-bots",
@@ -11256,6 +11340,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cross-layer-speculative-confidence-scoring-engines-for-enterprise-contract-parsing",
+    "path": "/solutions/cross-layer-speculative-confidence-scoring-engines-for-enterprise-contract-parsing",
+    "slug": "cross-layer-speculative-confidence-scoring-engines-for-enterprise-contract-parsing",
+    "target_keyword": "cross layer speculative confidence scoring engines for enterprise contract parsing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.0,
+    "impressions": 3120,
+    "clicks": 47,
+    "ctr": 0.0152,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cross-mcp-server-session-context-handoff-telemetry-for-multi-department-enterprise-workflows",
     "path": "/solutions/cross-mcp-server-session-context-handoff-telemetry-for-multi-department-enterprise-workflows",
     "slug": "cross-mcp-server-session-context-handoff-telemetry-for-multi-department-enterprise-workflows",
@@ -11504,6 +11602,20 @@
     "impressions": 507,
     "clicks": 10,
     "ctr": 0.02,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/cross-tenant-mtp-draft-state-isolation-managers-for-multi-tenant-healthcare-clouds",
+    "path": "/solutions/cross-tenant-mtp-draft-state-isolation-managers-for-multi-tenant-healthcare-clouds",
+    "slug": "cross-tenant-mtp-draft-state-isolation-managers-for-multi-tenant-healthcare-clouds",
+    "target_keyword": "cross tenant mtp draft state isolation managers for multi tenant healthcare clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.6,
+    "impressions": 2076,
+    "clicks": 43,
+    "ctr": 0.0211,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -13114,6 +13226,20 @@
     "impressions": 610,
     "clicks": 26,
     "ctr": 0.0431,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/depth-k-multi-token-speculative-drafting-daemons-for-sovereign-private-vpcs",
+    "path": "/solutions/depth-k-multi-token-speculative-drafting-daemons-for-sovereign-private-vpcs",
+    "slug": "depth-k-multi-token-speculative-drafting-daemons-for-sovereign-private-vpcs",
+    "target_keyword": "depth k multi token speculative drafting daemons for sovereign private vpcs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.2,
+    "impressions": 732,
+    "clicks": 12,
+    "ctr": 0.0173,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14784,6 +14910,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dpdp-act-2023-statutory-data-residency-verified-mtp-serving-daemons-for-fintechs",
+    "path": "/solutions/dpdp-act-2023-statutory-data-residency-verified-mtp-serving-daemons-for-fintechs",
+    "slug": "dpdp-act-2023-statutory-data-residency-verified-mtp-serving-daemons-for-fintechs",
+    "target_keyword": "dpdp act 2023 statutory data residency verified mtp serving daemons for fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 1626,
+    "clicks": 54,
+    "ctr": 0.0337,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dpdp-act-compliant-prompt-data-residency-validators-for-tiered-memory-llm-pipelines",
     "path": "/solutions/dpdp-act-compliant-prompt-data-residency-validators-for-tiered-memory-llm-pipelines",
     "slug": "dpdp-act-compliant-prompt-data-residency-validators-for-tiered-memory-llm-pipelines",
@@ -15092,6 +15232,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dual-speculative-verification-tree-engines-for-deterministic-multi-agent-debates",
+    "path": "/solutions/dual-speculative-verification-tree-engines-for-deterministic-multi-agent-debates",
+    "slug": "dual-speculative-verification-tree-engines-for-deterministic-multi-agent-debates",
+    "target_keyword": "dual speculative verification tree engines for deterministic multi agent debates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.1,
+    "impressions": 2581,
+    "clicks": 96,
+    "ctr": 0.0372,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/duplicate-invoice-number-detection-and-hash-fingerprint-collision-defense-telemetry-for-high-volume-billing",
     "path": "/solutions/duplicate-invoice-number-detection-and-hash-fingerprint-collision-defense-telemetry-for-high-volume-billing",
     "slug": "duplicate-invoice-number-detection-and-hash-fingerprint-collision-defense-telemetry-for-high-volume-billing",
@@ -15368,6 +15522,20 @@
     "impressions": 2896,
     "clicks": 46,
     "ctr": 0.0162,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-draft-token-length-adapters-based-on-real-time-speculative-acceptance-rates",
+    "path": "/solutions/dynamic-draft-token-length-adapters-based-on-real-time-speculative-acceptance-rates",
+    "slug": "dynamic-draft-token-length-adapters-based-on-real-time-speculative-acceptance-rates",
+    "target_keyword": "dynamic draft token length adapters based on real time speculative acceptance rates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.9,
+    "impressions": 309,
+    "clicks": 3,
+    "ctr": 0.0122,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15736,6 +15904,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dynamic-mtp-compute-allocation-throttlers-based-on-cluster-power-utilization",
+    "path": "/solutions/dynamic-mtp-compute-allocation-throttlers-based-on-cluster-power-utilization",
+    "slug": "dynamic-mtp-compute-allocation-throttlers-based-on-cluster-power-utilization",
+    "target_keyword": "dynamic mtp compute allocation throttlers based on cluster power utilization",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.1,
+    "impressions": 2731,
+    "clicks": 22,
+    "ctr": 0.0084,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/dynamic-page-table-remap-controllers-for-commercial-maritime-container-routing",
     "path": "/solutions/dynamic-page-table-remap-controllers-for-commercial-maritime-container-routing",
     "slug": "dynamic-page-table-remap-controllers-for-commercial-maritime-container-routing",
@@ -15956,6 +16138,20 @@
     "impressions": 1619,
     "clicks": 35,
     "ctr": 0.0217,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-speculative-acceptance-ratio-calibrators-for-enterprise-reasoning-models",
+    "path": "/solutions/dynamic-speculative-acceptance-ratio-calibrators-for-enterprise-reasoning-models",
+    "slug": "dynamic-speculative-acceptance-ratio-calibrators-for-enterprise-reasoning-models",
+    "target_keyword": "dynamic speculative acceptance ratio calibrators for enterprise reasoning models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 2425,
+    "clicks": 61,
+    "ctr": 0.0255,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -17118,6 +17314,20 @@
     "impressions": 1936,
     "clicks": 48,
     "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-mtp-serving-finops-auditors-for-slashing-multi-million-token-cloud-gpu-bills",
+    "path": "/solutions/enterprise-mtp-serving-finops-auditors-for-slashing-multi-million-token-cloud-gpu-bills",
+    "slug": "enterprise-mtp-serving-finops-auditors-for-slashing-multi-million-token-cloud-gpu-bills",
+    "target_keyword": "enterprise mtp serving finops auditors for slashing multi million token cloud gpu bills",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.7,
+    "impressions": 2927,
+    "clicks": 73,
+    "ctr": 0.0252,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -19922,6 +20132,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/fp8-quantized-multi-token-prediction-draft-heads-for-blackwell-b200-clusters",
+    "path": "/solutions/fp8-quantized-multi-token-prediction-draft-heads-for-blackwell-b200-clusters",
+    "slug": "fp8-quantized-multi-token-prediction-draft-heads-for-blackwell-b200-clusters",
+    "target_keyword": "fp8 quantized multi token prediction draft heads for blackwell b200 clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.1,
+    "impressions": 1771,
+    "clicks": 20,
+    "ctr": 0.0114,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/fp8-weight-activation-quantization-agents-preserving-sub-1-percent-perplexity-degradation",
     "path": "/solutions/fp8-weight-activation-quantization-agents-preserving-sub-1-percent-perplexity-degradation",
     "slug": "fp8-weight-activation-quantization-agents-preserving-sub-1-percent-perplexity-degradation",
@@ -20086,6 +20310,20 @@
     "impressions": 3230,
     "clicks": 28,
     "ctr": 0.0088,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/fused-mtp-draft-generation-and-main-model-decoding-triton-kernels-for-h100-nodes",
+    "path": "/solutions/fused-mtp-draft-generation-and-main-model-decoding-triton-kernels-for-h100-nodes",
+    "slug": "fused-mtp-draft-generation-and-main-model-decoding-triton-kernels-for-h100-nodes",
+    "target_keyword": "fused mtp draft generation and main model decoding triton kernels for h100 nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.5,
+    "impressions": 2595,
+    "clicks": 33,
+    "ctr": 0.0129,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -20786,6 +21024,20 @@
     "impressions": 1156,
     "clicks": 12,
     "ctr": 0.0105,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/gradient-isolated-multi-token-prediction-training-daemons-for-sovereign-fine-tuning",
+    "path": "/solutions/gradient-isolated-multi-token-prediction-training-daemons-for-sovereign-fine-tuning",
+    "slug": "gradient-isolated-multi-token-prediction-training-daemons-for-sovereign-fine-tuning",
+    "target_keyword": "gradient isolated multi token prediction training daemons for sovereign fine tuning",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.1,
+    "impressions": 2151,
+    "clicks": 36,
+    "ctr": 0.0171,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -21812,6 +22064,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hierarchical-speculative-verification-schedulers-across-disaggregated-prefill-pods",
+    "path": "/solutions/hierarchical-speculative-verification-schedulers-across-disaggregated-prefill-pods",
+    "slug": "hierarchical-speculative-verification-schedulers-across-disaggregated-prefill-pods",
+    "target_keyword": "hierarchical speculative verification schedulers across disaggregated prefill pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.7,
+    "impressions": 1577,
+    "clicks": 47,
+    "ctr": 0.0302,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hierarchical-vector-index-pruning-agents-for-real-time-voice-conversational-agents",
     "path": "/solutions/hierarchical-vector-index-pruning-agents-for-real-time-voice-conversational-agents",
     "slug": "hierarchical-vector-index-pruning-agents-for-real-time-voice-conversational-agents",
@@ -21934,6 +22200,20 @@
     "impressions": 1694,
     "clicks": 16,
     "ctr": 0.0096,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/high-concurrency-mtp-batching-schedulers-for-1024-simultaneous-enterprise-streams",
+    "path": "/solutions/high-concurrency-mtp-batching-schedulers-for-1024-simultaneous-enterprise-streams",
+    "slug": "high-concurrency-mtp-batching-schedulers-for-1024-simultaneous-enterprise-streams",
+    "target_keyword": "high concurrency mtp batching schedulers for 1024 simultaneous enterprise streams",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.1,
+    "impressions": 1151,
+    "clicks": 23,
+    "ctr": 0.0204,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -25102,6 +25382,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/interleaved-mtp-transformer-block-execution-schedulers-for-hopper-h100-nodes",
+    "path": "/solutions/interleaved-mtp-transformer-block-execution-schedulers-for-hopper-h100-nodes",
+    "slug": "interleaved-mtp-transformer-block-execution-schedulers-for-hopper-h100-nodes",
+    "target_keyword": "interleaved mtp transformer block execution schedulers for hopper h100 nodes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.5,
+    "impressions": 3915,
+    "clicks": 119,
+    "ctr": 0.0305,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines",
     "path": "/solutions/intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines",
     "slug": "intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines",
@@ -26292,6 +26586,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/lightweight-mtp-draft-module-parameter-tuners-for-671b-foundation-model-serving",
+    "path": "/solutions/lightweight-mtp-draft-module-parameter-tuners-for-671b-foundation-model-serving",
+    "slug": "lightweight-mtp-draft-module-parameter-tuners-for-671b-foundation-model-serving",
+    "target_keyword": "lightweight mtp draft module parameter tuners for 671b foundation model serving",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.8,
+    "impressions": 1208,
+    "clicks": 39,
+    "ctr": 0.0327,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/liposome-extruded-size-and-polydispersity-dynamic-light-scattering-dls-software-for-nanomedicine-labs",
     "path": "/solutions/liposome-extruded-size-and-polydispersity-dynamic-light-scattering-dls-software-for-nanomedicine-labs",
     "slug": "liposome-extruded-size-and-polydispersity-dynamic-light-scattering-dls-software-for-nanomedicine-labs",
@@ -26894,6 +27202,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/lossless-mtp-draft-cache-checkpointing-daemons-for-zero-downtime-cluster-failover",
+    "path": "/solutions/lossless-mtp-draft-cache-checkpointing-daemons-for-zero-downtime-cluster-failover",
+    "slug": "lossless-mtp-draft-cache-checkpointing-daemons-for-zero-downtime-cluster-failover",
+    "target_keyword": "lossless mtp draft cache checkpointing daemons for zero downtime cluster failover",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.3,
+    "impressions": 2853,
+    "clicks": 88,
+    "ctr": 0.031,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/lossless-sliding-window-token-eviction-controllers-for-vernacular-invoice-processing",
     "path": "/solutions/lossless-sliding-window-token-eviction-controllers-for-vernacular-invoice-processing",
     "slug": "lossless-sliding-window-token-eviction-controllers-for-vernacular-invoice-processing",
@@ -26946,6 +27268,20 @@
     "impressions": 2597,
     "clicks": 55,
     "ctr": 0.0213,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/low-latency-mtp-draft-pipeline-warmers-for-zero-cold-start-deepseek-serving",
+    "path": "/solutions/low-latency-mtp-draft-pipeline-warmers-for-zero-cold-start-deepseek-serving",
+    "slug": "low-latency-mtp-draft-pipeline-warmers-for-zero-cold-start-deepseek-serving",
+    "target_keyword": "low latency mtp draft pipeline warmers for zero cold start deepseek serving",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 3221,
+    "clicks": 85,
+    "ctr": 0.0265,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -28008,6 +28344,20 @@
     "type": "compact_landing",
     "position": 12.3,
     "impressions": 1423,
+    "clicks": 8,
+    "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/memory-bandwidth-bottleneck-decouplers-via-multi-token-speculative-drafting",
+    "path": "/solutions/memory-bandwidth-bottleneck-decouplers-via-multi-token-speculative-drafting",
+    "slug": "memory-bandwidth-bottleneck-decouplers-via-multi-token-speculative-drafting",
+    "target_keyword": "memory bandwidth bottleneck decouplers via multi token speculative drafting",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.0,
+    "impressions": 1440,
     "clicks": 8,
     "ctr": 0.006,
     "tier": "STRIKING_DISTANCE",
@@ -29302,6 +29652,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-candidate-speculative-path-evaluators-for-complex-mathematical-proofs",
+    "path": "/solutions/multi-candidate-speculative-path-evaluators-for-complex-mathematical-proofs",
+    "slug": "multi-candidate-speculative-path-evaluators-for-complex-mathematical-proofs",
+    "target_keyword": "multi candidate speculative path evaluators for complex mathematical proofs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.5,
+    "impressions": 785,
+    "clicks": 26,
+    "ctr": 0.0343,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-candidate-speculative-verification-daemons-for-logistics-freight-dispatch",
     "path": "/solutions/multi-candidate-speculative-verification-daemons-for-logistics-freight-dispatch",
     "slug": "multi-candidate-speculative-verification-daemons-for-logistics-freight-dispatch",
@@ -29424,6 +29788,20 @@
     "impressions": 3555,
     "clicks": 45,
     "ctr": 0.0129,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-gpu-tensor-parallel-mtp-draft-head-all-gather-communication-overlap-daemons",
+    "path": "/solutions/multi-gpu-tensor-parallel-mtp-draft-head-all-gather-communication-overlap-daemons",
+    "slug": "multi-gpu-tensor-parallel-mtp-draft-head-all-gather-communication-overlap-daemons",
+    "target_keyword": "multi gpu tensor parallel mtp draft head all gather communication overlap daemons",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 2152,
+    "clicks": 53,
+    "ctr": 0.0248,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -30072,6 +30450,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/multi-session-legal-discovery-mtp-context-rehydration-daemons-for-enterprise-law-firms",
+    "path": "/solutions/multi-session-legal-discovery-mtp-context-rehydration-daemons-for-enterprise-law-firms",
+    "slug": "multi-session-legal-discovery-mtp-context-rehydration-daemons-for-enterprise-law-firms",
+    "target_keyword": "multi session legal discovery mtp context rehydration daemons for enterprise law firms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.9,
+    "impressions": 3059,
+    "clicks": 36,
+    "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody",
     "path": "/solutions/multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody",
     "slug": "multi-signature-threshold-ed25519-key-derivation-agents-for-enterprise-crypto-custody",
@@ -30446,6 +30838,20 @@
     "impressions": 2466,
     "clicks": 17,
     "ctr": 0.0072,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/multi-token-prediction-mtp-speculative-drafting-daemons-for-deepseek-clusters",
+    "path": "/solutions/multi-token-prediction-mtp-speculative-drafting-daemons-for-deepseek-clusters",
+    "slug": "multi-token-prediction-mtp-speculative-drafting-daemons-for-deepseek-clusters",
+    "target_keyword": "multi-token prediction mtp speculative drafting daemons for deepseek clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.8,
+    "impressions": 1568,
+    "clicks": 16,
+    "ctr": 0.0103,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -32662,6 +33068,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/optimal-acceptance-threshold-calibrators-for-high-temperature-generative-drafting",
+    "path": "/solutions/optimal-acceptance-threshold-calibrators-for-high-temperature-generative-drafting",
+    "slug": "optimal-acceptance-threshold-calibrators-for-high-temperature-generative-drafting",
+    "target_keyword": "optimal acceptance threshold calibrators for high temperature generative drafting",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.1,
+    "impressions": 2721,
+    "clicks": 32,
+    "ctr": 0.0121,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/optimistic-fraud-proof-challenge-window-and-state-rollback-telemetry-for-multi-agent-ledgers",
     "path": "/solutions/optimistic-fraud-proof-challenge-window-and-state-rollback-telemetry-for-multi-agent-ledgers",
     "slug": "optimistic-fraud-proof-challenge-window-and-state-rollback-telemetry-for-multi-agent-ledgers",
@@ -33302,6 +33722,20 @@
     "impressions": 3607,
     "clicks": 27,
     "ctr": 0.0076,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/parallel-multi-token-prediction-head-schedulers-for-deepseek-v3-enterprise-deployments",
+    "path": "/solutions/parallel-multi-token-prediction-head-schedulers-for-deepseek-v3-enterprise-deployments",
+    "slug": "parallel-multi-token-prediction-head-schedulers-for-deepseek-v3-enterprise-deployments",
+    "target_keyword": "parallel multi-token prediction head schedulers for deepseek v3 enterprise deployments",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.1,
+    "impressions": 3731,
+    "clicks": 34,
+    "ctr": 0.0092,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -36568,6 +37002,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-mtp-speculative-memory-isolation-auditors",
+    "path": "/solutions/rbi-cyber-security-framework-compliant-mtp-speculative-memory-isolation-auditors",
+    "slug": "rbi-cyber-security-framework-compliant-mtp-speculative-memory-isolation-auditors",
+    "target_keyword": "rbi cyber security framework compliant mtp speculative memory isolation auditors",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.4,
+    "impressions": 504,
+    "clicks": 3,
+    "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
     "path": "/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
     "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
@@ -36830,6 +37278,20 @@
     "impressions": 1847,
     "clicks": 18,
     "ctr": 0.0099,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/real-time-mtp-speculative-draft-drift-detectors-for-long-running-agent-swarms",
+    "path": "/solutions/real-time-mtp-speculative-draft-drift-detectors-for-long-running-agent-swarms",
+    "slug": "real-time-mtp-speculative-draft-drift-detectors-for-long-running-agent-swarms",
+    "target_keyword": "real time mtp speculative draft drift detectors for long running agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.0,
+    "impressions": 2730,
+    "clicks": 24,
+    "ctr": 0.0088,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -39718,6 +40180,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sequential-mtp-draft-module-orchestrators-for-high-throughput-enterprise-inference",
+    "path": "/solutions/sequential-mtp-draft-module-orchestrators-for-high-throughput-enterprise-inference",
+    "slug": "sequential-mtp-draft-module-orchestrators-for-high-throughput-enterprise-inference",
+    "target_keyword": "sequential mtp draft module orchestrators for high throughput enterprise inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.1,
+    "impressions": 3681,
+    "clicks": 44,
+    "ctr": 0.0121,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/server-chassis-drip-tray-optoelectronic-moisture-telemetry-for-high-density-clusters",
     "path": "/solutions/server-chassis-drip-tray-optoelectronic-moisture-telemetry-for-high-density-clusters",
     "slug": "server-chassis-drip-tray-optoelectronic-moisture-telemetry-for-high-density-clusters",
@@ -42098,6 +42574,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sovereign-private-vpc-deepseek-v3-mtp-cluster-deployment-engineers-for-private-banks",
+    "path": "/solutions/sovereign-private-vpc-deepseek-v3-mtp-cluster-deployment-engineers-for-private-banks",
+    "slug": "sovereign-private-vpc-deepseek-v3-mtp-cluster-deployment-engineers-for-private-banks",
+    "target_keyword": "sovereign private vpc deepseek v3 mtp cluster deployment engineers for private banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.8,
+    "impressions": 2528,
+    "clicks": 50,
+    "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi",
     "path": "/solutions/sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi",
     "slug": "sovereign-ring-buffer-kv-eviction-blueprints-for-tier-4-datacenters-in-mumbai-and-delhi",
@@ -43344,6 +43834,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/speculative-draft-token-cache-eviction-daemons-for-extreme-million-token-contexts",
+    "path": "/solutions/speculative-draft-token-cache-eviction-daemons-for-extreme-million-token-contexts",
+    "slug": "speculative-draft-token-cache-eviction-daemons-for-extreme-million-token-contexts",
+    "target_keyword": "speculative draft token cache eviction daemons for extreme million token contexts",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.6,
+    "impressions": 3796,
+    "clicks": 115,
+    "ctr": 0.0304,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/speculative-draft-token-quality-predictors-for-dynamic-temperature-tuning",
     "path": "/solutions/speculative-draft-token-quality-predictors-for-dynamic-temperature-tuning",
     "slug": "speculative-draft-token-quality-predictors-for-dynamic-temperature-tuning",
@@ -43470,6 +43974,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/speculative-multi-token-draft-sequence-validators-for-multi-agent-autonomous-swarms",
+    "path": "/solutions/speculative-multi-token-draft-sequence-validators-for-multi-agent-autonomous-swarms",
+    "slug": "speculative-multi-token-draft-sequence-validators-for-multi-agent-autonomous-swarms",
+    "target_keyword": "speculative multi-token draft sequence validators for multi-agent autonomous swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.8,
+    "impressions": 3868,
+    "clicks": 126,
+    "ctr": 0.0327,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/speculative-rollback-latency-eliminators-for-rejected-multi-token-candidates",
+    "path": "/solutions/speculative-rollback-latency-eliminators-for-rejected-multi-token-candidates",
+    "slug": "speculative-rollback-latency-eliminators-for-rejected-multi-token-candidates",
+    "target_keyword": "speculative rollback latency eliminators for rejected multi token candidates",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.5,
+    "impressions": 1875,
+    "clicks": 29,
+    "ctr": 0.0159,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/speculative-token-rejection-rate-and-rollback-compute-waste-telemetry-for-autonomous-legal-drafting-agents",
     "path": "/solutions/speculative-token-rejection-rate-and-rollback-compute-waste-telemetry-for-autonomous-legal-drafting-agents",
     "slug": "speculative-token-rejection-rate-and-rollback-compute-waste-telemetry-for-autonomous-legal-drafting-agents",
@@ -43508,6 +44040,20 @@
     "impressions": 3581,
     "clicks": 71,
     "ctr": 0.0199,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/speculative-tree-branch-pruning-daemons-based-on-cumulative-token-log-probabilities",
+    "path": "/solutions/speculative-tree-branch-pruning-daemons-based-on-cumulative-token-log-probabilities",
+    "slug": "speculative-tree-branch-pruning-daemons-based-on-cumulative-token-log-probabilities",
+    "target_keyword": "speculative tree branch pruning daemons based on cumulative token log probabilities",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.3,
+    "impressions": 2363,
+    "clicks": 46,
+    "ctr": 0.0198,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -44772,6 +45318,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-100w-green-datacenter-mtp-cluster-deployment-advisors-for-environmental-compliance",
+    "path": "/solutions/sub-100w-green-datacenter-mtp-cluster-deployment-advisors-for-environmental-compliance",
+    "slug": "sub-100w-green-datacenter-mtp-cluster-deployment-advisors-for-environmental-compliance",
+    "target_keyword": "sub 100w green datacenter mtp cluster deployment advisors for environmental compliance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.7,
+    "impressions": 1417,
+    "clicks": 23,
+    "ctr": 0.0165,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-100w-server-power-reduction-via-disaggregated-kv-memory-pooling-for-green-clouds",
     "path": "/solutions/sub-100w-server-power-reduction-via-disaggregated-kv-memory-pooling-for-green-clouds",
     "slug": "sub-100w-server-power-reduction-via-disaggregated-kv-memory-pooling-for-green-clouds",
@@ -44908,6 +45468,20 @@
     "impressions": 1599,
     "clicks": 24,
     "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-10ms-inter-token-latency-schedulers-for-mtp-accelerated-671b-parameter-models",
+    "path": "/solutions/sub-10ms-inter-token-latency-schedulers-for-mtp-accelerated-671b-parameter-models",
+    "slug": "sub-10ms-inter-token-latency-schedulers-for-mtp-accelerated-671b-parameter-models",
+    "target_keyword": "sub 10ms inter token latency schedulers for mtp accelerated 671b parameter models",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 953,
+    "clicks": 19,
+    "ctr": 0.0206,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -45724,6 +46298,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-dollar-per-million-tokens-mtp-inference-deployment-consultants-for-enterprise-swarms",
+    "path": "/solutions/sub-dollar-per-million-tokens-mtp-inference-deployment-consultants-for-enterprise-swarms",
+    "slug": "sub-dollar-per-million-tokens-mtp-inference-deployment-consultants-for-enterprise-swarms",
+    "target_keyword": "sub dollar per million tokens mtp inference deployment consultants for enterprise swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.0,
+    "impressions": 660,
+    "clicks": 13,
+    "ctr": 0.0199,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-dollar-per-million-tokens-tiered-storage-deployment-consultants-for-enterprise-swarms",
     "path": "/solutions/sub-dollar-per-million-tokens-tiered-storage-deployment-consultants-for-enterprise-swarms",
     "slug": "sub-dollar-per-million-tokens-tiered-storage-deployment-consultants-for-enterprise-swarms",
@@ -46018,6 +46606,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-second-vernacular-invoice-parsing-mtp-multi-agent-swarms-for-supply-chains",
+    "path": "/solutions/sub-second-vernacular-invoice-parsing-mtp-multi-agent-swarms-for-supply-chains",
+    "slug": "sub-second-vernacular-invoice-parsing-mtp-multi-agent-swarms-for-supply-chains",
+    "target_keyword": "sub second vernacular invoice parsing mtp multi agent swarms for supply chains",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.9,
+    "impressions": 1319,
+    "clicks": 18,
+    "ctr": 0.0144,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-surface-pipeline-acoustic-leak-localization-telemetry-agents-for-water-utilities",
     "path": "/solutions/sub-surface-pipeline-acoustic-leak-localization-telemetry-agents-for-water-utilities",
     "slug": "sub-surface-pipeline-acoustic-leak-localization-telemetry-agents-for-water-utilities",
@@ -46028,6 +46630,20 @@
     "impressions": 1280,
     "clicks": 9,
     "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-ten-millisecond-mtp-draft-verification-kernels-for-low-latency-enterprise-copilots",
+    "path": "/solutions/sub-ten-millisecond-mtp-draft-verification-kernels-for-low-latency-enterprise-copilots",
+    "slug": "sub-ten-millisecond-mtp-draft-verification-kernels-for-low-latency-enterprise-copilots",
+    "target_keyword": "sub ten millisecond mtp draft verification kernels for low latency enterprise copilots",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.5,
+    "impressions": 625,
+    "clicks": 5,
+    "ctr": 0.0092,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -48594,6 +49210,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/ten-million-token-sovereign-mtp-agent-swarm-architecture-advisors-for-enterprise-ctos",
+    "path": "/solutions/ten-million-token-sovereign-mtp-agent-swarm-architecture-advisors-for-enterprise-ctos",
+    "slug": "ten-million-token-sovereign-mtp-agent-swarm-architecture-advisors-for-enterprise-ctos",
+    "target_keyword": "ten million token sovereign mtp agent swarm architecture advisors for enterprise ctos",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.8,
+    "impressions": 1138,
+    "clicks": 34,
+    "ctr": 0.0301,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/tension-leg-platform-bottom-connector-flex-joint-angular-misalignment-ultrasonic-sensor-telemetry-for-floating-wind",
     "path": "/solutions/tension-leg-platform-bottom-connector-flex-joint-angular-misalignment-ultrasonic-sensor-telemetry-for-floating-wind",
     "slug": "tension-leg-platform-bottom-connector-flex-joint-angular-misalignment-ultrasonic-sensor-telemetry-for-floating-wind",
@@ -49798,6 +50428,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/token-level-speculative-verification-schedulers-for-deepseek-r1-reasoning-clusters",
+    "path": "/solutions/token-level-speculative-verification-schedulers-for-deepseek-r1-reasoning-clusters",
+    "slug": "token-level-speculative-verification-schedulers-for-deepseek-r1-reasoning-clusters",
+    "target_keyword": "token level speculative verification schedulers for deepseek r1 reasoning clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.7,
+    "impressions": 1937,
+    "clicks": 28,
+    "ctr": 0.0149,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/token-routing-entropy-monitors-for-conversational-voice-streaming-runtimes",
     "path": "/solutions/token-routing-entropy-monitors-for-conversational-voice-streaming-runtimes",
     "slug": "token-routing-entropy-monitors-for-conversational-voice-streaming-runtimes",
@@ -50204,6 +50848,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/tree-structured-mtp-draft-candidate-evaluators-in-custom-triton-decoding-kernels",
+    "path": "/solutions/tree-structured-mtp-draft-candidate-evaluators-in-custom-triton-decoding-kernels",
+    "slug": "tree-structured-mtp-draft-candidate-evaluators-in-custom-triton-decoding-kernels",
+    "target_keyword": "tree structured mtp draft candidate evaluators in custom triton decoding kernels",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 1488,
+    "clicks": 17,
+    "ctr": 0.0119,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/trie-prefix-index-tool-selection-latency-optimization-telemetry-for-real-time-autonomous-agents",
     "path": "/solutions/trie-prefix-index-tool-selection-latency-optimization-telemetry-for-real-time-autonomous-agents",
     "slug": "trie-prefix-index-tool-selection-latency-optimization-telemetry-for-real-time-autonomous-agents",
@@ -50480,6 +51138,20 @@
     "impressions": 1659,
     "clicks": 49,
     "ctr": 0.03,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/two-point-eight-x-token-decoding-throughput-optimizers-via-multi-token-prediction",
+    "path": "/solutions/two-point-eight-x-token-decoding-throughput-optimizers-via-multi-token-prediction",
+    "slug": "two-point-eight-x-token-decoding-throughput-optimizers-via-multi-token-prediction",
+    "target_keyword": "two point eight x token decoding throughput optimizers via multi token prediction",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.3,
+    "impressions": 2173,
+    "clicks": 33,
+    "ctr": 0.0153,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -52178,6 +52850,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-copy-mtp-draft-tensor-buffer-allocators-for-unified-vram-architectures",
+    "path": "/solutions/zero-copy-mtp-draft-tensor-buffer-allocators-for-unified-vram-architectures",
+    "slug": "zero-copy-mtp-draft-tensor-buffer-allocators-for-unified-vram-architectures",
+    "target_keyword": "zero copy mtp draft tensor buffer allocators for unified vram architectures",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.3,
+    "impressions": 1753,
+    "clicks": 36,
+    "ctr": 0.0206,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-copy-network-buffer-profilers-for-disaggregated-inference-microservices",
     "path": "/solutions/zero-copy-network-buffer-profilers-for-disaggregated-inference-microservices",
     "slug": "zero-copy-network-buffer-profilers-for-disaggregated-inference-microservices",
@@ -52682,6 +53368,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-overhead-speculative-draft-acceptance-verifiers-for-hopper-tensor-cores",
+    "path": "/solutions/zero-overhead-speculative-draft-acceptance-verifiers-for-hopper-tensor-cores",
+    "slug": "zero-overhead-speculative-draft-acceptance-verifiers-for-hopper-tensor-cores",
+    "target_keyword": "zero overhead speculative draft acceptance verifiers for hopper tensor cores",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.6,
+    "impressions": 2806,
+    "clicks": 94,
+    "ctr": 0.0337,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-packet-loss-in-flight-agent-state-socket-transfer-managers-for-bourses",
     "path": "/solutions/zero-packet-loss-in-flight-agent-state-socket-transfer-managers-for-bourses",
     "slug": "zero-packet-loss-in-flight-agent-state-socket-transfer-managers-for-bourses",
@@ -52748,6 +53448,20 @@
     "impressions": 2528,
     "clicks": 50,
     "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-remanence-cryptographic-erasure-verifiers-for-speculative-draft-memory",
+    "path": "/solutions/zero-remanence-cryptographic-erasure-verifiers-for-speculative-draft-memory",
+    "slug": "zero-remanence-cryptographic-erasure-verifiers-for-speculative-draft-memory",
+    "target_keyword": "zero remanence cryptographic erasure verifiers for speculative draft memory",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.5,
+    "impressions": 235,
+    "clicks": 3,
+    "ctr": 0.0142,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },

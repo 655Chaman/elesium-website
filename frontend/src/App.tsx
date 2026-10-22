@@ -171,6 +171,8 @@ const EnterpriseAgentMlaLatentProjectionSimulator = lazy(() => import('./compone
 const EmbedAgentMlaLatentProjectionSimulator = lazy(() => import('./components/pages/EmbedAgentMlaLatentProjectionSimulator'))
 const EnterpriseAgentMtpSpeculativeDraftSimulator = lazy(() => import('./components/pages/EnterpriseAgentMtpSpeculativeDraftSimulator'))
 const EmbedAgentMtpSpeculativeDraftSimulator = lazy(() => import('./components/pages/EmbedAgentMtpSpeculativeDraftSimulator'))
+const EnterpriseAgentDualpipePipelineSimulator = lazy(() => import('./components/pages/EnterpriseAgentDualpipePipelineSimulator'))
+const EmbedAgentDualpipePipelineSimulator = lazy(() => import('./components/pages/EmbedAgentDualpipePipelineSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -456,6 +458,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-mtp-speculative-draft-simulator" element={<EnterpriseAgentMtpSpeculativeDraftSimulator />} />
                             <Route path="/tools/agent-mtp-speculative-draft-simulator" element={<Navigate to="/tools/enterprise-agent-mtp-speculative-draft-simulator" replace />} />
                             <Route path="/embed/agent-mtp-speculative-draft-simulator" element={<EmbedAgentMtpSpeculativeDraftSimulator />} />
+                            <Route path="/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator" element={<EnterpriseAgentDualpipePipelineSimulator />} />
+                            <Route path="/tools/agent-dualpipe-pipeline-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator" replace />} />
+                            <Route path="/embed/agent-dualpipe-pipeline-parallelism-simulator" element={<EmbedAgentDualpipePipelineSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

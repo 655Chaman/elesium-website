@@ -4314,6 +4314,53 @@ def render_mtp_speculative_embed_semantic_html():
 </div>
 """
 
+def render_dualpipe_pipeline_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator.
+    """
+    return """
+<div id="prerendered-agent-dualpipe-pipeline-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#0284c7;font-family:monospace;margin-bottom:0.5rem;">TOOLS / PIPELINE PARALLELISM / TOOL #74</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent DualPipe Bidirectional Pipeline Parallelism Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate DualPipe bidirectional pipeline parallelism, zero-bubble micro-batch scheduling, All-to-All communication overlap, and MFU maximization on DeepSeek-V3 clusters.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#0284c7;margin-top:0;">DualPipe Bidirectional Overlap Telemetry</h2>
+      <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Interleaves forward and backward micro-batches across dual symmetric pipelines, partitioning backward propagation into B_input and B_weight to completely hide cross-node All-to-All network latency behind matrix computation kernels.</p>
+      <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;font-family:monospace;font-size:0.85rem;">
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Pipeline Bubble: <strong>Under 2% Ratio</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Model Flops Util: <strong>63%+ MFU Frontier</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Network Overlap: <strong>98%+ All-to-All Hidden</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid #1e293b;font-size:0.85rem;color:#64748b;text-align:right;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#0284c7;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_dualpipe_pipeline_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-dualpipe-pipeline-parallelism-simulator.
+    """
+    return """
+<div id="prerendered-agent-dualpipe-pipeline-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">DualPipe Pipeline Simulator</h1>
+    <div style="font-size:0.8rem;color:#0284c7;font-family:monospace;">Bidirectional Scheduling · Zero-Bubble · Comm Overlap</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate DualPipe bidirectional pipeline parallelism, zero-bubble micro-batch scheduling, All-to-All communication overlap, and MFU maximization on DeepSeek-V3 clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#0284c7;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -6006,6 +6053,14 @@ def generate_ssg():
         "embed/agent-mtp-speculative-draft-simulator": {
             "title": "Embed: Multi-Token Prediction Simulator",
             "desc": "Interactive embed widget modeling Multi-Token Prediction (MTP), sequential draft heads, speculative tree verification, and 2.8x decode acceleration."
+        },
+        "tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator": {
+            "title": "Enterprise Autonomous Agent DualPipe Bidirectional Pipeline Parallelism Simulator",
+            "desc": "Simulate DualPipe bidirectional pipeline parallelism, zero-bubble micro-batch scheduling, All-to-All communication overlap, and MFU maximization on DeepSeek-V3 clusters."
+        },
+        "embed/agent-dualpipe-pipeline-parallelism-simulator": {
+            "title": "Embed: DualPipe Pipeline Simulator",
+            "desc": "Interactive embed widget modeling DualPipe bidirectional pipeline parallelism, zero-bubble scheduling, All-to-All communication overlap, and MFU maximization."
         }
     }
 
@@ -12094,6 +12149,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(mtp_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator":
+            tool_content = render_dualpipe_pipeline_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            dualpipe_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent DualPipe Bidirectional Pipeline Parallelism Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "DualPipe Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(dualpipe_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-dualpipe-pipeline-parallelism-simulator":
+            embed_content = render_dualpipe_pipeline_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            dualpipe_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "DualPipe Pipeline Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(dualpipe_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")
