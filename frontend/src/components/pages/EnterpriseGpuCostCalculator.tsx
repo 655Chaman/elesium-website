@@ -691,7 +691,7 @@ export default function EnterpriseGpuCostCalculator() {
 
         </div>
       </div>
-      {WhatsAppModal}
+      <WhatsAppModal />
     </>
   );
 }

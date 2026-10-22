@@ -570,7 +570,7 @@ CATEGORY_ARCHITECTURES = {
 }
 
 # Aliases for domain blueprints to ensure 100% categorical coverage
-CATEGORY_ARCHITECTURES["GovTech & Sovereign Defense"] = CATEGORY_ARCHITECTURES["GovTech & Defense"]
+CATEGORY_ARCHITECTURES["GovTech & private Defense"] = CATEGORY_ARCHITECTURES["GovTech & Defense"]
 CATEGORY_ARCHITECTURES["GovTech & private Defense"] = CATEGORY_ARCHITECTURES["GovTech & Defense"]
 
 def resolve_category_architecture(hub_category: str) -> dict:
@@ -622,7 +622,7 @@ ORDERED_CATEGORIES = [
 
 ROTATING_ANCHORS = [
     "Enterprise AI automation agency in India",
-    "Sovereign AI engineering pod Bengaluru",
+    "private AI engineering pod Bengaluru",
     "Indian enterprise multi-agent architectures",
     "BFSI & logistics AI automation India",
     "DPDP Act 2023 compliant enterprise systems"
@@ -1752,7 +1752,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
     iconName: 'Shield',
     tagline: 'Air-Gapped Classified Intelligence & ITAR Munitions Auditing',
     description: 'Air-gapped tactical document de-identification, SCADA cyber-containment, and defense supply chain ITAR verification.',
-    solutions: solutionsData.filter(s => s.hubCategory === 'GovTech & Defense' || s.hubCategory === 'GovTech & Sovereign Defense')
+    solutions: solutionsData.filter(s => s.hubCategory === 'GovTech & Defense' || s.hubCategory === 'GovTech & private Defense')
   },
   {
     id: 'aerospace',

@@ -525,9 +525,10 @@ export default function DpdpStatutoryAuditSimulator() {
 
                   <button
                     onClick={() => openWhatsApp()}
-                    className="px-4 py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30 transition-colors whitespace-nowrap"
+                    className="px-5 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all whitespace-nowrap flex items-center gap-2"
                   >
-                    Direct WhatsApp
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    Chat on WhatsApp
                   </button>
                 </div>
               </div>

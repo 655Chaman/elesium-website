@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import {
   Cpu,
   Layers,
@@ -25,9 +24,10 @@ import {
   PrivateClusterKey,
   Currency
 } from '../calculator/latencyEstimatorModel';
-import { InteractiveHoverButton } from '../ui/InteractiveHoverButton';
+import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 export default function MultiAgentLatencyEstimator() {
+  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
   const [currency, setCurrency] = useState<Currency>('USD');
   const [topology, setTopology] = useState<TopologyKey>('state_machine');
   const [nodeCount, setNodeCount] = useState<number>(5);
@@ -496,15 +496,15 @@ export default function MultiAgentLatencyEstimator() {
                   </span>
                 </div>
 
-                {/* Direct High-Converting Audit CTA */}
+                {/* Direct High-Converting WhatsApp CTA */}
                 <div className="pt-2">
-                  <Link to="/audit">
-                    <InteractiveHoverButton
-                      className="w-full justify-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl text-sm shadow-lg shadow-blue-600/30 transition-all"
-                    >
-                      Lock These Benchmarks (Schedule Audit)
-                    </InteractiveHoverButton>
-                  </Link>
+                  <button
+                    onClick={openWhatsApp}
+                    className="w-full justify-center bg-white text-black hover:bg-neutral-200 font-semibold py-3.5 rounded-full text-sm shadow-sm transition-all flex items-center gap-2"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    Chat on WhatsApp to Lock Benchmarks
+                  </button>
                   <p className="text-center text-[11px] text-slate-500 mt-2">
                     Zero data retention • Air-gapped VPC deployment • DPDP Act 2023 compliant
                   </p>
@@ -622,6 +622,7 @@ export default function MultiAgentLatencyEstimator() {
           </div>
         </div>
       )}
+      <WhatsAppModal />
     </>
   );
 }

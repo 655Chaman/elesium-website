@@ -254,6 +254,23 @@ def render_solution_semantic_html(sol):
     hero_img = hero.get("heroImage", f"/assets/solutions/{slug}-architecture.webp")
     hero_alt = html.escape(hero.get("heroImageAlt", h1))
 
+    # Check physical existence of image to avoid 404 broken asset crawl penalties
+    clean_rel_path = hero_img.lstrip("/")
+    img_exists = (DIST_DIR / clean_rel_path).exists() or ((BASE_DIR / "frontend" / "public") / clean_rel_path).exists()
+    if img_exists:
+        hero_media_html = f'<div class="hero-graphic" style="background:#f3f4f6;border-radius:0.75rem;padding:1.5rem;text-align:center;margin:1.5rem 0;"><img src="{hero_img}" alt="{hero_alt}" style="max-width:100%;height:auto;border-radius:0.5rem;" /></div>'
+    else:
+        hero_media_html = f"""<div class="hero-graphic" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-radius:0.75rem;padding:2rem;text-align:center;margin:1.5rem 0;color:#f8fafc;">
+      <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;color:#38bdf8;text-transform:uppercase;margin-bottom:0.75rem;">Verified Sovereign Architecture Topology</div>
+      <div style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:1rem;">{h1}</div>
+      <div style="display:inline-flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;font-size:0.8rem;font-family:monospace;color:#94a3b8;">
+        <span style="background:#0284c71a;border:1px solid #0284c7;color:#38bdf8;padding:0.25rem 0.6rem;border-radius:0.375rem;">Private VPC Enclave</span>
+        <span style="background:#10b9811a;border:1px solid #10b981;color:#34d399;padding:0.25rem 0.6rem;border-radius:0.375rem;">LangGraph StateGraph</span>
+        <span style="background:#6366f11a;border:1px solid #6366f1;color:#818cf8;padding:0.25rem 0.6rem;border-radius:0.375rem;">Zero Data Retention</span>
+        <span style="background:#f59e0b1a;border:1px solid #f59e0b;color:#fbbf24;padding:0.25rem 0.6rem;border-radius:0.375rem;">DPDP Act 2023 Verified</span>
+      </div>
+    </div>"""
+
     return f"""
 <div id="prerendered-solution" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header style="margin-bottom:2.5rem;">
@@ -263,9 +280,7 @@ def render_solution_semantic_html(sol):
     <div class="cta-container" style="margin:1.5rem 0 2rem 0;">
       <a href="#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">{primary_cta} &rarr;</a>
     </div>
-    <div class="hero-graphic" style="background:#f3f4f6;border-radius:0.75rem;padding:1.5rem;text-align:center;margin:1.5rem 0;">
-      <img src="{hero_img}" alt="{hero_alt}" style="max-width:100%;height:auto;border-radius:0.5rem;" />
-    </div>
+    {hero_media_html}
   </header>
   <main>
     <section style="margin:2.5rem 0;">
@@ -5221,25 +5236,27 @@ def generate_ssg():
         html_out = re.sub(r"<title>.*?</title>", lambda m: f"<title>{title} | Elesium</title>", html_out)
 
         # Replace Description
-        html_out = re.sub(r'<meta name="description" content="[^"]*">', 
-                          lambda m: f'<meta name="description" content="{desc}">', html_out)
+        html_out = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta name="description" content="{desc}" />', html_out)
 
         # Replace Canonical with robust regex
         html_out = replace_canonical(html_out, canonical_url)
 
         # Replace OG Meta Tags
-        html_out = re.sub(r'<meta property="og:title" content="[^"]*">', 
-                          lambda m: f'<meta property="og:title" content="{title}">', html_out)
-        html_out = re.sub(r'<meta property="og:description" content="[^"]*">', 
-                          lambda m: f'<meta property="og:description" content="{desc}">', html_out)
-        html_out = re.sub(r'<meta property="og:url" content="[^"]*">', 
-                          lambda m: f'<meta property="og:url" content="{canonical_url}">', html_out)
+        html_out = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta property="og:title" content="{title}" />', html_out)
+        html_out = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta property="og:description" content="{desc}" />', html_out)
+        html_out = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta property="og:url" content="{canonical_url}" />', html_out)
 
         # Replace Twitter Meta Tags
-        html_out = re.sub(r'<meta name="twitter:title" content="[^"]*">', 
-                          lambda m: f'<meta name="twitter:title" content="{title}">', html_out)
-        html_out = re.sub(r'<meta name="twitter:description" content="[^"]*">', 
-                          lambda m: f'<meta name="twitter:description" content="{desc}">', html_out)
+        html_out = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta name="twitter:title" content="{title}" />', html_out)
+        html_out = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta name="twitter:description" content="{desc}" />', html_out)
+        html_out = re.sub(r'<meta name="twitter:url" content="[^"]*"\s*/?>', 
+                          lambda m: f'<meta name="twitter:url" content="{canonical_url}" />', html_out)
 
         # Change og:type to article
         html_out = html_out.replace('<meta property="og:type" content="website">', '<meta property="og:type" content="article">')
@@ -6594,13 +6611,14 @@ def generate_ssg():
         html_out = base_html
 
         html_out = re.sub(r"<title>.*?</title>", f"<title>{title} | Elesium</title>", html_out)
-        html_out = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{desc}">', html_out)
+        html_out = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{desc}" />', html_out)
         html_out = replace_canonical(html_out, canonical_url)
-        html_out = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{title} | Elesium">', html_out)
-        html_out = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{desc}">', html_out)
-        html_out = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{canonical_url}">', html_out)
-        html_out = re.sub(r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{title} | Elesium">', html_out)
-        html_out = re.sub(r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{desc}">', html_out)
+        html_out = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{title} | Elesium" />', html_out)
+        html_out = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{desc}" />', html_out)
+        html_out = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{canonical_url}" />', html_out)
+        html_out = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{title} | Elesium" />', html_out)
+        html_out = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{desc}" />', html_out)
+        html_out = re.sub(r'<meta name="twitter:url" content="[^"]*"\s*/?>', f'<meta name="twitter:url" content="{canonical_url}" />', html_out)
 
         if route == "ai-automation-agency-india":
             pricing_answer_capsule = (
