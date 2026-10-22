@@ -37,6 +37,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://elesium.online/authors/chaman-shah</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elesium.online/team</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://elesium.online/waitlist</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
