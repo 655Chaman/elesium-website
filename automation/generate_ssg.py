@@ -3938,6 +3938,53 @@ def render_three_d_parallelism_embed_semantic_html():
 </div>
 """
 
+def render_fp8_microscaling_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-fp8-microscaling-simulator.
+    """
+    return """
+<div id="prerendered-agent-fp8-microscaling-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#10b981;font-family:monospace;margin-bottom:0.5rem;">TOOLS / FP8 MICROSCALING / TOOL #66</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent FP8 Microscaling & Block Dynamic Range Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model dynamic 32-element block exponent shifting, OCP MXFP8/MXFP4 quantization, and WGMMA Tensor Core speedups. Eliminate low-precision outlier degradation while bounding perplexity loss below 0.08%.</p>
+  </header>
+  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+    <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Microscaling Exponent Normalization Telemetry</h2>
+      <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Calculates dynamic block exponent scaling factors across vector partitions, eliminating activation outlier cascading and delivering 2.14x GEMM speedups on Hopper and Blackwell clusters.</p>
+      <div style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;font-family:monospace;font-size:0.85rem;">
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">GEMM Acceleration: <strong>2.14x Peak TFLOPS</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">Perplexity Degradation: <strong>+0.07% Sub-10 BPS</strong></div>
+        <div style="background:#020617;padding:0.75rem;border-radius:0.5rem;border:1px solid #334155;">VRAM Footprint: <strong>55% Allocation Cut</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid #1e293b;font-size:0.85rem;color:#64748b;text-align:right;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_fp8_microscaling_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-fp8-microscaling-simulator.
+    """
+    return """
+<div id="prerendered-agent-fp8-microscaling-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">FP8 &amp; MXFP8 Microscaling Simulator</h1>
+    <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">OCP MXFP8 · Dynamic Exponent Shifting · Sub-1% Perplexity · Hopper/Blackwell</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Model dynamic 32-element block exponent shifting, OCP MXFP8/MXFP4 quantization, and WGMMA Tensor Core speedups. Eliminate low-precision outlier degradation while bounding perplexity loss below 0.08%.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -5566,6 +5613,14 @@ def generate_ssg():
         "embed/agent-3d-parallelism-simulator": {
             "title": "Embed: 3D Parallelism Simulator",
             "desc": "Interactive embed widget modeling Megatron-DeepSpeed 3D mesh, zero-bubble interleaved 1F1B pipeline, ZeRO-3 memory sharding, and sub-8ms step latency."
+        },
+        "tools/enterprise-agent-fp8-microscaling-simulator": {
+            "title": "Enterprise Autonomous Agent FP8 Microscaling & Block Dynamic Range Simulator",
+            "desc": "Model dynamic 32-element block exponent shifting, OCP MXFP8/MXFP4 quantization, and WGMMA Tensor Core speedups. Eliminate low-precision outlier degradation while bounding perplexity loss below 0.08%."
+        },
+        "embed/agent-fp8-microscaling-simulator": {
+            "title": "Embed: FP8 & MXFP8 Microscaling Simulator",
+            "desc": "Interactive embed widget modeling OCP MXFP8 block exponent scaling, FP4 weight quantization, GEMM tensor acceleration, and sub-1% perplexity serving."
         }
     }
 
@@ -11022,6 +11077,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(threed_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-fp8-microscaling-simulator":
+            tool_content = render_fp8_microscaling_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            fp8_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise Autonomous Agent FP8 Microscaling & Block Dynamic Range Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "FP8 Microscaling Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(fp8_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-fp8-microscaling-simulator":
+            embed_content = render_fp8_microscaling_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            fp8_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "FP8 & MXFP8 Microscaling Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(fp8_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

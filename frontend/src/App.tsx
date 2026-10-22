@@ -155,6 +155,8 @@ const EnterpriseAgentContextParallelismSimulator = lazy(() => import('./componen
 const EmbedAgentContextParallelismSimulator = lazy(() => import('./components/pages/EmbedAgentContextParallelismSimulator'))
 const EnterpriseAgent3DParallelismSimulator = lazy(() => import('./components/pages/EnterpriseAgent3DParallelismSimulator'))
 const EmbedAgent3DParallelismSimulator = lazy(() => import('./components/pages/EmbedAgent3DParallelismSimulator'))
+const EnterpriseAgentFp8MicroscalingSimulator = lazy(() => import('./components/pages/EnterpriseAgentFp8MicroscalingSimulator'))
+const EmbedAgentFp8MicroscalingSimulator = lazy(() => import('./components/pages/EmbedAgentFp8MicroscalingSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -416,6 +418,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-3d-parallelism-simulator" element={<EnterpriseAgent3DParallelismSimulator />} />
                             <Route path="/tools/agent-3d-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-3d-parallelism-simulator" replace />} />
                             <Route path="/embed/agent-3d-parallelism-simulator" element={<EmbedAgent3DParallelismSimulator />} />
+                            <Route path="/tools/enterprise-agent-fp8-microscaling-simulator" element={<EnterpriseAgentFp8MicroscalingSimulator />} />
+                            <Route path="/tools/agent-fp8-microscaling-simulator" element={<Navigate to="/tools/enterprise-agent-fp8-microscaling-simulator" replace />} />
+                            <Route path="/embed/agent-fp8-microscaling-simulator" element={<EmbedAgentFp8MicroscalingSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

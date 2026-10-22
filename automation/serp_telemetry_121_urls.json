@@ -196,6 +196,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/signals/3d-parallelism-tensor-pipeline-zero3-interleaved-execution-100b-swarms",
+    "path": "/signals/3d-parallelism-tensor-pipeline-zero3-interleaved-execution-100b-swarms",
+    "slug": "3d-parallelism-tensor-pipeline-zero3-interleaved-execution-100b-swarms",
+    "target_keyword": "3d parallelism tensor pipeline zero3 interleaved execution 100b swarms",
+    "category": "signal",
+    "type": "blog_whitepaper",
+    "position": 20.2,
+    "impressions": 452,
+    "clicks": 2,
+    "ctr": 0.0058,
+    "tier": "UNDERPERFORMING",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/signals/context-parallelism-ring-kv-communication-overlap-2m-tokens",
     "path": "/signals/context-parallelism-ring-kv-communication-overlap-2m-tokens",
     "slug": "context-parallelism-ring-kv-communication-overlap-2m-tokens",
@@ -1708,6 +1722,48 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
+    "path": "/solutions/100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
+    "slug": "100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises",
+    "target_keyword": "100b parameter autonomous agent cluster sizing consultants for private enterprises",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.0,
+    "impressions": 700,
+    "clicks": 13,
+    "ctr": 0.0199,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways",
+    "path": "/solutions/100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways",
+    "slug": "100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways",
+    "target_keyword": "100b parameter autonomous fraud detection agent swarms for payment gateways",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.3,
+    "impressions": 583,
+    "clicks": 15,
+    "ctr": 0.026,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/100b-parameter-medical-imaging-multimodal-agent-deployment-architectures",
+    "path": "/solutions/100b-parameter-medical-imaging-multimodal-agent-deployment-architectures",
+    "slug": "100b-parameter-medical-imaging-multimodal-agent-deployment-architectures",
+    "target_keyword": "100b parameter medical imaging multimodal agent deployment architectures",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.0,
+    "impressions": 1030,
+    "clicks": 11,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india",
     "path": "/solutions/1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india",
     "slug": "1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india",
@@ -1760,6 +1816,76 @@
     "impressions": 2963,
     "clicks": 77,
     "ctr": 0.026,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/3d-distributed-topology-auto-discovery-daemons-for-nvidia-hgx-h100-pods",
+    "path": "/solutions/3d-distributed-topology-auto-discovery-daemons-for-nvidia-hgx-h100-pods",
+    "slug": "3d-distributed-topology-auto-discovery-daemons-for-nvidia-hgx-h100-pods",
+    "target_keyword": "3d distributed topology auto discovery daemons for nvidia hgx h100 pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.1,
+    "impressions": 1371,
+    "clicks": 15,
+    "ctr": 0.0114,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/3d-parallel-token-throughput-benchmarks-for-air-gapped-defense-multi-agent-pods",
+    "path": "/solutions/3d-parallel-token-throughput-benchmarks-for-air-gapped-defense-multi-agent-pods",
+    "slug": "3d-parallel-token-throughput-benchmarks-for-air-gapped-defense-multi-agent-pods",
+    "target_keyword": "3d parallel token throughput benchmarks for air gapped defense multi agent pods",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.6,
+    "impressions": 3506,
+    "clicks": 22,
+    "ctr": 0.0063,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/3d-parallel-workload-distribution-consultants-for-tier-1-indian-telecom-billing",
+    "path": "/solutions/3d-parallel-workload-distribution-consultants-for-tier-1-indian-telecom-billing",
+    "slug": "3d-parallel-workload-distribution-consultants-for-tier-1-indian-telecom-billing",
+    "target_keyword": "3d parallel workload distribution consultants for tier 1 indian telecom billing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.4,
+    "impressions": 894,
+    "clicks": 18,
+    "ctr": 0.0208,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/3d-parallelism-gpu-memory-fragmentation-mitigation-engines-for-70b-llama-clusters",
+    "path": "/solutions/3d-parallelism-gpu-memory-fragmentation-mitigation-engines-for-70b-llama-clusters",
+    "slug": "3d-parallelism-gpu-memory-fragmentation-mitigation-engines-for-70b-llama-clusters",
+    "target_keyword": "3d parallelism gpu memory fragmentation mitigation engines for 70b llama clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 1393,
+    "clicks": 15,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/3d-parallelism-mesh-sharding-controllers-for-enterprise-megatron-deepspeed-clusters",
+    "path": "/solutions/3d-parallelism-mesh-sharding-controllers-for-enterprise-megatron-deepspeed-clusters",
+    "slug": "3d-parallelism-mesh-sharding-controllers-for-enterprise-megatron-deepspeed-clusters",
+    "target_keyword": "3d parallelism mesh sharding controllers for enterprise megatron deepspeed clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.5,
+    "impressions": 1135,
+    "clicks": 16,
+    "ctr": 0.0142,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -2730,6 +2856,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/all-reduce-and-p2p-interleaved-communication-overlapping-daemons-for-3d-mesh",
+    "path": "/solutions/all-reduce-and-p2p-interleaved-communication-overlapping-daemons-for-3d-mesh",
+    "slug": "all-reduce-and-p2p-interleaved-communication-overlapping-daemons-for-3d-mesh",
+    "target_keyword": "all reduce and p2p interleaved communication overlapping daemons for 3d mesh",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.4,
+    "impressions": 1664,
+    "clicks": 21,
+    "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/all-reduce-barrier-eviction-schedulers-for-high-throughput-fintech-clearinghouses",
     "path": "/solutions/all-reduce-barrier-eviction-schedulers-for-high-throughput-fintech-clearinghouses",
     "slug": "all-reduce-barrier-eviction-schedulers-for-high-throughput-fintech-clearinghouses",
@@ -3262,6 +3402,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/asynchronous-all-gather-parameter-prefetching-controllers-for-deepspeed-zero3",
+    "path": "/solutions/asynchronous-all-gather-parameter-prefetching-controllers-for-deepspeed-zero3",
+    "slug": "asynchronous-all-gather-parameter-prefetching-controllers-for-deepspeed-zero3",
+    "target_keyword": "asynchronous all gather parameter prefetching controllers for deepspeed zero3",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.9,
+    "impressions": 919,
+    "clicks": 19,
+    "ctr": 0.0217,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/asynchronous-all-reduce-prefetching-daemons-for-cloud-contact-center-copilots",
     "path": "/solutions/asynchronous-all-reduce-prefetching-daemons-for-cloud-contact-center-copilots",
     "slug": "asynchronous-all-reduce-prefetching-daemons-for-cloud-contact-center-copilots",
@@ -3762,6 +3916,20 @@
     "impressions": 3792,
     "clicks": 77,
     "ctr": 0.0205,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/automated-3d-distributed-execution-planners-for-large-scale-mixture-of-experts",
+    "path": "/solutions/automated-3d-distributed-execution-planners-for-large-scale-mixture-of-experts",
+    "slug": "automated-3d-distributed-execution-planners-for-large-scale-mixture-of-experts",
+    "target_keyword": "automated 3d distributed execution planners for large scale mixture of experts",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.9,
+    "impressions": 2599,
+    "clicks": 34,
+    "ctr": 0.0134,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -6240,6 +6408,20 @@
     "impressions": 3554,
     "clicks": 36,
     "ctr": 0.0104,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/bare-metal-slurm-3d-distributed-agent-execution-fabrics-for-aerospace-r-and-d",
+    "path": "/solutions/bare-metal-slurm-3d-distributed-agent-execution-fabrics-for-aerospace-r-and-d",
+    "slug": "bare-metal-slurm-3d-distributed-agent-execution-fabrics-for-aerospace-r-and-d",
+    "target_keyword": "bare metal slurm 3d distributed agent execution fabrics for aerospace r and d",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.8,
+    "impressions": 228,
+    "clicks": 2,
+    "ctr": 0.009,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -10192,6 +10374,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/cross-datacenter-3d-parallel-fault-tolerant-runners-for-autonomous-supply-chain-erp",
+    "path": "/solutions/cross-datacenter-3d-parallel-fault-tolerant-runners-for-autonomous-supply-chain-erp",
+    "slug": "cross-datacenter-3d-parallel-fault-tolerant-runners-for-autonomous-supply-chain-erp",
+    "target_keyword": "cross datacenter 3d parallel fault tolerant runners for autonomous supply chain erp",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.9,
+    "impressions": 2989,
+    "clicks": 60,
+    "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/cross-datacenter-sequence-parallel-latency-compensation-agents-for-multi-region-enterprises",
     "path": "/solutions/cross-datacenter-sequence-parallel-latency-compensation-agents-for-multi-region-enterprises",
     "slug": "cross-datacenter-sequence-parallel-latency-compensation-agents-for-multi-region-enterprises",
@@ -11970,6 +12166,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/deterministic-3d-parallel-state-snapshot-recovery-engines-for-banking-agents",
+    "path": "/solutions/deterministic-3d-parallel-state-snapshot-recovery-engines-for-banking-agents",
+    "slug": "deterministic-3d-parallel-state-snapshot-recovery-engines-for-banking-agents",
+    "target_keyword": "deterministic 3d parallel state snapshot recovery engines for banking agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.1,
+    "impressions": 3431,
+    "clicks": 108,
+    "ctr": 0.0315,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/deterministic-chemical-batch-synthesis-validation-software-for-api-manufacturers",
     "path": "/solutions/deterministic-chemical-batch-synthesis-validation-software-for-api-manufacturers",
     "slug": "deterministic-chemical-batch-synthesis-validation-software-for-api-manufacturers",
@@ -13454,6 +13664,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/dpdp-act-compliant-zero3-memory-partition-controllers-for-indian-fintechs",
+    "path": "/solutions/dpdp-act-compliant-zero3-memory-partition-controllers-for-indian-fintechs",
+    "slug": "dpdp-act-compliant-zero3-memory-partition-controllers-for-indian-fintechs",
+    "target_keyword": "dpdp act compliant zero3 memory partition controllers for indian fintechs",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.6,
+    "impressions": 1866,
+    "clicks": 13,
+    "ctr": 0.0072,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/draft-token-probability-threshold-tuners-for-real-time-algorithmic-crypto-trading",
     "path": "/solutions/draft-token-probability-threshold-tuners-for-real-time-algorithmic-crypto-trading",
     "slug": "draft-token-probability-threshold-tuners-for-real-time-algorithmic-crypto-trading",
@@ -13688,6 +13912,20 @@
     "impressions": 721,
     "clicks": 6,
     "ctr": 0.0097,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-activation-checkpointing-engines-for-zero-bubble-pipeline-clusters",
+    "path": "/solutions/dynamic-activation-checkpointing-engines-for-zero-bubble-pipeline-clusters",
+    "slug": "dynamic-activation-checkpointing-engines-for-zero-bubble-pipeline-clusters",
+    "target_keyword": "dynamic activation checkpointing engines for zero bubble pipeline clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.4,
+    "impressions": 3224,
+    "clicks": 63,
+    "ctr": 0.0198,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -14108,6 +14346,20 @@
     "impressions": 3446,
     "clicks": 24,
     "ctr": 0.0072,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/dynamic-micro-batch-3d-parallel-tuning-controllers-for-real-time-underwriting-agents",
+    "path": "/solutions/dynamic-micro-batch-3d-parallel-tuning-controllers-for-real-time-underwriting-agents",
+    "slug": "dynamic-micro-batch-3d-parallel-tuning-controllers-for-real-time-underwriting-agents",
+    "target_keyword": "dynamic micro batch 3d parallel tuning controllers for real time underwriting agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 13.0,
+    "impressions": 2370,
+    "clicks": 20,
+    "ctr": 0.0088,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -15008,6 +15260,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/enterprise-100b-model-fine-tuning-and-inference-convergence-engines-for-banking",
+    "path": "/solutions/enterprise-100b-model-fine-tuning-and-inference-convergence-engines-for-banking",
+    "slug": "enterprise-100b-model-fine-tuning-and-inference-convergence-engines-for-banking",
+    "target_keyword": "enterprise 100b model fine tuning and inference convergence engines for banking",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.1,
+    "impressions": 2051,
+    "clicks": 26,
+    "ctr": 0.0128,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-3d-parallel-cluster-architecture-auditors-for-fortune-500-cto-offices",
+    "path": "/solutions/enterprise-3d-parallel-cluster-architecture-auditors-for-fortune-500-cto-offices",
+    "slug": "enterprise-3d-parallel-cluster-architecture-auditors-for-fortune-500-cto-offices",
+    "target_keyword": "enterprise 3d parallel cluster architecture auditors for fortune 500 cto offices",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.6,
+    "impressions": 616,
+    "clicks": 6,
+    "ctr": 0.0105,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/enterprise-agent-token-budget-enforcement-agents-preventing-recursive-reasoning-runaway-spend",
     "path": "/solutions/enterprise-agent-token-budget-enforcement-agents-preventing-recursive-reasoning-runaway-spend",
     "slug": "enterprise-agent-token-budget-enforcement-agents-preventing-recursive-reasoning-runaway-spend",
@@ -15298,6 +15578,20 @@
     "impressions": 737,
     "clicks": 28,
     "ctr": 0.0382,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/enterprise-slurm-cluster-health-monitoring-daemons-for-100b-agent-swarms",
+    "path": "/solutions/enterprise-slurm-cluster-health-monitoring-daemons-for-100b-agent-swarms",
+    "slug": "enterprise-slurm-cluster-health-monitoring-daemons-for-100b-agent-swarms",
+    "target_keyword": "enterprise slurm cluster health monitoring daemons for 100b agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.8,
+    "impressions": 3708,
+    "clicks": 38,
+    "ctr": 0.0103,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -18340,6 +18634,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/gpu-failure-detection-and-instant-worker-failover-controllers-for-3d-clusters",
+    "path": "/solutions/gpu-failure-detection-and-instant-worker-failover-controllers-for-3d-clusters",
+    "slug": "gpu-failure-detection-and-instant-worker-failover-controllers-for-3d-clusters",
+    "target_keyword": "gpu failure detection and instant worker failover controllers for 3d clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.8,
+    "impressions": 3898,
+    "clicks": 97,
+    "ctr": 0.0251,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/gpu-hbm-page-coalescing-schedulers-for-autonomous-supply-chain-dispatchers",
     "path": "/solutions/gpu-hbm-page-coalescing-schedulers-for-autonomous-supply-chain-dispatchers",
     "slug": "gpu-hbm-page-coalescing-schedulers-for-autonomous-supply-chain-dispatchers",
@@ -20594,6 +20902,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/hybrid-tensor-pipeline-data-parallel-orchestrators-for-autonomous-agent-swarms",
+    "path": "/solutions/hybrid-tensor-pipeline-data-parallel-orchestrators-for-autonomous-agent-swarms",
+    "slug": "hybrid-tensor-pipeline-data-parallel-orchestrators-for-autonomous-agent-swarms",
+    "target_keyword": "hybrid tensor pipeline data parallel orchestrators for autonomous agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.9,
+    "impressions": 3529,
+    "clicks": 70,
+    "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/hybrid-x25519-kyber768-post-quantum-tls-key-exchange-telemetry-for-cloud-vpc-peering",
     "path": "/solutions/hybrid-x25519-kyber768-post-quantum-tls-key-exchange-telemetry-for-cloud-vpc-peering",
     "slug": "hybrid-x25519-kyber768-post-quantum-tls-key-exchange-telemetry-for-cloud-vpc-peering",
@@ -21770,6 +22092,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/infiniband-nvlink-3d-parallel-communication-optimizers-for-enterprise-ai-clouds",
+    "path": "/solutions/infiniband-nvlink-3d-parallel-communication-optimizers-for-enterprise-ai-clouds",
+    "slug": "infiniband-nvlink-3d-parallel-communication-optimizers-for-enterprise-ai-clouds",
+    "target_keyword": "infiniband nvlink 3d parallel communication optimizers for enterprise ai clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.8,
+    "impressions": 1088,
+    "clicks": 12,
+    "ctr": 0.0119,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/infiniband-ring-attention-collective-drivers-for-pharmaceutical-genomic-sequence-search",
     "path": "/solutions/infiniband-ring-attention-collective-drivers-for-pharmaceutical-genomic-sequence-search",
     "slug": "infiniband-ring-attention-collective-drivers-for-pharmaceutical-genomic-sequence-search",
@@ -22302,6 +22638,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing",
+    "path": "/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing",
+    "slug": "interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing",
+    "target_keyword": "interleaved 1f1b stage communication overlap monitors for scada manufacturing",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.6,
+    "impressions": 966,
+    "clicks": 9,
+    "ctr": 0.0096,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/interleaved-forward-backward-schedule-controllers-for-healthcare-clinical-rag",
+    "path": "/solutions/interleaved-forward-backward-schedule-controllers-for-healthcare-clinical-rag",
+    "slug": "interleaved-forward-backward-schedule-controllers-for-healthcare-clinical-rag",
+    "target_keyword": "interleaved forward backward schedule controllers for healthcare clinical rag",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.3,
+    "impressions": 2983,
+    "clicks": 37,
+    "ctr": 0.0126,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines",
     "path": "/solutions/intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines",
     "slug": "intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines",
@@ -22424,6 +22788,20 @@
     "impressions": 2875,
     "clicks": 31,
     "ctr": 0.0108,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/intra-node-tp-and-inter-node-pp-mesh-managers-for-256-gpu-clusters-in-bangalore",
+    "path": "/solutions/intra-node-tp-and-inter-node-pp-mesh-managers-for-256-gpu-clusters-in-bangalore",
+    "slug": "intra-node-tp-and-inter-node-pp-mesh-managers-for-256-gpu-clusters-in-bangalore",
+    "target_keyword": "intra node tp and inter node pp mesh managers for 256 gpu clusters in bangalore",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.6,
+    "impressions": 276,
+    "clicks": 6,
+    "ctr": 0.0249,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -24874,6 +25252,20 @@
     "impressions": 2028,
     "clicks": 18,
     "ctr": 0.009,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/megatron-deepspeed-3d-grid-partitioning-engines-for-tier-4-hyperscalers",
+    "path": "/solutions/megatron-deepspeed-3d-grid-partitioning-engines-for-tier-4-hyperscalers",
+    "slug": "megatron-deepspeed-3d-grid-partitioning-engines-for-tier-4-hyperscalers",
+    "target_keyword": "megatron deepspeed 3d grid partitioning engines for tier 4 hyperscalers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.1,
+    "impressions": 2411,
+    "clicks": 24,
+    "ctr": 0.0102,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -30604,6 +30996,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/pipedream-flush-scheduler-eliminators-for-sub-20ms-enterprise-agent-response",
+    "path": "/solutions/pipedream-flush-scheduler-eliminators-for-sub-20ms-enterprise-agent-response",
+    "slug": "pipedream-flush-scheduler-eliminators-for-sub-20ms-enterprise-agent-response",
+    "target_keyword": "pipedream flush scheduler eliminators for sub 20ms enterprise agent response",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.0,
+    "impressions": 2240,
+    "clicks": 13,
+    "ctr": 0.006,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/pipeline-activation-checkpointing-daemons-for-chemical-process-scada-networks",
     "path": "/solutions/pipeline-activation-checkpointing-daemons-for-chemical-process-scada-networks",
     "slug": "pipeline-activation-checkpointing-daemons-for-chemical-process-scada-networks",
@@ -30656,6 +31062,20 @@
     "impressions": 1780,
     "clicks": 13,
     "ctr": 0.0075,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/pipeline-bubble-telemetry-and-automated-stage-rebalancing-engines-for-kubernetes",
+    "path": "/solutions/pipeline-bubble-telemetry-and-automated-stage-rebalancing-engines-for-kubernetes",
+    "slug": "pipeline-bubble-telemetry-and-automated-stage-rebalancing-engines-for-kubernetes",
+    "target_keyword": "pipeline bubble telemetry and automated stage rebalancing engines for kubernetes",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.3,
+    "impressions": 433,
+    "clicks": 3,
+    "ctr": 0.0092,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -36470,6 +36890,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/slurm-accounting-and-cost-attribution-daemons-for-multi-department-ai-agents",
+    "path": "/solutions/slurm-accounting-and-cost-attribution-daemons-for-multi-department-ai-agents",
+    "slug": "slurm-accounting-and-cost-attribution-daemons-for-multi-department-ai-agents",
+    "target_keyword": "slurm accounting and cost attribution daemons for multi department ai agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.3,
+    "impressions": 3513,
+    "clicks": 47,
+    "ctr": 0.0135,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/slurm-cgroups-memory-enforcement-controllers-for-multi-agent-inference-containers",
+    "path": "/solutions/slurm-cgroups-memory-enforcement-controllers-for-multi-agent-inference-containers",
+    "slug": "slurm-cgroups-memory-enforcement-controllers-for-multi-agent-inference-containers",
+    "target_keyword": "slurm cgroups memory enforcement controllers for multi agent inference containers",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.6,
+    "impressions": 3716,
+    "clicks": 92,
+    "ctr": 0.0249,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/slurm-cluster-fair-share-gpu-job-scheduling-agents-for-enterprise-ai-research-teams",
     "path": "/solutions/slurm-cluster-fair-share-gpu-job-scheduling-agents-for-enterprise-ai-research-teams",
     "slug": "slurm-cluster-fair-share-gpu-job-scheduling-agents-for-enterprise-ai-research-teams",
@@ -36480,6 +36928,62 @@
     "impressions": 1910,
     "clicks": 38,
     "ctr": 0.0202,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/slurm-gpu-dynamic-affinity-schedulers-for-multi-tenant-agent-swarms-in-india",
+    "path": "/solutions/slurm-gpu-dynamic-affinity-schedulers-for-multi-tenant-agent-swarms-in-india",
+    "slug": "slurm-gpu-dynamic-affinity-schedulers-for-multi-tenant-agent-swarms-in-india",
+    "target_keyword": "slurm gpu dynamic affinity schedulers for multi tenant agent swarms in india",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 4.2,
+    "impressions": 3652,
+    "clicks": 150,
+    "ctr": 0.0413,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/slurm-multi-cluster-bursting-daemons-for-cloud-burst-3d-parallel-inference",
+    "path": "/solutions/slurm-multi-cluster-bursting-daemons-for-cloud-burst-3d-parallel-inference",
+    "slug": "slurm-multi-cluster-bursting-daemons-for-cloud-burst-3d-parallel-inference",
+    "target_keyword": "slurm multi cluster bursting daemons for cloud burst 3d parallel inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.2,
+    "impressions": 2202,
+    "clicks": 43,
+    "ctr": 0.0198,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/slurm-pyxis-enroot-containerized-3d-parallel-deployment-managers-for-tier-1-oems",
+    "path": "/solutions/slurm-pyxis-enroot-containerized-3d-parallel-deployment-managers-for-tier-1-oems",
+    "slug": "slurm-pyxis-enroot-containerized-3d-parallel-deployment-managers-for-tier-1-oems",
+    "target_keyword": "slurm pyxis enroot containerized 3d parallel deployment managers for tier 1 oems",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.3,
+    "impressions": 613,
+    "clicks": 6,
+    "ctr": 0.011,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/slurm-workload-manager-3d-parallel-job-plugins-for-enterprise-agent-clusters",
+    "path": "/solutions/slurm-workload-manager-3d-parallel-job-plugins-for-enterprise-agent-clusters",
+    "slug": "slurm-workload-manager-3d-parallel-job-plugins-for-enterprise-agent-clusters",
+    "target_keyword": "slurm workload manager 3d parallel job plugins for enterprise agent clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.2,
+    "impressions": 2532,
+    "clicks": 78,
+    "ctr": 0.0312,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -40166,6 +40670,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-10ms-inter-agent-p2p-coordination-daemons-for-100b-model-inference-mesh",
+    "path": "/solutions/sub-10ms-inter-agent-p2p-coordination-daemons-for-100b-model-inference-mesh",
+    "slug": "sub-10ms-inter-agent-p2p-coordination-daemons-for-100b-model-inference-mesh",
+    "target_keyword": "sub 10ms inter agent p2p coordination daemons for 100b model inference mesh",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.0,
+    "impressions": 3970,
+    "clicks": 38,
+    "ctr": 0.0098,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-10ms-inter-stage-latency-sla-monitoring-daemons-for-enterprise-agent-swarms",
     "path": "/solutions/sub-10ms-inter-stage-latency-sla-monitoring-daemons-for-enterprise-agent-swarms",
     "slug": "sub-10ms-inter-stage-latency-sla-monitoring-daemons-for-enterprise-agent-swarms",
@@ -40236,6 +40754,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-12ms-100b-model-inference-routing-fabrics-for-autonomous-flight-planning",
+    "path": "/solutions/sub-12ms-100b-model-inference-routing-fabrics-for-autonomous-flight-planning",
+    "slug": "sub-12ms-100b-model-inference-routing-fabrics-for-autonomous-flight-planning",
+    "target_keyword": "sub 12ms 100b model inference routing fabrics for autonomous flight planning",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 6.8,
+    "impressions": 2748,
+    "clicks": 55,
+    "ctr": 0.0201,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-12ms-context-parallel-step-latency-monitors-for-enterprise-legal-litigation-copilots",
     "path": "/solutions/sub-12ms-context-parallel-step-latency-monitors-for-enterprise-legal-litigation-copilots",
     "slug": "sub-12ms-context-parallel-step-latency-monitors-for-enterprise-legal-litigation-copilots",
@@ -40302,6 +40834,20 @@
     "impressions": 797,
     "clicks": 8,
     "ctr": 0.0109,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-15ms-time-to-first-token-3d-parallel-engines-for-tier-1-fintech-surveillance",
+    "path": "/solutions/sub-15ms-time-to-first-token-3d-parallel-engines-for-tier-1-fintech-surveillance",
+    "slug": "sub-15ms-time-to-first-token-3d-parallel-engines-for-tier-1-fintech-surveillance",
+    "target_keyword": "sub 15ms time to first token 3d parallel engines for tier 1 fintech surveillance",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.9,
+    "impressions": 259,
+    "clicks": 4,
+    "ctr": 0.0191,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -40404,6 +40950,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-3-percent-pipeline-bubble-ratio-optimizers-for-enterprise-hpc-inference",
+    "path": "/solutions/sub-3-percent-pipeline-bubble-ratio-optimizers-for-enterprise-hpc-inference",
+    "slug": "sub-3-percent-pipeline-bubble-ratio-optimizers-for-enterprise-hpc-inference",
+    "target_keyword": "sub 3 percent pipeline bubble ratio optimizers for enterprise hpc inference",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.8,
+    "impressions": 2648,
+    "clicks": 23,
+    "ctr": 0.009,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-30ms-time-to-first-token-prefix-caching-architectures-for-live-voice-agents",
     "path": "/solutions/sub-30ms-time-to-first-token-prefix-caching-architectures-for-live-voice-agents",
     "slug": "sub-30ms-time-to-first-token-prefix-caching-architectures-for-live-voice-agents",
@@ -40488,6 +41048,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/sub-5ms-inter-stage-p2p-transfer-daemons-for-zero-bubble-pipeline-execution",
+    "path": "/solutions/sub-5ms-inter-stage-p2p-transfer-daemons-for-zero-bubble-pipeline-execution",
+    "slug": "sub-5ms-inter-stage-p2p-transfer-daemons-for-zero-bubble-pipeline-execution",
+    "target_keyword": "sub 5ms inter stage p2p transfer daemons for zero bubble pipeline execution",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.0,
+    "impressions": 1610,
+    "clicks": 20,
+    "ctr": 0.0125,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/sub-5ms-intra-node-all-reduce-latency-sla-monitoring-daemons-for-agent-swarms",
     "path": "/solutions/sub-5ms-intra-node-all-reduce-latency-sla-monitoring-daemons-for-agent-swarms",
     "slug": "sub-5ms-intra-node-all-reduce-latency-sla-monitoring-daemons-for-agent-swarms",
@@ -40568,6 +41142,20 @@
     "impressions": 921,
     "clicks": 18,
     "ctr": 0.0199,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/sub-8ms-3d-distributed-communication-overlap-daemons-for-100b-enterprise-llms",
+    "path": "/solutions/sub-8ms-3d-distributed-communication-overlap-daemons-for-100b-enterprise-llms",
+    "slug": "sub-8ms-3d-distributed-communication-overlap-daemons-for-100b-enterprise-llms",
+    "target_keyword": "sub 8ms 3d distributed communication overlap daemons for 100b enterprise llms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.4,
+    "impressions": 2094,
+    "clicks": 26,
+    "ctr": 0.0125,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -43638,6 +44226,20 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/tensor-plus-pipeline-plus-zero3-hybrid-cluster-architects-for-private-vpc-clouds",
+    "path": "/solutions/tensor-plus-pipeline-plus-zero3-hybrid-cluster-architects-for-private-vpc-clouds",
+    "slug": "tensor-plus-pipeline-plus-zero3-hybrid-cluster-architects-for-private-vpc-clouds",
+    "target_keyword": "tensor plus pipeline plus zero3 hybrid cluster architects for private vpc clouds",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 10.4,
+    "impressions": 2504,
+    "clicks": 22,
+    "ctr": 0.0089,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/tensor-sharded-activation-ring-buffers-for-chemical-process-scada-networks",
     "path": "/solutions/tensor-sharded-activation-ring-buffers-for-chemical-process-scada-networks",
     "slug": "tensor-sharded-activation-ring-buffers-for-chemical-process-scada-networks",
@@ -46522,6 +47124,34 @@
     "telemetry_source": "simulated_telemetry"
   },
   {
+    "url": "https://elesium.online/solutions/zero-bubble-interleaved-1f1b-pipeline-schedulers-for-enterprise-agent-swarms",
+    "path": "/solutions/zero-bubble-interleaved-1f1b-pipeline-schedulers-for-enterprise-agent-swarms",
+    "slug": "zero-bubble-interleaved-1f1b-pipeline-schedulers-for-enterprise-agent-swarms",
+    "target_keyword": "zero bubble interleaved 1f1b pipeline schedulers for enterprise agent swarms",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 14.2,
+    "impressions": 1602,
+    "clicks": 6,
+    "ctr": 0.0038,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-bubble-interleaved-pipeline-auditors-for-tier-1-telecom-operations",
+    "path": "/solutions/zero-bubble-interleaved-pipeline-auditors-for-tier-1-telecom-operations",
+    "slug": "zero-bubble-interleaved-pipeline-auditors-for-tier-1-telecom-operations",
+    "target_keyword": "zero bubble interleaved pipeline auditors for tier 1 telecom operations",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 8.8,
+    "impressions": 3438,
+    "clicks": 64,
+    "ctr": 0.0189,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
     "url": "https://elesium.online/solutions/zero-bubble-pipeline-schedulers-for-sovereign-private-banking-risk-analytics",
     "path": "/solutions/zero-bubble-pipeline-schedulers-for-sovereign-private-banking-risk-analytics",
     "slug": "zero-bubble-pipeline-schedulers-for-sovereign-private-banking-risk-analytics",
@@ -46574,6 +47204,20 @@
     "impressions": 355,
     "clicks": 4,
     "ctr": 0.0118,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero-bubble-virtual-pipeline-stage-balancers-for-automotive-design-agents",
+    "path": "/solutions/zero-bubble-virtual-pipeline-stage-balancers-for-automotive-design-agents",
+    "slug": "zero-bubble-virtual-pipeline-stage-balancers-for-automotive-design-agents",
+    "target_keyword": "zero bubble virtual pipeline stage balancers for automotive design agents",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 11.1,
+    "impressions": 2691,
+    "clicks": 30,
+    "ctr": 0.0114,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },
@@ -47232,6 +47876,76 @@
     "impressions": 461,
     "clicks": 4,
     "ctr": 0.0097,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero3-memory-allocation-profiling-services-for-enterprise-ai-infrastructure",
+    "path": "/solutions/zero3-memory-allocation-profiling-services-for-enterprise-ai-infrastructure",
+    "slug": "zero3-memory-allocation-profiling-services-for-enterprise-ai-infrastructure",
+    "target_keyword": "zero3 memory allocation profiling services for enterprise ai infrastructure",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.4,
+    "impressions": 3674,
+    "clicks": 57,
+    "ctr": 0.0156,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero3-multi-node-gradient-reduction-daemons-for-private-vpc-generative-ai",
+    "path": "/solutions/zero3-multi-node-gradient-reduction-daemons-for-private-vpc-generative-ai",
+    "slug": "zero3-multi-node-gradient-reduction-daemons-for-private-vpc-generative-ai",
+    "target_keyword": "zero3 multi node gradient reduction daemons for private vpc generative ai",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 7.0,
+    "impressions": 1650,
+    "clicks": 33,
+    "ctr": 0.0202,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero3-offload-nvme-memory-tiering-orchestrators-for-sovereign-indian-banks",
+    "path": "/solutions/zero3-offload-nvme-memory-tiering-orchestrators-for-sovereign-indian-banks",
+    "slug": "zero3-offload-nvme-memory-tiering-orchestrators-for-sovereign-indian-banks",
+    "target_keyword": "zero3 offload nvme memory tiering orchestrators for sovereign indian banks",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 12.4,
+    "impressions": 1914,
+    "clicks": 21,
+    "ctr": 0.0114,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero3-parameter-and-gradient-partitioning-daemons-for-multi-node-vllm-deployments",
+    "path": "/solutions/zero3-parameter-and-gradient-partitioning-daemons-for-multi-node-vllm-deployments",
+    "slug": "zero3-parameter-and-gradient-partitioning-daemons-for-multi-node-vllm-deployments",
+    "target_keyword": "zero3 parameter and gradient partitioning daemons for multi node vllm deployments",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 9.1,
+    "impressions": 1481,
+    "clicks": 14,
+    "ctr": 0.0097,
+    "tier": "STRIKING_DISTANCE",
+    "telemetry_source": "simulated_telemetry"
+  },
+  {
+    "url": "https://elesium.online/solutions/zero3-parameter-caching-and-ring-communication-tuning-for-405b-llama-clusters",
+    "path": "/solutions/zero3-parameter-caching-and-ring-communication-tuning-for-405b-llama-clusters",
+    "slug": "zero3-parameter-caching-and-ring-communication-tuning-for-405b-llama-clusters",
+    "target_keyword": "zero3 parameter caching and ring communication tuning for 405b llama clusters",
+    "category": "solution",
+    "type": "compact_landing",
+    "position": 5.2,
+    "impressions": 2632,
+    "clicks": 82,
+    "ctr": 0.0312,
     "tier": "STRIKING_DISTANCE",
     "telemetry_source": "simulated_telemetry"
   },

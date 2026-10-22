@@ -106,6 +106,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/tools/enterprise-agent-expert-parallelism-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-context-parallelism-simulator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-agent-3d-parallelism-simulator", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": f"{BASE_URL}/tools/enterprise-agent-fp8-microscaling-simulator", "priority": "0.9", "changefreq": "weekly"},
     ]
     
     # Read dynamic blog slugs

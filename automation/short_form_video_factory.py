@@ -4443,6 +4443,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "DeepSpeed ZeRO-3 • Slurm Workload Manager • DPDP Act 2023"
                     }
             ]
+    },
+    {
+            "id": "sfv-43",
+            "slug": "enterprise-agent-fp8-microscaling-simulator",
+            "keyword": "fp8 microscaling dynamic block exponent shifting sub 1 percent perplexity",
+            "key_benefit": "2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8",
+            "industry": "Enterprise Infrastructure & High-Performance AI",
+            "target_persona": "Chief Technology Officers & HPC Platform Directors",
+            "youtube_id": "fp8Micro43",
+            "hero_image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "caption": "FP8 Microscaling with Dynamic Block Exponents",
+                            "visual": "Fast-paced code terminal rendering CUTLASS and Triton WGMMA FP8 Tensor Core instructions.",
+                            "voiceover": "FP8 microscaling with dynamic block exponents eliminates outlier degradation across hundred-billion-parameter enterprise agent clusters."
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Operational Friction Point",
+                            "caption": "The Low-Precision Outlier Catastrophe",
+                            "visual": "Vector diagram illustrating activation outliers destroying standard FP8 tensor dynamic range.",
+                            "voiceover": "Naive FP8 quantization forces emergent activation outliers to clamp, triggering catastrophic perplexity cascades in production reasoning."
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Deterministic Architecture Mechanism",
+                            "caption": "32-Element Micro-Blocks & Shared E8M0 Exponents",
+                            "visual": "Animated tensor matrix partitioning into k=32 microscopic blocks with fused register scale factors.",
+                            "voiceover": "Our architecture slices activation vectors into thirty-two element blocks, calculating dynamic eight-bit shared exponents in hardware registers."
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Case Study Metrics",
+                            "caption": "2.14x GEMM Speedup & Sub-0.08% Perplexity",
+                            "visual": "Telemetry dashboard showing 2.14x higher throughput and sub-10 basis point perplexity degradation.",
+                            "voiceover": "On Hopper and Blackwell clusters, this unlocks two-point-one-four-x higher GEMM throughput while restricting perplexity degradation to under point-zero-eight percent."
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion CTA",
+                            "caption": "Deploy Sovereign FP8 Serving at Elesium.online",
+                            "visual": "Clean typography screen with verified DPDP Act 2023 on-premise air-gapped badge.",
+                            "voiceover": "Visit elesium dot online to simulate your microscaling architecture and claim your sovereign deployment memo."
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "GEMM Speedup",
+                            "value": "2.14x",
+                            "detail": "Peak Hopper/Blackwell TFLOPS",
+                            "color": "emerald"
+                    },
+                    {
+                            "label": "Perplexity Degradation",
+                            "value": "+0.07%",
+                            "detail": "Sub-10 Basis Points on C4",
+                            "color": "blue"
+                    },
+                    {
+                            "label": "VRAM Memory Reduction",
+                            "value": "55%",
+                            "detail": "160GB down to 85GB VRAM",
+                            "color": "purple"
+                    },
+                    {
+                            "label": "Power OPEX Savings",
+                            "value": "38%",
+                            "detail": "Slashing Cluster Kilowatt Draw",
+                            "color": "amber"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Microscopic Vector Partitioning & Dynamic Exponent Shifting",
+                            "bullets": [
+                                    "Partitioning activation and weight matrices into microscopic 32-element vector blocks",
+                                    "Calculating dynamic shared 8-bit scale factors (E8M0) per block to isolate activation outliers",
+                                    "Preserving dynamic range without requiring expensive per-tensor calibration passes"
+                            ],
+                            "techStack": "OCP Microscaling (MX) • Shared E8M0 • 32-Elem Blocks"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Fused CUTLASS & Triton WGMMA Tensor Core Execution",
+                            "bullets": [
+                                    "Executing asynchronous WGMMA matrix multiply instructions directly on Tensor Cores",
+                                    "Overlapping shared memory dequantization with active compute pipeline cycles",
+                                    "Saturating second-generation micro-tensor hardware units on NVIDIA Blackwell B200"
+                            ],
+                            "techStack": "Triton WGMMA • CUTLASS FP8 • Hopper / Blackwell"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Air-Gapped Sovereign Serving & DPDP Act 2023 Compliance",
+                            "bullets": [
+                                    "Halving GPU node requirements to enable 70B/100B deployment on dual-GPU on-premise servers",
+                                    "Guaranteeing zero external API transit for sensitive Indian banking and medical records",
+                                    "Delivering sub-15ms step latency for enterprise high-concurrency agent swarms"
+                            ],
+                            "techStack": "vLLM FP8 • Sovereign VPC • DPDP Act 2023"
+                    }
+            ]
     }
 ]
 
