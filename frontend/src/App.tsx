@@ -173,6 +173,8 @@ const EnterpriseAgentMtpSpeculativeDraftSimulator = lazy(() => import('./compone
 const EmbedAgentMtpSpeculativeDraftSimulator = lazy(() => import('./components/pages/EmbedAgentMtpSpeculativeDraftSimulator'))
 const EnterpriseAgentDualpipePipelineSimulator = lazy(() => import('./components/pages/EnterpriseAgentDualpipePipelineSimulator'))
 const EmbedAgentDualpipePipelineSimulator = lazy(() => import('./components/pages/EmbedAgentDualpipePipelineSimulator'))
+const EnterpriseAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components/pages/EnterpriseAgentDeepseekUnifiedFabricSimulator'))
+const EmbedAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components/pages/EmbedAgentDeepseekUnifiedFabricSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -461,6 +463,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator" element={<EnterpriseAgentDualpipePipelineSimulator />} />
                             <Route path="/tools/agent-dualpipe-pipeline-parallelism-simulator" element={<Navigate to="/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator" replace />} />
                             <Route path="/embed/agent-dualpipe-pipeline-parallelism-simulator" element={<EmbedAgentDualpipePipelineSimulator />} />
+                            <Route path="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" element={<EnterpriseAgentDeepseekUnifiedFabricSimulator />} />
+                            <Route path="/tools/agent-deepseek-v3-serving-fabric-simulator" element={<Navigate to="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" replace />} />
+                            <Route path="/embed/agent-deepseek-v3-serving-fabric-simulator" element={<EmbedAgentDeepseekUnifiedFabricSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

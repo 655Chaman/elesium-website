@@ -4361,6 +4361,45 @@ def render_dualpipe_pipeline_embed_semantic_html():
 </div>
 """
 
+def render_deepseek_serving_fabric_tool_semantic_html():
+    """
+    Renders clean semantic HTML for /tools/enterprise-agent-deepseek-v3-serving-fabric-simulator.
+    """
+    return """
+<div id="prerendered-agent-deepseek-serving-fabric-simulator" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;">
+  <header style="margin-bottom:2rem;border-bottom:1px solid #1e293b;padding-bottom:1rem;">
+    <div style="font-size:0.8rem;color:#10b981;font-family:monospace;margin-bottom:0.5rem;">TOOLS / MEGAWATT SERVING / TOOL #75</div>
+    <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise DeepSeek-V3 Grand Unified Serving Fabric Simulator</h1>
+    <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe zero-bubble overlap, and auxiliary-loss-free routing on megawatt clusters.</p>
+  </header>
+  <main style="font-size:0.95rem;color:#cbd5e1;line-height:1.7;">
+    <p>The Grand Unified DeepSeek-V3 Serving Fabric co-designs low-rank KV joint compression, sequential speculative drafting daemons, and bidirectional forward-backward computation-communication overlap to deliver 3.2x inference speedups and sub-12ms TTFT.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:2rem;text-align:right;font-size:0.8rem;color:#64748b;">
+    Calculated via <a href="https://elesium.online/solutions" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
+def render_deepseek_serving_fabric_embed_semantic_html():
+    """
+    Renders clean semantic HTML for /embed/agent-deepseek-v3-serving-fabric-simulator.
+    """
+    return """
+<div id="prerendered-agent-deepseek-serving-fabric-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#020617;color:#ffffff;min-height:100vh;">
+  <header style="margin-bottom:1.5rem;border-bottom:1px solid #1e293b;padding-bottom:0.75rem;">
+    <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">DeepSeek-V3 Unified Fabric Simulator</h1>
+    <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">MLA Latents · DualPipe Overlap · MTP Speculative Drafting</div>
+  </header>
+  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+    <p>Simulate Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe zero-bubble overlap, and auxiliary-loss-free routing on megawatt clusters.</p>
+  </main>
+  <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
+    Simulated via <a href="https://elesium.online/solutions" target="_blank" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a>
+  </footer>
+</div>
+"""
+
 def replace_canonical(html_content, target_url):
     """
     Robust regex replacement for the canonical link tag.
@@ -6061,6 +6100,14 @@ def generate_ssg():
         "embed/agent-dualpipe-pipeline-parallelism-simulator": {
             "title": "Embed: DualPipe Pipeline Simulator",
             "desc": "Interactive embed widget modeling DualPipe bidirectional pipeline parallelism, zero-bubble scheduling, All-to-All communication overlap, and MFU maximization."
+        },
+        "tools/enterprise-agent-deepseek-v3-serving-fabric-simulator": {
+            "title": "Enterprise DeepSeek-V3 Grand Unified Serving Fabric Simulator",
+            "desc": "Simulate Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe zero-bubble overlap, and auxiliary-loss-free routing on megawatt clusters."
+        },
+        "embed/agent-deepseek-v3-serving-fabric-simulator": {
+            "title": "Embed: DeepSeek-V3 Unified Fabric Simulator",
+            "desc": "Interactive embed widget modeling MLA compressed latents, DualPipe bidirectional overlap, and MTP speculative drafting."
         }
     }
 
@@ -12228,6 +12275,85 @@ def generate_ssg():
                 }
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(dualpipe_embed_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "tools/enterprise-agent-deepseek-v3-serving-fabric-simulator":
+            tool_content = render_deepseek_serving_fabric_tool_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tool_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tool_content}</div>')
+
+            serving_fabric_tool_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Enterprise DeepSeek-V3 Grand Unified Serving Fabric Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+
+            breadcrumb_schema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://elesium.online/resources"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "DeepSeek Unified Fabric Simulator",
+                        "item": canonical_url
+                    }
+                ]
+            }
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(serving_fabric_tool_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "embed/agent-deepseek-v3-serving-fabric-simulator":
+            embed_content = render_deepseek_serving_fabric_embed_semantic_html()
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{embed_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{embed_content}</div>')
+
+            serving_fabric_embed_schema = {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "DeepSeek-V3 Unified Fabric Simulator",
+                "url": canonical_url,
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "All modern browsers (HTML5/JavaScript)",
+                "description": desc,
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "Elesium - Enterprise AI Automation Agency",
+                    "url": "https://elesium.online"
+                }
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(serving_fabric_embed_schema, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html_out, encoding="utf-8")

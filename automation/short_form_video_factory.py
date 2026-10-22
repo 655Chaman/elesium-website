@@ -5433,6 +5433,116 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "techStack": "Triton Barrier Kernels • DPDP Act 2023 Compliance • Sovereign VPC Isolation"
                     }
             ]
+    },
+    {
+            "id": "sfv-52",
+            "slug": "enterprise-agent-deepseek-v3-serving-fabric-simulator",
+            "keyword": "grand unified deepseek serving fabric orchestrators for enterprise llm clusters",
+            "key_benefit": "MLA Latent Compression, DualPipe Overlap & 3.2x Throughput",
+            "industry": "Enterprise Foundation Model Inference & DeepSeek Serving Clusters",
+            "target_persona": "Chief Technology Officers & AI Infrastructure Architects",
+            "youtube_id": "DskUnf75s",
+            "hero_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+            "timecodes": [
+                    {
+                            "time": "00:00 - 00:03",
+                            "seconds": 0,
+                            "title": "Exact Spoken Keyword Hook",
+                            "visual": "Megawatt datacenter cluster running DeepSeek-V3 unified serving fabric telemetry.",
+                            "voiceover": "Deploying the Grand Unified DeepSeek-V3 Serving Fabric on enterprise GPU clusters.",
+                            "caption": "GRAND UNIFIED DEEPSEEK-V3 SERVING FABRIC"
+                    },
+                    {
+                            "time": "00:03 - 00:08",
+                            "seconds": 3,
+                            "title": "Megawatt Serving Bottlenecks",
+                            "visual": "Comparison chart showing KV-cache VRAM saturation and 31% pipeline bubble idling.",
+                            "voiceover": "Standard serving architectures suffer from memory bandwidth exhaustion and idle pipeline bubbles.",
+                            "caption": "93% KV OVERHEAD // 31% PIPELINE BUBBLE TAX"
+                    },
+                    {
+                            "time": "00:08 - 00:18",
+                            "seconds": 8,
+                            "title": "Tri-Pillar Architecture Co-Design",
+                            "visual": "Animated SVG showing MLA joint latents, MTP speculative drafting, and DualPipe bidirectional overlap.",
+                            "voiceover": "Our architecture co-designs MLA joint compression, MTP speculative drafting, and DualPipe bidirectional scheduling.",
+                            "caption": "MLA LATENTS + MTP SPECULATIVE + DUALPIPE OVERLAP"
+                    },
+                    {
+                            "time": "00:18 - 00:26",
+                            "seconds": 18,
+                            "title": "Quantitative Production Metrics",
+                            "visual": "Production telemetry showing 3.2x decoding throughput and 95.8% Model Flops Utilization.",
+                            "voiceover": "Slashing KV-cache by 93.3%, elevating MFU past 95%, and driving 3.2x faster continuous decoding.",
+                            "caption": "-93.3% KV CACHE // 3.2X DECODE // 95.8% MFU"
+                    },
+                    {
+                            "time": "00:26 - 00:30",
+                            "seconds": 26,
+                            "title": "Frictionless Conversion Action",
+                            "visual": "Enterprise sovereign VPC audit interface with direct calendar booking.",
+                            "voiceover": "Schedule your sovereign DeepSeek-V3 architecture audit at elesium.online.",
+                            "caption": "AUDIT SERVING FABRIC // ELESIUM.ONLINE"
+                    }
+            ],
+            "roi_metrics": [
+                    {
+                            "label": "KV Cache",
+                            "value": "-93.3%",
+                            "detail": "512-dim joint latent",
+                            "color": "emerald"
+                    },
+                    {
+                            "label": "Decoding Speed",
+                            "value": "3.2x",
+                            "detail": "1,840 tok/s node",
+                            "color": "teal"
+                    },
+                    {
+                            "label": "Model Flops",
+                            "value": "95.8%",
+                            "detail": "Zero-bubble MFU",
+                            "color": "sky"
+                    },
+                    {
+                            "label": "Annual FinOps",
+                            "value": "$2.48M",
+                            "detail": "Amortization savings",
+                            "color": "amber"
+                    }
+            ],
+            "architecture_stages": [
+                    {
+                            "stage": "Stage 01",
+                            "name": "Low-Rank KV Joint Latent Compression (MLA)",
+                            "bullets": [
+                                    "Projecting key and value vectors into a unified 512-dimensional joint latent space",
+                                    "Shrinking per-token KV memory footprint from 70KB to under 4.7KB without perplexity loss",
+                                    "Freeing GPU on-chip SRAM and HBM to co-locate high-concurrency MTP speculative heads"
+                            ],
+                            "techStack": "MLA Joint Latents • RoPE Decoupling • Low-Rank KV Compression"
+                    },
+                    {
+                            "stage": "Stage 02",
+                            "name": "Bidirectional DualPipe & Speculative MTP Overlap",
+                            "bullets": [
+                                    "Drafting multiple tokens forward sequentially via dedicated lightweight transformer modules",
+                                    "Hiding MTP tree verification and all-to-all expert communication behind backward GEMMs",
+                                    "Driving pipeline idling bubbles strictly below 1.8% across 64-node InfiniBand clusters"
+                            ],
+                            "techStack": "DualPipe Chunked Scheduling • MTP Speculative Verification • All-to-All Overlap"
+                    },
+                    {
+                            "stage": "Stage 03",
+                            "name": "Auxiliary-Loss-Free Expert Load Balancing & Sovereign VPC",
+                            "bullets": [
+                                    "Dynamic bias term adjustments balancing token flow across 256 experts without model degradation",
+                                    "Hardware-level memory shredding enforcing DPDP Act 2023 zero-remanence guarantees",
+                                    "Sovereign air-gapped VPC deployment maintaining strict enterprise banking and defense security"
+                            ],
+                            "techStack": "Auxiliary-Loss-Free MoE • Fused Triton Kernels • DPDP Act 2023 Compliance"
+                    }
+            ]
     }
 ]
 
