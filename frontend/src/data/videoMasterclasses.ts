@@ -6925,6 +6925,156 @@ export const videoMasterclasses: VideoMasterclass[] = [
             }
         ],
         "fullTranscript": "Asynchronous GPU checkpointing memory offload daemons eliminate cluster pause bubbles across high-performance Slurm environments. Synchronous file dumps stall all participating GPUs for up to a minute, wasting twenty percent of total cluster compute hours. Our architecture schedules non-blocking Direct Memory Access from GPU memory to page-locked host RAM over dedicated CUDA copy streams. This restricts blocking checkpoint pause to under forty-two milliseconds and enables sub-one-hundred-twenty-millisecond live failover upon node eviction. Visit elesium dot online to simulate your asynchronous checkpoint architecture and receive your sovereign deployment recipe."
+    },
+    {
+        "id": "sfv-45",
+        "slug": "enterprise-agent-disaggregated-prefill-simulator",
+        "title": "Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters \u2014 Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium",
+        "youtubeId": "disaggPrefill45",
+        "duration": "0:30",
+        "durationIso": "PT30S",
+        "uploadDate": "2026-10-19T08:00:00+05:30",
+        "industry": "Enterprise Infrastructure & Distributed AI Serving",
+        "category": "30s Short-Form Breakdown",
+        "videoType": "short",
+        "keyword": "disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters",
+        "keyBenefit": "Sub-4ms TTFT & 5.4x Decode Concurrency Scaling",
+        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "targetPersona": "Inference Infrastructure Architects & Enterprise LLM Platform Directors",
+        "executiveSummary": "A 30-second technical architecture breakdown of disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
+        "roiMetrics": [
+            {
+                "label": "Time to First Token",
+                "value": "3.8 ms",
+                "detail": "Sub-4ms Decoupled Serving",
+                "color": "emerald"
+            },
+            {
+                "label": "Decode Concurrency",
+                "value": "5.4x",
+                "detail": "Continuous Batching Scale",
+                "color": "blue"
+            },
+            {
+                "label": "KV Transfer Latency",
+                "value": "1.4 ms",
+                "detail": "400G RoCE v2 RDMA",
+                "color": "purple"
+            },
+            {
+                "label": "Cluster TCO Savings",
+                "value": "54.2%",
+                "detail": "Heterogeneous GPU Pairing",
+                "color": "amber"
+            }
+        ],
+        "keyMoments": [
+            {
+                "time": "00:00",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "description": "Disaggregated pre-fill and decode pod orchestrators decouple compute-heavy prompt encoding from memory-bound autoregressive decoding in enterprise vLLM clusters."
+            },
+            {
+                "time": "00:03",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "description": "Unified serving pods cause long prompts to hijack Tensor Cores, spiking time-to-first-token and inducing severe jitter across concurrent streaming users."
+            },
+            {
+                "time": "00:08",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "description": "Our architecture isolates pre-fill onto dense H100 pods, streaming chunked KV-cache pages over 400 Gbps RoCE v2 direct to high-concurrency L40S decode ranks."
+            },
+            {
+                "time": "00:18",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "description": "This achieves sub-four-millisecond time-to-first-token, expands decode batch sizes by five point four times, and cuts cloud inference TCO by fifty-four percent."
+            },
+            {
+                "time": "00:26",
+                "seconds": 26,
+                "title": "Frictionless Conversion CTA",
+                "description": "Visit elesium dot online to simulate your disaggregated pre-fill architecture and receive your sovereign GPU cluster specification."
+            }
+        ],
+        "architectureStages": [
+            {
+                "stage": "Stage 01",
+                "name": "Compute-Bound Pre-fill Isolation & Dense Tensor Parallelism",
+                "bullets": [
+                    "Partitioning compute-intensive prompt ingestion onto dedicated 8x H100 SXM5 pods running Tensor Parallelism",
+                    "Eliminating context-length interference bubbles and achieving 98% compute saturation on prompt GEMM operations",
+                    "Chunking multi-thousand-token prompts to prevent KV memory spikes and maintain deterministic ingress latency"
+                ],
+                "techStack": "Dense 8x H100 \u2022 Tensor Parallelism TP=8 \u2022 Compute Isolation"
+            },
+            {
+                "stage": "Stage 02",
+                "name": "Chunked KV-Cache Cross-Node RDMA Memory Streaming",
+                "bullets": [
+                    "Streaming generated KV-cache tensors across non-blocking 400 Gbps RoCE v2 / InfiniBand interconnects",
+                    "Zero-copy Direct Memory Access directly into remote PagedAttention memory pools on decode ranks",
+                    "Masking network transfer behind speculative verification tokens with sub-2ms network round-trip time"
+                ],
+                "techStack": "400G RoCE v2 \u2022 RDMA Direct Memory Access \u2022 PagedAttention"
+            },
+            {
+                "stage": "Stage 03",
+                "name": "Heterogeneous GPU Pairing & High-Throughput Autoregressive Decode",
+                "bullets": [
+                    "Directing pure token generation to cost-efficient L40S and A100 GPU pods with massive memory bandwidth",
+                    "Maximizing continuous batch sizes up to 512 concurrent sessions without prompt pre-fill interruptions",
+                    "Slashing enterprise GPU cluster hardware procurement and electrical operational expenses by over 50%"
+                ],
+                "techStack": "Heterogeneous L40S/A100 \u2022 Continuous Batching \u2022 FinOps Optimization"
+            }
+        ],
+        "timecodes": [
+            {
+                "time": "00:00 - 00:03",
+                "seconds": 0,
+                "title": "Exact Spoken Keyword Hook",
+                "caption": "Disaggregated Pre-fill and Decode Pod Orchestrators",
+                "visual": "Dual-node cluster monitoring console displaying isolated pre-fill tensor pods and streaming decode ranks.",
+                "voiceover": "Disaggregated pre-fill and decode pod orchestrators decouple compute-heavy prompt encoding from memory-bound autoregressive decoding in enterprise vLLM clusters."
+            },
+            {
+                "time": "00:03 - 00:08",
+                "seconds": 3,
+                "title": "Operational Friction Point",
+                "caption": "The Pre-fill Interference Bottleneck",
+                "visual": "Latency telemetry spike showing token generation stalling while a 16k context prompt is processed on the same GPU.",
+                "voiceover": "Unified serving pods cause long prompts to hijack Tensor Cores, spiking time-to-first-token and inducing severe jitter across concurrent streaming users."
+            },
+            {
+                "time": "00:08 - 00:18",
+                "seconds": 8,
+                "title": "Deterministic Architecture Mechanism",
+                "caption": "Dedicated Pre-fill Pods & RDMA Chunked KV Routing",
+                "visual": "Animated architecture diagram showing chunked KV-cache tensors streaming over 400 Gbps RoCE v2 to high-concurrency decode nodes.",
+                "voiceover": "Our architecture isolates pre-fill onto dense H100 pods, streaming chunked KV-cache pages over 400 Gbps RoCE v2 direct to high-concurrency L40S decode ranks."
+            },
+            {
+                "time": "00:18 - 00:26",
+                "seconds": 18,
+                "title": "Quantitative Case Study Metrics",
+                "caption": "Sub-4ms TTFT & 54% FinOps Cost Reduction",
+                "visual": "Comparative dashboard showing sub-4ms TTFT, 5.4x decode concurrency, and a 54% reduction in enterprise cloud inference spend.",
+                "voiceover": "This achieves sub-four-millisecond time-to-first-token, expands decode batch sizes by five point four times, and cuts cloud inference TCO by fifty-four percent."
+            },
+            {
+                "time": "00:26 - 00:30",
+                "seconds": 26,
+                "title": "Frictionless Conversion CTA",
+                "caption": "Simulate Disaggregated Serving at Elesium.online",
+                "visual": "Clean typography screen with verified vLLM integration, DPDP Act 2023 compliance seal, and direct audit booking button.",
+                "voiceover": "Visit elesium dot online to simulate your disaggregated pre-fill architecture and receive your sovereign GPU cluster specification."
+            }
+        ],
+        "fullTranscript": "Disaggregated pre-fill and decode pod orchestrators decouple compute-heavy prompt encoding from memory-bound autoregressive decoding in enterprise vLLM clusters. Unified serving pods cause long prompts to hijack Tensor Cores, spiking time-to-first-token and inducing severe jitter across concurrent streaming users. Our architecture isolates pre-fill onto dense H100 pods, streaming chunked KV-cache pages over 400 Gbps RoCE v2 direct to high-concurrency L40S decode ranks. This achieves sub-four-millisecond time-to-first-token, expands decode batch sizes by five point four times, and cuts cloud inference TCO by fifty-four percent. Visit elesium dot online to simulate your disaggregated pre-fill architecture and receive your sovereign GPU cluster specification."
     }
 ];
 

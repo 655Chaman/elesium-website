@@ -159,6 +159,8 @@ const EnterpriseAgentFp8MicroscalingSimulator = lazy(() => import('./components/
 const EmbedAgentFp8MicroscalingSimulator = lazy(() => import('./components/pages/EmbedAgentFp8MicroscalingSimulator'))
 const EnterpriseAgentAsyncCheckpointingSimulator = lazy(() => import('./components/pages/EnterpriseAgentAsyncCheckpointingSimulator'))
 const EmbedAgentAsyncCheckpointingSimulator = lazy(() => import('./components/pages/EmbedAgentAsyncCheckpointingSimulator'))
+const EnterpriseAgentDisaggregatedPrefillSimulator = lazy(() => import('./components/pages/EnterpriseAgentDisaggregatedPrefillSimulator'))
+const EmbedAgentDisaggregatedPrefillSimulator = lazy(() => import('./components/pages/EmbedAgentDisaggregatedPrefillSimulator'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -426,6 +428,9 @@ function App() {
                             <Route path="/tools/enterprise-agent-async-checkpointing-simulator" element={<EnterpriseAgentAsyncCheckpointingSimulator />} />
                             <Route path="/tools/agent-async-checkpointing-simulator" element={<Navigate to="/tools/enterprise-agent-async-checkpointing-simulator" replace />} />
                             <Route path="/embed/agent-async-checkpointing-simulator" element={<EmbedAgentAsyncCheckpointingSimulator />} />
+                            <Route path="/tools/enterprise-agent-disaggregated-prefill-simulator" element={<EnterpriseAgentDisaggregatedPrefillSimulator />} />
+                            <Route path="/tools/agent-disaggregated-prefill-simulator" element={<Navigate to="/tools/enterprise-agent-disaggregated-prefill-simulator" replace />} />
+                            <Route path="/embed/agent-disaggregated-prefill-simulator" element={<EmbedAgentDisaggregatedPrefillSimulator />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>
