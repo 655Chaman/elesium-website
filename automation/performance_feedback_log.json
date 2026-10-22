@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "2.0.0",
-  "last_feedback_sync": "2026-10-21T16:56:28.841683+00:00",
+  "last_feedback_sync": "2026-10-21T17:25:10.381264+00:00",
   "architecture_phase": "Stage 9.1 Dan Kurtz Compounding AI Learning Loop & Striking Distance Optimizer",
-  "total_urls_monitored": 3273,
+  "total_urls_monitored": 3375,
   "performance_tiers_summary": {
     "ELITE_LEADER": {
       "count": 3,
@@ -11,7 +11,7 @@
       "action": "100% lock, monitored for freshness"
     },
     "STRIKING_DISTANCE": {
-      "count": 3207,
+      "count": 3309,
       "percentage": "98.0%",
       "action": "Highest-ROI tier! Google already understands the URL; automated entity & link push into Top 3"
     },
@@ -21,7 +21,7 @@
       "action": "Scheduled for keyword cannibalization audits and structural expansions"
     }
   },
-  "striking_distance_reinforcements_applied": 3207,
+  "striking_distance_reinforcements_applied": 3309,
   "top_striking_distance_targets": [
     {
       "url": "https://elesium.online/",
@@ -189,23 +189,23 @@
       "link_boosts_required": 2
     },
     {
-      "url": "https://elesium.online/signals/tensor-parallelism-megatron-column-row-all-reduce-overlap-sub-5ms",
-      "keyword": "tensor parallelism megatron column row all reduce overlap sub 5ms",
-      "current_position": 5.1,
-      "projected_position": 1.9,
+      "url": "https://elesium.online/signals/context-parallelism-ring-kv-communication-overlap-2m-tokens",
+      "keyword": "context parallelism ring kv communication overlap 2m tokens",
+      "current_position": 6.4,
+      "projected_position": 2.1,
       "moz_score": 97,
       "capsule_word_count": 45,
       "missing_entities": [
         "FastAPI",
         "pgvector"
       ],
-      "link_boosts_required": 1
+      "link_boosts_required": 2
     },
     {
-      "url": "https://elesium.online/signals/prefill-decode-disaggregation-distributed-chunked-prefilling-sub-15ms-ttft",
-      "keyword": "prefill decode disaggregation distributed chunked prefilling sub 15ms ttft",
-      "current_position": 13.7,
-      "projected_position": 4.7,
+      "url": "https://elesium.online/signals/expert-parallelism-moe-dynamic-dispatch-all-to-all-overlap",
+      "keyword": "expert parallelism moe dynamic dispatch all to all overlap",
+      "current_position": 11.1,
+      "projected_position": 2.8,
       "moz_score": 97,
       "capsule_word_count": 45,
       "missing_entities": [
