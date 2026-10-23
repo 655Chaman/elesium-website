@@ -18,9 +18,6 @@ import {
 } from 'lucide-react'
 import { getSolutionBySlug, solutionsData, SolutionRecord } from '../../data/solutionsData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
-import { MandateApplicationForm } from '../features/WaitingListForm'
-import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 import { getRotatingAnchorText } from '../../lib/seoAnchors'
 
 export default function SolutionDetail() {
@@ -156,31 +153,20 @@ export default function SolutionDetail() {
                         <div className="flex flex-wrap items-center gap-3.5 mb-8 lg:mb-10">
                             <button
                                 onClick={openWhatsApp}
-                                className="px-6 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm group"
+                                className="px-6 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2 shadow-sm"
                             >
-                                <MessageSquare className="w-4 h-4 fill-current" />
+                                <MessageSquare className="w-4 h-4 fill-current text-emerald-500" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
-                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                                <ArrowRight className="w-4 h-4" />
                             </button>
 
                             <Link
                                 to="/waitlist"
-                                className="px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-xs sm:text-sm transition-all flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                                className="px-5 py-3.5 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 text-gray-800 dark:text-gray-200 shadow-sm"
                             >
                                 <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
                                 <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
-
-                            <ExpandableScreen>
-                                <ExpandableScreenTrigger>
-                                    <InteractiveHoverButton className="h-11 px-5 text-xs font-mono">
-                                        Submit Mandate
-                                    </InteractiveHoverButton>
-                                </ExpandableScreenTrigger>
-                                <ExpandableScreenContent>
-                                    <MandateApplicationForm source={`Solution: ${solution.h1}`} />
-                                </ExpandableScreenContent>
-                            </ExpandableScreen>
                         </div>
 
                         {/* Additional Structured Micro-Paragraphs from Block 1 (Strict 1-2 sentence constraint) */}
@@ -355,12 +341,10 @@ export default function SolutionDetail() {
 
             {/* Sturm Module 10: Underlying Technical Architecture & Whitepaper Evidence Citation */}
             {solution.whitepaperCitation && (
-                <section className="max-w-5xl mx-auto px-6 my-20">
-                    <div className="p-8 sm:p-10 rounded-2xl border border-blue-500/20 dark:border-blue-500/30 bg-blue-50/40 dark:bg-blue-950/15 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-
-                        <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-blue-200/60 dark:border-blue-500/20">
-                            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                <section className="max-w-5xl mx-auto px-6 my-14 md:my-16">
+                    <div className="p-8 sm:p-10 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] relative overflow-hidden">
+                        <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-gray-200 dark:border-white/10">
+                            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
                                 <FileText className="w-4 h-4" />
                                 <span>Underlying Technical Architecture & Whitepaper Evidence</span>
                             </div>
@@ -372,7 +356,7 @@ export default function SolutionDetail() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             <div className="lg:col-span-8 space-y-3.5">
-                                <span className="inline-block text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-medium">
+                                <span className="inline-block text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-gray-200 font-medium">
                                     {solution.whitepaperCitation.category}
                                 </span>
                                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white leading-snug">
@@ -386,7 +370,7 @@ export default function SolutionDetail() {
                                     <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-gray-700 dark:text-gray-300">
                                         {solution.whitepaperCitation.keyFindings.map((finding, fIdx) => (
                                             <div key={fIdx} className="flex items-start gap-2">
-                                                <span className="text-blue-500 font-bold shrink-0">↳</span>
+                                                <span className="text-emerald-500 font-bold shrink-0">↳</span>
                                                 <span>{finding}</span>
                                             </div>
                                         ))}
@@ -397,10 +381,10 @@ export default function SolutionDetail() {
                             <div className="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-2.5">
                                 <Link
                                     to={`/signals/${solution.whitepaperCitation.slug}`}
-                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs font-mono tracking-wide shadow-sm hover:shadow-md transition-all group"
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs font-mono tracking-wide shadow-sm transition-all"
                                 >
                                     <span>Read Technical Whitepaper</span>
-                                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                                    <ArrowRight className="w-3.5 h-3.5" />
                                 </Link>
                                 <span className="text-[11px] font-mono text-gray-500 dark:text-gray-400">
                                     Algorithmic topical equity verification
@@ -412,8 +396,8 @@ export default function SolutionDetail() {
             )}
 
             {/* LOWER HALF: Reusable Enterprise Trust & Security Components */}
-            <section className="max-w-5xl mx-auto px-6 my-20">
-                <div className="p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-[#0c0c0c]">
+            <section className="max-w-5xl mx-auto px-6 my-14 md:my-16">
+                <div className="p-8 sm:p-10 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02]">
                     <div className="max-w-2xl mb-8 space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
                             Enterprise Sovereignty Standard

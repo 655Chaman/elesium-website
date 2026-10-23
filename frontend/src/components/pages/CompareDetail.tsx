@@ -12,9 +12,6 @@ import {
 } from 'lucide-react'
 import { getCompareBySlug, compareData, CompareBattlecardItem } from '../../data/compareData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
-import { MandateApplicationForm } from '../features/WaitingListForm'
-import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 
 export default function CompareDetail() {
     const { slug } = useParams<{ slug: string }>()
@@ -136,14 +133,14 @@ export default function CompareDetail() {
                 {/* Breadcrumbs & Share */}
                 <div className="flex items-center justify-between gap-4 mb-6">
                     <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                        <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
                             Home
                         </Link>
-                        <ChevronRight className="w-3 h-3 text-gray-400" />
-                        <Link to="/compare" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                        <Link to="/compare" className="hover:text-black dark:hover:text-white transition-colors">
                             Architecture Comparisons
                         </Link>
-                        <ChevronRight className="w-3 h-3 text-gray-400" />
+                        <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
                         <span className="text-gray-900 dark:text-white font-medium truncate max-w-[200px] sm:max-w-sm">
                             {battlecard.entityALabel} vs {battlecard.entityBLabel}
                         </span>
@@ -461,26 +458,23 @@ export default function CompareDetail() {
                         <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                             Do not commit budget to fragile orchestration or shared-tenant API bottlenecks. Connect directly with Chaman Shah to architect your deterministic, production-grade agent framework.
                         </p>
-                        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all shadow-md hover:scale-[1.02]"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2"
                             >
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                Chat on WhatsApp with Lead Architect
+                                <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
-                            <ExpandableScreen>
-                                <ExpandableScreenTrigger>
-                                    <InteractiveHoverButton className="bg-transparent text-white border border-white/20 hover:bg-white/10 px-8 py-3.5 text-sm">
-                                        Book Technical Architecture Audit
-                                    </InteractiveHoverButton>
-                                </ExpandableScreenTrigger>
-                                <ExpandableScreenContent>
-                                    <MandateApplicationForm />
-                                </ExpandableScreenContent>
-                            </ExpandableScreen>
+                            <Link
+                                to="/waitlist"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            >
+                                <span>ele-in SaaS Waitlist</span>
+                                <span>&rarr;</span>
+                            </Link>
                         </div>
                     </div>
                 </section>

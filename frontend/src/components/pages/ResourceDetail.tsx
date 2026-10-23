@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, Calendar, Clock, Download, MessageSquare, ArrowRight } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Download, MessageSquare, ArrowRight, ChevronRight, FileText, ShieldCheck, Sparkles } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
@@ -45,20 +45,37 @@ export default function ResourceDetail() {
         }
     }, [slug, resource]);
 
+    // Strip duplicate header (e.g. # Title, ### Subtitle) if already displayed in page header
+    const cleanedMarkdown = useMemo(() => {
+        if (!markdownContent) return '';
+        let cleaned = markdownContent;
+        
+        // Remove leading H1 if it mirrors the resource title
+        cleaned = cleaned.replace(/^#\s+[^\n]+\n+/, '');
+        // Remove leading H3 subtitle if present
+        cleaned = cleaned.replace(/^###\s+[^\n]+\n+/, '');
+        // Remove author line if present right below title
+        cleaned = cleaned.replace(/^\*[^\n]+\*\n+/, '');
+        // Remove leading horizontal rule
+        cleaned = cleaned.replace(/^---\n+/, '');
+        
+        return cleaned.trim();
+    }, [markdownContent]);
+
     if (!resource) {
         return (
-            <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] text-black dark:text-white pt-[120px] text-center">
+            <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-32 text-center">
                 <p className="text-gray-500">Resource not found.</p>
-                <button onClick={() => navigate('/resources')} className="text-emerald-500 hover:underline mt-4 inline-block">Back to Resources</button>
+                <button onClick={() => navigate('/resources')} className="text-black dark:text-white underline mt-4 inline-block font-medium">Back to Resources</button>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto pt-[52px] transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300">
             <WhatsAppModal />
             <Helmet>
-                <title>{resource.title} | Resources | Elesium</title>
+                <title>{resource.title} | Technical Documentation | Elesium</title>
                 <meta name="description" content={resource.description} />
                 
                 <meta property="og:title" content={`${resource.title} | Resources | Elesium`} />
@@ -68,9 +85,22 @@ export default function ResourceDetail() {
                 <link rel="canonical" href={`https://elesium.online/resources/${resource.slug}`} />
             </Helmet>
 
+            <main className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
+                {/* Breadcrumbs */}
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-8">
+                    <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
+                        Home
+                    </Link>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                    <Link to="/resources" className="hover:text-black dark:hover:text-white transition-colors">
+                        Resources
+                    </Link>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                    <span className="text-gray-900 dark:text-gray-200 font-medium truncate max-w-[240px] sm:max-w-md">
+                        {resource.title}
+                    </span>
+                </nav>
 
-
-            <main className="max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-20">
                 <AnimatePresence mode="wait">
                     <motion.article
                         key="article"
@@ -79,83 +109,157 @@ export default function ResourceDetail() {
                         exit={{ opacity: 0, y: -15 }}
                         transition={{ duration: 0.4 }}
                     >
-                        {/* Meta Header */}
-                        <div className="flex flex-wrap items-center gap-y-2 gap-x-4 mb-8 text-[11px] font-semibold text-gray-500 dark:text-gray-400 tracking-[0.06em] uppercase">
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white rounded-full">
+                        {/* Meta Category & Timestamps */}
+                        <div className="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-gray-500 dark:text-gray-400">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-900 dark:text-white font-medium uppercase tracking-wider text-[11px]">
+                                <FileText className="w-3 h-3 text-emerald-500" />
                                 {resource.category}
                             </span>
-                            <span className="flex items-center gap-1">
+                            <span className="inline-flex items-center gap-1">
                                 <Calendar className="h-3.5 w-3.5" />
                                 {resource.date}
                             </span>
-                            <span className="flex items-center gap-1">
+                            <span>•</span>
+                            <span className="inline-flex items-center gap-1">
                                 <Clock className="h-3.5 w-3.5" />
                                 {resource.readTime}
                             </span>
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-black dark:text-white leading-[1.15] mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-950 dark:text-white leading-[1.15] mb-5">
                             {resource.title}
                         </h1>
 
-                        <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-normal mb-8">
+                        {/* Lead Summary */}
+                        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal mb-8">
                             {resource.description}
                         </p>
 
-                        <a 
-                            href={resource.googleDriveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors mb-12 shadow-md shadow-blue-500/20"
-                        >
-                            <Download className="h-5 w-5" />
-                            Download Resource from Drive
-                        </a>
+                        {/* Action Bar (Direct WhatsApp Desk + Download Drive Resource + ele-in SaaS) */}
+                        <div className="flex flex-wrap items-center gap-3 pb-10 mb-10 border-b border-gray-100 dark:border-white/10">
+                            <button
+                                onClick={openWhatsApp}
+                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-sm transition-all shadow-sm group"
+                            >
+                                <MessageSquare className="w-4 h-4 fill-current" />
+                                <span>Chat on WhatsApp with Lead Architect</span>
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                            </button>
 
-                        <div className="border-b border-gray-100 dark:border-white/5 mb-10"></div>
+                            <a 
+                                href={resource.googleDriveLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-sm transition-all shadow-sm"
+                            >
+                                <Download className="h-4 w-4" />
+                                <span>Download PDF Document</span>
+                            </a>
 
-                        {/* Markdown Content */}
-                        <div className="prose prose-lg dark:prose-invert max-w-none 
-                            prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-black dark:prose-headings:text-white
-                            prose-h1:text-4xl prose-h2:text-2xl prose-h3:text-xl
-                            prose-h2:mt-16 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-100 dark:prose-h2:border-white/5 prose-h2:pb-4
-                            prose-p:text-gray-600 dark:prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
-                            prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
-                            prose-strong:text-black dark:prose-strong:text-white prose-strong:font-semibold
-                            prose-blockquote:border-l-2 prose-blockquote:border-black dark:prose-blockquote:border-white prose-blockquote:pl-6 prose-blockquote:font-medium prose-blockquote:text-gray-900 dark:prose-blockquote:text-gray-100 prose-blockquote:not-italic prose-blockquote:my-10
-                            prose-li:text-gray-600 dark:prose-li:text-gray-400 prose-li:mb-3
-                            prose-ul:list-none prose-ul:pl-0 prose-ul:my-8
-                            prose-ul>li:relative prose-ul>li:pl-6
-                            prose-ul>li:before:content-[''] prose-ul>li:before:absolute prose-ul>li:before:left-0 prose-ul>li:before:top-[0.6em] prose-ul>li:before:h-1.5 prose-ul>li:before:w-1.5 prose-ul>li:before:rounded-full prose-ul>li:before:bg-gray-300 dark:prose-ul>li:before:bg-gray-700
-                            prose-ol:list-decimal prose-ol:pl-5 prose-ol:my-8
-                            prose-code:bg-gray-100 dark:prose-code:bg-white/5 prose-code:rounded-md prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-mono prose-code:text-gray-800 dark:prose-code:text-gray-200 prose-code:before:content-none prose-code:after:content-none
-                            prose-pre:bg-[#111] prose-pre:text-gray-100 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:border prose-pre:border-white/10
-                            prose-img:rounded-2xl prose-img:shadow-2xl prose-img:border prose-img:border-gray-100 dark:prose-img:border-white/10
-                            prose-hr:border-gray-100 dark:prose-hr:border-white/5 prose-hr:my-12
-                        ">
+                            <Link
+                                to="/waitlist"
+                                className="inline-flex items-center gap-1.5 px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 font-medium text-xs sm:text-sm transition-all"
+                            >
+                                <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+                                <span>ele-in SaaS Waitlist &rarr;</span>
+                            </Link>
+                        </div>
+
+                        {/* Markdown Content with Custom Components & Clean Styling */}
+                        <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
                             {loading ? (
-                                <div className="flex  space-x-4">
-                                    <div className="flex-1 space-y-6 py-1">
-                                        <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded"></div>
-                                        <div className="space-y-3">
-                                            <div className="grid grid-cols-3 gap-4">
-                                                <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded col-span-2"></div>
-                                                <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded col-span-1"></div>
-                                            </div>
-                                            <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded"></div>
-                                            <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded"></div>
-                                        </div>
-                                    </div>
+                                <div className="space-y-4 py-8">
+                                    <div className="h-4 bg-gray-100 dark:bg-white/5 rounded-full w-3/4 animate-pulse"></div>
+                                    <div className="h-4 bg-gray-100 dark:bg-white/5 rounded-full w-full animate-pulse"></div>
+                                    <div className="h-4 bg-gray-100 dark:bg-white/5 rounded-full w-5/6 animate-pulse"></div>
                                 </div>
                             ) : (
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                    {markdownContent}
+                                <ReactMarkdown 
+                                    remarkPlugins={[remarkGfm]}
+                                    components={{
+                                        h1: ({ node, ...props }) => (
+                                            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-950 dark:text-white mt-12 mb-4 pb-2 border-b border-gray-100 dark:border-white/10" {...props} />
+                                        ),
+                                        h2: ({ node, ...props }) => (
+                                            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-950 dark:text-white mt-10 mb-4" {...props} />
+                                        ),
+                                        h3: ({ node, ...props }) => (
+                                            <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white mt-8 mb-3" {...props} />
+                                        ),
+                                        p: ({ node, ...props }) => (
+                                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-5" {...props} />
+                                        ),
+                                        strong: ({ node, ...props }) => (
+                                            <strong className="font-semibold text-gray-950 dark:text-white" {...props} />
+                                        ),
+                                        em: ({ node, ...props }) => (
+                                            <em className="italic text-gray-700 dark:text-gray-300" {...props} />
+                                        ),
+                                        hr: ({ node, ...props }) => (
+                                            <hr className="my-10 border-gray-200 dark:border-white/10" {...props} />
+                                        ),
+                                        ul: ({ node, ...props }) => (
+                                            <ul className="space-y-2.5 my-5 pl-5 list-disc text-gray-600 dark:text-gray-300 text-sm sm:text-base" {...props} />
+                                        ),
+                                        ol: ({ node, ...props }) => (
+                                            <ol className="space-y-2.5 my-5 pl-5 list-decimal text-gray-600 dark:text-gray-300 text-sm sm:text-base" {...props} />
+                                        ),
+                                        li: ({ node, ...props }) => (
+                                            <li className="leading-relaxed" {...props} />
+                                        ),
+                                        blockquote: ({ children }) => {
+                                            return (
+                                                <div className="my-6 p-5 rounded-2xl bg-gray-50/90 dark:bg-white/[0.03] border-l-4 border-black dark:border-white border-y border-r border-gray-200 dark:border-white/10 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                                                    {children}
+                                                </div>
+                                            );
+                                        },
+                                        table: ({ node, ...props }) => (
+                                            <div className="my-8 overflow-x-auto rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm bg-white dark:bg-[#070707]">
+                                                <table className="w-full text-left border-collapse text-xs sm:text-sm" {...props} />
+                                            </div>
+                                        ),
+                                        thead: ({ node, ...props }) => (
+                                            <thead className="bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white font-semibold text-xs uppercase tracking-wider border-b border-gray-200 dark:border-white/10" {...props} />
+                                        ),
+                                        th: ({ node, ...props }) => (
+                                            <th className="px-5 py-3.5 whitespace-nowrap font-semibold" {...props} />
+                                        ),
+                                        tbody: ({ node, ...props }) => (
+                                            <tbody className="divide-y divide-gray-100 dark:divide-white/5 text-gray-700 dark:text-gray-300" {...props} />
+                                        ),
+                                        tr: ({ node, ...props }) => (
+                                            <tr className="hover:bg-gray-50/50 dark:hover:bg-white/[0.02] transition-colors" {...props} />
+                                        ),
+                                        td: ({ node, ...props }) => (
+                                            <td className="px-5 py-3.5 leading-relaxed" {...props} />
+                                        ),
+                                        code: ({ node, inline, className, children, ...props }: any) => {
+                                            if (inline) {
+                                                return (
+                                                    <code className="px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-white/10 font-mono text-xs text-gray-900 dark:text-gray-200" {...props}>
+                                                        {children}
+                                                    </code>
+                                                );
+                                            }
+                                            return (
+                                                <pre className="my-6 p-5 rounded-2xl bg-[#0a0a0a] border border-gray-200 dark:border-white/10 font-mono text-xs text-gray-200 overflow-x-auto leading-relaxed" {...props}>
+                                                    <code>{children}</code>
+                                                </pre>
+                                            );
+                                        },
+                                        a: ({ node, ...props }) => (
+                                            <a className="text-black dark:text-white underline underline-offset-4 font-medium hover:opacity-80 transition-opacity" {...props} />
+                                        ),
+                                    }}
+                                >
+                                    {cleanedMarkdown}
                                 </ReactMarkdown>
                             )}
                         </div>
 
-                        {/* Interactive Behavioral Dwell Hook: Architecture Simulator */}
+                        {/* Interactive Architecture Simulator */}
                         <div className="mt-12">
                             <ArchitecturePlayground onTelemetry={trackInteraction} />
                         </div>
@@ -163,11 +267,11 @@ export default function ResourceDetail() {
                         {/* Interactive Blueprint Download Card */}
                         <BlueprintDownloadCard onTelemetry={trackInteraction} />
 
-                        {/* Live Telemetry Transparency Status Bar */}
-                        <div className="my-10 p-4 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
+                        {/* Live Telemetry Status Bar */}
+                        <div className="my-10 p-4 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
                             <div className="flex items-center gap-3">
                                 <span className="flex items-center gap-1.5">
-                                    <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400 ' : 'bg-cyan-400'}`} />
+                                    <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400' : 'bg-cyan-400'}`} />
                                     Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
                                 </span>
                                 <span className="hidden sm:inline">|</span>
@@ -175,27 +279,27 @@ export default function ResourceDetail() {
                                 <span className="hidden sm:inline">|</span>
                                 <span className="hidden sm:inline">Interactions: <strong className="text-black dark:text-white">{interactionCount}</strong></span>
                             </div>
-                            <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold">
+                            <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">
                                 {isLastLongestClickEligible ? 'Navboost High-Retention Verified (180s+)' : isGoodClick ? 'Navboost GoodClick Active (120s+)' : 'Logging Session Telemetry'}
                             </span>
                         </div>
 
                         {/* Direct WhatsApp Engineering Intake Card */}
-                        <div className="my-12 p-8 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
+                        <div className="my-12 p-8 sm:p-10 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
                             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                <ShieldCheck className="w-3.5 h-3.5" />
                                 <span>Direct Engineering Intake SLA</span>
                             </div>
-                            <h3 className="text-2xl font-bold tracking-tight text-white">
-                                Implement This Resource in Production
+                            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+                                Implement This Architecture in Production
                             </h3>
                             <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
-                                Connect directly with our Principal AI Systems Architect to deploy these tools inside your private VPC.
+                                Connect directly with our Principal AI Systems Architect in Shivamogga to model hardware sizing, latency envelopes, and private VPC deployment parameters.
                             </p>
                             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <button
                                     onClick={openWhatsApp}
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-sm transition-all shadow-md group"
                                 >
                                     <MessageSquare className="w-4 h-4 fill-current" />
                                     <span>Chat on WhatsApp with Lead Architect</span>
@@ -203,7 +307,7 @@ export default function ResourceDetail() {
                                 </button>
                                 <Link
                                     to="/waitlist"
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
                                 >
                                     <span>ele-in SaaS Waitlist &rarr;</span>
                                 </Link>
@@ -214,10 +318,10 @@ export default function ResourceDetail() {
                         <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">
                             <Link
                                 to="/resources"
-                                className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
+                                className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
                             >
                                 <ArrowLeft className="h-4 w-4" />
-                                Back to All Resources
+                                <span>Back to All Resources</span>
                             </Link>
                         </div>
                     </motion.article>

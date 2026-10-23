@@ -19,9 +19,6 @@ import {
 } from 'lucide-react'
 import { solutionCategories, getTopHighLeverSolutions, SolutionRecord } from '../../data/solutionsData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
-import { ExpandableScreen, ExpandableScreenTrigger, ExpandableScreenContent } from '../ui/ExpandableScreen'
-import { MandateApplicationForm } from '../features/WaitingListForm'
-import { InteractiveHoverButton } from '../ui/InteractiveHoverButton'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Truck,
@@ -310,26 +307,23 @@ export default function SolutionsHub() {
                             delivering a formal 1-page feasibility memorandum with zero obligation.
                         </p>
 
-                        <div className="flex flex-wrap items-center gap-4 pt-2">
+                        <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
                             <button
                                 onClick={openWhatsApp}
-                                className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-sm"
                             >
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                Chat on WhatsApp with Lead Architect
+                                <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
-                            <ExpandableScreen>
-                                <ExpandableScreenTrigger>
-                                    <InteractiveHoverButton className="h-12 px-6 text-sm border-white/20 text-white bg-transparent hover:bg-white/10">
-                                        Submit Architecture Mandate
-                                    </InteractiveHoverButton>
-                                </ExpandableScreenTrigger>
-                                <ExpandableScreenContent>
-                                    <MandateApplicationForm source="Solutions Hub CTA" />
-                                </ExpandableScreenContent>
-                            </ExpandableScreen>
+                            <Link
+                                to="/waitlist"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            >
+                                <span>ele-in SaaS Waitlist</span>
+                                <span>&rarr;</span>
+                            </Link>
                         </div>
                     </div>
 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft, ArrowRight, Shield, TrendingUp, Zap, Activity, Cpu, Share2 } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { ArrowRight, Shield, TrendingUp, Zap, Activity, Cpu, Share2, MessageSquare, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -74,74 +74,78 @@ const industries = [
 ]
 
 export default function Industries() {
-    const navigate = useNavigate();
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-y-auto">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 transition-colors duration-300">
+            <WhatsAppModal />
             <Helmet>
                 <title>AI Automation for Every Industry | Elesium India</title>
                 <meta name="description" content="Elesium delivers AI automation across BFSI, Healthcare, SaaS, Manufacturing and more. India's trusted AI partner for enterprise automation." />
                 <link rel="canonical" href="https://elesium.online/markets" />
             </Helmet>
             <h1 className="sr-only">AI Automation Solutions for Every Industry in India</h1>
-            {/* Header */}
-            <div className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-white/10">
-                <div className="max-w-7xl mx-auto px-5 md:px-6 h-16 md:h-20 flex items-center justify-between">
-                    <button
-                        onClick={() => navigate('/')}
-                        className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                    >
-                        <ArrowLeft className="h-4 w-4" />
-                        Back to Home
-                    </button>
-                    <span className="text-sm font-semibold tracking-wide uppercase text-gray-400 dark:text-gray-600">
-                        Market Architecture
-                    </span>
-                </div>
-            </div>
 
-            <main className="max-w-7xl mx-auto px-5 md:px-6 py-12 md:py-20">
+            <main className="max-w-6xl mx-auto px-5 md:px-8">
+                {/* Breadcrumbs */}
+                <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
+                    <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
+                        Home
+                    </Link>
+                    <ChevronRight className="w-3 h-3 text-gray-400" />
+                    <span className="text-gray-900 dark:text-white font-medium">Markets</span>
+                </nav>
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="mb-12 md:mb-24 max-w-3xl"
+                    className="mb-14 md:mb-16 max-w-3xl"
                 >
-                    <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8">
+                    <div className="inline-flex items-center gap-2 mb-4">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
+                            Enterprise Sector Architecture
+                        </span>
+                    </div>
+
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-black dark:text-white leading-[1.1]">
                         Master Markets.
                     </h1>
-                    <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                         We orchestrate high-ticket dealflow and secure contract placement across six critical master markets. Our advanced matching systems connect Tier-1 primes, investment firms, and enterprise operators with friction-free precision.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
                     {industries.map((industry, index) => (
                         <motion.div
                             key={industry.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group"
+                            transition={{ duration: 0.5, delay: index * 0.08 }}
+                            className="bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between group hover:border-black dark:hover:border-white/30 transition-all shadow-sm"
                         >
-                            <div className="mb-6 flex items-center gap-4">
-                                <div className="h-12 w-12 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <industry.icon className="h-6 w-6 text-gray-900 dark:text-white" />
+                            <div>
+                                <div className="mb-6 flex items-center gap-3">
+                                    <div className="h-11 w-11 rounded-2xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                        <industry.icon className="h-5 w-5 text-gray-900 dark:text-white" />
+                                    </div>
+                                    <h2 className="text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white">{industry.title}</h2>
                                 </div>
-                                <h2 className="text-2xl font-semibold">{industry.title}</h2>
-                            </div>
 
-                            <div className="border-l-2 border-gray-100 dark:border-white/10 pl-6 group-hover:border-black dark:group-hover:border-white transition-colors duration-300">
-                                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                                     {industry.description}
                                 </p>
+                            </div>
+
+                            <div className="pt-5 border-t border-gray-200/80 dark:border-white/5">
                                 <ul className="space-y-2">
                                     {industry.details.map((item, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-500">
-                                            <div className="h-1 w-1 rounded-full bg-gray-400 dark:bg-gray-600" />
-                                            {item}
+                                        <li key={i} className="flex items-center gap-2 text-xs font-mono text-gray-600 dark:text-gray-400">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                                            <span>{item}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -151,42 +155,38 @@ export default function Industries() {
                 </div>
 
                 {/* Bottom Call to Action Card */}
-                <section className="mt-20">
-                    <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
-                        <div className="relative z-10 max-w-2xl space-y-6">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                <span>Cross-Sector Enterprise Routing Desk</span>
-                            </div>
-
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
-                                Deploy High-Throughput AI Workflows for Your Sector
-                            </h2>
-
-                            <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
-                                Schedule a 30-minute direct engineering evaluation. We map your domain data pipelines, evaluate regulatory compliance boundaries, and deliver an actionable deployment roadmap.
-                            </p>
-
-                            <div className="flex flex-wrap items-center gap-4 pt-2">
-                                <button
-                                    onClick={openWhatsApp}
-                                    className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
-                                >
-                                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                    Chat on WhatsApp with Lead Architect
-                                    <ArrowRight className="w-4 h-4" />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                            <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
-                        </div>
+                <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] text-center space-y-4">
+                    <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <span>Cross-Sector Enterprise Routing Desk</span>
                     </div>
-                </section>
+
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight max-w-xl mx-auto">
+                        Deploy High-Throughput AI Workflows for Your Sector
+                    </h2>
+
+                    <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                        Schedule a 30-minute direct engineering evaluation. We map your domain data pipelines, evaluate regulatory compliance boundaries, and deliver an actionable deployment roadmap.
+                    </p>
+
+                    <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <button
+                            onClick={openWhatsApp}
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                        >
+                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <span>Chat on WhatsApp with Lead Architect</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                        </button>
+                        <Link
+                            to="/waitlist"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                        >
+                            <span>ele-in SaaS Waitlist &rarr;</span>
+                        </Link>
+                    </div>
+                </div>
             </main>
-            <WhatsAppModal />
         </div>
     )
 }

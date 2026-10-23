@@ -6,7 +6,8 @@ import {
     CheckCircle2,
     ArrowRight,
     TrendingUp,
-    MessageSquare
+    MessageSquare,
+    ChevronRight
 } from 'lucide-react'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -359,63 +360,64 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
             </Helmet>
 
-            <main className="max-w-6xl mx-auto px-6 pt-32 pb-24">
+            <main className="max-w-6xl mx-auto px-5 md:px-8 pt-24 pb-20">
                 {/* Regional Breadcrumbs */}
                 <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 mb-8" aria-label="Breadcrumbs">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
-                    <span>/</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
                     <Link to="/ai-automation-agency-india" className="hover:text-black dark:hover:text-white transition-colors">Enterprise AI India</Link>
-                    <span>/</span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold">{cityData.cityName}</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                    <span className="text-gray-900 dark:text-gray-200 font-semibold">{cityData.cityName}</span>
                 </nav>
 
                 {/* Hero Section */}
-                <header className="mb-16">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono mb-4">
-                        <MapPin className="w-3.5 h-3.5" />
+                <header className="mb-14">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-800 dark:text-gray-200 text-xs font-mono mb-4">
+                        <MapPin className="w-3.5 h-3.5 text-emerald-500" />
                         <span>{cityData.regionName} • Sovereign Engineering Node</span>
                     </div>
 
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-6">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.1] mb-6">
                         {cityData.h1}
                     </h1>
 
-                    <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mb-8">
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mb-8">
                         {cityData.heroSubtitle}
                     </p>
 
                     {/* Answer Capsule (Google Direct Snippet Target) */}
-                    <div className="p-6 rounded-2xl border border-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-950/10 mb-8">
-                        <div className="text-xs font-mono uppercase tracking-wider text-emerald-700 dark:text-emerald-400 font-semibold mb-2">
+                    <div className="p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] mb-8">
+                        <div className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold mb-2">
                             Regional Engineering Executive Summary
                         </div>
-                        <p className="text-base sm:text-lg text-gray-900 dark:text-gray-100 font-medium leading-relaxed">
+                        <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 font-medium leading-relaxed">
                             {cityData.answerCapsule}
                         </p>
                     </div>
 
                     {/* CTAs */}
-                    <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex flex-col sm:flex-row items-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="px-6 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm group"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
                         >
-                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <MessageSquare className="w-4 h-4 text-emerald-500" />
                             <span>Chat on WhatsApp with Lead Architect</span>
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                            <ArrowRight className="w-4 h-4" />
                         </button>
 
                         <Link
                             to="/waitlist"
-                            className="px-5 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-sm transition-all flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
-                            <span>ele-in SaaS Waitlist &rarr;</span>
+                            <span>ele-in SaaS Waitlist</span>
+                            <span>&rarr;</span>
                         </Link>
                     </div>
                 </header>
 
                 {/* 3 Core Architecture Pillars */}
-                <section className="mb-24">
+                <section className="mb-14 md:mb-16">
                     <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mb-8">
                         Deterministic Systems Engineering for {cityData.cityName}
                     </h2>
@@ -446,7 +448,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Target Local Industries */}
-                <section className="mb-24 p-8 rounded-3xl border border-black/10 dark:border-white/10 bg-gray-50 dark:bg-[#111]">
+                <section className="mb-14 md:mb-16 p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
                     <div className="max-w-3xl">
                         <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
                             Enterprise Sector Specialization
@@ -470,7 +472,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Verifiable Local Case Study */}
-                <section className="mb-24">
+                <section className="mb-14 md:mb-16">
                     <div className="p-8 sm:p-10 rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent">
                         <div className="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">
                             <TrendingUp className="w-4 h-4" />
@@ -505,7 +507,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Regional Mesh Navigation */}
-                <section className="mb-24 pt-12 border-t border-gray-200 dark:border-white/10">
+                <section className="mb-14 md:mb-16 pt-12 border-t border-gray-200 dark:border-white/10">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-6">
                         Explore Elesium Sovereign Engineering Hubs Across India
                     </h3>
@@ -514,10 +516,10 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             <Link
                                 key={c.cityId}
                                 to={`/${c.slug}`}
-                                className={`p-4 rounded-xl border text-left transition-all ${
+                                className={`p-4 rounded-2xl border text-left transition-all ${
                                     c.cityId === cityData.cityId
                                         ? 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20'
-                                        : 'border-gray-200 dark:border-white/5 hover:border-black dark:hover:border-white/30'
+                                        : 'border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white/30'
                                 }`}
                             >
                                 <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">
@@ -543,20 +545,21 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         Book an architectural consultation with Principal AI Systems Architect Chaman Shah.
                         Receive a comprehensive 3-year TCO memorandum and fixed-fee implementation blueprint.
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="px-8 py-4 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all flex items-center gap-2 shadow-md group"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
                         >
-                            <MessageSquare className="w-4 h-4 fill-current" />
+                            <MessageSquare className="w-4 h-4 text-emerald-500" />
                             <span>Chat on WhatsApp with Lead Architect</span>
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                            <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
                             to="/waitlist"
-                            className="px-6 py-4 rounded-xl border border-white/20 hover:bg-white/10 font-medium text-sm transition-all flex items-center gap-2 text-white"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
-                            <span>ele-in SaaS Waitlist &rarr;</span>
+                            <span>ele-in SaaS Waitlist</span>
+                            <span>&rarr;</span>
                         </Link>
                     </div>
                 </section>

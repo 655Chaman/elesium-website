@@ -768,15 +768,22 @@ export default function EnterpriseRoiCalculator() {
                             Connect directly with our engineering architects to validate your headcount costs, legacy SaaS spend, and custom air-gapped deployment ROI in a confidential 30-minute review.
                         </p>
 
-                        <div className="flex flex-wrap items-center gap-4 pt-2">
+                        <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
                             <button
                                 onClick={openWhatsApp}
-                                className="px-6 py-3.5 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all duration-200 flex items-center gap-2 shadow-sm hover:scale-[1.02]"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-sm"
                             >
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                Chat on WhatsApp with Lead Architect
+                                <span>Chat on WhatsApp with Lead Architect</span>
                                 <ChevronRight className="w-4 h-4" />
                             </button>
+                            <Link
+                                to="/waitlist"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            >
+                                <span>ele-in SaaS Waitlist</span>
+                                <span>&rarr;</span>
+                            </Link>
                         </div>
                     </div>
 

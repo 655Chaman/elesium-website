@@ -713,15 +713,22 @@ export default function VideoMirror() {
                         </p>
                     </div>
 
-                    <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
+                    <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full md:w-auto">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white hover:bg-gray-100 text-black font-semibold text-sm tracking-wide transition-all duration-200 shadow-md hover:scale-[1.02]"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-white hover:bg-gray-100 text-black font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-md"
                         >
                             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                            Chat on WhatsApp with Lead Architect
+                            <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
+                        <Link
+                            to="/waitlist"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm"
+                        >
+                            <span>ele-in SaaS Waitlist</span>
+                            <span>&rarr;</span>
+                        </Link>
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
@@ -752,22 +759,22 @@ export default function VideoMirror() {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 20 }}
                             transition={{ duration: 0.25 }}
-                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl border border-cyan-500/40 bg-[#0B0F1C] shadow-2xl shadow-cyan-950/60 flex flex-col z-10"
+                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0A0A0A] text-gray-900 dark:text-white shadow-2xl flex flex-col z-10"
                         >
                             {/* Modal Header */}
-                            <div className="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between gap-4">
+                            <div className="p-4 sm:p-5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between gap-4">
                                 <div className="flex items-center gap-3 truncate">
-                                    <span className="px-2.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shrink-0">
+                                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-white/10 shrink-0">
                                         {modalVideo.duration} • {modalVideo.category}
                                     </span>
-                                    <h3 className="text-sm sm:text-base font-bold text-white truncate">
+                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white truncate">
                                         {modalVideo.title}
                                     </h3>
                                 </div>
 
                                 <button
                                     onClick={handleClosePlayModal}
-                                    className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors shrink-0"
+                                    className="p-1.5 rounded-full text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors shrink-0"
                                     aria-label="Close modal"
                                 >
                                     <X className="w-5 h-5" />
@@ -786,10 +793,10 @@ export default function VideoMirror() {
                             </div>
 
                             {/* Modal Chapters Navigation */}
-                            <div className="p-4 sm:p-6 bg-black/40 border-b border-white/10">
-                                <div className="text-xs font-mono text-gray-400 mb-3 flex items-center gap-2">
-                                    <Clock className="w-3.5 h-3.5 text-cyan-400" />
-                                    <span>Time-Stamped Chapters (Chad Michael Second-by-Second Structure):</span>
+                            <div className="p-4 sm:p-6 bg-gray-50/70 dark:bg-white/[0.02] border-b border-gray-200 dark:border-white/10">
+                                <div className="text-xs font-mono text-gray-500 dark:text-gray-400 mb-3 flex items-center gap-2">
+                                    <Clock className="w-3.5 h-3.5 text-emerald-500" />
+                                    <span>Time-Stamped Chapters:</span>
                                 </div>
 
                                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
@@ -797,13 +804,13 @@ export default function VideoMirror() {
                                         <button
                                             key={idx}
                                             onClick={() => setModalActiveMoment(idx)}
-                                            className={`p-2.5 rounded-lg border text-left transition-all ${
+                                            className={`p-2.5 rounded-xl border text-left transition-all ${
                                                 modalActiveMoment === idx
-                                                    ? 'bg-cyan-500/20 border-cyan-500 text-cyan-300'
-                                                    : 'bg-white/[0.02] border-white/5 text-gray-400 hover:text-white hover:bg-white/5'
+                                                    ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white'
+                                                    : 'bg-white dark:bg-white/[0.03] border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:border-gray-400 dark:hover:border-white/30'
                                             }`}
                                         >
-                                            <div className="text-[10px] font-mono font-bold text-cyan-400 mb-0.5">
+                                            <div className={`text-[10px] font-mono font-bold mb-0.5 ${modalActiveMoment === idx ? 'text-emerald-400 dark:text-emerald-600' : 'text-emerald-600 dark:text-emerald-400'}`}>
                                                 {km.time}
                                             </div>
                                             <div className="text-xs font-medium truncate">
@@ -815,11 +822,11 @@ export default function VideoMirror() {
 
                                 {/* Active Chapter Visual & Voiceover Callout */}
                                 {modalVideo.keyMoments[modalActiveMoment] && (
-                                    <div className="mt-4 p-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs">
-                                        <div className="font-semibold text-white mb-1">
+                                    <div className="mt-4 p-3.5 rounded-2xl bg-white dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 text-xs">
+                                        <div className="font-semibold text-gray-900 dark:text-white mb-1">
                                             {modalVideo.keyMoments[modalActiveMoment].title}
                                         </div>
-                                        <p className="text-gray-300 leading-relaxed font-mono text-[11px]">
+                                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-mono text-[11px]">
                                             "{modalVideo.keyMoments[modalActiveMoment].description}"
                                         </p>
                                     </div>
@@ -827,29 +834,29 @@ export default function VideoMirror() {
                             </div>
 
                             {/* Modal Footer Actions */}
-                            <div className="p-4 sm:p-5 bg-[#0B0F1C] flex flex-wrap items-center justify-between gap-4">
+                            <div className="p-4 sm:p-5 bg-gray-50/50 dark:bg-white/[0.02] flex flex-wrap items-center justify-between gap-4">
                                 <button
                                     onClick={() => handleCopyTranscript(modalVideo.fullTranscript, true)}
-                                    className="text-xs font-mono text-gray-300 hover:text-white flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all"
+                                    className="text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-all"
                                 >
-                                    {modalCopied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                                    {modalCopied ? 'Copied Full Transcript' : 'Copy Verbatim Transcript'}
+                                    {modalCopied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+                                    <span>{modalCopied ? 'Copied Full Transcript' : 'Copy Verbatim Transcript'}</span>
                                 </button>
 
                                 <div className="flex items-center gap-3">
                                     <Link
                                         to={`/videos/${modalVideo.slug}`}
                                         onClick={handleClosePlayModal}
-                                        className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 px-3 py-2"
+                                        className="text-xs font-semibold text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white flex items-center gap-1 px-3 py-2 transition-colors"
                                     >
-                                        Open Full Dossier
+                                        <span>Open Full Dossier</span>
                                         <ArrowRight className="w-3.5 h-3.5" />
                                     </Link>
 
                                     <Link
                                         to={modalVideo.slug === 'enterprise-ai-roi-calculator' ? '/tools/enterprise-ai-roi-calculator' : `/solutions/${modalVideo.slug}`}
                                         onClick={handleClosePlayModal}
-                                        className="text-xs font-bold text-black bg-cyan-500 hover:bg-cyan-400 px-4 py-2 rounded-lg transition-all shadow-md shadow-cyan-500/20"
+                                        className="text-xs font-semibold text-white bg-black dark:text-black dark:bg-white hover:opacity-90 px-4 py-2 rounded-full transition-all shadow-sm"
                                     >
                                         Explore Architecture
                                     </Link>

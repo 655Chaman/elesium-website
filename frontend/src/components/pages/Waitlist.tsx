@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
     ShieldCheck, 
@@ -11,7 +11,8 @@ import {
     ExternalLink,
     Cpu,
     Server,
-    Layers
+    Layers,
+    ChevronRight
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { TrustProofRibbon } from '../cro/TrustProofRibbon';
@@ -212,7 +213,7 @@ export default function Waitlist() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative min-h-[100vh] pt-28 pb-24 px-6 md:px-12 bg-gray-50 dark:bg-[#070707] text-gray-900 dark:text-white font-sans"
+            className="relative min-h-[100vh] pt-24 pb-20 px-5 md:px-8 bg-white dark:bg-black text-gray-900 dark:text-white font-sans transition-colors duration-300"
         >
             <Helmet>
                 <title>ele-in Early Access Waitlist | Sovereign Enterprise AI SaaS Platform | Elesium</title>
@@ -227,6 +228,12 @@ export default function Waitlist() {
             </Helmet>
 
             <div className="relative z-10 max-w-6xl mx-auto">
+                {/* Breadcrumb Navigation */}
+                <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-8" aria-label="Breadcrumb">
+                    <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                    <span className="text-gray-900 dark:text-gray-200">ele-in SaaS Waitlist</span>
+                </nav>
                 
                 {/* Contextual Referral Banner */}
                 {(formattedSolutionTitle || roiParam) && (
@@ -332,7 +339,7 @@ export default function Waitlist() {
                             <button
                                 type="button"
                                 onClick={openWhatsApp}
-                                className="w-full py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center justify-center gap-2"
+                                className="w-full h-11 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 text-xs font-semibold shadow-sm transition-all flex items-center justify-center gap-2"
                             >
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -550,7 +557,7 @@ export default function Waitlist() {
                                     <button
                                         type="submit"
                                         disabled={isLoading || !fullName || !workEmail || !companyName}
-                                        className="w-full py-4 px-6 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full py-4 px-6 rounded-full bg-black text-white hover:opacity-90 dark:bg-white dark:text-black font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isLoading ? (
                                             <span className="flex items-center gap-2">

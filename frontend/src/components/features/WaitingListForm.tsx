@@ -11,10 +11,11 @@ import {
     Clock, 
     Cpu, 
     Check, 
-    FileText 
+    FileText,
+    MessageSquare 
 } from 'lucide-react'
 import { validateEnterpriseEmail, DomainValidationResult } from '../cro/corporateDomainValidator'
-import { CalendarBookingEmbed } from '../cro/CalendarBookingEmbed'
+import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 // ─── Step indicators ──────────────────────────────────────────────────────────
 
@@ -113,7 +114,7 @@ export function MandateApplicationForm({
     const [step, setStep] = useState(1)
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
-    const [isCalendarOpen, setIsCalendarOpen] = useState(false)
+    const { openWhatsApp, WhatsAppModal } = useWhatsApp()
 
     const [formData, setFormData] = useState<DossierFormData>({
         email: '',
@@ -252,33 +253,19 @@ export function MandateApplicationForm({
                     </div>
                 </div>
 
-                {/* Direct Fast-Track Calendar Action */}
+                {/* Direct Fast-Track WhatsApp Action */}
                 <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md">
                     <button
                         type="button"
-                        onClick={() => setIsCalendarOpen(true)}
+                        onClick={openWhatsApp}
                         className="w-full btn-primary h-12 text-sm flex items-center justify-center gap-2 group"
                     >
-                        <Calendar className="w-4 h-4 text-emerald-400" />
-                        Fast-Track 30-Min Architecture Call
+                        <MessageSquare className="w-4 h-4 text-emerald-400" />
+                        Chat on WhatsApp with Lead Architect
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>
-
-                <CalendarBookingEmbed
-                    isOpen={isCalendarOpen}
-                    onClose={() => setIsCalendarOpen(false)}
-                    prefill={{
-                        name: formData.name,
-                        email: formData.email,
-                        company: formData.company,
-                        notes: `Deployment: ${formData.deploymentTarget} | Workflow: ${formData.targetWorkflow}`
-                    }}
-                    context={{
-                        solutionSlug: formData.leadSource,
-                        complianceFrameworks: formData.complianceMatrix
-                    }}
-                />
+                <WhatsAppModal />
             </div>
         )
     }
@@ -375,11 +362,11 @@ export function MandateApplicationForm({
                     <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
                         <button
                             type="button"
-                            onClick={() => setIsCalendarOpen(true)}
+                            onClick={openWhatsApp}
                             className="btn-primary h-13 px-8 text-base flex items-center justify-center gap-2 group w-full sm:w-auto"
                         >
-                            <Calendar className="w-4 h-4 text-emerald-400" />
-                            Open Calendar Scheduler
+                            <MessageSquare className="w-4 h-4 text-emerald-400" />
+                            Chat on WhatsApp with Lead Architect
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
                         <button
@@ -390,15 +377,6 @@ export function MandateApplicationForm({
                             Or Submit Architecture Dossier (Asynchronous)
                         </button>
                     </div>
-
-                    <CalendarBookingEmbed
-                        isOpen={isCalendarOpen}
-                        onClose={() => setIsCalendarOpen(false)}
-                        context={{
-                            solutionSlug: source,
-                            complianceFrameworks: ['DPDP Act 2023', 'Private Air-Gapped VPC']
-                        }}
-                    />
                 </div>
             )}
 
@@ -767,6 +745,7 @@ export function MandateApplicationForm({
                     </div>
                 </div>
             )}
+            <WhatsAppModal />
         </div>
     )
 }

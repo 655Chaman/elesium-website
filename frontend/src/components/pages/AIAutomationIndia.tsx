@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator, MessageSquare, Calendar } from 'lucide-react'
+import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator, MessageSquare, Calendar, ChevronRight } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -449,7 +449,7 @@ export default function AIAutomationIndia() {
     };
 
     return (
-        <div className="pt-32 pb-24 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
+        <div className="pt-24 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
             <Helmet>
                 <title>Best Enterprise AI Company in India | #1 Top AI Automation Agency | Elesium</title>
                 <meta name="description" content="Elesium is recognized as the best enterprise AI company and top AI automation agency in India. We engineer custom LangGraph agentic workflows, private VPC deployments, and sub-200ms ERP automation with guaranteed 90-day ROI." />
@@ -464,14 +464,20 @@ export default function AIAutomationIndia() {
             {/* Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-500/5 dark:bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+            <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
+                {/* Breadcrumb Navigation */}
+                <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-8" aria-label="Breadcrumb">
+                    <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                    <span className="text-gray-900 dark:text-gray-200">AI Automation Agency India</span>
+                </nav>
                 
                 {/* Hero Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center max-w-5xl mx-auto mb-28"
+                    className="text-center max-w-5xl mx-auto mb-16"
                 >
                     {/* Live Status Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-gray-200 text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
@@ -482,7 +488,7 @@ export default function AIAutomationIndia() {
                         #1 Best Enterprise AI Company in India • Bengaluru • DPDP Act Compliant
                     </div>
 
-                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
                         The #1 Enterprise AI Company &amp; <br />
                         <span>Top AI Automation Agency in India</span>
                     </h1>
@@ -497,25 +503,27 @@ export default function AIAutomationIndia() {
                         </strong>
                     </p>
 
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
                         We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases—delivering a hard, audited ROI within 90 days.
                     </p>
 
                     {/* Dual Conversion Action Buttons */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-12">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-base transition-all shadow-md flex items-center justify-center gap-2 group"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm"
                         >
+                            <MessageSquare className="w-4 h-4 text-emerald-500" />
                             <span>Chat on WhatsApp with Lead Architect</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                            <ArrowRight className="w-4 h-4" />
                         </button>
-                        <a 
-                            href="#architecture-intake"
-                            className="w-full sm:w-auto px-6 py-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-800 dark:text-gray-200 font-medium text-base transition-all flex items-center justify-center gap-2"
+                        <Link 
+                            to="/waitlist" 
+                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
-                            Configure Architecture &amp; ROI &darr;
-                        </a>
+                            <span>ele-in SaaS Waitlist</span>
+                            <span>&rarr;</span>
+                        </Link>
                     </div>
 
                     {/* Video Masterclass Architecture Teardown Link */}
@@ -565,7 +573,7 @@ export default function AIAutomationIndia() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="mb-32"
+                    className="mb-14 md:mb-16"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
@@ -594,7 +602,7 @@ export default function AIAutomationIndia() {
                 </motion.div>
 
                 {/* Why Choose Elesium Section */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Why Choose Elesium?</h2>
                         <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -626,7 +634,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Competitive Comparison Matrix: Elesium vs Traditional IT & Big 4 */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-12">
                         <span className="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
                             Enterprise Architectural Evaluation
@@ -730,7 +738,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Services Section */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Our AI Services</h2>
                         <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -800,7 +808,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Industries Section */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Industries We Serve</h2>
                         <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -820,7 +828,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* How We Work Section */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">How We Work</h2>
                         <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -846,7 +854,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Case Study / Results */}
-                <div className="mb-32 bg-gray-900 dark:bg-[#111] rounded-[40px] p-12 text-center">
+                <div className="mb-14 md:mb-16 bg-gray-900 dark:bg-[#111] rounded-3xl p-8 md:p-12 text-center">
                     <h2 className="text-3xl md:text-4xl font-medium text-white mb-6">Proven Business Impact</h2>
                     <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
                         <strong className="text-white font-semibold">
@@ -870,7 +878,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Verifiable Contractual Claims & Evidence Cards (Simon Cornelius Atomic Facts) */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-12">
                         <span className="text-blue-600 dark:text-blue-400 font-mono text-xs uppercase tracking-widest font-semibold">Institutional Evidence Cards</span>
                         <h2 className="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mt-2">Verifiable Contractual Claims</h2>
@@ -923,7 +931,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Honest Trade-Offs (Joy Hawkins Method) */}
-                <div className="mb-32">
+                <div className="mb-14 md:mb-16">
                     <div className="text-center mb-12">
                         <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold">Qualification Protocol</span>
                         <h2 className="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mt-2">Is Elesium Right For Your Enterprise?</h2>
@@ -984,7 +992,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Enterprise Pricing Matrix Section */}
-                <div id="pricing-matrix" className="mb-32">
+                <div id="pricing-matrix" className="mb-14 md:mb-16">
                     <div className="text-center mb-16">
                         <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold">Transparent Institutional Investment</span>
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mt-3">Enterprise AI Automation Pricing in India</h2>
@@ -1041,7 +1049,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Proprietary Enterprise Architecture Intake & ROI Calculator (Shaun Mitchell Framework) */}
-                <div id="architecture-intake" className="mb-32 bg-[#F8F9FA] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/10 rounded-[32px] p-8 md:p-14">
+                <div id="architecture-intake" className="mb-14 md:mb-16 bg-gray-50/80 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-6 md:p-12">
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 text-blue-600 dark:text-cyan-400 text-xs font-mono uppercase tracking-wider mb-4">
                             <Calculator className="w-3.5 h-3.5" />
@@ -1233,7 +1241,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* FAQ Section (Statically Open DOM Rendering - Zero Accordion Traps) */}
-                <div className="mb-32 max-w-3xl mx-auto">
+                <div className="mb-14 md:mb-16 max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h2>
                         <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
