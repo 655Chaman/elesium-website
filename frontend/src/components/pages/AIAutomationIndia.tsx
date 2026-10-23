@@ -869,6 +869,120 @@ export default function AIAutomationIndia() {
                     </div>
                 </div>
 
+                {/* Verifiable Contractual Claims & Evidence Cards (Simon Cornelius Atomic Facts) */}
+                <div className="mb-32">
+                    <div className="text-center mb-12">
+                        <span className="text-blue-600 dark:text-blue-400 font-mono text-xs uppercase tracking-widest font-semibold">Institutional Evidence Cards</span>
+                        <h2 className="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mt-2">Verifiable Contractual Claims</h2>
+                        <p className="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-3">
+                            Machine-verifiable atomic facts backed by master service agreements, independent audits, and contractual SLA remedies.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div className="p-6 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 hover:border-emerald-500/50 transition-all">
+                            <div className="flex items-center justify-between mb-4">
+                                <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">Production SLA</span>
+                                <span className="text-xs bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-mono">14 Days</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">14-Day Delivery</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Complete production pilot deployed inside your private VPC within 14 calendar days or initial engineering sprint fees rebated.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-all">
+                            <div className="flex items-center justify-between mb-4">
+                                <span className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-semibold">Financial Guarantee</span>
+                                <span className="text-xs bg-blue-500/10 text-blue-500 px-2 py-0.5 rounded-full font-mono">90 Days</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">90-Day ROI Mandate</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Measured against contractual cash-flow hurdles (hours saved + error reductions). Full professional fee rebate if targets are unmet.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 hover:border-purple-500/50 transition-all">
+                            <div className="flex items-center justify-between mb-4">
+                                <span className="text-xs font-mono uppercase tracking-wider text-purple-600 dark:text-purple-400 font-semibold">Data Sovereignty</span>
+                                <span className="text-xs bg-purple-500/10 text-purple-500 px-2 py-0.5 rounded-full font-mono">Zero Egress</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Private VPC Enclaves</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Deployed in customer-owned AWS Mumbai (ap-south-1) or CtrlS. Zero customer tokens leave sovereign borders or touch training sets.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 hover:border-amber-500/50 transition-all">
+                            <div className="flex items-center justify-between mb-4">
+                                <span className="text-xs font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-semibold">Statutory Safe Harbor</span>
+                                <span className="text-xs bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full font-mono">DPDP 2023</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">DPDP Act 2023 Shield</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Complete compliance with Section 6 & 8 data fiduciary requirements, mitigating non-compliance penalties up to ₹250 Crore.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Honest Trade-Offs (Joy Hawkins Method) */}
+                <div className="mb-32">
+                    <div className="text-center mb-12">
+                        <span className="text-emerald-600 dark:text-emerald-400 font-mono text-xs uppercase tracking-widest font-semibold">Qualification Protocol</span>
+                        <h2 className="text-3xl md:text-4xl font-medium text-gray-900 dark:text-white mt-2">Is Elesium Right For Your Enterprise?</h2>
+                        <p className="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-3">
+                            We decline 40% of prospective engagements to maintain 100% SLA delivery fidelity. Review our architectural qualification criteria:
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div className="p-8 rounded-3xl bg-emerald-500/[0.03] border border-emerald-500/20">
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center font-bold">✓</div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Elesium IS Right For You If:</h3>
+                            </div>
+                            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                                    <span><strong>Deterministic Execution:</strong> You require auditable state machines (LangGraph) where agent actions are logged and predictable.</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                                    <span><strong>Sovereign Data Residency:</strong> Your compliance officer mandates that data cannot leave Indian borders (AWS Mumbai / CtrlS).</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                                    <span><strong>Legacy ERP Complexity:</strong> You need custom bi-directional connectors into SAP S/4HANA, Oracle NetSuite, or Tally Prime.</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                                    <span><strong>ROI Accountability:</strong> You demand contractual SLA guarantees and cash-flow breakeven within 90 calendar days.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="p-8 rounded-3xl bg-rose-500/[0.03] border border-rose-500/20">
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="w-8 h-8 rounded-full bg-rose-500/20 text-rose-500 flex items-center justify-center font-bold">✕</div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Elesium is NOT Right For You If:</h3>
+                            </div>
+                            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-rose-500 flex-shrink-0" />
+                                    <span><strong>Basic FAQ Chatbot:</strong> You only need a simple website widget for answering FAQs (use Intercom or Tidio instead).</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-rose-500 flex-shrink-0" />
+                                    <span><strong>Budget Under ₹1,50,000:</strong> Your initial budget cannot support enterprise private staging (start with low-code tools first).</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-rose-500 flex-shrink-0" />
+                                    <span><strong>No Architecture Review:</strong> You want an instant plug-and-play bot deployed in 1 hour without technical discovery.</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-rose-500 flex-shrink-0" />
+                                    <span><strong>No-Code Wrapper Reselling:</strong> You want a white-labeled Make.com or Zapier flow repackaged as custom AI.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Enterprise Pricing Matrix Section */}
                 <div id="pricing-matrix" className="mb-32">
                     <div className="text-center mb-16">
