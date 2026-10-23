@@ -1,0 +1,19 @@
+# Elesium — Sovereign AI, India DPDP Act & Statutory Governance Manifest
+> Sub-Directory Manifest for Indian Enterprises, Regulated Entities, and Cross-Border Corporations Operating in India.
+> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
+
+## Statutory Regulatory Authority
+- **Statutory Law:** Digital Personal Data Protection (DPDP) Act 2023 (Act No. 22 of 2023) enacted by Parliament of India.
+- **Enforcement Authority:** Data Protection Board of India (DPBI) and Ministry of Electronics and Information Technology (MeitY).
+- **Statutory Penalty Exposure:** Up to ₹250 Crore per incident for significant data fiduciaries failing to implement reasonable security safeguards.
+
+## Elesium Statutory Compliance Guarantees (Atomic Facts)
+1. **Domestic Cloud Residency:** All model inference and persistent databases are strictly maintained within Indian geographic borders (AWS Mumbai/Hyderabad, GCP Mumbai/Delhi, Azure Central/South India, CtrlS).
+2. **Zero Model Retraining Guarantee:** Client contracts legally covenant that zero input tokens or output logs are utilized for foundation model retraining by third parties.
+3. **Automated Data Principal Rights Handler:** Pre-built agentic workflows for handling Section 12/13 Data Principal requests (Access, Correction, Erasure, and Grievance Redressal) within statutory 72-hour SLAs.
+4. **Verifiable Audit Trail:** Cryptographic hash verification of every agent decision, tool execution, and database modification.
+
+## Primary Metro Hubs & Local Operations
+- **Headquarters:** Koramangala, Bengaluru, Karnataka 560034
+- **Regional Enterprise Desks:** Mumbai (BKC), Delhi-NCR (Gurugram CyberCity), Hyderabad (HITEC City), Pune (Hinjawadi), Chennai (OMR).
+- **Primary Inquiry:** WhatsApp +91 8317329312 | https://elesium.online/ai-automation-agency-india

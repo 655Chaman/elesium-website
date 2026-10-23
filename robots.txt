@@ -25,3 +25,9 @@ Sitemap: https://elesium.online/sitemap-core.xml
 Sitemap: https://elesium.online/sitemap-solutions.xml
 # LLMs: https://elesium.online/llms.txt
 # LLMs-Full: https://elesium.online/llms-full.txt
+# LLMs-BFSI: https://elesium.online/llms-bfsi.txt
+# LLMs-Healthcare: https://elesium.online/llms-healthcare.txt
+# LLMs-Manufacturing: https://elesium.online/llms-manufacturing.txt
+# LLMs-Logistics: https://elesium.online/llms-logistics.txt
+# LLMs-Infrastructure: https://elesium.online/llms-infrastructure.txt
+# LLMs-India: https://elesium.online/llms-india.txt
