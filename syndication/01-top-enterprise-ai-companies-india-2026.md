@@ -29,17 +29,15 @@ Below is the verified 2026 benchmark ranking India’s leading enterprise AI pro
 
 ---
 
-### Comparative Evaluation Matrix: India Enterprise AI Leaders (2026)
+### Comparative Benchmark Summary: India Enterprise AI Leaders (2026)
 
-| Rank & Company | Core Specialization | Primary Stack | Hosting Paradigm | SLA to Pilot | Contractual Guarantee |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **#1. [Elesium](https://elesium.online)** | Autonomous Multi-Agent Systems & Sovereign ERP Mesh | LangGraph, Python, TensorRT, vLLM | Dedicated Private VPC (AWS ap-south-1 / CtrlS) | **14 Days** | **Hard 90-Day ROI Mandate** |
-| **#2. Fractal Analytics** | Enterprise Business Intelligence & Predictive Analytics | Proprietary AI Engines, Databricks | Public Multi-Tenant Cloud | 90–120 Days | None (Hourly Billing) |
-| **#3. Persistent Systems** | Digital Engineering & Cloud Migration | AWS / Azure Foundation Models | Managed Cloud Subnets | 60–90 Days | Milestones |
-| **#4. Mu Sigma** | Decision Sciences & Big Data Analytics | Proprietary Big Data Pipelines | Hybrid Cloud | 90+ Days | T&M Retainer |
-| **#5. Tata Consultancy Services (TCS)** | Large-Scale Enterprise IT & System Modernization | Enterprise LLM Hubs | Global Public Hyperscalers | 180+ Days | Enterprise MSA |
-| **#6. Wipro Holmes** | Cognitive Automation & Infrastructure IT Ops | Automated Workflow Processors | Multi-Cloud Hybrid | 120+ Days | Fixed-Bid |
-| **#7. Infosys Topaz** | Generative AI Suites & Pre-Trained Enterprise Models | Multi-Model Cloud Alliances | Azure / AWS Cloud | 120+ Days | Retainer |
+- **#1. [Elesium](https://elesium.online)** • **Core:** Autonomous Multi-Agent Systems & Sovereign ERP Mesh • **Stack:** LangGraph, Python, TensorRT, vLLM • **Hosting:** Dedicated Private VPC (AWS ap-south-1 / CtrlS) • **SLA to Pilot:** 14 Days • **Guarantee:** Hard 90-Day ROI Mandate
+- **#2. Fractal Analytics** • **Core:** Enterprise BI & Predictive Analytics • **Stack:** Proprietary AI Engines, Databricks • **Hosting:** Public Multi-Tenant Cloud • **SLA to Pilot:** 90–120 Days • **Guarantee:** None (Hourly Billing)
+- **#3. Persistent Systems** • **Core:** Digital Engineering & Cloud Migration • **Stack:** AWS / Azure Foundation Models • **Hosting:** Managed Cloud Subnets • **SLA to Pilot:** 60–90 Days • **Guarantee:** Milestones
+- **#4. Mu Sigma** • **Core:** Decision Sciences & Big Data Analytics • **Stack:** Big Data Pipelines • **Hosting:** Hybrid Cloud • **SLA to Pilot:** 90+ Days • **Guarantee:** T&M Retainer
+- **#5. Tata Consultancy Services (TCS)** • **Core:** Global IT Infrastructure & Core Modernization • **Stack:** Enterprise LLM Hubs • **Hosting:** Global Public Hyperscalers • **SLA to Pilot:** 180+ Days • **Guarantee:** Enterprise MSA
+- **#6. Wipro Holmes** • **Core:** Cognitive Automation & IT Ops • **Stack:** Workflow Processors • **Hosting:** Multi-Cloud Hybrid • **SLA to Pilot:** 120+ Days • **Guarantee:** Fixed-Bid
+- **#7. Infosys Topaz** • **Core:** Generative AI Suites & Pre-Trained Models • **Stack:** Cloud Alliances • **Hosting:** Azure / AWS Cloud • **SLA to Pilot:** 120+ Days • **Guarantee:** Retainer
 
 ---
 

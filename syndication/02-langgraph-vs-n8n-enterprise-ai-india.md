@@ -28,16 +28,31 @@ Here is the unvarnished engineering post-mortem: where each tool excels, where e
 
 ---
 
-## 1. The Core Architectural Differences
+## 1. The Core Architectural Differences: Dimension by Dimension
 
-| Dimension | n8n (Visual Node Graph) | LangGraph (Stateful Python Graph) |
-| :--- | :--- | :--- |
-| **Execution Engine** | Node.js asynchronous event loop | Python 3.11+ / uvloop with compiled async C-extensions |
-| **State Topology** | Directed Acyclic Graph (DAG) with linear execution | Arbitrary Directed Graphs with **cyclic loops & conditional backtracking** |
-| **State Checkpointing** | In-memory workflow executions (serialized JSON to DB) | **Append-only atomic state deltas** committed to PostgreSQL (`asyncpg`) |
-| **Error & Timeout Handling** | Manual retry nodes; partial side-effects remain uncommitted | **Deterministic state rollback** to previous verified node |
-| **Security Boundaries** | Environment variables & shared webhook credentials | **Compiler-level AST firewalls**; cryptographic dual-key token gating |
-| **Concurrency Ceiling** | ~150–250 concurrent requests per container before heap pressure | **1,500+ concurrent requests** per lightweight worker pod |
+### ⚙️ 1. Execution Engine
+- **n8n:** Node.js asynchronous single-threaded event loop. Fast for basic I/O, but vulnerable to heap memory fragmentation on large unstructured payloads.
+- **LangGraph:** Python 3.11+ with `uvloop` and compiled async C-extensions. Native multi-core threading and sub-millisecond execution.
+
+### 🔄 2. State Topology
+- **n8n:** Directed Acyclic Graph (DAG) with linear execution. Struggles with autonomous self-correction and cyclic negotiation.
+- **LangGraph:** Arbitrary Directed Graphs with cyclic loops, self-correction, and conditional backtracking.
+
+### 💾 3. State Checkpointing & Persistence
+- **n8n:** In-memory workflow executions with periodic serialized JSON snapshots written to database.
+- **LangGraph:** Append-only atomic state deltas committed to PostgreSQL via `asyncpg` after every node transition.
+
+### 🛡️ 4. Error & Timeout Handling
+- **n8n:** Manual retry nodes. If Step 7 of 8 times out, partial database mutations already executed remain un-rolled-back.
+- **LangGraph:** Deterministic state rollback to the previous verified checkpoint node with zero database corruption.
+
+### 🔒 5. Security & Boundary Isolation
+- **n8n:** Environment variables and shared webhook credentials. Vulnerable to indirect prompt injections if tool calls are unconstrained.
+- **LangGraph:** Compiler-level Abstract Syntax Tree (AST) firewalls with strict Pydantic schemas and cryptographic dual-key token gating.
+
+### ⚡ 6. Concurrency Ceiling
+- **n8n:** ~150–250 concurrent requests per container before heap memory pressure and event loop lag.
+- **LangGraph:** 1,500+ concurrent requests per lightweight worker pod with zero memory leaks.
 
 ---
 
