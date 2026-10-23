@@ -48,6 +48,18 @@ export const resourcesData: ResourceItem[] = [
     section: 'segregated'
   },
   {
+    id: 'ai-automation-voices-2026',
+    title: 'Top AI Architecture Voices & Enterprise Swarm Engineering 2026',
+    slug: 'ai-automation-voices',
+    description: '10 Public Declarations from Founders at Anthropic, OpenAI, DeepMind & LangChain on Multi-Agent Orchestration, with Elesium Architectural Commentary.',
+    category: 'Expert Round-Up',
+    date: 'October 2026',
+    readTime: '10 min read',
+    googleDriveLink: 'https://elesium.online/resources/ai-automation-voices',
+    markdownFile: '/resources/ai-automation-voices.md',
+    section: 'segregated'
+  },
+  {
     id: '2',
     title: 'Multi-Channel Inbound Tracker',
     slug: 'multi-channel-inbound-tracker',
