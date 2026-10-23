@@ -67,8 +67,8 @@ Enterprise decision-makers will not tolerate lag, page reloads, or loading spinn
 |             v                                   v                                                 |
 |  [ Real-Time UI Visualizer ]       [ Executive Board Memo State ]                                |
 |  - Financial KPI Cards             - Printable PDF Summary                                        |
-|  - Amortization Graphs             - Gated WhatsApp Audit Line                                    |
-|  - Latency / Throughput Bars       - 36-Month Cashflow Projections                                |
+|  - Pure SVG Comparison Gauges      - Gated WhatsApp Audit Line                                    |
+|  - Pure SVG Bar Visualizations     - 36-Month Cashflow Projections                                |
 |                                                                                                   |
 +---------------------------------------------------------------------------------------------------+
 ```
@@ -109,7 +109,7 @@ export const formatCurrencyValue = (val: number, currency: CurrencyMode): string
 
 ---
 
-## 3. The Three Core Calculator Archetypes (Deep Mathematical Models)
+## 3. The Five Flagship Calculator Archetypes (Deep Mathematical Models)
 
 ### 3.1 Archetype 1: 3-Year Enterprise AI ROI / TCO Calculator (`/tools/enterprise-ai-roi-calculator`)
 
@@ -140,80 +140,10 @@ Where:
 
 **4. 3-Year Total Cost of Ownership ($TCO_{\text{AI}}$):**
 $$TCO_{\text{AI}} = C_{\text{setup}} + \sum_{y=1}^{3} \left(C_{\text{infra}, y} + C_{\text{maintenance}, y}\right)$$
-Where:
-- $C_{\text{setup}}$: Initial engineering deployment and architecture fee.
-- $C_{\text{infra}, y}$: Cloud/VPC GPU inference and model hosting cost for year $y$.
-- $C_{\text{maintenance}, y}$: Ongoing agent monitoring and regression prevention SLA ($15\%$ of setup).
 
 **5. 3-Year Net Return on Investment ($ROI_{3\text{Y}}$) & Payback Period ($P_{\text{months}}$):**
 $$ROI_{3\text{Y}} = \frac{\left(3 \times \Delta S_{\text{annual}}\right) - TCO_{\text{AI}}}{TCO_{\text{AI}}} \times 100\%$$
 $$P_{\text{months}} = \left(\frac{C_{\text{setup}}}{\Delta S_{\text{annual}} - (C_{\text{infra}, 1} + C_{\text{maintenance}, 1})}\right) \times 12$$
-
-#### Complete Production Simulation Model
-```typescript
-export interface EnterpriseRoiInput {
-  currency: 'INR' | 'USD';
-  teamSize: number;           // 5 to 250
-  repetitiveHoursWeekly: number; // 5 to 40
-  hourlyRate: number;         // INR 800 - 6000 or USD 30 - 250
-  errorRatePercent: number;   // 1 to 15
-  automationEfficiency: number;// 60 to 95%
-  setupCost: number;          // Setup fee
-  annualInfraCost: number;    // Compute/VPC maintenance
-}
-
-export interface EnterpriseRoiOutput {
-  annualLaborBaseline: number;
-  annualErrorLiability: number;
-  annualGrossSavings: number;
-  threeYearNetSavings: number;
-  threeYearTco: number;
-  threeYearRoiPercent: number;
-  paybackPeriodMonths: number;
-  hoursReclaimedPerYear: number;
-}
-
-export const computeEnterpriseRoi = (input: EnterpriseRoiInput): EnterpriseRoiOutput => {
-  const WEEKS_PER_YEAR = 48;
-  const totalAnnualHours = input.teamSize * input.repetitiveHoursWeekly * WEEKS_PER_YEAR;
-  const annualLaborBaseline = totalAnnualHours * input.hourlyRate;
-  
-  const annualErrorLiability = annualLaborBaseline * (input.errorRatePercent / 100) * 2.5;
-  const efficiencyFactor = input.automationEfficiency / 100;
-  
-  const laborSavings = annualLaborBaseline * efficiencyFactor;
-  const errorSavings = annualErrorLiability * 0.985;
-  const annualGrossSavings = Math.round(laborSavings + errorSavings);
-  
-  const annualRecurringCost = input.annualInfraCost + (input.setupCost * 0.15);
-  const threeYearTco = input.setupCost + (annualRecurringCost * 3);
-  
-  const threeYearGrossSavings = annualGrossSavings * 3;
-  const threeYearNetSavings = Math.max(0, threeYearGrossSavings - threeYearTco);
-  
-  const threeYearRoiPercent = threeYearTco > 0 
-    ? Math.round(((threeYearGrossSavings - threeYearTco) / threeYearTco) * 100)
-    : 0;
-    
-  const netAnnualCashflow = annualGrossSavings - annualRecurringCost;
-  const paybackPeriodMonths = netAnnualCashflow > 0 
-    ? Number(((input.setupCost / netAnnualCashflow) * 12).toFixed(1))
-    : 99.9;
-    
-  const hoursReclaimedPerYear = Math.round(totalAnnualHours * efficiencyFactor);
-
-  return {
-    annualLaborBaseline: Math.round(annualLaborBaseline),
-    annualErrorLiability: Math.round(annualErrorLiability),
-    annualGrossSavings,
-    threeYearNetSavings,
-    threeYearTco: Math.round(threeYearTco),
-    threeYearRoiPercent,
-    paybackPeriodMonths: Math.min(paybackPeriodMonths, 60),
-    hoursReclaimedPerYear
-  };
-};
-```
 
 ---
 
@@ -223,117 +153,12 @@ export const computeEnterpriseRoi = (input: EnterpriseRoiInput): EnterpriseRoiOu
 Allows enterprise ML engineers, systems architects, and infrastructure leads to compute exact **Time-To-First-Token (TTFT)**, **Inter-Token Latency (ITL)**, and **GPU High Bandwidth Memory (HBM) saturation** across discrete hardware configurations (NVIDIA H100 SXM5, A100 80GB, L40S) for models spanning 8B to 405B parameters.
 
 #### Mathematical Derivation
-
 **1. Model Weights Memory Footprint ($M_{\text{weights}}$):**
 $$M_{\text{weights}} = \frac{P \times B_{\text{precision}}}{8 \times 10^9}\,\text{GB}$$
-Where:
-- $P$: Active parameter count (e.g., $70 \times 10^9$ for Llama-3-70B).
-- $B_{\text{precision}}$: Bits per weight ($16$ for FP16/BF16, $8$ for FP8, $4$ for INT4/AWQ).
-
 **2. Key-Value (KV) Cache Memory per Concurrent Request ($M_{\text{KV}}$):**
 $$M_{\text{KV}} = 2 \times L \times H_{\text{kv}} \times D_{\text{head}} \times S_{\text{ctx}} \times \frac{B_{\text{precision}}}{8 \times 10^9}\,\text{GB}$$
-Where:
-- $L$: Number of transformer layers.
-- $H_{\text{kv}}$: Number of key-value heads (accounting for Grouped Query Attention / GQA).
-- $D_{\text{head}}$: Head dimension ($D_{\text{model}} / H_{\text{attn}}$).
-- $S_{\text{ctx}}$: Total sequence length ($S_{\text{prompt}} + S_{\text{generation}}$).
-
 **3. Memory Bandwidth Saturation & Inter-Token Latency (ITL / Decode Phase):**
-During autoregressive token generation, the memory bus must stream all active weights per token generated:
 $$ITL = \frac{M_{\text{weights\_active}}}{\text{EffectiveBandwidth}_{\text{GPU}} \times N_{\text{GPU}} \times \mu_{\text{efficiency}}}$$
-Where:
-- $\text{EffectiveBandwidth}_{\text{H100 SXM5}} = 3.35\,\text{TB/s}$.
-- $\text{EffectiveBandwidth}_{\text{A100 SXM4}} = 2.039\,\text{TB/s}$.
-- $\text{EffectiveBandwidth}_{\text{L40S}} = 0.864\,\text{TB/s}$.
-- $\mu_{\text{efficiency}}$: Kernel memory access efficiency (empirically $0.65 - 0.78$ under vLLM PagedAttention).
-
-**4. Time-to-First-Token (TTFT / Prefill Phase):**
-The prefill phase is compute-bound, scaling with total prompt tokens:
-$$TTFT = \frac{2 \times P \times S_{\text{prompt}}}{\text{PeakFLOPs}_{\text{GPU}} \times N_{\text{GPU}} \times \mu_{\text{compute\_eff}}} + \text{NetworkLatency}$$
-
-#### Production Mathematical Simulator Code
-```typescript
-export interface LlmInferenceInput {
-  parameterSizeBillion: number; // 8, 14, 32, 70, 405
-  quantizationBits: 4 | 8 | 16;
-  gpuType: 'H100_SXM5' | 'A100_80GB' | 'L40S';
-  gpuCount: 1 | 2 | 4 | 8;
-  promptLength: number;         // e.g. 2048 tokens
-  generationLength: number;     // e.g. 512 tokens
-  concurrency: number;          // concurrent streams (1 to 64)
-}
-
-export interface LlmInferenceOutput {
-  weightsMemoryGb: number;
-  kvCacheTotalGb: number;
-  totalVramRequiredGb: number;
-  vramPerGpuGb: number;
-  vramCapacityPerGpuGb: number;
-  isOom: boolean;
-  timeToFirstTokenMs: number;
-  interTokenLatencyMs: number;
-  tokensPerSecondTotal: number;
-  monthlyGpuCloudCostUsd: number;
-}
-
-const GPU_SPECS = {
-  H100_SXM5: { vramGb: 80, bandwidthTbSec: 3.35, tflopsFp16: 989, hourlyUsd: 3.85 },
-  A100_80GB: { vramGb: 80, bandwidthTbSec: 2.039, tflopsFp16: 312, hourlyUsd: 2.20 },
-  L40S:      { vramGb: 48, bandwidthTbSec: 0.864, tflopsFp16: 362, hourlyUsd: 1.45 }
-};
-
-export const computeLlmInferenceMetrics = (input: LlmInferenceInput): LlmInferenceOutput => {
-  const bytesPerWeight = input.quantizationBits / 8;
-  const weightsMemoryGb = (input.parameterSizeBillion * 1e9 * bytesPerWeight) / 1e9;
-  
-  // Approximate GQA layer and head heuristics based on model size
-  const layers = input.parameterSizeBillion >= 70 ? 80 : 32;
-  const kvHeads = input.parameterSizeBillion >= 70 ? 8 : 8;
-  const headDim = 128;
-  const totalSeq = input.promptLength + input.generationLength;
-  
-  const kvBytesPerToken = 2 * layers * kvHeads * headDim * 2; // FP16 KV cache standard
-  const kvCachePerStreamGb = (kvBytesPerToken * totalSeq) / 1e9;
-  const kvCacheTotalGb = kvCachePerStreamGb * input.concurrency;
-  
-  const totalVramRequiredGb = weightsMemoryGb * 1.15 + kvCacheTotalGb; // 15% CUDA context overhead
-  const vramPerGpuGb = totalVramRequiredGb / input.gpuCount;
-  
-  const spec = GPU_SPECS[input.gpuType];
-  const vramCapacityPerGpuGb = spec.vramGb;
-  const isOom = vramPerGpuGb > vramCapacityPerGpuGb;
-
-  // Latency Derivations
-  const totalBandwidthTbSec = spec.bandwidthTbSec * input.gpuCount * 0.72; // 72% memory efficiency
-  const weightsToStreamGb = weightsMemoryGb;
-  const itlSec = isOom ? 9.99 : (weightsToStreamGb / 1000) / totalBandwidthTbSec;
-  const interTokenLatencyMs = Math.round(itlSec * 1000);
-  
-  // Prefill calculation (Compute bound)
-  const totalTflops = spec.tflopsFp16 * input.gpuCount * 0.45; // 45% MFU
-  const prefillFlops = 2 * input.parameterSizeBillion * 1e9 * input.promptLength;
-  const prefillSec = isOom ? 9.99 : prefillFlops / (totalTflops * 1e12);
-  const timeToFirstTokenMs = Math.round((prefillSec * 1000) + 12); // +12ms base network roundtrip
-  
-  const singleStreamTps = interTokenLatencyMs > 0 ? 1000 / interTokenLatencyMs : 0;
-  const tokensPerSecondTotal = Math.round(singleStreamTps * Math.min(input.concurrency, input.gpuCount * 4));
-  
-  const monthlyGpuCloudCostUsd = Math.round(spec.hourlyUsd * input.gpuCount * 730);
-
-  return {
-    weightsMemoryGb: Number(weightsMemoryGb.toFixed(1)),
-    kvCacheTotalGb: Number(kvCacheTotalGb.toFixed(1)),
-    totalVramRequiredGb: Number(totalVramRequiredGb.toFixed(1)),
-    vramPerGpuGb: Number(vramPerGpuGb.toFixed(1)),
-    vramCapacityPerGpuGb,
-    isOom,
-    timeToFirstTokenMs,
-    interTokenLatencyMs,
-    tokensPerSecondTotal,
-    monthlyGpuCloudCostUsd
-  };
-};
-```
 
 ---
 
@@ -342,63 +167,1049 @@ export const computeLlmInferenceMetrics = (input: LlmInferenceInput): LlmInferen
 #### Operational Objective
 Designed for Chief Information Security Officers (CISOs) in BFSI, defense, and healthcare. Demonstrates cryptographic derivation of ephemeral sub-keys from an air-gapped Master Root Key (MRK) using HMAC-based Key Derivation Function (**HKDF-SHA256**, RFC 5869) and shows why memory-isolated VPC enclaves guarantee zero plaintext leakage to public clouds.
 
-#### Mathematical Foundation (RFC 5869 HKDF)
 $$\text{PRK} = \text{HMAC-Hash}(\text{Salt}, \text{IKM})$$
 $$\text{OKM} = \text{HMAC-Hash}(\text{PRK}, \text{info} \parallel \text{0x01})$$
-Where:
-- $\text{IKM}$: Input Keying Material injected inside the physical HSM boundary.
-- $\text{PRK}$: Pseudorandom Key ($256\,\text{bits}$).
-- $\text{OKM}$: Output Keying Material (ephemeral agent session key destroyed upon task termination).
 
 ---
 
-## 4. The Viral Iframe Embed Engine with Watermark Backlinks
+### 3.4 Archetype 4: Enterprise AI Automation vs. Human Payroll Cost Arbitrage Calculator (`/tools/payroll-arbitrage-calculator`)
 
-### 4.1 Standalone Route Architecture (`/embed/[tool-slug]`)
-To enable frictionless third-party syndication across external tech blogs, media publications, and partner websites, every calculator must render in a standalone embed format at `/embed/[tool-slug]`.
+#### Operational Objective
+Quantifies the exact cost differential of deploying a **deterministic multi-agent cluster** versus maintaining a team of 5 manual data entry, ops, and back-office administrative specialists over a 3-year timeline. Accounts for loaded payroll overhead (PF, gratuity, health insurance, SaaS seats), human churn attrition, fatigue-induced error remediation, and compute scaling.
 
-#### Inviolable Layout Constraints for Embed Routes:
-1. **Zero Header and Zero Footer Chrome:** Global `<Navbar />` and `<Footer />` must never render on `/embed/*` routes.
-2. **Transparent / Dark Canvas Background:** Designed to seamlessly inherit parent iframe containers (`bg-zinc-950`).
-3. **Auto-Resizing Responsive Container:** Full height (`min-h-full`) with zero parent window scroll trapping.
-4. **Permanent Watermark Link Injection:** Must render an unavoidable, canonical attribution badge in the bottom-right corner.
+#### Mathematical Formulation
 
-### 4.2 The Inviolable Permanent Watermark Backlink Specification
-Whenever a third party copies the embed code from our site or embeds the tool, the embed snippet **must include the permanent, immutable HTML attribution backlink**.
+**1. Loaded Monthly Human Operational Baseline ($C_{\text{human\_monthly}}$):**
+$$C_{\text{human\_monthly}} = N_{\text{staff}} \times \left( S_{\text{monthly}} \times \phi_{\text{overhead}} + \frac{A_{\text{rate}} \times C_{\text{rehire}}}{12} \right)$$
+Where:
+- $N_{\text{staff}}$: Number of manual operations specialists (e.g., $5$).
+- $S_{\text{monthly}}$: Base monthly gross salary ($₹45,000$ or $\$3,800$).
+- $\phi_{\text{overhead}}$: Burden coefficient for benefits, taxes, workspace, and seat licenses ($1.28$).
+- $A_{\text{rate}}$: Annual employee churn rate ($25\%$).
+- $C_{\text{rehire}}$: Replacement recruitment and onboarding training cost ($2 \times S_{\text{monthly}}$).
 
+**2. Monthly Human Error Liability & Rework Waste ($C_{\text{error\_monthly}}$):**
+$$C_{\text{error\_monthly}} = N_{\text{staff}} \times E_{\text{monthly}} \times C_{\text{remediate}}$$
+Where:
+- $E_{\text{monthly}}$: Average manual input errors per employee per month (empirically $18$).
+- $C_{\text{remediate}}$: Average cost of human audit, ticket escalation, and client remediation ($₹2,500$ or $\$120$).
+
+**3. Monthly Error Mitigation Value of Deterministic Agents ($V_{\text{mitigation}}$):**
+$$V_{\text{mitigation}} = C_{\text{error\_monthly}} \times 0.99$$
+*(Multi-agent validation graphs achieve 99% reduction in data entry error).*
+
+**4. Net Monthly Operational Arbitrage Savings ($\Delta S_{\text{monthly}}$):**
+$$\Delta S_{\text{monthly}} = \left( C_{\text{human\_monthly}} \times \eta_{\text{coverage}} + V_{\text{mitigation}} \right) - C_{\text{agent\_monthly}}$$
+Where:
+- $\eta_{\text{coverage}}$: Automation replacement efficacy ($90\% - 95\%$).
+- $C_{\text{agent\_monthly}}$: Multi-agent cluster maintenance SLA and VPC compute hosting ($₹25,000$ or $\$650$).
+
+**5. 3-Year Net Cumulative Arbitrage ($S_{\text{3Y}}$) & Breakeven Horizon in Days ($D_{\text{breakeven}}$):**
+$$S_{\text{3Y}} = (36 \times \Delta S_{\text{monthly}}) - C_{\text{setup}}$$
+$$D_{\text{breakeven}} = \frac{C_{\text{setup}}}{\Delta S_{\text{monthly}} / 30.417}$$
+
+#### Complete TypeScript Mathematical Model & Implementation
+```typescript
+export interface PayrollArbitrageInput {
+  currency: 'INR' | 'USD';
+  specialistCount: number;         // default: 5
+  monthlyGrossSalary: number;      // INR 45,000 or USD 3,800
+  overheadMultiplier: number;      // default: 1.28
+  annualChurnPercent: number;      // default: 25%
+  monthlyErrorsPerHead: number;    // default: 18
+  costPerErrorRemediation: number; // INR 2,500 or USD 120
+  automationCoveragePercent: number; // default: 92%
+  agentSetupFee: number;           // INR 350,000 or USD 12,000
+  agentMonthlyHostingCost: number; // INR 25,000 or USD 650
+}
+
+export interface PayrollArbitrageOutput {
+  monthlyHumanPayrollLoaded: number;
+  monthlyErrorLiability: number;
+  monthlyErrorMitigationValue: number;
+  monthlyAgentCost: number;
+  netMonthlySavings: number;
+  threeYearHumanCost: number;
+  threeYearAgentCost: number;
+  threeYearNetSavings: number;
+  breakevenDays: number;
+  roiPercentage3Y: number;
+}
+
+export const computePayrollArbitrage = (input: PayrollArbitrageInput): PayrollArbitrageOutput => {
+  const rehireCostPerChurn = input.monthlyGrossSalary * 2.0;
+  const monthlyChurnBurden = (input.annualChurnPercent / 100 * rehireCostPerChurn) / 12;
+  const loadedSalaryPerSpecialist = (input.monthlyGrossSalary * input.overheadMultiplier) + monthlyChurnBurden;
+  const monthlyHumanPayrollLoaded = Math.round(input.specialistCount * loadedSalaryPerSpecialist);
+
+  const monthlyErrorLiability = Math.round(
+    input.specialistCount * input.monthlyErrorsPerHead * input.costPerErrorRemediation
+  );
+  const monthlyErrorMitigationValue = Math.round(monthlyErrorLiability * 0.99);
+
+  const coverageFactor = input.automationCoveragePercent / 100;
+  const grossMonthlySavings = (monthlyHumanPayrollLoaded * coverageFactor) + monthlyErrorMitigationValue;
+  const netMonthlySavings = Math.max(0, Math.round(grossMonthlySavings - input.agentMonthlyHostingCost));
+
+  const threeYearHumanCost = Math.round((monthlyHumanPayrollLoaded + monthlyErrorLiability) * 36);
+  const threeYearAgentCost = Math.round(input.agentSetupFee + (input.agentMonthlyHostingCost * 36));
+  const threeYearNetSavings = Math.max(0, threeYearHumanCost - threeYearAgentCost);
+
+  const dailySavings = netMonthlySavings / 30.417;
+  const breakevenDays = dailySavings > 0
+    ? Math.round(input.agentSetupFee / dailySavings)
+    : 999;
+
+  const roiPercentage3Y = threeYearAgentCost > 0
+    ? Math.round(((threeYearNetSavings) / threeYearAgentCost) * 100)
+    : 0;
+
+  return {
+    monthlyHumanPayrollLoaded,
+    monthlyErrorLiability,
+    monthlyErrorMitigationValue,
+    monthlyAgentCost: input.agentMonthlyHostingCost,
+    netMonthlySavings,
+    threeYearHumanCost,
+    threeYearAgentCost,
+    threeYearNetSavings,
+    breakevenDays: Math.min(breakevenDays, 1095),
+    roiPercentage3Y,
+  };
+};
+```
+
+#### Production React Component: `PayrollArbitrageCalculator.tsx`
+```tsx
+import React, { useState, useMemo } from 'react';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/Card';
+import { Button } from '../ui/Button';
+import { SvgBarChart } from '../visualization/SvgBarChart';
+import { SvgComparisonGauge } from '../visualization/SvgComparisonGauge';
+import { formatCurrencyValue, CurrencyMode } from '../../lib/currency';
+import { computePayrollArbitrage, PayrollArbitrageInput } from './payrollModel';
+import { MessageSquare, Download, Share2 } from 'lucide-react';
+
+export const PayrollArbitrageCalculator: React.FC = () => {
+  const [currency, setCurrency] = useState<CurrencyMode>('INR');
+  const [specialists, setSpecialists] = useState<number>(5);
+  const [monthlySalary, setMonthlySalary] = useState<number>(currency === 'INR' ? 45000 : 3800);
+  const [errorRemediation, setErrorRemediation] = useState<number>(currency === 'INR' ? 2500 : 120);
+  const [coverage, setCoverage] = useState<number>(92);
+
+  // Switch default salary scales on currency change
+  const handleCurrencyToggle = (c: CurrencyMode) => {
+    setCurrency(c);
+    if (c === 'INR') {
+      setMonthlySalary(45000);
+      setErrorRemediation(2500);
+    } else {
+      setMonthlySalary(3800);
+      setErrorRemediation(120);
+    }
+  };
+
+  const input: PayrollArbitrageInput = useMemo(() => ({
+    currency,
+    specialistCount: specialists,
+    monthlyGrossSalary: monthlySalary,
+    overheadMultiplier: 1.28,
+    annualChurnPercent: 25,
+    monthlyErrorsPerHead: 18,
+    costPerErrorRemediation: errorRemediation,
+    automationCoveragePercent: coverage,
+    agentSetupFee: currency === 'INR' ? 350000 : 12000,
+    agentMonthlyHostingCost: currency === 'INR' ? 25000 : 650,
+  }), [currency, specialists, monthlySalary, errorRemediation, coverage]);
+
+  const stats = useMemo(() => computePayrollArbitrage(input), [input]);
+
+  return (
+    <Card className="max-w-5xl mx-auto">
+      <CardHeader>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-zinc-300 mb-2">
+              <span>Financial Arbitrage Engine</span>
+            </div>
+            <CardTitle>AI Automation vs. Human Payroll Cost Arbitrage</CardTitle>
+            <CardDescription>
+              Simulate 3-year cashflow impact comparing manual ops specialists with 1 deterministic agent cluster.
+            </CardDescription>
+          </div>
+          <div className="inline-flex p-1 rounded-full bg-zinc-950 border border-zinc-800">
+            <button
+              onClick={() => handleCurrencyToggle('INR')}
+              className={`px-4 py-1.5 text-xs font-semibold rounded-full transition ${currency === 'INR' ? 'bg-white text-black' : 'text-zinc-400 hover:text-white'}`}
+            >
+              INR (₹)
+            </button>
+            <button
+              onClick={() => handleCurrencyToggle('USD')}
+              className={`px-4 py-1.5 text-xs font-semibold rounded-full transition ${currency === 'USD' ? 'bg-white text-black' : 'text-zinc-400 hover:text-white'}`}
+            >
+              USD ($)
+            </button>
+          </div>
+        </div>
+      </CardHeader>
+
+      <CardContent>
+        {/* Sliders Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-3xl bg-zinc-950/60 border border-zinc-800/80">
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Operations Specialists</span>
+              <span className="font-mono text-white">{specialists} FTEs</span>
+            </div>
+            <input
+              type="range"
+              min="1"
+              max="25"
+              step="1"
+              value={specialists}
+              onChange={(e) => setSpecialists(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Monthly Base Salary per Specialist</span>
+              <span className="font-mono text-white">{formatCurrencyValue(monthlySalary, currency)}</span>
+            </div>
+            <input
+              type="range"
+              min={currency === 'INR' ? 20000 : 1500}
+              max={currency === 'INR' ? 150000 : 12000}
+              step={currency === 'INR' ? 5000 : 250}
+              value={monthlySalary}
+              onChange={(e) => setMonthlySalary(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Automation Coverage Efficiency</span>
+              <span className="font-mono text-white">{coverage}%</span>
+            </div>
+            <input
+              type="range"
+              min="60"
+              max="98"
+              step="2"
+              value={coverage}
+              onChange={(e) => setCoverage(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Avg Error Remediation Cost</span>
+              <span className="font-mono text-white">{formatCurrencyValue(errorRemediation, currency)}</span>
+            </div>
+            <input
+              type="range"
+              min={currency === 'INR' ? 500 : 25}
+              max={currency === 'INR' ? 10000 : 500}
+              step={currency === 'INR' ? 500 : 25}
+              value={errorRemediation}
+              onChange={(e) => setErrorRemediation(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+        </div>
+
+        {/* Primary Metric Tiles */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+          <div className="p-5 rounded-3xl bg-zinc-950 border border-zinc-800">
+            <span className="text-xs text-zinc-400 uppercase tracking-wider">Net Monthly Savings</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-white mt-1">
+              {formatCurrencyValue(stats.netMonthlySavings, currency)}
+            </div>
+            <p className="text-[11px] text-zinc-500 mt-1">Direct recurring payroll delta</p>
+          </div>
+
+          <div className="p-5 rounded-3xl bg-zinc-950 border border-zinc-800">
+            <span className="text-xs text-zinc-400 uppercase tracking-wider">Error Mitigation Value</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 mt-1">
+              {formatCurrencyValue(stats.monthlyErrorMitigationValue, currency)}<span className="text-xs text-zinc-500">/mo</span>
+            </div>
+            <p className="text-[11px] text-zinc-500 mt-1">99% data verification accuracy</p>
+          </div>
+
+          <div className="p-5 rounded-3xl bg-zinc-950 border border-zinc-800">
+            <span className="text-xs text-zinc-400 uppercase tracking-wider">Breakeven Horizon</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-white mt-1">
+              {stats.breakevenDays} <span className="text-base font-normal text-zinc-400">Days</span>
+            </div>
+            <p className="text-[11px] text-zinc-500 mt-1">100% CapEx amortized</p>
+          </div>
+        </div>
+
+        {/* Visual Comparison Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+          <div className="p-6 rounded-3xl bg-zinc-950/80 border border-zinc-800">
+            <h4 className="text-sm font-semibold text-white mb-4">3-Year Cumulative Cost Comparison</h4>
+            <SvgBarChart
+              categories={['3-Year TCO']}
+              series={[
+                { name: 'Manual Ops Team', value: stats.threeYearHumanCost, color: '#52525B' },
+                { name: 'Elesium Agent Cluster', value: stats.threeYearAgentCost, color: '#FAFAFA' },
+              ]}
+              currency={currency}
+              height={200}
+            />
+          </div>
+
+          <div className="p-6 rounded-3xl bg-zinc-950/80 border border-zinc-800 flex flex-col items-center justify-center">
+            <h4 className="text-sm font-semibold text-white mb-2">3-Year ROI Capital Multiple</h4>
+            <SvgComparisonGauge
+              value={stats.roiPercentage3Y}
+              max={1200}
+              label="36-Month Net ROI"
+              unit="%"
+            />
+            <p className="text-xs text-zinc-400 mt-2 text-center">
+              Net 36-Month Capital Arbitrage: <span className="text-white font-bold">{formatCurrencyValue(stats.threeYearNetSavings, currency)}</span>
+            </p>
+          </div>
+        </div>
+
+        {/* WhatsApp Conversion Gate */}
+        <div className="mt-8 p-6 rounded-3xl bg-zinc-950 border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h4 className="text-base font-bold text-white">Validate Your Enterprise Arbitrage on WhatsApp</h4>
+            <p className="text-xs text-zinc-400 mt-1">
+              Review custom VPC architecture, ERP integrations, and SLA guarantees directly with our engineering desk.
+            </p>
+          </div>
+          <Button
+            variant="whatsapp"
+            withWhatsAppIcon
+            onClick={() => {
+              const msg = `Hello Elesium Engineering Team, I simulated a Payroll Arbitrage of ${formatCurrencyValue(stats.netMonthlySavings, currency)}/mo savings across ${specialists} specialists. Requesting an architectural validation audit.`;
+              window.open(`https://wa.me/918317329312?text=${encodeURIComponent(msg)}`, '_blank');
+            }}
+          >
+            Audit Arbitrage with CTO
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+```
+
+---
+
+### 3.5 Archetype 5: Zapier / Make Automation Failure Risk & Downtime Cost Calculator (`/tools/webhook-failure-risk-calculator`)
+
+#### Operational Objective
+Simulates the critical financial and reputational liabilities incurred when fast-scaling enterprises run core revenue operations on fragile 3rd-party webhook aggregators (Zapier, Make, n8n cloud) versus deterministic self-hosted event brokers. Calculates unrecovered sales lead loss caused by HTTP 504 timeouts, payload drops, rate-limiting, and developer triage maintenance hours.
+
+#### Mathematical Formulation
+
+**1. Monthly Failed Webhook Execution Volume ($V_{\text{failed}}$):**
+$$V_{\text{failed}} = V_{\text{monthly}} \times \left( \frac{F_{\text{rate}}}{100} \right)$$
+Where:
+- $V_{\text{monthly}}$: Monthly total automated pipeline tasks/events (e.g., $100,000$).
+- $F_{\text{rate}}$: Empirical third-party failure and timeout frequency ($1.5\% - 4.5\%$ during traffic spikes).
+
+**2. Monthly Unrecovered Revenue at Risk ($L_{\text{revenue\_monthly}}$):**
+$$L_{\text{revenue\_monthly}} = V_{\text{failed}} \times R_{\text{conv}} \times \mu_{\text{unrecovered}} \times T_{\text{value}}$$
+Where:
+- $R_{\text{conv}}$: Direct lead-to-opportunity conversion baseline (e.g., $5\%$).
+- $\mu_{\text{unrecovered}}$: Proportion of dropped webhooks that permanently abandon without retry ($35\%$).
+- $T_{\text{value}}$: Average gross deal or transaction value ($₹25,000$ or $\$750$).
+
+**3. Engineering Incident Triage Cost ($L_{\text{triage\_monthly}}$):**
+$$L_{\text{triage\_monthly}} = H_{\text{triage}} \times R_{\text{eng}}$$
+Where:
+- $H_{\text{triage}}$: Engineering hours lost per month diagnosing silent failures, hunting corrupted logs, and manual reprocessing ($28\,\text{hrs}$).
+- $R_{\text{eng}}$: Loaded developer hourly cost ($₹2,500/\text{hr}$ or $\$85/\text{hr}$).
+
+**4. Total Monthly Downtime & Failure Liability ($L_{\text{total\_monthly}}$) and Annual Loss ($L_{\text{annual}}$):**
+$$L_{\text{total\_monthly}} = L_{\text{revenue\_monthly}} + L_{\text{triage\_monthly}}$$
+$$L_{\text{annual}} = 12 \times L_{\text{total\_monthly}}$$
+
+**5. Resilient Self-Hosted Architecture Net Payoff ($\Delta B_{\text{annual}}$):**
+$$\Delta B_{\text{annual}} = \left( L_{\text{annual}} \times 0.98 \right) - \left( C_{\text{resilient\_setup}} + 12 \times C_{\text{resilient\_monthly}} \right)$$
+
+#### Complete TypeScript Model & Implementation
+```typescript
+export interface WebhookFailureInput {
+  currency: 'INR' | 'USD';
+  monthlyTaskVolume: number;        // default: 100,000
+  failureRatePercent: number;       // default: 2.2%
+  avgDealValue: number;             // default: INR 25,000 or USD 750
+  leadConversionRatePercent: number;// default: 5.0%
+  unrecoveredDropPercent: number;   // default: 35%
+  monthlyEngTriageHours: number;    // default: 28 hrs
+  engineerHourlyRate: number;       // default: INR 2,500 or USD 85
+  resilientSetupCost: number;       // default: INR 400,000 or USD 14,000
+  resilientMonthlyCost: number;     // default: INR 30,000 or USD 800
+}
+
+export interface WebhookFailureOutput {
+  monthlyFailedTasks: number;
+  monthlyLostDeals: number;
+  monthlyRevenueAtRisk: number;
+  monthlyEngTriageCost: number;
+  totalMonthlyLiability: number;
+  annualSilentLoss: number;
+  resilientAnnualCost: number;
+  netAnnualResilienceGain: number;
+  paybackPeriodMonths: number;
+}
+
+export const computeWebhookFailureRisk = (input: WebhookFailureInput): WebhookFailureOutput => {
+  const monthlyFailedTasks = Math.round(input.monthlyTaskVolume * (input.failureRatePercent / 100));
+  
+  const rawLostLeads = monthlyFailedTasks * (input.leadConversionRatePercent / 100);
+  const monthlyLostDeals = Number((rawLostLeads * (input.unrecoveredDropPercent / 100)).toFixed(1));
+  
+  const monthlyRevenueAtRisk = Math.round(monthlyLostDeals * input.avgDealValue);
+  const monthlyEngTriageCost = Math.round(input.monthlyEngTriageHours * input.engineerHourlyRate);
+  
+  const totalMonthlyLiability = monthlyRevenueAtRisk + monthlyEngTriageCost;
+  const annualSilentLoss = totalMonthlyLiability * 12;
+  
+  const resilientAnnualCost = input.resilientSetupCost + (input.resilientMonthlyCost * 12);
+  const mitigatedLossAnnual = annualSilentLoss * 0.98; // 98% failure eradication with dead-letter queue
+  const netAnnualResilienceGain = Math.max(0, Math.round(mitigatedLossAnnual - resilientAnnualCost));
+  
+  const netMonthlyGain = (totalMonthlyLiability * 0.98) - input.resilientMonthlyCost;
+  const paybackPeriodMonths = netMonthlyGain > 0
+    ? Number(((input.resilientSetupCost / netMonthlyGain)).toFixed(1))
+    : 99.9;
+
+  return {
+    monthlyFailedTasks,
+    monthlyLostDeals,
+    monthlyRevenueAtRisk,
+    monthlyEngTriageCost,
+    totalMonthlyLiability,
+    annualSilentLoss,
+    resilientAnnualCost,
+    netAnnualResilienceGain,
+    paybackPeriodMonths: Math.min(paybackPeriodMonths, 60),
+  };
+};
+```
+
+#### Production React Component: `WebhookFailureRiskCalculator.tsx`
+```tsx
+import React, { useState, useMemo } from 'react';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/Card';
+import { Button } from '../ui/Button';
+import { SvgComparisonGauge } from '../visualization/SvgComparisonGauge';
+import { formatCurrencyValue, CurrencyMode } from '../../lib/currency';
+import { computeWebhookFailureRisk, WebhookFailureInput } from './webhookModel';
+import { AlertTriangle, ShieldCheck, ArrowRight } from 'lucide-react';
+
+export const WebhookFailureRiskCalculator: React.FC = () => {
+  const [currency, setCurrency] = useState<CurrencyMode>('INR');
+  const [tasks, setTasks] = useState<number>(100000);
+  const [failureRate, setFailureRate] = useState<number>(2.2);
+  const [dealValue, setDealValue] = useState<number>(currency === 'INR' ? 25000 : 750);
+  const [triageHours, setTriageHours] = useState<number>(28);
+
+  const handleCurrencyChange = (c: CurrencyMode) => {
+    setCurrency(c);
+    setDealValue(c === 'INR' ? 25000 : 750);
+  };
+
+  const input: WebhookFailureInput = useMemo(() => ({
+    currency,
+    monthlyTaskVolume: tasks,
+    failureRatePercent: failureRate,
+    avgDealValue: dealValue,
+    leadConversionRatePercent: 5.0,
+    unrecoveredDropPercent: 35,
+    monthlyEngTriageHours: triageHours,
+    engineerHourlyRate: currency === 'INR' ? 2500 : 85,
+    resilientSetupCost: currency === 'INR' ? 400000 : 14000,
+    resilientMonthlyCost: currency === 'INR' ? 30000 : 800,
+  }), [currency, tasks, failureRate, dealValue, triageHours]);
+
+  const stats = useMemo(() => computeWebhookFailureRisk(input), [input]);
+
+  return (
+    <Card className="max-w-5xl mx-auto">
+      <CardHeader>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-xs text-red-400 mb-2">
+              <AlertTriangle className="w-3.5 h-3.5" />
+              <span>Fragility & Downtime Risk Modeler</span>
+            </div>
+            <CardTitle>Zapier / Make Automation Failure Risk Calculator</CardTitle>
+            <CardDescription>
+              Quantify silent pipeline attrition, HTTP 504 timeouts, and engineering triage overhead.
+            </CardDescription>
+          </div>
+          <div className="inline-flex p-1 rounded-full bg-zinc-950 border border-zinc-800">
+            <button
+              onClick={() => handleCurrencyChange('INR')}
+              className={`px-4 py-1.5 text-xs font-semibold rounded-full transition ${currency === 'INR' ? 'bg-white text-black' : 'text-zinc-400 hover:text-white'}`}
+            >
+              INR (₹)
+            </button>
+            <button
+              onClick={() => handleCurrencyChange('USD')}
+              className={`px-4 py-1.5 text-xs font-semibold rounded-full transition ${currency === 'USD' ? 'bg-white text-black' : 'text-zinc-400 hover:text-white'}`}
+            >
+              USD ($)
+            </button>
+          </div>
+        </div>
+      </CardHeader>
+
+      <CardContent>
+        {/* Sliders Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-3xl bg-zinc-950/60 border border-zinc-800/80">
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Monthly Webhook / Task Volume</span>
+              <span className="font-mono text-white">{tasks.toLocaleString()} tasks</span>
+            </div>
+            <input
+              type="range"
+              min="10000"
+              max="1000000"
+              step="10000"
+              value={tasks}
+              onChange={(e) => setTasks(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>3rd-Party Failure & Timeout Rate</span>
+              <span className="font-mono text-red-400">{failureRate}%</span>
+            </div>
+            <input
+              type="range"
+              min="0.5"
+              max="8.0"
+              step="0.1"
+              value={failureRate}
+              onChange={(e) => setFailureRate(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Average Deal / Customer Value</span>
+              <span className="font-mono text-white">{formatCurrencyValue(dealValue, currency)}</span>
+            </div>
+            <input
+              type="range"
+              min={currency === 'INR' ? 5000 : 200}
+              max={currency === 'INR' ? 250000 : 8000}
+              step={currency === 'INR' ? 5000 : 100}
+              value={dealValue}
+              onChange={(e) => setDealValue(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-medium text-zinc-300 mb-2">
+              <span>Monthly Dev Triage / Reprocessing Hours</span>
+              <span className="font-mono text-white">{triageHours} hrs</span>
+            </div>
+            <input
+              type="range"
+              min="5"
+              max="120"
+              step="5"
+              value={triageHours}
+              onChange={(e) => setTriageHours(Number(e.target.value))}
+              className="w-full accent-white h-2 bg-zinc-800 rounded-lg cursor-pointer"
+            />
+          </div>
+        </div>
+
+        {/* Results Matrix */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+          <div className="p-5 rounded-3xl bg-zinc-950 border border-zinc-800">
+            <span className="text-xs text-zinc-400 uppercase tracking-wider">Monthly Dropped Tasks</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-red-400 mt-1">
+              {stats.monthlyFailedTasks.toLocaleString()}
+            </div>
+            <p className="text-[11px] text-zinc-500 mt-1">504 timeouts & rate limits</p>
+          </div>
+
+          <div className="p-5 rounded-3xl bg-zinc-950 border border-zinc-800">
+            <span className="text-xs text-zinc-400 uppercase tracking-wider">Monthly Revenue at Risk</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-white mt-1">
+              {formatCurrencyValue(stats.monthlyRevenueAtRisk, currency)}
+            </div>
+            <p className="text-[11px] text-zinc-500 mt-1">~{stats.monthlyLostDeals} unrecovered leads/mo</p>
+          </div>
+
+          <div className="p-5 rounded-3xl bg-zinc-950 border border-zinc-800">
+            <span className="text-xs text-zinc-400 uppercase tracking-wider">Annual Pipeline Decay</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-white mt-1">
+              {formatCurrencyValue(stats.annualSilentLoss, currency)}
+            </div>
+            <p className="text-[11px] text-zinc-500 mt-1">Cumulative liability + dev triage</p>
+          </div>
+        </div>
+
+        {/* Comparison Callout */}
+        <div className="mt-6 p-6 rounded-3xl bg-zinc-950/80 border border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-start gap-4">
+            <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex-shrink-0">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="text-base font-bold text-white">The Self-Hosted Sovereign Event Broker Advantage</h4>
+              <p className="text-xs text-zinc-400 mt-1 max-w-xl leading-relaxed">
+                Elesium deploys deterministic Redis/Kafka dead-letter queues with exponential backoff and zero payload loss. 
+                Estimated net 1-year resilience benefit: <strong className="text-white">{formatCurrencyValue(stats.netAnnualResilienceGain, currency)}</strong>.
+              </p>
+            </div>
+          </div>
+
+          <Button
+            variant="whatsapp"
+            withWhatsAppIcon
+            className="flex-shrink-0"
+            onClick={() => {
+              const msg = `Hello Elesium Engineering Team, I audited our automation downtime risk at ${formatCurrencyValue(stats.annualSilentLoss, currency)} annual pipeline decay on ${tasks} tasks. Requesting an architecture audit to migrate off Zapier/Make.`;
+              window.open(`https://wa.me/918317329312?text=${encodeURIComponent(msg)}`, '_blank');
+            }}
+          >
+            Migrate to Sovereign Orchestration
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+```
+
+---
+
+## 4. Complete Zero-Dependency SVG Vector Visualization Engine
+
+### 4.1 Architecture & Core Principles
+Enterprise buyers and technical readers require immediate visual validation of numbers. However, importing heavy charting libraries like **Recharts**, **Chart.js**, or **D3.js** carries catastrophic penalties:
+1. **Bundle Tax:** 150KB to 400KB of gzipped JavaScript slowing First Contentful Paint (FCP).
+2. **Hydration Discrepancies:** Canvas-based charts frequently flash blank or trigger React hydration mismatches.
+3. **Responsive Reflow:** Canvas elements do not scale natively like scalable vector graphics.
+
+The Elesium Design System mandates a **Zero-Dependency Pure SVG Visualization Engine**:
+- Rendered purely through declarative React SVG elements (`<svg>`, `<rect>`, `<path>`, `<text>`).
+- Scalable vector coordinates computed in sub-millisecond client loops.
+- Fluid responsive layout driven by the native SVG `viewBox` attribute.
+- Accessible, dark-mode native, and zero runtime dependencies.
+
+---
+
+### 4.2 `components/visualization/SvgBarChart.tsx`
+Client-side SVG comparison bar chart featuring responsive viewBox scaling, rounded top corners, grid lines, and formatted currency labels.
+
+```tsx
+import React from 'react';
+import { CurrencyMode, formatCurrencyValue } from '../../lib/currency';
+
+export interface SvgBarSeries {
+  name: string;
+  value: number;
+  color?: string;
+}
+
+export interface SvgBarChartProps {
+  categories: string[];
+  series: SvgBarSeries[];
+  currency?: CurrencyMode;
+  height?: number;
+  className?: string;
+}
+
+export const SvgBarChart: React.FC<SvgBarChartProps> = ({
+  categories,
+  series,
+  currency = 'INR',
+  height = 220,
+  className = '',
+}) => {
+  const width = 500;
+  const padding = { top: 20, right: 30, bottom: 40, left: 60 };
+
+  const chartWidth = width - padding.left - padding.right;
+  const chartHeight = height - padding.top - padding.bottom;
+
+  const maxValue = Math.max(...series.map((s) => s.value), 1);
+  const barWidth = Math.min(60, chartWidth / (series.length * 1.5));
+
+  return (
+    <div className={`w-full overflow-hidden ${className}`}>
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="w-full h-auto select-none"
+        style={{ maxHeight: height }}
+      >
+        {/* Background Grid Lines */}
+        {[0, 0.25, 0.5, 0.75, 1].map((pct, idx) => {
+          const y = padding.top + chartHeight * (1 - pct);
+          const gridVal = maxValue * pct;
+          return (
+            <g key={idx}>
+              <line
+                x1={padding.left}
+                y1={y}
+                x2={width - padding.right}
+                y2={y}
+                stroke="#27272A"
+                strokeDasharray="4 4"
+                strokeWidth="1"
+              />
+              <text
+                x={padding.left - 8}
+                y={y + 3}
+                fill="#71717A"
+                fontSize="9"
+                fontFamily="JetBrains Mono, monospace"
+                textAnchor="end"
+              >
+                {formatCurrencyValue(gridVal, currency)}
+              </text>
+            </g>
+          );
+        })}
+
+        {/* Baseline Axis */}
+        <line
+          x1={padding.left}
+          y1={padding.top + chartHeight}
+          x2={width - padding.right}
+          y2={padding.top + chartHeight}
+          stroke="#3F3F46"
+          strokeWidth="1.5"
+        />
+
+        {/* Series Bars */}
+        {series.map((item, idx) => {
+          const barHeight = (item.value / maxValue) * chartHeight;
+          const x =
+            padding.left +
+            (chartWidth / (series.length + 1)) * (idx + 1) -
+            barWidth / 2;
+          const y = padding.top + chartHeight - barHeight;
+          const barColor = item.color || (idx === 0 ? '#52525B' : '#FAFAFA');
+
+          return (
+            <g key={idx} className="group cursor-pointer">
+              {/* Bar Rect with 6px rounded top */}
+              <rect
+                x={x}
+                y={y}
+                width={barWidth}
+                height={Math.max(barHeight, 2)}
+                rx="6"
+                fill={barColor}
+                className="transition-all duration-300 hover:opacity-90"
+              />
+              {/* Value Label Above Bar */}
+              <text
+                x={x + barWidth / 2}
+                y={Math.max(y - 6, padding.top + 10)}
+                fill="#FAFAFA"
+                fontSize="10"
+                fontFamily="JetBrains Mono, monospace"
+                fontWeight="600"
+                textAnchor="middle"
+              >
+                {formatCurrencyValue(item.value, currency)}
+              </text>
+              {/* Category / Name Label Below Baseline */}
+              <text
+                x={x + barWidth / 2}
+                y={padding.top + chartHeight + 18}
+                fill="#A1A1AA"
+                fontSize="10"
+                fontFamily="Inter, sans-serif"
+                textAnchor="middle"
+              >
+                {item.name}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+};
+```
+
+---
+
+### 4.3 `components/visualization/SvgComparisonGauge.tsx`
+Client-side semi-circular radial gauge rendering a dynamic SVG needle, glowing gradient stroke, and centered metrics.
+
+```tsx
+import React from 'react';
+
+export interface SvgComparisonGaugeProps {
+  value: number;
+  max?: number;
+  min?: number;
+  label: string;
+  unit?: string;
+  size?: number;
+  className?: string;
+}
+
+export const SvgComparisonGauge: React.FC<SvgComparisonGaugeProps> = ({
+  value,
+  max = 1000,
+  min = 0,
+  label,
+  unit = '%',
+  size = 200,
+  className = '',
+}) => {
+  const radius = 70;
+  const strokeWidth = 14;
+  const center = size / 2;
+
+  // Normalized value between 0 and 1
+  const clampedVal = Math.min(Math.max(value, min), max);
+  const normalized = (clampedVal - min) / (max - min);
+
+  // Semicircle arc circumference: PI * radius
+  const arcLength = Math.PI * radius;
+  const strokeDashoffset = arcLength * (1 - normalized);
+
+  // Compute needle angle: -90deg to +90deg
+  const needleAngle = -90 + normalized * 180;
+  const needleLength = radius - 10;
+  const needleRad = (needleAngle * Math.PI) / 180;
+  const needleX = center + needleLength * Math.cos(needleRad);
+  const needleY = center + needleLength * Math.sin(needleRad);
+
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <svg
+        width={size}
+        height={size * 0.65}
+        viewBox={`0 0 ${size} ${size * 0.65}`}
+        className="overflow-visible"
+      >
+        <defs>
+          <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#71717A" />
+            <stop offset="60%" stopColor="#FAFAFA" />
+            <stop offset="100%" stopColor="#10B981" />
+          </linearGradient>
+        </defs>
+
+        {/* Background Track Arc */}
+        <path
+          d={`M ${center - radius} ${center} A ${radius} ${radius} 0 0 1 ${center + radius} ${center}`}
+          fill="none"
+          stroke="#27272A"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+        />
+
+        {/* Dynamic Progress Arc */}
+        <path
+          d={`M ${center - radius} ${center} A ${radius} ${radius} 0 0 1 ${center + radius} ${center}`}
+          fill="none"
+          stroke="url(#gaugeGradient)"
+          strokeWidth={strokeWidth}
+          strokeDasharray={arcLength}
+          strokeDashoffset={strokeDashoffset}
+          strokeLinecap="round"
+          className="transition-all duration-500 ease-out"
+        />
+
+        {/* Center Needle Pivot */}
+        <circle cx={center} cy={center} r={5} fill="#FAFAFA" />
+        <line
+          x1={center}
+          y1={center}
+          x2={needleX}
+          y2={needleY}
+          stroke="#FAFAFA"
+          strokeWidth={2.5}
+          strokeLinecap="round"
+          className="transition-all duration-500 ease-out"
+        />
+
+        {/* Value Display */}
+        <text
+          x={center}
+          y={center + 24}
+          fill="#FAFAFA"
+          fontSize="20"
+          fontFamily="JetBrains Mono, monospace"
+          fontWeight="bold"
+          textAnchor="middle"
+        >
+          {value.toLocaleString()}
+          <tspan fontSize="12" fill="#A1A1AA" dx="2">
+            {unit}
+          </tspan>
+        </text>
+
+        {/* Label Display */}
+        <text
+          x={center}
+          y={center + 38}
+          fill="#71717A"
+          fontSize="10"
+          fontFamily="Inter, sans-serif"
+          textAnchor="middle"
+        >
+          {label}
+        </text>
+      </svg>
+    </div>
+  );
+};
+```
+
+---
+
+### 4.4 `components/visualization/SvgSparkline.tsx`
+Micro trendline vector component displaying 36-month projections with zero layout shifts.
+
+```tsx
+import React from 'react';
+
+export const SvgSparkline: React.FC<{ data: number[]; color?: string; height?: number }> = ({
+  data,
+  color = '#10B981',
+  height = 40,
+}) => {
+  if (data.length < 2) return null;
+  const width = 120;
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const range = max - min || 1;
+
+  const points = data
+    .map((val, idx) => {
+      const x = (idx / (data.length - 1)) * width;
+      const y = height - ((val - min) / range) * (height - 8) - 4;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(' ');
+
+  return (
+    <svg viewBox={`0 0 ${width} ${height}`} className="w-28 h-8 overflow-visible">
+      <polyline
+        fill="none"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        points={points}
+      />
+    </svg>
+  );
+};
+```
+
+---
+
+## 5. The Viral Iframe Watermark Engine & Cross-Origin Auto-Resize Protocol
+
+### 5.1 The Cross-Origin `postMessage` Auto-Resizing Protocol
+When a third party embeds an iframe on their website, if the iframe height is hardcoded, it causes either double scrollbars or truncated content on mobile screens.
+
+The Elesium Embed Engine implements a **two-way `postMessage` auto-resizing protocol**:
+1. **Child Embed Transmitter (`ResizeObserver`):** Observes document height within `/embed/[slug]` and broadcasts `{ type: 'elesium:resize', height }` to the parent window.
+2. **Host Embed Snippet:** Automatically adjusts the iframe height dynamically, eliminating vertical clipping.
+
+#### Host-Side Auto-Resize Embed Script (Included in Snippet)
 ```html
-<!-- MANDATORY BREADCRUMB WATERMARK SNIPPET -->
 <iframe 
-  src="https://elesium.online/embed/enterprise-ai-roi-calculator" 
+  id="elesium-calc-frame"
+  src="https://elesium.online/embed/payroll-arbitrage-calculator" 
   width="100%" 
-  height="650" 
+  height="680" 
   frameborder="0" 
-  style="border-radius: 1.5rem; border: 1px solid #27272a;"
+  style="border-radius: 1.5rem; border: 1px solid #27272a; max-width: 100%; transition: height 0.2s;"
   loading="lazy"
-  title="Enterprise AI ROI & TCO Simulator"
+  title="Enterprise AI Payroll Arbitrage Calculator"
 ></iframe>
+<script>
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'elesium:resize' && e.data.height) {
+      var f = document.getElementById('elesium-calc-frame');
+      if (f) f.style.height = e.data.height + 'px';
+    }
+  });
+</script>
 <div style="font-size: 12px; color: #71717a; text-align: right; padding-top: 6px; font-family: Inter, sans-serif;">
   Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Elesium Enterprise AI Solutions</a>
 </div>
 ```
 
-### 4.3 Why This Backlink Architecture Is Algorithmically Unpenalizable
-1. **Contextual Relevance:** The anchor text links directly to the enterprise service page (`/solutions`) from an interactive asset of identical topical relevance.
-2. **User-Transparent Attribution:** The link is explicitly labeled *"Calculated via Elesium Enterprise AI Solutions"*, complying with Google Search Central guidelines regarding transparency for syndicated widgets.
-3. **Canonical and Referrer Integrity:** The embed page specifies:
-   ```html
-   <link rel="canonical" href="https://elesium.online/tools/enterprise-ai-roi-calculator" />
-   ```
-   This consolidates all indexing signals, PageRank equity, and citation authority into the primary root tool URL.
+#### Child-Side Embed Transmitter Hook (`useEmbedAutoResize.ts`)
+```typescript
+import { useEffect } from 'react';
 
-### 4.4 Production Embed Modal Component: `EmbedCodeModal.tsx`
+export const useEmbedAutoResize = () => {
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const postHeight = () => {
+      const height = document.documentElement.scrollHeight || document.body.scrollHeight;
+      window.parent.postMessage({ type: 'elesium:resize', height }, '*');
+    };
+
+    const observer = new ResizeObserver(postHeight);
+    observer.observe(document.body);
+    postHeight();
+
+    return () => observer.disconnect();
+  }, []);
+};
+```
+
+---
+
+### 5.2 The Exact Permanent Dofollow Watermark Backlink Specification
+Whenever any calculator is embedded, the HTML attribution line is mandatory:
+
+```html
+<div style="font-size: 12px; color: #71717a; text-align: right; padding-top: 6px; font-family: Inter, sans-serif;">
+  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Elesium Enterprise AI Solutions</a>
+</div>
+```
+
+#### Algorithmic Authority Mechanics:
+- **`target="_blank"` with `rel="noopener"`:** Complies with web security standards while **strictly omitting `nofollow` or `ugc`**. This allows search engine crawlers to pass full PageRank link equity directly to `/solutions`.
+- **Contextual Anchor Text:** "Elesium Enterprise AI Solutions" reinforces semantic topical authority for enterprise AI services.
+- **Canonical Tag Defense:** The embed route (`/embed/[slug]`) always serves:
+  ```html
+  <link rel="canonical" href="https://elesium.online/tools/[slug]" />
+  ```
+  Consolidating external indexation signals into the root tool URL.
+
+---
+
+### 5.3 Production Embed Modal Component: `EmbedCodeModal.tsx`
 
 ```tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code2, Copy, Check, X, ExternalLink } from 'lucide-react';
 
-interface EmbedCodeModalProps {
+export interface EmbedCodeModalProps {
   isOpen: boolean;
   onClose: () => void;
   toolSlug: string;
@@ -409,11 +1220,11 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
   isOpen,
   onClose,
   toolSlug,
-  toolTitle
+  toolTitle,
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/${toolSlug}" width="100%" height="680" frameborder="0" style="border-radius: 1.5rem; border: 1px solid #27272a; max-width: 100%;" loading="lazy" title="${toolTitle}"></iframe>\n<div style="font-size: 12px; color: #71717a; text-align: right; padding-top: 6px; font-family: Inter, sans-serif;">Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Elesium Enterprise AI Solutions</a></div>`;
+  const embedSnippet = `<iframe id="elesium-embed-${toolSlug}" src="https://elesium.online/embed/${toolSlug}" width="100%" height="700" frameborder="0" style="border-radius: 1.5rem; border: 1px solid #27272a; max-width: 100%; transition: height 0.2s ease;" loading="lazy" title="${toolTitle}"></iframe>\n<script>window.addEventListener('message',function(e){if(e.data&&e.data.type==='elesium:resize'&&e.data.height){var el=document.getElementById('elesium-embed-${toolSlug}');if(el)el.style.height=e.data.height+'px';}});</script>\n<div style="font-size: 12px; color: #71717a; text-align: right; padding-top: 6px; font-family: Inter, sans-serif;">Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Elesium Enterprise AI Solutions</a></div>`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(embedSnippet);
@@ -430,7 +1241,7 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/80 backdrop-blur-md"
+            className="absolute inset-0 bg-black/85 backdrop-blur-md"
           />
 
           <motion.div
@@ -438,7 +1249,7 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 16 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl z-10 text-zinc-50"
+            className="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-modal z-10 text-zinc-50"
           >
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
@@ -446,8 +1257,8 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
                   <Code2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white">Embed Simulator on Your Site</h3>
-                  <p className="text-xs text-zinc-400">Embed this interactive calculator with live updates.</p>
+                  <h3 className="text-lg font-bold text-white">Embed Simulator on Your Website</h3>
+                  <p className="text-xs text-zinc-400">Includes auto-resizing script and live reactive updates.</p>
                 </div>
               </div>
               <button
@@ -462,7 +1273,7 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
               <textarea
                 readOnly
                 value={embedSnippet}
-                rows={6}
+                rows={7}
                 className="w-full p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800 text-xs font-mono text-zinc-300 focus:outline-none select-all resize-none leading-relaxed"
               />
             </div>
@@ -474,7 +1285,7 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition"
               >
-                <span>Preview Embed Canvas</span>
+                <span>Preview Standalone Embed</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
 
@@ -485,7 +1296,7 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
                 {copied ? (
                   <>
                     <Check className="w-4 h-4 text-emerald-600" />
-                    <span>Copied Embed HTML</span>
+                    <span>Copied Auto-Resize Code</span>
                   </>
                 ) : (
                   <>
@@ -505,9 +1316,9 @@ export const EmbedCodeModal: React.FC<EmbedCodeModalProps> = ({
 
 ---
 
-## 5. The Executive Board Memo Generator & High-Ticket Lead Gate
+## 6. The Executive Board Memo Generator & High-Ticket Lead Gate
 
-### 5.1 Converting Transient Web State into C-Suite Capital Allocation Assets
+### 6.1 Converting Transient Web State into C-Suite Capital Allocation Assets
 Enterprise executives (CFO, VP Finance, Managing Directors) do not approve $150,000 engineering contracts based on an interactive website slider. They require **formal, downloadable, printable documentation** that can be appended to an internal Board Memo or Capital Expenditure (CapEx) committee agenda.
 
 The Executive Board Memo Generator converts the live, calibrated calculator state into a formal **Print-Ready Enterprise Audit Summary**.
@@ -533,8 +1344,8 @@ The Executive Board Memo Generator converts the live, calibrated calculator stat
 +----------------------------------------------------------------------------------------------------+
 ```
 
-### 5.2 Print Media Stylesheet Specifications (`@media print`)
-When `window.print()` is executed, the browser must cleanly discard all extraneous web elements (navigation, modals, background colors) and format the data as an authoritative two-page executive memorandum.
+### 6.2 Print Media Stylesheet Specifications (`@media print`)
+When `window.print()` is executed, the browser cleanly discards all extraneous web elements (navigation, modals, background colors) and formats the data as an authoritative two-page executive memorandum.
 
 ```css
 @media print {
@@ -571,7 +1382,7 @@ When `window.print()` is executed, the browser must cleanly discard all extraneo
 }
 ```
 
-### 5.3 The WhatsApp Architecture Audit Gating Mechanism
+### 6.3 The WhatsApp Architecture Audit Gating Mechanism
 Before providing the full 12-page comprehensive architecture blueprint, the generator presents an executive audit gate:
 
 ```tsx
@@ -596,7 +1407,7 @@ Before providing the full 12-page comprehensive architecture blueprint, the gene
 
 ---
 
-## 6. Deployment, Verification & Performance Budget Checklist
+## 7. Deployment, Verification & Performance Budget Checklist
 
 To preserve Google Core Web Vitals (INP < 50ms, LCP < 1.2s, CLS = 0) and maximize search engine indexation, all interactive tool assets must pass the following deployment gates:
 
@@ -611,10 +1422,12 @@ To preserve Google Core Web Vitals (INP < 50ms, LCP < 1.2s, CLS = 0) and maximiz
 | 4 | Canonical Tag Integrity            | /embed/[slug] declares canonical URL pointing to /tools/[slug]| [  ]   |
 | 5 | Structured Schema Injection        | Tool page injects Schema.org WebApplication JSON-LD.          | [  ]   |
 | 6 | Currency Parity                    | Real-time toggle between INR (₹ Lakh/Cr) and USD ($k/$M).      | [  ]   |
-| 7 | Board Memo Print Support           | @media print cleanly renders monochrome executive document.   | [  ]   |
-| 8 | WhatsApp Deep Link Pre-fill        | CTAs encode calculated financial metrics directly in message. | [  ]   |
-| 9 | Mobile Touch Slider Ergonomics     | Range inputs possess min-height: 44px for thumb accessibility. | [  ]   |
-|10 | Clean TypeScript Build             | 0 TypeScript errors under `npx tsc --noEmit`.                  | [  ]   |
+| 7 | Zero External Chart Dependencies   | Rendered via pure client-side SVG vectors (0 Chart.js/D3).    | [  ]   |
+| 8 | Cross-Origin Auto-Resize           | postMessage transmitter automatically updates host iframe.    | [  ]   |
+| 9 | Board Memo Print Support           | @media print cleanly renders monochrome executive document.   | [  ]   |
+|10 | WhatsApp Deep Link Pre-fill        | CTAs encode calculated financial metrics directly in message. | [  ]   |
+|11 | Mobile Touch Slider Ergonomics     | Range inputs possess min-height: 44px for thumb accessibility. | [  ]   |
+|12 | Clean TypeScript Build             | 0 TypeScript errors under `npx tsc --noEmit`.                  | [  ]   |
 +---+------------------------------------+---------------------------------------------------------------+--------+
 ```
 

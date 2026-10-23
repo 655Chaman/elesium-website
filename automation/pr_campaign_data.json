@@ -1,0 +1,50 @@
+{
+  "campaigns": [
+    {
+      "id": "PR-1001",
+      "type": "JOURNALIST",
+      "outlet": "TechCrunch",
+      "target": "Enterprise Reporter",
+      "topic": "Why 85% of Enterprise AI Pilots Fail",
+      "angle": "Sovereign VPC vs Public API Latency",
+      "da": 93,
+      "status": "ACCEPTED",
+      "date_sent": "2026-10-11",
+      "last_action_date": "2026-10-18",
+      "published_link": "https://techcrunch.com/enterprise-ai-sovereign-clusters",
+      "notes": "Quoted Chaman Shah with link to India Enterprise AI Benchmark."
+    },
+    {
+      "id": "PR-1002",
+      "type": "PODCAST",
+      "outlet": "Latent Space Podcast",
+      "target": "Swyx & Alessio",
+      "topic": "The Multi-Agent Latency Lie",
+      "angle": "LangGraph StateGraph & AST Firewalls",
+      "da": 78,
+      "status": "FOLLOWUP_1",
+      "date_sent": "2026-10-19",
+      "last_action_date": "2026-10-19",
+      "published_link": "",
+      "notes": "Sent Script 1. Follow-up 1 due now."
+    },
+    {
+      "id": "PR-1003",
+      "type": "DIRECTORY_DISPUTE",
+      "outlet": "Clutch.co",
+      "target": "Review Moderation Board",
+      "topic": "Overturn Flagged Review for BFSI Client",
+      "angle": "Consumer Review Fairness Act & Redacted SOW",
+      "da": 92,
+      "status": "DISPUTE_WON",
+      "date_sent": "2026-10-08",
+      "last_action_date": "2026-10-21",
+      "published_link": "https://clutch.co/profile/elesium-online#reviews",
+      "notes": "Submitted Redacted SOW and SWIFT advice. Review reinstated."
+    }
+  ],
+  "metadata": {
+    "created": "2026-10-23",
+    "next_id": 1004
+  }
+}

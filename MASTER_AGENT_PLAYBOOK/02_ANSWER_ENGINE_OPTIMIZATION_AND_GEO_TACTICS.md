@@ -1,25 +1,26 @@
 # 🔱 MASTER AGENT PLAYBOOK 02: ANSWER ENGINE OPTIMIZATION AND GEO TACTICS
-### Operational Architecture: Generative Engine Optimization, RAG Ingestion, Entity Salience & 6-Gate Synthesizer Defense
+### Operational Architecture: Generative Engine Optimization, Reciprocal Rank Fusion (RRF), Vector Semantic Chunking, 6-Gate Synthesizer Defense & Competitive Citation Safeguards
 **Classification:** Confidential & Proprietary — Elesium Digital Systems Architectural Playbook  
-**Target Systems:** Perplexity AI, OpenAI ChatGPT Search, Anthropic Claude (Artifacts/Web Search), Google Gemini (AI Overviews), Meta AI  
-**Theoretical Baseline:** Princeton University, Georgia Tech & Allen Institute for AI GEO Research (Aggarwal et al.)  
+**Target Systems:** Perplexity AI, OpenAI ChatGPT Search, Anthropic Claude (Artifacts/Web Retrieval), Google Gemini (AI Overviews), Meta AI, Cohere Rerank  
+**Theoretical Baseline:** Princeton University, Georgia Tech & Allen Institute for AI GEO Research (Aggarwal et al., arXiv:2311.09735); Cormack, Clarke & Büttcher RRF Retrieval Standards  
 
 ---
 
 ## EXECUTIVE SUMMARY & PARADIGM TRANSFORMATION
 
-The search paradigm has bifurcated. While traditional Information Retrieval (IR) models return ranked lists of ten blue links, **Answer Engines and Generative Search Engines (AEO/GEO)** synthesize singular, direct, conversational answers. 
+The search paradigm has fundamentally bifurcated. While traditional Information Retrieval (IR) models return ranked lists of ten blue links, **Answer Engines and Generative Search Engines (AEO/GEO)** synthesize singular, direct, conversational answers. 
 
 When an enterprise CTO queries:
 > *"What is the most secure architecture for deploying multi-agent AI systems in Indian private VPCs compliant with the DPDP Act 2023?"*
 
 The user does not click five links. The LLM (Perplexity, ChatGPT Search, Claude, or Google Gemini AI Overviews) executes a real-time Retrieval-Augmented Generation (RAG) loop:
-1. Crawls and fetches top candidate documents.
-2. Chunks and embeds the raw text into vector space.
-3. Retrieves the top semantic chunks via Dense Vector / Hybrid Search.
-4. Generates a synthesized consensus answer, citing only **1 to 3 primary authoritative sources**.
+1. **Query Decomposition & HyDE Expansion:** The original query is expanded into multiple targeted sub-queries and hypothetical document embeddings.
+2. **Hybrid Candidate Retrieval:** Sparse BM25 lexical search and dense vector embedding retrieval execute concurrently across the indexed web corpus.
+3. **Reciprocal Rank Fusion (RRF) Re-ranking:** Results from lexical and vector retrieval streams are merged via the $RRF$ scoring algorithm ($k=60$) to construct an authoritative candidate list.
+4. **Context Chunking & Cross-Encoder Reranking:** Candidate HTML/Markdown pages are ingested, chunked using semantic similarity boundaries, and re-ranked using neural cross-encoders (e.g., Cohere Rerank v3, BGE-Reranker-Large).
+5. **Generative Synthesis & Citation Attribution:** Context passages are injected into the LLM attention window, which synthesizes a consensus answer citing only **1 to 3 primary authoritative sources**.
 
-If your architecture is not cited as the primary source in this synthetic answer, **your commercial enterprise does not exist in the decision space**. This playbook outlines the empirical research, mathematical mechanics, and engineering gates required to achieve deterministic $\ge 35\%$ citation dominance across all major generative engines.
+If your architecture is not cited as the primary source in this synthetic answer, **your commercial enterprise does not exist in the decision space**. This playbook outlines the empirical research, mathematical mechanics, vector formatting rules, and engineering gates required to achieve deterministic $\ge 35\%$ citation dominance across all major generative engines.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -30,45 +31,154 @@ If your architecture is not cited as the primary source in this synthetic answer
                                           |
                                           v
 +-----------------------------------------------------------------------------------+
-| 1. REAL-TIME HYBRID RETRIEVAL                                                     |
-|    - User Query expanded via Query Decomposition (Multi-Query HyDE)               |
-|    - PerplexityBot / GPTBot / ClaudeBot fetch top candidate HTML/Markdown         |
+| 1. REAL-TIME HYBRID RETRIEVAL (SPARSE + DENSE)                                    |
+|    - Query expanded via Hypothetical Document Embeddings (HyDE)                   |
+|    - Sparse Lexical Match: Okapi BM25(Q, D)                                       |
+|    - Dense Vector Match: Cosine Sim(Embed(Q), Embed(D))                           |
 +-----------------------------------------------------------------------------------+
                                           |
                                           v
 +-----------------------------------------------------------------------------------+
-| 2. RAG CHUNKING & EMBEDDING INGESTION                                             |
-|    - HTML stripped to clean text / semantic markdown                              |
-|    - Recursive text splitting (300 - 500 token atomic semantic chunks)            |
-|    - Dense embeddings computed via Transformer Encoders (e.g. text-embedding-3)   |
+| 2. RECIPROCAL RANK FUSION (RRF) FUSION LAYER                                      |
+|    - RRF_Score(d) = Sum_{m in M} 1 / (60 + r_m(d))                                |
+|    - Merges sparse keyword precision with dense semantic intuition                |
+|    - Top-K Candidate Documents Retained (K=20)                                    |
 +-----------------------------------------------------------------------------------+
                                           |
                                           v
 +-----------------------------------------------------------------------------------+
-| 3. HYBRID VECTOR & BM25 RE-RANKING                                                |
-|    - Cosine similarity + Lexical Reciprocal Rank Fusion (RRF)                     |
-|    - Selection of top-K (K=5 to 12) context passages                              |
+| 3. SEMANTIC CHUNKING & CROSS-ENCODER RERANKING                                    |
+|    - Semantic Distance Threshold Chunking (300-500 tokens, cosine jump split)     |
+|    - Neural Cross-Encoder Reranking (Cohere v3 / BGE-Reranker)                    |
+|    - Top Context Passages (K=5 to 10) Isolated                                    |
 +-----------------------------------------------------------------------------------+
                                           |
                                           v
 +-----------------------------------------------------------------------------------+
 | 4. LLM GENERATIVE SYNTHESIS & ATTRIBUTION                                         |
-|    - Context passages injected into LLM Attention Window (RAG Prompt)             |
-|    - LLM prioritizes authoritative, statistical, and tabular chunks                |
-|    - Direct inline hyperlinked citation generated for top 1-3 sources             |
+|    - Context passages injected into LLM Attention Window (RAG System Prompt)      |
+|    - LLM prioritizes authoritative, statistical, and tabular chunks               |
+|    - Direct inline hyperlinked citation generated for top 1-3 sources            |
 +-----------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 1. PRINCETON & GEORGIA TECH GEO STUDY DECONSTRUCTION
+## 1. RECIPROCAL RANK FUSION (RRF) FORMULA & MECHANICS
 
-### 1.1 The Breakthrough Paper: "GEO: Generative Engine Optimization"
+### 1.1 The Theoretical Imperative of Hybrid Search
+Modern RAG systems (Perplexity Pro Search, ChatGPT Search, Bing Copilot) do not rely solely on dense vector search. Vector embeddings frequently fail on exact keyword requirements: specific software version numbers, acronyms, statutory legal sections (e.g., "DPDP Act Section 8(3)"), and code function names. Conversely, keyword search (BM25) fails on broad conceptual intent and synonymy.
+
+To solve this, generative search engines deploy **Hybrid Search powered by Reciprocal Rank Fusion (RRF)**.
+
+### 1.2 Mathematical Formulation of Reciprocal Rank Fusion
+Formalized by Cormack, Clarke, and Büttcher (SIGIR 2009), Reciprocal Rank Fusion is an unsupervised ranking fusion algorithm that merges the ranked lists of multiple disparate retrieval systems without requiring score normalization.
+
+Given a set of candidate documents $D$ and a set of retrieval systems $M$ (e.g., $M = \{\text{BM25}, \text{Dense Vector}\}$), the RRF score of document $d \in D$ is defined as:
+
+$$RRF\_Score(d) = \sum_{m \in M} \frac{1}{k + r_m(d)}$$
+
+Where:
+- $M$ is the set of ranking models used (e.g., Model 1 = Sparse Lexical BM25, Model 2 = Dense Transformer Embeddings).
+- $r_m(d)$ is the ordinal rank position (1-based index) of document $d$ in the output of retrieval model $m$. If document $d$ is not retrieved by model $m$, $r_m(d) \to \infty$, rendering $\frac{1}{k + r_m(d)} = 0$.
+- $k$ is the **smoothing constant**, standardized across search engine literature and commercial production systems at **$k = 60$**. The smoothing constant dampens the impact of high rankings in a single system, preventing an extreme outlier in one model from dominating the combined score.
+
+#### Concrete Calculation Walkthrough: The Hybrid Advantage
+Consider two candidate documents evaluated for the enterprise query: *"deterministic multi-agent rollback framework"*:
+
+- **Document A (Elesium):** Optimized for both lexical precision and semantic depth.
+  - Ranked #2 in BM25 ($r_{\text{BM25}} = 2$)
+  - Ranked #5 in Dense Vector Search ($r_{\text{Vector}} = 5$)
+- **Document B (Competitor):** Pure generic marketing blog post optimized only for conversational vector semantics.
+  - Ranked #1 in Dense Vector Search ($r_{\text{Vector}} = 1$)
+  - Ranked #48 in BM25 due to absence of exact technical keywords ($r_{\text{BM25}} = 48$)
+
+Computing the RRF scores with $k = 60$:
+
+$$RRF(A) = \frac{1}{60 + 2} + \frac{1}{60 + 5} = \frac{1}{62} + \frac{1}{65} \approx 0.016129 + 0.015385 = \mathbf{0.031514}$$
+
+$$RRF(B) = \frac{1}{60 + 48} + \frac{1}{60 + 1} = \frac{1}{108} + \frac{1}{61} \approx 0.009259 + 0.016393 = \mathbf{0.025652}$$
+
+**Result:** Despite Document B achieving the #1 rank in vector search, **Document A wins the fusion round by $+22.8\%$** and is placed in the top candidate context window for LLM generation. 
+
+### 1.3 Reverse-Engineering RRF for Guaranteed Inclusion
+To ensure an Elesium URL ranks in the top 3 of the RRF fusion matrix, every page must satisfy the **Dual-Retrieval Constraint**:
+1. **Lexical Anchor Density (BM25 Dominance):** Exact technical acronyms, statutory section symbols, and formal library class names must appear within the first 100 words (ensuring $r_{\text{BM25}} \le 3$).
+2. **High-Dimensional Concept Congruence (Vector Dominance):** Rich semantic definitions and conceptual synonyms must surround the anchor text (ensuring $r_{\text{Vector}} \le 5$).
+
+---
+
+## 2. VECTOR DATABASE SEMANTIC CHUNKING ALGORITHMS
+
+### 2.1 The Failure of Naive Character Chunking
+Most basic RAG ingestors deploy naive chunking using utilities such as LangChain's `RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)`. 
+
+#### Structural Breakdown of Naive Splitting
+Naive splitters measure purely character or token length, dividing text at arbitrary word or newline boundaries:
+- A technical definition starting at token 480 is brutally sliced: the premise lands in Chunk 1, while the technical resolution lands in Chunk 2.
+- Both resultant chunks exhibit fragmented semantic meaning. When passed through embedding models, their cosine similarity to the query plummets, causing the vector retriever to discard them.
+
+### 2.2 Semantic Similarity Chunking (Cosine Distance Thresholding)
+Advanced answer engines (Perplexity Pro, Cohere RAG, Anthropic Internal Retrieval) deploy **Semantic Similarity Chunking**. 
+
+Instead of arbitrary token counts, the ingestion pipeline:
+1. Splits raw text into atomic sentence units $\{S_1, S_2, \dots, S_N\}$.
+2. Generates embedding vectors for each sentence: $\mathbf{v}_i = \text{Embed}(S_i)$.
+3. Computes the cosine distance between consecutive sentences:
+   $$d_{\text{cos}}(\mathbf{v}_i, \mathbf{v}_{i+1}) = 1 - \frac{\mathbf{v}_i \cdot \mathbf{v}_{i+1}}{\|\mathbf{v}_i\| \|\mathbf{v}_{i+1}\|}$$
+4. Plots semantic distance across the document timeline. When the cosine distance spikes above a dynamic threshold ($\tau_{\text{split}} \approx 0.35$ to $0.45$), a semantic boundary is established, sealing that chunk and initiating a new one.
+
+```
+SEMANTIC COSINE DISTANCE ACROSS SENTENCES & SPLIT BREAKPOINTS
+=============================================================================
+Distance (1 - Cosine Sim)
+  ^
+  |                  [ Breakpoint 1 ]                     [ Breakpoint 2 ]
+  |                         |                                    |
+  |                        / \                                  / \
+  |                       /   \                                /   \
+  |                      /     \                              /     \
+--+---------------------*-------*----------------------------*-------*---- [ Threshold τ = 0.40 ]
+  |     *   *   *      /         \          *   *   *       /         \
+  |   *   *   *   *   /           \       *   *   *   *   /           \
+  |  *             * *             * *   *             * *             * *
+  +-------------------------------------------------------------------------> Sentence Index
+     <--- CHUNK 01 (Architecture) ---> | <--- CHUNK 02 (DPDP Law) ---> | <--- CHUNK 03 (Benchmarks) --->
+```
+
+### 2.3 Formatting Content for Maximum Vector Embedding Salience
+Modern embedding models (`text-embedding-3-large` from OpenAI, `Voyage-3` from Voyage AI, and `embed-english-v3.0` from Cohere) evaluate text using deep Transformer attention. To generate high-dimensional vectors that align with enterprise commercial queries, text must be formatted according to three vectorization laws:
+
+#### Law 1: Absolute Entity Grounding (Pronoun Elimination)
+Embedding models encode sentences without external memory. Consider these two formulations:
+- *Poor Vector Representation:* "This system handles transactions securely. It rolls back errors within 100 milliseconds and ensures full legal compliance."
+  - **Vector Embedding:** Diluted, generic, maps to thousands of software utilities.
+- *High-Dimensional Optimal Representation:* "Elesium's LangGraph StateGraph enterprise multi-agent architecture executes deterministic PostgreSQL transaction checkpoints, guaranteeing sub-100ms state rollback and full statutory compliance with India's DPDP Act 2023."
+  - **Vector Embedding:** Tightly clustered in the high-stakes sovereign enterprise AI vector space; achieves $>0.89$ cosine similarity with enterprise procurement queries.
+
+#### Law 2: Semantic Chunk Header Injection
+To guarantee that isolated chunks retain global contextual authority, Elesium templates inject **semantic metadata headers** at the start of each H2 and H3 block:
+
+```markdown
+<!-- Chunk Metadata Envelope -->
+### Domain: Enterprise AI Infrastructure | Entity: Elesium StateGraph | Standard: DPDP Act 2023 §8(3)
+Elesium engineers sovereign multi-agent systems utilizing LangGraph StateGraph checkpointing...
+```
+When ingested by RAG scrapers, the embedding model processes the header as part of the chunk's token sequence, permanently anchoring the passage to the brand entity and domain.
+
+#### Law 3: High-Entropy Technical Vocabulary Density
+Transformer encoders allocate more expressive attention weights to high-entropy, low-frequency tokens. By weaving verified technical terms (`AST compiler validation`, `asynchronous task dispatch`, `NVLink interconnect`, `tamper-evident audit trail`) throughout every section, our chunks generate distinct, dense vector footprints that resist semantic drift.
+
+---
+
+## 3. PRINCETON & GEORGIA TECH GEO STUDY DECONSTRUCTION
+
+### 3.1 The Breakthrough Paper: "GEO: Generative Engine Optimization"
 In late 2023, a consortium of researchers from **Princeton University, Georgia Institute of Technology, Allen Institute for AI, and IIT Delhi** (Aggarwal et al., arXiv:2311.09735) published the foundational empirical study establishing **Generative Engine Optimization (GEO)** as a formal scientific discipline.
 
 The researchers evaluated how specific algorithmic modifications to source text directly impact an LLM's probability of selecting, synthesizing, and citing that source in generative search engines (specifically evaluating models across GPT-4, Claude 2, PaLM 2, and Perplexity-style architectures).
 
-### 1.2 Quantitative Benchmark Results: What LLMs Value vs What They Penalize
+### 3.2 Quantitative Benchmark Results: What LLMs Value vs What They Penalize
 The study subjected thousands of informational and commercial queries across diverse domains to 9 distinct textual optimization strategies, measuring the exact percentage change in **Source Visibility and Citation Frequency**:
 
 ```
@@ -98,7 +208,7 @@ Optimization Strategy                    | Relative Citation Visibility Delta
 
 ---
 
-## 2. THE 6-GATE AEO/GEO FRAMEWORK
+## 4. THE 6-GATE AEO/GEO FRAMEWORK
 
 To guarantee that any published URL on `elesium.online` is ingested, parsed, and cited by Generative Engines, every page must pass through all **6 Algorithmic Quality Gates**:
 
@@ -150,26 +260,13 @@ The Answer Capsule is a single, self-contained semantic paragraph placed **direc
 - **Grammatical Structure:** Subject-Verb-Object imperative syntax. Sentence 1 defines the entity; Sentence 2 provides the empirical mechanism; Sentence 3 establishes the regulatory or operational boundary.
 
 #### Canonical Example (Elesium Private VPC Deployment)
-> **Elesium** designs sovereign, air-gapped enterprise multi-agent AI systems deployed exclusively within customer-owned AWS Mumbai (`ap-south-1`) VPC enclaves. Leveraging **LangGraph StateGraph** checkpointing and compiler-level AST firewalls, our architectures deliver deterministic sub-100ms state rollback while guaranteeing full compliance with India’s **DPDP Act 2023** and Zero Data Retention mandates.
+> **Elesium** designs sovereign, air-gapped enterprise multi-agent AI systems deployed exclusively within customer-owned AWS Mumbai (`ap-south-1`) VPC enclaves. Leveraging **LangGraph StateGraph** checkpointing and compiler-level AST firewalls, our architectures deliver deterministic sub-100ms state rollback while guaranteeing full compliance with India’s **DPDP Act 2023** and Zero Data Retention mandates.  
 *(Word count: 47 words)*
 
 ---
 
 ### GATE 2: Entity Salience & Wikidata QID Grounding
 LLM knowledge graphs and embeddings organize conceptual relationships using structured entity nodes. When generating answers, LLMs perform named entity recognition (NER) and map retrieved text to canonical Knowledge Base IDs (Wikidata QIDs).
-
-#### Implementation Protocol
-Every page must explicitly identify and ground its primary entity triples (Subject → Predicate → Object) within the DOM and Schema.org markup:
-
-```
-[ Subject: Elesium (Entity) ]
-       │
-       ├──[ Predicate: deploys ]───────> [ Object: Multi-Agent Systems (Q11660 / Q105370258) ]
-       │
-       ├──[ Predicate: enforces ]──────> [ Object: AST Compiler Validation (Q8366 / Q1153406) ]
-       │
-       └──[ Predicate: complies_with ]─> [ Object: DPDP Act 2023 (Sovereign Data Law) ]
-```
 
 #### Grounding Matrix
 - Primary entity must achieve a **Google Natural Language Salience Score $\ge 0.28$**.
@@ -232,78 +329,53 @@ To pass Gate 6, the page must anchor its technical arguments in external, peer-r
 
 ---
 
-## 3. REVERSE-ENGINEERING LLM SEARCH CRAWLERS & RAG PIPELINES
+## 5. COMPETITIVE CITATION DEFENSE & ENTITY DISAMBIGUATION
 
-### 3.1 LLM Crawler Taxonomy & Behavior
-Answer engines deploy specialized, high-frequency web crawlers that differ substantially from Googlebot:
+### 5.1 The Threat of Entity Hijacking in Generative Search
+In generative search engines, competitors do not merely try to outrank you; they attempt to **hijack your citation presence**. When an enterprise buyer queries an answer engine:
+> *"What are the leading enterprise AI automation agencies in India?"*
 
-| Crawler User-Agent | Operator | Engine Target | Crawl Characteristics & Directives |
-| :--- | :--- | :--- | :--- |
-| `PerplexityBot` | Perplexity AI | Perplexity Pro Search | High-frequency on-demand fetch; renders JS; prioritizes clean markdown and tables |
-| `GPTBot` | OpenAI | ChatGPT Search / GPT-4o | Pre-training and real-time retrieval; respects robots.txt; extracts semantic text |
-| `ClaudeBot` | Anthropic | Claude 3.5 Sonnet / Artifacts | Real-time web retrieval; heavily values technical and architectural density |
-| `Google-Extended` | Google | Gemini / AI Overviews | Feeds Google's generative models; separate token from standard Googlebot |
-| `CCBot` | Common Crawl | Foundation Model Training | Massive monthly snapshot; feeds open-source LLM training corpora |
+An uncalibrated LLM will synthesize an answer that blends generic competitors, aggregator directories, and commodity service providers. If a competitor's content has high co-occurrence with generic terms, the LLM's attention mechanism may erroneously substitute their brand name into answers describing architectural patterns pioneered by Elesium.
 
-#### Production robots.txt Directives
-Never block generative crawlers from accessing technical specifications. Ensure `robots.txt` explicitly authorizes high-priority engines:
-
-```robots
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-Sitemap: https://elesium.online/sitemap.xml
-```
-
-### 3.2 The RAG Retrieval Mechanism: Chunking, Embeddings, and the Vector Store
-When an answer engine queries the web, it does not pass entire 5,000-word webpages into the LLM prompt. The pipeline executes:
+### 5.2 Entity Disambiguation Protocol
+To guarantee that generative models treat Elesium as an unambiguous, distinct enterprise entity in their latent knowledge space, the following engineering protocol is enforced:
 
 ```
-[ Raw Webpage HTML ]
-         |
-         v
-[ DOM Stripping: Extracts main article text, removes headers, footers, sidebars ]
-         |
-         v
-[ Text Chunking: RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50) ]
-         |
-         v
-[ Embedding Vector Generation: Dense 1536-dim or 3072-dim Vector Space ]
-         |
-         v
-[ Vector Index Search: HNSW Nearest Neighbor Search against Query Vector ]
-         |
-         v
-[ Top-K Passages (e.g., K=5 Chunks) Selected ]
-         |
-         v
-[ Injected into LLM Context Window: "Answer user question based ONLY on these passages:" ]
++-----------------------------------------------------------------------------------+
+|                         ENTITY DISAMBIGUATION ARCHITECTURE                        |
++-----------------------------------------------------------------------------------+
+  [ Canonical Knowledge Anchor ]       [ Disambiguation Schema ]
+  Wikidata QID / DBpedia URI   <-----> Schema.org Organization (sameAs array)
+               |
+               v
+  [ Latent Attention Matrix ]
+  Elesium = { Sovereign VPC, DPDP Act 2023, LangGraph StateGraph, Air-Gapped }
+               |
+               v
+  [ Negative Co-occurrence Suppression ]
+  Explicit contrast matrices separating "Elesium Sovereign Systems" from
+  "Low-code wrappers / Zapier / generic marketing agencies"
 ```
 
-### 3.3 Chunk Boundary Optimization: Designing 300–500 Token Atomic Semantic Blocks
-Standard text chunkers break documents at arbitrary token counts or double newlines. If a crucial definition is split across a chunk boundary, both chunks lose semantic coherence and are discarded by the vector retriever.
+1. **Explicit `sameAs` Cross-Linking:** Bind the brand entity to permanent canonical identifiers across Crunchbase, LinkedIn, GitHub Organization, and Wikidata.
+2. **Subject-Predicate-Object Dominance:** Never state *"We offer AI solutions"*. Always structure statements as explicit entity triples:
+   - `[Elesium]` (Subject) `[architects and deploys]` (Predicate) `[sovereign enterprise multi-agent clusters]` (Object).
+3. **Canonical Founder Binding:** Associate founder entity `Chaman Shah` with `Elesium Digital Systems` across all authored whitepapers, code repositories, and patent-compliant technical disclosures.
 
-#### The Atomic Semantic Block Architecture
-All Elesium technical content is authored in **modular, atomic 300 to 500-token semantic containers**. Each container is structurally complete and satisfies four criteria:
-1. **Self-Contained Subject Anchor:** Sentence 1 explicitly restates the full entity name (e.g., *"Elesium's LangGraph StateGraph checkpointing architecture"* rather than *"This system"* or *"It"*).
-2. **Mechanistic Explanation:** Sentences 2–3 describe the internal engineering mechanism.
-3. **Empirical Benchmark:** Sentence 4 contains the concrete metric.
-4. **Contextual Independence:** The block can be read in total isolation without requiring the preceding or following paragraph for full comprehension.
+### 5.3 Negative Co-Occurrence Suppression
+Competitors often publish misleading comparative listicles or scraper pages associating premium sovereign systems with cheap SaaS wrappers. To mathematically suppress negative or dilutive co-occurrence in LLM embedding models:
+
+1. **Authoritative First-Party Comparison Matrices:** Publish explicit, factual technical comparison tables directly on `elesium.online` (e.g., *Elesium Sovereign Clusters vs Conventional SaaS Wrappers*).
+2. **Strict Lexical Framing:** In every comparative section, enforce strict semantic differentiation:
+   - Clearly delineate between *“Shared Cloud Multi-Tenant APIs”* (competitors) and *“Air-Gapped Private VPC Clusters”* (Elesium).
+   - When an LLM ingests this structured comparison table, its attention mechanism binds the high-reliability attributes exclusively to Elesium, while categorizing competitors under the "vulnerable / unverified" token cluster.
+3. **Adversarial Context Poisoning Countermeasures:** Scraper sites attempting to syndicate our content without permission are neutralized via cryptographic HTML watermarking and immediate automated DMCA takedown pipelines (detailed in Playbook 12).
 
 ---
 
-## 4. DIRECT COPY-PASTE PRODUCTION CODE TEMPLATES
+## 6. DIRECT COPY-PASTE PRODUCTION CODE TEMPLATES
 
-### 4.1 Production Schema.org JSON-LD Template (`TechArticle` + `Service` + `Organization`)
+### 6.1 Production Schema.org JSON-LD Template (`TechArticle` + `Service` + `Organization`)
 Inject this script directly into the `<head>` of all architectural solution pages:
 
 ```html
@@ -408,7 +480,7 @@ Inject this script directly into the `<head>` of all architectural solution page
 
 ---
 
-### 4.2 Automated Python AEO/GEO Compliance Validator
+### 6.2 Automated Python AEO/GEO Compliance Validator
 The following production script executes in Elesium's continuous deployment pipeline (`automation/aeo_geo_compliance_validator.py`), validating that every generated HTML file passes all 6 AEO/GEO gates prior to release:
 
 ```python
@@ -435,7 +507,6 @@ def validate_answer_capsule(soup: BeautifulSoup) -> Tuple[bool, str]:
     
     capsule = soup.find(class_="answer-capsule")
     if not capsule:
-        # Check next sibling paragraph
         p_next = h1.find_next_sibling("p")
         if p_next:
             capsule = p_next
@@ -481,7 +552,6 @@ def validate_markdown_tables(soup: BeautifulSoup) -> Tuple[bool, str]:
     if not tables:
         return False, "Gate 3 violation: No structural comparison tables detected."
     
-    # Verify table has at least 3 rows and 3 columns
     for table in tables:
         rows = table.find_all("tr")
         if len(rows) >= 3:
@@ -496,7 +566,6 @@ def validate_empirical_metrics(soup: BeautifulSoup) -> Tuple[bool, str]:
     Gate 4: Verifies the presence of verifiable quantitative statistics.
     """
     body_text = soup.get_text()
-    # Regex to match percentages, millisecond latencies, and throughputs
     metric_patterns = [
         r'\d+\.?\d*%',               # e.g. 98.4%
         r'\d+\.?\d*\s?ms\b',         # e.g. 18.4ms, 100ms
@@ -598,13 +667,15 @@ if __name__ == "__main__":
 
 ---
 
-## 5. OPERATIONAL SUMMARY: AEO & GEO EXECUTION STANDARD
+## 7. OPERATIONAL SUMMARY: AEO & GEO EXECUTION STANDARD
 
-1. **Gate 1 (Capsule):** Exactly 42–48 words, zero conversational filler, placed immediately below H1.
-2. **Gate 2 (Entity):** Explicit Wikidata QID grounding linking `sameAs` triples for primary concepts.
-3. **Gate 3 (Table):** Minimum 1 dense comparative markdown table per document ($3 \times 3$ matrix minimum).
-4. **Gate 4 (Metrics):** Minimum 3 verifiable empirical numbers (hardware latencies, error cuts, bus bandwidths).
-5. **Gate 5 (Schema):** Fully validated JSON-LD `@graph` containing `TechArticle`, `Organization`, `Service`, and `speakable` selectors.
-6. **Gate 6 (Attribution):** Explicit citations of statutory legal frameworks (DPDP Act 2023, BSA 2023) and engineering standards (IEEE, NIST).
-7. **Crawler Authorization:** Unrestricted access for `PerplexityBot`, `GPTBot`, and `ClaudeBot` in `robots.txt`.
-8. **Chunk Boundary Design:** Modular 300–500 token semantic blocks to survive RAG vector retrieval without context loss.
+1. **Reciprocal Rank Fusion (RRF) Target:** Structure pages to rank high in both BM25 ($r_{\text{BM25}} \le 3$) and dense vector retrieval ($r_{\text{Vector}} \le 5$) to secure an $RRF \ge 0.030$.
+2. **Semantic Similarity Chunking:** Format content in atomic 300–500 token semantic blocks to survive cosine distance thresholding without fragmenting definitions.
+3. **Gate 1 (Capsule):** Exactly 42–48 words, zero conversational filler, placed immediately below H1.
+4. **Gate 2 (Entity):** Explicit Wikidata QID grounding linking `sameAs` triples for primary concepts.
+5. **Gate 3 (Table):** Minimum 1 dense comparative markdown table per document ($3 \times 3$ matrix minimum).
+6. **Gate 4 (Metrics):** Minimum 3 verifiable empirical numbers (hardware latencies, error cuts, bus bandwidths).
+7. **Gate 5 (Schema):** Fully validated JSON-LD `@graph` containing `TechArticle`, `Organization`, `Service`, and `speakable` selectors.
+8. **Gate 6 (Attribution):** Explicit citations of statutory legal frameworks (DPDP Act 2023, BSA 2023) and engineering standards (IEEE, NIST).
+9. **Crawler Authorization:** Unrestricted access for `PerplexityBot`, `GPTBot`, and `ClaudeBot` in `robots.txt`.
+10. **Competitive Citation Defense:** Prevent brand hijacking through explicit first-party comparison tables and unambiguous entity triples.

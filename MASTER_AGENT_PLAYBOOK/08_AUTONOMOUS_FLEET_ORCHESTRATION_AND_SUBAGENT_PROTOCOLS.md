@@ -1,18 +1,18 @@
 # 08: AUTONOMOUS FLEET ORCHESTRATION & SUBAGENT PROTOCOLS
-## The Engineering Handbook for Multi-Agent Task Decomposition, Parallel Execution & Quality Assurance
+## The Engineering Handbook for Multi-Agent Task Decomposition, Git Worktree Isolation & Distributed Fleet Concurrency
 
 ---
 
 ## 1. Executive Overview
 
-When building, auditing, or maintaining large-scale enterprise web applications, programmatic SEO architectures (spanning thousands of URLs), or multi-channel conversion funnels, a single linear LLM context window becomes an operational bottleneck. Attempting to execute an entire enterprise roadmap in a single prompt causes:
-1. Context window degradation (attention dilution and hallucinated details).
-2. Truncated outputs and incomplete file writes.
-3. Lack of specialized persona depth (e.g., an agent trying to be a deep algorithmic SEO auditor and a minimalist CSS designer in the same turn).
+When building, auditing, or scaling large enterprise digital architectures, programmatic SEO engines (indexing thousands of URLs), or multi-channel conversion funnels, a single linear LLM context window becomes an operational bottleneck. Attempting to execute an entire enterprise roadmap in a single prompt causes:
+1. **Context Window Degradation:** Attention dilution and hallucinated file references as the context exceeds 60,000 tokens.
+2. **Truncated Generation Outputs:** Incomplete file writes, syntax errors, and missing closing brackets.
+3. **Cognitive Domain Collisions:** An agent attempting to be an unsparing Google Navboost database auditor and a minimalist CSS designer in the same turn produces mediocre compromises.
 
-The solution is **Autonomous Multi-Agent Fleet Orchestration**: decomposing complex digital objectives into specialized, parallel subagent workstreams governed by an uncompromising Primary Coordinator.
+The architectural solution is **Autonomous Multi-Agent Fleet Orchestration**: decomposing complex digital objectives into specialized, parallel subagent workstreams governed by an uncompromising Primary Coordinator.
 
-This handbook establishes the exact architectural rules, communication contracts, file serialization boundaries, and verification gates required to deploy fleets of AI agents that deliver flawless, production-grade results without collision.
+This handbook establishes the exact architectural rules, communication contracts, git worktree isolation boundaries, POSIX lockfile management, and verification gates required to deploy fleets of AI agents that deliver flawless, production-grade results without collision.
 
 ---
 
@@ -20,17 +20,17 @@ This handbook establishes the exact architectural rules, communication contracts
 
 ```mermaid
 graph TD
-    Captain["The Captain (Human Operator / Product Owner)"] --> Primary["Primary Coordinator Agent (The Architect)"]
+    Captain["The Captain (Human Operator / Product Owner)"] --> Primary["Primary Coordinator Agent (Fleet Architect)"]
     
-    Primary --> S1["Subagent 1: Algorithmic SEO & AEO/GEO"]
-    Primary --> S2["Subagent 2: BOFU Conversion & Human Copywriter"]
-    Primary --> S3["Subagent 3: UI/UX Minimalist Design Engineer"]
-    Primary --> S4["Subagent 4: Off-Page Authority & PR Specialist"]
+    Primary --> S1["Subagent 1: Algorithmic SEO & Adversarial Defense"]
+    Primary --> S2["Subagent 2: B2B Conversion, Paid Ads & WhatsApp Sales"]
+    Primary --> S3["Subagent 3: UI/UX Minimalist Design & Micro-SaaS Tools"]
+    Primary --> S4["Subagent 4: Off-Page PR, Evaluator Tooling & Handbook Compiler"]
     
-    S1 -. "Status / Artifacts" .-> Primary
-    S2 -. "Status / Artifacts" .-> Primary
-    S3 -. "Status / Artifacts" .-> Primary
-    S4 -. "Status / Artifacts" .-> Primary
+    S1 -. "State / Disk Artifacts" .-> Primary
+    S2 -. "State / Disk Artifacts" .-> Primary
+    S3 -. "State / Disk Artifacts" .-> Primary
+    S4 -. "State / Disk Artifacts" .-> Primary
     
     Primary --> Gate["Compilation, SSG & Verification Gate"]
     Gate --> Delivery["Atomic Commit & Captain Report"]
@@ -51,9 +51,9 @@ graph TD
 
 ---
 
-## 3. The 5 Laws of Subagent Isolation & Concurrency
+## 3. The 6 Laws of Subagent Isolation & Concurrency
 
-To prevent race conditions, file corruption, and conflicting edits when multiple AI agents work on the same repository simultaneously, every fleet must adhere to these five laws:
+To prevent race conditions, file corruption, and conflicting edits when multiple AI agents work on the same repository simultaneously, every fleet must adhere to these six laws:
 
 ### Law 1: Non-Overlapping File Write Boundaries
 No two subagents may ever be assigned write permissions to the same file during the same execution turn.
@@ -62,25 +62,37 @@ No two subagents may ever be assigned write permissions to the same file during 
 - Subagent C authors `MASTER_AGENT_PLAYBOOK/01_SEARCH_ENGINE_DOMINATION_ALGORITHMIC_BLUEPRINT.md`.
 If two tasks touch the same file, the Primary Coordinator must sequence them linearly or handle the merge directly.
 
-### Law 2: Disk-Based State Serialization
-Agents must never rely on ephemeral memory or implicit assumptions across subagent boundaries. All state transfers must occur via structured files on disk:
+### Law 2: Git Worktree Isolation for Deep Refactors
+For complex, multi-file code modifications where subagents might alter shared node modules or build directories, the Primary Coordinator must spin up isolated **Git Worktrees**:
+```bash
+# Create an isolated worktree for Subagent 2
+git worktree add -b agent-bofu-overhaul .worktrees/subagent-2 main
+```
+This grants the subagent a clean, dedicated filesystem branch where builds and tests can execute without interfering with the parent workspace. Upon verification, the Coordinator merges the branch back cleanly:
+```bash
+git merge --no-ff agent-bofu-overhaul
+git worktree remove .worktrees/subagent-2
+```
+
+### Law 3: POSIX Lockfile State Serialization
+Agents must never rely on ephemeral memory or implicit assumptions across subagent boundaries. All state transfers must occur via structured files on disk protected by advisory lockfiles:
 - Research findings $\rightarrow$ Markdown reports in `docs/`, `artifacts/`, or `automation/`
 - Queue data $\rightarrow$ Structured JSON files (e.g., `automation/keywords_queue.json`)
-- System status $\rightarrow$ Append-only status logs (e.g., `state/[id].status`)
+- Runtime signals $\rightarrow$ Append-only status logs with `.lock` serialization (`state/<id>.status.lock`)
 
-### Law 3: Zero-Assumption Tool Invocation
+### Law 4: Zero-Assumption Tool Invocation
 A subagent must never assume a command, package, or directory exists without checking.
 - Before running `python3 script.py`, confirm python3 is installed and the file path is valid.
 - Before editing a component, read the exact file contents to get accurate line numbers and context.
 
-### Law 4: Strict Pre-Merge Verification Gates
+### Law 5: Strict Pre-Merge Verification Gates
 A subagent's work is considered incomplete until it has passed all domain-specific quality gates:
 1. **Compilation Gate:** `npx tsc -p frontend/tsconfig.json --noEmit` returns **0 errors**.
 2. **Build Gate:** `npm run build` succeeds cleanly.
 3. **SSG Pre-Render Gate:** Pre-rendering generates valid HTML DOM for all routes.
 4. **Copywriting Gate:** Zero banned AI words in generated text.
 
-### Law 5: Fail-Safe Recovery & Termination
+### Law 6: Fail-Safe Recovery & Termination
 If a subagent enters an infinite loop, hallucinates invalid dependencies, or stalls, the Primary Coordinator must terminate the subagent, inspect the partial disk artifacts, revert invalid edits, and either re-prompt with tighter constraints or complete the task directly.
 
 ---
@@ -116,82 +128,70 @@ A poorly briefed subagent will inevitably drift, hallucinate, or write generic b
 
 ---
 
-## 5. Fleet Coordination Patterns
-
-### Pattern 1: Parallel Fan-Out / Fan-In
-Used when generating independent modular assets (such as authoring separate documentation files, generating independent programmatic routes, or running parallel audits):
-
-```
-                   +---> Subagent 1 (SEO Engine) --------+
-                   |                                      |
-Primary Dispatch --+---> Subagent 2 (Copywriting Bible) --+---> Primary Collector (Sync & Validate)
-                   |                                      |
-                   +---> Subagent 3 (Design System) ------+
-```
-
-1. Primary Coordinator defines the shared schema and creates target directories.
-2. Primary Coordinator launches Subagents 1, 2, and 3 concurrently.
-3. Subagents write their respective files independently.
-4. Primary Coordinator detects completion, validates file existence and syntax, and compiles the master index.
-
-### Pattern 2: Sequential Pipeline (Staged Hand-off)
-Used when the output of Step A is the strict prerequisite for Step B:
-
-```
-[Keyword Research Subagent] 
-            │ (outputs: keywords_queue.json)
-            ▼
-[Programmatic Generator Subagent] 
-            │ (outputs: solutionsData.ts)
-            ▼
-[SSG Pre-Rendering Subagent] 
-            │ (outputs: dist/ HTML files)
-            ▼
-[Instant IndexNow Broadcast Subagent]
-```
-
-1. Stage 1 executes and writes verified data to disk.
-2. Primary Coordinator inspects and validates the data structure.
-3. Stage 2 executes using the validated disk artifacts.
-
----
-
-## 6. Production Python Automation Scripts for Fleet Management
+## 5. Production Python Automation Scripts for Fleet Management
 
 To orchestrate fleets programmatically across local environments or CI/CD pipelines, use the following production-grade patterns:
 
-### 6.1 Subagent Task Status Logger (`state_manager.py`)
+### 5.1 Async Multi-Agent Process Queue (`fleet_orchestrator.py`)
 ```python
-import json
-import os
-import time
+"""
+ELESIUM FLEET ASYNC ORCHESTRATOR
+Spawns, monitors, and verifies parallel subagent execution with concurrency control.
+"""
 
+import asyncio
+import os
+import subprocess
+import time
+from typing import List, Dict
+
+MAX_CONCURRENT_AGENTS = 4
 STATE_DIR = "state"
 os.makedirs(STATE_DIR, exist_ok=True)
 
-def log_subagent_event(agent_id: str, status: str, note: str):
-    """
-    Appends an atomic status event to the agent's runtime log.
-    Format: <timestamp> <status>: <note>
-    """
-    log_file = os.path.join(STATE_DIR, f"{agent_id}.status")
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    with open(log_file, "a", encoding="utf-8") as f:
-        f.write(f"[{timestamp}] {status.upper()}: {note}\n")
+class SubagentTask:
+    def __init__(self, agent_id: str, role: str, command: List[str]):
+        self.agent_id = agent_id
+        self.role = role
+        self.command = command
+        self.status = "PENDING"
+        self.start_time = 0.0
+        self.end_time = 0.0
 
-def check_agent_completion(agent_id: str) -> bool:
-    """
-    Checks if the agent has logged a COMPLETED or FAILED terminal state.
-    """
-    log_file = os.path.join(STATE_DIR, f"{agent_id}.status")
-    if not os.path.exists(log_file):
-        return False
-    with open(log_file, "r", encoding="utf-8") as f:
-        content = f.read()
-        return "COMPLETED:" in content or "FAILED:" in content
+async def execute_subagent(task: SubagentTask, semaphore: asyncio.Semaphore) -> bool:
+    async with semaphore:
+        task.status = "RUNNING"
+        task.start_time = time.time()
+        print(f"[*] [LAUNCH] Agent {task.agent_id} ({task.role})...")
+        
+        proc = await asyncio.create_subprocess_exec(
+            *task.command,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE
+        )
+        stdout, stderr = await proc.communicate()
+        task.end_time = time.time()
+        
+        duration = round(task.end_time - task.start_time, 2)
+        if proc.returncode == 0:
+            task.status = "SUCCESS"
+            print(f"[+] [COMPLETED] Agent {task.agent_id} in {duration}s")
+            return True
+        else:
+            task.status = "FAILED"
+            print(f"[!] [FAILED] Agent {task.agent_id} ({duration}s):\n{stderr.decode()}")
+            return False
+
+async def run_fleet(tasks: List[SubagentTask]):
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_AGENTS)
+    results = await asyncio.gather(*[execute_subagent(t, semaphore) for t in tasks])
+    success_rate = (sum(results) / len(results)) * 100
+    print(f"\n==========================================")
+    print(f"Fleet Execution Complete. Success Rate: {success_rate:.1f}%")
+    print(f"==========================================")
 ```
 
-### 6.2 Pre-Merge Verification Runner (`verify_fleet_health.py`)
+### 5.2 Pre-Merge Verification Runner (`verify_fleet_health.py`)
 ```python
 import subprocess
 import sys
@@ -226,7 +226,7 @@ if __name__ == "__main__":
 
 ---
 
-## 7. Fleet Audit Checklist for the Primary Coordinator
+## 6. Fleet Audit Checklist for the Primary Coordinator
 
 Before declaring any multi-agent mission complete and reporting to the Captain, the Primary Coordinator must verify each item on this checklist:
 
