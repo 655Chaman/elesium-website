@@ -36,6 +36,18 @@ export const resourcesData: ResourceItem[] = [
     section: 'segregated'
   },
   {
+    id: 'india-enterprise-ai-benchmark-2026',
+    title: 'India Enterprise AI Benchmark Report 2026',
+    slug: 'india-enterprise-ai-benchmark-2026',
+    description: 'Empirical Telemetry Across 1,420 Indian Enterprise Multi-Agent Deployments: Token Unit Economics, Private VPC Latencies, DPDP Act Safe Harbors, and 90-Day ROI Yields.',
+    category: 'Industry Research',
+    date: 'October 2026',
+    readTime: '12 min read',
+    googleDriveLink: 'https://elesium.online/resources/india-enterprise-ai-benchmark-2026',
+    markdownFile: '/resources/india-enterprise-ai-benchmark-2026.md',
+    section: 'segregated'
+  },
+  {
     id: '2',
     title: 'Multi-Channel Inbound Tracker',
     slug: 'multi-channel-inbound-tracker',

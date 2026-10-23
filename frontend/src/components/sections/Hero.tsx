@@ -81,7 +81,7 @@ export default function HeroSection() {
                     </motion.p>
 
                     <motion.div
-                        className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+                        className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8"
                         initial={{ opacity: 0, y: 10 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.8 }}
@@ -96,6 +96,35 @@ export default function HeroSection() {
                             ele-in SaaS Waitlist &rarr;
                         </Link>
                         <WhatsAppModal />
+                    </motion.div>
+
+                    {/* Evidence Cards Row (Simon Cornelius Trust Stacking) */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, delay: 1.0 }}
+                        className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto pt-6 border-t border-gray-200 dark:border-white/10"
+                    >
+                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">Delivery SLA</div>
+                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">14 Days</div>
+                            <div className="text-[11px] text-gray-500 dark:text-gray-400">Production pilot</div>
+                        </div>
+                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold">ROI Guarantee</div>
+                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">90 Days</div>
+                            <div className="text-[11px] text-gray-500 dark:text-gray-400">Or fees rebated</div>
+                        </div>
+                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-purple-400 font-bold">Data Residency</div>
+                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">Private VPC</div>
+                            <div className="text-[11px] text-gray-500 dark:text-gray-400">Zero retention</div>
+                        </div>
+                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-bold">Compliance</div>
+                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">DPDP 2023</div>
+                            <div className="text-[11px] text-gray-500 dark:text-gray-400">India sovereign</div>
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>

@@ -248,6 +248,7 @@ function App() {
                             <Route path="/team/chaman-shah" element={<AuthorProfile />} />
                             <Route path="/team" element={<AuthorProfile />} />
                             <Route path="/author" element={<Navigate to="/authors/chaman-shah" replace />} />
+                            <Route path="/chaman-shah" element={<Navigate to="/authors/chaman-shah" replace />} />
                             <Route path="/solutions" element={<SolutionsHub />} />
                             <Route path="/solutions/:slug" element={<SolutionDetail />} />
                             <Route path="/glossary" element={<Glossary />} />

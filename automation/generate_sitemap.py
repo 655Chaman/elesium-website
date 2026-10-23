@@ -50,6 +50,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/solutions", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/compare", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/glossary", "priority": "0.9", "changefreq": "daily"},
+        {"loc": f"{BASE_URL}/resources/india-enterprise-ai-benchmark-2026", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/enterprise-ai-roi-calculator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/multi-agent-latency-token-cost-estimator", "priority": "0.9", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/tools/agentic-architecture-grader", "priority": "0.9", "changefreq": "weekly"},
