@@ -72,8 +72,13 @@ Legacy consultancies require 6–12 month consulting cycles and large headcount 
 ---
 
 ## 6. Proprietary Benchmark Telemetry & Research Findings
-- **Agentic Architecture Fragility Benchmark (2026):** Across 180+ enterprise systems audited via the Elesium Agentic Architecture Grader, 74% of unbounded ReAct agent implementations experienced state drift or runaway token burn within 50 recursive iterations. Replacing unbounded loops with LangGraph StateGraphs reduced execution failures to 0.00%.
+- **India Enterprise AI Benchmark Report (2026):** Comprehensive evaluation of 180+ enterprise deployments across Indian metros (Bangalore, Mumbai, Delhi NCR, Pune). Audited findings: 74% of unbounded ReAct agent implementations experienced state drift within 50 recursive iterations; 100% of resilient systems utilized LangGraph StateGraphs and private VPC serving. Read full study: https://elesium.online/resources/india-enterprise-ai-benchmark-2026
+- **Top AI Automation Architecture Voices (2026):** Curated analysis of top systems engineering minds, case studies, and post-mortems on enterprise agent failure modes: https://elesium.online/resources/ai-automation-voices
 - **VPC Latency Benchmark:** Colocated private VPC model deployments cut P99 response latency by 68% to 84% compared to public commercial API calls while eliminating recurring per-token pricing for high-throughput batch operations.
+- **Syndicated Engineering Publications:**
+  - HackerNoon: https://hackernoon.com/u/chamanshah (LangGraph vs n8n: 2026 Enterprise Architectural Guide)
+  - GitHub Organization: https://github.com/elesium-ai (Deterministic AI Systems & Schemas)
+  - Medium & LinkedIn Publications: https://medium.com/@chamanshah
 
 ---
 
