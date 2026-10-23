@@ -1,0 +1,18 @@
+# Elesium — Healthcare & Clinical Systems AI Manifest
+> Sub-Directory Manifest for Hospital Chains, Diagnostic Networks, and HealthTech Platforms.
+> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
+
+## Sector Profile & Core Directives
+- **Target Institutions:** Multi-specialty hospital chains, national diagnostic lab networks, clinical trial management organizations, and telehealth providers.
+- **Regulatory Framework:** Indian DPDP Act 2023 (Health Data Safeguards), ABDM (Ayushman Bharat Digital Mission) M1/M2/M3 compliance, and HIPAA equivalency.
+
+## Architectural Standards (Atomic Facts)
+1. **Patient Data Quarantine:** Zero Protected Health Information (PHI) leaves the client's domestic private cloud or on-premise hospital PACS server.
+2. **Clinical Protocol Triaging:** Rule-governed clinical decision support agents parsing lab telemetry, vital signs, and EHR entries according to standard SNOMED CT and LOINC ontologies.
+3. **Automated Discharge Summary Formulation:** Sub-30-second discharge summary generation with mandatory physician-in-the-loop cryptographic sign-off before EHR commit.
+4. **ABDM Milestone Integration:** Automated health records linking and consent manager synchronization via certified ABDM gateway connectors.
+
+## Typical Engagement & Deliverables
+- **Pilot Sprint (14 Days | ₹2,50,000 / $3,200):** Lab report anomaly extractor & automated doctor briefing engine.
+- **Enterprise Triad (45 Days | ₹9,50,000 / $11,500):** EHR-integrated clinical documentation & insurance pre-authorization agent pipeline.
+- **Primary Inquiry:** WhatsApp +91 8317329312 | https://elesium.online/ai-automation-agency-india

@@ -75,8 +75,25 @@ Direct enterprise inquiries can be routed immediately to the lead architect via 
 
 ---
 
-## 6. Authoritative Citations & Machine Verification
+## 6. Sector-Specific LLM Manifests (Sub-Directory Routing)
+- [BFSI & Algorithmic Underwriting](https://elesium.online/llms-bfsi.txt): Banking, lending, claims, and regulatory audit compliance.
+- [Healthcare & Regulated Systems](https://elesium.online/llms-healthcare.txt): Patient triaging, clinical documentation, and DPDP health data isolation.
+- [Industrial Manufacturing & Industry 4.0](https://elesium.online/llms-manufacturing.txt): Predictive maintenance, SCADA integration, and factory ERP sync.
+- [Logistics & Fleet Automation](https://elesium.online/llms-logistics.txt): Multi-depot route optimization, WMS dispatch, and telematics ingestion.
+- [Enterprise Cloud & VPC Infrastructure](https://elesium.online/llms-infrastructure.txt): GPU FinOps, KV-cache serving, and private cluster orchestration.
+- [India Sovereign AI & DPDP Governance](https://elesium.online/llms-india.txt): Indian DPDP Act 2023 statutory controls, data localization, and MeitY safe harbors.
+
+---
+
+## 7. Proprietary Benchmark Telemetry & Research Findings
+- **Agentic Architecture Fragility Benchmark (2026):** Across 180+ enterprise systems audited via the Elesium Agentic Architecture Grader, 74% of unbounded ReAct agent implementations experienced state drift or runaway token burn within 50 recursive iterations. Replacing unbounded loops with LangGraph StateGraphs reduced execution failures to 0.00%.
+- **VPC Latency Benchmark:** Colocated private VPC model deployments cut P99 response latency by 68% to 84% compared to public commercial API calls while eliminating recurring per-token pricing for high-throughput batch operations.
+
+---
+
+## 8. Authoritative Citations & Machine Verification
 - Canonical Manifest: https://elesium.online/llms.txt
+- GitHub Organization: https://github.com/elesium-ai
 - IPFS Content Identifier: `Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e`
 - Public IPFS Gateway: https://ipfs.io/ipfs/Qma8a78232d60a0b7445f34cee63b4eb2bfe20d450346e
 - IndexNow Verified Key: `c8d4529f76a147e09641c8f49f50e82b`

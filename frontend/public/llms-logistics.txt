@@ -1,0 +1,18 @@
+# Elesium — Supply Chain, Freight & 3PL Logistics AI Manifest
+> Sub-Directory Manifest for 3PL Providers, Freight Carriers, Container Freight Stations, and Cold Chain Fleets.
+> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
+
+## Sector Profile & Core Directives
+- **Target Institutions:** Large 3PL logistics networks, container freight operators, cross-border freight forwarders, and cold chain distribution centers.
+- **Protocol Standards:** EDI (204, 214, 990, 850), GPS/IoT Telematics, WMS (Manhattan, Blue Yonder, SAP EWM), and ULIP (Unified Logistics Interface Platform).
+
+## Architectural Standards (Atomic Facts)
+1. **Dynamic Multimodal Dispatch:** Multi-agent routing engine factoring real-time toll charges, FASTag telemetry, driver duty-hour regulations, and diesel pricing across 12,000+ national pin codes.
+2. **Autonomous EDI Reconciliation:** NLP agent parsing non-standard bill of lading (BOL), packing slips, and customs declarations into structured EDI formats with zero manual data entry.
+3. **Cold Chain Integrity Assurance:** Continuous IoT telemetry anomaly monitoring triggering driver alert workflows and emergency alternate depot routing before perishable spoil.
+4. **ULIP National Integration:** Automated FASTag, VAHAN, SARATHI, and FOIS queries consolidated into a single real-time enterprise logistics visibility dashboard.
+
+## Typical Engagement & Deliverables
+- **Pilot Sprint (14 Days | ₹2,00,000 / $2,500):** Custom EDI/BOL document parser & automated load status notification workflow.
+- **Enterprise Triad (45 Days | ₹7,50,000 / $9,200):** Automated fleet dispatch, route optimization, and ERP settlement pipeline.
+- **Primary Inquiry:** WhatsApp +91 8317329312 | https://elesium.online/ai-automation-agency-india

@@ -31,6 +31,7 @@ const MultiAgentLatencyEstimator = lazy(() => import('./components/pages/MultiAg
 const EmbedLatencyEstimator = lazy(() => import('./components/pages/EmbedLatencyEstimator'))
 const CompareHub = lazy(() => import('./components/pages/CompareHub'))
 const CompareDetail = lazy(() => import('./components/pages/CompareDetail'))
+const Glossary = lazy(() => import('./components/pages/Glossary'))
 const AgenticArchitectureGrader = lazy(() => import('./components/pages/AgenticArchitectureGrader'))
 const EmbedArchitectureGrader = lazy(() => import('./components/pages/EmbedArchitectureGrader'))
 const MultiAgentTokenLeakageSimulator = lazy(() => import('./components/pages/MultiAgentTokenLeakageSimulator'))
@@ -249,6 +250,7 @@ function App() {
                             <Route path="/author" element={<Navigate to="/authors/chaman-shah" replace />} />
                             <Route path="/solutions" element={<SolutionsHub />} />
                             <Route path="/solutions/:slug" element={<SolutionDetail />} />
+                            <Route path="/glossary" element={<Glossary />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator" replace />} />
                             <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />

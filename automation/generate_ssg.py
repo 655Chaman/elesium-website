@@ -30,6 +30,7 @@ COMPACT_QUEUE_PATH = BASE_DIR / "automation" / "compact_keywords_queue.json"
 VIDEOS_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "videoMasterclasses.ts"
 VIDEO_SCRIPTS_DIR = BASE_DIR / "automation" / "video_scripts"
 COMPARE_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "compareData.ts"
+GLOSSARY_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "glossaryData.ts"
 
 def load_solutions_via_node():
     """
@@ -157,6 +158,149 @@ def get_rotating_anchor_text(category_name: str) -> str:
     else:
         return ROTATING_ANCHORS[4]
 
+def get_matched_tool_for_solution(sol):
+    """
+    Intelligently maps any solution to its exact companion tool from the 75 interactive tools.
+    Returns (tool_slug, tool_name, tool_metric, tool_desc).
+    """
+    cat = str(sol.get("hubCategory") or sol.get("category") or "").lower()
+    kw = str(sol.get("keyword") or sol.get("slug") or "").lower()
+    combined = f"{cat} {kw}"
+
+    if any(k in combined for k in ["tally", "accounting", "invoice", "erp reconciliation", "voucher"]):
+        return (
+            "enterprise-agent-tally-erp-xml-simulator",
+            "Tally ERP / Prime XML Gateway & Ledger Reconciliation Simulator",
+            "Sub-50ms Idempotent RFC Sync",
+            "Simulate automated XML ledger posting, GST reconciliation, and bi-directional voucher verification without modifying legacy core accounting databases."
+        )
+    elif any(k in combined for k in ["ondc", "retail", "inventory", "e-commerce", "warehouse", "wms", "shelf"]):
+        return (
+            "enterprise-agent-ondc-retail-inventory-simulator",
+            "ONDC Multi-Ecosystem Retail Inventory & Dynamic Pricing Simulator",
+            "Sub-50ms Stock Idempotency",
+            "Simulate Beckn protocol catalog broadcast, real-time multi-depot reservation, and dynamic margin optimization across sovereign distribution hubs."
+        )
+    elif any(k in combined for k in ["logistics", "fleet", "route", "dispatch", "telematics", "3pl", "carrier", "freight", "transport"]):
+        return (
+            "multi-agent-latency-token-cost-estimator",
+            "Autonomous Fleet Dispatch & Latency Optimization Simulator",
+            "< 180ms Dispatch Latency SLA",
+            "Simulate dynamic fleet telematics ingestion, automated corridor congestion re-routing, and instant driver SLA compliance calculation."
+        )
+    elif any(k in combined for k in ["underwriting", "loan", "lending", "credit", "cibil", "cam", "mortgage"]):
+        return (
+            "enterprise-event-sourcing-audit-simulator",
+            "Enterprise Multi-Agent Event Sourcing & Audit Ledger Simulator",
+            "100.0% Cryptographic Audit Trail",
+            "Simulate immutable append-only loan origination workflows with SHA-256 state hashing, MCA verification, and sub-2s underwriting compilation."
+        )
+    elif any(k in combined for k in ["bfsi", "banking", "fintech", "insurance", "claims", "settlement", "payment"]):
+        return (
+            "enterprise-agent-zk-attestation-simulator",
+            "Zero-Knowledge Proof State Attestation & Privacy Simulator",
+            "Zero Financial Data Disclosure",
+            "Simulate zero-knowledge state verification across banking transactions, multi-party claims audit, and statutory DPDP Act compliance."
+        )
+    elif any(k in combined for k in ["clinical", "fhir", "hospital", "patient", "abdm", "medical", "telehealth", "doctor"]):
+        return (
+            "enterprise-agent-abdm-fhir-privacy-simulator",
+            "ABDM FHIR Clinical Privacy & De-Identification Simulator",
+            "Zero PHI Data Egress SLA",
+            "Simulate HIPAA and DPDP Act compliant medical record anonymization, SNOMED CT clinical coding, and automated doctor summary formulations."
+        )
+    elif any(k in combined for k in ["fda", "cfr", "pharma", "batch", "biopharm", "ebmr", "drug"]):
+        return (
+            "enterprise-agent-cfr-part-11-validation-simulator",
+            "CDSCO & US FDA 21 CFR Part 11 eBMR Validation Simulator",
+            "21 CFR Part 11 Cryptographic Audit",
+            "Simulate electronic batch manufacturing record (eBMR) validation with strict dual-signature authorization and tamper-evident audit trails."
+        )
+    elif any(k in combined for k in ["iot", "scada", "plc", "modbus", "opc-ua", "sensor", "manufacturing", "plant", "factory", "industrial"]):
+        return (
+            "enterprise-agent-industrial-iot-opc-ua-simulator",
+            "Edge Industrial IoT Protocol Translation & OPC-UA Latency Simulator",
+            "Sub-10ms Anomaly Detection",
+            "Simulate real-time sensor telemetry ingestion, edge inference on industrial IPCs, and automated SAP S/4HANA maintenance work-order generation."
+        )
+    elif any(k in combined for k in ["deepseek", "v3", "serving", "fabric", "cluster"]):
+        return (
+            "enterprise-agent-deepseek-v3-serving-fabric-simulator",
+            "DeepSeek-V3 Grand Unified Serving Fabric Simulator",
+            "Sub-12ms Prefill TTFT",
+            "Simulate DualPipe bidirectional pipeline parallelism, Multi-Head Latent Attention compression, and sovereign GPU cluster serving topologies."
+        )
+    elif any(k in combined for k in ["mla", "latent", "latent attention"]):
+        return (
+            "enterprise-agent-mla-latent-projection-simulator",
+            "Multi-Head Latent Attention (MLA) Low-Rank Projection Simulator",
+            "-90% KV Cache Memory Footprint",
+            "Simulate compressed KV-cache matrix multiplication, up-projection GEMMs, and high-concurrency enterprise swarm scaling."
+        )
+    elif any(k in combined for k in ["kv-cache", "pagedattention", "prefix caching", "eviction", "vram", "context window"]):
+        return (
+            "enterprise-llm-context-kv-cache-simulator",
+            "Enterprise LLM Context Window Cache & KV Eviction Simulator",
+            "4.2x VRAM Memory Savings",
+            "Simulate PagedAttention virtual memory block allocation, Automatic Prefix Caching hit ratios, and TTFT response optimization."
+        )
+    elif any(k in combined for k in ["gpu", "finops", "h100", "slurm", "nvidia", "compute", "cost"]):
+        return (
+            "enterprise-gpu-finops-cost-calculator",
+            "Enterprise GPU FinOps & Infrastructure TCO Calculator",
+            "-74% Token OpEx Savings",
+            "Model 3-year infrastructure TCO, VRAM requirements, and throughput comparing colocated private clusters against commercial cloud APIs."
+        )
+    elif any(k in combined for k in ["speculative", "medusa", "draft", "decoding"]):
+        return (
+            "enterprise-agent-speculative-decoding-simulator",
+            "Dynamic Speculative Decoding & Latency Arbitrage Simulator",
+            "2.85x Inference Acceleration",
+            "Simulate speculative verification trees, draft model candidate generation, and GPU memory bandwidth arbitrage for sub-20ms token latency."
+        )
+    elif any(k in combined for k in ["vector", "rag", "pgvector", "pinecone", "milvus", "embedding", "search"]):
+        return (
+            "enterprise-vector-db-latency-benchmark",
+            "Enterprise Vector DB & RAG Latency Benchmark Simulator",
+            "< 12ms Recall Guarantee",
+            "Simulate and benchmark retrieval latency, memory footprint, and recall@k for PostgreSQL pgvector (HNSW) vs Pinecone, Qdrant, and Milvus."
+        )
+    elif any(k in combined for k in ["voice", "audio", "speech", "call", "webrtc", "vad", "telephony"]):
+        return (
+            "enterprise-voice-agent-latency-simulator",
+            "Enterprise Real-Time Voice Agent VAD & Turn-Taking Latency Simulator",
+            "< 450ms Total Roundtrip Latency",
+            "Simulate WebRTC streaming transport, Silero VAD silence hangover, neural ASR, and sub-100ms TTS synthesis for human-like conversational agents."
+        )
+    elif any(k in combined for k in ["prompt injection", "firewall", "security", "guardrail", "cyber", "zero-trust"]):
+        return (
+            "enterprise-prompt-injection-firewall-simulator",
+            "Enterprise Agentic Prompt Injection & Boundary Firewall Simulator",
+            "Sub-2ms AST Boundary Defense",
+            "Simulate deterministic grammar AST firewalls vs secondary LLM guards, preventing jailbreaks, indirect prompt injection, and tool parameter SQLi."
+        )
+    elif any(k in combined for k in ["dpdp", "compliance", "privacy", "statutory", "audit", "governance"]):
+        return (
+            "dpdp-act-2023-audit-simulator",
+            "DPDP Act 2023 Enterprise Statutory Audit Simulator",
+            "₹250 Cr Statutory Penalty Protection",
+            "Simulate statutory data principal consent architectures, cross-border inference liabilities, and sovereign Indian private VPC safe harbors."
+        )
+    elif any(k in combined for k in ["latency", "speed", "throughput", "concurrency", "token"]):
+        return (
+            "multi-agent-latency-token-cost-estimator",
+            "Deterministic Multi-Agent Latency & Token Cost Estimator",
+            "Sub-200ms Execution SLA",
+            "Calculate multi-agent pipeline P50/P99 latency, token consumption saturation, and sovereign private VPC cluster savings vs public APIs."
+        )
+    else:
+        return (
+            "agentic-architecture-grader",
+            "Enterprise Agentic Architecture Fragility & Readiness Grader",
+            "100.0% State Convergence Target",
+            "Evaluate enterprise AI deployments across workflow concurrency, orchestration topologies, inference boundaries, and state persistence."
+        )
+
 def render_solution_semantic_html(sol):
     """
     Renders semantic HTML for an individual solution page according to Edward Sturm's
@@ -254,6 +398,12 @@ def render_solution_semantic_html(sol):
     hero_img = hero.get("heroImage", f"/assets/solutions/{slug}-architecture.webp")
     hero_alt = html.escape(hero.get("heroImageAlt", h1))
 
+    tool_slug, tool_name, tool_metric, tool_desc = get_matched_tool_for_solution(sol)
+    tool_slug_esc = html.escape(tool_slug)
+    tool_name_esc = html.escape(tool_name)
+    tool_metric_esc = html.escape(tool_metric)
+    tool_desc_esc = html.escape(tool_desc)
+
     # Check physical existence of image to avoid 404 broken asset crawl penalties
     clean_rel_path = hero_img.lstrip("/")
     img_exists = (DIST_DIR / clean_rel_path).exists() or ((BASE_DIR / "frontend" / "public") / clean_rel_path).exists()
@@ -276,11 +426,36 @@ def render_solution_semantic_html(sol):
   <header style="margin-bottom:2.5rem;">
     <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">{category} • Designed for {target_persona}</div>
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">{h1}</h1>
-    <p style="font-size:1.25rem;line-height:1.6;color:#374151;margin-bottom:1.5rem;"><strong>{first_sentence}</strong></p>
+    <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">Architectural Answer Capsule • Deterministic Executive Summary</div>
+      <p style="font-size:1.15rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">{first_sentence}</p>
+    </div>
     <div class="cta-container" style="margin:1.5rem 0 2rem 0;">
       <a href="#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">{primary_cta} &rarr;</a>
     </div>
     {hero_media_html}
+    <div class="evidence-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin:1.5rem 0 2rem 0;">
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#15803d;text-transform:uppercase;letter-spacing:0.05em;">Delivery SLA</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">14 Days</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">Production pilot</div>
+      </div>
+      <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#1d4ed8;text-transform:uppercase;letter-spacing:0.05em;">ROI Guarantee</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">90 Days</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">Or fees rebated</div>
+      </div>
+      <div style="background:#faf5ff;border:1px solid #ddd6fe;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:0.05em;">Data Residency</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">Private VPC</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">Zero retention</div>
+      </div>
+      <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#c2410c;text-transform:uppercase;letter-spacing:0.05em;">Compliance</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">DPDP 2023</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">India sovereign</div>
+      </div>
+    </div>
   </header>
   <main>
     <section style="margin:2.5rem 0;">
@@ -288,6 +463,20 @@ def render_solution_semantic_html(sol):
       {f'<ul style="list-style-type:none;padding:0;">{caps_html}</ul>' if caps_html else ''}
       <div style="margin-top:1.5rem;">{p_html}</div>
     </section>
+    <aside class="solution-interactive-tool-callout" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-left:4px solid #38bdf8;border-radius:0.75rem;padding:1.5rem;margin:2rem 0;color:#f8fafc;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
+        <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;color:#38bdf8;text-transform:uppercase;background:#0369a12a;padding:0.25rem 0.6rem;border-radius:0.375rem;border:1px solid #0284c7;">⚡ Live Interactive Architecture Diagnostic</span>
+        <span style="font-size:0.75rem;font-family:monospace;color:#34d399;background:#064e3b4d;padding:0.2rem 0.5rem;border-radius:0.25rem;border:1px solid #059669;">Verified SLA: {tool_metric_esc}</span>
+      </div>
+      <h3 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 0.5rem 0;">
+        <a href="/tools/{tool_slug_esc}" style="color:#ffffff;text-decoration:none;">{tool_name_esc} &rarr;</a>
+      </h3>
+      <p style="font-size:0.875rem;color:#94a3b8;line-height:1.6;margin:0 0 1rem 0;">{tool_desc_esc}</p>
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+        <a href="/tools/{tool_slug_esc}" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;font-size:0.875rem;font-weight:600;text-decoration:none;">Launch Free Interactive Simulator &rarr;</a>
+        <a href="/embed/{tool_slug_esc}" target="_blank" rel="noopener" style="font-size:0.8rem;color:#64748b;text-decoration:underline;">Embed Simulator Widget</a>
+      </div>
+    </aside>
     {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Technical Specifications &amp; SLAs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">{specs_html}</div></section>' if specs_html else ''}
     <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;background:#f9fafb;padding:1.5rem;border-radius:0.5rem;">
       <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">{html.escape(trust_title)}</h3>
@@ -299,6 +488,76 @@ def render_solution_semantic_html(sol):
       </div>
     </section>
     {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
+    <section style="margin:2.5rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;" id="pricing">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Engagement Tiers &amp; Institutional Pricing</h2>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+          <thead>
+            <tr style="background:#111827;color:#ffffff;">
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Tier</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Investment (INR)</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">USD Equiv.</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Timeline</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Deliverables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e5e7eb;">
+              <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Pilot Sprint</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 &#8211; &#8377;3,50,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$2,000 &#8211; $4,500</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">14 days</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">Single-process deterministic agent, private cloud staging, production validation</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+              <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Enterprise Suite <span style="background:#2563eb;color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;margin-left:0.4rem;">Most Deployed</span></td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 &#8211; &#8377;15,00,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$7,500 &#8211; $18,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">30&#8211;45 days</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">3-agent triad, LangGraph StateGraph, SAP/Oracle ERP integration, zero-data-retention VPC</td>
+            </tr>
+            <tr>
+              <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">AI Engineering Pod</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;4,50,000 / month</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$5,500 / month</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">12-month retainer</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">3 AI engineers + 1 principal architect, continuous fine-tuning, 1-hour critical SLA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Is Elesium Right For You?</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.5rem;padding:1.25rem;">
+          <div style="font-weight:700;color:#15803d;margin-bottom:0.75rem;">&#10003; Right fit if you need:</div>
+          <ul style="list-style-type:none;padding:0;margin:0;color:#374151;font-size:0.9rem;">
+            <li style="margin-bottom:0.5rem;">&#8226; Deterministic, auditable agent execution with state logs</li>
+            <li style="margin-bottom:0.5rem;">&#8226; Data that never leaves Indian sovereign cloud</li>
+            <li style="margin-bottom:0.5rem;">&#8226; A hard 90-day ROI guarantee backed by contract</li>
+            <li style="margin-bottom:0.5rem;">&#8226; Legacy ERP (SAP, Oracle, Tally Prime) integration</li>
+            <li>&#8226; Sub-14-day production deployment SLA</li>
+          </ul>
+        </div>
+        <div style="background:#fff1f2;border:1px solid #fecdd3;border-radius:0.5rem;padding:1.25rem;">
+          <div style="font-weight:700;color:#b91c1c;margin-bottom:0.75rem;">&#10007; Not the right fit if you need:</div>
+          <ul style="list-style-type:none;padding:0;margin:0;color:#374151;font-size:0.9rem;">
+            <li style="margin-bottom:0.5rem;">&#8226; A basic website chatbot (use Tidio or Intercom instead)</li>
+            <li style="margin-bottom:0.5rem;">&#8226; Zero-budget automation (start with SaaS tools first)</li>
+            <li style="margin-bottom:0.5rem;">&#8226; Instant deployment with no architecture review</li>
+            <li style="margin-bottom:0.5rem;">&#8226; No-code Zapier/Make wrappers</li>
+            <li>&#8226; A project scoped under &#8377;1,50,000</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section style="margin:2.5rem 0;background:#111827;border-radius:0.75rem;padding:2rem;text-align:center;" id="audit">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-top:0;margin-bottom:0.75rem;">Start With a Free Architecture Audit</h2>
+      <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;">30-minute private session with Principal AI Systems Architect Chaman Shah. No sales pitch &#8212; just a technical assessment of your automation opportunity.</p>
+      <a href="https://wa.me/918317329312" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;margin-bottom:0.5rem;">{primary_cta} &rarr;</a>
+      <a href="/ai-automation-agency-india" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">View All Services</a>
+    </section>
   </main>
 </div>
 """
@@ -880,6 +1139,83 @@ def load_compare_battlecards_via_node():
             if tmp_bridge.exists():
                 tmp_bridge.unlink()
     return items
+
+def load_glossary_terms_via_node():
+    """
+    Loads all glossary terms from glossaryData.ts via Node bridge.
+    """
+    items = []
+    if GLOSSARY_TS_PATH.exists():
+        content = GLOSSARY_TS_PATH.read_text(encoding="utf-8")
+        code = content
+        code = re.sub(r'export\s+interface[\s\S]*?(?=export\s+const)', '', code)
+        code = re.sub(r'export\s+const\s+GLOSSARY_TERMS:\s*GlossaryTerm\[\]\s*=', 'const GLOSSARY_TERMS =', code)
+        code += '\nconsole.log(JSON.stringify(GLOSSARY_TERMS));\n'
+        tmp_bridge = BASE_DIR / "frontend" / "src" / "data" / ".tmp_bridge_glossary.cjs"
+        tmp_bridge.write_text(code, encoding="utf-8")
+        try:
+            res = subprocess.run(["node", str(tmp_bridge)], capture_output=True, text=True, check=True)
+            items = json.loads(res.stdout)
+            print(f"Loaded {len(items)} glossary terms from glossaryData.ts via Node bridge.")
+        except Exception as e:
+            print(f"Node bridge error on glossary: {e}")
+        finally:
+            if tmp_bridge.exists():
+                tmp_bridge.unlink()
+    return items
+
+def render_glossary_semantic_html(terms):
+    """
+    Renders clean, accessible semantic HTML for /glossary central reference hub.
+    Formatted according to Edward Sturm mobile geometry and Brian Winum semantic claiming.
+    """
+    cards_html = "".join(
+        f'<article id="{html.escape(t.get("slug", ""))}" style="margin-bottom:2rem;background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.75rem;color:#f8fafc;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">'
+        f'<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">'
+        f'<span style="font-size:0.7rem;font-weight:700;color:#38bdf8;text-transform:uppercase;background:#0369a12a;padding:0.25rem 0.6rem;border-radius:0.375rem;border:1px solid #0284c7;">{html.escape(t.get("category", ""))}</span>'
+        f'<span style="font-size:0.75rem;font-family:monospace;color:#34d399;background:#064e3b4d;padding:0.2rem 0.5rem;border-radius:0.25rem;border:1px solid #059669;">SLA: {html.escape(t.get("productionBenchmark", ""))}</span>'
+        f'</div>'
+        f'<h2 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.75rem 0;">'
+        f'{html.escape(t.get("term", ""))}'
+        + (f' <span style="font-family:monospace;font-size:0.8rem;background:#1e293b;color:#38bdf8;padding:0.2rem 0.5rem;border-radius:0.25rem;border:1px solid #334155;">{html.escape(t.get("acronym", ""))}</span>' if t.get("acronym") else '')
+        + f'</h2>'
+        f'<div class="glossary-term-def" style="background:#020617;border:1px solid #1e293b;border-left:3px solid #0284c7;border-radius:0.5rem;padding:1rem;margin-bottom:1rem;font-size:0.95rem;line-height:1.6;color:#e2e8f0;font-weight:500;">{html.escape(t.get("shortDefinition", ""))}</div>'
+        f'<p style="color:#94a3b8;font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem;">{html.escape(t.get("technicalDeepDive", ""))}</p>'
+        f'<div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;padding-top:0.75rem;border-top:1px solid #1e293b;">'
+        + (f'<a href="/tools/{html.escape(t.get("relatedToolSlug", ""))}" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.5rem 1rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.8rem;">Launch Interactive Simulator &rarr;</a>' if t.get("relatedToolSlug") else '')
+        + (f'<a href="{html.escape(t.get("relatedSolutionUrl", ""))}" style="color:#38bdf8;text-decoration:underline;font-size:0.8rem;">View Architecture Docs</a>' if t.get("relatedSolutionUrl") else '')
+        + f'</div>'
+        f'</article>'
+        for t in terms
+    )
+
+    return f"""
+<div id="prerendered-glossary" style="max-width:960px;margin:0 auto;padding:2.5rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#0f172a;">
+  <header style="margin-bottom:3rem;text-align:center;">
+    <div style="display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0284c7;background:#e0f2fe;padding:0.35rem 0.85rem;border-radius:9999px;margin-bottom:1rem;border:1px solid #bae6fd;">Sovereign Engineering Knowledge Graph • Definitive Lexicon</div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;color:#0f172a;margin:0 0 1rem 0;">Enterprise AI Systems &amp; Agentic Architecture Glossary</h1>
+    <p style="font-size:1.15rem;color:#475569;line-height:1.6;max-width:750px;margin:0 auto 1.5rem auto;">
+      A peer-reviewed architectural reference for Chief Technology Officers, AI Systems Architects, and Engineering Directors. Grounded definitions of deterministic state machines, sovereign VPC enclaves, DPDP Act compliance, and low-latency inference fabrics.
+    </p>
+    <div style="font-size:0.875rem;font-weight:600;color:#0369a1;background:#f0f9ff;border:1px solid #e0f2fe;border-radius:0.5rem;padding:0.75rem;display:inline-block;">
+      Covering {len(terms)} Definitive Enterprise Engineering Standards &bull; Verified Telemetry SLAs Included
+    </div>
+  </header>
+  <main>
+    <section>
+      {cards_html}
+    </section>
+    <section style="margin:3rem 0;background:#0f172a;border-radius:1rem;padding:2.5rem 2rem;text-align:center;color:#ffffff;">
+      <h2 style="font-size:1.75rem;font-weight:700;margin:0 0 0.75rem 0;color:#ffffff;">Deploy Sovereign Multi-Agent Infrastructure</h2>
+      <p style="color:#94a3b8;font-size:0.95rem;max-width:600px;margin:0 auto 1.5rem auto;line-height:1.6;">
+        Schedule a 30-minute private technical assessment with Principal AI Systems Architect Chaman Shah. Contractually backed 14-day production pilot SLA with 90-day ROI guarantee.
+      </p>
+      <a href="https://wa.me/918317329312" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;">Schedule Architecture Audit &rarr;</a>
+      <a href="/solutions" style="display:inline-block;border:1px solid #334155;color:#cbd5e1;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Browse 3,765 Workflows</a>
+    </section>
+  </main>
+</div>
+"""
 
 def render_compare_hub_semantic_html(battlecards):
     """
@@ -5395,9 +5731,21 @@ def generate_ssg():
             ]
         }
 
+        speakable_schema = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": title,
+            "url": canonical_url,
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".answer-capsule", "h1"]
+            }
+        }
+
         injections = [
             f'<script type="application/ld+json">{json.dumps(author_schema, ensure_ascii=False)}</script>',
-            f'<script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script>'
+            f'<script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script>',
+            f'<script type="application/ld+json">{json.dumps(speakable_schema, ensure_ascii=False)}</script>'
         ]
         if json_ld:
             injections.append(f'<script type="application/ld+json">{json_ld}</script>')
@@ -5554,6 +5902,8 @@ def generate_ssg():
         else:
             html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{semantic_sol}</div>')
 
+        tool_slug, tool_name, tool_metric, tool_desc = get_matched_tool_for_solution(sol)
+
         # Inject JSON-LD right before </head>
         service_schema = {
             "@context": "https://schema.org",
@@ -5569,6 +5919,22 @@ def generate_ssg():
             "areaServed": {
                 "@type": "Country",
                 "name": "India"
+            },
+            "hasPart": {
+                "@type": "SoftwareApplication",
+                "name": tool_name,
+                "url": f"https://elesium.online/tools/{tool_slug}",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "All",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "INR"
+                }
+            },
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".answer-capsule", "h1"]
             }
         }
 
@@ -5682,6 +6048,69 @@ def generate_ssg():
     print("Generated SSG for: /solutions (Hub)")
     print("✅ SSG complete for solutions.")
 
+    # Generate SSG for Enterprise AI Systems & Agentic Architecture Glossary (/glossary)
+    print("Starting SSG Generation for Glossary Hub (/glossary)...")
+    glossary_terms = load_glossary_terms_via_node()
+    print(f"Loaded {len(glossary_terms)} glossary terms for SSG pre-rendering.")
+
+    glossary_canonical = "https://elesium.online/glossary"
+    glossary_title = "Enterprise AI Systems & Agentic Architecture Glossary | Elesium"
+    glossary_desc = "Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, DPDP Act compliance protocols, and low-latency inference fabrics."
+
+    glossary_out_dir = DIST_DIR / "glossary"
+    glossary_out_dir.mkdir(parents=True, exist_ok=True)
+    glossary_out_file = glossary_out_dir / "index.html"
+    glossary_direct_file = DIST_DIR / "glossary.html"
+
+    glossary_html = base_html
+    glossary_html = re.sub(r"<title>.*?</title>", f"<title>{glossary_title}</title>", glossary_html)
+    glossary_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{glossary_desc}" />', glossary_html)
+    glossary_html = replace_canonical(glossary_html, glossary_canonical)
+    glossary_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{glossary_title}" />', glossary_html)
+    glossary_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{glossary_desc}" />', glossary_html)
+    glossary_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{glossary_canonical}" />', glossary_html)
+    glossary_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{glossary_title}" />', glossary_html)
+    glossary_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{glossary_desc}" />', glossary_html)
+
+    glossary_semantic = render_glossary_semantic_html(glossary_terms)
+    root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+    if root_pattern.search(glossary_html):
+        glossary_html = root_pattern.sub(lambda m: f'<div id="root">{glossary_semantic}</div>', glossary_html)
+    else:
+        glossary_html = glossary_html.replace('<div id="root"></div>', f'<div id="root">{glossary_semantic}</div>')
+
+    glossary_schema = {
+        "@context": "https://schema.org",
+        "@type": "DefinedTermSet",
+        "@id": "https://elesium.online/glossary#definedtermset",
+        "name": "Elesium Sovereign AI Systems & Enterprise Agentic Architecture Glossary",
+        "description": glossary_desc,
+        "url": glossary_canonical,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Elesium",
+            "url": "https://elesium.online"
+        },
+        "hasDefinedTerm": [
+            {
+                "@type": "DefinedTerm",
+                "name": f"{t.get('term', '')} ({t.get('acronym', '')})" if t.get('acronym') else t.get('term', ''),
+                "description": t.get("shortDefinition", ""),
+                "url": f"https://elesium.online/glossary#{t.get('slug', '')}",
+                "inDefinedTermSet": "https://elesium.online/glossary#definedtermset"
+            }
+            for t in glossary_terms
+        ],
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".glossary-term-def", "h1"]
+        }
+    }
+    glossary_html = glossary_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(glossary_schema, ensure_ascii=False)}</script>\n</head>')
+    glossary_out_file.write_text(glossary_html, encoding="utf-8")
+    glossary_direct_file.write_text(glossary_html, encoding="utf-8")
+    print(f"Generated SSG for: /glossary ({len(glossary_terms)} terms, DefinedTermSet schema)")
+
     # Generate SSG for Architecture Comparisons (/compare and /compare/:slug)
     print("Starting SSG Generation for architecture battlecards...")
     battlecards = load_compare_battlecards_via_node()
@@ -5782,7 +6211,11 @@ def generate_ssg():
                     },
                     "mainEntityOfPage": b_canonical,
                     "datePublished": b_date_pub,
-                    "dateModified": b_date_mod
+                    "dateModified": b_date_mod,
+                    "speakable": {
+                        "@type": "SpeakableSpecification",
+                        "cssSelector": ["h1", "p"]
+                    }
                 },
                 {
                     "@type": "BreadcrumbList",
@@ -5905,7 +6338,11 @@ def generate_ssg():
                         "url": "https://elesium.online"
                     },
                     "mainEntityOfPage": v_canonical,
-                    "datePublished": v_upload_date
+                    "datePublished": v_upload_date,
+                    "speakable": {
+                        "@type": "SpeakableSpecification",
+                        "cssSelector": ["h1", "p"]
+                    }
                 },
                 {
                     "@type": "BreadcrumbList",
@@ -6747,12 +7184,6 @@ def generate_ssg():
                         "jobTitle": "Principal AI Systems Architect & Founder",
                         "url": "https://elesium.online/authors/chaman-shah"
                     },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "4.9",
-                        "reviewCount": "28",
-                        "bestRating": "5"
-                    },
                     "sameAs": [
                         "https://elesium.online",
                         "https://www.goodfirms.co/company/elesium-online",
@@ -6761,6 +7192,7 @@ def generate_ssg():
                         "https://www.trustpilot.com/review/elesium.online",
                         "https://www.crunchbase.com/organization/elesium-online",
                         "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
+                        "https://github.com/elesium-ai",
                         "https://github.com/655Chaman/elesium-website",
                         "https://www.linkedin.com/in/chaman-elesium",
                         "https://x.com/elesium_ai"

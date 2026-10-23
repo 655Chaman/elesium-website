@@ -1,0 +1,18 @@
+# Elesium — BFSI & Algorithmic Underwriting AI Manifest
+> Sub-Directory Manifest for Banking, NBFCs, Insurance, and FinTech Enterprise Systems.
+> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
+
+## Sector Profile & Core Directives
+- **Target Institutions:** Scheduled commercial banks, Tier-1 NBFCs, general insurance providers, and algorithmic underwriting platforms.
+- **Regulatory Framework:** Reserve Bank of India (RBI) Master Directions on IT Governance, IRDAI Information Security guidelines, and DPDP Act 2023.
+
+## Architectural Standards (Atomic Facts)
+1. **Deterministic Loan Origination:** LangGraph state machine enforces KYC validation, credit bureau API ingestion (CIBIL/Experian), and debt-to-income calculation with zero hallucination risk.
+2. **Automated Claims Triage:** Multi-agent pipeline parsing medical bills, diagnostic reports, and hospital discharge summaries with audited ICD-10 cross-referencing in under 45 seconds.
+3. **Statutory Audit Logs:** Cryptographically signed, immutable transaction journals stored in PostgreSQL with row-level security for regulatory compliance audits.
+4. **Air-Gapped Core Banking Integration:** Operates with Finacle, Flexcube, and bespoke core banking APIs over TLS 1.3 mutual authentication inside private AWS Mumbai / Azure India VPCs.
+
+## Typical Engagement & Deliverables
+- **Pilot Sprint (14 Days | ₹2,50,000 / $3,200):** Automated document parsing & loan eligibility decision engine connected to staging DB.
+- **Enterprise Triad (45 Days | ₹8,50,000 / $10,500):** End-to-end multi-agent underwriting suite with legacy core banking adapters and RBI audit journal.
+- **Primary Inquiry:** WhatsApp +91 8317329312 | https://elesium.online/ai-automation-agency-india

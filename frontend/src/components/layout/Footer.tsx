@@ -11,6 +11,7 @@ export default function DownloadFooter() {
         { name: 'Technical Whitepapers & Research', path: '/signals' },
         { name: 'Architecture Comparisons', path: '/compare' },
         { name: 'Video Masterclasses', path: '/videos' },
+        { name: 'Engineering Glossary (50+ Terms)', path: '/glossary' },
         { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india' },
         { name: 'ele-in SaaS Platform (Waitlist)', path: '/waitlist' },
     ];
