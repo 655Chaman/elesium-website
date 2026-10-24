@@ -101,7 +101,7 @@
   </script>
 
   <!-- Tailwind CSS CDN or Compiled CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
   <style>
     @layer utilities {
       .font-mono-code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
@@ -183,6 +183,8 @@
            width="800" 
            height="400" 
            loading="eager"
+           fetchpriority="high"
+           style="aspect-ratio: 800 / 400;"
            class="w-full h-auto rounded bg-slate-950 border border-slate-800/60">
       <figcaption class="text-xs font-mono-code text-slate-500 mt-2.5 text-center">
         Figure 1.0: Real-time deterministic state flow for {{KEYWORD_TITLE}} with delta WAL verification.

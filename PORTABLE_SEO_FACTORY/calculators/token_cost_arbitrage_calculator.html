@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise LLM Token Cost Arbitrage Simulator | Elesium</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1e293b;
+      --accent: #06b6d4;
+      --accent-glow: rgba(6, 182, 212, 0.2);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .calculator-container { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 720px; width: 100%; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+    .header h1 { font-size: 24px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .header p { color: var(--text-muted); font-size: 14px; margin-top: 6px; }
+    .input-group { margin-bottom: 20px; }
+    .label-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .slider { width: 100%; height: 6px; border-radius: 4px; background: #334155; outline: none; -webkit-appearance: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; box-shadow: 0 0 10px var(--accent); }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .result-card { background: #0c121e; border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-align: center; }
+    .result-card.highlight { border-color: var(--accent); background: radial-gradient(circle at top, #083344 0%, #0c121e 100%); box-shadow: 0 0 20px var(--accent-glow); }
+    .model-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .cost-val { font-size: 24px; font-weight: 800; color: #fff; margin: 10px 0 4px; }
+    .subtext { font-size: 11px; color: var(--text-muted); }
+    .savings-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: var(--success); font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 999px; margin-top: 8px; }
+    .watermark-footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+    .watermark-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .watermark-footer a:hover { text-decoration: underline; }
+    @media(max-width: 640px) { .results-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container" id="widget">
+  <div class="header">
+    <h1>⚡ Enterprise LLM Token Cost Arbitrage Model</h1>
+    <p>Simulate monthly operating costs: Proprietary APIs vs On-Premise DeepSeek-V3 / vLLM cluster.</p>
+  </div>
+
+  <div class="input-group">
+    <div class="label-row">
+      <span>Monthly Input Tokens:</span>
+      <span id="inputTokensDisplay" style="color: var(--accent);">50,000,000 (50M)</span>
+    </div>
+    <input type="range" min="1" max="500" value="50" class="slider" id="inputSlider">
+  </div>
+
+  <div class="input-group">
+    <div class="label-row">
+      <span>Monthly Output Tokens:</span>
+      <span id="outputTokensDisplay" style="color: var(--accent);">15,000,000 (15M)</span>
+    </div>
+    <input type="range" min="1" max="200" value="15" class="slider" id="outputSlider">
+  </div>
+
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="model-title">OpenAI GPT-4o</div>
+      <div class="cost-val" id="gptCost">$275</div>
+      <div class="subtext">In: $2.50/M | Out: $10.00/M</div>
+      <div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
+    </div>
+
+    <div class="result-card">
+      <div class="model-title">Claude 3.5 Sonnet</div>
+      <div class="cost-val" id="claudeCost">$375</div>
+      <div class="subtext">In: $3.00/M | Out: $15.00/M</div>
+      <div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
+    </div>
+
+    <div class="result-card highlight">
+      <div class="model-title">On-Prem DeepSeek-V3</div>
+      <div class="cost-val" id="deepseekCost" style="color: var(--accent);">$48</div>
+      <div class="subtext">Raw GPU Compute Arbitrage</div>
+      <div class="savings-badge" id="savingsBadge">82.5% SAVINGS</div>
+    </div>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>Zero Data Retention • DPDP Compliant</span>
+  </div>
+</div>
+
+<script>
+  const inSlider = document.getElementById('inputSlider');
+  const outSlider = document.getElementById('outputSlider');
+  const inDisplay = document.getElementById('inputTokensDisplay');
+  const outDisplay = document.getElementById('outputTokensDisplay');
+  const gptCostEl = document.getElementById('gptCost');
+  const claudeCostEl = document.getElementById('claudeCost');
+  const deepseekCostEl = document.getElementById('deepseekCost');
+  const savingsEl = document.getElementById('savingsBadge');
+
+  function calculate() {
+    const inM = parseFloat(inSlider.value);
+    const outM = parseFloat(outSlider.value);
+
+    inDisplay.innerText = `${(inM * 1000000).toLocaleString()} (${inM}M)`;
+    outDisplay.innerText = `${(outM * 1000000).toLocaleString()} (${outM}M)`;
+
+    // Rates per Million tokens
+    const gptCost = (inM * 2.50) + (outM * 10.00);
+    const claudeCost = (inM * 3.00) + (outM * 15.00);
+    // DeepSeek V3 on-premise hosted rate estimate (amortized GPU instance + inference energy)
+    const deepseekCost = (inM * 0.27) + (outM * 1.10) + 15; // baseline cluster standby
+
+    gptCostEl.innerText = `$${Math.round(gptCost).toLocaleString()}`;
+    claudeCostEl.innerText = `$${Math.round(claudeCost).toLocaleString()}`;
+    deepseekCostEl.innerText = `$${Math.round(deepseekCost).toLocaleString()}`;
+
+    const maxCloud = Math.max(gptCost, claudeCost);
+    const savingsPct = Math.round(((maxCloud - deepseekCost) / maxCloud) * 100);
+    savingsEl.innerText = `${savingsPct}% SAVINGS`;
+
+    // Notify parent window if mounted in iframe (responsive postMessage)
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'RESIZE_EMBED', height: document.getElementById('widget').offsetHeight + 48 }, '*');
+    }
+  }
+
+  inSlider.addEventListener('input', calculate);
+  outSlider.addEventListener('input', calculate);
+  calculate();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India DPDP Act 2023 Statutory Penalty Exposure Calculator | Elesium</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1e293b;
+      --accent: #f59e0b;
+      --accent-glow: rgba(245, 158, 11, 0.2);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --danger: #ef4444;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .calculator-container { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 740px; width: 100%; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+    .header h1 { font-size: 22px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .header p { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+    .input-group { margin-bottom: 18px; }
+    .label-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .slider { width: 100%; height: 6px; border-radius: 4px; background: #334155; outline: none; -webkit-appearance: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; }
+    .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .checkbox-card { background: #0c121e; border: 1px solid var(--border); border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .checkbox-card input { accent-color: var(--accent); width: 16px; height: 16px; cursor: pointer; }
+    .checkbox-card span { font-size: 12px; color: var(--text); font-weight: 500; }
+    .results-banner { background: radial-gradient(circle at top, rgba(239, 68, 68, 0.15) 0%, #0c121e 100%); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 12px; padding: 20px; text-align: center; margin-top: 24px; }
+    .penalty-amount { font-size: 32px; font-weight: 800; color: #f87171; margin: 8px 0; }
+    .penalty-statute { font-size: 12px; color: var(--text-muted); }
+    .mitigation-box { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px; margin-top: 16px; font-size: 12px; color: var(--success); display: flex; justify-content: space-between; align-items: center; }
+    .watermark-footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+    .watermark-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    @media(max-width: 640px) { .checkbox-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container" id="widget">
+  <div class="header">
+    <h1>⚖️ DPDP Act 2023 Statutory Penalty Exposure Calculator</h1>
+    <p>Estimate regulatory financial liability under Section 33 & The Schedule (Penalties up to ₹250 Crores).</p>
+  </div>
+
+  <div class="input-group">
+    <div class="label-row">
+      <span>Customer Data Records Processed:</span>
+      <span id="recordsDisplay" style="color: var(--accent);">2,500,000 Records</span>
+    </div>
+    <input type="range" min="10" max="500" value="25" class="slider" id="recordsSlider">
+  </div>
+
+  <div class="checkbox-grid">
+    <label class="checkbox-card">
+      <input type="checkbox" id="thirdPartyAi" checked>
+      <span>Customer Data Sent to US Cloud LLMs</span>
+    </label>
+    <label class="checkbox-card">
+      <input type="checkbox" id="missingConsent" checked>
+      <span>Missing Granular Multi-lingual Consent</span>
+    </label>
+    <label class="checkbox-card">
+      <input type="checkbox" id="noDpo">
+      <span>No Designated Data Protection Officer</span>
+    </label>
+    <label class="checkbox-card">
+      <input type="checkbox" id="childrenData">
+      <span>Processing Data of Minor Individuals</span>
+    </label>
+  </div>
+
+  <div class="results-banner">
+    <div class="penalty-statute">MAXIMUM ESTIMATED STATUTORY LIABILITY</div>
+    <div class="penalty-amount" id="penaltyDisplay">₹150 Crores</div>
+    <div class="penalty-statute" id="legalClause">Governed under Section 33(1) & Schedule Item 1 (Failure to enforce reasonable security safeguards)</div>
+  </div>
+
+  <div class="mitigation-box">
+    <span>🛡️ Sovereign Air-Gapped LLM Remediation:</span>
+    <span style="font-weight: 700;">Eliminates 100% of Cross-Border Data Transfer Exposure</span>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>Statutory Reference: DPDP Act 2023 (Act No. 22 of 2023)</span>
+  </div>
+</div>
+
+<script>
+  const slider = document.getElementById('recordsSlider');
+  const recordsDisplay = document.getElementById('recordsDisplay');
+  const penaltyDisplay = document.getElementById('penaltyDisplay');
+  const thirdPartyAi = document.getElementById('thirdPartyAi');
+  const missingConsent = document.getElementById('missingConsent');
+  const noDpo = document.getElementById('noDpo');
+  const childrenData = document.getElementById('childrenData');
+
+  function calculate() {
+    const records = parseInt(slider.value) * 100000;
+    recordsDisplay.innerText = `${records.toLocaleString()} Records`;
+
+    let maxPenaltyCrores = 50;
+
+    if (thirdPartyAi.checked) maxPenaltyCrores = Math.max(maxPenaltyCrores, 250);
+    if (childrenData.checked) maxPenaltyCrores = Math.max(maxPenaltyCrores, 200);
+    if (missingConsent.checked) maxPenaltyCrores = Math.max(maxPenaltyCrores, 150);
+    if (noDpo.checked) maxPenaltyCrores = Math.max(maxPenaltyCrores, 100);
+
+    // Adjust by volume
+    if (records > 10000000) {
+      maxPenaltyCrores = Math.min(250, maxPenaltyCrores);
+    } else if (records < 500000 && !thirdPartyAi.checked && !childrenData.checked) {
+      maxPenaltyCrores = Math.round(maxPenaltyCrores * 0.4);
+    }
+
+    penaltyDisplay.innerText = `₹${maxPenaltyCrores} Crores`;
+
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'RESIZE_EMBED', height: document.getElementById('widget').offsetHeight + 48 }, '*');
+    }
+  }
+
+  slider.addEventListener('input', calculate);
+  thirdPartyAi.addEventListener('change', calculate);
+  missingConsent.addEventListener('change', calculate);
+  noDpo.addEventListener('change', calculate);
+  childrenData.addEventListener('change', calculate);
+  calculate();
+</script>
+
+</body>
+</html>

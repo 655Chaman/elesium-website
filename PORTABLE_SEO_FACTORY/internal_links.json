@@ -1,0 +1,988 @@
+{
+  "graph_metadata": {
+    "total_nodes": 25,
+    "total_edges": 75,
+    "mean_in_degree": 3.0,
+    "pagerank_gini": 0.2744,
+    "orphan_count": 0,
+    "sink_count": 0,
+    "damping_factor": 0.85
+  },
+  "nodes": [
+    {
+      "slug": "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+      "canonical_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+      "hub_category": "Logistics & Supply Chain",
+      "target_persona": "Logistics Directors & Fleet Operations VPs",
+      "pagerank": 0.047883,
+      "cheirank": 0.028788,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+        "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.365,
+          "anchor_text": "deploying deterministic constrained decoding logit masking in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying sub-200ms transaction ledger reconciliation in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying private air-gapped vpc deployment in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+      "canonical_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+      "hub_category": "BFSI & Underwriting",
+      "target_persona": "Chief Technology Officers & Principal AI Architects",
+      "pagerank": 0.045774,
+      "cheirank": 0.028788,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+        "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+        "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.424,
+          "anchor_text": "deploying deterministic constrained decoding logit masking in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying sub-200ms transaction ledger reconciliation in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying dynamic token cost arbitrage in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+      "canonical_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+      "hub_category": "Industrial Manufacturing",
+      "target_persona": "Chief Risk Officers & Compliance Directors",
+      "pagerank": 0.052382,
+      "cheirank": 0.024305,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+        "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.407,
+          "anchor_text": "deploying dynamic token cost arbitrage in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "affinity_score": 0.366,
+          "anchor_text": "deploying deterministic constrained decoding logit masking in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying sub-200ms transaction ledger reconciliation in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+      "canonical_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+      "hub_category": "Healthcare AI",
+      "target_persona": "Supply Chain Superintendents",
+      "pagerank": 0.06393,
+      "cheirank": 0.017455,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+        "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+        "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.365,
+          "anchor_text": "deploying deterministic constrained decoding logit masking in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying private air-gapped vpc deployment in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying dynamic token cost arbitrage in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "canonical_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "hub_category": "Decarbonization & Clean Tech",
+      "target_persona": "Electrolysis Plant Directors & Clean Hydrogen Leads",
+      "pagerank": 0.015845,
+      "cheirank": 0.039736,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+        "dynamic-token-cost-arbitrage-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying private air-gapped vpc deployment in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying dynamic token cost arbitrage in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.337,
+          "anchor_text": "deterministic Deterministic constrained decoding logit masking for Electrolysis Plant Directors & Clean Hydrogen Leads",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+      "canonical_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+      "hub_category": "Space Exploration & Robotics",
+      "target_persona": "Logistics Directors & Fleet Operations VPs",
+      "pagerank": 0.013846,
+      "cheirank": 0.068101,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+        "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying private air-gapped vpc deployment in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying dynamic token cost arbitrage in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.317,
+          "anchor_text": "deterministic Private air-gapped VPC deployment for Logistics Directors & Fleet Operations VPs",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+      "canonical_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+      "hub_category": "Offshore LNG & Marine Cryogenics",
+      "target_persona": "Chief Technology Officers & Principal AI Architects",
+      "pagerank": 0.013846,
+      "cheirank": 0.091024,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+        "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying private air-gapped vpc deployment in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying deterministic constrained decoding logit masking in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.334,
+          "anchor_text": "deterministic Private air-gapped VPC deployment for Chief Technology Officers & Principal AI Architects",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+      "canonical_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+      "hub_category": "Logistics & Supply Chain",
+      "target_persona": "Chief Risk Officers & Compliance Directors",
+      "pagerank": 0.047883,
+      "cheirank": 0.028788,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+        "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.411,
+          "anchor_text": "deterministic Deterministic constrained decoding logit masking for Chief Technology Officers & Principal AI Architects",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying deterministic finite state machine agent fallbacks in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Private air-gapped VPC deployment for Electrolysis Plant Directors & Clean Hydrogen Leads",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+      "canonical_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+      "hub_category": "BFSI & Underwriting",
+      "target_persona": "Supply Chain Superintendents",
+      "pagerank": 0.045774,
+      "cheirank": 0.028788,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+        "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+        "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying deterministic finite state machine agent fallbacks in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Dynamic token cost arbitrage and semantic caching saving 85%+ in API spend for Logistics Directors & Fleet Operations VPs",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Deterministic constrained decoding logit masking for Chief Risk Officers & Compliance Directors",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "canonical_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "hub_category": "Industrial Manufacturing",
+      "target_persona": "Electrolysis Plant Directors & Clean Hydrogen Leads",
+      "pagerank": 0.052382,
+      "cheirank": 0.024305,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+        "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+        "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying deterministic finite state machine agent fallbacks in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Dynamic token cost arbitrage and semantic caching saving 85%+ in API spend for Chief Technology Officers & Principal AI Architects",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Deterministic constrained decoding logit masking for Supply Chain Superintendents",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+      "canonical_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+      "hub_category": "Healthcare AI",
+      "target_persona": "Logistics Directors & Fleet Operations VPs",
+      "pagerank": 0.070044,
+      "cheirank": 0.019146,
+      "in_degree": 5,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 2.322,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+        "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+        "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+        "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+        "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.367,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying deterministic finite state machine agent fallbacks in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Dynamic token cost arbitrage and semantic caching saving 85%+ in API spend for Chief Risk Officers & Compliance Directors",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+      "canonical_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+      "hub_category": "Decarbonization & Clean Tech",
+      "target_persona": "Chief Technology Officers & Principal AI Architects",
+      "pagerank": 0.018902,
+      "cheirank": 0.046631,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+        "dynamic-token-cost-arbitrage-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying deterministic finite state machine agent fallbacks in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Dynamic token cost arbitrage and semantic caching saving 85%+ in API spend for Supply Chain Superintendents",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.345,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+      "canonical_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+      "hub_category": "Space Exploration & Robotics",
+      "target_persona": "Chief Risk Officers & Compliance Directors",
+      "pagerank": 0.013846,
+      "cheirank": 0.070361,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+        "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying sub-200ms transaction ledger reconciliation in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Dynamic token cost arbitrage and semantic caching saving 85%+ in API spend for Electrolysis Plant Directors & Clean Hydrogen Leads",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.33,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+      "canonical_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+      "hub_category": "Offshore LNG & Marine Cryogenics",
+      "target_persona": "Supply Chain Superintendents",
+      "pagerank": 0.013846,
+      "cheirank": 0.084932,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+        "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.367,
+          "anchor_text": "deterministic Deterministic constrained decoding logit masking for Logistics Directors & Fleet Operations VPs",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deploying sub-200ms transaction ledger reconciliation in private VPC",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "affinity_score": 0.33,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "canonical_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "hub_category": "Logistics & Supply Chain",
+      "target_persona": "Electrolysis Plant Directors & Clean Hydrogen Leads",
+      "pagerank": 0.047883,
+      "cheirank": 0.028788,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+        "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+        "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.366,
+          "anchor_text": "explore Elesium's deterministic constrained decoding logit masking specification",
+          "anchor_type": "BRAND_NAVIGATIONAL"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Deterministic Finite State Machine agent fallbacks for Logistics Directors & Fleet Operations VPs",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Sub-200ms transaction ledger reconciliation and zero-copy streaming for Chief Risk Officers & Compliance Directors",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+      "canonical_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+      "hub_category": "BFSI & Underwriting",
+      "target_persona": "Logistics Directors & Fleet Operations VPs",
+      "pagerank": 0.045774,
+      "cheirank": 0.028788,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+        "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+        "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.367,
+          "anchor_text": "explore Elesium's deterministic constrained decoding logit masking specification",
+          "anchor_type": "BRAND_NAVIGATIONAL"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Deterministic Finite State Machine agent fallbacks for Chief Technology Officers & Principal AI Architects",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Sub-200ms transaction ledger reconciliation and zero-copy streaming for Supply Chain Superintendents",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+      "canonical_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+      "hub_category": "Industrial Manufacturing",
+      "target_persona": "Chief Technology Officers & Principal AI Architects",
+      "pagerank": 0.052382,
+      "cheirank": 0.024305,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+        "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.407,
+          "anchor_text": "deterministic Deterministic Finite State Machine agent fallbacks for Chief Risk Officers & Compliance Directors",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "affinity_score": 0.367,
+          "anchor_text": "explore Elesium's deterministic constrained decoding logit masking specification",
+          "anchor_type": "BRAND_NAVIGATIONAL"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Sub-200ms transaction ledger reconciliation and zero-copy streaming for Electrolysis Plant Directors & Clean Hydrogen Leads",
+          "anchor_type": "PARTIAL_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+      "canonical_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+      "hub_category": "Healthcare AI",
+      "target_persona": "Chief Risk Officers & Compliance Directors",
+      "pagerank": 0.06393,
+      "cheirank": 0.017455,
+      "in_degree": 3,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.585,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+        "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+        "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.367,
+          "anchor_text": "explore Elesium's deterministic constrained decoding logit masking specification",
+          "anchor_type": "BRAND_NAVIGATIONAL"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Deterministic Finite State Machine agent fallbacks for Supply Chain Superintendents",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "dynamic-token-cost-arbitrage-for-supply-chain-superintendents",
+      "canonical_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-supply-chain-superintendents",
+      "hub_category": "Decarbonization & Clean Tech",
+      "target_persona": "Supply Chain Superintendents",
+      "pagerank": 0.015845,
+      "cheirank": 0.040632,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Deterministic Finite State Machine agent fallbacks for Electrolysis Plant Directors & Clean Hydrogen Leads",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+          "affinity_score": 0.33,
+          "anchor_text": "deterministic constrained decoding logit masking",
+          "anchor_type": "EXACT_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "canonical_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "hub_category": "Space Exploration & Robotics",
+      "target_persona": "Electrolysis Plant Directors & Clean Hydrogen Leads",
+      "pagerank": 0.013846,
+      "cheirank": 0.068101,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+        "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Sub-200ms transaction ledger reconciliation and zero-copy streaming for Logistics Directors & Fleet Operations VPs",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Private air-gapped VPC deployment for Chief Risk Officers & Compliance Directors",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.345,
+          "anchor_text": "deterministic constrained decoding logit masking",
+          "anchor_type": "EXACT_MATCH"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+      "canonical_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps",
+      "hub_category": "Offshore LNG & Marine Cryogenics",
+      "target_persona": "Logistics Directors & Fleet Operations VPs",
+      "pagerank": 0.013846,
+      "cheirank": 0.084036,
+      "in_degree": 2,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 1.0,
+      "inbound_sources": [
+        "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+        "private-air-gapped-vpc-deployment-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+          "affinity_score": 0.367,
+          "anchor_text": "deterministic Private air-gapped VPC deployment for Supply Chain Superintendents",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic Sub-200ms transaction ledger reconciliation and zero-copy streaming for Chief Technology Officers & Principal AI Architects",
+          "anchor_type": "PARTIAL_MATCH"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.33,
+          "anchor_text": "explore Elesium's private air-gapped vpc deployment specification",
+          "anchor_type": "BRAND_NAVIGATIONAL"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+      "canonical_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects",
+      "hub_category": "Logistics & Supply Chain",
+      "target_persona": "Chief Technology Officers & Principal AI Architects",
+      "pagerank": 0.052056,
+      "cheirank": 0.03047,
+      "in_degree": 4,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 2.0,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+        "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+        "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects",
+        "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.411,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.366,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.365,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+      "canonical_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors",
+      "hub_category": "BFSI & Underwriting",
+      "target_persona": "Chief Risk Officers & Compliance Directors",
+      "pagerank": 0.048831,
+      "cheirank": 0.03047,
+      "in_degree": 4,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 2.0,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+        "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+        "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors",
+        "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.424,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.367,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+      "canonical_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents",
+      "hub_category": "Industrial Manufacturing",
+      "target_persona": "Supply Chain Superintendents",
+      "pagerank": 0.058937,
+      "cheirank": 0.026659,
+      "in_degree": 5,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 2.322,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+        "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "private-air-gapped-vpc-deployment-for-supply-chain-superintendents",
+        "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+        "dynamic-token-cost-arbitrage-for-supply-chain-superintendents"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects",
+          "affinity_score": 0.367,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.366,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "target_url": "https://elesium.online/solutions/sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads",
+          "affinity_score": 0.35,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    },
+    {
+      "slug": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "canonical_url": "https://elesium.online/solutions/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads",
+      "hub_category": "Healthcare AI",
+      "target_persona": "Electrolysis Plant Directors & Clean Hydrogen Leads",
+      "pagerank": 0.070486,
+      "cheirank": 0.019146,
+      "in_degree": 5,
+      "out_degree": 3,
+      "anchor_shannon_entropy": 2.322,
+      "inbound_sources": [
+        "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+        "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads",
+        "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+        "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+        "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads"
+      ],
+      "outbound_links": [
+        {
+          "target_slug": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "target_url": "https://elesium.online/solutions/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps",
+          "affinity_score": 0.367,
+          "anchor_text": "private air-gapped vpc deployment",
+          "anchor_type": "EXACT_MATCH"
+        },
+        {
+          "target_slug": "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+          "target_url": "https://elesium.online/solutions/dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors",
+          "affinity_score": 0.367,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        },
+        {
+          "target_slug": "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+          "target_url": "https://elesium.online/solutions/deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents",
+          "affinity_score": 0.365,
+          "anchor_text": "deterministic state machine telemetry",
+          "anchor_type": "SEMANTIC_LSI"
+        }
+      ]
+    }
+  ]
+}

@@ -20,7 +20,7 @@ This factory is mathematically engineered to defeat modern search engine algorit
 
 ```
 +---------------------------------------------------------------------------------------------------+
-|                              THE 10-PILLAR PORTABLE SEO ENGINE                                    |
+|                              THE 12-PILLAR PORTABLE SEO ENGINE                                    |
 +---------------------------------------------------------------------------------------------------+
 |  1. Edward Sturm Compact Keywords    --> 350-500 words, Answer Capsules, Moz 96-98, Mobile DOM     |
 |  2. SEO Rockstars 2026 Intelligence  --> LLM Authority, Reddit Mimicry, Evidence Cards, Pricing   |
@@ -32,6 +32,8 @@ This factory is mathematically engineered to defeat modern search engine algorit
 |  8. Commercial Agency Operator Guide --> Retainers, Legal MSA/SOW, Cold Outbound, White-Labeling  |
 |  9. AISCO AI Search Crawler Opt.     --> Content Negotiation, Markdown Serving, Robots.txt Matrix  |
 | 10. AAEO Autonomous AI Engine Opt.   --> Agentic Purchasing, OpenAPI Specs, Fast MCP Tool Servers  |
+| 11. Programmatic Graph Theory & Mesh --> Damped Semantic Mesh, PageRank Diffusion, Shannon Entropy |
+| 12. Core Web Vitals & DOM Physics    --> 14.6KB TCP cwnd, Sub-50ms INP, Sub-800ms LCP, Zero-CLS   |
 +---------------------------------------------------------------------------------------------------+
 ```
 
@@ -46,14 +48,24 @@ PORTABLE_SEO_FACTORY/
 ├── PROJECT_QUESTIONNAIRE.md            # 📋 Offline project intake questionnaire
 ├── project_config.json                 # ⚙️ Generated project configuration (created by wizard)
 ├── auto_pilot.py                       # 🤖 MASTER AUTONOMOUS CLI: One-click scan, generate, audit, index
+├── cid_converter.py                    # 📍 Google Maps Hex/Decimal CID converter & permanent URL engine
+├── core_web_vitals_auditor.py          # ⚡ DOM Physics & CWV Auditor: 14.6KB TCP cwnd, 0-CLS, sub-50ms INP
 ├── dynamic_crawler_router.py           # 🚀 Server middleware: Detects AI bots & serves 95% lighter Markdown
 ├── gsc_regex_analyzer.py               # 📊 Standalone GSC RE2 telemetry analyzer & AI Overview radar
+├── internal_link_mesh_optimizer.py     # 🕸️ Graph Theory Engine: PageRank, CheiRank & Damped Semantic Mesh
 ├── setup_wizard.py                     # 🧙 Interactive CLI onboarding wizard
 ├── generator_engine.py                 # 🚀 Programmatic keyword & page generator (v2.0)
-├── compliance_gatekeeper.py            # 🔍 9-Gate Edward Sturm & Quality auditor
+├── compliance_gatekeeper.py            # 🔍 11-Gate Edward Sturm & Quality auditor
 ├── portable_instant_indexer.py         # ⚡ Zero-dependency IndexNow & Sitemap broadcaster
 │
-├── playbooks/                          # 📚 Comprehensive Masterclass Knowledge Manuals (550+ KB)
+├── calculators/                        # 🧮 5 Production Standalone & Embeddable Micro-SaaS Tools
+│   ├── token_cost_arbitrage_calculator.html      # Cloud APIs vs On-Premises DeepSeek-V3/vLLM
+│   ├── dpdp_act_penalty_exposure_calculator.html # Statutory exposure under India DPDP Act 2023
+│   ├── enterprise_rag_latency_simulator.html    # Vector DB (Qdrant/Milvus/pgvector) p90/p99 latency
+│   ├── agent_vram_gpu_cluster_sizer.html        # Multi-agent VRAM & Tensor Parallelism cluster sizer
+│   └── b2b_seo_roi_payback_model.html           # Compact BOFU pipeline creation & CAC payback
+│
+├── playbooks/                          # 📚 Comprehensive Masterclass Knowledge Manuals (750+ KB)
 │   ├── MODULE_01_EDWARD_STURM_COMPACT_KEYWORDS.md        # The 5 properties, 135-case taxonomy & 6 gates
 │   ├── MODULE_02_SEO_ROCKSTARS_2026_ELITE_INTELLIGENCE.md # All 9 Rockstars speakers decoded
 │   ├── MODULE_03_ADRIAN_GANA_LOCAL_SEO_GBP_DOMINATION.md # GBP categories, CID links, atomic reviews
@@ -63,7 +75,9 @@ PORTABLE_SEO_FACTORY/
 │   ├── MODULE_07_GSC_RE2_INTELLIGENCE_AI_OVERVIEWS.md    # GSC regex filters & telemetry analysis
 │   ├── MODULE_08_COMMERCIAL_AGENCY_OPERATOR_GUIDE.md     # Legal MSA/SOW, pricing, cold outreach, white-label
 │   ├── MODULE_09_AISCO_AI_SEARCH_CRAWLER_OPTIMIZATION.md # Forensic bot census, edge routing, markdown negotiation
-│   └── MODULE_10_AAEO_AUTONOMOUS_AI_ENGINE_OPTIMIZATION.md # Agentic procurement, OpenAPI specs, MCP servers
+│   ├── MODULE_10_AAEO_AUTONOMOUS_AI_ENGINE_OPTIMIZATION.md # Agentic procurement, OpenAPI specs, MCP servers
+│   ├── MODULE_11_PROGRAMMATIC_INTERNAL_LINKING_GRAPH_THEORY.md # Directed graphs, PageRank Markov chains, Shannon entropy
+│   └── MODULE_12_CORE_WEB_VITALS_DOM_PHYSICS_SUB_SECOND_CRP.md # TCP cwnd init (14.6KB), zero-CLS, sub-50ms INP, CrUX field data
 │
 ├── templates/                          # 🛠️ Production-Proven Component Templates
 │   ├── bofu_landing_page.tmpl          # Complete HTML/TSX compact solution page

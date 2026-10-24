@@ -21,11 +21,11 @@
 
 ---
 
-## 🗺️ THE 5-PHASE AUTONOMOUS EXECUTION PIPELINE
+## 🗺️ THE 9-PHASE AUTONOMOUS EXECUTION PIPELINE
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        AUTONOMOUS 5-PHASE EXECUTION PIPELINE                           │
+│                        AUTONOMOUS 9-PHASE EXECUTION PIPELINE                           │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ PHASE 1: INTAKE & ENTITY DISCOVERY                                                     │
 │   • AST Codebase Inspection ➔ Extract Brand, ICP, Tech Stack, & Conversion Route       │
@@ -38,24 +38,49 @@
 │   • Compile 350–500 Word Landing Pages with Answer Capsules & Differentiator Tables    │
 │   • Inject Shaun Mitchell 3-Tier Pricing Grids & Joy Hawkins Honest Trade-off Tables   │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 3: 6-GATE COMPLIANCE GATEKEEPER                                                  │
+│ PHASE 3: 9-GATE COMPLIANCE GATEKEEPER                                                  │
 │   • Gate 1: Tri-Alignment (Slug == Title == Single H1)                                 │
 │   • Gate 2: Strict 350–500 Word Count & Micro-Paragraphs (<=3 sentences/p)             │
 │   • Gate 3: Moz Sweet Spot (Score 96–98, Assert NOT 100)                               │
 │   • Gate 4: Mobile Geometry (Primary CTA Precedes Hero Graphic in DOM)                 │
 │   • Gate 5: Crawl Depth & Orphan Check (<= 2 clicks from root)                         │
 │   • Gate 6: Semantic SSG & Self-Referential Canonical Matching                         │
+│   • Gate 7: Answer Capsule Density (40–50 words, declarative format)                   │
+│   • Gate 8: Pricing Grid & Evidence Cards Schema Mapping                               │
+│   • Gate 9: Zero AI Slop & Cliché Filter ("game-changer", "dive into", etc.)           │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ PHASE 4: AEO / GEO & KNOWLEDGE GRAPH INJECTION                                         │
 │   • Brian Winum 7-Layer LLM Authority Hacking Framework                                │
-│   • Compile llms.txt, llms-full.txt, and 6 Sector Manifests (llms-*.txt)               │
+│   • Compile llms.txt, llms-full.txt, and Sector Manifests (llms-*.txt)                 │
 │   • Inject Adrian Gana Dynamic Schema (Google Maps CID, Wikidata, sameAs Triad)        │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 5: INSTANT INDEXING & SYNDICATION NETWORK                                        │
+│ PHASE 5: MICRO-SAAS LINK MAGNETS & DUAL-MOUNT SPRINT                                   │
 │   • Dual-Mount Micro-SaaS Simulators (/tools/... and /embed/...) with Watermarks       │
+│   • PostMessage Responsive Height Resizing Protocol                                    │
 │   • XML Sitemap Compilation & Robots.txt Verification                                  │
 │   • Live HTTP Broadcast to IndexNow API (Bing, Yandex, Seznam, AI Search Crawlers)     │
-│   • Output Verification Telemetry Dashboard to the Operator                            │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 6: AISCO (AI SEARCH CRAWLER OPTIMIZATION & EDGE ROUTING)                         │
+│   • Dynamic Content Negotiation (Detecting GPTBot, PerplexityBot, ClaudeBot)           │
+│   • Serving Lean Semantic Markdown with Answer Capsules (94% Token Reduction)          │
+│   • Cloudflare Workers & Fast Nginx Reverse Proxy Adapters                             │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 7: AAEO (AUTONOMOUS AI ENGINE OPTIMIZATION & AGENT PROCUREMENT)                  │
+│   • Machine-Readable OpenAPI 3.1.0 Manifests (/.well-known/openapi.json)               │
+│   • Production Model Context Protocol (MCP) Server for Tool Calling                    │
+│   • Cryptographic Evidence Attestations & IPFS CID Anchoring                           │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 8: PROGRAMMATIC INTERNAL LINKING GRAPH THEORY & SEMANTIC MESH                    │
+│   • Directed Graph Adjacency Formulation G = (V, E) with Damped Power Iteration        │
+│   • PageRank Diffusion (d = 0.85) & CheiRank Communicative Dual Balancing              │
+│   • Bound Maximum Click-Depth (dist(root, v) <= 2) & Orphan Node Eradication           │
+│   • Shannon Entropy Anchor Text Distribution (15% Exact, 45% Partial, 25% LSI, 15% Brand)│
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 9: CORE WEB VITALS & SUB-SECOND CRITICAL RENDERING PATH AUDIT                    │
+│   • 14KB Initial TCP Congestion Window (cwnd init) Inlining Verification               │
+│   • Interaction to Next Paint (INP < 50ms) & Largest Contentful Paint (LCP < 800ms)   │
+│   • Cumulative Layout Shift Zeroing (CLS = 0.000) via Strict Media Aspect Ratios       │
+│   • CSS Containment (`contain: content`, `content-visibility: auto`) Validation        │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -244,7 +269,41 @@ Enable autonomous AI purchasing and coding agents (Devin, Claude Code, Antigravi
 
 ---
 
-## 👥 THE 9 SPECIALIZED SUB-AGENT PERSONA DISPATCH PROMPTS
+## 🕸️ PHASE 8: PROGRAMMATIC INTERNAL LINKING GRAPH THEORY & TOPOLOGICAL MESH
+
+### Objective
+Eliminate orphan pages, bound click distance to $\le 2$ from root, diffuse PageRank across the programmatic corpus using a Damped Semantic Mesh, and enforce Shannon anchor text entropy for complete Penguin immunity.
+
+### Autonomous Action Steps:
+1. **Execute Graph Topology Scan:**
+   - Run `python3 internal_link_mesh_optimizer.py --scan` or ingest `keywords_queue.json`.
+   - Represent domain as directed graph $G = (V, E)$, computing transition probability matrix $M$ and Power Iteration PageRank ($d = 0.85$).
+2. **Eradicate Graph Sinkholes & Orphans:**
+   - Assert in-degree $d_{\text{in}}(v) \ge 3$ and out-degree $d_{\text{out}}(v) \ge 3$ for every solution page.
+   - Inject contextual cross-links between complementary categories and personas.
+3. **Enforce Shannon Anchor Text Entropy:**
+   - Distribute internal anchor text: 15% Exact Match, 45% Partial / Long-Tail, 25% Semantic LSI, 15% Navigational.
+   - Enforce First-Link Priority: ensure the most critical cluster target is hyperlinked in the first 150 words of body content.
+
+---
+
+## ⚡ PHASE 9: CORE WEB VITALS & SUB-SECOND CRITICAL RENDERING PATH (CRP)
+
+### Objective
+Guarantee sub-second page loads on 4G/5G mobile devices, achieve Interaction to Next Paint (INP) $< 50\text{ms}$, Largest Contentful Paint (LCP) $< 800\text{ms}$, and Cumulative Layout Shift (CLS) $= 0.000$ to maximize Google NavBoost dwell and engagement telemetry.
+
+### Autonomous Action Steps:
+1. **Enforce the 14KB Initial TCP Congestion Window (cwnd init):**
+   - Ensure the critical HTML document and inlined styles render the full hero section and primary CTA within the first 14,600 bytes.
+2. **Isolate Layout Thrashing via CSS Containment:**
+   - Apply `contain: content` and `content-visibility: auto` to below-the-fold sections, cutting layout computation overhead by 80%+.
+3. **Run Automated Performance Gatekeeper:**
+   - Run `python3 core_web_vitals_auditor.py generated_pages/`.
+   - Assert zero render-blocking `<script>` tags, strict aspect-ratio reserves on all media, and font-display metric matching.
+
+---
+
+## 👥 THE 12 SPECIALIZED SUB-AGENT PERSONA DISPATCH PROMPTS
 
 When orchestrating in multi-agent environments (e.g. Antigravity Subagents, Claude Task Workers, CrewAI, AutoGen), dispatch the following exact persona prompts:
 
@@ -387,6 +446,55 @@ EXECUTION CHECKLIST:
 3. Validate JSON Schema types and strict response guarantees.
 4. Ensure cryptographic IPFS CID and signed SLA commitments are verifiable by evaluating agents.
 OUTPUT: Live MCP tool server and validated agent-callable OpenAPI manifest.
+```
+
+---
+
+### SUB-AGENT 10: The Local Pack & CID Engineering Specialist
+```text
+ROLE: Google Local 3-Pack & Geodesic Entity Architect
+MISSION: Transform client's local coordinates into an unshakeable Google Maps CID authority anchor, dominate the local 3-pack, and deploy multi-hub schemas.
+INPUT ARTIFACTS: project_config.json, cid_converter.py, templates/local_schema.tmpl.
+EXECUTION CHECKLIST:
+1. Run cid_converter.py to extract permanent 64-bit decimal CID from Google Maps hex coordinates.
+2. Nest primary category (e.g. Software Company) and 9 secondary categories.
+3. Build NAP consistency citations across top 25 Indian and 25 Global business directories.
+4. Inject geotagged EXIF metadata into corporate image assets.
+5. Setup atomic review velocity formula (R_target = 1.25 * R_leader).
+OUTPUT: Validated permanent CID URL, multi-hub JSON-LD schema, and citation directory matrix.
+```
+
+---
+
+### SUB-AGENT 11: The Internal Link Mesh & Graph Theory Architect
+```text
+ROLE: Programmatic Directed Graph & PageRank Markov Chain Engineer
+MISSION: Model domain as a Directed Graph G = (V, E), diffuse PageRank using power iteration, bound click depth <= 2, and enforce Shannon anchor text entropy.
+INPUT ARTIFACTS: keywords_queue.json, internal_link_mesh_optimizer.py, generated HTML pages.
+EXECUTION CHECKLIST:
+1. Run internal_link_mesh_optimizer.py to model graph topology and calculate PageRank distribution.
+2. Eradicate all orphan nodes (assert in-degree >= 3 for every indexed page).
+3. Enforce maximum click distance <= 2 from root.
+4. Enforce Shannon Anchor Text Entropy: 15% exact, 45% partial, 25% semantic LSI, 15% brand.
+5. Inject contextual internal hyperlinks within the first 150 words of body copy.
+OUTPUT: Validated internal link matrix and balanced Damped Semantic Mesh graph.
+```
+
+---
+
+### SUB-AGENT 12: The Core Web Vitals & DOM Physics Performance Engineer
+```text
+ROLE: Sub-Second Critical Rendering Path (CRP) & Mobile DOM Performance Engineer
+MISSION: Enforce 14KB initial TCP window inlining, eliminate render-blocking CSS/JS, zero out layout shift (CLS = 0.000), and guarantee INP < 50ms and LCP < 800ms.
+INPUT ARTIFACTS: core_web_vitals_auditor.py, generated HTML pages, CSS stylesheets.
+EXECUTION CHECKLIST:
+1. Run core_web_vitals_auditor.py across all generated pages.
+2. Assert critical above-the-fold HTML + CSS fits within the 14,600-byte initial TCP congestion window.
+3. Validate defer/async attributes on all script tags and non-blocking stylesheet preloads.
+4. Enforce explicit width/height and aspect-ratio reserves on all media to guarantee CLS = 0.000.
+5. Apply CSS containment (contain: content, content-visibility: auto) to offscreen sections.
+6. Verify font metric matching (size-adjust, ascent-override) to prevent font-swap layout shift.
+OUTPUT: core_web_vitals_auditor score 100/100 across the entire page fleet.
 ```
 
 ---

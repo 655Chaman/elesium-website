@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise RAG Pipeline Latency Simulator | Elesium</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1e293b;
+      --accent: #8b5cf6;
+      --accent-glow: rgba(139, 92, 246, 0.2);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .calculator-container { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 740px; width: 100%; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+    .header h1 { font-size: 22px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .header p { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+    .select-box { background: #0c121e; border: 1px solid var(--border); color: #fff; padding: 10px 12px; border-radius: 8px; width: 100%; font-size: 13px; outline: none; }
+    .select-label { font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block; }
+    .slider-group { margin-bottom: 18px; }
+    .label-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .slider { width: 100%; height: 6px; border-radius: 4px; background: #334155; outline: none; -webkit-appearance: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; }
+    .latency-breakdown { background: #0c121e; border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 24px; }
+    .latency-bar-container { height: 16px; background: #1e293b; border-radius: 8px; overflow: hidden; display: flex; margin: 16px 0; }
+    .bar-segment { height: 100%; transition: width 0.3s; }
+    .bar-embed { background: #3b82f6; }
+    .bar-vector { background: #8b5cf6; }
+    .bar-rerank { background: #ec4899; }
+    .bar-llm { background: #06b6d4; }
+    .metrics-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; margin-top: 14px; }
+    .metric-val { font-size: 18px; font-weight: 800; color: #fff; margin-top: 4px; }
+    .metric-lbl { font-size: 11px; color: var(--text-muted); }
+    .total-banner { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--border); margin-top: 16px; }
+    .total-val { font-size: 26px; font-weight: 800; color: #a78bfa; }
+    .watermark-footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+    .watermark-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    @media(max-width: 640px) { .input-row { grid-template-columns: 1fr; } .metrics-summary { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container" id="widget">
+  <div class="header">
+    <h1>⏱️ Enterprise RAG Pipeline Latency Simulator</h1>
+    <p>Simulate p50, p90, and p99 end-to-end retrieval and generation latency across enterprise architectures.</p>
+  </div>
+
+  <div class="input-row">
+    <div>
+      <label class="select-label">Vector Database Engine:</label>
+      <select class="select-box" id="vectorDb">
+        <option value="qdrant">Qdrant (HNSW / Memory-mapped) — Sub-10ms</option>
+        <option value="milvus">Milvus (Cluster Distributed) — Sub-15ms</option>
+        <option value="pgvector">pgvector (HNSW Index on Postgres) — Sub-25ms</option>
+        <option value="pinecone">Pinecone Cloud (Serverless) — 40–80ms</option>
+      </select>
+    </div>
+    <div>
+      <label class="select-label">Inference Model & Serving:</label>
+      <select class="select-box" id="llmEngine">
+        <option value="vllm_deepseek">On-Prem vLLM (DeepSeek-V3 FP8) — Sub-200ms TTFT</option>
+        <option value="vllm_llama">On-Prem vLLM (Llama-3.3-70B) — Sub-150ms TTFT</option>
+        <option value="cloud_gpt4o">OpenAI GPT-4o API (Cloud Tier-1) — 450–700ms TTFT</option>
+        <option value="cloud_claude">Claude 3.5 Sonnet API (Cloud Tier-1) — 500–800ms TTFT</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Knowledge Chunks Retrieved (Top-K):</span>
+      <span id="topKDisplay" style="color: var(--accent);">5 Chunks</span>
+    </div>
+    <input type="range" min="1" max="25" value="5" class="slider" id="topKSlider">
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Target Generation Tokens:</span>
+      <span id="genTokensDisplay" style="color: var(--accent);">250 Tokens</span>
+    </div>
+    <input type="range" min="50" max="1000" step="50" value="250" class="slider" id="tokensSlider">
+  </div>
+
+  <div class="latency-breakdown">
+    <div style="font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Pipeline Stage Execution Waterfall</div>
+    
+    <div class="latency-bar-container">
+      <div class="bar-segment bar-embed" id="barEmbed" style="width: 10%;"></div>
+      <div class="bar-segment bar-vector" id="barVector" style="width: 15%;"></div>
+      <div class="bar-segment bar-rerank" id="barRerank" style="width: 15%;"></div>
+      <div class="bar-segment bar-llm" id="barLlm" style="width: 60%;"></div>
+    </div>
+
+    <div class="metrics-summary">
+      <div>
+        <div class="metric-lbl">1. Embedding</div>
+        <div class="metric-val" id="embedVal">12ms</div>
+      </div>
+      <div>
+        <div class="metric-lbl">2. Vector Search</div>
+        <div class="metric-val" id="vectorVal">8ms</div>
+      </div>
+      <div>
+        <div class="metric-lbl">3. Cross-Rerank</div>
+        <div class="metric-val" id="rerankVal">22ms</div>
+      </div>
+      <div>
+        <div class="metric-lbl">4. LLM Generation</div>
+        <div class="metric-val" id="llmVal">280ms</div>
+      </div>
+    </div>
+
+    <div class="total-banner">
+      <div>
+        <span style="font-weight: 700; font-size: 14px;">Total End-to-End Latency (p90):</span>
+        <div style="font-size: 11px; color: var(--text-muted);">Includes network transport + time to first token + token streaming</div>
+      </div>
+      <div class="total-val" id="totalLatency">322 ms</div>
+    </div>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>Benchmarked on H100 SXM5 & RoCE v2 Fabrics</span>
+  </div>
+</div>
+
+<script>
+  const vectorDb = document.getElementById('vectorDb');
+  const llmEngine = document.getElementById('llmEngine');
+  const topKSlider = document.getElementById('topKSlider');
+  const tokensSlider = document.getElementById('tokensSlider');
+  const topKDisplay = document.getElementById('topKDisplay');
+  const genTokensDisplay = document.getElementById('genTokensDisplay');
+
+  const embedValEl = document.getElementById('embedVal');
+  const vectorValEl = document.getElementById('vectorVal');
+  const rerankValEl = document.getElementById('rerankVal');
+  const llmValEl = document.getElementById('llmVal');
+  const totalLatencyEl = document.getElementById('totalLatency');
+
+  const barEmbed = document.getElementById('barEmbed');
+  const barVector = document.getElementById('barVector');
+  const barRerank = document.getElementById('barRerank');
+  const barLlm = document.getElementById('barLlm');
+
+  function calculate() {
+    const k = parseInt(topKSlider.value);
+    const tokens = parseInt(tokensSlider.value);
+
+    topKDisplay.innerText = `${k} Chunks`;
+    genTokensDisplay.innerText = `${tokens} Tokens`;
+
+    // 1. Embedding latency (e.g. bge-large-en-v1.5)
+    const embedLatency = 12;
+
+    // 2. Vector DB latency
+    let vectorLatency = 8;
+    if (vectorDb.value === 'milvus') vectorLatency = 14;
+    if (vectorDb.value === 'pgvector') vectorLatency = 24 + Math.round(k * 0.5);
+    if (vectorDb.value === 'pinecone') vectorLatency = 52 + Math.round(k * 1.2);
+
+    // 3. Reranking latency (FlashRank or bge-reranker-large)
+    const rerankLatency = Math.round(15 + (k * 2.4));
+
+    // 4. LLM Generation
+    let ttft = 120;
+    let msPerToken = 5.2; // ~190 tok/sec on vLLM DeepSeek
+    if (llmEngine.value === 'vllm_llama') { ttft = 90; msPerToken = 3.8; }
+    if (llmEngine.value === 'cloud_gpt4o') { ttft = 480; msPerToken = 12.5; }
+    if (llmEngine.value === 'cloud_claude') { ttft = 520; msPerToken = 14.0; }
+
+    const llmLatency = Math.round(ttft + (tokens * msPerToken));
+    const total = embedLatency + vectorLatency + rerankLatency + llmLatency;
+
+    embedValEl.innerText = `${embedLatency}ms`;
+    vectorValEl.innerText = `${vectorLatency}ms`;
+    rerankValEl.innerText = `${rerankLatency}ms`;
+    llmValEl.innerText = `${llmLatency}ms`;
+    totalLatencyEl.innerText = `${total.toLocaleString()} ms`;
+
+    // Update bar percentages
+    barEmbed.style.width = `${(embedLatency / total) * 100}%`;
+    barVector.style.width = `${(vectorLatency / total) * 100}%`;
+    barRerank.style.width = `${(rerankLatency / total) * 100}%`;
+    barLlm.style.width = `${(llmLatency / total) * 100}%`;
+
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'RESIZE_EMBED', height: document.getElementById('widget').offsetHeight + 48 }, '*');
+    }
+  }
+
+  vectorDb.addEventListener('change', calculate);
+  llmEngine.addEventListener('change', calculate);
+  topKSlider.addEventListener('input', calculate);
+  tokensSlider.addEventListener('input', calculate);
+  calculate();
+</script>
+
+</body>
+</html>

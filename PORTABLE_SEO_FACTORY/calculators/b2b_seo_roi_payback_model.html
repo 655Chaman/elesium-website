@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B Programmatic SEO ROI & CAC Payback Model | Elesium</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1e293b;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.2);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .calculator-container { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 740px; width: 100%; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+    .header h1 { font-size: 22px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .header p { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+    .slider-group { margin-bottom: 18px; }
+    .label-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .slider { width: 100%; height: 6px; border-radius: 4px; background: #334155; outline: none; -webkit-appearance: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    .result-card { background: #0c121e; border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-align: center; }
+    .result-card.highlight { border-color: var(--accent); background: radial-gradient(circle at top, #0369a1 0%, #0c121e 100%); }
+    .card-title { font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+    .card-val { font-size: 26px; font-weight: 800; color: #fff; margin: 8px 0 4px; }
+    .subtext { font-size: 11px; color: var(--text-muted); }
+    .payback-banner { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 14px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+    .watermark-footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+    .watermark-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    @media(max-width: 640px) { .results-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container" id="widget">
+  <div class="header">
+    <h1>📈 B2B Programmatic SEO ROI & CAC Payback Model</h1>
+    <p>Model pipeline generated via Edward Sturm Compact BOFU Pages vs Traditional Agency Retainers.</p>
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Deployed BOFU Solution Pages:</span>
+      <span id="pagesDisplay" style="color: var(--accent);">150 Pages</span>
+    </div>
+    <input type="range" min="25" max="500" step="25" value="150" class="slider" id="pagesSlider">
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Average Contract Value (Annual ACV):</span>
+      <span id="acvDisplay" style="color: var(--accent);">$35,000 / year</span>
+    </div>
+    <input type="range" min="5" max="150" step="5" value="35" class="slider" id="acvSlider">
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Demo-to-Closed-Won Win Rate:</span>
+      <span id="winRateDisplay" style="color: var(--accent);">20% Close Rate</span>
+    </div>
+    <input type="range" min="5" max="50" step="5" value="20" class="slider" id="winRateSlider">
+  </div>
+
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="card-title">Monthly High-Intent Demos</div>
+      <div class="card-val" id="demosVal">18 Demos</div>
+      <div class="subtext">Assuming 35 monthly visits/page @ 3.5% conversion</div>
+    </div>
+
+    <div class="result-card highlight">
+      <div class="card-title">Annual Pipeline Created</div>
+      <div class="card-val" id="pipelineVal">$1,512,000</div>
+      <div class="subtext" style="color: #e0f2fe;">Net New Annual Pipeline</div>
+    </div>
+
+    <div class="result-card">
+      <div class="card-title">Closed ARR Generated</div>
+      <div class="card-val" id="arrVal" style="color: var(--success);">$302,400</div>
+      <div class="subtext">Based on 20% sales win rate</div>
+    </div>
+  </div>
+
+  <div class="payback-banner">
+    <div>
+      <span style="font-weight: 700; color: #fff;">Sovereign Factory Payback Period:</span>
+      <div style="font-size: 11px; color: var(--text-muted);">Against a standard ₹3.5L / $4.5k Pilot Sprint investment</div>
+    </div>
+    <div style="font-size: 22px; font-weight: 800; color: var(--success);" id="paybackVal">14 Days</div>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>Edward Sturm Economic Sigmoid Model</span>
+  </div>
+</div>
+
+<script>
+  const pagesSlider = document.getElementById('pagesSlider');
+  const acvSlider = document.getElementById('acvSlider');
+  const winRateSlider = document.getElementById('winRateSlider');
+
+  const pagesDisplay = document.getElementById('pagesDisplay');
+  const acvDisplay = document.getElementById('acvDisplay');
+  const winRateDisplay = document.getElementById('winRateDisplay');
+
+  const demosVal = document.getElementById('demosVal');
+  const pipelineVal = document.getElementById('pipelineVal');
+  const arrVal = document.getElementById('arrVal');
+  const paybackVal = document.getElementById('paybackVal');
+
+  function calculate() {
+    const pages = parseInt(pagesSlider.value);
+    const acvK = parseInt(acvSlider.value);
+    const winRate = parseInt(winRateSlider.value) / 100;
+
+    pagesDisplay.innerText = `${pages} Pages`;
+    acvDisplay.innerText = `$${(acvK * 1000).toLocaleString()} / year`;
+    winRateDisplay.innerText = `${Math.round(winRate * 100)}% Close Rate`;
+
+    // 150 pages * 35 monthly visits = 5,250 visits.
+    // BOFU conversion rate to demo is 3.5% (vs 0.2% on blog posts)
+    const monthlyVisits = pages * 35;
+    const monthlyDemos = Math.round(monthlyVisits * 0.035);
+    const annualDemos = monthlyDemos * 12;
+
+    const annualPipeline = annualDemos * (acvK * 1000);
+    const closedArr = Math.round(annualPipeline * winRate);
+
+    // Payback calculation against $4,500 pilot cost
+    const monthlyArr = closedArr / 12;
+    const paybackDays = Math.max(7, Math.round((4500 / (monthlyArr || 1)) * 30));
+
+    demosVal.innerText = `${monthlyDemos} Demos`;
+    pipelineVal.innerText = `$${Math.round(annualPipeline / 1000).toLocaleString()}k`;
+    arrVal.innerText = `$${Math.round(closedArr).toLocaleString()}`;
+    paybackVal.innerText = `${paybackDays} Days`;
+
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'RESIZE_EMBED', height: document.getElementById('widget').offsetHeight + 48 }, '*');
+    }
+  }
+
+  pagesSlider.addEventListener('input', calculate);
+  acvSlider.addEventListener('input', calculate);
+  winRateSlider.addEventListener('input', calculate);
+  calculate();
+</script>
+
+</body>
+</html>

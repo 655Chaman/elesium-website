@@ -1,0 +1,1502 @@
+[
+  {
+    "file": "deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors.html",
+    "path": "generated_pages/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors.html",
+    "score": 100,
+    "raw_bytes": 24037,
+    "compressed_bytes": 5791,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,791 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-constrained-decoding-logit-masking-for-chief-risk-officers-compliance-directors.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects.html",
+    "path": "generated_pages/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects.html",
+    "score": 100,
+    "raw_bytes": 24283,
+    "compressed_bytes": 5804,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,804 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-constrained-decoding-logit-masking-for-chief-technology-officers-principal-ai-architects.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "path": "generated_pages/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "score": 100,
+    "raw_bytes": 24283,
+    "compressed_bytes": 5811,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,811 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-constrained-decoding-logit-masking-for-electrolysis-plant-directors-clean-hydrogen-leads.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps.html",
+    "path": "generated_pages/deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps.html",
+    "score": 100,
+    "raw_bytes": 24037,
+    "compressed_bytes": 5790,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,790 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-constrained-decoding-logit-masking-for-logistics-directors-fleet-operations-vps.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents.html",
+    "path": "generated_pages/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents.html",
+    "score": 100,
+    "raw_bytes": 23699,
+    "compressed_bytes": 5806,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,806 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-constrained-decoding-logit-masking-for-supply-chain-superintendents.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors.html",
+    "path": "generated_pages/deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors.html",
+    "score": 100,
+    "raw_bytes": 24082,
+    "compressed_bytes": 5790,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,790 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-finite-state-machine-agent-fallbacks-for-chief-risk-officers-compliance-directors.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects.html",
+    "path": "generated_pages/deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects.html",
+    "score": 100,
+    "raw_bytes": 24333,
+    "compressed_bytes": 5797,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,797 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-finite-state-machine-agent-fallbacks-for-chief-technology-officers-principal-ai-architects.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "path": "generated_pages/deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "score": 100,
+    "raw_bytes": 24333,
+    "compressed_bytes": 5804,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,804 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-finite-state-machine-agent-fallbacks-for-electrolysis-plant-directors-clean-hydrogen-leads.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps.html",
+    "path": "generated_pages/deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps.html",
+    "score": 100,
+    "raw_bytes": 24082,
+    "compressed_bytes": 5789,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,789 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-finite-state-machine-agent-fallbacks-for-logistics-directors-fleet-operations-vps.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents.html",
+    "path": "generated_pages/deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents.html",
+    "score": 100,
+    "raw_bytes": 23746,
+    "compressed_bytes": 5798,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,798 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/deterministic-finite-state-machine-agent-fallbacks-for-supply-chain-superintendents.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors.html",
+    "path": "generated_pages/dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors.html",
+    "score": 100,
+    "raw_bytes": 23442,
+    "compressed_bytes": 5782,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,782 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/dynamic-token-cost-arbitrage-for-chief-risk-officers-compliance-directors.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects.html",
+    "path": "generated_pages/dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects.html",
+    "score": 100,
+    "raw_bytes": 23695,
+    "compressed_bytes": 5792,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,792 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/dynamic-token-cost-arbitrage-for-chief-technology-officers-principal-ai-architects.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "path": "generated_pages/dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "score": 100,
+    "raw_bytes": 23695,
+    "compressed_bytes": 5798,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,798 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/dynamic-token-cost-arbitrage-for-electrolysis-plant-directors-clean-hydrogen-leads.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps.html",
+    "path": "generated_pages/dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps.html",
+    "score": 100,
+    "raw_bytes": 23442,
+    "compressed_bytes": 5781,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,781 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/dynamic-token-cost-arbitrage-for-logistics-directors-fleet-operations-vps.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "dynamic-token-cost-arbitrage-for-supply-chain-superintendents.html",
+    "path": "generated_pages/dynamic-token-cost-arbitrage-for-supply-chain-superintendents.html",
+    "score": 100,
+    "raw_bytes": 23104,
+    "compressed_bytes": 5795,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,795 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/dynamic-token-cost-arbitrage-for-supply-chain-superintendents.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors.html",
+    "path": "generated_pages/private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors.html",
+    "score": 100,
+    "raw_bytes": 23606,
+    "compressed_bytes": 5775,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,775 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/private-air-gapped-vpc-deployment-for-chief-risk-officers-compliance-directors.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects.html",
+    "path": "generated_pages/private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects.html",
+    "score": 100,
+    "raw_bytes": 23857,
+    "compressed_bytes": 5777,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,777 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/private-air-gapped-vpc-deployment-for-chief-technology-officers-principal-ai-architects.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "path": "generated_pages/private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "score": 100,
+    "raw_bytes": 23857,
+    "compressed_bytes": 5787,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,787 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/private-air-gapped-vpc-deployment-for-electrolysis-plant-directors-clean-hydrogen-leads.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps.html",
+    "path": "generated_pages/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps.html",
+    "score": 100,
+    "raw_bytes": 23606,
+    "compressed_bytes": 5771,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,771 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/private-air-gapped-vpc-deployment-for-logistics-directors-fleet-operations-vps.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "private-air-gapped-vpc-deployment-for-supply-chain-superintendents.html",
+    "path": "generated_pages/private-air-gapped-vpc-deployment-for-supply-chain-superintendents.html",
+    "score": 100,
+    "raw_bytes": 23264,
+    "compressed_bytes": 5786,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,786 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/private-air-gapped-vpc-deployment-for-supply-chain-superintendents.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors.html",
+    "path": "generated_pages/sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors.html",
+    "score": 100,
+    "raw_bytes": 23915,
+    "compressed_bytes": 5794,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,794 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/sub-200ms-transaction-ledger-reconciliation-for-chief-risk-officers-compliance-directors.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects.html",
+    "path": "generated_pages/sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects.html",
+    "score": 100,
+    "raw_bytes": 24169,
+    "compressed_bytes": 5798,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,798 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/sub-200ms-transaction-ledger-reconciliation-for-chief-technology-officers-principal-ai-architects.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "path": "generated_pages/sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads.html",
+    "score": 100,
+    "raw_bytes": 24169,
+    "compressed_bytes": 5807,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,807 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/sub-200ms-transaction-ledger-reconciliation-for-electrolysis-plant-directors-clean-hydrogen-leads.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps.html",
+    "path": "generated_pages/sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps.html",
+    "score": 100,
+    "raw_bytes": 23915,
+    "compressed_bytes": 5795,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,795 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/sub-200ms-transaction-ledger-reconciliation-for-logistics-directors-fleet-operations-vps.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  },
+  {
+    "file": "sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents.html",
+    "path": "generated_pages/sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents.html",
+    "score": 100,
+    "raw_bytes": 23572,
+    "compressed_bytes": 5799,
+    "node_count": 173,
+    "max_depth": 9,
+    "checks": [
+      {
+        "gate": "1. TCP Congestion Window (14.6 KB)",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Wire transfer size is 5,799 bytes (gzipped), fitting in 1 RTT initial flight."
+      },
+      {
+        "gate": "2. Zero Render-Blocking Scripts",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "All 1 head scripts use defer, async, or type='module'."
+      },
+      {
+        "gate": "3. Non-Blocking CSS Delivery",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "Stylesheets utilize asynchronous loading (preload + onload) or critical inlining."
+      },
+      {
+        "gate": "4. Zero-CLS Media Aspect-Ratio Geometry",
+        "passed": true,
+        "weight": 20,
+        "deduction": 0,
+        "details": "All 1 image(s) and 0 iframe(s) reserve geometry."
+      },
+      {
+        "gate": "5. LCP Fetchpriority Optimization",
+        "passed": true,
+        "weight": 15,
+        "deduction": 0,
+        "details": "LCP candidate has fetchpriority='high' and eager loading: https://elesium.online/assets/diagrams/sub-200ms-transaction-ledger-reconciliation-for-supply-chain-superintendents.svg."
+      },
+      {
+        "gate": "6. DOM Structural Physics",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "Node count: 173 (< 800) | Max depth: 9 (< 32)."
+      },
+      {
+        "gate": "7. Typography & Font Display Optimization",
+        "passed": true,
+        "weight": 10,
+        "deduction": 0,
+        "details": "All external font links enforce display=swap or optional."
+      }
+    ]
+  }
+]

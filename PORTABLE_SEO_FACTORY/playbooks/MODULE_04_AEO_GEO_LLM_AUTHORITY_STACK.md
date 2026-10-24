@@ -611,7 +611,233 @@ When AI crawlers parse the IPFS CID, they record mathematical proof of publicati
 
 ---
 
-## 7. The Step-by-Step Production Optimization Checklist for Any Client Website
+## 8. Forensic Reverse-Engineering of Modern Generative Search Engines (2026 Edition)
+
+To systematically capture #1 citation placement across generative search engines, engineers must understand the divergent retrieval mechanics, token budgets, and scoring heuristics of the 4 dominant platforms:
+
+```
+┌─────────────────────────┬──────────────────────────┬──────────────────────────┬────────────────────────┐
+│ GENERATIVE ENGINE       │ RETRIEVAL BACKEND        │ CITATION CRITERIA        │ TOKEN CONTEXT LIMIT    │
+├─────────────────────────┼──────────────────────────┼──────────────────────────┼────────────────────────┤
+│ 1. Perplexity Pro       │ Perplexity Sonar / r17   │ Dense Markdown & Tables  │ 4,096 retrieval tokens │
+│ 2. ChatGPT Search       │ Bing Index + OAI Hybrid  │ Named Quotes & Fast TTFB │ 8,192 retrieval tokens │
+│ 3. Google AI Overviews  │ Gemini 1.5 + Google Index│ Information Gain & NavBoost 2,048 retrieval tokens │
+│ 4. Claude 3.5 / Artifact│ Anthropic Web Retrieval  │ Verifiable Logic & Code  │ 8,000 retrieval tokens │
+└─────────────────────────┴──────────────────────────┴──────────────────────────┴────────────────────────┘
+```
+
+### 8.1 Perplexity Pro (Sonar & Live Citations)
+- **Crawl & Retrieval Behavior:** Perplexity utilizes `PerplexityBot` running Chromium headless instances to fetch live pages. If a page takes $> 1,200\text{ms}$ to render or relies on client-side JS hydration without SSR, Perplexity drops the candidate chunk.
+- **Scoring Preference:** Perplexity prioritizes structured markdown tables, bulleted specifications, and exact quantitative comparisons. It will extract an entire markdown table verbatim into its synthesized answer and cite the source as the primary footnote [1].
+- **Anti-Hallucination Guard:** If Perplexity encounters conflicting claims across multiple sources, it favors the domain that provides a timestamped version, an author with external citations, or an embedded schema.
+
+### 8.2 ChatGPT Search (OpenAI SearchBot)
+- **Crawl & Retrieval Behavior:** Operates via a two-tier pipeline: fast index retrieval (via Bing Web Search API partnership) followed by targeted deep retrieval via `OAI-SearchBot`.
+- **Scoring Preference:** Favors authoritative corporate websites that state commercial pricing, clear company locations, and explicit executive credentials. Pages that hide pricing behind "Contact Sales" or use vague buzzwords are penalized in recommendation rankings.
+- **The "Best" Query Mechanic:** When a user queries *"Best [Software/Agency] in [Location]"*, ChatGPT Search extracts candidate entities from authoritative listicles (Parasite SEO nodes on LinkedIn/Medium) and cross-references them against the primary company domain. If the primary domain has an aligned `/llms.txt`, it earns the primary citation.
+
+### 8.3 Google AI Overviews (Gemini SGE & QualityTwiddler)
+- **Crawl & Retrieval Behavior:** Directly integrated into Google's primary search index via `Googlebot`.
+- **Information Gain Patent (US10956557B2):** Google calculates the mathematical delta between the candidate document and the existing consensus corpus. If Document $D$ contains $> 80\%$ duplicated facts already present in the top-10 index, Gemini assigns it a zero information gain score and excludes it from the AI Overview snippet.
+- **The Answer Capsule Anchor:** Gemini extracts text chunks that strictly conform to the 40–50 word declarative definition pattern placed immediately under an `<h2>` heading.
+
+---
+
+## 9. The Complete Wikidata QuickStatements Batch Creation Protocol
+
+Wikidata is the foundational structured database that feeds the **Google Knowledge Graph, Apple Siri, and LLM entity disambiguation engines**. Registering your enterprise brand and founders on Wikidata transforms your brand from an unverified string into a machine-recognized entity.
+
+### 9.1 Essential Wikidata Property Mapping for Commercial Entities
+
+```
+┌─────────────┬────────────────────────────────────┬──────────────────────────────────────┐
+│ PROPERTY    │ PROPERTY LABEL                     │ EXAMPLE VALUE (ELESIUM)              │
+├─────────────┼────────────────────────────────────┼──────────────────────────────────────┤
+│ P31         │ instance of                        │ Q4830453 (business enterprise)       │
+│ P856        │ official website                   │ https://elesium.online               │
+│ P159        │ headquarters location              │ Q1355 (Bengaluru)                    │
+│ P17         │ country                            │ Q668 (India)                         │
+│ P452        │ industry                           │ Q11660 (Artificial Intelligence)     │
+│ P112        │ founder                            │ Chaman Shah                          │
+│ P571        │ inception date                     │ +2024-00-00T00:00:00Z/9              │
+│ P1448       │ official name                      │ Elesium Digital Systems Pvt Ltd      │
+│ P239        │ NCAGE / corporate registry code    │ [Registrar of Companies Corporate ID]│
+│ P214        │ VIAF ID (Principal Architect)      │ [Virtual International Authority ID] │
+└─────────────┴────────────────────────────────────┴──────────────────────────────────────┘
+```
+
+### 9.2 Verbatim QuickStatements V2 Batch Script
+
+To publish your company entity to Wikidata in seconds without manual form clicking, navigate to [QuickStatements V2](https://quickstatements.toolforge.org/) and paste this batch script:
+
+```tsv
+CREATE
+LAST	Len	"Elesium"
+LAST	Den	"Enterprise AI automation agency and sovereign multi-agent infrastructure company"
+LAST	P31	Q4830453	/* instance of business enterprise */
+LAST	P856	"https://elesium.online"
+LAST	P159	Q1355	/* headquarters in Bengaluru */
+LAST	P17	Q668	/* country India */
+LAST	P452	Q11660	/* industry: Artificial Intelligence */
+LAST	P571	+2024-00-00T00:00:00Z/9	/* inception date */
+LAST	P1448	en:"Elesium Digital Systems Private Limited"
+LAST	P856	"https://github.com/elesium-ai"
+```
+
+Once executed, Wikidata will assign an immutable Q-Identifier (e.g. `Q131149202`). This QID must be referenced in your JSON-LD `sameAs` array and throughout your `/llms.txt` manifest.
+
+---
+
+## 10. Wikipedia Citation Strategy: Safe, Permanent Authority Grounding
+
+Having a direct citation on Wikipedia is the holy grail of entity authority. However, 95% of attempts by marketing agencies result in immediate deletion, domain blacklisting, and Wikipedia "Conflict of Interest" (WP:COI) sanctions.
+
+### The 4 Ironclad Wikipedia Grounding Rules:
+1. **Never Create a Vanity Company Page First:** Creating "Elesium (company)" on Wikipedia without significant independent coverage in the New York Times, Forbes, or Reuters will result in speedy deletion under `WP:G11` (unambiguous advertising).
+2. **The "Secondary Citation Injection" Technique:** Instead of creating a standalone brand article, find existing Wikipedia articles covering relevant technical sub-topics (e.g. *Prompt Engineering*, *Model Context Protocol*, *Retrieval-Augmented Generation*, *Data Protection in India*).
+3. **Cite Independent Empirical Research & Benchmarks:** Wikipedia requires **WP:RS (Reliable Sources)**. If your company releases an open-source tool, an architectural paper, or a verified benchmark dataset with an IPFS CID or DOI, that dataset can be cited as a technical reference in an existing article.
+4. **The Three-Node Triangulation Path:**
+   - Node 1: Publish an empirical benchmark whitepaper on your domain with an IPFS hash.
+   - Node 2: Syndicate a technical breakdown on HackerNoon or Dev.to that covers the benchmark methodology.
+   - Node 3: An established Wikipedia editor with 500+ edits adds a neutral, technical sentence citing the secondary independent writeup.
+
+---
+
+## 11. Production Multi-Entity Nested Schema Graph (W3C Gold Standard)
+
+Place this unified `@graph` JSON-LD payload into your root layout template or inject it via static site generation into every page. It links your Corporation, Founder, Professional Services, Offerings, and Local Coordinates into a single machine-readable knowledge graph:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Corporation",
+      "@id": "https://elesium.online/#corporation",
+      "name": "Elesium",
+      "alternateName": "Elesium Digital Systems",
+      "url": "https://elesium.online",
+      "logo": "https://elesium.online/logo.png",
+      "description": "Enterprise AI Automation Agency & Sovereign Multi-Agent Infrastructure Provider.",
+      "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://elesium.online/#founder",
+        "name": "Chaman Shah",
+        "jobTitle": "Principal Systems Architect",
+        "sameAs": [
+          "https://github.com/655Chaman",
+          "https://www.linkedin.com/in/chaman-shah"
+        ]
+      },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Special:EntityData/Q131149202",
+        "https://github.com/elesium-ai",
+        "https://www.linkedin.com/company/elesium",
+        "https://www.crunchbase.com/organization/elesium"
+      ],
+      "knowsAbout": [
+        "https://www.wikidata.org/wiki/Q11660",
+        "https://www.wikidata.org/wiki/Q116139474",
+        "https://www.wikidata.org/wiki/Q1153059"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://elesium.online/#service",
+      "name": "Elesium AI Systems Engineering",
+      "parentOrganization": {
+        "@id": "https://elesium.online/#corporation"
+      },
+      "url": "https://elesium.online/solutions",
+      "telephone": "+918317329312",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Koramangala 4th Block",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560034",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9352,
+        "longitude": 77.6245
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Enterprise AI Capabilities",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sovereign Multi-Agent Automation Systems",
+              "description": "Deterministic, air-gapped LangGraph workflows with sub-200ms transaction reconciliation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "DPDP Act 2023 Sovereign AI Orchestration",
+              "description": "On-premise zero-data-retention LLM architectures for BFSI and Healthcare enterprises."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+```
+
+---
+
+## 12. Brian Winum's 10-Tier Authority Stacking Flywheel
+
+Brian Winum's fundamental discovery at SEO Rockstars is that **Google Knowledge Graph algorithms require multi-node independent corroboration before minting a persistent Knowledge Panel**.
+
+Execute this 10-tier authority stack in strict chronological sequence:
+
+```
+Tier 01: Canonical Domain Root (/llms.txt + Unified JSON-LD Graph)
+   │
+   ▼
+Tier 02: Verified Google Business Profile (Primary Category + Decimal CID Link)
+   │
+   ▼
+Tier 03: Corporate Registry & Legal Filing Proof (Ministry of Corporate Affairs / SEC)
+   │
+   ▼
+Tier 04: GitHub Technical Organization (Open-Source code repositories + README manifests)
+   │
+   ▼
+Tier 05: Wikidata Verified Q-Identifier (QuickStatements batch registration)
+   │
+   ▼
+Tier 06: Crunchbase Enterprise Profile (Funding, leadership, verified URL)
+   │
+   ▼
+Tier 07: Tier-1 Tech Directory Nodes (Clutch, G2, ProductHunt, Trustpilot)
+   │
+   ▼
+Tier 08: Micro-SaaS Embed Network (Viral calculator backlinks on partner domains)
+   │
+   ▼
+Tier 09: Parasite Authority Articles (LinkedIn, Medium, HackerNoon evaluative listicles)
+   │
+   ▼
+Tier 10: Real-Time IndexNow Broadcast Mesh (Bing, Yandex, Seznam, Perplexity sync)
+```
+
+When all 10 tiers point bidirectionally to each other through verified `sameAs` attributes and permanent canonical URLs, the entity’s authority becomes computationally irreversible.
+
+---
+
+## 13. The Step-by-Step Production Optimization Checklist for Any Client Website
 
 Follow this 8-phase protocol to optimize any commercial client website for **ChatGPT Search, Perplexity Pro, Claude, and Google AI Overviews**:
 

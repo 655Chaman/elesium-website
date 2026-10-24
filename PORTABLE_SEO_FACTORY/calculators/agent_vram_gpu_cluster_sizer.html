@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Agent GPU VRAM & Cluster Sizer | Elesium</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1e293b;
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.2);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .calculator-container { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 740px; width: 100%; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+    .header h1 { font-size: 22px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .header p { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+    .select-box { background: #0c121e; border: 1px solid var(--border); color: #fff; padding: 10px 12px; border-radius: 8px; width: 100%; font-size: 13px; outline: none; }
+    .select-label { font-size: 13px; font-weight: 600; margin-bottom: 6px; display: block; }
+    .slider-group { margin-bottom: 18px; }
+    .label-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .slider { width: 100%; height: 6px; border-radius: 4px; background: #334155; outline: none; -webkit-appearance: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; }
+    .gpu-recommendation-box { background: radial-gradient(circle at top, rgba(16, 185, 129, 0.15) 0%, #0c121e 100%); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 22px; text-align: center; margin-top: 24px; }
+    .gpu-title { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+    .gpu-hardware { font-size: 28px; font-weight: 800; color: #fff; margin: 8px 0; }
+    .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+    .spec-card { background: #111827; border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+    .spec-val { font-size: 18px; font-weight: 700; color: var(--accent); margin-top: 4px; }
+    .watermark-footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+    .watermark-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    @media(max-width: 640px) { .input-row { grid-template-columns: 1fr; } .specs-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container" id="widget">
+  <div class="header">
+    <h1>🖥️ Autonomous Agent GPU VRAM & Cluster Sizer</h1>
+    <p>Compute exact VRAM allocation: Model weights, KV-cache scaling, and Tensor Parallelism (TP).</p>
+  </div>
+
+  <div class="input-row">
+    <div>
+      <label class="select-label">Base Model Architecture:</label>
+      <select class="select-box" id="modelArch">
+        <option value="deepseek_671b">DeepSeek-V3 / R1 (671B MoE - 37B active)</option>
+        <option value="llama_70b">Llama-3.3 (70B Dense)</option>
+        <option value="qwen_72b">Qwen-2.5 (72B Dense)</option>
+        <option value="mistral_8x22b">Mixtral-8x22B (MoE)</option>
+      </select>
+    </div>
+    <div>
+      <label class="select-label">Quantization / Precision:</label>
+      <select class="select-box" id="precision">
+        <option value="fp8">FP8 (Production Sovereign Standard)</option>
+        <option value="awq4">INT4 / AWQ (Compressed Edge)</option>
+        <option value="bf16">BF16 (Uncompressed Full Precision)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Concurrent Autonomous Agents / Requests:</span>
+      <span id="agentsDisplay" style="color: var(--accent);">32 Agents</span>
+    </div>
+    <input type="range" min="1" max="128" value="32" class="slider" id="agentsSlider">
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Context Window Per Agent (Tokens):</span>
+      <span id="contextDisplay" style="color: var(--accent);">16,384 Tokens (16k)</span>
+    </div>
+    <input type="range" min="4" max="128" step="4" value="16" class="slider" id="contextSlider">
+  </div>
+
+  <div class="gpu-recommendation-box">
+    <div class="gpu-title">RECOMMENDED SOVEREIGN ON-PREM CLUSTER</div>
+    <div class="gpu-hardware" id="clusterHardware">4x NVIDIA H100 SXM5 (80GB)</div>
+    <div style="font-size: 13px; color: var(--text-muted);" id="clusterTopology">Tensor Parallelism (TP=4) • vLLM PagedAttention v2</div>
+
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div style="font-size: 11px; color: var(--text-muted);">Model Weights VRAM</div>
+        <div class="spec-val" id="weightsVram">185 GB</div>
+      </div>
+      <div class="spec-card">
+        <div style="font-size: 11px; color: var(--text-muted);">KV Cache Memory</div>
+        <div class="spec-val" id="kvCacheVram">84 GB</div>
+      </div>
+      <div class="spec-card">
+        <div style="font-size: 11px; color: var(--text-muted);">Total Cluster VRAM</div>
+        <div class="spec-val" id="totalVram">320 GB</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>vLLM FlashAttention-3 Sizing Matrix</span>
+  </div>
+</div>
+
+<script>
+  const modelArch = document.getElementById('modelArch');
+  const precision = document.getElementById('precision');
+  const agentsSlider = document.getElementById('agentsSlider');
+  const contextSlider = document.getElementById('contextSlider');
+
+  const agentsDisplay = document.getElementById('agentsDisplay');
+  const contextDisplay = document.getElementById('contextDisplay');
+
+  const clusterHardware = document.getElementById('clusterHardware');
+  const clusterTopology = document.getElementById('clusterTopology');
+  const weightsVramEl = document.getElementById('weightsVram');
+  const kvCacheVramEl = document.getElementById('kvCacheVram');
+  const totalVramEl = document.getElementById('totalVram');
+
+  function calculate() {
+    const agents = parseInt(agentsSlider.value);
+    const contextK = parseInt(contextSlider.value);
+
+    agentsDisplay.innerText = `${agents} Concurrent Agents`;
+    contextDisplay.innerText = `${(contextK * 1024).toLocaleString()} Tokens (${contextK}k)`;
+
+    // Weights size calculation
+    let baseParamsB = 70;
+    if (modelArch.value === 'deepseek_671b') baseParamsB = 320; // compressed/MoE FP8 representation
+    if (modelArch.value === 'qwen_72b') baseParamsB = 72;
+    if (modelArch.value === 'mistral_8x22b') baseParamsB = 140;
+
+    let bytesPerParam = 1.0; // FP8
+    if (precision.value === 'awq4') bytesPerParam = 0.55;
+    if (precision.value === 'bf16') bytesPerParam = 2.0;
+
+    const weightsVram = Math.round(baseParamsB * bytesPerParam);
+
+    // KV Cache calculation: 2 * layers * heads * head_dim * bytes * seq_len * batch
+    // Approximation: ~1.2MB per 1024 tokens per batch for 70B model in FP8
+    const kvMbPerSeq = contextK * (baseParamsB > 100 ? 1.8 : 1.2) * (precision.value === 'bf16' ? 2 : 1);
+    const kvCacheVram = Math.round((kvMbPerSeq * agents) / 1024);
+
+    const totalNeeded = weightsVram + kvCacheVram + 16; // 16GB activation buffer
+
+    weightsVramEl.innerText = `${weightsVram} GB`;
+    kvCacheVramEl.innerText = `${kvCacheVram} GB`;
+
+    // Recommend hardware
+    if (totalNeeded <= 80) {
+      clusterHardware.innerText = '1x NVIDIA H100 (80GB) or 2x L40S';
+      clusterTopology.innerText = 'Single-Node Execution • Low Latency';
+      totalVramEl.innerText = '80 GB';
+    } else if (totalNeeded <= 160) {
+      clusterHardware.innerText = '2x NVIDIA H100 SXM5 (80GB)';
+      clusterTopology.innerText = 'Tensor Parallelism (TP=2) • NVLink Mesh';
+      totalVramEl.innerText = '160 GB';
+    } else if (totalNeeded <= 320) {
+      clusterHardware.innerText = '4x NVIDIA H100 SXM5 (80GB)';
+      clusterTopology.innerText = 'Tensor Parallelism (TP=4) • 900 GB/s NVLink';
+      totalVramEl.innerText = '320 GB';
+    } else {
+      clusterHardware.innerText = '8x NVIDIA H100 SXM5 (80GB)';
+      clusterTopology.innerText = 'Tensor Parallelism (TP=8) • Full SuperPOD';
+      totalVramEl.innerText = '640 GB';
+    }
+
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'RESIZE_EMBED', height: document.getElementById('widget').offsetHeight + 48 }, '*');
+    }
+  }
+
+  modelArch.addEventListener('change', calculate);
+  precision.addEventListener('change', calculate);
+  agentsSlider.addEventListener('input', calculate);
+  contextSlider.addEventListener('input', calculate);
+  calculate();
+</script>
+
+</body>
+</html>
