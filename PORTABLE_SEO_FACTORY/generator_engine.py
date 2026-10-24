@@ -194,6 +194,115 @@ def generate_keyword_queue(config):
     print(f"✅ Generated {len(keywords)} rich BOFU keywords with Answer Capsules, Pricing Grids & FAQs in {QUEUE_PATH}")
     return keywords
 
+def build_static_pages(config, queue):
+    """
+    Renders standalone Edward Sturm-compliant HTML pages into generated_pages/
+    using templates/bofu_landing_page.tmpl.
+    """
+    tmpl_path = BASE_DIR / "templates" / "bofu_landing_page.tmpl"
+    if not tmpl_path.exists():
+        return False
+
+    DIST_HTML_DIR.mkdir(parents=True, exist_ok=True)
+    template = tmpl_path.read_text(encoding="utf-8")
+
+    brand = config.get("brand_name", "Elesium")
+    domain = config.get("domain_url", "https://elesium.online").rstrip("/")
+    primary_cta = config.get("primary_cta", "Schedule Architecture Audit")
+    cta_url = config.get("conversion_route", "/waitlist")
+
+    for item in queue:
+        slug = item.get("slug", "")
+        h1 = item.get("h1", "")
+        capsule = item.get("answer_capsule", "")
+        prob = item.get("problem_statement", "")
+
+        # Format differentiator table rows
+        diff_rows = []
+        for d in item.get("differentiator_table", []):
+            diff_rows.append(f"""<tr>
+  <td class="p-4 font-semibold text-white">{d.get('dimension')}</td>
+  <td class="p-4 text-slate-400">{d.get('traditional')}</td>
+  <td class="p-4 font-bold text-emerald-400 bg-emerald-500/10 border-l border-emerald-500/30">{d.get('sovereign')}</td>
+</tr>""")
+        diff_html = "\n".join(diff_rows)
+
+        # Format FAQ accordions & schema
+        faq_accs = []
+        faq_schemas = []
+        for faq in item.get("faqs", []):
+            faq_accs.append(f"""<details class="group border border-slate-800 rounded-lg p-4 bg-slate-900/60 mb-3">
+  <summary class="font-bold text-white cursor-pointer list-none flex justify-between items-center">
+    <span>{faq.get('q')}</span>
+    <span class="text-blue-400 transition group-open:rotate-180">▼</span>
+  </summary>
+  <p class="mt-3 text-slate-300 text-sm leading-relaxed">{faq.get('a')}</p>
+</details>""")
+            faq_schemas.append(json.dumps({
+                "@type": "Question",
+                "name": faq.get("q"),
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.get("a")
+                }
+            }))
+
+        faq_html = "\n".join(faq_accs)
+        faq_schema_str = ",\n".join(faq_schemas)
+
+        rendered = template
+        rendered = rendered.replace("{{BRAND_NAME}}", brand)
+        rendered = rendered.replace("{{DOMAIN_URL}}", domain)
+        rendered = rendered.replace("{{CURRENT_YEAR}}", "2026")
+        rendered = rendered.replace("{{KEYWORD_SLUG}}", slug)
+        rendered = rendered.replace("{{KEYWORD_TITLE}}", h1)
+        rendered = rendered.replace("{{ANSWER_CAPSULE}}", capsule)
+        rendered = rendered.replace("{{PROBLEM_STATEMENT}}", prob)
+        rendered = rendered.replace("{{PRIMARY_CTA}}", primary_cta)
+        rendered = rendered.replace("{{PRIMARY_CTA_URL}}", cta_url)
+        rendered = rendered.replace("{{DIFFERENTIATOR_TABLE_ROWS}}", diff_html)
+        rendered = rendered.replace("{{FAQ_HTML_ACCORDIONS}}", faq_html)
+        rendered = rendered.replace("{{FAQ_SCHEMA_ENTITIES}}", faq_schema_str)
+
+        out_html = DIST_HTML_DIR / f"{slug}.html"
+        out_html.write_text(rendered, encoding="utf-8")
+
+    return True
+
+def build_sitemaps(config, queue):
+    """
+    Builds sitemap_solutions.xml and llms.txt manifest.
+    """
+    domain = config.get("domain_url", "https://elesium.online").rstrip("/")
+    brand = config.get("brand_name", "Elesium")
+    
+    # XML Sitemap
+    xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    xml_lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+    xml_lines.append(f'  <url><loc>{domain}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>')
+    xml_lines.append(f'  <url><loc>{domain}/solutions</loc><changefreq>daily</changefreq><priority>0.9</priority></url>')
+    
+    for item in queue:
+        slug = item.get("slug")
+        xml_lines.append(f'  <url><loc>{domain}/solutions/{slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>')
+    xml_lines.append('</urlset>')
+
+    sitemap_p = BASE_DIR / "sitemap_solutions.xml"
+    sitemap_p.write_text("\n".join(xml_lines), encoding="utf-8")
+
+    # llms.txt manifest
+    llms_lines = [f"# {brand} Machine-Readable Architecture Index (llms.txt)"]
+    llms_lines.append(f"> Sovereign Multi-Agent Infrastructure & Enterprise Software Solutions.\n")
+    llms_lines.append(f"**Canonical Index:** <{domain}/solutions>\n")
+    llms_lines.append("## Core Solutions & Answer Capsules\n")
+    for item in queue:
+        llms_lines.append(f"- [{item.get('h1')}]({domain}/solutions/{item.get('slug')}): {item.get('answer_capsule')}")
+    
+    llms_p = BASE_DIR / "llms.txt"
+    llms_p.write_text("\n".join(llms_lines), encoding="utf-8")
+
+    return True
+
 def main():
     print("=" * 75)
     print("      🚀 SOVEREIGN PORTABLE PROGRAMMATIC GENERATION ENGINE v2.0 🚀")

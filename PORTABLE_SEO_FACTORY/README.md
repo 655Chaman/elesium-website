@@ -20,7 +20,7 @@ This factory is mathematically engineered to defeat modern search engine algorit
 
 ```
 +---------------------------------------------------------------------------------------------------+
-|                              THE 8-PILLAR PORTABLE SEO ENGINE                                     |
+|                              THE 10-PILLAR PORTABLE SEO ENGINE                                    |
 +---------------------------------------------------------------------------------------------------+
 |  1. Edward Sturm Compact Keywords    --> 350-500 words, Answer Capsules, Moz 96-98, Mobile DOM     |
 |  2. SEO Rockstars 2026 Intelligence  --> LLM Authority, Reddit Mimicry, Evidence Cards, Pricing   |
@@ -29,7 +29,9 @@ This factory is mathematically engineered to defeat modern search engine algorit
 |  5. Micro-SaaS Link Magnet Factory   --> Embeddable Calculators, 180s+ Dwell Time, Watermark Links |
 |  6. Parasite Authority Syndication   --> DA 90+ Platforms (GitHub, HackerNoon, Medium, Dev.to)     |
 |  7. GSC RE2 Telemetry Radar          --> Regex AI Search Tracking, Zero-Click Query Extraction    |
-|  8. Autonomous Multi-Agent OS        --> Multi-agent dispatch, 14-day delivery, 90-day ROI mandate |
+|  8. Commercial Agency Operator Guide --> Retainers, Legal MSA/SOW, Cold Outbound, White-Labeling  |
+|  9. AISCO AI Search Crawler Opt.     --> Content Negotiation, Markdown Serving, Robots.txt Matrix  |
+| 10. AAEO Autonomous AI Engine Opt.   --> Agentic Purchasing, OpenAPI Specs, Fast MCP Tool Servers  |
 +---------------------------------------------------------------------------------------------------+
 ```
 
@@ -43,20 +45,25 @@ PORTABLE_SEO_FACTORY/
 ├── README.md                           # 📖 This executive architecture guide
 ├── PROJECT_QUESTIONNAIRE.md            # 📋 Offline project intake questionnaire
 ├── project_config.json                 # ⚙️ Generated project configuration (created by wizard)
+├── auto_pilot.py                       # 🤖 MASTER AUTONOMOUS CLI: One-click scan, generate, audit, index
+├── dynamic_crawler_router.py           # 🚀 Server middleware: Detects AI bots & serves 95% lighter Markdown
+├── gsc_regex_analyzer.py               # 📊 Standalone GSC RE2 telemetry analyzer & AI Overview radar
 ├── setup_wizard.py                     # 🧙 Interactive CLI onboarding wizard
 ├── generator_engine.py                 # 🚀 Programmatic keyword & page generator (v2.0)
 ├── compliance_gatekeeper.py            # 🔍 9-Gate Edward Sturm & Quality auditor
 ├── portable_instant_indexer.py         # ⚡ Zero-dependency IndexNow & Sitemap broadcaster
 │
-├── playbooks/                          # 📚 Comprehensive Masterclass Knowledge Manuals
-│   ├── MODULE_01_EDWARD_STURM_COMPACT_KEYWORDS.md        # The 5 properties & 6 compliance gates
+├── playbooks/                          # 📚 Comprehensive Masterclass Knowledge Manuals (550+ KB)
+│   ├── MODULE_01_EDWARD_STURM_COMPACT_KEYWORDS.md        # The 5 properties, 135-case taxonomy & 6 gates
 │   ├── MODULE_02_SEO_ROCKSTARS_2026_ELITE_INTELLIGENCE.md # All 9 Rockstars speakers decoded
 │   ├── MODULE_03_ADRIAN_GANA_LOCAL_SEO_GBP_DOMINATION.md # GBP categories, CID links, atomic reviews
 │   ├── MODULE_04_AEO_GEO_LLM_AUTHORITY_STACK.md          # llms.txt, Wikidata, Perplexity/ChatGPT GEO
 │   ├── MODULE_05_MICROSaaS_LINK_MAGNET_FACTORY.md        # Interactive calculators & iframe backlinks
-│   ├── MODULE_06_PARASITE_SYNDICATION_OFFPAGE_AUTHORITY.md # DA 90+ syndication blueprints
+│   ├── MODULE_06_PARASITE_SYNDICATION_OFFPAGE_AUTHORITY.md # DA 90+ syndication blueprints & templates
 │   ├── MODULE_07_GSC_RE2_INTELLIGENCE_AI_OVERVIEWS.md    # GSC regex filters & telemetry analysis
-│   └── MODULE_08_COMMERCIAL_AGENCY_OPERATOR_GUIDE.md     # Packaging, pricing, and white-labeling
+│   ├── MODULE_08_COMMERCIAL_AGENCY_OPERATOR_GUIDE.md     # Legal MSA/SOW, pricing, cold outreach, white-label
+│   ├── MODULE_09_AISCO_AI_SEARCH_CRAWLER_OPTIMIZATION.md # Forensic bot census, edge routing, markdown negotiation
+│   └── MODULE_10_AAEO_AUTONOMOUS_AI_ENGINE_OPTIMIZATION.md # Agentic procurement, OpenAPI specs, MCP servers
 │
 ├── templates/                          # 🛠️ Production-Proven Component Templates
 │   ├── bofu_landing_page.tmpl          # Complete HTML/TSX compact solution page
@@ -65,7 +72,8 @@ PORTABLE_SEO_FACTORY/
 │   └── interactive_calculator_widget.tmpl # Standalone & embeddable calculator widget
 │
 └── examples/                           # 🧪 Reference Implementations
-    └── sample_project_config.json      # Gold-standard reference configuration
+    ├── sample_project_config.json      # Gold-standard reference configuration
+    └── cloudflare_worker_crawler_router.js # Edge middleware detecting AI bots
 ```
 
 ---
@@ -78,8 +86,23 @@ PORTABLE_SEO_FACTORY/
    > *"Read `PORTABLE_SEO_FACTORY/AUTONOMOUS_AGENCY_ORCHESTRATOR.md` and execute Phase 1 through Phase 5 for this project."*
 3. The AI agent will inspect the codebase, extract the brand positioning and unspoken capabilities, generate `project_config.json`, run the programmatic generator, verify compliance, inject schemas, and deploy.
 
-### Option B: The Interactive CLI Walkthrough
-If executing manually in a terminal:
+### Option B: The Master Auto-Pilot CLI (Fastest & Zero-Friction)
+Run the entire factory autonomously with a single command:
+```bash
+cd PORTABLE_SEO_FACTORY
+
+# Autonomous Scan, Config Validation, Page Generation, 9-Gate Audit, and IndexNow broadcast:
+python3 auto_pilot.py --all
+
+# Or run individual stages:
+python3 auto_pilot.py --scan       # Codebase inspection & config creation
+python3 auto_pilot.py --generate   # Generate keyword queue & solution pages
+python3 auto_pilot.py --audit      # Run 9-gate compliance audit
+python3 auto_pilot.py --index      # Broadcast URLs to IndexNow API
+```
+
+### Option C: The Modular Step-by-Step CLI Walkthrough
+If executing manually in a terminal step by step:
 ```bash
 cd PORTABLE_SEO_FACTORY
 

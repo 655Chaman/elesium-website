@@ -41,19 +41,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic finite state machine agent fallbacks agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -66,7 +66,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -81,7 +81,7 @@
       },
       {
         "question": "What is the expected ROI for logistics directors & fleet operations vps?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic finite state machine agent fallbacks for logistics directors & fleet operations vps delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for logistics directors & fleet operations vps.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic finite state machine agent fallbacks with sub-1.5ms delta wal checkpointing guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -136,19 +136,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic finite state machine agent fallbacks agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -161,7 +161,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -176,7 +176,7 @@
       },
       {
         "question": "What is the expected ROI for chief technology officers & principal ai architects?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic finite state machine agent fallbacks for chief technology officers & principal ai architects delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief technology officers & principal ai architects.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic finite state machine agent fallbacks with sub-1.5ms delta wal checkpointing guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -231,19 +231,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic finite state machine agent fallbacks agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -256,7 +256,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -271,7 +271,7 @@
       },
       {
         "question": "What is the expected ROI for chief risk officers & compliance directors?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic finite state machine agent fallbacks for chief risk officers & compliance directors delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief risk officers & compliance directors.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic finite state machine agent fallbacks with sub-1.5ms delta wal checkpointing guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -326,19 +326,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic finite state machine agent fallbacks agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -351,7 +351,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -366,7 +366,7 @@
       },
       {
         "question": "What is the expected ROI for supply chain superintendents?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic finite state machine agent fallbacks for supply chain superintendents delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for supply chain superintendents.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic finite state machine agent fallbacks with sub-1.5ms delta wal checkpointing guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -421,19 +421,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic finite state machine agent fallbacks agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -446,7 +446,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -461,7 +461,7 @@
       },
       {
         "question": "What is the expected ROI for electrolysis plant directors & clean hydrogen leads?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic finite state machine agent fallbacks for electrolysis plant directors & clean hydrogen leads delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for electrolysis plant directors & clean hydrogen leads.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic finite state machine agent fallbacks with sub-1.5ms delta wal checkpointing guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -516,19 +516,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic sub-200ms transaction ledger reconciliation agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -541,7 +541,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -556,7 +556,7 @@
       },
       {
         "question": "What is the expected ROI for logistics directors & fleet operations vps?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Sub-200ms transaction ledger reconciliation for logistics directors & fleet operations vps delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for logistics directors & fleet operations vps.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, sub-200ms transaction ledger reconciliation and zero-copy streaming guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -611,19 +611,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic sub-200ms transaction ledger reconciliation agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -636,7 +636,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -651,7 +651,7 @@
       },
       {
         "question": "What is the expected ROI for chief technology officers & principal ai architects?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Sub-200ms transaction ledger reconciliation for chief technology officers & principal ai architects delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief technology officers & principal ai architects.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, sub-200ms transaction ledger reconciliation and zero-copy streaming guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -706,19 +706,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic sub-200ms transaction ledger reconciliation agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -731,7 +731,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -746,7 +746,7 @@
       },
       {
         "question": "What is the expected ROI for chief risk officers & compliance directors?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Sub-200ms transaction ledger reconciliation for chief risk officers & compliance directors delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief risk officers & compliance directors.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, sub-200ms transaction ledger reconciliation and zero-copy streaming guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -801,19 +801,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic sub-200ms transaction ledger reconciliation agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -826,7 +826,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -841,7 +841,7 @@
       },
       {
         "question": "What is the expected ROI for supply chain superintendents?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Sub-200ms transaction ledger reconciliation for supply chain superintendents delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for supply chain superintendents.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, sub-200ms transaction ledger reconciliation and zero-copy streaming guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -896,19 +896,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic sub-200ms transaction ledger reconciliation agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -921,7 +921,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -936,7 +936,7 @@
       },
       {
         "question": "What is the expected ROI for electrolysis plant directors & clean hydrogen leads?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Sub-200ms transaction ledger reconciliation for electrolysis plant directors & clean hydrogen leads delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for electrolysis plant directors & clean hydrogen leads.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, sub-200ms transaction ledger reconciliation and zero-copy streaming guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -991,19 +991,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic private air-gapped vpc deployment agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1016,7 +1016,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1031,7 +1031,7 @@
       },
       {
         "question": "What is the expected ROI for logistics directors & fleet operations vps?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Private air-gapped vpc deployment for logistics directors & fleet operations vps delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for logistics directors & fleet operations vps.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, private air-gapped vpc deployment with zero third-party cloud data leakage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1086,19 +1086,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic private air-gapped vpc deployment agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1111,7 +1111,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1126,7 +1126,7 @@
       },
       {
         "question": "What is the expected ROI for chief technology officers & principal ai architects?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Private air-gapped vpc deployment for chief technology officers & principal ai architects delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief technology officers & principal ai architects.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, private air-gapped vpc deployment with zero third-party cloud data leakage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1181,19 +1181,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic private air-gapped vpc deployment agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1206,7 +1206,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1221,7 +1221,7 @@
       },
       {
         "question": "What is the expected ROI for chief risk officers & compliance directors?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Private air-gapped vpc deployment for chief risk officers & compliance directors delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief risk officers & compliance directors.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, private air-gapped vpc deployment with zero third-party cloud data leakage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1276,19 +1276,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic private air-gapped vpc deployment agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1301,7 +1301,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1316,7 +1316,7 @@
       },
       {
         "question": "What is the expected ROI for supply chain superintendents?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Private air-gapped vpc deployment for supply chain superintendents delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for supply chain superintendents.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, private air-gapped vpc deployment with zero third-party cloud data leakage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1371,19 +1371,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic private air-gapped vpc deployment agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1396,7 +1396,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1411,7 +1411,7 @@
       },
       {
         "question": "What is the expected ROI for electrolysis plant directors & clean hydrogen leads?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Private air-gapped vpc deployment for electrolysis plant directors & clean hydrogen leads delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for electrolysis plant directors & clean hydrogen leads.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, private air-gapped vpc deployment with zero third-party cloud data leakage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1466,19 +1466,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic dynamic token cost arbitrage agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1491,7 +1491,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1506,7 +1506,7 @@
       },
       {
         "question": "What is the expected ROI for logistics directors & fleet operations vps?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Dynamic token cost arbitrage for logistics directors & fleet operations vps delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for logistics directors & fleet operations vps.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, dynamic token cost arbitrage and semantic caching saving 85%+ in api spend guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1561,19 +1561,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic dynamic token cost arbitrage agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1586,7 +1586,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1601,7 +1601,7 @@
       },
       {
         "question": "What is the expected ROI for chief technology officers & principal ai architects?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Dynamic token cost arbitrage for chief technology officers & principal ai architects delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief technology officers & principal ai architects.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, dynamic token cost arbitrage and semantic caching saving 85%+ in api spend guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1656,19 +1656,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic dynamic token cost arbitrage agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1681,7 +1681,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1696,7 +1696,7 @@
       },
       {
         "question": "What is the expected ROI for chief risk officers & compliance directors?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Dynamic token cost arbitrage for chief risk officers & compliance directors delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief risk officers & compliance directors.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, dynamic token cost arbitrage and semantic caching saving 85%+ in api spend guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1751,19 +1751,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic dynamic token cost arbitrage agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1776,7 +1776,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1791,7 +1791,7 @@
       },
       {
         "question": "What is the expected ROI for supply chain superintendents?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Dynamic token cost arbitrage for supply chain superintendents delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for supply chain superintendents.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, dynamic token cost arbitrage and semantic caching saving 85%+ in api spend guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1846,19 +1846,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic dynamic token cost arbitrage agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1871,7 +1871,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1886,7 +1886,7 @@
       },
       {
         "question": "What is the expected ROI for electrolysis plant directors & clean hydrogen leads?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Dynamic token cost arbitrage for electrolysis plant directors & clean hydrogen leads delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for electrolysis plant directors & clean hydrogen leads.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, dynamic token cost arbitrage and semantic caching saving 85%+ in api spend guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -1941,19 +1941,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic constrained decoding logit masking agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -1966,7 +1966,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -1981,7 +1981,7 @@
       },
       {
         "question": "What is the expected ROI for logistics directors & fleet operations vps?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic constrained decoding logit masking for logistics directors & fleet operations vps delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for logistics directors & fleet operations vps.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic constrained decoding logit masking with zero retry token wastage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -2036,19 +2036,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic constrained decoding logit masking agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -2061,7 +2061,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -2076,7 +2076,7 @@
       },
       {
         "question": "What is the expected ROI for chief technology officers & principal ai architects?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic constrained decoding logit masking for chief technology officers & principal ai architects delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief technology officers & principal ai architects.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic constrained decoding logit masking with zero retry token wastage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -2131,19 +2131,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic constrained decoding logit masking agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -2156,7 +2156,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -2171,7 +2171,7 @@
       },
       {
         "question": "What is the expected ROI for chief risk officers & compliance directors?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic constrained decoding logit masking for chief risk officers & compliance directors delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for chief risk officers & compliance directors.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic constrained decoding logit masking with zero retry token wastage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -2226,19 +2226,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic constrained decoding logit masking agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -2251,7 +2251,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -2266,7 +2266,7 @@
       },
       {
         "question": "What is the expected ROI for supply chain superintendents?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic constrained decoding logit masking for supply chain superintendents delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for supply chain superintendents.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic constrained decoding logit masking with zero retry token wastage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",
@@ -2321,19 +2321,19 @@
     "pricing_grid": [
       {
         "tier": "Pilot Architecture Sprint",
-        "price": "₹1,50,000 – ₹3,50,000 ($2k–$4.5k)",
+        "price": "\u20b91,50,000 \u2013 \u20b93,50,000 ($2k\u2013$4.5k)",
         "timeline": "14 Days",
         "deliverable": "Production-ready deterministic deterministic constrained decoding logit masking agent deployed in client staging."
       },
       {
         "tier": "Enterprise Suite",
-        "price": "₹6,00,000 – ₹15,00,000 ($7.5k–$18k)",
-        "timeline": "30–45 Days",
+        "price": "\u20b96,00,000 \u2013 \u20b915,00,000 ($7.5k\u2013$18k)",
+        "timeline": "30\u201345 Days",
         "deliverable": "Multi-agent collaborative triad integrated with legacy ERP/database backends."
       },
       {
         "tier": "Autonomous Engineering Pod",
-        "price": "₹4,50,000 / mo ($5.5k/mo)",
+        "price": "\u20b94,50,000 / mo ($5.5k/mo)",
         "timeline": "Annual Retainer",
         "deliverable": "Dedicated senior systems engineering pod with 1-hour critical incident SLA."
       }
@@ -2346,7 +2346,7 @@
       ],
       "is_not_for_you": [
         "You are looking for a basic generic chatbot or low-code Zapier/Make wrapper.",
-        "Your total engineering budget is under ₹1,50,000 ($2,000).",
+        "Your total engineering budget is under \u20b91,50,000 ($2,000).",
         "You do not require data residency or compliance audits."
       ]
     },
@@ -2361,7 +2361,7 @@
       },
       {
         "question": "What is the expected ROI for electrolysis plant directors & clean hydrogen leads?",
-        "answer": "Implementations typically deliver a 3x–5x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
+        "answer": "Implementations typically deliver a 3x\u20135x operational ROI within 90 calendar days by eliminating manual backlogs and slashing cycle latency by up to 80%."
       }
     ],
     "content": "Deterministic constrained decoding logit masking for electrolysis plant directors & clean hydrogen leads delivers deterministic operational reliability across high-volume enterprise workflows.\n\nModern enterprise ai systems & sovereign multi-agent automation infrastructure requires resilient execution guarantees that eliminate silent failures, race conditions, and unmonitored exceptions.\n\nElesium provides direct private deployment architectures designed specifically for electrolysis plant directors & clean hydrogen leads.\n\nLegacy implementations in this sector struggle with brittle scripts and unpredictable cloud timeouts that introduce cascading workflow stalls.\n\nWhen critical data pipelines fail silently, engineering teams lose valuable operational hours manually debugging untyped error payloads.\n\nOur deterministic architecture enforces explicit state transitions through LangGraph StateGraphs, eliminating runaway recursive loops entirely.\n\nEvery task payload is validated against strict Pydantic schemas before executing against underlying database ledgers or transactional endpoints.\n\nIn production environments, deterministic constrained decoding logit masking with zero retry token wastage guarantees sub-millisecond execution checkpoints and cryptographic audit trails for every transition.\n\nData security remains non-negotiable for enterprise leadership.\n\nWe deploy dedicated, air-gapped instances within your sovereign AWS, GCP, or on-premise private VPC, ensuring zero external data egress.\n\nCustomer records, financial ledgers, and proprietary internal metrics never touch third-party public model training pools or shared multi-tenant infrastructure.\n\nAudited enterprise deployments demonstrate a verified 98.2% reduction in operational turnaround delays and total mitigation of unhandled state drift.\n\nBy decoupling data ingestion from execution via distributed worker queues, the system absorbs high-volume traffic spikes without memory thrashing or CPU throttling.\n\nReal-time OpenTelemetry tracing exports granular spans to your existing observability dashboards, providing instantaneous visibility into every node's processing time.\n\nAutomated rollback hooks guarantee that if any transactional step encounters a database constraint violation, the entire workflow reverts cleanly to its previous checkpoint.\n\nThis eliminates orphaned state records and guarantees ledger consistency across high-concurrency enterprise workloads.\n\nOur systems operate under strict non-disclosure terms with complete customer ownership of all generated application code, fine-tuned model weights, and pipeline configurations.\n\nIntegration connects seamlessly with existing PostgreSQL clusters, SAP S/4HANA instances, and Kafka event streams via native adapters.\n\nOur Tier 1 Pilot Sprint delivers a validated production system inside your staging perimeter within 14 calendar days.\n\nEvery deployment is backed by a contractual 90-day cash-flow ROI guarantee, ensuring verified economic return on invested capital.\n\nConnect directly with our senior systems engineering pod to review hardware sizing, latency envelopes, and deployment parameters today.",

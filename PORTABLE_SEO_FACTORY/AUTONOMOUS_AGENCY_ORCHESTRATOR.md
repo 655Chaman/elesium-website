@@ -202,7 +202,49 @@ Bypass the multi-month Googlebot crawl queue. Broadcast URL updates to participa
 
 ---
 
-## 👥 THE 7 SPECIALIZED SUB-AGENT PERSONA DISPATCH PROMPTS
+## 📡 PHASE 6: AISCO (AI SEARCH CRAWLER OPTIMIZATION) & CONTENT NEGOTIATION
+
+### Objective
+Maximize visibility, crawl throughput, and citation fidelity across the 10+ major autonomous AI search crawlers (`GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `Bytespider`, `Applebot-Extended`). Eliminate 95% of HTML/CSS parsing overhead for neural search engines by dynamically serving pure, high-density Markdown and JSON-LD.
+
+### Autonomous Action Steps:
+1. **Deploy Dynamic Crawler Router Middleware:**
+   - Mount `dynamic_crawler_router.py` (FastAPI / Express / Cloudflare Worker) at the server or edge layer.
+   - Detect AI Crawler User-Agents:
+     ```regex
+     (GPTBot|ChatGPT-User|PerplexityBot|ClaudeBot|anthropic-ai|Google-Extended|Bytespider|Applebot-Extended|Meta-ExternalAgent|Amazonbot)
+     ```
+   - Or inspect request header `Accept: text/markdown`.
+2. **Execute Content Negotiation:**
+   - If human browser ➔ Serve full React / HTML UI with Tailwind styling.
+   - If AI crawler ➔ Serve pure Markdown representation of the page with the 40–50 word Answer Capsule in the first 250 tokens, eliminating CSS/JS bloat.
+3. **Configure Robots.txt AI Permissive Matrix:**
+   - Allow live search retrieval bots (`ChatGPT-User`, `PerplexityBot`, `ClaudeBot`) to access `/solutions/`, `/resources/`, and `/tools/`.
+   - Rate-limit or block unauthorized bulk scrapers.
+4. **Enforce RAG Chunk Boundary Physics:**
+   - Structure headings (`H1`, `H2`, `H3`) and Answer Capsules so that sliding chunk windows (512–1024 tokens) never bisect a definition or atomic evidence card.
+
+---
+
+## ⚡ PHASE 7: AAEO (AUTONOMOUS AGENT ENGINE OPTIMIZATION) & MCP INTEGRATION
+
+### Objective
+Enable autonomous AI purchasing and coding agents (Devin, Claude Code, Antigravity, Operator) conducting vendor evaluations on behalf of enterprise CTOs to programmatically discover, evaluate, and book your services via standardized tool calling.
+
+### Autonomous Action Steps:
+1. **Expose Machine-Readable Agent Manifests:**
+   - Deploy `/.well-known/openapi.json` and `/.well-known/ai-plugin.json` defining services, SLAs, and pricing models.
+2. **Deploy Model Context Protocol (MCP) Server Endpoint:**
+   - Provide an MCP tool server (`/mcp` or standalone stdio/SSE server) exposing tools:
+     - `get_service_offerings`: Returns 3-tier pricing, SLAs, and technical specifications.
+     - `calculate_roi_estimate`: Programmatically computes customer ROI based on team size and transaction volume.
+     - `request_architecture_audit`: Accepts enterprise requirements and books an architecture review.
+3. **Publish Cryptographic State Attestations:**
+   - Expose immutable IPFS Content Identifiers (CIDs) and signed DPDP Act / SOC-2 compliance proofs so evaluating AI agents award maximum veracity points in 2-step scoring.
+
+---
+
+## 👥 THE 9 SPECIALIZED SUB-AGENT PERSONA DISPATCH PROMPTS
 
 When orchestrating in multi-agent environments (e.g. Antigravity Subagents, Claude Task Workers, CrewAI, AutoGen), dispatch the following exact persona prompts:
 
@@ -314,6 +356,37 @@ EXECUTION CHECKLIST:
 3. Execute live IndexNow API broadcast to api.indexnow.org.
 4. Format syndication blueprints for LinkedIn, GitHub README, and Reddit BOFU threads.
 OUTPUT: IndexNow API HTTP 200 receipt and multi-channel syndication schedule.
+```
+
+---
+
+### SUB-AGENT 8: The AISCO & Content Negotiation Engineer
+```text
+ROLE: AI Search Crawler Optimization & Edge Content Negotiation Engineer
+MISSION: Configure robots.txt, deploy dynamic markdown negotiation middleware, and optimize RAG chunking boundaries.
+INPUT ARTIFACTS: dynamic_crawler_router.py, public/robots.txt, solution templates.
+EXECUTION CHECKLIST:
+1. Mount dynamic_crawler_router middleware on target web server / edge function.
+2. Verify AI bot user-agent detection (GPTBot, PerplexityBot, ClaudeBot, Applebot).
+3. Ensure AI bots receive clean, high-density Markdown with Answer Capsules in the first 250 tokens.
+4. Verify robots.txt permits search-driven retrieval bots while blocking unauthorized scrapers.
+5. Audit chunk boundary physics: assert no H2/H3 or Answer Capsule is bisected across 512-token windows.
+OUTPUT: Operational dynamic crawler router and validated AISCO robots.txt.
+```
+
+---
+
+### SUB-AGENT 9: The AAEO & Autonomous Agent Endpoint Architect
+```text
+ROLE: Autonomous Agent Engine Optimization & Model Context Protocol (MCP) Engineer
+MISSION: Expose machine-readable OpenAPI specs and MCP tool calling endpoints so autonomous purchasing agents can discover, evaluate, and book the agency.
+INPUT ARTIFACTS: project_config.json, public/llms.txt.
+EXECUTION CHECKLIST:
+1. Deploy /.well-known/openapi.json and /.well-known/ai-plugin.json.
+2. Expose MCP tool server endpoints: get_service_offerings, calculate_roi_estimate, request_architecture_audit.
+3. Validate JSON Schema types and strict response guarantees.
+4. Ensure cryptographic IPFS CID and signed SLA commitments are verifiable by evaluating agents.
+OUTPUT: Live MCP tool server and validated agent-callable OpenAPI manifest.
 ```
 
 ---
