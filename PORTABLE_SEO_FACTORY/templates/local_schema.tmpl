@@ -1,0 +1,187 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{DOMAIN_URL}}/#website",
+      "url": "{{DOMAIN_URL}}/",
+      "name": "{{BRAND_NAME}}",
+      "description": "{{TAGLINE}}",
+      "publisher": {
+        "@id": "{{DOMAIN_URL}}/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{DOMAIN_URL}}/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+      "@id": "{{DOMAIN_URL}}/#organization",
+      "name": "{{BRAND_NAME}}",
+      "legalName": "{{LEGAL_ENTITY_NAME}}",
+      "alternateName": ["{{BRAND_NAME}} AI", "{{BRAND_NAME}} Systems", "{{BRAND_NAME}} Automation Agency"],
+      "url": "{{DOMAIN_URL}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{DOMAIN_URL}}/#logo",
+        "inLanguage": "en-US",
+        "url": "{{DOMAIN_URL}}/assets/logo.png",
+        "contentUrl": "{{DOMAIN_URL}}/assets/logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "{{BRAND_NAME}} Logo"
+      },
+      "image": {
+        "@id": "{{DOMAIN_URL}}/#logo"
+      },
+      "description": "{{TAGLINE}}. Sovereign Multi-Agent Infrastructure, Private Air-Gapped VPC Deployments, and Programmatic Enterprise Automation.",
+      "telephone": "{{TELEPHONE}}",
+      "email": "{{CONTACT_EMAIL}}",
+      "priceRange": "{{PRICE_RANGE}}",
+      "currenciesAccepted": "INR, USD, EUR",
+      "paymentAccepted": "Wire Transfer, ACH, Corporate Invoicing, Credit Card",
+      
+      <!-- Adrian Gana Dynamic Google Maps CID Integration -->
+      "hasMap": "https://maps.google.com/?cid={{GOOGLE_MAPS_CID}}",
+      
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{STREET_ADDRESS}}",
+        "addressLocality": "{{LOCALITY_CITY}}",
+        "addressRegion": "{{REGION_STATE}}",
+        "postalCode": "{{POSTAL_CODE}}",
+        "addressCountry": "{{COUNTRY_CODE}}"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{LATITUDE}},
+        "longitude": {{LONGITUDE}}
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Bengaluru",
+          "sameAs": "https://www.wikidata.org/wiki/Q1355"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai",
+          "sameAs": "https://www.wikidata.org/wiki/Q1156"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi",
+          "sameAs": "https://www.wikidata.org/wiki/Q1353"
+        },
+        {
+          "@type": "City",
+          "name": "Pune",
+          "sameAs": "https://www.wikidata.org/wiki/Q1538"
+        },
+        {
+          "@type": "City",
+          "name": "Hyderabad",
+          "sameAs": "https://www.wikidata.org/wiki/Q1361"
+        },
+        {
+          "@type": "Country",
+          "name": "India",
+          "sameAs": "https://www.wikidata.org/wiki/Q668"
+        },
+        {
+          "@type": "Country",
+          "name": "United States",
+          "sameAs": "https://www.wikidata.org/wiki/Q30"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Global / Remote"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "{{FOUNDER_NAME}}",
+        "jobTitle": "Chief Executive Officer & Principal Systems Architect",
+        "url": "{{DOMAIN_URL}}/founder/",
+        "sameAs": [
+          "{{FOUNDER_LINKEDIN}}"
+        ]
+      },
+      "sameAs": [
+        "https://maps.google.com/?cid={{GOOGLE_MAPS_CID}}",
+        "https://www.wikidata.org/wiki/{{WIKIDATA_QID}}",
+        "{{LINKEDIN_URL}}",
+        "{{GITHUB_URL}}",
+        "{{CRUNCHBASE_URL}}",
+        "{{G2_URL}}",
+        "{{CLUTCH_URL}}"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5.0",
+        "worstRating": "1.0",
+        "ratingCount": "64",
+        "reviewCount": "64"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Autonomous AI & Sovereign Engineering Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pilot Sprint (14-Day Production Agent Deployment)",
+              "description": "Single deterministic process automation in private enterprise VPC with 90-day ROI guarantee.",
+              "price": "150000",
+              "priceCurrency": "INR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise Multi-Agent Suite",
+              "description": "3-agent autonomous triad with bi-directional ERP integration and sub-200ms transaction reconciliation.",
+              "price": "600000",
+              "priceCurrency": "INR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dedicated AI Engineering Retainer Pod",
+              "description": "Continuous state machine optimization, 1-hour critical SLA, and dedicated engineering team.",
+              "price": "450000",
+              "priceCurrency": "INR"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>

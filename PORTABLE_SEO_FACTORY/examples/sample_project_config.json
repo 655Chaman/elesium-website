@@ -1,0 +1,37 @@
+{
+  "brand_name": "Synthetix Cloud",
+  "domain_url": "https://synthetixcloud.io",
+  "tagline": "Autonomous Kubernetes FinOps & Ephemeral Cloud Cost Optimization",
+  "primary_geographic_market": "North America & India Tech Hubs",
+  "primary_industry": "Cloud Infrastructure & FinOps SaaS",
+  "hub_categories": [
+    "Kubernetes Spot Optimization",
+    "MicroVM Cold-Start Mitigation",
+    "Dynamic Cloud Egress Arbitrage",
+    "Private VPC Air-Gapped Kubernetes",
+    "Automated Cluster Downscaling"
+  ],
+  "target_personas": [
+    "Chief Technology Officers",
+    "VP of Cloud Infrastructure",
+    "DevOps Leads & Platform Engineers",
+    "Site Reliability Engineering (SRE) Directors"
+  ],
+  "its_toasted_capabilities": [
+    "Sub-15ms Kernel Live Patching without Pod Eviction",
+    "Predictive Pre-Warm Spot Instance Replacement",
+    "Zero-Copy eBPF Network Flow Telemetry",
+    "Cryptographic Cluster State Rollbacks"
+  ],
+  "primary_cta": "Request 14-Day Free Cluster Audit",
+  "target_conversion_url": "/audit",
+  "social_proof_badges": [
+    "SOC-2 Type II Certified",
+    "AWS Advanced Technology Partner",
+    "G2 High Performer 2026",
+    "99.99% Availability SLA"
+  ],
+  "frontend_architecture": "nextjs",
+  "html_dist_directory": "out",
+  "indexnow_key": "4a7b9c1d2e3f4a5b6c7d8e9f0a1b2c3d"
+}
