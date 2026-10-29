@@ -13843,6 +13843,36 @@ def generate_ssg():
         direct_file.write_text(html_out, encoding="utf-8")
         print(f"Generated SSG for: /{route}")
 
+    # Generate static redirect pages for legacy/alias routes
+    redirects = [
+        ("market-signals", "https://elesium.online/signals"),
+        ("industries", "https://elesium.online/markets"),
+    ]
+
+    print("Generating static redirect pages for legacy routes...")
+    for alias, target_url in redirects:
+        redirect_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url={target_url}">
+  <link rel="canonical" href="{target_url}">
+  <title>Redirecting to {target_url}...</title>
+</head>
+<body>
+  <p>Redirecting to <a href="{target_url}">{target_url}</a>...</p>
+</body>
+</html>
+"""
+        alias_dir = DIST_DIR / alias
+        alias_dir.mkdir(parents=True, exist_ok=True)
+        alias_index = alias_dir / "index.html"
+        alias_direct = DIST_DIR / f"{alias}.html"
+
+        alias_index.write_text(redirect_html, encoding="utf-8")
+        alias_direct.write_text(redirect_html, encoding="utf-8")
+        print(f"Generated redirect: /{alias} -> {target_url}")
+
     print("✅ SSG complete. All routes prerendered with semantic HTML and verified canonical tags.")
 
 if __name__ == "__main__":
