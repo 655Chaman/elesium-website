@@ -5995,7 +5995,14 @@ def generate_ssg():
             f'<script type="application/ld+json">{json.dumps(speakable_schema, ensure_ascii=False)}</script>'
         ]
         if json_ld:
-            injections.append(f'<script type="application/ld+json">{json_ld}</script>')
+            try:
+                if isinstance(json_ld, str):
+                    parsed_ld = json.loads(json_ld)
+                    injections.append(f'<script type="application/ld+json">{json.dumps(parsed_ld, ensure_ascii=False)}</script>')
+                elif isinstance(json_ld, (dict, list)):
+                    injections.append(f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False)}</script>')
+            except Exception as e:
+                print(f"Warning: Skipping malformed jsonLdSchema in signal {slug}: {e}")
 
         html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
 
@@ -6577,7 +6584,8 @@ def generate_ssg():
                     "description": v_desc,
                     "author": {
                         "@type": "Organization",
-                        "name": "Elesium AI Systems Architecture Team"
+                        "name": "Elesium AI Systems Architecture Team",
+                        "url": "https://elesium.online"
                     },
                     "publisher": {
                         "@type": "Organization",

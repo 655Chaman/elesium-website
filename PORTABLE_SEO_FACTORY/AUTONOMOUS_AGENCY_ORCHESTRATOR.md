@@ -38,7 +38,7 @@
 │   • Compile 350–500 Word Landing Pages with Answer Capsules & Differentiator Tables    │
 │   • Inject Shaun Mitchell 3-Tier Pricing Grids & Joy Hawkins Honest Trade-off Tables   │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 3: 9-GATE COMPLIANCE GATEKEEPER                                                  │
+│ PHASE 3: 12-GATE COMPLIANCE GATEKEEPER                                                 │
 │   • Gate 1: Tri-Alignment (Slug == Title == Single H1)                                 │
 │   • Gate 2: Strict 350–500 Word Count & Micro-Paragraphs (<=3 sentences/p)             │
 │   • Gate 3: Moz Sweet Spot (Score 96–98, Assert NOT 100)                               │
@@ -48,6 +48,9 @@
 │   • Gate 7: Answer Capsule Density (40–50 words, declarative format)                   │
 │   • Gate 8: Pricing Grid & Evidence Cards Schema Mapping                               │
 │   • Gate 9: Zero AI Slop & Cliché Filter ("game-changer", "dive into", etc.)           │
+│   • Gate 10: Core Web Vitals & DOM Physics (14.6KB TCP cwnd, 0-CLS, sub-50ms INP)      │
+│   • Gate 11: Damped Semantic Mesh & Zero-Orphans (PageRank diffusion, 0 orphans/sinks) │
+│   • Gate 12: Zero-Defect Schema.org AST Gate (Strict JSON, zero duplicate keys)        │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ PHASE 4: AEO / GEO & KNOWLEDGE GRAPH INJECTION                                         │
 │   • Brian Winum 7-Layer LLM Authority Hacking Framework                                │
@@ -163,6 +166,12 @@ Guarantee mathematical immunity against Google's `QualityTwiddler`, `babyPanda`,
 | **Gate 4** | **Mobile Geometry** | Primary CTA button must appear BEFORE any image or graphic in the mobile DOM. | In mobile viewport (390px), user must see H1 ➔ Intro ➔ CTA without scrolling. |
 | **Gate 5** | **Crawl Depth** | Every page must be reachable in $\le 2$ clicks from the homepage. | Deploy master index at `/solutions/` linked directly from root navigation and footer. |
 | **Gate 6** | **Semantic SSG** | Pure pre-rendered semantic HTML with self-referential `<link rel="canonical">`. | Zero client-side JS rendering required for initial DOM paint. |
+| **Gate 7** | **Answer Capsule Density** | Strictly 40–50 words in bold declarative format for AEO extraction. | Fails if capsule length < 35 or > 55 words. |
+| **Gate 8** | **Pricing Grid & Evidence** | 3-tier pricing table and transparent qualification trade-offs. | Fails if pricing options < 2 tiers. |
+| **Gate 9** | **Zero AI Slop Filter** | Zero banned AI clichés ("delve into", "game-changer", etc.). | Fails if banned phrases found in copy. |
+| **Gate 10** | **Core Web Vitals & DOM Physics** | 14.6KB initial TCP congestion window (cwnd), zero-CLS, sub-50ms INP. | Fails if critical path HTML bloats over 14.6KB. |
+| **Gate 11** | **Damped Semantic Mesh** | Directed topological graph with PageRank diffusion, 0 orphans, 0 sinks. | Fails if page in-degree < 2 or out-degree == 0. |
+| **Gate 12** | **Zero-Defect Schema.org AST** | Strict JSON AST validation: zero duplicate keys, canonical @context, structural invariants. | Fails and halts build/deployment if any duplicate key or broken invariant is detected. |
 
 ---
 

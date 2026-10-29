@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-compliance_gatekeeper.py — Sovereign Portable Compliance Auditor v2.0
+compliance_gatekeeper.py — Sovereign Portable Compliance Auditor v2.0 (12-Gate Standard)
 
-Enforces Edward Sturm's 6 Core Gates + SEO Rockstars 2026 Quality Standards:
+Enforces Edward Sturm's Core Gates + SEO Rockstars 2026 Quality Standards:
 - Gate 1: Tri-Alignment (Slug, Meta Title, single H1 exact match)
 - Gate 2: Word Count & Micro-Paragraph Discipline (350–500 words, <= 3 sents/p)
 - Gate 3: Moz Sweet Spot (Target 96–98, assert NOT 100 to avoid over-optimization)
@@ -12,6 +12,9 @@ Enforces Edward Sturm's 6 Core Gates + SEO Rockstars 2026 Quality Standards:
 - Gate 7: Answer Capsule Density (Strictly 40–50 words for AEO extraction)
 - Gate 8: Pricing Grid & Evidence Cards Verification
 - Gate 9: Zero AI Slop & Cliché Banned Vocabulary Filter
+- Gate 10: Core Web Vitals & DOM Physics Sub-Audit (core_web_vitals_auditor.py)
+- Gate 11: Graph Topology & Damped Semantic Mesh Sub-Audit (internal_link_mesh_optimizer.py)
+- Gate 12: Zero-Defect Schema.org AST Gate (verify_schema_integrity.py)
 """
 
 import sys
@@ -137,7 +140,7 @@ def main():
     failed = 0
     warning_count = 0
 
-    print(f"Auditing {total} programmatic solution pages against 9 compliance gates...\n")
+    print(f"Auditing {total} programmatic solution pages against 12-Gate compliance standard...\n")
 
     for sol in keywords:
         is_ok, errs, warns = audit_solution(sol, config)
@@ -153,8 +156,35 @@ def main():
             for w in warns:
                 print(f"   ▲ {w}")
 
+    # Gate 12: Zero-Defect Schema.org AST Gate
+    schema_passed = True
+    schema_script = BASE_DIR / "verify_schema_integrity.py"
+    if not schema_script.exists():
+        schema_script = BASE_DIR.parent / "automation" / "verify_schema_integrity.py"
+
+    if schema_script.exists():
+        print("\n" + "-" * 75)
+        print("Auditing Gate 12: Zero-Defect Schema.org AST Gate across all generated pages...")
+        try:
+            import importlib.util
+            schema_spec = importlib.util.spec_from_file_location("verify_schema_integrity", schema_script)
+            schema_mod = importlib.util.module_from_spec(schema_spec)
+            schema_spec.loader.exec_module(schema_mod)
+
+            pages_dir = BASE_DIR / "generated_pages"
+            dist_dir = BASE_DIR.parent / "frontend" / "dist"
+            schema_passed = schema_mod.run_gatekeeper(
+                dist_dir=dist_dir if dist_dir.exists() else None,
+                pages_dir=pages_dir if pages_dir.exists() else None
+            )
+            if not schema_passed:
+                failed += 1
+        except Exception as e:
+            print(f"❌ Gate 12 Schema Audit error: {e}")
+            failed += 1
+
     print("\n" + "=" * 75)
-    print(f"AUDIT RESULTS: {passed}/{total} Passed ({(passed/total)*100:.1f}%)")
+    print(f"AUDIT RESULTS: {passed}/{total} Solutions Passed ({(passed/total)*100:.1f}%) | Gate 12 Schema AST: {'PASSED' if schema_passed else 'FAILED'}")
     if warning_count > 0:
         print(f"Advisory Warnings: {warning_count}")
     print("=" * 75)

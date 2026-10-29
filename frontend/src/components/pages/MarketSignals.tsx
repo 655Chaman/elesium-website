@@ -135,26 +135,30 @@ export default function MarketSignals() {
                     
                     {/* Breadcrumb Schema for GEO/AEO */}
                     <script type="application/ld+json">
-                        {`{
+                        {JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "BreadcrumbList",
-                            "itemListElement": [{
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Home",
-                                "item": "https://elesium.online"
-                            },{
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Market Signals",
-                                "item": "https://elesium.online/signals"
-                            },{
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": ${JSON.stringify(activeArticle.title.replace(/\*\*/g, ''))},
-                                "item": "https://elesium.online/signals/${activeArticle.slug}"
-                            }]
-                        }`}
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://elesium.online"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Market Signals",
+                                    "item": "https://elesium.online/signals"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": activeArticle.title.replace(/\*\*/g, ''),
+                                    "item": `https://elesium.online/signals/${activeArticle.slug}`
+                                }
+                            ]
+                        })}
                     </script>
 
                     {activeArticle.jsonLdSchema && (
@@ -185,31 +189,36 @@ export default function MarketSignals() {
                     
                     {/* Breadcrumb Schema for GEO/AEO */}
                     <script type="application/ld+json">
-                        {`{
+                        {JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "BreadcrumbList",
-                            "itemListElement": [{
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Home",
-                                "item": "https://elesium.online"
-                            },{
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Market Signals",
-                                "item": "https://elesium.online/signals"
-                            }]
-                        }`}
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://elesium.online"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Market Signals",
+                                    "item": "https://elesium.online/signals"
+                                }
+                            ]
+                        })}
                     </script>
 
-                    <script type="application/ld+json">{`{
-                        "@context": "https://schema.org",
-                        "@type": "Blog",
-                        "name": "Elesium Market Signals",
-                        "description": "B2B enterprise market intelligence from Elesium",
-                        "url": "https://elesium.online/signals",
-                        "publisher": { "@type": "Organization", "name": "Elesium", "url": "https://elesium.online" }
-                    }`}</script>
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Blog",
+                            "name": "Elesium Market Signals",
+                            "description": "B2B enterprise market intelligence from Elesium",
+                            "url": "https://elesium.online/signals",
+                            "publisher": { "@type": "Organization", "name": "Elesium", "url": "https://elesium.online" }
+                        })}
+                    </script>
                 </Helmet>
             )}
 

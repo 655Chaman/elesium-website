@@ -35,70 +35,7 @@
   <!-- ===================================================================== -->
   <!-- LINKED DATA SCHEMA: BreadcrumbList + TechArticle + FAQPage + Org      -->
   <!-- ===================================================================== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "@id": "{{DOMAIN_URL}}/solutions/{{KEYWORD_SLUG}}/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "{{DOMAIN_URL}}/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Solutions",
-            "item": "{{DOMAIN_URL}}/solutions/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "{{KEYWORD_TITLE}}",
-            "item": "{{DOMAIN_URL}}/solutions/{{KEYWORD_SLUG}}/"
-          }
-        ]
-      },
-      {
-        "@type": "TechArticle",
-        "@id": "{{DOMAIN_URL}}/solutions/{{KEYWORD_SLUG}}/#article",
-        "isPartOf": {
-          "@type": "WebPage",
-          "@id": "{{DOMAIN_URL}}/solutions/{{KEYWORD_SLUG}}/"
-        },
-        "headline": "{{KEYWORD_TITLE}}",
-        "description": "{{KEYWORD_TITLE}}: Enterprise-grade, deterministic architecture by {{BRAND_NAME}}.",
-        "inLanguage": "en-US",
-        "mainEntityOfPage": "{{DOMAIN_URL}}/solutions/{{KEYWORD_SLUG}}/",
-        "author": {
-          "@type": "Organization",
-          "name": "{{BRAND_NAME}}",
-          "url": "{{DOMAIN_URL}}/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "{{BRAND_NAME}}",
-          "url": "{{DOMAIN_URL}}/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{DOMAIN_URL}}/assets/logo.png"
-          }
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "{{DOMAIN_URL}}/solutions/{{KEYWORD_SLUG}}/#faq",
-        "mainEntity": [
-          {{FAQ_SCHEMA_ENTITIES}}
-        ]
-      }
-    ]
-  }
-  </script>
+  {{JSON_LD_SCHEMA}}
 
   <!-- Tailwind CSS CDN or Compiled CSS -->
   <script src="https://cdn.tailwindcss.com" defer></script>

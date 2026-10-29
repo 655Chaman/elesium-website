@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "python3 ../automation/generate_sitemap.py && tsc && vite build && python3 ../automation/generate_ssg.py",
+    "build": "python3 ../automation/generate_sitemap.py && tsc && vite build && python3 ../automation/generate_ssg.py && python3 ../automation/verify_schema_integrity.py",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && git add -A && git commit -m \"Deploy: $(date '+%Y-%m-%d %H:%M')\" && git push origin main && echo '✅ Deploying to elesium.online - check https://github.com/655Chaman/elesium-website/actions'",

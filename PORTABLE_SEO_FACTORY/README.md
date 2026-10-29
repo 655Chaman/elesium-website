@@ -55,7 +55,8 @@ PORTABLE_SEO_FACTORY/
 ├── internal_link_mesh_optimizer.py     # 🕸️ Graph Theory Engine: PageRank, CheiRank & Damped Semantic Mesh
 ├── setup_wizard.py                     # 🧙 Interactive CLI onboarding wizard
 ├── generator_engine.py                 # 🚀 Programmatic keyword & page generator (v2.0)
-├── compliance_gatekeeper.py            # 🔍 11-Gate Edward Sturm & Quality auditor
+├── compliance_gatekeeper.py            # 🔍 12-Gate Edward Sturm & Quality auditor
+├── verify_schema_integrity.py          # 🛡️ Gate 12: Zero-Defect Schema.org JSON-LD AST Gatekeeper
 ├── portable_instant_indexer.py         # ⚡ Zero-dependency IndexNow & Sitemap broadcaster
 │
 ├── calculators/                        # 🧮 5 Production Standalone & Embeddable Micro-SaaS Tools
@@ -105,13 +106,13 @@ Run the entire factory autonomously with a single command:
 ```bash
 cd PORTABLE_SEO_FACTORY
 
-# Autonomous Scan, Config Validation, Page Generation, 9-Gate Audit, and IndexNow broadcast:
+# Autonomous Scan, Config Validation, Page Generation, 12-Gate Audit, and IndexNow broadcast:
 python3 auto_pilot.py --all
 
 # Or run individual stages:
 python3 auto_pilot.py --scan       # Codebase inspection & config creation
 python3 auto_pilot.py --generate   # Generate keyword queue & solution pages
-python3 auto_pilot.py --audit      # Run 9-gate compliance audit
+python3 auto_pilot.py --audit      # Run 12-gate compliance audit
 python3 auto_pilot.py --index      # Broadcast URLs to IndexNow API
 ```
 
@@ -126,7 +127,7 @@ python3 setup_wizard.py
 # Step 2: Generate all BOFU solutions, Answer Capsules & Pricing Grids
 python3 generator_engine.py
 
-# Step 3: Audit against Edward Sturm's 9 compliance gates
+# Step 3: Audit against Edward Sturm & SEO Rockstars 12 compliance gates (including Gate 12 Schema AST)
 python3 compliance_gatekeeper.py
 
 # Step 4: Broadcast all generated URLs to search engines

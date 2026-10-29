@@ -229,28 +229,100 @@ def build_static_pages(config, queue):
 
         # Format FAQ accordions & schema
         faq_accs = []
-        faq_schemas = []
+        faq_items_valid = []
         for faq in item.get("faqs", []):
+            q_text = faq.get("q", "").strip()
+            a_text = faq.get("a", "").strip()
+            if not q_text or not a_text:
+                continue
             faq_accs.append(f"""<details class="group border border-slate-800 rounded-lg p-4 bg-slate-900/60 mb-3">
   <summary class="font-bold text-white cursor-pointer list-none flex justify-between items-center">
-    <span>{faq.get('q')}</span>
+    <span>{html.escape(q_text) if 'html' in globals() else q_text}</span>
     <span class="text-blue-400 transition group-open:rotate-180">▼</span>
   </summary>
-  <p class="mt-3 text-slate-300 text-sm leading-relaxed">{faq.get('a')}</p>
+  <p class="mt-3 text-slate-300 text-sm leading-relaxed">{html.escape(a_text) if 'html' in globals() else a_text}</p>
 </details>""")
-            faq_schemas.append(json.dumps({
+            faq_items_valid.append({
                 "@type": "Question",
-                "name": faq.get("q"),
+                "name": q_text,
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": faq.get("a")
+                    "text": a_text
                 }
-            }))
+            })
 
         faq_html = "\n".join(faq_accs)
-        faq_schema_str = ",\n".join(faq_schemas)
+        faq_schema_str = ",\n".join(json.dumps(x, ensure_ascii=False) for x in faq_items_valid)
+
+        # Build Zero-Defect Schema.org JSON-LD Knowledge Graph
+        schema_graph = [
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{domain}/solutions/{slug}/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": f"{domain}/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Solutions",
+                        "item": f"{domain}/solutions/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": h1,
+                        "item": f"{domain}/solutions/{slug}/"
+                    }
+                ]
+            },
+            {
+                "@type": "TechArticle",
+                "@id": f"{domain}/solutions/{slug}/#article",
+                "isPartOf": {
+                    "@type": "WebPage",
+                    "@id": f"{domain}/solutions/{slug}/"
+                },
+                "headline": h1,
+                "description": f"{h1}: Enterprise-grade, deterministic architecture by {brand}.",
+                "inLanguage": "en-US",
+                "mainEntityOfPage": f"{domain}/solutions/{slug}/",
+                "author": {
+                    "@type": "Organization",
+                    "name": brand,
+                    "url": f"{domain}/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": brand,
+                    "url": f"{domain}/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": f"{domain}/assets/logo.png"
+                    }
+                }
+            }
+        ]
+
+        if faq_items_valid:
+            schema_graph.append({
+                "@type": "FAQPage",
+                "@id": f"{domain}/solutions/{slug}/#faq",
+                "mainEntity": faq_items_valid
+            })
+
+        json_ld_payload = {
+            "@context": "https://schema.org",
+            "@graph": schema_graph
+        }
+        json_ld_script = f'<script type="application/ld+json">\n{json.dumps(json_ld_payload, indent=2, ensure_ascii=False)}\n  </script>'
 
         rendered = template
+        rendered = rendered.replace("{{JSON_LD_SCHEMA}}", json_ld_script)
         rendered = rendered.replace("{{BRAND_NAME}}", brand)
         rendered = rendered.replace("{{DOMAIN_URL}}", domain)
         rendered = rendered.replace("{{CURRENT_YEAR}}", "2026")

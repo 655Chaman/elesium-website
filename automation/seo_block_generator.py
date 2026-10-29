@@ -474,46 +474,48 @@ def find_related_posts(current_keywords: List[str], ts_path: Path, limit: int = 
 def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, faq_items: list, keywords: List[Dict]) -> str:
     """
     Generate combined Article + FAQPage JSON-LD schema markup.
+    Constructed using native Python dictionaries and json.dumps to guarantee
+    zero duplicate keys, zero unescaped quotes, and strict syntax validity.
     This is injected into the blogPost's jsonLdSchema field and rendered
     in <Helmet> by MarketSignals.tsx for every article page.
     """
-    faq_schema = ""
-    if faq_items:
-        qa_items = ",\n".join(
-            f'{{"@type":"Question","name":{json.dumps(item["q"])},'
-            f'"acceptedAnswer":{{"@type":"Answer","text":{json.dumps(item["a"])}}}}}'
-            for item in faq_items
-        )
-        faq_schema = f""",
-    {{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{qa_items}]
-    }}"""
-    
-    # Extract keyword strings for GEO 'about' and 'keywords' schema
-    kw_strings = [k["keyword"] for k in keywords]
-    about_schema = ",\n        ".join(f'{{"@type": "Thing", "name": {json.dumps(k)}}}' for k in kw_strings[:3])
-
-    schema = f"""[
-    {{
+    kw_strings = [k["keyword"] for k in keywords if isinstance(k, dict) and "keyword" in k]
+    article_node = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": {json.dumps(title)},
-        "description": {json.dumps(meta_desc)},
-        "keywords": {json.dumps(", ".join(kw_strings))},
-        "about": [
-            {about_schema}
-        ],
-        "datePublished": "{date_str}",
-        "dateModified": "{date_str}",
-        "author": {{"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"}},
-        "publisher": {{"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"}},
-        "url": "https://elesium.online/signals/{slug}",
-        "mainEntityOfPage": {{"@type": "WebPage", "@id": "https://elesium.online/signals/{slug}"}}
-    }}{faq_schema}
-]"""
-    return schema
+        "headline": title,
+        "description": meta_desc,
+        "keywords": ", ".join(kw_strings),
+        "about": [{"@type": "Thing", "name": k} for k in kw_strings[:3]],
+        "datePublished": date_str,
+        "dateModified": date_str,
+        "author": {"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"},
+        "publisher": {"@type": "Organization", "name": "Elesium", "url": "https://elesium.online"},
+        "url": f"https://elesium.online/signals/{slug}",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": f"https://elesium.online/signals/{slug}"}
+    }
+    nodes = [article_node]
+
+    if faq_items:
+        qa_nodes = []
+        for item in faq_items:
+            if isinstance(item, dict) and item.get("q") and item.get("a"):
+                qa_nodes.append({
+                    "@type": "Question",
+                    "name": item["q"],
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item["a"]
+                    }
+                })
+        if qa_nodes:
+            nodes.append({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": qa_nodes
+            })
+
+    return json.dumps(nodes, indent=4, ensure_ascii=False)
 
 
 # ─────────────────────────────────────────────────────
@@ -789,11 +791,10 @@ def build_ts_entry(
         slugs_ts = ", ".join(f"'{s}'" for s in related_slugs)
         links_str = f"\n        internalLinks: [{slugs_ts}],"
 
-    # Build jsonLdSchema TS string (escaped for template literal)
+    # Build jsonLdSchema TS string (strictly serialized as JSON string literal)
     schema_str = ""
     if json_ld:
-        safe_schema = json_ld.replace('`', '\\`').replace('\\', '\\\\')
-        schema_str = f"\n        jsonLdSchema: `{safe_schema}`,"
+        schema_str = f"\n        jsonLdSchema: {json.dumps(json_ld)},"
 
     theme_str = f"\n        weeklyTheme: '{weekly_theme}'," if weekly_theme else ""
 

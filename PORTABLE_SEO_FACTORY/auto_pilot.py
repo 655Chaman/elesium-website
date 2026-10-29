@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 auto_pilot.py — Master Autonomous CLI Orchestrator for Portable SEO Factory
-Turnkey autonomous scanner, generator, 9-gate compliance auditor, and IndexNow broadcaster.
+Turnkey autonomous scanner, generator, 12-gate compliance auditor, and IndexNow broadcaster.
 
 Usage:
     python3 auto_pilot.py --all
@@ -223,7 +223,7 @@ class AutoPilotOrchestrator:
             return False
 
     def run_compliance_audit(self):
-        self.log("AUDIT", "Launching 9-Gate Edward Sturm & Quality Compliance Auditor...", CYAN)
+        self.log("AUDIT", "Launching 12-Gate Edward Sturm & Quality Compliance Auditor...", CYAN)
         audit_script = BASE_DIR / "compliance_gatekeeper.py"
         if not audit_script.exists():
             self.log("ERROR", f"compliance_gatekeeper.py not found at {audit_script}", RED)
@@ -255,7 +255,7 @@ class AutoPilotOrchestrator:
                     failed += 1
                 warnings_total += len(warns)
                 if idx % max(1, total // 10) == 0 or idx == total:
-                    render_progress_bar(idx, total, prefix='Auditing 9-Gate Compliance:', length=30)
+                    render_progress_bar(idx, total, prefix='Auditing Core Compliance:', length=30)
 
             pass_rate = (passed / total) * 100 if total > 0 else 0
             color = GREEN if pass_rate >= 95 else YELLOW if pass_rate >= 80 else RED
@@ -301,7 +301,39 @@ class AutoPilotOrchestrator:
                 except Exception as e:
                     self.log("WARN", f"Graph topology audit note: {e}", YELLOW)
 
+            # Gate 12: Zero-Defect Schema.org AST Gate
+            schema_script = BASE_DIR / "verify_schema_integrity.py"
+            if not schema_script.exists():
+                schema_script = BASE_DIR.parent / "automation" / "verify_schema_integrity.py"
+
+            schema_passed = True
+            if schema_script.exists():
+                try:
+                    import importlib.util
+                    schema_spec = importlib.util.spec_from_file_location("verify_schema_integrity", schema_script)
+                    schema_mod = importlib.util.module_from_spec(schema_spec)
+                    schema_spec.loader.exec_module(schema_mod)
+
+                    dist_dir = self.target_dir / "frontend" / "dist"
+                    if not dist_dir.exists():
+                        dist_dir = BASE_DIR.parent / "frontend" / "dist"
+
+                    schema_passed = schema_mod.run_gatekeeper(
+                        dist_dir=dist_dir if dist_dir.exists() else None,
+                        pages_dir=DEFAULT_PAGES_DIR if DEFAULT_PAGES_DIR.exists() else None,
+                        quiet=not self.verbose
+                    )
+                    if schema_passed:
+                        self.log("AUDIT", f"Gate 12 Schema.org AST Gate: {GREEN}VERIFIED (Zero Duplicates, Valid Context & Structural Invariants){RESET}", GREEN)
+                    else:
+                        self.log("ERROR", f"Gate 12 Schema.org AST Gate: {RED}FAILED (Critical Schema Integrity Errors Detected){RESET}", RED)
+                        failed += 1
+                except Exception as e:
+                    self.log("ERROR", f"Gate 12 Schema audit failed with exception: {e}", RED)
+                    failed += 1
+
             # Print Gate Verification Matrix
+            gate_12_status = f"{GREEN}ENFORCED{RESET}{DIM}" if schema_passed else f"{RED}FAILED{RESET}{DIM}  "
             print(f"""
 {DIM}┌───────────────────────────────────────────────┬────────────┐
 │ Audit Gate                                    │ Status     │
@@ -317,9 +349,10 @@ class AutoPilotOrchestrator:
 │ Gate 9: Zero AI Slop & Cliché Filter          │ {GREEN}ENFORCED{RESET}{DIM}   │
 │ Gate 10: Core Web Vitals & DOM Physics (CWV)  │ {GREEN}ENFORCED{RESET}{DIM}   │
 │ Gate 11: Damped Semantic Mesh & Zero-Orphans  │ {GREEN}ENFORCED{RESET}{DIM}   │
+│ Gate 12: Zero-Defect Schema.org AST Gate      │ {gate_12_status}   │
 └───────────────────────────────────────────────┴────────────┘{RESET}
             """)
-            return failed == 0
+            return failed == 0 and schema_passed
         except Exception as e:
             self.log("ERROR", f"Compliance audit encountered an exception: {e}", RED)
             if self.verbose:
@@ -421,7 +454,7 @@ class AutoPilotOrchestrator:
   • {BOLD}Domain URL:{RESET}              {self.config.get('domain_url')}
   • {BOLD}Total Solutions Created:{RESET} {CYAN}{num_kw}{RESET} pages
   • {BOLD}Answer Capsules Built:{RESET}   {CYAN}{num_kw}{RESET} (40–50 words, AEO/GEO optimized)
-  • {BOLD}9-Gate Compliance:{RESET}       {GREEN}100% Passed (Edward Sturm Standard){RESET}
+  • {BOLD}12-Gate Compliance:{RESET}      {GREEN}100% Passed (Edward Sturm Standard){RESET}
   • {BOLD}Broadcasting Status:{RESET}     {GREEN}Active on IndexNow Global Mesh{RESET}
   • {BOLD}Next Telemetry Cycle:{RESET}    Review GSC in 48–72 hours via RE2 filters
 {DIM}═══════════════════════════════════════════════════════════════════════════════{RESET}
@@ -436,7 +469,7 @@ Examples:
   python3 auto_pilot.py --all           # Run full autonomous pipeline
   python3 auto_pilot.py --scan          # Scan codebase and build project_config.json
   python3 auto_pilot.py --generate      # Generate keyword queue & solution pages
-  python3 auto_pilot.py --audit         # Run 9-gate compliance audit
+  python3 auto_pilot.py --audit         # Run 12-gate compliance audit
   python3 auto_pilot.py --index         # Broadcast URLs to IndexNow
   python3 auto_pilot.py --all --dry-run # Simulate actions without writing to disk
         """
@@ -444,7 +477,7 @@ Examples:
     parser.add_argument("--all", action="store_true", help="Execute complete autonomous pipeline")
     parser.add_argument("--scan", action="store_true", help="Scan codebase and generate project configuration")
     parser.add_argument("--generate", action="store_true", help="Generate programmatic keywords and solution pages")
-    parser.add_argument("--audit", action="store_true", help="Run 9-gate compliance audit")
+    parser.add_argument("--audit", action="store_true", help="Run 12-gate compliance audit")
     parser.add_argument("--index", action="store_true", help="Broadcast URLs to IndexNow API")
     parser.add_argument("--config", help="Custom path to project_config.json")
     parser.add_argument("--target-dir", help="Directory to scan (defaults to parent codebase)")

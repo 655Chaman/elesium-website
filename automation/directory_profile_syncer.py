@@ -320,7 +320,6 @@ Clutch requires a 10-15 minute independent telephone interview for client verifi
                 "name": self.canonical["founder_name"],
                 "title": self.canonical["founder_title"]
             },
-            "founding_year": self.canonical["founding_year"],
             "company_size": self.canonical["company_size"],
             "hourly_rate": self.canonical["hourly_rate"],
             "target_solutions": self.bofu_pages
