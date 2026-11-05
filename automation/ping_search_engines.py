@@ -183,7 +183,7 @@ def ping_sitemap_endpoint(
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=5) as resp:
             elapsed = (time.time() - start_time) * 1000
             status = resp.getcode()
             body_preview = resp.read(256).decode("utf-8", errors="ignore").strip()
@@ -245,7 +245,7 @@ def submit_indexnow(
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
+        with urllib.request.urlopen(req, timeout=5) as resp:
             elapsed = (time.time() - start_time) * 1000
             status = resp.getcode()
             body = resp.read().decode("utf-8", errors="ignore").strip()
