@@ -619,189 +619,431 @@ def render_solutions_hub_semantic_html(solutions):
 
 def render_commercial_directory_semantic_html(items):
     """
-    Renders high-fidelity, luxury dark obsidian pre-rendered DOM for /commercial-directory.html
-    Fully consistent with the React component, with all 100 solution cards, stats, and banners.
+    Renders 100% congruent, flagship-grade pre-rendered DOM for /commercial-directory.html
+    Fully consistent with SolutionsHub.tsx and CommercialDirectory.tsx, including authentic
+    Elesium navbar (using /assets/LOGO_NEW.png, 56px height), 5 thematic category panels,
+    100 child solution cards with emerald badges and SLA indicators, bottom CTA, and authentic footer.
     """
-    cards_html = []
-    for item in items:
-        sector = item.get("sector", "")
-        metro = item.get("geo_focus", "Pan-India")
-        anchor_text = item.get("anchor_text", item.get("title", ""))
-        slug = item.get("slug", "")
-        desc = f"Deploy enterprise {anchor_text} with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance."
-
-        pill_color = "border-emerald-500/30 bg-emerald-950/30 text-emerald-300"
-        if "Logistics" in sector:
-            pill_color = "border-amber-500/30 bg-amber-950/30 text-amber-300"
-        elif "Healthcare" in sector:
-            pill_color = "border-rose-500/30 bg-rose-950/30 text-rose-300"
-        elif "Manufacturing" in sector:
-            pill_color = "border-sky-500/30 bg-sky-950/30 text-sky-300"
-        elif "Defense" in sector:
-            pill_color = "border-purple-500/30 bg-purple-950/30 text-purple-300"
-
+    def get_badge(anchor_text, slug):
         lower = (anchor_text + " " + slug).lower()
-        badges = []
-        if "vllm" in lower: badges.append("vLLM FP8")
-        if "rbi" in lower: badges.append("RBI CSF")
-        if "hsm" in lower: badges.append("FIPS 140-2 HSM")
-        if "merkle" in lower: badges.append("Merkle Audit Trail")
-        if "tally" in lower: badges.append("Tally Prime XML")
-        if "icegate" in lower: badges.append("Customs ICEGATE")
-        if "sap" in lower: badges.append("SAP S/4HANA")
-        if "scada" in lower or "plc" in lower: badges.append("SCADA / Modbus")
-        if "abdm" in lower or "hipaa" in lower: badges.append("ABDM / HIPAA")
-        if "deepseek" in lower: badges.append("DeepSeek Cluster")
-        if "mla" in lower: badges.append("MLA Latent Pool")
+        if "vllm" in lower: return "vLLM FP8"
+        if "rbi" in lower: return "RBI CSF"
+        if "hsm" in lower: return "FIPS 140-2 HSM"
+        if "merkle" in lower: return "Merkle Audit Trail"
+        if "tally" in lower: return "Tally Prime XML"
+        if "icegate" in lower: return "Customs ICEGATE"
+        if "sap" in lower: return "SAP S/4HANA"
+        if "scada" in lower or "plc" in lower: return "SCADA / Modbus"
+        if "abdm" in lower or "hipaa" in lower: return "ABDM / HIPAA"
+        if "deepseek" in lower: return "DeepSeek Cluster"
+        if "mla" in lower: return "MLA Latent Pool"
+        if "fp8" in lower: return "FP8 Inference"
+        if "ml-kem" in lower or "crypto" in lower: return "ML-KEM-1024"
+        if "dpdp" in lower: return "DPDP Compliant"
+        return "Air-Gapped VPC"
 
-        fallback_badges = ["Air-Gapped VPC", "Sub-200ms SLA", "DPDP Compliant", "Zero Egress"]
-        for fb in fallback_badges:
-            if len(badges) >= 4:
-                break
-            if fb not in badges:
-                badges.append(fb)
-        badges = badges[:4]
+    category_defs = [
+        {
+            "key": "bfsi",
+            "cluster": "Cluster 01",
+            "name": "BFSI & Fintech",
+            "icon_svg": '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>',
+            "tagline": "Sub-200ms Core Banking Telemetry & Sovereign DPDP-Compliant State Machines",
+            "description": "Air-gapped private VPC inference clusters, immutable Merkle audit trails, and deterministic ledger reconciliation for scheduled commercial banks, NBFCs, and payment aggregators.",
+            "match": lambda s: "bfsi" in s or "banking" in s or "fintech" in s
+        },
+        {
+            "key": "logistics",
+            "cluster": "Cluster 02",
+            "name": "Logistics & Supply Chain",
+            "icon_svg": '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18.5" r="2.5"/><circle cx="7" cy="18.5" r="2.5"/></svg>',
+            "tagline": "Automated E-Way Bill Dispatch, Customs ICEGATE, & Port 9000 Tally Integration",
+            "description": "End-to-end multi-agent dispatch pipelines connecting shopfloor manifests, national logistics transport networks, and automated GSTN tax compliance engines.",
+            "match": lambda s: "logistics" in s or "supply" in s
+        },
+        {
+            "key": "healthcare",
+            "cluster": "Cluster 03",
+            "name": "Healthcare & Life Sciences",
+            "icon_svg": '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>',
+            "tagline": "Air-Gapped Clinical LLM Enclaves, ABDM M3 Consent, & DISHA Compliance",
+            "description": "HIPAA and DISHA-certified clinical copilots, zero-trust biomedical IoT monitoring, and volatile VRAM de-identification for hospital networks and pharmaceutical R&D.",
+            "match": lambda s: "health" in s or "life" in s
+        },
+        {
+            "key": "manufacturing",
+            "cluster": "Cluster 04",
+            "name": "Manufacturing & SCADA",
+            "icon_svg": '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>',
+            "tagline": "Purdue Model Level-2 Isolation, Sub-8ms Machine Vision, & PLC Work Order Confirmation",
+            "description": "Deterministic Modbus-TCP and industrial IoT gateway agents synchronizing shopfloor programmable logic controllers with enterprise SAP S/4HANA and MES stacks.",
+            "match": lambda s: "manufactur" in s or "industrial" in s or "scada" in s
+        },
+        {
+            "key": "defense",
+            "cluster": "Cluster 05",
+            "name": "Sovereign Defense",
+            "icon_svg": '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>',
+            "tagline": "Air-Gapped Sovereign Compute Enclaves, ML-KEM-1024, & Zero-Leakage Avionics",
+            "description": "Military-grade cryptographic encapsulation, isolated prefill-decode architectures, and immutable system prompt locking for defense installations and critical infrastructure.",
+            "match": lambda s: "defense" in s or "sovereign" in s
+        }
+    ]
 
-        badge_spans = "".join(f'<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800/60 text-slate-300 border border-slate-700/60">{html.escape(b)}</span>' for b in badges)
+    category_panels_html = []
+    for cdef in category_defs:
+        cat_items = [it for it in items if cdef["match"](it.get("sector", "").lower())]
+        cards = []
+        for it in cat_items:
+            slug = it.get("slug", "")
+            anchor_text = it.get("anchor_text", it.get("title", ""))
+            metro = it.get("geo_focus", "Pan-India")
+            desc = f"Deploy enterprise {anchor_text} with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance."
+            badge = get_badge(anchor_text, slug)
 
-        card = f"""
-        <div class="group relative flex flex-col justify-between rounded-2xl border border-slate-800/80 bg-gradient-to-b from-slate-900/60 to-slate-950/90 p-6 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] hover:-translate-y-1 overflow-hidden">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider border font-medium {pill_color}">
-                {html.escape(sector)}
-              </span>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-slate-400">
-                {html.escape(metro)}
-              </span>
+            card_html = f"""
+            <a href="/solutions/{html.escape(slug)}" class="group relative flex flex-col justify-between p-6 rounded-xl border border-gray-200/90 dark:border-white/5 bg-gray-50/40 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/40 hover:bg-white dark:hover:bg-white/[0.04] transition-all text-left">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 dark:text-gray-500 truncate">
+                    Metro: {html.escape(metro)}
+                  </span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded border border-gray-200 dark:border-white/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                    {html.escape(badge)}
+                  </span>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 group-hover:text-black dark:group-hover:text-white transition-colors leading-snug">
+                  {html.escape(anchor_text)}
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2">
+                  {html.escape(desc)}
+                </p>
+              </div>
+              <div class="mt-5 pt-4 border-t border-gray-100 dark:border-white/5 flex items-center justify-between text-xs">
+                <span class="font-mono text-gray-400 dark:text-gray-500">&lt; 200ms Execution SLA</span>
+                <span class="inline-flex items-center gap-1 font-medium text-black dark:text-white group-hover:translate-x-0.5 transition-transform">
+                  <span>Inspect Architecture</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </a>
+            """
+            cards.append(card_html)
+
+        panel_html = f"""
+        <section id="{cdef['key']}" class="p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a] shadow-sm mb-12">
+          <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 mb-8 border-b border-gray-100 dark:border-white/5">
+            <div class="space-y-2 max-w-2xl">
+              <div class="flex items-center gap-2.5">
+                <div class="p-2 rounded-lg bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white">
+                  {cdef['icon_svg']}
+                </div>
+                <span class="text-xs font-mono uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                  {cdef['cluster']}
+                </span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
+                {html.escape(cdef['name'])}
+              </h2>
+              <p class="text-sm font-mono text-emerald-600 dark:text-emerald-400">
+                {html.escape(cdef['tagline'])}
+              </p>
+              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed pt-1">
+                {html.escape(cdef['description'])}
+              </p>
             </div>
-            <h2 class="text-base sm:text-lg font-semibold text-slate-100 group-hover:text-cyan-300 transition-colors leading-snug mb-3">
-              <a href="/solutions/{html.escape(slug)}" class="hover:text-cyan-300 text-slate-100 transition-colors">
-                {html.escape(anchor_text)}
-              </a>
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 line-clamp-2 leading-relaxed mb-5">
-              {html.escape(desc)}
-            </p>
+            <div class="flex items-center gap-2 text-xs font-mono text-gray-400 shrink-0 self-start md:self-auto">
+              <span>{len(cat_items)} Priority Architectures</span>
+            </div>
           </div>
-          <div class="pt-4 border-t border-slate-800/70">
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              {badge_spans}
-            </div>
-            <div class="flex items-center justify-between text-xs font-medium text-cyan-400 pt-1">
-              <span class="font-mono text-[11px] text-slate-500">SLA: &lt;200ms</span>
-              <a href="/solutions/{html.escape(slug)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-semibold">
-                <span>Inspect Technical Spec</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {''.join(cards)}
           </div>
-        </div>
+        </section>
         """
-        cards_html.append(card)
+        category_panels_html.append(panel_html)
 
     return f"""
-<div class="min-h-screen bg-[#030712] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black pt-24 pb-24 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-mono text-slate-400 mb-8 sm:mb-12">
-      <a href="/" class="hover:text-cyan-400 transition-colors text-slate-400">Home</a>
-      <span class="text-slate-600">/</span>
-      <a href="/solutions" class="hover:text-cyan-400 transition-colors text-slate-400">Solutions</a>
-      <span class="text-slate-600">/</span>
-      <span class="text-slate-200 font-medium tracking-wide">Commercial Priority Directory</span>
+<!-- Authentic Elesium Fixed Navbar (56px) -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style="height:56px;">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 h-full flex items-center justify-between">
+    <a href="/" class="flex items-center cursor-pointer">
+      <img src="/assets/LOGO_NEW.png" alt="Elesium Logo" width="160" height="40" class="h-8 md:h-9 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm" />
+    </a>
+    <div class="hidden lg:flex items-center gap-1 xl:gap-2">
+      <a href="/how-we-work" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">How We Work</a>
+      <a href="/solutions" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Solutions</a>
+      <a href="/compare" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Architecture</a>
+      <a href="/signals" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Market Signals</a>
+      <a href="/resources" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Engineering Tools</a>
+      <a href="/waitlist" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">ele-in (SaaS)</a>
+      <a href="/ai-automation-agency-india" class="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1">Best Enterprise AI India</a>
+    </div>
+    <div class="hidden lg:flex items-center gap-3">
+      <a href="https://wa.me/918317329312" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 shadow-sm transition-all">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>Chat on WhatsApp</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content Wrapper (SolutionsHub Congruent) -->
+<div class="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
+  <!-- Breadcrumbs Navigation -->
+  <div class="max-w-6xl mx-auto px-6 mb-8">
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
+      <a href="/" class="hover:text-black dark:hover:text-white transition-colors">Home</a>
+      <svg class="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="/solutions" class="hover:text-black dark:hover:text-white transition-colors">Solutions</a>
+      <svg class="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="text-gray-900 dark:text-gray-200 font-medium">Commercial Priority Directory</span>
     </nav>
+  </div>
 
-    <header class="mb-14 sm:mb-20">
-      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 backdrop-blur-md text-xs font-mono text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.15)] mb-6 sm:mb-8">
-        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span class="tracking-widest uppercase font-semibold text-[11px] sm:text-xs">TOP 100 COMMERCIAL ENTERPRISE AI DIRECTORY</span>
-      </div>
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-6 text-white max-w-5xl">
-        Top 100 Commercial Enterprise AI Solutions &amp; Sovereign Architecture Directory
-      </h1>
-      <p class="max-w-3xl text-base sm:text-lg text-slate-400 leading-relaxed font-normal mb-10">
-        Production-grade deterministic automation workflows, private VPC inference clusters, and sovereign multi-agent state machines engineered for mission-critical Indian and global enterprises. Every architecture is guaranteed sub-200ms execution latency with 100% zero-egress data sovereignty.
+  <!-- Hero Header -->
+  <header class="max-w-6xl mx-auto px-6 mb-16 md:mb-24">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span class="text-xs font-mono uppercase tracking-widest text-gray-600 dark:text-gray-300">
+        System 2 • Commercial Priority Directory (Top 100)
+      </span>
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-6 max-w-4xl text-gray-900 dark:text-white">
+      Top 100 Commercial Enterprise AI Solutions &amp; Sovereign Architecture Directory
+    </h1>
+
+    <div class="max-w-3xl space-y-4 text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+      <p>
+        Elesium engineers deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise leaders who require contractual execution guarantees, zero data leakage, and rigorous statutory compliance.
       </p>
+      <p>
+        Explore 100 production-ready commercial architectures spanning BFSI, Logistics, Healthcare, SCADA Manufacturing, and Sovereign Defense. Every deployment features air-gapped private subnets, sub-200ms SLAs, and verified DPDP Act 2023 adherence.
+      </p>
+    </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-4">
-        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
-          <div class="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight flex items-center gap-2">
-            <span>100</span>
-            <span class="text-xs px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-sans font-medium">Verified</span>
-          </div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Priority Hubs</div>
-          <div class="text-[11px] text-slate-500 mt-1">High-Intent Enterprise Workflows</div>
+    <!-- Trust Metrics Bar -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-gray-100 dark:border-white/10">
+      <div class="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
+        <div class="text-2xl font-mono font-semibold text-gray-900 dark:text-white">100</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Priority Architecture Hubs</div>
+      </div>
+      <div class="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
+        <div class="text-2xl font-mono font-semibold text-gray-900 dark:text-white">&lt; 200ms</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Deterministic Latency SLA</div>
+      </div>
+      <div class="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
+        <div class="text-2xl font-mono font-semibold text-gray-900 dark:text-white">100%</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Private VPC Data Isolation</div>
+      </div>
+      <div class="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
+        <div class="text-2xl font-mono font-semibold text-emerald-600 dark:text-emerald-400">90-Day</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Hard Contracted ROI SLA</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search & Sector Filter Section -->
+  <section class="max-w-6xl mx-auto px-6 mb-12">
+    <div class="relative w-full mb-6">
+      <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </div>
+      <input type="text" placeholder="Search 100 enterprise solutions by keyword, metro, or regulation..." class="w-full pl-11 pr-10 py-3.5 bg-gray-50/70 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-black dark:focus:border-white/40 transition-all" />
+    </div>
+    <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+      <a href="#all" class="px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap border bg-black text-white dark:bg-white dark:text-black border-black dark:border-white font-medium shadow-sm">All (100)</a>
+      <a href="#bfsi" class="px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">BFSI &amp; Fintech (20)</a>
+      <a href="#logistics" class="px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">Logistics &amp; Supply Chain (20)</a>
+      <a href="#healthcare" class="px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">Healthcare &amp; Life Sciences (20)</a>
+      <a href="#manufacturing" class="px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">Manufacturing &amp; SCADA (20)</a>
+      <a href="#defense" class="px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">Sovereign Defense (20)</a>
+    </div>
+    <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 font-mono mt-3 px-1">
+      <span>Showing <span class="font-semibold text-gray-900 dark:text-white">100</span> of 100 solutions</span>
+    </div>
+  </section>
+
+  <!-- 5 Thematic Category Panels (SolutionsHub Congruent) -->
+  <main class="max-w-6xl mx-auto px-6 space-y-12">
+    {''.join(category_panels_html)}
+  </main>
+
+  <!-- Bottom Call-to-Action Card (SolutionsHub Congruent) -->
+  <section class="max-w-6xl mx-auto px-6 mt-20">
+    <div class="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-2xl space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Private Sovereign VPC Deployment Protocol</span>
         </div>
-        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
-          <div class="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight flex items-center gap-2">
-            <span>5</span>
-            <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-sans font-medium">Sectors</span>
-          </div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Enterprise Sectors</div>
-          <div class="text-[11px] text-slate-500 mt-1">BFSI, Supply Chain, Healthcare, SCADA, Defense</div>
-        </div>
-        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
-          <div class="text-2xl sm:text-3xl font-mono font-bold text-cyan-400 tracking-tight flex items-center gap-2">
-            <span>&lt; 200ms</span>
-          </div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Execution SLA</div>
-          <div class="text-[11px] text-slate-500 mt-1">Deterministic P99 Latency SLA</div>
-        </div>
-        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
-          <div class="text-2xl sm:text-3xl font-mono font-bold text-emerald-400 tracking-tight flex items-center gap-2">
-            <span>100%</span>
-          </div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Zero-Egress Air-Gapped</div>
-          <div class="text-[11px] text-slate-500 mt-1">DPDP Act 2023 &amp; RBI CSF Safe Harbors</div>
+
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+          Request a Deterministic AI Architecture Audit for Your Enterprise
+        </h2>
+
+        <p class="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
+          Schedule a 30-minute technical evaluation directly with our Systems Engineering Pod. We review your SAP/Oracle ledgers, legacy workflows, and data governance policies, delivering a formal 1-page feasibility memorandum with zero obligation.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
+          <a href="https://wa.me/918317329312" class="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>Chat on WhatsApp with Lead Architect</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a href="/waitlist" class="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm">
+            <span>ele-in SaaS Waitlist</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
-    </header>
 
-    <div class="mb-10 space-y-6">
-      <div class="relative w-full">
-        <input type="text" placeholder="Search 100 enterprise solutions by keyword, metro, sector, or regulation..." class="w-full pl-5 pr-12 py-4 bg-slate-900/60 border border-slate-800/90 rounded-2xl text-slate-100 placeholder-slate-500 text-sm sm:text-base focus:outline-none focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20 backdrop-blur-md transition-all shadow-lg" />
+      <div class="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
+        <img src="/assets/LOGO_NEW.png" alt="Elesium" class="w-96 h-96 object-contain filter invert" />
       </div>
-      <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-2">
-        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-cyan-500/10 text-cyan-300 border border-cyan-500/50">All (100)</span>
-        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">BFSI &amp; Fintech (20)</span>
-        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Logistics &amp; Supply Chain (20)</span>
-        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Healthcare &amp; Life Sciences (20)</span>
-        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Manufacturing &amp; SCADA (20)</span>
-        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Sovereign Defense (20)</span>
+    </div>
+  </section>
+</div>
+
+<!-- Authentic Elesium Footer -->
+<footer class="relative bg-white dark:bg-black text-black dark:text-white py-12 md:py-16 overflow-hidden font-sans border-t border-gray-200 dark:border-white/10 transition-colors duration-300">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col justify-between">
+    <!-- Top Conversion Bar: Direct WhatsApp Engineering Intake -->
+    <div class="mb-12 p-6 sm:p-8 rounded-3xl bg-gray-50/90 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div class="space-y-2 max-w-2xl">
+        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Direct Engineering Intake SLA</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Direct Principal Systems Architect Pairing
+        </h3>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          Zero sales friction. Connect directly with our core engineering desk in Shivamogga, Karnataka via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto shrink-0">
+        <a href="https://wa.me/918317329312" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Chat on WhatsApp</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/waitlist" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-full text-sm transition-all text-gray-800 dark:text-gray-200">
+          <span>ele-in SaaS Waitlist &rarr;</span>
+        </a>
       </div>
     </div>
 
-    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-      {''.join(cards_html)}
-    </main>
-
-    <section class="mt-20 sm:mt-28 relative">
-      <div class="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-cyan-500/30 bg-gradient-to-b from-slate-900/90 via-[#030712] to-black shadow-[0_0_50px_rgba(6,182,212,0.1)]">
-        <div class="relative z-10 max-w-3xl space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/30 text-xs font-mono text-emerald-300">
-            <span>Sovereign Enclave Production Guarantee</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-            Deploy Sovereign Multi-Agent Infrastructure with a Contractual 90-Day ROI Guarantee
-          </h2>
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            Schedule a 45-minute confidential architecture audit directly with our Principal AI Systems Architect. We review your existing ERP/CRM topologies, audit private VPC isolation requirements, and formulate a deterministic implementation roadmap with zero external data retention.
-          </p>
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <a href="/waitlist" class="h-12 px-7 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2">
-              <span>Schedule Architecture Audit</span>
-              <span>&rarr;</span>
-            </a>
-            <a href="https://wa.me/918317329312" class="h-12 px-7 rounded-xl border border-slate-700/80 hover:border-emerald-500/50 bg-slate-900/60 hover:bg-emerald-950/20 text-slate-200 hover:text-emerald-300 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              <span>Direct WhatsApp Desk</span>
-            </a>
-          </div>
-        </div>
+    <!-- 4-Column Navigation Layout -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-gray-100 dark:border-white/10">
+      <div class="flex flex-col gap-4">
+        <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
+        <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
+          <li><a href="/how-we-work" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">How We Work</a></li>
+          <li><a href="/solutions" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Solutions Hub (3,765 Workflows)</a></li>
+          <li><a href="/commercial-directory.html" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left font-semibold text-cyan-600 dark:text-cyan-400">Top 100 Commercial Directory</a></li>
+          <li><a href="/signals" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Technical Whitepapers &amp; Research</a></li>
+          <li><a href="/compare" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Architecture Comparisons</a></li>
+          <li><a href="/videos" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Video Masterclasses</a></li>
+          <li><a href="/glossary" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Engineering Glossary (50+ Terms)</a></li>
+          <li><a href="/ai-automation-agency-india" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Best Enterprise AI Company in India</a></li>
+          <li><a href="/waitlist" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">ele-in SaaS Platform (Waitlist)</a></li>
+        </ul>
       </div>
-    </section>
+
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Enterprise Solutions</h4>
+          <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">3,765 Workflows</span>
+        </div>
+        <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
+          <li><a href="/solutions/ai-automation-agency-for-logistics" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">AI Automation Agency for Logistics</a></li>
+          <li><a href="/solutions/autonomous-loan-underwriting-ai-for-nbfcs" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Autonomous Loan Underwriting AI for NBFCs</a></li>
+          <li><a href="/solutions/deterministic-multi-agent-systems-for-manufacturing-erp" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic Multi-Agent Systems for Manufacturing ERP</a></li>
+          <li><a href="/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC Air-Gapped LLM Deployment for Healthcare</a></li>
+          <li><a href="/solutions/sap-s4hana-autonomous-ai-integration-agency" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">SAP S/4HANA Autonomous AI Integration Agency</a></li>
+          <li class="pt-1"><a href="/solutions" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">Explore All 3,765 Solutions &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Engineering Tools</h4>
+          <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">75 Simulators</span>
+        </div>
+        <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
+          <li><a href="/tools/enterprise-ai-roi-calculator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Enterprise AI ROI Calculator</a></li>
+          <li><a href="/tools/multi-agent-latency-token-cost-estimator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Multi-Agent Latency &amp; Cost Estimator</a></li>
+          <li><a href="/tools/dpdp-act-2023-audit-simulator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">DPDP Act 2023 Statutory Audit Simulator</a></li>
+          <li><a href="/tools/enterprise-gpu-finops-cost-calculator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">GPU FinOps Cost &amp; Cluster Calculator</a></li>
+          <li><a href="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">DeepSeek-V3 Unified Fabric Simulator</a></li>
+          <li class="pt-1"><a href="/resources" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">View All 75 Engineering Tools &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Architecture</h4>
+          <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">Battlecards</span>
+        </div>
+        <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
+          <li><a href="/compare/langgraph-vs-crewai-enterprise" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">LangGraph vs CrewAI Enterprise</a></li>
+          <li><a href="/compare/private-vpc-vllm-vs-azure-openai" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC vLLM vs Azure OpenAI</a></li>
+          <li><a href="/compare/custom-multi-agent-systems-vs-zapier-enterprise" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Custom Agents vs Zapier Enterprise</a></li>
+          <li><a href="/compare/deterministic-state-machines-vs-react-agents" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic FSM vs ReAct Loops</a></li>
+          <li><a href="/compare/elesium-vs-traditional-it-consultancies" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Elesium vs Traditional IT Consultancies</a></li>
+          <li class="pt-1"><a href="/compare" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">View All Comparisons &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Entity Credentials, Location, and Legal -->
+    <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="flex flex-col gap-1.5">
+        <span class="text-xs font-semibold tracking-wider text-gray-900 dark:text-white uppercase">
+          Elesium — India's Principal Enterprise AI &amp; Multi-Agent Engineering Firm
+        </span>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
+          Headquartered in Bangalore, Karnataka, India. Engineering sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for Fortune 500, BFSI, and high-growth industrial leaders across India and global markets.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          DPDP Act 2023 Compliant
+        </span>
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
+          SOC-2 Type II Attested
+        </span>
+        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
+          ISO 27001 Certified
+        </span>
+      </div>
+    </div>
+
+    <!-- Copyright Line -->
+    <div class="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
+      <p>© 2025 Elesium Systems Pvt. Ltd. All rights reserved.</p>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="/authors/chaman-shah" class="hover:text-black dark:hover:text-white transition">Principal Architect</a>
+        <a href="/ai-automation-agency-india" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</a>
+        <a href="/commercial-directory.html" class="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</a>
+        <a href="/resources" class="hover:text-black dark:hover:text-white transition">Resources</a>
+        <a href="/waitlist" class="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</a>
+        <a href="/sitemap-commercial-top100.xml" class="hover:text-black dark:hover:text-white transition">Top-100 Sitemap</a>
+        <a href="/sitemap.xml" class="hover:text-black dark:hover:text-white transition">Sitemap</a>
+      </div>
+    </div>
   </div>
-</div>
+</footer>
 """
 
 def load_posts_via_node():
@@ -6523,6 +6765,9 @@ def generate_ssg():
     comm_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{comm_title}" />', comm_html)
     comm_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{comm_desc}" />', comm_html)
 
+    # Strip out the generic external footer mesh so only the authentic Elesium footer is present
+    comm_html = re.sub(r'<footer class="footer-seo-mesh".*?</footer>', '', comm_html, flags=re.DOTALL)
+
     comm_semantic = render_commercial_directory_semantic_html(top100_items)
     root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
     if root_pattern.search(comm_html):
@@ -6532,67 +6777,67 @@ def generate_ssg():
 
     comm_schema = {
         "@context": "https://schema.org",
-        "@graph": [
+        "@type": "CollectionPage",
+        "name": comm_title,
+        "description": comm_desc,
+        "url": comm_canonical,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Elesium",
+            "url": "https://elesium.online",
+            "logo": "https://elesium.online/assets/LOGO_NEW.png"
+        },
+        "hasPart": [
             {
-                "@type": "Organization",
-                "@id": "https://elesium.online/#organization",
-                "name": "Elesium",
-                "alternateName": ["Elesium Online", "Elesium Enterprise AI", "Elesium India"],
-                "url": "https://elesium.online",
-                "logo": "https://elesium.online/og-image.png"
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://elesium.online/#website",
-                "url": "https://elesium.online",
-                "name": "Elesium Enterprise AI"
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://elesium.online/commercial-directory.html#breadcrumbs",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://elesium.online/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Solutions",
-                        "item": "https://elesium.online/solutions"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "Commercial Priority Directory",
-                        "item": comm_canonical
-                    }
-                ]
-            },
-            {
-                "@type": "CollectionPage",
-                "@id": "https://elesium.online/commercial-directory.html#collection",
-                "url": comm_canonical,
-                "name": comm_title,
-                "description": comm_desc,
-                "mainEntity": {
-                    "@type": "ItemList",
-                    "name": "Top 100 Commercial Enterprise AI Solutions",
-                    "numberOfItems": len(top100_items),
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": i + 1,
-                            "name": it.get("anchor_text", it.get("title")),
-                            "item": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}")
-                        }
-                        for i, it in enumerate(top100_items)
-                    ]
+                "@type": "Service",
+                "name": it.get("anchor_text", it.get("title")),
+                "url": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}"),
+                "description": f"Deploy enterprise {it.get('anchor_text', it.get('title'))} with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance.",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online"
                 }
             }
-        ]
+            for it in top100_items
+        ],
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Top 100 Commercial Enterprise AI Solutions",
+            "numberOfItems": len(top100_items),
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": i + 1,
+                    "name": it.get("anchor_text", it.get("title")),
+                    "item": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}")
+                }
+                for i, it in enumerate(top100_items)
+            ]
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://elesium.online"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Solutions",
+                    "item": "https://elesium.online/solutions"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Commercial Priority Directory",
+                    "item": comm_canonical
+                }
+            ]
+        }
     }
 
     comm_injections = [
