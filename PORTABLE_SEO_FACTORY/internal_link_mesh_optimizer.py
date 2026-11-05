@@ -191,15 +191,21 @@ def compute_semantic_affinity(node_a: Dict[str, Any], node_b: Dict[str, Any]) ->
     Calculates weighted semantic affinity score between two solution nodes:
     Aff(a, b) = 0.40 * TokenSim + 0.35 * CategoryMatch + 0.25 * PersonaOverlap
     """
-    tokens_a = tokenize_clean(f"{node_a.get('keyword', '')} {node_a.get('capability', '')}")
-    tokens_b = tokenize_clean(f"{node_b.get('keyword', '')} {node_b.get('capability', '')}")
+    kw_a = node_a.get('keyword') or node_a.get('anchor_text', '')
+    kw_b = node_b.get('keyword') or node_b.get('anchor_text', '')
+    cap_a = node_a.get('capability') or node_a.get('title', '')
+    cap_b = node_b.get('capability') or node_b.get('title', '')
+    tokens_a = tokenize_clean(f"{kw_a} {cap_a}")
+    tokens_b = tokenize_clean(f"{kw_b} {cap_b}")
     token_sim = compute_jaccard_similarity(tokens_a, tokens_b)
     
-    cat_match = 1.0 if node_a.get('hub_category') == node_b.get('hub_category') else 0.0
+    cat_a = node_a.get('hub_category') or node_a.get('sector', '')
+    cat_b = node_b.get('hub_category') or node_b.get('sector', '')
+    cat_match = 1.0 if cat_a == cat_b and cat_a else 0.0
     
-    # Check persona similarity
-    persona_a = set(tokenize_clean(node_a.get('target_persona', '')))
-    persona_b = set(tokenize_clean(node_b.get('target_persona', '')))
+    # Check persona / geo similarity
+    persona_a = set(tokenize_clean(node_a.get('target_persona') or node_a.get('geo_focus', '')))
+    persona_b = set(tokenize_clean(node_b.get('target_persona') or node_b.get('geo_focus', '')))
     persona_match = compute_jaccard_similarity(persona_a, persona_b)
     
     score = (0.40 * token_sim) + (0.35 * cat_match) + (0.25 * persona_match)
@@ -213,10 +219,10 @@ def generate_anchor_text_portfolio(target_node: Dict[str, Any], variant_index: i
     - Variant 3: Semantic LSI / Capability (25%)
     - Variant 4: Brand / Navigational (15%)
     """
-    kw = target_node.get("keyword", "sovereign ai solutions")
-    cap = target_node.get("capability", "deterministic agent systems")
-    cat = target_node.get("hub_category", "enterprise automation")
-    persona = target_node.get("target_persona", "engineering leaders")
+    kw = target_node.get("anchor_text") or target_node.get("keyword", "sovereign ai solutions")
+    cap = target_node.get("title") or target_node.get("capability", "deterministic agent systems")
+    cat = target_node.get("sector") or target_node.get("hub_category", "enterprise automation")
+    persona = target_node.get("geo_focus") or target_node.get("target_persona", "engineering leaders")
     
     # Simplify kw for anchor readability
     short_kw = kw.split(" for ")[0] if " for " in kw else kw
@@ -539,6 +545,179 @@ def export_json_link_matrix(graph: DirectedWebGraph, output_path: str):
 
     print(f"[SUCCESS] Exported full Link Mesh Graph & Matrix to: {output_path}")
 
+def inject_high_authority_hubs(top100_items: List[Dict[str, Any]], project_root: str):
+    """
+    Injects bidirectional reciprocal links from high-authority hubs (/solutions, /signals, /how-we-work)
+    directly into commercial priority pages.
+    """
+    print("[*] Injecting bidirectional reciprocal links into High-Authority Hubs (/solutions, /signals, /how-we-work)...")
+    
+    # 1. Solutions Hub: frontend/dist/solutions/index.html
+    sol_hub_path = os.path.join(project_root, "frontend", "dist", "solutions", "index.html")
+    if os.path.exists(sol_hub_path):
+        try:
+            with open(sol_hub_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            if 'data-commercial-mesh-hub="true"' not in content:
+                hub_banner = '''
+    <!-- TOP-100 COMMERCIAL INDEXATION ACCELERATION HUB -->
+    <div style="margin-bottom:2.5rem;background:linear-gradient(135deg, #064e3b15 0%, #0284c715 100%);border:2px solid #059669;border-radius:1rem;padding:1.75rem;" data-commercial-mesh-hub="true">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+        <div>
+          <span style="font-size:0.75rem;font-family:monospace;letter-spacing:0.12em;text-transform:uppercase;color:#059669;font-weight:800;background:#d1fae5;padding:0.25rem 0.5rem;border-radius:0.375rem;">Fast-Track Indexation Engine</span>
+          <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-top:0.5rem;margin-bottom:0.25rem;">Top 100 Commercial Enterprise AI Solutions Directory</h2>
+          <p style="font-size:0.95rem;color:#4b5563;margin:0;">Curated high-intent commercial architectures across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense.</p>
+        </div>
+        <a href="https://elesium.online/commercial-directory.html" style="display:inline-block;background:#059669;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;font-weight:700;text-decoration:none;font-size:0.9rem;">
+          Open Commercial Directory (100 Specs) &rarr;
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;margin-top:1.25rem;font-size:0.85rem;">
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:0.75rem;">
+          <strong style="color:#111827;display:block;margin-bottom:0.35rem;">BFSI &amp; Fintech (20)</strong>
+          <span style="color:#6b7280;font-size:0.8rem;">vLLM Banking VPCs, RBI CSF HSMs, Title Search Intelligence</span>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:0.75rem;">
+          <strong style="color:#111827;display:block;margin-bottom:0.35rem;">Logistics &amp; Trade (20)</strong>
+          <span style="color:#6b7280;font-size:0.8rem;">Air-Gapped Tally Invoicing, Customs ICEGATE, E-Way Bill Auto-Sync</span>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:0.75rem;">
+          <strong style="color:#111827;display:block;margin-bottom:0.35rem;">Healthcare &amp; Life Sciences (20)</strong>
+          <span style="color:#6b7280;font-size:0.8rem;">Sovereign DeepSeek DISHA, Hospital Triage, Pharma R&amp;D Llama-3</span>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:0.75rem;">
+          <strong style="color:#111827;display:block;margin-bottom:0.35rem;">Manufacturing &amp; SCADA (20)</strong>
+          <span style="color:#6b7280;font-size:0.8rem;">Purdue SCADA Isolation, Automotive JIT State Machines, SMT Vision</span>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:0.75rem;">
+          <strong style="color:#111827;display:block;margin-bottom:0.35rem;">Sovereign Defense (20)</strong>
+          <span style="color:#6b7280;font-size:0.8rem;">Bangalore GCC DeepSeek-R1, Military ML-KEM-1024, TRNG Telemetry</span>
+        </div>
+      </div>
+    </div>
+'''
+                if "<main>" in content:
+                    content = content.replace("<main>", f"<main>\n{hub_banner}")
+                    with open(sol_hub_path, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    print(f"[SUCCESS] Injected Commercial Hub Banner into: {sol_hub_path}")
+        except Exception as e:
+            print(f"[WARN] Failed to inject into solutions hub: {e}", file=sys.stderr)
+
+    # 2. Signals Hub: frontend/dist/signals/index.html & frontend/dist/signals.html
+    sig_paths = [
+        os.path.join(project_root, "frontend", "dist", "signals", "index.html"),
+        os.path.join(project_root, "frontend", "dist", "signals.html")
+    ]
+    signals_banner = '''
+    <!-- TOP-100 COMMERCIAL ARCHITECTURE IMPLEMENTATIONS -->
+    <section style="margin-top:3rem;padding:2rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:1rem;" data-commercial-mesh-hub="true">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;border-bottom:1px solid #e5e7eb;padding-bottom:1rem;">
+        <div>
+          <span style="font-size:0.75rem;font-family:monospace;letter-spacing:0.1em;text-transform:uppercase;color:#059669;font-weight:700;">Applied Engineering &amp; Production Deployments</span>
+          <h3 style="font-size:1.5rem;font-weight:800;color:#111827;margin-top:0.25rem;">Commercial Enterprise AI Deployments (Top 100 Priority Directory)</h3>
+          <p style="font-size:0.9rem;color:#4b5563;margin-top:0.25rem;">Translate technical signals into production air-gapped sovereign VPC architectures across India.</p>
+        </div>
+        <a href="https://elesium.online/commercial-directory.html" style="display:inline-block;background:#111827;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.5rem;font-weight:600;font-size:0.85rem;text-decoration:none;">
+          View All 100 Commercial Specs &rarr;
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;font-size:0.875rem;">
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+          <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">BFSI Hub</span>
+          <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india" style="color:#2563eb;text-decoration:none;">vLLM Banking VPCs in India &rarr;</a></h4>
+          <p style="font-size:0.8rem;color:#4b5563;line-height:1.4;margin:0;">Sub-200ms banking inference with zero cloud data egress and RBI CSF compliance.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+          <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">BFSI Hub</span>
+          <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors" style="color:#2563eb;text-decoration:none;">RBI Cybersecurity Framework HSM Telemetry &rarr;</a></h4>
+          <p style="font-size:0.8rem;color:#4b5563;line-height:1.4;margin:0;">Core banking HSM telemetry with cryptographic tamper-evident audit trails.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+          <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">Defense Hub</span>
+          <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore" style="color:#2563eb;text-decoration:none;">Bangalore GCC DeepSeek Deployments &rarr;</a></h4>
+          <p style="font-size:0.8rem;color:#4b5563;line-height:1.4;margin:0;">On-premise DeepSeek reasoning cluster deployment for Fortune 500 Bangalore GCCs.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+          <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">Logistics Hub</span>
+          <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration" style="color:#2563eb;text-decoration:none;">Air-Gapped Logistics Invoice Processing &rarr;</a></h4>
+          <p style="font-size:0.8rem;color:#4b5563;line-height:1.4;margin:0;">Local vLLM pipeline integrating with Tally Prime XML socket port 9000.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+          <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">BFSI / Real Estate</span>
+          <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing" style="color:#2563eb;text-decoration:none;">Mumbai Real Estate Title Search Intelligence &rarr;</a></h4>
+          <p style="font-size:0.8rem;color:#4b5563;line-height:1.4;margin:0;">Automated municipal revenue title search and chain-of-custody parsing.</p>
+        </div>
+      </div>
+    </section>
+'''
+    for sp in sig_paths:
+        if os.path.exists(sp):
+            try:
+                with open(sp, "r", encoding="utf-8") as f:
+                    content = f.read()
+                if 'data-commercial-mesh-hub="true"' not in content and "</main>" in content:
+                    content = content.replace("</main>", f"{signals_banner}\n  </main>")
+                    with open(sp, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    print(f"[SUCCESS] Injected Commercial Hub Section into: {sp}")
+            except Exception as e:
+                print(f"[WARN] Failed to inject into signals hub {sp}: {e}", file=sys.stderr)
+
+    # 3. How We Work Hub: frontend/dist/how-we-work/index.html & frontend/dist/how-we-work.html
+    hww_paths = [
+        os.path.join(project_root, "frontend", "dist", "how-we-work", "index.html"),
+        os.path.join(project_root, "frontend", "dist", "how-we-work.html")
+    ]
+    hww_banner = '''
+  <section class="commercial-priority-mesh" style="max-width:1200px;margin:2rem auto;padding:2rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;border-top:1px solid #e5e7eb;" data-commercial-mesh-hub="true">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+      <div>
+        <span style="font-size:0.75rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">Validated Delivery Framework</span>
+        <h3 style="font-size:1.5rem;font-weight:800;color:#111827;margin-top:0.25rem;">Top 100 Commercial Enterprise AI Implementations</h3>
+        <p style="font-size:0.9rem;color:#4b5563;margin-top:0.25rem;">Every workflow is backed by our 14-day production pilot SLA and contractual 90-day cash-flow ROI guarantee.</p>
+      </div>
+      <a href="https://elesium.online/commercial-directory.html" style="display:inline-block;background:#059669;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.5rem;font-weight:600;font-size:0.85rem;text-decoration:none;">
+        Commercial Directory &rarr;
+      </a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;font-size:0.85rem;">
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+        <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">BFSI Architecture</span>
+        <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india" style="color:#2563eb;text-decoration:none;">vLLM Banking VPCs in India &rarr;</a></h4>
+        <p style="color:#4b5563;font-size:0.8rem;line-height:1.4;">Air-gapped sovereign VPC banking pods with sub-200ms latency guarantees.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+        <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">Defense Architecture</span>
+        <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore" style="color:#2563eb;text-decoration:none;">Bangalore GCC DeepSeek Deployments &rarr;</a></h4>
+        <p style="color:#4b5563;font-size:0.8rem;line-height:1.4;">Private air-gapped reasoning models for enterprise centers in Bangalore.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+        <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">Logistics Architecture</span>
+        <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration" style="color:#2563eb;text-decoration:none;">Air-Gapped Logistics Invoice Processing &rarr;</a></h4>
+        <p style="color:#4b5563;font-size:0.8rem;line-height:1.4;">Tally Prime XML socket pipeline with zero third-party cloud data egress.</p>
+      </div>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">
+        <span style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">Industrial Architecture</span>
+        <h4 style="font-size:0.95rem;font-weight:700;margin:0.25rem 0 0.5rem 0;"><a href="https://elesium.online/solutions/air-gapped-purdue-model-level-2-scada-isolation-telemetry-for-pharmaceutical-cleanroom-facilities" style="color:#2563eb;text-decoration:none;">Purdue Model Level-2 SCADA Isolation &rarr;</a></h4>
+        <p style="color:#4b5563;font-size:0.8rem;line-height:1.4;">Air-gapped SCADA isolation telemetry for aseptic pharmaceutical cleanrooms.</p>
+      </div>
+    </div>
+  </section>
+'''
+    for hp in hww_paths:
+        if os.path.exists(hp):
+            try:
+                with open(hp, "r", encoding="utf-8") as f:
+                    content = f.read()
+                if 'data-commercial-mesh-hub="true"' not in content and "</body>" in content:
+                    content = content.replace("</body>", f"{hww_banner}\n</body>")
+                    with open(hp, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    print(f"[SUCCESS] Injected Commercial Hub Section into: {hp}")
+            except Exception as e:
+                print(f"[WARN] Failed to inject into how-we-work hub {hp}: {e}", file=sys.stderr)
+
 # ==============================================================================
 # 6. MAIN EXECUTION ROUTINE
 # ==============================================================================
@@ -547,9 +726,10 @@ def main():
     parser = argparse.ArgumentParser(
         description="Internal Link Mesh Optimizer: Compute PageRank, CheiRank, Anchor Entropy & Generate Optimal Graph Topology."
     )
-    parser.add_argument("input_file", nargs="?", default="keywords_queue.json", help="Path to keywords_queue.json or dataset")
+    parser.add_argument("input_file", nargs="?", default="keywords_queue.json", help="Path to keywords_queue.json, top100_commercial_urls.json, or dataset")
+    parser.add_argument("--top100", action="store_true", help="Force prioritize Top 100 Commercial URLs fast-track dataset")
     parser.add_argument("--scan", action="store_true", help="Scan existing generated_pages/ HTML directory to inspect current link graph")
-    parser.add_argument("--dir", default="generated_pages", help="Directory of HTML pages for --scan mode (default: generated_pages)")
+    parser.add_argument("--dir", default="frontend/dist/solutions", help="Directory of HTML pages for --scan or --inject mode (default: frontend/dist/solutions)")
     parser.add_argument("--output", "-o", default="internal_links.json", help="Path to output generated link mesh JSON (default: internal_links.json)")
     parser.add_argument("--links-per-node", type=int, default=3, help="Target outbound contextual links to construct per node (default: 3)")
     parser.add_argument("--damping", type=float, default=0.85, help="PageRank damping factor (default: 0.85)")
@@ -557,25 +737,37 @@ def main():
     
     args = parser.parse_args()
 
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.abspath(os.path.join(base_dir, ".."))
+
     # Mode 1: Scan existing HTML pages
     if args.scan:
         scan_dir = args.dir
         if not os.path.isabs(scan_dir):
-            base_dir = os.path.dirname(os.path.abspath(__file__))
-            scan_dir = os.path.join(base_dir, args.dir)
+            scan_dir = os.path.join(project_root, args.dir)
             
         print(f"[*] Scanning HTML directory: {scan_dir} ...")
         scanned_graph = scan_html_directory(scan_dir)
         print_graph_diagnostics(scanned_graph, title=f"LIVE HTML GRAPH DIAGNOSTIC AUDIT: {args.dir}")
         return
 
-    # Mode 2: Generate Damped Semantic Mesh from keywords_queue.json
+    # Mode 2: Ingest node queue
+    # Auto-resolve priority top-100 if present or requested
+    top100_default_path = os.path.join(project_root, "authority_assets", "indexation_acceleration", "top100_commercial_urls.json")
+    
     input_path = args.input_file
+    if args.top100 or (args.input_file == "keywords_queue.json" and os.path.exists(top100_default_path)):
+        if os.path.exists(top100_default_path):
+            input_path = top100_default_path
+
     if not os.path.isabs(input_path):
-        base_dir = os.path.dirname(os.path.abspath(__file__))
         cand_path = os.path.join(base_dir, input_path)
         if os.path.exists(cand_path):
             input_path = cand_path
+        else:
+            cand_root = os.path.join(project_root, input_path)
+            if os.path.exists(cand_root):
+                input_path = cand_root
 
     if not os.path.exists(input_path):
         print(f"[ERROR] Input queue file not found: {input_path}", file=sys.stderr)
@@ -583,9 +775,26 @@ def main():
 
     print(f"[*] Ingesting node queue from: {input_path}")
     with open(input_path, "r", encoding="utf-8") as f:
-        queue_items = json.load(f)
+        raw_items = json.load(f)
 
-    print(f"[*] Ingested {len(queue_items)} programmatic solution items.")
+    # Normalize fields for seamless affinity calculation
+    queue_items = []
+    for it in raw_items:
+        queue_items.append({
+            "slug": it["slug"],
+            "keyword": it.get("anchor_text") or it.get("keyword") or it["slug"].replace("-", " "),
+            "anchor_text": it.get("anchor_text") or it.get("keyword") or it["slug"].replace("-", " "),
+            "hub_category": it.get("sector") or it.get("hub_category") or "General",
+            "sector": it.get("sector") or it.get("hub_category") or "General",
+            "capability": it.get("title") or it.get("capability") or it["slug"].replace("-", " "),
+            "target_persona": it.get("geo_focus") or it.get("target_persona") or "Enterprise Leadership",
+            "geo_focus": it.get("geo_focus") or it.get("target_persona") or "India",
+            "canonical_url": it.get("canonical_url") or f"https://elesium.online/solutions/{it['slug']}",
+            "title": it.get("title") or it["slug"].replace("-", " "),
+            "meta_description": it.get("meta_description", "")
+        })
+
+    print(f"[*] Ingested {len(queue_items)} solution items into Graph Engine.")
     print(f"[*] Computing Semantic Affinity Matrix and generating Damped Semantic Mesh (links_per_node={args.links_per_node})...")
 
     optimizer = InternalLinkMeshOptimizer(queue_items, links_per_node=args.links_per_node)
@@ -595,25 +804,32 @@ def main():
 
     output_path = args.output
     if not os.path.isabs(output_path):
-        base_dir = os.path.dirname(os.path.abspath(__file__))
         output_path = os.path.join(base_dir, output_path)
 
     export_json_link_matrix(optimized_graph, output_path)
 
-    # Optional: Inject into HTML files in generated_pages/
+    # Mode 3: Inject Bidirectional Reciprocal Mesh into HTML files
     if args.inject:
+        # Step A: Inject high-authority hubs (/solutions, /signals, /how-we-work)
+        inject_high_authority_hubs(queue_items, project_root)
+
+        # Step B: Inject reciprocal mesh into priority solution pages
         inject_dir = args.dir
         if not os.path.isabs(inject_dir):
-            base_dir = os.path.dirname(os.path.abspath(__file__))
-            inject_dir = os.path.join(base_dir, args.dir)
+            cand_dir = os.path.join(project_root, args.dir)
+            if os.path.isdir(cand_dir):
+                inject_dir = cand_dir
+            else:
+                inject_dir = os.path.join(base_dir, args.dir)
 
         if os.path.isdir(inject_dir):
-            print(f"[*] Injecting Semantic Mesh link cards into HTML files in: {inject_dir} ...")
+            print(f"[*] Injecting Bidirectional Semantic Mesh into Solution HTML files in: {inject_dir} ...")
             injected_count = 0
             for slug in optimized_graph.nodes:
-                html_path = os.path.join(inject_dir, f"{slug}.html")
-                if not os.path.exists(html_path):
-                    continue
+                candidate_paths = [
+                    os.path.join(inject_dir, f"{slug}.html"),
+                    os.path.join(inject_dir, slug, "index.html")
+                ]
 
                 u = optimized_graph.node_to_idx[slug]
                 out_links = []
@@ -623,57 +839,69 @@ def main():
                     target_meta = optimized_graph.metadata.get(target_slug, {})
                     out_links.append((target_slug, edge_attr, target_meta))
 
-                # Build HTML snippet for mesh cards
+                # Build HTML snippet for mesh cards with reciprocal navigation bar
                 cards_html = []
                 for t_slug, e_attr, t_meta in out_links:
                     t_url = e_attr.get("target_url", f"https://elesium.online/solutions/{t_slug}")
                     t_anchor = e_attr.get("anchor_text", t_slug.replace("-", " "))
                     t_cat = t_meta.get("hub_category", "AI Architecture")
-                    t_title = t_meta.get("title", t_anchor)
+                    t_geo = t_meta.get("geo_focus", "India Enterprise")
                     card = f"""
-        <a href="{t_url}" class="group block p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-900 hover:border-cyan-500/50 transition-all">
-          <div class="text-[10px] font-mono text-cyan-400 mb-1">{t_cat}</div>
-          <h4 class="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors line-clamp-2">{t_title}</h4>
-          <p class="text-xs text-slate-400 mt-2 line-clamp-2">Explore {t_anchor} with enterprise VPC SLA.</p>
-          <div class="mt-3 text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition-transform">Explore Solution &rarr;</div>
-        </a>"""
+        <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem;background:#f9fafb;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div style="font-size:0.7rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;margin-bottom:0.35rem;">{t_cat} • {t_geo}</div>
+            <h4 style="font-size:0.95rem;font-weight:700;margin:0 0 0.5rem 0;line-height:1.4;">
+              <a href="{t_url}" style="color:#111827;text-decoration:none;">{t_anchor}</a>
+            </h4>
+            <p style="font-size:0.8rem;color:#4b5563;line-height:1.5;margin:0 0 1rem 0;">Explore {t_anchor} with private VPC deployment, DPDP Act 2023 compliance, and sub-200ms latency SLAs.</p>
+          </div>
+          <div style="font-size:0.8rem;font-weight:600;">
+            <a href="{t_url}" style="color:#2563eb;text-decoration:none;">Inspect Architecture Spec &rarr;</a>
+          </div>
+        </div>"""
                     cards_html.append(card)
 
                 mesh_section = f"""
-    <!-- DAMPED SEMANTIC MESH: COMPLEMENTARY SOVEREIGN AI SOLUTIONS -->
-    <section class="mt-12 pt-8 border-t border-slate-800" data-semantic-mesh="true">
-      <div class="flex items-center justify-between mb-6">
+    <!-- DAMPED SEMANTIC MESH: COMPLEMENTARY SOVEREIGN AI SOLUTIONS & RECIPROCAL AUTHORITY MESH -->
+    <section class="mt-12 pt-8 border-t border-slate-800" data-semantic-mesh="true" style="margin-top:3rem;padding-top:2rem;border-top:1px solid #e5e7eb;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
         <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">Semantic Link Mesh</span>
-          <h3 class="text-lg font-bold text-white mt-1">Complementary Sovereign AI Solutions</h3>
+          <span style="font-size:0.75rem;font-family:monospace;letter-spacing:0.1em;text-transform:uppercase;color:#059669;font-weight:700;">Topological Indexation Mesh</span>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0.25rem;">Complementary Enterprise AI Architectures</h3>
         </div>
-        <a href="https://elesium.online/solutions/" class="text-xs text-slate-400 hover:text-cyan-400 font-mono transition-colors">
-          Solutions Matrix &rarr;
-        </a>
+        <div style="font-size:0.8rem;font-family:monospace;display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://elesium.online/solutions" style="color:#2563eb;text-decoration:none;font-weight:600;">Solutions Hub &rarr;</a>
+          <a href="https://elesium.online/signals" style="color:#2563eb;text-decoration:none;font-weight:600;">Technical Signals &rarr;</a>
+          <a href="https://elesium.online/how-we-work" style="color:#2563eb;text-decoration:none;font-weight:600;">How We Work &rarr;</a>
+          <a href="https://elesium.online/commercial-directory.html" style="color:#059669;text-decoration:none;font-weight:700;">Top 100 Commercial Directory &rarr;</a>
+        </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
 {''.join(cards_html)}
       </div>
     </section>
 """
-                try:
-                    with open(html_path, "r", encoding="utf-8") as f:
-                        html_content = f.read()
-
-                    # Avoid duplicate injection
-                    if 'data-semantic-mesh="true"' in html_content:
+                for html_path in candidate_paths:
+                    if not os.path.exists(html_path):
                         continue
+                    try:
+                        with open(html_path, "r", encoding="utf-8") as f:
+                            html_content = f.read()
 
-                    # Insert before </main>
-                    if "</main>" in html_content:
-                        new_content = html_content.replace("</main>", f"{mesh_section}\n  </main>")
-                        with open(html_path, "w", encoding="utf-8") as f:
-                            f.write(new_content)
-                        injected_count += 1
-                except Exception as e:
-                    print(f"[WARN] Failed to inject into {slug}.html: {e}", file=sys.stderr)
+                        if 'data-semantic-mesh="true"' in html_content:
+                            continue
 
-            print(f"[SUCCESS] Successfully injected Semantic Mesh into {injected_count} HTML pages.")
+                        if "</main>" in html_content:
+                            new_content = html_content.replace("</main>", mesh_section + "\n  </main>")
+                            with open(html_path, "w", encoding="utf-8") as f:
+                                f.write(new_content)
+                            injected_count += 1
+                    except Exception as e:
+                        print(f"[WARN] Failed to inject into {html_path}: {e}", file=sys.stderr)
+
+            print(f"[SUCCESS] Successfully injected Bidirectional Semantic Mesh into {injected_count} Solution HTML files.")
+        else:
+            print(f"[WARN] Injection directory not found: {inject_dir}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

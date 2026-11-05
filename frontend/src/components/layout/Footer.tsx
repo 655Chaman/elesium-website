@@ -8,6 +8,7 @@ export default function DownloadFooter() {
     const mainNavigation = [
         { name: 'How We Work', path: '/how-we-work' },
         { name: 'Solutions Hub (3,765 Workflows)', path: '/solutions' },
+        { name: 'Top 100 Commercial Directory', path: '/commercial-directory.html' },
         { name: 'Technical Whitepapers & Research', path: '/signals' },
         { name: 'Architecture Comparisons', path: '/compare' },
         { name: 'Video Masterclasses', path: '/videos' },
@@ -227,8 +228,10 @@ export default function DownloadFooter() {
                     <div className="flex items-center gap-4 flex-wrap">
                         <Link to="/authors/chaman-shah" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
                         <Link to="/ai-automation-agency-india" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
+                        <Link to="/commercial-directory.html" className="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</Link>
                         <Link to="/resources" className="hover:text-black dark:hover:text-white transition">Resources</Link>
                         <Link to="/waitlist" className="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</Link>
+                        <Link to="/sitemap-commercial-top100.xml" className="hover:text-black dark:hover:text-white transition">Top-100 Sitemap</Link>
                         <Link to="/sitemap.xml" className="hover:text-black dark:hover:text-white transition">Sitemap</Link>
                     </div>
                 </div>

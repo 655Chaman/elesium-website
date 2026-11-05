@@ -95,6 +95,4 @@ exec ${NUMA_EXEC} python3 -m vllm.entrypoints.openai.api_server \
     --swap-space 16 \
     --disable-log-requests \
     --uvloop \
-    --enforce-eager False \
-    --trust-remote-code False \
     --api-key "${VLLM_INTERNAL_AUTH_KEY:-$(openssl rand -hex 32)}"
