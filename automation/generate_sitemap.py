@@ -48,6 +48,7 @@ def generate_sitemap():
         {"loc": f"{BASE_URL}/audit", "priority": "0.8", "changefreq": "weekly"},
         {"loc": f"{BASE_URL}/signals", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/solutions", "priority": "0.9", "changefreq": "daily"},
+        {"loc": f"{BASE_URL}/commercial-directory.html", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/compare", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/glossary", "priority": "0.9", "changefreq": "daily"},
         {"loc": f"{BASE_URL}/resources/india-enterprise-ai-benchmark-2026", "priority": "0.9", "changefreq": "weekly"},
@@ -297,6 +298,10 @@ def generate_sitemap():
     # 3. Write master sitemapindex to sitemap.xml
     sitemap_index_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>{BASE_URL}/sitemap-commercial-top100.xml</loc>
+    <lastmod>{today_default}</lastmod>
+  </sitemap>
   <sitemap>
     <loc>{BASE_URL}/sitemap-core.xml</loc>
     <lastmod>{today_default}</lastmod>

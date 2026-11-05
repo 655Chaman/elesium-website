@@ -24,6 +24,7 @@ const ResourceDetail = lazy(() => import('./components/pages/ResourceDetail'))
 const Waitlist = lazy(() => import('./components/pages/Waitlist'))
 const VideoMirror = lazy(() => import('./components/pages/VideoMirror'))
 const SolutionsHub = lazy(() => import('./components/pages/SolutionsHub'))
+const CommercialDirectory = lazy(() => import('./components/pages/CommercialDirectory'))
 const SolutionDetail = lazy(() => import('./components/pages/SolutionDetail'))
 const EnterpriseRoiCalculator = lazy(() => import('./components/pages/EnterpriseRoiCalculator'))
 const EmbedRoiCalculator = lazy(() => import('./components/pages/EmbedRoiCalculator'))
@@ -250,6 +251,8 @@ function App() {
                             <Route path="/author" element={<Navigate to="/authors/chaman-shah" replace />} />
                             <Route path="/chaman-shah" element={<Navigate to="/authors/chaman-shah" replace />} />
                             <Route path="/solutions" element={<SolutionsHub />} />
+                            <Route path="/commercial-directory" element={<CommercialDirectory />} />
+                            <Route path="/commercial-directory.html" element={<CommercialDirectory />} />
                             <Route path="/solutions/:slug" element={<SolutionDetail />} />
                             <Route path="/glossary" element={<Glossary />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />

@@ -31,6 +31,15 @@ VIDEOS_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "videoMasterclasses.ts
 VIDEO_SCRIPTS_DIR = BASE_DIR / "automation" / "video_scripts"
 COMPARE_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "compareData.ts"
 GLOSSARY_TS_PATH = BASE_DIR / "frontend" / "src" / "data" / "glossaryData.ts"
+COMMERCIAL_URLS_PATH = BASE_DIR / "authority_assets" / "indexation_acceleration" / "top100_commercial_urls.json"
+
+def load_commercial_urls():
+    if COMMERCIAL_URLS_PATH.exists():
+        try:
+            return json.loads(COMMERCIAL_URLS_PATH.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"Error loading commercial URLs: {e}")
+    return []
 
 def load_solutions_via_node():
     """
@@ -605,6 +614,193 @@ def render_solutions_hub_semantic_html(solutions):
       <a href="/ai-automation-agency-india#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Schedule Architecture Audit &rarr;</a>
     </div>
   </main>
+</div>
+"""
+
+def render_commercial_directory_semantic_html(items):
+    """
+    Renders high-fidelity, luxury dark obsidian pre-rendered DOM for /commercial-directory.html
+    Fully consistent with the React component, with all 100 solution cards, stats, and banners.
+    """
+    cards_html = []
+    for item in items:
+        sector = item.get("sector", "")
+        metro = item.get("geo_focus", "Pan-India")
+        anchor_text = item.get("anchor_text", item.get("title", ""))
+        slug = item.get("slug", "")
+        desc = f"Deploy enterprise {anchor_text} with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance."
+
+        pill_color = "border-emerald-500/30 bg-emerald-950/30 text-emerald-300"
+        if "Logistics" in sector:
+            pill_color = "border-amber-500/30 bg-amber-950/30 text-amber-300"
+        elif "Healthcare" in sector:
+            pill_color = "border-rose-500/30 bg-rose-950/30 text-rose-300"
+        elif "Manufacturing" in sector:
+            pill_color = "border-sky-500/30 bg-sky-950/30 text-sky-300"
+        elif "Defense" in sector:
+            pill_color = "border-purple-500/30 bg-purple-950/30 text-purple-300"
+
+        lower = (anchor_text + " " + slug).lower()
+        badges = []
+        if "vllm" in lower: badges.append("vLLM FP8")
+        if "rbi" in lower: badges.append("RBI CSF")
+        if "hsm" in lower: badges.append("FIPS 140-2 HSM")
+        if "merkle" in lower: badges.append("Merkle Audit Trail")
+        if "tally" in lower: badges.append("Tally Prime XML")
+        if "icegate" in lower: badges.append("Customs ICEGATE")
+        if "sap" in lower: badges.append("SAP S/4HANA")
+        if "scada" in lower or "plc" in lower: badges.append("SCADA / Modbus")
+        if "abdm" in lower or "hipaa" in lower: badges.append("ABDM / HIPAA")
+        if "deepseek" in lower: badges.append("DeepSeek Cluster")
+        if "mla" in lower: badges.append("MLA Latent Pool")
+
+        fallback_badges = ["Air-Gapped VPC", "Sub-200ms SLA", "DPDP Compliant", "Zero Egress"]
+        for fb in fallback_badges:
+            if len(badges) >= 4:
+                break
+            if fb not in badges:
+                badges.append(fb)
+        badges = badges[:4]
+
+        badge_spans = "".join(f'<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800/60 text-slate-300 border border-slate-700/60">{html.escape(b)}</span>' for b in badges)
+
+        card = f"""
+        <div class="group relative flex flex-col justify-between rounded-2xl border border-slate-800/80 bg-gradient-to-b from-slate-900/60 to-slate-950/90 p-6 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)] hover:-translate-y-1 overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider border font-medium {pill_color}">
+                {html.escape(sector)}
+              </span>
+              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-slate-400">
+                {html.escape(metro)}
+              </span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-100 group-hover:text-cyan-300 transition-colors leading-snug mb-3">
+              <a href="/solutions/{html.escape(slug)}" class="hover:text-cyan-300 text-slate-100 transition-colors">
+                {html.escape(anchor_text)}
+              </a>
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 line-clamp-2 leading-relaxed mb-5">
+              {html.escape(desc)}
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/70">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              {badge_spans}
+            </div>
+            <div class="flex items-center justify-between text-xs font-medium text-cyan-400 pt-1">
+              <span class="font-mono text-[11px] text-slate-500">SLA: &lt;200ms</span>
+              <a href="/solutions/{html.escape(slug)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-semibold">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        """
+        cards_html.append(card)
+
+    return f"""
+<div class="min-h-screen bg-[#030712] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black pt-24 pb-24 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-mono text-slate-400 mb-8 sm:mb-12">
+      <a href="/" class="hover:text-cyan-400 transition-colors text-slate-400">Home</a>
+      <span class="text-slate-600">/</span>
+      <a href="/solutions" class="hover:text-cyan-400 transition-colors text-slate-400">Solutions</a>
+      <span class="text-slate-600">/</span>
+      <span class="text-slate-200 font-medium tracking-wide">Commercial Priority Directory</span>
+    </nav>
+
+    <header class="mb-14 sm:mb-20">
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 backdrop-blur-md text-xs font-mono text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.15)] mb-6 sm:mb-8">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span class="tracking-widest uppercase font-semibold text-[11px] sm:text-xs">TOP 100 COMMERCIAL ENTERPRISE AI DIRECTORY</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-6 text-white max-w-5xl">
+        Top 100 Commercial Enterprise AI Solutions &amp; Sovereign Architecture Directory
+      </h1>
+      <p class="max-w-3xl text-base sm:text-lg text-slate-400 leading-relaxed font-normal mb-10">
+        Production-grade deterministic automation workflows, private VPC inference clusters, and sovereign multi-agent state machines engineered for mission-critical Indian and global enterprises. Every architecture is guaranteed sub-200ms execution latency with 100% zero-egress data sovereignty.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-4">
+        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
+          <div class="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight flex items-center gap-2">
+            <span>100</span>
+            <span class="text-xs px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-sans font-medium">Verified</span>
+          </div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Priority Hubs</div>
+          <div class="text-[11px] text-slate-500 mt-1">High-Intent Enterprise Workflows</div>
+        </div>
+        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
+          <div class="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight flex items-center gap-2">
+            <span>5</span>
+            <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-sans font-medium">Sectors</span>
+          </div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Enterprise Sectors</div>
+          <div class="text-[11px] text-slate-500 mt-1">BFSI, Supply Chain, Healthcare, SCADA, Defense</div>
+        </div>
+        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
+          <div class="text-2xl sm:text-3xl font-mono font-bold text-cyan-400 tracking-tight flex items-center gap-2">
+            <span>&lt; 200ms</span>
+          </div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Execution SLA</div>
+          <div class="text-[11px] text-slate-500 mt-1">Deterministic P99 Latency SLA</div>
+        </div>
+        <div class="p-5 rounded-2xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
+          <div class="text-2xl sm:text-3xl font-mono font-bold text-emerald-400 tracking-tight flex items-center gap-2">
+            <span>100%</span>
+          </div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-2">Zero-Egress Air-Gapped</div>
+          <div class="text-[11px] text-slate-500 mt-1">DPDP Act 2023 &amp; RBI CSF Safe Harbors</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mb-10 space-y-6">
+      <div class="relative w-full">
+        <input type="text" placeholder="Search 100 enterprise solutions by keyword, metro, sector, or regulation..." class="w-full pl-5 pr-12 py-4 bg-slate-900/60 border border-slate-800/90 rounded-2xl text-slate-100 placeholder-slate-500 text-sm sm:text-base focus:outline-none focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20 backdrop-blur-md transition-all shadow-lg" />
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-2">
+        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-cyan-500/10 text-cyan-300 border border-cyan-500/50">All (100)</span>
+        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">BFSI &amp; Fintech (20)</span>
+        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Logistics &amp; Supply Chain (20)</span>
+        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Healthcare &amp; Life Sciences (20)</span>
+        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Manufacturing &amp; SCADA (20)</span>
+        <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-900/40 text-slate-400 border border-slate-800/80">Sovereign Defense (20)</span>
+      </div>
+    </div>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {''.join(cards_html)}
+    </main>
+
+    <section class="mt-20 sm:mt-28 relative">
+      <div class="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-cyan-500/30 bg-gradient-to-b from-slate-900/90 via-[#030712] to-black shadow-[0_0_50px_rgba(6,182,212,0.1)]">
+        <div class="relative z-10 max-w-3xl space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/30 text-xs font-mono text-emerald-300">
+            <span>Sovereign Enclave Production Guarantee</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+            Deploy Sovereign Multi-Agent Infrastructure with a Contractual 90-Day ROI Guarantee
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Schedule a 45-minute confidential architecture audit directly with our Principal AI Systems Architect. We review your existing ERP/CRM topologies, audit private VPC isolation requirements, and formulate a deterministic implementation roadmap with zero external data retention.
+          </p>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="/waitlist" class="h-12 px-7 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2">
+              <span>Schedule Architecture Audit</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="https://wa.me/918317329312" class="h-12 px-7 rounded-xl border border-slate-700/80 hover:border-emerald-500/50 bg-slate-900/60 hover:bg-emerald-950/20 text-slate-200 hover:text-emerald-300 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Direct WhatsApp Desk</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
 """
 
@@ -6301,6 +6497,114 @@ def generate_ssg():
     hub_out_file.write_text(hub_html, encoding="utf-8")
     print("Generated SSG for: /solutions (Hub)")
     print("✅ SSG complete for solutions.")
+
+    # Generate SSG for Top 100 Commercial Directory (/commercial-directory & /commercial-directory.html)
+    print("Starting SSG Generation for Commercial Directory Hub (/commercial-directory)...")
+    comm_canonical = "https://elesium.online/commercial-directory.html"
+    comm_title = "Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory | Elesium"
+    comm_desc = "Explore Elesium's top 100 high-intent commercial enterprise AI solutions across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense. Air-gapped VPCs, DPDP Act 2023 compliance, sub-200ms SLAs."
+
+    comm_out_dir = DIST_DIR / "commercial-directory"
+    comm_out_dir.mkdir(parents=True, exist_ok=True)
+    comm_out_file = comm_out_dir / "index.html"
+    comm_direct_file = DIST_DIR / "commercial-directory.html"
+    comm_public_file = BASE_DIR / "frontend" / "public" / "commercial-directory.html"
+
+    top100_items = load_commercial_urls()
+    print(f"Loaded {len(top100_items)} commercial solutions for SSG pre-rendering.")
+
+    comm_html = base_html
+    comm_html = re.sub(r"<title>.*?</title>", f"<title>{comm_title}</title>", comm_html)
+    comm_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{comm_desc}" />', comm_html)
+    comm_html = replace_canonical(comm_html, comm_canonical)
+    comm_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{comm_title}" />', comm_html)
+    comm_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{comm_desc}" />', comm_html)
+    comm_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{comm_canonical}" />', comm_html)
+    comm_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{comm_title}" />', comm_html)
+    comm_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{comm_desc}" />', comm_html)
+
+    comm_semantic = render_commercial_directory_semantic_html(top100_items)
+    root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+    if root_pattern.search(comm_html):
+        comm_html = root_pattern.sub(lambda m: f'<div id="root">{comm_semantic}</div>', comm_html)
+    else:
+        comm_html = comm_html.replace('<div id="root"></div>', f'<div id="root">{comm_semantic}</div>')
+
+    comm_schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://elesium.online/#organization",
+                "name": "Elesium",
+                "alternateName": ["Elesium Online", "Elesium Enterprise AI", "Elesium India"],
+                "url": "https://elesium.online",
+                "logo": "https://elesium.online/og-image.png"
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://elesium.online/#website",
+                "url": "https://elesium.online",
+                "name": "Elesium Enterprise AI"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://elesium.online/commercial-directory.html#breadcrumbs",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Solutions",
+                        "item": "https://elesium.online/solutions"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Commercial Priority Directory",
+                        "item": comm_canonical
+                    }
+                ]
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": "https://elesium.online/commercial-directory.html#collection",
+                "url": comm_canonical,
+                "name": comm_title,
+                "description": comm_desc,
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "name": "Top 100 Commercial Enterprise AI Solutions",
+                    "numberOfItems": len(top100_items),
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": i + 1,
+                            "name": it.get("anchor_text", it.get("title")),
+                            "item": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}")
+                        }
+                        for i, it in enumerate(top100_items)
+                    ]
+                }
+            }
+        ]
+    }
+
+    comm_injections = [
+        f'<script type="application/ld+json">{json.dumps(comm_schema, ensure_ascii=False)}</script>'
+    ]
+    comm_html = comm_html.replace("</head>", "\n" + "\n".join(comm_injections) + "\n</head>")
+
+    comm_out_file.write_text(comm_html, encoding="utf-8")
+    comm_direct_file.write_text(comm_html, encoding="utf-8")
+    comm_public_file.write_text(comm_html, encoding="utf-8")
+    print("Generated SSG for: /commercial-directory (Directory & .html)")
+    print("✅ SSG complete for commercial directory.")
 
     # Generate SSG for Enterprise AI Systems & Agentic Architecture Glossary (/glossary)
     print("Starting SSG Generation for Glossary Hub (/glossary)...")
