@@ -5,6 +5,7 @@ import {
     Search,
     X,
     ChevronRight,
+    ChevronDown,
     ArrowRight,
     ShieldCheck,
     Truck,
@@ -72,10 +73,34 @@ const thematicCategories: ThematicCategory[] = [
     }
 ]
 
+const commercialFaqs = [
+    {
+        q: "What is the Top 100 Commercial Directory?",
+        a: "The Top 100 Commercial Directory is Elesium's curated index of production-ready enterprise AI automation architectures prioritized for immediate high-intent commercial deployment across BFSI, Logistics, Healthcare, SCADA Manufacturing, and Sovereign Defense."
+    },
+    {
+        q: "How does Elesium guarantee sub-200ms latency for commercial solutions?",
+        a: "Through vLLM PagedAttention virtual memory management and FP8 GEMM microscaling kernels hosted on dedicated NVIDIA clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS), delivering sub-200ms TTFT across SAP RFC, Oracle ERP, and core banking transactions."
+    },
+    {
+        q: "How are commercial solutions protected under India's DPDP Act 2023?",
+        a: "Under Section 8(5) of the DPDP Act 2023, personal data must be erased upon completion of purpose. Elesium solutions operate with zero external data retention in dedicated private VPCs, ensuring no data ever escapes client boundaries."
+    },
+    {
+        q: "What contractual ROI SLA is provided with each commercial deployment?",
+        a: "Every commercial deployment carries an audited 90-day cash-flow ROI SLA delivering 3x–5x return on engineering investment, backed by contractually guaranteed fee rebate provisions."
+    },
+    {
+        q: "What are the commercial pricing tiers?",
+        a: "Tier 1: Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); Tier 3: Autonomous AI Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
+    }
+]
+
 export default function CommercialDirectory() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [selectedSector, setSelectedSector] = useState<SectorFilterOption['key']>('all')
     const [searchQuery, setSearchQuery] = useState('')
+    const [openFaq, setOpenFaq] = useState<number | null>(null)
 
     // Categorized solutions filtered by search query and active sector
     const visibleCategories = useMemo(() => {
@@ -115,62 +140,81 @@ export default function CommercialDirectory() {
     // Structured Data: CollectionPage schema matching SolutionsHub.tsx
     const structuredData = {
         '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        'name': 'Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory',
-        'description':
-            'Explore Elesium’s top 100 high-intent commercial enterprise AI solutions across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense.',
-        'url': 'https://elesium.online/commercial-directory.html',
-        'publisher': {
-            '@type': 'Organization',
-            'name': 'Elesium',
-            'url': 'https://elesium.online',
-            'logo': 'https://elesium.online/assets/LOGO_NEW.png'
-        },
-        'hasPart': commercialSolutions.map((item) => ({
-            '@type': 'Service',
-            'name': item.anchorText,
-            'url': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}`,
-            'description': item.description,
-            'provider': {
-                '@type': 'Organization',
-                'name': 'Elesium',
-                'url': 'https://elesium.online'
-            }
-        })),
-        'mainEntity': {
-            '@type': 'ItemList',
-            'name': 'Top 100 Commercial Enterprise AI Solutions',
-            'numberOfItems': commercialSolutions.length,
-            'itemListElement': commercialSolutions.map((item, index) => ({
-                '@type': 'ListItem',
-                'position': index + 1,
-                'name': item.anchorText,
-                'item': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}`
-            }))
-        },
-        'breadcrumb': {
-            '@type': 'BreadcrumbList',
-            'itemListElement': [
-                {
-                    '@type': 'ListItem',
-                    'position': 1,
-                    'name': 'Home',
-                    'item': 'https://elesium.online'
+        '@graph': [
+            {
+                '@type': 'CollectionPage',
+                '@id': 'https://elesium.online/commercial-directory.html#collection',
+                'name': 'Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory',
+                'description':
+                    'Explore Elesium’s top 100 high-intent commercial enterprise AI solutions across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense.',
+                'url': 'https://elesium.online/commercial-directory.html',
+                'publisher': {
+                    '@type': 'Organization',
+                    '@id': 'https://elesium.online/#organization',
+                    'name': 'Elesium',
+                    'url': 'https://elesium.online',
+                    'logo': 'https://elesium.online/og-image.png'
                 },
-                {
-                    '@type': 'ListItem',
-                    'position': 2,
-                    'name': 'Solutions',
-                    'item': 'https://elesium.online/solutions'
+                'hasPart': commercialSolutions.map((item) => ({
+                    '@type': 'Service',
+                    'name': item.anchorText,
+                    'url': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}`,
+                    'description': item.description,
+                    'provider': {
+                        '@type': 'Organization',
+                        'name': 'Elesium',
+                        'url': 'https://elesium.online'
+                    }
+                })),
+                'mainEntity': {
+                    '@type': 'ItemList',
+                    'name': 'Top 100 Commercial Enterprise AI Solutions',
+                    'numberOfItems': commercialSolutions.length,
+                    'itemListElement': commercialSolutions.map((item, index) => ({
+                        '@type': 'ListItem',
+                        'position': index + 1,
+                        'name': item.anchorText,
+                        'item': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}`
+                    }))
                 },
-                {
-                    '@type': 'ListItem',
-                    'position': 3,
-                    'name': 'Commercial Priority Directory',
-                    'item': 'https://elesium.online/commercial-directory.html'
+                'breadcrumb': {
+                    '@type': 'BreadcrumbList',
+                    '@id': 'https://elesium.online/commercial-directory.html#breadcrumb',
+                    'itemListElement': [
+                        {
+                            '@type': 'ListItem',
+                            'position': 1,
+                            'name': 'Home',
+                            'item': 'https://elesium.online/'
+                        },
+                        {
+                            '@type': 'ListItem',
+                            'position': 2,
+                            'name': 'Solutions',
+                            'item': 'https://elesium.online/solutions'
+                        },
+                        {
+                            '@type': 'ListItem',
+                            'position': 3,
+                            'name': 'Commercial Priority Directory',
+                            'item': 'https://elesium.online/commercial-directory.html'
+                        }
+                    ]
                 }
-            ]
-        }
+            },
+            {
+                '@type': 'FAQPage',
+                '@id': 'https://elesium.online/commercial-directory.html#faq',
+                'mainEntity': commercialFaqs.map((faq) => ({
+                    '@type': 'Question',
+                    'name': faq.q,
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': faq.a
+                    }
+                }))
+            }
+        ]
     }
 
     return (
@@ -261,6 +305,25 @@ export default function CommercialDirectory() {
                         <div className="text-2xl font-mono font-semibold text-emerald-600 dark:text-emerald-400">90-Day</div>
                         <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Hard Contracted ROI SLA</div>
                     </div>
+                </div>
+
+                {/* AEO / Perplexity Definitive Answer Capsule */}
+                <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/90 dark:bg-[#070707] shadow-sm">
+                    <div className="flex items-center gap-2 mb-3">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
+                            AEO Answer Capsule • Priority Commercial Index
+                        </span>
+                    </div>
+                    <h2 className="text-lg sm:text-xl font-bold text-gray-950 dark:text-white mb-2">
+                        Top 100 Commercial Enterprise AI Architecture Specifications
+                    </h2>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                        <strong>Elesium's Top 100 Commercial Directory indexes high-intent, production-tested multi-agent workflows across BFSI, Logistics, Healthcare, SCADA Manufacturing, and Sovereign Defense.</strong> Each architecture is engineered with sub-200ms TTFT execution, private VPC data isolation, and strict adherence to Section 8(5) of India's DPDP Act 2023.
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Deployments run on dedicated NVIDIA H100 clusters hosted within tier-IV sovereign datacenters in India (Yotta Shakti Navi Mumbai and CtrlS Hyderabad/Mumbai). Workflows integrate seamlessly with SAP S/4HANA, Oracle, and legacy core banking systems, backed by an audited 90-day cash-flow ROI SLA.
+                    </p>
                 </div>
             </header>
 
@@ -450,6 +513,116 @@ export default function CommercialDirectory() {
                     })
                 )}
             </main>
+
+            {/* Transparent Institutional Pricing Tiers */}
+            <section className="max-w-6xl mx-auto px-6 mt-20">
+                <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#080808]">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 block">
+                            Direct Commercial Engagement
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Top 100 Commercial Investment &amp; Deployment Tiers
+                        </h2>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                            Deploy any of our top 100 high-intent architectures under transparent terms and contractual ROI SLAs.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                            <div>
+                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
+                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                    Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
+                                </p>
+                            </div>
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                            >
+                                Inquire Tier 1 &rarr;
+                            </button>
+                        </div>
+
+                        <div className="p-6 rounded-2xl border-2 border-emerald-500/50 bg-white dark:bg-[#0c0c0c] flex flex-col justify-between shadow-lg relative">
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-emerald-500 text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
+                                Most Deployed
+                            </div>
+                            <div>
+                                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
+                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                    Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
+                                </p>
+                            </div>
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full py-2.5 px-4 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono transition-all"
+                            >
+                                Deploy Suite &rarr;
+                            </button>
+                        </div>
+
+                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                            <div>
+                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 03</span>
+                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹4,50,000 / month</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">Dedicated Team</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                    3 AI engineers + 1 principal architect, continuous vLLM fine-tuning, and 1-hour critical production SLA.
+                                </p>
+                            </div>
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                            >
+                                Retain Pod &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Commercial Directory FAQ Section */}
+            <section className="max-w-4xl mx-auto px-6 mt-20">
+                <div className="text-center mb-10">
+                    <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-1 block">
+                        Commercial Deployment
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                        Frequently Asked Questions About Commercial Deployments
+                    </h2>
+                </div>
+
+                <div className="space-y-3">
+                    {commercialFaqs.map((faq, idx) => (
+                        <div
+                            key={idx}
+                            className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-white dark:bg-[#070707] shadow-sm"
+                        >
+                            <button
+                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                            >
+                                <span>{faq.q}</span>
+                                <ChevronDown className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                            </button>
+                            {openFaq === idx && (
+                                <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-3">
+                                    {faq.a}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             {/* Bottom Call to Action Card (SolutionsHub congruent) */}
             <section className="max-w-6xl mx-auto px-6 mt-20">

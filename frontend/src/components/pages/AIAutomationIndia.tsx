@@ -448,6 +448,39 @@ export default function AIAutomationIndia() {
         }
     };
 
+    const jsonLdBreadcrumbs = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://elesium.online/ai-automation-agency-india#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://elesium.online"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "AI Automation Agency India",
+                "item": "https://elesium.online/ai-automation-agency-india"
+            }
+        ]
+    };
+
+    const jsonLdWebPage = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://elesium.online/ai-automation-agency-india#webpage",
+        "name": "Best Enterprise AI Company in India | #1 Top AI Automation Agency | Elesium",
+        "description": pricingAnswerCapsule,
+        "url": "https://elesium.online/ai-automation-agency-india",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".answer-capsule", "h1", "h2"]
+        }
+    };
+
     return (
         <div className="pt-24 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
             <Helmet>
@@ -459,6 +492,8 @@ export default function AIAutomationIndia() {
                 <script type="application/ld+json">{JSON.stringify(jsonLdLocalBusiness)}</script>
                 <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
                 <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
+                <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumbs)}</script>
+                <script type="application/ld+json">{JSON.stringify(jsonLdWebPage)}</script>
             </Helmet>
 
             {/* Background Glow */}

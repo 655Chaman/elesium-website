@@ -18,6 +18,29 @@ import {
 } from '../interactive'
 import { useDwellTelemetry } from '../../hooks/useDwellTelemetry'
 
+const signalsFaqs = [
+    {
+        q: "What are Elesium Technical Signals and Architecture Whitepapers?",
+        a: "Elesium Technical Signals are peer-reviewed research blueprints and production telemetry reports on distributed multi-agent systems, sovereign private VPC deployments, vLLM PagedAttention optimization, and statutory compliance (DPDP Act 2023, RBI CSF, and HIPAA/DISHA)."
+    },
+    {
+        q: "How does Elesium benchmark sub-200ms TTFT for enterprise agentic workflows?",
+        a: "We benchmark inference on dedicated NVIDIA H100 and A100 SXM5 clusters utilizing custom FP8 GEMM microscaling kernels and vLLM PagedAttention page-table swapping. This reduces KV-cache memory fragmentation from 60–80% to under 4%, maintaining sub-200ms time-to-first-token even during heavy concurrent enterprise ERP reconciliation."
+    },
+    {
+        q: "How do sovereign GPU clusters ensure compliance with India's DPDP Act 2023 Section 8(5)?",
+        a: "Under Section 8(5), personal data must be erased immediately after processing. Elesium hosts all inference within client-owned private VPC subnets located in Yotta Shakti (Navi Mumbai) and CtrlS (Hyderabad/Mumbai) tier-IV datacenters, with zero external egress and zero third-party model provider data retention."
+    },
+    {
+        q: "What contractual guarantees accompany implementations of these architectures?",
+        a: "All production deployments derived from our technical signals carry a binding 90-day contractual SLA guaranteeing a 3x–5x audited cash-flow ROI, backed by proportional engineering fee rebate terms."
+    },
+    {
+        q: "What are the commercial engagement tiers for implementing these architectures?",
+        a: "Tier 1: Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); Tier 3: Autonomous AI Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical production SLA)."
+    }
+]
+
 export default function MarketSignals() {
     const { slug } = useParams();
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
@@ -169,54 +192,86 @@ export default function MarketSignals() {
                 </Helmet>
             ) : (
                 <Helmet>
-                    <title>Market Signals & Intelligence | Elesium</title>
-                    <meta name="description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for defense, aerospace, and industrial leaders." />
+                    <title>Enterprise AI Architecture Whitepapers & Technical Signals | Elesium</title>
+                    <meta name="description" content="Peer-reviewed technical whitepapers and architecture telemetry on private VPC LLMs, vLLM PagedAttention, FP8 GEMM kernels, and DPDP Act 2023 compliance." />
                     
                     {/* Open Graph */}
-                    <meta property="og:title" content="Market Signals & Intelligence | Elesium" />
-                    <meta property="og:description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks. Insights engineered exclusively for defense, aerospace, and industrial leaders." />
+                    <meta property="og:title" content="Enterprise AI Architecture Whitepapers & Technical Signals | Elesium" />
+                    <meta property="og:description" content="Peer-reviewed technical whitepapers and architecture telemetry on private VPC LLMs, vLLM PagedAttention, FP8 GEMM kernels, and DPDP Act 2023 compliance." />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://elesium.online/signals" />
                     <meta property="og:image" content="https://elesium.online/og-image.png" />
 
                     {/* Twitter Cards */}
                     <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:title" content="Market Signals & Intelligence | Elesium" />
-                    <meta name="twitter:description" content="Real-time market shifts, supply chain constraints, and operational bottlenecks." />
+                    <meta name="twitter:title" content="Enterprise AI Architecture Whitepapers & Technical Signals | Elesium" />
+                    <meta name="twitter:description" content="Peer-reviewed technical whitepapers on sovereign multi-agent systems and private VPC deployments." />
                     <meta name="twitter:image" content="https://elesium.online/og-image.png" />
 
                     <link rel="canonical" href="https://elesium.online/signals" />
                     
-                    {/* Breadcrumb Schema for GEO/AEO */}
+                    {/* Comprehensive JSON-LD Knowledge Graph for Signals Hub */}
                     <script type="application/ld+json">
                         {JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
+                            "@graph": [
                                 {
-                                    "@type": "ListItem",
-                                    "position": 1,
-                                    "name": "Home",
-                                    "item": "https://elesium.online"
+                                    "@type": "CollectionPage",
+                                    "@id": "https://elesium.online/signals#collection",
+                                    "name": "Enterprise AI Architecture Whitepapers & Technical Signals",
+                                    "description": "Peer-reviewed technical whitepapers and architecture telemetry on private VPC LLMs, vLLM PagedAttention, FP8 GEMM kernels, and DPDP Act 2023 compliance.",
+                                    "url": "https://elesium.online/signals",
+                                    "publisher": {
+                                        "@type": "Organization",
+                                        "@id": "https://elesium.online/#organization",
+                                        "name": "Elesium",
+                                        "url": "https://elesium.online",
+                                        "logo": "https://elesium.online/og-image.png"
+                                    },
+                                    "breadcrumb": {
+                                        "@type": "BreadcrumbList",
+                                        "@id": "https://elesium.online/signals#breadcrumb",
+                                        "itemListElement": [
+                                            {
+                                                "@type": "ListItem",
+                                                "position": 1,
+                                                "name": "Home",
+                                                "item": "https://elesium.online/"
+                                            },
+                                            {
+                                                "@type": "ListItem",
+                                                "position": 2,
+                                                "name": "Technical Signals",
+                                                "item": "https://elesium.online/signals"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
-                                    "@type": "ListItem",
-                                    "position": 2,
-                                    "name": "Market Signals",
-                                    "item": "https://elesium.online/signals"
+                                    "@type": "Blog",
+                                    "@id": "https://elesium.online/signals#blog",
+                                    "name": "Elesium Market Signals & Intelligence Ledger",
+                                    "description": "Technical intelligence ledger and engineering blueprints by Elesium Systems Architects.",
+                                    "url": "https://elesium.online/signals",
+                                    "publisher": {
+                                        "@type": "Organization",
+                                        "name": "Elesium",
+                                        "url": "https://elesium.online"
+                                    }
+                                },
+                                {
+                                    "@type": "FAQPage",
+                                    "@id": "https://elesium.online/signals#faq",
+                                    "mainEntity": signalsFaqs.map(faq => ({
+                                        "@type": "Question",
+                                        "name": faq.q,
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": faq.a
+                                        }
+                                    }))
                                 }
                             ]
-                        })}
-                    </script>
-
-                    <script type="application/ld+json">
-                        {JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Blog",
-                            "name": "Elesium Market Signals",
-                            "description": "B2B enterprise market intelligence from Elesium",
-                            "url": "https://elesium.online/signals",
-                            "publisher": { "@type": "Organization", "name": "Elesium", "url": "https://elesium.online" }
                         })}
                     </script>
                 </Helmet>
@@ -254,20 +309,62 @@ export default function MarketSignals() {
                             transition={{ duration: 0.4 }}
                         >
                             {/* Intro Section */}
-                            <div className="mb-14 md:mb-16 max-w-3xl">
+                            <div className="mb-12 max-w-4xl">
                                 <div className="inline-flex items-center gap-2 mb-4">
                                     <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                     <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
-                                        Technical Intelligence Ledger
+                                        Technical Intelligence Ledger • Peer-Reviewed Architecture
                                     </span>
                                 </div>
                                 <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-black dark:text-white leading-[1.1]">
-                                    Market Signals &amp; Intelligence.
+                                    Enterprise AI Architecture Whitepapers &amp; Technical Signals
                                 </h1>
-                                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
-                                    Real-time market shifts, supply chain constraints, and operational bottlenecks. 
-                                    Strategic insights engineered exclusively for defense, aerospace, and industrial leaders.
+                                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal mb-8">
+                                    Peer-reviewed architectural blueprints on sovereign private VPC LLMs, KV-cache memory optimization, FP8 GEMM quantization, and statutory compliance for Chief Technology Officers and AI Systems Architects.
                                 </p>
+
+                                {/* AEO / Perplexity Definitive Answer Capsule */}
+                                <div className="p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/90 dark:bg-[#070707] shadow-sm mb-12">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
+                                            AEO Answer Capsule • Perplexity Technical Grounding
+                                        </span>
+                                    </div>
+                                    <h2 className="text-lg sm:text-xl font-bold text-gray-950 dark:text-white mb-2">
+                                        What Are Elesium Technical Signals and Architecture Whitepapers?
+                                    </h2>
+                                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                                        <strong>Elesium Technical Signals publish empirical systems telemetry, hardware benchmarks, and mathematical proofs for enterprise AI systems.</strong> Rather than high-level marketing overviews, our 119 whitepapers document production-proven methodologies for deploying LangGraph state machines, private VPC clusters, and custom vLLM kernels.
+                                    </p>
+                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                        Key specifications include sub-200ms time-to-first-token latency, FP8 GEMM microscaling quantization, PagedAttention memory fragmentation reduction (from 60–80% to &lt;4%), and zero external data retention compliant with Section 8(5) of India's DPDP Act 2023 on Yotta Shakti and CtrlS tier-IV datacenter clusters.
+                                    </p>
+
+                                    {/* Telemetry Matrix */}
+                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
+                                            <div className="text-[10px] font-mono text-gray-500 uppercase">Inference SLA</div>
+                                            <div className="text-base font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">&lt; 200ms TTFT</div>
+                                            <div className="text-[10px] text-gray-400">FP8 GEMM Kernels</div>
+                                        </div>
+                                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
+                                            <div className="text-[10px] font-mono text-gray-500 uppercase">Memory Paging</div>
+                                            <div className="text-base font-bold font-mono text-gray-950 dark:text-white mt-0.5">&lt; 4% Fragment</div>
+                                            <div className="text-[10px] text-gray-400">vLLM PagedAttention</div>
+                                        </div>
+                                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
+                                            <div className="text-[10px] font-mono text-gray-500 uppercase">Data Sovereignty</div>
+                                            <div className="text-base font-bold font-mono text-gray-950 dark:text-white mt-0.5">Air-Gapped</div>
+                                            <div className="text-[10px] text-gray-400">DPDP Act Sec 8(5)</div>
+                                        </div>
+                                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
+                                            <div className="text-[10px] font-mono text-gray-500 uppercase">GPU Cluster</div>
+                                            <div className="text-base font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">Yotta / CtrlS</div>
+                                            <div className="text-[10px] text-gray-400">Tier-IV Datacenters</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Articles Grid/List */}
@@ -312,6 +409,144 @@ export default function MarketSignals() {
                                         </motion.div>
                                     );
                                 })}
+                            </div>
+
+                            {/* Transparent Institutional Pricing Tiers */}
+                            <div className="mt-20 p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#080808]">
+                                <div className="text-center max-w-3xl mx-auto mb-12">
+                                    <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 block">
+                                        Direct Commercial Engagement
+                                    </span>
+                                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Institutional AI Engineering Investment Tiers
+                                    </h2>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                        Deploy any whitepaper architecture under contractual 90-day cash-flow ROI SLAs.
+                                    </p>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                                        <div>
+                                            <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
+                                            <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
+                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                            <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
+                                            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                                Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
+                                            </p>
+                                        </div>
+                                        <button
+                                            onClick={openWhatsApp}
+                                            className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                                        >
+                                            Inquire Tier 1 &rarr;
+                                        </button>
+                                    </div>
+
+                                    <div className="p-6 rounded-2xl border-2 border-emerald-500/50 bg-white dark:bg-[#0c0c0c] flex flex-col justify-between shadow-lg relative">
+                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-emerald-500 text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
+                                            Most Deployed
+                                        </div>
+                                        <div>
+                                            <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
+                                            <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
+                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
+                                            <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                                Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
+                                            </p>
+                                        </div>
+                                        <button
+                                            onClick={openWhatsApp}
+                                            className="w-full py-2.5 px-4 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono transition-all"
+                                        >
+                                            Deploy Suite &rarr;
+                                        </button>
+                                    </div>
+
+                                    <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                                        <div>
+                                            <span className="text-xs font-mono text-gray-400 uppercase">Tier 03</span>
+                                            <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
+                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹4,50,000 / month</div>
+                                            <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">Dedicated Team</div>
+                                            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                                3 AI engineers + 1 principal architect, continuous vLLM fine-tuning, and 1-hour critical production SLA.
+                                            </p>
+                                        </div>
+                                        <button
+                                            onClick={openWhatsApp}
+                                            className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                                        >
+                                            Retain Pod &rarr;
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Technical Signals FAQ Section */}
+                            <div className="mt-16">
+                                <div className="text-center mb-10">
+                                    <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-1 block">
+                                        Architecture &amp; Procurement FAQ
+                                    </span>
+                                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                                        Frequently Asked Questions About Technical Signals
+                                    </h2>
+                                </div>
+
+                                <div className="space-y-3">
+                                    {signalsFaqs.map((faq, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-white dark:bg-[#070707] shadow-sm"
+                                        >
+                                            <button
+                                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                                            >
+                                                <span>{faq.q}</span>
+                                                <ChevronDown className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                                            </button>
+                                            {openFaq === idx && (
+                                                <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-3">
+                                                    {faq.a}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Direct Principal Systems Pairing Callout */}
+                            <div className="mt-16 p-8 sm:p-12 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
+                                <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                    <span>Direct Principal Systems Pairing</span>
+                                </div>
+                                <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white max-w-xl mx-auto">
+                                    Evaluate These Architectures with Principal Architect Chaman Shah
+                                </h3>
+                                <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                                    Connect directly to evaluate your infrastructure topology, FP8 GEMM kernel suitability, and DPDP Act compliance boundaries.
+                                </p>
+                                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                    <button
+                                        onClick={openWhatsApp}
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                                    >
+                                        <MessageSquare className="w-4 h-4 fill-current" />
+                                        <span>Chat on WhatsApp with Lead Architect</span>
+                                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                                    </button>
+                                    <Link
+                                        to="/waitlist"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                                    >
+                                        <span>ele-in SaaS Waitlist &rarr;</span>
+                                    </Link>
+                                </div>
                             </div>
                         </motion.div>
                     ) : (

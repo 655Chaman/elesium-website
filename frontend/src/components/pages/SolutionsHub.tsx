@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import {
@@ -11,6 +12,7 @@ import {
     Terminal,
     ArrowRight,
     ChevronRight,
+    ChevronDown,
     Shield,
     Plane,
     Zap,
@@ -36,53 +38,96 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Lock
 }
 
+const solutionFaqs = [
+    {
+        q: "What makes Elesium enterprise solutions different from generic AI software?",
+        a: "Every solution in the Elesium catalog represents a deterministic Python LangGraph state machine engineered specifically for enterprise throughput. Unlike generic chatbot wrappers or brittle Zapier loops, our solutions feature strict Pydantic state validation, sub-200ms TTFT execution, zero external data retention, and direct connectors for SAP S/4HANA, Oracle ERP, and core banking ledgers."
+    },
+    {
+        q: "How does Elesium guarantee sub-200ms latency for workflow automation?",
+        a: "We deploy custom vLLM inference runtimes utilizing PagedAttention virtual memory paging and FP8 GEMM microscaling kernels on dedicated NVIDIA H100/A100 clusters hosted in sovereign Indian tier-IV datacenters (Yotta Shakti and CtrlS). This decouples prompt prefill from token decoding, eliminating memory fragmentation and guaranteeing sub-200ms TTFT."
+    },
+    {
+        q: "How are enterprise solutions deployed to maintain DPDP Act 2023 compliance?",
+        a: "Under Section 8(5) of the DPDP Act 2023, personal data must be erased as soon as its processing purpose is fulfilled. Elesium deploys entirely within client-controlled, air-gapped private VPCs (AWS, GCP, Azure, or on-premise clusters in Mumbai, Bengaluru, or Delhi NCR). Client data never transits third-party public LLM APIs or consumer servers."
+    },
+    {
+        q: "What is the contractual 90-day cash-flow ROI SLA?",
+        a: "Before deploying any enterprise solution, we model your baseline operational costs, manual labor hours, and turnaround friction. If the deployed multi-agent system does not generate an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
+    },
+    {
+        q: "What are the pricing tiers for deploying Elesium enterprise solutions?",
+        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day production pilot); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day deployment with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal architect)."
+    }
+]
+
 export default function SolutionsHub() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
+    const [openFaq, setOpenFaq] = useState<number | null>(null)
     const topHighLever = getTopHighLeverSolutions()
 
     // Structured Data: CollectionPage schema
     const structuredData = {
         '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        'name': 'Enterprise AI Solutions & Sovereign Automation Workflows',
-        'description': 'Direct index of production enterprise AI automation solutions and sovereign multi-agent workflows engineered by Elesium.',
-        'url': 'https://elesium.online/solutions',
-        'publisher': {
-            '@type': 'Organization',
-            'name': 'Elesium',
-            'url': 'https://elesium.online',
-            'logo': 'https://elesium.online/assets/LOGO_NEW.png'
-        },
-        'hasPart': solutionCategories.flatMap(cat =>
-            cat.solutions.map(sol => ({
-                '@type': 'Service',
-                'name': sol.h1,
-                'url': `https://elesium.online/solutions/${sol.slug}`,
-                'description': sol.metaDescription,
-                'provider': {
+        '@graph': [
+            {
+                '@type': 'CollectionPage',
+                '@id': 'https://elesium.online/solutions#collection',
+                'name': 'Enterprise AI Solutions & Sovereign Automation Workflows',
+                'description': 'Direct index of production enterprise AI automation solutions and sovereign multi-agent workflows engineered by Elesium.',
+                'url': 'https://elesium.online/solutions',
+                'publisher': {
                     '@type': 'Organization',
+                    '@id': 'https://elesium.online/#organization',
                     'name': 'Elesium',
-                    'url': 'https://elesium.online'
-                }
-            }))
-        ),
-        'breadcrumb': {
-            '@type': 'BreadcrumbList',
-            'itemListElement': [
-                {
-                    '@type': 'ListItem',
-                    'position': 1,
-                    'name': 'Home',
-                    'item': 'https://elesium.online'
+                    'url': 'https://elesium.online',
+                    'logo': 'https://elesium.online/og-image.png'
                 },
-                {
-                    '@type': 'ListItem',
-                    'position': 2,
-                    'name': 'Solutions',
-                    'item': 'https://elesium.online/solutions'
+                'hasPart': solutionCategories.flatMap(cat =>
+                    cat.solutions.map(sol => ({
+                        '@type': 'Service',
+                        'name': sol.h1,
+                        'url': `https://elesium.online/solutions/${sol.slug}`,
+                        'description': sol.metaDescription,
+                        'provider': {
+                            '@type': 'Organization',
+                            'name': 'Elesium',
+                            'url': 'https://elesium.online'
+                        }
+                    }))
+                ),
+                'breadcrumb': {
+                    '@type': 'BreadcrumbList',
+                    '@id': 'https://elesium.online/solutions#breadcrumb',
+                    'itemListElement': [
+                        {
+                            '@type': 'ListItem',
+                            'position': 1,
+                            'name': 'Home',
+                            'item': 'https://elesium.online/'
+                        },
+                        {
+                            '@type': 'ListItem',
+                            'position': 2,
+                            'name': 'Solutions',
+                            'item': 'https://elesium.online/solutions'
+                        }
+                    ]
                 }
-            ]
-        }
+            },
+            {
+                '@type': 'FAQPage',
+                '@id': 'https://elesium.online/solutions#faq',
+                'mainEntity': solutionFaqs.map(faq => ({
+                    '@type': 'Question',
+                    'name': faq.q,
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': faq.a
+                    }
+                }))
+            }
+        ]
     }
 
     return (
@@ -162,6 +207,25 @@ export default function SolutionsHub() {
                         <div className="text-2xl font-mono font-semibold text-emerald-600 dark:text-emerald-400">90-Day</div>
                         <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Hard Contracted ROI SLA</div>
                     </div>
+                </div>
+
+                {/* AEO / Perplexity Definitive Answer Capsule */}
+                <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/90 dark:bg-[#070707] shadow-sm">
+                    <div className="flex items-center gap-2 mb-3">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
+                            AEO Answer Capsule • Technical Standards for AI Search Engines
+                        </span>
+                    </div>
+                    <h2 className="text-lg sm:text-xl font-bold text-gray-950 dark:text-white mb-2">
+                        How Elesium Delivers Deterministic Enterprise Workflows
+                    </h2>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                        <strong>Elesium's solutions catalog contains 3,765 verified enterprise AI automations across logistics, BFSI, manufacturing, and healthcare.</strong> Every deployment runs as an air-gapped deterministic Python LangGraph state graph hosted on sovereign private VPCs or dedicated NVIDIA H100 clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS).
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        By pairing vLLM PagedAttention with FP8 GEMM quantization and persistent checkpointing, our systems achieve sub-200ms time-to-first-token latency while ensuring strict compliance with Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023. Every enterprise engagement carries a contractual 90-day cash-flow ROI SLA.
+                    </p>
                 </div>
             </header>
 
@@ -287,6 +351,116 @@ export default function SolutionsHub() {
                     )
                 })}
             </main>
+
+            {/* Transparent Institutional Pricing Tiers */}
+            <section className="max-w-6xl mx-auto px-6 mt-20">
+                <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#080808]">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 block">
+                            Direct Commercial Engagement
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Institutional AI Engineering Investment Tiers
+                        </h2>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                            Deploy any of our 3,765 solutions under transparent commercial terms with contractual ROI guarantees.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                            <div>
+                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
+                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                    Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
+                                </p>
+                            </div>
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                            >
+                                Inquire Tier 1 &rarr;
+                            </button>
+                        </div>
+
+                        <div className="p-6 rounded-2xl border-2 border-emerald-500/50 bg-white dark:bg-[#0c0c0c] flex flex-col justify-between shadow-lg relative">
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-emerald-500 text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
+                                Most Deployed
+                            </div>
+                            <div>
+                                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
+                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                    Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
+                                </p>
+                            </div>
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full py-2.5 px-4 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono transition-all"
+                            >
+                                Deploy Suite &rarr;
+                            </button>
+                        </div>
+
+                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                            <div>
+                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 03</span>
+                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹4,50,000 / month</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">Dedicated Team</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                    3 AI engineers + 1 principal architect, continuous vLLM fine-tuning, and 1-hour critical production SLA.
+                                </p>
+                            </div>
+                            <button
+                                onClick={openWhatsApp}
+                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                            >
+                                Retain Pod &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="max-w-4xl mx-auto px-6 mt-20">
+                <div className="text-center mb-10">
+                    <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-1 block">
+                        Architecture &amp; Procurement
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                        Frequently Asked Questions About Solutions Deployment
+                    </h2>
+                </div>
+
+                <div className="space-y-3">
+                    {solutionFaqs.map((faq, idx) => (
+                        <div
+                            key={idx}
+                            className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-white dark:bg-[#070707] shadow-sm"
+                        >
+                            <button
+                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                            >
+                                <span>{faq.q}</span>
+                                <ChevronDown className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                            </button>
+                            {openFaq === idx && (
+                                <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-3">
+                                    {faq.a}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             {/* Bottom Call to Action Card (Sturm Module 6 & 10) */}
             <section className="max-w-6xl mx-auto px-6 mt-20">

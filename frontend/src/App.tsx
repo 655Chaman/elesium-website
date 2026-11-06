@@ -1,18 +1,14 @@
 import { Suspense, lazy, useEffect } from 'react'
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
-import HeroSection from './components/sections/Hero'
-import AgentIntro from './components/sections/AgentIntro'
-import ActiveSignals from './components/sections/ActiveSignals'
 import DownloadFooter from './components/layout/Footer'
 import SmoothScroll from './components/ui/SmoothScroll'
 import NoiseOverlay from './components/ui/NoiseOverlay'
 import Preloader from './components/ui/Preloader'
 
 // Lazy load heavy below-the-fold components and secondary pages
-const FeatureExplorer = lazy(() => import('./components/sections/FeatureExplorer'))
-const Solutions = lazy(() => import('./components/sections/Solutions'))
+const Home = lazy(() => import('./components/pages/Home'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
 const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
@@ -182,27 +178,6 @@ const EmbedAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
-function HomePage() {
-    return (
-        <motion.div
-            key="home"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="relative z-10"
-        >
-            <HeroSection />
-            <AgentIntro />
-            {/* Active Signals Ledger */}
-            <ActiveSignals />
-            {/* Lazy Loaded Sections */}
-            <FeatureExplorer />
-            <Solutions />
-        </motion.div>
-    )
-}
-
 function App() {
     const location = useLocation();
     const isEmbed = location.pathname.startsWith('/embed');
@@ -226,7 +201,7 @@ function App() {
                 <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
                     <Suspense fallback={<Preloader />}>
                         <Routes location={location} key={location.pathname}>
-                            <Route path="/" element={<HomePage />} />
+                            <Route path="/" element={<Home />} />
                             <Route path="/how-we-work" element={<HowWeWork />} />
                             <Route path="/industries" element={<Navigate to="/markets" replace />} />
                             <Route path="/markets" element={<Industries />} />
