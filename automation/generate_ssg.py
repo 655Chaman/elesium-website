@@ -6300,6 +6300,33 @@ def render_video_detail_semantic_html(video):
 </div>
 """
 
+def sanitize_base_html_breadcrumbs(html_str: str) -> str:
+    """
+    Defensively strips any dummy BreadcrumbList object from base_html's JSON-LD @graph.
+    Ensures pre-rendered pages never inherit a conflicting duplicate BreadcrumbList.
+    """
+    def clean_script(match):
+        raw = match.group(1).strip()
+        try:
+            data = json.loads(raw)
+            if isinstance(data, dict) and "@graph" in data and isinstance(data["@graph"], list):
+                original_len = len(data["@graph"])
+                data["@graph"] = [
+                    item for item in data["@graph"]
+                    if not (isinstance(item, dict) and (
+                        item.get("@type") == "BreadcrumbList" or 
+                        (isinstance(item.get("@type"), list) and "BreadcrumbList" in item.get("@type"))
+                    ))
+                ]
+                if len(data["@graph"]) != original_len:
+                    return f'<script type="application/ld+json">\n{json.dumps(data, indent=2, ensure_ascii=False)}\n</script>'
+        except Exception:
+            pass
+        return match.group(0)
+
+    pattern = re.compile(r'<script\b(?=[^>]*\btype=[\"\']application/ld\+json[\"\'])[^>]*>(.*?)</script>', re.DOTALL | re.IGNORECASE)
+    return pattern.sub(clean_script, html_str)
+
 def generate_ssg():
     if not DIST_INDEX.exists():
         print(f"Error: {DIST_INDEX} not found. Must run after vite build.")
@@ -6307,6 +6334,7 @@ def generate_ssg():
 
     posts = load_posts_via_node()
     base_html = DIST_INDEX.read_text(encoding="utf-8")
+    base_html = sanitize_base_html_breadcrumbs(base_html)
 
     print(f"Starting SSG Generation for {len(posts)} posts...")
 
@@ -6713,31 +6741,96 @@ def generate_ssg():
     else:
         hub_html = hub_html.replace('<div id="root"></div>', f'<div id="root">{hub_semantic}</div>')
 
-    hub_breadcrumb = {
+    # Build rich CollectionPage schema matching SolutionsHub.tsx
+    hub_categories = [
+        "Logistics & Supply Chain",
+        "BFSI & Underwriting",
+        "Industrial Manufacturing",
+        "Healthcare AI",
+        "ERP & Systems",
+        "Telecom & Infrastructure",
+        "Pharma & Life Sciences",
+        "Legal & Real Estate Tech",
+        "GovTech & Sovereign Defense",
+        "Aerospace & Avionics",
+        "Renewable Energy & Power Grid",
+        "Heavy Industrial & Mining",
+        "Enterprise Cybersecurity & Cloud Infrastructure"
+    ]
+    hub_has_part = []
+    for cat_name in hub_categories:
+        cat_sols = [s for s in solutions if s.get("hubCategory") == cat_name]
+        for s in cat_sols:
+            slug = s.get("slug", "")
+            h1 = s.get("h1") or slug.replace("-", " ").title()
+            desc = s.get("metaDescription") or f"Deploy {h1} with sub-200ms deterministic workflows and private VPC security."
+            hub_has_part.append({
+                "@type": "Service",
+                "name": h1,
+                "url": f"https://elesium.online/solutions/{slug}",
+                "description": desc,
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online"
+                }
+            })
+    if not hub_has_part:
+        for s in solutions:
+            slug = s.get("slug", "")
+            h1 = s.get("h1") or slug.replace("-", " ").title()
+            desc = s.get("metaDescription") or f"Deploy {h1} with sub-200ms deterministic workflows and private VPC security."
+            hub_has_part.append({
+                "@type": "Service",
+                "name": h1,
+                "url": f"https://elesium.online/solutions/{slug}",
+                "description": desc,
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online"
+                }
+            })
+
+    hub_collection_schema = {
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://elesium.online"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Solutions",
-                "item": hub_canonical
-            }
-        ]
+        "@type": "CollectionPage",
+        "name": "Enterprise AI Solutions & Sovereign Automation Workflows",
+        "description": "Direct index of production enterprise AI automation solutions and sovereign multi-agent workflows engineered by Elesium.",
+        "url": hub_canonical,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Elesium",
+            "url": "https://elesium.online",
+            "logo": "https://elesium.online/assets/LOGO_NEW.png"
+        },
+        "hasPart": hub_has_part,
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://elesium.online"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Solutions",
+                    "item": hub_canonical
+                }
+            ]
+        }
     }
     hub_injections = [
-        f'<script type="application/ld+json">{json.dumps(hub_breadcrumb, ensure_ascii=False)}</script>'
+        f'<script type="application/ld+json">{json.dumps(hub_collection_schema, ensure_ascii=False)}</script>'
     ]
     hub_html = hub_html.replace("</head>", "\n" + "\n".join(hub_injections) + "\n</head>")
 
     hub_out_file.write_text(hub_html, encoding="utf-8")
-    print("Generated SSG for: /solutions (Hub)")
+    hub_direct_file.write_text(hub_html, encoding="utf-8")
+    print("Generated SSG for: /solutions (Hub) and /solutions.html")
     print("✅ SSG complete for solutions.")
 
     # Generate SSG for Top 100 Commercial Directory (/commercial-directory & /commercial-directory.html)

@@ -271,6 +271,14 @@ class SchemaIntegrityAuditor:
             self.record_error(file_path, 1, f"Failed to read file: {e}")
             return
 
+        top_level_breadcrumbs: List[Tuple[int, Dict[str, Any]]] = []
+
+        def is_breadcrumb_node(node: Any) -> bool:
+            if not isinstance(node, dict):
+                return False
+            t = node.get("@type")
+            return t == "BreadcrumbList" or (isinstance(t, list) and "BreadcrumbList" in t)
+
         for match in JSONLD_SCRIPT_PATTERN.finditer(content):
             self.blocks_validated += 1
             raw_script = match.group(1).strip()
@@ -293,13 +301,33 @@ class SchemaIntegrityAuditor:
                 elif "@graph" not in parsed_data:
                     self.record_error(file_path, base_line, "Root JSON-LD object missing required '@context'.")
 
+                # Track top-level BreadcrumbList declarations
+                if is_breadcrumb_node(parsed_data):
+                    top_level_breadcrumbs.append((base_line, parsed_data))
+                elif "@graph" in parsed_data and isinstance(parsed_data["@graph"], list):
+                    for graph_node in parsed_data["@graph"]:
+                        if is_breadcrumb_node(graph_node):
+                            top_level_breadcrumbs.append((base_line, graph_node))
+
                 self.validate_node_invariants(parsed_data, file_path, base_line)
 
             elif isinstance(parsed_data, list):
                 for item in parsed_data:
                     if isinstance(item, dict) and "@context" in item:
                         self.validate_context(item["@context"], file_path, base_line)
+                    if is_breadcrumb_node(item):
+                        top_level_breadcrumbs.append((base_line, item))
                     self.validate_node_invariants(item, file_path, base_line)
+
+        # Invariant: Enforce at most one top-level BreadcrumbList declaration per page
+        if len(top_level_breadcrumbs) > 1:
+            second_line = top_level_breadcrumbs[1][0]
+            self.record_error(
+                file_path,
+                second_line,
+                f"Page invariant violation: Detected {len(top_level_breadcrumbs)} top-level BreadcrumbList declarations. A page must have at most one BreadcrumbList.",
+                "BreadcrumbList"
+            )
 
     def audit_directory(self, target_dir: Path):
         """Recursively audits all .html files within a directory."""

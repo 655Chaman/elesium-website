@@ -61,7 +61,8 @@ export default function SolutionsHub() {
                 'description': sol.metaDescription,
                 'provider': {
                     '@type': 'Organization',
-                    'name': 'Elesium'
+                    'name': 'Elesium',
+                    'url': 'https://elesium.online'
                 }
             }))
         ),
