@@ -32,30 +32,62 @@ export default function Glossary() {
     });
   }, [selectedCategory, searchQuery]);
 
+  const aeoAnswerCapsule = "The Elesium Sovereign AI Engineering Terminology Glossary is an authoritative technical lexicon codified for Enterprise CTOs, Lead Systems Architects, and Compliance Officers. It defines the formal mathematics, latency thresholds, memory paging primitives, and statutory standards governing deterministic multi-agent state machines, vLLM PagedAttention runtimes, private VPC isolation enclaves, and DPDP Act 2023 compliance protocols.";
+
   const schemaJson = useMemo(() => {
     return {
       "@context": "https://schema.org",
-      "@type": "DefinedTermSet",
-      "@id": "https://elesium.online/glossary#definedtermset",
-      "name": "Elesium Sovereign AI Systems & Enterprise Agentic Architecture Glossary",
-      "description": "Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, DPDP Act compliance protocols, and low-latency inference fabrics.",
-      "url": "https://elesium.online/glossary",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Elesium",
-        "url": "https://elesium.online"
-      },
-      "hasDefinedTerm": GLOSSARY_TERMS.map(t => ({
-        "@type": "DefinedTerm",
-        "name": t.acronym ? `${t.term} (${t.acronym})` : t.term,
-        "description": t.shortDefinition,
-        "url": `https://elesium.online/glossary#${t.slug}`,
-        "inDefinedTermSet": "https://elesium.online/glossary#definedtermset"
-      })),
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".glossary-term-def", "h1"]
-      }
+      "@graph": [
+        {
+          "@type": "DefinedTermSet",
+          "@id": "https://elesium.online/glossary#definedtermset",
+          "name": "Elesium Sovereign AI Systems & Enterprise Agentic Architecture Glossary",
+          "description": aeoAnswerCapsule,
+          "url": "https://elesium.online/glossary",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://elesium.online/#organization",
+            "name": "Elesium",
+            "url": "https://elesium.online"
+          },
+          "hasDefinedTerm": GLOSSARY_TERMS.map(t => ({
+            "@type": "DefinedTerm",
+            "name": t.acronym ? `${t.term} (${t.acronym})` : t.term,
+            "description": t.shortDefinition,
+            "url": `https://elesium.online/glossary#${t.slug}`,
+            "inDefinedTermSet": "https://elesium.online/glossary#definedtermset"
+          }))
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://elesium.online/glossary#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://elesium.online"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Glossary",
+              "item": "https://elesium.online/glossary"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://elesium.online/glossary#webpage",
+          "name": "Enterprise AI Systems & Agentic Architecture Glossary | Elesium",
+          "description": aeoAnswerCapsule,
+          "url": "https://elesium.online/glossary",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".answer-capsule", ".glossary-term-def", "h1", "h2"]
+          }
+        }
+      ]
     };
   }, []);
 
@@ -109,9 +141,20 @@ export default function Glossary() {
             Enterprise AI Systems Glossary
           </h1>
           
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
             A peer-reviewed architectural reference for CTOs and Systems Architects. Grounded definitions of deterministic state machines, private VPC enclaves, and high-concurrency LLM serving fabrics.
           </p>
+
+          {/* AEO Answer Capsule */}
+          <div className="answer-capsule text-left mb-10 p-6 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-3xl mx-auto shadow-sm">
+            <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
+              <Cpu className="w-4 h-4" />
+              Definitive Answer Capsule • Sovereign AI Engineering Terminology
+            </div>
+            <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+              {aeoAnswerCapsule}
+            </p>
+          </div>
 
           {/* Search Bar */}
           <div className="max-w-xl mx-auto relative mb-6">

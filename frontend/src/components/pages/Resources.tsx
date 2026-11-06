@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FileText, Download, MessageSquare, ArrowRight, ChevronRight } from 'lucide-react'
+import { FileText, Download, MessageSquare, ArrowRight, ChevronRight, Cpu } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { resourcesData } from '../../data/resourcesData'
@@ -12,8 +12,72 @@ export default function Resources() {
         window.scrollTo(0, 0);
     }, []);
 
+    const aeoAnswerCapsule = "The Elesium Engineering Resources and Technical Playbooks library provides production-ready deployment blueprints, empirical performance benchmarks, and mathematical frameworks for Enterprise CTOs and AI Systems Architects. Covering sovereign multi-agent topologies, sub-200ms vLLM PagedAttention inference runtimes, DPDP Act 2023 compliance enclaves, and enterprise SAP/Oracle automation scripts, these peer-reviewed resources establish verified industry benchmarks across 1,420+ deployments."
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "https://elesium.online/resources#collection",
+                "name": "AI Automation Resources, Technical Playbooks & Benchmarks | Elesium",
+                "description": aeoAnswerCapsule,
+                "url": "https://elesium.online/resources",
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://elesium.online/#organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online",
+                    "logo": "https://elesium.online/assets/ele-in-logo.png"
+                }
+            },
+            {
+                "@type": "ItemList",
+                "@id": "https://elesium.online/resources#itemlist",
+                "name": "Elesium Technical Playbooks & Engineering Whitepapers",
+                "description": "Curated collection of enterprise multi-agent blueprints, empirical benchmarks, and sovereign AI deployment guides.",
+                "itemListElement": resourcesData.map((res, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "name": res.title,
+                    "description": res.description,
+                    "url": res.markdownFile ? `https://elesium.online/resources/${res.slug}` : res.googleDriveLink
+                }))
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://elesium.online/resources#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Resources",
+                        "item": "https://elesium.online/resources"
+                    }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://elesium.online/resources#webpage",
+                "name": "AI Automation Resources & Guides | Elesium",
+                "description": aeoAnswerCapsule,
+                "url": "https://elesium.online/resources",
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": [".answer-capsule", "h1", "h2"]
+                }
+            }
+        ]
+    }
+
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 transition-colors duration-300">
             <WhatsAppModal />
             <Helmet>
                 <title>AI Automation Resources & Guides | Elesium</title>
@@ -27,6 +91,9 @@ export default function Resources() {
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
 
                 <link rel="canonical" href="https://elesium.online/resources" />
+                <script type="application/ld+json">
+                    {JSON.stringify(structuredData)}
+                </script>
             </Helmet>
 
             <main className="max-w-5xl mx-auto px-5 md:px-8">
@@ -48,18 +115,29 @@ export default function Resources() {
                         transition={{ duration: 0.4 }}
                     >
                         {/* Intro Section */}
-                        <div className="mb-14 md:mb-16 max-w-3xl">
+                        <div className="mb-10 max-w-3xl">
                             <div className="inline-flex items-center gap-2 mb-4">
                                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
                                     Engineering Playbooks &amp; Benchmarks
                                 </span>
                             </div>
-                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-black dark:text-white leading-[1.1]">
+                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-950 dark:text-white leading-[1.1]">
                                 Resources &amp; Guides
                             </h1>
                             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                                 Download our production tools, scripts, and workflows. Complete with detailed technical documentation and execution playbooks.
+                            </p>
+                        </div>
+
+                        {/* AEO Answer Capsule */}
+                        <div className="answer-capsule mt-2 mb-12 p-6 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-4xl shadow-sm">
+                            <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
+                                <Cpu className="w-4 h-4" />
+                                Definitive Answer Capsule • Technical Playbooks &amp; Benchmarks
+                            </div>
+                            <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                                {aeoAnswerCapsule}
                             </p>
                         </div>
 
@@ -70,7 +148,7 @@ export default function Resources() {
                             <section>
                                 <div className="mb-6 flex items-end justify-between border-b border-gray-200 dark:border-white/10 pb-4">
                                     <div>
-                                        <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white tracking-tight">Technical Series</h2>
+                                        <h2 className="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white tracking-tight">Technical Series</h2>
                                         <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">Comprehensive documentation and multi-part enterprise resources.</p>
                                     </div>
                                 </div>
@@ -96,7 +174,7 @@ export default function Resources() {
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-6 flex flex-col gap-1.5">
                                                 <Link to={resource.markdownFile ? `/resources/${resource.slug}` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
-                                                    <h3 className={`text-base sm:text-lg font-semibold text-black dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
+                                                    <h3 className={`text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
                                                         {resource.title}
                                                     </h3>
                                                 </Link>
@@ -149,7 +227,7 @@ export default function Resources() {
                             <section>
                                 <div className="mb-6 flex items-end justify-between border-b border-gray-200 dark:border-white/10 pb-4">
                                     <div>
-                                        <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white tracking-tight">Segregated Workflows</h2>
+                                        <h2 className="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white tracking-tight">Segregated Workflows</h2>
                                         <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">Individual tools, trackers, and implementation blueprints.</p>
                                     </div>
                                 </div>
@@ -175,7 +253,7 @@ export default function Resources() {
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-6 flex flex-col gap-1.5">
                                                 <Link to={resource.markdownFile ? `/resources/${resource.slug}` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
-                                                    <h3 className={`text-base sm:text-lg font-semibold text-black dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
+                                                    <h3 className={`text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
                                                         {resource.title}
                                                     </h3>
                                                 </Link>

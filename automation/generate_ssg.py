@@ -1817,6 +1817,14 @@ def render_glossary_semantic_html(terms):
     <p style="font-size:1.15rem;color:#475569;line-height:1.6;max-width:750px;margin:0 auto 1.5rem auto;">
       A peer-reviewed architectural reference for Chief Technology Officers, AI Systems Architects, and Engineering Directors. Grounded definitions of deterministic state machines, sovereign VPC enclaves, DPDP Act compliance, and low-latency inference fabrics.
     </p>
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin:1.5rem auto 2rem auto;max-width:850px;text-align:left;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">
+        Sovereign AI Engineering Terminology • AEO Answer Capsule
+      </div>
+      <p style="font-size:1.05rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">
+        The Elesium Sovereign AI Engineering Terminology Glossary is an authoritative technical lexicon codified for Enterprise CTOs, Lead Systems Architects, and Compliance Officers. It defines the formal mathematics, latency thresholds, memory paging primitives, and statutory standards governing deterministic multi-agent state machines, vLLM PagedAttention runtimes, private VPC isolation enclaves, and DPDP Act 2023 compliance protocols.
+      </p>
+    </div>
     <div style="font-size:0.875rem;font-weight:600;color:#0369a1;background:#f0f9ff;border:1px solid #e0f2fe;border-radius:0.5rem;padding:0.75rem;display:inline-block;">
       Covering {len(terms)} Definitive Enterprise Engineering Standards &bull; Verified Telemetry SLAs Included
     </div>
@@ -6266,7 +6274,7 @@ def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
         "description": city["answer_capsule"],
         "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": [".answer-capsule", "h1"]
+            "cssSelector": [".answer-capsule", "h1", "h2"]
         },
         "address": {
             "@type": "PostalAddress",
@@ -6790,30 +6798,67 @@ def render_video_detail_semantic_html(video):
 
 def sanitize_base_html_breadcrumbs(html_str: str) -> str:
     """
-    Defensively strips any dummy BreadcrumbList object from base_html's JSON-LD @graph.
+    Defensively strips any dummy BreadcrumbList object from base_html's JSON-LD @graph,
+    including nested "breadcrumb": {"@type": "BreadcrumbList", ...} properties.
     Ensures pre-rendered pages never inherit a conflicting duplicate BreadcrumbList.
     """
+    def strip_breadcrumbs_recursively(obj):
+        modified = False
+        if isinstance(obj, dict):
+            keys_to_del = []
+            for k, v in list(obj.items()):
+                if isinstance(v, dict):
+                    t = v.get("@type")
+                    if t == "BreadcrumbList" or (isinstance(t, list) and "BreadcrumbList" in t):
+                        keys_to_del.append(k)
+                        modified = True
+                    else:
+                        if strip_breadcrumbs_recursively(v):
+                            modified = True
+                elif isinstance(v, list):
+                    if strip_breadcrumbs_recursively(v):
+                        modified = True
+            for k in keys_to_del:
+                del obj[k]
+        elif isinstance(obj, list):
+            new_list = []
+            for item in obj:
+                if isinstance(item, dict):
+                    t = item.get("@type")
+                    if t == "BreadcrumbList" or (isinstance(t, list) and "BreadcrumbList" in t):
+                        modified = True
+                        continue
+                    if strip_breadcrumbs_recursively(item):
+                        modified = True
+                elif isinstance(item, list):
+                    if strip_breadcrumbs_recursively(item):
+                        modified = True
+                new_list.append(item)
+            if len(new_list) != len(obj):
+                obj.clear()
+                obj.extend(new_list)
+                modified = True
+        return modified
+
     def clean_script(match):
         raw = match.group(1).strip()
         try:
             data = json.loads(raw)
-            if isinstance(data, dict) and "@graph" in data and isinstance(data["@graph"], list):
-                original_len = len(data["@graph"])
-                data["@graph"] = [
-                    item for item in data["@graph"]
-                    if not (isinstance(item, dict) and (
-                        item.get("@type") == "BreadcrumbList" or 
-                        (isinstance(item.get("@type"), list) and "BreadcrumbList" in item.get("@type"))
-                    ))
-                ]
-                if len(data["@graph"]) != original_len:
-                    return f'<script type="application/ld+json">\n{json.dumps(data, indent=2, ensure_ascii=False)}\n</script>'
+            changed = strip_breadcrumbs_recursively(data)
+            if changed:
+                return f'<script type="application/ld+json">\n{json.dumps(data, indent=2, ensure_ascii=False)}\n</script>'
         except Exception:
             pass
         return match.group(0)
 
     pattern = re.compile(r'<script\b(?=[^>]*\btype=[\"\']application/ld\+json[\"\'])[^>]*>(.*?)</script>', re.DOTALL | re.IGNORECASE)
-    return pattern.sub(clean_script, html_str)
+    cleaned = pattern.sub(clean_script, html_str)
+
+    # Defensive secondary regex pass to strip any remaining "breadcrumb": {"@type": "BreadcrumbList", ...}
+    cleaned = re.sub(r',\s*"breadcrumb":\s*\{\s*"@type":\s*"BreadcrumbList".*?"itemListElement":\s*\[.*?\]\s*\}', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'"breadcrumb":\s*\{\s*"@type":\s*"BreadcrumbList".*?"itemListElement":\s*\[.*?\]\s*\},\s*', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'"breadcrumb":\s*\{\s*"@type":\s*"BreadcrumbList"[^}]*\}', '', cleaned)
+    return cleaned
 
 def generate_ssg():
     if not DIST_INDEX.exists():
@@ -7500,7 +7545,7 @@ def generate_ssg():
         "hasPart": hub_has_part,
         "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": [".answer-capsule", "h1"]
+            "cssSelector": [".answer-capsule", "h1", "h2"]
         },
         "breadcrumb": {
             "@type": "BreadcrumbList",
@@ -7720,32 +7765,69 @@ def generate_ssg():
     else:
         glossary_html = glossary_html.replace('<div id="root"></div>', f'<div id="root">{glossary_semantic}</div>')
 
+    glossary_capsule = (
+        "The Elesium Sovereign AI Engineering Terminology Glossary is an authoritative technical lexicon codified "
+        "for Enterprise CTOs, Lead Systems Architects, and Compliance Officers. It defines the formal mathematics, "
+        "latency thresholds, memory paging primitives, and statutory standards governing deterministic multi-agent "
+        "state machines, vLLM PagedAttention runtimes, private VPC isolation enclaves, and DPDP Act 2023 compliance protocols."
+    )
+
     glossary_schema = {
         "@context": "https://schema.org",
-        "@type": "DefinedTermSet",
-        "@id": "https://elesium.online/glossary#definedtermset",
-        "name": "Elesium Sovereign AI Systems & Enterprise Agentic Architecture Glossary",
-        "description": glossary_desc,
-        "url": glossary_canonical,
-        "publisher": {
-            "@type": "Organization",
-            "name": "Elesium",
-            "url": "https://elesium.online"
-        },
-        "hasDefinedTerm": [
+        "@graph": [
             {
-                "@type": "DefinedTerm",
-                "name": f"{t.get('term', '')} ({t.get('acronym', '')})" if t.get('acronym') else t.get('term', ''),
-                "description": t.get("shortDefinition", ""),
-                "url": f"https://elesium.online/glossary#{t.get('slug', '')}",
-                "inDefinedTermSet": "https://elesium.online/glossary#definedtermset"
+                "@type": "DefinedTermSet",
+                "@id": "https://elesium.online/glossary#definedtermset",
+                "name": "Elesium Sovereign AI Systems & Enterprise Agentic Architecture Glossary",
+                "description": glossary_capsule,
+                "url": glossary_canonical,
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://elesium.online/#organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online"
+                },
+                "hasDefinedTerm": [
+                    {
+                        "@type": "DefinedTerm",
+                        "name": f"{t.get('term', '')} ({t.get('acronym', '')})" if t.get('acronym') else t.get('term', ''),
+                        "description": t.get("shortDefinition", ""),
+                        "url": f"https://elesium.online/glossary#{t.get('slug', '')}",
+                        "inDefinedTermSet": "https://elesium.online/glossary#definedtermset"
+                    }
+                    for t in glossary_terms
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://elesium.online/glossary#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Glossary",
+                        "item": "https://elesium.online/glossary"
+                    }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://elesium.online/glossary#webpage",
+                "name": glossary_title,
+                "description": glossary_capsule,
+                "url": glossary_canonical,
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": [".answer-capsule", ".glossary-term-def", "h1", "h2"]
+                }
             }
-            for t in glossary_terms
-        ],
-        "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": [".glossary-term-def", "h1"]
-        }
+        ]
     }
     glossary_html = glossary_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(glossary_schema, ensure_ascii=False)}</script>\n</head>')
     glossary_out_file.write_text(glossary_html, encoding="utf-8")
@@ -15418,7 +15500,64 @@ def generate_ssg():
                 ]
             }
 
-            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(author_person_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_schema, ensure_ascii=False)}</script>\n</head>')
+            author_capsule = (
+                "Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams "
+                "in designing deterministic LangGraph multi-agent execution graphs, dedicated private VPC inference "
+                "clusters, and statutory DPDP Act 2023 compliance enclaves. With over 8+ years of distributed systems "
+                "engineering, his architectural focus eliminates manual operational latency across supply chain logistics, "
+                "core banking, and industrial manufacturing via verifiable sub-200ms state machines and contractual "
+                "90-day ROI mandates."
+            )
+
+            author_person = {k: v for k, v in author_person_schema.items() if k != "@context"}
+            author_bc = {k: v for k, v in breadcrumb_schema.items() if k != "@context"}
+
+            author_combined_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    author_person,
+                    author_bc,
+                    {
+                        "@type": "ProfilePage",
+                        "@id": f"{canonical_url}#webpage",
+                        "name": f"{title} | Elesium",
+                        "description": author_capsule,
+                        "url": canonical_url,
+                        "mainEntity": {
+                            "@id": "https://elesium.online/authors/chaman-shah#person"
+                        },
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    }
+                ]
+            }
+
+            author_semantic = f"""
+<div id="prerendered-author" style="max-width:960px;margin:0 auto;padding:2.5rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#0f172a;">
+  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <a href="/team" style="color:#2563eb;text-decoration:none;">Leadership</a> / <span style="color:#059669;font-weight:700;">Chaman Shah</span>
+  </nav>
+  <header style="margin-bottom:2.5rem;">
+    <h1 style="font-size:2.5rem;font-weight:800;color:#0f172a;margin:0 0 0.5rem 0;">Chaman Shah</h1>
+    <p style="font-size:1.15rem;color:#475569;font-weight:600;margin:0 0 1.5rem 0;">Principal AI Systems Architect &amp; Founder, Elesium</p>
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin-bottom:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">
+        Definitive Answer Capsule &bull; Principal Systems Architect Dossier
+      </div>
+      <p style="font-size:1.05rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">{author_capsule}</p>
+    </div>
+  </header>
+</div>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{author_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{author_semantic}</div>')
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(author_combined_schema, ensure_ascii=False)}</script>\n</head>')
 
         elif route in [
             "enterprise-ai-bangalore",
@@ -15436,6 +15575,320 @@ def generate_ssg():
 
             city_schema, city_breadcrumb = get_regional_city_hub_schemas(city_key, canonical_url)
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(city_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(city_breadcrumb, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "markets":
+            markets_answer_capsule = (
+                "Elesium engineers sovereign enterprise AI automation architectures across six high-stakes master markets: "
+                "Defense & Aerospace (AS9100/ITAR capacity routing), Private Equity (off-market M&A dealflow automation), "
+                "Energy Infrastructure (thermal and grid distribution telemetry), Advanced MedTech (FDA-compliant CMO matching), "
+                "Applied AI (statutory compliance state machines), and Strategic Capital Placement. Our deterministic LangGraph "
+                "agents operate inside client-owned private VPCs with sub-200ms latency, zero third-party data egress, and audited "
+                "3x–5x ROI in 90 days."
+            )
+            markets_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": f"{canonical_url}#collection",
+                        "name": "Sovereign Enterprise AI Automation for High-Stakes Master Markets | Elesium",
+                        "description": markets_answer_capsule,
+                        "url": canonical_url,
+                        "publisher": {
+                            "@type": "Organization",
+                            "@id": "https://elesium.online/#organization",
+                            "name": "Elesium",
+                            "url": "https://elesium.online",
+                            "logo": "https://elesium.online/assets/ele-in-logo.png"
+                        }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": f"{canonical_url}#breadcrumb",
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online"},
+                            {"@type": "ListItem", "position": 2, "name": "Markets", "item": canonical_url}
+                        ]
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "@id": f"{canonical_url}#faq",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "How does Elesium deploy sovereign AI automation for defense and aerospace primes?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Elesium engineers air-gapped, AS9100 and ITAR compliant deterministic multi-agent state machines deployed entirely on-premise or within sovereign private VPCs. Our systems automate precision manufacturing routing, supplier capacity verification, and defense contract milestone tracking without external LLM data egress."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How do private equity firms utilize Elesium's AI dealflow and roll-up infrastructure?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "We deploy autonomous acquisition screening agents that parse proprietary financial filings, EBITDA margins, and industrial capacity datasets. These agents execute automated platform add-on matching, contract telemetry audits, and post-merger ERP consolidation workflows."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What data sovereignty guarantees does Elesium provide for MedTech and healthcare systems?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "All healthcare and medical hardware pipelines operate under strict DPDP Act 2023 Section 8(5) compliance and FDA 21 CFR Part 11 validation protocols. Data never leaves client-controlled private infrastructure, ensuring zero unauthorized retention and tamper-evident audit logs."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How does Elesium guarantee sub-200ms latency across energy and infrastructure logistics?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "We deploy custom vLLM inference runtimes running PagedAttention algorithms on dedicated NVIDIA H100/A100 clusters. This guarantees sub-200ms response times for real-time thermal load balancing, SCADA telemetry analysis, and grid equipment failure prediction."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": f"{canonical_url}#webpage",
+                        "name": "AI Automation for Every Industry | Elesium India",
+                        "description": markets_answer_capsule,
+                        "url": canonical_url,
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    }
+                ]
+            }
+            markets_semantic = f"""
+<div id="prerendered-markets" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">Markets</span>
+  </nav>
+  <header style="margin-bottom:3rem;">
+    <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#059669;margin-bottom:0.75rem;">Enterprise Sector Architecture</div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">AI Automation for Master Markets</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;margin-bottom:2rem;">High-ticket dealflow and secure contract placement across six critical master markets.</p>
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin-bottom:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">Definitive Answer Capsule &bull; Sovereign Market Capacities</div>
+      <p style="font-size:1.1rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">{markets_answer_capsule}</p>
+    </div>
+  </header>
+</div>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{markets_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{markets_semantic}</div>')
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(markets_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "resources":
+            resources_answer_capsule = (
+                "The Elesium Engineering Resources and Technical Playbooks library provides production-ready deployment blueprints, "
+                "empirical performance benchmarks, and mathematical frameworks for Enterprise CTOs and AI Systems Architects. "
+                "Covering sovereign multi-agent topologies, sub-200ms vLLM PagedAttention inference runtimes, DPDP Act 2023 compliance "
+                "enclaves, and enterprise SAP/Oracle automation scripts, these peer-reviewed resources establish verified industry "
+                "benchmarks across 1,420+ deployments."
+            )
+            resources_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": f"{canonical_url}#collection",
+                        "name": "AI Automation Resources, Technical Playbooks & Benchmarks | Elesium",
+                        "description": resources_answer_capsule,
+                        "url": canonical_url,
+                        "publisher": {
+                            "@type": "Organization",
+                            "@id": "https://elesium.online/#organization",
+                            "name": "Elesium",
+                            "url": "https://elesium.online",
+                            "logo": "https://elesium.online/assets/ele-in-logo.png"
+                        }
+                    },
+                    {
+                        "@type": "ItemList",
+                        "@id": f"{canonical_url}#itemlist",
+                        "name": "Elesium Technical Playbooks & Engineering Whitepapers",
+                        "description": "Curated collection of enterprise multi-agent blueprints, empirical benchmarks, and sovereign AI deployment guides.",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "India Enterprise AI Benchmark Report 2026",
+                                "description": "Empirical Telemetry Across 1,420 Indian Enterprise Multi-Agent Deployments.",
+                                "url": "https://elesium.online/resources/india-enterprise-ai-benchmark-2026"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Top AI Architecture Voices & Enterprise Swarm Engineering 2026",
+                                "description": "10 Public Declarations from Founders at Anthropic, OpenAI, DeepMind & LangChain on Multi-Agent Orchestration.",
+                                "url": "https://elesium.online/resources/ai-automation-voices"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Offer Creation Blueprint",
+                                "description": "The reverse-engineered framework to build a world-class, irresistible offer.",
+                                "url": "https://elesium.online/resources/offer-creation-blueprint"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": f"{canonical_url}#breadcrumb",
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online"},
+                            {"@type": "ListItem", "position": 2, "name": "Resources", "item": canonical_url}
+                        ]
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": f"{canonical_url}#webpage",
+                        "name": "AI Automation Resources & Guides | Elesium",
+                        "description": resources_answer_capsule,
+                        "url": canonical_url,
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    }
+                ]
+            }
+            resources_semantic = f"""
+<div id="prerendered-resources" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">Resources</span>
+  </nav>
+  <header style="margin-bottom:3rem;">
+    <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#059669;margin-bottom:0.75rem;">Engineering Playbooks &amp; Benchmarks</div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">AI Automation Resources &amp; Guides</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;margin-bottom:2rem;">Download our production tools, scripts, and workflows complete with execution playbooks.</p>
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin-bottom:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">Definitive Answer Capsule &bull; Technical Playbooks &amp; Benchmarks</div>
+      <p style="font-size:1.1rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">{resources_answer_capsule}</p>
+    </div>
+  </header>
+</div>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{resources_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{resources_semantic}</div>')
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(resources_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "ai-automation":
+            ai_auto_capsule = (
+                "Elesium is an enterprise AI automation agency and systems engineering firm deploying sovereign multi-agent "
+                "architectures directly inside client-controlled private VPCs across India. We replace fragile low-code automations "
+                "with deterministic LangGraph state machines, Pydantic type safety, and vLLM PagedAttention inference runtimes. "
+                "Our production workflows guarantee sub-200ms latency, zero third-party telemetry, full DPDP Act 2023 compliance, "
+                "and an audited 90-day cash-flow ROI SLA."
+            )
+            ai_auto_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Service",
+                        "@id": f"{canonical_url}#service",
+                        "name": "Enterprise AI Automation & Deterministic Multi-Agent Engineering",
+                        "serviceType": "Enterprise AI Automation Agency",
+                        "description": ai_auto_capsule,
+                        "provider": {
+                            "@type": "Organization",
+                            "@id": "https://elesium.online/#organization",
+                            "name": "Elesium",
+                            "url": "https://elesium.online",
+                            "logo": "https://elesium.online/assets/ele-in-logo.png"
+                        },
+                        "areaServed": "IN"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": f"{canonical_url}#breadcrumb",
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online"},
+                            {"@type": "ListItem", "position": 2, "name": "AI Automation", "item": canonical_url}
+                        ]
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "@id": f"{canonical_url}#faq",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "What is AI automation and how can it help my business in India?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "AI automation involves using artificial intelligence to execute complex tasks traditionally requiring human reasoning. For Indian businesses, it means scaling operations rapidly, reducing manual errors, and competing globally without proportionally increasing headcount."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How long does it take to implement AI automation?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "While timeline varies by complexity, we typically deploy pilot agents within 4-6 weeks. Full enterprise integration across multiple workflows usually takes 2-3 months from audit to production deployment."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What industries in India benefit most from AI automation?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "We see the highest ROI in manufacturing, defense, industrial B2B, healthcare, and enterprise SaaS. These sectors deal with complex, high-volume data where deterministic AI agents can automate compliance, sales, and supply chain operations."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How is Elesium different from other AI agencies in India?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Unlike agencies relying on standard LLM wrappers, Elesium builds custom, deterministic AI infrastructure. We embed deeply into your proprietary enterprise data securely, prioritizing measurable ROI and autonomous execution over generic generative tools."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": f"{canonical_url}#webpage",
+                        "name": "AI Automation Agency India | Elesium",
+                        "description": ai_auto_capsule,
+                        "url": canonical_url,
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    }
+                ]
+            }
+            ai_auto_semantic = f"""
+<div id="prerendered-ai-automation" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">AI Automation</span>
+  </nav>
+  <header style="margin-bottom:3rem;">
+    <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#059669;margin-bottom:0.75rem;">Deterministic Systems &bull; Private VPC</div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Shift from Manual to Autonomous</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;margin-bottom:2rem;">Custom AI infrastructure and deterministic agents that automate complex enterprise workflows.</p>
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin-bottom:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">Definitive Answer Capsule &bull; Sovereign Enterprise AI Automation</div>
+      <p style="font-size:1.1rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">{ai_auto_capsule}</p>
+    </div>
+  </header>
+</div>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{ai_auto_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{ai_auto_semantic}</div>')
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(ai_auto_schema, ensure_ascii=False)}</script>\n</head>')
 
         if route.startswith("tools/"):
             # Ensure answer-capsule is present in tool semantic HTML

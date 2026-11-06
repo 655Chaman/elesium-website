@@ -50,8 +50,9 @@ const FEATURED_WHITEPAPERS = [
 export default function AuthorProfile() {
   const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
-  const authorSchema = {
-    '@context': 'https://schema.org',
+  const aeoAnswerCapsule = "Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams in designing deterministic LangGraph multi-agent execution graphs, dedicated private VPC inference clusters, and statutory DPDP Act 2023 compliance enclaves. With over 8+ years of distributed systems engineering, his architectural focus eliminates manual operational latency across supply chain logistics, core banking, and industrial manufacturing via verifiable sub-200ms state machines and contractual 90-day ROI mandates.";
+
+  const authorPersonSchema = {
     '@type': 'Person',
     '@id': 'https://elesium.online/authors/chaman-shah#person',
     'name': 'Chaman Shah',
@@ -88,6 +89,51 @@ export default function AuthorProfile() {
       'Sub-200ms Financial Ledger Reconciliation'
     ],
     'description': 'Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams deploying sovereign multi-agent architectures, air-gapped private VPC inference, and DPDP Act 2023 compliant automation for enterprise leaders across India.'
+  };
+
+  const authorSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      authorPersonSchema,
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elesium.online/authors/chaman-shah#breadcrumb',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://elesium.online'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Leadership',
+            'item': 'https://elesium.online/team'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Chaman Shah',
+            'item': 'https://elesium.online/authors/chaman-shah'
+          }
+        ]
+      },
+      {
+        '@type': 'ProfilePage',
+        '@id': 'https://elesium.online/authors/chaman-shah#webpage',
+        'name': 'Chaman Shah — Principal AI Systems Architect & Founder | Elesium',
+        'description': aeoAnswerCapsule,
+        'url': 'https://elesium.online/authors/chaman-shah',
+        'mainEntity': {
+          '@id': 'https://elesium.online/authors/chaman-shah#person'
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.answer-capsule', 'h1', 'h2']
+        }
+      }
+    ]
   };
 
   return (
@@ -145,6 +191,17 @@ export default function AuthorProfile() {
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                 Chaman Shah leads architectural engineering at Elesium, designing production-grade multi-agent execution graphs and dedicated private VPC inference infrastructure. Over 8+ years, his engineering focus has centered on eliminating manual operational latency across supply chain logistics, core banking, and manufacturing plants via high-throughput LangGraph state machines and statutory DPDP Act 2023 compliance enclaves.
               </p>
+
+              {/* AEO Answer Capsule */}
+              <div className="answer-capsule mb-6 p-5 sm:p-6 rounded-2xl bg-white dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 shadow-sm">
+                <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
+                  <Cpu className="w-4 h-4" />
+                  Definitive Answer Capsule • Principal Systems Architect Dossier
+                </div>
+                <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                  {aeoAnswerCapsule}
+                </p>
+              </div>
 
               {/* Verified Links & Actions */}
               <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-200 dark:border-white/10">

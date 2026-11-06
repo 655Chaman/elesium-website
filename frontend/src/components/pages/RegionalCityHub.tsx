@@ -271,74 +271,92 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
     const canonicalUrl = `https://elesium.online/${cityData.slug}`
 
-    const localBusinessSchema = {
+    const structuredData = {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": `${canonicalUrl}#localbusiness`,
-        "name": `Elesium - ${cityData.h1}`,
-        "url": canonicalUrl,
-        "telephone": "+91-8317329312",
-        "description": cityData.answerCapsule,
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": cityData.officeAddress.street,
-            "addressLocality": cityData.officeAddress.locality,
-            "addressRegion": cityData.officeAddress.region,
-            "postalCode": cityData.officeAddress.postalCode,
-            "addressCountry": "IN"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": cityData.officeAddress.lat,
-            "longitude": cityData.officeAddress.lng
-        },
-        "founder": {
-            "@type": "Person",
-            "@id": "https://elesium.online/authors/chaman-shah#person",
-            "name": "Chaman Shah",
-            "jobTitle": "Principal AI Systems Architect & Founder",
-            "url": "https://elesium.online/authors/chaman-shah"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "28",
-            "bestRating": "5"
-        },
-        "sameAs": [
-            "https://elesium.online",
-            "https://www.goodfirms.co/company/elesium-online",
-            "https://clutch.co/profile/elesium-online",
-            "https://www.g2.com/products/elesium-ai-automation-platform",
-            "https://www.trustpilot.com/review/elesium.online",
-            "https://www.crunchbase.com/organization/elesium-online",
-            "https://github.com/655Chaman/elesium-website",
-            "https://www.linkedin.com/in/chaman-elesium",
-            "https://x.com/elesium_ai"
-        ]
-    }
-
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        "@graph": [
             {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://elesium.online"
+                "@type": "LocalBusiness",
+                "@id": `${canonicalUrl}#localbusiness`,
+                "name": `Elesium - ${cityData.h1}`,
+                "url": canonicalUrl,
+                "telephone": "+91-8317329312",
+                "description": cityData.answerCapsule,
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": [".answer-capsule", "h1", "h2"]
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": cityData.officeAddress.street,
+                    "addressLocality": cityData.officeAddress.locality,
+                    "addressRegion": cityData.officeAddress.region,
+                    "postalCode": cityData.officeAddress.postalCode,
+                    "addressCountry": "IN"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": cityData.officeAddress.lat,
+                    "longitude": cityData.officeAddress.lng
+                },
+                "founder": {
+                    "@type": "Person",
+                    "@id": "https://elesium.online/authors/chaman-shah#person",
+                    "name": "Chaman Shah",
+                    "jobTitle": "Principal AI Systems Architect & Founder",
+                    "url": "https://elesium.online/authors/chaman-shah"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "28",
+                    "bestRating": "5"
+                },
+                "sameAs": [
+                    "https://elesium.online",
+                    "https://www.goodfirms.co/company/elesium-online",
+                    "https://clutch.co/profile/elesium-online",
+                    "https://www.g2.com/products/elesium-ai-automation-platform",
+                    "https://www.trustpilot.com/review/elesium.online",
+                    "https://www.crunchbase.com/organization/elesium-online",
+                    "https://github.com/655Chaman/elesium-website",
+                    "https://www.linkedin.com/in/chaman-elesium",
+                    "https://x.com/elesium_ai"
+                ]
             },
             {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Enterprise AI India",
-                "item": "https://elesium.online/ai-automation-agency-india"
+                "@type": "BreadcrumbList",
+                "@id": `${canonicalUrl}#breadcrumb`,
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Enterprise AI India",
+                        "item": "https://elesium.online/ai-automation-agency-india"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": cityData.cityName,
+                        "item": canonicalUrl
+                    }
+                ]
             },
             {
-                "@type": "ListItem",
-                "position": 3,
-                "name": cityData.cityName,
-                "item": canonicalUrl
+                "@type": "WebPage",
+                "@id": `${canonicalUrl}#webpage`,
+                "name": `${cityData.metaTitle} | Elesium`,
+                "description": cityData.metaDescription,
+                "url": canonicalUrl,
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": [".answer-capsule", "h1", "h2"]
+                }
             }
         ]
     }
@@ -356,8 +374,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={`${cityData.metaTitle} | Elesium`} />
                 <meta name="twitter:description" content={cityData.metaDescription} />
-                <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
             <main className="max-w-6xl mx-auto px-5 md:px-8 pt-24 pb-20">
@@ -386,9 +403,10 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     </p>
 
                     {/* Answer Capsule (Google Direct Snippet Target) */}
-                    <div className="p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] mb-8">
-                        <div className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold mb-2">
-                            Regional Engineering Executive Summary
+                    <div className="answer-capsule p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] border-l-4 border-l-emerald-500 mb-8 shadow-sm">
+                        <div className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
+                            <TrendingUp className="w-4 h-4" />
+                            <span>Regional Engineering Executive Summary • AEO Answer Capsule</span>
                         </div>
                         <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 font-medium leading-relaxed">
                             {cityData.answerCapsule}

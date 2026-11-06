@@ -86,6 +86,8 @@ const AgentTerminal = () => {
 export default function AIAutomation() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
+    const aeoAnswerCapsule = "Elesium is an enterprise AI automation agency and systems engineering firm deploying sovereign multi-agent architectures directly inside client-controlled private VPCs across India. We replace fragile low-code automations with deterministic LangGraph state machines, Pydantic type safety, and vLLM PagedAttention inference runtimes. Our production workflows guarantee sub-200ms latency, zero third-party telemetry, full DPDP Act 2023 compliance, and an audited 90-day cash-flow ROI SLA.";
+
     const jsonLdFaq = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -125,6 +127,61 @@ export default function AIAutomation() {
         ]
     };
 
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://elesium.online/ai-automation#service",
+                "name": "Enterprise AI Automation & Deterministic Multi-Agent Engineering",
+                "serviceType": "Enterprise AI Automation Agency",
+                "description": aeoAnswerCapsule,
+                "provider": {
+                    "@type": "Organization",
+                    "@id": "https://elesium.online/#organization",
+                    "name": "Elesium",
+                    "url": "https://elesium.online",
+                    "logo": "https://elesium.online/assets/ele-in-logo.png"
+                },
+                "areaServed": "IN"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://elesium.online/ai-automation#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://elesium.online"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "AI Automation",
+                        "item": "https://elesium.online/ai-automation"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://elesium.online/ai-automation#faq",
+                "mainEntity": jsonLdFaq.mainEntity
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://elesium.online/ai-automation#webpage",
+                "name": "AI Automation Agency India | Elesium",
+                "description": aeoAnswerCapsule,
+                "url": "https://elesium.online/ai-automation",
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": [".answer-capsule", "h1", "h2"]
+                }
+            }
+        ]
+    };
+
     return (
         <div className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
             <WhatsAppModal />
@@ -133,7 +190,7 @@ export default function AIAutomation() {
                 <meta name="description" content="Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down." />
                 <link rel="canonical" href="https://elesium.online/ai-automation" />
                 <script type="application/ld+json">
-                    {JSON.stringify(jsonLdFaq)}
+                    {JSON.stringify(structuredData)}
                 </script>
             </Helmet>
 
@@ -164,6 +221,17 @@ export default function AIAutomation() {
                     <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
                         We build custom AI infrastructure and deterministic agents that automate complex enterprise workflows, scale your operations, and eliminate human error.
                     </p>
+
+                    {/* AEO Answer Capsule */}
+                    <div className="answer-capsule text-left mb-10 p-6 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-3xl mx-auto shadow-sm">
+                        <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
+                            <Cpu className="w-4 h-4" />
+                            Definitive Answer Capsule • Sovereign Enterprise AI Automation
+                        </div>
+                        <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                            {aeoAnswerCapsule}
+                        </p>
+                    </div>
 
                     {/* Hero CTAs */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
