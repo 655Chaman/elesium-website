@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "engine": "Elesium High-Ticket Lead Router v1.0",
+    "timestamp_utc": "2026-11-09T08:53:05.685539+00:00",
+    "target_sla_minutes": 15
+  },
+  "sample_lead_scored": {
+    "company_name": "Axis Commercial Capital Partners Ltd",
+    "signatory_name": "Rajesh Subramanian",
+    "signatory_role": "Chief Technology Officer (CTO)",
+    "email": "r.subramanian@axiscommercial.in",
+    "phone": "+91 98450 12345",
+    "budget_tier": "tier-3",
+    "tech_stack": [
+      "sap",
+      "kafka",
+      "kubernetes"
+    ],
+    "compliance_requirements": [
+      "dpdp-2023",
+      "rbi-sebi"
+    ],
+    "workflow_scope": "Automate 14-day commercial credit appraisal into sub-4min CAM generation multi-agent triad with private VPC enclave in Mumbai ap-south-1."
+  },
+  "score_result": {
+    "score": 100,
+    "priority": "PRIORITY_ALPHA",
+    "qualification_passed": true
+  },
+  "dispatched_channels": [
+    "slack_webhook",
+    "whatsapp_api",
+    "crm_ledger"
+  ]
+}

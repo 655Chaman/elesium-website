@@ -110,6 +110,7 @@ def generate_sitemap():
         {"path": "/authors/chaman-shah/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/AuthorProfile.tsx"},
         {"path": "/team/", "priority": "0.8", "changefreq": "weekly", "file": "frontend/src/components/pages/AuthorProfile.tsx"},
         {"path": "/waitlist/", "priority": "0.8", "changefreq": "weekly", "file": "frontend/src/components/pages/Waitlist.tsx"},
+        {"path": "/onboarding/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/EnterpriseOnboarding.tsx"},
         {"path": "/audit/", "priority": "0.8", "changefreq": "weekly", "file": "frontend/src/components/pages/Waitlist.tsx"},
         {"path": "/signals/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/MarketSignals.tsx"},
         {"path": "/solutions/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/SolutionsHub.tsx"},

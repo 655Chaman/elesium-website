@@ -20,6 +20,7 @@ const MarketSignals = lazy(() => import('./components/pages/MarketSignals'))
 const Resources = lazy(() => import('./components/pages/Resources'))
 const ResourceDetail = lazy(() => import('./components/pages/ResourceDetail'))
 const Waitlist = lazy(() => import('./components/pages/Waitlist'))
+const EnterpriseOnboarding = lazy(() => import('./components/pages/EnterpriseOnboarding'))
 const VideoMirror = lazy(() => import('./components/pages/VideoMirror'))
 const SolutionsHub = lazy(() => import('./components/pages/SolutionsHub'))
 const SolutionCategoryHub = lazy(() => import('./components/pages/SolutionCategoryHub'))
@@ -229,6 +230,7 @@ function App() {
                             <Route path="/videos" element={<VideoMirror />} />
                             <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />
+                            <Route path="/onboarding" element={<EnterpriseOnboarding />} />
                             <Route path="/audit" element={<Waitlist />} />
                             <Route path="/book-audit" element={<Waitlist />} />
                             <Route path="/authors/chaman-shah" element={<AuthorProfile />} />
