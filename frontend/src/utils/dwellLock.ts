@@ -1,8 +1,11 @@
 /**
- * ELESIUM NAVBOOST DWELL LOCK (V2026.1)
- * TypeScript utility for client-side engagement locking and anti-pogo-stick protection.
+ * ELESIUM NAVBOOST ENGAGEMENT TELEMETRY (V2026.2 - SAFEGUARDED)
+ * Operational Specification: Google Search Essentials & Chromium Compliance Standard
+ *
+ * Measures genuine dwell time and scroll engagement without back-button hijacking or
+ * history stack manipulation. 100% compliant with Chromium Abusive Experience policies.
  */
-export function initNavboostDwellLock(qualifiedThresholdMs: number = 12000): void {
+export function initNavboostDwellLock(qualifiedDwellThreshold: number = 12000): void {
   if (typeof window === "undefined" || typeof document === "undefined") return;
 
   const ref = document.referrer || "";
@@ -13,28 +16,40 @@ export function initNavboostDwellLock(qualifiedThresholdMs: number = 12000): voi
     ref.includes("duckduckgo.") || 
     ref.includes("ecosia.");
 
-  if (!isSearchReferral) return;
-
   const arrivalTime = Date.now();
+  let maxScrollDepth = 0;
 
-  if (window.history && window.history.pushState) {
-    window.history.pushState({ elesiumNavboostLock: true }, document.title, window.location.href);
+  window.addEventListener("scroll", () => {
+    const h = document.documentElement;
+    const b = document.body;
+    const st = "scrollTop";
+    const sh = "scrollHeight";
+    const percent = Math.round(((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100);
+    if (percent > maxScrollDepth) {
+      maxScrollDepth = percent;
+    }
+  }, { passive: true });
 
-    window.addEventListener("popstate", () => {
-      const elapsed = Date.now() - arrivalTime;
-      if (elapsed < qualifiedThresholdMs) {
-        window.history.pushState({ elesiumNavboostLock: true }, document.title, window.location.href);
-        const hook = 
-          document.getElementById("interactive-anchor") || 
-          document.querySelector(".answer-capsule") || 
-          document.querySelector("main") || 
-          document.querySelector("h1");
-        if (hook && typeof (hook as HTMLElement).scrollIntoView === "function") {
-          (hook as HTMLElement).scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      } else {
-        window.history.back();
-      }
-    });
-  }
+  const report = () => {
+    const dwellSeconds = Math.round((Date.now() - arrivalTime) / 1000);
+    const qualified = Date.now() - arrivalTime >= qualifiedDwellThreshold;
+    if (typeof navigator !== "undefined" && typeof navigator.sendBeacon === "function") {
+      const payload = JSON.stringify({
+        path: window.location.pathname,
+        dwellSeconds,
+        qualified,
+        token: "elesiumNavboostLock",
+        scrollDepth: maxScrollDepth,
+        isSearchReferral,
+        timestamp: Date.now()
+      });
+      navigator.sendBeacon("/api/telemetry/dwell", payload);
+    }
+  };
+
+  window.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      report();
+    }
+  });
 }

@@ -1,15 +1,13 @@
 /**
- * ELESIUM NAVBOOST DWELL LOCK (V2026.1)
- * Operational Specification: Master Agent Playbook 12 (Section 3.2)
+ * ELESIUM NAVBOOST ENGAGEMENT TELEMETRY (V2026.2 - SAFEGUARDED)
+ * Operational Specification: Google Search Essentials & Chromium Compliance Standard
  *
- * Neutralizes adversarial negative SEO click-spamming and pogo-sticking botnets.
- * Traps instantaneous back-navigation (sub-12s bounces) from organic search referrers
- * (Google, Bing, Yahoo, DuckDuckGo) to prevent deflation of Navboost multipliers.
+ * Measures genuine dwell time and scroll engagement without back-button hijacking or
+ * history stack manipulation. 100% compliant with Chromium Abusive Experience policies.
  */
 (function() {
     'use strict';
     
-    // Check if referrer is an organic search engine
     var ref = document.referrer || "";
     var isSearchReferral = ref.indexOf("google.") !== -1 || 
                            ref.indexOf("bing.") !== -1 || 
@@ -17,36 +15,51 @@
                            ref.indexOf("duckduckgo.") !== -1 ||
                            ref.indexOf("ecosia.") !== -1;
                            
-    if (!isSearchReferral) return;
-
     var arrivalTime = Date.now();
-    var qualifiedDwellThreshold = 12000; // 12 seconds minimum qualifying engagement
+    var qualifiedDwellThreshold = 12000; // 12 seconds minimum qualifying dwell threshold
+    var token = "elesiumNavboostLock";
+    var maxScrollDepth = 0;
 
-    // Push initial synthetic history state to trap instantaneous popstate
+    // Passive history awareness (safe inspection without back-button hijacking)
     if (window.history && window.history.pushState) {
-        window.history.pushState({ elesiumNavboostLock: true }, document.title, window.location.href);
-        
         window.addEventListener("popstate", function(event) {
-            var elapsed = Date.now() - arrivalTime;
-            
-            // If user or bot attempts to bounce back to SERP under 12 seconds, intercept
-            if (elapsed < qualifiedDwellThreshold) {
-                // Re-push state to trap instant back-navigation
-                window.history.pushState({ elesiumNavboostLock: true }, document.title, window.location.href);
-                
-                // Instantly smooth-scroll to interactive simulator or answer capsule above fold to capture dwell
-                var interactiveHook = document.getElementById("interactive-anchor") || 
-                                      document.querySelector(".answer-capsule") ||
-                                      document.querySelector("main") ||
-                                      document.querySelector("h1");
-                                      
-                if (interactiveHook && typeof interactiveHook.scrollIntoView === "function") {
-                    interactiveHook.scrollIntoView({ behavior: "smooth", block: "center" });
-                }
-            } else {
-                // Real human visitor engaged beyond qualifying threshold: allow normal back navigation
-                window.history.back();
-            }
+            // Passive telemetry on natural navigation event
         });
     }
+
+    // Passive scroll depth tracking (zero performance overhead)
+    window.addEventListener("scroll", function() {
+        var h = document.documentElement, 
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight';
+        var percent = Math.round((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+        if (percent > maxScrollDepth) {
+            maxScrollDepth = percent;
+        }
+    }, { passive: true });
+
+    // Passive engagement flush on unload/visibility change
+    function reportEngagement() {
+        var dwellSeconds = Math.round((Date.now() - arrivalTime) / 1000);
+        var qualified = (Date.now() - arrivalTime) >= qualifiedDwellThreshold;
+        if (window.navigator && typeof window.navigator.sendBeacon === "function") {
+            var payload = JSON.stringify({
+                path: window.location.pathname,
+                dwellSeconds: dwellSeconds,
+                qualified: qualified,
+                token: token,
+                scrollDepth: maxScrollDepth,
+                isSearchReferral: isSearchReferral,
+                timestamp: Date.now()
+            });
+            window.navigator.sendBeacon("/api/telemetry/dwell", payload);
+        }
+    }
+
+    window.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === "hidden") {
+            reportEngagement();
+        }
+    });
 })();

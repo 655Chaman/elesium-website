@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-11-09T12:26:53.634402Z",
+  "summary": {
+    "total_requests_audited": 7,
+    "googlebot_requests": 5,
+    "ai_search_crawlers": 1,
+    "human_visitors": 1,
+    "crawl_efficiency_index": "60.00%"
+  },
+  "googlebot_status_breakdown": {
+    "200": 3,
+    "301": 1,
+    "404": 1
+  },
+  "silo_distribution": {
+    "/solutions/": 3,
+    "/signals/": 1,
+    "other": 1
+  },
+  "charles_taylor_redirect_waste": {
+    "total_redirect_hops": 1,
+    "flagged_paths_sample": [
+      [
+        "/solutions/old-legacy-redirect",
+        301
+      ]
+    ]
+  },
+  "growth_scale_crawler_traps": {
+    "total_traps_detected": 1,
+    "flagged_traps_sample": [
+      [
+        "/solutions/catalog?filter=sap&sort=asc",
+        200
+      ]
+    ]
+  },
+  "actionable_remediation": [
+    "Update internal links pointing to 301 URLs directly to canonical destination to save Googlebot crawl budget.",
+    "Inject 'Disallow: /*?*filter=' into robots.txt to prevent faceted crawler trap loops.",
+    "Enforce HTTP 410 Gone immediately on deleted legacy URLs rather than 404 to de-index within 24-48 hours."
+  ]
+}
