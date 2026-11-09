@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embed: Enterprise LLM Token Cost Arbitrage Calculator | Elesium</title>
-  <meta name="description" content="Calculate enterprise token cost divergence between GPT-4o, Claude 3.5 Sonnet, and sovereign on-premise vLLM clusters. Amortize hardware and reduce TCO by up to 86%.">
-  <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#090d16">
-  <link rel="canonical" href="https://elesium.online/tools/token-cost-arbitrage-calculator/">
-  
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Embed: Enterprise LLM Token Cost Arbitrage Calculator | Elesium</title>
+<meta content="Calculate enterprise token cost divergence between GPT-4o, Claude 3.5 Sonnet, and sovereign on-premise vLLM clusters. Amortize hardware and reduce TCO by up to 86%." name="description"/>
+<meta content="noindex, follow" name="robots"/>
+<meta content="#090d16" name="theme-color"/>
+<link href="https://elesium.online/tools/token-cost-arbitrage-calculator/" rel="canonical"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -120,8 +120,7 @@
   ]
 }
 </script>
-
-  <style>
+<style>
 
     :root {
       --bg: #090d16;
@@ -171,58 +170,50 @@
   </style>
 </head>
 <body>
-
 <div class="calculator-container" id="widget">
-  <div class="header">
-    <h1>⚡ Enterprise LLM Token Cost Arbitrage Model</h1>
-    <p>Simulate monthly operating costs: Proprietary APIs vs On-Premise DeepSeek-V3 / vLLM cluster.</p>
-  </div>
-
-  <div class="input-group">
-    <div class="label-row">
-      <span>Monthly Input Tokens:</span>
-      <span id="inputTokensDisplay" style="color: var(--accent);">50,000,000 (50M)</span>
-    </div>
-    <input type="range" min="1" max="500" value="50" class="slider" id="inputSlider">
-  </div>
-
-  <div class="input-group">
-    <div class="label-row">
-      <span>Monthly Output Tokens:</span>
-      <span id="outputTokensDisplay" style="color: var(--accent);">15,000,000 (15M)</span>
-    </div>
-    <input type="range" min="1" max="200" value="15" class="slider" id="outputSlider">
-  </div>
-
-  <div class="results-grid">
-    <div class="result-card">
-      <div class="model-title">OpenAI GPT-4o</div>
-      <div class="cost-val" id="gptCost">$275</div>
-      <div class="subtext">In: $2.50/M | Out: $10.00/M</div>
-      <div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
-    </div>
-
-    <div class="result-card">
-      <div class="model-title">Claude 3.5 Sonnet</div>
-      <div class="cost-val" id="claudeCost">$375</div>
-      <div class="subtext">In: $3.00/M | Out: $15.00/M</div>
-      <div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
-    </div>
-
-    <div class="result-card highlight">
-      <div class="model-title">On-Prem DeepSeek-V3</div>
-      <div class="cost-val" id="deepseekCost" style="color: var(--accent);">$48</div>
-      <div class="subtext">Raw GPU Compute Arbitrage</div>
-      <div class="savings-badge" id="savingsBadge">82.5% SAVINGS</div>
-    </div>
-  </div>
-
-  <div class="watermark-footer">
-    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
-    <span>Zero Data Retention • DPDP Compliant</span>
-  </div>
+<div class="header">
+<h1>⚡ Enterprise LLM Token Cost Arbitrage Model</h1>
+<p>Simulate monthly operating costs: Proprietary APIs vs On-Premise DeepSeek-V3 / vLLM cluster﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌‌‍​‌‌​‌‌​​‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌​‌​‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​​‌​‌‌​‌‍​‌‌​​​‌‌‍​‌‌​‌‌‌‌‍​‌‌‌​​‌‌‍​‌‌‌​‌​​‍​​‌​‌‌​‌‍​‌‌​​​​‌‍​‌‌‌​​‌​‍​‌‌​​​‌​‍​‌‌​‌​​‌‍​‌‌‌​‌​​‍​‌‌‌​​‌​‍​‌‌​​​​‌‍​‌‌​​‌‌‌‍​‌‌​​‌​‌‍​​‌​‌‌​‌‍​‌‌​​​‌‌‍​‌‌​​​​‌‍​‌‌​‌‌​​‍​‌‌​​​‌‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​​‍​‌‌​​​​‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌‌​​‌​‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​‌‌​​​‌​‍​‌‌​​​‌‌‍​​‌‌​​‌‌‍​​‌‌​​‌​‍​​‌‌​​​‌‍​​‌‌​​‌‌‍​​‌‌‌​​‌‍​‌‌​​‌​​‍​​‌‌​​​​‍​​‌‌​‌‌‌‍​​‌‌​‌​‌‍​‌‌​​‌​​‍​‌‌​​​‌​‍​‌‌​​​‌‌‍​​‌‌​‌​​‍​‌‌​​‌​​﻿.</p>
 </div>
-
+<div class="input-group">
+<div class="label-row">
+<span>Monthly Input Tokens:</span>
+<span id="inputTokensDisplay" style="color: var(--accent);">50,000,000 (50M)</span>
+</div>
+<input class="slider" id="inputSlider" max="500" min="1" type="range" value="50"/>
+</div>
+<div class="input-group">
+<div class="label-row">
+<span>Monthly Output Tokens:</span>
+<span id="outputTokensDisplay" style="color: var(--accent);">15,000,000 (15M)</span>
+</div>
+<input class="slider" id="outputSlider" max="200" min="1" type="range" value="15"/>
+</div>
+<div class="results-grid">
+<div class="result-card">
+<div class="model-title">OpenAI GPT-4o</div>
+<div class="cost-val" id="gptCost">$275</div>
+<div class="subtext">In: $2.50/M | Out: $10.00/M</div>
+<div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
+</div>
+<div class="result-card">
+<div class="model-title">Claude 3.5 Sonnet</div>
+<div class="cost-val" id="claudeCost">$375</div>
+<div class="subtext">In: $3.00/M | Out: $15.00/M</div>
+<div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
+</div>
+<div class="result-card highlight">
+<div class="model-title">On-Prem DeepSeek-V3</div>
+<div class="cost-val" id="deepseekCost" style="color: var(--accent);">$48</div>
+<div class="subtext">Raw GPU Compute Arbitrage</div>
+<div class="savings-badge" id="savingsBadge">82.5% SAVINGS</div>
+</div>
+</div>
+<div class="watermark-footer">
+<span>Calculated via <a href="https://elesium.online/solutions" rel="noopener noreferrer" target="_blank">Elesium Enterprise AI Solutions</a></span>
+<span>Zero Data Retention • DPDP Compliant</span>
+</div>
+</div>
 <script>
 const inSlider = document.getElementById('inputSlider');
   const outSlider = document.getElementById('outputSlider');
@@ -284,6 +275,5 @@ const inSlider = document.getElementById('inputSlider');
   setTimeout(sendHeight, 500);
 })();
 </script>
-
 </body>
 </html>
