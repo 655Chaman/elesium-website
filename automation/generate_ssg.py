@@ -40,6 +40,14 @@ try:
 except ImportError:
     from topical_silos_data import SILO_DEFINITIONS, get_silo_for_solution, get_peer_solutions_in_silo
 
+try:
+    from automation.knowledge_graph_registry import SILO_KNOWLEDGE_MESH, STATUTORY_ENTITIES, ORGANIZATION_ENTITY
+except ImportError:
+    try:
+        from knowledge_graph_registry import SILO_KNOWLEDGE_MESH, STATUTORY_ENTITIES, ORGANIZATION_ENTITY
+    except ImportError:
+        SILO_KNOWLEDGE_MESH, STATUTORY_ENTITIES, ORGANIZATION_ENTITY = {}, {}, {}
+
 def load_commercial_urls():
     if COMMERCIAL_URLS_PATH.exists():
         try:
@@ -9794,6 +9802,13 @@ def generate_ssg():
             cat_html = cat_html.replace('<div id="root"></div>', f'<div id="root">{cat_semantic}</div>')
 
         # Build Schema.org graph for the Category Pillar Hub
+        mesh = SILO_KNOWLEDGE_MESH.get(silo_id, {})
+        regulators_list = [STATUTORY_ENTITIES[r] for r in mesh.get("regulators", []) if r in STATUTORY_ENTITIES]
+        mentions_list = list(regulators_list) + list(mesh.get("secondary_entities", []))
+        about_list = [{"@id": "https://elesium.online/#organization"}]
+        if "primary_entity" in mesh:
+            about_list.append(mesh["primary_entity"])
+
         cat_schema = {
             "@context": "https://schema.org",
             "@graph": [
@@ -9804,7 +9819,8 @@ def generate_ssg():
                     "name": cat_title,
                     "description": cat_desc,
                     "isPartOf": {"@id": "https://elesium.online/#website"},
-                    "about": {"@id": "https://elesium.online/#organization"}
+                    "about": about_list,
+                    "mentions": mentions_list
                 },
                 {
                     "@type": "CollectionPage",
@@ -9813,7 +9829,8 @@ def generate_ssg():
                     "name": cat_title,
                     "description": cat_desc,
                     "isPartOf": {"@id": "https://elesium.online/#website"},
-                    "about": {"@id": "https://elesium.online/#organization"},
+                    "about": about_list,
+                    "mentions": mentions_list,
                     "hasPart": [
                         {
                             "@type": "Service",

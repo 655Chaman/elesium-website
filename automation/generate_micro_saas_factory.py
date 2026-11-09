@@ -233,10 +233,36 @@ def generate_schema_json(tool: Dict[str, Any]) -> str:
                 },
                 "creator": {
                     "@type": "Corporation",
-                    "@id": "https://elesium.online/#localbusiness-hq",
+                    "@id": "https://elesium.online/#organization",
                     "name": "Elesium - Enterprise AI & Automation",
                     "url": "https://elesium.online"
                 },
+                "provider": {
+                    "@id": "https://elesium.online/#organization"
+                },
+                "about": [
+                    {
+                        "@type": "DefinedTerm",
+                        "name": tool["category"],
+                        "sameAs": "https://www.wikidata.org/wiki/Q11660"
+                    }
+                ],
+                "knowsAbout": [
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Artificial Intelligence",
+                        "sameAs": "https://www.wikidata.org/wiki/Q11660",
+                        "identifier": "/m/0mkz",
+                        "url": "https://www.google.com/search?kgmid=/m/0mkz"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Autonomous Agent",
+                        "sameAs": "https://www.wikidata.org/wiki/Q116139474",
+                        "identifier": "/g/11t6w8b67f",
+                        "url": "https://www.google.com/search?kgmid=/g/11t6w8b67f"
+                    }
+                ],
                 "featureList": [
                     tool["answer_capsule"],
                     "Instant client-side calculation with zero data retention",
