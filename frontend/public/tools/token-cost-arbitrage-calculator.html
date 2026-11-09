@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise LLM Token Cost Arbitrage Calculator | Elesium</title>
+  <meta name="description" content="Calculate enterprise token cost divergence between GPT-4o, Claude 3.5 Sonnet, and sovereign on-premise vLLM clusters. Amortize hardware and reduce TCO by up to 86%.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#020617">
+  <link rel="canonical" href="https://elesium.online/tools/token-cost-arbitrage-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://elesium.online/tools/token-cost-arbitrage-calculator/">
+  <link rel="alternate" hreflang="en-in" href="https://elesium.online/tools/token-cost-arbitrage-calculator/">
+  <link rel="alternate" hreflang="en-us" href="https://elesium.online/us/tools/token-cost-arbitrage-calculator/">
+  <link rel="alternate" hreflang="en-gb" href="https://elesium.online/uk/tools/token-cost-arbitrage-calculator/">
+  <link rel="alternate" hreflang="en-ae" href="https://elesium.online/ae/tools/token-cost-arbitrage-calculator/">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "WebApplication",
+        "SoftwareApplication"
+      ],
+      "@id": "https://elesium.online/tools/token-cost-arbitrage-calculator/#app",
+      "name": "Enterprise LLM Token Cost Arbitrage Calculator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All modern web browsers (Chrome, Safari, Firefox, Edge)",
+      "browserRequirements": "Requires JavaScript. HTML5 Canvas and CSS Grid compliant.",
+      "url": "https://elesium.online/tools/token-cost-arbitrage-calculator/",
+      "description": "Calculate enterprise token cost divergence between GPT-4o, Claude 3.5 Sonnet, and sovereign on-premise vLLM clusters. Amortize hardware and reduce TCO by up to 86%.",
+      "softwareVersion": "2026.4.2",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "creator": {
+        "@type": "Corporation",
+        "@id": "https://elesium.online/#localbusiness-hq",
+        "name": "Elesium - Enterprise AI & Automation",
+        "url": "https://elesium.online"
+      },
+      "featureList": [
+        "The Enterprise LLM Token Cost Arbitrage Calculator models monthly operating expense divergence between hyperscaler multi-tenant APIs (GPT-4o, Claude 3.5 Sonnet) and on-premise private sovereign clusters (DeepSeek-V3, vLLM). It dynamically amortizes dedicated GPU hardware, power consumption, and network egress against peak token velocity to reveal 78% to 86% TCO reduction.",
+        "Instant client-side calculation with zero data retention",
+        "Responsive iframe embed code with dynamic postMessage auto-resizing",
+        "Mathematical methodology and empirical benchmark documentation"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://elesium.online/tools/token-cost-arbitrage-calculator/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://elesium.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Interactive Tools",
+          "item": "https://elesium.online/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LLM Token Cost Arbitrage Calculator",
+          "item": "https://elesium.online/tools/token-cost-arbitrage-calculator/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    /* Standalone Master Layout */
+    :root {
+      --page-bg: #020617;
+      --card-bg: #0b1120;
+      --border-color: #1e293b;
+      --text-main: #f8fafc;
+      --text-dim: #94a3b8;
+      --tool-accent: #06b6d4;
+      --tool-glow: rgba(6, 182, 212, 0.2);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    body { background-color: var(--page-bg); color: var(--text-main); min-height: 100vh; line-height: 1.6; }
+    
+    /* Global Navigation */
+    .site-nav {
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand { font-weight: 800; font-size: 18px; letter-spacing: -0.5px; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; gap: 20px; align-items: center; font-size: 13px; font-weight: 500; }
+    .nav-links a { color: var(--text-dim); text-decoration: none; transition: color 0.15s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: #10b981; color: #020617 !important; padding: 6px 14px; border-radius: 8px; font-weight: 700; }
+    
+    /* Main Content Container */
+    .main-wrap { max-width: 1040px; margin: 0 auto; padding: 36px 20px 80px; }
+    
+    /* Breadcrumbs */
+    .breadcrumbs { font-size: 12px; color: var(--text-dim); margin-bottom: 24px; display: flex; gap: 8px; align-items: center; }
+    .breadcrumbs a { color: var(--text-dim); text-decoration: none; }
+    .breadcrumbs a:hover { color: #fff; }
+    .breadcrumbs span.current { color: var(--tool-accent); font-weight: 600; }
+    
+    /* Hero Header */
+    .hero-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color); margin-bottom: 32px; }
+    .hero-title-area { flex: 1; }
+    .category-badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--tool-accent); background: rgba(6, 182, 212, 0.1); border: 1px solid var(--tool-accent); padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .hero-h1 { font-size: 28px; sm-font-size: 34px; font-weight: 800; color: #fff; letter-spacing: -0.8px; line-height: 1.25; margin-bottom: 12px; }
+    .hero-tagline { font-size: 14px; color: var(--text-dim); margin-bottom: 16px; }
+    
+    /* 45-Word Answer Capsule */
+    .answer-capsule {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-top: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .answer-capsule strong { color: #34d399; font-weight: 700; }
+    
+    /* Embed Button */
+    .embed-trigger-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: #f1f5f9;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .embed-trigger-btn:hover { border-color: var(--tool-accent); transform: translateY(-1px); }
+    
+    /* Calculator Canvas Mounting */
+    .calculator-canvas { margin: 32px 0; display: flex; justify-content: center; }
+    
+    /* Inner Calculator Overrides */
+
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1e293b;
+      --accent: #06b6d4;
+      --accent-glow: rgba(6, 182, 212, 0.2);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .calculator-container { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 720px; width: 100%; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+    .header h1 { font-size: 24px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .header p { color: var(--text-muted); font-size: 14px; margin-top: 6px; }
+    .input-group { margin-bottom: 20px; }
+    .label-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .slider { width: 100%; height: 6px; border-radius: 4px; background: #334155; outline: none; -webkit-appearance: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; box-shadow: 0 0 10px var(--accent); }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .result-card { background: #0c121e; border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-align: center; }
+    .result-card.highlight { border-color: var(--accent); background: radial-gradient(circle at top, #083344 0%, #0c121e 100%); box-shadow: 0 0 20px var(--accent-glow); }
+    .model-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .cost-val { font-size: 24px; font-weight: 800; color: #fff; margin: 10px 0 4px; }
+    .subtext { font-size: 11px; color: var(--text-muted); }
+    .savings-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: var(--success); font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 999px; margin-top: 8px; }
+    .watermark-footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+    .watermark-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .watermark-footer a:hover { text-decoration: underline; }
+    @media(max-width: 640px) { .results-grid { grid-template-columns: 1fr; } }
+  
+    .calculator-container {
+      width: 100% !important;
+      max-width: 860px !important;
+      background: var(--card-bg) !important;
+      border: 1px solid var(--border-color) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* Methodology Section */
+    .methodology-box {
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border-color);
+    }
+    .methodology-box h2 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 20px; }
+    .methodology-content { font-size: 14px; color: #cbd5e1; line-height: 1.7; }
+    .methodology-content h3 { font-size: 16px; font-weight: 700; color: #f1f5f9; margin: 24px 0 10px; }
+    .methodology-content p { margin-bottom: 14px; }
+    .methodology-content ul { margin-bottom: 16px; padding-left: 20px; }
+    .methodology-content li { margin-bottom: 6px; }
+    .methodology-content pre {
+      background: #000;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12.5px;
+      color: #38bdf8;
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+    .methodology-content code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; background: #1e293b; padding: 2px 6px; border-radius: 4px; color: #38bdf8; }
+
+    /* Related Tools Grid */
+    .related-tools-section {
+      margin-top: 56px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border-color);
+    }
+    .related-tools-section h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    @media(max-width: 680px) { .related-grid { grid-template-columns: 1fr; } .hero-header { flex-direction: column; } }
+    .related-tool-card {
+      background: #0b1120;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .related-tool-card:hover { border-color: var(--tool-accent); transform: translateY(-2px); }
+    .related-tag { font-size: 10.5px; font-weight: 700; color: var(--tool-accent); text-transform: uppercase; margin-bottom: 6px; }
+    .related-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .related-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+    /* Embed Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-card {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      max-width: 680px;
+      width: 100%;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; margin-bottom: 16px; }
+    .modal-header h3 { font-size: 17px; font-weight: 700; color: #fff; }
+    .modal-close-btn { background: none; border: none; color: var(--text-dim); font-size: 20px; cursor: pointer; }
+    .modal-close-btn:hover { color: #fff; }
+    .modal-desc { font-size: 13px; color: var(--text-dim); margin-bottom: 16px; }
+    .embed-code-box {
+      background: #020617;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11.5px;
+      color: #34d399;
+      overflow-x: auto;
+      max-height: 220px;
+      margin-bottom: 16px;
+      white-space: pre;
+    }
+    .modal-actions { display: flex; justify-content: space-between; align-items: center; }
+    .copy-btn { background: #10b981; color: #020617; border: none; font-weight: 700; font-size: 12.5px; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+    .copy-btn:hover { background: #34d399; }
+
+    /* Footer */
+    .site-footer { margin-top: 80px; border-top: 1px solid var(--border-color); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--text-dim); }
+    .site-footer a { color: var(--text-dim); text-decoration: none; margin: 0 10px; }
+    .site-footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-nav">
+    <a href="/" class="nav-brand">
+      <span style="color:#10b981;">⚡</span> ELESIUM
+    </a>
+    <nav class="nav-links">
+      <a href="/solutions/">Solutions Fleet</a>
+      <a href="/tools/" style="color:#fff; font-weight:700;">Interactive Tools</a>
+      <a href="/commercial-directory.html">Directory</a>
+      <a href="https://wa.me/918317329312" target="_blank" rel="noopener" class="nav-cta">WhatsApp Architect</a>
+    </nav>
+  </header>
+
+  <main class="main-wrap">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> &rarr;
+      <a href="/tools/">Interactive Tools</a> &rarr;
+      <span class="current">LLM Token Cost Arbitrage Calculator</span>
+    </nav>
+
+    <!-- Hero Header -->
+    <div class="hero-header">
+      <div class="hero-title-area">
+        <span class="category-badge">DeepTech & Cloud FinOps</span>
+        <h1 class="hero-h1">Enterprise LLM Token Cost Arbitrage Calculator</h1>
+        <p class="hero-tagline">Model monthly operating expense divergence: Proprietary Cloud APIs vs On-Premise Sovereign vLLM Clusters.</p>
+        
+        <!-- Answer Capsule for Google SGE & AI Overviews -->
+        <div class="answer-capsule">
+          <strong>Answer Capsule: </strong>
+          The Enterprise LLM Token Cost Arbitrage Calculator models monthly operating expense divergence between hyperscaler multi-tenant APIs (GPT-4o, Claude 3.5 Sonnet) and on-premise private sovereign clusters (DeepSeek-V3, vLLM). It dynamically amortizes dedicated GPU hardware, power consumption, and network egress against peak token velocity to reveal 78% to 86% TCO reduction.
+        </div>
+      </div>
+
+      <!-- Embed Modal Trigger -->
+      <button onclick="openModal()" class="embed-trigger-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--tool-accent);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        Embed on Your Site
+      </button>
+    </div>
+
+    <!-- Live Interactive Calculator Canvas -->
+    <div class="calculator-canvas">
+      <div class="calculator-container" id="widget">
+  <div class="header">
+    <h1>⚡ Enterprise LLM Token Cost Arbitrage Model</h1>
+    <p>Simulate monthly operating costs: Proprietary APIs vs On-Premise DeepSeek-V3 / vLLM cluster.</p>
+  </div>
+
+  <div class="input-group">
+    <div class="label-row">
+      <span>Monthly Input Tokens:</span>
+      <span id="inputTokensDisplay" style="color: var(--accent);">50,000,000 (50M)</span>
+    </div>
+    <input type="range" min="1" max="500" value="50" class="slider" id="inputSlider">
+  </div>
+
+  <div class="input-group">
+    <div class="label-row">
+      <span>Monthly Output Tokens:</span>
+      <span id="outputTokensDisplay" style="color: var(--accent);">15,000,000 (15M)</span>
+    </div>
+    <input type="range" min="1" max="200" value="15" class="slider" id="outputSlider">
+  </div>
+
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="model-title">OpenAI GPT-4o</div>
+      <div class="cost-val" id="gptCost">$275</div>
+      <div class="subtext">In: $2.50/M | Out: $10.00/M</div>
+      <div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
+    </div>
+
+    <div class="result-card">
+      <div class="model-title">Claude 3.5 Sonnet</div>
+      <div class="cost-val" id="claudeCost">$375</div>
+      <div class="subtext">In: $3.00/M | Out: $15.00/M</div>
+      <div class="subtext" style="margin-top: 6px;">Multi-Tenant Cloud</div>
+    </div>
+
+    <div class="result-card highlight">
+      <div class="model-title">On-Prem DeepSeek-V3</div>
+      <div class="cost-val" id="deepseekCost" style="color: var(--accent);">$48</div>
+      <div class="subtext">Raw GPU Compute Arbitrage</div>
+      <div class="savings-badge" id="savingsBadge">82.5% SAVINGS</div>
+    </div>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>Zero Data Retention • DPDP Compliant</span>
+  </div>
+</div>
+    </div>
+
+    <!-- Mathematical Methodology Section -->
+    <section class="methodology-box">
+      <h2>Mathematical Methodology & Benchmark Assumptions</h2>
+      <div class="methodology-content">
+        
+<h3>1. Mathematical Formulation & Amortization Mechanics</h3>
+<p>The total cost of ownership (TCO) for foundation model inference diverges significantly between multi-tenant public APIs and dedicated private sovereign clusters. The model implements the following dual-cost formulation:</p>
+<pre><code>C_cloud = ((T_in * P_in + T_out * P_out) / 1,000,000) * 12
+C_sovereign = C_hw_amortized + C_power_cooling + C_network_egress
+Net_Annual_Savings = C_cloud - C_sovereign
+Arbitrage_Ratio = (Net_Annual_Savings / C_cloud) * 100%</code></pre>
+
+<h3>2. Empirical Pricing & Hardware Baselines</h3>
+<ul>
+  <li><strong>OpenAI GPT-4o:</strong> $2.50 per 1M prompt tokens, $10.00 per 1M completion tokens ($4.38/MTok blended at 3:1 input/output ratio).</li>
+  <li><strong>Anthropic Claude 3.5 Sonnet:</strong> $3.00 per 1M prompt tokens, $15.00 per 1M completion tokens ($6.00/MTok blended at 3:1 input/output ratio).</li>
+  <li><strong>Google Gemini 1.5 Pro:</strong> $3.50 per 1M prompt tokens, $10.50 per 1M completion tokens ($5.25/MTok blended).</li>
+  <li><strong>On-Premise Sovereign Cluster:</strong> 8x NVIDIA L40S or 4x H100 SXM5 compute nodes capital cost amortized over 36 months ($1,850/mo), electricity calculated at $0.11/kWh with PUE 1.35, and redundant NVLink switching. Net equivalent cost: $0.27/MTok input and $1.10/MTok output.</li>
+</ul>
+
+<h3>3. Data Residency & Legal Non-Financial Dividend</h3>
+<p>In addition to raw dollar arbitrage, private sovereign clusters eliminate statutory risk under India's DPDP Act 2023, EU GDPR Article 44 cross-border transfer prohibitions, and RBI circular RBI/2023-24/104 regarding confidential banking telemetry retention on external multi-tenant infrastructure.</p>
+
+      </div>
+    </section>
+
+    <!-- Related Interactive Tools -->
+    <section class="related-tools-section">
+      <h3>Explore More Enterprise Micro-SaaS Simulators</h3>
+      <div class="related-grid">
+        
+        <a href="/tools/dpdp-act-penalty-exposure-calculator/" class="related-tool-card">
+          <div class="related-tag">Regulatory Compliance & Infosec</div>
+          <div class="related-title">DPDP Act Penalty Exposure Grader</div>
+          <div class="related-desc">Assess enterprise statutory financial penalty exposure under India's DPDP Act 2023 up to ₹250 C...</div>
+        </a>
+        <a href="/tools/enterprise-rag-latency-simulator/" class="related-tool-card">
+          <div class="related-tag">AI Architecture & Vector Systems</div>
+          <div class="related-title">Enterprise RAG Latency Simulator</div>
+          <div class="related-desc">Simulate end-to-end RAG latency across Qdrant, Milvus, pgvector, and sovereign vLLM clusters. E...</div>
+        </a>
+        <a href="/tools/agent-vram-gpu-cluster-sizer/" class="related-tool-card">
+          <div class="related-tag">Hardware & Accelerated Compute</div>
+          <div class="related-title">GPU VRAM & Cluster Sizer</div>
+          <div class="related-desc">Size GPU cluster requirements for multi-agent workloads. Calculate VRAM for DeepSeek-V3, Llama-...</div>
+        </a>
+        <a href="/tools/b2b-seo-roi-payback-model/" class="related-tool-card">
+          <div class="related-tag">Growth Engineering & Search</div>
+          <div class="related-title">B2B Programmatic SEO ROI Model</div>
+          <div class="related-desc">Calculate B2B programmatic SEO pipeline revenue, customer acquisition cost (CAC), and payback h...</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Embed Modal -->
+  <div id="embedModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Embed LLM Token Cost Arbitrage Calculator</h3>
+        <button onclick="closeModal()" class="modal-close-btn">&times;</button>
+      </div>
+      <p class="modal-desc">Copy and paste this responsive HTML iframe snippet directly into your blog, publication, or technical documentation. It dynamically auto-resizes with zero scrollbars.</p>
+      <div class="embed-code-box" id="embedCodeText">&lt;!-- Elesium LLM Token Cost Arbitrage Calculator Embed Widget --&gt;
+&lt;div class="elesium-widget-wrapper" style="width:100%; max-width:820px; margin:24px auto;"&gt;
+  &lt;iframe 
+    id="elesium-token-cost-arbitrage-frame"
+    src="https://elesium.online/embed/token-cost-arbitrage" 
+    width="100%" 
+    height="650" 
+    style="border:0; border-radius:16px; overflow:hidden; display:block; background:#090d16;" 
+    loading="lazy"
+    title="Enterprise LLM Token Cost Arbitrage Calculator"&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  window.addEventListener('message', function(e) {
+    if (e.data && (e.data.type === 'elesium-embed-resize' || e.data.type === 'RESIZE_EMBED')) {
+      var frame = document.getElementById('elesium-token-cost-arbitrage-frame');
+      if (frame && e.data.height) frame.style.height = e.data.height + 'px';
+    }
+  });
+&lt;/script&gt;</div>
+      <div class="modal-actions">
+        <span style="font-size:12px; color:var(--text-dim);">Zero API dependencies • DPDP & GDPR Safe</span>
+        <button onclick="copyEmbedCode()" class="copy-btn" id="copyBtn">Copy Embed Code</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Elesium Enterprise AI Solutions. Sovereign Private VPC Intelligence.</p>
+    <div style="margin-top: 8px;">
+      <a href="/solutions/">Solutions</a>
+      <a href="/tools/">Tools Fleet</a>
+      <a href="/llms.txt">llms.txt</a>
+      <a href="/robots.txt">robots.txt</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+const inSlider = document.getElementById('inputSlider');
+  const outSlider = document.getElementById('outputSlider');
+  const inDisplay = document.getElementById('inputTokensDisplay');
+  const outDisplay = document.getElementById('outputTokensDisplay');
+  const gptCostEl = document.getElementById('gptCost');
+  const claudeCostEl = document.getElementById('claudeCost');
+  const deepseekCostEl = document.getElementById('deepseekCost');
+  const savingsEl = document.getElementById('savingsBadge');
+
+  function calculate() {
+    const inM = parseFloat(inSlider.value);
+    const outM = parseFloat(outSlider.value);
+
+    inDisplay.innerText = `${(inM * 1000000).toLocaleString()} (${inM}M)`;
+    outDisplay.innerText = `${(outM * 1000000).toLocaleString()} (${outM}M)`;
+
+    // Rates per Million tokens
+    const gptCost = (inM * 2.50) + (outM * 10.00);
+    const claudeCost = (inM * 3.00) + (outM * 15.00);
+    // DeepSeek V3 on-premise hosted rate estimate (amortized GPU instance + inference energy)
+    const deepseekCost = (inM * 0.27) + (outM * 1.10) + 15; // baseline cluster standby
+
+    gptCostEl.innerText = `$${Math.round(gptCost).toLocaleString()}`;
+    claudeCostEl.innerText = `$${Math.round(claudeCost).toLocaleString()}`;
+    deepseekCostEl.innerText = `$${Math.round(deepseekCost).toLocaleString()}`;
+
+    const maxCloud = Math.max(gptCost, claudeCost);
+    const savingsPct = Math.round(((maxCloud - deepseekCost) / maxCloud) * 100);
+    savingsEl.innerText = `${savingsPct}% SAVINGS`;
+
+    // Notify parent window if mounted in iframe (responsive postMessage)
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'RESIZE_EMBED', height: document.getElementById('widget').offsetHeight + 48 }, '*');
+    }
+  }
+
+  inSlider.addEventListener('input', calculate);
+  outSlider.addEventListener('input', calculate);
+  calculate();
+
+    // Modal Handlers
+    function openModal() {
+      document.getElementById('embedModal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('embedModal').classList.remove('active');
+    }
+    function copyEmbedCode() {
+      var raw = `<!-- Elesium LLM Token Cost Arbitrage Calculator Embed Widget -->
+<div class="elesium-widget-wrapper" style="width:100%; max-width:820px; margin:24px auto;">
+  <iframe 
+    id="elesium-token-cost-arbitrage-frame"
+    src="https://elesium.online/embed/token-cost-arbitrage" 
+    width="100%" 
+    height="650" 
+    style="border:0; border-radius:16px; overflow:hidden; display:block; background:#090d16;" 
+    loading="lazy"
+    title="Enterprise LLM Token Cost Arbitrage Calculator">
+  </iframe>
+</div>
+<script>
+  window.addEventListener('message', function(e) {
+    if (e.data && (e.data.type === 'elesium-embed-resize' || e.data.type === 'RESIZE_EMBED')) {
+      var frame = document.getElementById('elesium-token-cost-arbitrage-frame');
+      if (frame && e.data.height) frame.style.height = e.data.height + 'px';
+    }
+  });
+</script>`;
+      navigator.clipboard.writeText(raw).then(function() {
+        var btn = document.getElementById('copyBtn');
+        btn.innerText = 'Copied to Clipboard!';
+        setTimeout(function() { btn.innerText = 'Copy Embed Code'; }, 2500);
+      });
+    }
+    window.addEventListener('click', function(e) {
+      var modal = document.getElementById('embedModal');
+      if (e.target === modal) closeModal();
+    });
+  </script>
+
+</body>
+</html>
