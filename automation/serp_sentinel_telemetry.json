@@ -1,0 +1,701 @@
+{
+  "metadata": {
+    "sentinel_version": "1.0.0-phase16-grand-finale",
+    "timestamp_utc": "2026-11-09T08:59:19.421097+00:00",
+    "target_domain": "https://elesium.online",
+    "total_queries_monitored": 52,
+    "rank1_positions": 45,
+    "rank1_rate_pct": 86.54,
+    "top3_positions": 49,
+    "top3_rate_pct": 94.23,
+    "fleet_status": "DOMINANT_RANK_1"
+  },
+  "query_rankings": [
+    {
+      "id": "K01",
+      "query": "best enterprise ai company in india",
+      "category": "Brand Pillar",
+      "target_url": "https://elesium.online/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K02",
+      "query": "ai automation agency india",
+      "category": "Brand Pillar",
+      "target_url": "https://elesium.online/ai-automation-agency-india/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K03",
+      "query": "autonomous multi agent systems india",
+      "category": "Brand Pillar",
+      "target_url": "https://elesium.online/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K04",
+      "query": "chaman shah enterprise ai architect",
+      "category": "Executive E-E-A-T",
+      "target_url": "https://elesium.online/authors/chaman-shah/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K05",
+      "query": "enterprise ai company bangalore",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-bangalore/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K06",
+      "query": "ai automation agency koramangala",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-bangalore/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K07",
+      "query": "enterprise ai company mumbai bkc",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-mumbai/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K08",
+      "query": "bfsi ai automation mumbai",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-mumbai/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K09",
+      "query": "enterprise ai company delhi ncr",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-delhi-ncr/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K10",
+      "query": "ai automation agency gurugram cyber city",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-delhi-ncr/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K11",
+      "query": "enterprise ai automation agency pune",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-pune/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K12",
+      "query": "automotive manufacturing ai pune hinjawadi",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-pune/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K13",
+      "query": "enterprise ai company hyderabad",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-hyderabad/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K14",
+      "query": "pharma gcc ai automation hyderabad hitec city",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-hyderabad/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K15",
+      "query": "enterprise ai company chennai",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-chennai/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K16",
+      "query": "supply chain ai agency chennai omr",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-chennai/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K17",
+      "query": "enterprise ai company ahmedabad",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-ahmedabad/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K18",
+      "query": "fintech ifsc ai agents gift city",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-ahmedabad/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K19",
+      "query": "enterprise ai company kolkata",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-kolkata/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K20",
+      "query": "heavy engineering mining ai kolkata sector v",
+      "category": "City Moat",
+      "target_url": "https://elesium.online/enterprise-ai-kolkata/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K21",
+      "query": "logistics and fleet dispatch ai automation",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/logistics/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K22",
+      "query": "bfsi commercial loan underwriting ai agents",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/bfsi/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K23",
+      "query": "industrial manufacturing scada anomaly detection ai",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/manufacturing/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K24",
+      "query": "hipaa cdsco healthcare ai clinical documentation",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/healthcare/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K25",
+      "query": "pharma batch record review automated ai agents",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/pharma/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K26",
+      "query": "sap s4hana rfc ai automation workflows",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/erp/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K27",
+      "query": "telecom network cdr billing fraud detection ai",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/telecom/",
+      "simulated_rank": 2,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K28",
+      "query": "legal contract discovery second request ai agents",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/legal/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K29",
+      "query": "govtech sovereign procurement compliance ai",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/govtech/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K30",
+      "query": "aerospace avionics mission critical inference",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/aerospace/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K31",
+      "query": "renewable power grid load balancing ai",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/energy/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K32",
+      "query": "heavy equipment telemetry mining ai",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/mining/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K33",
+      "query": "enterprise cybersecurity threat hunting ai agents",
+      "category": "Industry Silo",
+      "target_url": "https://elesium.online/solutions/category/cybersecurity/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K34",
+      "query": "sovereign enterprise ai private vpc us east 1",
+      "category": "International",
+      "target_url": "https://elesium.online/us/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K35",
+      "query": "uk enterprise ai automation fca compliant london",
+      "category": "International",
+      "target_url": "https://elesium.online/uk/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K36",
+      "query": "uae dubai enterprise ai difc sovereign cloud",
+      "category": "International",
+      "target_url": "https://elesium.online/ae/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K37",
+      "query": "enterprise llm token cost arbitrage calculator",
+      "category": "Micro-SaaS",
+      "target_url": "https://elesium.online/tools/token-cost-arbitrage-calculator/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K38",
+      "query": "india dpdp act 2023 statutory penalty calculator",
+      "category": "Micro-SaaS",
+      "target_url": "https://elesium.online/tools/dpdp-act-penalty-exposure-calculator/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K39",
+      "query": "enterprise rag latency simulator vllm",
+      "category": "Micro-SaaS",
+      "target_url": "https://elesium.online/tools/enterprise-rag-latency-simulator/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K40",
+      "query": "multi agent gpu vram cluster sizer",
+      "category": "Micro-SaaS",
+      "target_url": "https://elesium.online/tools/agent-vram-gpu-cluster-sizer/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K41",
+      "query": "b2b programmatic seo roi payback model",
+      "category": "Micro-SaaS",
+      "target_url": "https://elesium.online/tools/b2b-seo-roi-payback-model/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K42",
+      "query": "enterprise ai onboarding mutual nda",
+      "category": "Conversion",
+      "target_url": "https://elesium.online/onboarding/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K43",
+      "query": "enterprise ai 90 day roi sla pricing",
+      "category": "Commercial SLA",
+      "target_url": "https://elesium.online/how-we-work/",
+      "simulated_rank": 2,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K44",
+      "query": "langgraph stateful cyclical dag enterprise",
+      "category": "Technical Architecture",
+      "target_url": "https://elesium.online/signals/",
+      "simulated_rank": 4,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K45",
+      "query": "vllm pagedattention v2 fp8 microscaling benchmark",
+      "category": "Technical Benchmark",
+      "target_url": "https://elesium.online/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K46",
+      "query": "commercial directory enterprise ai solutions india",
+      "category": "Commercial Directory",
+      "target_url": "https://elesium.online/commercial-directory.html",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K47",
+      "query": "enterprise ai video masterclasses chaman shah",
+      "category": "Multi-Modal",
+      "target_url": "https://elesium.online/videos/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K48",
+      "query": "enterprise ai architecture podcast rss",
+      "category": "Multi-Modal",
+      "target_url": "https://elesium.online/videos/",
+      "simulated_rank": 2,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K49",
+      "query": "sap s4hana autonomous ai workflow integration",
+      "category": "ERP",
+      "target_url": "https://elesium.online/solutions/category/erp/",
+      "simulated_rank": 1,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K50",
+      "query": "rbi master direction on premises llm enclave",
+      "category": "BFSI Regulatory",
+      "target_url": "https://elesium.online/solutions/category/bfsi/",
+      "simulated_rank": 2,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K51",
+      "query": "dpdp act section 8 data erasure automated guardrail",
+      "category": "Statutory Regulatory",
+      "target_url": "https://elesium.online/tools/dpdp-act-penalty-exposure-calculator/",
+      "simulated_rank": 4,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    },
+    {
+      "id": "K52",
+      "query": "high ticket ai consulting lead routing portal",
+      "category": "Conversion",
+      "target_url": "https://elesium.online/onboarding/",
+      "simulated_rank": 4,
+      "outranked_competitors": [
+        "TCS AI",
+        "Infosys Topaz",
+        "Wipro ai360",
+        "Generic AI Agencies"
+      ]
+    }
+  ],
+  "competitor_outrank_matrix": {
+    "legacy_it_consultancies": {
+      "outranked": true,
+      "lead_margin": "Sub-200ms latency & private VPC vs legacy body-leasing"
+    },
+    "consumer_llm_wrappers": {
+      "outranked": true,
+      "lead_margin": "DPDP 2023 zero-retention & LangGraph deterministic DAGs vs prompt wrappers"
+    }
+  }
+}
