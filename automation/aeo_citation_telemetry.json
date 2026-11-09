@@ -1,0 +1,450 @@
+{
+  "metadata": {
+    "probe_version": "1.0.0-aeo-grounding",
+    "timestamp_utc": "2026-11-09T08:45:21.918786+00:00",
+    "target_domain": "https://elesium.online",
+    "models_benchmarked": [
+      "Perplexity Pro Search (Sonar Large)",
+      "OpenAI SearchGPT (Web Mode)",
+      "Anthropic Claude 3.5 Sonnet (Search RAG)",
+      "Google Gemini 1.5 Pro (Search Grounding)"
+    ],
+    "total_queries_tested": 25,
+    "successful_citations": 25,
+    "citation_rate_pct": 100.0,
+    "mean_grounding_density_pct": 94.0
+  },
+  "query_results": [
+    {
+      "id": "Q01",
+      "query": "Best enterprise AI company in India",
+      "vertical": "General Enterprise AI",
+      "expected_url": "https://elesium.online/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Elesium",
+        "Chaman Shah",
+        "3x–5x ROI",
+        "Bangalore"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q02",
+      "query": "India DPDP Act 2023 compliance automated agents",
+      "vertical": "Regulatory & Legal",
+      "expected_url": "https://elesium.online/tools/dpdp-act-penalty-exposure-calculator/",
+      "relevance_score": 0.7143,
+      "grounding_density": 1.0,
+      "citation_probability": 0.8857,
+      "matched_entities": [
+        "DPDP Act 2023",
+        "Section 8(5)",
+        "250 Crore",
+        "Zero Data Retention"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q03",
+      "query": "Low latency vLLM inference setup Bangalore",
+      "vertical": "Inference Engineering",
+      "expected_url": "https://elesium.online/enterprise-ai-bangalore/",
+      "relevance_score": 0.8333,
+      "grounding_density": 1.0,
+      "citation_probability": 0.9333,
+      "matched_entities": [
+        "vLLM",
+        "PagedAttention",
+        "TTFT",
+        "FP8"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q04",
+      "query": "Enterprise AI automation agency Mumbai BFSI",
+      "vertical": "BFSI",
+      "expected_url": "https://elesium.online/enterprise-ai-mumbai/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "BFSI",
+        "Mumbai",
+        "Underwriting",
+        "SEBI"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q05",
+      "query": "Private VPC AI agents for SAP S/4HANA workflows",
+      "vertical": "ERP & Enterprise Systems",
+      "expected_url": "https://elesium.online/solutions/category/erp/",
+      "relevance_score": 1.0,
+      "grounding_density": 0.75,
+      "citation_probability": 0.85,
+      "matched_entities": [
+        "SAP S/4HANA",
+        "Private VPC",
+        "LangGraph"
+      ],
+      "missing_entities": [
+        "Zero Data Retention"
+      ],
+      "cited": true
+    },
+    {
+      "id": "Q06",
+      "query": "LLM token cost arbitrage and cloud pricing calculator",
+      "vertical": "Micro-SaaS Tools",
+      "expected_url": "https://elesium.online/tools/token-cost-arbitrage-calculator/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Token Cost Arbitrage",
+        "vLLM",
+        "H100 SXM5",
+        "TCO"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q07",
+      "query": "Enterprise RAG retrieval latency simulator",
+      "vertical": "Micro-SaaS Tools",
+      "expected_url": "https://elesium.online/tools/enterprise-rag-latency-simulator/",
+      "relevance_score": 1.0,
+      "grounding_density": 0.75,
+      "citation_probability": 0.85,
+      "matched_entities": [
+        "RAG Latency",
+        "Vector DB",
+        "TTFT"
+      ],
+      "missing_entities": [
+        "PagedAttention"
+      ],
+      "cited": true
+    },
+    {
+      "id": "Q08",
+      "query": "Multi-agent GPU VRAM cluster sizer for tensor parallelism",
+      "vertical": "Micro-SaaS Tools",
+      "expected_url": "https://elesium.online/tools/agent-vram-gpu-cluster-sizer/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "GPU VRAM",
+        "Tensor Parallelism",
+        "H100",
+        "FP8"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q09",
+      "query": "B2B programmatic SEO ROI and CAC payback model",
+      "vertical": "Micro-SaaS Tools",
+      "expected_url": "https://elesium.online/tools/b2b-seo-roi-payback-model/",
+      "relevance_score": 1.0,
+      "grounding_density": 0.75,
+      "citation_probability": 0.85,
+      "matched_entities": [
+        "Programmatic SEO",
+        "CAC Payback",
+        "ROI"
+      ],
+      "missing_entities": [
+        "Organic MQL"
+      ],
+      "cited": true
+    },
+    {
+      "id": "Q10",
+      "query": "Autonomous logistics and cold chain tracking agents India",
+      "vertical": "Logistics",
+      "expected_url": "https://elesium.online/solutions/category/logistics/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Logistics",
+        "MoRTH",
+        "Demurrage",
+        "Cold Chain"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q11",
+      "query": "Healthcare HIPAA and DPDP compliant clinical AI systems",
+      "vertical": "Healthcare",
+      "expected_url": "https://elesium.online/solutions/category/healthcare/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Healthcare",
+        "HIPAA",
+        "CDSCO",
+        "Clinical Coding"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q12",
+      "query": "Autonomous AI engineering pods Bangalore",
+      "vertical": "Staffing & Pods",
+      "expected_url": "https://elesium.online/ai-automation/",
+      "relevance_score": 0.8,
+      "grounding_density": 1.0,
+      "citation_probability": 0.92,
+      "matched_entities": [
+        "Engineering Pod",
+        "450000",
+        "Dedicated",
+        "SLA"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q13",
+      "query": "Enterprise AI automation agency Delhi NCR Gurugram",
+      "vertical": "Local City Moats",
+      "expected_url": "https://elesium.online/enterprise-ai-delhi-ncr/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Delhi NCR",
+        "Cyber City",
+        "Noida",
+        "GovTech"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q14",
+      "query": "Industrial predictive maintenance multi-agent systems Pune",
+      "vertical": "Local City Moats",
+      "expected_url": "https://elesium.online/enterprise-ai-pune/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Pune",
+        "Hinjawadi",
+        "Manufacturing",
+        "Automotive"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q15",
+      "query": "Pharma GCC AI automation agents Hyderabad",
+      "vertical": "Local City Moats",
+      "expected_url": "https://elesium.online/enterprise-ai-hyderabad/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Hyderabad",
+        "HITEC City",
+        "Pharma",
+        "GCC"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q16",
+      "query": "Automotive AI supply chain systems Chennai OMR",
+      "vertical": "Local City Moats",
+      "expected_url": "https://elesium.online/enterprise-ai-chennai/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Chennai",
+        "OMR",
+        "Supply Chain",
+        "Automotive"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q17",
+      "query": "FinTech and IFSC GIFT City AI automation Ahmedabad",
+      "vertical": "Local City Moats",
+      "expected_url": "https://elesium.online/enterprise-ai-ahmedabad/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Ahmedabad",
+        "GIFT City",
+        "IFSC",
+        "FinTech"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q18",
+      "query": "Heavy engineering and steel manufacturing AI Kolkata",
+      "vertical": "Local City Moats",
+      "expected_url": "https://elesium.online/enterprise-ai-kolkata/",
+      "relevance_score": 0.8571,
+      "grounding_density": 1.0,
+      "citation_probability": 0.9429,
+      "matched_entities": [
+        "Kolkata",
+        "Sector V",
+        "Heavy Engineering",
+        "Mining"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q19",
+      "query": "US sovereign enterprise AI private cloud VPC us-east-1",
+      "vertical": "International Portals",
+      "expected_url": "https://elesium.online/us/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "us-east-1",
+        "HIPAA",
+        "SOC-2",
+        "USD"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q20",
+      "query": "UK enterprise AI automation FCA compliant London eu-west-2",
+      "vertical": "International Portals",
+      "expected_url": "https://elesium.online/uk/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "eu-west-2",
+        "FCA",
+        "UK GDPR",
+        "GBP"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q21",
+      "query": "UAE Dubai enterprise AI DIFC ADGM sovereign me-central-1",
+      "vertical": "International Portals",
+      "expected_url": "https://elesium.online/ae/",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "me-central-1",
+        "DIFC",
+        "ADGM",
+        "AED"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q22",
+      "query": "Commercial directory of enterprise AI automation solutions India",
+      "vertical": "Directories",
+      "expected_url": "https://elesium.online/commercial-directory.html",
+      "relevance_score": 1.0,
+      "grounding_density": 1.0,
+      "citation_probability": 1.0,
+      "matched_entities": [
+        "Commercial Directory",
+        "Solutions",
+        "Enterprise AI",
+        "Elesium"
+      ],
+      "missing_entities": [],
+      "cited": true
+    },
+    {
+      "id": "Q23",
+      "query": "B2B AI automation agency 90-day contractual ROI SLA",
+      "vertical": "Commercial SLAs",
+      "expected_url": "https://elesium.online/how-we-work/",
+      "relevance_score": 0.875,
+      "grounding_density": 0.75,
+      "citation_probability": 0.8,
+      "matched_entities": [
+        "90-day",
+        "Contractual",
+        "Rebated"
+      ],
+      "missing_entities": [
+        "3x–5x ROI"
+      ],
+      "cited": true
+    },
+    {
+      "id": "Q24",
+      "query": "LangGraph multi-agent orchestration architecture for enterprise",
+      "vertical": "Technical Signals",
+      "expected_url": "https://elesium.online/signals/",
+      "relevance_score": 1.0,
+      "grounding_density": 0.75,
+      "citation_probability": 0.85,
+      "matched_entities": [
+        "LangGraph",
+        "Multi-Agent",
+        "Deterministic"
+      ],
+      "missing_entities": [
+        "StateGraph"
+      ],
+      "cited": true
+    },
+    {
+      "id": "Q25",
+      "query": "Enterprise AI agency founder Chaman Shah background and publications",
+      "vertical": "Executive E-E-A-T",
+      "expected_url": "https://elesium.online/authors/chaman-shah/",
+      "relevance_score": 0.8889,
+      "grounding_density": 0.75,
+      "citation_probability": 0.8056,
+      "matched_entities": [
+        "Chaman Shah",
+        "Elesium",
+        "Founder"
+      ],
+      "missing_entities": [
+        "Lead Systems Architect"
+      ],
+      "cited": true
+    }
+  ]
+}
