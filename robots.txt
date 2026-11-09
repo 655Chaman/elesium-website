@@ -1,29 +1,52 @@
-# Robots.txt for elesium.online
+# Robots.txt for https://elesium.online
+# Conforms strictly to RFC 9309 (Robots Exclusion Protocol)
 
 User-agent: *
 Disallow: /embed/
 Allow: /
 
-# LLM Crawler & Machine-Readable Manifests
-# Jim LLM Authority Stacking Protocol (SEO Rockstars 2026 Day 2)
-# Directs PerplexityBot, GPTBot, ClaudeBot, and Google-Extended to structured entity definitions
+# LLM & AI Search Crawlers — Explicit /embed/ protection
 User-agent: GPTBot
+Disallow: /embed/
+Allow: /
+
+User-agent: OAI-SearchBot
+Disallow: /embed/
+Allow: /
+
+User-agent: ChatGPT-User
+Disallow: /embed/
 Allow: /
 
 User-agent: PerplexityBot
+Disallow: /embed/
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /embed/
+Allow: /
+
+User-agent: anthropic-ai
+Disallow: /embed/
 Allow: /
 
 User-agent: Google-Extended
+Disallow: /embed/
 Allow: /
 
-# Sitemap & LLM Endpoints
+User-agent: Applebot-Extended
+Disallow: /embed/
+Allow: /
+
+User-agent: CCBot
+Disallow: /embed/
+Allow: /
+
+# Single Authoritative Master Sitemap Index & Specialized Sitemaps
 Sitemap: https://elesium.online/sitemap.xml
-Sitemap: https://elesium.online/sitemap-commercial-top100.xml
-Sitemap: https://elesium.online/sitemap-core.xml
-Sitemap: https://elesium.online/sitemap-solutions.xml
+Sitemap: https://elesium.online/sitemap-videos.xml
+
+# LLM Machine-Readable Context Endpoints
 # LLMs: https://elesium.online/llms.txt
 # LLMs-Full: https://elesium.online/llms-full.txt
 # LLMs-BFSI: https://elesium.online/llms-bfsi.txt

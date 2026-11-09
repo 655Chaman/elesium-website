@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://elesium.online/sitemap-commercial-top100.xml</loc>
-    <lastmod>2026-11-06</lastmod>
-  </sitemap>
-  <sitemap>
     <loc>https://elesium.online/sitemap-core.xml</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-09</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://elesium.online/sitemap-solutions.xml</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-09</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://elesium.online/sitemap-videos.xml</loc>
+    <lastmod>2026-10-19</lastmod>
   </sitemap>
 </sitemapindex>
