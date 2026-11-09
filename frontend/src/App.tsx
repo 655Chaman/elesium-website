@@ -216,6 +216,10 @@ function App() {
                             <Route path="/enterprise-ai-mumbai" element={<RegionalCityHub forcedCityId="mumbai" />} />
                             <Route path="/enterprise-ai-delhi-ncr" element={<RegionalCityHub forcedCityId="delhi-ncr" />} />
                             <Route path="/enterprise-ai-pune" element={<RegionalCityHub forcedCityId="pune" />} />
+                            <Route path="/enterprise-ai-hyderabad" element={<RegionalCityHub forcedCityId="hyderabad" />} />
+                            <Route path="/enterprise-ai-chennai" element={<RegionalCityHub forcedCityId="chennai" />} />
+                            <Route path="/enterprise-ai-ahmedabad" element={<RegionalCityHub forcedCityId="ahmedabad" />} />
+                            <Route path="/enterprise-ai-kolkata" element={<RegionalCityHub forcedCityId="kolkata" />} />
                             <Route path="/videos" element={<VideoMirror />} />
                             <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />

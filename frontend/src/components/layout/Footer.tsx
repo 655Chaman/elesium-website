@@ -197,6 +197,30 @@ export default function DownloadFooter() {
                     </div>
                 </div>
 
+                {/* Regional Engineering Pods Across India */}
+                <div className="pt-6 border-t border-gray-100 dark:border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs">
+                    <span className="font-mono text-gray-500 uppercase tracking-wider text-[11px] shrink-0">
+                        Regional AI Engineering Pods:
+                    </span>
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-gray-600 dark:text-gray-400">
+                        <Link to="/enterprise-ai-bangalore/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Bengaluru HQ</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-mumbai/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Mumbai (BKC)</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-delhi-ncr/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Delhi NCR</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-pune/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Pune (Hinjawadi)</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-hyderabad/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Hyderabad (HITEC)</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-chennai/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Chennai (OMR)</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-ahmedabad/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Ahmedabad (GIFT City)</Link>
+                        <span>•</span>
+                        <Link to="/enterprise-ai-kolkata/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Kolkata (Sector V)</Link>
+                    </div>
+                </div>
+
                 {/* Bottom Section: Entity Credentials, Location, and Legal */}
                 <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div className="flex flex-col gap-1.5">

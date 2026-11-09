@@ -59,7 +59,10 @@ def audit_fleet():
             clusters["videos"].append(f)
         elif rel.startswith("compare/"):
             clusters["compare"].append(f)
-        elif any(c in rel for c in ["enterprise-ai-bangalore", "enterprise-ai-mumbai", "enterprise-ai-delhi-ncr", "enterprise-ai-pune"]):
+        elif any(c in rel for c in [
+            "enterprise-ai-bangalore", "enterprise-ai-mumbai", "enterprise-ai-delhi-ncr", "enterprise-ai-pune",
+            "enterprise-ai-hyderabad", "enterprise-ai-chennai", "enterprise-ai-ahmedabad", "enterprise-ai-kolkata"
+        ]):
             clusters["city_moats"].append(f)
         elif rel in ["industries.html", "market-signals.html", "industries/index.html", "market-signals/index.html"]:
             clusters["redirect_wrappers"].append(f)
@@ -173,7 +176,7 @@ def audit_fleet():
                             has_software = True
                         if stype == "VideoObject":
                             has_video = True
-                        if stype in ["LocalBusiness", "ProfessionalService"]:
+                        if stype in ["LocalBusiness", "ProfessionalService"] or (isinstance(stype, list) and any(t in ["LocalBusiness", "ProfessionalService"] for t in stype)):
                             has_local_biz = True
                         if stype in ["TechArticle", "Article"]:
                             has_tech_article = True

@@ -1,0 +1,418 @@
+{
+  "$schema": "https://schema.org/LocalBusiness",
+  "version": "2026.1",
+  "organization": "Elesium Systems Pvt. Ltd.",
+  "brand": "Elesium",
+  "primary_phone": "+91 83173 29312",
+  "primary_email": "chaman@elesium.online",
+  "founder": "Chaman Shah",
+  "locations_count": 8,
+  "locations": [
+    {
+      "store_code": "ELESIUM-BLR-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Bangalore",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Engineering consultant",
+        "Data processing service"
+      ],
+      "address": {
+        "street": "Koramangala 4th Block, 80 Feet Road",
+        "locality": "Bengaluru",
+        "administrative_area": "Karnataka",
+        "postal_code": "560034",
+        "country": "IN",
+        "landmark": "500m from Sony World Signal, 80 Feet Road"
+      },
+      "coordinates": {
+        "latitude": 12.9352,
+        "longitude": 77.6245
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-bangalore/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_bangalore",
+      "google_maps_url": "https://maps.google.com/?q=12.9352,77.6245",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Bengaluru's premier enterprise AI automation company, engineering sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-2s automated pipelines from our Koramangala engineering pod. We deliver contractually guaranteed 3x–5x ROI in 90 days with full DPDP Act 2023 statutory compliance. Serving Tier-1 B2B SaaS, Global Capability Centers (GCCs), and venture-backed fintechs across Bangalore.",
+      "services": [
+        {
+          "name": "Sovereign Multi-Agent Architecture Audit",
+          "price_inr": "1,50,000",
+          "currency": "INR",
+          "description": "Comprehensive 90-minute architecture review, data sovereignty risk audit, and deterministic multi-agent roadmap led by Principal Architect Chaman Shah."
+        },
+        {
+          "name": "Private VPC vLLM Cluster Deployment",
+          "price_inr": "4,50,000",
+          "currency": "INR",
+          "description": "Turnkey deployment of open-weights LLMs (DeepSeek-V3, Llama-3.3) on private AWS ap-south-1 or on-premise GPU clusters with zero external token egress."
+        },
+        {
+          "name": "Deterministic LangGraph State Machine Engineering",
+          "price_inr": "8,00,000",
+          "currency": "INR",
+          "description": "Custom state graph pipelines eliminating 40+ hours of weekly manual bottlenecks with sub-200ms latency and guaranteed 90-day breakeven."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-BOM-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Mumbai",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Engineering consultant",
+        "Financial consultant"
+      ],
+      "address": {
+        "street": "Bandra Kurla Complex (BKC), G Block",
+        "locality": "Mumbai",
+        "administrative_area": "Maharashtra",
+        "postal_code": "400051",
+        "country": "IN",
+        "landmark": "Adjacent to National Stock Exchange (NSE) & Bharat Diamond Bourse"
+      },
+      "coordinates": {
+        "latitude": 19.0657,
+        "longitude": 72.8687
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-mumbai/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_mumbai",
+      "google_maps_url": "https://maps.google.com/?q=19.0657,72.8687",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Mumbai's top enterprise AI automation company, delivering deterministic multi-agent architectures and sub-200ms ledger reconciliation for BFSI institutions, NBFCs, and conglomerates in BKC and Nariman Point. All systems strictly comply with RBI digital lending guidelines, cyber security frameworks, and India's DPDP Act 2023 with air-gapped data residency.",
+      "services": [
+        {
+          "name": "Sub-200ms BFSI Ledger Reconciliation",
+          "price_inr": "6,50,000",
+          "currency": "INR",
+          "description": "High-throughput stream processing state graphs validating transactions across core banking platforms with zero ledger mismatch."
+        },
+        {
+          "name": "Automated Credit Underwriting & MCA Verification",
+          "price_inr": "5,00,000",
+          "currency": "INR",
+          "description": "Multimodal document extraction for balance sheets, ITRs, and GST filings reducing corporate loan underwriting from 14 hours to 1.9 seconds."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-DEL-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Delhi NCR",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Logistics service",
+        "Data processing service"
+      ],
+      "address": {
+        "street": "Cyber City, DLF Phase 2, Building 10",
+        "locality": "Gurugram",
+        "administrative_area": "Haryana",
+        "postal_code": "122002",
+        "country": "IN",
+        "landmark": "Opposite Cyber Hub Rapid Metro Station"
+      },
+      "coordinates": {
+        "latitude": 28.4908,
+        "longitude": 77.0903
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-delhi-ncr/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_delhincr",
+      "google_maps_url": "https://maps.google.com/?q=28.4908,77.0903",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Delhi NCR's leading enterprise AI company, architecting automated logistics dispatch, GST Rule 36(4) invoice reconciliation, and sovereign GovTech multi-agent systems across Gurugram, Noida, and New Delhi. Contractually committed 90-day ROI backed by sovereign private cloud deployments and MeitY-compliant security standards.",
+      "services": [
+        {
+          "name": "GST Rule 36(4) Auto-Reconciliation Engine",
+          "price_inr": "3,50,000",
+          "currency": "INR",
+          "description": "Continuous automated reconciliation between vendor e-invoices, GSTR-2B, and ERP accounting ledgers in under 3.5 minutes."
+        },
+        {
+          "name": "Autonomous Logistics & Fleet Dispatch Agents",
+          "price_inr": "6,00,000",
+          "currency": "INR",
+          "description": "Combinatorial route optimization agents cutting yard dwell times by 64% and slashing demurrage penalties for 3PL freight carriers."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-PNQ-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Pune",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Industrial consultant",
+        "Engineering consultant"
+      ],
+      "address": {
+        "street": "Rajiv Gandhi Infotech Park, Phase 1",
+        "locality": "Hinjawadi, Pune",
+        "administrative_area": "Maharashtra",
+        "postal_code": "411057",
+        "country": "IN",
+        "landmark": "Near Hinjawadi Phase 1 Circle, Adjacent to Tata Technologies Campus"
+      },
+      "coordinates": {
+        "latitude": 18.5913,
+        "longitude": 73.7389
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-pune/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_pune",
+      "google_maps_url": "https://maps.google.com/?q=18.5913,73.7389",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Pune's leading enterprise AI company, engineering sub-50ms computer vision defect inspection, predictive machine telemetry, and bidirectional SAP RFC state machines for automotive OEMs and discrete manufacturing plants across Chakan, Bhosari, and Hinjawadi. Delivering audited 3.5x ROI in 90 days.",
+      "services": [
+        {
+          "name": "Sub-50ms Edge Computer Vision Defect Detection",
+          "price_inr": "5,50,000",
+          "currency": "INR",
+          "description": "NVIDIA Jetson AGX deployment with custom quantized YOLOv10 detecting surface porosities and micro-cracks on active stamping lines."
+        },
+        {
+          "name": "Predictive Bearing & Machine Anomaly Telemetry",
+          "price_inr": "4,50,000",
+          "currency": "INR",
+          "description": "Acoustic and vibration sensor anomaly models predicting spindle bearing seizures 72 hours in advance to prevent catastrophic stoppages."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-HYD-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Hyderabad",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Biotechnology consultant",
+        "Data processing service"
+      ],
+      "address": {
+        "street": "HITEC City Main Road, Madhapur",
+        "locality": "Hyderabad",
+        "administrative_area": "Telangana",
+        "postal_code": "500081",
+        "country": "IN",
+        "landmark": "Adjacent to Cyber Towers, HITEC City Junction"
+      },
+      "coordinates": {
+        "latitude": 17.4483,
+        "longitude": 78.3742
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-hyderabad/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_hyderabad",
+      "google_maps_url": "https://maps.google.com/?q=17.4483,78.3742",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x–5x ROI in 90 days with zero data egress for pharma and cloud GCCs.",
+      "services": [
+        {
+          "name": "US-FDA 21 CFR Part 11 Batch Record Verification",
+          "price_inr": "6,50,000",
+          "currency": "INR",
+          "description": "Audit-trail guaranteed multi-agent extraction for clinical batch records and regulatory submission dossiers slashing filing latency by 78%."
+        },
+        {
+          "name": "Global Capability Center (GCC) Workflow Orchestrator",
+          "price_inr": "5,00,000",
+          "currency": "INR",
+          "description": "Sub-second autonomous ticket classification and cross-system sync bridging enterprise Jira, SAP, and ServiceNow stacks."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-MAA-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Chennai",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Engineering consultant",
+        "Logistics service"
+      ],
+      "address": {
+        "street": "Rajiv Gandhi Salai (OMR), Taramani",
+        "locality": "Chennai",
+        "administrative_area": "Tamil Nadu",
+        "postal_code": "600113",
+        "country": "IN",
+        "landmark": "Opposite TIDEL Park, Canal Bank Road"
+      },
+      "coordinates": {
+        "latitude": 12.9863,
+        "longitude": 80.2425
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-chennai/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_chennai",
+      "google_maps_url": "https://maps.google.com/?q=12.9863,80.2425",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x–5x ROI in 90 days with complete DPDP compliance.",
+      "services": [
+        {
+          "name": "Maritime Port Logistics & Shipping Bill OCR",
+          "price_inr": "4,50,000",
+          "currency": "INR",
+          "description": "Sub-second parsing of multi-language maritime shipping documents and customs declarations into ICEGATE format, avoiding demurrage."
+        },
+        {
+          "name": "Automotive Assembly Telemetry & Anomaly Interception",
+          "price_inr": "6,00,000",
+          "currency": "INR",
+          "description": "Predictive sensor parsing preventing robotic welding stoppages on active Tamil Nadu vehicle manufacturing lines."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-AMD-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Ahmedabad",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Financial consultant",
+        "Industrial consultant"
+      ],
+      "address": {
+        "street": "GIFT One Tower, GIFT City",
+        "locality": "Gandhinagar / Ahmedabad",
+        "administrative_area": "Gujarat",
+        "postal_code": "382355",
+        "country": "IN",
+        "landmark": "GIFT One Tower, 14th Floor, GIFT City International Financial Services Centre"
+      },
+      "coordinates": {
+        "latitude": 23.1611,
+        "longitude": 72.6842
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-ahmedabad/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_ahmedabad",
+      "google_maps_url": "https://maps.google.com/?q=23.1611,72.6842",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x–5x ROI in 90 days with strict data residency.",
+      "services": [
+        {
+          "name": "IFSCA Trade Finance & SWIFT Validation Engine",
+          "price_inr": "7,00,000",
+          "currency": "INR",
+          "description": "Automated Letter of Credit (LC) and SWIFT MT700 validation cross-referencing sanctions lists in 3.2 minutes for GIFT City banking units."
+        },
+        {
+          "name": "Petrochemical Process Safety Anomaly Detector",
+          "price_inr": "5,50,000",
+          "currency": "INR",
+          "description": "Real-time edge SCADA telemetry monitoring thermal runaways and vapor pressure anomalies in Dahej and Sanand chemical plants."
+        }
+      ]
+    },
+    {
+      "store_code": "ELESIUM-CCU-01",
+      "business_name": "Elesium - Best Enterprise AI Company in Kolkata",
+      "primary_category": "Software company",
+      "additional_categories": [
+        "Artificial intelligence service",
+        "Computer consultant",
+        "Engineering consultant",
+        "Government office"
+      ],
+      "address": {
+        "street": "Sector V, Salt Lake City",
+        "locality": "Kolkata",
+        "administrative_area": "West Bengal",
+        "postal_code": "700091",
+        "country": "IN",
+        "landmark": "Webel Bhavan Circle, Adjacent to Sector V Metro Station"
+      },
+      "coordinates": {
+        "latitude": 22.5804,
+        "longitude": 88.4378
+      },
+      "service_radius_km": 50,
+      "website_url": "https://elesium.online/enterprise-ai-kolkata/?utm_source=google&utm_medium=organic&utm_campaign=gbp_location_kolkata",
+      "google_maps_url": "https://maps.google.com/?q=22.5804,88.4378",
+      "regular_hours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-19:00",
+        "friday": "09:00-19:00",
+        "saturday": "10:00-15:00",
+        "sunday": "CLOSED"
+      },
+      "description": "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x–5x ROI in 90 days with zero data egress.",
+      "services": [
+        {
+          "name": "Heavy Industrial Predictive Equipment Telemetry",
+          "price_inr": "5,50,000",
+          "currency": "INR",
+          "description": "Acoustic and vibration frequency telemetry models preventing rotary kiln and steel mill drive breakdowns for Eastern India industrial plants."
+        },
+        {
+          "name": "Commodity Auction & Export Filing OCR Engine",
+          "price_inr": "3,50,000",
+          "currency": "INR",
+          "description": "Multimodal document intelligence parsing tea auction catalogs, lab assay sheets, and shipping bills in 1.8 seconds."
+        }
+      ]
+    }
+  ]
+}
