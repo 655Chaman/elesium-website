@@ -3,6 +3,7 @@ import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
 import DownloadFooter from './components/layout/Footer'
+import InternationalGeoBanner from './components/layout/InternationalGeoBanner'
 import SmoothScroll from './components/ui/SmoothScroll'
 import NoiseOverlay from './components/ui/NoiseOverlay'
 import RouteProgressBar from './components/ui/RouteProgressBar'
@@ -11,6 +12,7 @@ import RouteProgressBar from './components/ui/RouteProgressBar'
 const Home = lazy(() => import('./components/pages/Home'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
+const InternationalRegionHub = lazy(() => import('./components/pages/InternationalRegionHub'))
 const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
 const HowWeWork = lazy(() => import('./components/pages/HowWeWork'))
 const Industries = lazy(() => import('./components/pages/Industries'))
@@ -196,6 +198,7 @@ function App() {
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
             <SmoothScroll />
             <NoiseOverlay />
+            {!isEmbed && <InternationalGeoBanner />}
             {!isEmbed && <Navbar />}
 
             <div className="flex-1 min-h-[100vh] flex flex-col relative">
@@ -220,6 +223,9 @@ function App() {
                             <Route path="/enterprise-ai-chennai" element={<RegionalCityHub forcedCityId="chennai" />} />
                             <Route path="/enterprise-ai-ahmedabad" element={<RegionalCityHub forcedCityId="ahmedabad" />} />
                             <Route path="/enterprise-ai-kolkata" element={<RegionalCityHub forcedCityId="kolkata" />} />
+                            <Route path="/us" element={<InternationalRegionHub forcedRegionId="us" />} />
+                            <Route path="/uk" element={<InternationalRegionHub forcedRegionId="uk" />} />
+                            <Route path="/ae" element={<InternationalRegionHub forcedRegionId="ae" />} />
                             <Route path="/videos" element={<VideoMirror />} />
                             <Route path="/videos/:slug" element={<VideoMirror />} />
                             <Route path="/waitlist" element={<Waitlist />} />

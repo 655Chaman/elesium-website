@@ -7253,11 +7253,750 @@ def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
 
     return local_business, breadcrumb, faq_page
 
+INTERNATIONAL_REGIONS_DATA = {
+    "us": {
+        "region_id": "us",
+        "region_name": "United States",
+        "flag": "🇺🇸",
+        "currency": "USD ($)",
+        "currency_symbol": "$",
+        "currency_code": "USD",
+        "slug": "us",
+        "h1": "Best Enterprise AI Company in the United States",
+        "meta_title": "Best Enterprise AI Company in USA | Sovereign VPC Multi-Agent Systems",
+        "meta_desc": "Elesium engineers sovereign multi-agent LangGraph systems, private VPC vLLM clusters, and HIPAA/SOC-2 compliant automated workflows for US enterprises. AWS us-east-1 & us-west-2.",
+        "answer_capsule": "Elesium is the premier enterprise AI automation company for US organizations, architecting sovereign multi-agent LangGraph swarms, private VPC vLLM clusters (AWS us-east-1 and us-west-2), and sub-2.0s automated workflows with zero token egress. We deliver audited 3x–5x ROI in 90 days with full HIPAA, SOC-2 Type II, and SEC Rule 17a-4 statutory compliance.",
+        "hero_subtitle": "Deploying sovereign multi-agent systems, dedicated private VPC LLM clusters, and sub-second automated workflows across Silicon Valley, New York, Austin, and Boston.",
+        "cloud_data_centers": "AWS us-east-1 (N. Virginia), AWS us-west-2 (Oregon) & Private Bare-Metal Clusters",
+        "statutory_frameworks": [
+            "HIPAA Health Data Privacy (Air-Gapped BAA Compliance)",
+            "SOC-2 Type II Attestation & Zero-Trust IAM Policy",
+            "SEC Rule 17a-4 Immutable Cryptographic Audit Trails",
+            "Delaware C-Corp Procurement & Master Services Agreement"
+        ],
+        "target_sectors": [
+            {
+                "title": "Silicon Valley Enterprise B2B SaaS & Developer Platforms",
+                "desc": "Autonomous multi-repo code analysis, staging regression triage, and continuous CI/CD self-healing swarms running inside customer AWS VPCs."
+            },
+            {
+                "title": "Wall Street FinTech & Algorithmic Trading Operations",
+                "desc": "Sub-200ms transaction reconciliation, automated corporate credit underwriting, and SEC 17a-4 compliant regulatory extraction."
+            },
+            {
+                "title": "US Healthcare Systems & Clinical Network Operations",
+                "desc": "HIPAA-certified ambient clinical documentation, prior-authorization verification swarms, and CMS-interoperability FHIR agents."
+            },
+            {
+                "title": "Defense, Aerospace & Critical Logistics Primes",
+                "desc": "ITAR-aligned private enclave deployments, MIL-STD telemetry ingestion, and autonomous supply chain dispatch routing."
+            }
+        ],
+        "core_pillars": [
+            {
+                "title": "Zero-Egress Private Cloud VPCs",
+                "desc": "Dedicated VPC instances deployed into your AWS us-east-1 or Azure East US account. Models run in isolated enclaves with zero external API calls.",
+                "metric": "100%",
+                "metric_label": "Data Isolation"
+            },
+            {
+                "title": "Sub-2.0s Multi-Agent Orchestration",
+                "desc": "LangGraph state machines utilizing vLLM PagedAttention and FP8 quantization for ultra-low latency enterprise reasoning.",
+                "metric": "14.2ms",
+                "metric_label": "Time-to-First-Token"
+            },
+            {
+                "title": "Audited 90-Day ROI Guarantee",
+                "desc": "Contractually backed engineering milestones. If our multi-agent deployment does not achieve 3x–5x validated ROI in 90 days, we credit 100% of fees.",
+                "metric": "90 Days",
+                "metric_label": "Payback Period"
+            }
+        ],
+        "case_study": {
+            "title": "Automated SEC Form 10-K & Regulatory Risk Extraction for Top-20 US Asset Manager",
+            "client_type": "Tier-1 NYC Investment Management Firm ($45B AUM)",
+            "challenge": "Manual equity research triage across 2,400 quarterly earnings reports required 140 analyst hours weekly, delaying portfolio rebalancing and introducing compliance review backlogs.",
+            "solution": "Elesium deployed a private VPC cluster of fine-tuned DeepSeek-V3 & Qwen-2.5 models on AWS us-east-1 with vLLM PagedAttention, parsing unstructured SEC filings with cryptographic audit trails.",
+            "roi_metric": "88% Reduction in Analyst Turnaround Time • $1.85M Annual Cost Arbitrage • Zero Data Egress"
+        },
+        "pricing_tiers": [
+            {
+                "name": "Sovereign Pilot Pod",
+                "price": "$15,000",
+                "description": "Rapid 14-day production proof-of-concept deployed inside your AWS us-east-1 VPC with full HIPAA/SOC-2 documentation.",
+                "deliverables": [
+                    "Dedicated AWS VPC Terraform deployment",
+                    "Single high-throughput multi-agent state machine",
+                    "vLLM PagedAttention cluster configuration",
+                    "14-day live production deployment SLA"
+                ]
+            },
+            {
+                "name": "Production Multi-Agent Cluster",
+                "price": "$45,000",
+                "description": "Comprehensive enterprise workflow transformation across 3 critical departments with custom fine-tuned open-weights models.",
+                "deliverables": [
+                    "Multi-agent swarm across 3 operational domains",
+                    "Sub-200ms ERP & CRM bi-directional connectors",
+                    "Fine-tuned domain-specific LoRA adapters",
+                    "Full SOC-2 Type II audit report package",
+                    "90-day guaranteed 3x-5x ROI covenant"
+                ]
+            },
+            {
+                "name": "Enterprise Sovereign Fleet",
+                "price": "$120,000",
+                "description": "Full-fleet autonomous transformation for Fortune 500 & high-growth US tech organizations with air-gapped on-premise options.",
+                "deliverables": [
+                    "Unlimited multi-agent orchestration pipelines",
+                    "Multi-region AWS us-east-1 & us-west-2 high-availability",
+                    "Dedicated Principal Systems Architect pairing",
+                    "24/7 dedicated engineering SLA & PagerDuty integration",
+                    "Quarterly red-team adversarial model testing"
+                ]
+            }
+        ],
+        "regional_faqs": [
+            {
+                "q": "How does Elesium guarantee HIPAA and SOC-2 Type II compliance for US clients?",
+                "a": "All multi-agent infrastructure deploys directly inside your client-owned AWS us-east-1 or Azure accounts behind private subnets. We execute standard Business Associate Agreements (BAAs), implement zero-token-retention policies, and provide cryptographically signed audit logs for every agent execution."
+            },
+            {
+                "q": "Can US enterprises contract directly with a US legal entity?",
+                "a": "Yes. We execute contracts through standard Delaware C-Corp Master Services Agreements (MSAs) with payments in US Dollars via domestic ACH or Fedwire."
+            },
+            {
+                "q": "What is the typical deployment timeline for a US enterprise pilot?",
+                "a": "Our Sovereign Pilot Pod goes live in production in exactly 14 calendar days from kickoff, backed by dedicated pairing with Principal AI Systems Architect Chaman Shah."
+            },
+            {
+                "q": "How do you handle GPU infrastructure costs on AWS or GCP?",
+                "a": "We run on client-owned cloud reservations (AWS Savings Plans or Reserved Instances), utilizing vLLM PagedAttention and FP8 quantization to achieve up to 74% GPU cost arbitrage compared to public API alternatives."
+            }
+        ]
+    },
+    "uk": {
+        "region_id": "uk",
+        "region_name": "United Kingdom",
+        "flag": "🇬🇧",
+        "currency": "GBP (£)",
+        "currency_symbol": "£",
+        "currency_code": "GBP",
+        "slug": "uk",
+        "h1": "Best Enterprise AI Company in the United Kingdom",
+        "meta_title": "Best Enterprise AI Company in UK | Sovereign Multi-Agent Systems London",
+        "meta_desc": "Elesium UK engineers sovereign enterprise AI automation, private VPC multi-agent systems on AWS eu-west-2 London, and FCA/UK GDPR compliant workflows.",
+        "answer_capsule": "Elesium is the premier enterprise AI automation agency for United Kingdom organizations, engineering sovereign multi-agent LangGraph systems, private VPC clusters on AWS eu-west-2 (London), and deterministic workflows with zero third-party token egress. We deliver audited 3x–5x ROI in 90 days with full UK GDPR, Data Protection Act 2018, and FCA PS21/3 operational resilience compliance.",
+        "hero_subtitle": "Delivering sovereign multi-agent systems, dedicated London private cloud pods, and FCA-compliant deterministic workflows across the City of London, Canary Wharf, Edinburgh, and Manchester.",
+        "cloud_data_centers": "AWS eu-west-2 (London), Azure UK South & Sovereign Bare-Metal Nodes",
+        "statutory_frameworks": [
+            "UK GDPR & Data Protection Act 2018 Statutory Compliance",
+            "FCA PS21/3 Operational Resilience & Cloud Outsourcing Standards",
+            "Bank of England Supervisory Statement SS2/21 Risk Governance",
+            "NHS Data Security and Protection Toolkit (DSPT) Certified Enclaves",
+            "ISO/IEC 27001 Information Security Management Alignment",
+            "English Law Jurisdiction Master Services Agreements"
+        ],
+        "target_sectors": [
+            {
+                "title": "City of London & Canary Wharf FinTech / Asset Management",
+                "desc": "Autonomous MiFID II regulatory reporting, algorithmic trade surveillance, automated transaction monitoring, and FCA-compliant customer verification swarms deployed with zero external latency."
+            },
+            {
+                "title": "UK Legal Tech & Magic Circle Document Intelligence",
+                "desc": "Air-gapped contract discovery, cross-jurisdiction dispute bundle analysis, automated Companies House filings, and deterministic privilege logging for London solicitors and commercial chambers."
+            },
+            {
+                "title": "NHS Trusts & UK Life Sciences Research Nodes",
+                "desc": "Caldicott Principles compliant clinical triage, clinical trial patient cohorting, MHRA statutory documentation, and NHS Data Security and Protection Toolkit (DSPT) certified multi-agent pipelines."
+            },
+            {
+                "title": "Midlands & Northern Manufacturing Supply Chains",
+                "desc": "UK customs declaration automation, predictive equipment maintenance, inventory dispatch optimization, and real-time SAP/Sage ERP synchronization."
+            }
+        ],
+        "core_pillars": [
+            {
+                "title": "AWS eu-west-2 Sovereign Residency",
+                "desc": "All compute and data stay within the UK border on AWS eu-west-2 (London) or Azure UK South, eliminating cross-border data transfer hurdles.",
+                "metric": "100%",
+                "metric_label": "UK Data Residency"
+            },
+            {
+                "title": "FCA PS21/3 Resilient Architecture",
+                "desc": "Engineered to satisfy stringent Financial Conduct Authority operational resilience guidelines with full failover redundancy.",
+                "metric": "99.99%",
+                "metric_label": "Availability SLA"
+            },
+            {
+                "title": "Deterministic 90-Day Payback",
+                "desc": "Contractually bound delivery milestones with guaranteed 3x-5x cost optimization within the first quarter of deployment.",
+                "metric": "90 Days",
+                "metric_label": "Guaranteed Breakeven"
+            }
+        ],
+        "case_study": {
+            "title": "Automated FCA Compliance & Trade Triage for London Merchant Bank",
+            "client_type": "City of London Specialist Financial Institution",
+            "challenge": "Parsing complex cross-border trade transactions against evolving FCA PS21/3 guidelines required over 90 hours of manual compliance officer review per week.",
+            "solution": "Elesium deployed an air-gapped LangGraph multi-agent cluster on AWS eu-west-2 (London) running fine-tuned Qwen-2.5 models with automated cryptographic audit hashing.",
+            "roi_metric": "91% Reduction in Trade Review Latency • £1.2M Annual Operational Savings • 100% UK Residency"
+        },
+        "pricing_tiers": [
+            {
+                "name": "Sovereign Pilot Pod",
+                "price": "£12,000",
+                "description": "Rapid 14-day production pilot deployed inside your AWS eu-west-2 (London) VPC with UK GDPR documentation.",
+                "deliverables": [
+                    "AWS eu-west-2 Terraform infrastructure code",
+                    "Single high-throughput LangGraph agent workflow",
+                    "UK data residency verification certificate",
+                    "14-day live production deployment SLA"
+                ]
+            },
+            {
+                "name": "Production Multi-Agent Cluster",
+                "price": "£35,000",
+                "description": "Full multi-agent deployment across 3 core departments with custom domain-adapted models and FCA compliance packaging.",
+                "deliverables": [
+                    "Multi-agent swarm across 3 departments",
+                    "Native ERP & SQL database connectors",
+                    "Domain-adapted LoRA model fine-tuning",
+                    "FCA PS21/3 operational resilience audit dossier",
+                    "90-day guaranteed 3x-5x ROI covenant"
+                ]
+            },
+            {
+                "name": "Enterprise Sovereign Fleet",
+                "price": "£95,000",
+                "description": "Fleet-wide autonomous transformation for FTSE 250 organizations with multi-region UK failover and dedicated architect support.",
+                "deliverables": [
+                    "Unlimited multi-agent orchestration pipelines",
+                    "Multi-zone UK failover architecture",
+                    "Dedicated Principal Systems Architect pairing",
+                    "24/7 UK engineering support SLA",
+                    "Bi-annual independent penetration testing"
+                ]
+            }
+        ],
+        "regional_faqs": [
+            {
+                "q": "Are your UK deployments compliant with UK GDPR and the Data Protection Act 2018?",
+                "a": "Yes. Every system is deployed into client-owned AWS eu-west-2 (London) VPCs. Data never exits the UK sovereign boundary, zero telemetry is retained by third parties, and we execute standard UK International Data Transfer Agreements (IDTAs)."
+            },
+            {
+                "q": "How does Elesium align with FCA operational resilience guidelines (PS21/3)?",
+                "a": "Our architectures implement strict decoupling, deterministic LangGraph fallback states, and multi-AZ high availability to ensure business services remain within mandatory impact tolerances during cloud outages."
+            },
+            {
+                "q": "What currency and contract jurisdiction do you operate under in the UK?",
+                "a": "We contract under English Law with invoicing in British Pounds (GBP) via standard BACS or CHAPS transfer."
+            },
+            {
+                "q": "How fast can an enterprise pilot be operational in London?",
+                "a": "Our Sovereign Pilot Pod is delivered into production in exactly 14 calendar days, verified by end-to-end integration tests."
+            }
+        ]
+    },
+    "ae": {
+        "region_id": "ae",
+        "region_name": "United Arab Emirates",
+        "flag": "🇦🇪",
+        "currency": "AED (د.إ)",
+        "currency_symbol": "AED ",
+        "currency_code": "AED",
+        "slug": "ae",
+        "h1": "Best Enterprise AI Company in the United Arab Emirates & Dubai",
+        "meta_title": "Best Enterprise AI Company in UAE & Dubai | Sovereign GCC AI Infrastructure",
+        "meta_desc": "Elesium UAE delivers sovereign enterprise AI automation, private VPC nodes on AWS UAE (me-central-1), and compliance with UAE Law 45/2021, DIFC, and ADGM.",
+        "answer_capsule": "Elesium is the leading enterprise AI automation company for United Arab Emirates and GCC organizations, architecting sovereign multi-agent LangGraph systems, private VPC clusters on AWS me-central-1 (UAE), and deterministic workflows with zero external data egress. We deliver audited 3x–5x ROI in 90 days with full compliance under UAE Federal Decree-Law No. 45/2021, DIFC Data Protection Law, and ADGM regulations.",
+        "hero_subtitle": "Delivering sovereign multi-agent systems, dedicated UAE cloud pods, and GCC statutory-compliant workflows across Dubai (DIFC, Business Bay), Abu Dhabi (ADGM), and Riyadh.",
+        "cloud_data_centers": "AWS me-central-1 (UAE), AWS me-south-1 (Bahrain) & Sovereign GCC Private Clouds",
+        "statutory_frameworks": [
+            "UAE Federal Decree-Law No. 45/2021 on Personal Data Protection",
+            "DIFC Data Protection Law No. 5 of 2020 Compliance",
+            "ADGM Data Protection Regulations 2021 Alignment",
+            "Bilingual English/Arabic Multi-Agent Natural Language Models"
+        ],
+        "target_sectors": [
+            {
+                "title": "DIFC & ADGM Sovereign Wealth, Banking & Family Offices",
+                "desc": "Autonomous portfolio surveillance, bilingual KYC/AML transaction onboarding, and Central Bank of the UAE regulatory reporting."
+            },
+            {
+                "title": "Dubai & Abu Dhabi Real Estate Mega-Developers",
+                "desc": "Lead qualification swarms, smart escrow reconciliation, automated title deed generation, and multi-lingual WhatsApp tenant agents."
+            },
+            {
+                "title": "Energy, CleanTech & Petrochemical Infrastructure",
+                "desc": "Refinery sensor telemetry triage, automated HSE compliance incident logging, and supply chain procurement dispatch."
+            },
+            {
+                "title": "Government Entities & Sovereign Smart City Programs",
+                "desc": "Air-gapped bilingual citizen service agents, multi-department document indexing, and sovereign GovTech workflow automation."
+            }
+        ],
+        "core_pillars": [
+            {
+                "title": "AWS me-central-1 (UAE) Sovereign Cloud",
+                "desc": "All model weights and enterprise data remain strictly within the UAE sovereign cloud perimeter, fulfilling all national data residency mandates.",
+                "metric": "100%",
+                "metric_label": "UAE Data Residency"
+            },
+            {
+                "title": "Native Arabic/English Bilingual LLMs",
+                "desc": "Fine-tuned models with deep Arabic dialectal and Modern Standard Arabic comprehension alongside English for seamless GCC workflows.",
+                "metric": "Sub-20ms",
+                "metric_label": "Bilingual TTFT"
+            },
+            {
+                "title": "Audited 90-Day Breakeven",
+                "desc": "Contractually backed milestones with audited 3x-5x ROI delivered inside 90 days of live production deployment.",
+                "metric": "90 Days",
+                "metric_label": "Guaranteed Breakeven"
+            }
+        ],
+        "case_study": {
+            "title": "Bilingual Escrow & Investor Contract Automation for Leading Dubai Real Estate Developer",
+            "client_type": "Tier-1 Dubai Master Developer (AED 12B Portfolio)",
+            "challenge": "Processing bilingual English/Arabic sales purchase agreements, KYC compliance documents, and DLD escrow reconciliations required 3 weeks per transaction cycle.",
+            "solution": "Elesium deployed a private VPC cluster on AWS me-central-1 (UAE) running bilingual fine-tuned models with sub-second OCR and automated escrow ledger matching.",
+            "roi_metric": "94% Faster Contract Processing • AED 4.2M Annual Cost Arbitrage • 100% UAE In-Country Residency"
+        },
+        "pricing_tiers": [
+            {
+                "name": "Sovereign Pilot Pod",
+                "price": "AED 55,000",
+                "description": "Rapid 14-day production pilot deployed inside your AWS me-central-1 (UAE) VPC with UAE Law 45/2021 documentation.",
+                "deliverables": [
+                    "AWS me-central-1 Terraform deployment",
+                    "Single high-throughput bilingual multi-agent workflow",
+                    "UAE data residency verification certificate",
+                    "14-day live production deployment SLA"
+                ]
+            },
+            {
+                "name": "Production Multi-Agent Cluster",
+                "price": "AED 165,000",
+                "description": "Multi-agent transformation across 3 core departments with custom bilingual Arabic/English models and DIFC/ADGM compliance packaging.",
+                "deliverables": [
+                    "Multi-agent swarm across 3 departments",
+                    "Bilingual Arabic/English fine-tuned models",
+                    "Native ERP & Oracle/SAP database connectors",
+                    "DIFC/ADGM compliance audit dossier",
+                    "90-day guaranteed 3x-5x ROI covenant"
+                ]
+            },
+            {
+                "name": "Enterprise Sovereign Fleet",
+                "price": "AED 440,000",
+                "description": "Fleet-wide autonomous transformation for UAE conglomerates, sovereign entities, and GCC multinationals with dedicated architect support.",
+                "deliverables": [
+                    "Unlimited multi-agent orchestration pipelines",
+                    "Multi-zone GCC cloud failover",
+                    "Dedicated Principal Systems Architect pairing",
+                    "24/7 GCC engineering support SLA",
+                    "Bi-annual red-team model safety evaluation"
+                ]
+            }
+        ],
+        "regional_faqs": [
+            {
+                "q": "How does Elesium comply with UAE Data Protection Law (Federal Decree-Law No. 45/2021)?",
+                "a": "All compute and data stay within the UAE borders on AWS me-central-1 (UAE) or sovereign local cloud nodes. Zero customer data or inference logs leave the UAE sovereign jurisdiction."
+            },
+            {
+                "q": "Do you support Arabic language and GCC dialect enterprise processing?",
+                "a": "Yes. Our models are fine-tuned on bilingual Arabic/English corporate datasets, supporting Modern Standard Arabic as well as Gulf, Egyptian, and Levantine dialects for document processing and conversational voice agents."
+            },
+            {
+                "q": "How does contracting work for UAE and GCC enterprises?",
+                "a": "We contract under standard DIFC or ADGM common-law jurisdiction agreements with UAE Dirham (AED) invoicing via local bank transfer."
+            },
+            {
+                "q": "Do you support deployments in Saudi Arabia or other GCC countries?",
+                "a": "Yes. Our sovereign VPC pods deploy identically into AWS me-south-1 (Bahrain) or local Saudi Cloud infrastructure in full compliance with KSA Personal Data Protection Law (PDPL)."
+            }
+        ]
+    }
+}
+
+def render_international_hub_semantic_html(region_key: str) -> str:
+    region = INTERNATIONAL_REGIONS_DATA.get(region_key, INTERNATIONAL_REGIONS_DATA["us"])
+    region_name = html.escape(region["region_name"])
+    flag = html.escape(region["flag"])
+    h1 = html.escape(region["h1"])
+    hero_subtitle = html.escape(region["hero_subtitle"])
+    answer_capsule = html.escape(region["answer_capsule"])
+    cloud_data_centers = html.escape(region["cloud_data_centers"])
+    currency = html.escape(region["currency"])
+    currency_symbol = html.escape(region["currency_symbol"])
+    case = region["case_study"]
+    case_title = html.escape(case["title"])
+    case_client = html.escape(case["client_type"])
+    case_challenge = html.escape(case["challenge"])
+    case_solution = html.escape(case["solution"])
+    case_metric = html.escape(case["roi_metric"])
+
+    pillars_html = "".join(
+        f'<div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.03);">'
+        f'<div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#059669;margin-bottom:0.25rem;">{html.escape(p["metric"])}</div>'
+        f'<div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#6b7280;margin-bottom:0.75rem;">{html.escape(p["metric_label"])}</div>'
+        f'<h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">{html.escape(p["title"])}</h3>'
+        f'<p style="font-size:0.9rem;line-height:1.6;color:#4b5563;margin:0;">{html.escape(p["desc"])}</p>'
+        f'</div>'
+        for p in region.get("core_pillars", [])
+    )
+
+    sectors_html = "".join(
+        f'<li style="border:1px solid #e5e7eb;padding:1.25rem;border-radius:0.75rem;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.02);">'
+        f'<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">'
+        f'<span style="color:#059669;font-weight:bold;font-size:1.1rem;">&check;</span>'
+        f'<h3 style="font-size:1.05rem;font-weight:700;color:#111827;margin:0;">{html.escape(s["title"])}</h3>'
+        f'</div>'
+        f'<p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">{html.escape(s["desc"])}</p>'
+        f'</li>'
+        for s in region.get("target_sectors", [])
+    )
+
+    pricing_html = "".join(
+        f'<div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.75rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.04);display:flex;flex-direction:column;justify-content:space-between;">'
+        f'<div>'
+        f'<div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Fixed-Fee Milestone SLA</div>'
+        f'<h3 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0 0 0.5rem 0;">{html.escape(tier["name"])}</h3>'
+        f'<div style="font-size:2rem;font-weight:800;color:#111827;margin-bottom:0.75rem;font-family:monospace;">{html.escape(tier["price"])}</div>'
+        f'<p style="font-size:0.9rem;line-height:1.6;color:#4b5563;margin-bottom:1.25rem;">{html.escape(tier["description"])}</p>'
+        f'<ul style="list-style-type:none;padding:0;margin:0 0 1.5rem 0;font-size:0.875rem;color:#374151;line-height:1.7;">'
+        + "".join(f'<li style="margin-bottom:0.35rem;">&bull; {html.escape(d)}</li>' for d in tier.get("deliverables", [])) +
+        f'</ul>'
+        f'</div>'
+        f'<a href="/waitlist/" style="display:block;text-align:center;padding:0.75rem 1rem;background:#111827;color:#ffffff;border-radius:0.5rem;font-weight:700;text-decoration:none;font-size:0.875rem;">Engage {region_name} Engineering Pod &rarr;</a>'
+        f'</div>'
+        for tier in region.get("pricing_tiers", [])
+    )
+
+    frameworks_html = "".join(
+        f'<li style="border:1px solid #d1fae5;background:#f0fdf4;padding:1rem 1.25rem;border-radius:0.5rem;color:#065f46;font-size:0.9rem;font-weight:600;">'
+        f'&#128737; {html.escape(fw)}'
+        f'</li>'
+        for fw in region.get("statutory_frameworks", [])
+    )
+
+    faqs_html = "".join(
+        f'<div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.75rem;margin-bottom:1.25rem;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.03);">'
+        f'<h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.75rem 0;">{html.escape(faq["q"])}</h3>'
+        f'<p class="faq-answer" style="font-size:0.95rem;line-height:1.7;color:#374151;margin:0;">{html.escape(faq["a"])}</p>'
+        f'</div>'
+        for faq in region.get("regional_faqs", [])
+    )
+
+    global_mesh_links = "".join(
+        f'<div style="border:1px solid #e5e7eb;padding:1.25rem;border-radius:0.5rem;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.03);">'
+        f'<div style="font-size:0.75rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">{html.escape(r["currency"])} &bull; {html.escape(r["cloud_data_centers"].split("&")[0].strip())}</div>'
+        f'<div style="font-weight:700;margin-top:0.35rem;"><a href="/{html.escape(r["slug"])}/" style="color:#2563eb;text-decoration:none;">{html.escape(r["flag"])} {html.escape(r["region_name"])} Hub &rarr;</a></div>'
+        f'</div>'
+        for k, r in INTERNATIONAL_REGIONS_DATA.items()
+    )
+    global_mesh_links += f"""<div style="border:1px solid #e5e7eb;padding:1.25rem;border-radius:0.5rem;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="font-size:0.75rem;font-family:monospace;color:#059669;font-weight:700;text-transform:uppercase;">INR (₹) &bull; AWS ap-south-1 Mumbai</div>
+        <div style="font-weight:700;margin-top:0.35rem;"><a href="/ai-automation-agency-india/" style="color:#2563eb;text-decoration:none;">🇮🇳 India &amp; Global Headquarters &rarr;</a></div>
+      </div>"""
+
+    return f"""
+<div id="prerendered-international-hub" style="max-width:1100px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;" aria-label="Breadcrumb">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / 
+    <span style="color:#4b5563;">Global Enterprise AI</span> / 
+    <span style="color:#059669;font-weight:700;">{flag} {region_name}</span>
+  </nav>
+
+  <header style="margin-bottom:3.5rem;">
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin-bottom:1rem;">
+      <span style="font-size:0.75rem;font-family:monospace;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#059669;background:#ecfdf5;border:1px solid #a7f3d0;padding:0.35rem 0.75rem;border-radius:9999px;">
+        {flag} {region_name} &bull; Sovereign Cloud Hub
+      </span>
+      <span style="font-size:0.75rem;font-family:monospace;color:#4b5563;background:#f3f4f6;border:1px solid #e5e7eb;padding:0.35rem 0.75rem;border-radius:9999px;">
+        ⚡ {cloud_data_centers}
+      </span>
+      <span style="font-size:0.75rem;font-family:monospace;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;padding:0.35rem 0.75rem;border-radius:9999px;">
+        Invoicing: {currency}
+      </span>
+    </div>
+
+    <h1 style="font-size:2.85rem;font-weight:800;line-height:1.15;margin:0 0 1.25rem 0;color:#111827;letter-spacing:-0.02em;">{h1}</h1>
+    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;margin-bottom:2rem;max-width:920px;">{hero_subtitle}</p>
+
+    <!-- AEO Answer Capsule -->
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:5px solid #059669;border-radius:0.75rem;padding:1.75rem;margin-bottom:2rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;">
+        <span>⚡ Global Enterprise Executive Summary • AEO Answer Capsule</span>
+      </div>
+      <p style="font-size:1.1rem;line-height:1.65;color:#065f46;margin:0;font-weight:600;">{answer_capsule}</p>
+    </div>
+
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+      <a href="/waitlist/" style="display:inline-block;padding:0.75rem 1.75rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Architecture Consultation &rarr;</a>
+      <a href="/tools/enterprise-ai-roi-calculator/" style="display:inline-block;padding:0.75rem 1.75rem;border:1px solid #d1d5db;background:#ffffff;color:#111827;font-weight:600;border-radius:0.5rem;text-decoration:none;">Simulate {currency_symbol} ROI Payback</a>
+      <a href="https://wa.me/918317329312" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.75rem 1.5rem;border:1px solid #a7f3d0;background:#ecfdf5;color:#047857;font-weight:600;border-radius:0.5rem;text-decoration:none;">💬 Chat on WhatsApp with Lead Architect</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 3 Core Architecture Pillars -->
+    <section style="margin-bottom:3.5rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Production SLA &amp; Verification</div>
+      <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin:0 0 1.5rem 0;">Deterministic Systems Engineering for {region_name}</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+        {pillars_html}
+      </div>
+    </section>
+
+    <!-- Sovereign Architecture Deep Dive -->
+    <section style="margin-bottom:3.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Data Sovereignty Blueprint</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Air-Gapped Private VPC Deployment &amp; Dedicated Enclave Architecture</h2>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
+        For enterprise leaders operating across {region_name}, commercial cloud API models introduce severe regulatory vulnerabilities, risk of proprietary IP leakage into public foundation model corpora, and unexpected per-token pricing escalation. Sending sensitive customer records, financial ledgers, or proprietary source code to shared public endpoints violates regional compliance standards.
+      </p>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
+        Elesium engineers custom, sovereign private VPC clusters containerized within your corporate cloud perimeter ({cloud_data_centers}). Our architectures leverage state-of-the-art open-weights model backbones—including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5—accelerated with <strong>vLLM PagedAttention</strong> and custom FP8 quantization. This produces sub-2.0s multi-agent reasoning, sub-20ms time-to-first-token throughput, and up to 74% compute cost reduction compared to legacy API routes, all operating strictly behind your firewall.
+      </p>
+      <div style="background:#f8fafc;border-left:4px solid #059669;padding:1.25rem;border-radius:0.5rem;font-size:0.9rem;line-height:1.6;color:#1e293b;">
+        <strong>Sovereign Zero-Retention Guarantee:</strong> Zero external API egress. Zero customer telemetry retention. All model weights, fine-tuned LoRA adapters, and agent scratchpad memories remain permanently within your dedicated tenant VPC boundary.
+      </div>
+    </section>
+
+    <!-- Target Industries -->
+    <section style="margin-bottom:3.5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Regional Commercial Workflows</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">High-Impact Operational Workflows Automated in {region_name}</h2>
+      <p style="font-size:1rem;color:#4b5563;margin-bottom:1.5rem;max-width:850px;line-height:1.6;">
+        We design and deploy deterministic, mission-critical autonomous workflows engineered specifically for the regulatory mandates, legacy IT backbones, and operational bottlenecks prevalent in {region_name}:
+      </p>
+      <ul style="list-style-type:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
+        {sectors_html}
+      </ul>
+    </section>
+
+    <!-- Audited Case Study -->
+    <section style="margin-bottom:3.5rem;background:linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);border:1px solid #86efac;border-radius:0.75rem;padding:2.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+      <div style="font-size:0.75rem;font-family:monospace;color:#16a34a;font-weight:700;text-transform:uppercase;margin-bottom:0.5rem;">Audited Deployment Benchmark</div>
+      <h3 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 0.5rem 0;">{case_title}</h3>
+      <div style="font-size:0.875rem;color:#6b7280;margin-bottom:1.5rem;font-family:monospace;">Client Node: {case_client} &bull; Audited Production Benchmark</div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin-bottom:1.5rem;">
+        <div style="background:#ffffff;border:1px solid #d1fae5;padding:1.5rem;border-radius:0.5rem;">
+          <strong style="display:block;font-size:0.95rem;color:#111827;margin-bottom:0.5rem;">Operational Bottleneck:</strong>
+          <p style="font-size:0.9rem;line-height:1.65;color:#4b5563;margin:0;">{case_challenge}</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #d1fae5;padding:1.5rem;border-radius:0.5rem;">
+          <strong style="display:block;font-size:0.95rem;color:#111827;margin-bottom:0.5rem;">Engineered Architecture:</strong>
+          <p style="font-size:0.9rem;line-height:1.65;color:#4b5563;margin:0;">{case_solution}</p>
+        </div>
+      </div>
+      
+      <div style="font-size:1.15rem;font-weight:700;color:#047857;background:#dcfce7;border:1px solid #bbf7d0;padding:1.25rem;border-radius:0.5rem;display:flex;align-items:center;gap:0.75rem;">
+        <span>🎯 Audited Production Metric:</span>
+        <span>{case_metric}</span>
+      </div>
+    </section>
+
+    <!-- 14-Day Production Protocol -->
+    <section style="margin-bottom:3.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Execution Lifecycle &amp; Delivery SLA</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">The 14-Day Production Engineering Lifecycle</h2>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.5rem;">
+        Elesium circumvents bureaucratic 6-month consulting cycles through a rigorous, high-velocity engineering sprint backed by fixed-fee covenants:
+      </p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;margin-bottom:1.5rem;">
+        <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 01 – 03</div>
+          <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">VPC Enclave &amp; Infrastructure</h4>
+          <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">Terraform deployment of private cloud VPC, vLLM instance provisioning, and KMS key generation.</p>
+        </div>
+        <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 04 – 07</div>
+          <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">Multi-Agent State Graph</h4>
+          <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">LangGraph orchestration nodes, deterministic validation schemas, and automated error recovery loops.</p>
+        </div>
+        <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 08 – 11</div>
+          <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">Integration &amp; Red-Teaming</h4>
+          <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">Bi-directional enterprise connectors, synthetic failure injection, and adversarial security benchmarking.</p>
+        </div>
+        <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 12 – 14</div>
+          <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">Production Cutover</h4>
+          <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">Live traffic cutover, automated Prometheus telemetry dashboards, and 90-day ROI clock initialization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Pricing Tiers -->
+    <section style="margin-bottom:3.5rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Transparent Procurement &amp; Invoicing</div>
+      <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin:0 0 1.5rem 0;">Enterprise Investment Framework ({currency})</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;">
+        {pricing_html}
+      </div>
+    </section>
+
+    <!-- Statutory Compliance Matrix -->
+    <section style="margin-bottom:3.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Regulatory Governance</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Statutory Compliance &amp; Regional Audit Safe Harbors</h2>
+      <p style="font-size:1rem;color:#4b5563;margin-bottom:1.5rem;max-width:850px;line-height:1.6;">
+        Every multi-agent pipeline engineered by Elesium is architected to satisfy the strictest national and industry statutory mandates governing {region_name}:
+      </p>
+      <ul style="list-style-type:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
+        {frameworks_html}
+      </ul>
+    </section>
+
+    <!-- Regional Procurement & Architecture FAQs -->
+    <section style="margin-bottom:3.5rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Architectural Inquiries</div>
+      <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin:0 0 1.5rem 0;">Enterprise Procurement &amp; Technical FAQs ({region_name})</h2>
+      {faqs_html}
+    </section>
+
+    <!-- Global Cross-Regional Navigation Mesh -->
+    <section style="margin-bottom:3.5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Global Sovereign Infrastructure Network</div>
+      <h3 style="font-size:1.25rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Elesium International Sovereign Portals &amp; Reciprocal Hreflang Clusters</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">
+        {global_mesh_links}
+      </div>
+    </section>
+
+    <!-- Bottom Action Card -->
+    <section style="text-align:center;padding:3rem 2rem;border-radius:1rem;background:#111827;color:#ffffff;">
+      <div style="font-family:monospace;font-size:0.75rem;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Sovereign Production SLA &bull; Guaranteed Breakeven</div>
+      <h3 style="font-size:2rem;font-weight:800;margin:0 0 1rem 0;">Deploy Sovereign Multi-Agent Infrastructure in {region_name}</h3>
+      <p style="color:#9ca3af;font-size:1.05rem;max-width:650px;margin:0 auto 1.5rem auto;line-height:1.6;">
+        Schedule a confidential 90-minute architecture review with Principal AI Systems Architect Chaman Shah. Receive a customized 3-year TCO financial analysis in {currency_symbol} and fixed-fee implementation plan.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/918317329312" style="display:inline-block;padding:0.85rem 2rem;background:#10b981;color:#000000;font-weight:800;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+          Chat on WhatsApp with Lead Architect (+91-8317329312) &rarr;
+        </a>
+        <a href="/waitlist/" style="display:inline-block;padding:0.85rem 2rem;border:1px solid #374151;background:#1f2937;color:#ffffff;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+          Request Confidential Enterprise Audit
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+"""
+
+def get_international_hub_schemas(region_key: str, canonical_url: str):
+    region = INTERNATIONAL_REGIONS_DATA.get(region_key, INTERNATIONAL_REGIONS_DATA["us"])
+    org_schema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://elesium.online/#organization",
+        "name": "Elesium",
+        "url": "https://elesium.online",
+        "logo": "https://elesium.online/logo.png",
+        "description": region["answer_capsule"],
+        "sameAs": [
+            "https://elesium.online",
+            "https://www.goodfirms.co/company/elesium-online",
+            "https://clutch.co/profile/elesium-online",
+            "https://www.g2.com/products/elesium-ai-automation-platform",
+            "https://www.trustpilot.com/review/elesium.online",
+            "https://www.crunchbase.com/organization/elesium-online",
+            "https://github.com/655Chaman/elesium-website",
+            "https://www.linkedin.com/in/chaman-elesium",
+            "https://x.com/elesium_ai"
+        ]
+    }
+
+    srv_schema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": f"{canonical_url}#service",
+        "name": region["h1"],
+        "provider": {
+            "@id": "https://elesium.online/#organization"
+        },
+        "serviceType": "Enterprise AI Automation & Sovereign Private VPC Engineering",
+        "areaServed": region["region_name"],
+        "description": region["answer_capsule"],
+        "url": canonical_url,
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": tier["name"],
+                "description": tier["description"],
+                "priceCurrency": region["currency_code"],
+                "price": re.sub(r'[^0-9]', '', tier["price"])
+            }
+            for tier in region.get("pricing_tiers", [])
+        ]
+    }
+
+    breadcrumb_schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": f"{canonical_url}#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://elesium.online"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": f"Global Enterprise AI ({region['region_name']})",
+                "item": canonical_url
+            }
+        ]
+    }
+
+    faq_schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": f"{canonical_url}#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": faq["q"],
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq["a"]
+                }
+            }
+            for faq in region.get("regional_faqs", [])
+        ]
+    }
+
+    return org_schema, srv_schema, breadcrumb_schema, faq_schema
+
+RECIPROCAL_HREFLANG_URLS = {
+    "https://elesium.online/",
+    "https://elesium.online",
+    "https://elesium.online/us/",
+    "https://elesium.online/uk/",
+    "https://elesium.online/ae/",
+}
+
+RECIPROCAL_HREFLANG_BLOCK = """  <link rel="alternate" hreflang="x-default" href="https://elesium.online/" />
+  <link rel="alternate" hreflang="en-in" href="https://elesium.online/" />
+  <link rel="alternate" hreflang="en-us" href="https://elesium.online/us/" />
+  <link rel="alternate" hreflang="en-gb" href="https://elesium.online/uk/" />
+  <link rel="alternate" hreflang="en-ae" href="https://elesium.online/ae/" />"""
+
 def replace_canonical(html_content, target_url):
     """
-    Robust regex replacement for the canonical link tag and self-referential hreflang tags.
-    Handles self-closing slashes (/>), whitespace, and single/double quotes.
-    Prevents Google from collapsing child pages into the root homepage.
+    Robust regex replacement for the canonical link tag and hreflang tags.
+    For the flagship regional cluster (/, /us/, /uk/, /ae/), injects the full
+    5-tuple reciprocal hreflang array (x-default, en-in, en-us, en-gb, en-ae).
+    For all other deep programmatic and utility pages, injects self-referential
+    hreflang tags (en, x-default) to prevent Googlebot 404 hreflang errors.
     """
     pattern = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\'][^"\']*["\']\s*/?>', re.IGNORECASE)
     replacement = f'<link rel="canonical" href="{target_url}" />'
@@ -7267,10 +8006,22 @@ def replace_canonical(html_content, target_url):
         # If no canonical tag existed, inject it before </head>
         html_content = html_content.replace("</head>", f'  {replacement}\n</head>')
 
-    # Update hreflang tags to be self-referential to target_url
-    hreflang_pattern = re.compile(r'<link\s+rel=["\']alternate["\']\s+hreflang=["\'](en|x-default)["\']\s+href=["\'][^"\']*["\']\s*/?>', re.IGNORECASE)
-    if hreflang_pattern.search(html_content):
-        html_content = hreflang_pattern.sub(f'<link rel="alternate" hreflang="\\1" href="{target_url}" />', html_content)
+    # Remove all existing hreflang tags to avoid duplicates/stale tags
+    html_content = re.sub(r'\s*<link\s+rel=["\']alternate["\']\s+hreflang=["\'][^"\']*["\']\s+href=["\'][^"\']*["\']\s*/?>', '', html_content, flags=re.IGNORECASE)
+
+    # Inject appropriate hreflang tags right after canonical
+    if target_url in RECIPROCAL_HREFLANG_URLS:
+        hreflang_injection = f'\n{RECIPROCAL_HREFLANG_BLOCK}'
+    else:
+        hreflang_injection = f'\n  <link rel="alternate" hreflang="en" href="{target_url}" />\n  <link rel="alternate" hreflang="x-default" href="{target_url}" />'
+
+    html_content = re.sub(
+        r'(<link\s+rel=["\']canonical["\']\s+href=["\'][^"\']*["\']\s*/?>)',
+        r'\1' + hreflang_injection,
+        html_content,
+        count=1,
+        flags=re.IGNORECASE
+    )
 
     return html_content
 
@@ -8699,6 +9450,8 @@ def generate_ssg():
         hp_html = root_pattern.sub(lambda m: f'<div id="root">{hp_semantic}</div>', raw_hp_html)
     else:
         hp_html = raw_hp_html.replace('<div id="root"></div>', f'<div id="root">{hp_semantic}</div>')
+    hp_html = replace_canonical(hp_html, "https://elesium.online/")
+    hp_html = update_social_urls(hp_html, "https://elesium.online/")
     DIST_INDEX.write_text(finalize_html_output(hp_html, "https://elesium.online/"), encoding="utf-8")
     print("Pre-rendered dist/index.html with full semantic DOM.")
 
@@ -9884,6 +10637,18 @@ def generate_ssg():
         "enterprise-ai-kolkata": {
             "title": "Best Enterprise AI Company in Kolkata | Enterprise AI & Mining Logistics Automation",
             "desc": "Elesium is the top enterprise AI company in Kolkata. Delivering heavy engineering telemetry, cross-border tea & commodity trading state machines, and GovTech AI in Sector V Salt Lake."
+        },
+        "us": {
+            "title": "Best Enterprise AI Company in USA | Sovereign VPC Multi-Agent Systems",
+            "desc": "Elesium engineers sovereign multi-agent LangGraph systems, private VPC vLLM clusters, and HIPAA/SOC-2 compliant automated workflows for US enterprises. AWS us-east-1 & us-west-2."
+        },
+        "uk": {
+            "title": "Best Enterprise AI Company in UK | Sovereign Multi-Agent Systems London",
+            "desc": "Elesium UK engineers sovereign enterprise AI automation, private VPC multi-agent systems on AWS eu-west-2 London, and FCA/UK GDPR compliant workflows."
+        },
+        "ae": {
+            "title": "Best Enterprise AI Company in UAE & Dubai | Sovereign GCC AI Infrastructure",
+            "desc": "Elesium UAE delivers sovereign enterprise AI automation, private VPC nodes on AWS UAE (me-central-1), and compliance with UAE Law 45/2021, DIFC, and ADGM."
         },
         "waitlist": {
             "title": "ele-in Waitlist — Enterprise AI Platform",
@@ -17244,6 +18009,18 @@ def generate_ssg():
 
             city_schema, city_breadcrumb, city_faq = get_regional_city_hub_schemas(city_key, canonical_url)
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(city_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(city_breadcrumb, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(city_faq, ensure_ascii=False)}</script>\n</head>')
+
+        elif route in ["us", "uk", "ae"]:
+            region_key = route
+            region_content = render_international_hub_semantic_html(region_key)
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{region_content}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{region_content}</div>')
+
+            org_s, srv_s, breadcrumb_s, faq_s = get_international_hub_schemas(region_key, canonical_url)
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(org_s, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(srv_s, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(breadcrumb_s, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(faq_s, ensure_ascii=False)}</script>\n</head>')
 
         elif route == "markets":
             markets_answer_capsule = (
