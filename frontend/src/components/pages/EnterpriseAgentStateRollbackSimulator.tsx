@@ -124,7 +124,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
           name="description"
           content="Simulate and benchmark multi-agent state persistence architectures: volatile memory vs synchronous relational checkpointing vs sovereign Delta WAL. Calculate sub-1.5ms overhead, microsecond rollback, and zero rerun token waste."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-state-snapshot-rollback-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-state-snapshot-rollback-simulator/" />
       </Helmet>
 
       {/* Top Banner / Breadcrumb */}
@@ -133,7 +133,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
           <div className="flex items-center gap-2 text-slate-400">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/resources" className="hover:text-white transition-colors">Interactive Tools</Link>
+            <Link to="/resources/" className="hover:text-white transition-colors">Interactive Tools</Link>
             <span>/</span>
             <span className="text-cyan-400 font-mono">Agent State Snapshot &amp; Rollback Simulator</span>
           </div>
@@ -630,7 +630,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                 </ExpandableScreenContent>
               </ExpandableScreen>
               <Link
-                to="/solutions"
+                to="/solutions/"
                 className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
               >
                 Explore All Sovereign Solutions

@@ -152,7 +152,7 @@ export default function EnterpriseRoiCalculator() {
                 "name": "Enterprise AI ROI & 3-Year TCO Calculator",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "All",
-                "url": "https://elesium.online/tools/enterprise-ai-roi-calculator",
+                "url": "https://elesium.online/tools/enterprise-ai-roi-calculator/",
                 "description": "Interactive 3-Year Total Cost of Ownership (TCO) & ROI Calculator for Enterprise AI Automation. Model savings across Logistics, BFSI, Manufacturing, Healthcare, and ERP systems.",
                 "offers": {
                     "@type": "Offer",
@@ -178,13 +178,13 @@ export default function EnterpriseRoiCalculator() {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Enterprise AI Solutions",
-                        "item": "https://elesium.online/solutions"
+                        "item": "https://elesium.online/solutions/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 3,
                         "name": "Enterprise AI ROI Calculator",
-                        "item": "https://elesium.online/tools/enterprise-ai-roi-calculator"
+                        "item": "https://elesium.online/tools/enterprise-ai-roi-calculator/"
                     }
                 ]
             },
@@ -208,12 +208,12 @@ export default function EnterpriseRoiCalculator() {
                 <title>Enterprise AI Automation ROI & 3-Year TCO Calculator | Elesium</title>
                 <meta 
                     name="description" 
-                    content="Calculate your exact 3-year Total Cost of Ownership (TCO) and net capital savings migrating from manual headcount drag and per-seat SaaS to sovereign private VPC multi-agent AI automation." 
+                    content="Calculate your exact 3-Year Total Cost of Ownership (TCO) and net capital savings migrating from manual headcount drag and per-seat SaaS to sovereign private VPC multi-agent AI automation." 
                 />
-                <link rel="canonical" href="https://elesium.online/tools/enterprise-ai-roi-calculator" />
+                <link rel="canonical" href="https://elesium.online/tools/enterprise-ai-roi-calculator/" />
                 <meta property="og:title" content="Enterprise AI Automation ROI & 3-Year TCO Calculator | Elesium" />
                 <meta property="og:description" content="Simulate enterprise cost migration from manual operations to sovereign private VPC AI agents. Real-time payback, annual savings, and latency benchmarks." />
-                <meta property="og:url" content="https://elesium.online/tools/enterprise-ai-roi-calculator" />
+                <meta property="og:url" content="https://elesium.online/tools/enterprise-ai-roi-calculator/" />
                 <meta property="og:type" content="website" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Enterprise AI Automation ROI & 3-Year TCO Calculator | Elesium" />
@@ -228,7 +228,7 @@ export default function EnterpriseRoiCalculator() {
                 <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-6">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
                     <ChevronRight className="w-3 h-3 text-gray-400" />
-                    <Link to="/solutions" className="hover:text-black dark:hover:text-white transition-colors">Solutions</Link>
+                    <Link to="/solutions/" className="hover:text-black dark:hover:text-white transition-colors">Solutions</Link>
                     <ChevronRight className="w-3 h-3 text-gray-400" />
                     <span className="text-emerald-600 dark:text-emerald-400 font-medium">ROI & TCO Calculator</span>
                 </nav>
@@ -778,7 +778,7 @@ export default function EnterpriseRoiCalculator() {
                                 <ChevronRight className="w-4 h-4" />
                             </button>
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                             >
                                 <span>ele-in SaaS Waitlist</span>
@@ -788,7 +788,7 @@ export default function EnterpriseRoiCalculator() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>

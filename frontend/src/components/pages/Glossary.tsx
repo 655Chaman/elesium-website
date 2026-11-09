@@ -103,19 +103,25 @@ export default function Glossary() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans transition-colors duration-300 pt-24 pb-20">
+    <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans transition-colors duration-300 pt-24 pb-20">
       <WhatsAppModal />
       <Helmet>
-        <title>Enterprise AI Systems & Agentic Architecture Glossary | Elesium</title>
+        <title>AI Architecture Glossary | Elesium</title>
         <meta 
           name="description" 
-          content="Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, DPDP Act compliance protocols, and low-latency inference fabrics." 
+          content="Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, and enterprise low-latency inference fabrics." 
         />
-        <link rel="canonical" href="https://elesium.online/glossary" />
-        <meta property="og:title" content="Enterprise AI Systems & Agentic Architecture Glossary | Elesium" />
-        <meta property="og:description" content="50+ definitive engineering terms for Chief Technology Officers, AI Systems Architects, and Engineering Directors." />
-        <meta property="og:url" content="https://elesium.online/glossary" />
+        <link rel="canonical" href="https://elesium.online/glossary/" />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="AI Architecture Glossary | Elesium" />
+        <meta property="og:description" content="Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, and enterprise low-latency inference fabrics." />
+        <meta property="og:image" content="https://elesium.online/og-image.png" />
+        <meta property="og:url" content="https://elesium.online/glossary/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@elesium_ai" />
+        <meta name="twitter:title" content="AI Architecture Glossary | Elesium" />
+        <meta name="twitter:description" content="Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, and enterprise low-latency inference fabrics." />
+        <meta name="twitter:image" content="https://elesium.online/og-image.png" />
         <script type="application/ld+json">
           {JSON.stringify(schemaJson)}
         </script>
@@ -193,7 +199,7 @@ export default function Glossary() {
             Showing <span className="text-black dark:text-white font-bold">{filteredTerms.length}</span> of {GLOSSARY_TERMS.length} Architectural Definitions
           </div>
           <Link
-            to="/ai-automation-agency-india"
+            to="/ai-automation-agency-india/"
             className="text-xs font-semibold text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center gap-1 transition-colors"
           >
             <span>Explore Sovereign India Pods</span>
@@ -304,7 +310,7 @@ export default function Glossary() {
               <span>Chat on WhatsApp</span>
             </button>
             <Link
-              to="/waitlist"
+              to="/waitlist/"
               className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
             >
               <span>ele-in SaaS Waitlist</span>
@@ -313,6 +319,6 @@ export default function Glossary() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

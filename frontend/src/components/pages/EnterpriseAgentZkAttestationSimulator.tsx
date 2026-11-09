@@ -125,7 +125,7 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
           name="description"
           content="Simulate and benchmark Zero-Knowledge (ZK-SNARK) state attestation for enterprise autonomous agents. Compare full state logging against Merkle rollups and sovereign Groth16 proofs on BN254 for zero-disclosure DPDP Act compliance."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-zk-attestation-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-zk-attestation-simulator/" />
       </Helmet>
 
       {/* Top Breadcrumb */}
@@ -133,7 +133,7 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
         <div className="flex items-center gap-2 text-slate-400">
           <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/resources" className="hover:text-cyan-400 transition-colors">Tools</Link>
+          <Link to="/resources/" className="hover:text-cyan-400 transition-colors">Tools</Link>
           <span>/</span>
           <span className="text-slate-200">Agent ZK State Attestation Simulator</span>
         </div>

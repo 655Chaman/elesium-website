@@ -19,7 +19,7 @@ import {
     Pickaxe,
     Lock
 } from 'lucide-react'
-import { solutionCategories, getTopHighLeverSolutions, SolutionRecord } from '../../data/solutionsData'
+import { solutionCategories, getTopHighLeverSolutions, SolutionSummaryItem as SolutionRecord } from '../../data/solutionsHubData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -131,21 +131,27 @@ export default function SolutionsHub() {
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
+        <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
-                <title>Enterprise AI Solutions & Sovereign Automation Workflows | Elesium</title>
+                <title>Enterprise AI Solutions &amp; Sovereign Automation | Elesium</title>
                 <meta
                     name="description"
                     content="Directory of deterministic, sovereign enterprise AI automation solutions across logistics, BFSI, manufacturing, healthcare, and ERP integration."
                 />
-                <link rel="canonical" href="https://elesium.online/solutions" />
-                <meta property="og:title" content="Enterprise AI Solutions & Sovereign Automation Workflows | Elesium" />
+                <link rel="canonical" href="https://elesium.online/solutions/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Enterprise AI Solutions &amp; Sovereign Automation | Elesium" />
                 <meta
                     property="og:description"
-                    content="Explore 26 production-grade AI solutions for enterprise automation. Sub-2s execution latency, zero data retention, and private VPC deployment."
+                    content="Directory of deterministic, sovereign enterprise AI automation solutions across logistics, BFSI, manufacturing, healthcare, and ERP integration."
                 />
-                <meta property="og:url" content="https://elesium.online/solutions" />
-                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://elesium.online/solutions/" />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="Enterprise AI Solutions &amp; Sovereign Automation | Elesium" />
+                <meta name="twitter:description" content="Directory of deterministic, sovereign enterprise AI automation solutions across logistics, BFSI, manufacturing, healthcare, and ERP integration." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
@@ -246,7 +252,7 @@ export default function SolutionsHub() {
                         {topHighLever.map((item: SolutionRecord) => (
                             <Link
                                 key={item.slug}
-                                to={`/solutions/${item.slug}`}
+                                to={`/solutions/${item.slug}/`}
                                 className="group flex items-start gap-3 p-3.5 rounded-xl border border-gray-200/80 dark:border-white/5 bg-white dark:bg-white/[0.03] hover:border-black dark:hover:border-white/30 transition-all"
                             >
                                 <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-black dark:group-hover:text-white group-hover:translate-x-0.5 transition-all mt-0.5 shrink-0" />
@@ -312,7 +318,7 @@ export default function SolutionsHub() {
                                 {category.solutions.map((solution: SolutionRecord) => (
                                     <Link
                                         key={solution.slug}
-                                        to={`/solutions/${solution.slug}`}
+                                        to={`/solutions/${solution.slug}/`}
                                         className="group relative flex flex-col justify-between p-6 rounded-xl border border-gray-200/90 dark:border-white/5 bg-gray-50/40 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/40 hover:bg-white dark:hover:bg-white/[0.04] transition-all"
                                     >
                                         <div className="space-y-3">
@@ -493,7 +499,7 @@ export default function SolutionsHub() {
                             </button>
 
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                             >
                                 <span>ele-in SaaS Waitlist</span>
@@ -503,10 +509,10 @@ export default function SolutionsHub() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     )
 }

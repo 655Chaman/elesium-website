@@ -191,7 +191,7 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
             <div className="flex items-center space-x-2 text-slate-400">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
               <span>/</span>
-              <Link to="/resources" className="hover:text-white transition-colors">Tools</Link>
+              <Link to="/resources/" className="hover:text-white transition-colors">Tools</Link>
               <span>/</span>
               <span className="text-cyan-400 font-medium">Multi-Agent Tracing &amp; OTel Simulator</span>
             </div>

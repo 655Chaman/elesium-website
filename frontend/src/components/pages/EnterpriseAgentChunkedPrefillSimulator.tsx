@@ -197,7 +197,7 @@ TECHNICAL RECOMMENDATIONS:
           <div className="flex items-center space-x-2 text-xs text-slate-400">
             <a href="/" className="hover:text-indigo-400 transition-colors">Home</a>
             <span>/</span>
-            <a href="/solutions" className="hover:text-indigo-400 transition-colors">Tools</a>
+            <a href="/solutions/" className="hover:text-indigo-400 transition-colors">Tools</a>
             <span>/</span>
             <span className="text-indigo-400 font-medium">Chunked Prefill &amp; Radix Attention</span>
           </div>

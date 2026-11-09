@@ -218,12 +218,12 @@ export default function CommercialDirectory() {
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
+        <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
-                <title>Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory | Elesium</title>
+                <title>Top 100 Enterprise AI Solutions Directory | Elesium</title>
                 <meta
                     name="description"
-                    content="Explore Elesium's top 100 high-intent commercial enterprise AI solutions across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense. Air-gapped VPCs, DPDP Act 2023 compliance, sub-200ms SLAs."
+                    content="Explore Elesium's top 100 enterprise AI solutions across BFSI, Logistics, and Manufacturing. Private VPCs, DPDP compliance, and sub-200ms SLAs."
                 />
                 <link rel="canonical" href="https://elesium.online/commercial-directory.html" />
                 <meta property="og:type" content="website" />
@@ -231,18 +231,18 @@ export default function CommercialDirectory() {
                 <meta property="og:site_name" content="Elesium" />
                 <meta
                     property="og:title"
-                    content="Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory | Elesium"
+                    content="Top 100 Enterprise AI Solutions Directory | Elesium"
                 />
                 <meta
                     property="og:description"
-                    content="Explore Elesium's top 100 high-intent commercial enterprise AI solutions across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense. Air-gapped VPCs, DPDP Act 2023 compliance, sub-200ms SLAs."
+                    content="Explore Elesium's top 100 enterprise AI solutions across BFSI, Logistics, and Manufacturing. Private VPCs, DPDP compliance, and sub-200ms SLAs."
                 />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Top 100 Commercial Enterprise AI Solutions Directory | Elesium" />
+                <meta name="twitter:title" content="Top 100 Enterprise AI Solutions Directory | Elesium" />
                 <meta
                     name="twitter:description"
-                    content="Priority index of 100 commercial enterprise AI automation architectures across India and global hubs."
+                    content="Explore Elesium's top 100 enterprise AI solutions across BFSI, Logistics, and Manufacturing. Private VPCs, DPDP compliance, and sub-200ms SLAs."
                 />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -257,7 +257,7 @@ export default function CommercialDirectory() {
                         Home
                     </Link>
                     <ChevronRight className="w-3 h-3 text-gray-400" />
-                    <Link to="/solutions" className="hover:text-black dark:hover:text-white transition-colors">
+                    <Link to="/solutions/" className="hover:text-black dark:hover:text-white transition-colors">
                         Solutions
                     </Link>
                     <ChevronRight className="w-3 h-3 text-gray-400" />
@@ -474,7 +474,7 @@ export default function CommercialDirectory() {
                                     {category.solutions.map((solution: CommercialSolution) => (
                                         <Link
                                             key={solution.slug}
-                                            to={`/solutions/${solution.slug}`}
+                                            to={`/solutions/${solution.slug}/`}
                                             className="group relative flex flex-col justify-between p-6 rounded-xl border border-gray-200/90 dark:border-white/5 bg-gray-50/40 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/40 hover:bg-white dark:hover:bg-white/[0.04] transition-all"
                                         >
                                             <div className="space-y-3">
@@ -655,7 +655,7 @@ export default function CommercialDirectory() {
                             </button>
 
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                             >
                                 <span>ele-in SaaS Waitlist</span>
@@ -665,10 +665,10 @@ export default function CommercialDirectory() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     )
 }

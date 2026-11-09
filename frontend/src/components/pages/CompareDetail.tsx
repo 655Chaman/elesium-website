@@ -25,7 +25,7 @@ export default function CompareDetail() {
     }, [slug])
 
     if (!battlecard) {
-        return <Navigate to="/compare" replace />
+        return <Navigate to="/compare/" replace />
     }
 
     const relatedBattlecards: CompareBattlecardItem[] = compareData
@@ -44,7 +44,7 @@ export default function CompareDetail() {
         '@graph': [
             {
                 '@type': 'TechArticle',
-                '@id': `https://elesium.online/compare/${battlecard.slug}#article`,
+                '@id': `https://elesium.online/compare/${battlecard.slug}/#article`,
                 'isPartOf': {
                     '@type': 'WebSite',
                     '@id': 'https://elesium.online/#website',
@@ -54,7 +54,7 @@ export default function CompareDetail() {
                 'headline': battlecard.title,
                 'description': battlecard.metaDescription,
                 'inLanguage': 'en-US',
-                'mainEntityOfPage': `https://elesium.online/compare/${battlecard.slug}`,
+                'mainEntityOfPage': `https://elesium.online/compare/${battlecard.slug}/`,
                 'datePublished': battlecard.datePublished,
                 'dateModified': battlecard.dateModified,
                 'author': {
@@ -79,7 +79,7 @@ export default function CompareDetail() {
             },
             {
                 '@type': 'FAQPage',
-                '@id': `https://elesium.online/compare/${battlecard.slug}#faq`,
+                '@id': `https://elesium.online/compare/${battlecard.slug}/#faq`,
                 'mainEntity': battlecard.faqs.map(faq => ({
                     '@type': 'Question',
                     'name': faq.question,
@@ -91,7 +91,7 @@ export default function CompareDetail() {
             },
             {
                 '@type': 'BreadcrumbList',
-                '@id': `https://elesium.online/compare/${battlecard.slug}#breadcrumb`,
+                '@id': `https://elesium.online/compare/${battlecard.slug}/#breadcrumb`,
                 'itemListElement': [
                     {
                         '@type': 'ListItem',
@@ -103,13 +103,13 @@ export default function CompareDetail() {
                         '@type': 'ListItem',
                         'position': 2,
                         'name': 'Architecture Comparisons',
-                        'item': 'https://elesium.online/compare'
+                        'item': 'https://elesium.online/compare/'
                     },
                     {
                         '@type': 'ListItem',
                         'position': 3,
                         'name': battlecard.title,
-                        'item': `https://elesium.online/compare/${battlecard.slug}`
+                        'item': `https://elesium.online/compare/${battlecard.slug}/`
                     }
                 ]
             }
@@ -117,15 +117,22 @@ export default function CompareDetail() {
     }
 
     return (
+        <main id="main-content">
         <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-24 selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
                 <title>{battlecard.title} | Elesium Architecture Battlecards</title>
                 <meta name="description" content={battlecard.metaDescription} />
-                <link rel="canonical" href={`https://elesium.online/compare/${battlecard.slug}`} />
+                <link rel="canonical" href={`https://elesium.online/compare/${battlecard.slug}/`} />
                 <meta property="og:title" content={`${battlecard.title} | Elesium`} />
                 <meta property="og:description" content={battlecard.metaDescription} />
-                <meta property="og:url" content={`https://elesium.online/compare/${battlecard.slug}`} />
+                <meta property="og:url" content={`https://elesium.online/compare/${battlecard.slug}/`} />
                 <meta property="og:type" content="article" />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content={`${battlecard.title} | Elesium`} />
+                <meta name="twitter:description" content={battlecard.metaDescription} />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
@@ -137,7 +144,7 @@ export default function CompareDetail() {
                             Home
                         </Link>
                         <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                        <Link to="/compare" className="hover:text-black dark:hover:text-white transition-colors">
+                        <Link to="/compare/" className="hover:text-black dark:hover:text-white transition-colors">
                             Architecture Comparisons
                         </Link>
                         <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -349,7 +356,7 @@ export default function CompareDetail() {
                                 </p>
                             </div>
                             <Link
-                                to={`/solutions/${battlecard.relatedSolutionSlug}`}
+                                to={`/solutions/${battlecard.relatedSolutionSlug}/`}
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm transition-all hover:opacity-90 shrink-0"
                             >
                                 <span>Inspect Production Solution</span>
@@ -412,7 +419,7 @@ export default function CompareDetail() {
                             <h2 className="text-xl font-bold text-gray-950 dark:text-white">
                                 Adjacent Architecture Battlecards
                             </h2>
-                            <Link to="/compare" className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">
+                            <Link to="/compare/" className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">
                                 View All 6 Comparisons →
                             </Link>
                         </div>
@@ -420,7 +427,7 @@ export default function CompareDetail() {
                             {relatedBattlecards.map(item => (
                                 <Link
                                     key={item.id}
-                                    to={`/compare/${item.slug}`}
+                                    to={`/compare/${item.slug}/`}
                                     className="p-5 rounded-2xl bg-gray-50/80 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white/40 transition-all group flex flex-col justify-between"
                                 >
                                     <div>
@@ -469,7 +476,7 @@ export default function CompareDetail() {
                             </button>
 
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                             >
                                 <span>ele-in SaaS Waitlist</span>
@@ -482,5 +489,6 @@ export default function CompareDetail() {
 
             <WhatsAppModal />
         </article>
+        </main>
     )
 }

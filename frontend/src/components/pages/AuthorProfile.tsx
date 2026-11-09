@@ -137,15 +137,25 @@ export default function AuthorProfile() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300">
+    <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300">
       <WhatsAppModal />
       <Helmet>
-        <title>Chaman Shah — Principal AI Systems Architect & Founder | Elesium</title>
+        <title>Chaman Shah — Principal AI Systems Architect | Elesium</title>
         <meta 
           name="description" 
-          content="Chaman Shah is the Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and DPDP Act 2023 enterprise infrastructure." 
+          content="Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure." 
         />
-        <link rel="canonical" href="https://elesium.online/authors/chaman-shah" />
+        <link rel="canonical" href="https://elesium.online/authors/chaman-shah/" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Chaman Shah — Principal AI Systems Architect | Elesium" />
+        <meta property="og:description" content="Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure." />
+        <meta property="og:image" content="https://elesium.online/chaman-shah.png" />
+        <meta property="og:url" content="https://elesium.online/authors/chaman-shah/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@elesium_ai" />
+        <meta name="twitter:title" content="Chaman Shah — Principal AI Systems Architect | Elesium" />
+        <meta name="twitter:description" content="Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure." />
+        <meta name="twitter:image" content="https://elesium.online/chaman-shah.png" />
         <script type="application/ld+json">
           {JSON.stringify(authorSchema)}
         </script>
@@ -157,7 +167,7 @@ export default function AuthorProfile() {
         <nav className="mb-8 flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400" aria-label="Breadcrumb">
           <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-          <Link to="/team" className="hover:text-black dark:hover:text-white transition-colors">Leadership</Link>
+          <Link to="/team/" className="hover:text-black dark:hover:text-white transition-colors">Leadership</Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
           <span className="text-gray-900 dark:text-white font-medium">Chaman Shah</span>
         </nav>
@@ -241,7 +251,7 @@ export default function AuthorProfile() {
                     <span>Chat on WhatsApp</span>
                   </button>
                   <Link
-                    to="/waitlist"
+                    to="/waitlist/"
                     className="inline-flex items-center gap-1.5 h-10 px-5 border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs rounded-full transition-all shadow-sm"
                   >
                     <span>ele-in SaaS Waitlist</span>
@@ -312,7 +322,7 @@ export default function AuthorProfile() {
             <h2 className="text-xl font-bold text-gray-950 dark:text-white flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-emerald-500" /> Key Authored Technical Systems Whitepapers
             </h2>
-            <Link to="/signals" className="text-xs font-mono text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link to="/signals/" className="text-xs font-mono text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               View All 119 Whitepapers &rarr;
             </Link>
           </div>
@@ -321,7 +331,7 @@ export default function AuthorProfile() {
             {FEATURED_WHITEPAPERS.map((paper) => (
               <Link
                 key={paper.slug}
-                to={`/signals/${paper.slug}`}
+                to={`/signals/${paper.slug}/`}
                 className="block p-5 bg-gray-50/50 dark:bg-white/[0.02] hover:bg-gray-100 dark:hover:bg-white/[0.05] border border-gray-200 dark:border-white/10 rounded-2xl transition-all group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
@@ -366,7 +376,7 @@ export default function AuthorProfile() {
               <span>Chat on WhatsApp with Chaman</span>
             </button>
             <Link
-              to="/waitlist"
+              to="/waitlist/"
               className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
             >
               <span>ele-in SaaS Waitlist</span>
@@ -376,6 +386,6 @@ export default function AuthorProfile() {
         </div>
 
       </div>
-    </div>
+    </main>
   );
 }

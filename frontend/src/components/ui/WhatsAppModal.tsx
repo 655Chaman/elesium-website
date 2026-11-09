@@ -60,6 +60,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                 alt="Elesium Watermark"
                                 width="220"
                                 height="220"
+                                loading="lazy"
                                 className="w-48 h-48 sm:w-56 sm:h-56 object-contain select-none pointer-events-none"
                             />
                         </div>
@@ -160,7 +161,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                     Or launch direct chat without details
                                 </button>
                                 <Link
-                                    to="/waitlist"
+                                    to="/waitlist/"
                                     onClick={onClose}
                                     className="inline-flex items-center gap-1 hover:text-gray-900 dark:hover:text-white transition-colors text-emerald-600 dark:text-emerald-400 font-medium"
                                 >

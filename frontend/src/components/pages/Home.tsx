@@ -100,17 +100,28 @@ export default function Home() {
             className="relative z-10 bg-white dark:bg-black text-gray-900 dark:text-white"
         >
             <Helmet>
-                <title>#1 Best Enterprise AI Company in India | Elesium — Autonomous AI Systems</title>
+                <title>Elesium | Best Enterprise AI Company in India</title>
                 <meta
                     name="description"
-                    content="Elesium is ranked India's #1 best enterprise AI company and premier AI automation agency. We deploy deterministic multi-agent systems and sovereign private VPC infrastructure delivering audited 3x–5x ROI in 90 days."
+                    content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days."
                 />
                 <link rel="canonical" href="https://elesium.online/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Elesium | Best Enterprise AI Company in India" />
+                <meta property="og:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days." />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta property="og:url" content="https://elesium.online/" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="Elesium | Best Enterprise AI Company in India" />
+                <meta name="twitter:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
             </Helmet>
 
             <WhatsAppModal />
 
+            <main id="main-content">
             {/* Hero Section */}
             <HeroSection />
 
@@ -400,7 +411,7 @@ export default function Home() {
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto h-12 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-medium text-sm transition-all flex items-center justify-center gap-2"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
@@ -408,6 +419,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            </main>
         </motion.div>
     )
 }

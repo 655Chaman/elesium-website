@@ -156,7 +156,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
           <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400">
             <a href="/" className="hover:text-cyan-400 transition">Elesium</a>
             <span>/</span>
-            <a href="/solutions" className="hover:text-cyan-400 transition">Tools</a>
+            <a href="/solutions/" className="hover:text-cyan-400 transition">Tools</a>
             <span>/</span>
             <span className="text-cyan-400">Tool #35: Enterprise Agent HSM PKCS#11 Simulator</span>
           </div>

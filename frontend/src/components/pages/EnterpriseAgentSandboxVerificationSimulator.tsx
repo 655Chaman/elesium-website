@@ -114,7 +114,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
           name="description"
           content="Simulate and benchmark autonomous agent code sandbox isolation. Compare unconstrained host execution against naive Docker containers and sovereign microVMs with sub-45ms cold boot, 0.00% breakout vulnerability, and formal AST verification."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-sandbox-formal-verification-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-sandbox-formal-verification-simulator/" />
       </Helmet>
 
       {/* Hero Section */}
@@ -401,7 +401,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
                 </ExpandableScreenContent>
               </ExpandableScreen>
               <Link
-                to="/solutions"
+                to="/solutions/"
                 className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
               >
                 Explore All Sovereign Solutions

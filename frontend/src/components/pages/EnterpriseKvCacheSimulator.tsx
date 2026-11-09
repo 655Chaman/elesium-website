@@ -108,13 +108,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           name="description"
           content="Simulate LLM KV cache memory allocation, PagedAttention fragmentation, Automatic Prefix Caching hit ratios, and TTFT latency across multi-turn enterprise agent workflows."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-llm-context-kv-cache-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-llm-context-kv-cache-simulator/" />
         <meta property="og:title" content="Enterprise LLM Context Window Cache & KV Eviction Simulator | Elesium" />
         <meta
           property="og:description"
           content="Benchmark LLM KV cache memory allocation, RadixAttention prefix caching, Chunked Prefill, and TTFT across multi-turn agent sessions."
         />
-        <meta property="og:url" content="https://elesium.online/tools/enterprise-llm-context-kv-cache-simulator" />
+        <meta property="og:url" content="https://elesium.online/tools/enterprise-llm-context-kv-cache-simulator/" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -125,7 +125,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-slate-400">
           <Link to="/" className="hover:text-white transition-colors">Home</Link>
           <span className="text-slate-600">/</span>
-          <Link to="/compare" className="hover:text-white transition-colors">Compare</Link>
+          <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
           <span className="text-slate-600">/</span>
           <span className="text-sky-400 font-medium">KV Cache Simulator</span>
         </nav>

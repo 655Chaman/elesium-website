@@ -146,13 +146,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           name="description"
           content="Simulate and benchmark real-time voice agent latency across WebRTC transport, Silero VAD silence hangover, streaming ASR, LLM TTFT, and neural TTS synthesis."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-voice-agent-latency-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-voice-agent-latency-simulator/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "Enterprise Real-Time Voice Agent VAD & Turn-Taking Latency Simulator",
-            "url": "https://elesium.online/tools/enterprise-voice-agent-latency-simulator",
+            "url": "https://elesium.online/tools/enterprise-voice-agent-latency-simulator/",
             "description": "Interactive telemetry sandbox calculating conversational turn-taking latency across WebRTC audio transport, VAD silence thresholds, streaming Whisper ASR, LLM TTFT, and neural TTS streaming audio.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "All",
@@ -186,13 +186,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Solutions",
-                "item": "https://elesium.online/solutions"
+                "item": "https://elesium.online/solutions/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Voice Agent Latency Simulator",
-                "item": "https://elesium.online/tools/enterprise-voice-agent-latency-simulator"
+                "item": "https://elesium.online/tools/enterprise-voice-agent-latency-simulator/"
               }
             ]
           })}
@@ -204,7 +204,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <nav className="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-8">
           <Link to="/" className="hover:text-slate-200 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/solutions" className="hover:text-slate-200 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-slate-200 transition-colors">Solutions</Link>
           <span>/</span>
           <span className="text-purple-400">Voice Agent Latency Simulator</span>
         </nav>

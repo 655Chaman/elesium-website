@@ -150,13 +150,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           name="description"
           content="Simulate cyclic agent deadlocks, cascading API rate-limit thundering herds, and deterministic FSM circuit breaker fallbacks with exponential backoff and jitter."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "Enterprise Multi-Agent Deadlock & FSM Circuit Breaker Visualizer",
-            "url": "https://elesium.online/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer",
+            "url": "https://elesium.online/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer/",
             "description": "Interactive multi-agent network graph simulator modeling circular wait deadlocks, exponential backoff with full jitter, and deterministic FSM circuit breaker fallback mechanics.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "All",
@@ -190,13 +190,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Solutions",
-                "item": "https://elesium.online/solutions"
+                "item": "https://elesium.online/solutions/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Agent Deadlock & Circuit Breaker Visualizer",
-                "item": "https://elesium.online/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer"
+                "item": "https://elesium.online/tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer/"
               }
             ]
           })}
@@ -208,7 +208,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <nav className="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-8">
           <Link to="/" className="hover:text-slate-200 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/solutions" className="hover:text-slate-200 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-slate-200 transition-colors">Solutions</Link>
           <span>/</span>
           <span className="text-rose-400">Agent Deadlock & Circuit Breaker Visualizer</span>
         </nav>

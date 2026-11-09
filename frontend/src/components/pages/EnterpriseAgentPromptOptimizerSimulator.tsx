@@ -119,7 +119,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
     name: 'Enterprise Agent Continuous Prompt Optimization & Evolutionary Tuning Simulator',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Web-based, Cloud, On-Premises VPC',
-    url: 'https://elesium.online/tools/enterprise-agent-prompt-optimizer-simulator',
+    url: 'https://elesium.online/tools/enterprise-agent-prompt-optimizer-simulator/',
     description: 'Interactive mathematical and systems engineering simulator comparing ad-hoc manual prompting, brute-force grid search, and sovereign gradient-free Bayesian evolutionary prompt compilation (MIPROv2 / GEPA).',
     offers: {
       '@type': 'Offer',
@@ -141,7 +141,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
           name="description"
           content="Simulate and compare manual prompt engineering vs brute-force grid search vs sovereign Bayesian evolutionary prompt compilation (MIPROv2 / GEPA). Slash token bloat by 38.2%."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-prompt-optimizer-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-prompt-optimizer-simulator/" />
         <script type="application/ld+json">{JSON.stringify(jsonLdSchema)}</script>
       </Helmet>
 
@@ -150,7 +150,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
         <div className="flex items-center gap-2 text-sm font-mono text-slate-400">
           <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/solutions" className="hover:text-cyan-400 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-cyan-400 transition-colors">Solutions</Link>
           <span>/</span>
           <span className="text-cyan-400">Prompt Optimizer Simulator</span>
         </div>

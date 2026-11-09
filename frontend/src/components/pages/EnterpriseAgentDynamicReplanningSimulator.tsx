@@ -123,7 +123,7 @@ RECOMMENDATION: Replace unconstrained LLM self-reflection with DAG-constrained b
           name="description"
           content="Simulate and benchmark autonomous agent dynamic re-planning and self-correction overhead. Compare unconstrained Reflexion loops vs static circuit breakers vs bounded deterministic DAG replanning."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-dynamic-replanning-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-dynamic-replanning-simulator/" />
       </Helmet>
 
       {/* Top Banner / Breadcrumb */}
@@ -132,7 +132,7 @@ RECOMMENDATION: Replace unconstrained LLM self-reflection with DAG-constrained b
           <div className="flex items-center gap-2 text-slate-400">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/resources" className="hover:text-white transition-colors">Interactive Tools</Link>
+            <Link to="/resources/" className="hover:text-white transition-colors">Interactive Tools</Link>
             <span>/</span>
             <span className="text-cyan-400 font-mono">Agent Dynamic Re-Planning Simulator</span>
           </div>
@@ -623,7 +623,7 @@ RECOMMENDATION: Replace unconstrained LLM self-reflection with DAG-constrained b
                 </ExpandableScreenContent>
               </ExpandableScreen>
               <Link
-                to="/solutions"
+                to="/solutions/"
                 className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
               >
                 Explore All Sovereign Solutions

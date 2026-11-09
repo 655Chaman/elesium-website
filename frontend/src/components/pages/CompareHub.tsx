@@ -60,10 +60,10 @@ export default function CompareHub() {
         '@graph': [
             {
                 '@type': 'CollectionPage',
-                '@id': 'https://elesium.online/compare#collection',
+                '@id': 'https://elesium.online/compare/#collection',
                 'name': 'Enterprise AI Architecture Battlecards & Framework Comparisons | Elesium',
                 'description': 'Objective, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models.',
-                'url': 'https://elesium.online/compare',
+                'url': 'https://elesium.online/compare/',
                 'publisher': {
                     '@type': 'Organization',
                     'name': 'Elesium',
@@ -73,11 +73,11 @@ export default function CompareHub() {
                 'hasPart': compareData.map((item: CompareBattlecardItem) => ({
                     '@type': 'Article',
                     'headline': item.title,
-                    'url': `https://elesium.online/compare/${item.slug}`,
+                    'url': `https://elesium.online/compare/${item.slug}/`,
                     'description': item.metaDescription,
                     'author': {
                         '@type': 'Person',
-                        '@id': 'https://elesium.online/authors/chaman-shah#person',
+                        '@id': 'https://elesium.online/authors/chaman-shah/#person',
                         'name': 'Chaman Shah',
                         'jobTitle': 'Principal AI Systems Architect'
                     }
@@ -85,7 +85,7 @@ export default function CompareHub() {
             },
             {
                 '@type': 'BreadcrumbList',
-                '@id': 'https://elesium.online/compare#breadcrumb',
+                '@id': 'https://elesium.online/compare/#breadcrumb',
                 'itemListElement': [
                     {
                         '@type': 'ListItem',
@@ -97,13 +97,13 @@ export default function CompareHub() {
                         '@type': 'ListItem',
                         'position': 2,
                         'name': 'Architecture Comparisons',
-                        'item': 'https://elesium.online/compare'
+                        'item': 'https://elesium.online/compare/'
                     }
                 ]
             },
             {
                 '@type': 'FAQPage',
-                '@id': 'https://elesium.online/compare#faq',
+                '@id': 'https://elesium.online/compare/#faq',
                 'mainEntity': compareFaqs.map(faq => ({
                     '@type': 'Question',
                     'name': faq.q,
@@ -115,7 +115,7 @@ export default function CompareHub() {
             },
             {
                 '@type': 'WebPage',
-                '@id': 'https://elesium.online/compare#webpage',
+                '@id': 'https://elesium.online/compare/#webpage',
                 'name': 'Enterprise AI Framework & Architecture Comparisons | Elesium',
                 'description': aeoAnswerCapsule,
                 'speakable': {
@@ -127,21 +127,27 @@ export default function CompareHub() {
     }
 
     return (
-        <main className="min-h-screen bg-black text-white pt-24 pb-24 selection:bg-neutral-800">
+        <main id="main-content" className="min-h-screen bg-black text-white pt-24 pb-24 selection:bg-neutral-800">
             <Helmet>
-                <title>Enterprise AI Architecture Comparisons & Framework Battlecards | Elesium</title>
+                <title>Enterprise AI Comparisons &amp; Battlecards | Elesium</title>
                 <meta
                     name="description"
-                    content="Objective, empirical evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models."
+                    content="Objective evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models."
                 />
-                <link rel="canonical" href="https://elesium.online/compare" />
-                <meta property="og:title" content="Enterprise AI Architecture Comparisons & Framework Battlecards | Elesium" />
+                <link rel="canonical" href="https://elesium.online/compare/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Enterprise AI Comparisons &amp; Battlecards | Elesium" />
                 <meta
                     property="og:description"
-                    content="Objective, empirical evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models."
+                    content="Objective evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models."
                 />
-                <meta property="og:url" content="https://elesium.online/compare" />
-                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://elesium.online/compare/" />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="Enterprise AI Comparisons &amp; Battlecards | Elesium" />
+                <meta name="twitter:description" content="Objective evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
@@ -282,7 +288,7 @@ export default function CompareHub() {
                             </p>
                         </div>
                         <Link
-                            to="/tools/agentic-architecture-grader"
+                            to="/tools/agentic-architecture-grader/"
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-black font-medium text-sm transition-all hover:bg-gray-200 shrink-0"
                         >
                             Launch Grader Tool
@@ -329,7 +335,7 @@ export default function CompareHub() {
 
                                 {/* Comparison Title */}
                                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-white transition-colors leading-snug">
-                                    <Link to={`/compare/${item.slug}`} className="focus:outline-none">
+                                    <Link to={`/compare/${item.slug}/`} className="focus:outline-none">
                                         {item.title}
                                     </Link>
                                 </h3>
@@ -363,7 +369,7 @@ export default function CompareHub() {
 
                             {/* Card Action Link */}
                             <Link
-                                to={`/compare/${item.slug}`}
+                                to={`/compare/${item.slug}/`}
                                 className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white hover:text-black text-gray-200 text-xs font-semibold transition-all group-hover:shadow-sm"
                             >
                                 <span>Inspect Comparison Matrix</span>
@@ -590,7 +596,7 @@ export default function CompareHub() {
                             </button>
 
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                             >
                                 <span>ele-in SaaS Waitlist</span>

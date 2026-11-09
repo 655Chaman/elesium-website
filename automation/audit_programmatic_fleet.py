@@ -196,7 +196,7 @@ def audit_fleet():
                 if not has_speakable:
                     metrics["missing_speakable_schema"] += 1
 
-            elif c_name == "tools" and rel not in ["tools/index.html", "tools.html"]:
+            elif c_name == "tools" and not is_redirect and rel not in ["tools/index.html", "tools.html"]:
                 if not has_software:
                     metrics["schema_missing_primary"] += 1
                 if breadcrumb_count == 0:
@@ -229,7 +229,7 @@ def audit_fleet():
                     metrics["missing_speakable_schema"] += 1
 
             # 6. Answer Capsule
-            if c_name in ["solutions", "tools", "videos", "city_moats", "compare"]:
+            if not is_redirect and c_name in ["solutions", "tools", "videos", "city_moats", "compare"]:
                 ac_m = ANSWER_CAPSULE_REGEX.search(content)
                 if not ac_m:
                     metrics["missing_answer_capsule"] += 1

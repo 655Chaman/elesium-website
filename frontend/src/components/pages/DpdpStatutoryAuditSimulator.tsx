@@ -130,7 +130,7 @@ export default function DpdpStatutoryAuditSimulator() {
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
     "description": "Simulate DPDP Act 2023 statutory penalties, cross-border LLM leakage liabilities, and sovereign local VPC safe harbor checklists.",
-    "url": "https://elesium.online/tools/dpdp-act-2023-audit-simulator",
+    "url": "https://elesium.online/tools/dpdp-act-2023-audit-simulator/",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -171,7 +171,7 @@ export default function DpdpStatutoryAuditSimulator() {
           content="Simulate DPDP Act 2023 statutory penalties (up to ₹250 Crore), cross-border inference liabilities, and sovereign local VPC safe harbor checklists."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://elesium.online/tools/dpdp-act-2023-audit-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/dpdp-act-2023-audit-simulator/" />
         <script type="application/ld+json">{JSON.stringify(jsonLdSchema)}</script>
       </Helmet>
 
@@ -182,7 +182,7 @@ export default function DpdpStatutoryAuditSimulator() {
           <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/compare" className="hover:text-white transition-colors">Compare</Link>
+            <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
             <span>/</span>
             <span className="text-amber-400">DPDP Act 2023 Audit Simulator</span>
           </div>
@@ -573,22 +573,22 @@ export default function DpdpStatutoryAuditSimulator() {
           <div className="border-t border-slate-800 pt-10 text-center">
             <div className="text-xs font-mono text-slate-500 mb-3">Explore Sovereign Architecture Tools</div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
-              <Link to="/compare" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/compare/" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
                 <span>Architecture Battlecard Matrix</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-slate-700">•</span>
-              <Link to="/tools/multi-agent-token-leakage-simulator" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/tools/multi-agent-token-leakage-simulator/" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
                 <span>Token Leakage Simulator</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-slate-700">•</span>
-              <Link to="/tools/enterprise-ai-roi-calculator" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/tools/enterprise-ai-roi-calculator/" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
                 <span>Enterprise AI ROI Calculator</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-slate-700">•</span>
-              <Link to="/solutions" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/solutions/" className="text-slate-400 hover:text-amber-400 inline-flex items-center gap-1 transition-colors">
                 <span>126 Sovereign Enterprise Solutions</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>

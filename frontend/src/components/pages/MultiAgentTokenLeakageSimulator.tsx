@@ -121,7 +121,7 @@ export default function MultiAgentTokenLeakageSimulator() {
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
     "description": "Simulate and quantify token leakage in unconstrained ReAct agent loops vs deterministic FSM circuit breakers.",
-    "url": "https://elesium.online/tools/multi-agent-token-leakage-simulator",
+    "url": "https://elesium.online/tools/multi-agent-token-leakage-simulator/",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -162,7 +162,7 @@ export default function MultiAgentTokenLeakageSimulator() {
           content="Simulate and quantify silent token leakage, quadratic context window growth, and runaway spend in unconstrained ReAct loops vs deterministic FSM circuit breakers."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://elesium.online/tools/multi-agent-token-leakage-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/multi-agent-token-leakage-simulator/" />
         <script type="application/ld+json">{JSON.stringify(jsonLdSchema)}</script>
       </Helmet>
 
@@ -173,7 +173,7 @@ export default function MultiAgentTokenLeakageSimulator() {
           <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/compare" className="hover:text-white transition-colors">Compare</Link>
+            <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
             <span>/</span>
             <span className="text-rose-400">Token Leakage Simulator</span>
           </div>
@@ -719,22 +719,22 @@ export default function MultiAgentTokenLeakageSimulator() {
           <div className="border-t border-slate-800 pt-10 text-center">
             <div className="text-xs font-mono text-slate-500 mb-3">Explore Elesium Engineering Assets</div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
-              <Link to="/compare" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/compare/" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
                 <span>Architecture Battlecard Matrix</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-slate-700">•</span>
-              <Link to="/tools/multi-agent-latency-token-cost-estimator" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/tools/multi-agent-latency-token-cost-estimator/" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
                 <span>Latency & Token Cost Estimator</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-slate-700">•</span>
-              <Link to="/tools/agentic-architecture-grader" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/tools/agentic-architecture-grader/" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
                 <span>1-Minute Architecture Grader</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-slate-700">•</span>
-              <Link to="/solutions" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
+              <Link to="/solutions/" className="text-slate-400 hover:text-rose-400 inline-flex items-center gap-1 transition-colors">
                 <span>Enterprise Sovereign Solutions</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>

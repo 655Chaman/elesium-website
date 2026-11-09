@@ -134,7 +134,7 @@ Audit performed via https://elesium.online/tools/enterprise-model-routing-cost-a
           name="description"
           content="Simulate and benchmark Enterprise Multi-Model Dynamic Routing (DeepSeek, Llama, Claude, GPT-4o) vs naive single-model architectures. Calculate token cost arbitrage, sub-15ms classification, and latency reductions."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-model-routing-cost-arbitrage-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-model-routing-cost-arbitrage-simulator/" />
       </Helmet>
 
       {/* Hero Header */}
@@ -467,16 +467,16 @@ Audit performed via https://elesium.online/tools/enterprise-model-routing-cost-a
         <div className="mt-12 border-t border-slate-800/60 pt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             Explore related sovereign solutions:{' '}
-            <Link to="/solutions" className="text-purple-400 hover:underline">
+            <Link to="/solutions/" className="text-purple-400 hover:underline">
               Enterprise AI Solutions Hub
             </Link>{' '}
             &bull;{' '}
-            <Link to="/compare" className="text-purple-400 hover:underline">
+            <Link to="/compare/" className="text-purple-400 hover:underline">
               Architecture Comparison Hub
             </Link>
           </div>
           <div>
-            <Link to="/tools/enterprise-semantic-cache-simulator" className="text-slate-400 hover:text-white transition">
+            <Link to="/tools/enterprise-semantic-cache-simulator/" className="text-slate-400 hover:text-white transition">
               Semantic Cache Simulator &rarr;
             </Link>
           </div>

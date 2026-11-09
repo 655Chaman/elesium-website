@@ -123,7 +123,7 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
           name="description"
           content="Simulate and benchmark Confidential Computing enclaves (AMD SEV-SNP / AWS Nitro) versus pure software Fully Homomorphic Encryption (FHE) for autonomous enterprise AI agents. Eliminate hypervisor memory snooping with sub-20ms latencies."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-homomorphic-enclave-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-homomorphic-enclave-simulator/" />
       </Helmet>
 
       {/* Top Breadcrumb */}
@@ -131,7 +131,7 @@ RECOMMENDATION: Deploy hardware-attested AMD SEV-SNP / AWS Nitro Enclaves to eli
         <div className="flex items-center gap-2 text-slate-400">
           <Link to="/" className="hover:text-emerald-400 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/resources" className="hover:text-emerald-400 transition-colors">Tools</Link>
+          <Link to="/resources/" className="hover:text-emerald-400 transition-colors">Tools</Link>
           <span>/</span>
           <span className="text-slate-200">Confidential Enclave &amp; FHE Simulator</span>
         </div>

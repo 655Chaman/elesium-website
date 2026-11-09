@@ -147,23 +147,28 @@ export default function HowWeWork() {
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 transition-colors duration-300">
+        <main id="main-content" className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 transition-colors duration-300">
             <WhatsAppModal />
             <Helmet>
-                <title>How We Work — The 4-Stage Sovereign AI Engineering Protocol | Elesium</title>
+                <title>How We Work | Sovereign AI Engineering | Elesium</title>
                 <meta
                     name="description"
-                    content="Elesium's institutional 4-stage engineering protocol: 14-day sovereign pilot sprint, deterministic LangGraph FSM, vLLM FP8 deployment, and contractual 90-day ROI guarantee."
+                    content="Elesium's 4-stage engineering protocol: 14-day sovereign pilot sprint, deterministic LangGraph FSM, private VPCs, and contractual 90-day ROI."
                 />
-                <link rel="canonical" href="https://elesium.online/how-we-work" />
-                <meta property="og:title" content="How We Work — The 4-Stage Sovereign AI Engineering Protocol | Elesium" />
+                <link rel="canonical" href="https://elesium.online/how-we-work/" />
+                <meta property="og:title" content="How We Work | Sovereign AI Engineering | Elesium" />
                 <meta
                     property="og:description"
-                    content="Explore Elesium's institutional implementation methodology: deterministic state machines, sovereign VPC air-gapping, sub-200ms TTFT, and DPDP Act compliance."
+                    content="Elesium's 4-stage engineering protocol: 14-day sovereign pilot sprint, deterministic LangGraph FSM, private VPCs, and contractual 90-day ROI."
                 />
-                <meta property="og:url" content="https://elesium.online/how-we-work" />
+                <meta property="og:url" content="https://elesium.online/how-we-work/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="How We Work | Sovereign AI Engineering | Elesium" />
+                <meta name="twitter:description" content="Elesium's 4-stage engineering protocol: 14-day sovereign pilot sprint, deterministic LangGraph FSM, private VPCs, and contractual 90-day ROI." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>
             </Helmet>
 
@@ -209,7 +214,7 @@ export default function HowWeWork() {
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-800 dark:text-gray-200 font-medium px-5 py-3.5 rounded-full text-sm transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
@@ -533,7 +538,7 @@ export default function HowWeWork() {
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
@@ -541,6 +546,6 @@ export default function HowWeWork() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

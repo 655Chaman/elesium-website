@@ -30,43 +30,43 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-1 xl:gap-2">
                         <Link
-                            to="/how-we-work"
+                            to="/how-we-work/"
                             className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             How We Work
                         </Link>
                         <Link
-                            to="/solutions"
+                            to="/solutions/"
                             className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             Solutions
                         </Link>
                         <Link
-                            to="/compare"
+                            to="/compare/"
                             className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             Architecture
                         </Link>
                         <Link
-                            to="/signals"
+                            to="/signals/"
                             className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             Market Signals
                         </Link>
                         <Link
-                            to="/resources"
+                            to="/resources/"
                             className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             Engineering Tools
                         </Link>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
                         >
                             ele-in (SaaS)
                         </Link>
                         <Link
-                            to="/ai-automation-agency-india"
+                            to="/ai-automation-agency-india/"
                             className="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1"
                         >
                             <span>Best Enterprise AI India</span>
@@ -113,42 +113,42 @@ export default function Navbar() {
                     >
                         <div className="flex flex-col gap-4">
                             <Link
-                                to="/how-we-work"
+                                to="/how-we-work/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-white/5"
                             >
                                 How We Work
                             </Link>
                             <Link
-                                to="/solutions"
+                                to="/solutions/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-white/5"
                             >
                                 Solutions Hub (3,765 Workflows)
                             </Link>
                             <Link
-                                to="/compare"
+                                to="/compare/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-white/5"
                             >
                                 Architecture Comparisons
                             </Link>
                             <Link
-                                to="/signals"
+                                to="/signals/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-white/5"
                             >
                                 Technical Market Signals &amp; Whitepapers
                             </Link>
                             <Link
-                                to="/resources"
+                                to="/resources/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-white/5"
                             >
                                 Engineering Tools (75 Simulators)
                             </Link>
                             <Link
-                                to="/ai-automation-agency-india"
+                                to="/ai-automation-agency-india/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-semibold text-emerald-600 dark:text-emerald-400 py-2 border-b border-gray-100 dark:border-white/5"
                             >
@@ -171,7 +171,7 @@ export default function Navbar() {
                                     <ArrowUpRight className="w-4 h-4" />
                                 </button>
                                 <Link
-                                    to="/waitlist"
+                                    to="/waitlist/"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="w-full py-2.5 px-4 rounded-xl border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-medium text-center text-xs"
                                 >

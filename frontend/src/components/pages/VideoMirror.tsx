@@ -218,7 +218,7 @@ export default function VideoMirror() {
                     <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                         <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
                         <span>/</span>
-                        <Link to="/videos" className="hover:text-black dark:hover:text-white transition-colors">Video Vault</Link>
+                        <Link to="/videos/" className="hover:text-black dark:hover:text-white transition-colors">Video Vault</Link>
                         <span>/</span>
                         <span className="text-gray-900 dark:text-white font-medium truncate max-w-xs sm:max-w-md">{activeVideo.slug}</span>
                     </div>
@@ -607,6 +607,9 @@ export default function VideoMirror() {
                                                 <img
                                                     src={video.heroImage || "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"}
                                                     alt={video.title}
+                                                    width="800"
+                                                    height="450"
+                                                    loading="lazy"
                                                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -723,7 +726,7 @@ export default function VideoMirror() {
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm"
                         >
                             <span>ele-in SaaS Waitlist</span>
@@ -732,7 +735,7 @@ export default function VideoMirror() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
 

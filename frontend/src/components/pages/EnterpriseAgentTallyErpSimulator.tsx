@@ -140,7 +140,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           <nav className="flex items-center gap-2 text-xs text-slate-400 mb-6 font-mono">
             <a href="/" className="hover:text-emerald-400 transition-colors">Home</a>
             <span>/</span>
-            <a href="/solutions" className="hover:text-emerald-400 transition-colors">Tools</a>
+            <a href="/solutions/" className="hover:text-emerald-400 transition-colors">Tools</a>
             <span>/</span>
             <span className="text-emerald-400">Tally ERP LLM Gateway Simulator</span>
           </nav>

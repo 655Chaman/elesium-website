@@ -158,9 +158,9 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
         {/* Header Breadcrumbs & Title */}
         <div className="space-y-4">
           <div className="flex items-center space-x-2 text-sm text-cyan-400 font-mono">
-            <a href="/solutions" className="hover:underline">Solutions</a>
+            <a href="/solutions/" className="hover:underline">Solutions</a>
             <span>/</span>
-            <a href="/resources" className="hover:underline">Tools</a>
+            <a href="/resources/" className="hover:underline">Tools</a>
             <span>/</span>
             <span className="text-slate-400">SNN Neuromorphic Simulator</span>
           </div>

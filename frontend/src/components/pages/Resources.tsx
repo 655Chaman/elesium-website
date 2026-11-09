@@ -87,10 +87,10 @@ export default function Resources() {
                 <meta property="og:title" content="AI Automation Resources & Guides | Elesium" />
                 <meta property="og:description" content="Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://elesium.online/resources" />
+                <meta property="og:url" content="https://elesium.online/resources/" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
 
-                <link rel="canonical" href="https://elesium.online/resources" />
+                <link rel="canonical" href="https://elesium.online/resources/" />
                 <script type="application/ld+json">
                     {JSON.stringify(structuredData)}
                 </script>
@@ -173,7 +173,7 @@ export default function Resources() {
                                         >
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-6 flex flex-col gap-1.5">
-                                                <Link to={resource.markdownFile ? `/resources/${resource.slug}` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
+                                                <Link to={resource.markdownFile ? `/resources/${resource.slug}/` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
                                                     <h3 className={`text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
                                                         {resource.title}
                                                     </h3>
@@ -201,7 +201,7 @@ export default function Resources() {
                                             <div className="col-span-1 md:col-span-2 flex items-center justify-start md:justify-end gap-2">
                                                 {resource.markdownFile && (
                                                     <Link
-                                                        to={`/resources/${resource.slug}`}
+                                                        to={`/resources/${resource.slug}/`}
                                                         className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white text-xs font-semibold rounded-full transition-all"
                                                     >
                                                         Read Guide
@@ -252,7 +252,7 @@ export default function Resources() {
                                         >
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-6 flex flex-col gap-1.5">
-                                                <Link to={resource.markdownFile ? `/resources/${resource.slug}` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
+                                                <Link to={resource.markdownFile ? `/resources/${resource.slug}/` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
                                                     <h3 className={`text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
                                                         {resource.title}
                                                     </h3>
@@ -280,7 +280,7 @@ export default function Resources() {
                                             <div className="col-span-1 md:col-span-2 flex items-center justify-start md:justify-end gap-2">
                                                 {resource.markdownFile && (
                                                     <Link
-                                                        to={`/resources/${resource.slug}`}
+                                                        to={`/resources/${resource.slug}/`}
                                                         className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white text-xs font-semibold rounded-full transition-all"
                                                     >
                                                         Read Guide
@@ -324,7 +324,7 @@ export default function Resources() {
                                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                                     </button>
                                     <Link
-                                        to="/waitlist"
+                                        to="/waitlist/"
                                         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
                                     >
                                         <span>ele-in SaaS Waitlist &rarr;</span>

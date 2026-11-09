@@ -148,7 +148,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
         <div className="flex items-center gap-2 text-xs font-mono text-gray-400 mb-8">
           <a href="/" className="hover:text-emerald-400 transition-colors">Home</a>
           <span>/</span>
-          <a href="/tools" className="hover:text-emerald-400 transition-colors">Tools</a>
+          <a href="/tools/" className="hover:text-emerald-400 transition-colors">Tools</a>
           <span>/</span>
           <span className="text-emerald-400 font-semibold">Disaggregated Pre-fill Simulator</span>
         </div>

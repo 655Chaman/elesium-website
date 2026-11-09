@@ -269,7 +269,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
     const { openWhatsApp } = useWhatsApp()
 
-    const canonicalUrl = `https://elesium.online/${cityData.slug}`
+    const canonicalUrl = `https://elesium.online/${cityData.slug}/`
 
     const structuredData = {
         "@context": "https://schema.org",
@@ -382,7 +382,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 mb-8" aria-label="Breadcrumbs">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
                     <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                    <Link to="/ai-automation-agency-india" className="hover:text-black dark:hover:text-white transition-colors">Enterprise AI India</Link>
+                    <Link to="/ai-automation-agency-india/" className="hover:text-black dark:hover:text-white transition-colors">Enterprise AI India</Link>
                     <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
                     <span className="text-gray-900 dark:text-gray-200 font-semibold">{cityData.cityName}</span>
                 </nav>
@@ -425,7 +425,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         </button>
 
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
                             <span>ele-in SaaS Waitlist</span>
@@ -573,7 +573,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
                             <span>ele-in SaaS Waitlist</span>

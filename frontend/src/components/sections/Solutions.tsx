@@ -64,7 +64,7 @@ export default function Solutions() {
                                 <ArrowRight className="w-4 h-4" />
                             </button>
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto text-center px-4 py-3 text-xs text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
                             >
                                 ele-in SaaS Waitlist &rarr;
@@ -101,7 +101,7 @@ export default function Solutions() {
                                 <ArrowRight className="w-4 h-4" />
                             </button>
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto text-center px-4 py-3 text-xs text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
                             >
                                 ele-in SaaS Waitlist &rarr;

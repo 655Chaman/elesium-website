@@ -14,12 +14,14 @@ with:
 4. SSG generation for all core static landing pages and video masterclasses.
 """
 
+import fnmatch
 import html
 import json
 import os
 import re
 import subprocess
 from pathlib import Path
+from typing import Optional, List, Dict, Tuple
 
 BASE_DIR = Path(__file__).parent.parent
 DIST_DIR = BASE_DIR / "frontend" / "dist"
@@ -417,7 +419,7 @@ def render_solution_semantic_html(sol):
     clean_rel_path = hero_img.lstrip("/")
     img_exists = (DIST_DIR / clean_rel_path).exists() or ((BASE_DIR / "frontend" / "public") / clean_rel_path).exists()
     if img_exists:
-        hero_media_html = f'<div class="hero-graphic" style="background:#f3f4f6;border-radius:0.75rem;padding:1.5rem;text-align:center;margin:1.5rem 0;"><img src="{hero_img}" alt="{hero_alt}" style="max-width:100%;height:auto;border-radius:0.5rem;" /></div>'
+        hero_media_html = f'<div class="hero-graphic" style="background:#f3f4f6;border-radius:0.75rem;padding:1.5rem;text-align:center;margin:1.5rem 0;"><img src="{hero_img}" alt="{hero_alt}" width="800" height="450" loading="lazy" style="max-width:100%;height:auto;border-radius:0.5rem;" /></div>'
     else:
         hero_media_html = f"""<div class="hero-graphic" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-radius:0.75rem;padding:2rem;text-align:center;margin:1.5rem 0;color:#f8fafc;">
       <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;color:#38bdf8;text-transform:uppercase;margin-bottom:0.75rem;">Verified Sovereign Architecture Topology</div>
@@ -431,6 +433,7 @@ def render_solution_semantic_html(sol):
     </div>"""
 
     return f"""
+<main id="main-content">
 <div id="prerendered-solution" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header style="margin-bottom:2.5rem;">
     <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">{category} • Designed for {target_persona}</div>
@@ -466,7 +469,7 @@ def render_solution_semantic_html(sol):
       </div>
     </div>
   </header>
-  <main>
+  <div class="solution-body">
     <section style="margin:2.5rem 0;">
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Deterministic Operational Capabilities</h2>
       {f'<ul style="list-style-type:none;padding:0;">{caps_html}</ul>' if caps_html else ''}
@@ -478,12 +481,12 @@ def render_solution_semantic_html(sol):
         <span style="font-size:0.75rem;font-family:monospace;color:#34d399;background:#064e3b4d;padding:0.2rem 0.5rem;border-radius:0.25rem;border:1px solid #059669;">Verified SLA: {tool_metric_esc}</span>
       </div>
       <h3 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 0.5rem 0;">
-        <a href="/tools/{tool_slug_esc}" style="color:#ffffff;text-decoration:none;">{tool_name_esc} &rarr;</a>
+        <a href="/tools/{tool_slug_esc}/" style="color:#ffffff;text-decoration:none;">{tool_name_esc} &rarr;</a>
       </h3>
       <p style="font-size:0.875rem;color:#94a3b8;line-height:1.6;margin:0 0 1rem 0;">{tool_desc_esc}</p>
       <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-        <a href="/tools/{tool_slug_esc}" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;font-size:0.875rem;font-weight:600;text-decoration:none;">Launch Free Interactive Simulator &rarr;</a>
-        <a href="/embed/{tool_slug_esc}" target="_blank" rel="noopener" style="font-size:0.8rem;color:#64748b;text-decoration:underline;">Embed Simulator Widget</a>
+        <a href="/tools/{tool_slug_esc}/" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;font-size:0.875rem;font-weight:600;text-decoration:none;">Launch Free Interactive Simulator &rarr;</a>
+        <a href="/embed/{tool_slug_esc}/" target="_blank" rel="noopener" style="font-size:0.8rem;color:#64748b;text-decoration:underline;">Embed Simulator Widget</a>
       </div>
     </aside>
     {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Technical Specifications &amp; SLAs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">{specs_html}</div></section>' if specs_html else ''}
@@ -493,7 +496,7 @@ def render_solution_semantic_html(sol):
       <ul style="list-style-type:none;padding:0;margin:0;">{badges_html}</ul>
       <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e5e7eb;font-size:0.875rem;">
         <span style="color:#6b7280;">Sovereign Architecture Pod: </span>
-        <a href="/ai-automation-agency-india" style="color:#059669;font-weight:600;text-decoration:underline;">{rotating_anchor} &rarr;</a>
+        <a href="/ai-automation-agency-india/" style="color:#059669;font-weight:600;text-decoration:underline;">{rotating_anchor} &rarr;</a>
       </div>
     </section>
     {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
@@ -565,10 +568,11 @@ def render_solution_semantic_html(sol):
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-top:0;margin-bottom:0.75rem;">Start With a Free Architecture Audit</h2>
       <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;">30-minute private session with Principal AI Systems Architect Chaman Shah. No sales pitch &#8212; just a technical assessment of your automation opportunity.</p>
       <a href="https://wa.me/918317329312" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;margin-bottom:0.5rem;">{primary_cta} &rarr;</a>
-      <a href="/ai-automation-agency-india" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">View All Services</a>
+      <a href="/ai-automation-agency-india/" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">View All Services</a>
     </section>
-  </main>
+  </div>
 </div>
+</main>
 """
 
 def render_solutions_hub_semantic_html(solutions):
@@ -587,7 +591,7 @@ def render_solutions_hub_semantic_html(solutions):
     for cat_name, items in categories.items():
         links_html = "".join(
             f'<li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;">'
-            f'<a href="/solutions/{html.escape(item.get("slug", ""))}" style="font-weight:700;color:#2563eb;text-decoration:none;font-size:1.125rem;">{html.escape(item.get("h1", ""))} &rarr;</a>'
+            f'<a href="/solutions/{html.escape(item.get("slug", ""))}/" style="font-weight:700;color:#2563eb;text-decoration:none;font-size:1.125rem;">{html.escape(item.get("h1", ""))} &rarr;</a>'
             f'<p style="color:#4b5563;font-size:0.875rem;margin:0.5rem 0 0 0;">{html.escape(item.get("firstSentence", ""))}</p>'
             f'</li>'
             for item in items
@@ -654,12 +658,12 @@ def render_solutions_hub_semantic_html(solutions):
         </div>
       </div>
       <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e5e7eb;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="/tools/enterprise-ai-roi-calculator" style="display:inline-block;background:#059669;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Simulate AI Automation ROI &rarr;</a>
+        <a href="/tools/enterprise-ai-roi-calculator/" style="display:inline-block;background:#059669;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Simulate AI Automation ROI &rarr;</a>
         <a href="/commercial-directory.html" style="display:inline-block;border:1px solid #d1d5db;background:#ffffff;color:#111827;padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Commercial Directory Index &rarr;</a>
       </div>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     {''.join(cat_sections)}
 
     <!-- Transparent Institutional Investment Tiers -->
@@ -790,7 +794,7 @@ def render_commercial_directory_semantic_html(items):
             badge = get_badge(anchor_text, slug)
 
             card_html = f"""
-            <a href="/solutions/{html.escape(slug)}" class="group relative flex flex-col justify-between p-6 rounded-xl border border-gray-200/90 dark:border-white/5 bg-gray-50/40 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/40 hover:bg-white dark:hover:bg-white/[0.04] transition-all text-left">
+            <a href="/solutions/{html.escape(slug)}/" class="group relative flex flex-col justify-between p-6 rounded-xl border border-gray-200/90 dark:border-white/5 bg-gray-50/40 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/40 hover:bg-white dark:hover:bg-white/[0.04] transition-all text-left">
               <div class="space-y-3">
                 <div class="flex items-center justify-between gap-2">
                   <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 dark:text-gray-500 truncate">
@@ -859,13 +863,13 @@ def render_commercial_directory_semantic_html(items):
       <img src="/assets/LOGO_NEW.png" alt="Elesium Logo" width="160" height="40" class="h-8 md:h-9 w-auto object-contain transition-all hover:opacity-90 drop-shadow-sm" />
     </a>
     <div class="hidden lg:flex items-center gap-1 xl:gap-2">
-      <a href="/how-we-work" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">How We Work</a>
-      <a href="/solutions" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Solutions</a>
-      <a href="/compare" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Architecture</a>
-      <a href="/signals" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Market Signals</a>
-      <a href="/resources" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Engineering Tools</a>
-      <a href="/waitlist" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">ele-in (SaaS)</a>
-      <a href="/ai-automation-agency-india" class="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1">Best Enterprise AI India</a>
+      <a href="/how-we-work/" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">How We Work</a>
+      <a href="/solutions/" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Solutions</a>
+      <a href="/compare/" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Architecture</a>
+      <a href="/signals/" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Market Signals</a>
+      <a href="/resources/" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">Engineering Tools</a>
+      <a href="/waitlist/" class="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition">ele-in (SaaS)</a>
+      <a href="/ai-automation-agency-india/" class="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1">Best Enterprise AI India</a>
     </div>
     <div class="hidden lg:flex items-center gap-3">
       <a href="https://wa.me/918317329312" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 shadow-sm transition-all">
@@ -884,7 +888,7 @@ def render_commercial_directory_semantic_html(items):
     <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
       <a href="/" class="hover:text-black dark:hover:text-white transition-colors">Home</a>
       <svg class="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      <a href="/solutions" class="hover:text-black dark:hover:text-white transition-colors">Solutions</a>
+      <a href="/solutions/" class="hover:text-black dark:hover:text-white transition-colors">Solutions</a>
       <svg class="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       <span class="text-gray-900 dark:text-gray-200 font-medium">Commercial Priority Directory</span>
     </nav>
@@ -1018,7 +1022,7 @@ def render_commercial_directory_semantic_html(items):
   </section>
 
   <!-- 5 Thematic Category Panels (SolutionsHub Congruent) -->
-  <main class="max-w-6xl mx-auto px-6 space-y-12">
+  <main id="main-content" class="max-w-6xl mx-auto px-6 space-y-12">
     {''.join(category_panels_html)}
   </main>
 
@@ -1077,7 +1081,7 @@ def render_commercial_directory_semantic_html(items):
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
 
-          <a href="/waitlist" class="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm">
+          <a href="/waitlist/" class="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm">
             <span>ele-in SaaS Waitlist</span>
             <span>&rarr;</span>
           </a>
@@ -1085,7 +1089,7 @@ def render_commercial_directory_semantic_html(items):
       </div>
 
       <div class="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-        <img src="/assets/LOGO_NEW.png" alt="Elesium" class="w-96 h-96 object-contain filter invert" />
+        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" class="w-96 h-96 object-contain filter invert" />
       </div>
     </div>
   </section>
@@ -1117,7 +1121,7 @@ def render_commercial_directory_semantic_html(items):
           <span>Chat on WhatsApp</span>
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="/waitlist" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-full text-sm transition-all text-gray-800 dark:text-gray-200">
+        <a href="/waitlist/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-full text-sm transition-all text-gray-800 dark:text-gray-200">
           <span>ele-in SaaS Waitlist &rarr;</span>
         </a>
       </div>
@@ -1128,15 +1132,15 @@ def render_commercial_directory_semantic_html(items):
       <div class="flex flex-col gap-4">
         <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
-          <li><a href="/how-we-work" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">How We Work</a></li>
-          <li><a href="/solutions" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Solutions Hub (3,765 Workflows)</a></li>
+          <li><a href="/how-we-work/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">How We Work</a></li>
+          <li><a href="/solutions/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Solutions Hub (3,765 Workflows)</a></li>
           <li><a href="/commercial-directory.html" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left font-semibold text-cyan-600 dark:text-cyan-400">Top 100 Commercial Directory</a></li>
-          <li><a href="/signals" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Technical Whitepapers &amp; Research</a></li>
-          <li><a href="/compare" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Architecture Comparisons</a></li>
-          <li><a href="/videos" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Video Masterclasses</a></li>
-          <li><a href="/glossary" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Engineering Glossary (50+ Terms)</a></li>
-          <li><a href="/ai-automation-agency-india" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Best Enterprise AI Company in India</a></li>
-          <li><a href="/waitlist" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">ele-in SaaS Platform (Waitlist)</a></li>
+          <li><a href="/signals/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Technical Whitepapers &amp; Research</a></li>
+          <li><a href="/compare/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Architecture Comparisons</a></li>
+          <li><a href="/videos/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Video Masterclasses</a></li>
+          <li><a href="/glossary/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Engineering Glossary (50+ Terms)</a></li>
+          <li><a href="/ai-automation-agency-india/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Best Enterprise AI Company in India</a></li>
+          <li><a href="/waitlist/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">ele-in SaaS Platform (Waitlist)</a></li>
         </ul>
       </div>
 
@@ -1146,12 +1150,12 @@ def render_commercial_directory_semantic_html(items):
           <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">3,765 Workflows</span>
         </div>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
-          <li><a href="/solutions/ai-automation-agency-for-logistics" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">AI Automation Agency for Logistics</a></li>
-          <li><a href="/solutions/autonomous-loan-underwriting-ai-for-nbfcs" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Autonomous Loan Underwriting AI for NBFCs</a></li>
-          <li><a href="/solutions/deterministic-multi-agent-systems-for-manufacturing-erp" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic Multi-Agent Systems for Manufacturing ERP</a></li>
-          <li><a href="/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC Air-Gapped LLM Deployment for Healthcare</a></li>
-          <li><a href="/solutions/sap-s4hana-autonomous-ai-integration-agency" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">SAP S/4HANA Autonomous AI Integration Agency</a></li>
-          <li class="pt-1"><a href="/solutions" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">Explore All 3,765 Solutions &rarr;</a></li>
+          <li><a href="/solutions/ai-automation-agency-for-logistics/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">AI Automation Agency for Logistics</a></li>
+          <li><a href="/solutions/autonomous-loan-underwriting-ai-for-nbfcs/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Autonomous Loan Underwriting AI for NBFCs</a></li>
+          <li><a href="/solutions/deterministic-multi-agent-systems-for-manufacturing-erp/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic Multi-Agent Systems for Manufacturing ERP</a></li>
+          <li><a href="/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC Air-Gapped LLM Deployment for Healthcare</a></li>
+          <li><a href="/solutions/sap-s4hana-autonomous-ai-integration-agency/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">SAP S/4HANA Autonomous AI Integration Agency</a></li>
+          <li class="pt-1"><a href="/solutions/" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">Explore All 3,765 Solutions &rarr;</a></li>
         </ul>
       </div>
 
@@ -1161,12 +1165,12 @@ def render_commercial_directory_semantic_html(items):
           <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">75 Simulators</span>
         </div>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
-          <li><a href="/tools/enterprise-ai-roi-calculator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Enterprise AI ROI Calculator</a></li>
-          <li><a href="/tools/multi-agent-latency-token-cost-estimator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Multi-Agent Latency &amp; Cost Estimator</a></li>
-          <li><a href="/tools/dpdp-act-2023-audit-simulator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">DPDP Act 2023 Statutory Audit Simulator</a></li>
-          <li><a href="/tools/enterprise-gpu-finops-cost-calculator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">GPU FinOps Cost &amp; Cluster Calculator</a></li>
-          <li><a href="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">DeepSeek-V3 Unified Fabric Simulator</a></li>
-          <li class="pt-1"><a href="/resources" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">View All 75 Engineering Tools &rarr;</a></li>
+          <li><a href="/tools/enterprise-ai-roi-calculator/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Enterprise AI ROI Calculator</a></li>
+          <li><a href="/tools/multi-agent-latency-token-cost-estimator/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Multi-Agent Latency &amp; Cost Estimator</a></li>
+          <li><a href="/tools/dpdp-act-2023-audit-simulator/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">DPDP Act 2023 Statutory Audit Simulator</a></li>
+          <li><a href="/tools/enterprise-gpu-finops-cost-calculator/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">GPU FinOps Cost &amp; Cluster Calculator</a></li>
+          <li><a href="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">DeepSeek-V3 Unified Fabric Simulator</a></li>
+          <li class="pt-1"><a href="/resources/" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">View All 75 Engineering Tools &rarr;</a></li>
         </ul>
       </div>
 
@@ -1176,12 +1180,12 @@ def render_commercial_directory_semantic_html(items):
           <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">Battlecards</span>
         </div>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
-          <li><a href="/compare/langgraph-vs-crewai-enterprise" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">LangGraph vs CrewAI Enterprise</a></li>
-          <li><a href="/compare/private-vpc-vllm-vs-azure-openai" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC vLLM vs Azure OpenAI</a></li>
-          <li><a href="/compare/custom-multi-agent-systems-vs-zapier-enterprise" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Custom Agents vs Zapier Enterprise</a></li>
-          <li><a href="/compare/deterministic-state-machines-vs-react-agents" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic FSM vs ReAct Loops</a></li>
-          <li><a href="/compare/elesium-vs-traditional-it-consultancies" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Elesium vs Traditional IT Consultancies</a></li>
-          <li class="pt-1"><a href="/compare" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">View All Comparisons &rarr;</a></li>
+          <li><a href="/compare/langgraph-vs-crewai-enterprise/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">LangGraph vs CrewAI Enterprise</a></li>
+          <li><a href="/compare/private-vpc-vllm-vs-azure-openai/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC vLLM vs Azure OpenAI</a></li>
+          <li><a href="/compare/custom-multi-agent-systems-vs-zapier-enterprise/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Custom Agents vs Zapier Enterprise</a></li>
+          <li><a href="/compare/deterministic-state-machines-vs-react-agents/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic FSM vs ReAct Loops</a></li>
+          <li><a href="/compare/elesium-vs-traditional-it-consultancies/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Elesium vs Traditional IT Consultancies</a></li>
+          <li class="pt-1"><a href="/compare/" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">View All Comparisons &rarr;</a></li>
         </ul>
       </div>
     </div>
@@ -1214,11 +1218,11 @@ def render_commercial_directory_semantic_html(items):
     <div class="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
       <p>© 2025 Elesium Systems Pvt. Ltd. All rights reserved.</p>
       <div class="flex items-center gap-4 flex-wrap">
-        <a href="/authors/chaman-shah" class="hover:text-black dark:hover:text-white transition">Principal Architect</a>
-        <a href="/ai-automation-agency-india" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</a>
+        <a href="/authors/chaman-shah/" class="hover:text-black dark:hover:text-white transition">Principal Architect</a>
+        <a href="/ai-automation-agency-india/" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</a>
         <a href="/commercial-directory.html" class="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</a>
-        <a href="/resources" class="hover:text-black dark:hover:text-white transition">Resources</a>
-        <a href="/waitlist" class="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</a>
+        <a href="/resources/" class="hover:text-black dark:hover:text-white transition">Resources</a>
+        <a href="/waitlist/" class="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</a>
         <a href="/sitemap-commercial-top100.xml" class="hover:text-black dark:hover:text-white transition">Top-100 Sitemap</a>
         <a href="/sitemap.xml" class="hover:text-black dark:hover:text-white transition">Sitemap</a>
       </div>
@@ -1379,8 +1383,8 @@ def render_post_semantic_html(post):
       <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 0.5rem 0;color:#ffffff;">Model Your Enterprise State: {tool_name}</h3>
       <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem;">Execute deterministic parameter simulations across concurrency thresholds, token degradation, and air-gapped private VPC compute bounds.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-        <a href="/tools/{tool_slug}" style="display:inline-block;background:#2563eb;color:#ffffff;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;">Launch Interactive Simulator &rarr;</a>
-        <a href="/waitlist" style="color:#38bdf8;text-decoration:underline;font-size:0.9rem;">Schedule Architecture Audit</a>
+        <a href="/tools/{tool_slug}/" style="display:inline-block;background:#2563eb;color:#ffffff;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.95rem;">Launch Interactive Simulator &rarr;</a>
+        <a href="/waitlist/" style="color:#38bdf8;text-decoration:underline;font-size:0.9rem;">Schedule Architecture Audit</a>
       </div>
     </aside>
 """
@@ -1391,37 +1395,39 @@ def render_post_semantic_html(post):
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
         <div>
           <div style="font-size:0.8rem;color:#64748b;font-weight:600;">Parent Industry Hub:</div>
-          <a href="/ai-automation-agency-india" style="color:#0f172a;font-weight:700;text-decoration:none;">Enterprise AI Agency India &rarr;</a>
+          <a href="/ai-automation-agency-india/" style="color:#0f172a;font-weight:700;text-decoration:none;">Enterprise AI Agency India &rarr;</a>
         </div>
         <div>
           <div style="font-size:0.8rem;color:#64748b;font-weight:600;">Interactive Diagnostic:</div>
-          <a href="/tools/{tool_slug}" style="color:#0284c7;font-weight:700;text-decoration:none;">{tool_name} &rarr;</a>
+          <a href="/tools/{tool_slug}/" style="color:#0284c7;font-weight:700;text-decoration:none;">{tool_name} &rarr;</a>
         </div>
         <div>
           <div style="font-size:0.8rem;color:#64748b;font-weight:600;">Architectural Protocols:</div>
-          <a href="/how-we-work" style="color:#10b981;font-weight:700;text-decoration:none;">Deterministic Methodology &rarr;</a>
+          <a href="/how-we-work/" style="color:#10b981;font-weight:700;text-decoration:none;">Deterministic Methodology &rarr;</a>
         </div>
       </div>
     </footer>
 """
 
     article_html = f"""
+<main id="main-content">
 <div id="prerendered-article" style="max-width:800px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header>
     <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">{category}</div>
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">{title}</h1>
     <div style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;">
-      <time>{date}</time> • <span>{read_time}</span> • <span>Author: <a href="/authors/chaman-shah" style="color:#2563eb;text-decoration:underline;"><strong>{author_name}</strong></a> ({author_role})</span>
+      <time>{date}</time> • <span>{read_time}</span> • <span>Author: <a href="/authors/chaman-shah/" style="color:#2563eb;text-decoration:underline;"><strong>{author_name}</strong></a> ({author_role})</span>
     </div>
     {answer_capsule_html}
   </header>
-  <main class="article-body">
+  <div class="article-body">
     {''.join(body_parts)}
     {simulator_embed_html}
-  </main>
+  </div>
   {''.join(faq_parts)}
   {topic_silo_footer_html}
 </div>
+</main>
 """
     return article_html
 
@@ -1443,7 +1449,7 @@ def render_roi_calculator_tool_semantic_html():
       <a href="/ai-automation-agency-india#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Schedule Architecture Feasibility Audit &rarr;</a>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section style="background:#070b12;color:#ffffff;border:1px solid #1e3a8a;border-radius:1rem;padding:2rem;margin:2.5rem 0;">
       <div style="font-size:0.75rem;font-family:monospace;color:#60a5fa;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">Interactive Tool Engine State</div>
       <h2 style="font-size:1.75rem;font-weight:700;margin:0 0 1rem 0;color:#ffffff;">Audited Baseline Financial Projections</h2>
@@ -1595,7 +1601,7 @@ def render_roi_calculator_embed_semantic_html():
     <h1 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin:0.25rem 0;">Enterprise AI ROI &amp; Payback Calculator</h1>
     <p style="font-size:0.875rem;color:#9ca3af;margin:0.25rem 0 0 0;">Interactive financial modeler for enterprise multi-agent automation workflows.</p>
   </header>
-  <main>
+  <main id="main-content">
     <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:0.75rem;padding:1.5rem;margin-bottom:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0;">Baseline Labor Reclamation Metrics</h2>
       <ul style="list-style-type:none;padding:0;margin:1rem 0;color:#cbd5e1;font-size:0.875rem;line-height:1.8;">
@@ -1630,10 +1636,10 @@ def render_latency_estimator_tool_semantic_html():
       <strong>The Elesium Multi-Agent Latency &amp; Token Cost model calculates end-to-end P50 and P99 pipeline response latency, token throughput saturation, and sovereign private VPC cluster savings versus commercial cloud APIs (OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 1.5 Pro). Colocated private VPC deployments cut tail latency by 68% to 84% while eliminating per-token pricing for enterprise workloads.</strong>
     </p>
     <div style="margin:1.5rem 0;">
-      <a href="/audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Lock Architecture Benchmarks (Schedule Audit) &rarr;</a>
+      <a href="/audit/" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Lock Architecture Benchmarks (Schedule Audit) &rarr;</a>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section style="background:#030712;color:#ffffff;border:1px solid #1e3a8a;border-radius:1rem;padding:2rem;margin:2.5rem 0;">
       <div style="font-size:0.75rem;font-family:monospace;color:#60a5fa;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">Production Baseline Benchmarks</div>
       <h2 style="font-size:1.75rem;font-weight:700;margin:0 0 1rem 0;color:#ffffff;">LangGraph Multi-Agent Architecture Metrics (5 Nodes, 50k Tasks/Mo)</h2>
@@ -1716,7 +1722,7 @@ def render_latency_estimator_embed_semantic_html():
     <h1 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin:0.25rem 0;">Deterministic Multi-Agent Latency &amp; Token Cost Estimator</h1>
     <p style="font-size:0.875rem;color:#9ca3af;margin:0.25rem 0 0 0;">Interactive latency, throughput, and private VPC infrastructure cost calculator.</p>
   </header>
-  <main>
+  <main id="main-content">
     <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:0.75rem;padding:1.5rem;margin-bottom:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin-top:0;">Baseline Multi-Agent Metrics (5 Nodes, 50,000 Runs/Mo)</h2>
       <ul style="list-style-type:none;padding:0;margin:1rem 0;color:#cbd5e1;font-size:0.875rem;line-height:1.8;">
@@ -1802,7 +1808,7 @@ def render_glossary_semantic_html(terms):
         f'<div class="glossary-term-def" style="background:#020617;border:1px solid #1e293b;border-left:3px solid #0284c7;border-radius:0.5rem;padding:1rem;margin-bottom:1rem;font-size:0.95rem;line-height:1.6;color:#e2e8f0;font-weight:500;">{html.escape(t.get("shortDefinition", ""))}</div>'
         f'<p style="color:#94a3b8;font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem;">{html.escape(t.get("technicalDeepDive", ""))}</p>'
         f'<div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;padding-top:0.75rem;border-top:1px solid #1e293b;">'
-        + (f'<a href="/tools/{html.escape(t.get("relatedToolSlug", ""))}" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.5rem 1rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.8rem;">Launch Interactive Simulator &rarr;</a>' if t.get("relatedToolSlug") else '')
+        + (f'<a href="/tools/{html.escape(t.get("relatedToolSlug", ""))}/" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.5rem 1rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.8rem;">Launch Interactive Simulator &rarr;</a>' if t.get("relatedToolSlug") else '')
         + (f'<a href="{html.escape(t.get("relatedSolutionUrl", ""))}" style="color:#38bdf8;text-decoration:underline;font-size:0.8rem;">View Architecture Docs</a>' if t.get("relatedSolutionUrl") else '')
         + f'</div>'
         f'</article>'
@@ -1829,7 +1835,7 @@ def render_glossary_semantic_html(terms):
       Covering {len(terms)} Definitive Enterprise Engineering Standards &bull; Verified Telemetry SLAs Included
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section>
       {cards_html}
     </section>
@@ -1839,7 +1845,7 @@ def render_glossary_semantic_html(terms):
         Schedule a 30-minute private technical assessment with Principal AI Systems Architect Chaman Shah. Contractually backed 14-day production pilot SLA with 90-day ROI guarantee.
       </p>
       <a href="https://wa.me/918317329312" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;">Schedule Architecture Audit &rarr;</a>
-      <a href="/solutions" style="display:inline-block;border:1px solid #334155;color:#cbd5e1;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Browse 3,765 Workflows</a>
+      <a href="/solutions/" style="display:inline-block;border:1px solid #334155;color:#cbd5e1;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Browse 3,765 Workflows</a>
     </section>
   </main>
 </div>
@@ -1860,7 +1866,7 @@ def render_india_benchmark_semantic_html():
       India Enterprise AI Benchmark Report 2026
     </h1>
     <div style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;">
-      Published: October 2026 &bull; Author: <a href="/authors/chaman-shah" style="color:#2563eb;text-decoration:underline;">Chaman Shah</a> (Principal AI Systems Architect) &bull; 12 min read
+      Published: October 2026 &bull; Author: <a href="/authors/chaman-shah/" style="color:#2563eb;text-decoration:underline;">Chaman Shah</a> (Principal AI Systems Architect) &bull; 12 min read
     </div>
     <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
       <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">
@@ -1871,7 +1877,7 @@ def render_india_benchmark_semantic_html():
       </p>
     </div>
   </header>
-  <main style="line-height:1.75;color:#374151;">
+  <main id="main-content" style="line-height:1.75;color:#374151;">
     <section style="margin:2.5rem 0;">
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">1. Executive Telemetry Overview</h2>
       <div style="overflow-x:auto;">
@@ -1936,8 +1942,8 @@ def render_india_benchmark_semantic_html():
       <p style="color:#9ca3af;font-size:0.95rem;max-width:600px;margin:0 auto 1.5rem auto;line-height:1.6;">
         Evaluate your token unit economics, data residency risk, and multi-agent readiness using our free interactive diagnostic tools.
       </p>
-      <a href="/tools/agentic-architecture-grader" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;">Launch Architecture Grader &rarr;</a>
-      <a href="/tools/enterprise-gpu-finops-cost-calculator" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">GPU FinOps Calculator</a>
+      <a href="/tools/agentic-architecture-grader/" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;">Launch Architecture Grader &rarr;</a>
+      <a href="/tools/enterprise-gpu-finops-cost-calculator/" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">GPU FinOps Calculator</a>
     </section>
   </main>
 </div>
@@ -1958,7 +1964,7 @@ def render_ai_voices_semantic_html():
       Top AI Architecture Voices &amp; Enterprise Swarm Engineering 2026
     </h1>
     <div style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;">
-      Published: October 2026 &bull; Curated by: <a href="/authors/chaman-shah" style="color:#2563eb;text-decoration:underline;">Chaman Shah</a> (Principal AI Systems Architect) &bull; 10 min read
+      Published: October 2026 &bull; Curated by: <a href="/authors/chaman-shah/" style="color:#2563eb;text-decoration:underline;">Chaman Shah</a> (Principal AI Systems Architect) &bull; 10 min read
     </div>
     <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
       <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">
@@ -1969,7 +1975,7 @@ def render_ai_voices_semantic_html():
       </p>
     </div>
   </header>
-  <main style="line-height:1.75;color:#374151;">
+  <main id="main-content" style="line-height:1.75;color:#374151;">
     <article style="margin:2rem 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.75rem;">
       <h2 style="font-size:1.35rem;font-weight:700;color:#111827;margin-top:0;">1. Harrison Chase (CEO &amp; Co-founder, LangChain)</h2>
       <blockquote style="border-left:4px solid #2563eb;padding-left:1rem;margin:1rem 0;font-style:italic;color:#1f2937;">
@@ -2065,7 +2071,7 @@ def render_ai_voices_semantic_html():
       </blockquote>
       <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:0.5rem;padding:1rem;margin-top:1rem;font-size:0.9rem;">
         <strong style="color:#1d4ed8;">Elesium Architectural Implementation:</strong>
-        We built the <a href="/tools/agentic-architecture-grader" style="color:#2563eb;text-decoration:underline;">Enterprise Agentic Architecture Fragility Grader</a> to benchmark multi-agent pipelines against 18 enterprise failure modes before production sign-off.
+        We built the <a href="/tools/agentic-architecture-grader/" style="color:#2563eb;text-decoration:underline;">Enterprise Agentic Architecture Fragility Grader</a> to benchmark multi-agent pipelines against 18 enterprise failure modes before production sign-off.
       </div>
     </article>
 
@@ -2086,7 +2092,7 @@ def render_ai_voices_semantic_html():
         Schedule a confidential 30-minute technical session with Principal AI Systems Architect Chaman Shah to evaluate your multi-agent architecture.
       </p>
       <a href="https://wa.me/918317329312" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;">Schedule Architecture Audit &rarr;</a>
-      <a href="/glossary" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Engineering Glossary (51 Terms)</a>
+      <a href="/glossary/" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Engineering Glossary (51 Terms)</a>
     </section>
   </main>
 </div>
@@ -2117,7 +2123,7 @@ def render_how_we_work_semantic_html():
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section style="margin-bottom:3rem;">
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1.5rem;text-align:center;">The 4-Stage Sovereign Engineering Methodology</h2>
       <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
@@ -2287,13 +2293,13 @@ def render_compare_hub_semantic_html(battlecards):
     cards_html = "".join(
         f'<article style="margin-bottom:2rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">'
         f'<div style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">{html.escape(b.get("category", ""))} &bull; Battlecard #{b.get("id", "")}</div>'
-        f'<h2 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0 0 0.75rem 0;"><a href="/compare/{html.escape(b.get("slug", ""))}" style="color:#111827;text-decoration:none;">{html.escape(b.get("title", ""))} &rarr;</a></h2>'
+        f'<h2 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0 0 0.75rem 0;"><a href="/compare/{html.escape(b.get("slug", ""))}/" style="color:#111827;text-decoration:none;">{html.escape(b.get("title", ""))} &rarr;</a></h2>'
         f'<div style="font-family:monospace;font-size:0.875rem;color:#4b5563;margin-bottom:0.75rem;"><span style="background:#f3f4f6;padding:0.25rem 0.5rem;border-radius:0.25rem;">{html.escape(b.get("entityALabel", ""))}</span> vs <span style="background:#f3f4f6;padding:0.25rem 0.5rem;border-radius:0.25rem;">{html.escape(b.get("entityBLabel", ""))}</span></div>'
         f'<p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin-bottom:1rem;">{html.escape(b.get("verdictSummary", ""))}</p>'
         f'<div style="display:flex;gap:1rem;font-size:0.85rem;color:#374151;margin-bottom:1rem;">'
         + "".join(f'<div style="background:#f9fafb;padding:0.5rem 0.75rem;border-radius:0.5rem;border:1px solid #e5e7eb;"><strong>{html.escape(f.get("label", ""))}:</strong> {html.escape(f.get("value", ""))}</div>' for f in b.get("fastFacts", [])[:2])
         + f'</div>'
-        f'<a href="/compare/{html.escape(b.get("slug", ""))}" style="display:inline-block;background:#059669;color:#ffffff;padding:0.5rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Inspect Comparison Matrix &rarr;</a>'
+        f'<a href="/compare/{html.escape(b.get("slug", ""))}/" style="display:inline-block;background:#059669;color:#ffffff;padding:0.5rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Inspect Comparison Matrix &rarr;</a>'
         f'</article>'
         for b in battlecards
     )
@@ -2324,10 +2330,10 @@ def render_compare_hub_semantic_html(battlecards):
       <h3 style="margin:0 0 0.5rem 0;font-size:1.25rem;font-weight:700;">1-Minute Enterprise Agentic Architecture Grader</h3>
       <p style="margin:0;color:#cbd5e1;font-size:0.875rem;">Assess your stack across concurrency, topology, inference boundaries, state persistence, and DPDP compliance.</p>
     </div>
-    <a href="/tools/agentic-architecture-grader" style="background:#10b981;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;white-space:nowrap;margin-left:1rem;">Launch Grader &rarr;</a>
+    <a href="/tools/agentic-architecture-grader/" style="background:#10b981;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.875rem;white-space:nowrap;margin-left:1rem;">Launch Grader &rarr;</a>
   </div>
 
-  <main>
+  <main id="main-content">
     <section style="margin-bottom:3rem;">
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1.5rem;">Audited Production Framework Comparisons</h2>
       {cards_html}
@@ -2450,10 +2456,11 @@ def render_compare_detail_semantic_html(item):
     )
 
     return f"""
+<main id="main-content">
 <div id="prerendered-compare-detail" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <nav style="font-size:0.8rem;color:#6b7280;margin-bottom:1.5rem;">
     <a href="/" style="color:#6b7280;text-decoration:none;">Home</a> &gt; 
-    <a href="/compare" style="color:#6b7280;text-decoration:none;">Architecture Comparisons</a> &gt; 
+    <a href="/compare/" style="color:#6b7280;text-decoration:none;">Architecture Comparisons</a> &gt; 
     <span style="color:#111827;font-weight:600;">{html.escape(item.get("entityALabel", ""))} vs {html.escape(item.get("entityBLabel", ""))}</span>
   </nav>
   <header style="margin-bottom:2.5rem;">
@@ -2496,18 +2503,19 @@ def render_compare_detail_semantic_html(item):
     <h3 style="font-size:1.15rem;font-weight:700;color:#0f172a;margin:0 0 0.5rem 0;">Connected Architecture Simulators &amp; Solutions</h3>
     <p style="font-size:0.9rem;color:#475569;margin:0 0 1rem 0;">Model your multi-agent architecture unit economics, latency boundaries, and DPDP Act compliance before implementation:</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;font-size:0.875rem;">
-      <a href="/tools/agentic-architecture-grader" style="color:#2563eb;text-decoration:none;font-weight:600;">Architecture Readiness Grader &rarr;</a>
-      <a href="/tools/enterprise-ai-roi-calculator" style="color:#2563eb;text-decoration:none;font-weight:600;">AI ROI &amp; Payback Calculator &rarr;</a>
-      <a href="/solutions" style="color:#059669;text-decoration:none;font-weight:600;">Browse All Enterprise Solutions &rarr;</a>
+      <a href="/tools/agentic-architecture-grader/" style="color:#2563eb;text-decoration:none;font-weight:600;">Architecture Readiness Grader &rarr;</a>
+      <a href="/tools/enterprise-ai-roi-calculator/" style="color:#2563eb;text-decoration:none;font-weight:600;">AI ROI &amp; Payback Calculator &rarr;</a>
+      <a href="/solutions/" style="color:#059669;text-decoration:none;font-weight:600;">Browse All Enterprise Solutions &rarr;</a>
       <a href="/commercial-directory.html" style="color:#0284c7;text-decoration:none;font-weight:600;">Commercial Directory &rarr;</a>
     </div>
   </section>
   <footer style="background:#111827;color:#ffffff;border-radius:1rem;padding:2rem;text-align:center;">
     <h3 style="font-size:1.5rem;font-weight:700;margin:0 0 0.5rem 0;">Need an Architecture Audit for Your Enterprise Stack?</h3>
     <p style="color:#9ca3af;font-size:0.95rem;margin:0 0 1.25rem 0;">Schedule a technical teardown with Chaman Shah, Principal AI Systems Architect.</p>
-    <a href="/waitlist" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Book Technical Audit &rarr;</a>
+    <a href="/waitlist/" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Book Technical Audit &rarr;</a>
   </footer>
 </div>
+</main>
 """
 
 def render_architecture_grader_tool_semantic_html():
@@ -2521,7 +2529,7 @@ def render_architecture_grader_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agentic Architecture Fragility &amp; Readiness Grader</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Audit your autonomous multi-agent systems across five critical engineering dimensions: workflow concurrency, orchestration topology, inference isolation, state persistence, and compliance guardrails. Calculates structural fragility, failure probability, and annual financial token waste.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">5-Dimension Diagnostic Evaluation</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -2561,7 +2569,7 @@ def render_architecture_grader_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Enterprise Agentic Architecture Fragility Grader</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive diagnostic assessment for autonomous multi-agent systems.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Audit your enterprise agent stack across concurrency, topology, inference boundaries, state persistence, and DPDP Act 2023 compliance.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2581,7 +2589,7 @@ def render_token_leakage_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Token Leakage Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate quadratic context window bloat, runaway spend, and cascade failure risk in unconstrained ReAct loops vs deterministic FSM circuit breakers with bounded Pydantic state projections.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Architectural Comparison Summary</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2611,7 +2619,7 @@ def render_token_leakage_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Token Leakage Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate quadratic context window bloat and runaway spend in unconstrained ReAct loops.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model silent token leakage, quadratic context bloat, and runaway cloud spend in unconstrained ReAct loops vs deterministic FSM circuit breakers.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2631,7 +2639,7 @@ def render_dpdp_audit_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">DPDP Act 2023 Enterprise Statutory Audit Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate Data Protection Board of India (DPBI) statutory penalty liabilities up to &#8377;250 Crore per violation, evaluate cross-border LLM leakage risks, and deploy sovereign MeitY-empaneled local VPC safe harbors.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">DPDP Act Statutory Penalty Schedule (Section 33)</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2661,7 +2669,7 @@ def render_dpdp_audit_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">DPDP Act 2023 Statutory Audit Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate DPBI statutory penalties and cross-border inference liabilities.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Audit your enterprise AI stack against the Digital Personal Data Protection Act 2023 and evaluate sovereign local VPC deployment checklists.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2681,7 +2689,7 @@ def render_gpu_finops_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise GPU FinOps &amp; Throughput Calculator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Compare total cost of ownership, VRAM allocation, and continuous batch throughput of self-hosted sovereign GPU clusters (NVIDIA H100, H200, A100) vs closed hyperscaler API token consumption.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Hardware Roofline &amp; Continuous Batching Economics</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2711,7 +2719,7 @@ def render_gpu_finops_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Enterprise GPU FinOps &amp; Throughput Calculator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Compare self-hosted sovereign GPU clusters vs hyperscaler APIs.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Calculate VRAM sizing, memory bandwidth roofline throughput, and 3-year TCO for sovereign enterprise AI infrastructure.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2731,7 +2739,7 @@ def render_vector_db_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Vector DB &amp; RAG Latency Benchmark Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate indexing memory footprints, p99 query latency under concurrent agent load, and 3-year TCO comparing self-hosted PostgreSQL pgvector (HNSW) vs Pinecone, Qdrant, and Milvus.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Vector Retrieval Topology &amp; Latency Profiles</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2761,7 +2769,7 @@ def render_vector_db_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Enterprise Vector DB &amp; RAG Latency Benchmark</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Compare self-hosted pgvector (HNSW) vs Pinecone, Qdrant, and Milvus.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate indexing memory footprints, p99 query latency, and 3-year TCO for sovereign enterprise RAG infrastructure.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2781,7 +2789,7 @@ def render_kv_cache_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise LLM Context Window Cache &amp; KV Eviction Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate LLM KV cache memory allocation, PagedAttention fragmentation, Automatic Prefix Caching hit ratios, and TTFT latency across multi-turn enterprise agent workflows.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">KV Cache Architecture &amp; Prefill Optimization</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2811,7 +2819,7 @@ def render_kv_cache_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">LLM Context Window &amp; KV Cache Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate PagedAttention, Prefix Caching, and TTFT latency across multi-turn workflows.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark VRAM allocation, RadixAttention hit ratios, and monthly cloud cost for enterprise LLM agent deployments.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2831,7 +2839,7 @@ def render_deadlock_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Deadlock &amp; FSM Circuit Breaker Visualizer</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate directed dependency cycles, cascading API rate-limit thundering herds, and deterministic finite state machine circuit breakers under high concurrency.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Agent Dependency Graph &amp; Mutex Deadlock Analysis</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2861,7 +2869,7 @@ def render_deadlock_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Deadlock &amp; FSM Breaker Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Simulate multi-agent circular wait deadlocks, exponential backoff with full jitter, and deterministic FSM circuit breaker fallbacks.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Detect directed cycles with Tarjan DFS algorithms and test sliding-window circuit breakers against upstream LLM rate limits.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2881,7 +2889,7 @@ def render_voice_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Real-Time Voice Agent VAD &amp; Turn-Taking Latency Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark real-time voice agent latency across WebRTC transport, Silero VAD silence hangover, streaming ASR, LLM TTFT, and neural TTS synthesis.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Audio Pipeline Decomposition &amp; Sub-500ms Turnaround Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2911,7 +2919,7 @@ def render_voice_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Voice Agent Turn-Taking Latency Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating voice agent latency across WebRTC, VAD silence, streaming ASR, and TTS.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark turn-taking latency, Silero VAD thresholds, and monthly telephony cloud opex vs sovereign GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2931,7 +2939,7 @@ def render_graphrag_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise GraphRAG vs Vector DB Benchmark</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark indexing token multipliers, k-hop retrieval latency, and multi-hop reasoning accuracy comparing Dense Vector RAG, Hybrid BM25+Dense, and Knowledge Graph Triplet Extraction.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Retrieval Architecture Comparison &amp; Multi-Hop Accuracy</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -2961,7 +2969,7 @@ def render_graphrag_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">GraphRAG vs Vector DB Benchmark Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating indexing token costs, k-hop retrieval latency, and multi-hop accuracy.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark Dense Vector RAG, Hybrid BM25+Dense, and GraphRAG across enterprise document sizes and query complexity.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -2981,7 +2989,7 @@ def render_eventsourcing_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Event Sourcing &amp; Audit Ledger Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark Append-Only CQRS event stores vs mutable CRUD databases. Model SHA-256 cryptographic hash chains, sub-second time-travel replay, and DPDP Act 2023 compliance.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Cryptographic Auditability &amp; Time-Travel Forensics Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3011,7 +3019,7 @@ def render_eventsourcing_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Event Sourcing Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating event sourcing recovery, SHA-256 Merkle chain integrity, and DPDP auditability.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark immutable event streams vs mutable database overwrites under agent hallucinations and network partition failures.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3031,7 +3039,7 @@ def render_routing_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Model Routing &amp; Token Cost Arbitrage Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark dynamic model routing (DeepSeek, Llama, Claude, GPT-4o) vs naive single-frontier ingestion. Calculate sub-15ms intent classification, token cost arbitrage, and cluster latency cuts.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Routing &amp; Arbitrage Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3066,7 +3074,7 @@ def render_routing_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Model Dynamic Routing &amp; Arbitrage Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating dynamic model routing distribution, token cost arbitrage, and cluster latency cuts.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark cascading multi-model dynamic routing vs naive single-model ingestion under varying prompt distributions and traffic volumes.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3086,7 +3094,7 @@ def render_firewall_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agentic Prompt Injection &amp; Boundary Firewall Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark deterministic AST grammar syntax firewalls vs secondary guardrail LLMs. Model sub-2ms zero-allocation boundary checks against indirect prompt injection, tool parameter SQLi, and token smuggling.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Defense Architecture Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3121,7 +3129,7 @@ def render_firewall_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Prompt Injection &amp; Boundary Defense Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating prompt firewall latency, AST defense verification, and guardrail token overhead.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark deterministic AST syntax firewalls vs secondary guardrail models under indirect prompt injections, tool parameter SQLi, and token smuggling attacks.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3141,7 +3149,7 @@ def render_cache_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise AI Semantic Cache &amp; Embedding Deduplication Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark in-memory semantic vector caching (Redis Stack, Milvus, pgvector) vs uncached multi-agent LLM invocations. Model cosine similarity thresholds, sub-10ms lookup latencies, and token cost reductions.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Cache &amp; Token Architecture Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3176,7 +3184,7 @@ def render_cache_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Semantic Cache &amp; Token Deduplication Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating semantic cache hit rates, vector lookup latencies, and LLM token cost reductions.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark in-memory semantic vector caching vs uncached LLM calls under varying cosine similarity thresholds and query volumes.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3196,7 +3204,7 @@ def render_routing_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Model Routing &amp; Token Cost Arbitrage Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark dynamic model routing (DeepSeek, Llama, Claude, GPT-4o) vs naive single-frontier ingestion. Calculate sub-15ms intent classification, token cost arbitrage, and cluster latency cuts.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Multi-Tier Routing &amp; Arbitrage Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3231,7 +3239,7 @@ def render_routing_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Model Dynamic Routing &amp; Arbitrage Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating dynamic model routing distribution, token cost arbitrage, and cluster latency cuts.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark cascading multi-model dynamic routing vs naive single-model ingestion under varying prompt distributions and traffic volumes.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3251,7 +3259,7 @@ def render_structured_output_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Structured Output &amp; JSON Grammar Decoding Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark deterministic constrained decoding (Outlines, vLLM XGrammar, GBNF) vs unconstrained prompt generation and Pydantic retry loops. Calculate sub-5ms vocabulary logit masking, zero retry token wastage, and cloud cost arbitrage.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Grammar Decoding Architecture Comparison</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3286,7 +3294,7 @@ def render_structured_output_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Structured Output &amp; JSON Grammar Decoding Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating grammar logit masking, zero retry token wastage, and cloud API spend reductions.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark deterministic context-free grammar decoding (Outlines / XGrammar) vs unconstrained generation and Pydantic retries under varying schema depths and query volumes.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3306,7 +3314,7 @@ def render_tracing_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Tracing &amp; OpenTelemetry Span Overhead Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark OpenTelemetry W3C distributed trace-context propagation vs blocking APM exporters and unmonitored agent meshes. Calculate sub-1.5ms span batching, tail-based telemetry compression, and MTTR reduction.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Observability Architecture Comparison</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3341,7 +3349,7 @@ def render_tracing_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Tracing &amp; OpenTelemetry Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating span export latency overhead, tail-based sampling compression, and incident MTTR reduction.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark non-blocking RingBuffer OpenTelemetry batching vs blocking cloud APM exporters across varying agent workflow depths and sampling strategies.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3361,7 +3369,7 @@ def render_state_rollback_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agentic State Machine Snapshot &amp; Rollback Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark multi-agent state persistence across uncheckpointed volatile meshes, synchronous Postgres JSONB commits, and sovereign async Delta WAL pipelines. Calculate sub-1.5ms overhead, microsecond rollback, and elimination of failed rerun token waste.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">State Persistence Architecture Comparison</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3396,7 +3404,7 @@ def render_state_rollback_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent State Machine Snapshot &amp; Rollback Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating async delta checkpoint overhead, microsecond rollback speedup, and elimination of failed rerun token waste.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark append-only Delta WAL state persistence vs blocking relational JSONB commits and volatile uncheckpointed agent execution meshes.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3416,7 +3424,7 @@ def render_dynamic_replanning_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Dynamic Re-Planning Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark autonomous agent dynamic re-planning and self-correction overhead. Contrast unconstrained Reflexion loops against static counter aborts and sovereign bounded DAG re-planning with sub-1.8s convergence and 0.0% deadlocks.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Re-Planning Architecture Comparison</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3451,7 +3459,7 @@ def render_dynamic_replanning_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Autonomous Agent Dynamic Re-Planning Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating dynamic plan branch refinement latency, task convergence rate, and cyclic deadlock elimination.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark bounded DAG re-planning vs unconstrained Reflexion prompt loops and static retry counter circuit breakers.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3471,7 +3479,7 @@ def render_consensus_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Consensus &amp; Byzantine Fault Tolerance Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark multi-agent consensus protocols. Contrast single-agent hallucination risks and naive N-way LLM majority voting against sovereign Byzantine fault-tolerant (BFT) state-machine quorum achieving sub-450ms verification, 99.98% decision accuracy, and 68% token savings.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Consensus Architecture Comparison</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3506,7 +3514,7 @@ def render_consensus_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Consensus &amp; Byzantine Fault Tolerance Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating Byzantine fault tolerance quorum verification latency, hallucination suppression, and token expense arbitrage.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign BFT state-machine quorum vs naive N-way LLM majority voting and single-agent execution.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3526,7 +3534,7 @@ def render_sandbox_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Multi-Agent Sandboxed Code Execution &amp; Formal Verification Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark autonomous code sandbox architectures. Contrast unconstrained host execution against naive Docker container overhead and sovereign KVM microVMs with sub-45ms cold boot, 0.00% breakout vulnerability, and Z3 formal AST verification.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Sandbox Architecture Comparison</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3561,7 +3569,7 @@ def render_sandbox_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Multi-Agent Code Sandbox &amp; Formal Verification Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating KVM microVM cold boot speedup, zero kernel escape isolation, and formal AST proof coverage.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign KVM microVMs with eBPF syscall filtering vs naive Docker container spawning and unconstrained host execution.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3581,7 +3589,7 @@ def render_memory_drift_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Memory Drift &amp; Long-Horizon Context Compression Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Simulate and benchmark autonomous agent long-horizon memory architectures. Contrast uncompressed FIFO context bloat and sliding window amnesia against sovereign hierarchical semantic memory with recursive episodic compression achieving 92.4% context compression, sub-85ms semantic recall, and 99.96% reasoning retention.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Memory Architecture Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3616,7 +3624,7 @@ def render_memory_drift_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Memory Drift &amp; Long-Horizon Context Compression Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating hierarchical semantic compression, context amnesia mitigation, and token expense arbitrage.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign hierarchical semantic memory against sliding window truncation and uncompressed raw FIFO context bloat.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3636,7 +3644,7 @@ def render_self_healing_tool_semantic_html():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Self-Healing Pipeline &amp; Regression Canary Simulator</h1>
     <p style="font-size:1.15rem;line-height:1.6;color:#94a3b8;max-width:800px;margin:0 auto;">Model and benchmark enterprise autonomous agent failure resilience. Quantify Mean Time to Detect (MTTD), Mean Time to Recover (MTTR), and token burn arbitrage between unmonitored rollouts, naive retry loops, and sovereign statistical shadow canaries with sub-320ms automated rollback.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Failure Resilience &amp; Self-Healing Benchmark</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -3671,7 +3679,7 @@ def render_self_healing_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Self-Healing Pipeline &amp; Regression Canary Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive widget calculating autonomous agent self-healing recovery, statistical shadow canary drift detection, and automated rollback.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign shadow canary pipelines with sub-320ms automated rollback against naive retry death loops and unmonitored monolithic agent rollouts.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3691,7 +3699,7 @@ def render_prompt_optimizer_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Continuous Prompt Optimization &amp; Evolutionary Tuning Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and compare ad-hoc manual prompt engineering, brute-force grid sweeps, and sovereign Bayesian gradient-free evolutionary prompt compilation (MIPROv2 / GEPA). Cut prompt token bloat by 38.2% and enforce 99.4% task completion determinism.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Architectural Divergence Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3714,7 +3722,7 @@ def render_prompt_optimizer_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Continuous Prompt Optimization &amp; Evolutionary Tuning Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Bayesian gradient-free prompt compilation, accuracy boost, and token overhead reduction.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign Bayesian prompt compilation against ad-hoc manual prompting and brute-force grid search with multi-objective Pareto frontier analysis.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3734,7 +3742,7 @@ def render_speculative_decoding_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Dynamic Speculative Decoding &amp; Latency Arbitrage Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark LLM speculative decoding architectures. Compare monolithic autoregressive decoding against static draft horizons and sovereign dynamic speculative tree sampling for 2.85x speedup and sub-17ms token latency.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Decoding Architectural Divergence Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3757,7 +3765,7 @@ def render_speculative_decoding_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Speculative Decoding &amp; Latency Arbitrage Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating LLM speculative tree verification, token acceptance rates, and GPU memory bandwidth arbitrage.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign speculative decoding against standard autoregressive decoding with dynamic tree sampling for sub-17ms token latency.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3777,7 +3785,7 @@ def render_zk_attestation_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Zero-Knowledge Proof State Attestation Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate cryptographic audit trails for autonomous AI agents. Benchmark unencrypted logging against Merkle hash trees and sovereign Groth16/PlonK SNARK circuits for 256-byte constant proof sizes, sub-3.5ms verification, and 100% DPDP Act 2023 compliance.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Cryptographic Audit Architecture Comparison</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3800,7 +3808,7 @@ def render_zk_attestation_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Zero-Knowledge Proof State Attestation Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent ZK-SNARK state attestation, proof size compression, verifier latency, and DPDP Act 2023 zero-disclosure compliance.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign ZK-SNARK state proofs against full state logging and Merkle hash rollups for zero-disclosure enterprise compliance.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3820,7 +3828,7 @@ def render_homomorphic_enclave_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Homomorphic Encryption &amp; Confidential Enclave Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Benchmark physical memory encryption overhead, ciphertext expansion, and hypervisor snooping vulnerabilities. Compare unencrypted cloud execution against software FHE (CKKS) and sovereign AMD SEV-SNP confidential enclaves for sub-20ms real-time multi-agent execution.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Confidential Isolation Architecture Comparison</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3843,7 +3851,7 @@ def render_homomorphic_enclave_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Confidential Enclave &amp; FHE Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent Confidential Computing enclaves, FHE arithmetic slowdown, wire-speed memory encryption, and DPDP Act 2023 zero-disclosure compliance.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark sovereign AMD SEV-SNP confidential enclaves against software FHE and unencrypted virtualization for real-time zero-knowledge agent execution.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3863,7 +3871,7 @@ def render_epistemic_ood_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Epistemic Uncertainty &amp; OOD Calibrator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark autonomous agent epistemic uncertainty and out-of-distribution (OOD) rejection. Compare uncalibrated Softmax overconfidence against Conformal Prediction and Mahalanobis latent distance to enforce deterministic abstention and zero-hallucination routing.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Statistical Calibration Architecture Comparison</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3886,7 +3894,7 @@ def render_epistemic_ood_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Epistemic Uncertainty &amp; OOD Calibrator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent Conformal Prediction calibration, Mahalanobis latent distance OOD rejection, and DPDP Act 2023 compliance.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark Expected Calibration Error (ECE) and out-of-distribution rejection to eliminate enterprise hallucination liabilities.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3906,7 +3914,7 @@ def render_differential_privacy_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Differential Privacy &amp; Gradient Sanitizer</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark autonomous agent Differential Privacy (DP-SGD) and gradient inversion leakage. Calculate epsilon privacy budgets, gradient clipping, Gaussian noise injection, and DPDP Act compliance to eliminate Deep Leakage from Gradients (DLG).</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#c084fc;margin-top:0;">Differential Privacy Defense Architecture Comparison</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3929,7 +3937,7 @@ def render_differential_privacy_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Differential Privacy &amp; Gradient Sanitizer</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent (epsilon, delta)-Differential Privacy, DP-SGD gradient clipping, Gaussian noise perturbation, and DPDP Act 2023 compliance.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark gradient inversion reconstruction resistance and downstream task utility retention across enterprise agent fine-tuning pipelines.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3949,7 +3957,7 @@ def render_byzantine_consensus_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Federated Secure Aggregation &amp; Byzantine Consensus Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark multi-agent federated learning resilience against gradient poisoning, sign flipping, and covert backdoors. Test cryptographic Secure Aggregation (SecAgg via Shamir Secret Sharing) and Byzantine-robust aggregation algorithms (Multi-Krum, Bulyan, Trimmed Mean) to ensure DPDP Act 2023 compliance.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">Byzantine Aggregation Algorithm Resilience Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -3973,7 +3981,7 @@ def render_byzantine_consensus_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Byzantine Consensus &amp; SecAgg Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating multi-agent federated Byzantine fault tolerance, Multi-Krum/Bulyan filtering, and cryptographic Secure Aggregation (SecAgg).</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark gradient poisoning defense, convergence degradation, and statutory privacy compliance across distributed autonomous agent networks.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -3993,7 +4001,7 @@ def render_post_quantum_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Post-Quantum Cryptography &amp; ML-KEM/Dilithium Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate and benchmark autonomous agent state checkpoint encryption against cryptanalytically relevant quantum computers (CRQC). Test NIST FIPS 203 (ML-KEM / Kyber-768) and FIPS 204 (ML-DSA / Dilithium) lattice-based Module-LWE attestation to eliminate Harvest Now Decrypt Later (HNDL) exposure.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Post-Quantum Cryptographic Suite Performance Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4016,7 +4024,7 @@ def render_post_quantum_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Post-Quantum Cryptography &amp; ML-KEM Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating autonomous agent NIST FIPS 203 / 204 lattice cryptography, Module-LWE polynomial noise, and HNDL quantum threat exposure.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark post-quantum key encapsulation (ML-KEM) and digital signatures (ML-DSA) across enterprise autonomous agent architectures.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4036,7 +4044,7 @@ def render_photonic_compute_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Optical Neural Network &amp; Silicon Photonics Compute Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Benchmark coherent optical matrix multiplication (GEMM) using Mach-Zehnder Interferometer (MZI) meshes and Wavelength Division Multiplexing (WDM). Simulate in-flight waveguide time-of-flight latency, electro-optic conversions, and femtojoule-per-MAC energy efficiency against electronic GPU baselines.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">Optical Matrix Compute Performance Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4059,7 +4067,7 @@ def render_photonic_compute_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Silicon Photonics &amp; Optical GEMM Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating coherent optical neural network matrix acceleration, in-flight waveguide latency, and WDM energy efficiency.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark in-flight optical matrix multiplication and electro-optic conversion latencies across enterprise autonomous agent architectures.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4079,7 +4087,7 @@ def render_memristor_crossbar_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Analog Neuromorphic Crossbar Memristor Compute Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Benchmark analog in-memory computing (AIMC) using Resistive RAM (ReRAM) and Phase-Change Memory (PCM) crossbar arrays. Simulate single-step Kirchhoff/Ohm Vector-Matrix Multiplication (VMM), power-law conductance drift, and femtojoule-per-synaptic-op energy scaling against digital GPU baselines.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Analog Neuromorphic In-Memory Computing Performance Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4102,7 +4110,7 @@ def render_memristor_crossbar_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Memristor Crossbar &amp; AIMC Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating analog in-memory computing (AIMC), ReRAM vector-matrix multiplication, and conductance drift dynamics.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark analog Kirchhoff bitline current summation and memristive conductance retention across enterprise autonomous agent architectures.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4122,7 +4130,7 @@ def render_snn_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Spiking Neural Network (SNN) LIF Neuromorphic Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Benchmark event-driven Spiking Neural Networks (SNN) utilizing Leaky Integrate-and-Fire (LIF) and Adaptive-LIF (ALIF) membrane dynamics. Simulate temporal spike encoding, Address-Event Representation (AER), synaptic sparsity, and femtojoule-per-synaptic-op energy scaling against dense GPU baselines.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">Neuromorphic Event-Driven SNN Performance Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4145,7 +4153,7 @@ def render_snn_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent SNN Neuromorphic &amp; LIF Event Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating event-driven Leaky Integrate-and-Fire dynamics, Address-Event Representation, and synaptic sparsity.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark asynchronous biological membrane potential integration and synaptic energy scaling across enterprise autonomous agent architectures.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4165,7 +4173,7 @@ def render_hsm_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Hardware Security Module (HSM) PKCS#11 Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate FIPS 140-3 Level 4 physical tamper-detection envelopes, PKCS#11 cryptographic session tokenization, and air-gapped key derivation for sovereign enterprise AI agent clusters under India's DPDP Act 2023.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">HSM Cryptographic Performance &amp; Tamper Zeroization Matrix</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4188,7 +4196,7 @@ def render_hsm_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent HSM PKCS#11 Air-Gapped Key Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Hardware Security Module (HSM) FIPS 140-3 key derivation latency, physical tamper zeroization, and tokenization throughput.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark air-gapped cryptographic coprocessor throughput and physical security boundaries across sovereign enterprise AI agent deployments.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4208,7 +4216,7 @@ def render_graph_consensus_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Asynchronous Graph Consensus Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate asynchronous aBFT, DAG Hashgraph gossip, and Merkle Patricia state trie proofs across autonomous multi-agent clusters under Section 63 BSA 2023.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Distributed Byzantine Fault Tolerance &amp; State Commit Invariants</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4231,7 +4239,7 @@ def render_graph_consensus_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Agent Graph Consensus &amp; State Verifier Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Asynchronous BFT commit latency, DAG gossip overhead, and Byzantine fault resistance.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark distributed state verification and Byzantine fault tolerance across sovereign enterprise AI agent clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#10b981;text-decoration:underline;">
@@ -4251,7 +4259,7 @@ def render_abdm_fhir_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise ABDM FHIR Clinical Privacy &amp; De-Identification Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate HL7 FHIR R4 clinical record de-identification, Laplace differential privacy epsilon budgets, and ABDM consent manager telemetry under India's DPDP Act 2023.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">Clinical De-Identification &amp; Statutory Protection Benchmarks</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4274,7 +4282,7 @@ def render_abdm_fhir_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">ABDM FHIR Clinical Privacy &amp; De-Identification Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating HL7 FHIR de-identification latency, differential privacy epsilon budgets, and re-identification risk.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Benchmark healthcare data privacy and ABDM consent exchange telemetry across sovereign hospital private VPC clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4294,7 +4302,7 @@ def render_cfr_part_11_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">CDSCO &amp; US FDA 21 CFR Part 11 eBMR Validation Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate cryptographic Merkle audit trail verification, GAMP 5 data integrity compliance, and automated batch release cycle acceleration across Indian formulation plants and active pharmaceutical ingredient (API) facilities.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#22d3ee;margin-top:0;">GAMP 5 Data Integrity &amp; Batch Release Benchmarks</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4317,7 +4325,7 @@ def render_cfr_part_11_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">21 CFR Part 11 &amp; CDSCO eBMR Validation Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Electronic Batch Record verification latency, tamper detection confidence, and annual validation OPEX savings.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate pharmaceutical computerized system validation (CSV) and cryptographic audit trail integrity across sovereign life sciences manufacturing clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4337,7 +4345,7 @@ def render_ondc_retail_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agent ONDC Multi-Ecosystem Retail Inventory &amp; Dynamic Pricing Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate Beckn protocol catalog broadcast, sub-50ms stock reservation idempotency, vernacular NLU pricing elasticity, and SAP S/4HANA retail inventory reconciliation across Indian omnichannel consumer brands.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#fb923c;margin-top:0;">Beckn Protocol &amp; Omnichannel Inventory Benchmarks</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4360,7 +4368,7 @@ def render_ondc_retail_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">ONDC Retail Inventory &amp; Dynamic Pricing Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Beckn protocol synchronization latency, phantom stockout reduction, and annual working capital savings.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate ONDC multi-buyer network catalog synchronization and dynamic algorithmic pricing across sovereign retail distribution centers.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4380,7 +4388,7 @@ def render_nemo_guardrails_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise LLM Security Guardrails &amp; NeMo Colang Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate sub-15ms prompt injection interception, Colang 2.0 guardrail flows, Indian statutory PII redaction under the DPDP Act 2023, and multi-turn Crescendo jailbreak defense across sovereign private VPCs.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#34d399;margin-top:0;">NeMo Colang 2.0 &amp; Sovereign Security Benchmarks</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4403,7 +4411,7 @@ def render_nemo_guardrails_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">LLM Security Guardrails &amp; NeMo Colang Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating sub-15ms prompt injection interception, Colang 2.0 flow latency, and DPDP Act 2023 PII masking confidence.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate enterprise LLM safety guardrails, adversarial jailbreak classification, and statutory data fiduciary protection across sovereign private VPCs.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4423,7 +4431,7 @@ def render_aiops_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Agent AIOps &amp; Incident Auto-Remediation Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate closed-loop autonomous SRE runbook automation, eBPF packet-level kernel tracing, Kubernetes pod self-healing, and sub-5-second MTTR across enterprise cloud clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;color:#38bdf8;margin-top:0;">Autonomous SRE &amp; eBPF Kernel Benchmarks</h2>
       <ul style="color:#cbd5e1;line-height:1.8;padding-left:1.25rem;">
@@ -4446,7 +4454,7 @@ def render_aiops_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">AIOps Incident Remediation &amp; Chaos Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating sub-second Kubernetes pod healing, eBPF kernel triage latency, and four-nines SLA uptime confidence.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate autonomous SRE runbook execution and chaos fault injection across hybrid enterprise Kubernetes clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4466,7 +4474,7 @@ def render_vector_sharding_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Vector Database Sharding &amp; HNSW Indexing Latency Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate distributed vector cluster memory footprints, P99 ANN search latencies, HNSW graph parameters, scalar/product quantization compression ratios, and cross-shard scatter-gather overhead.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Distributed Vector Partitioning &amp; Latency Benchmarks</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4494,7 +4502,7 @@ def render_vector_sharding_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Vector DB Sharding &amp; HNSW Latency Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating distributed vector cluster RAM, P99 ANN latency, and scalar quantization compression.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate vector database cluster sharding, RAM memory footprint, HNSW graph traversal parameters, scalar quantization, and P99 query latency for enterprise AI agents.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4514,7 +4522,7 @@ def render_chunked_prefill_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Chunked Prefill &amp; Radix Attention KV Cache Paging Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate LLM serving Time-to-First-Token (TTFT), RadixAttention prefix caching hit ratios, chunked prefill head-of-line blocking mitigation, and GPU VRAM savings.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">KV Cache Memory Allocation &amp; Serving Benchmarks</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4542,7 +4550,7 @@ def render_chunked_prefill_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Chunked Prefill &amp; Radix Attention Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating TTFT latency, prefix hit ratio, and GPU VRAM savings.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate LLM serving Time-to-First-Token (TTFT), RadixAttention prefix caching, chunked prefill head-of-line blocking mitigation, and GPU VRAM savings.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4562,7 +4570,7 @@ def render_mcp_routing_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Model Context Protocol (MCP) Tool Routing &amp; Context Pruning Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate multi-server MCP tool discovery latency, dynamic prompt schema pruning, VRAM memory offloading, and sub-50ms tool execution precision.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Model Context Protocol (MCP) Discovery &amp; Pruning Telemetry</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4590,7 +4598,7 @@ def render_mcp_routing_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">MCP Tool Routing &amp; Context Pruning Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating multi-server discovery latency, tokens saved, and tool precision.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate Model Context Protocol (MCP) multi-server tool routing, semantic tool discovery latency, prompt token pruning, and VRAM memory conservation for production agent swarms.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4610,7 +4618,7 @@ def render_industrial_iot_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Edge Industrial IoT Protocol Translation &amp; OPC-UA Latency Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate deterministic OPC-UA, Profinet, and EtherCAT fieldbus translation, sub-10ms edge neural anomaly detection, and closed-loop SAP ERP shopfloor dispatch.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Edge Protocol Translation &amp; Telemetry Architecture</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4638,7 +4646,7 @@ def render_industrial_iot_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Edge Industrial IoT Protocol &amp; OPC-UA Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating fieldbus translation latency, spindle anomaly detection, and unplanned downtime reduction.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate deterministic OPC-UA, Profinet, and EtherCAT fieldbus translation, sub-10ms edge neural anomaly detection, and closed-loop SAP ERP shopfloor dispatch.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4658,7 +4666,7 @@ def render_tally_erp_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Tally ERP / Prime XML Gateway &amp; Ledger Reconciliation Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate TDL XML-over-HTTP port 9000 voucher ingestion, layout-aware invoice OCR, straight-through processing (STP) rates, and statutory GST Rule 36(4) Input Tax Credit reconciliation.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Tally Prime XML &amp; GST Rule 36(4) Telemetry</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4686,7 +4694,7 @@ def render_tally_erp_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Tally ERP LLM Agent Reconciliation Sandbox</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Tally Prime XML-over-HTTP port 9000 latency, straight-through processing rates, and GST Rule 36(4) verification.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate TDL XML-over-HTTP port 9000 voucher ingestion, layout-aware invoice OCR, straight-through processing (STP) rates, and statutory GST Rule 36(4) Input Tax Credit reconciliation.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4706,7 +4714,7 @@ def render_smart_contract_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Web3 Smart Contract Formal Verification &amp; ZK-Audit Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate automated SMT theorem proving, AST constraint solving, zero-knowledge proof generation, and Value-at-Risk mitigation across decentralized finance protocols.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Formal Verification Invariant &amp; ZK Telemetry</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4734,7 +4742,7 @@ def render_smart_contract_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Web3 Formal Verification Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating SMT theorem proving latency, invariant coverage, and zero-knowledge proof generation.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate automated SMT theorem proving, AST constraint solving, zero-knowledge proof generation, and Value-at-Risk mitigation across decentralized finance protocols.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4754,7 +4762,7 @@ def render_pagedattention_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent GPU VRAM PagedAttention Fragmentation &amp; Prefill KV Cache Allocator Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate non-contiguous virtual memory allocation, chunked prefill batching, and GPU VRAM fragmentation elimination for enterprise multi-agent swarms.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">GPU VRAM Paging &amp; Prefill Latency Telemetry</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4782,7 +4790,7 @@ def render_pagedattention_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">GPU VRAM PagedAttention Allocator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating GPU VRAM utilization, TTFT latency, and multi-agent concurrency capacity.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate non-contiguous virtual memory allocation, chunked prefill batching, and GPU VRAM fragmentation elimination for enterprise multi-agent swarms.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4802,7 +4810,7 @@ def render_medusa_tool_semantic_html():
     <h1 style="font-size:2.25rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;">Enterprise Autonomous Agent Medusa Multi-Head Tree-Attention &amp; Speculative Verification Simulator</h1>
     <p style="font-size:1.125rem;color:#94a3b8;max-width:760px;margin:0 auto;">Simulate candidate token tree generation, parallel verification kernels, rejection sampling acceptance rates, and sub-15ms per-token latencies across enterprise GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:2rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:2rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:1rem;padding:1.5rem;">
       <h2 style="font-size:1.25rem;font-weight:700;color:#ffffff;margin:0 0 1rem 0;">Medusa Multi-Head Tree-Attention Telemetry</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -4830,7 +4838,7 @@ def render_medusa_embed_semantic_html():
     <h1 style="font-size:1.25rem;font-weight:700;margin:0;">Medusa Speculative Tree Simulator</h1>
     <p style="font-size:0.85rem;color:#94a3b8;margin:0.25rem 0 0 0;">Interactive embed widget calculating Medusa multi-head tree attention speedups, token latencies, and verification rates.</p>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate candidate token tree generation, parallel verification kernels, rejection sampling acceptance rates, and sub-15ms per-token latencies across enterprise GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4850,7 +4858,7 @@ def render_ptq_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise LLM FP8 vs INT4 Quantization Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate post-training quantization across 70B+ sovereign LLMs: calculate AWQ salient-channel protection, SmoothQuant activation migration, Hopper FP8 E4M3 speedups, and exact WikiText-2 perplexity degradation.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Model & Quantization Calibration Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Simulate 4-bit and 8-bit quantization across Meta Llama-3 70B, DeepSeek-R1 671B MoE, Qwen-2.5 72B, and Mistral Large 123B on NVIDIA H100, B200, and on-premise clusters.</p>
@@ -4877,7 +4885,7 @@ def render_ptq_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Enterprise LLM FP8 vs INT4 Quantization Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">AWQ 4-Bit · SmoothQuant W8A8 · Hopper FP8 E4M3</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate activation-aware weight quantization (AWQ), SmoothQuant W8A8 outlier migration, FP8 KV cache memory compression, and annual GPU cluster FinOps savings.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4897,7 +4905,7 @@ def render_flashdecoding_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise LLM FlashDecoding & Sequence Parallelism Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate FlashDecoding split-KV parallel attention across 64k-128k context windows: parallelize keys and values across Streaming Multiprocessors, execute partial log-sum-exp reduction, and slash decoding latency by up to 8x.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">FlashDecoding Parallel Execution Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Simulate split-KV parallel chunk execution across NVIDIA H100, B200, and A100 nodes for Meta Llama-3 70B and DeepSeek-R1 671B MoE architectures.</p>
@@ -4924,7 +4932,7 @@ def render_flashdecoding_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">FlashDecoding & Sequence Parallelism Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Split-KV Attention · RingAttention · Partial Softmax</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate FlashDecoding sequence parallelism, partial log-sum-exp reduction kernels, SM occupancy saturation, and long-context generation throughput.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4944,7 +4952,7 @@ def render_prefix_caching_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise LLM KV Cache Prefix Caching & Radix Attention Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Radix tree KV reuse, zero-copy memory page sharing, and prefill compute elimination across high-concurrency multi-agent clusters. Quantify TTFT latency acceleration, redundant VRAM savings, and annual FinOps payback.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Radix Tree Prefix Caching Execution Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Simulate shared system prompt and RAG context reuse across NVIDIA H100 and Blackwell clusters for Llama-3 70B and DeepSeek-R1 671B MoE architectures.</p>
@@ -4971,7 +4979,7 @@ def render_prefix_caching_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">KV Cache Prefix Caching Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Radix Attention · Zero-Copy Memory · TTFT Acceleration</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate Radix tree KV reuse, zero-copy memory page sharing, prefill compute elimination, and TTFT latency acceleration for multi-tenant agent clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -4991,7 +4999,7 @@ def render_cross_attention_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise LLM Chunked Cross-Attention & Document Sharding Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate distributed chunked cross-attention, tensor-parallel document memory sharding, and sub-second multi-turn reasoning across massive multi-gigabyte corporate knowledge graphs.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Chunked Cross-Attention Execution Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Simulate decoupled document shard attention over NVIDIA H100 and Blackwell clusters for Llama-3 70B and DeepSeek-R1 671B MoE architectures.</p>
@@ -5018,7 +5026,7 @@ def render_cross_attention_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Chunked Cross-Attention Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Document Memory Sharding · Tensor Parallel NVLink Reduction</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate distributed chunked cross-attention, tensor-parallel document memory sharding, fused NVLink log-sum-exp reduction, and sub-second RAG latency.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5038,7 +5046,7 @@ def render_sliding_window_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Agent Sliding-Window Attention & Ring KV Eviction Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate hierarchical sliding-window attention, attention sink preservation, ring KV buffer eviction, and sub-5ms continuous streaming LLM generation.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Streaming Attention Execution Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Simulate bounded-VRAM streaming generation across infinite token horizons without perplexity collapse or CUDA out-of-memory crashes.</p>
@@ -5065,7 +5073,7 @@ def render_sliding_window_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Sliding-Window Attention & Ring KV Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Constant-VRAM Bounds · Sub-5ms Streaming Inference</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate hierarchical sliding-window attention, attention sink preservation, ring KV buffer eviction, and sub-5ms continuous streaming LLM generation.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5085,7 +5093,7 @@ def render_multi_lora_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Multi-LoRA Adapter Routing & Weight Slicing Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate multi-LoRA dynamic adapter switching, zero-copy weight swapping, paged GPU memory slicing, and sub-10ms task multiplexing on shared foundation model clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Multi-LoRA Serving Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Multiplex hundreds of domain-specialized enterprise agent tasks on a unified foundation model cluster with Batched Segment GEMV execution.</p>
@@ -5112,7 +5120,7 @@ def render_multi_lora_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Multi-LoRA Adapter Routing Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Zero-Copy Weight Swapping · Paged Memory Slicing</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate multi-LoRA dynamic adapter switching, zero-copy weight swapping, paged GPU memory slicing, and sub-10ms task multiplexing on shared foundation model clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5132,7 +5140,7 @@ def render_mixture_of_depths_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Mixture-of-Depths Dynamic Compute Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Mixture-of-Depths conditional compute routing, token-level early exits, static tensor shape memory allocation, and sub-50% FLOP reduction on enterprise LLM clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Mixture-of-Depths Architecture Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Dynamically route easy tokens through residual bypass connections while concentrating full multi-head attention and MLP compute capacity on high-entropy reasoning tokens.</p>
@@ -5159,7 +5167,7 @@ def render_mixture_of_depths_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Mixture-of-Depths Dynamic Compute Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Conditional Capacity Allocation · Sub-50% FLOP Reduction</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate conditional capacity allocation, learned top-k token routing, static-shape residual bypass streams, and sub-50% FLOP reduction across enterprise AI clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5179,7 +5187,7 @@ def render_kvcache_compaction_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise KV-Cache Memory Compaction Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate KV-cache dynamic memory compaction, virtual block re-allocation, zero-copy cuMemMap defragmentation, and 3.4x serving concurrency expansion on enterprise GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">KV-Cache Compaction Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Reclaim non-contiguous GPU HBM memory holes into unified virtual address spaces without issuing blocking memory copies or kernel stalls.</p>
@@ -5206,7 +5214,7 @@ def render_kvcache_compaction_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">KV-Cache Memory Compaction Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Paged Block Compaction · Zero-Copy cuMemMap Defragmentation</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate paged block compaction, zero-copy virtual memory re-allocation, HBM defragmentation, and 3.4x serving concurrency expansion across enterprise AI clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5226,7 +5234,7 @@ def render_speculative_verification_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Speculative Verification Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate tree-based candidate draft generation, non-uniform branch pruning, and single-pass CUDA verification kernels. Accelerate decode throughput by up to 2.8x with sub-8ms verification latency.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#38bdf8;margin-top:0;">Speculative Verification Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Construct branched speculative candidate trees verified in a single target forward pass using specialized tree-attention masks.</p>
@@ -5253,7 +5261,7 @@ def render_speculative_verification_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Speculative Verification Simulator</h1>
     <div style="font-size:0.8rem;color:#38bdf8;font-family:monospace;">Tree-Based Draft Verification · Sub-8ms Kernel Latency</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate tree-based candidate draft generation, non-uniform branch pruning, and single-pass CUDA verification kernels. Accelerate decode throughput by up to 2.8x with sub-8ms verification latency.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5273,7 +5281,7 @@ def render_prefill_decode_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Prefill-Decode Disaggregation Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model distributed chunked prompt prefilling, zero-copy RDMA KV-cache network transport, and dedicated decode pools to eliminate head-of-line blocking and guarantee sub-15ms TTFT SLAs.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Disaggregated Inference Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Physically decouples compute-intensive prompt prefill from memory-bandwidth-bound token decode across dedicated GPU clusters.</p>
@@ -5300,7 +5308,7 @@ def render_prefill_decode_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Prefill-Decode Disaggregation Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">Chunked Prompt Prefill · Zero-Copy RDMA KV Transport · Sub-15ms TTFT</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model distributed chunked prompt prefilling, zero-copy RDMA KV-cache network transport, and dedicated decode pools to eliminate head-of-line blocking and guarantee sub-15ms TTFT SLAs.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5320,7 +5328,7 @@ def render_pipeline_parallelism_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Pipeline Parallelism & 1F1B Bubble Minimizer Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model 1F1B micro-batch schedules, cross-node GPUDirect RDMA activation transport, and zero-bubble interleaving to eliminate GPU idle bubbles and achieve sub-10ms inter-stage latency.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#818cf8;margin-top:0;">Pipeline Parallelism Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Interleaves forward and backward passes across pipeline ranks to eliminate execution bubbles and sustain 95%+ cluster utilization.</p>
@@ -5347,7 +5355,7 @@ def render_pipeline_parallelism_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Pipeline Parallelism Simulator</h1>
     <div style="font-size:0.8rem;color:#818cf8;font-family:monospace;">1F1B Micro-Batching · Bubble Minimizer · Sub-10ms P2P Buffer</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model 1F1B micro-batch schedules, cross-node GPUDirect RDMA activation transport, and zero-bubble interleaving to eliminate GPU idle bubbles and achieve sub-10ms inter-stage latency.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5367,7 +5375,7 @@ def render_tensor_parallelism_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Tensor Parallelism & All-Reduce Communication Overlap Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model Megatron column and row linear weight partitioning, asynchronous ring all-reduce communication overlapping, and NVLink 4 900 GB/s bus saturation to achieve sub-5ms intra-node collective reduction latency.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin-top:0;">Tensor Parallelism Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Shards transformer weight matrices across GPU ranks and overlaps collective communication with GEMM matrix multiplication to unlock 2.9x throughput speedups.</p>
@@ -5394,7 +5402,7 @@ def render_tensor_parallelism_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Tensor Parallelism Simulator</h1>
     <div style="font-size:0.8rem;color:#06b6d4;font-family:monospace;">Megatron Column/Row Partitioning · All-Reduce Overlap · Sub-5ms NVLink</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model Megatron column and row linear weight partitioning, asynchronous ring all-reduce communication overlapping, and NVLink 4 900 GB/s bus saturation to achieve sub-5ms intra-node collective reduction latency.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5414,7 +5422,7 @@ def render_sequence_parallelism_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Sequence Parallelism & Ring Attention Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model Ring Self-Attention, chunked QKV sequence sharding, non-blocking peer-to-peer KV-shift overlapping, and 1M+ context token inference on sovereign multi-GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#14b8a6;margin-top:0;">Sequence Parallelism Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Shards sequence length across distributed GPU ranks in a peer-to-peer ring topology, streaming Key-Value chunks concurrently with local QKV matrix multiplications.</p>
@@ -5441,7 +5449,7 @@ def render_sequence_parallelism_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Sequence Parallelism Simulator</h1>
     <div style="font-size:0.8rem;color:#14b8a6;font-family:monospace;">Ring Self-Attention · P2P KV Overlap · 1M+ Context Token Inference</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model Ring Self-Attention, chunked QKV sequence sharding, non-blocking peer-to-peer KV-shift overlapping, and 1M+ context token inference on sovereign multi-GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5461,7 +5469,7 @@ def render_expert_parallelism_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Expert Parallelism & MoE Dynamic Dispatch Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model top-k dynamic token routing, cross-GPU all-to-all collective communication overlapping, sparse expert GEMM compute, and sub-8ms forward step latency on sovereign multi-GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#6366f1;margin-top:0;">Expert Parallelism Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Shards feed-forward network experts across distributed GPU ranks with top-2 softmax gating, streaming all-to-all token dispatch concurrently with expert GEMM executions.</p>
@@ -5488,7 +5496,7 @@ def render_expert_parallelism_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Expert Parallelism Simulator</h1>
     <div style="font-size:0.8rem;color:#6366f1;font-family:monospace;">MoE Dynamic Dispatch · All-to-All Overlap · Sub-8ms Sparse Inference</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model top-k dynamic token routing, cross-GPU all-to-all collective communication overlapping, sparse expert GEMM compute, and sub-8ms forward step latency on sovereign multi-GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5508,7 +5516,7 @@ def render_context_parallelism_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Context Parallelism & Ring KV Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model distributed attention head sharding, peer-to-peer Ring KV communication overlapping, causal block-triangular masking, and 2M+ token inference on sovereign multi-GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#06b6d4;margin-top:0;">Context Parallelism Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Shards Key-Value activation states along the sequence dimension across distributed GPU ranks, streaming P2P Ring KV chunks concurrently with local QKV matrix multiplications.</p>
@@ -5535,7 +5543,7 @@ def render_context_parallelism_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Context Parallelism Simulator</h1>
     <div style="font-size:0.8rem;color:#06b6d4;font-family:monospace;">Ring Attention · P2P KV Overlap · 2M+ Context Token Inference</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model distributed attention head sharding, peer-to-peer Ring KV communication overlapping, causal block-triangular masking, and 2M+ token inference on sovereign multi-GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5555,7 +5563,7 @@ def render_three_d_parallelism_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent 3D Parallelism & Mesh Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model multi-dimensional distributed GPU clusters: calibrate Tensor Parallelism (TP), Pipeline Parallelism (PP), and ZeRO-3 memory partitioning to execute 100B+ autonomous agent swarms with zero-bubble schedules.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">3D Cartesian Mesh Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Decomposes cluster into TP (intra-node NVLink), PP (inter-node InfiniBand P2P), and DP+ZeRO-3 (ring parameter sharding) dimensions, eliminating memory faults and pipeline bubble idle time.</p>
@@ -5582,7 +5590,7 @@ def render_three_d_parallelism_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">3D Parallelism &amp; Mesh Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">TP · PP · ZeRO-3 · 100B+ Swarms · Sub-8ms Latency</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model multi-dimensional distributed GPU clusters: calibrate Tensor Parallelism, Pipeline Parallelism, and ZeRO-3 memory partitioning to execute 100B+ autonomous agent swarms with zero-bubble schedules.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5602,7 +5610,7 @@ def render_fp8_microscaling_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent FP8 Microscaling & Block Dynamic Range Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model dynamic 32-element block exponent shifting, OCP MXFP8/MXFP4 quantization, and WGMMA Tensor Core speedups. Eliminate low-precision outlier degradation while bounding perplexity loss below 0.08%.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Microscaling Exponent Normalization Telemetry</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Calculates dynamic block exponent scaling factors across vector partitions, eliminating activation outlier cascading and delivering 2.14x GEMM speedups on Hopper and Blackwell clusters.</p>
@@ -5629,7 +5637,7 @@ def render_fp8_microscaling_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">FP8 &amp; MXFP8 Microscaling Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">OCP MXFP8 · Dynamic Exponent Shifting · Sub-1% Perplexity · Hopper/Blackwell</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model dynamic 32-element block exponent shifting, OCP MXFP8/MXFP4 quantization, and WGMMA Tensor Core speedups. Eliminate low-precision outlier degradation while bounding perplexity loss below 0.08%.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5649,7 +5657,7 @@ def render_async_checkpointing_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Asynchronous Checkpointing & In-Flight State Migration Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model non-blocking host-to-device memory offloading, PCIe Gen5 DMA streaming, causal state tree serialization, and sub-120ms Slurm failovers across distributed sovereign GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Non-Blocking Checkpoint Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Decouples snapshot generation from persistent storage writes by scheduling dedicated CUDA copy streams to pinned host RAM, completely eliminating checkpoint pause bubbles.</p>
@@ -5676,7 +5684,7 @@ def render_async_checkpointing_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Asynchronous GPU Checkpointing Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">Non-Blocking DMA · Pinned Host RAM · Causal Tree Snapshots · Slurm Failover</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model non-blocking host-to-device memory offloading, PCIe Gen5 DMA streaming, causal state tree serialization, and sub-120ms Slurm failovers across distributed sovereign GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5696,7 +5704,7 @@ def render_disaggregated_prefill_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Disaggregated Pre-fill & KV Paged Routing Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model compute-bound pre-fill decoupling from memory-bound decode nodes, RDMA RoCE v2 chunked KV transfer, sub-4ms TTFT, and heterogeneous GPU pod cost optimization.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Disaggregated Decoupled Inference Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Isolates compute-heavy prompt pre-fill onto dense H100/H200 Tensor Parallel pods while streaming chunked KV-cache pages over InfiniBand/RoCE v2 to high-concurrency L40S/A100 decode nodes.</p>
@@ -5723,7 +5731,7 @@ def render_disaggregated_prefill_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Disaggregated Pre-fill & KV Paged Routing Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">Decoupled Pre-fill · RoCE v2 RDMA · Chunked KV Paging · Sub-4ms TTFT</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model compute-bound pre-fill decoupling from memory-bound decode nodes, RDMA RoCE v2 chunked KV transfer, sub-4ms TTFT, and heterogeneous GPU pod cost optimization.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5743,7 +5751,7 @@ def render_speculative_tree_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Dynamic Speculative Verification Tree Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Model dynamic multi-candidate speculative draft trees, Medusa &amp; Eagle-2 verification heads, custom Triton tree-attention masks, GPU warp divergence elimination, and sub-8ms token generation on sovereign AI clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Speculative Verification Tree Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Evaluates multiple candidate token hypotheses simultaneously in a single forward pass, applying warp-aligned candidate flattening to sustain 96%+ SM occupancy.</p>
@@ -5770,7 +5778,7 @@ def render_speculative_tree_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Speculative Verification Tree Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">Multi-Draft Verification · Triton Tree Attention · Warp Flattening · Sub-8ms ITL</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Model dynamic multi-candidate speculative draft trees, Medusa &amp; Eagle-2 verification heads, custom Triton tree-attention masks, GPU warp divergence elimination, and sub-8ms token generation on sovereign AI clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5790,7 +5798,7 @@ def render_kv_cache_eviction_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent KV-Cache Eviction & Attention Sink Compression Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate dynamic heavy-hitter token retention (H2O), attention sink preservation (StreamingLLM), 4x memory compression on 2M context windows, and sub-1% perplexity degradation across enterprise GPU clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">KV-Cache Compression Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Pins initial attention sink tokens to prevent catastrophic entropy collapse, dynamically retains top-k heavy-hitter tokens via cumulative score oracles, and evicts stale middle-context tokens to slash VRAM footprint.</p>
@@ -5817,7 +5825,7 @@ def render_kv_cache_eviction_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">KV-Cache Eviction & Attention Sink Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">H2O Heavy-Hitters · Attention Sinks · 4x Memory Compression · 2M Context</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate dynamic heavy-hitter token retention (H2O), attention sink preservation (StreamingLLM), 4x memory compression on 2M context windows, and sub-1% perplexity degradation across enterprise GPU clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5837,7 +5845,7 @@ def render_hierarchical_storage_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Hierarchical HBM-to-CXL/NVMe Tiered Storage &amp; Paging Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate multi-tiered KV-cache paging hierarchies across GPU HBM3e, CXL 3.0 shared DRAM pools, and high-throughput PCIe Gen5 NVMe arrays. Model asynchronous DMA prefetching, sub-10ms page faults, and multi-stream concurrency.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#6366f1;margin-top:0;">Hierarchical Paging Telemetry Profile</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Overlaps active decoding GEMMs with asynchronous GPUDirect Storage DMA transfers, eliminating host-device IO stalls and sustaining 10M+ token context windows at sub-10ms page fault latency.</p>
@@ -5864,7 +5872,7 @@ def render_hierarchical_storage_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Hierarchical KV Storage Paging Simulator</h1>
     <div style="font-size:0.8rem;color:#6366f1;font-family:monospace;">HBM3e · CXL 3.0 DRAM · PCIe Gen5 NVMe · Sub-10ms Page Faults</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate multi-tiered KV-cache paging hierarchies across GPU HBM3e, CXL 3.0 shared DRAM pools, and high-throughput PCIe Gen5 NVMe arrays. Model asynchronous DMA prefetching, sub-10ms page faults, and multi-stream concurrency.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5884,7 +5892,7 @@ def render_mla_latent_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Multi-Head Latent Attention (MLA) Low-Rank Projection Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Multi-Head Latent Attention (MLA) low-rank KV-cache compression, decoupled RoPE vector isolation, and 90% VRAM reduction across DeepSeek-V3 and DeepSeek-R1 clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#14b8a6;margin-top:0;">MLA Low-Rank Compression Telemetry</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Down-projects keys and values into a shared 512-dimensional latent vector and isolates decoupled 64-dimensional RoPE vectors, enabling up-projection matrix absorption directly into active query heads during inference decoding.</p>
@@ -5911,7 +5919,7 @@ def render_mla_latent_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Multi-Head Latent Attention Simulator</h1>
     <div style="font-size:0.8rem;color:#14b8a6;font-family:monospace;">Low-Rank KV Projections · Decoupled RoPE · 90% VRAM Cut</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate Multi-Head Latent Attention (MLA) low-rank KV-cache compression, decoupled RoPE vector isolation, and 90% VRAM reduction across DeepSeek-V3 and DeepSeek-R1 clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5931,7 +5939,7 @@ def render_mtp_speculative_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent Multi-Token Prediction (MTP) Acceptance Ratio & Speculative Draft Tree Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Multi-Token Prediction (MTP) acceptance ratios, speculative tree verification, sequential draft modules, and 2.8x decoding speedup across DeepSeek-V3 and DeepSeek-R1 clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#10b981;margin-top:0;">Multi-Token Prediction (MTP) Speculative Telemetry</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Sequential lightweight Transformer modules predict k future tokens concurrently, reusing the foundational model's down-projected latent Key-Value representation and verifying branches via dynamic 2D speculative attention masks.</p>
@@ -5958,7 +5966,7 @@ def render_mtp_speculative_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">Multi-Token Prediction Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">Sequential MTP Drafting · Speculative Tree Verification · 2.8x Speedup</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate Multi-Token Prediction (MTP) acceptance ratios, speculative tree verification, sequential draft modules, and 2.8x decoding speedup across DeepSeek-V3 and DeepSeek-R1 clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -5978,7 +5986,7 @@ def render_dualpipe_pipeline_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Autonomous Agent DualPipe Bidirectional Pipeline Parallelism Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate DualPipe bidirectional pipeline parallelism, zero-bubble micro-batch scheduling, All-to-All communication overlap, and MFU maximization on DeepSeek-V3 clusters.</p>
   </header>
-  <main style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+  <main id="main-content" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
     <section style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#0284c7;margin-top:0;">DualPipe Bidirectional Overlap Telemetry</h2>
       <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">Interleaves forward and backward micro-batches across dual symmetric pipelines, partitioning backward propagation into B_input and B_weight to completely hide cross-node All-to-All network latency behind matrix computation kernels.</p>
@@ -6005,7 +6013,7 @@ def render_dualpipe_pipeline_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">DualPipe Pipeline Simulator</h1>
     <div style="font-size:0.8rem;color:#0284c7;font-family:monospace;">Bidirectional Scheduling · Zero-Bubble · Comm Overlap</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate DualPipe bidirectional pipeline parallelism, zero-bubble micro-batch scheduling, All-to-All communication overlap, and MFU maximization on DeepSeek-V3 clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -6025,7 +6033,7 @@ def render_deepseek_serving_fabric_tool_semantic_html():
     <h1 style="font-size:2rem;font-weight:800;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise DeepSeek-V3 Grand Unified Serving Fabric Simulator</h1>
     <p style="font-size:1rem;color:#94a3b8;line-height:1.5;margin:0;">Simulate Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe zero-bubble overlap, and auxiliary-loss-free routing on megawatt clusters.</p>
   </header>
-  <main style="font-size:0.95rem;color:#cbd5e1;line-height:1.7;">
+  <main id="main-content" style="font-size:0.95rem;color:#cbd5e1;line-height:1.7;">
     <p>The Grand Unified DeepSeek-V3 Serving Fabric co-designs low-rank KV joint compression, sequential speculative drafting daemons, and bidirectional forward-backward computation-communication overlap to deliver 3.2x inference speedups and sub-12ms TTFT.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:2rem;text-align:right;font-size:0.8rem;color:#64748b;">
@@ -6044,7 +6052,7 @@ def render_deepseek_serving_fabric_embed_semantic_html():
     <h1 style="font-size:1.4rem;font-weight:800;color:#ffffff;margin:0 0 0.25rem 0;">DeepSeek-V3 Unified Fabric Simulator</h1>
     <div style="font-size:0.8rem;color:#10b981;font-family:monospace;">MLA Latents · DualPipe Overlap · MTP Speculative Drafting</div>
   </header>
-  <main style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
+  <main id="main-content" style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;">
     <p>Simulate Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe zero-bubble overlap, and auxiliary-loss-free routing on megawatt clusters.</p>
   </main>
   <footer style="border-top:1px solid #1e293b;padding-top:1rem;margin-top:1.5rem;text-align:right;font-size:0.75rem;color:#64748b;">
@@ -6058,10 +6066,11 @@ def render_author_profile_semantic_html():
     Renders rich semantic HTML for /authors/chaman-shah establishing verified E-E-A-T.
     """
     return """
+<main id="main-content">
 <div id="prerendered-author-profile" style="max-width:960px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
   <nav style="font-size:0.8rem;color:#6b7280;margin-bottom:1.5rem;font-family:monospace;">
     <a href="/" style="color:#6b7280;text-decoration:none;">Home</a> &gt; 
-    <a href="/team" style="color:#6b7280;text-decoration:none;">Leadership</a> &gt; 
+    <a href="/authors/chaman-shah/" style="color:#6b7280;text-decoration:none;">Leadership</a> &gt; 
     <span style="color:#111827;font-weight:600;">Chaman Shah</span>
   </nav>
   <header style="border-bottom:1px solid #e5e7eb;padding-bottom:2rem;margin-bottom:2rem;">
@@ -6071,11 +6080,11 @@ def render_author_profile_semantic_html():
       Principal AI Systems Architect and Founder at Elesium, Bengaluru, Karnataka, India. Leading the engineering of sovereign multi-agent systems, dedicated private VPC inference infrastructure, and DPDP Act 2023 compliant automation across BFSI, manufacturing, and supply chain logistics in India.
     </p>
     <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="/waitlist" style="display:inline-block;padding:0.75rem 1.5rem;background:#059669;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Book Architecture Session &rarr;</a>
+      <a href="/waitlist/" style="display:inline-block;padding:0.75rem 1.5rem;background:#059669;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Book Architecture Session &rarr;</a>
       <a href="https://github.com/655Chaman" style="display:inline-block;padding:0.75rem 1.5rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">GitHub Profile</a>
     </div>
   </header>
-  <main>
+  <div class="author-body">
     <section style="margin-bottom:2.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Engineering &amp; Architecture Specializations</h2>
       <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
@@ -6096,13 +6105,14 @@ def render_author_profile_semantic_html():
     <section style="margin-bottom:2.5rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Authored Systems Whitepapers</h2>
       <ul style="list-style:none;padding:0;line-height:2;">
-        <li><a href="/signals/open-source-llm-deployment-on-premise-india" style="color:#2563eb;font-weight:600;text-decoration:none;">• On-Premise Open-Source LLM Deployment in India: Sovereign Private Cloud &amp; DPDP Act 2023 &rarr;</a></li>
-        <li><a href="/signals/ai-driven-document-processing-india" style="color:#2563eb;font-weight:600;text-decoration:none;">• Enterprise AI-Driven Document Processing in India: Multimodal OCR &amp; GST Rule 36(4) &rarr;</a></li>
-        <li><a href="/signals/sub-200ms-ledger-reconciliation-agents-for-fintechs" style="color:#2563eb;font-weight:600;text-decoration:none;">• Sub-200ms Ledger Reconciliation: Python LangGraph State Machines for Core Banking &rarr;</a></li>
+        <li><a href="/signals/open-source-llm-deployment-on-premise-india/" style="color:#2563eb;font-weight:600;text-decoration:none;">• On-Premise Open-Source LLM Deployment in India: Sovereign Private Cloud &amp; DPDP Act 2023 &rarr;</a></li>
+        <li><a href="/signals/ai-driven-document-processing-india/" style="color:#2563eb;font-weight:600;text-decoration:none;">• Enterprise AI-Driven Document Processing in India: Multimodal OCR &amp; GST Rule 36(4) &rarr;</a></li>
+        <li><a href="/signals/sub-200ms-ledger-reconciliation-agents-for-fintechs/" style="color:#2563eb;font-weight:600;text-decoration:none;">• Sub-200ms Ledger Reconciliation: Python LangGraph State Machines for Core Banking &rarr;</a></li>
       </ul>
     </section>
-  </main>
+  </div>
 </div>
+</main>
 """
 
 REGIONAL_CITY_DATA = {
@@ -6204,7 +6214,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
     mesh_links = "".join(
         f'<div style="border:1px solid #e5e7eb;padding:1rem;border-radius:0.5rem;background:#ffffff;">'
         f'<div style="font-size:0.75rem;font-family:monospace;color:#059669;font-weight:700;">{html.escape(c["region_name"])}</div>'
-        f'<div style="font-weight:700;margin-top:0.25rem;"><a href="/{html.escape(c["slug"])}" style="color:#2563eb;text-decoration:none;">{html.escape(c["city_name"])} &rarr;</a></div>'
+        f'<div style="font-weight:700;margin-top:0.25rem;"><a href="/{html.escape(c["slug"])}/" style="color:#2563eb;text-decoration:none;">{html.escape(c["city_name"])} &rarr;</a></div>'
         f'</div>'
         for k, c in REGIONAL_CITY_DATA.items()
     )
@@ -6213,7 +6223,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
 <div id="prerendered-regional-hub" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
   <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
     <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / 
-    <a href="/ai-automation-agency-india" style="color:#2563eb;text-decoration:none;">Enterprise AI India</a> / 
+    <a href="/ai-automation-agency-india/" style="color:#2563eb;text-decoration:none;">Enterprise AI India</a> / 
     <span style="color:#059669;font-weight:700;">{city_name}</span>
   </nav>
 
@@ -6232,12 +6242,12 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
     </div>
 
     <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="/waitlist" style="display:inline-block;padding:0.75rem 1.75rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Architecture Audit &rarr;</a>
-      <a href="/tools/enterprise-ai-roi-calculator" style="display:inline-block;padding:0.75rem 1.75rem;border:1px solid #d1d5db;background:#ffffff;color:#111827;font-weight:600;border-radius:0.5rem;text-decoration:none;">Simulate 3-Year TCO ROI</a>
+      <a href="/waitlist/" style="display:inline-block;padding:0.75rem 1.75rem;background:#111827;color:#ffffff;font-weight:600;border-radius:0.5rem;text-decoration:none;">Schedule Architecture Audit &rarr;</a>
+      <a href="/tools/enterprise-ai-roi-calculator/" style="display:inline-block;padding:0.75rem 1.75rem;border:1px solid #d1d5db;background:#ffffff;color:#111827;font-weight:600;border-radius:0.5rem;text-decoration:none;">Simulate 3-Year TCO ROI</a>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section style="margin-bottom:3rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-top:0;margin-bottom:1rem;">High-Leverage Enterprise Sectors in {city_name}</h2>
       <ul style="list-style-type:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.75rem;color:#374151;">
@@ -6362,6 +6372,306 @@ def replace_canonical(html_content, target_url):
         html_content = hreflang_pattern.sub(f'<link rel="alternate" hreflang="\\1" href="{target_url}" />', html_content)
 
     return html_content
+
+def update_social_urls(html_content: str, canonical_url: str) -> str:
+    """
+    Standardizes og:url and twitter:url to strictly match the canonical URL of the specific page.
+    Fixes Defect 6 (broken twitter:url pointing to root homepage sitewide).
+    """
+    # 1. og:url
+    if re.search(r'<meta\s+property=["\']og:url["\']', html_content, re.IGNORECASE):
+        html_content = re.sub(
+            r'<meta\s+property=["\']og:url["\']\s+content=["\'][^"\']*["\']\s*/?>',
+            f'<meta property="og:url" content="{canonical_url}" />',
+            html_content,
+            flags=re.IGNORECASE
+        )
+    else:
+        html_content = html_content.replace('</head>', f'  <meta property="og:url" content="{canonical_url}" />\n</head>')
+
+    # 2. twitter:url
+    if re.search(r'<meta\s+name=["\']twitter:url["\']', html_content, re.IGNORECASE):
+        html_content = re.sub(
+            r'<meta\s+name=["\']twitter:url["\']\s+content=["\'][^"\']*["\']\s*/?>',
+            f'<meta name="twitter:url" content="{canonical_url}" />',
+            html_content,
+            flags=re.IGNORECASE
+        )
+    elif re.search(r'<meta\s+property=["\']twitter:url["\']', html_content, re.IGNORECASE):
+        html_content = re.sub(
+            r'<meta\s+property=["\']twitter:url["\']\s+content=["\'][^"\']*["\']\s*/?>',
+            f'<meta name="twitter:url" content="{canonical_url}" />',
+            html_content,
+            flags=re.IGNORECASE
+        )
+    else:
+        html_content = html_content.replace('</head>', f'  <meta name="twitter:url" content="{canonical_url}" />\n</head>')
+
+    return html_content
+
+ASSET_FILES: List[str] = []
+ROUTE_COMPONENT_MAP: Dict[str, str] = {}
+
+def init_asset_cache():
+    """
+    Caches built javascript chunk names and maps React Router routes to lazy component names.
+    Enables instant lookups for <link rel="modulepreload"> injection.
+    """
+    global ASSET_FILES, ROUTE_COMPONENT_MAP
+    assets_dir = DIST_DIR / "assets"
+    if assets_dir.exists():
+        ASSET_FILES = [p.name for p in assets_dir.glob("*.js")]
+
+    app_tsx = BASE_DIR / "frontend" / "src" / "App.tsx"
+    if app_tsx.exists():
+        content = app_tsx.read_text(encoding="utf-8")
+        matches = re.findall(r'<Route\s+path=[\"\']([^\"\']+)[\"\']\s+element=\{<(\w+)', content)
+        for route_path, comp_name in matches:
+            if comp_name != "Navigate":
+                ROUTE_COMPONENT_MAP[route_path.strip("/")] = comp_name
+
+def find_asset_chunk(pattern: str) -> Optional[str]:
+    """Finds first matching JS chunk from cached build assets."""
+    for name in ASSET_FILES:
+        if fnmatch.fnmatch(name, pattern):
+            return f"/assets/{name}"
+    return None
+
+def inject_modulepreload(html_content: str, chunk_patterns: List[str]) -> str:
+    """
+    Injects <link rel="modulepreload" crossorigin href="..."> tags before </head>.
+    Preloads the entry bundle and specific route component chunk, eliminating hydration delay
+    and preventing Suspense layout shift flashes.
+    """
+    full_patterns = ["index-*.js"] + chunk_patterns
+    links = []
+    for pat in full_patterns:
+        chunk_url = find_asset_chunk(pat)
+        if chunk_url and f'href="{chunk_url}"' not in html_content:
+            links.append(f'  <link rel="modulepreload" crossorigin href="{chunk_url}" />')
+    if links:
+        injection = "\n" + "\n".join(links) + "\n</head>"
+        html_content = html_content.replace("</head>", injection)
+    return html_content
+
+def get_route_chunks(route: str) -> List[str]:
+    """Determines relevant component chunks to modulepreload for a given route."""
+    chunks = []
+    comp = ROUTE_COMPONENT_MAP.get(route)
+    if comp:
+        chunks.append(f"{comp}-*.js")
+    if route in ["waitlist", "audit", "book-audit"]:
+        chunks.append("Waitlist-*.js")
+    elif route in ["authors/chaman-shah", "team"]:
+        chunks.append("AuthorProfile-*.js")
+    elif route in ["ai-automation", "ai-automation-agency-india"]:
+        chunks.append("AIAutomation-*.js")
+    elif route.startswith("enterprise-ai-"):
+        chunks.append("RegionalCityHub-*.js")
+    return chunks
+
+def make_redirect_stub(target_url: str) -> str:
+    """
+    Generates exact approved static redirect stub returning HTTP 200 on static edges.
+    Features:
+    - 0-second meta refresh preserving crawl efficiency
+    - Fully qualified canonical URL with trailing slash
+    - <meta name="robots" content="noindex, follow"> (Pass PageRank to canonical target while preventing thin indexation)
+    - window.location.replace to preserve browser history without back-button traps
+    - Search query & hash fragment preservation
+    """
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url={target_url}">
+  <link rel="canonical" href="{target_url}">
+  <title>Redirecting to {target_url}...</title>
+  <script>
+    window.location.replace("{target_url}" + window.location.search + window.location.hash);
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="{target_url}">{target_url}</a>...</p>
+</body>
+</html>
+"""
+
+def extract_redirect_routes_from_app_tsx() -> List[Tuple[str, str]]:
+    """
+    Programmatically extracts all <Navigate to="..." replace /> routes from frontend/src/App.tsx.
+    Ensures all 78 alias routes (75 tools, 2 author aliases, 1 compare alias) plus /team/chaman-shah
+    and legacy market-signals are generated as HTTP 200 static redirect stubs with trailing slashes.
+    """
+    app_tsx = BASE_DIR / "frontend" / "src" / "App.tsx"
+    redirect_map: Dict[str, str] = {}
+
+    if app_tsx.exists():
+        content = app_tsx.read_text(encoding="utf-8")
+        matches = re.findall(
+            r'<Route\s+path=[\"\']([^\"\']+)[\"\']\s+element=\{<Navigate\s+to=[\"\']([^\"\']+)[\"\']\s+replace\s*/>\}',
+            content
+        )
+        for src, dst in matches:
+            alias = src.strip("/")
+            target = dst.strip("/")
+            redirect_map[alias] = target
+
+    # Author & Team consolidation: team/chaman-shah must redirect to authors/chaman-shah/
+    redirect_map["team/chaman-shah"] = "authors/chaman-shah"
+    # Legacy alias routes
+    redirect_map["market-signals"] = "signals"
+
+    normalized_redirects: List[Tuple[str, str]] = []
+    for alias, target in redirect_map.items():
+        if target.endswith(".html"):
+            target_url = f"https://elesium.online/{target}"
+        else:
+            target_clean = target.rstrip("/")
+            target_url = f"https://elesium.online/{target_clean}/"
+        normalized_redirects.append((alias, target_url))
+
+    return normalized_redirects
+
+def render_waitlist_semantic_html(route: str, title: str, desc: str, canonical_url: str) -> str:
+    """
+    Renders full semantic Waitlist & Technical Audit HTML DOM matching Waitlist.tsx.
+    Pre-rendered inside <div id="root"> to prevent blank-screen hydration mismatches.
+    """
+    page_heading = "Schedule Sovereign Enterprise AI Architecture Audit" if "audit" in route else "ele-in Sovereign AI Platform"
+    sub_heading = "Request Private Architecture Scope & Confidential Technical Audit" if "audit" in route else "Autonomous Multi-Agent Enterprise Operating System"
+    badge_label = "Confidential NDA Audit • Principal Systems Architect" if "audit" in route else "ele-in // Private Alpha Cohort Open"
+
+    return f"""
+<main id="main-content">
+<div id="prerendered-waitlist" style="max-width:1160px;margin:0 auto;padding:2.5rem 1.25rem 5rem 1.25rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav aria-label="Breadcrumb" style="font-size:0.85rem;font-family:monospace;color:#6b7280;margin-bottom:2rem;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">{title}</span>
+  </nav>
+
+  <header style="margin-bottom:2.5rem;">
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1rem;">
+      <span style="display:inline-block;width:0.5rem;height:0.5rem;border-radius:9999px;background:#10b981;"></span>
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#059669;">{badge_label}</span>
+    </div>
+    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">{page_heading}</h1>
+    <p style="font-size:1.2rem;line-height:1.6;color:#4b5563;margin:0 0 1.5rem 0;">{sub_heading}</p>
+    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin-bottom:2.5rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">
+        Definitive Architecture Audit &amp; Intake Capsule • Sovereign Cloud Protocol
+      </div>
+      <p style="font-size:1.05rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">{desc}</p>
+    </div>
+  </header>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2.5rem;align-items:start;">
+    <div>
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin:0 0 1rem 0;">90-Minute Sovereign Architecture Scope</h2>
+      <p style="font-size:0.95rem;line-height:1.6;color:#4b5563;margin-bottom:1.5rem;">
+        Every technical audit is led personally by <strong>Chaman Shah (Principal AI Systems Architect &amp; Founder)</strong>, governed under a mutual Non-Disclosure Agreement (NDA), and establishes production-ready engineering specifications:
+      </p>
+      <ul style="list-style:none;padding:0;margin:0 0 2rem 0;">
+        <li style="margin-bottom:1rem;display:flex;gap:0.75rem;align-items:flex-start;">
+          <span style="color:#059669;font-weight:bold;">✔</span>
+          <div>
+            <strong style="color:#111827;">DPDP Act 2023 Statutory Risk Analysis:</strong>
+            <span style="color:#4b5563;display:block;font-size:0.9rem;">Section 8(5) zero-retention verification across private VPC subnets, preventing third-party model data egress.</span>
+          </div>
+        </li>
+        <li style="margin-bottom:1rem;display:flex;gap:0.75rem;align-items:flex-start;">
+          <span style="color:#059669;font-weight:bold;">✔</span>
+          <div>
+            <strong style="color:#111827;">Deterministic LangGraph Execution Graph:</strong>
+            <span style="color:#4b5563;display:block;font-size:0.9rem;">Transitioning fragile conversational chains into finite state machines (FSM) with strict Pydantic schemas.</span>
+          </div>
+        </li>
+        <li style="margin-bottom:1rem;display:flex;gap:0.75rem;align-items:flex-start;">
+          <span style="color:#059669;font-weight:bold;">✔</span>
+          <div>
+            <strong style="color:#111827;">Sub-200ms vLLM PagedAttention Benchmark:</strong>
+            <span style="color:#4b5563;display:block;font-size:0.9rem;">Sovereign GPU inference profiling across Yotta and CtrlS Tier-IV datacenters with -74% token cost arbitrage.</span>
+          </div>
+        </li>
+        <li style="margin-bottom:1rem;display:flex;gap:0.75rem;align-items:flex-start;">
+          <span style="color:#059669;font-weight:bold;">✔</span>
+          <div>
+            <strong style="color:#111827;">Legacy ERP &amp; Banking Middleware Bridges:</strong>
+            <span style="color:#4b5563;display:block;font-size:0.9rem;">Automated SAP S/4HANA RFC, Salesforce, Tally ERP XML, and Finacle ledger connectors with Merkle audit receipts.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem;">
+        <div style="font-size:0.8rem;font-weight:700;color:#111827;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.05em;">Direct Architect WhatsApp Desk</div>
+        <p style="font-size:0.85rem;color:#6b7280;margin:0 0 0.75rem 0;">Immediate technical inquiries and emergency architecture scheduling via direct encrypted channel.</p>
+        <a href="https://wa.me/918317329312" style="display:inline-block;background:#059669;color:#ffffff;padding:0.6rem 1.2rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.85rem;">Chat on WhatsApp (+91 83173 29312) &rarr;</a>
+      </div>
+    </div>
+
+    <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:2rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
+      <h2 style="font-size:1.35rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Executive Architecture Audit Intake</h2>
+      <p style="font-size:0.85rem;color:#6b7280;margin:0 0 1.5rem 0;">Governed under mutual Non-Disclosure Agreement (NDA). All telemetry isolated.</p>
+
+      <form action="#" method="POST" style="display:flex;flex-direction:column;gap:1.25rem;">
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:#374151;margin-bottom:0.35rem;text-transform:uppercase;">Full Name &amp; Executive Title *</label>
+          <input type="text" name="name" placeholder="e.g. Vikram Seth, VP Engineering" style="width:100%;box-sizing:border-box;padding:0.75rem;border:1px solid #d1d5db;border-radius:0.5rem;font-size:0.95rem;" required />
+        </div>
+
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:#374151;margin-bottom:0.35rem;text-transform:uppercase;">Corporate Work Email *</label>
+          <input type="email" name="email" placeholder="v.seth@company.com" style="width:100%;box-sizing:border-box;padding:0.75rem;border:1px solid #d1d5db;border-radius:0.5rem;font-size:0.95rem;" required />
+        </div>
+
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:#374151;margin-bottom:0.35rem;text-transform:uppercase;">Company / Enterprise Entity *</label>
+          <input type="text" name="company" placeholder="e.g. Acme Logistics India Ltd." style="width:100%;box-sizing:border-box;padding:0.75rem;border:1px solid #d1d5db;border-radius:0.5rem;font-size:0.95rem;" required />
+        </div>
+
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:#374151;margin-bottom:0.35rem;text-transform:uppercase;">Target Workflow Domain *</label>
+          <select name="workflow" style="width:100%;box-sizing:border-box;padding:0.75rem;border:1px solid #d1d5db;border-radius:0.5rem;font-size:0.95rem;">
+            <option>Logistics ERP &amp; Autonomous Fleet Dispatch</option>
+            <option>BFSI Loan Underwriting &amp; CAM Generation</option>
+            <option>Sub-200ms Ledger Reconciliation &amp; Surveillance</option>
+            <option>Manufacturing SCADA Anomaly &amp; Defect Detection</option>
+            <option>Private Air-Gapped VPC LLM Cluster</option>
+            <option>Healthcare Clinical Documentation &amp; DICOM Triage</option>
+            <option>Custom LangGraph Multi-Agent State Machine</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:#374151;margin-bottom:0.35rem;text-transform:uppercase;">Hosting &amp; Deployment Preference</label>
+          <select name="hosting" style="width:100%;box-sizing:border-box;padding:0.75rem;border:1px solid #d1d5db;border-radius:0.5rem;font-size:0.95rem;">
+            <option>Private VPC (AWS / Azure / GCP Dedicated Enclave)</option>
+            <option>Air-Gapped On-Premise GPU Cluster (CtrlS / Yotta)</option>
+            <option>Elesium Sovereign Cloud (DPDP 2023 Compliant Datacenters)</option>
+            <option>Hybrid Multi-Cloud Enterprise Mesh</option>
+          </select>
+        </div>
+
+        <button type="submit" style="background:#111827;color:#ffffff;padding:0.9rem 1.5rem;border:none;border-radius:0.5rem;font-weight:700;font-size:1rem;cursor:pointer;">
+          Request Confidential Architecture Audit &rarr;
+        </button>
+
+        <p style="font-size:0.75rem;color:#6b7280;margin:0;text-align:center;">
+          Governed by binding mutual NDA. Response guaranteed within 4 hours by engineering leadership.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <footer style="margin-top:3.5rem;padding-top:2rem;border-top:1px solid #e5e7eb;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;font-size:0.85rem;color:#6b7280;">
+    <div><strong>DPDP Act 2023 Compliant</strong> • Air-Gapped Private VPC Subnets</div>
+    <div><strong>ISO 27001 &amp; SOC-2 Standards</strong> • Zero LLM Telemetry Egress</div>
+    <div><strong>Contractual Guarantee</strong> • Audited 3x–5x Cash-Flow ROI in 90 Days</div>
+  </footer>
+</div>
+</main>
+"""
+
 
 def load_all_videos():
     """
@@ -6615,12 +6925,12 @@ def render_video_gallery_semantic_html(videos):
             {industry} • {duration} Runtime
           </div>
           <h2 style="font-size:1.5rem;font-weight:700;line-height:1.3;margin:0 0 0.75rem 0;">
-            <a href="/videos/{slug}" style="color:#111827;text-decoration:none;">{title}</a>
+            <a href="/videos/{slug}/" style="color:#111827;text-decoration:none;">{title}</a>
           </h2>
           <p style="color:#4b5563;font-size:1rem;line-height:1.6;margin-bottom:1rem;">{summary}</p>
           {f'<div style="margin-bottom:1rem;">{metrics_html}</div>' if metrics_html else ''}
           <div>
-            <a href="/videos/{slug}" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.875rem;">
+            <a href="/videos/{slug}/" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.875rem;">
               Watch Architecture Masterclass &amp; Read Transcript &rarr;
             </a>
           </div>
@@ -6641,7 +6951,7 @@ def render_video_gallery_semantic_html(videos):
       </p>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section>
       {cards_html}
     </section>
@@ -6650,7 +6960,7 @@ def render_video_gallery_semantic_html(videos):
       <p style="color:#4b5563;line-height:1.6;">
         Elesium engineers private VPC multi-agent systems with zero data retention, sub-200ms deterministic execution, and DPDP Act 2023 compliance.
       </p>
-      <a href="/ai-automation-agency-india" style="display:inline-block;background:#111827;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.875rem;margin-top:0.5rem;">
+      <a href="/ai-automation-agency-india/" style="display:inline-block;background:#111827;color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.875rem;margin-top:0.5rem;">
         View Enterprise Pricing &amp; Service Tiers &rarr;
       </a>
     </section>
@@ -6741,7 +7051,7 @@ def render_video_detail_semantic_html(video):
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Video Player Container -->
     <section class="video-cinema-container" style="margin-bottom:2.5rem;background:#000000;border-radius:0.75rem;overflow:hidden;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);">
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
@@ -6784,7 +7094,7 @@ def render_video_detail_semantic_html(video):
         Elesium engineers deterministic agentic state machines inside private VPCs, delivering audited 3x–5x cash-flow ROI in 90 days with guaranteed SLAs.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
-        <a href="/ai-automation-agency-india" style="display:inline-block;background:#38bdf8;color:#0f172a;padding:0.75rem 1.5rem;border-radius:0.375rem;text-decoration:none;font-weight:700;font-size:0.875rem;">
+        <a href="/ai-automation-agency-india/" style="display:inline-block;background:#38bdf8;color:#0f172a;padding:0.75rem 1.5rem;border-radius:0.375rem;text-decoration:none;font-weight:700;font-size:0.875rem;">
           Explore India Systems Pricing &rarr;
         </a>
         <a href="https://www.goodfirms.co/company/elesium-online" target="_blank" rel="noopener noreferrer" style="display:inline-block;border:1px solid #475569;background:rgba(255,255,255,0.05);color:#ffffff;padding:0.75rem 1.5rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.875rem;">
@@ -6860,14 +7170,35 @@ def sanitize_base_html_breadcrumbs(html_str: str) -> str:
     cleaned = re.sub(r'"breadcrumb":\s*\{\s*"@type":\s*"BreadcrumbList"[^}]*\}', '', cleaned)
     return cleaned
 
+def get_pristine_base_html() -> str:
+    if not DIST_INDEX.exists():
+        return ""
+    raw_html = DIST_INDEX.read_text(encoding="utf-8")
+    raw_html = sanitize_base_html_breadcrumbs(raw_html)
+    pristine = re.sub(
+        r'<div id="root">[\s\S]*?</div>(?=\s*<footer class="footer-seo-mesh"|\s*<script|\s*</body>)',
+        '<div id="root"></div>',
+        raw_html
+    )
+    return pristine
+
+def ensure_main_landmark(html_str: str) -> str:
+    if '<main id="main-content"' in html_str:
+        return html_str
+    if '<main id="main-content"' in html_str:
+        return re.sub(r'<main id="main-content"(?![^>]*id=["\']main-content["\'])', '<main id="main-content"', html_str)
+    def wrap_root(m):
+        return f'<div id="root">\n<main id="main-content">\n{m.group(1)}\n</main>\n</div>'
+    return re.sub(r'<div id="root">([\s\S]*?)</div>', wrap_root, html_str, count=1)
+
 def generate_ssg():
     if not DIST_INDEX.exists():
         print(f"Error: {DIST_INDEX} not found. Must run after vite build.")
         return
 
+    init_asset_cache()
     posts = load_posts_via_node()
-    base_html = DIST_INDEX.read_text(encoding="utf-8")
-    base_html = sanitize_base_html_breadcrumbs(base_html)
+    base_html = get_pristine_base_html()
 
     print(f"Starting SSG Generation for {len(posts)} posts...")
 
@@ -6878,7 +7209,7 @@ def generate_ssg():
         raw_desc = post.get("metaDescription", "").strip().strip('"').strip("'")
         desc = html.escape(raw_desc, quote=True)
         json_ld = post.get("jsonLdSchema", "")
-        canonical_url = f"https://elesium.online/signals/{slug}"
+        canonical_url = f"https://elesium.online/signals/{slug}/"
 
         # Create output directory and direct HTML file
         out_dir = DIST_DIR / "signals" / slug
@@ -6897,6 +7228,8 @@ def generate_ssg():
 
         # Replace Canonical with robust regex
         html_out = replace_canonical(html_out, canonical_url)
+        html_out = update_social_urls(html_out, canonical_url)
+        html_out = inject_modulepreload(html_out, ["MarketSignals-*.js"])
 
         # Replace OG Meta Tags
         html_out = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', 
@@ -6994,6 +7327,15 @@ def generate_ssg():
             f'<script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script>',
             f'<script type="application/ld+json">{json.dumps(speakable_schema, ensure_ascii=False)}</script>'
         ]
+
+        # Inject raw signal JSON for instant zero-latency hydration
+        post_json = json.dumps(post, ensure_ascii=False)
+        injections.append(f'<script id="__SIGNAL_DATA__" type="application/json">{post_json}</script>')
+
+        # Export per-slug JSON for client-side routing
+        sig_data_dir = DIST_DIR / "data" / "signals"
+        sig_data_dir.mkdir(parents=True, exist_ok=True)
+        (sig_data_dir / f"{slug}.json").write_text(post_json, encoding="utf-8")
         if json_ld:
             try:
                 if isinstance(json_ld, str):
@@ -7006,15 +7348,15 @@ def generate_ssg():
 
         html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
 
-        out_file.write_text(html_out, encoding="utf-8")
-        direct_file.write_text(html_out, encoding="utf-8")
+        out_file.write_text(ensure_main_landmark(html_out), encoding="utf-8")
+        direct_file.write_text(ensure_main_landmark(html_out), encoding="utf-8")
         print(f"Generated SSG for: /signals/{slug}")
 
     print("✅ SSG complete for signals.")
 
     # Generate /signals Hub Page (Fixes 404 on Googlebot crawl)
     print("Generating SSG for /signals Hub...")
-    sig_hub_canonical = "https://elesium.online/signals"
+    sig_hub_canonical = "https://elesium.online/signals/"
     sig_hub_title = "Enterprise AI Architecture Whitepapers & Market Signals | Elesium"
     sig_hub_desc = "Peer-reviewed technical whitepapers and market intelligence for Chief Technology Officers and AI Systems Architects. Private VPC, multi-agent systems, and DPDP Act compliance."
 
@@ -7027,6 +7369,8 @@ def generate_ssg():
     sig_hub_html = re.sub(r"<title>.*?</title>", f"<title>{sig_hub_title}</title>", sig_hub_html)
     sig_hub_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{sig_hub_desc}" />', sig_hub_html)
     sig_hub_html = replace_canonical(sig_hub_html, sig_hub_canonical)
+    sig_hub_html = update_social_urls(sig_hub_html, sig_hub_canonical)
+    sig_hub_html = inject_modulepreload(sig_hub_html, ["MarketSignals-*.js"])
     sig_hub_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{sig_hub_title}" />', sig_hub_html)
     sig_hub_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{sig_hub_desc}" />', sig_hub_html)
     sig_hub_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{sig_hub_canonical}" />', sig_hub_html)
@@ -7034,7 +7378,7 @@ def generate_ssg():
     sig_items_html = "".join([
         f'<li style="margin-bottom:1.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;">'
         f'<span style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;">{html.escape(p.get("category", "Architecture"))} • {html.escape(p.get("date", "2026"))}</span>'
-        f'<h2 style="font-size:1.25rem;font-weight:700;margin:0.5rem 0;"><a href="/signals/{html.escape(p.get("slug", ""))}" style="color:#2563eb;text-decoration:none;">{html.escape(p.get("title", ""))} &rarr;</a></h2>'
+        f'<h2 style="font-size:1.25rem;font-weight:700;margin:0.5rem 0;"><a href="/signals/{html.escape(p.get("slug", ""))}/" style="color:#2563eb;text-decoration:none;">{html.escape(p.get("title", ""))} &rarr;</a></h2>'
         f'<p style="color:#4b5563;font-size:0.9rem;line-height:1.5;">{html.escape(p.get("excerpt", p.get("metaDescription", "")))}</p>'
         f'</li>'
         for p in posts
@@ -7095,7 +7439,7 @@ def generate_ssg():
       </div>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <ul style="list-style-type:none;padding:0;">{sig_items_html}</ul>
 
     <!-- Transparent Institutional Investment Tiers -->
@@ -7146,13 +7490,14 @@ def generate_ssg():
     else:
         sig_hub_html = sig_hub_html.replace('<div id="root"></div>', f'<div id="root">{sig_semantic}</div>')
 
-    sig_hub_out_file.write_text(sig_hub_html, encoding="utf-8")
-    sig_hub_direct_file.write_text(sig_hub_html, encoding="utf-8")
+    sig_hub_out_file.write_text(ensure_main_landmark(sig_hub_html), encoding="utf-8")
+    sig_hub_direct_file.write_text(ensure_main_landmark(sig_hub_html), encoding="utf-8")
     print("Generated SSG for: /signals (Hub)")
 
     # Pre-render Homepage (dist/index.html) into <div id="root">
     print("Pre-rendering semantic HTML into dist/index.html...")
     hp_semantic = """
+<main id="main-content">
 <div id="prerendered-homepage" style="max-width:1240px;margin:0 auto;padding:2rem 1.5rem 5rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
   <header style="text-align:center;margin-bottom:3.5rem;">
     <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1.5rem;">
@@ -7169,10 +7514,10 @@ def generate_ssg():
       <a href="https://wa.me/918317329312" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#111827;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
         <span>Chat on WhatsApp with Lead Architect</span> &rarr;
       </a>
-      <a href="/ai-automation-agency-india" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#059669;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+      <a href="/ai-automation-agency-india/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#059669;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
         Best Enterprise AI India
       </a>
-      <a href="/solutions" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.5rem;background:#ffffff;border:1px solid #d1d5db;color:#111827;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+      <a href="/solutions/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.5rem;background:#ffffff;border:1px solid #d1d5db;color:#111827;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
         Solutions Hub (3,765)
       </a>
     </div>
@@ -7224,14 +7569,14 @@ def generate_ssg():
   <!-- Core Flagship Navigational Cards -->
   <section style="margin-bottom:3.5rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/ai-automation-agency-india" style="color:#059669;text-decoration:none;">India Enterprise AI Deployments</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/ai-automation-agency-india/" style="color:#059669;text-decoration:none;">India Enterprise AI Deployments</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Sovereign multi-agent systems in Bangalore, Mumbai, and Delhi NCR compliant with DPDP Act 2023.</p>
-      <a href="/ai-automation-agency-india" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore India Authority Pillar &rarr;</a>
+      <a href="/ai-automation-agency-india/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore India Authority Pillar &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/solutions" style="color:#059669;text-decoration:none;">Enterprise Solutions Hub (3,765)</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/solutions/" style="color:#059669;text-decoration:none;">Enterprise Solutions Hub (3,765)</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Targeted workflow automations across logistics, BFSI, manufacturing, healthcare, and ERP systems.</p>
-      <a href="/solutions" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Browse Solutions Directory &rarr;</a>
+      <a href="/solutions/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Browse Solutions Directory &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
       <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/commercial-directory.html" style="color:#059669;text-decoration:none;">Top 100 Commercial Directory</a></h3>
@@ -7239,19 +7584,19 @@ def generate_ssg():
       <a href="/commercial-directory.html" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">View Top 100 Commercial &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/signals" style="color:#059669;text-decoration:none;">Technical Signals &amp; Whitepapers</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/signals/" style="color:#059669;text-decoration:none;">Technical Signals &amp; Whitepapers</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Peer-reviewed architectural blueprints on KV-cache memory, vLLM serving, and deterministic state machines.</p>
-      <a href="/signals" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Read Technical Signals &rarr;</a>
+      <a href="/signals/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Read Technical Signals &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/how-we-work" style="color:#059669;text-decoration:none;">How We Work (4-Stage Protocol)</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/how-we-work/" style="color:#059669;text-decoration:none;">How We Work (4-Stage Protocol)</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">From 14-day sovereign pilot sprint to 45-day multi-agent ERP go-live and 90-day ROI audit.</p>
-      <a href="/how-we-work" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Inspect 4-Stage Protocol &rarr;</a>
+      <a href="/how-we-work/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Inspect 4-Stage Protocol &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/compare" style="color:#059669;text-decoration:none;">Architecture Comparisons &amp; Battlecards</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/compare/" style="color:#059669;text-decoration:none;">Architecture Comparisons &amp; Battlecards</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Empirical evaluations: LangGraph vs CrewAI, Private vLLM vs Azure OpenAI, and FSM vs ReAct.</p>
-      <a href="/compare" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">View Battlecards &rarr;</a>
+      <a href="/compare/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">View Battlecards &rarr;</a>
     </div>
   </section>
 
@@ -7299,12 +7644,13 @@ def generate_ssg():
     </a>
   </footer>
 </div>
+</main>
 """
     if root_pattern.search(base_html):
         hp_html = root_pattern.sub(lambda m: f'<div id="root">{hp_semantic}</div>', base_html)
     else:
         hp_html = base_html.replace('<div id="root"></div>', f'<div id="root">{hp_semantic}</div>')
-    DIST_INDEX.write_text(hp_html, encoding="utf-8")
+    DIST_INDEX.write_text(ensure_main_landmark(hp_html), encoding="utf-8")
     print("Pre-rendered dist/index.html with full semantic DOM.")
 
     print("Starting SSG Generation for System 2 Compact Solutions...")
@@ -7316,7 +7662,7 @@ def generate_ssg():
         if not title.endswith("Elesium"):
             title = f"{title} | Elesium"
         desc = sol.get("metaDescription", f"Deploy {h1} with sub-2s deterministic workflows and private VPC security.")
-        canonical_url = f"https://elesium.online/solutions/{slug}"
+        canonical_url = f"https://elesium.online/solutions/{slug}/"
 
         out_dir = DIST_DIR / "solutions" / slug
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -7334,6 +7680,17 @@ def generate_ssg():
 
         # Replace Canonical
         html_out = replace_canonical(html_out, canonical_url)
+        html_out = update_social_urls(html_out, canonical_url)
+        html_out = inject_modulepreload(html_out, ["SolutionDetail-*.js"])
+
+        # Inject raw solution JSON for instant zero-latency hydration
+        sol_json = json.dumps(sol, ensure_ascii=False)
+        html_out = html_out.replace("</head>", f'  <script id="__SOLUTION_DATA__" type="application/json">{sol_json}</script>\n</head>')
+
+        # Export per-slug JSON for client-side routing
+        sol_data_dir = DIST_DIR / "data" / "solutions"
+        sol_data_dir.mkdir(parents=True, exist_ok=True)
+        (sol_data_dir / f"{slug}.json").write_text(sol_json, encoding="utf-8")
 
         # Replace OG Meta Tags
         html_out = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', 
@@ -7447,13 +7804,13 @@ def generate_ssg():
 
         html_out = html_out.replace("</head>", "\n" + "\n".join(injections) + "\n</head>")
 
-        out_file.write_text(html_out, encoding="utf-8")
-        direct_file.write_text(html_out, encoding="utf-8")
+        out_file.write_text(ensure_main_landmark(html_out), encoding="utf-8")
+        direct_file.write_text(ensure_main_landmark(html_out), encoding="utf-8")
         print(f"Generated SSG for: /solutions/{slug}")
 
     # Generate /solutions Hub Page
     print("Generating SSG for /solutions Hub...")
-    hub_canonical = "https://elesium.online/solutions"
+    hub_canonical = "https://elesium.online/solutions/"
     hub_title = "Enterprise AI Solutions & Sovereign Automation Workflows | Elesium"
     hub_desc = "Explore Elesium's high-intent enterprise AI solutions across Logistics, BFSI, Healthcare, Manufacturing, and ERP integration. Deterministic multi-agent workflows and private VPC systems."
 
@@ -7466,6 +7823,8 @@ def generate_ssg():
     hub_html = re.sub(r"<title>.*?</title>", f"<title>{hub_title}</title>", hub_html)
     hub_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{hub_desc}" />', hub_html)
     hub_html = replace_canonical(hub_html, hub_canonical)
+    hub_html = update_social_urls(hub_html, hub_canonical)
+    hub_html = inject_modulepreload(hub_html, ["SolutionsHub-*.js"])
     hub_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{hub_title}" />', hub_html)
     hub_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{hub_desc}" />', hub_html)
     hub_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{hub_canonical}" />', hub_html)
@@ -7505,7 +7864,7 @@ def generate_ssg():
             hub_has_part.append({
                 "@type": "Service",
                 "name": h1,
-                "url": f"https://elesium.online/solutions/{slug}",
+                "url": f"https://elesium.online/solutions/{slug}/",
                 "description": desc,
                 "provider": {
                     "@type": "Organization",
@@ -7521,7 +7880,7 @@ def generate_ssg():
             hub_has_part.append({
                 "@type": "Service",
                 "name": h1,
-                "url": f"https://elesium.online/solutions/{slug}",
+                "url": f"https://elesium.online/solutions/{slug}/",
                 "description": desc,
                 "provider": {
                     "@type": "Organization",
@@ -7578,8 +7937,8 @@ def generate_ssg():
     # Generate SSG for Top 100 Commercial Directory (/commercial-directory & /commercial-directory.html)
     print("Starting SSG Generation for Commercial Directory Hub (/commercial-directory)...")
     comm_canonical = "https://elesium.online/commercial-directory.html"
-    comm_title = "Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory | Elesium"
-    comm_desc = "Explore Elesium's top 100 high-intent commercial enterprise AI solutions across BFSI, Logistics, Healthcare, Manufacturing, and Sovereign Defense. Air-gapped VPCs, DPDP Act 2023 compliance, sub-200ms SLAs."
+    comm_title = "Top 100 Enterprise AI Solutions Directory | Elesium"
+    comm_desc = "Explore Elesium's top 100 enterprise AI solutions across BFSI, Logistics, and Manufacturing. Private VPCs, DPDP compliance, and sub-200ms SLAs."
 
     comm_out_dir = DIST_DIR / "commercial-directory"
     comm_out_dir.mkdir(parents=True, exist_ok=True)
@@ -7626,7 +7985,7 @@ def generate_ssg():
             {
                 "@type": "Service",
                 "name": it.get("anchor_text", it.get("title")),
-                "url": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}"),
+                "url": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}/"),
                 "description": f"Deploy enterprise {it.get('anchor_text', it.get('title'))} with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance.",
                 "provider": {
                     "@type": "Organization",
@@ -7645,7 +8004,7 @@ def generate_ssg():
                     "@type": "ListItem",
                     "position": i + 1,
                     "name": it.get("anchor_text", it.get("title")),
-                    "item": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}")
+                    "item": it.get("canonical_url", f"https://elesium.online/solutions/{it.get('slug')}/")
                 }
                 for i, it in enumerate(top100_items)
             ]
@@ -7727,6 +8086,7 @@ def generate_ssg():
         f'<script type="application/ld+json">{json.dumps(comm_faq_schema, ensure_ascii=False)}</script>'
     ]
     comm_html = comm_html.replace("</head>", "\n" + "\n".join(comm_injections) + "\n</head>")
+    comm_html = ensure_main_landmark(comm_html)
 
     comm_out_file.write_text(comm_html, encoding="utf-8")
     comm_direct_file.write_text(comm_html, encoding="utf-8")
@@ -7739,9 +8099,9 @@ def generate_ssg():
     glossary_terms = load_glossary_terms_via_node()
     print(f"Loaded {len(glossary_terms)} glossary terms for SSG pre-rendering.")
 
-    glossary_canonical = "https://elesium.online/glossary"
-    glossary_title = "Enterprise AI Systems & Agentic Architecture Glossary | Elesium"
-    glossary_desc = "Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, DPDP Act compliance protocols, and low-latency inference fabrics."
+    glossary_canonical = "https://elesium.online/glossary/"
+    glossary_title = "AI Architecture Glossary | Elesium"
+    glossary_desc = "Authoritative engineering glossary defining deterministic multi-agent systems, sovereign cloud enclaves, and enterprise low-latency inference fabrics."
 
     glossary_out_dir = DIST_DIR / "glossary"
     glossary_out_dir.mkdir(parents=True, exist_ok=True)
@@ -7752,6 +8112,8 @@ def generate_ssg():
     glossary_html = re.sub(r"<title>.*?</title>", f"<title>{glossary_title}</title>", glossary_html)
     glossary_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{glossary_desc}" />', glossary_html)
     glossary_html = replace_canonical(glossary_html, glossary_canonical)
+    glossary_html = update_social_urls(glossary_html, glossary_canonical)
+    glossary_html = inject_modulepreload(glossary_html, ["Glossary-*.js"])
     glossary_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{glossary_title}" />', glossary_html)
     glossary_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{glossary_desc}" />', glossary_html)
     glossary_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{glossary_canonical}" />', glossary_html)
@@ -7830,8 +8192,8 @@ def generate_ssg():
         ]
     }
     glossary_html = glossary_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(glossary_schema, ensure_ascii=False)}</script>\n</head>')
-    glossary_out_file.write_text(glossary_html, encoding="utf-8")
-    glossary_direct_file.write_text(glossary_html, encoding="utf-8")
+    glossary_out_file.write_text(ensure_main_landmark(glossary_html), encoding="utf-8")
+    glossary_direct_file.write_text(ensure_main_landmark(glossary_html), encoding="utf-8")
     print(f"Generated SSG for: /glossary ({len(glossary_terms)} terms, DefinedTermSet schema)")
 
     # Generate SSG for Architecture Comparisons (/compare and /compare/:slug)
@@ -7840,7 +8202,7 @@ def generate_ssg():
     print(f"Loaded {len(battlecards)} compare battlecards for SSG pre-rendering.")
 
     # 1. /compare Hub Page
-    cmp_hub_canonical = "https://elesium.online/compare"
+    cmp_hub_canonical = "https://elesium.online/compare/"
     cmp_hub_title = "Enterprise AI Framework & Architecture Comparisons | Elesium"
     cmp_hub_desc = "Objective, empirical evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models."
 
@@ -7853,6 +8215,8 @@ def generate_ssg():
     cmp_hub_html = re.sub(r"<title>.*?</title>", f"<title>{cmp_hub_title}</title>", cmp_hub_html)
     cmp_hub_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{cmp_hub_desc}" />', cmp_hub_html)
     cmp_hub_html = replace_canonical(cmp_hub_html, cmp_hub_canonical)
+    cmp_hub_html = update_social_urls(cmp_hub_html, cmp_hub_canonical)
+    cmp_hub_html = inject_modulepreload(cmp_hub_html, ["CompareHub-*.js"])
     cmp_hub_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{cmp_hub_title}" />', cmp_hub_html)
     cmp_hub_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{cmp_hub_desc}" />', cmp_hub_html)
     cmp_hub_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{cmp_hub_canonical}" />', cmp_hub_html)
@@ -7958,7 +8322,7 @@ def generate_ssg():
         b_title = b.get("title", f"{b_slug} | Elesium")
         b_h1 = b.get("h1", b_title)
         b_desc = b.get("metaDescription", "")
-        b_canonical = f"https://elesium.online/compare/{b_slug}"
+        b_canonical = f"https://elesium.online/compare/{b_slug}/"
         b_date_pub = b.get("datePublished", "October 19, 2026")
         b_date_mod = b.get("dateModified", "October 19, 2026")
 
@@ -7971,6 +8335,8 @@ def generate_ssg():
         b_html = re.sub(r"<title>.*?</title>", f"<title>{b_title} | Elesium</title>", b_html)
         b_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{html.escape(b_desc)}" />', b_html)
         b_html = replace_canonical(b_html, b_canonical)
+        b_html = update_social_urls(b_html, b_canonical)
+        b_html = inject_modulepreload(b_html, ["CompareDetail-*.js"])
         b_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{b_title} | Elesium" />', b_html)
         b_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{html.escape(b_desc)}" />', b_html)
         b_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{b_canonical}" />', b_html)
@@ -8050,7 +8416,7 @@ def generate_ssg():
         v_slug = video.get("slug")
         v_title = video.get("title", "Architecture Masterclass")
         v_desc = video.get("executiveSummary", "")
-        v_canonical = f"https://elesium.online/videos/{v_slug}"
+        v_canonical = f"https://elesium.online/videos/{v_slug}/"
         v_youtube_id = video.get("youtubeId", "dQw4w9WgXcQ")
         v_duration_iso = video.get("durationIso", "PT20M")
         v_upload_date = video.get("uploadDate", "2026-03-15T09:00:00+05:30")
@@ -8065,6 +8431,8 @@ def generate_ssg():
         v_html = re.sub(r"<title>.*?</title>", f"<title>{v_title} | Elesium</title>", v_html)
         v_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{html.escape(v_desc)}" />', v_html)
         v_html = replace_canonical(v_html, v_canonical)
+        v_html = update_social_urls(v_html, v_canonical)
+        v_html = inject_modulepreload(v_html, ["VideoMirror-*.js"])
         v_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{v_title} | Elesium" />', v_html)
         v_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{html.escape(v_desc)}" />', v_html)
         v_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{v_canonical}" />', v_html)
@@ -8173,7 +8541,7 @@ def generate_ssg():
         print(f"Generated SSG for: /videos/{v_slug}")
 
     # 2. Video Gallery Route (/videos)
-    gallery_canonical = "https://elesium.online/videos"
+    gallery_canonical = "https://elesium.online/videos/"
     gallery_title = "Enterprise AI Architecture Masterclasses & Video Teardowns | Elesium"
     gallery_desc = "Watch technical engineering breakdowns on deterministic multi-agent systems, sovereign private VPC deployments, and production enterprise workflows by Elesium."
 
@@ -8186,6 +8554,8 @@ def generate_ssg():
     gallery_html = re.sub(r"<title>.*?</title>", f"<title>{gallery_title}</title>", gallery_html)
     gallery_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{gallery_desc}" />', gallery_html)
     gallery_html = replace_canonical(gallery_html, gallery_canonical)
+    gallery_html = update_social_urls(gallery_html, gallery_canonical)
+    gallery_html = inject_modulepreload(gallery_html, ["VideoMirror-*.js"])
     gallery_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{gallery_title}" />', gallery_html)
     gallery_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{gallery_desc}" />', gallery_html)
     gallery_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{gallery_canonical}" />', gallery_html)
@@ -8259,12 +8629,12 @@ def generate_ssg():
     print("Starting SSG Generation for static pages...")
     static_pages = {
         "ai-automation": {
-            "title": "AI Automation Agency India",
-            "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
+            "title": "Best AI & Automation Company in Bangalore",
+            "desc": "Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows."
         },
         "how-we-work": {
-            "title": "How We Work: 4-Stage Sovereign AI Engineering Protocol",
-            "desc": "Elesium's institutional 4-stage protocol for deploying deterministic multi-agent systems and sovereign private VPC LLM infrastructure with guaranteed 90-day ROI."
+            "title": "How We Work — Sovereign AI Engineering",
+            "desc": "Elesium's 4-stage engineering protocol: 14-day sovereign pilot sprint, deterministic LangGraph FSM, private VPCs, and contractual 90-day ROI."
         },
         "markets": {
             "title": "AI Automation for Every Industry",
@@ -8283,8 +8653,8 @@ def generate_ssg():
             "desc": "Architectural roundtable featuring 10 global AI founders at Anthropic, OpenAI, DeepMind, LangChain, Databricks & Stanford on stateful graph workflows, AST sandboxing, and sovereign private VPCs."
         },
         "ai-automation-agency-india": {
-            "title": "AI Automation Agency India",
-            "desc": "Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down."
+            "title": "Best AI & Automation Agency in India",
+            "desc": "India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI."
         },
         "enterprise-ai-bangalore": {
             "title": "Best Enterprise AI Company in Bangalore | AI Automation Agency Bengaluru",
@@ -8303,12 +8673,16 @@ def generate_ssg():
             "desc": "Elesium is the #1 enterprise AI company in Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi."
         },
         "waitlist": {
-            "title": "Schedule Sovereign Enterprise AI Architecture Audit | Elesium",
-            "desc": "Book a 90-minute technical scope, data sovereignty risk analysis, and deterministic multi-agent roadmap led by Chaman Shah (Principal AI Systems Architect). Confidential and governed by a mutual NDA."
+            "title": "ele-in Waitlist — Enterprise AI Platform",
+            "desc": "Join the private alpha waitlist for ele-in, Elesium's autonomous multi-agent enterprise SaaS platform. Deploy deterministic workflows with DPDP compliance."
         },
         "audit": {
-            "title": "Schedule Sovereign Enterprise AI Architecture Audit | Elesium",
-            "desc": "Book a 90-minute technical scope, data sovereignty risk analysis, and deterministic multi-agent roadmap led by Chaman Shah (Principal AI Systems Architect). Confidential and governed by a mutual NDA."
+            "title": "Schedule Enterprise AI Architecture Audit",
+            "desc": "Book a 90-minute technical scope, data sovereignty risk audit, and deterministic multi-agent roadmap led by Chaman Shah. Confidential under mutual NDA."
+        },
+        "book-audit": {
+            "title": "Schedule Enterprise AI Architecture Audit",
+            "desc": "Book a 90-minute technical scope, data sovereignty risk audit, and deterministic multi-agent roadmap led by Chaman Shah. Confidential under mutual NDA."
         },
         "tools/enterprise-ai-roi-calculator": {
             "title": "Enterprise AI ROI Calculator: Model Labor Savings & Payback",
@@ -8911,12 +9285,8 @@ def generate_ssg():
             "desc": "Interactive embed widget modeling MLA compressed latents, DualPipe bidirectional overlap, and MTP speculative drafting."
         },
         "authors/chaman-shah": {
-            "title": "Chaman Shah — Principal AI Systems Architect & Founder",
-            "desc": "Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams deploying sovereign multi-agent architectures, private VPC vLLM clusters, and DPDP Act 2023 compliant automation across India."
-        },
-        "team/chaman-shah": {
-            "title": "Chaman Shah — Principal AI Systems Architect & Founder",
-            "desc": "Chaman Shah is the Principal AI Systems Architect and Founder at Elesium, leading engineering teams deploying sovereign multi-agent architectures, private VPC vLLM clusters, and DPDP Act 2023 compliant automation across India."
+            "title": "Chaman Shah — Principal AI Systems Architect",
+            "desc": "Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure."
         },
         "team": {
             "title": "Engineering Leadership & Systems Architects",
@@ -8927,7 +9297,38 @@ def generate_ssg():
     for route, meta in static_pages.items():
         title = meta["title"]
         desc = meta["desc"]
-        canonical_url = f"https://elesium.online/{route}"
+        if route.endswith(".html"):
+            canonical_url = f"https://elesium.online/{route}"
+        elif route.startswith("embed/"):
+            # Map embed iframe to canonical parent tool URL to prevent iframe crawler drain & self-canonicalizing duplicate content
+            special_embed_map = {
+                "embed/roi-calculator": "tools/enterprise-ai-roi-calculator",
+                "embed/latency-estimator": "tools/multi-agent-latency-token-cost-estimator",
+                "embed/architecture-grader": "tools/agentic-architecture-grader",
+                "embed/token-leakage-simulator": "tools/multi-agent-token-leakage-simulator",
+                "embed/dpdp-audit-simulator": "tools/dpdp-act-2023-audit-simulator",
+                "embed/gpu-cost-calculator": "tools/enterprise-gpu-finops-cost-calculator",
+                "embed/vector-db-benchmark": "tools/enterprise-vector-db-latency-benchmark",
+                "embed/agent-deadlock-visualizer": "tools/enterprise-multi-agent-deadlock-circuit-breaker-visualizer",
+            }
+            parent_tool = special_embed_map.get(route)
+            if not parent_tool:
+                embed_slug = route.replace("embed/", "")
+                for cand in [f"tools/enterprise-{embed_slug}", f"tools/{embed_slug}"]:
+                    if cand in static_pages:
+                        parent_tool = cand
+                        break
+                if not parent_tool:
+                    for sp in static_pages:
+                        if sp.startswith("tools/") and embed_slug in sp:
+                            parent_tool = sp
+                            break
+            if parent_tool:
+                canonical_url = f"https://elesium.online/{parent_tool}/"
+            else:
+                canonical_url = f"https://elesium.online/{route}/"
+        else:
+            canonical_url = f"https://elesium.online/{route}/"
 
         out_dir = DIST_DIR / route
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -8936,13 +9337,27 @@ def generate_ssg():
 
         html_out = base_html
 
-        html_out = re.sub(r"<title>.*?</title>", f"<title>{title} | Elesium</title>", html_out)
+        if route.startswith("embed/"):
+            html_out = re.sub(r'<meta name="robots" content="[^"]*"\s*/?>', '<meta name="robots" content="noindex, follow" />', html_out)
+
+        full_title = title if "| Elesium" in title else f"{title} | Elesium"
+        html_out = re.sub(r"<title>.*?</title>", f"<title>{full_title}</title>", html_out)
         html_out = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{desc}" />', html_out)
         html_out = replace_canonical(html_out, canonical_url)
-        html_out = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{title} | Elesium" />', html_out)
+        html_out = update_social_urls(html_out, canonical_url)
+        html_out = inject_modulepreload(html_out, get_route_chunks(route))
+
+        if route in ["waitlist", "audit", "book-audit"]:
+            waitlist_html = render_waitlist_semantic_html(route, title, desc, canonical_url)
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{waitlist_html}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{waitlist_html}</div>')
+        html_out = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{full_title}" />', html_out)
         html_out = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{desc}" />', html_out)
         html_out = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{canonical_url}" />', html_out)
-        html_out = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{title} | Elesium" />', html_out)
+        html_out = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{full_title}" />', html_out)
         html_out = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{desc}" />', html_out)
         html_out = re.sub(r'<meta name="twitter:url" content="[^"]*"\s*/?>', f'<meta name="twitter:url" content="{canonical_url}" />', html_out)
 
@@ -9099,7 +9514,7 @@ def generate_ssg():
     <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Enterprise AI Automation Agency India</h1>
     <p style="font-size:1.25rem;line-height:1.6;color:#374151;margin-bottom:2rem;"><strong>{pricing_answer_capsule}</strong></p>
   </header>
-  <main>
+  <main id="main-content">
     <section style="margin:2rem 0;">
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Production Investment Tiers & Deliverables</h2>
       <ul style="list-style-type:none;padding:0;">
@@ -9124,13 +9539,13 @@ def generate_ssg():
         <h3 style="font-size:1.125rem;font-weight:700;color:#111827;margin-top:0;">Architectural Comparison Battlecards:</h3>
         <ul style="list-style-type:none;padding:0;margin:0.75rem 0;">
           <li style="margin-bottom:0.75rem;">
-            &bull; <a href="/compare/elesium-vs-traditional-it-consultancies" style="color:#059669;font-weight:600;text-decoration:underline;">Elesium vs Traditional IT Consultancies (TCS, Infosys, Wipro, Accenture) &rarr;</a>
+            &bull; <a href="/compare/elesium-vs-traditional-it-consultancies/" style="color:#059669;font-weight:600;text-decoration:underline;">Elesium vs Traditional IT Consultancies (TCS, Infosys, Wipro, Accenture) &rarr;</a>
           </li>
           <li style="margin-bottom:0.75rem;">
-            &bull; <a href="/compare/elesium-vs-big-4-consulting-firms" style="color:#2563eb;font-weight:600;text-decoration:underline;">Elesium vs Big 4 Consulting Firms (PwC, EY, Deloitte, KPMG) &rarr;</a>
+            &bull; <a href="/compare/elesium-vs-big-4-consulting-firms/" style="color:#2563eb;font-weight:600;text-decoration:underline;">Elesium vs Big 4 Consulting Firms (PwC, EY, Deloitte, KPMG) &rarr;</a>
           </li>
           <li>
-            &bull; <a href="/compare" style="color:#6b7280;font-weight:600;text-decoration:underline;">View All 12 Enterprise Architecture Battlecards &rarr;</a>
+            &bull; <a href="/compare/" style="color:#6b7280;font-weight:600;text-decoration:underline;">View All 12 Enterprise Architecture Battlecards &rarr;</a>
           </li>
         </ul>
       </div>
@@ -15537,7 +15952,7 @@ def generate_ssg():
             author_semantic = f"""
 <div id="prerendered-author" style="max-width:960px;margin:0 auto;padding:2.5rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#0f172a;">
   <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
-    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <a href="/team" style="color:#2563eb;text-decoration:none;">Leadership</a> / <span style="color:#059669;font-weight:700;">Chaman Shah</span>
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <a href="/authors/chaman-shah/" style="color:#2563eb;text-decoration:none;">Leadership</a> / <span style="color:#059669;font-weight:700;">Chaman Shah</span>
   </nav>
   <header style="margin-bottom:2.5rem;">
     <h1 style="font-size:2.5rem;font-weight:800;color:#0f172a;margin:0 0 0.5rem 0;">Chaman Shah</h1>
@@ -15868,6 +16283,7 @@ def generate_ssg():
                 ]
             }
             ai_auto_semantic = f"""
+<main id="main-content">
 <div id="prerendered-ai-automation" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
   <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
     <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">AI Automation</span>
@@ -15882,6 +16298,7 @@ def generate_ssg():
     </div>
   </header>
 </div>
+</main>
 """
             root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
             if root_pattern.search(html_out):
@@ -15920,40 +16337,24 @@ def generate_ssg():
                 html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(tool_speakable, ensure_ascii=False)}</script>\n</head>')
 
         direct_file.parent.mkdir(parents=True, exist_ok=True)
-        out_file.write_text(html_out, encoding="utf-8")
-        direct_file.write_text(html_out, encoding="utf-8")
+        out_file.write_text(ensure_main_landmark(html_out), encoding="utf-8")
+        direct_file.write_text(ensure_main_landmark(html_out), encoding="utf-8")
         print(f"Generated SSG for: /{route}")
 
-    # Generate static redirect pages for legacy/alias routes
-    redirects = [
-        ("market-signals", "https://elesium.online/signals"),
-        ("industries", "https://elesium.online/markets"),
-    ]
-
-    print("Generating static redirect pages for legacy routes...")
+    # Generate static redirect pages for all 78+ alias routes from App.tsx
+    redirects = extract_redirect_routes_from_app_tsx()
+    print(f"Generating static redirect pages for {len(redirects)} alias routes...")
     for alias, target_url in redirects:
-        redirect_html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex, follow">
-  <meta http-equiv="refresh" content="0; url={target_url}">
-  <link rel="canonical" href="{target_url}">
-  <title>Redirecting to {target_url}...</title>
-</head>
-<body>
-  <p>Redirecting to <a href="{target_url}">{target_url}</a>...</p>
-</body>
-</html>
-"""
-        alias_dir = DIST_DIR / alias
+        redirect_html = make_redirect_stub(target_url)
+        alias_clean = alias.strip("/")
+        alias_dir = DIST_DIR / alias_clean
         alias_dir.mkdir(parents=True, exist_ok=True)
         alias_index = alias_dir / "index.html"
-        alias_direct = DIST_DIR / f"{alias}.html"
+        alias_direct = DIST_DIR / f"{alias_clean}.html"
 
         alias_index.write_text(redirect_html, encoding="utf-8")
         alias_direct.write_text(redirect_html, encoding="utf-8")
-        print(f"Generated redirect: /{alias} -> {target_url}")
+        print(f"Generated redirect: /{alias_clean} -> {target_url}")
 
     print("✅ SSG complete. All routes prerendered with semantic HTML and verified canonical tags.")
 

@@ -6,40 +6,40 @@ export default function DownloadFooter() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
     const mainNavigation = [
-        { name: 'How We Work', path: '/how-we-work' },
-        { name: 'Solutions Hub (3,765 Workflows)', path: '/solutions' },
+        { name: 'How We Work', path: '/how-we-work/' },
+        { name: 'Solutions Hub (3,765 Workflows)', path: '/solutions/' },
         { name: 'Top 100 Commercial Directory', path: '/commercial-directory.html' },
-        { name: 'Technical Whitepapers & Research', path: '/signals' },
-        { name: 'Architecture Comparisons', path: '/compare' },
-        { name: 'Video Masterclasses', path: '/videos' },
-        { name: 'Engineering Glossary (50+ Terms)', path: '/glossary' },
-        { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india' },
-        { name: 'ele-in SaaS Platform (Waitlist)', path: '/waitlist' },
+        { name: 'Technical Whitepapers & Research', path: '/signals/' },
+        { name: 'Architecture Comparisons', path: '/compare/' },
+        { name: 'Video Masterclasses', path: '/videos/' },
+        { name: 'Engineering Glossary (50+ Terms)', path: '/glossary/' },
+        { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india/' },
+        { name: 'ele-in SaaS Platform (Waitlist)', path: '/waitlist/' },
     ];
 
     const featuredTools = [
-        { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator' },
-        { name: 'Multi-Agent Latency & Cost Estimator', path: '/tools/multi-agent-latency-token-cost-estimator' },
-        { name: 'DPDP Act 2023 Statutory Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator' },
-        { name: 'GPU FinOps Cost & Cluster Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator' },
-        { name: 'DeepSeek-V3 Unified Fabric Simulator', path: '/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator' },
-        { name: 'DualPipe Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator' },
+        { name: 'Enterprise AI ROI Calculator', path: '/tools/enterprise-ai-roi-calculator/' },
+        { name: 'Multi-Agent Latency & Cost Estimator', path: '/tools/multi-agent-latency-token-cost-estimator/' },
+        { name: 'DPDP Act 2023 Statutory Audit Simulator', path: '/tools/dpdp-act-2023-audit-simulator/' },
+        { name: 'GPU FinOps Cost & Cluster Calculator', path: '/tools/enterprise-gpu-finops-cost-calculator/' },
+        { name: 'DeepSeek-V3 Unified Fabric Simulator', path: '/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator/' },
+        { name: 'DualPipe Pipeline Parallelism Simulator', path: '/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator/' },
     ];
 
     const highLeverSolutions = [
-        { name: 'AI Automation Agency for Logistics', path: '/solutions/ai-automation-agency-for-logistics' },
-        { name: 'Autonomous Loan Underwriting AI for NBFCs', path: '/solutions/autonomous-loan-underwriting-ai-for-nbfcs' },
-        { name: 'Deterministic Multi-Agent Systems for Manufacturing ERP', path: '/solutions/deterministic-multi-agent-systems-for-manufacturing-erp' },
-        { name: 'Private VPC Air-Gapped LLM Deployment for Healthcare', path: '/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare' },
-        { name: 'SAP S/4HANA Autonomous AI Integration Agency', path: '/solutions/sap-s4hana-autonomous-ai-integration-agency' },
+        { name: 'AI Automation Agency for Logistics', path: '/solutions/ai-automation-agency-for-logistics/' },
+        { name: 'Autonomous Loan Underwriting AI for NBFCs', path: '/solutions/autonomous-loan-underwriting-ai-for-nbfcs/' },
+        { name: 'Deterministic Multi-Agent Systems for Manufacturing ERP', path: '/solutions/deterministic-multi-agent-systems-for-manufacturing-erp/' },
+        { name: 'Private VPC Air-Gapped LLM Deployment for Healthcare', path: '/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare/' },
+        { name: 'SAP S/4HANA Autonomous AI Integration Agency', path: '/solutions/sap-s4hana-autonomous-ai-integration-agency/' },
     ];
 
     const battlecardLinks = [
-        { name: 'LangGraph vs CrewAI Enterprise', path: '/compare/langgraph-vs-crewai-enterprise' },
-        { name: 'Private VPC vLLM vs Azure OpenAI', path: '/compare/private-vpc-vllm-vs-azure-openai' },
-        { name: 'Custom Agents vs Zapier Enterprise', path: '/compare/custom-multi-agent-systems-vs-zapier-enterprise' },
-        { name: 'Deterministic FSM vs ReAct Loops', path: '/compare/deterministic-state-machines-vs-react-agents' },
-        { name: 'Elesium vs Traditional IT Consultancies', path: '/compare/elesium-vs-traditional-it-consultancies' },
+        { name: 'LangGraph vs CrewAI Enterprise', path: '/compare/langgraph-vs-crewai-enterprise/' },
+        { name: 'Private VPC vLLM vs Azure OpenAI', path: '/compare/private-vpc-vllm-vs-azure-openai/' },
+        { name: 'Custom Agents vs Zapier Enterprise', path: '/compare/custom-multi-agent-systems-vs-zapier-enterprise/' },
+        { name: 'Deterministic FSM vs ReAct Loops', path: '/compare/deterministic-state-machines-vs-react-agents/' },
+        { name: 'Elesium vs Traditional IT Consultancies', path: '/compare/elesium-vs-traditional-it-consultancies/' },
     ];
 
     return (
@@ -57,9 +57,9 @@ export default function DownloadFooter() {
                             </span>
                             <span>Direct Engineering Intake SLA</span>
                         </div>
-                        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <p className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             Direct Principal Systems Architect Pairing
-                        </h3>
+                        </p>
                         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                             Zero sales friction. Connect directly with our core engineering desk in Shivamogga, Karnataka via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
                         </p>
@@ -75,7 +75,7 @@ export default function DownloadFooter() {
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium px-5 py-3.5 rounded-full text-sm transition-all text-gray-800 dark:text-gray-200"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
@@ -88,7 +88,7 @@ export default function DownloadFooter() {
                     
                     {/* Column 1: Main Navigation */}
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
+                        <p className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Navigation</p>
                         <ul className="flex flex-col gap-2.5">
                             {mainNavigation.map((item) => (
                                 <li key={item.name}>
@@ -106,7 +106,7 @@ export default function DownloadFooter() {
                     {/* Column 2: Solutions Hub */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Enterprise Solutions</h4>
+                            <p className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Enterprise Solutions</p>
                             <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                                 3,765 Workflows
                             </span>
@@ -125,7 +125,7 @@ export default function DownloadFooter() {
                             ))}
                             <li className="pt-1">
                                 <Link
-                                    to="/solutions"
+                                    to="/solutions/"
                                     className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
                                     Explore All 3,765 Solutions &rarr;
@@ -137,7 +137,7 @@ export default function DownloadFooter() {
                     {/* Column 3: Engineering Simulators */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Engineering Tools</h4>
+                            <p className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Engineering Tools</p>
                             <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                                 75 Simulators
                             </span>
@@ -156,7 +156,7 @@ export default function DownloadFooter() {
                             ))}
                             <li className="pt-1">
                                 <Link
-                                    to="/resources"
+                                    to="/resources/"
                                     className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
                                     View All 75 Engineering Tools &rarr;
@@ -168,7 +168,7 @@ export default function DownloadFooter() {
                     {/* Column 4: Architecture Battlecards */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Architecture</h4>
+                            <p className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Architecture</p>
                             <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
                                 Battlecards
                             </span>
@@ -187,7 +187,7 @@ export default function DownloadFooter() {
                             ))}
                             <li className="pt-1">
                                 <Link
-                                    to="/compare"
+                                    to="/compare/"
                                     className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
                                     View All Comparisons &rarr;
@@ -226,12 +226,11 @@ export default function DownloadFooter() {
                 <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
                     <p>© {new Date().getFullYear()} Elesium Systems Pvt. Ltd. All rights reserved.</p>
                     <div className="flex items-center gap-4 flex-wrap">
-                        <Link to="/authors/chaman-shah" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
-                        <Link to="/ai-automation-agency-india" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
+                        <Link to="/authors/chaman-shah/" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
+                        <Link to="/ai-automation-agency-india/" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
                         <Link to="/commercial-directory.html" className="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</Link>
-                        <Link to="/resources" className="hover:text-black dark:hover:text-white transition">Resources</Link>
-                        <Link to="/waitlist" className="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</Link>
-                        <Link to="/sitemap-commercial-top100.xml" className="hover:text-black dark:hover:text-white transition">Top-100 Sitemap</Link>
+                        <Link to="/resources/" className="hover:text-black dark:hover:text-white transition">Resources</Link>
+                        <Link to="/waitlist/" className="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</Link>
                         <Link to="/sitemap.xml" className="hover:text-black dark:hover:text-white transition">Sitemap</Link>
                     </div>
                 </div>

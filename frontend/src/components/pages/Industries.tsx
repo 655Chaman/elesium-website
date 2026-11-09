@@ -172,12 +172,21 @@ export default function Industries() {
             <Helmet>
                 <title>AI Automation for Every Industry | Elesium India</title>
                 <meta name="description" content="Elesium delivers AI automation across BFSI, Healthcare, SaaS, Manufacturing and more. India's trusted AI partner for enterprise automation." />
-                <link rel="canonical" href="https://elesium.online/markets" />
+                <link rel="canonical" href="https://elesium.online/markets/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="AI Automation for Every Industry | Elesium India" />
+                <meta property="og:description" content="Elesium delivers AI automation across BFSI, Healthcare, SaaS, Manufacturing and more." />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta property="og:url" content="https://elesium.online/markets/" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="AI Automation for Every Industry | Elesium India" />
+                <meta name="twitter:description" content="Elesium delivers AI automation across BFSI, Healthcare, SaaS, Manufacturing and more." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">
                     {JSON.stringify(structuredData)}
                 </script>
             </Helmet>
-            <h1 className="sr-only">AI Automation Solutions for Every Industry in India</h1>
 
             <main className="max-w-6xl mx-auto px-5 md:px-8">
                 {/* Breadcrumbs */}
@@ -203,7 +212,7 @@ export default function Industries() {
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-950 dark:text-white leading-[1.1]">
-                        Master Markets.
+                        AI Automation Solutions for Enterprise Markets
                     </h1>
                     <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                         We orchestrate high-ticket dealflow and secure contract placement across six critical master markets. Our advanced matching systems connect Tier-1 primes, investment firms, and enterprise operators with friction-free precision.
@@ -319,7 +328,7 @@ export default function Industries() {
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>

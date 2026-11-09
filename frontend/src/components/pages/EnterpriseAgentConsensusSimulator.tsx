@@ -123,7 +123,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
           name="description"
           content="Simulate and benchmark multi-agent consensus architectures: single-agent execution vs naive majority voting vs sovereign BFT state-machine quorum. Calculate sub-450ms verification, 99.98% decision accuracy, and zero rogue agent risk."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-consensus-byzantine-fault-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-consensus-byzantine-fault-simulator/" />
       </Helmet>
 
       {/* Top Banner / Breadcrumb */}
@@ -132,7 +132,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
           <div className="flex items-center gap-2 text-slate-400">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/resources" className="hover:text-white transition-colors">Interactive Tools</Link>
+            <Link to="/resources/" className="hover:text-white transition-colors">Interactive Tools</Link>
             <span>/</span>
             <span className="text-cyan-400 font-mono">Multi-Agent Consensus Simulator</span>
           </div>
@@ -601,7 +601,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                 </ExpandableScreenContent>
               </ExpandableScreen>
               <Link
-                to="/solutions"
+                to="/solutions/"
                 className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
               >
                 Explore All Sovereign Solutions

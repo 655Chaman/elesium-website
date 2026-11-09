@@ -34,8 +34,8 @@ export default function HeroSection() {
                                 alt="Elesium Background Watermark"
                                 width="128"
                                 height="128"
-                                loading="eager"
-                                fetchPriority="high"
+                                loading="lazy"
+                                fetchPriority="low"
                                 className="w-24 h-24 md:w-32 md:h-32 object-contain opacity-[0.08] dark:opacity-[0.12] select-none pointer-events-none"
                                 style={{ transform: 'translateX(28px)' }}
                             />
@@ -90,7 +90,7 @@ export default function HeroSection() {
                             Initiate AI Audit (WhatsApp)
                         </InteractiveHoverButton>
                         <Link 
-                            to="/waitlist" 
+                            to="/waitlist/" 
                             className="h-10 px-5 text-xs sm:text-sm font-semibold rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-all flex items-center gap-1.5 shadow-sm"
                         >
                             ele-in SaaS Waitlist &rarr;

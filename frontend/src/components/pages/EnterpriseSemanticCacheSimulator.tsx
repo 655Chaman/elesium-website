@@ -134,7 +134,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
           name="description"
           content="Simulate and benchmark Enterprise AI Semantic Vector Caching (Redis Stack, Milvus, pgvector) vs raw uncached LLM calls. Model cosine similarity thresholds, sub-10ms lookup latencies, and token cost reductions."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-semantic-cache-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-semantic-cache-simulator/" />
       </Helmet>
 
       {/* Hero Header */}
@@ -475,16 +475,16 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
         <div className="mt-12 border-t border-slate-800/60 pt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             Explore related sovereign solutions:{' '}
-            <Link to="/solutions" className="text-cyan-400 hover:underline">
+            <Link to="/solutions/" className="text-cyan-400 hover:underline">
               Enterprise AI Solutions Hub
             </Link>{' '}
             &bull;{' '}
-            <Link to="/compare" className="text-cyan-400 hover:underline">
+            <Link to="/compare/" className="text-cyan-400 hover:underline">
               Architecture Comparison Hub
             </Link>
           </div>
           <div>
-            <Link to="/tools/enterprise-ai-roi-calculator" className="text-slate-400 hover:text-white transition">
+            <Link to="/tools/enterprise-ai-roi-calculator/" className="text-slate-400 hover:text-white transition">
               Enterprise ROI Calculator &rarr;
             </Link>
           </div>

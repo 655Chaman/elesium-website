@@ -139,7 +139,7 @@ export default function EnterpriseGpuCostCalculator() {
     'applicationCategory': 'BusinessApplication',
     'operatingSystem': 'Any',
     'description': 'Interactive FinOps calculator comparing self-hosted sovereign GPU clusters (NVIDIA H100, H200, A100) vs hyperscaler closed APIs (Claude 3.5, GPT-4o) with VRAM sizing and roofline throughput modeling.',
-    'url': 'https://elesium.online/tools/enterprise-gpu-finops-cost-calculator',
+    'url': 'https://elesium.online/tools/enterprise-gpu-finops-cost-calculator/',
     'offers': {
       '@type': 'Offer',
       'price': '0',
@@ -160,13 +160,13 @@ export default function EnterpriseGpuCostCalculator() {
           name="description"
           content="Calculate 3-year TCO, VRAM sizing, and token throughput comparing self-hosted sovereign NVIDIA H100/H200 clusters against Claude 3.5 Sonnet and GPT-4o APIs."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-gpu-finops-cost-calculator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-gpu-finops-cost-calculator/" />
         <meta property="og:title" content="Enterprise GPU FinOps & Throughput Calculator | Elesium" />
         <meta
           property="og:description"
           content="Calculate 3-year TCO, VRAM sizing, and token throughput comparing self-hosted sovereign NVIDIA H100/H200 clusters against Claude 3.5 Sonnet and GPT-4o APIs."
         />
-        <meta property="og:url" content="https://elesium.online/tools/enterprise-gpu-finops-cost-calculator" />
+        <meta property="og:url" content="https://elesium.online/tools/enterprise-gpu-finops-cost-calculator/" />
         <script type="application/ld+json">{JSON.stringify(schemaJson)}</script>
       </Helmet>
 
@@ -177,7 +177,7 @@ export default function EnterpriseGpuCostCalculator() {
           <nav className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-6">
             <Link to="/" className="hover:text-sky-400 transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/solutions" className="hover:text-sky-400 transition-colors">Solutions</Link>
+            <Link to="/solutions/" className="hover:text-sky-400 transition-colors">Solutions</Link>
             <span>/</span>
             <span className="text-slate-200">GPU FinOps &amp; Throughput Calculator</span>
           </nav>

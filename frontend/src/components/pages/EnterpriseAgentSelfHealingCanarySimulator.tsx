@@ -120,7 +120,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           name="description"
           content="Simulate and benchmark autonomous agent self-healing architectures. Compare unmonitored monolithic rollouts against naive retry death loops and sovereign statistical shadow canaries with sub-320ms rollback."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-self-healing-canary-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-self-healing-canary-simulator/" />
       </Helmet>
 
       <div className="max-w-6xl mx-auto space-y-10">
@@ -506,7 +506,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             </ExpandableScreen>
 
             <Link
-              to="/solutions"
+              to="/solutions/"
               className="px-6 py-3 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-300 font-medium text-sm transition"
             >
               Explore Sovereign Solutions

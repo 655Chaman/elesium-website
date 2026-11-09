@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
     ShieldCheck, 
@@ -206,6 +206,30 @@ export default function Waitlist() {
     const selectClass =
         'w-full px-4 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#121212] text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500/50 dark:focus:ring-emerald-400/50 outline-none transition-all text-[14px] cursor-pointer appearance-none';
 
+    const location = useLocation();
+    const pathname = location.pathname.toLowerCase();
+    const isBookAudit = pathname.includes('book-audit');
+    const isAudit = !isBookAudit && pathname.includes('audit');
+
+    const canonicalPath = isBookAudit 
+        ? '/book-audit/' 
+        : isAudit 
+        ? '/audit/' 
+        : '/waitlist/';
+    const canonicalUrl = `https://elesium.online${canonicalPath}`;
+
+    const pageTitle = (isBookAudit || isAudit)
+        ? 'Schedule Enterprise AI Architecture Audit | Elesium'
+        : 'ele-in SaaS Waitlist | Enterprise AI | Elesium';
+
+    const pageDescription = (isBookAudit || isAudit)
+        ? 'Book a 90-minute technical scope, data sovereignty risk audit, and deterministic multi-agent roadmap led by Chaman Shah. Confidential under mutual NDA.'
+        : 'Join the private alpha waitlist for ele-in, Elesium\'s autonomous multi-agent enterprise SaaS platform. Deploy deterministic workflows with DPDP compliance.';
+
+    const breadcrumbLabel = (isBookAudit || isAudit)
+        ? 'Schedule Architecture Audit'
+        : 'ele-in SaaS Waitlist';
+
     return (
         <motion.div 
             key="ele-in-waitlist-portal"
@@ -216,23 +240,29 @@ export default function Waitlist() {
             className="relative min-h-[100vh] pt-24 pb-20 px-5 md:px-8 bg-white dark:bg-black text-gray-900 dark:text-white font-sans transition-colors duration-300"
         >
             <Helmet>
-                <title>ele-in Early Access Waitlist | Sovereign Enterprise AI SaaS Platform | Elesium</title>
-                <meta
-                    name="description"
-                    content="Join the exclusive private alpha waitlist for ele-in, Elesium's autonomous multi-agent enterprise SaaS platform. Deploy sovereign, deterministic AI workflows with zero prompt leakage and statutory DPDP Act compliance."
-                />
-                <link rel="canonical" href="https://elesium.online/waitlist" />
-                <meta property="og:title" content="ele-in Early Access Waitlist | Sovereign Enterprise AI SaaS" />
-                <meta property="og:description" content="Request private alpha access to ele-in, India's most advanced autonomous enterprise AI SaaS operating system by Elesium." />
-                <meta property="og:url" content="https://elesium.online/waitlist" />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription} />
+                <link rel="canonical" href={canonicalUrl} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={pageTitle} />
+                <meta property="og:description" content={pageDescription} />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={pageDescription} />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
             </Helmet>
+
+            <main id="main-content">
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Breadcrumb Navigation */}
                 <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-8" aria-label="Breadcrumb">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
                     <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                    <span className="text-gray-900 dark:text-gray-200">ele-in SaaS Waitlist</span>
+                    <span className="text-gray-900 dark:text-gray-200">{breadcrumbLabel}</span>
                 </nav>
                 
                 {/* Contextual Referral Banner */}
@@ -671,6 +701,7 @@ export default function Waitlist() {
                     <TrustProofRibbon />
                 </div>
             </div>
+            </main>
             <WhatsAppModal />
         </motion.div>
     );

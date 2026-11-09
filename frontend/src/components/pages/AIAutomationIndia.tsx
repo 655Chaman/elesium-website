@@ -482,13 +482,21 @@ export default function AIAutomationIndia() {
     };
 
     return (
-        <div className="pt-24 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
+        <main id="main-content" className="pt-24 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300 relative z-10 overflow-hidden">
             <Helmet>
-                <title>Best Enterprise AI Company in India | #1 Top AI Automation Agency | Elesium</title>
-                <meta name="description" content="Elesium is recognized as the best enterprise AI company and top AI automation agency in India. We engineer custom LangGraph agentic workflows, private VPC deployments, and sub-200ms ERP automation with guaranteed 90-day ROI." />
-                <link rel="canonical" href="https://elesium.online/ai-automation-agency-india" />
-                <meta property="og:title" content="Best Enterprise AI Company in India | Elesium" />
-                <meta property="og:description" content="Elesium is recognized as the best enterprise AI company and top AI automation agency in India. Sovereign multi-agent systems on private VPC infrastructure." />
+                <title>Best AI &amp; Automation Agency in India | Elesium</title>
+                <meta name="description" content="India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI." />
+                <link rel="canonical" href="https://elesium.online/ai-automation-agency-india/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Best AI &amp; Automation Agency in India | Elesium" />
+                <meta property="og:description" content="India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI." />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta property="og:url" content="https://elesium.online/ai-automation-agency-india/" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="Best AI &amp; Automation Agency in India | Elesium" />
+                <meta name="twitter:description" content="India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(jsonLdLocalBusiness)}</script>
                 <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
                 <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
@@ -553,7 +561,7 @@ export default function AIAutomationIndia() {
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link 
-                            to="/waitlist" 
+                            to="/waitlist/" 
                             className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
                             <span>ele-in SaaS Waitlist</span>
@@ -564,7 +572,7 @@ export default function AIAutomationIndia() {
                     {/* Video Masterclass Architecture Teardown Link */}
                     <div className="flex justify-center mb-10">
                         <Link
-                            to="/videos/enterprise-ai-automation-india-2026"
+                            to="/videos/enterprise-ai-automation-india-2026/"
                             className="group inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-200 shadow-sm"
                         >
                             <span className="flex items-center justify-center w-8 h-8 rounded-xl bg-black text-white dark:bg-white dark:text-black font-bold text-xs shadow-sm">
@@ -749,21 +757,21 @@ export default function AIAutomationIndia() {
                         <div className="p-6 bg-gray-50/50 dark:bg-white/[0.02] border-t border-black/10 dark:border-white/10 flex flex-wrap items-center justify-between gap-4">
                             <div className="flex flex-wrap items-center gap-4">
                                 <Link
-                                    to="/compare/elesium-vs-traditional-it-consultancies"
+                                    to="/compare/elesium-vs-traditional-it-consultancies/"
                                     className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
                                 >
                                     Read Full TCS, Infosys &amp; Wipro Battlecard &rarr;
                                 </Link>
                                 <span className="text-gray-300 dark:text-gray-700 hidden sm:inline">•</span>
                                 <Link
-                                    to="/compare/elesium-vs-big-4-consulting-firms"
+                                    to="/compare/elesium-vs-big-4-consulting-firms/"
                                     className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-blue-600 dark:text-blue-400 hover:underline"
                                 >
                                     Read Big 4 (PwC, EY, Deloitte, KPMG) Battlecard &rarr;
                                 </Link>
                             </div>
                             <Link
-                                to="/compare"
+                                to="/compare/"
                                 className="inline-flex items-center gap-1.5 text-xs font-mono text-gray-500 hover:text-black dark:hover:text-white transition-colors"
                             >
                                 View All 12 Architectural Battlecards &rarr;
@@ -1337,7 +1345,7 @@ export default function AIAutomationIndia() {
                                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                             </button>
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
                             >
                                 <Calendar className="w-4 h-4 text-emerald-400" />
@@ -1349,6 +1357,6 @@ export default function AIAutomationIndia() {
 
             </div>
             <WhatsAppModal />
-        </div>
+        </main>
     )
 }

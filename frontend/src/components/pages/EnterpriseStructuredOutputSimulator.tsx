@@ -191,7 +191,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
             <div className="flex items-center space-x-2 text-slate-400">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
               <span>/</span>
-              <Link to="/resources" className="hover:text-white transition-colors">Tools</Link>
+              <Link to="/resources/" className="hover:text-white transition-colors">Tools</Link>
               <span>/</span>
               <span className="text-sky-400 font-medium">Structured Output &amp; Grammar Decoding Simulator</span>
             </div>

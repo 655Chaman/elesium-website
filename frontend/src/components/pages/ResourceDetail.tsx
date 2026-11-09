@@ -81,8 +81,8 @@ export default function ResourceDetail() {
                 <meta property="og:title" content={`${resource.title} | Resources | Elesium`} />
                 <meta property="og:description" content={resource.description} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`https://elesium.online/resources/${resource.slug}`} />
-                <link rel="canonical" href={`https://elesium.online/resources/${resource.slug}`} />
+                <meta property="og:url" content={`https://elesium.online/resources/${resource.slug}/`} />
+                <link rel="canonical" href={`https://elesium.online/resources/${resource.slug}/`} />
             </Helmet>
 
             <main className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export default function ResourceDetail() {
                         Home
                     </Link>
                     <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                    <Link to="/resources" className="hover:text-black dark:hover:text-white transition-colors">
+                    <Link to="/resources/" className="hover:text-black dark:hover:text-white transition-colors">
                         Resources
                     </Link>
                     <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -158,7 +158,7 @@ export default function ResourceDetail() {
                             </a>
 
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="inline-flex items-center gap-1.5 px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 font-medium text-xs sm:text-sm transition-all"
                             >
                                 <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
@@ -306,7 +306,7 @@ export default function ResourceDetail() {
                                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                                 </button>
                                 <Link
-                                    to="/waitlist"
+                                    to="/waitlist/"
                                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
                                 >
                                     <span>ele-in SaaS Waitlist &rarr;</span>
@@ -317,7 +317,7 @@ export default function ResourceDetail() {
                         {/* Article Footer Navigation */}
                         <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">
                             <Link
-                                to="/resources"
+                                to="/resources/"
                                 className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
                             >
                                 <ArrowLeft className="h-4 w-4" />

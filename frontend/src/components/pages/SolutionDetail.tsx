@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -16,9 +16,35 @@ import {
     MessageSquare,
     Sparkles
 } from 'lucide-react'
-import { getSolutionBySlug, solutionsData, SolutionRecord } from '../../data/solutionsData'
+import { SolutionRecord, getRelatedSolutions } from '../../data/solutionsHubData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { getRotatingAnchorText } from '../../lib/seoAnchors'
+
+declare global {
+    interface Window {
+        __INITIAL_SOLUTION__?: SolutionRecord;
+    }
+}
+
+function getInitialSolution(slug?: string): SolutionRecord | null {
+    if (!slug || typeof window === 'undefined') return null;
+    const win = window as any;
+    if (win.__INITIAL_SOLUTION__ && win.__INITIAL_SOLUTION__.slug === slug) {
+        return win.__INITIAL_SOLUTION__;
+    }
+    try {
+        const el = document.getElementById('__SOLUTION_DATA__');
+        if (el && el.textContent) {
+            const parsed = JSON.parse(el.textContent);
+            if (parsed && parsed.slug === slug) {
+                return parsed;
+            }
+        }
+    } catch {
+        // ignore parse error
+    }
+    return null;
+}
 
 export default function SolutionDetail() {
     const { slug } = useParams<{ slug: string }>()
@@ -26,18 +52,80 @@ export default function SolutionDetail() {
     const [copied, setCopied] = useState(false)
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
 
-    const solution: SolutionRecord | undefined = useMemo(() => {
-        if (!slug) return undefined
-        return getSolutionBySlug(slug)
+    const [solution, setSolution] = useState<SolutionRecord | null>(() => getInitialSolution(slug))
+    const [loading, setLoading] = useState<boolean>(() => !getInitialSolution(slug))
+    const [notFound, setNotFound] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (!slug) {
+            setNotFound(true)
+            setLoading(false)
+            return
+        }
+
+        if (solution && solution.slug === slug) {
+            setLoading(false)
+            return
+        }
+
+        const initial = getInitialSolution(slug)
+        if (initial) {
+            setSolution(initial)
+            setLoading(false)
+            return
+        }
+
+        let cancelled = false
+        setLoading(true)
+
+        fetch(`/data/solutions/${slug}.json`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`)
+                return res.json()
+            })
+            .then((data: SolutionRecord) => {
+                if (!cancelled) {
+                    setSolution(data)
+                    setLoading(false)
+                }
+            })
+            .catch(() => {
+                if (!cancelled) {
+                    setNotFound(true)
+                    setLoading(false)
+                }
+            })
+
+        return () => {
+            cancelled = true
+        }
     }, [slug])
 
-    if (!solution) {
-        return <Navigate to="/solutions" replace />
+    const relatedSolutions = useMemo(() => {
+        if (!solution) return []
+        return getRelatedSolutions(solution.hubCategory, solution.slug)
+    }, [solution])
+
+    if (loading && !solution) {
+        return (
+            <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-pulse space-y-8">
+                    <div className="h-4 w-48 bg-gray-200 dark:bg-white/10 rounded" />
+                    <div className="h-12 w-3/4 bg-gray-200 dark:bg-white/10 rounded" />
+                    <div className="h-6 w-1/2 bg-gray-200 dark:bg-white/10 rounded" />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+                        <div className="h-32 bg-gray-200 dark:bg-white/10 rounded-xl" />
+                        <div className="h-32 bg-gray-200 dark:bg-white/10 rounded-xl" />
+                        <div className="h-32 bg-gray-200 dark:bg-white/10 rounded-xl" />
+                    </div>
+                </div>
+            </article>
+        )
     }
 
-    const relatedSolutions = solutionsData
-        .filter(s => s.hubCategory === solution.hubCategory && s.slug !== solution.slug)
-        .slice(0, 3)
+    if (notFound || !solution) {
+        return <Navigate to="/solutions/" replace />
+    }
 
     const handleCopyUrl = () => {
         navigator.clipboard.writeText(window.location.href)
@@ -67,15 +155,22 @@ export default function SolutionDetail() {
     ]
 
     return (
+        <main id="main-content">
         <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-24 selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
                 <title>{solution.title}</title>
                 <meta name="description" content={solution.metaDescription} />
-                <link rel="canonical" href={`https://elesium.online/solutions/${solution.slug}`} />
+                <link rel="canonical" href={`https://elesium.online/solutions/${solution.slug}/`} />
                 <meta property="og:title" content={solution.title} />
                 <meta property="og:description" content={solution.metaDescription} />
-                <meta property="og:url" content={`https://elesium.online/solutions/${solution.slug}`} />
+                <meta property="og:url" content={`https://elesium.online/solutions/${solution.slug}/`} />
                 <meta property="og:type" content="article" />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content={solution.title} />
+                <meta name="twitter:description" content={solution.metaDescription} />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 {solution.jsonLdSchema && (
                     <script type="application/ld+json">{solution.jsonLdSchema}</script>
                 )}
@@ -84,13 +179,13 @@ export default function SolutionDetail() {
             <WhatsAppModal />
 
             {/* Breadcrumb Navigation (<= 2 clicks to home, 1 click to hub) */}
-            <div className="max-w-5xl mx-auto px-6 mb-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
                         Home
                     </Link>
                     <ChevronRight className="w-3 h-3 text-gray-400" />
-                    <Link to="/solutions" className="hover:text-black dark:hover:text-white transition-colors">
+                    <Link to="/solutions/" className="hover:text-black dark:hover:text-white transition-colors">
                         Solutions
                     </Link>
                     <ChevronRight className="w-3 h-3 text-gray-400" />
@@ -101,7 +196,7 @@ export default function SolutionDetail() {
             </div>
 
             {/* UPPER HALF (The 80% Unique Copy Rule + Mobile CTA Hierarchy) */}
-            <header className="max-w-5xl mx-auto px-6 mb-16">
+            <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
                 <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-gray-100 dark:border-white/10">
                     <div className="flex items-center gap-3">
                         <span className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5">
@@ -131,9 +226,9 @@ export default function SolutionDetail() {
                   H1 Tag -> Intro Paragraph -> CTA Button -> Hero Graphic
                   Never push the CTA button below the fold on mobile screens!
                 */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                    {/* Copy Column (Span 7) */}
-                    <div className="lg:col-span-7 flex flex-col">
+                <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    {/* Copy Column (Span 8) */}
+                    <div className="xl:col-span-8 min-w-0 w-full flex flex-col">
                         {/* 1. EXACT H1 Tag (Tri-Aligned) */}
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-6 text-gray-900 dark:text-white">
                             {solution.h1}
@@ -161,7 +256,7 @@ export default function SolutionDetail() {
                             </button>
 
                             <Link
-                                to="/waitlist"
+                                to="/waitlist/"
                                 className="px-5 py-3.5 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 text-gray-800 dark:text-gray-200 shadow-sm"
                             >
                                 <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
@@ -179,8 +274,8 @@ export default function SolutionDetail() {
                         )}
                     </div>
 
-                    {/* 4. Hero Graphic / Terminal Simulator (Rendered AFTER CTA on mobile) */}
-                    <div className="lg:col-span-5 flex flex-col gap-4">
+                    {/* 4. Hero Graphic / Terminal Simulator (Sticky on xl+, stacks cleanly below < xl) */}
+                    <div className="xl:col-span-4 w-full xl:sticky xl:top-28 space-y-6 mt-8 xl:mt-0 flex flex-col gap-4">
                         <div className="p-5 sm:p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-neutral-950 font-mono text-xs text-gray-800 dark:text-gray-300 shadow-sm">
                             <div className="flex items-center justify-between pb-3 mb-4 border-b border-gray-200 dark:border-white/10 text-[11px] text-gray-400">
                                 <div className="flex items-center gap-2">
@@ -239,7 +334,7 @@ export default function SolutionDetail() {
 
             {/* BLOCK 1 DETAIL: Feature Bullets */}
             {block1 && block1.bullets && block1.bullets.length > 0 && (
-                <section className="max-w-5xl mx-auto px-6 mb-16">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
                     <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
                         <h2 className="text-sm font-mono uppercase tracking-wider text-gray-400 mb-4">
                             Operational Capabilities
@@ -258,7 +353,7 @@ export default function SolutionDetail() {
 
             {/* BLOCK 2: Right Copy / Left Architecture Diagram (Visual Rhythm Rule) */}
             {block2 && (
-                <section className="max-w-5xl mx-auto px-6 my-20">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
                     <div className="p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-[#0c0c0c]">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             {/* Graphic / Bullets on Left */}
@@ -306,7 +401,7 @@ export default function SolutionDetail() {
 
             {/* BLOCK 3: Centered Specification Card with Subtle Divider Lines */}
             {block3 && (
-                <section className="max-w-5xl mx-auto px-6 my-20">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
                     <div className="p-8 sm:p-12 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a] shadow-sm">
                         <div className="text-center max-w-2xl mx-auto mb-10">
                             <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
@@ -341,7 +436,7 @@ export default function SolutionDetail() {
 
             {/* Sturm Module 10: Underlying Technical Architecture & Whitepaper Evidence Citation */}
             {solution.whitepaperCitation && (
-                <section className="max-w-5xl mx-auto px-6 my-14 md:my-16">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-14 md:my-16">
                     <div className="p-8 sm:p-10 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] relative overflow-hidden">
                         <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-gray-200 dark:border-white/10">
                             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
@@ -380,7 +475,7 @@ export default function SolutionDetail() {
 
                             <div className="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-2.5">
                                 <Link
-                                    to={`/signals/${solution.whitepaperCitation.slug}`}
+                                    to={`/signals/${solution.whitepaperCitation.slug}/`}
                                     className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs font-mono tracking-wide shadow-sm transition-all"
                                 >
                                     <span>Read Technical Whitepaper</span>
@@ -396,7 +491,7 @@ export default function SolutionDetail() {
             )}
 
             {/* LOWER HALF: Reusable Enterprise Trust & Security Components */}
-            <section className="max-w-5xl mx-auto px-6 my-14 md:my-16">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-14 md:my-16">
                 <div className="p-8 sm:p-10 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02]">
                     <div className="max-w-2xl mb-8 space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
@@ -434,7 +529,7 @@ export default function SolutionDetail() {
             </section>
 
             {/* FAQ Accordion Section */}
-            <section className="max-w-5xl mx-auto px-6 my-20">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
                 <div className="mb-8">
                     <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
                         Operational Questions
@@ -482,7 +577,7 @@ export default function SolutionDetail() {
             </section>
 
             {/* Related Solutions in Category (Zero Orphan Guarantee) */}
-            <section className="max-w-5xl mx-auto px-6 my-20">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
                 <div className="flex items-center justify-between mb-8">
                     <div>
                         <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
@@ -493,7 +588,7 @@ export default function SolutionDetail() {
                         </h2>
                     </div>
                     <Link
-                        to="/solutions"
+                        to="/solutions/"
                         className="text-xs font-mono text-gray-500 hover:text-black dark:hover:text-white flex items-center gap-1 transition-colors"
                     >
                         View All Solutions
@@ -505,7 +600,7 @@ export default function SolutionDetail() {
                     {relatedSolutions.map(rel => (
                         <Link
                             key={rel.slug}
-                            to={`/solutions/${rel.slug}`}
+                            to={`/solutions/${rel.slug}/`}
                             className="group p-5 rounded-xl border border-gray-200 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/30 transition-all flex flex-col justify-between"
                         >
                             <div className="space-y-2">
@@ -527,7 +622,7 @@ export default function SolutionDetail() {
             </section>
 
             {/* Final Bottom Conversion Card */}
-            <section className="max-w-5xl mx-auto px-6 mt-16">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
                 <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-white/[0.03] text-center space-y-6">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                         <Terminal className="w-3.5 h-3.5 text-emerald-400" />
@@ -554,7 +649,7 @@ export default function SolutionDetail() {
                         </button>
 
                         <Link
-                            to="/waitlist"
+                            to="/waitlist/"
                             className="px-6 py-4 rounded-full border border-white/20 hover:bg-white/10 text-white font-medium text-sm transition-all flex items-center gap-2"
                         >
                             <Sparkles className="w-4 h-4 text-emerald-400" />
@@ -564,12 +659,13 @@ export default function SolutionDetail() {
 
                     <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-gray-400">
                         <span>Regional Deployment Node:</span>
-                        <Link to="/ai-automation-agency-india" className="text-emerald-400 hover:text-emerald-300 underline transition-colors">
+                        <Link to="/ai-automation-agency-india/" className="text-emerald-400 hover:text-emerald-300 underline transition-colors">
                             {getRotatingAnchorText(solution.hubCategory || solution.category)} &rarr;
                         </Link>
                     </div>
                 </div>
             </section>
         </article>
+        </main>
     )
 }

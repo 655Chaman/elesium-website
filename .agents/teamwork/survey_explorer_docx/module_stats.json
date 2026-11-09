@@ -1,0 +1,534 @@
+{
+  "header": {
+    "p0": "GROWTH SCALE \u2014 COMPLETE RAW VERBATIM TRANSCRIPTS (MODULES 1 \u2013 9)",
+    "p1": "This document contains the complete, unedited raw transcripts for all 46 video files across Modules 1 to 9 in your GROWTH SCALE Google Drive folder.",
+    "word_count": 36,
+    "char_count": 213
+  },
+  "total_paragraphs": 1520,
+  "total_words": 193410,
+  "total_chars": 1159947,
+  "modules": [
+    {
+      "module_name": "MODULE 1",
+      "start_p": 2,
+      "end_p": 94,
+      "p_count": 93,
+      "special_note": null,
+      "video_count": 9,
+      "word_count": 42915,
+      "char_count": 251475,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of 1. SEO at Scale.mp4",
+          "start_p": 3,
+          "end_p": 4,
+          "p_count": 2,
+          "word_count": 6057,
+          "char_count": 36956
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of 2. A SEO Case Study.mp4",
+          "start_p": 5,
+          "end_p": 6,
+          "p_count": 2,
+          "word_count": 5654,
+          "char_count": 33842
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of 3. The SEO & Content Game-Changers to Grow Your Rankings.mp4",
+          "start_p": 7,
+          "end_p": 8,
+          "p_count": 2,
+          "word_count": 9600,
+          "char_count": 57283
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of 4. SEO for D2C by Trisha Vaidya, COO of Dr Vaidya.mp4",
+          "start_p": 9,
+          "end_p": 38,
+          "p_count": 30,
+          "word_count": 4647,
+          "char_count": 25579
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of 5. Revisiting Fundamentals of SEO.mp4",
+          "start_p": 39,
+          "end_p": 40,
+          "p_count": 2,
+          "word_count": 10209,
+          "char_count": 61691
+        },
+        {
+          "video_index": 6,
+          "video_title": "6. Copy of 6. Organic Traffic.mp4",
+          "start_p": 41,
+          "end_p": 51,
+          "p_count": 11,
+          "word_count": 2274,
+          "char_count": 11779
+        },
+        {
+          "video_index": 7,
+          "video_title": "7. Copy of 7. Introduction to Generative AI In Creatives.mp4",
+          "start_p": 52,
+          "end_p": 65,
+          "p_count": 14,
+          "word_count": 839,
+          "char_count": 4663
+        },
+        {
+          "video_index": 8,
+          "video_title": "8. Copy of 8. Generative AI ChatGPT For Sheets.mp4",
+          "start_p": 66,
+          "end_p": 92,
+          "p_count": 27,
+          "word_count": 3089,
+          "char_count": 16522
+        },
+        {
+          "video_index": 9,
+          "video_title": "9. Copy of 9. Creating Beautiful Decks Using Generative AI.mp4",
+          "start_p": 93,
+          "end_p": 94,
+          "p_count": 2,
+          "word_count": 544,
+          "char_count": 3151
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 2",
+      "start_p": 95,
+      "end_p": 96,
+      "p_count": 2,
+      "special_note": "[Empty Folder on Google Drive \u2014 0 Video Files Present]",
+      "video_count": 0,
+      "word_count": 12,
+      "char_count": 64,
+      "videos": []
+    },
+    {
+      "module_name": "MODULE 3",
+      "start_p": 97,
+      "end_p": 109,
+      "p_count": 13,
+      "special_note": null,
+      "video_count": 6,
+      "word_count": 30097,
+      "char_count": 185582,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of 1. Mastering Content for SEO - Content Fundamentals.mp4",
+          "start_p": 98,
+          "end_p": 99,
+          "p_count": 2,
+          "word_count": 5349,
+          "char_count": 33642
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of 2. Content Optimization, B2B and B2C Content Strategies.mp4",
+          "start_p": 100,
+          "end_p": 101,
+          "p_count": 2,
+          "word_count": 7881,
+          "char_count": 48080
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of 3. Guest Session - SEO Content Writing by Pepper Content.mp4",
+          "start_p": 102,
+          "end_p": 103,
+          "p_count": 2,
+          "word_count": 2141,
+          "char_count": 13288
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of 4. Guest Session - SEO Content Writing by Pepper Content Part 2.mp4",
+          "start_p": 104,
+          "end_p": 105,
+          "p_count": 2,
+          "word_count": 10060,
+          "char_count": 62681
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of 5. Guest Session - Fundamentals of Keyword Research.mp4",
+          "start_p": 106,
+          "end_p": 107,
+          "p_count": 2,
+          "word_count": 655,
+          "char_count": 3948
+        },
+        {
+          "video_index": 6,
+          "video_title": "6. Copy of 6. Fundamentals of Keyword Research Part 2.mp4",
+          "start_p": 108,
+          "end_p": 109,
+          "p_count": 2,
+          "word_count": 4009,
+          "char_count": 23934
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 4",
+      "start_p": 110,
+      "end_p": 124,
+      "p_count": 15,
+      "special_note": null,
+      "video_count": 7,
+      "word_count": 26533,
+      "char_count": 159958,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of 1. Crawling & screaming frog.mp4",
+          "start_p": 111,
+          "end_p": 112,
+          "p_count": 2,
+          "word_count": 5891,
+          "char_count": 35551
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of 2. Robots.txt.mp4",
+          "start_p": 113,
+          "end_p": 114,
+          "p_count": 2,
+          "word_count": 1767,
+          "char_count": 11044
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of Copy of 3. Page Speed.mp4",
+          "start_p": 115,
+          "end_p": 116,
+          "p_count": 2,
+          "word_count": 3062,
+          "char_count": 18458
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of Copy of 4. Duplication.mp4",
+          "start_p": 117,
+          "end_p": 118,
+          "p_count": 2,
+          "word_count": 2410,
+          "char_count": 14833
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of Copy of 5. Pagination.mp4",
+          "start_p": 119,
+          "end_p": 120,
+          "p_count": 2,
+          "word_count": 996,
+          "char_count": 6027
+        },
+        {
+          "video_index": 6,
+          "video_title": "6. Copy of Copy of 6. Week 3 QnA session with Kaushal.mp4",
+          "start_p": 121,
+          "end_p": 122,
+          "p_count": 2,
+          "word_count": 9019,
+          "char_count": 54615
+        },
+        {
+          "video_index": 7,
+          "video_title": "7. Copy of Copy of 7. Guest Session - Components of SEO.mp4",
+          "start_p": 123,
+          "end_p": 124,
+          "p_count": 2,
+          "word_count": 3386,
+          "char_count": 19421
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 5",
+      "start_p": 125,
+      "end_p": 712,
+      "p_count": 588,
+      "special_note": null,
+      "video_count": 5,
+      "word_count": 13392,
+      "char_count": 80027,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of Copy of 1. Faceted Navigation.mp4",
+          "start_p": 126,
+          "end_p": 127,
+          "p_count": 2,
+          "word_count": 2585,
+          "char_count": 16254
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of Copy of 2. Optimizing for Mobile devices.mp4",
+          "start_p": 128,
+          "end_p": 129,
+          "p_count": 2,
+          "word_count": 1906,
+          "char_count": 12054
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of Copy of 3. Sitemaps.mp4",
+          "start_p": 130,
+          "end_p": 708,
+          "p_count": 579,
+          "word_count": 4336,
+          "char_count": 23488
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of Copy of 4. AMP.mp4",
+          "start_p": 709,
+          "end_p": 710,
+          "p_count": 2,
+          "word_count": 760,
+          "char_count": 4678
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of Copy of 5. Optimizing JavaScript Websites.mp4",
+          "start_p": 711,
+          "end_p": 712,
+          "p_count": 2,
+          "word_count": 3803,
+          "char_count": 23544
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 6",
+      "start_p": 713,
+      "end_p": 945,
+      "p_count": 233,
+      "special_note": null,
+      "video_count": 5,
+      "word_count": 12928,
+      "char_count": 77657,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of Copy of 1.Links Fundamentals.mp4",
+          "start_p": 714,
+          "end_p": 715,
+          "p_count": 2,
+          "word_count": 3343,
+          "char_count": 20552
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of Copy of 2.Internal Linking.mp4",
+          "start_p": 716,
+          "end_p": 717,
+          "p_count": 2,
+          "word_count": 1036,
+          "char_count": 6482
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of Copy of 3.Backlink Analysis.mp4",
+          "start_p": 718,
+          "end_p": 941,
+          "p_count": 224,
+          "word_count": 1735,
+          "char_count": 9331
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of Copy of 4.Link Building Techniques.mp4",
+          "start_p": 942,
+          "end_p": 943,
+          "p_count": 2,
+          "word_count": 5063,
+          "char_count": 30857
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of Copy of 5.Manual Actions.mp4",
+          "start_p": 944,
+          "end_p": 945,
+          "p_count": 2,
+          "word_count": 1749,
+          "char_count": 10426
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 7",
+      "start_p": 946,
+      "end_p": 952,
+      "p_count": 7,
+      "special_note": null,
+      "video_count": 3,
+      "word_count": 13713,
+      "char_count": 84854,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of Copy of 1.International SEO.mp4",
+          "start_p": 947,
+          "end_p": 948,
+          "p_count": 2,
+          "word_count": 5620,
+          "char_count": 34916
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of Copy of 2.SEO Goals & Forecasting.mp4",
+          "start_p": 949,
+          "end_p": 950,
+          "p_count": 2,
+          "word_count": 5522,
+          "char_count": 33729
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of Copy of 3.Google Penalties.mp4",
+          "start_p": 951,
+          "end_p": 952,
+          "p_count": 2,
+          "word_count": 2569,
+          "char_count": 16200
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 8",
+      "start_p": 953,
+      "end_p": 1506,
+      "p_count": 554,
+      "special_note": null,
+      "video_count": 5,
+      "word_count": 20815,
+      "char_count": 126691,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of Copy of 1.E-Commerce SEO.mp4",
+          "start_p": 954,
+          "end_p": 1498,
+          "p_count": 545,
+          "word_count": 4065,
+          "char_count": 22762
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of Copy of 2.Website Migrations.mp4",
+          "start_p": 1499,
+          "end_p": 1500,
+          "p_count": 2,
+          "word_count": 4570,
+          "char_count": 28649
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of Copy of 3.Local SEO.mp4",
+          "start_p": 1501,
+          "end_p": 1502,
+          "p_count": 2,
+          "word_count": 2823,
+          "char_count": 17481
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of Copy of 3.Local SEO (1).mp4",
+          "start_p": 1503,
+          "end_p": 1504,
+          "p_count": 2,
+          "word_count": 2824,
+          "char_count": 17485
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of Copy of 4.Guest Session - SEO for E-Commerce.mp4",
+          "start_p": 1505,
+          "end_p": 1506,
+          "p_count": 2,
+          "word_count": 6531,
+          "char_count": 40305
+        }
+      ]
+    },
+    {
+      "module_name": "MODULE 9",
+      "start_p": 1507,
+      "end_p": 1519,
+      "p_count": 13,
+      "special_note": null,
+      "video_count": 6,
+      "word_count": 32969,
+      "char_count": 193425,
+      "videos": [
+        {
+          "video_index": 1,
+          "video_title": "1. Copy of Copy of 2.Evolution of AI in SEO by Babu Chakroborty, Head of Digital Marketing & Analytics.mp4",
+          "start_p": 1508,
+          "end_p": 1509,
+          "p_count": 2,
+          "word_count": 9384,
+          "char_count": 55855
+        },
+        {
+          "video_index": 2,
+          "video_title": "2. Copy of Copy of 3.Introduction to ChatGPT.mp4",
+          "start_p": 1510,
+          "end_p": 1511,
+          "p_count": 2,
+          "word_count": 4236,
+          "char_count": 24799
+        },
+        {
+          "video_index": 3,
+          "video_title": "3. Copy of Copy of 4.Everything about Bard.mp4",
+          "start_p": 1512,
+          "end_p": 1513,
+          "p_count": 2,
+          "word_count": 2909,
+          "char_count": 16234
+        },
+        {
+          "video_index": 4,
+          "video_title": "4. Copy of Copy of 5.Prompting.mp4",
+          "start_p": 1514,
+          "end_p": 1515,
+          "p_count": 2,
+          "word_count": 6239,
+          "char_count": 37053
+        },
+        {
+          "video_index": 5,
+          "video_title": "5. Copy of Copy of 6.OpenAI Playground.mp4",
+          "start_p": 1516,
+          "end_p": 1517,
+          "p_count": 2,
+          "word_count": 5680,
+          "char_count": 32891
+        },
+        {
+          "video_index": 6,
+          "video_title": "6. Copy of Copy of 7.Keyword Research using Generative AI.mp4",
+          "start_p": 1518,
+          "end_p": 1519,
+          "p_count": 2,
+          "word_count": 4519,
+          "char_count": 26584
+        }
+      ]
+    }
+  ]
+}

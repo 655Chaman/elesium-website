@@ -107,13 +107,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           name="description"
           content="Simulate and compare retrieval latency, memory footprint, recall@k, and 3-year TCO for PostgreSQL pgvector (HNSW) vs Pinecone, Qdrant, and Milvus for enterprise RAG."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-vector-db-latency-benchmark" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-vector-db-latency-benchmark/" />
         <meta property="og:title" content="Enterprise Vector DB & RAG Latency Benchmark Simulator | Elesium" />
         <meta
           property="og:description"
           content="Benchmark PostgreSQL pgvector (HNSW) vs Pinecone, Qdrant, and Milvus across vector dimensions, concurrency, and 3-year TCO."
         />
-        <meta property="og:url" content="https://elesium.online/tools/enterprise-vector-db-latency-benchmark" />
+        <meta property="og:url" content="https://elesium.online/tools/enterprise-vector-db-latency-benchmark/" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -124,7 +124,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-slate-400">
           <Link to="/" className="hover:text-white transition-colors">Home</Link>
           <span className="text-slate-600">/</span>
-          <Link to="/compare" className="hover:text-white transition-colors">Compare</Link>
+          <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
           <span className="text-slate-600">/</span>
           <span className="text-sky-400 font-medium">Vector DB Benchmark</span>
         </nav>

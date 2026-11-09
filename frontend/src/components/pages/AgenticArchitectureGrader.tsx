@@ -103,7 +103,7 @@ DIMENSION-BY-DIMENSION BREAKDOWN:
 PRESCRIBED REMEDIATION ROADMAP:
 ${results.recommendedRoadmap.map(r => `[${r.phase}] ${r.title}\nAction: ${r.action}\nImpact: ${r.impact}\n`).join('\n')}
 
-Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Principal AI Systems Architect at https://elesium.online/audit
+Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Principal AI Systems Architect at https://elesium.online/audit/
 ================================================================================
     `.trim();
 
@@ -117,7 +117,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     'name': 'Enterprise Agentic Architecture Fragility & Readiness Grader',
-    'url': 'https://elesium.online/tools/agentic-architecture-grader',
+    'url': 'https://elesium.online/tools/agentic-architecture-grader/',
     'description': 'Interactive diagnostic assessment evaluating enterprise AI agent stacks across workflow concurrency, orchestration topologies, inference boundaries, state persistence, and DPDP Act 2023 compliance.',
     'applicationCategory': 'DeveloperApplication',
     'operatingSystem': 'Any',
@@ -162,13 +162,13 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
           name="description"
           content="Assess your enterprise AI agent stack across 5 core dimensions: concurrency, orchestration topology, inference boundaries, state persistence, and compliance. Computes annual financial leakage."
         />
-        <link rel="canonical" href="https://elesium.online/tools/agentic-architecture-grader" />
+        <link rel="canonical" href="https://elesium.online/tools/agentic-architecture-grader/" />
         <meta property="og:title" content="Enterprise Agentic Architecture Fragility & Readiness Grader | Elesium" />
         <meta
           property="og:description"
           content="Interactive architectural diagnostic for enterprise AI systems. Audit failure risk, runaway token burn, and DPDP compliance."
         />
-        <meta property="og:url" content="https://elesium.online/tools/agentic-architecture-grader" />
+        <meta property="og:url" content="https://elesium.online/tools/agentic-architecture-grader/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -181,7 +181,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
               Home
             </Link>
             <span>/</span>
-            <Link to="/compare" className="hover:text-blue-400 transition-colors">
+            <Link to="/compare/" className="hover:text-blue-400 transition-colors">
               Architecture Hub
             </Link>
             <span>/</span>
@@ -621,21 +621,21 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                 </span>
                 <div className="space-y-2 text-xs">
                   <Link
-                    to="/compare/deterministic-state-machines-vs-react-agents"
+                    to="/compare/deterministic-state-machines-vs-react-agents/"
                     className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
                   >
                     <span>Deterministic FSM vs ReAct Loops</span>
                     <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
                   </Link>
                   <Link
-                    to="/compare/private-vpc-vllm-vs-azure-openai"
+                    to="/compare/private-vpc-vllm-vs-azure-openai/"
                     className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
                   >
                     <span>Private VPC vLLM vs Azure OpenAI</span>
                     <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
                   </Link>
                   <Link
-                    to="/compare/langgraph-vs-crewai-enterprise"
+                    to="/compare/langgraph-vs-crewai-enterprise/"
                     className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
                   >
                     <span>LangGraph vs CrewAI Enterprise</span>

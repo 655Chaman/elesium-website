@@ -1,0 +1,2396 @@
+{
+  "module_num": 5,
+  "module_id": "module_05",
+  "module_title": "MODULE 5",
+  "start_p": 125,
+  "end_p": 712,
+  "special_note": null,
+  "videos": [
+    {
+      "video_index": 1,
+      "video_title": "1. Copy of Copy of 1. Faceted Navigation.mp4",
+      "start_p": 126,
+      "end_p": 127,
+      "paragraphs": [
+        {
+          "p_idx": 127,
+          "text": "I'm really happy to see you in weekfour.This week it would be a continuation ofthe technical SEOmodule which we are looking at and I'mterming this as part two.In the previous week what we saw was afew concepts like crawling robots.txttxt page speed the duplication relatedchallenges and paginationand in this week we expect to covermultiple things like faceted navigationoptimizing for mobile devices site mapsempawebsitesso let's get started okay and uh justbefore we start I just wanted to cover afew concepts about the error reports.Since some of you had doubts on thisparticular thing, uh let's cover thisthing up first and then move into thedetails. So when it comes to errorcodes, one thing which is important forus to understand is this are the codeswhich arereceived from the serveror from the browser when a particularaction happens.The easier way to remember thisparticular error codesis to understand this concepts that heyanything starting with two means thatthe URL is working fine.Don't have to worry too much about it.Anything starting with 300 is used forredirection. So these are the pageswhich are redirected.Starting with four means these areclient errors and something which youneed to look into it closelyand five are server errors. So the codeswhich start with five are mostly mostlytemporary errors which would be therebecause let's say your server is notworking fine. As soon as the server isup it may start working fine, right?Those pages may start working fine. Sothat's something which you need toremembersuccessfulredirected client errors and servererrors. Okay. But there are a few codeswhich you need to be well aware of.One is the 200 code. You would have seenthis in the last week when we were goingthrough the screaming frogcrawling, right? Most of the pages werereturning 200which means the page were being crawledperfectly fine. Some were returning 301which means those pages were redirectedfrom one particular destination toother.Now the other interesting uh code is 302code. This is where I would like toinvest a few minutes.This code is for the temporaryredirection.Now when you speak of temporaryredirection what does that mean? So manytimes you would have uh let's say aparticular page on which there is somework going on and because of which youfeel that hey I'm not I'll not be ableto uh share this particular content withmy end users and that's where you may doa temporary redirection to some otherpage instead of giving a 404 page toyour users. So people coming on thisparticular page may temporarily be movedto some other pages. Now what does thisindicate to Google and other searchengines?So while the 301 code tells Google thatheythis particular page has beenpermanently moved. So what it does isany links which were being passed on tothe original pageare now considered as the links to thenew page.Right. So a part of the link juice thatis the value of having a backlink to aparticular page.Right. The value of having a backlink tothe particular page helps it gettingcrawled etc. And it enhances itsauthority etc. again right so it's animportant thing that a link is coming toa particular page but now since youmoved this particular pageyou want even the authority to be passedon to the new page isn't it now this canbe done with the help of a 301 code thatyou're trying to pass the authority alsowhich this particular page hasaccumulated the original page hasaccumulated to the new page via the 301redirect but in case of a 302 thisparticular authority is not passed forthe time ing becauseGoogle knows that okay you have put atemporary redirect and you may move itto the final destination or this pagemay even come back so that's where itdoes not pass on the authority of thatparticular page to any other page itwill hold that particular page in itsindex and try to rec crawl it after aparticular point in timeokay uh the other common error code is404 which is page.com right you had somepage something changed on the websiteAnd that's where what you did is uh thethe the server team just removed thatparticular page or they missed thatparticular page and now the page isthrowing a 404. Now these are valuablepages because there could be some linksdirected to this pages which have nowbecome four or four pages. Right? So inthat case you're missing on the linkjuice. Further understand the userright a user who's coming to yourwebsite clicking on a Google searchresult and landing on a 404 page rightwhich says page not found whatimpression would you leave on thatparticular user so you don't want thispages either on your website so you willbe able to detect this via searchconsole as well but if you find thisparticular page the ideal thing is tomake them 200 by either bringing thepage back or doing a 301 redirection andmovingthedirecting the URL to another URL. Whenit comes to 301 URL, you can tell yourhosting pro provider or the team who isengineering team who is managing theservers to help you put a 301 redirect.If you're managing your own website,let's say it's a WordPress, there willbe utilities and tools to do thisparticular thing. So look out for justsome plugins which can help you with 30redirection and it will be possibleright if you're doing it by yourself.The last one which I would like to coveris the soft 404. Now this are ideallyempty pages or pages which are not atall loading when the bot was trying tocrawl it and that's where this would bereturning a soft 404. Even for thispages you need to look into it carefullyand understand what's going wrong andbased on that correct this particularerrors right so these are some majorerror codes which you usually seeing itin search console in today's session weare going to refer to this codes a lotand that's where I felt that it'simportant to cover this thing up beforewe proceed further okay now let's moveahead and uh get into the facetednavigation sectionOkay. So the first question what isprecedented navigation?Now many of you are working one-commerce websites and on thee-commerce websites ideally you wouldhave seen that on the left hand side oreven somewhere else on the page uh youcould drill down into the particularpage filter it in a better manner andnavigate through the website.This is called as specific navigation.Now why are we studying this? What's theimportance of it? Nowone thing which happens is the facetednavigations are a great opportunity forcreating relevant links.However, ifit is handled improperly, it could bevery dangerous. So you have to use itvery carefully.And why are we creating back links?We're creating back links so that therelevant link juice can be passed fromone page to other page. So instead ofgetting links from outside, ifinternally by creating the links if youcould rank better, wouldn't it be aworthwhile thing to do? Right? So we arejust trying to create more back linksfrom within the website and those areinternal links. Okay. Now before we gofurther uh there is anotheruh few basic things which you need toknow. One is follow links. Uh these arethe links where you are telling theGoogle Google and other search enginesthat hey please follow this links fromthe original page to the new page andalso pass the link juice from the firstpage to the second page. That is thepage which is building a link to thesecond page. Pass the link juice fromthis page. And when you say no followlink it means that hey there is a linkbut you need not follow it neither passthe link juice. Um that's what isdocumented but we have seen that okayeven when there are no follow back linksthere is some benefit which thedestination page gets. We don't knowwhat's the actual things be behind it oris it just because of some otherelements but this is a generalobservationright. So it's it's not that uh if youhave complete uh no follow links comingfrom some particular website you shouldjust tell them hey better not link to mywebsite then give me a no follow linkdoesn't matter let it be even a nofollow link let the link get created.Okay so this is follow links and nofollow links. Now let's go into thedetails again of faceted navigation andunderstand how are we going to use thisin our faceted navigationimplementation.So now when building the links what isthe opportunity see uh you don't want tomake any UX change on the website rightand you know how much time does it takewhen you're actually working in anorganization large organization evenmaking some small changes to the websitepage it takes a considerable amount oftime isn't itbut there is an opportunity here withfacilitated navigation that withoutmaking any major changes on the UX youcan build the internal links and that'swhere we using this opportunity if youhave not already used this opportunity.So let's say one of the facetednavigation over here isfor pant fitting right and there aredifferent kinds of pants loose fit pantsregular fit pants skinny pants slim fitpants etc.Wouldn't you love to create pages likeloose fit trousers, regular fittrousers, skinny fit trousers, slim fittrousers, right? People are searchingfor those kind of longtail keywords aswell and you would like to rank yourwebsite for those kind of pages.Sowhat we could do is whenGoogle bot tries to crawl the loose fittrrower you're asking your engineers toput a link on that particular thing. Soit is let's say yoursite.com loose fittrouser that's the URL which you'recreating and this is an anchor linkwhich is created on the loose fit text.Now this will help the users as well asthe bots to transition from that initialURL to the loose fit trrower URL and itwill also pass the link choose from theprevious page to the loose fit trrowerpage.Now while this is goodwe were also speaking that facetednavigation should be used very wisely.Let's consider the waist size which isthe second type of faceted navigation onthe same page.Would you create back links or internallinks also for something liketrouser for men 23 size, trouser for men24 size, trouser for men 25 size,trouser for men 26 size.Not sure. You should check the searchvolume, right? If people are searchingfor it, you should do it.That's what Well, in this case, it's notrelevant, but consider the size oft-shirts. If they were specified as MsizT-shirts, L-siz t-shirts, XL-sizedt-shirts or triple XL size T-shirts,there could be some search volume forthat and you want to take the stepsaccordingly. Right? So looking at thesearch volume is very crucial before anytaking any such decisions on the uhimplementation. But in this particularcase, let's say if we do not find thesearch volume, what you want to do isyou want to ensure that the Google botdoesn't crawl through this particularpages and create pages withthat when for trrows for 23, trouserform 23, etc., 24, etc. So you are goingto use the ahref but include the real isequal to no follow. This is how youimplement a no follow tag on your page.So on the 22 text, you're going to putan anchor text. If there is any, you aregoing to ensure that this becomes a nofollow link and you will not allow thebot to follow through this particularlink. I hope you understood thisparticular part.Now there are other ways to implement inno follow. Either you could block allthose kind of pages with thewhere the folder size is being used anddisallow it from the robots.xt itself.Sorry, this will also help you to ensurethat at the robots.txt level itself thispage the bots get blocked and don'tcrawl through these pages.Why are we taking this approach? We aretaking this approach specifically toensure that the longtail keywordsget targetedwith this new pages which may getcreated, right? Loose fit trousers formenand longtail. If you remember from theprevious few weeks, there is aconsiderable amount of search volume.roughly around 70% of the search volumeshappen for the longtail and the otherkeywords after that. Right? So thatthat's where the tail keywords arereally important for you. So this couldhelp you target the longtail keywords.Now let's look at a story of ane-commerce store.This is the story uh of an e-commercestorewhich came to us a few years back.Nowwhen this website came to usthe overall pages on the website wereincreasing constantlyand at first sight it was a realdelight. Who wouldn't like to work onthe SEO of a fast growing website isn'tit? Because more the number of pages,the higher the possibility of rankingfor more keywords and definitely rankingfor more keywords will help you withmore sessions,more users etc.However, the challenge wasthe pages that were getting createdwere not the ideal set of pages which Iwould love to have on a website.So the pages that were create gettingcreated were something like this.Say your doommain.com/woman accessories woman bags bagsnetbook bags netbook bags bagsand so on.Now with this kind of URLs do you thinkGoogle is going to enjoy crawling thiswebsite?No. Isn't it? And that's what washappening. The pages were there. Googlewas ignoring this pages. And uh onechallenge which the website was facingis the sessions were completelyconstraint.So after analyzing this we wanted toremove this kind of pagesbutthis decisions are not easy when itcomes to the corporate world.Firstif you find such pages you need to getthe proof and definitely with the kindof proof that we had it was clear thatokay this pages are of no usebut there is a fear the fear of losingeven what you have right the website wasgetting organic sessions and themarketing team there was kind of adamantthat hey what if we even lose thesessions which we are getting we gettingthe sessions because there are lot manynumber of pages on this particularwebsite and that's helping Google torank us betterright and u so we should keep this pagesas it is and don't worry about it sinceyou're getting considerable amount oforganic sessions which is the bestchannel in terms of the overallportfolio of channels which is there onfor the website right for getting thismany organic session sessions.If we had to drive it through paid, wewould have to pay millions of rupees,all right, for gaining this manyauguring sessions. So, let it be let itbe flat. Now, this defeated the originalpurpose of these people getting us ontothe project itself, right? They wantedgrowth and that's where we came into thepicture.So, we raised this particular issue. Weraised this particular issue with thefounders of the organization. We toldthem that hey this particular challengeis there and we want it to be resolved.The founders understood the situationbut they said that hey Gausyour neck will be on the line for thiskind of decision. It works well and goodif notyou may have to exit this particularproject.So we took this particular risk andproceeded further.It took all the necessary steps in termsof redirection,canonicalization,etc., which helped us to start reducingthose URLs from 30 millionto somewhat around 1 million. Now, whilethe pages got indexed,it was 1.7 million when I took thescreenshot. So at 1.7 million itselfwhat started happening is the sessionson the website organic sessions comingfrom search engine optimizationstarted increasing tremendously.This and various other SEO effortshelped us gain multiple awards for thisparticular websiteand this should help you understand whatis the importance of technical SEO.While I see many people uh runningbehind other elements, one thing whichthey miss out is the importance oftechnical SEO. And this case TD is justto help you understand that howimportant technical SEO is in thisoverall work which you're doing.Time for some self-arning.This is easy.Does your website have facetednavigation?If yes, record the SEO task spreadsheettemplate which we had shared with you inthe previous week to record anyoptimization possibilities. I hope youall remember the sheet. If not, this isthe tracker which you would havereceived on your platform. Please usethe tracker toupdate all the issues and observationsthat you have.This would help us in the subsequentweeks. So I want you all to ensure thatyou're filling up this tracker as you goon. Right? U so we'll have need thisparticular sheet in the last week. Soplease maintain the sheet. It's veryimportant.That's all on the faceted navigationmodule. I'll see you in the next module.Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 2585,
+      "char_count": 16253
+    },
+    {
+      "video_index": 2,
+      "video_title": "2. Copy of Copy of 2. Optimizing for Mobile devices.mp4",
+      "start_p": 128,
+      "end_p": 129,
+      "paragraphs": [
+        {
+          "p_idx": 129,
+          "text": "Hello, welcome to the second module oftake 4.We are now going to understand moreabout the mobile devices and how to mooptimize your website for mobiledevices.When it comes to mobile devices,everyone would like to get their websiteranking much better on the Google searchresults, right?But even with this, let's understand whyis it becoming more and more importanteach day.What I'm going to share with you is justa snapshot from the Google Analyticsofone of the website.Now what you see over here is for thisparticular websitewhich gets more than 6 million userswithin a week or so.Almost around 95% of the users arecomingfrom the mobile devices. a smallpercentage from desktop and a smallerthan that percentage fromtabs etc.Now this is important to understand whenmost of your users are on mobile isn'tit that you want to give them the bestexperience on mobile then while yourwork happens on the desktop you need toensure that the mobile devices are welloptimized and that's the reason why weare getting into this particular module.Now before getting into the details ofoptimization first let's understand whatare the different configurationpossibilities when it comes to devices.So there are three major kinds ofconfigurations which are possible whenyou are handling a website. The firstone being the responsive design.Now what are we getting into? So let'ssay you have a desktop version and amobile version.You may have to either create the samewebsite for both the devicesor all the devices including the tab onewebsite taking care of all the differentversions of theuh sorry all the different devices oryou could create websites which havedifferent code written for differentdevices right so the website where thecode is the same for all the differentkind of devices is called responsivewebsite. Right? So that's a responsivedesign configuration. It's important foryou to understand because based on thisyour decisions have to be taken and alsoyou will have to start interacting withthe engineering team accordingly.So what happens with the responsivedesign is the view portwill adjust itselfas per the width of the screen.You need not do this. The engineeringteam will take care of it. But it's justthat you need to be aware that somethinglike this is there, right? And you needto speak that language. That's what iscrucial when you are an SEO.Now, how is it done? It's just done by asimple command where a meta is there forview port which specifies that hey thecontent width will will should beequivalent to the device width and thattakes care of this particular thing.remaining part is something for theengineering team to take care of not foryou to worry if they need some moredocumentation around it. I'm alsosharing this particular URL to help themunderstand how this particular thingneeds to be configured and you should beable to access this URL with youron the course platform. So please uhmake a use of it if your website isresponsive in nature and you are seeingsome errors from Google around that.Now this is one type of implementation.The other type of implementation isdynamic serving. And what happens withdynamic serving is that you haveone URLbut two different versions of HTML. Sothere is a different version of HTML forthe mobile devicesand a different version ofcode for the desktop. There could beeven the third kind of code for thetablets. That's quite possible. But allof them have a single URL. The mobile,desktop and the T all have a single URL.What happens is that the browser isgoing to sniff the user agent. Useragent is the umcode which your browsergets from the uh when you're trying tohit that particular server. Right? Sothe user will be able to the browserbased on that particular thinguh will be able to understand that heythis is a mobile device and the serverwill provide a proper appropriateversion of the website to thisparticular user agent based on the useragent and based on that different kindsof HTML are being served to differentusers coming from different devicesright so this was dynamic servingAnd then there are websites withcompletely separate URLs, right? So aseparate URL for maybe the mobile,separate URL for desktop.Andbecause of this, what happens? There aredifferent URLs. But yet the browsersniffing comes into the picture.And after the browser sniffing is done,the server will provide the relevantversion to the relevant device.Many of you would have seen websiteswith M do. So let's say mdo.youebsite.com.Right? This is a classic example ofdifferent URLs.Now few things which have to be takencare of to ensure that this kind ofconfiguration does not create anyduplication.So what needs to be done is on themobile version a canonical has to bedefined to the desktop version. This isone of the popular practice. So from themobile version we do the canonical tothe desktop version which does not hasthat m dot and on the desktop version wealso put the canonical which is a selfcanonical which is also crucial. Alongwith that we specify that hey this isthe alternate URL.So on the desktop version again you aredoing a handshake with the mobileversion of the code with this particularcommand. the alternate command where youspecify that the alternate URL ism.example.comin this case. So both the URLs have aproper handshake and Google knows thathey this two pages should be consideredas one single page not as two differentpageagain I'm not going going into the depthbecause then this particular topicitself I can cover it for the entire daybut uh yes I'm including the URL in theplatform so that at least in case youneed to go detailed onto this particularthing you and go into the details.Now when it comes to URL, let's look atsome of the best practices which arevery crucial.One thing is for you to ensure that themobile and desktop both have the samecontent. It should not be that hey I'musing different URLs so I can havedifferent content on different URLs.Won't be the right practice. It wouldcreate more challenges thanthe current challenges that you'refacing. Right? Uh the other thing is donot lazy load the main content. This isone of the other practice which we haveseen that some of the people what theydo is uh on some devices they will lazyload the content. Lazy load means uhthe user comes onto the page and to justensure that the page speed is good. Thecontent is s to the user some part ofthe content is to the user after theoriginal page loads. So minimal part ofthe page loads first and then theremaining part of the page gets loaded.Now while this is fine for some of theimages which may be falling at thebottom of the page, please don't followsuch kind of practicesfor some content textual content whichis coming above the fold which the usercan immediately see.Avoid hiding the content. So that'sanother practice which usually somepeople follow. So please don't hide thecontent also. Uh display the contentaccordance I fine but uh completelyhiding the content not to show thecontent which is visible on the desktopto the mobile users at all. Uh that'snot desirable. I would prefer that ifthere is some content I'm assumingthat's a valuable content. So ifsomething is valuable it should beavailable also to the mobile users.Ensure that the URLs for mobile anddesktop to be the same. Essentially whatI'm saying is please use the responsivedesign if possible. Avoid using themobile version separately. So avoidusing the dynamic rendering or even thedifferent URLs. Right? Sorry, dynamicserving or the different URLs.Responsive website is desired. Imaginedoing all the assignments that you'vedone so far. once for the mobileversion, once for the desktop versionand I hope you don't have a tab versionor else you'll have to do all thoseassignments for the tab version as well.So better have a responsive design. Butyes, if you are working on some existingwebsite where this particular things arethere, it's your duty to do the audits,do the not only the assignments but dothe optimization for all the differentversions.Same Robert's meta tags. Now what isRobert's tags? These are again uh codesthrough which you can tell the botwhether this particular piece of contentshould be crawled, not crawled, blocked,not blocked etc. Right? So that'ssomething which we terms it term it asrobots meta. In case uh you have thisparticular thing on the mobile and thedesktop version, ensure that they givethe same instructions. It should nothappen that the desktop version isgiving some different instructions andthe mobile version is giving somedifferent instructions, right? Imagineconfusing Google with follow on one andno follow on the other. It would getconfused. That's fine. But uh it may notrank you, right? So that's something youdon't you want to be friends with Googlefor sure.Some other important information which Iwould like to share at this particularpoint is that nowmobile first indexing is in place. Whatdoes this mean? It means that Googleuses the mobile version of the contentfor indexing and ranking.Right? Previouslythis isfour five years back it used to use thedesktop version. After that whathappened is it started sending us emailslike this where it told us very clearlythat hey u mobile first indexing is nowgetting enabled for your website andthat means that okay mobile would be theprimary source of ranking for yourwebsite.This continued for se several yearsright from 2018 at least we startedseeing this m messages it went on till2020 right uh now the other way to checkin case you have not received this emailor you don't know who was working onyour website in 2018 the easier way tobe will be to go to the settings ofsearch consoleand checking the indexing crawler you'llbe able to see the indexing crawler forthis particular ular website is Googlesmartphone, right? So that at least willtell you that hey whether your websitemobile version is getting crawled or thedesktop version in case you have a doubtbut ideally all the websitesof since September 2020 have been movedto mobile first indexing. So definitelyyour website also should be a smartphonecrawled website.Okay, that means mobile optimization iscrucial. Ensure that you create a greatexperience for your users on mobile aswell as desktop.The way to check this particular thingwhether you're able to give the greatexperience to your users or not is tocheck the mobile usability report in thesearch console.And when you're in the search console,you will be able to see if there are anyerrors. If there are any errors overhere, um, you should fix it, right?Most of these errors are quite easy tounderstand at least. Text too small toread, clickable elements too closetogether, content wider than screen,right? All you need to do is sketch holdof your engineering team and get thiserrors fixed. I'll also share some ofthe other uh popular issues.Incompatible plugins may come in overhere. So, ensure that your plugins arecompatible with those devices. View portis not set. You now have the code forview port. Give it to your engineeringteam that hey this code is missing.Please implement it.Sometimes the view port is not set tothe device width. If it is a responsivewebsite, it needs to be configuredproperly. So please get it done. Contentwider than screen that's understood.Text too small to read that'sunderstood. Clickable elements too closetogether.Right? Just ask the UX team to work onit and ensure that the elements on themobile screen are placed a little spacewith a little space in between.With that it's time to move to theself-arning and some assignments.Okay. Uh, you need to go to your searchconsole and check the mobile usabilityreportand if you see any errors, please takethis errors and put it into your SEOtask sheetwhich will then be handed over to yourengineering team. So, please put all theSEO tasks. It's important that you putit at one place so you know how muchwork has to be done, isn't it?So put it on this sheet and then we takeit ahead. Right? That's all for thismodule. I'll see you soon in the nextone. Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 1906,
+      "char_count": 12053
+    },
+    {
+      "video_index": 3,
+      "video_title": "3. Copy of Copy of 3. Sitemaps.mp4",
+      "start_p": 130,
+      "end_p": 708,
+      "paragraphs": [
+        {
+          "p_idx": 131,
+          "text": "00:01 Hello and welcome to the module 3 of"
+        },
+        {
+          "p_idx": 132,
+          "text": "00:04 week four."
+        },
+        {
+          "p_idx": 133,
+          "text": "00:08 We are now going to cover site maps."
+        },
+        {
+          "p_idx": 134,
+          "text": "00:13 In the first few weeks we did went"
+        },
+        {
+          "p_idx": 135,
+          "text": "00:15 through some different forms of site"
+        },
+        {
+          "p_idx": 136,
+          "text": "00:17 maps but now it is the time to go into"
+        },
+        {
+          "p_idx": 137,
+          "text": "00:20 the details of sitemap."
+        },
+        {
+          "p_idx": 138,
+          "text": "00:23 Okay. So let's get started."
+        },
+        {
+          "p_idx": 139,
+          "text": "00:27 Starting with the question why do we"
+        },
+        {
+          "p_idx": 140,
+          "text": "00:30 need site maps?"
+        },
+        {
+          "p_idx": 141,
+          "text": "00:34 When it comes to SEO it's important that"
+        },
+        {
+          "p_idx": 142,
+          "text": "00:38 all your pages are getting crawled and"
+        },
+        {
+          "p_idx": 143,
+          "text": "00:42 indexed and sitemap is one way through"
+        },
+        {
+          "p_idx": 144,
+          "text": "00:45 which Google is able to discover your"
+        },
+        {
+          "p_idx": 145,
+          "text": "00:48 pages."
+        },
+        {
+          "p_idx": 146,
+          "text": "00:50 It"
+        },
+        {
+          "p_idx": 147,
+          "text": "00:52 helps Google understand how the pages"
+        },
+        {
+          "p_idx": 148,
+          "text": "00:56 are"
+        },
+        {
+          "p_idx": 149,
+          "text": "00:57 maintained, what are the folder"
+        },
+        {
+          "p_idx": 150,
+          "text": "00:59 structures etc. If you could uh"
+        },
+        {
+          "p_idx": 151,
+          "text": "01:02 organize this very properly, it helps it"
+        },
+        {
+          "p_idx": 152,
+          "text": "01:04 more and we'll see how to organize in"
+        },
+        {
+          "p_idx": 153,
+          "text": "01:06 the coming slides. But uh this is the"
+        },
+        {
+          "p_idx": 154,
+          "text": "01:08 first point."
+        },
+        {
+          "p_idx": 155,
+          "text": "01:12 The second point over here which you"
+        },
+        {
+          "p_idx": 156,
+          "text": "01:14 need"
+        },
+        {
+          "p_idx": 157,
+          "text": "01:16 to remember is your XML sitemap can help"
+        },
+        {
+          "p_idx": 158,
+          "text": "01:19 you index all the different kinds of"
+        },
+        {
+          "p_idx": 159,
+          "text": "01:21 content right be it images, videos etc."
+        },
+        {
+          "p_idx": 160,
+          "text": "01:26 Some of the websites are not so heavily"
+        },
+        {
+          "p_idx": 161,
+          "text": "01:29 linked internal linking is poor and"
+        },
+        {
+          "p_idx": 162,
+          "text": "01:32 that's where also sitemap can come to"
+        },
+        {
+          "p_idx": 163,
+          "text": "01:35 your rescue. It can help ensure that at"
+        },
+        {
+          "p_idx": 164,
+          "text": "01:39 least the pages even with few links"
+        },
+        {
+          "p_idx": 165,
+          "text": "01:43 which are there in the search uh sorry"
+        },
+        {
+          "p_idx": 166,
+          "text": "01:45 the XML sitemap have a good chance of"
+        },
+        {
+          "p_idx": 167,
+          "text": "01:48 getting discovered by Google and then"
+        },
+        {
+          "p_idx": 168,
+          "text": "01:50 ranking well."
+        },
+        {
+          "p_idx": 169,
+          "text": "01:52 However uh this should not be considered"
+        },
+        {
+          "p_idx": 170,
+          "text": "01:54 as an alternative to internal linking."
+        },
+        {
+          "p_idx": 171,
+          "text": "01:57 If you can do better internal linking I"
+        },
+        {
+          "p_idx": 172,
+          "text": "01:59 would highly recommend that you do"
+        },
+        {
+          "p_idx": 173,
+          "text": "02:01 optimize your website with better"
+        },
+        {
+          "p_idx": 174,
+          "text": "02:03 internal linking. It works really well"
+        },
+        {
+          "p_idx": 175,
+          "text": "02:08 structured way to inform Google about"
+        },
+        {
+          "p_idx": 176,
+          "text": "02:10 all the pages, right? You kept a"
+        },
+        {
+          "p_idx": 177,
+          "text": "02:13 complete table structure with lots of"
+        },
+        {
+          "p_idx": 178,
+          "text": "02:16 information which helps Google"
+        },
+        {
+          "p_idx": 179,
+          "text": "02:17 understand it better."
+        },
+        {
+          "p_idx": 180,
+          "text": "02:21 It also helps the"
+        },
+        {
+          "p_idx": 181,
+          "text": "02:24 SEO to analyze the page status on the"
+        },
+        {
+          "p_idx": 182,
+          "text": "02:26 sitemap report which we see it in the"
+        },
+        {
+          "p_idx": 183,
+          "text": "02:28 search console. Right? So it will help"
+        },
+        {
+          "p_idx": 184,
+          "text": "02:30 you to analyze the page status"
+        },
+        {
+          "p_idx": 185,
+          "text": "02:36 and also it helps you to ensure that"
+        },
+        {
+          "p_idx": 186,
+          "text": "02:39 even if the pages are dynamically"
+        },
+        {
+          "p_idx": 187,
+          "text": "02:41 generated and not at all linked onto the"
+        },
+        {
+          "p_idx": 188,
+          "text": "02:43 website it has some chances of getting"
+        },
+        {
+          "p_idx": 189,
+          "text": "02:47 indexed if they are included in the"
+        },
+        {
+          "p_idx": 190,
+          "text": "02:49 sitemap."
+        },
+        {
+          "p_idx": 191,
+          "text": "02:52 It helps the new website when there are"
+        },
+        {
+          "p_idx": 192,
+          "text": "02:54 a few other websites linking to it."
+        },
+        {
+          "p_idx": 193,
+          "text": "02:56 That's the other benefit."
+        },
+        {
+          "p_idx": 194,
+          "text": "03:00 and it definitely provides additional"
+        },
+        {
+          "p_idx": 195,
+          "text": "03:02 information to Google about your"
+        },
+        {
+          "p_idx": 196,
+          "text": "03:03 content."
+        },
+        {
+          "p_idx": 197,
+          "text": "03:08 Now let's get into the types of sitemap"
+        },
+        {
+          "p_idx": 198,
+          "text": "03:11 right uh"
+        },
+        {
+          "p_idx": 199,
+          "text": "03:14 as per the documentation provided by"
+        },
+        {
+          "p_idx": 200,
+          "text": "03:16 Google it could be classified into three"
+        },
+        {
+          "p_idx": 201,
+          "text": "03:18 different types XML RSS sitemaps or RSS"
+        },
+        {
+          "p_idx": 202,
+          "text": "03:23 MRSS atom 1.0 0 all included in this and"
+        },
+        {
+          "p_idx": 203,
+          "text": "03:26 the text sitemap."
+        },
+        {
+          "p_idx": 204,
+          "text": "03:28 I personally prefer to keep HTML sitemap"
+        },
+        {
+          "p_idx": 205,
+          "text": "03:31 as a separate category and not include"
+        },
+        {
+          "p_idx": 206,
+          "text": "03:33 it in the text sitemaps. But yes, uh"
+        },
+        {
+          "p_idx": 207,
+          "text": "03:35 I'll leave it to you how you keep it uh"
+        },
+        {
+          "p_idx": 208,
+          "text": "03:38 how you consider it."
+        },
+        {
+          "p_idx": 209,
+          "text": "03:41 Now when it comes to the XML sitemaps,"
+        },
+        {
+          "p_idx": 210,
+          "text": "03:44 I'm not taking you through the pros and"
+        },
+        {
+          "p_idx": 211,
+          "text": "03:45 cons. That's for you to read and uh um"
+        },
+        {
+          "p_idx": 212,
+          "text": "03:49 something you can invest some time on."
+        },
+        {
+          "p_idx": 213,
+          "text": "03:51 But uh yes the XML sitemaps are"
+        },
+        {
+          "p_idx": 214,
+          "text": "03:54 important and uh let's get straight into"
+        },
+        {
+          "p_idx": 215,
+          "text": "03:57 the XML sitemaps."
+        },
+        {
+          "p_idx": 216,
+          "text": "04:00 Now we were speaking of organizing the"
+        },
+        {
+          "p_idx": 217,
+          "text": "04:02 sitemap right and an index file of XML"
+        },
+        {
+          "p_idx": 218,
+          "text": "04:07 is a wonderable wonderful way to do it."
+        },
+        {
+          "p_idx": 219,
+          "text": "04:09 So an index file is an XML of XML you"
+        },
+        {
+          "p_idx": 220,
+          "text": "04:12 can term it as that where"
+        },
+        {
+          "p_idx": 221,
+          "text": "04:16 whatever XML files you're creating"
+        },
+        {
+          "p_idx": 222,
+          "text": "04:18 you're creating an index of it. So it"
+        },
+        {
+          "p_idx": 223,
+          "text": "04:21 would look something like this. Um when"
+        },
+        {
+          "p_idx": 224,
+          "text": "04:23 you're creating the sitemap index, you"
+        },
+        {
+          "p_idx": 225,
+          "text": "04:26 could keep the URL as sitemap index or"
+        },
+        {
+          "p_idx": 226,
+          "text": "04:30 uh give a proper name that whatever you"
+        },
+        {
+          "p_idx": 227,
+          "text": "04:32 feel would at least help you understand"
+        },
+        {
+          "p_idx": 228,
+          "text": "04:35 that hey this is my index file of"
+        },
+        {
+          "p_idx": 229,
+          "text": "04:37 sitemap and then it would have all the"
+        },
+        {
+          "p_idx": 230,
+          "text": "04:43 XMLs individual XMLs which you have"
+        },
+        {
+          "p_idx": 231,
+          "text": "04:45 created um listed within this main XML"
+        },
+        {
+          "p_idx": 232,
+          "text": "04:50 right there are tools like post which"
+        },
+        {
+          "p_idx": 233,
+          "text": "04:53 could be used to create this kind of XML"
+        },
+        {
+          "p_idx": 234,
+          "text": "04:56 sitemaps. You need not create it"
+        },
+        {
+          "p_idx": 235,
+          "text": "04:57 manually but yes you need to use those"
+        },
+        {
+          "p_idx": 236,
+          "text": "04:59 utilities and create your sitemap."
+        },
+        {
+          "p_idx": 237,
+          "text": "05:04 In the subsequent few minutes we will"
+        },
+        {
+          "p_idx": 238,
+          "text": "05:07 also see one of the tool to create the"
+        },
+        {
+          "p_idx": 239,
+          "text": "05:09 site map and we will create some site"
+        },
+        {
+          "p_idx": 240,
+          "text": "05:10 maps as well but yes is one of the other"
+        },
+        {
+          "p_idx": 241,
+          "text": "05:14 tool."
+        },
+        {
+          "p_idx": 242,
+          "text": "05:18 Now coming to the XML sitemap."
+        },
+        {
+          "p_idx": 243,
+          "text": "05:21 The XML sitemap will contain the"
+        },
+        {
+          "p_idx": 244,
+          "text": "05:23 individual pages"
+        },
+        {
+          "p_idx": 245,
+          "text": "05:25 which are there on your website."
+        },
+        {
+          "p_idx": 246,
+          "text": "05:34 So you're creating a list and uh also"
+        },
+        {
+          "p_idx": 247,
+          "text": "05:36 including some additional information"
+        },
+        {
+          "p_idx": 248,
+          "text": "05:38 like last modified."
+        },
+        {
+          "p_idx": 249,
+          "text": "05:41 Now let's get into that information"
+        },
+        {
+          "p_idx": 250,
+          "text": "05:42 part. How would the XML actually look in"
+        },
+        {
+          "p_idx": 251,
+          "text": "05:45 terms of code? While that was a XML"
+        },
+        {
+          "p_idx": 252,
+          "text": "05:49 which was uh"
+        },
+        {
+          "p_idx": 253,
+          "text": "05:52 displayed with the help of some tool and"
+        },
+        {
+          "p_idx": 254,
+          "text": "05:55 that's where it was coming in a table"
+        },
+        {
+          "p_idx": 255,
+          "text": "05:57 format. The actual XML would look"
+        },
+        {
+          "p_idx": 256,
+          "text": "05:58 something like this."
+        },
+        {
+          "p_idx": 257,
+          "text": "06:03 It would have a URL set XML name space"
+        },
+        {
+          "p_idx": 258,
+          "text": "06:07 which is fixed which you'll have to keep"
+        },
+        {
+          "p_idx": 259,
+          "text": "06:09 it tow.sitemaps.org"
+        },
+        {
+          "p_idx": 260,
+          "text": "06:12 and u schema sitemap/0.9."
+        },
+        {
+          "p_idx": 261,
+          "text": "06:16 So that that's a fixed thing. You need"
+        },
+        {
+          "p_idx": 262,
+          "text": "06:17 not change it as of now. If some"
+        },
+        {
+          "p_idx": 263,
+          "text": "06:19 standard changes later on, the entire"
+        },
+        {
+          "p_idx": 264,
+          "text": "06:21 SEU industry gets to know that. But yes,"
+        },
+        {
+          "p_idx": 265,
+          "text": "06:23 this is going to remain constant for the"
+        },
+        {
+          "p_idx": 266,
+          "text": "06:25 time being. Okay? And you need to keep"
+        },
+        {
+          "p_idx": 267,
+          "text": "06:27 it."
+        },
+        {
+          "p_idx": 268,
+          "text": "06:31 The other information which is included"
+        },
+        {
+          "p_idx": 269,
+          "text": "06:33 on the page, one is the last modified"
+        },
+        {
+          "p_idx": 270,
+          "text": "06:35 date which you saw over here,"
+        },
+        {
+          "p_idx": 271,
+          "text": "06:38 right? U"
+        },
+        {
+          "p_idx": 272,
+          "text": "06:40 so you will have the location. Location"
+        },
+        {
+          "p_idx": 273,
+          "text": "06:42 is nothing but the URL, the URL of the"
+        },
+        {
+          "p_idx": 274,
+          "text": "06:44 page. And then you have last modified."
+        },
+        {
+          "p_idx": 275,
+          "text": "06:46 Last modified has to be created in the"
+        },
+        {
+          "p_idx": 276,
+          "text": "06:50 specified format"
+        },
+        {
+          "p_idx": 277,
+          "text": "06:53 which is y"
+        },
+        {
+          "p_idx": 278,
+          "text": "06:55 - mm"
+        },
+        {
+          "p_idx": 279,
+          "text": "06:55 dd."
+        },
+        {
+          "p_idx": 280,
+          "text": "06:59 Okay. Then you have the change frequency"
+        },
+        {
+          "p_idx": 281,
+          "text": "07:03 that hey how frequently my page is"
+        },
+        {
+          "p_idx": 282,
+          "text": "07:04 changing and you could keep that as"
+        },
+        {
+          "p_idx": 283,
+          "text": "07:06 daily etc. Um the frequencies are"
+        },
+        {
+          "p_idx": 284,
+          "text": "07:09 mentioned over here. H hourly always"
+        },
+        {
+          "p_idx": 285,
+          "text": "07:12 means uh it's changing constantly. Uh so"
+        },
+        {
+          "p_idx": 286,
+          "text": "07:15 keep on crawling it constantly hourly,"
+        },
+        {
+          "p_idx": 287,
+          "text": "07:18 daily, weekly, monthly, yearly, right?"
+        },
+        {
+          "p_idx": 288,
+          "text": "07:21 If it is changing on a monthly basis,"
+        },
+        {
+          "p_idx": 289,
+          "text": "07:23 don't make it always because it's"
+        },
+        {
+          "p_idx": 290,
+          "text": "07:25 unnecessary waste of crawl budget. So"
+        },
+        {
+          "p_idx": 291,
+          "text": "07:27 please uh"
+        },
+        {
+          "p_idx": 292,
+          "text": "07:29 keep it as for the frequency"
+        },
+        {
+          "p_idx": 293,
+          "text": "07:35 for your information. Google completely"
+        },
+        {
+          "p_idx": 294,
+          "text": "07:36 ignores it. So don't worry too much"
+        },
+        {
+          "p_idx": 295,
+          "text": "07:38 about change frequency and priority. But"
+        },
+        {
+          "p_idx": 296,
+          "text": "07:39 yes, for the other search engines, you"
+        },
+        {
+          "p_idx": 297,
+          "text": "07:41 may want to understand it at least. And"
+        },
+        {
+          "p_idx": 298,
+          "text": "07:43 then the priorities there which is the"
+        },
+        {
+          "p_idx": 299,
+          "text": "07:46 importance of the page 0.0 to 1.0 where"
+        },
+        {
+          "p_idx": 300,
+          "text": "07:49 one is the highest and 0 is the lowest."
+        },
+        {
+          "p_idx": 301,
+          "text": "07:52 Right? So this is about the sitemap file"
+        },
+        {
+          "p_idx": 302,
+          "text": "07:56 and you would see that some of the"
+        },
+        {
+          "p_idx": 303,
+          "text": "07:58 information is mandatory over here. Uh"
+        },
+        {
+          "p_idx": 304,
+          "text": "08:00 which is your nameace XML name space and"
+        },
+        {
+          "p_idx": 305,
+          "text": "08:03 the URL at least those two things are"
+        },
+        {
+          "p_idx": 306,
+          "text": "08:05 mandatory. Uh then the last modified"
+        },
+        {
+          "p_idx": 307,
+          "text": "08:08 change frequency and priority are"
+        },
+        {
+          "p_idx": 308,
+          "text": "08:10 optional of which change frequency and"
+        },
+        {
+          "p_idx": 309,
+          "text": "08:13 priority are completely ignored by"
+        },
+        {
+          "p_idx": 310,
+          "text": "08:15 Google but may be considered by some"
+        },
+        {
+          "p_idx": 311,
+          "text": "08:16 other search engines. So there's nothing"
+        },
+        {
+          "p_idx": 312,
+          "text": "08:18 wrong in including it."
+        },
+        {
+          "p_idx": 313,
+          "text": "08:24 Okay. So now the next question is how"
+        },
+        {
+          "p_idx": 314,
+          "text": "08:26 how do we create a site map?"
+        },
+        {
+          "p_idx": 315,
+          "text": "08:29 There are multiple tools which you can"
+        },
+        {
+          "p_idx": 316,
+          "text": "08:31 use to create a site map. one being"
+        },
+        {
+          "p_idx": 317,
+          "text": "08:33 screaming frog yoast uh table convert"
+        },
+        {
+          "p_idx": 318,
+          "text": "08:36 XML sitemap and even if you Google"
+        },
+        {
+          "p_idx": 319,
+          "text": "08:39 you'll find hundreds of other tools so"
+        },
+        {
+          "p_idx": 320,
+          "text": "08:41 you could use the tool of your choice or"
+        },
+        {
+          "p_idx": 321,
+          "text": "08:42 the plug-in of your choice and get the"
+        },
+        {
+          "p_idx": 322,
+          "text": "08:44 sitemap created the important thing is"
+        },
+        {
+          "p_idx": 323,
+          "text": "08:46 creating the sitemap or your engineering"
+        },
+        {
+          "p_idx": 324,
+          "text": "08:49 team may even write some custom code and"
+        },
+        {
+          "p_idx": 325,
+          "text": "08:50 create a sitemap for you so that that"
+        },
+        {
+          "p_idx": 326,
+          "text": "08:52 I'll leave it to them but yes it's"
+        },
+        {
+          "p_idx": 327,
+          "text": "08:54 important that the XML sitemap is"
+        },
+        {
+          "p_idx": 328,
+          "text": "08:56 present"
+        },
+        {
+          "p_idx": 329,
+          "text": "08:59 now what I'm going to do is I'm going to"
+        },
+        {
+          "p_idx": 330,
+          "text": "09:01 Choose screaming frog the tool that we"
+        },
+        {
+          "p_idx": 331,
+          "text": "09:04 had a demo of it last week as well. I'm"
+        },
+        {
+          "p_idx": 332,
+          "text": "09:07 using the sitemap option within that and"
+        },
+        {
+          "p_idx": 333,
+          "text": "09:10 creating an XML sitemap."
+        },
+        {
+          "p_idx": 334,
+          "text": "09:13 So once you click on XML you would be"
+        },
+        {
+          "p_idx": 335,
+          "text": "09:15 seeing this popup where you can see that"
+        },
+        {
+          "p_idx": 336,
+          "text": "09:18 hey what all things you want to include"
+        },
+        {
+          "p_idx": 337,
+          "text": "09:19 on the page whether you want the no"
+        },
+        {
+          "p_idx": 338,
+          "text": "09:21 index pages to be included the"
+        },
+        {
+          "p_idx": 339,
+          "text": "09:22 canonicalized pages to be included"
+        },
+        {
+          "p_idx": 340,
+          "text": "09:24 pagenated urls to be included. Some of"
+        },
+        {
+          "p_idx": 341,
+          "text": "09:26 you may want the pagionated pages to be"
+        },
+        {
+          "p_idx": 342,
+          "text": "09:28 crawled properly. So you may just tick"
+        },
+        {
+          "p_idx": 343,
+          "text": "09:30 mark the pagionated URLs PDFs you may"
+        },
+        {
+          "p_idx": 344,
+          "text": "09:33 have on your website and you want those"
+        },
+        {
+          "p_idx": 345,
+          "text": "09:35 also to be indexed and crawled right. So"
+        },
+        {
+          "p_idx": 346,
+          "text": "09:37 you may include the PDFs as well right"
+        },
+        {
+          "p_idx": 347,
+          "text": "09:40 and and usually which all codes ideally"
+        },
+        {
+          "p_idx": 348,
+          "text": "09:43 just I'll recommend only include the 200"
+        },
+        {
+          "p_idx": 349,
+          "text": "09:45 codes uh all all the 301's or the 400"
+        },
+        {
+          "p_idx": 350,
+          "text": "09:50 don't include those"
+        },
+        {
+          "p_idx": 351,
+          "text": "09:52 particular pages in the XML sitemap. So"
+        },
+        {
+          "p_idx": 352,
+          "text": "09:55 just keep it as it is. Then you can"
+        },
+        {
+          "p_idx": 353,
+          "text": "09:57 click on the last modified tag. And uh"
+        },
+        {
+          "p_idx": 354,
+          "text": "10:04 so this is the timing which you are"
+        },
+        {
+          "p_idx": 355,
+          "text": "10:06 seeing on the XML."
+        },
+        {
+          "p_idx": 356,
+          "text": "10:10 Now either you could use it based on the"
+        },
+        {
+          "p_idx": 357,
+          "text": "10:13 server time itself or you could specify"
+        },
+        {
+          "p_idx": 358,
+          "text": "10:15 a particular date. I would recommend"
+        },
+        {
+          "p_idx": 359,
+          "text": "10:17 highly recommend use the server response"
+        },
+        {
+          "p_idx": 360,
+          "text": "10:18 time because it's too difficult to"
+        },
+        {
+          "p_idx": 361,
+          "text": "10:20 change the sitemap each and every time"
+        },
+        {
+          "p_idx": 362,
+          "text": "10:22 you modify a particular page. So based"
+        },
+        {
+          "p_idx": 363,
+          "text": "10:24 on the server timing whenever that file"
+        },
+        {
+          "p_idx": 364,
+          "text": "10:26 was uploaded it will automatically pick"
+        },
+        {
+          "p_idx": 365,
+          "text": "10:28 it up from there."
+        },
+        {
+          "p_idx": 366,
+          "text": "10:30 The next step is priority where either"
+        },
+        {
+          "p_idx": 367,
+          "text": "10:34 you could decide that hey how do you"
+        },
+        {
+          "p_idx": 368,
+          "text": "10:36 want to keep the priority or you could"
+        },
+        {
+          "p_idx": 369,
+          "text": "10:39 completely ignore it because it's"
+        },
+        {
+          "p_idx": 370,
+          "text": "10:41 optional in Google but yes if you want"
+        },
+        {
+          "p_idx": 371,
+          "text": "10:43 to create it based on the crawl depth."
+        },
+        {
+          "p_idx": 372,
+          "text": "10:45 So let's say for the first level of URLs"
+        },
+        {
+          "p_idx": 373,
+          "text": "10:48 you keep the priority as one second"
+        },
+        {
+          "p_idx": 374,
+          "text": "10:50 depth uh second level you keep it as 0.9"
+        },
+        {
+          "p_idx": 375,
+          "text": "10:53 and likewise for reducing priority you"
+        },
+        {
+          "p_idx": 376,
+          "text": "10:55 could keep something like that that's a"
+        },
+        {
+          "p_idx": 377,
+          "text": "10:56 deferred setting again in"
+        },
+        {
+          "p_idx": 378,
+          "text": "10:59 screaming frog so you could keep it as"
+        },
+        {
+          "p_idx": 379,
+          "text": "11:01 it is"
+        },
+        {
+          "p_idx": 380,
+          "text": "11:03 again when it comes to change frequency"
+        },
+        {
+          "p_idx": 381,
+          "text": "11:05 you could decide whether uh how"
+        },
+        {
+          "p_idx": 382,
+          "text": "11:07 frequently it is changing it could"
+        },
+        {
+          "p_idx": 383,
+          "text": "11:09 calculate it from the last modified"
+        },
+        {
+          "p_idx": 384,
+          "text": "11:11 header and decide our frequency by"
+        },
+        {
+          "p_idx": 385,
+          "text": "11:13 itself or use the crawl dep setting. So"
+        },
+        {
+          "p_idx": 386,
+          "text": "11:15 again you can specify that hey my"
+        },
+        {
+          "p_idx": 387,
+          "text": "11:17 homepage or the main page changes on an"
+        },
+        {
+          "p_idx": 388,
+          "text": "11:19 hourly basis but my second level pages"
+        },
+        {
+          "p_idx": 389,
+          "text": "11:22 are changing on a daily basis the third"
+        },
+        {
+          "p_idx": 390,
+          "text": "11:24 level pages are changing on a weekly"
+        },
+        {
+          "p_idx": 391,
+          "text": "11:25 basis. So for Google uh it will come and"
+        },
+        {
+          "p_idx": 392,
+          "text": "11:28 crawl those pages based on that"
+        },
+        {
+          "p_idx": 393,
+          "text": "11:31 frequency not a guarantee but at least"
+        },
+        {
+          "p_idx": 394,
+          "text": "11:32 it gives them an indication that okay"
+        },
+        {
+          "p_idx": 395,
+          "text": "11:34 these pages are changing and so I need"
+        },
+        {
+          "p_idx": 396,
+          "text": "11:36 to crawl them."
+        },
+        {
+          "p_idx": 397,
+          "text": "11:39 The next one is images. If you want even"
+        },
+        {
+          "p_idx": 398,
+          "text": "11:40 the images to be included, just click on"
+        },
+        {
+          "p_idx": 399,
+          "text": "11:42 the images tag and it would get included"
+        },
+        {
+          "p_idx": 400,
+          "text": "11:45 in the sitemap along with the other"
+        },
+        {
+          "p_idx": 401,
+          "text": "11:48 content pages. Last one is the href"
+        },
+        {
+          "p_idx": 402,
+          "text": "11:50 lang. HF lang is an attribute for"
+        },
+        {
+          "p_idx": 403,
+          "text": "11:53 international SEO. We'll cover this in"
+        },
+        {
+          "p_idx": 404,
+          "text": "11:55 the subsequent sessions"
+        },
+        {
+          "p_idx": 405,
+          "text": "11:58 not today in the subsequent week sorry."
+        },
+        {
+          "p_idx": 406,
+          "text": "12:00 Um but uh this is also one thing which"
+        },
+        {
+          "p_idx": 407,
+          "text": "12:03 you could just take mark and then hit"
+        },
+        {
+          "p_idx": 408,
+          "text": "12:05 explore export sorry. Um"
+        },
+        {
+          "p_idx": 409,
+          "text": "12:10 now once you do export it would"
+        },
+        {
+          "p_idx": 410,
+          "text": "12:12 automatically generate an XML for you"
+        },
+        {
+          "p_idx": 411,
+          "text": "12:16 and uh what you need to do is then just"
+        },
+        {
+          "p_idx": 412,
+          "text": "12:19 go ahead and use this particular file as"
+        },
+        {
+          "p_idx": 413,
+          "text": "12:21 your XML right so it'll create the XML"
+        },
+        {
+          "p_idx": 414,
+          "text": "12:23 and then you can use it now when it"
+        },
+        {
+          "p_idx": 415,
+          "text": "12:26 comes to images again I would recommend"
+        },
+        {
+          "p_idx": 416,
+          "text": "12:28 using Screaming Frog use the images"
+        },
+        {
+          "p_idx": 417,
+          "text": "12:30 option and based on that once you"
+        },
+        {
+          "p_idx": 418,
+          "text": "12:35 do it it will create an image XML for"
+        },
+        {
+          "p_idx": 419,
+          "text": "12:37 you again that can be uploaded onto your"
+        },
+        {
+          "p_idx": 420,
+          "text": "12:40 server."
+        },
+        {
+          "p_idx": 421,
+          "text": "12:43 The next one is the video sitemap."
+        },
+        {
+          "p_idx": 422,
+          "text": "12:46 Unfortunately, Screaming Frog yet does"
+        },
+        {
+          "p_idx": 423,
+          "text": "12:49 not has an option to create the video"
+        },
+        {
+          "p_idx": 424,
+          "text": "12:51 sitemap. But there are several other"
+        },
+        {
+          "p_idx": 425,
+          "text": "12:53 tools which are available. A simple"
+        },
+        {
+          "p_idx": 426,
+          "text": "12:55 Google search should help you understand"
+        },
+        {
+          "p_idx": 427,
+          "text": "12:57 what are the different kind of plugins"
+        },
+        {
+          "p_idx": 428,
+          "text": "12:59 for your platform for WordPress. Um on"
+        },
+        {
+          "p_idx": 429,
+          "text": "13:02 WordPress.org the warg itself you will"
+        },
+        {
+          "p_idx": 430,
+          "text": "13:04 see this uh different plugins which are"
+        },
+        {
+          "p_idx": 431,
+          "text": "13:06 recommended for uh the video sitemap."
+        },
+        {
+          "p_idx": 432,
+          "text": "13:09 Please use one of these uh based on the"
+        },
+        {
+          "p_idx": 433,
+          "text": "13:12 ratings of"
+        },
+        {
+          "p_idx": 434,
+          "text": "13:18 this thing and this is how a video XML"
+        },
+        {
+          "p_idx": 435,
+          "text": "13:21 sitemap looks like. again with multiple"
+        },
+        {
+          "p_idx": 436,
+          "text": "13:23 parameters. I'm not getting into details"
+        },
+        {
+          "p_idx": 437,
+          "text": "13:25 since you're not going to manually"
+        },
+        {
+          "p_idx": 438,
+          "text": "13:26 create it and at least whatever basics"
+        },
+        {
+          "p_idx": 439,
+          "text": "13:29 were there you understood with the"
+        },
+        {
+          "p_idx": 440,
+          "text": "13:31 content site map right but yes this"
+        },
+        {
+          "p_idx": 441,
+          "text": "13:34 could have more uh details in the site"
+        },
+        {
+          "p_idx": 442,
+          "text": "13:37 map which gives that additional"
+        },
+        {
+          "p_idx": 443,
+          "text": "13:39 information to Google about processing"
+        },
+        {
+          "p_idx": 444,
+          "text": "13:41 the particular video"
+        },
+        {
+          "p_idx": 445,
+          "text": "13:46 there are also new site maps again there"
+        },
+        {
+          "p_idx": 446,
+          "text": "13:49 are plugins for this particular thing"
+        },
+        {
+          "p_idx": 447,
+          "text": "13:51 this one uh created by Gary itself Gary"
+        },
+        {
+          "p_idx": 448,
+          "text": "13:55 Al is one of the"
+        },
+        {
+          "p_idx": 449,
+          "text": "13:59 u representative of Google if you people"
+        },
+        {
+          "p_idx": 450,
+          "text": "14:02 listen to the Google u podcast I believe"
+        },
+        {
+          "p_idx": 451,
+          "text": "14:06 I don't recollect the name but uh"
+        },
+        {
+          "p_idx": 452,
+          "text": "14:09 uh the the Google podcast Gary for"
+        },
+        {
+          "p_idx": 453,
+          "text": "14:12 search Gary is a regular uh host over"
+        },
+        {
+          "p_idx": 454,
+          "text": "14:16 there and u he has created this"
+        },
+        {
+          "p_idx": 455,
+          "text": "14:19 particular plug-in so I would highly"
+        },
+        {
+          "p_idx": 456,
+          "text": "14:20 recommend to use the Google XML"
+        },
+        {
+          "p_idx": 457,
+          "text": "14:24 sitemap plug-in for"
+        },
+        {
+          "p_idx": 458,
+          "text": "14:27 the new site map"
+        },
+        {
+          "p_idx": 459,
+          "text": "14:29 for all your pages which are related to"
+        },
+        {
+          "p_idx": 460,
+          "text": "14:31 news. You can include those pages"
+        },
+        {
+          "p_idx": 461,
+          "text": "14:33 separately in the new sitemap."
+        },
+        {
+          "p_idx": 462,
+          "text": "14:37 Okay. So what are the next steps? First"
+        },
+        {
+          "p_idx": 463,
+          "text": "14:39 thing is remember to upload this"
+        },
+        {
+          "p_idx": 464,
+          "text": "14:42 particular file to the server. Ideally"
+        },
+        {
+          "p_idx": 465,
+          "text": "14:44 upload it to the root folder."
+        },
+        {
+          "p_idx": 466,
+          "text": "14:48 Include the URL of the XML in the"
+        },
+        {
+          "p_idx": 467,
+          "text": "14:52 robberts.tx txt. We saw the code syntax"
+        },
+        {
+          "p_idx": 468,
+          "text": "14:55 in the when we were covering"
+        },
+        {
+          "p_idx": 469,
+          "text": "14:56 robberts.xt. So remember that code and"
+        },
+        {
+          "p_idx": 470,
+          "text": "14:59 if you have forgotten go back"
+        },
+        {
+          "p_idx": 471,
+          "text": "15:01 go through the code and then update your"
+        },
+        {
+          "p_idx": 472,
+          "text": "15:04 robberts.txt with that particular thing"
+        },
+        {
+          "p_idx": 473,
+          "text": "15:07 in the XM about XML sitemap in"
+        },
+        {
+          "p_idx": 474,
+          "text": "15:09 robberts.txt and then last one being"
+        },
+        {
+          "p_idx": 475,
+          "text": "15:11 submitting this to your search console."
+        },
+        {
+          "p_idx": 476,
+          "text": "15:14 So in search console you'll go to the"
+        },
+        {
+          "p_idx": 477,
+          "text": "15:16 sitemaps module you'll put your image"
+        },
+        {
+          "p_idx": 478,
+          "text": "15:18 sitemap and hit submit. So then you'll"
+        },
+        {
+          "p_idx": 479,
+          "text": "15:21 get this particular message that okay uh"
+        },
+        {
+          "p_idx": 480,
+          "text": "15:23 Google will process it and look for"
+        },
+        {
+          "p_idx": 481,
+          "text": "15:25 changes."
+        },
+        {
+          "p_idx": 482,
+          "text": "15:29 Some tips when uh managing site maps."
+        },
+        {
+          "p_idx": 483,
+          "text": "15:33 One is limit the sitemap file to around"
+        },
+        {
+          "p_idx": 484,
+          "text": "15:36 50 MB or 50,000 URLs per sitemap file."
+        },
+        {
+          "p_idx": 485,
+          "text": "15:41 If you have more than 50,000 URLs you"
+        },
+        {
+          "p_idx": 486,
+          "text": "15:43 can create multiple site maps or make it"
+        },
+        {
+          "p_idx": 487,
+          "text": "15:44 category based site maps. Right? that"
+        },
+        {
+          "p_idx": 488,
+          "text": "15:46 one for X category, other for Y"
+        },
+        {
+          "p_idx": 489,
+          "text": "15:50 category, other for Z category."
+        },
+        {
+          "p_idx": 490,
+          "text": "15:51 Likewise,"
+        },
+        {
+          "p_idx": 491,
+          "text": "15:55 use the sitemap index file. It will help"
+        },
+        {
+          "p_idx": 492,
+          "text": "15:57 you structure the things more"
+        },
+        {
+          "p_idx": 493,
+          "text": "15:58 efficiently. So, please use it. Do"
+        },
+        {
+          "p_idx": 494,
+          "text": "16:01 prioritize the important pages even if"
+        },
+        {
+          "p_idx": 495,
+          "text": "16:04 uh Google is not looking at it, Bing may"
+        },
+        {
+          "p_idx": 496,
+          "text": "16:07 be looking at it. So, please include"
+        },
+        {
+          "p_idx": 497,
+          "text": "16:09 that."
+        },
+        {
+          "p_idx": 498,
+          "text": "16:13 Other mistake I see regularly is people"
+        },
+        {
+          "p_idx": 499,
+          "text": "16:15 include all the pages even the"
+        },
+        {
+          "p_idx": 500,
+          "text": "16:19 page which is canonicalized"
+        },
+        {
+          "p_idx": 501,
+          "text": "16:22 to some other page. So only use the"
+        },
+        {
+          "p_idx": 502,
+          "text": "16:24 canonical version of the page not the"
+        },
+        {
+          "p_idx": 503,
+          "text": "16:26 page which is pointing the canonical to"
+        },
+        {
+          "p_idx": 504,
+          "text": "16:29 some other page. Right? So at least save"
+        },
+        {
+          "p_idx": 505,
+          "text": "16:32 your crawl budget over there."
+        },
+        {
+          "p_idx": 506,
+          "text": "16:35 And the other thing which I've observed"
+        },
+        {
+          "p_idx": 507,
+          "text": "16:37 sometimes is some people use uh some"
+        },
+        {
+          "p_idx": 508,
+          "text": "16:40 relative URLs. Um that means now let's"
+        },
+        {
+          "p_idx": 509,
+          "text": "16:43 say"
+        },
+        {
+          "p_idx": 510,
+          "text": "16:45 um let's say in case of infid if I'm"
+        },
+        {
+          "p_idx": 511,
+          "text": "16:48 just creating the URL with"
+        },
+        {
+          "p_idx": 512,
+          "text": "16:51 slash"
+        },
+        {
+          "p_idx": 513,
+          "text": "16:53 blog/"
+        },
+        {
+          "p_idx": 514,
+          "text": "16:55 let's say technical SEO/ article name"
+        },
+        {
+          "p_idx": 515,
+          "text": "16:57 right instead of specifying"
+        },
+        {
+          "p_idx": 516,
+          "text": "16:59 dotigit.com/news/"
+        },
+        {
+          "p_idx": 517,
+          "text": "17:04 etc. So use the absolute URL, the"
+        },
+        {
+          "p_idx": 518,
+          "text": "17:08 complete URL,"
+        },
+        {
+          "p_idx": 519,
+          "text": "17:10 not just the relative URL when you're"
+        },
+        {
+          "p_idx": 520,
+          "text": "17:12 including it in the sitemap."
+        },
+        {
+          "p_idx": 521,
+          "text": "17:16 The next is the HTML sitemap. Now when"
+        },
+        {
+          "p_idx": 522,
+          "text": "17:20 it comes to HTML sitemap, uh this is"
+        },
+        {
+          "p_idx": 523,
+          "text": "17:22 some manual activity, right? You will"
+        },
+        {
+          "p_idx": 524,
+          "text": "17:24 have to give some instructions to your"
+        },
+        {
+          "p_idx": 525,
+          "text": "17:27 engineering team that hey, this is how I"
+        },
+        {
+          "p_idx": 526,
+          "text": "17:28 need the site map created. you didn't"
+        },
+        {
+          "p_idx": 527,
+          "text": "17:32 had that worry with XML sitemap since u"
+        },
+        {
+          "p_idx": 528,
+          "text": "17:35 that was automatically getting created"
+        },
+        {
+          "p_idx": 529,
+          "text": "17:37 but an HTML sitemap um may need the UX"
+        },
+        {
+          "p_idx": 530,
+          "text": "17:40 team to be involved because it's a"
+        },
+        {
+          "p_idx": 531,
+          "text": "17:42 front- end related change some engineers"
+        },
+        {
+          "p_idx": 532,
+          "text": "17:44 would be required for that uh but I"
+        },
+        {
+          "p_idx": 533,
+          "text": "17:46 would recommend an HTML sitemap also to"
+        },
+        {
+          "p_idx": 534,
+          "text": "17:48 be created um in the previous weeks we"
+        },
+        {
+          "p_idx": 535,
+          "text": "17:51 saw how LinkedIn was efficiently using"
+        },
+        {
+          "p_idx": 536,
+          "text": "17:53 the HTML sitemap right it definitely"
+        },
+        {
+          "p_idx": 537,
+          "text": "17:55 helps if you have an HTML sitemap and"
+        },
+        {
+          "p_idx": 538,
+          "text": "17:57 highly recommended so let's see how we"
+        },
+        {
+          "p_idx": 539,
+          "text": "17:59 can build an HTML sitemap. So"
+        },
+        {
+          "p_idx": 540,
+          "text": "18:05 again over here I would like to use"
+        },
+        {
+          "p_idx": 541,
+          "text": "18:06 screaming frog itself and use some"
+        },
+        {
+          "p_idx": 542,
+          "text": "18:08 options within screaming frog. Uh the"
+        },
+        {
+          "p_idx": 543,
+          "text": "18:11 first one being um"
+        },
+        {
+          "p_idx": 544,
+          "text": "18:14 the forced directory tree diagram. So"
+        },
+        {
+          "p_idx": 545,
+          "text": "18:17 this tree diagram gives you the details"
+        },
+        {
+          "p_idx": 546,
+          "text": "18:20 of how your pages are connected with"
+        },
+        {
+          "p_idx": 547,
+          "text": "18:22 each other. Uh how the internal linking"
+        },
+        {
+          "p_idx": 548,
+          "text": "18:24 is happening etc. uh it it shows you a"
+        },
+        {
+          "p_idx": 549,
+          "text": "18:27 better view of your overall uh site"
+        },
+        {
+          "p_idx": 550,
+          "text": "18:31 architecture"
+        },
+        {
+          "p_idx": 551,
+          "text": "18:34 and internal linking."
+        },
+        {
+          "p_idx": 552,
+          "text": "18:36 If you go closer uh you may be able to"
+        },
+        {
+          "p_idx": 553,
+          "text": "18:39 see that okay uh"
+        },
+        {
+          "p_idx": 554,
+          "text": "18:42 if I hover on a particular page it can"
+        },
+        {
+          "p_idx": 555,
+          "text": "18:44 give me details like okay uh this"
+        },
+        {
+          "p_idx": 556,
+          "text": "18:46 particular sorry"
+        },
+        {
+          "p_idx": 557,
+          "text": "18:50 this is the page title of this"
+        },
+        {
+          "p_idx": 558,
+          "text": "18:51 particular page this is the response"
+        },
+        {
+          "p_idx": 559,
+          "text": "18:52 code"
+        },
+        {
+          "p_idx": 560,
+          "text": "18:54 right the crawl depth is two etc so it"
+        },
+        {
+          "p_idx": 561,
+          "text": "18:57 gives you some additional details about"
+        },
+        {
+          "p_idx": 562,
+          "text": "18:58 that particular page now why am I taking"
+        },
+        {
+          "p_idx": 563,
+          "text": "19:01 you into this is it helps you understand"
+        },
+        {
+          "p_idx": 564,
+          "text": "19:02 that hey when you're creating the HTML"
+        },
+        {
+          "p_idx": 565,
+          "text": "19:05 how do"
+        },
+        {
+          "p_idx": 566,
+          "text": "19:06 want the existing content to be"
+        },
+        {
+          "p_idx": 567,
+          "text": "19:10 displayed on the page, right? And this"
+        },
+        {
+          "p_idx": 568,
+          "text": "19:12 is the thing which can give you some"
+        },
+        {
+          "p_idx": 569,
+          "text": "19:14 insights. If you don't need the"
+        },
+        {
+          "p_idx": 570,
+          "text": "19:16 insights, you can directly create it"
+        },
+        {
+          "p_idx": 571,
+          "text": "19:17 based on your categories, subcategories,"
+        },
+        {
+          "p_idx": 572,
+          "text": "19:20 etc. But you need if you need one level"
+        },
+        {
+          "p_idx": 573,
+          "text": "19:22 of additional information, you could use"
+        },
+        {
+          "p_idx": 574,
+          "text": "19:23 this particular tool to generate some"
+        },
+        {
+          "p_idx": 575,
+          "text": "19:26 more insights and then create it."
+        },
+        {
+          "p_idx": 576,
+          "text": "19:29 Right here the pages which are marked in"
+        },
+        {
+          "p_idx": 577,
+          "text": "19:31 uh the other color red"
+        },
+        {
+          "p_idx": 578,
+          "text": "19:34 are the pages which are no indexed. So"
+        },
+        {
+          "p_idx": 579,
+          "text": "19:36 so that that's also something which"
+        },
+        {
+          "p_idx": 580,
+          "text": "19:39 would be there and it could even help"
+        },
+        {
+          "p_idx": 581,
+          "text": "19:40 you understand some pages. Now let's say"
+        },
+        {
+          "p_idx": 582,
+          "text": "19:43 in case of this particular page this"
+        },
+        {
+          "p_idx": 583,
+          "text": "19:45 particular page is get demo and it has"
+        },
+        {
+          "p_idx": 584,
+          "text": "19:47 some parameters like selected uh this"
+        },
+        {
+          "p_idx": 585,
+          "text": "19:50 particular package. So I'm not sure if"
+        },
+        {
+          "p_idx": 586,
+          "text": "19:52 it necessarily needs a new page for this"
+        },
+        {
+          "p_idx": 587,
+          "text": "19:54 per thing. But uh even if there are some"
+        },
+        {
+          "p_idx": 588,
+          "text": "19:57 errors on the page and you don't want"
+        },
+        {
+          "p_idx": 589,
+          "text": "19:58 all the pages to be displayed on the"
+        },
+        {
+          "p_idx": 590,
+          "text": "20:00 HTML, uh this could be one way of making"
+        },
+        {
+          "p_idx": 591,
+          "text": "20:03 some decisions."
+        },
+        {
+          "p_idx": 592,
+          "text": "20:06 While that was the directory diagram,"
+        },
+        {
+          "p_idx": 593,
+          "text": "20:08 this is a crawl diagram. So again, uh"
+        },
+        {
+          "p_idx": 594,
+          "text": "20:11 there are different types of diagrams"
+        },
+        {
+          "p_idx": 595,
+          "text": "20:12 over here when when you're going through"
+        },
+        {
+          "p_idx": 596,
+          "text": "20:14 the uh"
+        },
+        {
+          "p_idx": 597,
+          "text": "20:17 screaming frog uh report. Now let's say"
+        },
+        {
+          "p_idx": 598,
+          "text": "20:21 you got this particular directory tree"
+        },
+        {
+          "p_idx": 599,
+          "text": "20:24 graph and within that you see the"
+        },
+        {
+          "p_idx": 600,
+          "text": "20:27 carriers and you know that hey yes these"
+        },
+        {
+          "p_idx": 601,
+          "text": "20:29 are my important pages. So on the HTML"
+        },
+        {
+          "p_idx": 602,
+          "text": "20:31 also you may decide that hey I want to"
+        },
+        {
+          "p_idx": 603,
+          "text": "20:33 structure it like this right I want the"
+        },
+        {
+          "p_idx": 604,
+          "text": "20:35 carriers as a category and within that"
+        },
+        {
+          "p_idx": 605,
+          "text": "20:38 all the pages should be displayed on the"
+        },
+        {
+          "p_idx": 606,
+          "text": "20:41 HTML. So this could be an easier way to"
+        },
+        {
+          "p_idx": 607,
+          "text": "20:44 get all the content which is there on"
+        },
+        {
+          "p_idx": 608,
+          "text": "20:46 your website and then asking the"
+        },
+        {
+          "p_idx": 609,
+          "text": "20:49 development team to build the HTML. Uh"
+        },
+        {
+          "p_idx": 610,
+          "text": "20:52 the developers could create it"
+        },
+        {
+          "p_idx": 611,
+          "text": "20:53 completely dynamically based on that"
+        },
+        {
+          "p_idx": 612,
+          "text": "20:55 logic as well. But yes, this is just one"
+        },
+        {
+          "p_idx": 613,
+          "text": "20:56 methodology I'm sharing with you."
+        },
+        {
+          "p_idx": 614,
+          "text": "21:02 The other thing which you will see is"
+        },
+        {
+          "p_idx": 615,
+          "text": "21:04 the the difference between uh"
+        },
+        {
+          "p_idx": 616,
+          "text": "21:07 sometimes what happens is while your"
+        },
+        {
+          "p_idx": 617,
+          "text": "21:08 directory tree graph. So this is based"
+        },
+        {
+          "p_idx": 618,
+          "text": "21:11 on directory. So careers was a directory"
+        },
+        {
+          "p_idx": 619,
+          "text": "21:14 and based within that there are those"
+        },
+        {
+          "p_idx": 620,
+          "text": "21:16 pages and uh this is with the based on"
+        },
+        {
+          "p_idx": 621,
+          "text": "21:19 the crawl when it crawled the career"
+        },
+        {
+          "p_idx": 622,
+          "text": "21:20 section it decide saw this this other"
+        },
+        {
+          "p_idx": 623,
+          "text": "21:23 pages and uh yes this is exactly"
+        },
+        {
+          "p_idx": 624,
+          "text": "21:25 matching. So I know that hey there are"
+        },
+        {
+          "p_idx": 625,
+          "text": "21:26 no challenges over here. Buth what you"
+        },
+        {
+          "p_idx": 626,
+          "text": "21:28 would see is the industries uh tag over"
+        },
+        {
+          "p_idx": 627,
+          "text": "21:31 here. So while in the directory tree"
+        },
+        {
+          "p_idx": 628,
+          "text": "21:33 graph under industries there are no"
+        },
+        {
+          "p_idx": 629,
+          "text": "21:35 pages but when I'm using the crawl tree"
+        },
+        {
+          "p_idx": 630,
+          "text": "21:39 graph within industry I see some pages."
+        },
+        {
+          "p_idx": 631,
+          "text": "21:44 Now"
+        },
+        {
+          "p_idx": 632,
+          "text": "21:45 this is some level of information which"
+        },
+        {
+          "p_idx": 633,
+          "text": "21:47 I would like to deep go deeper into and"
+        },
+        {
+          "p_idx": 634,
+          "text": "21:51 understand that hey why is it coming"
+        },
+        {
+          "p_idx": 635,
+          "text": "21:52 like this? The ideal reason would be"
+        },
+        {
+          "p_idx": 636,
+          "text": "21:54 that okay the URLs have not been"
+        },
+        {
+          "p_idx": 637,
+          "text": "21:57 properly structured and that's where the"
+        },
+        {
+          "p_idx": 638,
+          "text": "21:59 industry as a folder is not there and"
+        },
+        {
+          "p_idx": 639,
+          "text": "22:02 that's where it's not uh"
+        },
+        {
+          "p_idx": 640,
+          "text": "22:06 getting displayed in the directory chart"
+        },
+        {
+          "p_idx": 641,
+          "text": "22:08 but since under industries when it"
+        },
+        {
+          "p_idx": 642,
+          "text": "22:11 crawls it sees all the pages it's"
+        },
+        {
+          "p_idx": 643,
+          "text": "22:14 structuring it for you right ideally"
+        },
+        {
+          "p_idx": 644,
+          "text": "22:17 that's the usual thing which happens"
+        },
+        {
+          "p_idx": 645,
+          "text": "22:18 when you are creating the pages many"
+        },
+        {
+          "p_idx": 646,
+          "text": "22:21 times the engineers have that habit that"
+        },
+        {
+          "p_idx": 647,
+          "text": "22:23 okay create everything in the root"
+        },
+        {
+          "p_idx": 648,
+          "text": "22:24 folder itself"
+        },
+        {
+          "p_idx": 649,
+          "text": "22:26 right but when you want to create a"
+        },
+        {
+          "p_idx": 650,
+          "text": "22:28 chart like this and HTML like this uh"
+        },
+        {
+          "p_idx": 651,
+          "text": "22:31 you want the information at a more"
+        },
+        {
+          "p_idx": 652,
+          "text": "22:35 detailed level and if it is can be just"
+        },
+        {
+          "p_idx": 653,
+          "text": "22:37 created with a tool like this it will"
+        },
+        {
+          "p_idx": 654,
+          "text": "22:39 simplify your work a lot"
+        },
+        {
+          "p_idx": 655,
+          "text": "22:43 right see over here SEO for cannabis"
+        },
+        {
+          "p_idx": 656,
+          "text": "22:45 does not has the industry folder and"
+        },
+        {
+          "p_idx": 657,
+          "text": "22:48 that that's where it's getting"
+        },
+        {
+          "p_idx": 658,
+          "text": "22:51 displayed in the crawl tree graph graph"
+        },
+        {
+          "p_idx": 659,
+          "text": "22:53 which is generated based on the crawl"
+        },
+        {
+          "p_idx": 660,
+          "text": "22:55 but not in the directory tree graph"
+        },
+        {
+          "p_idx": 661,
+          "text": "22:58 which is created based on the directory"
+        },
+        {
+          "p_idx": 662,
+          "text": "23:00 tree structure. But using both this"
+        },
+        {
+          "p_idx": 663,
+          "text": "23:02 charts together you should get enough"
+        },
+        {
+          "p_idx": 664,
+          "text": "23:04 insights to create your own HTML sitemap"
+        },
+        {
+          "p_idx": 665,
+          "text": "23:08 like LinkedIn."
+        },
+        {
+          "p_idx": 666,
+          "text": "23:12 Okay. Uh that's good. And then we have"
+        },
+        {
+          "p_idx": 667,
+          "text": "23:16 the text sitemap again that would be"
+        },
+        {
+          "p_idx": 668,
+          "text": "23:18 something like sitemap.txt txt a file"
+        },
+        {
+          "p_idx": 669,
+          "text": "23:21 which will be created with all the URLs"
+        },
+        {
+          "p_idx": 670,
+          "text": "23:23 only and uploaded onto the server and"
+        },
+        {
+          "p_idx": 671,
+          "text": "23:26 again you can submit it to your search"
+        },
+        {
+          "p_idx": 672,
+          "text": "23:28 console and then there is RSS sitemap"
+        },
+        {
+          "p_idx": 673,
+          "text": "23:31 again I'm not getting the details of"
+        },
+        {
+          "p_idx": 674,
+          "text": "23:32 this we spoke about it a little in the"
+        },
+        {
+          "p_idx": 675,
+          "text": "23:35 pre one of the previous slides where we"
+        },
+        {
+          "p_idx": 676,
+          "text": "23:36 were seeing the snapshot provided but"
+        },
+        {
+          "p_idx": 677,
+          "text": "23:39 yes if you have an RSS also it's fine um"
+        },
+        {
+          "p_idx": 678,
+          "text": "23:43 if it's getting updated regularly you"
+        },
+        {
+          "p_idx": 679,
+          "text": "23:45 could submit that as your site"
+        },
+        {
+          "p_idx": 680,
+          "text": "23:50 again uh time for some self-arning."
+        },
+        {
+          "p_idx": 681,
+          "text": "23:54 So just a simple thing this time. Um are"
+        },
+        {
+          "p_idx": 682,
+          "text": "23:57 all your pages and assets"
+        },
+        {
+          "p_idx": 683,
+          "text": "23:59 listed in the XML side?"
+        },
+        {
+          "p_idx": 684,
+          "text": "24:03 If yes, very good. If not, uh, use the"
+        },
+        {
+          "p_idx": 685,
+          "text": "24:07 SEO task spreadsheet template to record"
+        },
+        {
+          "p_idx": 686,
+          "text": "24:09 those pages and assets which you want to"
+        },
+        {
+          "p_idx": 687,
+          "text": "24:12 be included in the site map because"
+        },
+        {
+          "p_idx": 688,
+          "text": "24:15 that's something which you'll have to"
+        },
+        {
+          "p_idx": 689,
+          "text": "24:16 share with your engineering team or"
+        },
+        {
+          "p_idx": 690,
+          "text": "24:19 you'll have to take action on it in the"
+        },
+        {
+          "p_idx": 691,
+          "text": "24:20 future. So just keep a note of it."
+        },
+        {
+          "p_idx": 692,
+          "text": "24:26 Use any"
+        },
+        {
+          "p_idx": 693,
+          "text": "24:28 tool to generate your XML sitemap file."
+        },
+        {
+          "p_idx": 694,
+          "text": "24:32 Upload that file to the server."
+        },
+        {
+          "p_idx": 695,
+          "text": "24:35 If it is not already existing, also"
+        },
+        {
+          "p_idx": 696,
+          "text": "24:37 include it in your XML index file if you"
+        },
+        {
+          "p_idx": 697,
+          "text": "24:41 have an index file. If not, please"
+        },
+        {
+          "p_idx": 698,
+          "text": "24:43 create the index file and submit the XML"
+        },
+        {
+          "p_idx": 699,
+          "text": "24:46 file in the search console. Once you do"
+        },
+        {
+          "p_idx": 700,
+          "text": "24:49 this, observe the errors through the"
+        },
+        {
+          "p_idx": 701,
+          "text": "24:51 coming weeks or any issues which you are"
+        },
+        {
+          "p_idx": 702,
+          "text": "24:53 seeing in the sitemap folder on search"
+        },
+        {
+          "p_idx": 703,
+          "text": "24:55 console and then ensure that you're"
+        },
+        {
+          "p_idx": 704,
+          "text": "24:58 fixing those errors etc on a regular"
+        },
+        {
+          "p_idx": 705,
+          "text": "25:00 basis."
+        },
+        {
+          "p_idx": 706,
+          "text": "25:02 Okay. Uh with that it's time for the"
+        },
+        {
+          "p_idx": 707,
+          "text": "25:05 next module. I'll see you soon. Thank"
+        },
+        {
+          "p_idx": 708,
+          "text": "25:08 you."
+        }
+      ],
+      "paragraph_count": 579,
+      "word_count": 4336,
+      "char_count": 23487
+    },
+    {
+      "video_index": 4,
+      "video_title": "4. Copy of Copy of 4. AMP.mp4",
+      "start_p": 709,
+      "end_p": 710,
+      "paragraphs": [
+        {
+          "p_idx": 710,
+          "text": "The fourth module of week fourin technical SEO part two.This is going to be the smallestmodule among this five modules. Soit should be really easy. Okay. Now whenit comes to AM, what are we speaking of?We are speaking of accelerated mobilepages.This wasayou you can term it as a technology oryou could term it as a piece of codewhich was suggested by Google a fewyears back when there were major speedchallenges across the web right uh weused to see websites which used to loadin 8 seconds 9 seconds etc and that'swhereat that point in time accelerated Edmobile pages came into significancewhen it started. Initially it juststarted for the mobile version but lateron uh this particular thing wasuh opened up for all the kind ofplatforms right from the mobile to thelaptops to the desktops etc.This definitely helped and it was muchof a relief because since the time itwas launched accelerated mobile pageswas more for mobile and uh one of themajor challenge which was happening withAM was the maintainability.What was happening is while AM helped usin getting bettervisibility on the top stories etc.So many of the media houses specificallythe publication news publicationsum they were the firstwebsites to implement AM and many of thewebsites implemented AM and uh weregetting the benefits of it but yes againalong with uh AM came a challenge andthe challenge was maintainabilityright uhGoogle was constant ly speaking that heyam is not a ranking factor and uhactually it's just a way to optimize thespeedand one thing which happened over thislast many years is the technologies haveadvanced tools have advanced which havehelped us to optimize the speed of thewebsites in a much better manner sothat's where the need for AM as suchstarted reducing because there waschallengeuh the challenge of maintainabilitybecause understand that some websiteswere already maintaining the mobileversion some were already maintainingthe mobile plus desktop version and nowyou have to maintain one more AM versionall right uh so that that's where uhtoday the implementation of AM at leastbased on my understanding has reducedconsiderably as compared to what it waslet's say at least around 5 years backand uh that that's where I would suggestuh at least uh for all of you um don'tworry about AM as such but yes if youhave AM already implemented onto yourwebsite ensure that for pages like thislet's say you have a page which is an AMversion of the page ensure that thispage is canonicalcanonicalized to this page so thissecond page is a canonical mentioned inthis particular page. So that'ssomething which you need to ensure. Plusthere are a whole bunch of uh issueswhich you will find on your searchconsole if you're already having AMintegrated on your website. So if it isalready there please ensure that all thedifferent errors u are are rectified.These are just some of the sample errorsand you see all of these on the infidwebsite right now because we are in theprocess of removing EM to some extent.So that that's where uh I was able toget the screenshot. So a mandatory AMHTML tag is missing from the document.Custom JavaScript is not allowed. Somany of these will go more technical. Umso what I would recommend is at least uhif you're going to continue with AM onyour website and if it already has itplease share this errors with yourengineering team ask them to rectify itideally need not be there on the searchconsole at all. Uh and it will also helpyou ensure that your users get a betterexperience. But if you ask me thequestion Kawhel should we implementAM on our website todaymy answer would be nobecause uhthere are many tools which can help youget better page speed right so pleaseuse those tools because while AM givesyou the benefit of ranking better uhfrom the speed standpointmaintainability is something which I'veseen that many of the organizations werenot able to maintain those two versionsof the code. What was happening is EMpage would have some different contentand the main page has some differentcontent. Um again when we tell them toresolve the issues related to UX and allthis errors on the EM version which yousaw in the previous screen uh the clientfeels that hey this is too much it's toooverwhelming to fix now both theversions of the website. So that's whereI would prefer that you maintain oneresponsive version of the website and dojustice to that one particular versioninstead of creating multiple versions ofyour page.Right? Uh but ensure that if AM is thereyou resolve the errors in the searchconsole. So that was uh the smallest ofthe module for this particular week. UhI'll see you soon in the upcomingmodule.Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 760,
+      "char_count": 4677
+    },
+    {
+      "video_index": 5,
+      "video_title": "5. Copy of Copy of 5. Optimizing JavaScript Websites.mp4",
+      "start_p": 711,
+      "end_p": 712,
+      "paragraphs": [
+        {
+          "p_idx": 712,
+          "text": "Welcome to the last module of week fourtechnical SEO part two.We are going to cover JavaScripts.And uhfor the people who are uh not thatcomfortable with coding, this could beone of the most uh in intensivemodule so far. But don't be scared.We'll uh be able to navigate through ittogether. Right? Okay. So before gettinginto the details, let's first understandwhat is JavaScript.Okay. So as you know the websitesnormally this are mostly the HTMLwebsites used with uhplatforms like let's say WordPress orShopify.They may have JavaScript used in them tosome extent but predominantly thewebsite is an HTML based website or aserversideu website as such right where the codeis easy for the bots to understand.Nowwhen it comes to JavaScript,it's a programming languageand it is used to make dynamic websites,right? Um,one thing which may scare you is that98% of the websites use JavaScript. Butone good thing is only a few of themextensively use JavaScripts and uhthat's where they need some specialthings to take care of when it comes toJavaScript websites.It's quite popular with the developersand we see more and more websitesgetting onto JavaScripts these days andthat's where SEOs have to be more andmore vigilant about it and ensure thatthe developers don't make any mistakesover there. Right? So that that's thework of the SEOand uh one other thing which you shouldknow is till 2019 most of the popularsearch engines were ignorant about itworking towardsparsing a Java script based websiteunderstanding it and then ranking it. Sothat was one of the challenge whilesearch engine started working on thatparticular thing. It was a big relieffor the SEO community when um in 2019during the Google IO conference, this isone of the popular conferences of Googlewhich happens almost every year. Theyannounced the launch of the newevergreen Google bot.And with this particular bot, one thingwhich came up with is that JavaScriptwebsites would now be crawled by Google.So this was such a great relief for usbecause before that we had to work on uhspecifically different kind of solutionslike serverside rendering to ensure thatall the JavaScript content iskind of crawled by Google bot. So wefelt that okay uh once this thing comesin there's no need for serversiderendering etc.Now let's get into the platforms thathey how do I know whether my website isa JavaScript based website. So if uhyour engineers tell you that hey uheither they're using JavaScript it'seasier that hey the entire platform isbased on JavaScript it makes your lifemuch easier. But if not even if uh theymention that hey it's built on ReactJSor Angular NodeJS Vue.js JS etc. thelist that you see on this thing butthere are many other I've just selectedsome of the top 10 but yeah there aremultiple other languages some of thelanguages which can't be even understoodby Google. So there are severallanguages so it's important for you atleast to identify first whether yourwebsite is a JavaScript website or not.If uh this clears the test uh what youcould do is you could also startunderstanding that hey how do I detectthis particular thing even if I don'tknow this all right uh so we will gointo the details of it in the comingslides but let's say if uhyou want to understand uh that okaylet's say this particular websiteboxupgifting.comis it a JavaScript website or not what Iwould recommend is you right click on itand go to this view page source. Onceyou right click on it,you should be able to see the code ofthe page. And uh let's say if you seesome 4,000 lines of code, don't worryabout it.But say, \"Wow,this is not on JavaScript at least.\" uhthere's quite a bit of code over here.You'll be able to see some tables, someuh hyperlinks, etc. So even if that's alengthy code, my reaction would be wowat least it's not on JavaScript. Why amI so scared about JavaScript? It's notonly me. Many people at Google also getscared about JavaScript. Uh because uhit has its challenges. You'll be able tosee it in the coming slides.Okay. But let's say if there is someother website and uh you do the sameright click on this particular websitewishcarma.com.You right click on this particular thingand uhjust keep this in mind. This particularwebsite right now quotes that it hasaround 3 lakh 50,000products around 300,000 products on thewebsite.Now when you right click and say viewsource you see the code which isone line of code.Is this a wow?Ask the founder. It should not be forhim.Okay, let's go next. Now this is thetime you don't say wow but you prepareyourself with all your knowledge, allthe tools which you have collectedaround SEO and let's see how you aregoing to use this tools.The first one which you need tounderstand is use the tool calledbuiltwith.comfree website uh just go to builtwith.comput the website name let's say for justdifferentiation purposes I'm again usingthe same website which we tookpreviously boxupgifting.comand when you scroll through the resultyou'll understand that hey it's built onShopify and it's using all the pluginswithin Shopify. So you know that hey boxof gifting is built on Shopify. Shopifyis not 100% JavaScript and it's able tocrawl the websites. There are other fewcompetitors who are there on Shopify andthey are able to rank well with thiskind of website. So you cannot worry.But let's say you put Wish Karmaand it tells you that hey this is builton React. Again you'll have to scrollthrough the page to get to thisparticular uh this thing. But you youshould be able to manage it. So you'llreach this particular thing where you'llget to know that hey it's built onreact. Now it's built on react has thatone single line of code. What do you do?Next thing which I would ask you to dois do a site. We learned this particularcommand earlier. Use this command. Do asite for wish.com.See the results. How many pages indexedon Google?2,700.How many product pages uh overallcatalogsorrythat that was in some hundreds ofthousands, right?Google is not able to crawl through theother pages.Big challenge.The website is missing on the organicsearch opportunity itself as of now.Let's go deeper and understand whatneeds to be done.The next step I do is I put this in thescreaming frog and get the websitecrawled.After crawling 100%mine is the licensed version, so I'mable to crawl it completely. But what Iget is uh 287 pages and 0% remaining.And you are able to see the pages overhere. They are all CSS pageswhich arecrawled over here for this particularwebsite,right? And you further can see thistotal URLs 287uh no challenges as such. But yeah,having no challenges over here in thescreen itself is a challenge. Everythingis so good that there is a big problem,right?uh everything else no images at least noPDFs no nothing else no CSSuh okay and one JavaScript file but yeahso many CSS so let's see how can we godeeper into itwhen you see this at least just one uhpiece of advice uh go to yourconfiguration and ensure that JavaScriptis getting crawled if this is tick markat least you know that hey uh yes myScreaming frog is even crawling thejavascripts right so when you're doingthis kind of check just ensure that thisis open this ticked and you're gettingthis kind of pages yes there is someissue which you need to go deeper intoum I I would like to bring to yournotice a similar case like wish karmawhich came to us a fewmonths back and this is a very popularwebsite u so sorry I would not be ableto would reveal the URL over here. Uhbut at least after crawling 100% of thewebsite, we just saw one page.Yeah, you heard me right. Uh we wereable to just scroll one page while thesite had again hundreds of thousands ofpages, right? Uh completely missing onthe SEO opportunity and uh that that'swhere uh we had to take some steps andI'll help you with the steps.Now what you need to understand is whenall these things is yes this ishappening this is happening like wishkarma you know that this particularwebsite is a javascript website and thiswebsite means it's a client siderendered website right the website isworking perfectly fine if you younavigate through it as a user the chromebrowser or the other browsers are ableto perfectly um give you that experiencebut it's only the behind the scenes it'sa completely completely differentlanguage which is happening. So what youneed to do now is first understand whatis client side rendering. So client siderendering um what happens with clientside rendering let's say from your webserver when the code is provided to thebrowser the browser is able tounderstand this particular code it hasthe required parsersuh required what do you term it asparser if I have to explain you it's arequired uh set of technology which canexpand on that particular code uh do therequired DOM request or the documentrequest and get that piece ofinformation from the server and thendisplay the page to you. So for you itdoes not make any difference whether yousee a pro normal HTML page or thisparticular page. It would look more orless similarbut uh the browser did some differentaction to get you that content of thepage. Right? So that's where it is aclient side rendered website or clientside rendered rendering. Um at the sametime when you were working purely onlet's say HTML websites which had a codewhich you could see in the view source4,000 lines of code and uh it wascompletely readable. Um you were clearthat hey this is an HTML code. It's notthat uh just one point of clarification.It's not that uh JavaScript websiteswould be always small like the Vishkarmacase. uh it could be bigger as well uhif properlywritten over there it could be largerbut yes the code itself when you see thecode you will be able to understandwhether it's a JavaScript code or anHTML code there is one upcoming slide II'll speak more about that in that slidewhen I can show you the examples as wellbut I hope at least now it is clear thatokay client side rendering is going tobe rendered in a different way it's notthe same as the serverside renderedwebsite there is some At least that'ssomething which you are aware of.Okay. So let's go deeperand understand little about serversiderendering. So what happens in serversiderendering is all the template of thepage all the information content on thepage it helps you get that final HTMLversion and uh that's what is served toyou on your screen and you see thatparticular pageand in this case when it comes tocrawling how does it happen is Googlebot gets the page it comes to yourwebsite at that point in time itself itrenders it and then indexes thatparticular website right rendering andindexing is almost instantalong with the crawl. Uh nowthis is the most ideal situation evenfor the JavaScript based websites, isn'tit? But that's not the case. The realityin case of JavaScript websites isdifferent. So what happens?There are multiple waves of indexingwhen it comes to JavaScript websites.So once the bot crawls it, it will dothe first round of indexing where itwill collect some minimal information.Rendering is yet away. It's distinct,right? So it gets that initial piece ofinformation and uhat this stage we know that significantinformation is pending like the contentand other stuff. In most cases itdoesn't get crawled if it was notproperly implemented. So a good amountof information is pending.Now when those additional resources orbots which can render the content andunderstand the JavaScript based websitecontent become available,they start rendering the pageand that's where the second wave ofindexing gets completed.Okay. uh little technical but I've triedto represent it in as simple charts aspossible for you. So again I I'll justexplain it over here. Crawling happened.Google bot got the URL. It did the firstround indexed it andthen the second round happened where itwent through the rendering. This thinggot completed. And if I have torepresent it in a different way, I cando it this way also that okay from acrawl queue, the crawler came, itprocessed the pagebecause it was a JavaScript website, itmoved it into the render queue, itrendered the page, put it back toprocessing and then indexed the page.Right? Now the page should get indexedif it has followed this particularmechanism.But when websiteslike Wish Karma don't get properlyindexed or you see that the index countdoes not has those many pages, those areall blog pages which you see over therewhich is coming from WordPress. You knowthat something is wrong, isn't it?Sowhile it should get indexedthe big thing question comes here issome updates from Google which clearlymentioned thatthis was still 2022. What it used to sayin the old uh document of search consolethat keep in mind that the server sideof pre-rendering is still a great idea.you should do it because it makes yourwebsite faster for users and crawlersand not all WS can run JavaScript,right? So in fact we SEOs got sorelieved in 2019 with that update ofevergreen Google watch that we were allfine that okay now maybe in the nearfuture JavaScript websites would becompletely fine and we need not worryGoogle will have all the worry at itsend but understand that the technologyis quite advanced. Google is also facinguh challenges in terms of its resources.It needs server to servers to crawlthose particular websites right and wespeaking of millions and billions ofwebsites. So that's where the challengeis and yet todayit clearly says that in case yourwebsite has content that is changingrapidly. Now it doesn't say that okaywhat is rapidly changing content is itchanging the content changing in oneweek is it considered as rapid or is itcontent changing every few seconds butuh yes if you see that your websitecontent is not being done justice to inthe search engines uh it does recommendsomething called uh dynamic renderingand serverside rendering for yourwebsite. Now let's go deeper into whatis dynamic rendering.Okay. Solet's say if this is your server andwithin the web serverif a user comes in what they do is theyget that required set of code. We arespeaking of JavaScript only. Now um theclient side version gets rendered bythis particular code.And um iflet's say a Google bot comes in and forGoogle bot you're giving a completelydifferent version of code which isrendered separately on the run then itwould be considered as a dynamicallyrendered HTML. So what happens in thiscase is that when a request like thiscomes a dynamic renderer comes intopicture. It's a dynamic renderer isnothing but a let's say browser likeChrome or Chromium. Um I'm not sure howmany of you would have heard about itbut yes uh so those kind of browsersthat kind of technology is there on yourserver which when the bot comes in itknows that hey this is a bot and itgives it it the dynamic rendered versionof the page and not the client sideversion of the page right. Um so so thisis how two different versions are servedby the server to differentuser agents. Now some of you may askthat hey koshel is this clockingum because I'm serving different versionto the client and different version tothe server.Now uh this is something which Googlehas also clearly specified that thiswon't be considered as clocking becauseat the end whatever you're presenting tothe bots is also something which you'representing to the user. It's just aslight change in technologywhich is happening in this particularcase. Right? So it's not considered asclocking. For people who don't knowclocking, uh when you share differentversions with different people,um specifically with an intent to rankhigher and deceive the search engines,that is termed as clocking. Here you arenot trying to deceive the searchengines. You're trying to provide moreinformation to the search engines.That's why it's not considered asclocking.Okay. And uh while dynamic rendering isgood um in that document also if you sawwhich we presented this thing uh itclearly says that dynamic rendering is aworkar around forthis thing but uhwhat is better isserverside rendering right and that'swhere what I would suggest is instead ofgoing into dynamic rendering while youunderstood it it was more to help youunderstand what is dynamic renderingwhile you're speaking with yourengineers. But uh ideally I would preferthis kind of model where for the clientside users you're providing the clientversion and for all the Google bot andother things there is a serversideversion which is kept which is presentedto theGoogle bots and the other searchengines.Okay. Uh now some tips. So what shouldwebsites like Wish Karma do?They need to do a few checks.First is to see whetherthe website is returning a 200 HTTPstatus code which in its case we sawthat okay where theuh screaming frog report we saw that yesall the stylesheets were getting crawleduh not the real pages which ideallyshould get crawled. So it's not thisparticular challenge which is there infront of the website. That's what I mybelief is. Um is it returning uniquetitlesto all the pages for all the pages. Sothis will have to be checked on thewebsite by going to the pages andunderstand whether the titles aredifferent or are you serving the sametitles for all the pages to Google. Ifthat is the case, Google may be ignoringall the pages.um as well because all the pages arewith the same title but that also notwas not the caseat least for vish karma um then weshould be checking what are the metadescriptions are the descriptions thesame or different so let's say if we goand uh I hope you remember this tool theSEO plug-in which we used in theprevious weeks we use this tool insteadof getting into the code and we see thathey description is missinglet's see some more pages and we Yes,description is missing on those pages.Descriptions are important when it comesto JavaScript based websites becausethat's the way at least uh with thatlittle information also Google canunderstand that hey this page isdifferent from the other pageand that's where a description missingis something which ideally should getrectified and uh I would recommend thisparticular website to first get thedescription in place for all the pages.The next thing is the href links.Right now what happens is many of thetimes uh when the developers arecreating the JavaScript based codethey use pseudo links. Okay. Now pseudolinks are links like this which arecreated with span or on click etc. Nowthis are valid JavaScript standardsright. But what happens is the botcannot crawl through this links.Now if it has to crawl through thislink, it needs a proper AHF link. Sothat's the first thing which I feel uhshould be checked. And if the AHF linksare not there, uhonly the span links are there. Thosespan links should get converted shouldbe converted to AHF links. Right? Andonce this is incorporated again do acrawl via screaming frog etc. and thetools and just check it whether it'sworking or not.The next thing is semantic HTML.Google advises at least that uh thesemantic HTML should be provided whichhelps uh not only the users who canvisually see the screen but even for theusers who are not able to see and uh aredependent on some other devices tounderstand what is being presented tothem. Right? So for them as well as forGoogle's understanding if something likea semantic HTML is incorporated on thepage they will be able to clearlyunderstand that hey this is someJavaScript but even with the JavaScriptit's able to give me the instructionsvery clearly.Nowover here this is a good way to evenexplain you what is the major differencehow can you differentiate between the uhcodes u so when it comes to javascript'scode you you'll see more of uh spans etcon the uh code file but when it's anhtml you you will see more of table tagsparagraph tags content which is visibleon the page directly so that's how youcan differentiate it and And withcementing HTML markup, you are providingthose additional tags of informationin the code and the JavaScript contentis wrapped around this semantic HTMLwhich at least gives the indication toGoogle and other search engines that heythis particular link needs to befollowed. Um for the details um sinceall the websites may not be facing thiskind of problems. I'm not getting thedetails but this is a checkpoint. Youneed to share it with your engineeringteam. Uh I'll also share the URL fromGoogle so that at least you can uh sharethat URL with your engineering team andtake it up. But yes, at least I'm goinga little fast so that at least uh wedon't bore the other users with too muchof information as well.Other is if there are videos usecaptions on those videos. If there areimages, use all text on the images. Sothat at least helps Google to understandthat hey this images are there. Andone last thing which you need to do isuse the URL inspection tool in searchconsole to understand how thatparticular page is getting displayed. Ihope you remember URL inspection. It wasjust over here. So use this particulartool. Let's say if this is the URL orthis was the URL which was used. Itshould at least say that hey URL is onGoogle, is it getting indexed? Is itusable on mobile? Is it HTTPS?And if it has any FAQs or anything onthe page. So this at least should be alltick mark um after your website getscrawled properly. Right.One last thing specifically when itcomes to JavaScript SEO, you need tostay updated. uh the technologylandscape is changing really rapidlyacross the globe and that's where it'simportant.Um while we speak of JavaScript uh thereare already technologies from Microsoftand other technologies from other peopleuh who are open source technologieswhich are coming up and uh some of thesetechnologies even uhGoogle and other organizations arealready implementing within theorganizations. If wesee that okay those newer technologiesare better than JavaScript maybe it'squite possible that uh like technologiesuh like things what happened to AM andhow it is losing its significancesimilar things could happen toJavaScript but yes for the time beingtill the time this technologies are inplace we need visits we need peoplecoming to our website so one thing weneed to be stay updated with theinformation on a day-to-day basis so Umone thing uh I would recommend is atleast for the people who whose websitesis on JavaScript please use the Googlesearch central u use this URL I'll alsoput this URL on the u resources you'llbe able to see it on the learningplatformand uh keep a track of it even for thedetails the details over here how to fixthis particular thing issues areavailable on this thing if you need togo in depth please again use thisparticular version to go in depth. Uhwhat I've been able to cover JavaScriptin this last few minutes is just a smallpiece. While my objective was to atleast initiate you people into thisparticular journey.Completion of journey is something whereyou will have to go into the details.You'll have to go into the analysis andthen find your way.Right? Uh so time for some self-arning.I'll keep it simple.Is your website client side rendered?People who have the answer no, relax.And uh for the people whose website isclient side rendered,check the crawling and indexing of thewebsite. Right? uh use the tools insearch console to understand whetherit's happening properlyand if you find the issues update theSEO task spreadsheet along with thoseissues.That's all for this particular week. Ifyou have any questions, wait for ourweekly meeting.If you cannot wait, please feel free totweet me at koshal_t and I would try torespond it at my at the earliest.Thank you for your time this week. I'llsee you soon next week. Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 3803,
+      "char_count": 23543
+    }
+  ],
+  "paragraph_count": 588,
+  "word_count": 13392,
+  "char_count": 80026
+}

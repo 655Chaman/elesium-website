@@ -115,7 +115,7 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
           name="description"
           content="Simulate and benchmark multi-turn autonomous agent memory drift and context compression. Compare raw FIFO context accumulation against sliding windows and sovereign hierarchical semantic memory with 92.4% compression and sub-85ms retrieval."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-memory-drift-compression-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-memory-drift-compression-simulator/" />
       </Helmet>
 
       {/* Hero Section */}
@@ -402,7 +402,7 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
                 </ExpandableScreenContent>
               </ExpandableScreen>
               <Link
-                to="/solutions"
+                to="/solutions/"
                 className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
               >
                 Explore All Sovereign Solutions

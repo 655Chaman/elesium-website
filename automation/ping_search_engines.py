@@ -7,7 +7,7 @@ URLs to the IndexNow protocol (Microsoft Bing, Yandex, Seznam, Naver) for instan
 
 Sitemaps Targeted:
   - https://elesium.online/sitemap.xml
-  - https://elesium.online/sitemap-commercial-top100.xml
+  - https://elesium.online/sitemap-core.xml
   - https://elesium.online/sitemap-solutions.xml
 
 IndexNow Protocol:
@@ -46,8 +46,9 @@ INDEXNOW_API_ENDPOINT = "https://api.indexnow.org/IndexNow"
 
 SITEMAPS = [
     f"https://{HOST}/sitemap.xml",
-    f"https://{HOST}/sitemap-commercial-top100.xml",
-    f"https://{HOST}/sitemap-solutions.xml"
+    f"https://{HOST}/sitemap-core.xml",
+    f"https://{HOST}/sitemap-solutions.xml",
+    f"https://{HOST}/sitemap-videos.xml"
 ]
 
 SEARCH_ENGINE_PING_TEMPLATES = {
@@ -58,12 +59,12 @@ SEARCH_ENGINE_PING_TEMPLATES = {
 # Core priority URLs always included in IndexNow pushes
 CORE_PRIORITY_URLS = [
     f"https://{HOST}/",
-    f"https://{HOST}/solutions",
-    f"https://{HOST}/signals",
-    f"https://{HOST}/how-we-work",
+    f"https://{HOST}/solutions/",
+    f"https://{HOST}/signals/",
+    f"https://{HOST}/how-we-work/",
     f"https://{HOST}/commercial-directory.html",
-    f"https://{HOST}/tools/agentic-architecture-grader",
-    f"https://{HOST}/markets"
+    f"https://{HOST}/tools/agentic-architecture-grader/",
+    f"https://{HOST}/markets/"
 ]
 
 
@@ -104,17 +105,18 @@ def extract_top_priority_urls(limit: int = 100, logger: logging.Logger = None) -
     """
     Gathers top priority URLs:
     1. Core site entrypoints and simulators.
-    2. High-intent commercial URLs from sitemap-commercial-top100.xml.
-    3. Essential core URLs from sitemap-core.xml if needed.
+    2. Essential core URLs from sitemap-core.xml.
+    3. High-intent solution URLs from sitemap-solutions.xml if below limit.
     """
     discovered: List[str] = list(CORE_PRIORITY_URLS)
     seen = set(discovered)
     ns = {"ns": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     
-    commercial_sitemap = find_sitemap_file("sitemap-commercial-top100.xml")
-    if commercial_sitemap.exists():
+    # Ingest priority URLs from sitemap-core.xml
+    core_sitemap = find_sitemap_file("sitemap-core.xml")
+    if core_sitemap.exists():
         try:
-            tree = ET.parse(commercial_sitemap)
+            tree = ET.parse(core_sitemap)
             root = tree.getroot()
             for loc in root.findall(".//ns:loc", ns):
                 url = loc.text.strip() if loc.text else ""
@@ -125,17 +127,14 @@ def extract_top_priority_urls(limit: int = 100, logger: logging.Logger = None) -
                         break
         except Exception as e:
             if logger:
-                logger.warning(f"Could not parse commercial sitemap ({commercial_sitemap}): {e}")
-    else:
-        if logger:
-            logger.warning(f"Commercial sitemap not found on disk at {commercial_sitemap}")
+                logger.warning(f"Could not parse core sitemap ({core_sitemap}): {e}")
 
-    # Fallback to sitemap-core.xml if below limit
+    # Fallback / fill to limit from sitemap-solutions.xml if below limit
     if len(discovered) < limit:
-        core_sitemap = find_sitemap_file("sitemap-core.xml")
-        if core_sitemap.exists():
+        solutions_sitemap = find_sitemap_file("sitemap-solutions.xml")
+        if solutions_sitemap.exists():
             try:
-                tree = ET.parse(core_sitemap)
+                tree = ET.parse(solutions_sitemap)
                 root = tree.getroot()
                 for loc in root.findall(".//ns:loc", ns):
                     url = loc.text.strip() if loc.text else ""
@@ -146,7 +145,7 @@ def extract_top_priority_urls(limit: int = 100, logger: logging.Logger = None) -
                             break
             except Exception as e:
                 if logger:
-                    logger.warning(f"Could not parse core sitemap ({core_sitemap}): {e}")
+                    logger.warning(f"Could not parse solutions sitemap ({solutions_sitemap}): {e}")
 
     return discovered[:limit]
 

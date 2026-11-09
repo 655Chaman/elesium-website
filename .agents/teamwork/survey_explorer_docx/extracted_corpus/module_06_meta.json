@@ -1,0 +1,976 @@
+{
+  "module_num": 6,
+  "module_id": "module_06",
+  "module_title": "MODULE 6",
+  "start_p": 713,
+  "end_p": 945,
+  "special_note": null,
+  "videos": [
+    {
+      "video_index": 1,
+      "video_title": "1. Copy of Copy of 1.Links Fundamentals.mp4",
+      "start_p": 714,
+      "end_p": 715,
+      "paragraphs": [
+        {
+          "p_idx": 715,
+          "text": "Hello and welcome to week five.We are in the second last week and thereis so many things to cover.So let's start with this particular weekand this week we are going to speak onenhancing your link profile.So this would include all the ways uh ofbuilding your link profile including offpage but since there is more toenhancing your link profile than offpage I'm giving it a overall genericname.Let's go deeper. So what are we going tocover this week is we start with thefundamentals of the link building. Thenwe get into the details of internallinking,backlink analysis, link buildingtechniques and finally we speak aboutthe manual actions.Let's get started with the linkfundamentals.Now when it comes to the fundamentals oflinks, one of the most popularterminology within the industry is linkjuice.Let's try and understand this better.Now link juice is actually a notionalterminology. It's just a way to make youunderstand that hey how the crawlingmechanism transfers some value from onewebsite to the other website. Right? Solet's say if your websitehas page A and that particular page A isconnected from multiple differentexternal websites. So this particularpage on your website is receiving thelink juicefrom this four different websites whenthis websites are linking toyour page A. Now different websitesbased on their authority score etc wouldtransfer different kinds of link juice.However for this particular diagram weare considering that all the websitesare equal.So if all the external websites areequal, it's very clear that the morenumber of back links, the more amount oflink juice your website is able toaccumulate and that's going to help itrank better as compared to the websitewhere lesser number of backlinks arecoming to it.So when we speak of outbound linksthat let's say from your website you aregiving out links to some other website.So it's an outbound link. In this kindof case, if your page is giving backlinks to three different websites,those three different websites will getequal amount of link juice from yourwebsite.So let's say in this example uh thereare three links and that's where thelink juice is what that is sent out is33 33% equally to this three websites.So if there were four back links on yourwebsite,so then it will only give 25%link juicefrom that particular page to those otherwebsites. But let's take an examplewhere your website has 100back links going to a particularto some of the websites.So what you're essentially passing isjust one person link juice to each ofthose websites. So you need to be verycareful when giving the outbound links.The other terminology which weunderstood in one of the previous weekwas no follow tags.Nowno follow tag we we mentioned that okayif you do not want to pass the linkjuice to a particular website what youcould do is you could put the no followtags isn't it?So does that mean that in the previousexample if I had three websites now I'mputting the no follow tag on one of thewebsitein this case I'll give only 50% linkjuice to this other two websitesno that's not the case because thiswould be termed as page rank sculptingthat you are intentionally ally tryingto divert the link juice to some of thewebsites which you're linking to andavoiding some of the other websites withthe no follow tag. Okay. So then what'sthe purpose of a no follow tag? Thepurpose of the no follow tag isto not give the link juice to thatparticular website. But it doesn't saythat youretain that particular link juice by notgiving it to them.Right? So essentially if you're tryingto do something like this or if you'rethinking in this particular directionthat hey no follow tag is going to helpme save the link juice you are wrongbecause such a kind of situation pagerank sculpting is essentially a myth andit's not possible.So what does actually happenwhen we are putting a no follow taglink? What we are doing essentially iswasting that 33% of the link juice.Neither are we giving it to the otherwebsite and essentially we cannot holdthe link juice with ourselves. So itgets wasted.Okay. So that was a little about lingjuice. That's one fundamental. Let'sunderstand a few more fundamentals.Right? The other thing is when you'rebuilding back links etc. you should makethose links crawable.Only in that case the pagewould be linked from one page to theother page for the crawler which is veryessential if you are wanting to get thewebsite crawled want the link juice totransfer etc.So if you want to do this ensure thatyou're making the links scrollable andat least the only way which I know agood way to try make those linksscrollable is using the ahrefcommand right so the links can be builtlike this using that ahref is equal toyour website.comand this should be the syntax rightIn the previous week when we were goingthrough JavaScript related SEO, I hopeyou remember we highlighted some of thelinks which you should not use. I'm justreiterating that this week as well.Please do not use this links. WhileGoogle also says this that okay youavoid it. Uh I would say do not use it.Right? Because they are not crawable byseveral other bots. Google is yet tryingto crawl it but not 100% uh as efficientas the normal AHF links. So my piece ofadvice at least for the year 2023and even for the coming years pleasedon't use ituse anchor textthis is a very crucial thing because Iobserve many website many people justbuilding the href link and uh with emptyanchor tags right so you're saying thathey that there is this particularwebsite but what is this website I alsodon't know what is it should it rank forI don't know but yes it should rank nowyou're essentially giving Google or anyother search engine no indicator so ifyou're building a backlink to yourwebsite please use proper anchor tagsright and when I say proper anchor textum I'm not saying use something like uhmy website or click here view more etcum use this smartly. Use your anchortext to build the authority for theright kind of keywords for those pages.So let's say if I was building the alink to infidit website, I woulddefinitely use the anchor text SEOcompany on some other website.Right? Similarly, plan what are thekeywords which you want to use for thatparticular website and then use theappropriate anchor text to link buildthe links.Okay, so we spoke of that do not giveout 100 back links from your website tosome external website. But does thatmeanI should not give any backlink outside?No, I didn't say that. So, whatessentially I'm trying to say islinking to the external websites isfine, but yes, do it in a controlledmanner. Do it very minimal to the extentpossible. But at the same time, when youare taking some content from some otherwebsite, you're referring to thatparticular website. You essentiallyshould give the backlink to thatparticular website, right? So let's sayif you're working on a uh expanding on aresearch paper or you're taking theinsights from a particular researchpaper and u writing that in your blogdefinitely you should give a link tothat particular websiteright so that that's desirableand sometimes linking to some otherwebsites also helpsokay sowhile linking is fine. Be careful abouta few things that okay if you do notwant to pass the link juice use thea no follow tag right if you're beingpaid for a particular link by somebodyyou can use the sponsored tag arsponsored so that is also giving anindication to Google that hey this linkis created but it's a paid link which isthereifum you're allowing the links to getcreated from your comment box on yourwebsite. Right? So from the command saya user can build a links. Please tagthose links within whatever outputwithin those box as an uh real UGCcontent user generated content link.Right? So that also gives an indicationto Google that hey uh this is not a linkwhich is created by the author of thepage. It is created by the contributorsand it also helps it to give someweightage to the links. We don't knowexactly what weightage it provides withthe help of sponsored and UGC links. Butyes, it's trying to take some decisionswith this links. We exactly don't knowwhat.At the same time, if you want uh to putin multiple parameters at the same time,you did not uh you cannot definitelycreate multiple aff tags. So in thatcase, what you'll have to do, you'llhave you can combine the tags like thiswith a simple space in between the tags.So in this particular example what I'musing isa anchor uh real is equal to sponsoredand no follow. So I'm combiningsponsored and no follow. Please don'tcombine sponsored UGC and no followeverything together. Uh so it could besponsored and no follow right or UGC andno follow. That's also fine.We already spoke on this that okay keepit limited conserve the link juice onyour website.Okay. So at least uhthis is something which is coming frommy years of experience in SEO. What wehave been constantly seeing is that theimportance of external backlinks isconstantly reducingand that of internal links is constantlyincreasing.That doesn't mean that you should notbuild external links and you should relyonly on internal links. Uh but yes, amix of both is desirableto ensure that you are doing justice toboth internal as well as externalbacklinks.The other crucial thing when it comes tothe fundamentals of backlinks is thatsome of the tools are crucial. We'vealready spoken about search console inthe previous weeks. Let's explore a fewmore tools in this particular week.We'll start with AHFS.Now these are uh this is a paid tool. SoI I'm just highlighting it u and givingyou a brief on this. It's not uhmandatory that you need to use a hrefs.U some part of the work can be done withsearch console as well. But yes, youpeople need to be aware that hey whatare the functionalities which are therewithin a href. Many of you may haveaccess to href as well. So that's whereI would prefer to at least highlightsome of the crucial things within ahrefs.So one thing which I like about a ref isuh how it segregateseach of the projects that you're workingon. So let's say if you're working onthis multiple websites and on thisscreen you are seeing the threewebsites. It will give us the healthscore of that particular website basedon the certain parameters. It alsodepends on how much it was able tocrawl. If it's not able to crawlcompletely, it will not be able to givea perfect health score. So in this caseyou can ignore the health score which islesser than 90 because I know that okaythose websites have not been properlygiven the required credits.So it provides you other things like howmany pages were crawled, how manyredirectswere identified, how many links werebroken etc. Right? Um since the websiteshave millions of pages and the decisionis being done on a small set of pagesthat's where the health score issomething which I'm telling youexplicitly that do not look at thehealth score if your website is notcompletely scrolledcrawled sorry.Other than that what you'll get is thedomain rating. Now this is a proprietaryuh thing of AHEF. It gives a domainrating. The higher the domain rating thebit better. Uh this is not done based onthe crawl but it is done based on itsown generic observation of a particularwebsite.All right. Uh then the number of domainswhich are referring to this particularwebsite.The number of back links which it gets.How much organic visits as per itsanalysis that is the analysis of AHFthat this particular website gets. Howmany organic keywordsdoes this website rank for? And whichare the countries where this particularwebsite is ranking for visual number ofkeywords? How was the improvement in thelast 30 days, right? So all all thosedetails you'll get even if you'retracking the keywords with some credits,you'll also get that particular thingthat okay of this particular keywords,this many keywords are at thisparticular position etc. Right? So thisis just the initial uh dashboard of theproject screen. But let's say in AHF ifI want to understand u how my competitoris doing and let's say one of thecompetitor for the website which I'mworking on. Let's assume that uh thecompetitor is lbb.in. I'm just takingthis website as an example for some ofthe uh subsequent slides as well. Sojust a hypothetical date let's saylbb.online online little blackbook.inis uh something which uh we areanalyzing as a competitor. So we canunderstand that okay a little blackbookuh has this particular HF link the URLof the homepage has this kind of scoreoverall domain rating is 73 whereas theURL rating is 48. This many backlinksreferring domains organic keywords etc.Right? And uh then it gives me thedetails of the backlink profile as wellthat hey how the links have been ucreated to this particular website andhow it is trending right now. It alsohelps me understand that how many of thelinks are do follow links how many arecoming from government websites how manycoming from education websitesspecifically go websites.edu eduwebsites again because while educationalit's not necessarily only edu um domainswould be considered as educational thereare other domains as well um.com.netnet how many links are there rightreferring pages how many pages arereferring how many IPs are referring tothis particular website right so it'squite possible thatwell this many pages are uh referringmany of these pages are coming from thesame website or the same server sothat's where the referring IP is alsoone of the indicator which Google getswhen it looks at the link profile rightso that that is also something whichneeds to be properly looked at the otherthing we can understand is of thereferring pages, how the things havebeen moving. Um, we spoke a little aboutthis, how the domain rating has beenincreasing over the years. Where does itget the back links from? So, let's saythis particular website lbb.ingets 0% links from URL ratings in 91 to100. But, uh, URL ratings 0 to 10, itgets 97% of it backlinks from there.it you it will also help you understandthat how many new links are coming onthis particular domain how many links itis losinguh every week or on a a periodic basis.So, so, so this particular thing helpsyou analyze what's happening on yourcompetitor website, how strong they are,right? Um, and even you can do it foryour own website by this particulartool. It will help you understand howstrong your website is as well, right?Um, now this is this was for the domainsand this is for the backlinks. From onedomain, you can get multiple backlinks.Remember that and this is how thebehavior is. So based on this particularchart I feel that too many backlinks orequivalent amount of back links aregetting lost as many they are gettingcreatedright so something is wrong on thewebsite and we need to go dig deeperover there okay then where are thislinks coming from what what is the CTLdistribution that's country top leveldomains distributionright um so ctld let's say.com 85% ofthe links are coming from there India 2%fairly uh okay because the website isIndia specific so maximum is coming fromcom followed by net that's fairwhat are the anchor text which thewebsite is using um while getting theback links so of all the referringdomains around 13% are using no text.So this is something which should be ahighlight if let's say this particulartext in my case was an SEO company. Uhdefinitely that would help me rank muchmuch better uh for that particularkeyword if I'm not at position one. Butuh yeah generically uh this is a lostopportunity right so I ideally I wouldnot mind if this are the links we whichare created by some of my contacts. Iwould even outreach to them and tellthem that hey can you please correct thebacklink which you have provided to mywebsite and help me correct thatparticular link uh to let's say LBB orwhatever is that one word which LBB orthis particular page stands for rightwhat you're whatever the keyword you'retargeting for that particular page youcould keep that anchor text asthe anchor instead of just keeping it asno Nextuh while I'm not getting into thedetails of ER, please understand thatmost of the reports here are drill downreports. Once you want to get some moreinformation, you click through it andyou'll get more details like thisparticular page which is showing youthat hey what all are the referringdomains and uh what's the kind ofdetails of those domains right when werethey first seen. So that kind ofdetailing can also be received bydrilling down to the reports.The other report which I would like tohighlight over here is the backlinkreport where you get more details aboutthe back links even which page it islinking to and uh is it a no follow linkor is it a 301 uh link which is beingtransitioned. So this particularinformation is very crucial when you'redoing the analysis. Right? It helps youunderstandif it is landing on a proper link ornot. At least over here since at all theplaces either there is a 301 we knowthat hey this is proper at least uh thethings are working fine. Uh but as suchwhat's happening is the link is comingto the HTTP page and then from theremoving to the HTTPS page. So if I can Ihave access to clutch.co go um and thiswas one of the website which we wereoptimizing. What we would do is we'll goto clutch.co and over there change thelink itself to https/ml.coso that at least uh there is a directconnect to this particular websiteinstead of a connectivity via 301.Right? So this is some of the thingswhich you should be looking at.The next tool which I would like tospeak about today is SEM brush. This isalso one of my favorite tool.The visuals representation etc in SCMbrush is uh at least as for me muchbetter as compared to AHF. Um however itwould have its different kind ofscoring. So please don't try to comparethe numbers of AHF with SCM rush and saythat there is an error somewhere. Right?Both have them own recordingmethodologies. They also cannot crawlthe entire weband uh get you the exact data. So it'squite possible they are looking at yourwebsite from different angles and uhthat's something which is creating thediscrepancy. So please ignore thediscrepancy but more or less uh thethings matchnot 100%. Okay. Coming to theterminologies here instead of uh theterminology which you'll see in Hrefyou'll see a different terminology. Sowe have it an authority score of awebsite over here. uh this is somethingwhatever we have seen in AHF I'm notgoing to repeat but yes SEO uh sitehealth is something which is there howthe pages are getting crawled etc isthere again let's say if you want to getinto backlink analysis of a particularwebsite you can uh put it for backlinkanalysis and you'll get the details thathey how the website is behaving you'llsee a little different visuals over hereas compared to hrefThis was available in a repre as well.One new thing which you are seeing overhere is the c categories of referringdomains. This is very crucialinformation because it helps meunderstand that okay if let's say umif it was a business website let's sayit was a legal website for which we aredoing a umaudit and we see that okay the links arecoming from arts and entertainment. Isthat the right kind of links that youwant for a legal website? Right. youwould prefer that hey this websites arecoming all from business industriallegal kind of domains that should havebeen higher but yes considering lbb.inis more of an arts and entertainment uhwebsite at least as for me. Um this kindof link looks fine. Um what I'm worriedof is the anchor text. Top anchor textis something which is not coming out. Wedon't know what the company stands for.Uh referring domains by authority score.I I would even be fine with this. Mostof the links will come from the uhlesser authority score. But yes, if itwas a little higher that was okay.Backlink types again text images createthe maximum kind of links. I would havepreferred if text was more because thatgives more clear indication to Google interms of the anchor text through whichthe links are coming. Again, most of thelinks are follow links. So that's reallygood about it. No follow links are veryfew. That's fine. sponsors are also tdistribution is fine. Top countries wehave seen already in the previous thing.Um again this is just a different way ofrepresenting the data similar profilesthat okay what are the other websiteswhich are similar to this that's inother interesting thing which we get inCM brush.Okay. So that's the tools and uh a bitabout the fundamentals that we spoke of.Uh what we are going to do now is moveinto the next module. So I I'll see yourightinto the second module. Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 3343,
+      "char_count": 20551
+    },
+    {
+      "video_index": 2,
+      "video_title": "2. Copy of Copy of 2.Internal Linking.mp4",
+      "start_p": 716,
+      "end_p": 717,
+      "paragraphs": [
+        {
+          "p_idx": 717,
+          "text": "Hey, welcome to the second module ofweek five internal linking.Now, as for me, this is the easiest wayto enhance the link juice of anyparticular websiteand at the same time ignored by manyprofessionals. Solet's look at the alternatives ofcreating internal linking.One way to create it is via the header,the top navigation. Ensure that all thelinks on your top navigation arecrawable.The other alternative is the footer. Soeven ensure that you're using yourfooter. It's a a wonderful place tobuild back links in a proper manner. Tryto build the backlinks for the relevantkeywords that you want to optimize forand use it wisely becausewhile it's on the footer you havelimited real estate over there as well.Then you have other opportunities likelet's say some banners, some widgetsthrough which you're building the links.Um example this particular thing youwould have also links within the textright or you would also have links whichare created via some widgets like thisokay what are the services what are thearticles so different widgets could beexplored I'm just giving you someexamples right uhcreativity in terms of uh link buildinghas no limits so please explore uh thatby yourself that hey what are thedifferent ways you can build someinteresting widgets which would beuseful for the client as well as for thebots.You could also create things like thispopular searches, people also read,different kind of links you could createthat would help you to enhance theinternal linking on the website. Uhlet's look at some alternatives to uhbuild uhgood links on the e-commerce store. uhthis is something which is uh more of aeducational material I would say. I'venot been able to implement thisparticular thing uh but yes I would loveto implement it on some websites if theengineers take up this particularchallenge.So um if I were to create someinnovative ways to build internal link Iwould uh definitely do it based on userdata and uh why I selected e-commerce isbecause e-commerce has uh lots ofinformation which is available based onuhthe buyer and the affinity of the buyingbehavior. Right? So let's say if thecustomer is buying dresses, we know thatokay the person who buys dresses 26% ofthose people also bought heels. 15% ofthe people who brought dresses gotclutches. 5% of them got watches.Similarly for kortas people who boughtkortas took for 25% of the time gotearrings14% time got hills. uh so based on thisI know that okay if somebody's on thekortas page what kind of product Ishould try to upsell to those particularthing and I would like to bring thoserelevant links over there which wouldserve dual purpose one is the backlinkat the same time it would be reallyinteresting widget to be created rightum similarly for tops um maybe when thebuying behavior is there 14% of thepeople are buying heels 11% are buyingskirts so this information can be usedintelligently to build relevant backlinks.Similarly, we could do it based onarticle attributes also. So let's sayfor this particular store when upeople are buying dresses,what what is seen is along with dressesthey are buying some earring or jewelry.So let's say in this casewhen they're buying dresses they usuallyprefer casual jewelry.uh and uh when they they are looking atthis they are also buying earrings andin most cases with dresses 13% of thebuyers prefer studs 12% prefer drop uhearrings. Similarly for kortas we areseeing that hey most of them prefer dropearrings not stud earrings when they'rebuying kortas when they're buying topsuh they prefer studs and lesser dropearrings right so this is quite relevantand uh the information would sync withat least the buying behavior of uh mywife as well she would also prefer andbuy in a very similar mode so this kindof information is available and Thenbased on this particular informationwhat could be done is back links couldbe created in an intelligent manner. Solet's say if we were on a particularpage for uha particular shot and we know that okaythe affinity is towards this kind ofother products. we could bring thoserelevant products over there. Um becausethis real estate is limited, right? Anduh you want to make it closest to theother users at least the informationthat you know of and that would be anintelligent internal linking.Similarly, your popular searches alsocould be populated based on that andthat would help you create more detailedbacklinks again for the bots as well asthe users.Now that's a little about creating theinternal linkings. Uh don't miss thesearch console report. Uh definitelylook at the search console report whenyou're looking at the internal links andyou would be able to find that in thelinks section. You'll be able to seethat what are the top internal linkedpages. Uh the information may not be asdetailed as the other tools but yessearch console is free. those othertools are paid. So please make do withthe information that you have. Uh thisis also good amount of information totake some basic decisions. So please uhif you do not have access to HF or SCMbrush uh umit's okay use search console and try tounderstand the subject at least.Time for some self-arning. Uh this wasreally short module. Uh,is your website's internal linking thebest for you?I assume most of you are saying no. So,if no, use the SEO task spreadsheettemplate to record any internal linkingpossibility on your website. Think overit a little. Pause the video over here.think over it that because it's fresh II would like you to list down all thepoints which you feel that uh they arerelevant for internal linking and put iton that sheet on the sheet you wouldhave multiple different types since it'sinternal linking this would go into onpage um so create an on page relatedtask put in that hey this is theinternal linking thing which I want whatare what are your thoughts what's goingin your mind about your website put itdown over here again um this This is thesame sheet which continues from theprevious two weeks. We used it in thetechnical SEO both the parts oftechnical SEO as well. So this is thethird week where you we are using thisparticular sheet. So please continueusing it. It's going to be useful.If you're not using the sheet, you'reusing something else to record all thisobservations in a different manner,that's fine. But at least keep onerepository where you get are able totrack all this information. It would bevery essential for you.We'll be moving into the next modulenow.Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 1036,
+      "char_count": 6481
+    },
+    {
+      "video_index": 3,
+      "video_title": "3. Copy of Copy of 3.Backlink Analysis.mp4",
+      "start_p": 718,
+      "end_p": 941,
+      "paragraphs": [
+        {
+          "p_idx": 719,
+          "text": "00:04 So we start with module three of week"
+        },
+        {
+          "p_idx": 720,
+          "text": "00:07 five and we are discussing backlink"
+        },
+        {
+          "p_idx": 721,
+          "text": "00:11 analysis. Now"
+        },
+        {
+          "p_idx": 722,
+          "text": "00:13 so when it comes to backlink analysis"
+        },
+        {
+          "p_idx": 723,
+          "text": "00:16 the first thing which you need to do is"
+        },
+        {
+          "p_idx": 724,
+          "text": "00:18 analyze your own website."
+        },
+        {
+          "p_idx": 725,
+          "text": "00:27 So the first question which should come"
+        },
+        {
+          "p_idx": 726,
+          "text": "00:29 to your mind is definitely"
+        },
+        {
+          "p_idx": 727,
+          "text": "00:32 what are the websites linking to your"
+        },
+        {
+          "p_idx": 728,
+          "text": "00:34 website right and uh you would be able"
+        },
+        {
+          "p_idx": 729,
+          "text": "00:37 to easily get this from search console"
+        },
+        {
+          "p_idx": 730,
+          "text": "00:41 by going to links and looking at the top"
+        },
+        {
+          "p_idx": 731,
+          "text": "00:44 linking sites."
+        },
+        {
+          "p_idx": 732,
+          "text": "00:46 Uh so that's how you understand that"
+        },
+        {
+          "p_idx": 733,
+          "text": "00:49 which are the websites linking to you."
+        },
+        {
+          "p_idx": 734,
+          "text": "00:52 You will be also able to understand from"
+        },
+        {
+          "p_idx": 735,
+          "text": "00:54 each of these websites how many linking"
+        },
+        {
+          "p_idx": 736,
+          "text": "00:56 pages are there and what are the target"
+        },
+        {
+          "p_idx": 737,
+          "text": "00:59 number of pages from that particular"
+        },
+        {
+          "p_idx": 738,
+          "text": "01:00 website to your website which would be"
+        },
+        {
+          "p_idx": 739,
+          "text": "01:02 the target page. So let's say in this"
+        },
+        {
+          "p_idx": 740,
+          "text": "01:04 case from edify there are 401 pages on"
+        },
+        {
+          "p_idx": 741,
+          "text": "01:08 edify.com linking to one page on"
+        },
+        {
+          "p_idx": 742,
+          "text": "01:10 infidigit"
+        },
+        {
+          "p_idx": 743,
+          "text": "01:12 right at the same time let's say for"
+        },
+        {
+          "p_idx": 744,
+          "text": "01:14 this particular website akal huti there"
+        },
+        {
+          "p_idx": 745,
+          "text": "01:17 are 337 pages which are linking to 73"
+        },
+        {
+          "p_idx": 746,
+          "text": "01:21 different pages on the inigit website"
+        },
+        {
+          "p_idx": 747,
+          "text": "01:24 likewise so definitely I would like to"
+        },
+        {
+          "p_idx": 748,
+          "text": "01:26 understand more about this particular"
+        },
+        {
+          "p_idx": 749,
+          "text": "01:28 thing let's say um so I would go deeper"
+        },
+        {
+          "p_idx": 750,
+          "text": "01:32 into a particular website which was"
+        },
+        {
+          "p_idx": 751,
+          "text": "01:34 there on the previous screen. So let's"
+        },
+        {
+          "p_idx": 752,
+          "text": "01:36 say I I clicked on SEO. London and uh"
+        },
+        {
+          "p_idx": 753,
+          "text": "01:40 then I'll get this particular thing that"
+        },
+        {
+          "p_idx": 754,
+          "text": "01:42 okay from SEO. London um two"
+        },
+        {
+          "p_idx": 755,
+          "text": "01:47 target pages are there on the infid"
+        },
+        {
+          "p_idx": 756,
+          "text": "01:50 website. Total 59 external links are"
+        },
+        {
+          "p_idx": 757,
+          "text": "01:53 coming in to the infid website on two"
+        },
+        {
+          "p_idx": 758,
+          "text": "01:56 link pages. And uh let's say if I want"
+        },
+        {
+          "p_idx": 759,
+          "text": "01:58 to understand website migration a little"
+        },
+        {
+          "p_idx": 760,
+          "text": "02:00 more, I'll go into website migration and"
+        },
+        {
+          "p_idx": 761,
+          "text": "02:03 understand which all pages from SEO"
+        },
+        {
+          "p_idx": 762,
+          "text": "02:07 landed are linking to this particular"
+        },
+        {
+          "p_idx": 763,
+          "text": "02:09 page. And this is the list of those 29"
+        },
+        {
+          "p_idx": 764,
+          "text": "02:12 pages."
+        },
+        {
+          "p_idx": 765,
+          "text": "02:15 The other important thing which you"
+        },
+        {
+          "p_idx": 766,
+          "text": "02:17 would want to understand is what anchor"
+        },
+        {
+          "p_idx": 767,
+          "text": "02:19 tags are they using. We already saw some"
+        },
+        {
+          "p_idx": 768,
+          "text": "02:22 tools which had those particular"
+        },
+        {
+          "p_idx": 769,
+          "text": "02:25 features. Um and we could also use"
+        },
+        {
+          "p_idx": 770,
+          "text": "02:31 search console to get this information"
+        },
+        {
+          "p_idx": 771,
+          "text": "02:33 that okay for let's say this website the"
+        },
+        {
+          "p_idx": 772,
+          "text": "02:36 most popular uh anchor tag which is used"
+        },
+        {
+          "p_idx": 773,
+          "text": "02:40 by the other website is go to website or"
+        },
+        {
+          "p_idx": 774,
+          "text": "02:42 Google sandbox infidigit infid.com so um"
+        },
+        {
+          "p_idx": 775,
+          "text": "02:46 that's what ideally I would prefer"
+        },
+        {
+          "p_idx": 776,
+          "text": "02:48 definitely everybody using SEO company"
+        },
+        {
+          "p_idx": 777,
+          "text": "02:50 or uh at least SEO services or if not"
+        },
+        {
+          "p_idx": 778,
+          "text": "02:55 anything at least the brand name. But"
+        },
+        {
+          "p_idx": 779,
+          "text": "02:57 yes, um again over here we see some"
+        },
+        {
+          "p_idx": 780,
+          "text": "03:01 empty tags which is uh not a right"
+        },
+        {
+          "p_idx": 781,
+          "text": "03:05 utilization of the anchor tag. So I"
+        },
+        {
+          "p_idx": 782,
+          "text": "03:07 would love to change that if possible."
+        },
+        {
+          "p_idx": 783,
+          "text": "03:12 The other question which you should be"
+        },
+        {
+          "p_idx": 784,
+          "text": "03:14 asking for this analysis is what pages"
+        },
+        {
+          "p_idx": 785,
+          "text": "03:16 are they linking to on your website."
+        },
+        {
+          "p_idx": 786,
+          "text": "03:19 Again that's something which you'll get"
+        },
+        {
+          "p_idx": 787,
+          "text": "03:21 it in that particular report and you"
+        },
+        {
+          "p_idx": 788,
+          "text": "03:23 will be able to see it within the link"
+        },
+        {
+          "p_idx": 789,
+          "text": "03:24 section itself. you'll be able to see"
+        },
+        {
+          "p_idx": 790,
+          "text": "03:27 what are the top target pages. So"
+        },
+        {
+          "p_idx": 791,
+          "text": "03:29 incoming links are coming from"
+        },
+        {
+          "p_idx": 792,
+          "text": "03:33 which source and it's targeting this"
+        },
+        {
+          "p_idx": 793,
+          "text": "03:36 page. So around"
+        },
+        {
+          "p_idx": 794,
+          "text": "03:38 574 links coming from 215 linking"
+        },
+        {
+          "p_idx": 795,
+          "text": "03:41 websites."
+        },
+        {
+          "p_idx": 796,
+          "text": "03:43 So this is also a good information for"
+        },
+        {
+          "p_idx": 797,
+          "text": "03:45 you to have"
+        },
+        {
+          "p_idx": 798,
+          "text": "03:51 right if I need the details I'll just"
+        },
+        {
+          "p_idx": 799,
+          "text": "03:53 click on that and I'll understand that"
+        },
+        {
+          "p_idx": 800,
+          "text": "03:55 which are the websites which are linking"
+        },
+        {
+          "p_idx": 801,
+          "text": "03:57 to it and how many website are linking"
+        },
+        {
+          "p_idx": 802,
+          "text": "03:59 to this particular URL"
+        },
+        {
+          "p_idx": 803,
+          "text": "04:09 they could also understand from this"
+        },
+        {
+          "p_idx": 804,
+          "text": "04:11 particular website let's say I'm taking"
+        },
+        {
+          "p_idx": 805,
+          "text": "04:13 this example specifically uh because I"
+        },
+        {
+          "p_idx": 806,
+          "text": "04:16 just want to share some additional"
+        },
+        {
+          "p_idx": 807,
+          "text": "04:17 information. So let's say for Akalhhati"
+        },
+        {
+          "p_idx": 808,
+          "text": "04:20 I go into the details understand that u"
+        },
+        {
+          "p_idx": 809,
+          "text": "04:23 let's say they've copied some content"
+        },
+        {
+          "p_idx": 810,
+          "text": "04:25 from the infid website and that's where"
+        },
+        {
+          "p_idx": 811,
+          "text": "04:29 uh some of the links which are u"
+        },
+        {
+          "p_idx": 812,
+          "text": "04:32 here um are pointing to the infidigit"
+        },
+        {
+          "p_idx": 813,
+          "text": "04:35 website. So that's fine. At least"
+        },
+        {
+          "p_idx": 814,
+          "text": "04:38 they've copied the content. Um at least"
+        },
+        {
+          "p_idx": 815,
+          "text": "04:40 till the time they don't uh"
+        },
+        {
+          "p_idx": 816,
+          "text": "04:44 create any discrepancies or any"
+        },
+        {
+          "p_idx": 817,
+          "text": "04:47 challenge for our rankings. That's okay."
+        },
+        {
+          "p_idx": 818,
+          "text": "04:49 But yes, at least those back links may"
+        },
+        {
+          "p_idx": 819,
+          "text": "04:51 be adding some value to the infid"
+        },
+        {
+          "p_idx": 820,
+          "text": "04:54 website. So I would be fine with it. But"
+        },
+        {
+          "p_idx": 821,
+          "text": "04:56 let's say if I come across and"
+        },
+        {
+          "p_idx": 822,
+          "text": "04:57 understand that hey this is a spam"
+        },
+        {
+          "p_idx": 823,
+          "text": "04:59 website that's having a very low um oh"
+        },
+        {
+          "p_idx": 824,
+          "text": "05:03 sorry very high spam score I may decide"
+        },
+        {
+          "p_idx": 825,
+          "text": "05:06 that hey we should take some action"
+        },
+        {
+          "p_idx": 826,
+          "text": "05:08 against them and get the things removed"
+        },
+        {
+          "p_idx": 827,
+          "text": "05:10 but yeah as of now I don't think it"
+        },
+        {
+          "p_idx": 828,
+          "text": "05:12 would be a uh good uh"
+        },
+        {
+          "p_idx": 829,
+          "text": "05:17 investment of time for getting the"
+        },
+        {
+          "p_idx": 830,
+          "text": "05:19 things done there is some benefit also"
+        },
+        {
+          "p_idx": 831,
+          "text": "05:21 coming from the website so I just keep"
+        },
+        {
+          "p_idx": 832,
+          "text": "05:22 it as it is"
+        },
+        {
+          "p_idx": 833,
+          "text": "05:25 Okay, so you did the analysis of your"
+        },
+        {
+          "p_idx": 834,
+          "text": "05:28 own website. Now it's time to get into"
+        },
+        {
+          "p_idx": 835,
+          "text": "05:30 the competitor website analysis."
+        },
+        {
+          "p_idx": 836,
+          "text": "05:33 Now since you do not have the access to"
+        },
+        {
+          "p_idx": 837,
+          "text": "05:36 the search console of your competitor,"
+        },
+        {
+          "p_idx": 838,
+          "text": "05:38 uh there is no alternative over here but"
+        },
+        {
+          "p_idx": 839,
+          "text": "05:40 to use some third party tools which help"
+        },
+        {
+          "p_idx": 840,
+          "text": "05:43 you with that additional information."
+        },
+        {
+          "p_idx": 841,
+          "text": "05:45 And this is the reason why in the"
+        },
+        {
+          "p_idx": 842,
+          "text": "05:47 fundamentals we introduced you to those"
+        },
+        {
+          "p_idx": 843,
+          "text": "05:49 two tools. We'll be using those"
+        },
+        {
+          "p_idx": 844,
+          "text": "05:51 extensively for the competitor website"
+        },
+        {
+          "p_idx": 845,
+          "text": "05:54 analysis."
+        },
+        {
+          "p_idx": 846,
+          "text": "05:58 Okay. So almost the same questions but"
+        },
+        {
+          "p_idx": 847,
+          "text": "06:00 yes uh I'm using some different"
+        },
+        {
+          "p_idx": 848,
+          "text": "06:03 terminologies over here. How is the"
+        },
+        {
+          "p_idx": 849,
+          "text": "06:04 competitor backlink profile and I'm"
+        },
+        {
+          "p_idx": 850,
+          "text": "06:07 using a ref first."
+        },
+        {
+          "p_idx": 851,
+          "text": "06:10 So in Ahref I'll go to site explorer and"
+        },
+        {
+          "p_idx": 852,
+          "text": "06:14 uh put in the domain name and try to"
+        },
+        {
+          "p_idx": 853,
+          "text": "06:16 understand what is the link profile of"
+        },
+        {
+          "p_idx": 854,
+          "text": "06:20 this particular website."
+        },
+        {
+          "p_idx": 855,
+          "text": "06:22 uh it will give me some details that hey"
+        },
+        {
+          "p_idx": 856,
+          "text": "06:25 this many backlinks etc which is coming"
+        },
+        {
+          "p_idx": 857,
+          "text": "06:27 uh onto this particular"
+        },
+        {
+          "p_idx": 858,
+          "text": "06:31 website so I can go into the details"
+        },
+        {
+          "p_idx": 859,
+          "text": "06:33 understand uh"
+        },
+        {
+          "p_idx": 860,
+          "text": "06:36 they're coming from India USA which"
+        },
+        {
+          "p_idx": 861,
+          "text": "06:38 particular country followed no followed"
+        },
+        {
+          "p_idx": 862,
+          "text": "06:40 how they are etc right I could even"
+        },
+        {
+          "p_idx": 863,
+          "text": "06:42 understand that okay all the do follow"
+        },
+        {
+          "p_idx": 864,
+          "text": "06:44 links which this domain gets which are"
+        },
+        {
+          "p_idx": 865,
+          "text": "06:46 the domains from which it gets this do"
+        },
+        {
+          "p_idx": 866,
+          "text": "06:48 follow links now if this is is a"
+        },
+        {
+          "p_idx": 867,
+          "text": "06:51 competitor of mine definitely what I"
+        },
+        {
+          "p_idx": 868,
+          "text": "06:53 would do is I'll try to look at each of"
+        },
+        {
+          "p_idx": 869,
+          "text": "06:54 the domain from where it is getting the"
+        },
+        {
+          "p_idx": 870,
+          "text": "06:56 backlink and see if I can also build the"
+        },
+        {
+          "p_idx": 871,
+          "text": "06:58 backlink to my website from this"
+        },
+        {
+          "p_idx": 872,
+          "text": "07:01 particular domains right I'm sorting it"
+        },
+        {
+          "p_idx": 873,
+          "text": "07:04 based on the domain ratings so let's say"
+        },
+        {
+          "p_idx": 874,
+          "text": "07:07 for Apple and playg Google it seems that"
+        },
+        {
+          "p_idx": 875,
+          "text": "07:10 that that would be for their uh"
+        },
+        {
+          "p_idx": 876,
+          "text": "07:14 apps and that's how they're building the"
+        },
+        {
+          "p_idx": 877,
+          "text": "07:16 links so if I have those apps I'll also"
+        },
+        {
+          "p_idx": 878,
+          "text": "07:19 be getting those links So that's not"
+        },
+        {
+          "p_idx": 879,
+          "text": "07:21 something which is I'm interested in. Uh"
+        },
+        {
+          "p_idx": 880,
+          "text": "07:23 Reddit we are getting Pinterest also we"
+        },
+        {
+          "p_idx": 881,
+          "text": "07:25 are getting Wix site. It seems that okay"
+        },
+        {
+          "p_idx": 882,
+          "text": "07:27 they've created some Wix site. I'm not"
+        },
+        {
+          "p_idx": 883,
+          "text": "07:29 sure about Bing. So let's I want to"
+        },
+        {
+          "p_idx": 884,
+          "text": "07:30 understand Bing. I'll just click on Bing"
+        },
+        {
+          "p_idx": 885,
+          "text": "07:33 and get a list of uh actual URLs from"
+        },
+        {
+          "p_idx": 886,
+          "text": "07:36 where they're getting the links. I mean"
+        },
+        {
+          "p_idx": 887,
+          "text": "07:38 use this to create back links for my"
+        },
+        {
+          "p_idx": 888,
+          "text": "07:41 domain also. Right? So that that's how"
+        },
+        {
+          "p_idx": 889,
+          "text": "07:44 uh um you can use this particular"
+        },
+        {
+          "p_idx": 890,
+          "text": "07:47 reports when you're doing the"
+        },
+        {
+          "p_idx": 891,
+          "text": "07:49 competitive analysis you can go into"
+        },
+        {
+          "p_idx": 892,
+          "text": "07:52 this depth and based on that build"
+        },
+        {
+          "p_idx": 893,
+          "text": "07:55 intelligence while creating back links"
+        },
+        {
+          "p_idx": 894,
+          "text": "07:58 to your website."
+        },
+        {
+          "p_idx": 895,
+          "text": "08:00 Let's say if I want to understand that"
+        },
+        {
+          "p_idx": 896,
+          "text": "08:03 hey lbv.in is getting some educational"
+        },
+        {
+          "p_idx": 897,
+          "text": "08:06 links from some educational website.edu"
+        },
+        {
+          "p_idx": 898,
+          "text": "08:08 website I can even just put the"
+        },
+        {
+          "p_idx": 899,
+          "text": "08:11 phrase.edu edu and search for it and get"
+        },
+        {
+          "p_idx": 900,
+          "text": "08:14 a list of the websites where the edu"
+        },
+        {
+          "p_idx": 901,
+          "text": "08:16 links are getting created. Uh if my"
+        },
+        {
+          "p_idx": 902,
+          "text": "08:19 website do not have many of the edu"
+        },
+        {
+          "p_idx": 903,
+          "text": "08:20 links and uh there's a possibility I"
+        },
+        {
+          "p_idx": 904,
+          "text": "08:24 could at least connect with this"
+        },
+        {
+          "p_idx": 905,
+          "text": "08:26 websites and try to get back links from"
+        },
+        {
+          "p_idx": 906,
+          "text": "08:28 them as well."
+        },
+        {
+          "p_idx": 907,
+          "text": "08:32 Time for some self-arning."
+        },
+        {
+          "p_idx": 908,
+          "text": "08:39 do the backlink analysis of your website"
+        },
+        {
+          "p_idx": 909,
+          "text": "08:41 and your competitors"
+        },
+        {
+          "p_idx": 910,
+          "text": "08:44 and add the XN items to the SEO task"
+        },
+        {
+          "p_idx": 911,
+          "text": "08:47 spreadsheet. Now in the SEO task uh"
+        },
+        {
+          "p_idx": 912,
+          "text": "08:49 spreadsheet you would have a drop-down"
+        },
+        {
+          "p_idx": 913,
+          "text": "08:51 for off- page also. So please add this"
+        },
+        {
+          "p_idx": 914,
+          "text": "08:54 task under off page. Don't add them"
+        },
+        {
+          "p_idx": 915,
+          "text": "08:56 under technical SEO or onpage SEO"
+        },
+        {
+          "p_idx": 916,
+          "text": "08:58 because this is purely backlink related"
+        },
+        {
+          "p_idx": 917,
+          "text": "09:00 work. Put it as off page."
+        },
+        {
+          "p_idx": 918,
+          "text": "09:04 Okay. Um if you don't have uh access to"
+        },
+        {
+          "p_idx": 919,
+          "text": "09:08 Ahref or SEM brush it's okay. Uh try to"
+        },
+        {
+          "p_idx": 920,
+          "text": "09:12 find some tools. There are multiple"
+        },
+        {
+          "p_idx": 921,
+          "text": "09:13 tools. Ah and SCM brush are not the only"
+        },
+        {
+          "p_idx": 922,
+          "text": "09:16 tools. Um AHF even has some u free"
+        },
+        {
+          "p_idx": 923,
+          "text": "09:20 access. Um how much in depth it will"
+        },
+        {
+          "p_idx": 924,
+          "text": "09:24 give you the analysis I'm not sure about"
+        },
+        {
+          "p_idx": 925,
+          "text": "09:25 that but you can use that and understand"
+        },
+        {
+          "p_idx": 926,
+          "text": "09:27 if that helps you. At the same time"
+        },
+        {
+          "p_idx": 927,
+          "text": "09:30 there are multiple other tools. Even if"
+        },
+        {
+          "p_idx": 928,
+          "text": "09:31 you do a search for"
+        },
+        {
+          "p_idx": 929,
+          "text": "09:34 backlink analysis tools, free tools, you"
+        },
+        {
+          "p_idx": 930,
+          "text": "09:38 should be able to get multiple tools."
+        },
+        {
+          "p_idx": 931,
+          "text": "09:39 Try to find. But yes, uh if you have the"
+        },
+        {
+          "p_idx": 932,
+          "text": "09:43 money and the budgets to purchase one of"
+        },
+        {
+          "p_idx": 933,
+          "text": "09:46 the two and uh if the website traffic is"
+        },
+        {
+          "p_idx": 934,
+          "text": "09:49 crucial, um maybe go for one of the two."
+        },
+        {
+          "p_idx": 935,
+          "text": "09:52 Uh if you ask me the question which one"
+        },
+        {
+          "p_idx": 936,
+          "text": "09:55 uh then I would say SCM Rush"
+        },
+        {
+          "p_idx": 937,
+          "text": "10:02 that's my favorite but yeah uh no"
+        },
+        {
+          "p_idx": 938,
+          "text": "10:05 offense even AF is good for some of the"
+        },
+        {
+          "p_idx": 939,
+          "text": "10:07 things."
+        },
+        {
+          "p_idx": 940,
+          "text": "10:10 Okay uh we move to the next topic."
+        },
+        {
+          "p_idx": 941,
+          "text": "10:13 See you soon in the next module."
+        }
+      ],
+      "paragraph_count": 224,
+      "word_count": 1735,
+      "char_count": 9330
+    },
+    {
+      "video_index": 4,
+      "video_title": "4. Copy of Copy of 4.Link Building Techniques.mp4",
+      "start_p": 942,
+      "end_p": 943,
+      "paragraphs": [
+        {
+          "p_idx": 943,
+          "text": "Okay. Uh let's start with the linkbuilding techniques.If I had to give a name to alternatename to it, this would be off page. Uhsomething which many of you were waitingfor.While in the previous section we justdid the analysis. Now we are gettinginto the details of off pageoptimization orlink building techniques by externalsources. Okay. So why is that needed?Many of you will just call out that heygosh we want more link juice coming toour website. Uh but at the same timelet's get into the details. So whenyou're creating back links this help youto get many new pages on your websitediscovered right so that's the first uhcrucial benefit of the back links whenyour website is new new specifically youneed a lot of these because that helpsin faster discovery of the pages on yourwebsitethe other thing is improvement inrankingsright so that that's the other importantthing that uh it's going to help youimprove your rankings.The third thing is gaining referraltraffic.Some people may click on those links andcome to your website. That would becounted as referral visits or referraltrafficand definitely it boosts yourcredibility not only for Google butother people also who find those kind ofbacklinks on some other website.um may feel that hey your website ismore credible.Okay.So that's how it helps. Butspecifically uh backlinks could be moreinteresting when the contenton your page as well as the page of theexternal website from where thisparticular link is getting created hassome original content link worthycontent which is there. And if you getthe link from that where thebacklink would be much more valuable inthat particular case, right? Um theother thing is the target keywords aremore specific instead of being generic.So instead of building back links forlet's say uh keywords like fashionif it was men's fashion or uh even moreuh men's fashion for uh a particularoccasion let's say that would besomething which would be moreinteresting and it would have a littlemore weightage while your focus becomesa little narrow. Um it enhances thepossibility of you getting moreadvantages of those kind of backlinks.of just keeping it at a generic level.Um even writing for search terms withthe lower search volume that's somethingwhich we have seen that that's somethingwhich helps when you're creating backlinks.Okay. So now let's get into the detailsand understand how should you createbacklinks.Now when it comes to the how first basicthing is to identify the target keywordright on which you want to build thebacklink. So let's say uh if you want tobuild the backlinkyou want to specify the anchor text overthere. So what should be the anchor texton the back link that would be yourtarget keyword essentially. So if let'ssay if it was for an SEO company SEOcompany in USA could be a keyword orlet's say if it's for a fashione-commerce website kortas etc could bethe keyword. So you'll identify any suchtarget keyword.The next thing is you need to fix on atarget URL as well that hey for thisparticular keyword I want thisparticular page to rank and that's whereyou um define the target URL as wellthat hey this is the target URL or thiswould be the URL which would be includedin the av link rightnow the other crucial thing is thebacklink source from where are yougetting the backlink and uh that's aquestion which would be relevantthat hey where should I get the backlinkfrom so there are multiple alternativesto this word thing let's get into thedetails and uh the first thing is let'ssay if you want to get some backlinksfrom the blogs now this doesn't need anyvisuals in terms of getting thebacklinks from a blog so one blogconnecting to some particular websitethat would be a backlink from a blogblog, right? How do I get the backlinkfrom the blog? Now, uh you could connectwith that particular blogger and tellthem that hey would you be able to uhwrite for my particular website. Umthat's how you could do it and uhyou could take that particular thingfurther from there. Right? So how theconversation goes I don't know if you'reselling something really interesting andthe blogger is interested in thatparticular thing feels that thatparticular thing would be valid fortheir audience and their audience canget benefited by writing around it theymay definitely uh provide you a link.Now one particular thing which I wantyou people to not do isbuying back links. You will as soon asyou are the owner of a website or youremail ID is connected you will startgetting emails like this right that heyI am from this particular brand I have10,000 premium blogs across 200different categories and uhwe will publish this with sponsoredguest post tags. The price isnegotiable. They're asking clearly moneyfor that particular thing. They're goingto give you a do follow link. All right.And it will be published in 48 hours. Itseems so easy as compared to theprevious alternative. But uhmany of these links don't give therequired results. So if you can avoidit, nothing like it. So please escapefrom them. um they may even try to makeit more convincing for you, provide youthe domain authority or the domainratings, the traffic which that websiteis getting. So all all those uh thingswill be done to pull you uh to make abuying decision from them. So this kindof emails you'll keep on getting. Infact, my mailbox has lot of these. uhthe first thing I come in the morning Ihave to do is ignore those particularemails and move on to the ones which areuseful. So that's something which is achallenge in the current times when botsare writing emails. So that that's onething which is there but yes uhthis could be a way but if you can avoidit nothing like it instead of buying tryto earn the links.Okay, we'll come to how to on the linksin the coming modules. But okay, uhlet's move to the next kind of ulinks which could be the editorialbacklink. So you got the backlink fromthe blog by speaking with them. Umeditorial backlinks are simple. Let'ssay if you are placing some ad on someparticular website directly with them,uh it could help you earn an editorialbacklinks.I'm not sure how much value does Googleattribute to the adv advertorialbacklinks when it knows that clearlythis is coming from sponsored ads orthis thing but yes they get counted as abacklink that's at least knownhow much uh credit you get is not knownokay uh content syndicationso what's content syndication that's thefirst thing now let's say when uSomebodysays that they would like to write foryour websitethat could be termed as contentsyndication. They they are providing thecontent which you can put it on yourwebsite. Uh you will have to mentionthem as an author. That's the reason whythey are writing this. Uh it's not thatuh they are people sent without anyexpectation in return. uh they wouldexpect that okay you have some kind oftransactionaluh exchange which is happening they maynot ask for money directly but theywould write for the content and take abacklink so that kind of contentcollaboration is there um now how theperson is doing you could also do it foryour website let's say if you areinterested in getting backlinks to yourwebsite you can tell other people thathey I'll write content for your websiteuh and this is my expertise I'm a experton this particular topic and I I canwrite on this part topic and just putthe author uh tag and mention that heyyou are the author and this is yourwebsite. So it will help you to create abacklink to your websiteor maybe from some content within thatparticular thing if you can take a linkto your website where there is a deepercontent return on that particular topic.Uh that would also be a wonderful thing.So you can use content collaboration inthat particular way, right? Um this isjust one other example. Uh you couldalso go now this gentleman found that Iwas providing a link to one of theircompetitor. So he identified which URLthe link was coming from. Uh rememberthe reports we just saw in the previousmodules. So they understood that okay weare giving link to copycape. So theywrote to us that hey you are giving thelink to copycape. Can you give the linkto us as well? Uh this is a better tool.Um we can share a coupon code. We caneven open up an affiliate program. Soyou could use all these techniques togain backlinks, right? Uh so I'm justgiving you some examples how uh otherpeople are doing it. Uh this is the wayyou could do content syndication. Uinstead of buying links, I would saycontent syndication would be a betterthing. Soplease uh try this alternative.This would be the way to earn links. Butyes, this is one way. More ways arecoming in the subsequent slides.Okay. And uhthe subsequent slide is here already. Weare now speaking on the skyscrapertechniqueto get more content. Now this is also away to earn back links where you don'thave to speak with anybody but you'rewriting something which isworthy to be linked.Okay. So the first thing to create askyscraper content is identify contenton your website which is linkw worthywhich somebody else would love to linkto. Right? This could be a very in-depthresearch article on some particulartopic,right?One key to successwhen you're creating content like this,try to bring up more numbers. Peoplelove numbers and when some website hasnumbers uthere is a higher probability of theother website linking to this websitebecause if they are using those numbersthey will have to give you the uh theywill have to attribute that hey thisnumber was taken from this particularwebsite.Now once you ex identify this contentexpand on that content. Let's say if youhad a a blog around top 10 ways todress for Diwaliand you feel this is a link worthycontent maybe now make it 20 30 uh go asdeep as you can and expand it to thelimit which nobody has gone so far rightbecome the best at what you're doing. Soexpand it.The other thing is keep on updating thiscontent. Don't stop.Continuously work towards ex updatingthe content. So let's say you updatedthis content in the month of uh let'ssay 2 months back and u even if nocompetitor is working on it, you keep onupdating this particular content andmake it the most updated piece, mostexpanded piece of content. So identifythat one niche which you are good at andbuild the content. If you can buildmultiple things, nothing like it, but atleast make it one to start withand then definitely beautify thatparticular page, right? Bring moreinfographics, bring more visuals, bringmore videos to that particular content.Uh that would make it even moreinteresting, right? So work towardsgetting that position one or I would sayposition zero, which is the featuresnippet for that particular piece ofcontent. And definitely people wouldlove to link to you because your contentis something which uh they areconnecting with and in their contentthey would prefer to quote your content.So please make it link worthy ormake it a skyscraper content. Right?This is the best way to earn the linksand the most recommended way even byGoogle to earn links.Okay, so that wascontent. Now we move on to thedirectories and the UGC kind ofbacklinks as compared to the skyscraperlinks. This would be a little lesser interms of value. Um but yes uh they areeasy to create. So one kind of link thatyou can create is via the businessdirectories. So you would have manywebsites like these which just take somebasic information from your website andare uh building a link to your website.Uh so this are termed as directories. Uhvery less value. Uh I'm not sure even ifthey are of any value but yes u at leastit shows up in your search console asone link. Souh this is a way so I'm covering it butyeah I wouldn't uh ask you to devotemuch of your time to building businessdirectories but yes if it's happeningnothing wrong in it. Local citation isthe next way. Uh so let's sayin India just is very popular and uh youare listed on just you build a link fromjust that would be considered as alocal citation. I would also considerthat as a business directory. It may becounted as both.But yeah, for this example, I'mconsidering this as a local link.You can build links from Q&A websiteslike Reddit, Kora, etc. So, this issimple. People are asking questions of aparticular thing. Put your article orput your answer to that particularquestion. And if there is something morewhich the user can get on your websiteeven include the link how thisparticular gentleman has done. Sothey've also included uh their uhwebsite link in this particular thingright. Uh so do something like this thatshould help you get some links from Koraas well. While this links would be nofollow. Please understand that whilethis links are no follow even that wesee that okay there is some value whichis getting attributed to this kind ofbacklinks. So um it could be tried butyes again uh if you tell me skyscrapercontent or kora I would say definitelythe skyscraper content technique.Other thing is the social social mediabacklinks. Uh please excuse the spellingmistake there. Uh so we are referring tobacklinks which you can create fromsocial media post. So let's say in thisparticular thing uhthere is this tweet which is going onand we have also inserted thisparticular link around some particulartopic. So definitely this would beconsidered as a social media backlink.Even um this kind of links to your mainpage from your profile page itself wouldbe considered as a social media links.Please create this. This is also has alittle value. Uh and at the same timethese are really easy back links right.So you should not ignore this kind ofbacklinks. Getting a link from Twitterwould also come in the very highauthority domains linking to yourwebsite and it's very easy as well. Sono harm inlinking to your website.Okay. So the next way to build linksare broken back links, right? So on theinternet there are so many kind ofbacklinks which are broken. What if youhad an insight into all the backlinkswhich are broken and could divert thatto your website? Amazing. It wouldn'tbe. Uhso one is the lost back links. So againfor getting the lost back links you canuse ahref and there is a report calledlost referring domains report in ahrefwhere what we can do is once we go tothis particular report let's say uh itshows that okay how many backlinks aregetting added or removed on a particularwebsite each day right so this is acalendar for that uhnow let's say if I'm interested inunderstanding that hey what are thesefile links I just uh understand thatokay for this particular date what arethe file links once I click on that uh II get this listof referring domains which were lost Ineed to analyze this because I need tounderstand why are we losing the backlinks right so let's say if this was thewebsite we were taking care of we wouldgo into the details understand that okayfor this particular website uh uhThis was the link which was coming intothe website and it was an image formatand a content format connecting to Ymedia labs logo and from y media livesthere was a 30 redection to yml.co.So I would love to explore more I wouldgo to this particular domain understandthat okay uh this were more of uh ads onthis particular website and yes we havestopped the ads and that's the reasondefinitely we would have lost thebacklinks. So can't do much about it.Not to worry about it. Ignore it or markit as fixed.Let's open the next link which was therebelow that it was from websiteopedia. Um there was a direct link tothis part on this particular page. Iwould go and check this particular pagethat hey what is this particular pageall about? I see that okay uh thewebsite cannot be reached. Now this issomething which the content has beentaken off while the parent website isworking only this one page which wasdedicated to the particular organizationhas been removed. So the next thing I'lldo is uh I'll speak with website opediadefinitely since they had a dedicatedpage they would be willing to bring thatpage up again but speak with them evenoffer them some content if I find thatthis particular domain isso important that I should invest thismuch time. So I have to go ahead andinvest that much time and get that linkback.So we provide the content if needed.Let's open the third one as wellthat was from uh goaggency.com.Uh so I'll go to this particulararticle.I see that okay uh that particularcontent already has a linkif I click on it I'm going to the actualwebsiteon the website that particular contentis also there which they are referringto so this seems to be perfectly fineso don't worry about it just relaxlike the article, the person in thatarticle. Uh don't worry too much aboutit. Sometimesbots make mistakes and you may getsomething incorrect on that particularreport. So ignore this. Uh that's whereuh human audits are more valuable ascompared to audits by bots and tools. Soonce you identify this if you feel youcan just ignore this particular thingand move ahead and we'll move ahead tothe next point. Okay. So that was on thelost back links. Now we move to thediscontinued pages and again fordiscontinued pages what we do is uhwe're using a refri but a differentreport in a ref. This is called thebroken back links report.They may sound the same but have somedifferent meanings. Let's go into thedetails.Okay. So once I go into the broken backlinksI get to understand that okay uh thereis this particular page which is now a404 page.It means that okay within my websiteitself uh there is a problem. If I bringup that content on my website, the linkwill be automatically restored. Isn'tthat much easier to do as compared tocalling up somebody asking them toupload the content or sharing somecontent? I just need to ensure that therelevant pages on my website needs to beup and running. Right? So the websitehas uh lost multiple things, multiplepages which are not working fine. Umif the person clicks on it they areseeing a 404 page something went wrongit says do not worry but yes as a siteowner definitely they need to be worriedand uh if you've done discontinued thepage on purpose do a 301 redirect tosome other page which is a valid page ifyou don't find a valid page do it toyour homepage that's okay last resortbut uh yes at least don't leave it as afour or four right that doesn't createthe right impression of your website. Atleast if the user reaches your homepage,they may again try to find similar kindof content from some other page. But ifyou yourself could direct them to aalternate content, try to do that tocreate a proper 301 redirect on thatparticular page.And if you have not discontinued thepage, it was an error, please get itrectified and bring up that page as soonas possible.Okay, moving to the fourth type of uhlink building. I term it as digital PR,digital press releases. Umwhen I say digital press release, thisis online press releases, right? So oneway is to do digital PR is the editorialbacklinks.Okay. uh editor total backlinks is uhsomething as simple as getting abacklink from some reputed publication.Um these days you will even find uhmails like thisasking you to connect with them. If youfeel that you want a link fromwebsite like Forbes,go ahead initiate the conversation. Evenif you search for it online, you willfind enough uh number of uh websiteswhere they would love to publish yourcontent on those editorial websites. Sothis could be tried. Uh but consideringthat many of these become paid sometimesum you will have to weigh the costversus the benefit,right? Umand okay how do you determine the costversus benefit whatever cost you'reincurring on this part thing understandthat okay if it gives me let's sayfive to 10 ranking jumps if I build thisbacklink so let's say if you're buildingthis particular backlink and uh yourpage is currently ranking on the10th position um and if this gives youlet's say five level jump that's whatyour expectation is considering the linkis coming from a very reputable sourcelet's say if it is coming from times ofIndia definitely it can give you fivesix kind of jump if it is coming from avery relevant page on the times of Indiauh main website so if it is coming fromthere uh gives you that jump you'll haveto evaluate whether if I'm coming fromto from position 10 if I move toposition five what would be my CTR theCTR would increase and plus I'm doingsome more efforts can I take thisparticular keyword to the first page. IfI rank on the first page, how much sorryfirst position, how much benefit do Iget? How many customers would I get?What would be the cost of acquisitionfor those particular customers by thisroute? So, you'll have to do some matheither some mental math or some math onsome spreadsheet and arrive at thisparticular thing. But yes, if you dothis, it would be very clear to youwhether you should be building thebacklink or not. In terms of the value udefinitely website like Forbesum Wall Street Journal um Times of Indiaetc have some value because those aregood editorial websites have built thatkind of reputation over the years. Sothey are valuable but money I don't knowhow much uh this people charge. Sothat's something which you'll have toexplore.The other alternative is online pressreleases.So this is viaumwebsites like businesswire India, PRnews wire. There are many other websiteslike this who are uhwho disseminate the information or yournewsworthy content to other websites.Right? So um they have an alternative tobuild content as well as back linkswithin those particularcontent. So you could try thisparticular route. One benefit is it notonly gets published only on this onewebsite when you do a press release. Umit even gets published on multiple otherpublications along with the main websitebased on how they pick it up. Many ofthese would be RSS feeds. Um so thevalue of this links would be veryminimal but uh yes since the domains areveryum big and those are some reputed namesum it helps you get betterlink value. So try it out experimentdoes it give you any jump in terms ofyour rankings? Understand that. Do it asan experiment. If it uh helps you,continue. If it doesn't help you, stop.Okay. The fifth way of uh getting linksuh or the fifth category of gettinglinks are your business relationsitself. Right? This is one way which isignored quite a lot. While uh peopleare ready to spend budgets on backlinkssometimesthey don't capitalize on their ownbusiness relations and this is somethingwhich I would love you doing. So to takecare of this particular thing what uh weneed to do is you need to be more alertin terms of all the business relationswhich you are having with differentdifferent parties and see if there isany value which you could get out ofthat particular relationship. So let'ssay if you're hiring some talent from aneducational institute,can the educational institute put up onepost that hey uh this many candidateshave been placed at your company?That could be one way. So let's say ifwe are hiring some talent at Infidigitfrom some particular institute, we maywe can ask them that hey this manypeople are getting placed. So you couldlist us as one of your umone one of the organization where yourstudents are getting placed.Uh the other would be governmentcontracts or contactsright? Uh so if you have some uhcontactswith your uhlocal uh government authorities if theyhave a government website please do it.It's more popular in US where uh the govwebsites it's much easier to get linksfrom the go website as compared to inIndia. I don't know how many govwebsites would benot not uh it won't be existing with thesame extension maybe but at least thegovernment based websites how manywebsites uh would share those links Idon't know but yes uh if you have goodcontacts uh you could use thatnos's many of you donate a lot and uhwhy not use that also uh to build somebacklink I'm not saying uh do itpurposely. But yes, if you want, if youthink that, hey, that's a good way tocreate a win-win situation and you candonate a little more with the backlinkcoming in, uh, I would say please donatemore. The backlink would not have anyvalue for the NGO, but at the same time,your money could help several people.So, it's a win-win situation and weshould be fine with it.website development. This is the mostpopular form of links which you wouldhave seen uh at least for uh somewebsite development companies, right?they will put that small link at the uhbottom of the page that a websitecreated by and yeah if you are in ITcompany developing such thing nothingwrong in getting those links although itdoes not have the relevant anchor textsometimes it's fine at least a link iscoming from so many different crediblewebsitessponsorships so maybe you are sponsoringsome particular event some particularconferencedefinitely your website should be taggedover there as the sponsor and uh or yourlogo should have the link to yourwebsite.So this is again links or backlinksgetting created by your businessrelations.Okay. Uh the next thing is unlinmentions. So let's say somebodyinterviewed you wrote about you but theydid not create an intern a backlink fromtheir website to your website.That would be termed as an unlin.So if that particular thing is theremaybe you could nudge them that heyyou've written about me but how arepeople going to understand what is myorganization about? If you can build thelink to my website that would be ofgreat help and definitely the person hasinterviewed you, they have mentioned youon their on their website, they would beobligated tobuild that link, right? So that that'sabout UNL mentions. Okay. Uh that'squite some time uh time for a smallstory. Uh and this is the storyof my first bank link via UNL mentions.Okay. So this was a story of around whenI joined uh Myntraand uh the founderand that at that time CEO of Myntra Mr.MKkesh pencil he had been interviewed byForbes.comand uhbased on that particular thing uh he hadshared some information but there was nobacklink coming to my website whilethere was a link going to Amazon fromthat particular article. So we wrote tothis particularuh editor at Forbes and asked them thathey you've interviewed but can you buildthe backlink and fortunately after thatwhat happened is they gave the backlinkto the word Myntraeven with this minor thing which youthink that would have come from Forbesuh this was a great achievement at thatpoint in time for a brand like I'mspeaking of 2013 2014Uh so at at that point in time whathappened is we started seeing that heysome of the rankings of our keywordsstarted improving because of that. So uhthat that's something which we shouldtry uh to do. If you have such kind ofunlin mentions please uh get links fromthose particular sources. Um to continuethe story u I reported this to my superboss. He was happy about it. At the sametime he said that why are you not doingit for if this is helping in this mannerif this can help us with this sales thisis the easiest way to do it and the mosteconomical way to do it why don't you doit from more websites and that's wherewe started uh with the backlink strategyof myntra at that point in time build itand over the years it's helping theorganization rank better on organicsearch results so it's it's notsomething which is the effort of one dayor ua small period. SEO is something whichis a long-term game and uh you need tostrategize it well. Be consistent withthe game. Don't keep on changing yourtechniques uh every few days and uhtry to run from here to there and thereto here. So be sure what you're doingand then do it in the right manner. itwill bring results if you do it in theright manner.Okay. Okay. Uh so that was uh the lastone which was unlin mentions which wasin the fifth categoryand that's all the kind of differentbacklinks uh which at least I wouldrecommend you create popular ones I'vecovered. There are many more which Ihave not covered but yeah uh those arenot those popular but uh at least useall those please.Okay. So you havethe back links also. Now you have thetarget keyword, you have the target URL.Need to understand what is the purposeof creating the backlink. In most cases,it should be ranking. But sometimes,let's say if you're doing it forsomebody and your uh manager or yourboss or your client tells you that, hey,I want to get referral visits out of it.Please ask them for the budget ofplacing your backlink on the first pageof Times of India main website.If you need the referral visits from abacklink which can be quantified and itcould it should be a sizable number. Ifthey're fine with one or two referralvisits coming from a backlink that'sfine. See the objective of backlinks isnotto build visits. The main objective isto build credibility to enhance your E AT. Right? So, it's being done fororganic purposes. But here, ifsomebody's trying to push uh referralvisits as a target on the back links,please ask them for the budgets to placeit on the top page of the most popularbusiness publication in your country.The other thing which should you shoulddo and I would include this also in thehow uh of creating backlinks. The reasonbeing you should know what was thebaseline when you started some activity.Right? So you should know the currentranking where you started and based onthat build that particular thing.Okay.So that that's about the linkbuilding techniques. We covered multiplethings while getting into thisparticular topic and now it's time forsome self-arning or some assignments.Okay. So the third assignment of thisparticular week,does your website have any broken links?So now you may use the various toolswhich you saw and try to understand thatdoes your website have any broken links?If yes, use that spreadsheet to recordthose particular instance and thencontinue with the session. But yes,please record it to the spreadsheet orelse you people will forgot forget itand then at the end it would becomereally difficult for you to remember allthe assignments and do the thingsas per what I spoke. So please keep onupdating it on the spreadsheet.Okay. The fourth assignment.Are you following all the best practicesfor enhancing your link profile or yourwebsite's link profile or your uhthe the place where you're working rightthe link profile of that particularwebsiteif you're not following all the bestpractices which I have spoken of use theSEO task spreadsheet template to recordthis opportunities each one of thosethings where was an opportunity soplease list it downin the last week I'm going to ask youhow many points do you have on yourspread sheet, right? So, I would love tospeak with the person who has themaximum ones and please try to make yoursheetthe sheet with the maximum points. Atthe same time, just don't add points forthe heck of it. There should besomething which are real opportunities.That's where I would know that okay,you've donereal justice to this particular courseand to yourself and your timeinvestment.Time to move on to the next module.Thank you."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 5063,
+      "char_count": 30856
+    },
+    {
+      "video_index": 5,
+      "video_title": "5. Copy of Copy of 5.Manual Actions.mp4",
+      "start_p": 944,
+      "end_p": 945,
+      "paragraphs": [
+        {
+          "p_idx": 945,
+          "text": "Welcome to the last module of week five,manual actions.Okay, what are manual actions?Google penalties.Okay, and you want to stay away from it.So, one thing which you need to do isyou need to be careful while buildingthe links. Why am I taking you throughthis session? Uh I hope and I wish thatnothing happens to your website uh thatyou receive this particular email. Uhbut yes uh I need to prepare you and atleast uh tell you what are thechallenges if you start building thelinksuh randomly right without a properstrategy without understanding thenuances of it. Now this is the story ofa client who came to us after gettingpenalized and uhwe realized thatthis thing happened because of thosetechniques which were used to randomlybuild the back links. Now this is notgoing to creategood for anybody right in the long term.So please avoid this kind of practices.While you may get some benefit out ofthe back links in the short term, youshould think of the long-term and buildthe back links.So now let's say unfortunately you getthis particular email, right? Or uhyou get a message on your search consolethat hey there are unnatural inboundlinks. uh please uh try to correlatethis particular message with theactual impact on your rankings impact onyour clicks sessions etc.Ideally we have seen that whenever thismessage comes in leads to a drop in theranking of that particular websitefor either that particular specificcategory or the overall website. Sohaving said that if you get this messageor within the manual action uh if youget some message over here this issomething I didn't have the appropriatescreenshot so I'm just using thescreenshot of the manual action that'ssomething which is there uh if you havesome action uh over there being taken byGoogle on your website you would seethat particular message let's say if youjoined the organization recently and youdid not get this email because thisemail would have come earlierUm at least you can go to your searchconsole manual actions and understandwhether your website is currentlygetting penalized. Um this is just oneuh kind of manual action. There are manymultiple other kind different kinds ofmanual actions right since we arecovering the backlink uh section u andthis is very crucial for it. I'mincluding it over here. But let's say ifyou have copied content on your websiteyou could see a manual action for copiedcontent. If you would have um some kindof uh things which are blackardtechniques, you could get some penaltyfor that as well and it could gethighlighted over here. Right? U the timeit is small, Google may ignore it andjust ensure that uh it penalizes you inthe way of ranking. But if it becomestoo much for it, then it's going to giveyou this kind of manual penalty which iscalled manual actions. Right? And thenyou need to write to these people andthen resolve this particular thing. Soit's a very big process as such. Let metell you a few steps about it. Okay. Sonow let's say if you are in thisparticular situation specifically withthe bad back links, what you'll have todo is you'll have to first identify thespammy back links on your website.Okay. Now how do you identify thatspammy backlinks? uh is something whichis the next question which you have inyour mind and we are going to use theAHF tool first to understand how to getthis back links.So in the AHF ref uh report uh sorry uhAF we went to the referring domainsearlier but all the domains were at thatpoint in time sorted based on theirdomain ratings as the highest ones. Nowwhat I've done is I've sorted it basedon the lowest. So what I'm getting isfor this particular website I'm gettingall the domains which have zero domainratings.NowI'll check a few of these I if thoselook proper I'll just ignore them. If Ifeel that hey these are something whichI need to be worried of I'll list themdown in a separate sheet or a documentthat hey these are the domains for whichthe links uh are not good and I need tomark them as spammy back links in somemanner. So first we are identifying thatlist and we need to make that list. Soyou'll use this to make a list. Ifneeded you export this particular listfrom a Href and then start working onit. Right? So you don't it would be mucheasier for you that part of manner. Uthe other way I prefer to do it is inmost cases spammy links have someparticular kind of keywords right so I'musingum keyword like sex over here tounderstand whether okay does any ofthese back links use something uhrelated to sex nothing wrong in thatparticular keyword but in wrong contextit could bring in different meaning. Sojust so as to shortlist my overall list,I can use something like this as welland then try to look at the domain.Let's say if I go within this domain andinstead of it showing me a page where itshould link to my website, it is takingme uh to a particular Chrome extensionwhich it wants me to install. I know whyis itwriting the content, right? It's spammycontent only. trying to bring in somebad practices and making the users toinstall these particular Chromeextension. So definitely I would putthis in the blacklist and put them as aspammy backlink on my website.Okay. Uh so that that's the way you doit by AHF. You'll have to do it manuallya little. Uh SEM brush has a littlebetter way to do it. Let's go into theSCM brush way of doing it. So in SEMbrush you would have to go to backlinkaudit you will see the overall toxiccity score. So you'll get into thatparticular thing. Let's say I see forthis particular website uh there is uh9.7%toxic website. So I click on it. I getto know that hey many of the links arecoming from uh some link networks. Okay.So at least for your information whatare link networks?Link networks are the links which SCMbrush finds um are coming from the samegroup.So let's say pages coming from the samenetwork having the same IP or have thesame Google Analytics ID or have thesame Google AdSense ID. All right. Sothis is intelligent way of connectingthose websites into one group. So nowlet's say one individual made 100websites kept the same Google Analyticscode or the kept the same AdSense codeover there because they are running adsalso. U it's an intelligent way ofunderstanding that hey it's coming fromone single source or all those websitesare listed on one particular server.It's a very easy way to understand thatparticular thing. So this are gettinghighlighted. It may not be necessarythat all these websites are bad. Butyes, it helps you to create that list ofwebsites which could be categorizedunder spammy. You can't if you havemillions of links, there's no way youcan go through all the links. But atleast if you filter it out, do some uhfiltering process, you may come up withthe better set of this websites. Okay.So in this particular case I find thatokay infid is getting website links fromlet's say find coupon codes uh someother website some other website. Okay.So now I may just uh download this anduhidentify that hey these are all thetoxic websites if all of them arerelevant because SCM brush has alreadymarked them as toxic. I download thelist, go through it once, even open someof the domain names or open all thedomain names and see whether there arebad websites or good website. If it isgood, I'll delete it from the list orelse I'll just maintain that list, thefinal list of the toxic websites.Okay. So now the next recommended way asper Google is ask those spammy websitesto remove the link to your website.This is the most difficult way becausefirst is you don't know who are thesepeopleon if you go on their website you willnot find the contact details. So how doyou remove the back links? Verydifficult to do that. But at least forthe ones where you are able to identifysome contact, please u connect withthem. Try to use uh the internet to findthat hey who is the owner of thisparticular website at a domain level. Ifyou understand who is registrying thatshould also give you some indicationabout who's the owner of that particulardomain. Try to connect and see if youcan remove it. If not,you may have to use the lastalternative.But yes, this step is a mandatory stepin this activity.Uh so if the second step doesn't happenthen the third step is disavow.Okay. What is disavow? A disavow is anoption which is provided in Google whereyou can upload all the domains whichhave those spammy back links onto aparticular tool on the Google searchconsole. So let's say what you'll haveto do is the list that you made whateverwas spammy you will have to put it on atext file and list out all the thingsand then there is this particular URLwhich I'm sharing it it would beavailable with your learning resources.Soyou will have to select and then uh youwill have to replace this file. Ensurethat when you're uploading if there isan existing file please add your URLs tothat original file. Do not delete theoriginal URLs and upload the new ones.Uh sometimes you mayum remove the work of the previouspeople who have worked on your website.So please be careful with this feature.This is an advanced feature. Um soplease be very careful with it. If youhave not done it, please uh uh take somehelp from the experts and do it. Butyes, be careful with this feature. Itcould create challenges unnecessarily.Right? So um once this is done, uh ifyou have to remove that manual penalty,you have to write to Google and reply tothat email which you would have receivedor mark it in search console and uh usethe reply option there and tell themthat hey, I've fixed this particularissue. If they feel you really fixed itand you work towards fixing it then theymay remove the penalty or else thepenalty continues and you'll have toredo this things till the time theyremove it right. Uh so the response timeis also more. So if something like thiscomes in and you are doing it for thefirst time please be careful or elsetake help from the experts.Okay. Uh so that was on the disavol andwhen it comes to backlinking this is thelast slide please don't overdo it rightuhusethe skyscraper content techniquewhich is the best way of doing thebacklinks but uh yes uh with the otherbacklinks while they are easy sometimesit brings its own challenges so pleasebe careful with it.Thank you.And uh yes uh if you have any questionswait for our weekly meetings. If not uhyou also have an alternative to tweet meat koshal_t and I'll try to reply toyour question at the earliest. Thankyou."
+        }
+      ],
+      "paragraph_count": 2,
+      "word_count": 1749,
+      "char_count": 10425
+    }
+  ],
+  "paragraph_count": 233,
+  "word_count": 12928,
+  "char_count": 77656
+}

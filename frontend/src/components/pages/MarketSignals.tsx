@@ -5,8 +5,8 @@ import { Link, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { blogPosts, getMatchedSolutionSlug } from '../../data/blogPosts'
-import { getSolutionBySlug, solutionsData, SolutionRecord } from '../../data/solutionsData'
+import { blogPosts, getMatchedSolutionSlug, BlogPost } from '../../data/signalsHubData'
+import { getSolutionSummaryBySlug, topHighLeverSolutions, SolutionSummaryItem as SolutionRecord } from '../../data/solutionsHubData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { 
     ArchitecturePlayground, 
@@ -41,19 +41,81 @@ const signalsFaqs = [
     }
 ]
 
+declare global {
+    interface Window {
+        __INITIAL_SIGNAL__?: BlogPost;
+    }
+}
+
+function getInitialSignal(slug?: string): BlogPost | null {
+    if (!slug || typeof window === 'undefined') return null;
+    const win = window as any;
+    if (win.__INITIAL_SIGNAL__ && win.__INITIAL_SIGNAL__.slug === slug) {
+        return win.__INITIAL_SIGNAL__;
+    }
+    try {
+        const el = document.getElementById('__SIGNAL_DATA__');
+        if (el && el.textContent) {
+            const parsed = JSON.parse(el.textContent);
+            if (parsed && parsed.slug === slug) {
+                return parsed;
+            }
+        }
+    } catch {
+        // ignore parse error
+    }
+    return null;
+}
+
 export default function MarketSignals() {
     const { slug } = useParams();
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const { trackInteraction } = useDwellTelemetry(slug || 'signals-directory');
 
-    const activeArticle = slug ? blogPosts.find(post => post.slug === slug) : null;
+    const [fullArticle, setFullArticle] = useState<BlogPost | null>(() => getInitialSignal(slug));
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setOpenFaq(null);
+
+        if (!slug) {
+            setFullArticle(null);
+            return;
+        }
+
+        const initial = getInitialSignal(slug);
+        if (initial) {
+            setFullArticle(initial);
+            return;
+        }
+
+        let cancelled = false;
+        fetch(`/data/signals/${slug}.json`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return res.json();
+            })
+            .then((data: BlogPost) => {
+                if (!cancelled) setFullArticle(data);
+            })
+            .catch(() => {
+                // Keep fallback summary
+            });
+
+        return () => {
+            cancelled = true;
+        };
+    }, [slug]);
+
+    const summaryArticle = slug ? blogPosts.find(post => post.slug === slug) : null;
+    const activeArticle = fullArticle || (summaryArticle as any);
 
     // System 1 -> System 2 Topical Equity Bridge: Match signal to commercial solution
     const matchedSolution: SolutionRecord | undefined = React.useMemo(() => {
         if (!activeArticle) return undefined;
         const targetSlug = getMatchedSolutionSlug(activeArticle);
-        return getSolutionBySlug(targetSlug) || solutionsData[0];
+        return getSolutionSummaryBySlug(targetSlug) || topHighLeverSolutions[0];
     }, [activeArticle]);
 
     // Pillar 1: Find related posts for internal linking
@@ -143,7 +205,7 @@ export default function MarketSignals() {
                     <meta property="og:title" content={activeArticle.title.replace(/\*\*/g, '')} />
                     <meta property="og:description" content={activeArticle.metaDescription} />
                     <meta property="og:type" content="article" />
-                    <meta property="og:url" content={`https://elesium.online/signals/${activeArticle.slug}`} />
+                    <meta property="og:url" content={`https://elesium.online/signals/${activeArticle.slug}/`} />
                     <meta property="og:image" content="https://elesium.online/og-image.png" />
                     <meta property="og:site_name" content="Elesium" />
                     <meta property="og:locale" content="en_US" />
@@ -154,7 +216,7 @@ export default function MarketSignals() {
                     <meta name="twitter:description" content={activeArticle.metaDescription} />
                     <meta name="twitter:image" content="https://elesium.online/og-image.png" />
 
-                    <link rel="canonical" href={`https://elesium.online/signals/${activeArticle.slug}`} />
+                    <link rel="canonical" href={`https://elesium.online/signals/${activeArticle.slug}/`} />
                     
                     {/* Breadcrumb Schema for GEO/AEO */}
                     <script type="application/ld+json">
@@ -199,7 +261,7 @@ export default function MarketSignals() {
                     <meta property="og:title" content="Enterprise AI Architecture Whitepapers & Technical Signals | Elesium" />
                     <meta property="og:description" content="Peer-reviewed technical whitepapers and architecture telemetry on private VPC LLMs, vLLM PagedAttention, FP8 GEMM kernels, and DPDP Act 2023 compliance." />
                     <meta property="og:type" content="website" />
-                    <meta property="og:url" content="https://elesium.online/signals" />
+                    <meta property="og:url" content="https://elesium.online/signals/" />
                     <meta property="og:image" content="https://elesium.online/og-image.png" />
 
                     {/* Twitter Cards */}
@@ -208,7 +270,7 @@ export default function MarketSignals() {
                     <meta name="twitter:description" content="Peer-reviewed technical whitepapers on sovereign multi-agent systems and private VPC deployments." />
                     <meta name="twitter:image" content="https://elesium.online/og-image.png" />
 
-                    <link rel="canonical" href="https://elesium.online/signals" />
+                    <link rel="canonical" href="https://elesium.online/signals/" />
                     
                     {/* Comprehensive JSON-LD Knowledge Graph for Signals Hub */}
                     <script type="application/ld+json">
@@ -286,7 +348,7 @@ export default function MarketSignals() {
                     <ChevronRight className="w-3 h-3 text-gray-400" />
                     {slug ? (
                         <>
-                            <Link to="/signals" className="hover:text-black dark:hover:text-white transition-colors">
+                            <Link to="/signals/" className="hover:text-black dark:hover:text-white transition-colors">
                                 Market Signals
                             </Link>
                             <ChevronRight className="w-3 h-3 text-gray-400" />
@@ -380,7 +442,7 @@ export default function MarketSignals() {
                                             transition={{ duration: 0.4, delay: index * 0.05 }}
                                         >
                                             <Link 
-                                                to={`/signals/${article.slug}`}
+                                                to={`/signals/${article.slug}/`}
                                                 className="group flex flex-col md:flex-row gap-4 md:gap-8 p-6 sm:p-8 rounded-3xl bg-gray-50/80 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all cursor-pointer block shadow-sm"
                                             >
                                                 <div className="md:w-1/4 flex flex-col gap-2">
@@ -541,7 +603,7 @@ export default function MarketSignals() {
                                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                                     </button>
                                     <Link
-                                        to="/waitlist"
+                                        to="/waitlist/"
                                         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
                                     >
                                         <span>ele-in SaaS Waitlist &rarr;</span>
@@ -596,9 +658,10 @@ export default function MarketSignals() {
 
                                 {/* Dynamic Sections with Interactive Assets */}
                                 <div className="space-y-6 mt-8">
-                                    {activeArticle.sections.map((section, sIdx) => {
-                                        const shouldInjectPlayground = sIdx === 2 && !activeArticle.sections.some(s => s.type === 'playground');
-                                        const shouldInjectRoiCalculator = sIdx === Math.min(5, activeArticle.sections.length - 1) && !activeArticle.sections.some(s => s.type === 'roi_calculator');
+                                    {activeArticle.sections && Array.isArray(activeArticle.sections) ? (
+                                        activeArticle.sections.map((section: any, sIdx: number) => {
+                                        const shouldInjectPlayground = sIdx === 2 && !activeArticle.sections.some((s: any) => s.type === 'playground');
+                                        const shouldInjectRoiCalculator = sIdx === Math.min(5, activeArticle.sections.length - 1) && !activeArticle.sections.some((s: any) => s.type === 'roi_calculator');
 
                                         const renderedSection = (() => {
                                             switch (section.type) {
@@ -766,7 +829,14 @@ export default function MarketSignals() {
                                                 )}
                                             </React.Fragment>
                                         );
-                                    })}
+                                    })
+                                    ) : (
+                                        <div className="space-y-4 my-8 animate-pulse">
+                                            <div className="h-4 bg-gray-200 dark:bg-white/10 rounded w-3/4"></div>
+                                            <div className="h-4 bg-gray-200 dark:bg-white/10 rounded w-5/6"></div>
+                                            <div className="h-4 bg-gray-200 dark:bg-white/10 rounded w-2/3"></div>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Behavioral Dwell Hook 4: Production Architecture Blueprint Download */}
@@ -788,7 +858,7 @@ export default function MarketSignals() {
                                         <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                                             Need to operationalize this architecture? Deploy Elesium&apos;s{' '}
                                             <Link
-                                                to={`/solutions/${matchedSolution.slug}`}
+                                                to={`/solutions/${matchedSolution.slug}/`}
                                                 className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
                                             >
                                                 {matchedSolution.h1}
@@ -814,7 +884,7 @@ export default function MarketSignals() {
                                                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                                                 </button>
                                                 <Link
-                                                    to={`/solutions/${matchedSolution.slug}`}
+                                                    to={`/solutions/${matchedSolution.slug}/`}
                                                     className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 font-medium text-xs font-mono transition-all text-gray-700 dark:text-gray-300"
                                                 >
                                                     <span>View Architecture Details &rarr;</span>
@@ -829,7 +899,7 @@ export default function MarketSignals() {
                                     <div className="mt-12 border-t border-gray-200 dark:border-white/10 pt-8">
                                         <h2 className="text-xl font-bold text-black dark:text-white mb-6">Frequently Asked Questions</h2>
                                         <div className="space-y-3">
-                                            {activeArticle.faq.map((item, fIdx) => (
+                                            {activeArticle.faq.map((item: any, fIdx: number) => (
                                                 <div key={fIdx} className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-gray-50/50 dark:bg-white/[0.01]">
                                                     <button
                                                         onClick={() => setOpenFaq(openFaq === fIdx + 100 ? null : fIdx + 100)}
@@ -868,7 +938,7 @@ export default function MarketSignals() {
                                             {relatedPosts.map(rp => (
                                                 <Link
                                                     key={rp.slug}
-                                                    to={`/signals/${rp.slug}`}
+                                                    to={`/signals/${rp.slug}/`}
                                                     className="group flex items-start gap-3 p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/60 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/30 transition-all duration-200"
                                                 >
                                                     <ChevronRight className="h-4 w-4 mt-0.5 text-gray-400 group-hover:text-black dark:group-hover:text-white flex-shrink-0" />
@@ -904,7 +974,7 @@ export default function MarketSignals() {
                                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                                         </button>
                                         <Link
-                                            to="/waitlist"
+                                            to="/waitlist/"
                                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
                                         >
                                             <span>ele-in SaaS Waitlist &rarr;</span>
@@ -915,7 +985,7 @@ export default function MarketSignals() {
                                 {/* Article Footer Navigation */}
                                 <div className="border-t border-gray-200 dark:border-white/10 mt-12 pt-8 flex items-center justify-between">
                                     <Link
-                                        to="/signals"
+                                        to="/signals/"
                                         className="flex items-center gap-2 text-xs font-mono font-semibold text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                                     >
                                         <ArrowLeft className="h-4 w-4" />

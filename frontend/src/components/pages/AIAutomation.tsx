@@ -183,12 +183,22 @@ export default function AIAutomation() {
     };
 
     return (
-        <div className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
+        <main id="main-content" className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
             <WhatsAppModal />
             <Helmet>
-                <title>AI Automation Agency India | Elesium</title>
-                <meta name="description" content="Elesium builds custom AI automation workflows for Indian enterprises. From agentic AI to LLM integration — we automate what slows you down." />
-                <link rel="canonical" href="https://elesium.online/ai-automation" />
+                <title>Best AI &amp; Automation Company in Bangalore | Elesium</title>
+                <meta name="description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
+                <link rel="canonical" href="https://elesium.online/ai-automation/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Best AI &amp; Automation Company in Bangalore | Elesium" />
+                <meta property="og:description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
+                <meta property="og:image" content="https://elesium.online/og-image.png" />
+                <meta property="og:url" content="https://elesium.online/ai-automation/" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:title" content="Best AI &amp; Automation Company in Bangalore | Elesium" />
+                <meta name="twitter:description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
+                <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">
                     {JSON.stringify(structuredData)}
                 </script>
@@ -243,7 +253,7 @@ export default function AIAutomation() {
                             <span>Initiate AI Audit (WhatsApp)</span>
                         </button>
                         <Link 
-                            to="/waitlist" 
+                            to="/waitlist/" 
                             className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
                             <span>ele-in SaaS Waitlist</span>
@@ -418,7 +428,7 @@ export default function AIAutomation() {
                             <span>Chat on WhatsApp with Lead Architect</span>
                         </button>
                         <Link 
-                            to="/waitlist" 
+                            to="/waitlist/" 
                             className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
                         >
                             <span>ele-in SaaS Waitlist</span>
@@ -427,6 +437,6 @@ export default function AIAutomation() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

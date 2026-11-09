@@ -150,7 +150,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-kv-cache-eviction-simu
       <div className="max-w-7xl mx-auto">
         {/* Navigation Breadcrumb */}
         <div className="flex items-center gap-2 text-xs font-mono text-gray-400 mb-6">
-          <a href="/resources" className="hover:text-emerald-400 transition-colors">TOOLS</a>
+          <a href="/resources/" className="hover:text-emerald-400 transition-colors">TOOLS</a>
           <span>/</span>
           <span className="text-emerald-400">KV-CACHE EVICTION</span>
           <span>/</span>

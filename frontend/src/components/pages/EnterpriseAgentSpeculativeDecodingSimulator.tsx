@@ -119,7 +119,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
     name: 'Enterprise Agent Dynamic Speculative Decoding & Draft Model Latency Arbitrage Simulator',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Web-based, Cloud, On-Premises VPC',
-    url: 'https://elesium.online/tools/enterprise-agent-speculative-decoding-simulator',
+    url: 'https://elesium.online/tools/enterprise-agent-speculative-decoding-simulator/',
     description: 'Interactive mathematical and systems engineering simulator comparing standard autoregressive decoding, static draft speculation, and sovereign dynamic tree speculative decoding for enterprise LLM agents.',
     offers: {
       '@type': 'Offer',
@@ -141,7 +141,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           name="description"
           content="Simulate and benchmark LLM speculative decoding architectures. Compare monolithic autoregressive decoding against dynamic speculative tree sampling for 2.85x speedup."
         />
-        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-speculative-decoding-simulator" />
+        <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-speculative-decoding-simulator/" />
         <script type="application/ld+json">{JSON.stringify(jsonLdSchema)}</script>
       </Helmet>
 
@@ -150,7 +150,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
         <div className="flex items-center gap-2 text-sm font-mono text-slate-400">
           <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/solutions" className="hover:text-cyan-400 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-cyan-400 transition-colors">Solutions</Link>
           <span>/</span>
           <span className="text-cyan-400">Speculative Decoding Simulator</span>
         </div>
