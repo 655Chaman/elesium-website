@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-11-09T10:15:14.539498+00:00",
+  "total_links_analyzed": 50,
+  "unique_domains": 50,
+  "unique_root_domains": 50,
+  "anchor_entropy": 5.6439,
+  "velocity_z_score": 0.0,
+  "top_anchor": "enterprise ai architecture 0",
+  "top_anchor_concentration_pct": 2.0,
+  "toxic_domains_flagged_count": 0,
+  "attack_detected": false,
+  "flagged_reasons": [],
+  "threat_level": "NOMINAL",
+  "disavow_file": "automation/disavow.txt"
+}

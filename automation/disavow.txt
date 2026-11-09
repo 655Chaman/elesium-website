@@ -1,0 +1,8 @@
+# ===========================================================================
+# OFFICIAL GOOGLE SEARCH CONSOLE DISAVOW SPECIFICATION
+# DOMAIN: elesium.online
+# GENERATED: 2026-11-09 10:15:14Z via Elesium Adversarial Detox Sentinel
+# TOTAL ROOT DOMAINS DISAVOWED: 0
+# PROTOCOL: 17 U.S.C. / Google Search Engine Anti-Spam Guidelines
+# ===========================================================================
+

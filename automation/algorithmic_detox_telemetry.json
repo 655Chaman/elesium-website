@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-11-09T10:22:29.567351+00:00",
+  "remediation_status": "DETOX_FRAMEWORK_ARMED",
+  "phase_1_cull": {
+    "status": "PHASE_1_COMPLETE",
+    "culled_urls_count": 6,
+    "http_410_rules_path": "automation/algorithmic_cull_http_410.conf",
+    "consolidation_map_path": "automation/301_consolidation_map.json"
+  },
+  "phase_2_entity": {
+    "status": "PHASE_2_COMPLETE",
+    "wikidata_qids_grounded": true,
+    "verified_author_provenance": true,
+    "author": "Chaman Shah",
+    "statutory_compliance_anchored": true,
+    "legal_jurisdiction": "Bengaluru, Karnataka (DPDP Act 2023 Section 8(5))"
+  },
+  "phase_3_pagerank": {
+    "status": "PHASE_3_COMPLETE",
+    "dangling_nodes_count": 0,
+    "upward_routing_efficiency_pct": 100.0,
+    "core_hub_targets": [
+      "/",
+      "/solutions/",
+      "/signals/",
+      "/onboarding/"
+    ],
+    "max_internal_hop_distance": 3
+  },
+  "phase_4_recrawl": {
+    "status": "PHASE_4_COMPLETE",
+    "recrawl_burst_urls_count": 7,
+    "payload_file": "automation/recrawl_acceleration_payload.json",
+    "target_engines": [
+      "Google",
+      "Bing",
+      "Yandex",
+      "Seznam"
+    ]
+  }
+}

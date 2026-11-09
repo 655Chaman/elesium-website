@@ -7,6 +7,7 @@ import InternationalGeoBanner from './components/layout/InternationalGeoBanner'
 import SmoothScroll from './components/ui/SmoothScroll'
 import NoiseOverlay from './components/ui/NoiseOverlay'
 import RouteProgressBar from './components/ui/RouteProgressBar'
+import { initNavboostDwellLock } from './utils/dwellLock'
 
 // Lazy load heavy below-the-fold components and secondary pages
 const Home = lazy(() => import('./components/pages/Home'))
@@ -188,6 +189,11 @@ function App() {
 
     // Since we're using React Router now, the Navbar and Footer are rendered once outside Routes
     // and we only animate the inner content changing.
+
+    // Initialize Navboost Anti-Pogo-Sticking Dwell-Lock (Playbook 12)
+    useEffect(() => {
+        initNavboostDwellLock();
+    }, []);
     
     // Scroll to top on route change
     useEffect(() => {

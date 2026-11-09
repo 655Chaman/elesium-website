@@ -1,0 +1,38 @@
+OFFICIAL STATUTORY NOTICE OF COPYRIGHT INFRINGEMENT
+PURSUANT TO THE DIGITAL MILLENNIUM COPYRIGHT ACT (17 U.S.C. § 512(c))
+
+DATE: 2026-11-09 10:20:54Z
+TO: Abuse & Copyright Enforcement Designated Agent
+INFRASTRUCTURE PROVIDER: scraper-pirate-mirror.xyz
+VIA ELECTRONIC TRANSMISSION: abuse@scraper-pirate-mirror.xyz
+
+Dear Designated Copyright Agent,
+
+I am writing on behalf of Elesium Digital Systems ("Copyright Owner") pursuant to the Digital Millennium Copyright Act (17 U.S.C. § 512(c)(3)) to notify your service of copyright infringement occurring on servers, hostnames, or routing infrastructure operated or administered by your organization.
+
+1. IDENTIFICATION OF COPYRIGHTED WORK:
+The proprietary copyrighted works are original technical software architectures, empirical latency/throughput benchmarks, and bespoke engineering text authored and owned exclusively by Elesium Digital Systems, originally published at:
+ORIGINAL AUTHORITATIVE URL: https://elesium.online/solutions/enterprise-ai-automation
+TITLE OF WORK: Proprietary Enterprise AI Architecture Specification & Empirical Benchmarks
+
+2. IDENTIFICATION OF INFRINGING MATERIAL:
+The material listed below has been copied, scraped, or reproduced without authorization, directly infringing upon Copyright Owner's exclusive rights under 17 U.S.C. § 106. We request immediate removal or disabling of access to this material:
+INFRINGING URL: https://scraper-pirate-mirror.xyz/stolen-content
+INFRINGING DOMAIN / HOST: scraper-pirate-mirror.xyz
+
+3. GOOD FAITH STATEMENT:
+I have a good faith belief that the use of the copyrighted material described above is not authorized by the copyright owner, its agent, or the law (such as fair use).
+
+4. STATEMENT UNDER PENALTY OF PERJURY:
+I state, under penalty of perjury under the laws of the United States of America, that the information in this notification is accurate, and that I am authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
+
+5. CONTACT INFORMATION & DESIGNATED AGENT:
+Elesium Digital Systems
+Attn: Legal Department & Copyright Enforcement Division
+Address: Bangalore, Karnataka 560034, India
+Email: legal@elesium.online
+Phone: +91-80-4829-1000
+
+ELECTRONIC SIGNATURE:
+/Chaman Shah/
+Principal AI Systems Architect, Elesium Digital Systems

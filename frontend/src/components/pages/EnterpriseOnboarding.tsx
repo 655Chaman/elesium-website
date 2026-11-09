@@ -241,6 +241,27 @@ Date: ${today}`;
                                     </div>
                                 </div>
 
+                                <div className="mb-6">
+                                    <label className="block text-xs font-medium text-slate-400 mb-3">Statutory &amp; Regulatory Governance Mandates</label>
+                                    <div className="flex flex-wrap gap-2.5">
+                                        {[
+                                            { id: 'dpdp-2023', label: 'DPDP Act 2023 Section 8(5)' },
+                                            { id: 'rbi-csf', label: 'RBI Cyber Security Framework' },
+                                            { id: 'iso-27001', label: 'ISO/IEC 27001:2022' },
+                                            { id: 'soc2', label: 'SOC 2 Type II Enclave' }
+                                        ].map(item => (
+                                            <button
+                                                type="button"
+                                                key={item.id}
+                                                onClick={() => toggleCompliance(item.id)}
+                                                className={`px-3.5 py-2 rounded-lg text-xs font-medium border transition-colors ${compliance.includes(item.id) ? 'bg-emerald-600/20 border-emerald-500 text-emerald-300' : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700'}`}
+                                            >
+                                                {item.label}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+
                                 <div className="flex justify-end">
                                     <button 
                                         type="button" 
@@ -340,7 +361,7 @@ Date: ${today}`;
                                         onClick={handleDownloadNda}
                                         className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold rounded-lg border border-slate-700"
                                     >
-                                        <Download className="w-4 h-4" /> Download Executable NDA
+                                        <Download className="w-4 h-4" /> {ndaGenerated ? "✓ NDA Stamped & Downloaded" : "Download Executable NDA"}
                                     </button>
                                 </div>
 
@@ -410,10 +431,10 @@ Date: ${today}`;
                                     </button>
                                     <button 
                                         type="submit" 
-                                        disabled={!phone}
-                                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold rounded-xl text-sm transition-all shadow-xl shadow-emerald-900/40"
+                                        disabled={!phone || submitted}
+                                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-extrabold rounded-xl text-sm transition-all shadow-xl shadow-emerald-900/40"
                                     >
-                                        <PhoneCall className="w-4 h-4" /> Submit &amp; Open WhatsApp Desk
+                                        <PhoneCall className="w-4 h-4" /> {submitted ? "Routing to WhatsApp Desk..." : "Submit & Open WhatsApp Desk"}
                                     </button>
                                 </div>
                             </motion.div>
