@@ -1,57 +1,144 @@
+# ==============================================================================
 # Robots.txt for https://elesium.online
-# Conforms strictly to RFC 9309 (Robots Exclusion Protocol)
+# Engineered under AISCO Protocol (AI Search Crawler Optimization - Module 09)
+# Conforms strictly to RFC 9309 (Robots Exclusion Protocol Standard)
+# ==============================================================================
 
+# ------------------------------------------------------------------------------
+# 1. DEFAULT DIRECTIVES FOR STANDARD CRAWLERS
+# ------------------------------------------------------------------------------
 User-agent: *
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
-# LLM & AI Search Crawlers — Explicit /embed/ protection
-User-agent: GPTBot
+# ------------------------------------------------------------------------------
+# 2. TRADITIONAL ORGANIC SEARCH SPIDERS (FULL ACCESS)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
+User-agent: Bingbot
+Disallow: /embed/
+Disallow: /api/internal/
+Allow: /
+
+User-agent: DuckDuckBot
+Disallow: /embed/
+Disallow: /api/internal/
+Allow: /
+
+User-agent: Slurp
+Disallow: /embed/
+Disallow: /api/internal/
+Allow: /
+
+User-agent: YandexBot
+Disallow: /embed/
+Disallow: /api/internal/
+Allow: /
+
+User-agent: Baiduspider
+Disallow: /embed/
+Disallow: /api/internal/
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 3. REAL-TIME AI INFERENCE & ANSWER ENGINE RAG AGENTS (RED-CARPET PRIORITY)
+# ------------------------------------------------------------------------------
+# OpenAI Real-Time Search & RAG Citation Agent (SearchGPT)
 User-agent: OAI-SearchBot
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
+# ChatGPT Real-Time User Navigation & Browsing
 User-agent: ChatGPT-User
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
+# Perplexity Pro Real-Time Retrieval & Citation Ingestion
 User-agent: PerplexityBot
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
+# Anthropic Claude Real-Time Citation Retrieval
 User-agent: ClaudeBot
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
-User-agent: anthropic-ai
+# Apple Intelligence & Spotlight Generative Search
+User-agent: Applebot
 Disallow: /embed/
-Allow: /
-
-User-agent: Google-Extended
-Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
 User-agent: Applebot-Extended
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
-User-agent: CCBot
+# Meta AI Live Search & Citation Ingress
+User-agent: Meta-ExternalAgent
 Disallow: /embed/
+Disallow: /api/internal/
 Allow: /
 
-# Single Authoritative Master Sitemap Index & Specialized Sitemaps
+# ------------------------------------------------------------------------------
+# 4. HARD-BLOCKED MODEL TRAINING SCRAPERS & BANDWIDTH EXTRACTORS (DISALLOWED)
+# ------------------------------------------------------------------------------
+# ByteDance Malicious Scraper (Hostile server hammering, zero search attribution)
+User-agent: Bytespider
+Disallow: /
+
+# Common Crawl Offline Ingestion (Unilateral extraction, zero referral traffic)
+User-agent: CCBot
+Disallow: /
+
+# Commercial Data Brokers & Web Scraping Swarms
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Cohere-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# 5. CANONICAL SITEMAP INDEXES
+# ------------------------------------------------------------------------------
 Sitemap: https://elesium.online/sitemap.xml
+Sitemap: https://elesium.online/sitemap-core.xml
+Sitemap: https://elesium.online/sitemap-solutions.xml
 Sitemap: https://elesium.online/sitemap-videos.xml
 
-# LLM Machine-Readable Context Endpoints
-# LLMs: https://elesium.online/llms.txt
-# LLMs-Full: https://elesium.online/llms-full.txt
-# LLMs-BFSI: https://elesium.online/llms-bfsi.txt
-# LLMs-Healthcare: https://elesium.online/llms-healthcare.txt
-# LLMs-Manufacturing: https://elesium.online/llms-manufacturing.txt
-# LLMs-Logistics: https://elesium.online/llms-logistics.txt
-# LLMs-Infrastructure: https://elesium.online/llms-infrastructure.txt
-# LLMs-India: https://elesium.online/llms-india.txt
+# ------------------------------------------------------------------------------
+# 6. MACHINE-READABLE LLM & AUTONOMOUS AGENT CONTEXT DISCOVERY ENDPOINTS
+# ------------------------------------------------------------------------------
+# LLMs-Context-Summary: https://elesium.online/llms.txt
+# LLMs-Context-Full: https://elesium.online/llms-full.txt
+# LLMs-Defense-Avionics: https://elesium.online/llms-defense.txt
+# LLMs-BFSI-Underwriting: https://elesium.online/llms-bfsi.txt
+# LLMs-Healthcare-Clinical: https://elesium.online/llms-healthcare.txt
+# LLMs-Logistics-SupplyChain: https://elesium.online/llms-logistics.txt
+# LLMs-GovTech-Compliance: https://elesium.online/llms-govtech.txt
+# LLMs-Metropolitan-India: https://elesium.online/llms-india.txt
+# Agent-Manifest: https://elesium.online/.well-known/agent-manifest.json
+# AI-Plugin-Manifest: https://elesium.online/.well-known/ai-plugin.json
+# MCP-Server-Manifest: https://elesium.online/.well-known/mcp.json
+# OpenAPI-Specification: https://elesium.online/.well-known/openapi.json

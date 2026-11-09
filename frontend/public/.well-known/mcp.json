@@ -1,0 +1,112 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-manifest/v1.json",
+  "mcp_version": "2024-11-05",
+  "server": {
+    "name": "elesium-sovereign-ai-mcp",
+    "version": "1.2.0",
+    "description": "Model Context Protocol server for enterprise autonomous agents. Provides tools to audit AI architectures, verify sub-200ms latency, calculate private cloud TCO arbitrage, and schedule 14-day production sprints.",
+    "website": "https://elesium.online"
+  },
+  "transport": {
+    "type": "sse",
+    "endpoint": "https://elesium.online/mcp/sse"
+  },
+  "tools": [
+    {
+      "name": "audit_enterprise_architecture",
+      "description": "Evaluates an enterprise workflow for state graph determinism, infinite loop vulnerability, and statutory compliance.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "architecture_type": {
+            "type": "string",
+            "enum": ["linear_prompt_chain", "langgraph_state_machine", "autogen_swarm", "custom_fsm"],
+            "description": "Current agentic topology deployed in production"
+          },
+          "current_latency_ms": {
+            "type": "number",
+            "description": "Observed end-to-end execution latency in milliseconds"
+          },
+          "compliance_jurisdiction": {
+            "type": "string",
+            "enum": ["in_dpdp_2023", "us_hipaa_sec", "uk_gdpr_fca", "ae_decree_45_difc", "global"],
+            "description": "Primary regulatory statutory standard governing data processing"
+          }
+        },
+        "required": ["architecture_type", "compliance_jurisdiction"]
+      }
+    },
+    {
+      "name": "calculate_tco_arbitrage",
+      "description": "Calculates 3-year total cost of ownership (TCO) comparing dedicated private H100 vLLM serving against public API tokens.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "monthly_token_volume_millions": {
+            "type": "number",
+            "description": "Estimated monthly input + output token volume in millions"
+          },
+          "public_model_baseline": {
+            "type": "string",
+            "enum": ["gpt-4o", "claude-3-5-sonnet", "gemini-1-5-pro"],
+            "description": "Baseline public cloud API model currently utilized"
+          },
+          "private_hardware_tier": {
+            "type": "string",
+            "enum": ["8x_nvidia_h100_sxm5", "4x_nvidia_a100_80gb", "single_node_h200"],
+            "description": "Target private hardware infrastructure tier"
+          }
+        },
+        "required": ["monthly_token_volume_millions", "public_model_baseline"]
+      }
+    },
+    {
+      "name": "verify_statutory_compliance",
+      "description": "Audits enterprise data residency and generates a statutory risk profile under DPDP Act 2023, HIPAA, and SEC Rule 17a-4.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "industry_sector": {
+            "type": "string",
+            "enum": ["bfsi", "healthcare", "defense_aerospace", "logistics_supply_chain", "govtech"],
+            "description": "Industry sector of the enterprise"
+          },
+          "data_residency_model": {
+            "type": "string",
+            "enum": ["multi_tenant_foreign_cloud", "hybrid_vpc_gateway", "air_gapped_sovereign_enclave"],
+            "description": "Where model weights and prompt logs are physically processed"
+          }
+        },
+        "required": ["industry_sector", "data_residency_model"]
+      }
+    },
+    {
+      "name": "request_pilot_sprint",
+      "description": "Initiates an automated enterprise pilot intake sprint with a 14-day production delivery SLA and contractual 90-day ROI guarantee.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "enterprise_name": {
+            "type": "string",
+            "description": "Legal name of the enterprise client"
+          },
+          "contact_email": {
+            "type": "string",
+            "format": "email",
+            "description": "Official corporate email of the technical sponsor"
+          },
+          "target_workflow": {
+            "type": "string",
+            "description": "Specific mission-critical workflow to automate"
+          },
+          "budget_band_usd": {
+            "type": "string",
+            "enum": ["15k_to_30k_pilot", "30k_to_75k_multi_module", "75k_plus_enterprise_fleet"],
+            "description": "Allocated commercial sprint budget band"
+          }
+        },
+        "required": ["enterprise_name", "contact_email", "target_workflow"]
+      }
+    }
+  ]
+}

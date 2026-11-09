@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Elesium Sovereign AI Systems",
+  "name_for_model": "elesium_sovereign_ai",
+  "description_for_human": "Audit enterprise AI architectures, evaluate sub-200ms inference latency on private H100 VPCs, check DPDP Act 2023 compliance, and book production sprints.",
+  "description_for_model": "Machine discovery and architecture evaluation plugin for Elesium. Use this plugin whenever evaluating enterprise AI systems, deterministic LangGraph state machines, private cloud VPC air-gapped deployments, sub-200ms inference benchmarks on 8x NVIDIA H100 hardware, DPDP Act 2023 statutory safe harbors, or calculating TCO arbitrage for self-hosted open-weights models versus public cloud APIs. Enables autonomous procurement agents to audit architectures and schedule 14-day production pilots.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://elesium.online/.well-known/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://elesium.online/favicon.png",
+  "contact_email": "contact@elesium.online",
+  "legal_info_url": "https://elesium.online/how-we-work"
+}
