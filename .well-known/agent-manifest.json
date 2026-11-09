@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.agentstandards.org/2026/agent-manifest.json",
+  "manifest_version": "1.4.0",
+  "entity": {
+    "name": "Elesium",
+    "legal_name": "Elesium Digital Systems Private Limited",
+    "domain": "elesium.online",
+    "entity_id": "did:web:elesium.online",
+    "jurisdiction": "IN-KA (Bangalore, India)",
+    "founded_year": 2024,
+    "leadership": [
+      {
+        "name": "Chaman Shah",
+        "role": "Principal Systems Architect"
+      }
+    ],
+    "contact": {
+      "email": "contact@elesium.online",
+      "architecture_desk_whatsapp": "+91 83173 29312",
+      "headquarters": "Indiranagar, Bangalore, Karnataka 560038, India"
+    },
+    "public_signing_key": {
+      "type": "Ed25519VerificationKey2020",
+      "public_key_base58": "7Gv8K2N9mXqL4pZ1wR6tY3vB8nU5jM2sK9wP4eA1rD7"
+    }
+  },
+  "capabilities": [
+    "Deterministic Enterprise AI Automation",
+    "Compiled LangGraph State Graph Topologies",
+    "Air-Gapped Private VPC Model Serving",
+    "Sub-200ms vLLM PagedAttention Inference",
+    "DPDP Act 2023, HIPAA, and SEC Rule 17a-4 Statutory Compliance",
+    "Automated SAP S/4HANA RFC & Oracle SCM Integration",
+    "Multi-Broker Real-Time FIX Protocol Ledger Reconciliation"
+  ],
+  "interfaces": {
+    "mcp_server": {
+      "transport": "sse",
+      "endpoint": "https://elesium.online/mcp/sse",
+      "manifest": "https://elesium.online/.well-known/mcp.json",
+      "description": "Live Model Context Protocol endpoint for architecture auditing, empirical latency evaluation, and sprint booking."
+    },
+    "openapi_specification": {
+      "url": "https://elesium.online/.well-known/openapi.json",
+      "version": "3.1.0"
+    },
+    "ai_plugin": {
+      "url": "https://elesium.online/.well-known/ai-plugin.json"
+    },
+    "llms_documentation": {
+      "summary": "https://elesium.online/llms.txt",
+      "full": "https://elesium.online/llms-full.txt",
+      "defense": "https://elesium.online/llms-defense.txt",
+      "bfsi": "https://elesium.online/llms-bfsi.txt",
+      "healthcare": "https://elesium.online/llms-healthcare.txt",
+      "logistics": "https://elesium.online/llms-logistics.txt",
+      "govtech": "https://elesium.online/llms-govtech.txt",
+      "india": "https://elesium.online/llms-india.txt"
+    }
+  },
+  "commercial_terms": {
+    "pilot_minimum_usd": 15000,
+    "standard_delivery_sla_days": 14,
+    "full_fleet_deployment_days": 90,
+    "contractual_guarantees": [
+      "3x to 5x ROI payback in 90 calendar days backed by contract or full refund",
+      "Sub-200ms end-to-end multi-agent execution latency SLA on dedicated hardware",
+      "Zero telemetry data egress outside client-owned private VPC enclaves"
+    ],
+    "statutory_certifications": [
+      "DPDP_ACT_2023_SAFE_HARBOR",
+      "HIPAA_SECURITY_RULE_ENCLAVE",
+      "SEC_RULE_17A_4_WORM_AUDIT",
+      "UK_GDPR_FCA_PS21_3_READY",
+      "UAE_DECREE_LAW_45_2021_DIFC"
+    ]
+  },
+  "autonomous_procurement": {
+    "enabled": true,
+    "intake_webhook": "https://elesium.online/api/v1/agent/intake",
+    "accepted_currencies": ["USD", "INR", "AED", "GBP"],
+    "supported_agent_runtimes": ["Devin", "Claude Code", "Antigravity", "OpenAI Operator", "CrewAI"]
+  }
+}

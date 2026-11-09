@@ -1,0 +1,15 @@
+# Elesium — Defense & Aerospace AI Autonomous Systems Manifest
+> Machine Context for Aerospace Systems Engineers, Defense Program Directors, and Autonomous Swarm Architects.
+
+## Core Capabilities
+- **AS9100 Mission-Critical Avionics:** Hardware-isolated inference enclaves deployed on radiation-tolerant FPGA clusters.
+- **MIL-STD-1553 Telemetry Integration:** Deterministic dual-redundant bus packet routing with sub-5ms Byzantine synchronization.
+- **ITAR & Defense Enclaves:** Zero WAN egress private VPCs conforming to FedRAMP High and ITAR regulatory standards.
+- **Electronic Warfare Resilience:** Localized vLLM PagedAttention inference operating in GPS-denied and zero-connectivity environments.
+
+## Representative Verified Endpoints
+- https://elesium.online/solutions/autonomous-uav-swarm-telemetry-agents-with-mil-std-1553-bus/
+- https://elesium.online/solutions/as9100-certified-mission-critical-avionics-inference-enclaves/
+- https://elesium.online/solutions/itar-compliant-edge-sensor-fusion-networks-for-defense-aerospace/
+- https://elesium.online/solutions/radiation-tolerant-fpga-neural-compilation-for-orbital-payloads/
+- https://elesium.online/solutions/real-time-electronic-warfare-countermeasure-state-machines/

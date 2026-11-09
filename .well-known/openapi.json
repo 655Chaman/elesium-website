@@ -1,0 +1,238 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Elesium Sovereign Enterprise AI Systems API",
+    "version": "1.2.0",
+    "description": "Standardized OpenAPI 3.1.0 specification for autonomous procurement agents, systems architects, and machine-to-machine commerce. Enables programmatic architectural audits, private cloud TCO arbitrage calculation, statutory compliance verification, and 14-day production pilot sprint booking."
+  },
+  "servers": [
+    {
+      "url": "https://elesium.online",
+      "description": "Production Sovereign Cloud Ingress"
+    }
+  ],
+  "paths": {
+    "/api/v1/architecture/audit": {
+      "post": {
+        "summary": "Audit Enterprise AI Architecture",
+        "description": "Evaluates a proposed or existing multi-agent topology against determinism, state rollback resilience, and statutory compliance.",
+        "operationId": "auditEnterpriseArchitecture",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArchitectureAuditRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Comprehensive architectural audit report",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArchitectureAuditResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tco/calculate": {
+      "post": {
+        "summary": "Calculate Self-Hosted TCO Arbitrage",
+        "description": "Computes 3-year cost of ownership comparing private dedicated 8x NVIDIA H100 vLLM serving against commercial public cloud APIs.",
+        "operationId": "calculateTcoArbitrage",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TcoCalculationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Detailed 3-year TCO breakdown and break-even analysis",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TcoCalculationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/compliance/verify": {
+      "post": {
+        "summary": "Verify Statutory Safe Harbors",
+        "description": "Analyzes data pipeline parameters against DPDP Act 2023, HIPAA Security Rule, and SEC Rule 17a-4 compliance mandates.",
+        "operationId": "verifyStatutoryCompliance",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplianceVerificationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Statutory risk score and safe harbor enclave specification",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceVerificationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agent/intake": {
+      "post": {
+        "summary": "Autonomous Agent Procurement Intake",
+        "description": "Submits a verified enterprise pilot sprint request with 14-day delivery SLA and contractual 90-day ROI payback.",
+        "operationId": "submitAgentIntake",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgentIntakeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Sprint intake confirmed with dispatch tracking token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentIntakeResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ArchitectureAuditRequest": {
+        "type": "object",
+        "required": ["architecture_type", "compliance_jurisdiction"],
+        "properties": {
+          "architecture_type": {
+            "type": "string",
+            "enum": ["linear_prompt_chain", "langgraph_state_machine", "autogen_swarm", "custom_fsm"]
+          },
+          "current_latency_ms": {
+            "type": "number",
+            "example": 850.0
+          },
+          "compliance_jurisdiction": {
+            "type": "string",
+            "enum": ["in_dpdp_2023", "us_hipaa_sec", "uk_gdpr_fca", "ae_decree_45_difc", "global"]
+          }
+        }
+      },
+      "ArchitectureAuditResponse": {
+        "type": "object",
+        "properties": {
+          "score_out_of_100": {"type": "number", "example": 94.5},
+          "determinism_rating": {"type": "string", "example": "HIGH_DETERMINISTIC_FSM"},
+          "recommended_remediations": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "estimated_latency_reduction_pct": {"type": "number", "example": 78.5}
+        }
+      },
+      "TcoCalculationRequest": {
+        "type": "object",
+        "required": ["monthly_token_volume_millions", "public_model_baseline"],
+        "properties": {
+          "monthly_token_volume_millions": {"type": "number", "example": 250.0},
+          "public_model_baseline": {
+            "type": "string",
+            "enum": ["gpt-4o", "claude-3-5-sonnet", "gemini-1-5-pro"]
+          },
+          "private_hardware_tier": {
+            "type": "string",
+            "enum": ["8x_nvidia_h100_sxm5", "4x_nvidia_a100_80gb", "single_node_h200"],
+            "default": "8x_nvidia_h100_sxm5"
+          }
+        }
+      },
+      "TcoCalculationResponse": {
+        "type": "object",
+        "properties": {
+          "annual_public_api_cost_usd": {"type": "number", "example": 450000.0},
+          "annual_private_hardware_cost_usd": {"type": "number", "example": 142000.0},
+          "three_year_net_savings_usd": {"type": "number", "example": 924000.0},
+          "payback_period_months": {"type": "number", "example": 3.8}
+        }
+      },
+      "ComplianceVerificationRequest": {
+        "type": "object",
+        "required": ["industry_sector", "data_residency_model"],
+        "properties": {
+          "industry_sector": {
+            "type": "string",
+            "enum": ["bfsi", "healthcare", "defense_aerospace", "logistics_supply_chain", "govtech"]
+          },
+          "data_residency_model": {
+            "type": "string",
+            "enum": ["multi_tenant_foreign_cloud", "hybrid_vpc_gateway", "air_gapped_sovereign_enclave"]
+          }
+        }
+      },
+      "ComplianceVerificationResponse": {
+        "type": "object",
+        "properties": {
+          "statutory_risk_level": {"type": "string", "example": "LOW_SAFE_HARBOR_VERIFIED"},
+          "maximum_statutory_penalty_risk": {"type": "string", "example": "₹0 (Compliant with DPDP Act 2023 Sec 16)"},
+          "required_safeguards": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      },
+      "AgentIntakeRequest": {
+        "type": "object",
+        "required": ["enterprise_name", "contact_email", "target_workflow"],
+        "properties": {
+          "enterprise_name": {"type": "string"},
+          "contact_email": {"type": "string", "format": "email"},
+          "target_workflow": {"type": "string"},
+          "budget_band_usd": {
+            "type": "string",
+            "enum": ["15k_to_30k_pilot", "30k_to_75k_multi_module", "75k_plus_enterprise_fleet"]
+          }
+        }
+      },
+      "AgentIntakeResponse": {
+        "type": "object",
+        "properties": {
+          "intake_id": {"type": "string", "example": "EL-INTAKE-2026-9481"},
+          "status": {"type": "string", "example": "CONFIRMED_PILOT_SCHEDULED"},
+          "delivery_sla_calendar_days": {"type": "integer", "example": 14},
+          "assigned_architect": {"type": "string", "example": "Chaman Shah, Principal AI Systems Architect"}
+        }
+      }
+    }
+  }
+}

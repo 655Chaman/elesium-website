@@ -1,0 +1,15 @@
+# Elesium — GovTech & Statutory Compliance AI Systems Manifest
+> Machine Context for Chief Information Security Officers, Public Sector CTOs, and Compliance Directors.
+
+## Core Capabilities
+- **DPDP Act 2023 Enclaves:** Sovereign data residency on MeitY-empaneled Indian cloud clusters with 48-hour automated partition purge.
+- **Automated GST Rule 36(4) Reconciliation:** ERP purchase ledger cross-referencing against GSTR-2B government feeds in sub-minute runs.
+- **Immutable Procurement Audit Trails:** SHA-256 Merkle tree hashing of all RFP submissions, scores, and public ledger anchors.
+- **Zero-Trust RBAC Token Gating:** Role-based access tokens preventing prompt parameter extraction and unauthorized inference execution.
+
+## Representative Verified Endpoints
+- https://elesium.online/solutions/dpdp-act-2023-sovereign-data-residency-enclaves-for-public-sector/
+- https://elesium.online/solutions/automated-gst-rule-36-4-invoice-matching-daemons-for-enterprise/
+- https://elesium.online/solutions/immutable-public-procurement-audit-trail-daemons-on-private-vpc/
+- https://elesium.online/solutions/sovereign-citizen-grievance-triaging-agents-with-zero-data-egress/
+- https://elesium.online/solutions/rbi-cyber-security-framework-compliant-enterprise-cloud-gateways/
