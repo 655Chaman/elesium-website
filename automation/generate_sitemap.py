@@ -113,6 +113,7 @@ def generate_sitemap():
         {"path": "/audit/", "priority": "0.8", "changefreq": "weekly", "file": "frontend/src/components/pages/Waitlist.tsx"},
         {"path": "/signals/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/MarketSignals.tsx"},
         {"path": "/solutions/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/SolutionsHub.tsx"},
+        {"path": "/tools/", "priority": "0.9", "changefreq": "daily", "file": "frontend/dist/tools/index.html"},
         # Commercial directory kept as .html without trailing slash per canonical contract
         {"path": "/commercial-directory.html", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/CommercialDirectory.tsx"},
         {"path": "/compare/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/CompareHub.tsx"},
@@ -185,6 +186,26 @@ def generate_sitemap():
             "lastmod": tool_date
         })
     print(f"Mapped {len(tool_map)} tools with component commit dates.")
+
+    # Phase 9 Micro-SaaS Link Magnets & Interactive Simulators (Priority 0.9, Weekly changefreq)
+    standalone_tools = [
+        "token-cost-arbitrage-calculator",
+        "dpdp-act-penalty-exposure-calculator",
+        "enterprise-rag-latency-simulator",
+        "agent-vram-gpu-cluster-sizer",
+        "b2b-seo-roi-payback-model",
+    ]
+    for st_slug in standalone_tools:
+        if st_slug not in tool_map:
+            st_file = f"frontend/public/tools/{st_slug}.html"
+            st_date = date_map.get(st_file, fallback_date)
+            core_urls.append({
+                "loc": f"{BASE_URL}/tools/{st_slug}/",
+                "priority": "0.9",
+                "changefreq": "weekly",
+                "lastmod": st_date
+            })
+    print(f"Registered {len(standalone_tools)} interactive standalone simulator tools.")
 
     # Dynamic compare battlecards (Priority 0.9, Weekly changefreq)
     if COMPARE_TS_PATH.exists():
@@ -433,6 +454,15 @@ def generate_sitemap():
     print(f"   - sitemap-core.xml lastmod: {max_core_lastmod}")
     print(f"   - sitemap-solutions.xml lastmod: {max_solutions_lastmod}")
     print(f"   - sitemap-videos.xml lastmod: {max_videos_lastmod}")
+
+    # 5. Mirror all sitemaps to frontend/dist/ for instant 100% production parity
+    dist_dir = WEBSITE_ROOT / "frontend" / "dist"
+    if dist_dir.exists():
+        (dist_dir / "sitemap.xml").write_text(sitemap_index_xml.strip() + "\n", encoding="utf-8")
+        (dist_dir / "sitemap-core.xml").write_text(SITEMAP_CORE_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+        (dist_dir / "sitemap-solutions.xml").write_text(SITEMAP_SOLUTIONS_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+        (dist_dir / "sitemap-videos.xml").write_text(SITEMAP_VIDEOS_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+        print("✅ Mirrored all 4 XML sitemaps to frontend/dist/ for edge serving parity.")
 
 
 if __name__ == "__main__":
