@@ -14,7 +14,6 @@ const Home = lazy(() => import('./components/pages/Home'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
 const InternationalRegionHub = lazy(() => import('./components/pages/InternationalRegionHub'))
-const AIAutomation = lazy(() => import('./components/pages/AIAutomation'))
 const HowWeWork = lazy(() => import('./components/pages/HowWeWork'))
 const Industries = lazy(() => import('./components/pages/Industries'))
 const MarketSignals = lazy(() => import('./components/pages/MarketSignals'))
@@ -32,6 +31,7 @@ const EmbedRoiCalculator = lazy(() => import('./components/pages/EmbedRoiCalcula
 const MultiAgentLatencyEstimator = lazy(() => import('./components/pages/MultiAgentLatencyEstimator'))
 const EmbedLatencyEstimator = lazy(() => import('./components/pages/EmbedLatencyEstimator'))
 const CompareHub = lazy(() => import('./components/pages/CompareHub'))
+const ToolsHub = lazy(() => import('./components/pages/ToolsHub'))
 const CompareDetail = lazy(() => import('./components/pages/CompareDetail'))
 const Glossary = lazy(() => import('./components/pages/Glossary'))
 const AgenticArchitectureGrader = lazy(() => import('./components/pages/AgenticArchitectureGrader'))
@@ -220,7 +220,8 @@ function App() {
                             <Route path="/signals/:slug" element={<MarketSignals />} />
                             <Route path="/resources" element={<Resources />} />
                             <Route path="/resources/:slug" element={<ResourceDetail />} />
-                            <Route path="/ai-automation" element={<AIAutomation />} />
+                            <Route path="/ai-automation" element={<Navigate to="/enterprise-ai-bangalore/" replace />} />
+                            <Route path="/ai-automation/" element={<Navigate to="/enterprise-ai-bangalore/" replace />} />
                             <Route path="/ai-automation-agency-india" element={<AIAutomationIndia />} />
                             <Route path="/enterprise-ai-bangalore" element={<RegionalCityHub forcedCityId="bangalore" />} />
                             <Route path="/enterprise-ai-mumbai" element={<RegionalCityHub forcedCityId="mumbai" />} />
@@ -250,6 +251,8 @@ function App() {
                             <Route path="/commercial-directory.html" element={<CommercialDirectory />} />
                             <Route path="/solutions/:slug" element={<SolutionDetail />} />
                             <Route path="/glossary" element={<Glossary />} />
+                            <Route path="/tools" element={<ToolsHub />} />
+                            <Route path="/tools/" element={<ToolsHub />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator/" replace />} />
                             <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />

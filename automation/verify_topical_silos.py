@@ -55,7 +55,13 @@ def check_gate1_category_hubs() -> Tuple[bool, List[str]]:
             
         # Check canonical
         expected_canonical = f"https://elesium.online/solutions/category/{silo_id}/"
-        if f'rel="canonical" href="{expected_canonical}"' not in content:
+        has_canonical = (
+            f'rel="canonical" href="{expected_canonical}"' in content or
+            f'href="{expected_canonical}" rel="canonical"' in content or
+            f"href='{expected_canonical}' rel='canonical'" in content or
+            f"rel='canonical' href='{expected_canonical}'" in content
+        )
+        if not has_canonical:
             errors.append(f"Category Hub [{silo_id}] missing canonical link to {expected_canonical}")
             
         # Check AEO capsule

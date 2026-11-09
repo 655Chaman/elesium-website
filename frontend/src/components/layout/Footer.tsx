@@ -7,7 +7,7 @@ export default function DownloadFooter() {
 
     const mainNavigation = [
         { name: 'How We Work', path: '/how-we-work/' },
-        { name: 'Solutions Hub (3,765 Workflows)', path: '/solutions/' },
+        { name: 'Solutions Hub (100 Enterprise Architectures)', path: '/solutions/' },
         { name: 'Top 100 Commercial Directory', path: '/commercial-directory.html' },
         { name: 'Technical Whitepapers & Research', path: '/signals/' },
         { name: 'Architecture Comparisons', path: '/compare/' },
@@ -27,11 +27,11 @@ export default function DownloadFooter() {
     ];
 
     const highLeverSolutions = [
-        { name: 'AI Automation Agency for Logistics', path: '/solutions/ai-automation-agency-for-logistics/' },
-        { name: 'Autonomous Loan Underwriting AI for NBFCs', path: '/solutions/autonomous-loan-underwriting-ai-for-nbfcs/' },
-        { name: 'Deterministic Multi-Agent Systems for Manufacturing ERP', path: '/solutions/deterministic-multi-agent-systems-for-manufacturing-erp/' },
-        { name: 'Private VPC Air-Gapped LLM Deployment for Healthcare', path: '/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare/' },
-        { name: 'SAP S/4HANA Autonomous AI Integration Agency', path: '/solutions/sap-s4hana-autonomous-ai-integration-agency/' },
+        { name: 'vLLM Banking VPCs in India', path: '/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/' },
+        { name: 'RBI CSF Core Banking HSM Telemetry', path: '/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors/' },
+        { name: 'Sovereign DeepSeek Healthcare & HIPAA', path: '/solutions/sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance/' },
+        { name: 'SAP S/4HANA PLC Manufacturing Agents', path: '/solutions/sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india/' },
+        { name: 'Air-Gapped Contract Intelligence Agents', path: '/solutions/air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing/' },
     ];
 
     const battlecardLinks = [
@@ -108,7 +108,7 @@ export default function DownloadFooter() {
                         <div className="flex items-center gap-2">
                             <p className="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Enterprise Solutions</p>
                             <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">
-                                3,765 Workflows
+                                100 Enterprise Workflows
                             </span>
                         </div>
                         <ul className="flex flex-col gap-2.5">
@@ -128,7 +128,7 @@ export default function DownloadFooter() {
                                     to="/solutions/"
                                     className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                 >
-                                    Explore All 3,765 Solutions &rarr;
+                                    Explore All 100 Enterprise Architectures &rarr;
                                 </Link>
                             </li>
                         </ul>
@@ -203,7 +203,7 @@ export default function DownloadFooter() {
                         Regional AI Engineering Pods:
                     </span>
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-gray-600 dark:text-gray-400">
-                        <Link to="/enterprise-ai-bangalore/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Bengaluru HQ</Link>
+                        <Link to="/enterprise-ai-bangalore/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium">Bengaluru HQ (Best AI &amp; Automation Agency)</Link>
                         <span>•</span>
                         <Link to="/enterprise-ai-mumbai/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Mumbai (BKC)</Link>
                         <span>•</span>
@@ -252,6 +252,7 @@ export default function DownloadFooter() {
                     <div className="flex items-center gap-4 flex-wrap">
                         <Link to="/authors/chaman-shah/" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
                         <Link to="/ai-automation-agency-india/" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
+                        <Link to="/enterprise-ai-bangalore/" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best AI Agency Bangalore</Link>
                         <Link to="/commercial-directory.html" className="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</Link>
                         <Link to="/resources/" className="hover:text-black dark:hover:text-white transition">Resources</Link>
                         <Link to="/waitlist/" className="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</Link>

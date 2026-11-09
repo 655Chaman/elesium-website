@@ -114,7 +114,7 @@ def generate_sitemap():
         {"path": "/audit/", "priority": "0.8", "changefreq": "weekly", "file": "frontend/src/components/pages/Waitlist.tsx"},
         {"path": "/signals/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/MarketSignals.tsx"},
         {"path": "/solutions/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/SolutionsHub.tsx"},
-        {"path": "/tools/", "priority": "0.9", "changefreq": "daily", "file": "frontend/dist/tools/index.html"},
+        {"path": "/tools/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/ToolsHub.tsx"},
         # Commercial directory kept as .html without trailing slash per canonical contract
         {"path": "/commercial-directory.html", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/CommercialDirectory.tsx"},
         {"path": "/compare/", "priority": "0.9", "changefreq": "daily", "file": "frontend/src/components/pages/CompareHub.tsx"},
@@ -337,30 +337,45 @@ def generate_sitemap():
     print(f"Mapped {len(video_sitemap_entries)} video masterclasses with rich Google Video schema for sitemap-videos.xml.")
 
     # Read dynamic solution slugs (System 2 Compact Keywords)
+    # If retained_solution_slugs.json exists, load ONLY the 100 retained enterprise solutions
+    RETAINED_SLUGS_PATH = BASE_DIR / "retained_solution_slugs.json"
     solution_slugs = set()
 
-    if COMPACT_QUEUE_PATH.exists():
+    if RETAINED_SLUGS_PATH.exists():
         try:
-            queue_items = json.loads(COMPACT_QUEUE_PATH.read_text(encoding="utf-8"))
-            for item in queue_items:
-                slug = item.get("slug")
+            retained_items = json.loads(RETAINED_SLUGS_PATH.read_text(encoding="utf-8"))
+            for s in retained_items:
+                if isinstance(s, dict):
+                    slug = s.get("slug")
+                else:
+                    slug = str(s)
                 if slug:
                     solution_slugs.add(slug)
         except Exception as e:
-            print(f"Notice reading {COMPACT_QUEUE_PATH}: {e}")
-
-    if SOLUTIONS_TS_PATH.exists():
-        sol_content = SOLUTIONS_TS_PATH.read_text(encoding="utf-8")
-        m = re.search(r'export const solutionsData:\s*(?:SolutionRecord|SolutionItem)\[\]\s*=\s*(\[[\s\S]*?\]);', sol_content)
-        if m:
+            print(f"Notice reading {RETAINED_SLUGS_PATH}: {e}")
+    else:
+        if COMPACT_QUEUE_PATH.exists():
             try:
-                data = json.loads(m.group(1))
-                for item in data:
-                    s = item.get("slug")
-                    if s:
-                        solution_slugs.add(s)
+                queue_items = json.loads(COMPACT_QUEUE_PATH.read_text(encoding="utf-8"))
+                for item in queue_items:
+                    slug = item.get("slug")
+                    if slug:
+                        solution_slugs.add(slug)
             except Exception as e:
-                print(f"Notice reading solutionsData JSON: {e}")
+                print(f"Notice reading {COMPACT_QUEUE_PATH}: {e}")
+
+        if SOLUTIONS_TS_PATH.exists():
+            sol_content = SOLUTIONS_TS_PATH.read_text(encoding="utf-8")
+            m = re.search(r'export const solutionsData:\s*(?:SolutionRecord|SolutionItem)\[\]\s*=\s*(\[[\s\S]*?\]);', sol_content)
+            if m:
+                try:
+                    data = json.loads(m.group(1))
+                    for item in data:
+                        s = item.get("slug")
+                        if s:
+                            solution_slugs.add(s)
+                except Exception as e:
+                    print(f"Notice reading solutionsData JSON: {e}")
 
     # Ground-truth date of solutionsData.ts
     solutions_date = date_map.get("frontend/src/data/solutionsData.ts", "2026-10-22")

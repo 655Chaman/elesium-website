@@ -1,0 +1,398 @@
+{
+  "timestamp": "2026-11-09T15:22:18Z",
+  "overall_passed": false,
+  "passed_gates_count": 0,
+  "total_gates_count": 6,
+  "gates": [
+    {
+      "gate_number": 1,
+      "name": "HTTP 410 Gone Server & Router Configuration",
+      "passed": false,
+      "summary": "Gate 1 Failed: 3 configuration deficiencies detected",
+      "metrics": {
+        "total_pruned_slugs_required": 3695,
+        "nginx_conf_exists": true,
+        "nginx_410_coverage": 0,
+        "redirects_file_exists": false,
+        "redirects_410_coverage": 0,
+        "vite_http410_plugin_configured": false
+      },
+      "failures": [
+        "Nginx config incomplete: 0/3695 pruned slugs covered (3695 missing)",
+        "Missing Cloudflare/Netlify _redirects file: /Users/krdeeksha/ELESIUM WEBSITE/frontend/public/_redirects",
+        "Vite config missing http410Plugin middleware: must intercept pruned routes and return HTTP 410"
+      ],
+      "execution_time_seconds": 0.014
+    },
+    {
+      "gate_number": 2,
+      "name": "Pre-rendered HTML <meta name='robots' content='noindex, follow'> Verification",
+      "passed": false,
+      "summary": "Gate 2 Failed: 7360 pruned files lack proper noindex directives",
+      "metrics": {
+        "total_pruned_audited": 3695,
+        "valid_noindex_dist": 0,
+        "missing_tag_dist": 0,
+        "has_affirmative_index_dist": 3695,
+        "missing_files_dist": 0,
+        "public_missing_noindex": 3665
+      },
+      "failures": [
+        "Dist solution 100b-parameter-autonomous-agent-cluster-sizing-consultants-for-private-enterprises: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 1f1b-execution-daemons-for-automotive-autonomous-driving-trajectory-simulators: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 1t1r-one-transistor-one-resistor-crossbar-sneak-path-leakage-current-suppression-telemetry-for-reram: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 3d-distributed-topology-auto-discovery-daemons-for-nvidia-hgx-h100-pods: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 3d-parallel-token-throughput-benchmarks-for-air-gapped-defense-multi-agent-pods: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 3d-parallel-workload-distribution-consultants-for-tier-1-indian-telecom-billing: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 3d-parallelism-gpu-memory-fragmentation-mitigation-engines-for-70b-llama-clusters: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 3d-parallelism-mesh-sharding-controllers-for-enterprise-megatron-deepspeed-clusters: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 4d-trajectory-strategic-conflict-detection-and-resolution-agents-for-evtol-fleets: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution 5g-direct-to-device-ntn-non-terrestrial-network-phased-array-antenna-gain-telemetry-from-haps: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution abdm-m1-abha-number-creation-and-biometric-triage-telemetry-for-hospital-networks: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution abdm-m2-health-information-provider-fhir-r4-bundle-publishing-telemetry-for-tertiary-hospitals: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution ac-impedance-high-frequency-charge-transfer-resistance-monitors-for-flow-stacks: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution acoustic-doppler-current-profiler-water-column-shear-velocity-telemetry-for-autonomous-gliders: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution acoustic-emission-sensor-wave-arrival-time-telemetry-for-superconducting-magnet-micro-slip-crack-localization: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution acoustic-footprint-noise-abatement-flight-path-synthesis-controllers-for-city-skies: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution acoustic-release-transponder-emergency-ascent-fail-safe-telemetry-for-deep-ocean-vehicles: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution acoustic-wellhead-fatigue-and-vortex-induced-vibration-analysers-for-risers: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution activation-aware-weight-quantization-calibration-agents-protecting-salient-outlier-channels: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution active-directory-kerberoasting-containment-agents-for-security-operations: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution active-energy-extraction-dump-resistor-voltage-transient-telemetry-for-high-field-magnets: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution active-pharmaceutical-ingredient-api-chemical-reactor-batch-synthesis-telemetry-for-bulk-drug-plants: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution active-substance-master-file-asmf-confidential-section-encryption-telemetry-for-bulk-drug-makers: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution active-transpiration-cooling-porous-matrix-pressure-telemetry-for-hypersonic-strakes: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adapter-rank-auto-tuners-for-task-specific-balance-sheet-accuracy-trade-offs: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-depth-token-classifiers-for-high-throughput-telecom-5g-routers: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-draft-candidate-tree-optimizers-for-hospital-patient-intake-copilots: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-draft-length-controllers-for-heterogeneous-agent-reasoning-swarms: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-page-replacement-policies-based-on-token-access-recency-for-tiered-llm-serving: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-routing-threshold-calibrators-for-deepseek-v3-mixture-of-experts-serving: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-threshold-alif-spike-frequency-adaptation-dynamics-telemetry-for-autonomous-edge-controllers: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adaptive-token-capacity-balancers-for-sudden-market-volatility-surges: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution address-event-representation-aer-asynchronous-spike-packet-routing-telemetry-for-neuromorphic-processors: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution adversarial-agent-prompt-injection-byzantine-quarantine-telemetry-for-sovereign-clusters: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution aerodynamic-friction-boundary-layer-transition-calorimeter-heat-flux-monitors-for-spaceplanes: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution aerodynamic-heating-refractory-coating-spallation-vision-inspection-for-hypersonic-craft: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution aerogel-micrometeoroid-particle-capture-track-laser-scanner-volumetric-penetration-telemetry-for-sample-return: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution aerospike-nozzle-altitude-compensating-flow-optimizers-for-sst-teams: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution aerothermal-acoustic-emission-piezoelectric-wafer-transducer-shockwave-sensors-for-spaceplanes: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution aes-256-gcm-authenticated-tag-verification-hardware-coprocessor-throughput-telemetry-for-sovereign-agents: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution afp-compaction-roller-elastomeric-compliance-wear-and-thermal-degradation-telemetry-for-commercial-aviation: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution afp-deposition-chamber-humidity-and-nitrogen-inert-atmosphere-oxygen-content-telemetry-for-thermoplastic-tape: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution afp-inline-ultrasonic-ndt-void-content-and-inter-ply-bonding-consolidated-tape-telemetry-for-aircraft-wings: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution afp-robotic-head-laser-pyrometer-closed-loop-heat-flux-telemetry-for-variable-speed-tape-deposition: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution afp-tow-tensioner-magnetic-particle-brake-torque-and-spool-inertia-compensation-telemetry-for-composite-manufacturing: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution agent-conversation-recursive-summarization-token-decay-mitigation-telemetry-for-enterprise-slack-bots: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution agent-memory-eviction-fifo-lru-policy-optimization-telemetry-for-long-horizon-autonomous-goal-planners: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution agent-token-budget-throttling-and-cost-guardrails-telemetry-for-enterprise-generative-ai-platforms: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution agentic-telemetry-export-to-datadog-and-opentelemetry-collectors-with-sub-100ms-trace-aggregation: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')",
+        "Dist solution agricultural-commodity-mandi-yard-weighing-bridge-automation-telemetry-for-state-marketing-boards: Invalid robots tag 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' (expected 'noindex, follow')"
+      ],
+      "execution_time_seconds": 3.049
+    },
+    {
+      "gate_number": 3,
+      "name": "100% Sitemaps Purge Verification",
+      "passed": false,
+      "summary": "Gate 3 Failed: 3695 pruned URLs found in sitemaps; URL count is 3795 (expected 100)",
+      "metrics": {
+        "public_sitemap_solutions_total_urls": 3795,
+        "dist_sitemap_solutions_total_urls": 3795,
+        "expected_retained_urls": 100,
+        "pruned_urls_in_public_sitemap": 3695,
+        "pruned_urls_in_dist_sitemap": 3695,
+        "missing_retained_urls_count": 0
+      },
+      "failures": [
+        "Contamination: 3695 pruned URLs remain in frontend/public/sitemap-solutions.xml",
+        "Contamination: 3695 pruned URLs remain in frontend/dist/sitemap-solutions.xml",
+        "URL Count Mismatch in public sitemap-solutions.xml: Found 3795 URLs, expected exactly 100"
+      ],
+      "execution_time_seconds": 0.038
+    },
+    {
+      "gate_number": 4,
+      "name": "0 Internal Broken Links to 410 Routes from Retained Pages",
+      "passed": false,
+      "summary": "Gate 4 Failed: 6696 internal broken links detected pointing to 410 or nonexistent routes",
+      "metrics": {
+        "total_broken_links_found": 6696,
+        "broken_link_samples": [
+          {
+            "source": "frontend/src/components/layout/Footer.tsx",
+            "target": "ai-automation-agency-for-logistics",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/src/components/layout/Footer.tsx",
+            "target": "autonomous-loan-underwriting-ai-for-nbfcs",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/components/layout/Footer.tsx",
+            "target": "deterministic-multi-agent-systems-for-manufacturing-erp",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/components/layout/Footer.tsx",
+            "target": "private-vpc-air-gapped-llm-deployment-for-healthcare",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/components/layout/Footer.tsx",
+            "target": "sap-s4hana-autonomous-ai-integration-agency",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/data/blogPosts.ts",
+            "target": "ai-automation-agency-for-automotive-manufacturing",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/data/blogPosts.ts",
+            "target": "ai-automation-agency-for-manufacturing",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/data/blogPosts.ts",
+            "target": "prior-authorization-automation-software-for-healthcare-ctos",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/src/data/blogPosts.ts",
+            "target": "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/src/data/glossaryData.ts",
+            "target": "sap-s4hana-autonomous-ai-integration-agency",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/src/data/glossaryData.ts",
+            "target": "autonomous-loan-underwriting-ai-for-nbfcs",
+            "reason": "Broken link: destination does not exist"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "ai-automation-agency-for-logistics",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "autonomous-dispatch-software-for-freight-carriers",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "deterministic-warehouse-automation-for-3pl-providers",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "fleet-route-optimization-agents-for-supply-chain-directors",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "custom-edi-parser-agents-for-freight-forwarders",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "container-demurrage-and-detention-auditing-software-for-ocean-freight-shippers",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "maritime-bunker-fuel-optimization-state-machines-for-commercial-ship-owners",
+            "reason": "Points to 410 pruned route"
+          },
+          {
+            "source": "frontend/dist/solutions/index.html",
+            "target": "air-cargo-unit-load-device-weight-balance-agents-for-aviation-freight-carriers",
+            "reason": "Points to 410 pruned route"
+          }
+        ]
+      },
+      "failures": [
+        "Broken Link: [frontend/src/components/layout/Footer.tsx] -> /solutions/ai-automation-agency-for-logistics/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/src/components/layout/Footer.tsx] -> /solutions/autonomous-loan-underwriting-ai-for-nbfcs/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/components/layout/Footer.tsx] -> /solutions/deterministic-multi-agent-systems-for-manufacturing-erp/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/components/layout/Footer.tsx] -> /solutions/private-vpc-air-gapped-llm-deployment-for-healthcare/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/components/layout/Footer.tsx] -> /solutions/sap-s4hana-autonomous-ai-integration-agency/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/data/blogPosts.ts] -> /solutions/ai-automation-agency-for-automotive-manufacturing/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/data/blogPosts.ts] -> /solutions/ai-automation-agency-for-manufacturing/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/data/blogPosts.ts] -> /solutions/prior-authorization-automation-software-for-healthcare-ctos/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/src/data/blogPosts.ts] -> /solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/src/data/glossaryData.ts] -> /solutions/sap-s4hana-autonomous-ai-integration-agency/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/src/data/glossaryData.ts] -> /solutions/autonomous-loan-underwriting-ai-for-nbfcs/ (Broken link: destination does not exist)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/ai-automation-agency-for-logistics/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/autonomous-dispatch-software-for-freight-carriers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/deterministic-warehouse-automation-for-3pl-providers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/fleet-route-optimization-agents-for-supply-chain-directors/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/custom-edi-parser-agents-for-freight-forwarders/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/container-demurrage-and-detention-auditing-software-for-ocean-freight-shippers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/maritime-bunker-fuel-optimization-state-machines-for-commercial-ship-owners/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/air-cargo-unit-load-device-weight-balance-agents-for-aviation-freight-carriers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/cold-storage-multi-zone-climate-telemetry-automation-for-perishable-food-exporters/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/automated-container-terminal-quay-crane-dispatch-software-for-port-operators/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/maritime-vessel-hull-fouling-predictive-telemetry-agents-for-fleet-owners/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/autonomous-grain-silo-climate-control-automation-for-bulk-handlers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/smart-container-rfid-cold-chain-telemetry-software-for-global-pharmaceutical-logistics/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/robotic-bin-picking-3d-point-cloud-segmentation-software-for-logistics-fulfillment-centers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/autonomous-forklift-palette-fork-alignment-computer-vision-software-for-distribution-centers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/quantum-annealing-qubo-quayside-crane-scheduling-agents-for-container-ports/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/container-vessel-berth-allocation-qubo-optimizers-for-terminal-operators/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/multi-modal-freight-rail-marshalling-yard-qubo-dispatchers-for-logistics/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/d-wave-quantum-annealing-vehicle-routing-problem-solvers-for-urban-fleets/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/air-traffic-flow-management-runway-spacing-qubo-agents-for-slot-coordinators/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/intermodal-empty-container-repositioning-qubo-solvers-for-shipping-lines/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/automated-guided-vehicle-swarm-pathfinding-qubo-agents-for-smart-warehouses/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/cross-docking-pallet-assignment-qubo-optimizers-for-distribution-centers/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/airline-crew-pairing-and-rostering-qubo-solvers-for-flight-operations/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/last-mile-time-window-delivery-routing-qubo-agents-for-courier-networks/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/dry-bulk-carrier-hold-loading-stability-qubo-solvers-for-mining-terminals/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/parcel-sortation-chute-allocation-qubo-optimizers-for-ecommerce-hubs/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/locomotive-maintenance-turnaround-scheduling-qubo-agents-for-freight-rails/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/offshore-supply-vessel-multi-rig-voyage-qubo-solvers-for-energy-logistics/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/straddle-carrier-dispatch-and-clash-avoidance-qubo-agents-for-maritime-ports/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/bulk-grain-vessel-jetty-scheduling-qubo-optimizers-for-commodity-ports/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/cold-chain-reefer-container-plug-allocation-qubo-solvers-for-reefer-terminals/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/vernacular-voice-nlu-hindi-hinglish-speech-recognition-accuracy-telemetry-for-e-commerce-checkout/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/ondc-beckn-protocol-search-to-confirm-transaction-latency-telemetry-for-retail-agent-networks/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/real-time-cart-checkout-abandonment-intent-detection-telemetry-for-conversational-commerce-agents/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/streaming-conformer-asr-acoustic-model-word-error-rate-telemetry-for-tier-2-indian-dialects/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/ondc-bpp-provider-platform-catalog-sync-and-order-state-reconciliation-telemetry-for-d2c-brands/ (Points to 410 pruned route)",
+        "Broken Link: [frontend/dist/solutions/index.html] -> /solutions/multilingual-slot-extraction-and-intent-classification-confidence-telemetry-for-grocery-shopping-agents/ (Points to 410 pruned route)"
+      ],
+      "execution_time_seconds": 0.109
+    },
+    {
+      "gate_number": 5,
+      "name": "Vocabulary Jaccard Similarity Certification",
+      "passed": false,
+      "summary": "Gate 5 Failed: Mean Jaccard similarity is 59.84% (must be < 50.00%)",
+      "metrics": {
+        "retained_pages_analyzed": 100,
+        "total_pairwise_combinations": 4950,
+        "mean_jaccard_similarity": 0.5984,
+        "mean_jaccard_percentage": "59.84%",
+        "threshold_percentage": "50.00%",
+        "baseline_percentage": "73.00%",
+        "max_pairwise_similarity": 0.958,
+        "min_pairwise_similarity": 0.4141,
+        "std_dev": 0.131,
+        "pairs_exceeding_65_percent_count": 2033,
+        "top_similar_pairs_sample": [
+          {
+            "page_a": "cross-border-remittance-settlement-agents-bridging-upi-and-rbi-cbdc-digital-rupee",
+            "page_b": "n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai",
+            "jaccard": 0.958
+          },
+          {
+            "page_a": "automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi",
+            "page_b": "quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs",
+            "jaccard": 0.9019
+          },
+          {
+            "page_a": "abdm-m3-health-information-user-consent-artifact-decryption-telemetry-for-clinical-diagnostic-centers",
+            "page_b": "private-hospital-statutory-clinical-establishment-act-registration-renewal-telemetry-for-legal-fiduciaries",
+            "jaccard": 0.897
+          },
+          {
+            "page_a": "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+            "page_b": "sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers",
+            "jaccard": 0.8854
+          },
+          {
+            "page_a": "sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization",
+            "page_b": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
+            "jaccard": 0.8847
+          },
+          {
+            "page_a": "p2p-nvlink-cross-instance-kv-cache-bridges-for-automotive-factory-quality-audits",
+            "page_b": "continuous-telemetry-anomaly-detection-agents-for-semiconductor-fabrication-cleanrooms",
+            "jaccard": 0.8834
+          },
+          {
+            "page_a": "cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad",
+            "page_b": "multi-agent-prefix-tree-partitioning-software-for-sovereign-cloud-air-gapped-servers",
+            "jaccard": 0.8821
+          },
+          {
+            "page_a": "nvlink-all-reduce-latency-optimizers-for-automotive-factory-quality-inspection",
+            "page_b": "dynamic-branch-pruning-controllers-for-industrial-scada-predictive-maintenance",
+            "jaccard": 0.8747
+          },
+          {
+            "page_a": "automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore",
+            "page_b": "e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments",
+            "jaccard": 0.8734
+          },
+          {
+            "page_a": "e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments",
+            "page_b": "fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india",
+            "jaccard": 0.8677
+          }
+        ]
+      },
+      "failures": [
+        "Mean Jaccard similarity is 59.84%, exceeding maximum threshold of 50.00% (Baseline: ~73%)",
+        "Detected 2033 pairs with high similarity >= 65.0% indicating residual template boilerplate duplication"
+      ],
+      "execution_time_seconds": 0.197
+    },
+    {
+      "gate_number": 6,
+      "name": "Custom Architecture Schematics & Empirical Benchmarks",
+      "passed": false,
+      "summary": "Gate 6 Failed: Only 0/100 pages are fully compliant (0.0% compliance, 100% required)",
+      "metrics": {
+        "total_retained_pages": 100,
+        "pages_with_schematics": 0,
+        "pages_with_benchmarks": 0,
+        "fully_compliant_pages": 0,
+        "schematic_compliance_percentage": "0.00%",
+        "benchmark_compliance_percentage": "0.00%",
+        "overall_compliance_percentage": "0.00%",
+        "missing_svg_slugs_sample": [
+          "static-prefix-sink-reservation-daemons-for-air-gapped-sovereign-defense-enclaves",
+          "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+          "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+          "cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad",
+          "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+          "column-linear-attention-weight-partitioners-for-hospital-clinical-triage-copilots",
+          "paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters",
+          "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+          "ml-kem-1024-military-grade-key-encapsulation-telemetry-for-sovereign-defense-ai-swarms",
+          "air-gapped-purdue-model-level-2-scada-isolation-telemetry-for-pharmaceutical-cleanroom-facilities"
+        ],
+        "missing_benchmark_slugs_sample": [
+          "static-prefix-sink-reservation-daemons-for-air-gapped-sovereign-defense-enclaves",
+          "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+          "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+          "cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad",
+          "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+          "column-linear-attention-weight-partitioners-for-hospital-clinical-triage-copilots",
+          "paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters",
+          "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+          "ml-kem-1024-military-grade-key-encapsulation-telemetry-for-sovereign-defense-ai-swarms",
+          "air-gapped-purdue-model-level-2-scada-isolation-telemetry-for-pharmaceutical-cleanroom-facilities"
+        ]
+      },
+      "failures": [
+        "100/100 retained enterprise pages missing vector SVG architecture schematics",
+        "100/100 retained enterprise pages missing empirical benchmark matrices"
+      ],
+      "execution_time_seconds": 0.351
+    }
+  ]
+}

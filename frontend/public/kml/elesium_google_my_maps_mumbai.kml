@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Elesium Enterprise AI — Mumbai Entity Authority & Driving Directions</name>
+    <description><![CDATA[
+      <h3>Elesium Enterprise AI Architecture Hub — Mumbai</h3>
+      <p><b>Address:</b> Bandra Kurla Complex (BKC), G Block, Mumbai, Maharashtra 400051</p>
+      <p><b>Google Maps CID:</b> <a href="https://maps.google.com/?cid=12984719284758192834">12984719284758192834</a></p>
+      <p><b>Official Entity URL:</b> <a href="https://elesium.online/enterprise-ai-mumbai/">https://elesium.online/enterprise-ai-mumbai/</a></p>
+      <p><b>Autonomous AI Engineering:</b> Multi-Agent LangGraph Systems, Sovereign LLM Deployment, DPDP Act 2023 Compliance.</p>
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PLelesium-enterprise" frameborder="0" allowfullscreen></iframe>
+    ]]></description>
+    <Style id="hubPoint">
+      <IconStyle>
+        <scale>1.4</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="vectorRoute">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="radiusBoundary">
+      <LineStyle><color>7f00ffff</color><width>2</width></LineStyle>
+      <PolyStyle><color>1aff0000</color></PolyStyle>
+    </Style>
+
+    <!-- FOCAL HUB PLACEMARK -->
+    <Placemark>
+      <name>Elesium Enterprise AI Headquarters — Mumbai</name>
+      <description>Primary sovereign AI state machine development center. Verified CID: 12984719284758192834</description>
+      <styleUrl>#hubPoint</styleUrl>
+      <Point>
+        <coordinates>72.8687,19.0657,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- ADRIAN GANA CONVERGENT DRIVING DIRECTION VECTORS -->
+    <Folder>
+      <name>Driving Direction Vectors to Mumbai AI Hub</name>
+      <Placemark>
+        <name>Route: Chhatrapati Shivaji Maharaj Terminus → Elesium Mumbai</name>
+        <description>Driving direction path from Chhatrapati Shivaji Maharaj Terminus converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8354,18.9401,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Nariman Point Express Towers → Elesium Mumbai</name>
+        <description>Driving direction path from Nariman Point Express Towers converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8217,18.9268,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Andheri East MIDC SEEPZ Gate → Elesium Mumbai</name>
+        <description>Driving direction path from Andheri East MIDC SEEPZ Gate converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8732,19.1245,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Powai Hiranandani Business Park → Elesium Mumbai</name>
+        <description>Driving direction path from Powai Hiranandani Business Park converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.906,19.1176,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Lower Parel One International Center → Elesium Mumbai</name>
+        <description>Driving direction path from Lower Parel One International Center converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8301,18.9953,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Vashi Navi Mumbai Infotech Park → Elesium Mumbai</name>
+        <description>Driving direction path from Vashi Navi Mumbai Infotech Park converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.9984,19.065,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Thane Majiwada Golden Quadrilateral → Elesium Mumbai</name>
+        <description>Driving direction path from Thane Majiwada Golden Quadrilateral converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.9781,19.2183,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Worli Sea Face Coastal Road Link → Elesium Mumbai</name>
+        <description>Driving direction path from Worli Sea Face Coastal Road Link converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8154,19.0144,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Goregaon NESCO Exhibition Centre → Elesium Mumbai</name>
+        <description>Driving direction path from Goregaon NESCO Exhibition Centre converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8532,19.1551,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Bandra West Linking Road Junction → Elesium Mumbai</name>
+        <description>Driving direction path from Bandra West Linking Road Junction converging on Elesium Mumbai headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>72.8295,19.0596,0 72.8687,19.0657,0</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+
+    <!-- 25KM & 50KM SERVICE RADIUS COVERAGE POLYGONS -->
+    <Folder>
+      <name>Mumbai Metropolitan Service Radius</name>
+      <Placemark>
+        <name>15km Metropolitan Delivery Boundary — Mumbai</name>
+        <styleUrl>#radiusBoundary</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>72.8687,19.20059824088781,0 72.89348439058834,19.198548833494023,0 72.91751572001017,19.192462881519273,0 72.94006380848143,19.182525303534675,0 72.9604435437438,19.16903804781863,0 72.97803569785401,19.152410917811192,0 72.99230574211144,19.133149120443903,0 73.00282008844235,19.11183791568283,0 73.00925926375398,19.08912483370064,0 73.01142761696285,19.0657,0 73.00925926375398,19.04227516629936,0 73.00282008844235,19.01956208431717,0 72.99230574211144,18.998250879556096,0 72.97803569785401,18.978989082188807,0 72.9604435437438,18.962361952181368,0 72.94006380848143,18.948874696465325,0 72.91751572001017,18.938937118480727,0 72.89348439058834,18.932851166505976,0 72.8687,18.93080175911219,0 72.84391560941167,18.932851166505976,0 72.81988427998984,18.938937118480727,0 72.79733619151858,18.948874696465325,0 72.7769564562562,18.962361952181368,0 72.759364302146,18.978989082188807,0 72.74509425788857,18.998250879556096,0 72.73457991155766,19.01956208431717,0 72.72814073624603,19.04227516629936,0 72.72597238303716,19.0657,0 72.72814073624603,19.08912483370064,0 72.73457991155766,19.11183791568283,0 72.74509425788857,19.133149120443903,0 72.759364302146,19.152410917811192,0 72.7769564562562,19.16903804781863,0 72.79733619151858,19.182525303534675,0 72.81988427998984,19.192462881519273,0 72.84391560941167,19.198548833494023,0 72.8687,19.20059824088781,0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>35km Metropolitan Delivery Boundary — Mumbai</name>
+        <styleUrl>#radiusBoundary</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>72.8687,19.380462562071557,0 72.92653024470614,19.375680611486054,0 72.9826033466904,19.361480056878307,0 73.03521555312334,19.338292374914243,0 73.08276826873555,19.306822111576807,0 73.12381662832601,19.268025474892784,0 73.15711339826004,19.22308128103578,0 73.18164687303215,19.17335513659327,0 73.19667161542594,19.1203579453015,0 73.20173110624665,19.0657,0 73.19667161542594,19.0110420546985,0 73.18164687303215,18.95804486340673,0 73.15711339826004,18.90831871896422,0 73.12381662832601,18.863374525107215,0 73.08276826873555,18.824577888423192,0 73.03521555312334,18.793107625085756,0 72.9826033466904,18.769919943121693,0 72.92653024470614,18.755719388513945,0 72.8687,18.750937437928442,0 72.81086975529387,18.755719388513945,0 72.75479665330961,18.769919943121693,0 72.70218444687667,18.793107625085756,0 72.65463173126446,18.824577888423192,0 72.613583371674,18.863374525107215,0 72.58028660173997,18.90831871896422,0 72.55575312696786,18.95804486340673,0 72.54072838457407,19.0110420546985,0 72.53566889375335,19.0657,0 72.54072838457407,19.1203579453015,0 72.55575312696786,19.17335513659327,0 72.58028660173997,19.22308128103578,0 72.613583371674,19.268025474892784,0 72.65463173126446,19.306822111576807,0 72.70218444687667,19.338292374914243,0 72.75479665330961,19.361480056878307,0 72.81086975529387,19.375680611486054,0 72.8687,19.380462562071557,0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

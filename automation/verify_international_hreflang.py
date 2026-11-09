@@ -101,10 +101,9 @@ def test_gate_2_reciprocal_hreflang():
     for label, filepath in flagship_files:
         content = filepath.read_text(encoding="utf-8")
         
-        # Extract all hreflang tags
-        hreflangs = re.findall(r'<link\s+rel=["\']alternate["\']\s+hreflang=["\']([^"\']+)["\']\s+href=["\']([^"\']+)["\']\s*/?>', content, re.IGNORECASE)
-        # Also try reverse attribute order (href before hreflang)
-        hreflangs_rev = re.findall(r'<link\s+rel=["\']alternate["\']\s+href=["\']([^"\']+)["\']\s+hreflang=["\']([^"\']+)["\']\s*/?>', content, re.IGNORECASE)
+        # Extract all hreflang tags regardless of attribute order
+        hreflangs = re.findall(r'<link[^>]*\shreflang=["\']([^"\']+)["\'][^>]*\shref=["\']([^"\']+)["\'][^>]*>', content, re.IGNORECASE)
+        hreflangs_rev = re.findall(r'<link[^>]*\shref=["\']([^"\']+)["\'][^>]*\shreflang=["\']([^"\']+)["\'][^>]*>', content, re.IGNORECASE)
         found_map = {lang.lower(): href for lang, href in hreflangs}
         for href, lang in hreflangs_rev:
             found_map[lang.lower()] = href

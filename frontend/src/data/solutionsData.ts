@@ -91,6 +91,16 @@ export interface SolutionItem {
   datePublished: string;
   dateModified: string;
   whitepaperCitation?: TechnicalWhitepaperCitation;
+  empiricalBenchmarks?: any;
+  hardwareConfiguration?: any;
+  svgSchematicHtml?: string;
+  benchmarkTableHtml?: string;
+  hardwareCardHtml?: string;
+  pricingTiers?: {
+    pilot: string;
+    enterprise: string;
+    institutional: string;
+  };
 }
 
 export interface TechnicalWhitepaperCitation {

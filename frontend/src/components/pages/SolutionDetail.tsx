@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -16,7 +16,7 @@ import {
     MessageSquare,
     Sparkles
 } from 'lucide-react'
-import { SolutionRecord, getRelatedSolutions } from '../../data/solutionsHubData'
+import { SolutionRecord, getRelatedSolutions, isRetainedSolutionSlug } from '../../data/solutionsHubData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 import { getRotatingAnchorText } from '../../lib/seoAnchors'
 
@@ -27,16 +27,16 @@ declare global {
 }
 
 function getInitialSolution(slug?: string): SolutionRecord | null {
-    if (!slug || typeof window === 'undefined') return null;
+    if (!slug || !isRetainedSolutionSlug(slug) || typeof window === 'undefined') return null;
     const win = window as any;
-    if (win.__INITIAL_SOLUTION__ && win.__INITIAL_SOLUTION__.slug === slug) {
+    if (win.__INITIAL_SOLUTION__ && win.__INITIAL_SOLUTION__.slug === slug && isRetainedSolutionSlug(win.__INITIAL_SOLUTION__.slug)) {
         return win.__INITIAL_SOLUTION__;
     }
     try {
         const el = document.getElementById('__SOLUTION_DATA__');
         if (el && el.textContent) {
             const parsed = JSON.parse(el.textContent);
-            if (parsed && parsed.slug === slug) {
+            if (parsed && parsed.slug === slug && isRetainedSolutionSlug(parsed.slug)) {
                 return parsed;
             }
         }
@@ -52,12 +52,14 @@ export default function SolutionDetail() {
     const [copied, setCopied] = useState(false)
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
 
+    const isRetained = isRetainedSolutionSlug(slug)
+
     const [solution, setSolution] = useState<SolutionRecord | null>(() => getInitialSolution(slug))
-    const [loading, setLoading] = useState<boolean>(() => !getInitialSolution(slug))
-    const [notFound, setNotFound] = useState<boolean>(false)
+    const [loading, setLoading] = useState<boolean>(() => !getInitialSolution(slug) && isRetained)
+    const [notFound, setNotFound] = useState<boolean>(() => !isRetained)
 
     useEffect(() => {
-        if (!slug) {
+        if (!slug || !isRetainedSolutionSlug(slug)) {
             setNotFound(true)
             setLoading(false)
             return
@@ -85,8 +87,13 @@ export default function SolutionDetail() {
             })
             .then((data: SolutionRecord) => {
                 if (!cancelled) {
-                    setSolution(data)
-                    setLoading(false)
+                    if (isRetainedSolutionSlug(data?.slug)) {
+                        setSolution(data)
+                        setLoading(false)
+                    } else {
+                        setNotFound(true)
+                        setLoading(false)
+                    }
                 }
             })
             .catch(() => {
@@ -124,7 +131,43 @@ export default function SolutionDetail() {
     }
 
     if (notFound || !solution) {
-        return <Navigate to="/solutions/" replace />
+        return (
+            <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-32 pb-24">
+                <Helmet>
+                    <meta name="robots" content="noindex, follow" />
+                    <meta name="googlebot" content="noindex, follow" />
+                    <title>410 Gone | Content Retired | Elesium</title>
+                </Helmet>
+                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-500 border border-red-500/20 mb-6">
+                        HTTP 410 • Content Retired
+                    </div>
+                    <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                        410 Gone
+                    </h1>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        This programmatic specification has been permanently retired under Elesium&apos;s
+                        Algorithmic Quality &amp; Enterprise Architecture Curation mandate.
+                        The requested resource is no longer indexed or served.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link
+                            to="/solutions/"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+                        >
+                            Explore 100 Enterprise Architectures
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                        <Link
+                            to="/"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-900 dark:text-white font-medium border border-gray-200 dark:border-white/10 transition-colors"
+                        >
+                            Return Home
+                        </Link>
+                    </div>
+                </div>
+            </article>
+        )
     }
 
     const handleCopyUrl = () => {
@@ -430,6 +473,81 @@ export default function SolutionDetail() {
                                 ))}
                             </div>
                         )}
+                    </div>
+                </section>
+            )}
+
+            {/* ENTERPRISE ARCHITECTURE SCHEMATIC & EMPIRICAL BENCHMARKS */}
+            {solution.svgSchematicHtml && (
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
+                    <div 
+                        dangerouslySetInnerHTML={{ __html: solution.svgSchematicHtml }} 
+                        className="overflow-x-auto"
+                    />
+                </section>
+            )}
+
+            {solution.benchmarkTableHtml && (
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
+                    <div 
+                        dangerouslySetInnerHTML={{ __html: solution.benchmarkTableHtml }} 
+                        className="overflow-x-auto"
+                    />
+                </section>
+            )}
+
+            {solution.hardwareCardHtml && (
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
+                    <div 
+                        dangerouslySetInnerHTML={{ __html: solution.hardwareCardHtml }} 
+                        className="overflow-x-auto"
+                    />
+                </section>
+            )}
+
+            {/* Dynamic Enterprise Pricing Tiers */}
+            {solution.pricingTiers && (
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20" id="pricing">
+                    <div className="mb-8">
+                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                            Institutional Engagement
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-1">
+                            Enterprise Deployment Tiers &amp; SLAs
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-950 flex flex-col justify-between">
+                            <div>
+                                <div className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Pilot Sprint (14 Days)</div>
+                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;1,50,000 &#8211; &#8377;3,50,000</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.pilot}</p>
+                            </div>
+                            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/10 text-xs font-mono text-emerald-600 dark:text-emerald-400">
+                                Sub-14 Day Delivery SLA
+                            </div>
+                        </div>
+                        <div className="p-6 rounded-2xl border border-blue-500/30 bg-blue-50/30 dark:bg-blue-950/20 flex flex-col justify-between relative">
+                            <span className="absolute -top-3 right-4 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white uppercase tracking-wider">Most Deployed</span>
+                            <div>
+                                <div className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400">Enterprise Suite (30-45 Days)</div>
+                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;6,00,000 &#8211; &#8377;15,00,000</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.enterprise}</p>
+                            </div>
+                            <div className="mt-6 pt-4 border-t border-blue-200 dark:border-blue-900/40 text-xs font-mono text-blue-600 dark:text-blue-400">
+                                Hard 90-Day ROI Guarantee
+                            </div>
+                        </div>
+                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-950 flex flex-col justify-between">
+                            <div>
+                                <div className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Institutional Retainer</div>
+                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;4,50,000 / month</div>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.institutional}</p>
+                            </div>
+                            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/10 text-xs font-mono text-emerald-600 dark:text-emerald-400">
+                                1-Hour Critical SLA Pod
+                            </div>
+                        </div>
                     </div>
                 </section>
             )}

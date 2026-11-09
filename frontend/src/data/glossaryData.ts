@@ -460,7 +460,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     technicalDeepDive: 'Autonomous enterprise agents interface directly with SAP core ledgers using standard BAPIs (e.g., BAPI_INCOMINGINVOICE_CREATE, BAPI_PO_CREATE1). The connector manages SAP connection pooling, converts JSON schemas to ABAP types, and handles SAP commit/rollback protocols with strict idempotency.',
     productionBenchmark: 'Sub-120ms BAPI execution latency; 100% compliance with SAP transactional integrity.',
     relatedToolSlug: 'enterprise-agent-tally-erp-xml-simulator',
-    relatedSolutionUrl: '/solutions/sap-s4hana-autonomous-ai-integration-agency'
+    relatedSolutionUrl: '/solutions/sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india/'
   },
   {
     slug: 'real-time-webrtc-vad-voice-telephony-agent',
@@ -481,7 +481,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     technicalDeepDive: 'Underwriting agents ingest bank statement PDFs, run OCR with tabular boundary verification, cross-verify GST returns against e-way bills, and compute debt service coverage ratios (DSCR). An immutable StateGraph checkpointer records every underwriting step, producing audit-ready loan memos for credit committees.',
     productionBenchmark: 'Sub-90s end-to-end CAM generation; 100% compliance with RBI priority sector lending norms.',
     relatedToolSlug: 'enterprise-event-sourcing-audit-simulator',
-    relatedSolutionUrl: '/solutions/autonomous-loan-underwriting-ai-for-nbfcs'
+    relatedSolutionUrl: '/solutions/aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms/'
   },
   {
     slug: 'self-healing-canary-deployment-circuit',

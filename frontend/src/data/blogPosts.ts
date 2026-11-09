@@ -2648,7 +2648,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
             "type": "paragraph",
-            "value": "Explore our production-grade high-leverage commercial solution at [Automotive Manufacturing JIT State Machine Telemetry](/solutions/ai-automation-agency-for-automotive-manufacturing/), or simulate edge protocol translation and PLC latency with our interactive [Enterprise Agent Industrial IoT & OPC-UA Latency Simulator](/tools/enterprise-agent-industrial-iot-opc-ua-simulator/)."
+            "value": "Explore our production-grade high-leverage commercial solution at [Automotive Manufacturing JIT State Machine Telemetry](/solutions/sovereign-multi-agent-order-state-machine-telemetry-for-automotive-manufacturing-just-in-time-lines/), or simulate edge protocol translation and PLC latency with our interactive [Enterprise Agent Industrial IoT & OPC-UA Latency Simulator](/tools/enterprise-agent-industrial-iot-opc-ua-simulator/)."
         }
     ]
 },
@@ -2796,7 +2796,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
             "type": "paragraph",
-            "value": "Explore our production-grade high-leverage commercial solution at [Enterprise Grade AI Automation Pipeline for Indian Industry](/solutions/ai-automation-agency-for-manufacturing/), or simulate multi-server tool discovery and context pruning efficiency with our interactive [Enterprise Agent MCP Tool Routing Simulator](/tools/enterprise-agent-mcp-tool-routing-simulator/)."
+            "value": "Explore our production-grade high-leverage commercial solution at [Enterprise Grade AI Automation Pipeline for Indian Industry](/solutions/sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india/), or simulate multi-server tool discovery and context pruning efficiency with our interactive [Enterprise Agent MCP Tool Routing Simulator](/tools/enterprise-agent-mcp-tool-routing-simulator/)."
         }
     ]
 },
@@ -2923,7 +2923,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
             "type": "paragraph",
-            "value": "Explore our production-grade high-leverage commercial solution at [Private VPC Air-Gapped LLM Deployment for Healthcare](/solutions/prior-authorization-automation-software-for-healthcare-ctos/), or model memory efficiency with our interactive [Enterprise Chunked Prefill & Radix Attention KV Cache Simulator](/tools/enterprise-agent-chunked-prefill-radix-attention-simulator/)."
+            "value": "Explore our production-grade high-leverage commercial solution at [Private VPC Air-Gapped LLM Deployment for Healthcare](/solutions/sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance/), or model memory efficiency with our interactive [Enterprise Chunked Prefill & Radix Attention KV Cache Simulator](/tools/enterprise-agent-chunked-prefill-radix-attention-simulator/)."
         }
     ]
 },
@@ -3064,7 +3064,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
             "type": "paragraph",
-            "value": "Explore our high-leverage commercial solution for sub-second ledger reconciliation at our dedicated engineering portal: [Sub-200ms Ledger Reconciliation Agents for FinTechs](/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs/), or test high-throughput memory sharding metrics on our interactive [Enterprise Vector Database Sharding Simulator](/tools/enterprise-agent-vector-db-sharding-simulator/)."
+            "value": "Explore our high-leverage commercial solution for sub-second ledger reconciliation at our dedicated engineering portal: [Sub-200ms Ledger Reconciliation Agents for FinTechs](/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/), or test high-throughput memory sharding metrics on our interactive [Enterprise Vector Database Sharding Simulator](/tools/enterprise-agent-vector-db-sharding-simulator/)."
         }
     ]
 },

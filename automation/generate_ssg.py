@@ -433,13 +433,22 @@ def render_solution_semantic_html(sol, all_sols=None):
     tool_metric_esc = html.escape(tool_metric)
     tool_desc_esc = html.escape(tool_desc)
 
-    # Check physical existence of image to avoid 404 broken asset crawl penalties
-    clean_rel_path = hero_img.lstrip("/")
-    img_exists = (DIST_DIR / clean_rel_path).exists() or ((BASE_DIR / "frontend" / "public") / clean_rel_path).exists()
-    if img_exists:
-        hero_media_html = f'<div class="hero-graphic" style="background:#f3f4f6;border-radius:0.75rem;padding:1.5rem;text-align:center;margin:1.5rem 0;"><img src="{hero_img}" alt="{hero_alt}" width="800" height="450" loading="lazy" style="max-width:100%;height:auto;border-radius:0.5rem;" /></div>'
+    # Check if this is a curated enterprise solution
+    is_curated = bool(sol.get("svgSchematicHtml"))
+    svg_schematic = sol.get("svgSchematicHtml", "")
+    bench_table_html = sol.get("benchmarkTableHtml", "")
+    hw_card_html = sol.get("hardwareCardHtml", "")
+    pricing_tiers = sol.get("pricingTiers")
+
+    if is_curated and svg_schematic:
+        hero_media_html = f'<div class="enterprise-schematic-slot" style="margin:2rem 0;">{svg_schematic}</div>'
     else:
-        hero_media_html = f"""<div class="hero-graphic" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-radius:0.75rem;padding:2rem;text-align:center;margin:1.5rem 0;color:#f8fafc;">
+        clean_rel_path = hero_img.lstrip("/")
+        img_exists = (DIST_DIR / clean_rel_path).exists() or ((BASE_DIR / "frontend" / "public") / clean_rel_path).exists()
+        if img_exists:
+            hero_media_html = f'<div class="hero-graphic" style="background:#f3f4f6;border-radius:0.75rem;padding:1.5rem;text-align:center;margin:1.5rem 0;"><img src="{hero_img}" alt="{hero_alt}" width="800" height="450" loading="lazy" style="max-width:100%;height:auto;border-radius:0.5rem;" /></div>'
+        else:
+            hero_media_html = f"""<div class="hero-graphic" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-radius:0.75rem;padding:2rem;text-align:center;margin:1.5rem 0;color:#f8fafc;">
       <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;color:#38bdf8;text-transform:uppercase;margin-bottom:0.75rem;">Verified Sovereign Architecture Topology</div>
       <div style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:1rem;">{h1}</div>
       <div style="display:inline-flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;font-size:0.8rem;font-family:monospace;color:#94a3b8;">
@@ -450,57 +459,35 @@ def render_solution_semantic_html(sol, all_sols=None):
       </div>
     </div>"""
 
-    peers = get_peer_solutions_in_silo(slug, silo_id, all_sols or [], count=4)
-    peer_cards_html = "".join(
-        f'<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 1px 3px rgba(0,0,0,0.05);">'
-        f'<div>'
-        f'<div style="font-size:0.65rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.35rem;">{silo_name_esc}</div>'
-        f'<h3 style="font-size:0.95rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;line-height:1.4;">'
-        f'<a href="/solutions/{html.escape(p.get("slug", ""))}/" style="color:#111827;text-decoration:none;">{html.escape(p.get("h1", ""))} &rarr;</a>'
-        f'</h3>'
-        f'<p style="font-size:0.75rem;color:#4b5563;line-height:1.5;margin:0 0 0.75rem 0;">{html.escape(p.get("metaDescription", ""))[:130]}...</p>'
-        f'</div>'
-        f'<div style="border-top:1px solid #f3f4f6;padding-top:0.5rem;margin-top:0.5rem;">'
-        f'<a href="/solutions/{html.escape(p.get("slug", ""))}/" style="font-size:0.75rem;font-weight:600;color:#2563eb;text-decoration:none;display:inline-flex;align-items:center;gap:0.25rem;">View Architecture Docs &rarr;</a>'
-        f'</div>'
-        f'</div>'
-        for p in peers
-    )
-    peers_section_html = f"""
-    <section class="thematic-cluster-peers" style="margin:3rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.5rem;">
-        <div>
-          <h2 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0;">Thematic Cluster Peers: Related {silo_name_esc} Workflows</h2>
-          <p style="font-size:0.8rem;color:#6b7280;margin:0.25rem 0 0 0;">Zero semantic leakage architecture: deterministic multi-agent state machines within the {silo_name_esc} domain.</p>
-        </div>
-        <a href="/solutions/category/{silo_id}/" style="font-size:0.8rem;font-weight:700;color:#059669;text-decoration:underline;">Explore Full {silo_name_esc} Hub &rarr;</a>
+    if is_curated:
+        benchmarks = sol.get("empiricalBenchmarks", {})
+        p50 = benchmarks.get("latencyProfiles", {}).get("p50Ms", "42")
+        qps = benchmarks.get("throughputAndScale", {}).get("sustainedQps", "3850")
+        conv = benchmarks.get("reliabilityAndConvergence", {}).get("deterministicConvergence", "99.999")
+        evidence_cards_html = f"""<div class="evidence-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin:1.5rem 0 2rem 0;">
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#15803d;text-transform:uppercase;letter-spacing:0.05em;">Execution Latency</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">{p50} ms</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">p50 telemetry</div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">
-        {peer_cards_html}
+      <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#1d4ed8;text-transform:uppercase;letter-spacing:0.05em;">Sustained Load</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">{qps} QPS</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">Zero packet drop</div>
       </div>
-    </section>
-    """ if peers else ""
-
-    return f"""
-<main id="main-content">
-<div id="prerendered-solution" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
-  <header style="margin-bottom:2.5rem;">
-    <div class="silo-pillar-banner" style="margin-bottom:1rem;font-size:0.8rem;font-family:monospace;color:#6b7280;background:rgba(5,150,105,0.06);padding:0.4rem 0.75rem;border-radius:0.375rem;border:1px solid rgba(5,150,105,0.25);display:inline-flex;align-items:center;gap:0.5rem;">
-      <a href="/solutions/category/{silo_id}/" style="color:#059669;font-weight:700;text-decoration:none;">&larr; Part of the {silo_name_esc} Thematic Cluster</a>
-      <span style="color:#9ca3af;">•</span>
-      <span style="color:#4b5563;">Sovereign Architecture Pod</span>
-    </div>
-    <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">{category} • Designed for {target_persona}</div>
-    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">{h1}</h1>
-    <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
-      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">Architectural Answer Capsule • Deterministic Executive Summary</div>
-      <p style="font-size:1.15rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">{first_sentence}</p>
-    </div>
-    <div class="cta-container" style="margin:1.5rem 0 2rem 0;">
-      <a href="#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">{primary_cta} &rarr;</a>
-    </div>
-    {hero_media_html}
-    <div class="evidence-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin:1.5rem 0 2rem 0;">
+      <div style="background:#faf5ff;border:1px solid #ddd6fe;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:0.05em;">State Convergence</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">{conv}%</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">Deterministic DAG</div>
+      </div>
+      <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:0.5rem;padding:0.875rem;text-align:center;">
+        <div style="font-size:0.65rem;font-weight:700;color:#c2410c;text-transform:uppercase;letter-spacing:0.05em;">Isolation Enclave</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">Air-Gapped</div>
+        <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">Zero cloud egress</div>
+      </div>
+    </div>"""
+    else:
+        evidence_cards_html = """<div class="evidence-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin:1.5rem 0 2rem 0;">
       <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.5rem;padding:0.875rem;text-align:center;">
         <div style="font-size:0.65rem;font-weight:700;color:#15803d;text-transform:uppercase;letter-spacing:0.05em;">Delivery SLA</div>
         <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">14 Days</div>
@@ -521,14 +508,52 @@ def render_solution_semantic_html(sol, all_sols=None):
         <div style="font-size:1.1rem;font-weight:800;color:#111827;margin-top:0.25rem;">DPDP 2023</div>
         <div style="font-size:0.7rem;color:#4b5563;margin-top:0.1rem;">India sovereign</div>
       </div>
-    </div>
-  </header>
-  <div class="solution-body">
-    <section style="margin:2.5rem 0;">
-      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Deterministic Operational Capabilities</h2>
-      {f'<ul style="list-style-type:none;padding:0;">{caps_html}</ul>' if caps_html else ''}
-      <div style="margin-top:1.5rem;">{p_html}</div>
+    </div>"""
+
+    peers = get_peer_solutions_in_silo(slug, silo_id, all_sols or [], count=4)
+    if is_curated or not peers:
+        peers_section_html = ""
+    else:
+        peer_cards_html = "".join(
+            f'<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 1px 3px rgba(0,0,0,0.05);">'
+            f'<div>'
+            f'<div style="font-size:0.65rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.35rem;">{silo_name_esc}</div>'
+            f'<h3 style="font-size:0.95rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;line-height:1.4;">'
+            f'<a href="/solutions/{html.escape(p.get("slug", ""))}/" style="color:#111827;text-decoration:none;">{html.escape(p.get("h1", ""))} &rarr;</a>'
+            f'</h3>'
+            f'<p style="font-size:0.75rem;color:#4b5563;line-height:1.5;margin:0 0 0.75rem 0;">{html.escape(p.get("metaDescription", ""))[:130]}...</p>'
+            f'</div>'
+            f'<div style="border-top:1px solid #f3f4f6;padding-top:0.5rem;margin-top:0.5rem;">'
+            f'<a href="/solutions/{html.escape(p.get("slug", ""))}/" style="font-size:0.75rem;font-weight:600;color:#2563eb;text-decoration:none;display:inline-flex;align-items:center;gap:0.25rem;">View Architecture Docs &rarr;</a>'
+            f'</div>'
+            f'</div>'
+            for p in peers
+        )
+        peers_section_html = f"""
+    <section class="thematic-cluster-peers" style="margin:3rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.5rem;">
+        <div>
+          <h2 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0;">Thematic Cluster Peers: Related {silo_name_esc} Workflows</h2>
+          <p style="font-size:0.8rem;color:#6b7280;margin:0.25rem 0 0 0;">Zero semantic leakage architecture: deterministic multi-agent state machines within the {silo_name_esc} domain.</p>
+        </div>
+        <a href="/solutions/category/{silo_id}/" style="font-size:0.8rem;font-weight:700;color:#059669;text-decoration:underline;">Explore Full {silo_name_esc} Hub &rarr;</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">
+        {peer_cards_html}
+      </div>
     </section>
+    """
+
+    benchmarks_section_html = f"""
+    <section style="margin:2.5rem 0;" id="empirical-benchmarks">
+      {bench_table_html}
+    </section>
+    <section style="margin:2.5rem 0;" id="hardware-specification">
+      {hw_card_html}
+    </section>
+    """ if (is_curated and bench_table_html) else ""
+
+    tool_callout_html = "" if is_curated else f"""
     <aside class="solution-interactive-tool-callout" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid #334155;border-left:4px solid #38bdf8;border-radius:0.75rem;padding:1.5rem;margin:2rem 0;color:#f8fafc;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
         <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;color:#38bdf8;text-transform:uppercase;background:#0369a12a;padding:0.25rem 0.6rem;border-radius:0.375rem;border:1px solid #0284c7;">⚡ Live Interactive Architecture Diagnostic</span>
@@ -540,20 +565,57 @@ def render_solution_semantic_html(sol, all_sols=None):
       <p style="font-size:0.875rem;color:#94a3b8;line-height:1.6;margin:0 0 1rem 0;">{tool_desc_esc}</p>
       <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
         <a href="/tools/{tool_slug_esc}/" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;font-size:0.875rem;font-weight:600;text-decoration:none;">Launch Free Interactive Simulator &rarr;</a>
-        <a href="/embed/{tool_slug_esc}/" target="_blank" rel="noopener" style="font-size:0.8rem;color:#64748b;text-decoration:underline;">Embed Simulator Widget</a>
+        <a href="/tools/{tool_slug_esc}/" target="_blank" rel="noopener" style="font-size:0.8rem;color:#64748b;text-decoration:underline;">Embed Simulator Widget</a>
       </div>
-    </aside>
-    {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Technical Specifications &amp; SLAs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">{specs_html}</div></section>' if specs_html else ''}
-    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;background:#f9fafb;padding:1.5rem;border-radius:0.5rem;">
-      <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">{html.escape(trust_title)}</h3>
-      <p style="color:#4b5563;margin-bottom:0.75rem;">{html.escape(trust_sla)}</p>
-      <ul style="list-style-type:none;padding:0;margin:0;">{badges_html}</ul>
-      <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e5e7eb;font-size:0.875rem;">
-        <span style="color:#6b7280;">Sovereign Architecture Pod: </span>
-        <a href="/ai-automation-agency-india/" style="color:#059669;font-weight:600;text-decoration:underline;">{rotating_anchor} &rarr;</a>
+    </aside>"""
+
+    if is_curated and pricing_tiers:
+        pilot_desc = html.escape(pricing_tiers.get("pilot", ""))
+        ent_desc = html.escape(pricing_tiers.get("enterprise", ""))
+        inst_desc = html.escape(pricing_tiers.get("institutional", ""))
+        pricing_section_html = f"""
+    <section style="margin:2.5rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;" id="pricing">
+      <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Engagement Tiers &amp; Institutional Pricing</h2>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+          <thead>
+            <tr style="background:#111827;color:#ffffff;">
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Tier</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Investment (INR)</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">USD Equiv.</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Timeline</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Deliverables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e5e7eb;">
+              <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Pilot Sprint</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 &#8211; &#8377;3,50,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$2,000 &#8211; $4,500</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">14 days</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">{pilot_desc}</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+              <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Enterprise Suite <span style="background:#2563eb;color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;margin-left:0.4rem;">Most Deployed</span></td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 &#8211; &#8377;15,00,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$7,500 &#8211; $18,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">30&#8211;45 days</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">{ent_desc}</td>
+            </tr>
+            <tr>
+              <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">AI Engineering Pod</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;4,50,000 / month</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$5,500 / month</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">12-month retainer</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">{inst_desc}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
-    {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
+    """
+    else:
+        pricing_section_html = """
     <section style="margin:2.5rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;" id="pricing">
       <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Engagement Tiers &amp; Institutional Pricing</h2>
       <div style="overflow-x:auto;">
@@ -593,6 +655,9 @@ def render_solution_semantic_html(sol, all_sols=None):
         </table>
       </div>
     </section>
+    """
+
+    right_fit_section = "" if is_curated else """
     <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
       <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Is Elesium Right For You?</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
@@ -618,6 +683,50 @@ def render_solution_semantic_html(sol, all_sols=None):
         </div>
       </div>
     </section>
+    """
+
+    return f"""
+<main id="main-content">
+<div id="prerendered-solution" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <header style="margin-bottom:2.5rem;">
+    <div class="silo-pillar-banner" style="margin-bottom:1rem;font-size:0.8rem;font-family:monospace;color:#6b7280;background:rgba(5,150,105,0.06);padding:0.4rem 0.75rem;border-radius:0.375rem;border:1px solid rgba(5,150,105,0.25);display:inline-flex;align-items:center;gap:0.5rem;">
+      <a href="/solutions/category/{silo_id}/" style="color:#059669;font-weight:700;text-decoration:none;">&larr; Part of the {silo_name_esc} Thematic Cluster</a>
+      <span style="color:#9ca3af;">•</span>
+      <span style="color:#4b5563;">Sovereign Architecture Pod</span>
+    </div>
+    <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">{category} • Designed for {target_persona}</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">{h1}</h1>
+    <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">Architectural Answer Capsule • Deterministic Executive Summary</div>
+      <p style="font-size:1.15rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">{first_sentence}</p>
+    </div>
+    <div class="cta-container" style="margin:1.5rem 0 2rem 0;">
+      <a href="#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">{primary_cta} &rarr;</a>
+    </div>
+    {hero_media_html}
+    {evidence_cards_html}
+  </header>
+  <div class="solution-body">
+    <section style="margin:2.5rem 0;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Deterministic Operational Capabilities</h2>
+      {f'<ul style="list-style-type:none;padding:0;">{caps_html}</ul>' if caps_html else ''}
+      <div style="margin-top:1.5rem;">{p_html}</div>
+    </section>
+    {benchmarks_section_html}
+    {tool_callout_html}
+    {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Technical Specifications &amp; SLAs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">{specs_html}</div></section>' if specs_html else ''}
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;background:#f9fafb;padding:1.5rem;border-radius:0.5rem;">
+      <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">{html.escape(trust_title)}</h3>
+      <p style="color:#4b5563;margin-bottom:0.75rem;">{html.escape(trust_sla)}</p>
+      <ul style="list-style-type:none;padding:0;margin:0;">{badges_html}</ul>
+      <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e5e7eb;font-size:0.875rem;">
+        <span style="color:#6b7280;">Sovereign Architecture Pod: </span>
+        <a href="/ai-automation-agency-india/" style="color:#059669;font-weight:600;text-decoration:underline;">{rotating_anchor} &rarr;</a>
+      </div>
+    </section>
+    {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
+    {pricing_section_html}
+    {right_fit_section}
     {peers_section_html}
     <section style="margin:2.5rem 0;background:#111827;border-radius:0.75rem;padding:2rem;text-align:center;" id="audit">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-top:0;margin-bottom:0.75rem;">Start With a Free Architecture Audit</h2>
@@ -1383,7 +1492,7 @@ def render_commercial_directory_semantic_html(items):
         <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Navigation</h4>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
           <li><a href="/how-we-work/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">How We Work</a></li>
-          <li><a href="/solutions/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Solutions Hub (3,765 Workflows)</a></li>
+          <li><a href="/solutions/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Solutions Hub (100 Enterprise Architectures)</a></li>
           <li><a href="/commercial-directory.html" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left font-semibold text-cyan-600 dark:text-cyan-400">Top 100 Commercial Directory</a></li>
           <li><a href="/signals/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Technical Whitepapers &amp; Research</a></li>
           <li><a href="/compare/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left">Architecture Comparisons</a></li>
@@ -1397,15 +1506,15 @@ def render_commercial_directory_semantic_html(items):
       <div class="flex flex-col gap-4">
         <div class="flex items-center gap-2">
           <h4 class="font-semibold text-xs tracking-wider uppercase text-gray-900 dark:text-white">Enterprise Solutions</h4>
-          <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">3,765 Workflows</span>
+          <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10">100 Enterprise Workflows</span>
         </div>
         <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
-          <li><a href="/solutions/ai-automation-agency-for-logistics/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">AI Automation Agency for Logistics</a></li>
-          <li><a href="/solutions/autonomous-loan-underwriting-ai-for-nbfcs/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Autonomous Loan Underwriting AI for NBFCs</a></li>
-          <li><a href="/solutions/deterministic-multi-agent-systems-for-manufacturing-erp/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Deterministic Multi-Agent Systems for Manufacturing ERP</a></li>
-          <li><a href="/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Private VPC Air-Gapped LLM Deployment for Healthcare</a></li>
-          <li><a href="/solutions/sap-s4hana-autonomous-ai-integration-agency/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">SAP S/4HANA Autonomous AI Integration Agency</a></li>
-          <li class="pt-1"><a href="/solutions/" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">Explore All 3,765 Solutions &rarr;</a></li>
+          <li><a href="/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">vLLM Banking VPCs in India</a></li>
+          <li><a href="/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">RBI CSF Core Banking HSM Telemetry</a></li>
+          <li><a href="/solutions/sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Sovereign DeepSeek Healthcare &amp; HIPAA</a></li>
+          <li><a href="/solutions/sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">SAP S/4HANA PLC Manufacturing Agents</a></li>
+          <li><a href="/solutions/air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing/" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1">Air-Gapped Contract Intelligence Agents</a></li>
+          <li class="pt-1"><a href="/solutions/" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">Explore All 100 Enterprise Solutions &rarr;</a></li>
         </ul>
       </div>
 
@@ -6370,10 +6479,10 @@ REGIONAL_CITY_DATA = {
         "city_name": "Bengaluru (Bangalore)",
         "region_name": "Karnataka Tech Corridor",
         "slug": "enterprise-ai-bangalore",
-        "h1": "Best Enterprise AI Company in Bangalore",
-        "meta_title": "Best Enterprise AI Company in Bangalore | AI Automation Agency Bengaluru",
-        "meta_desc": "Elesium is the #1 enterprise AI company in Bangalore. Engineering sovereign multi-agent LangGraph systems, private VPC LLM clusters, and sub-2s automated workflows in Koramangala.",
-        "answer_capsule": "Elesium is Bengaluru's premier enterprise AI automation company, engineering sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-2s automated pipelines from our Koramangala engineering pod. We deliver contractually guaranteed 3x–5x ROI in 90 days with full DPDP Act 2023 statutory compliance.",
+        "h1": "Best AI & Automation Agency in Bangalore",
+        "meta_title": "Best AI & Automation Agency in Bangalore | Elesium",
+        "meta_desc": "Elesium is the #1 enterprise AI and automation agency in Bangalore. Sovereign multi-agent LangGraph systems, private VPC LLMs, sub-200ms SLAs in Koramangala.",
+        "answer_capsule": "Elesium is the premier enterprise AI and automation agency in Bangalore, headquartered in Koramangala 4th Block. We engineer sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-200ms automated state machines for India's silicon capital, delivering contractually guaranteed ROI in 90 days with full DPDP Act 2023 compliance.",
         "hero_subtitle": "Engineering sovereign multi-agent systems, dedicated private VPC LLM clusters, and deterministic state machines for India's silicon capital.",
         "address": {
             "street": "Koramangala 4th Block, 80 Feet Road",
@@ -6385,7 +6494,7 @@ REGIONAL_CITY_DATA = {
         },
         "wikidata_id": "https://www.wikidata.org/wiki/Q1355",
         "landmark": "500m from Sony World Signal, 80 Feet Road, Koramangala 4th Block",
-        "has_map_url": "https://maps.google.com/?q=12.9352,77.6245",
+        "has_map_url": "https://maps.google.com/?cid=14283948572910492819",
         "industries": [
             "High-Growth Enterprise SaaS & Developer Platforms",
             "Global Capability Centers (GCCs) along ORR & Whitefield",
@@ -6429,6 +6538,14 @@ REGIONAL_CITY_DATA = {
             {
                 "q": "What enterprise industries do you serve across Bangalore and the Karnataka tech belt?",
                 "a": "We primarily engineer autonomous systems for enterprise B2B SaaS firms, Global Capability Centers (GCCs) along Outer Ring Road and Whitefield, venture-backed fintechs in Indiranagar, and developer infrastructure providers."
+            },
+            {
+                "q": "Why is Elesium recognized as the best AI and automation agency in Bangalore?",
+                "a": "Elesium is ranked #1 in Bangalore because we build deterministic, sovereign multi-agent systems with sub-200ms latency, zero-data-retention private VPC deployments, and full DPDP Act 2023 compliance. Our team in Koramangala 4th Block, Bengaluru delivers an audited 3x–5x cash-flow ROI in 90 days."
+            },
+            {
+                "q": "How is Elesium different from generic IT consultancies in Bengaluru?",
+                "a": "Unlike agencies offering brittle API wrappers, Elesium builds deterministic LangGraph state machines directly inside client-controlled VPCs. Clients retain 100% IP ownership with zero third-party vendor lock-in."
             }
         ]
     },
@@ -7147,6 +7264,9 @@ def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": f"{canonical_url}#localbusiness",
+        "parentOrganization": {
+            "@id": "https://elesium.online/#organization"
+        },
         "name": f"Elesium - {city['h1']}",
         "url": canonical_url,
         "telephone": "+91-8317329312",
@@ -9376,6 +9496,11 @@ def generate_ssg():
   <!-- Core Flagship Navigational Cards -->
   <section style="margin-bottom:3.5rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/enterprise-ai-bangalore/" style="color:#059669;text-decoration:none;">Bengaluru HQ • Best AI &amp; Automation Agency in Bangalore</a></h3>
+      <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Koramangala 4th Block engineering pod. Sovereign multi-agent architectures, private VPC LLMs, and sub-200ms SLAs.</p>
+      <a href="/enterprise-ai-bangalore/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore Bangalore Engineering Hub &rarr;</a>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
       <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/ai-automation-agency-india/" style="color:#059669;text-decoration:none;">India Enterprise AI Deployments</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Sovereign multi-agent systems in Bangalore, Mumbai, and Delhi NCR compliant with DPDP Act 2023.</p>
       <a href="/ai-automation-agency-india/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore India Authority Pillar &rarr;</a>
@@ -9439,6 +9564,37 @@ def generate_ssg():
     </div>
   </section>
 
+  <!-- Frequently Asked Questions (Structured Data Alignment) -->
+  <section style="margin-bottom:3.5rem;padding:2.5rem 2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#ffffff;">
+    <div style="text-align:center;max-width:700px;margin:0 auto 2rem auto;">
+      <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">Verified Architectural Answers</span>
+      <h2 style="font-size:2rem;font-weight:800;color:#111827;margin:0.5rem 0;">Frequently Asked Questions</h2>
+      <p style="color:#4b5563;font-size:1rem;">Clear, verifiable answers on data sovereignty, SLAs, latency benchmarks, and investment tiers.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.25rem;max-width:850px;margin:0 auto;">
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Why is Elesium recognized as India's #1 enterprise AI company?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium is ranked #1 because we engineer deterministic, sovereign multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). Unlike generic chatbot wrappers or brittle Zapier automations, Elesium builds mathematically verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and full compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5). We back our engineering with a contractual 90-day cash-flow ROI SLA.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium guarantee sub-200ms latency for enterprise agent workflows?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">We deploy custom vLLM inference runtimes utilizing PagedAttention virtual memory paging and FP8 GEMM (General Matrix Multiply) microscaling kernels on dedicated NVIDIA H100/A100 clusters. By decoupling prefill from decode phases and maintaining warm prefix caching for enterprise system prompts, we achieve sub-200ms TTFT across SAP S/4HANA RFC queries, core banking ledger reconciliation, and supply chain dispatch pipelines.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium ensure compliance with India's DPDP Act 2023?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Under Section 8(5) of the DPDP Act 2023, Data Fiduciaries must erase personal data upon purpose fulfillment. Elesium enforces zero external data retention, hosting LLM inference entirely within client-owned sovereign private VPCs located in Mumbai, Bengaluru, or Delhi NCR. Zero client prompt bytes or telemetry are ever transmitted to third-party consumer LLM providers.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is Elesium's 90-day contractual ROI SLA?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What are the institutional investment tiers for deploying Elesium AI systems?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA).</p>
+      </div>
+    </div>
+  </section>
+
   <!-- WhatsApp Pairing CTA -->
   <footer style="text-align:center;padding:2.5rem 2rem;border-radius:1.5rem;background:#111827;color:#ffffff;">
     <div style="font-family:monospace;font-size:0.75rem;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Direct Principal Systems Pairing</div>
@@ -9465,8 +9621,28 @@ def generate_ssg():
 
     print("Starting SSG Generation for System 2 Compact Solutions...")
     solutions = load_solutions_via_node()
+    curated_map = {}
+    curated_path = BASE_DIR / "automation" / "curated_enterprise_solutions.json"
+    if curated_path.exists():
+        try:
+            curated_list = json.loads(curated_path.read_text(encoding="utf-8"))
+            curated_map = {s["slug"]: s for s in curated_list}
+            print(f"Loaded {len(curated_map)} curated enterprise solutions into SSG pipeline.")
+        except Exception as e:
+            print(f"Warning: Failed to load curated solutions: {e}")
+
+    retained_slugs_set = set(curated_map.keys())
+    if not retained_slugs_set:
+        retained_path = BASE_DIR / "automation" / "retained_solution_slugs.json"
+        if retained_path.exists():
+            retained_slugs_set = set(json.loads(retained_path.read_text(encoding="utf-8")))
+
     for sol in solutions:
         slug = sol["slug"]
+        if retained_slugs_set and slug not in retained_slugs_set:
+            continue
+        if slug in curated_map:
+            sol = curated_map[slug]
         h1 = sol.get("h1", slug.replace("-", " ").title())
         title = sol.get("title", f"{h1} | Elesium")
         if not title.endswith("Elesium"):
@@ -9602,6 +9778,9 @@ def generate_ssg():
             f'<script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script>'
         ]
 
+        if sol.get("jsonLdSchema"):
+            injections.append(f'<script type="application/ld+json">{json.dumps(sol["jsonLdSchema"], ensure_ascii=False)}</script>')
+
         faqs = sol.get("faqs", [])
         if faqs:
             faq_schema = {
@@ -9650,7 +9829,19 @@ def generate_ssg():
     hub_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{hub_title}" />', hub_html)
     hub_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{hub_desc}" />', hub_html)
 
-    hub_semantic = render_solutions_hub_semantic_html(solutions)
+    retained_slugs_set = set(curated_map.keys())
+    if not retained_slugs_set:
+        retained_path = BASE_DIR / "automation" / "retained_solution_slugs.json"
+        if retained_path.exists():
+            retained_slugs_set = set(json.loads(retained_path.read_text(encoding="utf-8")))
+
+    hub_solutions = [s for s in solutions if s.get("slug") in retained_slugs_set]
+    if not hub_solutions:
+        hub_solutions = solutions
+    else:
+        hub_solutions = [curated_map.get(s["slug"], s) for s in hub_solutions]
+
+    hub_semantic = render_solutions_hub_semantic_html(hub_solutions)
     root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
     if root_pattern.search(hub_html):
         hub_html = root_pattern.sub(lambda m: f'<div id="root">{hub_semantic}</div>', hub_html)
@@ -9675,7 +9866,7 @@ def generate_ssg():
     ]
     hub_has_part = []
     for cat_name in hub_categories:
-        cat_sols = [s for s in solutions if s.get("hubCategory") == cat_name]
+        cat_sols = [s for s in hub_solutions if s.get("hubCategory") == cat_name]
         for s in cat_sols:
             slug = s.get("slug", "")
             h1 = s.get("h1") or slug.replace("-", " ").title()
@@ -9692,7 +9883,7 @@ def generate_ssg():
                 }
             })
     if not hub_has_part:
-        for s in solutions:
+        for s in hub_solutions:
             slug = s.get("slug", "")
             h1 = s.get("h1") or slug.replace("-", " ").title()
             desc = s.get("metaDescription") or f"Deploy {h1} with sub-200ms deterministic workflows and private VPC security."
@@ -9723,7 +9914,7 @@ def generate_ssg():
         "mainEntity": {
             "@type": "ItemList",
             "name": "Enterprise AI Solutions Catalog",
-            "numberOfItems": len(solutions),
+            "numberOfItems": len(hub_solutions),
             "itemListElement": [
                 {
                     "@type": "ListItem",
@@ -9731,7 +9922,7 @@ def generate_ssg():
                     "name": s.get("h1") or s.get("title", ""),
                     "item": f"https://elesium.online/solutions/{s.get('slug')}/"
                 }
-                for idx, s in enumerate(solutions[:100])
+                for idx, s in enumerate(hub_solutions[:100])
             ]
         },
         "hasPart": hub_has_part,
@@ -9773,7 +9964,7 @@ def generate_ssg():
     cat_base_dir.mkdir(parents=True, exist_ok=True)
 
     for silo_id, silo_data in SILO_DEFINITIONS.items():
-        silo_sols = [s for s in solutions if get_silo_for_solution(s) == silo_id]
+        silo_sols = [s for s in hub_solutions if get_silo_for_solution(s) == silo_id]
         cat_canonical = f"https://elesium.online/solutions/category/{silo_id}/"
         cat_title = silo_data["title"]
         cat_desc = silo_data["metaDescription"]
@@ -10611,6 +10802,10 @@ def generate_ssg():
             "title": "AI Automation Resources & Guides",
             "desc": "Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency."
         },
+        "tools": {
+            "title": "Enterprise AI Calculators & Architecture Simulators",
+            "desc": "Interactive enterprise AI engineering simulators, GPU cluster sizers, RAG latency estimators, and DPDP Act compliance calculators by Elesium."
+        },
         "resources/india-enterprise-ai-benchmark-2026": {
             "title": "India Enterprise AI Benchmark Report 2026: Empirical Telemetry & Unit Economics",
             "desc": "Empirical telemetry across 1,420 Indian enterprise multi-agent deployments: token cost arbitrage (-74%), sub-200ms private VPC latency, and DPDP Act 2023 compliance safe harbors."
@@ -10624,8 +10819,8 @@ def generate_ssg():
             "desc": "India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI."
         },
         "enterprise-ai-bangalore": {
-            "title": "Best Enterprise AI Company in Bangalore | AI Automation Agency Bengaluru",
-            "desc": "Elesium is the #1 enterprise AI company in Bangalore. Engineering sovereign multi-agent LangGraph systems, private VPC LLM clusters, and sub-2s automated workflows in Koramangala."
+            "title": "Best AI & Automation Agency in Bangalore",
+            "desc": "Elesium is the #1 best AI and automation agency in Bangalore. We engineer sovereign multi-agent LangGraph systems, private VPC LLMs, and sub-2s workflows."
         },
         "enterprise-ai-mumbai": {
             "title": "Best Enterprise AI Company in Mumbai | Sovereign BFSI AI Automation Agency",
@@ -11525,8 +11720,11 @@ def generate_ssg():
 <div id="prerendered-service-content" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header>
     <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Enterprise AI Engineering</div>
-    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Enterprise AI Automation Agency India</h1>
-    <p style="font-size:1.25rem;line-height:1.6;color:#374151;margin-bottom:2rem;"><strong>{pricing_answer_capsule}</strong></p>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Best AI &amp; Automation Agency in India</h1>
+    <div class="answer-capsule" style="background:#0f172a;border:1px solid #1e3a8a;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#38bdf8;margin-bottom:0.35rem;">National Engineering Executive Summary • AEO Answer Capsule</div>
+      <p style="font-size:1.15rem;line-height:1.6;color:#f1f5f9;margin:0;font-weight:500;">{pricing_answer_capsule}</p>
+    </div>
   </header>
   <main id="main-content">
     <section style="margin:2rem 0;">
@@ -11562,6 +11760,77 @@ def generate_ssg():
             &bull; <a href="/compare/" style="color:#6b7280;font-weight:600;text-decoration:underline;">View All 12 Enterprise Architecture Battlecards &rarr;</a>
           </li>
         </ul>
+      </div>
+    </section>
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Production AI Automation Services</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;">
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin-top:0;">Agentic AI Workflows</h3>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.5;">Deterministic Python LangGraph state machines replacing fragile low-code scripts. Handles multi-step ERP reasoning with zero human intervention.</p>
+        </div>
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin-top:0;">Private VPC LLM Integration</h3>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.5;">Air-gapped deployment of open-weights models (DeepSeek-V3, Llama 3) inside client-controlled AWS/Azure/GCP VPCs with zero data egress.</p>
+        </div>
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin-top:0;">Automated Process Pipelines</h3>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.5;">Sub-200ms document extraction, invoice OCR, and ledger reconciliation syncing directly with SAP, Oracle, and Tally Prime databases.</p>
+        </div>
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin-top:0;">WhatsApp Enterprise Routing</h3>
+          <p style="color:#4b5563;font-size:0.9rem;line-height:1.5;">Omnichannel customer triage and conversational checkout compliant with RBI digital lending guidelines and DPDP Act 2023.</p>
+        </div>
+      </div>
+    </section>
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Verifiable Contractual SLAs</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;border-left:4px solid #059669;">
+          <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;">Velocity SLA</div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0;">14-Day Delivery</h3>
+          <p style="color:#4b5563;font-size:0.85rem;margin:0;">Working production agent deployed into your staging environment within 14 business days.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;border-left:4px solid #059669;">
+          <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;">Financial Guarantee</div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0;">90-Day ROI Mandate</h3>
+          <p style="color:#4b5563;font-size:0.85rem;margin:0;">Audited 3x–5x cash-flow return or our implementation fees are proportionally refunded.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;border-left:4px solid #059669;">
+          <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;">Security Mandate</div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0;">Private VPC Enclaves</h3>
+          <p style="color:#4b5563;font-size:0.85rem;margin:0;">Zero data egress, zero third-party telemetry, 100% client IP retention.</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;border-left:4px solid #059669;">
+          <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;">Statutory Shield</div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0;">DPDP Act 2023</h3>
+          <p style="color:#4b5563;font-size:0.85rem;margin:0;">Section 8(5) statutory data disposal with cryptographic audit trail.</p>
+        </div>
+      </div>
+    </section>
+    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2>
+      <div style="display:flex;flex-direction:column;gap:1.25rem;">
+        <div style="border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;background:#f9fafb;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is a leading AI automation agency in India?</h3>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">If you need basic Zapier workflows, hire a freelancer. If you require deterministic, autonomous multi-agent infrastructure that connects directly to SAP S/4HANA via SAP RFC connectors, reconciles 1,420+ ledger items in 1.9s, and complies with DPDP Act 2023 and ISO 27001, Elesium is India's leading AI automation agency. We engineer production Python LangGraph state machines delivering verified 3.5x ROI within 90 days.</p>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;background:#f9fafb;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How much does AI automation cost in India?</h3>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard 90-day ROI mandate, private VPC zero-retention deployments, and sub-2s automated latency across SAP, Oracle, and legacy databases. Ongoing engineering pods are retained at ₹4,50,000/month.</p>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;background:#f9fafb;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What AI automation services does Elesium offer?</h3>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium deploys four production-grade AI services: Agentic AI Workflows via Python and LangGraph, air-gapped private VPC LLM deployments (Llama 3, DeepSeek) with zero data retention, automated ETL pipelines that cut document turnaround by 98%, and WhatsApp-first enterprise routing complying with RBI digital lending guidelines and DPDP Act 2023.</p>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;background:#f9fafb;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How long does AI automation implementation take?</h3>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Unlike legacy IT firms quoting 6 to 12 months, Elesium deploys production-ready pilot agents in 14 business days. Full multi-agent enterprise orchestration across SAP ERP, core banking, and CRM databases reaches complete production scale within 6 to 12 weeks, backed by 99.9% uptime SLAs and a strict 90-day cash-flow positive ROI guarantee.</p>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;background:#f9fafb;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Which industries benefit most from AI automation in India?</h3>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">High-compliance Indian sectors drowning in manual routing experience the highest ROI: BFSI (cutting credit underwriting latency from 14.5 hours to 1.9s under RBI guidelines), Manufacturing (averting ₹18.4L in stockout penalties via SAP RFC connectors), Healthcare (HIPAA/DPDP Act 2023 compliant medical extraction), and Enterprise SaaS (saving 10,000+ human operational hours).</p>
+        </div>
       </div>
     </section>
   </main>
@@ -18237,146 +18506,139 @@ def generate_ssg():
                 html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{resources_semantic}</div>')
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(resources_schema, ensure_ascii=False)}</script>\n</head>')
 
-        elif route == "ai-automation":
-            ai_auto_capsule = (
-                "Elesium is an enterprise AI automation agency and systems engineering firm deploying sovereign multi-agent "
-                "architectures directly inside client-controlled private VPCs across India. We replace fragile low-code automations "
-                "with deterministic LangGraph state machines, Pydantic type safety, and vLLM PagedAttention inference runtimes. "
-                "Our production workflows guarantee sub-200ms latency, zero third-party telemetry, full DPDP Act 2023 compliance, "
-                "and an audited 90-day cash-flow ROI SLA."
-            )
-            ai_auto_schema = {
+        elif route == "tools":
+            # Rich Tools & Simulators Directory
+            tools_capsule = "The Elesium Enterprise AI Interactive Simulator Suite provides deterministic mathematical models, GPU hardware sizers, RAG latency benchmarks, and DPDP Act statutory compliance calculators for enterprise technology leaders. Every tool runs interactive client-side calculations evaluating VRAM allocation, sub-200ms TTFT latency, FP8 compute unit economics, and Indian sovereign cloud data residency safe harbors."
+            
+            tool_items = [
+                ("agent-vram-gpu-cluster-sizer", "Agent VRAM & GPU Cluster Sizer", "GPU & Infrastructure", "Calculate exact VRAM allocation, tensor parallelism, and NVIDIA H100/A100 cluster topology for enterprise multi-agent deployment.", "Sub-4% Memory Fragmentation"),
+                ("enterprise-rag-latency-simulator", "Enterprise RAG Latency Simulator", "RAG & Latency", "Benchmark end-to-end vector search latency, reranking overhead, and time-to-first-token (TTFT) across Milvus, Qdrant, and pgvector.", "Sub-120ms Vector Retrieval"),
+                ("dpdp-act-penalty-exposure-calculator", "DPDP Act 2023 Penalty Exposure Calculator", "Compliance & DPDP", "Evaluate enterprise statutory liability under India's Digital Personal Data Protection Act 2023 with Section 8(5) data residency safe harbors.", "₹250 Cr Exposure Model"),
+                ("token-cost-arbitrage-calculator", "LLM Token Cost Arbitrage Calculator", "FinOps & Token Economics", "Model 3-year TCO comparison between commercial cloud APIs (Azure OpenAI, Anthropic Claude) versus private sovereign vLLM clusters.", "62% - 74% Cost Reduction"),
+                ("b2b-seo-roi-payback-model", "B2B AI Automation & SEO Payback Model", "FinOps & Token Economics", "Calculate payback period, net present value, and customer acquisition cost reduction for autonomous programmatic search engines.", "3.4x Cash-Flow Multiplier"),
+                ("enterprise-ai-roi-calculator", "Enterprise AI ROI Calculator", "FinOps & Token Economics", "Simulate multi-agent workforce replacement economics, annual operational expenditure reduction, and enterprise ROI across SAP workflows.", "90-Day Cash-Flow SLA"),
+                ("multi-agent-latency-token-cost-estimator", "Multi-Agent Latency & Token Cost Estimator", "Architecture & Reliability", "Profile end-to-end multi-agent conversational routing latency, prompt expansion bloat, and recursive tool execution cost.", "Sub-2.4s Complex Workflows"),
+                ("agentic-architecture-grader", "Agentic Architecture Grader", "Architecture & Reliability", "Audit your agentic infrastructure against 10 enterprise resilience dimensions: AST sandboxing, Merkle audit trails, and circuit breakers.", "Zero-Loop Determinism"),
+                ("multi-agent-token-leakage-simulator", "Multi-Agent Token Leakage Simulator", "FinOps & Token Economics", "Detect recursive conversation drift, infinite tool retry loops, and unbounded context window inflation in multi-agent swarms.", "99.8% Leak Prevention"),
+                ("dpdp-act-2023-audit-simulator", "DPDP Act 2023 Statutory Audit Simulator", "Compliance & DPDP", "Comprehensive Indian statutory data compliance simulation covering Data Fiduciary duties, Consent Managers, and cross-border restrictions.", "100% Indian Data Residency"),
+                ("enterprise-gpu-finops-cost-calculator", "Enterprise GPU FinOps Cost Calculator", "GPU & Infrastructure", "Calculate electricity, server rack cooling, reservation commitments, and spot-instance arbitrage across Tier-IV Indian datacenters.", "Sub-₹1.20 Per Inference"),
+                ("enterprise-vector-db-latency-benchmark", "Enterprise Vector DB Latency Benchmark", "RAG & Latency", "Compare HNSW index recall versus IVF-PQ latency curves across billion-vector datasets for enterprise private search systems.", "99.4% Recall at 45ms")
+            ]
+
+            tools_cards_html = "".join([
+                f"""<div style="background:#0f172a;border:1px solid #1e293b;border-radius:0.75rem;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;">
+  <div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+      <span style="font-size:0.7rem;font-family:monospace;text-transform:uppercase;color:#38bdf8;background:rgba(14,165,233,0.1);padding:0.2rem 0.5rem;border-radius:0.25rem;border:1px solid rgba(14,165,233,0.2);">{cat}</span>
+      <span style="font-size:0.75rem;color:#34d399;font-weight:600;font-family:monospace;">{metric}</span>
+    </div>
+    <h3 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin:0 0 0.5rem 0;">
+      <a href="/tools/{slug}/" style="color:#ffffff;text-decoration:none;">{name} &rarr;</a>
+    </h3>
+    <p style="font-size:0.85rem;color:#94a3b8;line-height:1.6;margin:0 0 1.25rem 0;">{desc}</p>
+  </div>
+  <a href="/tools/{slug}/" style="display:inline-block;text-align:center;background:#0284c7;color:#ffffff;padding:0.5rem 1rem;border-radius:0.375rem;font-size:0.8rem;font-weight:600;text-decoration:none;">Launch Simulator &rarr;</a>
+</div>""" for slug, name, cat, desc, metric in tool_items
+            ])
+
+            tools_faqs = [
+                ("What is the Elesium Enterprise AI Interactive Simulator Suite?", "It is an engineering-grade collection of interactive mathematical models, GPU infrastructure sizers, RAG latency estimators, and DPDP Act 2023 compliance calculators. Built with client-side computation engines, these tools allow Chief Technology Officers, AI Systems Architects, and procurement leads to stress-test unit economics, hardware sizing, and compliance exposure with zero vendor bias."),
+                ("Are the GPU sizer and VRAM calculations based on real production hardware?", "Yes. The calculators utilize empirical memory formulas derived from NVIDIA H100, H200, and A100 Tensor Core GPUs, accounting for FP8/FP16 weights, KV-cache overhead per context token, activation memory, and vLLM PagedAttention virtual memory block allocation with under 4% fragmentation."),
+                ("How does the DPDP Act 2023 Penalty Exposure Calculator quantify liability?", "The calculator models statutory penalties under Section 33 and the Schedule of the Indian Digital Personal Data Protection Act 2023, capping at ₹250 Crores per significant security failure. It evaluates Data Fiduciary risk across consent management, biometric authentication, cross-border data transfer, and sovereign Indian datacenter safe harbors."),
+                ("Can these interactive tools be embedded into internal enterprise wikis?", "Yes. Every calculator supports clean, iframe-compatible embed mode with dedicated noindex embed endpoints, enabling engineering teams to embed live calculators directly into Confluence, Notion, or internal architecture portals."),
+                ("How does Elesium translate simulator telemetry into production systems?", "Following simulation, Elesium deploys production-grade private VPC multi-agent clusters across Yotta, CtrlS, or AWS/Azure sovereign enclaves within a 14-day architecture sprint, backed by contractual SLAs and a 90-day cash-flow positive ROI guarantee.")
+            ]
+
+            tools_faq_html = "".join([
+                f"""<div style="border-bottom:1px solid #1e293b;padding:1.25rem 0;">
+  <dt style="font-weight:700;color:#ffffff;font-size:1.05rem;margin-bottom:0.5rem;">{q}</dt>
+  <dd style="color:#94a3b8;font-size:0.95rem;line-height:1.6;margin:0;">{a}</dd>
+</div>""" for q, a in tools_faqs
+            ])
+
+            tools_faq_schema = {
                 "@context": "https://schema.org",
-                "@graph": [
+                "@type": "FAQPage",
+                "@id": "https://elesium.online/tools/#faq",
+                "mainEntity": [
                     {
-                        "@type": "Service",
-                        "@id": f"{canonical_url}#service",
-                        "name": "Best AI & Automation Company in Bangalore | Enterprise Multi-Agent Engineering",
-                        "serviceType": "Enterprise AI Automation Agency",
-                        "description": ai_auto_capsule,
-                        "provider": {
-                            "@id": "https://elesium.online/#organization"
-                        },
-                        "areaServed": {
-                            "@type": "City",
-                            "name": "Bengaluru",
-                            "sameAs": "https://www.wikidata.org/wiki/Q1355"
+                        "@type": "Question",
+                        "name": q,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": a
                         }
-                    },
-                    {
-                        "@type": "LocalBusiness",
-                        "@id": f"{canonical_url}#localbusiness",
-                        "name": "Elesium - Best AI and Automation Company in Bangalore",
-                        "description": "Premier enterprise AI automation company in Bangalore, engineering sovereign multi-agent systems and private VPC infrastructure.",
-                        "url": canonical_url,
-                        "telephone": "+91-8317329312",
-                        "priceRange": "$$$$",
-                        "parentOrganization": {"@id": "https://elesium.online/#organization"},
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "80 Feet Road, 4th Block, Koramangala",
-                            "addressLocality": "Bengaluru",
-                            "addressRegion": "Karnataka",
-                            "postalCode": "560034",
-                            "addressCountry": "IN"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 12.9352,
-                            "longitude": 77.6245
-                        },
-                        "hasMap": "https://maps.google.com/?q=12.9352,77.6245",
-                        "areaServed": [
-                            {"@type": "City", "name": "Bengaluru", "sameAs": "https://www.wikidata.org/wiki/Q1355"},
-                            {"@type": "State", "name": "Karnataka"}
-                        ]
-                    },
-                    {
-                        "@type": "BreadcrumbList",
-                        "@id": f"{canonical_url}#breadcrumb",
-                        "itemListElement": [
-                            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online"},
-                            {"@type": "ListItem", "position": 2, "name": "AI Automation", "item": canonical_url}
-                        ]
-                    },
-                    {
-                        "@type": "FAQPage",
-                        "@id": f"{canonical_url}#faq",
-                        "isPartOf": {"@id": f"{canonical_url}#webpage"},
-                        "mainEntity": [
-                            {
-                                "@type": "Question",
-                                "name": "Why is Elesium recognized as the best AI and automation company in Bangalore?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Elesium is ranked #1 in Bangalore because we build deterministic, sovereign multi-agent systems with sub-200ms latency, zero-data-retention private VPC deployments, and full DPDP Act 2023 compliance. Our team in Koramangala, Bengaluru delivers an audited 3x–5x cash-flow ROI in 90 days."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "How long does it take to implement enterprise AI automation in Bangalore?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "We deploy production-validated pilot agents in 14 business days. Full multi-agent enterprise integration across SAP, Oracle, and proprietary databases takes 30 to 45 days, backed by a 90-day ROI SLA."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "What industries in Bangalore benefit most from Elesium AI automation?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Enterprise SaaS, BFSI, Aerospace & Defense, and high-throughput Logistics in Bangalore experience the highest ROI, eliminating 60%–80% of repetitive operational latency."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "How is Elesium different from generic IT consultancies in Bengaluru?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Unlike agencies offering brittle API wrappers, Elesium builds deterministic LangGraph state machines directly inside client-controlled VPCs. Clients retain 100% IP ownership with zero third-party vendor lock-in."
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "@type": "WebPage",
-                        "@id": f"{canonical_url}#webpage",
-                        "name": "Best AI & Automation Company in Bangalore | Elesium",
-                        "description": ai_auto_capsule,
-                        "url": canonical_url,
-                        "isPartOf": {"@id": "https://elesium.online/#website"},
-                        "about": {"@id": "https://elesium.online/#organization"},
-                        "speakable": {
-                            "@type": "SpeakableSpecification",
-                            "cssSelector": [".answer-capsule", "h1", "h2"]
-                        }
-                    }
+                    } for q, a in tools_faqs
                 ]
             }
-            ai_auto_semantic = f"""
-<main id="main-content">
-<div id="prerendered-ai-automation" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
-  <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;">
-    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">AI Automation</span>
+
+            tools_collection_schema = {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "@id": "https://elesium.online/tools/#collection",
+                "name": title,
+                "description": desc,
+                "url": "https://elesium.online/tools/",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://elesium.online/#website"
+                },
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": len(tool_items),
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": i + 1,
+                            "name": name,
+                            "url": f"https://elesium.online/tools/{slug}/"
+                        } for i, (slug, name, cat, desc, metric) in enumerate(tool_items)
+                    ]
+                }
+            }
+
+            tools_semantic = f"""
+<div id="prerendered-tools-content" style="max-width:1100px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <nav style="font-size:0.8rem;color:#64748b;margin-bottom:1.5rem;" aria-label="Breadcrumb">
+    <a href="/" style="color:#38bdf8;text-decoration:none;">Home</a> &gt; <span style="color:#94a3b8;">Tools &amp; Simulators</span>
   </nav>
-  <header style="margin-bottom:3rem;">
-    <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#059669;margin-bottom:0.75rem;">Deterministic Systems &bull; Private VPC</div>
-    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Shift from Manual to Autonomous</h1>
-    <p style="font-size:1.25rem;line-height:1.6;color:#4b5563;margin-bottom:2rem;">Custom AI infrastructure and deterministic agents that automate complex enterprise workflows.</p>
-    <div class="answer-capsule" style="background:#ecfdf5;border:1px solid #a7f3d0;border-left:4px solid #059669;border-radius:0.75rem;padding:1.5rem;margin-bottom:2rem;">
-      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#047857;font-weight:700;margin-bottom:0.5rem;">Definitive Answer Capsule &bull; Sovereign Enterprise AI Automation</div>
-      <p style="font-size:1.1rem;line-height:1.6;color:#065f46;margin:0;font-weight:600;">{ai_auto_capsule}</p>
+  <header style="margin-bottom:2.5rem;">
+    <div style="color:#38bdf8;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Deterministic Telemetry &amp; Unit Economics</div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#ffffff;">Enterprise AI Calculators &amp; Architecture Simulators</h1>
+    <div class="answer-capsule" style="background:#0f172a;border:1px solid #1e3a8a;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#38bdf8;margin-bottom:0.35rem;">Architectural Answer Capsule • Interactive Suite Summary</div>
+      <p style="font-size:1.05rem;line-height:1.6;color:#f1f5f9;margin:0;font-weight:500;">{tools_capsule}</p>
     </div>
   </header>
+  <main id="main-content">
+    <section style="margin-bottom:3rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#ffffff;margin-bottom:1.5rem;">Interactive Simulators &amp; Micro-SaaS Sizers</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;">
+        {tools_cards_html}
+      </div>
+    </section>
+    <section style="margin:3rem 0;border-top:1px solid #1e293b;padding-top:2.5rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#ffffff;margin-bottom:1.5rem;">Frequently Asked Questions</h2>
+      <dl>{tools_faq_html}</dl>
+    </section>
+  </main>
 </div>
-</main>
 """
             root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
             if root_pattern.search(html_out):
-                html_out = root_pattern.sub(lambda m: f'<div id="root">{ai_auto_semantic}</div>', html_out)
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{tools_semantic}</div>', html_out)
             else:
-                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{ai_auto_semantic}</div>')
-            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(ai_auto_schema, ensure_ascii=False)}</script>\n</head>')
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{tools_semantic}</div>')
+
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(tools_collection_schema, ensure_ascii=False)}</script>\n<script type="application/ld+json">{json.dumps(tools_faq_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "ai-automation":
+            redirect_html = make_redirect_stub("https://elesium.online/enterprise-ai-bangalore/")
+            direct_file.parent.mkdir(parents=True, exist_ok=True)
+            out_file.write_text(redirect_html, encoding="utf-8")
+            direct_file.write_text(redirect_html, encoding="utf-8")
+            print(f"Generated SSG 301 redirect for: /{route} -> /enterprise-ai-bangalore/")
+            continue
 
         if route.startswith("tools/"):
             # Ensure answer-capsule is present in tool semantic HTML

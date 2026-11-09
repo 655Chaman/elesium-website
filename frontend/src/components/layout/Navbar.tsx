@@ -124,7 +124,7 @@ export default function Navbar() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-gray-800 dark:text-gray-200 py-2 border-b border-gray-100 dark:border-white/5"
                             >
-                                Solutions Hub (3,765 Workflows)
+                                Solutions Hub (100 Enterprise Architectures)
                             </Link>
                             <Link
                                 to="/compare/"
@@ -153,6 +153,13 @@ export default function Navbar() {
                                 className="text-base font-semibold text-emerald-600 dark:text-emerald-400 py-2 border-b border-gray-100 dark:border-white/5"
                             >
                                 Best Enterprise AI Company in India (Sovereign Deployments)
+                            </Link>
+                            <Link
+                                to="/enterprise-ai-bangalore/"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-semibold text-emerald-600 dark:text-emerald-400 py-2 border-b border-gray-100 dark:border-white/5"
+                            >
+                                Best AI &amp; Automation Agency in Bangalore (Koramangala HQ)
                             </Link>
 
                             <div className="pt-4 flex flex-col gap-3">

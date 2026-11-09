@@ -372,19 +372,21 @@ export default function AIAutomationIndia() {
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">
-                        The #1 Enterprise AI Company &amp; <br />
-                        <span>Top AI Automation Agency in India</span>
+                        Best AI &amp; Automation Agency in India
                     </h1>
 
                     <h2 className="text-xl md:text-2xl text-gray-800 dark:text-gray-200 mb-6 font-medium max-w-4xl mx-auto leading-snug">
                         Replacing 40-hour manual bottlenecks with <span className="underline decoration-emerald-500/50 underline-offset-4 font-semibold">deterministic, autonomous multi-agent systems</span> deployed on your private VPC.
                     </h2>
 
-                    <p className="text-base md:text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
-                        <strong className="text-gray-950 dark:text-white font-semibold">
+                    <div className="answer-capsule bg-slate-100 dark:bg-slate-900/80 border border-slate-300 dark:border-blue-900/50 border-l-4 border-l-blue-500 rounded-lg p-5 mb-8 text-left max-w-3xl mx-auto shadow-sm">
+                        <div className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400 mb-1.5">
+                            National Engineering Executive Summary • AEO Answer Capsule
+                        </div>
+                        <p className="text-base sm:text-lg text-gray-900 dark:text-gray-100 leading-relaxed font-medium m-0">
                             Elesium is an enterprise AI automation agency in Bangalore, India, engineering deterministic multi-agent systems via LangGraph, Python FastAPI, and private VPC infrastructure. We eliminate 40-hour manual bottlenecks across SAP, Oracle, and BFSI workflows, cutting turnaround times by 98% while ensuring 100% compliance with India's DPDP Act 2023.
-                        </strong>
-                    </p>
+                        </p>
+                    </div>
 
                     <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
                         We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases—delivering a hard, audited ROI within 90 days.

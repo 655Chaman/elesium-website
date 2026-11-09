@@ -155,7 +155,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "CrewAI is well-suited for exploratory research assistants, internal brainstorming tools, or low-stakes content generation pipelines where deterministic execution and audit logging are not legally mandated."
       }
     ],
-    relatedSolutionSlug: "ai-automation-agency-for-logistics",
+    relatedSolutionSlug: "sovereign-multi-agent-order-state-machine-telemetry-for-automotive-manufacturing-just-in-time-lines",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -248,7 +248,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "Yes. Elesium builds and provisions sovereign clusters directly within your organization's sovereign VPC via Terraform and Kubernetes Helm charts. Your team retains 100% root access, with zero proprietary lock-in."
       }
     ],
-    relatedSolutionSlug: "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+    relatedSolutionSlug: "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -341,7 +341,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "Elesium provides complete code handover, full CI/CD deployment pipelines, automated test suites, and optional SLA-backed managed maintenance and monitoring retainers."
       }
     ],
-    relatedSolutionSlug: "deterministic-warehouse-automation-for-3pl-providers",
+    relatedSolutionSlug: "sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -427,7 +427,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "LangGraph features built-in 'interrupt' primitives. If an underwriting confidence score drops below 95%, execution automatically pauses, commits state to PostgreSQL, and alerts a human reviewer. Once approved, execution resumes from the exact checkpoint."
       }
     ],
-    relatedSolutionSlug: "prior-authorization-automation-software-for-healthcare-ctos",
+    relatedSolutionSlug: "private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -520,7 +520,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "We begin with a confidential 30-minute Technical Feasibility Audit with Principal AI Systems Architect Chaman Shah to analyze your current operational bottlenecks, review security boundaries, and provide a fixed-price 14-day implementation blueprint."
       }
     ],
-    relatedSolutionSlug: "cost-of-enterprise-ai-automation-india",
+    relatedSolutionSlug: "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -606,7 +606,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "No. A baseline LangGraph agent pod runs efficiently on standard cloud VM instances (e.g. AWS t4g.medium or c6i.large), consuming under 512MB of RAM per worker."
       }
     ],
-    relatedSolutionSlug: "fleet-route-optimization-agents-for-supply-chain-directors",
+    relatedSolutionSlug: "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -706,7 +706,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "No. TensorRT-LLM is proprietary to NVIDIA hardware. For heterogeneous compute topologies, vLLM or vLLM-ROCm provides superior operational portability."
       }
     ],
-    relatedSolutionSlug: "private-vpc-air-gapped-llm-deployment-for-defense-contractors",
+    relatedSolutionSlug: "air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -806,7 +806,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "No. LangGraph is 100% open-source and operates completely offline with local PostgreSQL checkpointers and private self-hosted OpenTelemetry tracing."
       }
     ],
-    relatedSolutionSlug: "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+    relatedSolutionSlug: "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -906,7 +906,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "A high-throughput Presidio pod running lightweight distilled Spacy/ONNX models requires just 2 vCPUs and 2GB of RAM, easily sustaining over 500 document redactions per second."
       }
     ],
-    relatedSolutionSlug: "cryptographic-state-audit-trails-dpdp-act-2023",
+    relatedSolutionSlug: "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -1006,7 +1006,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "We define precise, objective success criteria during the Architecture Audit (e.g. 99.5% extraction precision, sub-200ms latency). If these SLAs are not satisfied in production by day 90, we continue engineering at zero cost until verified."
       }
     ],
-    relatedSolutionSlug: "ai-automation-agency-for-logistics",
+    relatedSolutionSlug: "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -1106,7 +1106,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "Yes. PostgreSQL natively supports hybrid search by combining `tsvector` / `tsquery` full-text search with pgvector cosine distance using Reciprocal Rank Fusion (RRF) directly in SQL."
       }
     ],
-    relatedSolutionSlug: "air-gapped-intelligence-extraction-software-for-defense-agencies",
+    relatedSolutionSlug: "air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   },
@@ -1206,7 +1206,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         answer: "For long-running tasks, FastAPI dispatches background coroutines using `asyncio.create_task` or delegates them to internal Redis-backed task workers, returning an immediate task ID to the client."
       }
     ],
-    relatedSolutionSlug: "sub-200ms-ledger-reconciliation-agents-for-fintechs",
+    relatedSolutionSlug: "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
     datePublished: "October 19, 2026",
     dateModified: "October 19, 2026"
   }

@@ -227,7 +227,7 @@ export default function SolutionsHub() {
                         How Elesium Delivers Deterministic Enterprise Workflows
                     </h2>
                     <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                        <strong>Elesium's solutions catalog contains 3,765 verified enterprise AI automations across logistics, BFSI, manufacturing, and healthcare.</strong> Every deployment runs as an air-gapped deterministic Python LangGraph state graph hosted on sovereign private VPCs or dedicated NVIDIA H100 clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS).
+                        <strong>Elesium's solutions catalog contains 100 verified enterprise AI architectures across logistics, BFSI, manufacturing, and healthcare.</strong> Every deployment runs as an air-gapped deterministic Python LangGraph state graph hosted on sovereign private VPCs or dedicated NVIDIA H100 clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS).
                     </p>
                     <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                         By pairing vLLM PagedAttention with FP8 GEMM quantization and persistent checkpointing, our systems achieve sub-200ms time-to-first-token latency while ensuring strict compliance with Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023. Every enterprise engagement carries a contractual 90-day cash-flow ROI SLA.
@@ -273,7 +273,7 @@ export default function SolutionsHub() {
 
             {/* Thematic Category Panels (Module 6 & 10 Hub Specification) */}
             <main className="max-w-6xl mx-auto px-6 space-y-16">
-                {solutionCategories.map((category, catIndex) => {
+                {solutionCategories.filter(category => category.solutions && category.solutions.length > 0).map((category, catIndex) => {
                     const IconComponent = iconMap[category.iconName] || Terminal
 
                     return (
@@ -369,7 +369,7 @@ export default function SolutionsHub() {
                             Institutional AI Engineering Investment Tiers
                         </h2>
                         <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                            Deploy any of our 3,765 solutions under transparent commercial terms with contractual ROI guarantees.
+                            Deploy any of our 100 verified enterprise architectures under transparent commercial terms with contractual ROI guarantees.
                         </p>
                     </div>
 
