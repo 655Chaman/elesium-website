@@ -1,5 +1,5 @@
 export interface BlogSection {
-    type: 'paragraph' | 'heading' | 'list' | 'quote' | 'metric' | 'faq' | 'playground' | 'roi_calculator' | 'code_block' | 'mermaid' | 'audio_briefing' | 'blueprint_download';
+    type: 'paragraph' | 'heading' | 'list' | 'quote' | 'metric' | 'faq' | 'playground' | 'roi_calculator' | 'code_block' | 'mermaid' | 'audio_briefing' | 'blueprint_download' | 'table';
     value?: string | string[] | { label: string; value: string; description: string }[] | { q: string; a: string }[] | any;
     preset?: string;
     props?: Record<string, any>;

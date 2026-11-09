@@ -199,6 +199,38 @@ class SchemaIntegrityAuditor:
             if not url or not str(url).strip():
                 self.record_error(file_path, line_no, f"{type_label} invariant violation: missing required non-empty 'url'.", type_label)
 
+            # Invariant 3: 1:1 Square Logo (Google Search Central requirement)
+            logo = node.get("logo")
+            if logo:
+                logo_url = logo.get("url") if isinstance(logo, dict) else str(logo)
+                if "og-image.png" in logo_url:
+                    self.record_error(file_path, line_no, f"{type_label} logo violation: logo references 1.91:1 banner 'og-image.png' instead of 1:1 square image.", type_label)
+                if isinstance(logo, dict):
+                    w = str(logo.get("width", "")).strip()
+                    h = str(logo.get("height", "")).strip()
+                    if w and h and w != h:
+                        self.record_error(file_path, line_no, f"{type_label} logo aspect ratio violation: width ({w}) must equal height ({h}) for Google compliance.", type_label)
+
+            # Invariant 4: Bengaluru HQ NAP for #organization
+            if node.get("@id") == "https://elesium.online/#organization":
+                addr = node.get("address", {})
+                if isinstance(addr, dict):
+                    loc = addr.get("addressLocality", "")
+                    post = addr.get("postalCode", "")
+                    if loc not in ["Bengaluru", "Bangalore"]:
+                        self.record_error(file_path, line_no, f"Organization addressLocality violation: Expected 'Bengaluru', found '{loc}'.", type_label)
+                    if post != "560034":
+                        self.record_error(file_path, line_no, f"Organization postalCode violation: Expected '560034', found '{post}'.", type_label)
+                geo = node.get("geo", {})
+                if isinstance(geo, dict):
+                    try:
+                        lat = float(geo.get("latitude", 0))
+                        lon = float(geo.get("longitude", 0))
+                        if abs(lat - 12.9352) > 0.05 or abs(lon - 77.6245) > 0.05:
+                            self.record_error(file_path, line_no, f"Organization geo coordinates violation: Expected near (12.9352, 77.6245), found ({lat}, {lon}).", type_label)
+                    except (ValueError, TypeError):
+                        self.record_error(file_path, line_no, "Organization geo coordinates invalid format.", type_label)
+
         # 3. VideoObject invariant
         if "VideoObject" in types:
             name = node.get("name")
@@ -271,26 +303,46 @@ class SchemaIntegrityAuditor:
             self.record_error(file_path, 1, f"Failed to read file: {e}")
             return
 
+        # Skip redirect shims and noindex pages
+        if '<meta http-equiv="refresh"' in content or 'name="robots" content="noindex' in content:
+            return
+
+        matches = list(JSONLD_SCRIPT_PATTERN.finditer(content))
+        # Invariant 7: Maximum Script Tags Invariant
+        if len(matches) > 2:
+            self.record_error(
+                file_path,
+                1,
+                f"Page invariant violation: Detected {len(matches)} JSON-LD blocks (limit is <= 2). Must consolidate into monolithic @graph.",
+                "ScriptCount"
+            )
+
         found_breadcrumbs: List[Tuple[int, Dict[str, Any]]] = []
+        found_faqs: List[Tuple[int, Dict[str, Any]]] = []
+        found_webpages: List[Tuple[int, Dict[str, Any]]] = []
+        found_itemlists: List[Tuple[int, Dict[str, Any]]] = []
+        all_parsed_nodes: List[Tuple[int, Dict[str, Any]]] = []
 
-        def is_breadcrumb_node(node: Any) -> bool:
-            if not isinstance(node, dict):
-                return False
-            t = node.get("@type")
-            return t == "BreadcrumbList" or (isinstance(t, list) and "BreadcrumbList" in t)
-
-        def collect_breadcrumb_nodes(node: Any, line_no: int):
-            """Recursively search ALL dict keys for @type == 'BreadcrumbList' (including nested breadcrumbs)."""
+        def collect_nodes(node: Any, line_no: int):
             if isinstance(node, dict):
-                if is_breadcrumb_node(node):
+                all_parsed_nodes.append((line_no, node))
+                t = node.get("@type", [])
+                types = [t] if isinstance(t, str) else (t if isinstance(t, list) else [])
+                if "BreadcrumbList" in types:
                     found_breadcrumbs.append((line_no, node))
-                for key, val in node.items():
-                    collect_breadcrumb_nodes(val, line_no)
+                if "FAQPage" in types:
+                    found_faqs.append((line_no, node))
+                if "WebPage" in types:
+                    found_webpages.append((line_no, node))
+                if "ItemList" in types:
+                    found_itemlists.append((line_no, node))
+                for v in node.values():
+                    collect_nodes(v, line_no)
             elif isinstance(node, list):
                 for item in node:
-                    collect_breadcrumb_nodes(item, line_no)
+                    collect_nodes(item, line_no)
 
-        for match in JSONLD_SCRIPT_PATTERN.finditer(content):
+        for match in matches:
             self.blocks_validated += 1
             raw_script = match.group(1).strip()
             if not raw_script:
@@ -298,7 +350,6 @@ class SchemaIntegrityAuditor:
                 self.record_warning(file_path, base_line, "Empty <script type=\"application/ld+json\"> block encountered.")
                 continue
 
-            # Compute start line of JSON content inside the HTML file
             base_line = content[:match.start(1)].count('\n') + 1
 
             parsed_data = self.parse_json_strict(raw_script, file_path, base_line)
@@ -312,14 +363,14 @@ class SchemaIntegrityAuditor:
                 elif "@graph" not in parsed_data:
                     self.record_error(file_path, base_line, "Root JSON-LD object missing required '@context'.")
 
-                collect_breadcrumb_nodes(parsed_data, base_line)
+                collect_nodes(parsed_data, base_line)
                 self.validate_node_invariants(parsed_data, file_path, base_line)
 
             elif isinstance(parsed_data, list):
                 for item in parsed_data:
                     if isinstance(item, dict) and "@context" in item:
                         self.validate_context(item["@context"], file_path, base_line)
-                    collect_breadcrumb_nodes(item, base_line)
+                    collect_nodes(item, base_line)
                     self.validate_node_invariants(item, file_path, base_line)
 
         # Invariant: Enforce at most one BreadcrumbList declaration per page
@@ -328,9 +379,76 @@ class SchemaIntegrityAuditor:
             self.record_error(
                 file_path,
                 second_line,
-                f"Page invariant violation: Detected {len(found_breadcrumbs)} BreadcrumbList declarations (including nested breadcrumb properties). A page must have at most one BreadcrumbList.",
+                f"Page invariant violation: Detected {len(found_breadcrumbs)} BreadcrumbList declarations. A page must have at most one BreadcrumbList.",
                 "BreadcrumbList"
             )
+
+        # Invariant 1: Enforce at most one FAQPage declaration per page
+        if len(found_faqs) > 1:
+            second_line = found_faqs[1][0]
+            self.record_error(
+                file_path,
+                second_line,
+                f"Page invariant violation: Detected {len(found_faqs)} FAQPage declarations. A page must have at most one FAQPage.",
+                "FAQPage"
+            )
+
+        # Extract HTML canonical URL
+        can_match = re.search(r'<link\b[^>]*\brel=[\"\']canonical[\"\'][^>]*\bhref=[\"\']([^\"\']+)[\"\']', content, re.I)
+        if not can_match:
+            can_match = re.search(r'<link\b[^>]*\bhref=[\"\']([^\"\']+)[\"\'][^>]*\brel=[\"\']canonical[\"\']', content, re.I)
+        html_canonical = can_match.group(1).strip() if can_match else ""
+
+        # Invariant 2: WebPage URL Canonical Match
+        if html_canonical:
+            for line_no, wp in found_webpages:
+                wp_url = wp.get("url", "").strip()
+                if wp_url and wp_url != html_canonical:
+                    self.record_error(
+                        file_path,
+                        line_no,
+                        f"WebPage canonical mismatch: WebPage url '{wp_url}' does not match HTML canonical '{html_canonical}'.",
+                        "WebPage"
+                    )
+
+        # Invariant 5: ItemList Invariant for Directory / Collection Pages
+        is_directory_page = (
+            file_path.name in ["commercial-directory.html", "solutions.html", "compare.html", "signals.html"] or
+            (file_path.name == "index.html" and file_path.parent.name in ["commercial-directory", "solutions", "compare", "signals"])
+        )
+        if is_directory_page and len(found_itemlists) == 0:
+            self.record_error(
+                file_path,
+                1,
+                "Directory / Collection page invariant violation: Missing ItemList schema required for Google Carousel Rich Results.",
+                "ItemList"
+            )
+
+        # Invariant 6: SoftwareApplication / Product Invariant on /waitlist/
+        is_waitlist_page = (
+            file_path.name == "waitlist.html" or
+            (file_path.name == "index.html" and file_path.parent.name == "waitlist")
+        )
+        if is_waitlist_page:
+            found_app = False
+            for line_no, n in all_parsed_nodes:
+                nt = n.get("@type", [])
+                ntypes = [nt] if isinstance(nt, str) else (nt if isinstance(nt, list) else [])
+                if any(t in ntypes for t in ["SoftwareApplication", "Product"]):
+                    found_app = True
+                    os_val = str(n.get("operatingSystem", ""))
+                    if "Web" in os_val:
+                        self.record_error(file_path, line_no, "SoftwareApplication operatingSystem violation: 'Web' is not a valid OS. Expected concrete OS like Linux, macOS, Windows.", "SoftwareApplication")
+                    offers = n.get("offers", {})
+                    if not isinstance(offers, dict) or offers.get("priceCurrency") != "INR":
+                        self.record_error(file_path, line_no, "SoftwareApplication offers violation: Expected priceCurrency == 'INR'.", "SoftwareApplication")
+            if not found_app:
+                self.record_error(
+                    file_path,
+                    1,
+                    "Waitlist page invariant violation: Missing SoftwareApplication / Product schema for ele-in platform.",
+                    "SoftwareApplication"
+                )
 
     def audit_directory(self, target_dir: Path):
         """Recursively audits all .html files within a directory."""

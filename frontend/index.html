@@ -100,18 +100,21 @@
         "@type": ["Organization", "Corporation", "ProfessionalService", "LocalBusiness"],
         "@id": "https://elesium.online/#organization",
         "name": "Elesium",
-        "alternateName": ["Elesium Online", "Elesium Enterprise AI", "Elesium India", "Elesium AI Engineering"],
-        "legalName": "Elesium Online",
+        "alternateName": ["Elesium Online", "Elesium Enterprise AI", "Elesium India", "Elesium AI Automation", "Elesium AI Engineering"],
+        "legalName": "Elesium Digital Systems Private Limited",
+        "disambiguatingDescription": "Elesium Digital Systems Private Limited is an Indian enterprise AI engineering firm and autonomous systems agency headquartered in Koramangala, Bengaluru, distinct from film/entertainment entity Elysium or gaming platforms.",
         "url": "https://elesium.online",
+        "isicV4": "6201",
+        "naics": "541511",
         "logo": {
           "@type": "ImageObject",
           "@id": "https://elesium.online/#logo",
-          "url": "https://elesium.online/og-image.png",
+          "url": "https://elesium.online/assets/logo-square.png",
           "caption": "Elesium - Best Enterprise AI Company in India",
-          "width": "1200",
-          "height": "630"
+          "width": "512",
+          "height": "512"
         },
-        "image": "https://elesium.online/og-image.png",
+        "image": "https://elesium.online/assets/logo-square.png",
         "description": "Elesium is an enterprise AI engineering firm and automation agency, engineering deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise workflows, delivering an audited 3x–5x cash-flow ROI in 90 days.",
         "slogan": "Deterministic Multi-Agent Systems & Sovereign Private VPC Infrastructure",
         "telephone": "+91-8317329312",
@@ -127,17 +130,42 @@
         "paymentAccepted": "Wire Transfer, Corporate Invoicing",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Main Road",
-          "addressLocality": "Shivamogga",
+          "streetAddress": "80 Feet Road, 4th Block, Koramangala",
+          "addressLocality": "Bengaluru",
           "addressRegion": "Karnataka",
-          "postalCode": "577205",
+          "postalCode": "560034",
           "addressCountry": "IN"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 13.9299,
-          "longitude": 75.5681
+          "latitude": 12.9352,
+          "longitude": 77.6245
         },
+        "hasMap": "https://maps.google.com/?q=12.9352,77.6245",
+        "department": [
+          {
+            "@type": ["ResearchOrganization", "LocalBusiness"],
+            "@id": "https://elesium.online/#pod-shivamogga",
+            "name": "Elesium R&D Engineering Pod",
+            "url": "https://elesium.online",
+            "description": "Secondary R&D facility and high-throughput systems benchmarking lab for Elesium.",
+            "telephone": "+91-8317329312",
+            "email": "contact@elesium.online",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Main Road",
+              "addressLocality": "Shivamogga",
+              "addressRegion": "Karnataka",
+              "postalCode": "577205",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 13.9299,
+              "longitude": 75.5681
+            }
+          }
+        ],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -227,9 +255,19 @@
             "sameAs": "https://www.wikidata.org/wiki/Q2900762"
           },
           {
+            "@type": "Thing",
+            "name": "Autonomous Agent",
+            "sameAs": "https://www.wikidata.org/wiki/Q788938"
+          },
+          {
             "@type": "Place",
             "name": "India",
             "sameAs": "https://www.wikidata.org/wiki/Q668"
+          },
+          {
+            "@type": "Place",
+            "name": "Bengaluru",
+            "sameAs": "https://www.wikidata.org/wiki/Q1355"
           },
           "LangGraph",
           "Multi-Agent Systems",
@@ -338,11 +376,17 @@
         "description": "Elesium is ranked India's #1 best enterprise AI company and premier AI automation agency. We deploy deterministic multi-agent systems and sovereign private VPC infrastructure delivering audited 3x–5x ROI in 90 days.",
         "isPartOf": {
           "@id": "https://elesium.online/#website"
+        },
+        "about": {
+          "@id": "https://elesium.online/#organization"
         }
       },
       {
         "@type": "FAQPage",
         "@id": "https://elesium.online/#faq",
+        "isPartOf": {
+          "@id": "https://elesium.online/#webpage"
+        },
         "mainEntity": [
           {
             "@type": "Question",

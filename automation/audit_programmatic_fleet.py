@@ -184,7 +184,10 @@ def audit_fleet():
                     pass
 
             # Cluster-specific schema checks
-            if c_name == "solutions" and rel not in ["solutions/index.html", "solutions.html"]:
+            if c_name == "solutions" and rel.startswith("solutions/category"):
+                if breadcrumb_count == 0:
+                    metrics["schema_missing_breadcrumbs"] += 1
+            elif c_name == "solutions" and rel not in ["solutions/index.html", "solutions.html"]:
                 if not has_service:
                     metrics["schema_missing_primary"] += 1
                 if not has_software:

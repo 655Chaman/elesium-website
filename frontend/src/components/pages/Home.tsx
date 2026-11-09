@@ -51,45 +51,6 @@ export default function Home() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [openFaq, setOpenFaq] = useState<number | null>(null)
 
-    const homeSchema = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebPage",
-                "@id": "https://elesium.online/#webpage",
-                "url": "https://elesium.online/",
-                "name": "#1 Best Enterprise AI Company in India | Elesium — Autonomous AI Systems",
-                "description": "Elesium is India's premier enterprise AI company and automation agency. Deploy deterministic LangGraph multi-agent systems, sovereign private VPC infrastructure, and audited 3x–5x ROI in 90 days.",
-                "isPartOf": {
-                    "@id": "https://elesium.online/#website"
-                },
-                "breadcrumb": {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://elesium.online/"
-                        }
-                    ]
-                }
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://elesium.online/#faq",
-                "mainEntity": homeFaqs.map(faq => ({
-                    "@type": "Question",
-                    "name": faq.q,
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.a
-                    }
-                }))
-            }
-        ]
-    }
-
     return (
         <motion.div
             key="home"
@@ -116,7 +77,6 @@ export default function Home() {
                 <meta name="twitter:title" content="Elesium | Best Enterprise AI Company in India" />
                 <meta name="twitter:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
-                <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
             </Helmet>
 
             <WhatsAppModal />

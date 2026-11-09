@@ -124,6 +124,20 @@ def generate_sitemap():
             "lastmod": dt
         })
 
+    # 13 Thematic Industry Category Pillar Hubs (Priority 0.9, Weekly changefreq)
+    for cat_slug in [
+        "logistics", "bfsi", "manufacturing", "healthcare", "pharma",
+        "erp", "telecom", "legal", "govtech", "aerospace", "energy",
+        "mining", "cybersecurity"
+    ]:
+        core_urls.append({
+            "loc": f"{BASE_URL}/solutions/category/{cat_slug}/",
+            "priority": "0.9",
+            "changefreq": "weekly",
+            "lastmod": fallback_date
+        })
+    print("Mapped 13 Category Pillar Hubs to sitemap-core.xml.")
+
     # Read dynamic blog slugs
     if TS_PATH.exists():
         content = TS_PATH.read_text(encoding="utf-8")

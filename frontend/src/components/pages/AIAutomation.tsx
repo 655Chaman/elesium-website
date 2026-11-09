@@ -88,100 +88,6 @@ export default function AIAutomation() {
 
     const aeoAnswerCapsule = "Elesium is an enterprise AI automation agency and systems engineering firm deploying sovereign multi-agent architectures directly inside client-controlled private VPCs across India. We replace fragile low-code automations with deterministic LangGraph state machines, Pydantic type safety, and vLLM PagedAttention inference runtimes. Our production workflows guarantee sub-200ms latency, zero third-party telemetry, full DPDP Act 2023 compliance, and an audited 90-day cash-flow ROI SLA.";
 
-    const jsonLdFaq = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is AI automation and how can it help my business in India?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AI automation involves using artificial intelligence to execute complex tasks traditionally requiring human reasoning. For Indian businesses, it means scaling operations rapidly, reducing manual errors, and competing globally without proportionally increasing headcount."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How long does it take to implement AI automation?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "While timeline varies by complexity, we typically deploy pilot agents within 4-6 weeks. Full enterprise integration across multiple workflows usually takes 2-3 months from audit to production deployment."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What industries in India benefit most from AI automation?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We see the highest ROI in manufacturing, defense, industrial B2B, healthcare, and enterprise SaaS. These sectors deal with complex, high-volume data where deterministic AI agents can automate compliance, sales, and supply chain operations."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How is Elesium different from other AI agencies in India?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Unlike agencies relying on standard LLM wrappers, Elesium builds custom, deterministic AI infrastructure. We embed deeply into your proprietary enterprise data securely, prioritizing measurable ROI and autonomous execution over generic generative tools."
-                }
-            }
-        ]
-    };
-
-    const structuredData = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Service",
-                "@id": "https://elesium.online/ai-automation#service",
-                "name": "Enterprise AI Automation & Deterministic Multi-Agent Engineering",
-                "serviceType": "Enterprise AI Automation Agency",
-                "description": aeoAnswerCapsule,
-                "provider": {
-                    "@type": "Organization",
-                    "@id": "https://elesium.online/#organization",
-                    "name": "Elesium",
-                    "url": "https://elesium.online",
-                    "logo": "https://elesium.online/assets/ele-in-logo.png"
-                },
-                "areaServed": "IN"
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://elesium.online/ai-automation#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://elesium.online"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "AI Automation",
-                        "item": "https://elesium.online/ai-automation"
-                    }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://elesium.online/ai-automation#faq",
-                "mainEntity": jsonLdFaq.mainEntity
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://elesium.online/ai-automation#webpage",
-                "name": "AI Automation Agency India | Elesium",
-                "description": aeoAnswerCapsule,
-                "url": "https://elesium.online/ai-automation",
-                "speakable": {
-                    "@type": "SpeakableSpecification",
-                    "cssSelector": [".answer-capsule", "h1", "h2"]
-                }
-            }
-        ]
-    };
-
     return (
         <main id="main-content" className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
             <WhatsAppModal />
@@ -199,9 +105,6 @@ export default function AIAutomation() {
                 <meta name="twitter:title" content="Best AI &amp; Automation Company in Bangalore | Elesium" />
                 <meta name="twitter:description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
-                <script type="application/ld+json">
-                    {JSON.stringify(structuredData)}
-                </script>
             </Helmet>
 
             <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
