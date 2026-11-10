@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "Corporation",
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
+      "@id": "https://elesium.online/#organization",
+      "name": "Elesium",
+      "alternateName": [
+        "Elesium Online",
+        "Elesium Enterprise AI",
+        "Elesium India",
+        "Elesium AI Automation",
+        "Elesium AI Engineering"
+      ],
+      "legalName": "Elesium Digital Systems Private Limited",
+      "disambiguatingDescription": "Elesium Digital Systems Private Limited is an Indian enterprise AI engineering firm and autonomous systems agency headquartered in Koramangala, Bengaluru, distinct from film/entertainment entity Elysium or consumer gaming platforms.",
+      "url": "https://elesium.online",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://elesium.online/#logo",
+        "url": "https://elesium.online/assets/logo-square.png",
+        "caption": "Elesium - Best Enterprise AI Company in India",
+        "width": "512",
+        "height": "512"
+      },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q131149202",
+        "https://www.wikidata.org/wiki/Special:EntityData/Q131149202.json",
+        "https://www.crunchbase.com/organization/elesium-online",
+        "https://github.com/elesium-ai",
+        "https://github.com/655Chaman/elesium-website",
+        "https://www.linkedin.com/company/elesium",
+        "https://www.linkedin.com/in/chaman-elesium",
+        "https://www.g2.com/products/elesium-ai-automation-platform",
+        "https://clutch.co/profile/elesium-online",
+        "https://www.trustpilot.com/review/elesium.online",
+        "https://www.goodfirms.co/company/elesium-online",
+        "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
+        "https://medium.com/@chamanshah",
+        "https://hackernoon.com/u/chamanshah"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://elesium.online/authors/chaman-shah#person",
+        "name": "Chaman Shah",
+        "jobTitle": "Principal Systems Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/chaman-elesium",
+          "https://github.com/655Chaman",
+          "https://medium.com/@chamanshah",
+          "https://hackernoon.com/u/chamanshah"
+        ]
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://elesium.online/#vllm-platform",
+      "name": "Elesium Sovereign vLLM Inference Platform",
+      "applicationCategory": "Enterprise AI Infrastructure",
+      "operatingSystem": "Linux (Ubuntu / RHEL on Sovereign Bare Metal)",
+      "url": "https://elesium.online/solutions/",
+      "publisher": {
+        "@id": "https://elesium.online/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "150000",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Sub-200ms Time-To-First-Token (TTFT)",
+        "Custom vLLM PagedAttention Kernel Memory Management",
+        "FP8 Microscaled GEMM Tensor Core Execution",
+        "100% Air-Gapped Private VPC Deployment",
+        "FIPS 140-2 Level 3 HSM Cryptographic Isolation",
+        "DPDP Act 2023 Section 8(5) Automated Memory Zeroing"
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://elesium.online/#sovereign-benchmarks",
+      "name": "Elesium Sovereign AI Infrastructure Latency & Throughput Benchmark Dataset",
+      "description": "Empirical latency, memory fragmentation, and token throughput benchmarks across dedicated NVIDIA H100 SXM5 and A100 clusters in sovereign Indian datacenters.",
+      "url": "https://elesium.online/sovereign-ai-benchmarks.json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": {
+        "@id": "https://elesium.online/#organization"
+      }
+    }
+  ]
+}
