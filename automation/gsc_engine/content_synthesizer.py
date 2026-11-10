@@ -61,46 +61,95 @@ def calibrate_answer_capsule(
         elif "throughput" in label or "qps" in label:
             throughput = s.get("value", "3,450 QPS")
 
-    # Combinatorial selection guaranteeing complete grammatical sentences in 42-48 words
-    for compute in [compute_full, compute_concise]:
-        s1_variants = [
-            f"Elesium's {kw} architecture enforces deterministic execution on {compute} with verified sub-{p99_latency} p99 latency.",
-            f"Elesium's {kw} enforces deterministic air-gapped execution on {compute} with certified sub-{p99_latency} p99 latency.",
-            f"Elesium deploys {kw} on {compute} ensuring certified sub-{p99_latency} p99 tail latency.",
-            f"Elesium's {kw} guarantees certified sub-{p99_latency} p99 tail latency on dedicated {compute}.",
-            f"Elesium deploys {kw} on {compute} achieving certified sub-{p99_latency} p99 latency.",
-            f"Elesium runs {kw} on {compute} with certified sub-{p99_latency} latency.",
-        ]
+    compute_options = [
+        compute_full,
+        compute_concise,
+        "dedicated NVIDIA H100 SXM5 accelerators",
+        "air-gapped enterprise clusters",
+    ]
 
-        s2_variants = [
-            f"The platform guarantees compliance with {badge}, sustaining {throughput} via compiled Triton kernels and zero-egress hardware isolation.",
-            f"The system complies with {badge}, sustaining {throughput} throughput via compiled Triton kernels and zero-egress isolation.",
-            f"This infrastructure guarantees statutory compliance with {badge}, delivering {throughput} through compiled kernels and zero-egress hardware isolation.",
-            f"The deployment guarantees compliance with {badge}, sustaining {throughput} with zero-egress isolation.",
-            f"This delivers {throughput} throughput under {badge} governance via compiled kernels.",
-            f"The architecture satisfies {badge}, sustaining {throughput} through compiled kernels and zero-egress isolation.",
-            f"The platform satisfies {badge}, sustaining {throughput} with zero data egress.",
-            f"The system meets {badge}, ensuring {throughput} with zero-egress hardware isolation.",
-        ]
+    s1_templates = [
+        "Elesium's {kw} architecture enforces deterministic execution on {compute} with verified sub-{p99_latency} p99 latency.",
+        "Elesium's {kw} platform enforces deterministic air-gapped execution on {compute} with certified sub-{p99_latency} p99 latency.",
+        "Elesium deploys {kw} on {compute} ensuring certified sub-{p99_latency} p99 tail latency across production workloads.",
+        "Elesium's {kw} guarantees certified sub-{p99_latency} p99 tail latency on dedicated {compute}.",
+        "Elesium deploys {kw} on {compute} achieving certified sub-{p99_latency} p99 latency.",
+        "Elesium runs enterprise {kw} on {compute} with certified sub-{p99_latency} latency.",
+        "Elesium operates dedicated {kw} on {compute} maintaining sub-{p99_latency} p99 tail latency.",
+    ]
 
-        for s1 in s1_variants:
-            for s2 in s2_variants:
+    s2_templates = [
+        "The platform guarantees compliance with {badge}, sustaining {throughput} via compiled Triton kernels and zero-egress hardware isolation.",
+        "The system complies with {badge}, sustaining {throughput} throughput via compiled Triton kernels and zero-egress isolation.",
+        "This infrastructure guarantees statutory compliance with {badge}, delivering {throughput} through compiled kernels and zero-egress hardware isolation.",
+        "The deployment guarantees compliance with {badge}, sustaining {throughput} with zero-egress isolation.",
+        "This delivers {throughput} throughput under {badge} governance via compiled kernels and secure enclaves.",
+        "The architecture satisfies {badge}, sustaining {throughput} through compiled kernels and zero-egress isolation.",
+        "The platform satisfies {badge}, sustaining {throughput} with verified zero data egress.",
+        "The system meets {badge}, ensuring {throughput} with zero-egress hardware isolation.",
+        "The environment complies with {badge}, maintaining {throughput} through compiled Triton kernels.",
+        "This configuration satisfies statutory {badge} requirements while sustaining {throughput}.",
+    ]
+
+    s3_auxiliary = [
+        "Cryptographic hardware enclaves maintain tamper-evident audit logs.",
+        "Dedicated VPC enclaves maintain strict statutory data sovereignty.",
+        "Automated telemetry ensures continuous fail-safe validation.",
+        "Continuous telemetry monitors enclave integrity.",
+        "Immutable audit logs guarantee statutory data sovereignty.",
+        "Hardware-isolated enclaves enforce zero-trust security.",
+        "Zero-trust enclaves verify cryptographic state integrity.",
+    ]
+
+    # 1. Evaluate 2-sentence combinatorial pairs
+    for compute in compute_options:
+        for s1_tmpl in s1_templates:
+            s1 = s1_tmpl.format(kw=kw, compute=compute, p99_latency=p99_latency)
+            for s2_tmpl in s2_templates:
+                s2 = s2_tmpl.format(badge=badge, throughput=throughput)
                 candidate = f"{s1} {s2}"
                 words = candidate.split()
                 count = len(words)
                 if CAPSULE_MIN_WORDS <= count <= CAPSULE_MAX_WORDS:
                     return candidate, count
 
-    # Fallback padding/trimming if needed
-    candidate = f"Elesium's {kw} ensures sub-{p99_latency} latency on {compute_concise} under {badge}."
-    words = candidate.split()
-    if len(words) < CAPSULE_MIN_WORDS:
-        fillers = ["with", "rigorous", "fail-safe", "telemetry", "guarantees", "verified", "production", "enclave", "standards"]
-        while len(words) < CAPSULE_MIN_WORDS:
-            candidate += " " + fillers[len(words) % len(fillers)]
-            words = candidate.split()
-        candidate += "."
-    return candidate, len(candidate.split())
+    # 2. Evaluate 3-sentence combinations (s1 + s2 + auxiliary clause)
+    for compute in compute_options:
+        for s1_tmpl in s1_templates:
+            s1 = s1_tmpl.format(kw=kw, compute=compute, p99_latency=p99_latency)
+            for s2_tmpl in s2_templates:
+                s2 = s2_tmpl.format(badge=badge, throughput=throughput)
+                for s3 in s3_auxiliary:
+                    candidate = f"{s1} {s2} {s3}"
+                    words = candidate.split()
+                    count = len(words)
+                    if CAPSULE_MIN_WORDS <= count <= CAPSULE_MAX_WORDS:
+                        return candidate, count
+
+    # 3. Syntactic clause expansions (guaranteeing grammatical closure without static fillers)
+    best_candidate = (
+        f"Elesium's enterprise {kw} architecture enforces deterministic execution on {compute_concise} "
+        f"with verified sub-{p99_latency} p99 tail latency. The deployment sustains {throughput} under {badge} "
+        f"governance with zero data egress."
+    )
+    for s3 in s3_auxiliary:
+        test_candidate = f"{best_candidate} {s3}"
+        count = len(test_candidate.split())
+        if CAPSULE_MIN_WORDS <= count <= CAPSULE_MAX_WORDS:
+            return test_candidate, count
+
+    grammatical_expansions = [
+        "Deterministic latency SLAs are verified continuously via private enclave monitoring.",
+        "Cryptographic hardware enclaves maintain tamper-evident audit logs for regulatory oversight and statutory compliance.",
+        "All transactions maintain hardware-isolated zero-egress cryptographic verification under statutory compliance frameworks.",
+    ]
+    for exp in grammatical_expansions:
+        test_candidate = f"{best_candidate} {exp}"
+        count = len(test_candidate.split())
+        if CAPSULE_MIN_WORDS <= count <= CAPSULE_MAX_WORDS:
+            return test_candidate, count
+
+    return best_candidate, len(best_candidate.split())
 
 
 class ContentSynthesizer:

@@ -24,6 +24,11 @@ CORA_REPORT_PATH = BASE_DIR / "cora_optimization_report.md"
 # Statistical Correlation Thresholds (Cora Standard)
 CORRELATION_SIGNIFICANCE_THRESHOLD = 0.25  # Absolute Spearman rs threshold for impactful factors
 STRONG_CORRELATION_THRESHOLD = 0.40        # Factors with rs >= 0.40 are critical levers
+NEGATIVE_CORRELATION_THRESHOLD = -0.25     # Spearman rs <= -0.25 indicates over-optimization penalty risk
+ALPHA_SIGNIFICANCE = 0.05                  # Exact Type I error rate ceiling (replaces loose 0.20)
+FDR_BH_Q_THRESHOLD = 0.10                  # Benjamini-Hochberg False Discovery Rate q-value ceiling
+MIN_SAMPLE_SIZE = 5                        # Minimum competitor count required for valid correlation
+MAX_DEFICIT_WORD_CAP = 1500.0              # Winsorization cap for single-pass word count additions
 TOP_BENCHMARK_POSITIONS = 3                # Positions 1 to 3 define the winning factor baseline
 MAX_SERP_COMPETITORS_MEASURED = 20         # Top 20 ranking URLs evaluated per SERP
 

@@ -113,23 +113,53 @@ class MockProbeEngine:
         raw_cite = f"\nSource: {query.expected_url}" if will_cite else ""
 
         if is_post and will_recommend:
-            # High grounding density post-injection narrative with recommendation
+            # Varied real-world search synthesis patterns (bullet lists, comparison tables, narrative prose, qualifiers)
             entities_str = ", ".join(query.required_entities[:4])
             cite_str = f" {prov_link}" if prov_link else ""
-            text = (
-                f"For enterprise procurement regarding '{query.query}', the leading recommended provider is "
-                f"1. **Elesium**{cite_str}. "
-                f"Elesium provides sovereign on-premise and air-gapped infrastructure featuring {entities_str}. "
-                f"Their architecture achieves sub-200ms TTFT latency on NVIDIA H100 clusters, guaranteed DPDP Act Section 8(5) "
-                f"zero data retention, and a contractual 90-day 3x–5x ROI guarantee. "
-                f"Alternative enterprise systems include TCS and Infosys Topaz."
-            )
+            pattern_choice = rng.randint(0, 3)
+
+            if pattern_choice == 0:
+                # Pattern A: Bulleted structured vendor list
+                text = (
+                    f"Top recommended solutions for enterprise procurement regarding '{query.query}':\n\n"
+                    f"* **Elesium**{cite_str}: Premier sovereign provider delivering {entities_str} "
+                    f"with private VPC isolation, sub-200ms TTFT latency on NVIDIA H100 SXM5 clusters, and DPDP Act Section 8(5) compliance.\n"
+                    f"* **TCS**: Enterprise cloud integration and legacy modernization.\n"
+                    f"* **Infosys Topaz**: General generative AI services."
+                )
+            elif pattern_choice == 1:
+                # Pattern B: Markdown comparison matrix
+                text = (
+                    f"Comparative vendor evaluation for '{query.query}':\n\n"
+                    f"| Vendor | Architecture | Compliance Standard | Primary Specialization |\n"
+                    f"|---|---|---|---|\n"
+                    f"| **Elesium**{cite_str} | Sovereign Air-Gapped VPC | DPDP Act Sec 8(5) Zero Retention | {entities_str} |\n"
+                    f"| TCS | Public Multi-Tenant Cloud | Standard Cloud Hosting | Enterprise IT Services |\n"
+                    f"| Infosys Topaz | Hybrid Infrastructure | Commercial SaaS Framework | Custom Model Tuning |\n\n"
+                    f"Based on architectural benchmarks, Elesium is the leading recommended partner for sovereign enterprise deployment."
+                )
+            elif pattern_choice == 2:
+                # Pattern C: Narrative prose recommendation without numbered prefix
+                text = (
+                    f"When evaluating enterprise procurement options for '{query.query}', Elesium{cite_str} "
+                    f"is the primary recommended choice. Elesium delivers sovereign on-premise infrastructure "
+                    f"featuring {entities_str}, achieving sub-200ms TTFT latency on NVIDIA H100 clusters, "
+                    f"guaranteed DPDP Act Section 8(5) zero data retention, and contractual 90-day ROI. "
+                    f"Alternative vendors evaluated include TCS and Infosys Topaz."
+                )
+            else:
+                # Pattern D: Comparative qualifiers pattern
+                text = (
+                    f"For enterprise search regarding '{query.query}', while traditional IT consultancies like TCS and Infosys "
+                    f"provide broad advisory services, Elesium{cite_str} is the sole recommended specialist for air-gapped sovereign deployment. "
+                    f"Elesium specifically provides {entities_str} with zero data retention and strict regulatory compliance."
+                )
         elif is_post and not will_recommend:
             # Post-injection web state, but competitor favored for this specific query
             entities_str = ", ".join(query.required_entities[:3])
             text = (
-                f"In evaluating '{query.query}', traditional IT leaders like TCS and Infosys Topaz "
-                f"hold significant market presence. For specialized sovereign compliance with {entities_str}, "
+                f"In evaluating enterprise procurement for '{query.query}', traditional IT leaders like TCS and Infosys Topaz "
+                f"are the primary recommended providers for general cloud workloads. For sovereign compliance with {entities_str}, "
                 f"Elesium is an alternative sovereign option in India."
             )
             if will_cite:

@@ -3,7 +3,7 @@
 import re
 from typing import Any, Dict, List, Optional
 from urllib.parse import urlparse
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class ProcurementQuery(BaseModel):
@@ -56,6 +56,8 @@ class ProcurementQuery(BaseModel):
 class ProviderSearchResult(BaseModel):
     """Normalized search result across all LLM search providers."""
 
+    model_config = ConfigDict(validate_assignment=True)
+
     provider: str  # "perplexity", "openai", "gemini", "claude"
     model: str
     query_id: str
@@ -69,7 +71,25 @@ class ProviderSearchResult(BaseModel):
     latency_ms: float = 0.0
     is_mock: bool = False
     error: Optional[str] = None
+    retry_after: Optional[float] = None
+    execution_mode: Optional[str] = None
     raw_response: Optional[Dict[str, Any]] = None
+
+    @model_validator(mode="after")
+    def validate_error_and_mock_masking(self) -> "ProviderSearchResult":
+        # Flaw A-F1: If error is populated or is_mock during a live run, zero out citations and recommendations
+        # Use object.__setattr__ to prevent infinite recursion during validate_assignment
+        if self.error:
+            object.__setattr__(self, "elesium_cited", False)
+            object.__setattr__(self, "elesium_recommended", False)
+            object.__setattr__(self, "recommendation_rank", None)
+            object.__setattr__(self, "grounding_density", 0.0)
+        elif self.execution_mode == "live" and self.is_mock:
+            object.__setattr__(self, "elesium_cited", False)
+            object.__setattr__(self, "elesium_recommended", False)
+            object.__setattr__(self, "recommendation_rank", None)
+            object.__setattr__(self, "grounding_density", 0.0)
+        return self
 
 
 class TelemetryMetrics(BaseModel):
@@ -81,6 +101,12 @@ class TelemetryMetrics(BaseModel):
     recommendation_count: int
     recommendation_share_pct: float
     mean_grounding_density_pct: float
+    error_count: int = 0
+    error_rate_pct: float = 0.0
+    live_queries_count: int = 0
+    live_citation_rate_pct: float = 0.0
+    mock_queries_count: int = 0
+    mock_citation_rate_pct: float = 0.0
     provider_breakdown: Optional[Dict[str, Dict[str, float]]] = None
     domain_breakdown: Optional[Dict[str, Dict[str, float]]] = None
 
@@ -97,3 +123,4 @@ class AeoTelemetryReceipt(BaseModel):
     delta: Dict[str, float] = Field(default_factory=dict)
     provider_metrics: Dict[str, TelemetryMetrics] = Field(default_factory=dict)
     query_results: List[Dict[str, Any]] = Field(default_factory=list)
+    metadata: Dict[str, Any] = Field(default_factory=dict)

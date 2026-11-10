@@ -19,10 +19,10 @@ from automation.gsc_engine.models import OptimizationPayload
 
 logger = logging.getLogger(__name__)
 
-# Regex pattern for existing striking distance section
+# Regex pattern for existing striking distance section (attribute order agnostic)
 RE_EXISTING_SECTION = re.compile(
-    r"(?:<!--\s*=+\s*STRIKING DISTANCE OPTIMIZATION.*?-->\s*)?<section id=\"striking-distance-optimization\"[\s\S]*?<\/section>",
-    re.MULTILINE,
+    r"(?:<!--\s*=+\s*STRIKING DISTANCE OPTIMIZATION.*?-->\s*)?<section\b[^>]*\bid=[\"\']striking-distance-optimization[\"\'][^>]*>[\s\S]*?<\/section>",
+    re.MULTILINE | re.IGNORECASE,
 )
 
 # Regex pattern for any standalone striking distance schema tag (regardless of attribute ordering)
@@ -142,7 +142,11 @@ class HTMLInjector:
         section_html = payload.container_section_html
 
         if RE_EXISTING_SECTION.search(content):
-            content = RE_EXISTING_SECTION.sub(lambda _: section_html.strip(), content)
+            # Replace first occurrence with a temporary unique marker, strip all duplicates, then insert new section
+            placeholder = "<!--__STRIKING_DISTANCE_OPTIMIZATION_REPLACE_MARKER__-->"
+            content = RE_EXISTING_SECTION.sub(placeholder, content, count=1)
+            content = RE_EXISTING_SECTION.sub("", content)
+            content = content.replace(placeholder, section_html.strip(), 1)
         elif '<section id="aeo-empirical-benchmarks"' in content:
             # Inject immediately before the AEO benchmark section
             content = content.replace(

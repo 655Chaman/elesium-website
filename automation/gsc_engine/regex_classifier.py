@@ -32,14 +32,14 @@ RE2_PATTERNS = {
 }
 
 # Priority ordering for pattern matching:
-# 1. AI Conversational: Queries starting with question interrogatives (How, What, Why, Can...)
-# 2. Commercial Investigation: Comparative/evaluation terms (vs, best, pricing, alternative...)
-# 3. Technical Architecture: Deep engineering/kernel terms (kernel, latency, pagedattention...)
-# 4. Enterprise Procurement: RFP & provider terms (agency, contractor, rbi, dpdp...)
+# 1. Technical Architecture: Deep engineering/kernel terms (kernel, latency, pagedattention...)
+# 2. Enterprise Procurement: RFP & provider terms (agency, contractor, rbi, dpdp...)
+# 3. Commercial Investigation: Comparative/evaluation terms (vs, best, pricing, alternative...)
+# 4. AI Conversational: Queries starting with question interrogatives (How, What, Why, Can...)
 INTENT_PRECEDENCE = [
-    IntentCategory.AI_CONVERSATIONAL,
-    IntentCategory.COMMERCIAL_INVESTIGATION,
     IntentCategory.TECHNICAL_ARCHITECTURE,
+    IntentCategory.COMMERCIAL_INVESTIGATION,
+    IntentCategory.AI_CONVERSATIONAL,
     IntentCategory.ENTERPRISE_PROCUREMENT,
 ]
 
@@ -64,11 +64,6 @@ def classify_query(query: str) -> Tuple[IntentCategory, Optional[str]]:
         match = pattern.search(clean_query)
         if match:
             return intent, match.group(0)
-
-    # Check AI Conversational if not already caught
-    conv_match = RE2_PATTERNS[IntentCategory.AI_CONVERSATIONAL].search(clean_query)
-    if conv_match:
-        return IntentCategory.AI_CONVERSATIONAL, conv_match.group(0)
 
     return IntentCategory.INFORMATIONAL, None
 

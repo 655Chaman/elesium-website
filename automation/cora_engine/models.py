@@ -52,6 +52,8 @@ class FactorCorrelationResult:
     p_value: float
     is_significant: bool
     correlation_direction: str  # "POSITIVE_CORRELATION" (more = higher rank) or "NEGATIVE_CORRELATION"
+    fdr_significant: bool = False
+    adjusted_p_value: float = 1.0
 
 
 @dataclass
@@ -62,6 +64,10 @@ class FactorDeficit:
     deficit: float
     is_deficit: bool
     tuning_action: str
+    action_priority_score: float = 0.0
+    spearman_rs: float = 0.0
+    p_value: float = 1.0
+    is_penalty_risk: bool = False
 
 
 @dataclass

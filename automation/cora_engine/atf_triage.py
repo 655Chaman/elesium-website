@@ -4,11 +4,13 @@ TED KUBAITIS CORA SERP CORRELATION ENGINE — ATF REAL ESTATE & INTERACTION DEPT
 =============================================================================
 Classification: Visibility-First SERP Layout & Interaction Depth Triage
 Methodology: Ted Kubaitis (SEO Rockstars 2026 Day 1 - Visibility-First SEO)
+Remediated: Genuine Visibility Deflator formulation:
+            Deflated Score = (N + 1 - Rank) / (1.0 + 0.75 * InteractionDepth)
 =============================================================================
 """
 
 import math
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, List, Optional
 from automation.cora_engine.config import (
     VIEWPORT_HEIGHT_PX,
     ATF_MAX_DEPTH_PX,
@@ -16,7 +18,11 @@ from automation.cora_engine.config import (
     DEEP_FOLD_MAX_DEPTH_PX,
     FUNCTIONALLY_DEAD_DEPTH_PX,
 )
-from automation.cora_engine.models import ATFLayoutProfile, ATFChannelTriage
+from automation.cora_engine.models import (
+    ATFLayoutProfile,
+    ATFChannelTriage,
+    SERPCompetitorRecord,
+)
 
 
 def calculate_interaction_depth(pixel_y_offset: int) -> int:
@@ -36,6 +42,45 @@ def calculate_interaction_depth(pixel_y_offset: int) -> int:
         return 2
     else:
         return 3
+
+
+def calculate_deflated_ranking_score(
+    rank: int,
+    total_competitors: int,
+    interaction_depth: int,
+    deflator_coefficient: float = 0.75,
+) -> float:
+    """
+    Ted Kubaitis Visibility Deflator Formula:
+    Deflated Dominance Score = (N + 1 - Rank) / (1.0 + 0.75 * InteractionDepth)
+    Penalizes ranking positions pushed below the fold by sponsored ads, AI Overviews, or Map Packs.
+    """
+    if rank <= 0 or total_competitors <= 0:
+        return 0.0
+    raw_dominance = max(0.0, float((total_competitors + 1) - rank))
+    depth_penalty = 1.0 + (deflator_coefficient * max(0, interaction_depth))
+    return round(raw_dominance / depth_penalty, 4)
+
+
+def compute_deflated_dominance_scores(
+    competitors: List[SERPCompetitorRecord],
+    deflator_coefficient: float = 0.75,
+) -> List[float]:
+    """
+    Calculates deflated ranking dominance scores for an entire competitor SERP list.
+    """
+    n = len(competitors)
+    scores: List[float] = []
+    for c in competitors:
+        depth = calculate_interaction_depth(c.pixel_y_offset)
+        score = calculate_deflated_ranking_score(
+            rank=c.rank,
+            total_competitors=n,
+            interaction_depth=depth,
+            deflator_coefficient=deflator_coefficient,
+        )
+        scores.append(score)
+    return scores
 
 
 def triage_serp_layout(

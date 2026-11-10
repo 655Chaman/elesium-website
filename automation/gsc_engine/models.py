@@ -29,6 +29,11 @@ class GSCQueryRecord:
     matched_intent_pattern: Optional[str] = None
 
 
+class GSCAuthenticationError(Exception):
+    """Raised when GSC OAuth2 or Service Account authentication or token refresh fails."""
+    pass
+
+
 @dataclass
 class StrikingDistanceOpportunity:
     query: str
@@ -45,6 +50,9 @@ class StrikingDistanceOpportunity:
     intent_multiplier: float
     projected_top3_clicks: int
     matched_intent_pattern: Optional[str] = None
+    tier: int = 2
+    expected_ctr: float = 0.285
+    delta_ctr: float = 0.0
 
 
 @dataclass

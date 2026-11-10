@@ -17,6 +17,7 @@ from automation.gsc_engine.models import (
     IntentCategory,
     OptimizationPayload,
     TelemetrySummary,
+    GSCAuthenticationError,
 )
 from automation.gsc_engine.connector import GSCConnector
 from automation.gsc_engine.striking_distance import StrikingDistanceAnalyzer
@@ -35,6 +36,7 @@ __all__ = [
     "IntentCategory",
     "OptimizationPayload",
     "TelemetrySummary",
+    "GSCAuthenticationError",
     "GSCConnector",
     "StrikingDistanceAnalyzer",
     "ContentSynthesizer",

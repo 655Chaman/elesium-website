@@ -14,7 +14,7 @@ from automation.aeo_probe.analyzers.citation_parser import (
 )
 from automation.aeo_probe.config import ProviderConfig
 from automation.aeo_probe.models import ProcurementQuery, ProviderSearchResult
-from automation.aeo_probe.providers.base import BaseSearchProvider
+from automation.aeo_probe.providers.base import BaseSearchProvider, parse_retry_after
 from automation.aeo_probe.providers.mock_engine import MockProbeEngine
 
 
@@ -85,6 +85,7 @@ class PerplexitySonarProvider(BaseSearchProvider):
         if not self.is_live_available():
             return self.build_mock_response(query, scenario)
 
+        await self.rate_limiter.acquire()
         payload = self.format_request_payload(query)
         headers = self.format_headers()
         start_time = time.perf_counter()
@@ -132,20 +133,51 @@ class PerplexitySonarProvider(BaseSearchProvider):
                         latency_ms=latency,
                         is_mock=False,
                         error=None,
+                        execution_mode="live",
                         raw_response=data,
                     )
                 else:
-                    # Non-200 response: return mock with error logged
-                    mock = self.build_mock_response(query, scenario)
-                    mock.error = f"HTTP {resp.status_code}: {resp.text[:200]}"
-                    mock.latency_ms = latency
-                    return mock
+                    retry_after = parse_retry_after(resp.headers)
+                    return ProviderSearchResult(
+                        provider=self.name,
+                        model=self.model,
+                        query_id=query.id,
+                        raw_text="",
+                        citations=[],
+                        elesium_cited=False,
+                        elesium_recommended=False,
+                        recommendation_rank=None,
+                        matched_entities=[],
+                        grounding_density=0.0,
+                        latency_ms=latency,
+                        is_mock=False,
+                        error=f"HTTP {resp.status_code}: {resp.text[:200]}",
+                        retry_after=retry_after,
+                        execution_mode="live",
+                        raw_response=None,
+                    )
 
             finally:
                 if close_client:
                     await client.aclose()
 
         except Exception as exc:
-            mock = self.build_mock_response(query, scenario)
-            mock.error = f"Exception {exc.__class__.__name__}: {str(exc)}"
-            return mock
+            latency = round((time.perf_counter() - start_time) * 1000, 1)
+            return ProviderSearchResult(
+                provider=self.name,
+                model=self.model,
+                query_id=query.id,
+                raw_text="",
+                citations=[],
+                elesium_cited=False,
+                elesium_recommended=False,
+                recommendation_rank=None,
+                matched_entities=[],
+                grounding_density=0.0,
+                latency_ms=latency,
+                is_mock=False,
+                error=f"Exception {exc.__class__.__name__}: {str(exc)}",
+                retry_after=None,
+                execution_mode="live",
+                raw_response=None,
+            )
