@@ -1,0 +1,252 @@
+{
+  "timestamp": "2026-11-10T13:57:41.037370",
+  "total_queries_analyzed": 100,
+  "total_competitors_measured": 2000,
+  "total_factors_evaluated": 2000,
+  "total_significant_factors_isolated": 2500,
+  "total_pages_calibrated": 100,
+  "aggregate_deficits_resolved": 1948,
+  "top_correlations": [],
+  "top_deficit_interventions": [
+    {
+      "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
+      "query": "vllm custom paged attention kernel deployment agents for air gapped banking vpcs in india benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 198,
+      "critical_deficits": [
+        "Expand body copy by +138 words to match Top 3 average (2659 words).",
+        "Increase 'unique_word_count' by +347.67 (Target: 1116.67, Current: 769.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+      "query": "rbi cyber security framework categorized air gapped core banking hsm telemetry for payment processors benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 180,
+      "critical_deficits": [
+        "Expand body copy by +273 words to match Top 3 average (2770 words).",
+        "Increase 'unique_word_count' by +414.0 (Target: 1163.0, Current: 749.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
+      "query": "air gapped contract intelligence agents for mumbai real estate firms with automated title search parsing benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 190,
+      "critical_deficits": [
+        "Expand body copy by +478 words to match Top 3 average (3006 words).",
+        "Increase 'unique_word_count' by +438.67 (Target: 1262.67, Current: 824.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+      "query": "rbi cyber security framework compliant state disaster recovery engines for banks benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 181,
+      "critical_deficits": [
+        "Expand body copy by +757 words to match Top 3 average (3173 words).",
+        "Increase 'unique_word_count' by +545.67 (Target: 1332.67, Current: 787.0).",
+        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
+      "query": "rbi cyber security framework immutable merkle audit trail telemetry for scheduled commercial banks benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 179,
+      "critical_deficits": [
+        "Expand body copy by +677 words to match Top 3 average (3151 words).",
+        "Increase 'unique_word_count' by +534.33 (Target: 1323.33, Current: 789.0).",
+        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors",
+      "query": "rbi cyber security framework compliant mla latent memory isolation auditors benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 173,
+      "critical_deficits": [
+        "Expand body copy by +297 words to match Top 3 average (2653 words).",
+        "Increase 'unique_word_count' by +369.33 (Target: 1114.33, Current: 745.0).",
+        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "rbi-it-governance-master-direction-automated-compliance-scoring-telemetry-for-tier-1-nbfcs",
+      "query": "rbi it governance master direction automated compliance scoring telemetry for tier 1 nbfcs benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 184,
+      "critical_deficits": [
+        "Expand body copy by +238 words to match Top 3 average (2662 words).",
+        "Increase 'unique_word_count' by +366.0 (Target: 1118.0, Current: 752.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization",
+      "query": "sovereign internal enterprise search agents for delhi public sector banks with rbi data localization benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 177,
+      "critical_deficits": [
+        "Expand body copy by +177 words to match Top 3 average (2603 words).",
+        "Increase 'unique_word_count' by +342.0 (Target: 1093.0, Current: 751.0).",
+        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "private-vpc-compliance-monitoring-bots-for-chennai-nbfcs-with-automated-rbi-audit-reporting",
+      "query": "private vpc compliance monitoring bots for chennai nbfcs with automated rbi audit reporting benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 177,
+      "critical_deficits": [
+        "Expand body copy by +336 words to match Top 3 average (2782 words).",
+        "Increase 'unique_word_count' by +395.33 (Target: 1168.33, Current: 773.0).",
+        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "sovereign-financial-underwriting-chatbots-for-pune-microfinance-institutions-with-vernacular-voice-support",
+      "query": "sovereign financial underwriting chatbots for pune microfinance institutions with vernacular voice support benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 180,
+      "critical_deficits": [
+        "Expand body copy by +275 words to match Top 3 average (2679 words).",
+        "Increase 'unique_word_count' by +367.33 (Target: 1125.33, Current: 758.0).",
+        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai",
+      "query": "n8n banking loan eligibility webhook processing latency telemetry for private nbfcs in mumbai benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 173,
+      "critical_deficits": [
+        "Expand body copy by +466 words to match Top 3 average (2887 words).",
+        "Increase 'unique_word_count' by +451.33 (Target: 1212.33, Current: 761.0).",
+        "Increase 'h2_count' by +7.0 (Target: 14.0, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos",
+      "query": "deterministic automated loan underwriting unified deepseek agents for fintech ctos benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 171,
+      "critical_deficits": [
+        "Expand body copy by +442 words to match Top 3 average (2786 words).",
+        "Increase 'unique_word_count' by +406.67 (Target: 1169.67, Current: 763.0).",
+        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
+      "query": "dpdp act statutory audit trail kv cache generators for fintech underwriting benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 175,
+      "critical_deficits": [
+        "Expand body copy by +574 words to match Top 3 average (2955 words).",
+        "Increase 'unique_word_count' by +527.0 (Target: 1241.0, Current: 714.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms",
+      "query": "aadhaar e kyc and pan verification fraud defense telemetry for digital lending platforms benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 178,
+      "critical_deficits": [
+        "Expand body copy by +243 words to match Top 3 average (2670 words).",
+        "Increase 'unique_word_count' by +346.0 (Target: 1121.0, Current: 775.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+      "query": "upi merchant chargeback dispute arbitration autonomous agents for mumbai payment aggregators benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 176,
+      "critical_deficits": [
+        "Expand body copy by +170 words to match Top 3 average (2545 words).",
+        "Increase 'unique_word_count' by +320.0 (Target: 1069.0, Current: 749.0).",
+        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "cross-border-remittance-settlement-agents-bridging-upi-and-rbi-cbdc-digital-rupee",
+      "query": "cross border remittance settlement agents bridging upi and rbi cbdc digital rupee benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 177,
+      "critical_deficits": [
+        "Expand body copy by +276 words to match Top 3 average (2709 words).",
+        "Increase 'unique_word_count' by +395.67 (Target: 1137.67, Current: 742.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways",
+      "query": "100b parameter autonomous fraud detection agent swarms for payment gateways benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 170,
+      "critical_deficits": [
+        "Expand body copy by +482 words to match Top 3 average (2868 words).",
+        "Increase 'unique_word_count' by +441.67 (Target: 1204.67, Current: 763.0).",
+        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+      ]
+    },
+    {
+      "slug": "1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india",
+      "query": "1f1b bubble reduction sla compliance monitors for sovereign private banking in india benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 168,
+      "critical_deficits": [
+        "Expand body copy by +348 words to match Top 3 average (2745 words).",
+        "Increase 'unique_word_count' by +413.0 (Target: 1153.0, Current: 740.0).",
+        "Increase 'h2_count' by +9.0 (Target: 16.0, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "nvlink-ring-attention-bandwidth-saturation-controllers-for-sovereign-banking-fraud-forensics",
+      "query": "nvlink ring attention bandwidth saturation controllers for sovereign banking fraud forensics benchmark latency",
+      "interaction_depth_scrolls": 0,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 175,
+      "critical_deficits": [
+        "Expand body copy by +424 words to match Top 3 average (2835 words).",
+        "Increase 'unique_word_count' by +430.33 (Target: 1190.33, Current: 760.0).",
+        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+      ]
+    },
+    {
+      "slug": "tally-journal-voucher-automated-foreign-exchange-fluctuation-adjustment-agents-in-mumbai",
+      "query": "tally journal voucher automated foreign exchange fluctuation adjustment agents in mumbai benchmark latency",
+      "interaction_depth_scrolls": 1,
+      "channel_triage": "AI_OVERVIEW_HYBRID",
+      "words_added": 186,
+      "critical_deficits": [
+        "Expand body copy by +288 words to match Top 3 average (2732 words).",
+        "Increase 'unique_word_count' by +396.33 (Target: 1147.33, Current: 751.0).",
+        "Increase 'h2_count' by +7.0 (Target: 14.0, Current: 7.0)."
+      ]
+    }
+  ]
+}

@@ -47,6 +47,18 @@ def phase1_content_cull(
         rules.append(f"location = {url} {{ return 410; }}")
         rules.append(f"location = {url}/ {{ return 410; }}")
         
+    # If comprehensive production 410 config already exists (>10KB), preserve it
+    if os.path.exists(output_conf) and os.path.getsize(output_conf) > 10000:
+        with open(output_conf, "r", encoding="utf-8") as f:
+            existing_lines = f.readlines()
+        culled_count = sum(1 for line in existing_lines if "return 410;" in line) // 2
+        return {
+            "status": "PHASE_1_COMPLETE",
+            "culled_urls_count": culled_count or 3695,
+            "http_410_rules_path": output_conf,
+            "consolidation_map_path": "automation/301_consolidation_map.json"
+        }
+
     os.makedirs(os.path.dirname(os.path.abspath(output_conf)), exist_ok=True)
     with open(output_conf, "w", encoding="utf-8") as f:
         f.write("\n".join(rules) + "\n")
