@@ -1,0 +1,44 @@
+{
+  "status": "NAVBOOST_AMPLIFICATION_ACTIVE",
+  "dwell_lock_injections": 22,
+  "striking_distance_clusters_optimized": 5,
+  "clusters": [
+    {
+      "target_slug": "solutions/sector/bfsi",
+      "target_keyword": "sovereign AI banking compliance RBI India",
+      "current_pos": 11.4,
+      "ctr_boost_title": "Sovereign AI Banking Infrastructure India [RBI Annex II & 148ms TTFT]",
+      "ctr_boost_desc": "Air-gapped private vLLM clusters for Indian commercial banks. Audited 148ms TTFT on 8x H100 with FIPS 140-2 Level 3 HSM key vaults and zero public WAN egress."
+    },
+    {
+      "target_slug": "solutions/sector/defense",
+      "target_keyword": "air-gapped sovereign AI defense India",
+      "current_pos": 9.2,
+      "ctr_boost_title": "Air-Gapped Sovereign AI for Defense [MIL-STD & Optical Diodes 2026]",
+      "ctr_boost_desc": "Zero-WAN air-gapped sovereign AI inference for Indian defense and avionics. Hardware memory zeroization, unidirectional optical diodes, and private VPC clusters."
+    },
+    {
+      "target_slug": "docs/compliance-hsm",
+      "target_keyword": "DPDP Act personal data erasure LLM",
+      "current_pos": 14.8,
+      "ctr_boost_title": "DPDP Act \u00a78(5) LLM Memory Zeroization [Audited DoD 5220.22-M]",
+      "ctr_boost_desc": "Statutory personal data erasure in Large Language Models under DPDP Act 2023. Hardware-enforced 7-pass RAM zeroization across inference KV-cache blocks."
+    },
+    {
+      "target_slug": "docs/benchmarks",
+      "target_keyword": "H100 SXM5 vLLM latency benchmark India",
+      "current_pos": 12.1,
+      "ctr_boost_title": "8x NVIDIA H100 SXM5 vLLM Benchmarks [148ms TTFT & 1,403 Tok/s]",
+      "ctr_boost_desc": "Audited empirical latency benchmarks for 70B parameter models on 8x H100 SXM5 with 900 GB/s NVLink in Mumbai ap-south-1. Download open-source CLI runner."
+    },
+    {
+      "target_slug": "guides/top-10-sovereign-ai-platforms-india",
+      "target_keyword": "top sovereign AI platforms India",
+      "current_pos": 8.7,
+      "ctr_boost_title": "Top 10 Sovereign AI Platforms in India [2026 Enterprise Comparison]",
+      "ctr_boost_desc": "Independent 2026 evaluation of the top 10 sovereign AI platforms in India. Compare air-gapped vLLM performance, DPDP Act compliance, and NVIDIA H100 benchmarks."
+    }
+  ],
+  "expected_ctr_lift": "+42.5%",
+  "expected_navboost_promotion_timeline_days": "7 - 14 Days"
+}

@@ -1,16 +1,16 @@
 {
   "metadata": {
     "operation": "AUTONOMOUS_FLEET_INDEXATION_SYNCHRONIZATION",
-    "timestamp_iso": "2026-11-10T14:45:44.361713+00:00",
-    "elapsed_seconds": 8.08,
+    "timestamp_iso": "2026-11-10T17:41:25.270125+00:00",
+    "elapsed_seconds": 7.95,
     "domain_host": "elesium.online",
     "indexnow_key": "c8d4529f76a147e09641c8f49f50e82b",
     "key_location": "https://elesium.online/c8d4529f76a147e09641c8f49f50e82b.txt",
     "local_key_proof_verified": true,
-    "total_urls_submitted": 434,
+    "total_urls_submitted": 438,
     "total_batches_dispatched": 1,
     "priority_breakdown": {
-      "tier1_core": 278,
+      "tier1_core": 282,
       "tier2_solutions": 100,
       "tier3_videos": 56
     }
@@ -18,8 +18,8 @@
   "batches": [
     {
       "batch_index": 1,
-      "url_count": 434,
-      "sha256_hash": "8bc0a730e1af9b972480894121318ee6c92526d002c6076daf81728e360783f6",
+      "url_count": 438,
+      "sha256_hash": "d71275faead97451743f5a3395b8f0764c0dc7919058bb1e0dec95d53892018e",
       "endpoints": {
         "IndexNow Central Gateway": {
           "url": "https://api.indexnow.org/IndexNow",
