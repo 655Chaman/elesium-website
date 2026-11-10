@@ -1,0 +1,954 @@
+[
+  {
+    "id": "Q01",
+    "query": "Sovereign on-premise LLM deployment India DPDP Act compliance private VPC",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "DPDP Act 2023 Section 8(5) Data Erasure & Private VPC",
+    "buyer_persona": "Chief Information Security Officer (CISO) / Chief Risk Officer (CRO)",
+    "intent_stage": "RFP Procurement / Vendor Evaluation",
+    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "required_entities": [
+      "DPDP Act 2023",
+      "Section 8(5)",
+      "Zero Data Retention",
+      "Private VPC",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "DPDP Act Statutory Penalty & Guardrail Matrix (₹250 Cr Fine Ceiling Avoidance)",
+    "expected_url": "https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/",
+    "target_slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india"
+  },
+  {
+    "id": "Q02",
+    "query": "RBI compliant air-gapped LLM inference cluster setup scheduled commercial banks",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "RBI Cyber Security Framework & Air-Gapped HSM Telemetry",
+    "buyer_persona": "Head of Core Banking Infrastructure / Banking CIO",
+    "intent_stage": "BOFU / Infrastructure RFP",
+    "contract_value_tier": "₹2.5 Cr – ₹5.0 Cr ($300k – $600k)",
+    "required_entities": [
+      "RBI Cyber Security Framework",
+      "Air-Gapped",
+      "HSM",
+      "Scheduled Commercial Banks",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Core Banking HSM & Isolation Benchmark Table",
+    "expected_url": "https://elesium.online/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors/",
+    "target_slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors"
+  },
+  {
+    "id": "Q03",
+    "query": "vLLM custom PagedAttention FP8 deployment on-premise India banking data localization",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Inference Engineering & Data Localization",
+    "buyer_persona": "VP of AI Engineering / Chief Technology Officer",
+    "intent_stage": "Technical Architecture Validation",
+    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "required_entities": [
+      "vLLM",
+      "PagedAttention",
+      "FP8",
+      "Data Localization",
+      "TTFT",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Hardware Throughput & TTFT Latency Matrix (142ms on H100 SXM5)",
+    "expected_url": "https://elesium.online/solutions/paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters/",
+    "target_slug": "paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters"
+  },
+  {
+    "id": "Q04",
+    "query": "SEBI cybersecurity circular compliant algorithmic trading LLM guardrails Mumbai",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "SEBI CSCRF 2024 & Algorithmic Guardrails",
+    "buyer_persona": "Chief Compliance Officer / Trading Desk CTO",
+    "intent_stage": "RFP Selection",
+    "contract_value_tier": "₹1.8 Cr – ₹4.0 Cr ($220k – $480k)",
+    "required_entities": [
+      "SEBI",
+      "CSCRF",
+      "Algorithmic Guardrails",
+      "Mumbai",
+      "Deterministic",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Financial Guardrail Latency & Deterministic Rejection SLA",
+    "expected_url": "https://elesium.online/solutions/rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors/",
+    "target_slug": "rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors"
+  },
+  {
+    "id": "Q05",
+    "query": "Private sovereign GPU cluster sizing H100 vs A100 for Indian enterprise data sovereignty",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Sovereign GPU Infrastructure & Cluster Sizing",
+    "buyer_persona": "IT Infrastructure Director / Head of Cloud Architecture",
+    "intent_stage": "Procurement Budgeting",
+    "contract_value_tier": "₹3.0 Cr – ₹7.5 Cr ($360k – $900k)",
+    "required_entities": [
+      "H100 SXM5",
+      "A100 80GB",
+      "Tensor Parallelism",
+      "Data Sovereignty",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "GPU VRAM Cluster Sizing & Cost Arbitrage Matrix",
+    "expected_url": "https://elesium.online/solutions/air-gapped-private-cloud-flashdecoding-deployment-runbooks-for-defense-installations-in-india/",
+    "target_slug": "air-gapped-private-cloud-flashdecoding-deployment-runbooks-for-defense-installations-in-india"
+  },
+  {
+    "id": "Q06",
+    "query": "Indian Public Sector Bank sovereign enterprise search agent RBI data residency",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Public Sector Banking (PSB) Sovereign Search & Data Residency",
+    "buyer_persona": "General Manager (IT) - Public Sector Bank",
+    "intent_stage": "Government Tender / RFP",
+    "contract_value_tier": "₹2.0 Cr – ₹6.0 Cr ($240k – $720k)",
+    "required_entities": [
+      "Public Sector Banks",
+      "RBI Data Residency",
+      "Enterprise Search",
+      "Sovereign Enclave",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Public Sector Banking Compliance & Token Isolation SLA",
+    "expected_url": "https://elesium.online/solutions/sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization/",
+    "target_slug": "sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization"
+  },
+  {
+    "id": "Q07",
+    "query": "Aadhaar e-KYC and PAN verification biometric fraud defense agents India",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Identity Verification & UIDAI / Income Tax Portal Compliance",
+    "buyer_persona": "Head of Fraud Risk / Digital Lending CTO",
+    "intent_stage": "BOFU Solution Evaluation",
+    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "required_entities": [
+      "Aadhaar e-KYC",
+      "PAN Verification",
+      "Fraud Defense",
+      "UIDAI",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "e-KYC Fraud Defense Latency & False Acceptance Matrix",
+    "expected_url": "https://elesium.online/solutions/aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms/",
+    "target_slug": "aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms"
+  },
+  {
+    "id": "Q08",
+    "query": "Sovereign DeepSeek-V3 and Qwen-2.5 on-premise deployment India enterprise pricing",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Open-Weight Sovereign Model Hosting & TCO",
+    "buyer_persona": "VP Engineering / IT Procurement Lead",
+    "intent_stage": "Commercial Comparison & SOW",
+    "contract_value_tier": "₹1.5 Cr – ₹3.2 Cr ($180k – $390k)",
+    "required_entities": [
+      "DeepSeek-V3",
+      "Qwen-2.5-72B",
+      "On-Premise",
+      "Token Cost Arbitrage",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Open-Weight vs Closed API TCO Matrix ($0.42/Mtok vs $5.00/Mtok)",
+    "expected_url": "https://elesium.online/solutions/sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance/",
+    "target_slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance"
+  },
+  {
+    "id": "Q09",
+    "query": "Tier-1 NBFC automated RBI IT governance master direction scoring telemetry",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "RBI IT Governance Master Direction 2023 Automation",
+    "buyer_persona": "Chief Information Officer (CIO) - NBFC",
+    "intent_stage": "Regulatory Compliance Audit RFP",
+    "contract_value_tier": "₹1.2 Cr – ₹2.4 Cr ($145k – $290k)",
+    "required_entities": [
+      "RBI IT Governance",
+      "Master Direction",
+      "NBFC",
+      "Scoring Telemetry",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "RBI Master Direction Scoring & Continuous Auditing SLA",
+    "expected_url": "https://elesium.online/solutions/rbi-it-governance-master-direction-automated-compliance-scoring-telemetry-for-tier-1-nbfcs/",
+    "target_slug": "rbi-it-governance-master-direction-automated-compliance-scoring-telemetry-for-tier-1-nbfcs"
+  },
+  {
+    "id": "Q10",
+    "query": "Air-gapped clinical LLM deployment DISHA and DPDP compliance Indian hospitals",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Healthcare DISHA & DPDP Statutory De-identification",
+    "buyer_persona": "Chief Medical Information Officer (CMIO) / Hospital Trust CIO",
+    "intent_stage": "Institutional Healthcare RFP",
+    "contract_value_tier": "₹1.8 Cr – ₹4.2 Cr ($220k – $510k)",
+    "required_entities": [
+      "DISHA",
+      "DPDP Act",
+      "Clinical LLM",
+      "Air-Gapped",
+      "De-identification",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Clinical De-Identification Accuracy (99.94%) & Latency Matrix",
+    "expected_url": "https://elesium.online/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts/",
+    "target_slug": "private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts"
+  },
+  {
+    "id": "Q11",
+    "query": "UPI merchant chargeback dispute arbitration autonomous multi-agent systems",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "NPCI UPI Dispute Settlement Automation",
+    "buyer_persona": "Head of Merchant Operations / Payment Aggregator VP",
+    "intent_stage": "Payment Gateway RFP",
+    "contract_value_tier": "₹1.4 Cr – ₹3.0 Cr ($170k – $360k)",
+    "required_entities": [
+      "UPI",
+      "NPCI",
+      "Chargeback Dispute",
+      "Arbitration Agent",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Dispute Resolution Turnaround (4 mins vs 7 days) & ROI Table",
+    "expected_url": "https://elesium.online/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators/",
+    "target_slug": "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators"
+  },
+  {
+    "id": "Q12",
+    "query": "Cross-border remittance settlement agents bridging UPI and RBI CBDC Digital Rupee",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Digital Rupee (e₹) & Cross-Border Corridor Settlement",
+    "buyer_persona": "Head of Treasury / Global Payments Director",
+    "intent_stage": "Architecture Pilot",
+    "contract_value_tier": "₹2.2 Cr – ₹5.5 Cr ($265k – $660k)",
+    "required_entities": [
+      "CBDC",
+      "Digital Rupee",
+      "UPI",
+      "RBI Remittance",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "CBDC Clearing Latency & Cryptographic Settlement Ledger SLA",
+    "expected_url": "https://elesium.online/solutions/cross-border-remittance-settlement-agents-bridging-upi-and-rbi-cbdc-digital-rupee/",
+    "target_slug": "cross-border-remittance-settlement-agents-bridging-upi-and-rbi-cbdc-digital-rupee"
+  },
+  {
+    "id": "Q13",
+    "query": "Sovereign financial underwriting agents with 22 Indian scheduled vernacular languages",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Vernacular Voice & Dialect Financial Inclusion",
+    "buyer_persona": "Head of Rural Banking / Microfinance Managing Director",
+    "intent_stage": "Procurement RFP",
+    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "required_entities": [
+      "Vernacular Voice",
+      "22 Indian Languages",
+      "Underwriting",
+      "Bhashini",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Vernacular Speech-to-Intent Accuracy & Word Error Rate (WER <4.2%)",
+    "expected_url": "https://elesium.online/solutions/sovereign-financial-underwriting-chatbots-for-pune-microfinance-institutions-with-vernacular-voice-support/",
+    "target_slug": "sovereign-financial-underwriting-chatbots-for-pune-microfinance-institutions-with-vernacular-voice-support"
+  },
+  {
+    "id": "Q14",
+    "query": "Indian customs ICEGATE automated bill of entry tariff classification agents",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "CBIC ICEGATE & Customs Tariff Harmonization (HSN)",
+    "buyer_persona": "Supply Chain VP / Freight Forwarding Managing Director",
+    "intent_stage": "Commercial Deployment",
+    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "required_entities": [
+      "ICEGATE",
+      "Bill of Entry",
+      "HSN Classification",
+      "Customs Tariff",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Customs Clearance Cycle Time (Dropped by 82%) & Fine Elimination Matrix",
+    "expected_url": "https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/",
+    "target_slug": "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders"
+  },
+  {
+    "id": "Q15",
+    "query": "GSTN portal automated GSTR-9 annual reconciliation agents Tally Prime ERP",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "GSTN Return Auto-Reconciliation & ITC Mismatch Detection",
+    "buyer_persona": "Chief Financial Officer / Head of Tax Compliance",
+    "intent_stage": "SaaS/Enterprise Procurement",
+    "contract_value_tier": "₹80 Lakh – ₹1.8 Cr ($95k – $220k)",
+    "required_entities": [
+      "GSTR-9",
+      "GSTN Portal",
+      "Tally Prime",
+      "ITC Reconciliation",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Tax Audit Discrepancy Prevention & Ledger Matching SLA",
+    "expected_url": "https://elesium.online/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/",
+    "target_slug": "automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal"
+  },
+  {
+    "id": "Q16",
+    "query": "GIFT City IFSC offshore banking AI compliance and financial privacy enclaves",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "IFSCA Regulatory Sandbox & Confidential Computing",
+    "buyer_persona": "IFSC Compliance Director / Offshore Banking CTO",
+    "intent_stage": "Multi-Tenant Enclave RFP",
+    "contract_value_tier": "₹2.0 Cr – ₹4.8 Cr ($240k – $580k)",
+    "required_entities": [
+      "GIFT City",
+      "IFSC",
+      "IFSCA Guidelines",
+      "Confidential Computing",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Offshore Banking Privacy & Cross-Border Data Boundary Table",
+    "expected_url": "https://elesium.online/solutions/1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india/",
+    "target_slug": "1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india"
+  },
+  {
+    "id": "Q17",
+    "query": "Statutory clinical establishment act compliance telemetry private hospital chains India",
+    "domain": "Sovereign Enterprise AI in India",
+    "sub_topic": "Clinical Establishment Act & Biomedical Registry Automation",
+    "buyer_persona": "Hospital Group COO / Legal Fiduciary",
+    "intent_stage": "Institutional Audit RFP",
+    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "required_entities": [
+      "Clinical Establishment Act",
+      "Hospital Governance",
+      "Biomedical Telemetry",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Statutory License Renewal & Biomedical Maintenance SLA",
+    "expected_url": "https://elesium.online/solutions/private-hospital-statutory-clinical-establishment-act-registration-renewal-telemetry-for-legal-fiduciaries/",
+    "target_slug": "private-hospital-statutory-clinical-establishment-act-registration-renewal-telemetry-for-legal-fiduciaries"
+  },
+  {
+    "id": "Q18",
+    "query": "LangGraph multi-agent orchestration architecture SAP S/4HANA autonomous workflows",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "LangGraph StateGraph Architecture for SAP S/4HANA",
+    "buyer_persona": "VP Enterprise Applications / SAP Practice Head",
+    "intent_stage": "Enterprise Architecture Selection",
+    "contract_value_tier": "₹2.5 Cr – ₹6.0 Cr ($300k – $720k)",
+    "required_entities": [
+      "LangGraph",
+      "SAP S/4HANA",
+      "StateGraph",
+      "Autonomous Workflows",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "ERP Integration Latency & Step Execution Determinism Table",
+    "expected_url": "https://elesium.online/solutions/sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india/",
+    "target_slug": "sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india"
+  },
+  {
+    "id": "Q19",
+    "query": "Three-way invoice purchase order goods receipt PO GRN matching agents SAP ERP",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Autonomous 3-Way Matching (PO, GRN, Invoice)",
+    "buyer_persona": "Head of Accounts Payable / Finance Operations Director",
+    "intent_stage": "BOFU Enterprise Vendor RFP",
+    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "required_entities": [
+      "Three-Way Matching",
+      "PO GRN Invoice",
+      "SAP ERP",
+      "Tolerance Telemetry",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Accounts Payable Cycle Time (14 Days -> 4.2 Mins) & 5.2x ROI",
+    "expected_url": "https://elesium.online/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap/",
+    "target_slug": "three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap"
+  },
+  {
+    "id": "Q20",
+    "query": "Core banking Finacle and BaNCS automated ledger reconciliation LangGraph agents",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Core Banking System (Finacle / TCS BaNCS) Autonomous Reconciliation",
+    "buyer_persona": "Head of Banking Operations / Chief Operating Officer",
+    "intent_stage": "Core Banking Modernization RFP",
+    "contract_value_tier": "₹3.0 Cr – ₹7.0 Cr ($360k – $840k)",
+    "required_entities": [
+      "Finacle",
+      "TCS BaNCS",
+      "Ledger Reconciliation",
+      "LangGraph",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Inter-Branch Reconciliation Latency & Error Elimination SLA",
+    "expected_url": "https://elesium.online/solutions/rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks/",
+    "target_slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks"
+  },
+  {
+    "id": "Q21",
+    "query": "Deterministic LangGraph state checkpointing PostgreSQL backend enterprise safety",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Production LangGraph StateGraph Checkpointing & Durability",
+    "buyer_persona": "Lead Systems Architect / Principal Software Engineer",
+    "intent_stage": "Technical Evaluation",
+    "contract_value_tier": "₹1.0 Cr – ₹2.2 Cr ($120k – $265k)",
+    "required_entities": [
+      "LangGraph",
+      "PostgreSQL Checkpointer",
+      "StateGraph",
+      "Fault Tolerance",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Agent State Checkpoint Latency (<12ms) & Zero-Data-Loss SLA",
+    "expected_url": "https://elesium.online/solutions/sovereign-multi-agent-order-state-machine-telemetry-for-automotive-manufacturing-just-in-time-lines/",
+    "target_slug": "sovereign-multi-agent-order-state-machine-telemetry-for-automotive-manufacturing-just-in-time-lines"
+  },
+  {
+    "id": "Q22",
+    "query": "Oracle Fusion Cloud ERP autonomous journal voucher posting multi-agent system",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Oracle ERP Cloud Financial Close Automation",
+    "buyer_persona": "VP Corporate Finance / ERP Transformation Lead",
+    "intent_stage": "RFP Procurement",
+    "contract_value_tier": "₹1.8 Cr – ₹4.0 Cr ($220k – $480k)",
+    "required_entities": [
+      "Oracle Fusion",
+      "Journal Voucher",
+      "Financial Close",
+      "Multi-Agent",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Month-End Close Acceleration (12 Days -> 36 Hours) Benchmark",
+    "expected_url": "https://elesium.online/solutions/tally-journal-voucher-automated-foreign-exchange-fluctuation-adjustment-agents-in-mumbai/",
+    "target_slug": "tally-journal-voucher-automated-foreign-exchange-fluctuation-adjustment-agents-in-mumbai"
+  },
+  {
+    "id": "Q23",
+    "query": "Tally Prime XML port 9000 socket automated e-invoice IRN generation agents",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Tally Prime TDL & Port 9000 Socket Integration",
+    "buyer_persona": "Head of IT - Mid-Market / Manufacturing CFO",
+    "intent_stage": "Solution Selection",
+    "contract_value_tier": "₹60 Lakh – ₹1.5 Cr ($75k – $180k)",
+    "required_entities": [
+      "Tally Prime",
+      "Port 9000",
+      "e-Invoice IRN",
+      "QR Code",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Tally Socket Parser Latency (24ms) & NIC API Sync SLA",
+    "expected_url": "https://elesium.online/solutions/automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore/",
+    "target_slug": "automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore"
+  },
+  {
+    "id": "Q24",
+    "query": "Commercial loan credit appraisal multi-agent triad OCR risk scoring compliance",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Collaborative Multi-Agent Triad for Commercial Underwriting",
+    "buyer_persona": "Chief Credit Officer / Head of SME Lending",
+    "intent_stage": "BOFU Lending Platform Selection",
+    "contract_value_tier": "₹2.0 Cr – ₹4.5 Cr ($240k – $540k)",
+    "required_entities": [
+      "Credit Appraisal",
+      "Multi-Agent Triad",
+      "Risk Scoring",
+      "OCR",
+      "4.8x ROI",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Underwriting Turnaround (14 days -> 4 mins) & 4.8x Cash-flow ROI",
+    "expected_url": "https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos/",
+    "target_slug": "deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos"
+  },
+  {
+    "id": "Q25",
+    "query": "Enterprise SAP manufacturing spare parts predictive maintenance agent swarm",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Industrial IoT & SAP Plant Maintenance (PM) Module",
+    "buyer_persona": "VP Manufacturing Operations / Plant Head",
+    "intent_stage": "Industrial AI RFP",
+    "contract_value_tier": "₹2.2 Cr – ₹5.0 Cr ($265k – $600k)",
+    "required_entities": [
+      "Predictive Maintenance",
+      "SAP PM",
+      "Manufacturing",
+      "99.4% Uptime",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Plant Machine Uptime (99.4%) & Unplanned Downtime Reduction Matrix",
+    "expected_url": "https://elesium.online/solutions/electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises/",
+    "target_slug": "electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises"
+  },
+  {
+    "id": "Q26",
+    "query": "Hospital inpatient discharge acceleration and EHR pharmacy reconciliation agents",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Hospital EHR Integration & Discharge Medication Reconciliation",
+    "buyer_persona": "Chief Medical Officer / Hospital Operations Director",
+    "intent_stage": "Healthcare Workflow RFP",
+    "contract_value_tier": "₹1.4 Cr – ₹3.2 Cr ($170k – $390k)",
+    "required_entities": [
+      "Inpatient Discharge",
+      "Pharmacy Reconciliation",
+      "EHR",
+      "Turnaround",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Bed Turnover Acceleration (Discharge Latency: 4.5 hrs -> 38 mins)",
+    "expected_url": "https://elesium.online/solutions/hospital-inpatient-discharge-turnaround-acceleration-and-pharmacy-reconciliation-telemetry-for-private-clinics/",
+    "target_slug": "hospital-inpatient-discharge-turnaround-acceleration-and-pharmacy-reconciliation-telemetry-for-private-clinics"
+  },
+  {
+    "id": "Q27",
+    "query": "Quick commerce sub-10-minute dispatch queue multi-agent order routing telemetry",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "High-Frequency Logistics & Urban Micro-Fulfillment",
+    "buyer_persona": "VP Engineering - Quick Commerce / Supply Chain Chief",
+    "intent_stage": "Tech Architecture Evaluation",
+    "contract_value_tier": "₹1.8 Cr – ₹4.5 Cr ($220k – $540k)",
+    "required_entities": [
+      "Quick Commerce",
+      "Sub-10-Minute",
+      "Dispatch Queue",
+      "Micro-Fulfillment",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Order Dispatch Queue Latency (<180ms) & Route Optimization Table",
+    "expected_url": "https://elesium.online/solutions/quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs/",
+    "target_slug": "quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs"
+  },
+  {
+    "id": "Q28",
+    "query": "Deterministic human-in-the-loop LangGraph interrupt pattern for wire transfers",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "High-Value Wire Transfer Approval Gates",
+    "buyer_persona": "Head of Transaction Banking / Risk Governance",
+    "intent_stage": "Security & Governance Review",
+    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "required_entities": [
+      "Human-in-the-Loop",
+      "LangGraph Interrupt",
+      "Wire Transfer",
+      "Deterministic",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "StateGraph Interrupt Recovery & Cryptographic Approval Audit Log",
+    "expected_url": "https://elesium.online/solutions/100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways/",
+    "target_slug": "100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways"
+  },
+  {
+    "id": "Q29",
+    "query": "Automated e-Way bill NIC portal generation from delivery challans Tally Prime",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "National Logistics NIC e-Way Bill Automation",
+    "buyer_persona": "Logistics Operations VP / Transport Fleet Director",
+    "intent_stage": "Solution Selection",
+    "contract_value_tier": "₹70 Lakh – ₹1.6 Cr ($85k – $190k)",
+    "required_entities": [
+      "e-Way Bill",
+      "NIC Portal",
+      "Delivery Challans",
+      "Tally Prime",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Vehicle Breakdown Expiry Auto-Renewal & Demurrage Prevention SLA",
+    "expected_url": "https://elesium.online/solutions/automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi/",
+    "target_slug": "automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi"
+  },
+  {
+    "id": "Q30",
+    "query": "ICD-10-CM clinical coding discrepancy detection agents healthcare insurance claim",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Health Insurance Claim Auto-Adjudication",
+    "buyer_persona": "Head of Medical Billing / Health InsurTech CTO",
+    "intent_stage": "BOFU Procurement RFP",
+    "contract_value_tier": "₹1.6 Cr – ₹3.8 Cr ($190k – $460k)",
+    "required_entities": [
+      "ICD-10-CM",
+      "Clinical Coding",
+      "Claim Rejection Rate",
+      "4.1x ROI",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Claim Rejection Plummet (28% -> 1.8%) & 4.1x ROI Table",
+    "expected_url": "https://elesium.online/solutions/icd-10-cm-automated-diagnostic-coding-and-clinical-discrepancy-telemetry-for-medical-billing-controllers/",
+    "target_slug": "icd-10-cm-automated-diagnostic-coding-and-clinical-discrepancy-telemetry-for-medical-billing-controllers"
+  },
+  {
+    "id": "Q31",
+    "query": "Automated corporate credit card expense report reconciliation Tally Prime",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Corporate Card Expense & GST Ledger Reconciliation",
+    "buyer_persona": "Financial Controller / VP Finance",
+    "intent_stage": "Tool/Service RFP",
+    "contract_value_tier": "₹60 Lakh – ₹1.4 Cr ($75k – $170k)",
+    "required_entities": [
+      "Credit Card Reconciliation",
+      "Expense Report",
+      "Tally Prime",
+      "Receipt OCR",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Expense Approval SLA (Same-Day Automated Posting)",
+    "expected_url": "https://elesium.online/solutions/automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon/",
+    "target_slug": "automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon"
+  },
+  {
+    "id": "Q32",
+    "query": "Multi-agent LangGraph cyclic graph vs linear DAG for financial exception handling",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Multi-Agent Cyclic Graph Topologies for Re-trying Transactions",
+    "buyer_persona": "Principal Enterprise Architect",
+    "intent_stage": "Architectural Whitepaper Review",
+    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "required_entities": [
+      "Cyclic Graph",
+      "LangGraph",
+      "Financial Exception",
+      "Self-Correction",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Cyclic Agent Loop Convergence Rate (99.8%) & Latency Breakdown",
+    "expected_url": "https://elesium.online/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration/",
+    "target_slug": "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration"
+  },
+  {
+    "id": "Q33",
+    "query": "Pharmaceutical cold chain multi-point IoT temperature telemetry logistics hub",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Vaccine & Biologic Cold Chain Monitoring",
+    "buyer_persona": "Quality Assurance Director - Pharma / Logistics Head",
+    "intent_stage": "Life Sciences RFP",
+    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "required_entities": [
+      "Cold Chain",
+      "IoT Temperature",
+      "Vaccine Integrity",
+      "Excursion Alert",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Temperature Excursion Real-time Alerting (<3s) & Spoilage Elimination",
+    "expected_url": "https://elesium.online/solutions/pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs/",
+    "target_slug": "pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs"
+  },
+  {
+    "id": "Q34",
+    "query": "Contractual 90-day 3x to 5x ROI enterprise AI deployment guarantee agency India",
+    "domain": "Multi-agent LangGraph system integration for ERP/banking",
+    "sub_topic": "Commercial SLA & Performance-Backed Consulting",
+    "buyer_persona": "Chief Executive Officer / Group CFO",
+    "intent_stage": "Strategic Vendor Shortlist",
+    "contract_value_tier": "₹2.0 Cr – ₹6.0 Cr ($240k – $720k)",
+    "required_entities": [
+      "90-Day",
+      "3x–5x ROI",
+      "Contractual Guarantee",
+      "Rebated Fee",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Commercial SLA Payback Matrix & Contractual Guarantee Terms",
+    "expected_url": "https://elesium.online/solutions/cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad/",
+    "target_slug": "cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad"
+  },
+  {
+    "id": "Q35",
+    "query": "ISO 42001 AI management system continuous auditing architecture enterprise",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "ISO/IEC 42001:2023 Continuous Compliance Framework",
+    "buyer_persona": "Global Head of AI Governance / CISO",
+    "intent_stage": "Governance Platform RFP",
+    "contract_value_tier": "₹1.8 Cr – ₹4.5 Cr ($220k – $540k)",
+    "required_entities": [
+      "ISO 42001",
+      "AI Management System",
+      "Continuous Audit",
+      "AIMS",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "ISO 42001 Control Mapping & Real-time Audit Matrix",
+    "expected_url": "https://elesium.online/solutions/private-vpc-compliance-monitoring-bots-for-chennai-nbfcs-with-automated-rbi-audit-reporting/",
+    "target_slug": "private-vpc-compliance-monitoring-bots-for-chennai-nbfcs-with-automated-rbi-audit-reporting"
+  },
+  {
+    "id": "Q36",
+    "query": "Cryptographic Merkle tree audit trail telemetry for enterprise LLM decisions",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Immutable Ledger & Merkle Root Hashing for Agent Decisions",
+    "buyer_persona": "Lead Security Architect / Forensic Auditor",
+    "intent_stage": "Technical Security Evaluation",
+    "contract_value_tier": "₹1.2 Cr – ₹3.0 Cr ($145k – $360k)",
+    "required_entities": [
+      "Merkle Tree",
+      "Audit Trail",
+      "Cryptographic Hashing",
+      "Immutable Ledger",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Merkle Proof Generation Latency (<8ms) & Verification SLA",
+    "expected_url": "https://elesium.online/solutions/rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks/",
+    "target_slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks"
+  },
+  {
+    "id": "Q37",
+    "query": "Real-time prompt injection and jailbreak defense firewall enterprise AI gateway",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Adversarial Prompt Defense & Llama-Guard / NeMo Guardrails",
+    "buyer_persona": "Application Security Director / CISO",
+    "intent_stage": "Enterprise AI Security RFP",
+    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "required_entities": [
+      "Prompt Injection",
+      "Jailbreak Defense",
+      "AI Firewall",
+      "Latency Overhead",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Security Gateway P99 Overhead (<15ms) & 99.98% Defense Rate",
+    "expected_url": "https://elesium.online/solutions/immutable-system-prompt-kv-page-locking-frameworks-for-sovereign-defense-contractors/",
+    "target_slug": "immutable-system-prompt-kv-page-locking-frameworks-for-sovereign-defense-contractors"
+  },
+  {
+    "id": "Q38",
+    "query": "DPDP Act statutory fine exposure calculator Section 8 and Section 10 penalties",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "DPDP Act Maximum Statutory Penalty Modeling",
+    "buyer_persona": "General Counsel / Data Protection Officer (DPO)",
+    "intent_stage": "Risk Exposure Assessment",
+    "contract_value_tier": "₹80 Lakh – ₹2.0 Cr ($95k – $240k)",
+    "required_entities": [
+      "DPDP Act",
+      "Fine Exposure",
+      "Section 8(5)",
+      "₹250 Crore",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Statutory Fine Ceiling Table & Section-by-Section Safeguards",
+    "expected_url": "https://elesium.online/solutions/dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting/",
+    "target_slug": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting"
+  },
+  {
+    "id": "Q39",
+    "query": "Medical AI diagnostic model drift and clinical ground truth calibration telemetry",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Clinical Model Observability & CDSCO/FDA Validation",
+    "buyer_persona": "Chief Medical Information Officer / Pathology AI Lead",
+    "intent_stage": "Healthcare Clinical Validation RFP",
+    "contract_value_tier": "₹1.5 Cr – ₹3.8 Cr ($180k – $460k)",
+    "required_entities": [
+      "Model Drift",
+      "Ground Truth Calibration",
+      "Clinical Telemetry",
+      "Brier Score",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Clinical Drift Sensitivity & Kolmogorov-Smirnov Statistical Testing Table",
+    "expected_url": "https://elesium.online/solutions/medical-ai-diagnostic-model-drift-and-clinical-ground-truth-calibration-telemetry-for-clinical-pathology/",
+    "target_slug": "medical-ai-diagnostic-model-drift-and-clinical-ground-truth-calibration-telemetry-for-clinical-pathology"
+  },
+  {
+    "id": "Q40",
+    "query": "Automated medical peer review and mortality committee dossier preparation telemetry",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Clinical Governance & Objective Peer Review",
+    "buyer_persona": "Director of Medical Affairs / Hospital Quality Lead",
+    "intent_stage": "Clinical Governance Procurement",
+    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "required_entities": [
+      "Medical Peer Review",
+      "Mortality Committee",
+      "Clinical Governance",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Committee Dossier Generation Latency (Dropped by 88%)",
+    "expected_url": "https://elesium.online/solutions/automated-medical-peer-review-and-mortality-committee-dossier-preparation-telemetry-for-hospital-governance/",
+    "target_slug": "automated-medical-peer-review-and-mortality-committee-dossier-preparation-telemetry-for-hospital-governance"
+  },
+  {
+    "id": "Q41",
+    "query": "Gaussian mechanism differential privacy noise multiplier calibration for EHR embeddings",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Differential Privacy (ε, δ) for Healthcare RAG",
+    "buyer_persona": "Healthcare Privacy Officer / R&D Data Scientist",
+    "intent_stage": "Algorithmic Architecture Review",
+    "contract_value_tier": "₹1.4 Cr – ₹3.2 Cr ($170k – $390k)",
+    "required_entities": [
+      "Gaussian Mechanism",
+      "Differential Privacy",
+      "EHR Embeddings",
+      "Epsilon",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Privacy Budget (ε=0.5) vs Utility Tradeoff Benchmark",
+    "expected_url": "https://elesium.online/solutions/gaussian-mechanism-noise-multiplier-sigma-calibration-telemetry-for-electronic-health-record-ehr-embeddings/",
+    "target_slug": "gaussian-mechanism-noise-multiplier-sigma-calibration-telemetry-for-electronic-health-record-ehr-embeddings"
+  },
+  {
+    "id": "Q42",
+    "query": "Zero data retention ZDR architecture for LLM enterprise search banking",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Ephemeral In-Memory Processing & Scrubbing Protocols",
+    "buyer_persona": "Banking CISO / Head of Security Operations",
+    "intent_stage": "Security Certification Audit",
+    "contract_value_tier": "₹1.6 Cr – ₹3.6 Cr ($190k – $440k)",
+    "required_entities": [
+      "Zero Data Retention",
+      "ZDR",
+      "Ephemeral Memory",
+      "Banking Search",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Zero Data Retention Verification Attestation & Memory Dump Audit SLA",
+    "expected_url": "https://elesium.online/solutions/sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization/",
+    "target_slug": "sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization"
+  },
+  {
+    "id": "Q43",
+    "query": "Model explainability and SHAP attribution for regulated banking loan decisions",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Adverse Action Notices & RBI Explainability Mandates",
+    "buyer_persona": "Head of Model Risk Management (MRM) / Chief Credit Officer",
+    "intent_stage": "Model Risk Governance RFP",
+    "contract_value_tier": "₹1.8 Cr – ₹4.0 Cr ($220k – $480k)",
+    "required_entities": [
+      "Model Explainability",
+      "SHAP Attribution",
+      "Adverse Action Notice",
+      "RBI",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Feature Attribution Calculation Latency (<45ms) & Audit Trail SLA",
+    "expected_url": "https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos/",
+    "target_slug": "deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos"
+  },
+  {
+    "id": "Q44",
+    "query": "Synthetic PII tokenization gateway for multi-agent enterprise workflows",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Format-Preserving Encryption & Synthetic Tokenization",
+    "buyer_persona": "Data Protection Officer / Enterprise Security Architect",
+    "intent_stage": "Privacy Enhancing Technologies (PET) RFP",
+    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "required_entities": [
+      "PII Tokenization",
+      "Format-Preserving Encryption",
+      "Synthetic Gateway",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Tokenization Overhead (<3ms per 10k tokens) & De-tokenization Security",
+    "expected_url": "https://elesium.online/solutions/electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries/",
+    "target_slug": "electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries"
+  },
+  {
+    "id": "Q45",
+    "query": "Pharmacovigilance adverse event triage state machines clinical safety",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "FDA 21 CFR Part 11 & CDSCO Adverse Drug Reaction (ADR)",
+    "buyer_persona": "Global Head of Safety & Pharmacovigilance",
+    "intent_stage": "Global Pharma Tender",
+    "contract_value_tier": "₹2.0 Cr – ₹5.0 Cr ($240k – $600k)",
+    "required_entities": [
+      "Pharmacovigilance",
+      "Adverse Event Triage",
+      "CDSCO",
+      "State Machine",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "ADR Case Ingestion to CIOMS I Form Latency (<2 mins) & Zero-Miss SLA",
+    "expected_url": "https://elesium.online/solutions/pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads/",
+    "target_slug": "pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads"
+  },
+  {
+    "id": "Q46",
+    "query": "Hospital zero-trust network microsegmentation and medical device IoT defense",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Medical Device Isolation & IoMT Cyber Defense",
+    "buyer_persona": "Director of Biomedical Engineering / Hospital CISO",
+    "intent_stage": "Medical Cyber Defense RFP",
+    "contract_value_tier": "₹1.8 Cr – ₹4.2 Cr ($220k – $510k)",
+    "required_entities": [
+      "Zero Trust",
+      "Medical Device IoT",
+      "Microsegmentation",
+      "IoMT",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Lateral Movement Containment Latency (<100ms) Benchmark",
+    "expected_url": "https://elesium.online/solutions/hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering/",
+    "target_slug": "hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering"
+  },
+  {
+    "id": "Q47",
+    "query": "Enterprise LLM token cost arbitrage and cloud pricing calculator benchmark",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "FinOps for Enterprise AI & GPU TCO Modeling",
+    "buyer_persona": "Cloud FinOps Lead / VP of IT Finance",
+    "intent_stage": "FinOps Tooling & Cost Reduction",
+    "contract_value_tier": "₹80 Lakh – ₹1.8 Cr ($95k – $220k)",
+    "required_entities": [
+      "Token Cost Arbitrage",
+      "Cloud Pricing",
+      "FinOps",
+      "vLLM",
+      "H100 SXM5",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Cloud API vs On-Premise GPU Payback Schedule (3.8 Months Break-even)",
+    "expected_url": "https://elesium.online/solutions/enterprise-sovereign-kv-cache-compression-deployment-advisors-for-defense-ministries/",
+    "target_slug": "enterprise-sovereign-kv-cache-compression-deployment-advisors-for-defense-ministries"
+  },
+  {
+    "id": "Q48",
+    "query": "Enterprise RAG retrieval latency benchmark hybrid vector BM25 dense search",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Hybrid Retrieval & Reciprocal Rank Fusion (RRF)",
+    "buyer_persona": "Lead Search Architect / Information Retrieval VP",
+    "intent_stage": "Retrieval Engine Selection",
+    "contract_value_tier": "₹1.0 Cr – ₹2.4 Cr ($120k – $290k)",
+    "required_entities": [
+      "RAG Latency",
+      "Hybrid Vector BM25",
+      "Reciprocal Rank Fusion",
+      "TTFT",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "P99 Retrieval Latency (<42ms for 10M vectors) Benchmark",
+    "expected_url": "https://elesium.online/solutions/chunked-sequence-attention-weight-partitioners-for-hospital-clinical-ehr-copilots/",
+    "target_slug": "chunked-sequence-attention-weight-partitioners-for-hospital-clinical-ehr-copilots"
+  },
+  {
+    "id": "Q49",
+    "query": "Enterprise AI agency founder Chaman Shah background and engineering credentials",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Executive E-E-A-T & Proven Engineering Track Record",
+    "buyer_persona": "Procurement Selection Committee / Board Technical Advisor",
+    "intent_stage": "Executive Due Diligence",
+    "contract_value_tier": "Enterprise Master Services Agreement (MSA)",
+    "required_entities": [
+      "Chaman Shah",
+      "Lead Systems Architect",
+      "Elesium",
+      "Author",
+      "Founder"
+    ],
+    "expected_grounding_hook": "Executive Verified Author Credentials & Published Case Studies",
+    "expected_url": "https://elesium.online/solutions/air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants/",
+    "target_slug": "air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants"
+  },
+  {
+    "id": "Q50",
+    "query": "B2B enterprise multi-agent deployment payback and audited cash-flow ROI matrix",
+    "domain": "Enterprise AI compliance telemetry & governance",
+    "sub_topic": "Verified Multi-Industry Cash-Flow Impact",
+    "buyer_persona": "Chief Executive Officer / Managing Director / Board of Directors",
+    "intent_stage": "Final Commercial Sign-off",
+    "contract_value_tier": "₹3.0 Cr – ₹10.0 Cr ($360k – $1.2M)",
+    "required_entities": [
+      "Payback Matrix",
+      "Cash-Flow ROI",
+      "3x–5x ROI",
+      "Audited Case Studies",
+      "Elesium"
+    ],
+    "expected_grounding_hook": "Verified Multi-Industry 90-Day ROI Matrix (BFSI 4.8x, Logistics 3.9x, Mfg 5.2x, Health 4.1x)",
+    "expected_url": "https://elesium.online/solutions/abdm-m3-health-information-user-consent-artifact-decryption-telemetry-for-clinical-diagnostic-centers/",
+    "target_slug": "abdm-m3-health-information-user-consent-artifact-decryption-telemetry-for-clinical-diagnostic-centers"
+  }
+]

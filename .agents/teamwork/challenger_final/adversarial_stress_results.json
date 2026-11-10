@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-11-10T07:13:19.304787+00:00",
+  "summary": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0
+  },
+  "dimensions": {
+    "Dim1_Concurrency_Stress": [
+      {
+        "test_name": "burst_500_concurrent_tasks",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 206.18,
+        "details": "Executed 500 concurrent tasks: 500 success, 0 exceptions."
+      },
+      {
+        "test_name": "semaphore_enforcement_saturation",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 106.16,
+        "details": "Max active tasks observed: 5 (limit: 5)."
+      },
+      {
+        "test_name": "concurrency_limit_sweep",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 63.52,
+        "details": "Sweep results: C=1:40, C=5:40, C=20:40, C=50:40"
+      },
+      {
+        "test_name": "parallel_full_benchmark_isolation",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 48.59,
+        "details": "3 concurrent benchmark runs completed without cross-run interference."
+      },
+      {
+        "test_name": "multi_threaded_event_loop_isolation",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 34.73,
+        "details": "4 thread loops executed concurrently with counts: [24, 24, 24, 24]"
+      }
+    ],
+    "Dim2_Boundary_Inputs": [
+      {
+        "test_name": "redos_massive_payload_processing",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 1815.29,
+        "details": "Processed 2.0MB text in 1815.3ms without catastrophic backtracking."
+      },
+      {
+        "test_name": "adversarial_disqualification_sentiment_rejection",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.18,
+        "details": "All 4 hostile prompt injections & disqualifiers correctly denied recommendation."
+      },
+      {
+        "test_name": "nested_markdown_and_raw_url_extraction",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.19,
+        "details": "Extracted 4 Elesium citation URLs from complex nested markdown."
+      },
+      {
+        "test_name": "unicode_multibyte_rtl_nullbyte_fuzzing",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.3,
+        "details": "Extracted citations and entities under Devanagari, RTL, Emojis, and Null bytes."
+      },
+      {
+        "test_name": "extreme_procurement_query_normalization",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.39,
+        "details": "Auto-normalized missing vertical/domain/slug and 2,000 required entities."
+      },
+      {
+        "test_name": "metrics_zero_division_and_unknown_provider",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.06,
+        "details": "Gracefully handled total_queries=0 and dynamic unknown provider 'custom_deepseek_search'."
+      },
+      {
+        "test_name": "subdomain_spoofing_and_url_security",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.08,
+        "details": "Prevented 6 spoofed/malicious domains while correctly validating 4 legitimate Elesium URLs."
+      },
+      {
+        "test_name": "competitor_ranking_order_differentiation",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.08,
+        "details": "Rank 1: (rec=True, rank=1) | Rank 3: (rec=True, rank=3) | Neutral: rec=False | Disqualified override: rec=False."
+      },
+      {
+        "test_name": "reverse_rag_injection_fallback_robustness",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 1.75,
+        "details": "Verified idempotent section deduplication (1 section), DOM fallback before </main>, and append fallback."
+      }
+    ],
+    "Dim3_Receipt_Schema_Validation": [
+      {
+        "test_name": "receipt_mandatory_field_enforcement",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.06,
+        "details": "Pydantic correctly rejected receipt instantiation when mandatory fields were absent."
+      },
+      {
+        "test_name": "receipt_corrupt_types_validation",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.14,
+        "details": "Pydantic correctly raised ValidationError on corrupt field types."
+      },
+      {
+        "test_name": "receipt_truncated_json_rejection",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.48,
+        "details": "model_validate_json rejected truncated JSON payload."
+      },
+      {
+        "test_name": "markdown_report_graceful_fallbacks_on_null_metrics",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.03,
+        "details": "Report rendered gracefully with 'N/A' when metrics were None."
+      },
+      {
+        "test_name": "save_receipt_nested_directory_creation",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 0.76,
+        "details": "save_receipt created missing nested parent directories and wrote valid JSON."
+      }
+    ],
+    "Dim4_HTML_Parsing_200_Files": [
+      {
+        "test_name": "all_200_html_targets_exist",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 3075.97,
+        "details": "200/200 files present on disk."
+      },
+      {
+        "test_name": "section_idempotency_zero_duplicates",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 3075.97,
+        "details": "Zero duplicates (0) and zero missing (0) across 200 files."
+      },
+      {
+        "test_name": "placement_strictly_precedes_audit",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 3075.97,
+        "details": "All 200 files position grounding section prior to Section 8 (#audit)."
+      },
+      {
+        "test_name": "dense_data_tables_and_benchmarks_integrity",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 3075.97,
+        "details": "All 200 files contain 3 complete data tables, TTFT benchmarks, DPDP \u20b9250 Cr statutory facts, and ROI metrics."
+      },
+      {
+        "test_name": "schema_org_dataset_json_ld_syntax_validity",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 3075.97,
+        "details": "100% of 200 files contain syntactically valid Schema.org Dataset JSON-LD microdata."
+      }
+    ],
+    "Dim5_Companion_Compression_Integrity": [
+      {
+        "test_name": "all_400_companion_compressed_assets_exist",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 170.07,
+        "details": "All 200 .gz and all 200 .br companion files present on disk (400 total)."
+      },
+      {
+        "test_name": "gzip_bit_exact_decompression_parity",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 170.07,
+        "details": "100% of 200 .gz files decompressed to EXACT byte-parity with raw HTML files."
+      },
+      {
+        "test_name": "brotli_bit_exact_decompression_parity",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 170.07,
+        "details": "100% of 200 .br files decompressed to EXACT byte-parity with raw HTML files."
+      },
+      {
+        "test_name": "compression_efficiency_exceeds_threshold",
+        "status": "PASS",
+        "passed": true,
+        "duration_ms": 170.07,
+        "details": "All 400 companion assets exceed 2.0x compression ratio (Gzip mean ~5.2x, Brotli mean ~7.1x)."
+      }
+    ]
+  }
+}
