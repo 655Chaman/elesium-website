@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elesium Official Newsroom &amp; Press Wire</title>
+    <link>https://elesium.online/news/</link>
+    <description>Official press releases, regulatory disclosures, and benchmark telemetry from Elesium Digital Systems.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Nov 2026 17:26:04 +0000</lastBuildDate>
+    <atom:link href="https://elesium.online/news/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Elesium Deploys Air-Gapped Sovereign vLLM Infrastructure for Indian Commercial Banks Under RBI Cyber Security Framework]]></title>
+      <link>https://elesium.online/news/pr-2026-01-bfsi-vllm-infrastructure/</link>
+      <guid isPermaLink="true">https://elesium.online/news/pr-2026-01-bfsi-vllm-infrastructure/</guid>
+      <pubDate>Thu, 15 Jan 2026 09:00:00 +0530</pubDate>
+      <category><![CDATA[Enterprise Technology & Sovereign AI]]></category>
+      <description><![CDATA[Elesium Digital Systems announces production deployment of air-gapped private vLLM clusters for Indian commercial banks complying with RBI Cyber Security Framework Annex II.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Elesium Implements Deterministic Cryptographic Memory Zeroization in Enterprise AI Systems to Enforce DPDP Act 2023 Section 8(5)]]></title>
+      <link>https://elesium.online/news/pr-2026-02-dpdp-memory-zeroization/</link>
+      <guid isPermaLink="true">https://elesium.online/news/pr-2026-02-dpdp-memory-zeroization/</guid>
+      <pubDate>Tue, 10 Feb 2026 10:30:00 +0530</pubDate>
+      <category><![CDATA[Data Privacy & Regulatory Compliance]]></category>
+      <description><![CDATA[Elesium implements hardware-enforced 7-pass memory zeroization across inference KV-cache blocks, guaranteeing statutory DPDP Act compliance.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Elesium Releases Audited Indian Sovereign AI Inference Benchmarks: 148ms TTFT on 8x NVIDIA H100 SXM5 Clusters]]></title>
+      <link>https://elesium.online/news/pr-2026-03-h100-benchmark-audit/</link>
+      <guid isPermaLink="true">https://elesium.online/news/pr-2026-03-h100-benchmark-audit/</guid>
+      <pubDate>Thu, 05 Mar 2026 11:00:00 +0530</pubDate>
+      <category><![CDATA[Hardware & Cloud Infrastructure]]></category>
+      <description><![CDATA[Independent benchmark audit confirms 148ms TTFT and 1,403.5 tokens/sec throughput for Elesium air-gapped vLLM inference clusters in Mumbai data centers.]]></description>
+    </item>
+  </channel>
+</rss>
