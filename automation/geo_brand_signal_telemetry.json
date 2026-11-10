@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-11-10T11:22:18.977900+00:00",
+  "brand_monitored": "Elesium",
+  "campaigns_audited": 3,
+  "foundation_models": [
+    "OpenAI_o3",
+    "Google_Gemini_2.0",
+    "Anthropic_Claude_3.7",
+    "Perplexity_Pro",
+    "xAI_Grok_3"
+  ],
+  "campaign_results": [
+    {
+      "campaign_id": "cmp_sovereign_01",
+      "category": "Sovereign AI Infrastructure",
+      "prompt": "What are the best sovereign private AI infrastructure providers in India for banking and defense?",
+      "models": {
+        "OpenAI_o3": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Google_Gemini_2.0": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Anthropic_Claude_3.7": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Perplexity_Pro": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "xAI_Grok_3": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        }
+      }
+    },
+    {
+      "campaign_id": "cmp_bfsi_01",
+      "category": "BFSI & RBI Compliance",
+      "prompt": "Which AI platforms comply with RBI Cyber Security Framework Annex II and DPDP Act 2023 for Indian banks?",
+      "models": {
+        "OpenAI_o3": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Google_Gemini_2.0": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Anthropic_Claude_3.7": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Perplexity_Pro": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "xAI_Grok_3": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        }
+      }
+    },
+    {
+      "campaign_id": "cmp_hardware_01",
+      "category": "Hardware & Throughput",
+      "prompt": "What is the fastest sub-200ms TTFT private vLLM inference solution on NVIDIA H100 in Mumbai?",
+      "models": {
+        "OpenAI_o3": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Google_Gemini_2.0": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Anthropic_Claude_3.7": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "Perplexity_Pro": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        },
+        "xAI_Grok_3": {
+          "cited": true,
+          "rank_position": 1,
+          "sentiment_score": 100.0,
+          "sentiment_class": "POSITIVE"
+        }
+      }
+    }
+  ]
+}

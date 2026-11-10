@@ -29,7 +29,7 @@ WEBSITE_ROOT = BASE_DIR.parent
 DIST_DIR = WEBSITE_ROOT / "frontend" / "dist"
 SOLUTIONS_DIR = DIST_DIR / "solutions"
 CURATED_SOLUTIONS_PATH = BASE_DIR / "curated_enterprise_solutions.json"
-SITEMAP_SOLUTIONS_PATH = DIST_DIR / "sitemap-solutions.xml"
+SITEMAP_CORE_PATH = DIST_DIR / "sitemap-core.xml"
 NGINX_CONF_PATH = BASE_DIR / "prg_faceted_nginx.conf"
 
 FACET_DEFINITIONS = {
@@ -632,11 +632,11 @@ class FacetedNavigationEngine:
             f.write("\n".join(rules))
 
     def _update_sitemap(self, canonical_urls: List[str]):
-        """Appends canonical facet hubs to sitemap-solutions.xml if not already present."""
-        if not SITEMAP_SOLUTIONS_PATH.exists():
+        """Appends canonical facet hubs to sitemap-core.xml if not already present."""
+        if not SITEMAP_CORE_PATH.exists():
             return
 
-        content = SITEMAP_SOLUTIONS_PATH.read_text(encoding="utf-8")
+        content = SITEMAP_CORE_PATH.read_text(encoding="utf-8")
         now_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         new_entries = []
@@ -653,7 +653,7 @@ class FacetedNavigationEngine:
         if new_entries:
             addition = "\n".join(new_entries)
             content = content.replace("</urlset>", f"{addition}\n</urlset>")
-            SITEMAP_SOLUTIONS_PATH.write_text(content, encoding="utf-8")
+            SITEMAP_CORE_PATH.write_text(content, encoding="utf-8")
 
 
 if __name__ == "__main__":

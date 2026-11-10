@@ -17,7 +17,7 @@ from automation.faceted_navigation_engine import (
     FACET_DEFINITIONS,
     SOLUTIONS_DIR,
     NGINX_CONF_PATH,
-    SITEMAP_SOLUTIONS_PATH,
+    SITEMAP_CORE_PATH,
 )
 
 
@@ -72,9 +72,9 @@ class TestFacetedNavigationEngine:
         assert 'add_header X-Robots-Tag "noindex, follow, noarchive" always;' in conf
 
     def test_sitemap_contains_canonical_facets(self):
-        """Sitemap must contain all 12 canonical facet URLs."""
-        assert SITEMAP_SOLUTIONS_PATH.exists()
-        sitemap = SITEMAP_SOLUTIONS_PATH.read_text(encoding="utf-8")
+        """Sitemap core must contain all 12 canonical facet URLs."""
+        assert SITEMAP_CORE_PATH.exists()
+        sitemap = SITEMAP_CORE_PATH.read_text(encoding="utf-8")
         for facet_group, facets in FACET_DEFINITIONS.items():
             for facet_slug in facets:
                 expected_url = f"https://elesium.online/solutions/{facet_group}/{facet_slug}/"
