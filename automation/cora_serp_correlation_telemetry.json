@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-10T13:57:41.037370",
+  "timestamp": "2026-11-10T16:03:44.765204",
   "total_queries_analyzed": 100,
   "total_competitors_measured": 2000,
   "total_factors_evaluated": 2000,
-  "total_significant_factors_isolated": 2500,
+  "total_significant_factors_isolated": 2058,
   "total_pages_calibrated": 100,
-  "aggregate_deficits_resolved": 1948,
+  "aggregate_deficits_resolved": 1185,
   "top_correlations": [],
   "top_deficit_interventions": [
     {
@@ -15,9 +15,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 198,
       "critical_deficits": [
-        "Expand body copy by +138 words to match Top 3 average (2659 words).",
-        "Increase 'unique_word_count' by +347.67 (Target: 1116.67, Current: 769.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1263 words to match Top 3 average (3262 words).",
+        "Increase 'unique_word_count' by +621.0 (Target: 1370.0, Current: 749.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -27,9 +27,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 180,
       "critical_deficits": [
-        "Expand body copy by +273 words to match Top 3 average (2770 words).",
-        "Increase 'unique_word_count' by +414.0 (Target: 1163.0, Current: 749.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1345 words to match Top 3 average (3316 words).",
+        "Increase 'unique_word_count' by +673.67 (Target: 1392.67, Current: 719.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -39,9 +39,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 190,
       "critical_deficits": [
-        "Expand body copy by +478 words to match Top 3 average (3006 words).",
-        "Increase 'unique_word_count' by +438.67 (Target: 1262.67, Current: 824.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1213 words to match Top 3 average (3216 words).",
+        "Increase 'unique_word_count' by +560.33 (Target: 1350.33, Current: 790.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -51,9 +51,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 181,
       "critical_deficits": [
-        "Expand body copy by +757 words to match Top 3 average (3173 words).",
-        "Increase 'unique_word_count' by +545.67 (Target: 1332.67, Current: 787.0).",
-        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+        "Expand body copy by +1357 words to match Top 3 average (3267 words).",
+        "Increase 'unique_word_count' by +604.0 (Target: 1372.0, Current: 768.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -63,9 +63,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 179,
       "critical_deficits": [
-        "Expand body copy by +677 words to match Top 3 average (3151 words).",
-        "Increase 'unique_word_count' by +534.33 (Target: 1323.33, Current: 789.0).",
-        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+        "Expand body copy by +1360 words to match Top 3 average (3318 words).",
+        "Increase 'unique_word_count' by +635.67 (Target: 1393.67, Current: 758.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -75,9 +75,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 173,
       "critical_deficits": [
-        "Expand body copy by +297 words to match Top 3 average (2653 words).",
-        "Increase 'unique_word_count' by +369.33 (Target: 1114.33, Current: 745.0).",
-        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+        "Expand body copy by +1403 words to match Top 3 average (3267 words).",
+        "Increase 'unique_word_count' by +656.33 (Target: 1372.33, Current: 716.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -87,9 +87,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 184,
       "critical_deficits": [
-        "Expand body copy by +238 words to match Top 3 average (2662 words).",
-        "Increase 'unique_word_count' by +366.0 (Target: 1118.0, Current: 752.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1258 words to match Top 3 average (3166 words).",
+        "Increase 'unique_word_count' by +610.67 (Target: 1329.67, Current: 719.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -99,9 +99,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 177,
       "critical_deficits": [
-        "Expand body copy by +177 words to match Top 3 average (2603 words).",
-        "Increase 'unique_word_count' by +342.0 (Target: 1093.0, Current: 751.0).",
-        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+        "Expand body copy by +1322 words to match Top 3 average (3228 words).",
+        "Increase 'unique_word_count' by +635.67 (Target: 1355.67, Current: 720.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -111,9 +111,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 177,
       "critical_deficits": [
-        "Expand body copy by +336 words to match Top 3 average (2782 words).",
-        "Increase 'unique_word_count' by +395.33 (Target: 1168.33, Current: 773.0).",
-        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+        "Expand body copy by +1418 words to match Top 3 average (3341 words).",
+        "Increase 'unique_word_count' by +663.0 (Target: 1403.0, Current: 740.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -123,9 +123,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 180,
       "critical_deficits": [
-        "Expand body copy by +275 words to match Top 3 average (2679 words).",
-        "Increase 'unique_word_count' by +367.33 (Target: 1125.33, Current: 758.0).",
-        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+        "Expand body copy by +1325 words to match Top 3 average (3219 words).",
+        "Increase 'unique_word_count' by +629.0 (Target: 1352.0, Current: 723.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -135,9 +135,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 173,
       "critical_deficits": [
-        "Expand body copy by +466 words to match Top 3 average (2887 words).",
-        "Increase 'unique_word_count' by +451.33 (Target: 1212.33, Current: 761.0).",
-        "Increase 'h2_count' by +7.0 (Target: 14.0, Current: 7.0)."
+        "Expand body copy by +1325 words to match Top 3 average (3226 words).",
+        "Increase 'unique_word_count' by +624.0 (Target: 1355.0, Current: 731.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -147,9 +147,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 171,
       "critical_deficits": [
-        "Expand body copy by +442 words to match Top 3 average (2786 words).",
-        "Increase 'unique_word_count' by +406.67 (Target: 1169.67, Current: 763.0).",
-        "Increase 'h2_count' by +4.33 (Target: 11.33, Current: 7.0)."
+        "Expand body copy by +1380 words to match Top 3 average (3229 words).",
+        "Increase 'unique_word_count' by +627.0 (Target: 1356.0, Current: 729.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -159,9 +159,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 175,
       "critical_deficits": [
-        "Expand body copy by +574 words to match Top 3 average (2955 words).",
-        "Increase 'unique_word_count' by +527.0 (Target: 1241.0, Current: 714.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1426 words to match Top 3 average (3303 words).",
+        "Increase 'unique_word_count' by +704.33 (Target: 1387.33, Current: 683.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -171,9 +171,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 178,
       "critical_deficits": [
-        "Expand body copy by +243 words to match Top 3 average (2670 words).",
-        "Increase 'unique_word_count' by +346.0 (Target: 1121.0, Current: 775.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1311 words to match Top 3 average (3222 words).",
+        "Increase 'unique_word_count' by +610.0 (Target: 1353.0, Current: 743.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -183,9 +183,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 176,
       "critical_deficits": [
-        "Expand body copy by +170 words to match Top 3 average (2545 words).",
-        "Increase 'unique_word_count' by +320.0 (Target: 1069.0, Current: 749.0).",
-        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+        "Expand body copy by +1370 words to match Top 3 average (3242 words).",
+        "Increase 'unique_word_count' by +643.33 (Target: 1361.33, Current: 718.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -195,9 +195,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 177,
       "critical_deficits": [
-        "Expand body copy by +276 words to match Top 3 average (2709 words).",
-        "Increase 'unique_word_count' by +395.67 (Target: 1137.67, Current: 742.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1360 words to match Top 3 average (3278 words).",
+        "Increase 'unique_word_count' by +664.33 (Target: 1376.33, Current: 712.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -207,9 +207,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 170,
       "critical_deficits": [
-        "Expand body copy by +482 words to match Top 3 average (2868 words).",
-        "Increase 'unique_word_count' by +441.67 (Target: 1204.67, Current: 763.0).",
-        "Increase 'exact_kw_in_title' by +1.0 (Target: 1.0, Current: 0.0)."
+        "Expand body copy by +1398 words to match Top 3 average (3280 words).",
+        "Increase 'unique_word_count' by +648.0 (Target: 1377.0, Current: 729.0).",
+        "Reduce 'h2_count' by -3.33 to mitigate over-optimization risk (Target: 3.67, Current: 7.0)."
       ]
     },
     {
@@ -219,9 +219,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 168,
       "critical_deficits": [
-        "Expand body copy by +348 words to match Top 3 average (2745 words).",
-        "Increase 'unique_word_count' by +413.0 (Target: 1153.0, Current: 740.0).",
-        "Increase 'h2_count' by +9.0 (Target: 16.0, Current: 7.0)."
+        "Expand body copy by +1358 words to match Top 3 average (3250 words).",
+        "Increase 'unique_word_count' by +656.67 (Target: 1364.67, Current: 708.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -231,9 +231,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 175,
       "critical_deficits": [
-        "Expand body copy by +424 words to match Top 3 average (2835 words).",
-        "Increase 'unique_word_count' by +430.33 (Target: 1190.33, Current: 760.0).",
-        "Increase 'h2_count' by +3.0 (Target: 10.0, Current: 7.0)."
+        "Expand body copy by +1309 words to match Top 3 average (3218 words).",
+        "Increase 'unique_word_count' by +629.33 (Target: 1351.33, Current: 722.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     },
     {
@@ -243,9 +243,9 @@
       "channel_triage": "AI_OVERVIEW_HYBRID",
       "words_added": 186,
       "critical_deficits": [
-        "Expand body copy by +288 words to match Top 3 average (2732 words).",
-        "Increase 'unique_word_count' by +396.33 (Target: 1147.33, Current: 751.0).",
-        "Increase 'h2_count' by +7.0 (Target: 14.0, Current: 7.0)."
+        "Expand body copy by +1364 words to match Top 3 average (3305 words).",
+        "Increase 'unique_word_count' by +669.67 (Target: 1387.67, Current: 718.0).",
+        "Reduce 'h2_count' by -3.67 to mitigate over-optimization risk (Target: 3.33, Current: 7.0)."
       ]
     }
   ]

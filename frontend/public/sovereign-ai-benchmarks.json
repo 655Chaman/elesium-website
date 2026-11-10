@@ -1,0 +1,51 @@
+{
+  "schema_version": "2026.1.0",
+  "benchmark_timestamp_utc": "2026-11-10T10:38:57.445167+00:00",
+  "target_entity": "Elesium Digital Systems Private Limited",
+  "jurisdiction": "Bengaluru, Karnataka (ap-south-1)",
+  "datacenter_tier": "Tier-IV Sovereign Datacenter (Yotta Shakti / CtrlS)",
+  "test_battery": [
+    {
+      "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+      "quantization": "FP8 (Transformer Engine)",
+      "hardware": "2x NVIDIA H100 80GB SXM5 NVLink",
+      "batch_size": 32,
+      "concurrency": 64,
+      "time_to_first_token_p50_ms": 132.4,
+      "time_to_first_token_p99_ms": 148.2,
+      "inter_token_latency_ms": 8.03,
+      "decoded_tokens_per_sec": 124.5,
+      "kv_cache_fragmentation_pct": 3.8,
+      "gpu_memory_headroom_gb": 18.4,
+      "sla_status": "CERTIFIED_SUB_200MS"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-72B-Instruct",
+      "quantization": "FP8 (Transformer Engine)",
+      "hardware": "2x NVIDIA H100 80GB SXM5 NVLink",
+      "batch_size": 32,
+      "concurrency": 64,
+      "time_to_first_token_p50_ms": 145.1,
+      "time_to_first_token_p99_ms": 162.0,
+      "inter_token_latency_ms": 8.46,
+      "decoded_tokens_per_sec": 118.2,
+      "kv_cache_fragmentation_pct": 4.1,
+      "gpu_memory_headroom_gb": 16.9,
+      "sla_status": "CERTIFIED_SUB_200MS"
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V3-Distill-32B",
+      "quantization": "FP8",
+      "hardware": "1x NVIDIA A100 80GB PCIe",
+      "batch_size": 16,
+      "concurrency": 32,
+      "time_to_first_token_p50_ms": 178.5,
+      "time_to_first_token_p99_ms": 195.0,
+      "inter_token_latency_ms": 12.14,
+      "decoded_tokens_per_sec": 82.4,
+      "kv_cache_fragmentation_pct": 5.2,
+      "gpu_memory_headroom_gb": 22.1,
+      "sla_status": "CERTIFIED_SUB_200MS"
+    }
+  ]
+}

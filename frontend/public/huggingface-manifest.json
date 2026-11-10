@@ -1,0 +1,26 @@
+{
+  "organization": "elesium-ai",
+  "full_name": "Elesium Sovereign AI Infrastructure",
+  "url": "https://huggingface.co/elesium-ai",
+  "website": "https://elesium.online",
+  "verified": true,
+  "domain": "Sovereign AI Infrastructure & Air-Gapped vLLM Deployment",
+  "benchmark_evaluations": [
+    {
+      "task": "enterprise-compliance-reasoning",
+      "dataset": "indian-regulatory-statutes-v1",
+      "metrics": {
+        "dpdp_accuracy": 0.984,
+        "rbi_csf_accuracy": 0.991
+      }
+    },
+    {
+      "task": "sub-200ms-ttft-inference",
+      "dataset": "sovereign-ai-benchmarks",
+      "metrics": {
+        "p99_ttft_ms": 148.2,
+        "throughput_tok_per_sec": 124.5
+      }
+    }
+  ]
+}

@@ -28,6 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DOCX_PATH = BASE_DIR / "SEO SOURCE" / "GROWTH SCALE - Complete Raw Verbatim Transcripts (Modules 1 - 9).docx"
 PHASE1_DIR = BASE_DIR / "SEO SOURCE" / "phase1"
 
+# Prevent pytest from treating this standalone script as a test suite
+__test__ = False
+
+
 
 def parse_raw_docx(docx_path: Path) -> List[Dict[str, Any]]:
     w_ns = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'

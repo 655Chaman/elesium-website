@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-09T13:09:42.620407+00:00",
+  "timestamp": "2026-11-10T10:34:33.388310+00:00",
   "remediation_status": "DETOX_FRAMEWORK_ARMED",
   "phase_1_cull": {
     "status": "PHASE_1_COMPLETE",
-    "culled_urls_count": 6,
+    "culled_urls_count": 3695,
     "http_410_rules_path": "automation/algorithmic_cull_http_410.conf",
     "consolidation_map_path": "automation/301_consolidation_map.json"
   },
