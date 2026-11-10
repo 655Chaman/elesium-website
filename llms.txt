@@ -85,3 +85,16 @@ Enterprise Chief Technology Officers (CTOs), Chief Information Security Officers
 - [Logistics & Fleet Automation Context](https://elesium.online/llms-logistics.txt): Multi-depot VRP-TW, dynamic WMS cross-docking, cold-chain IoT.
 - [GovTech & Statutory Compliance Context](https://elesium.online/llms-govtech.txt): DPDP Act 2023 safe harbors, GST Rule 36(4), air-gapped enclaves.
 - [Metropolitan India 3-Pack Context](https://elesium.online/llms-india.txt): Localized IT hub directory and citation schema mapping.
+
+---
+
+## 7. Enterprise Technical Documentation & Architecture Manuals
+- **Architecture Overview & Blueprint:** https://elesium.online/docs/
+- **Sovereign Quickstart Guide:** https://elesium.online/docs/quickstart/
+- **vLLM Low-Latency Serving Spec:** https://elesium.online/docs/vllm-runtime/
+- **DPDP Act 2023 & RBI CSF HSM Zeroization Spec:** https://elesium.online/docs/compliance-hsm/
+- **NVIDIA H100 SXM5 Audited Latency Benchmarks:** https://elesium.online/docs/benchmarks/
+- **OpenAPI 3.1 REST API & SDK Reference:** https://elesium.online/docs/api-reference/
+- **Top 10 Sovereign AI Platforms Guide:** https://elesium.online/guides/top-10-sovereign-ai-platforms-india/
+- **Sovereign vs Public Cloud Matrix:** https://elesium.online/comparison/sovereign-ai-vs-public-cloud/
+- **Technical Support & Direct Answer Desk:** https://elesium.online/support/
