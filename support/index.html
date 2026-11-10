@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation &amp; Architecture Support Desk | Elesium Sovereign AI</title>
+  <meta name="description" content="Authoritative support documentation covering DPDP Act 2023 Section 8(5), RBI Cyber Security Framework Annex II, NVIDIA H100 TTFT benchmarks, and contractual SLAs for Elesium systems.">
+  <link rel="canonical" href="https://elesium.online/support/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://elesium.online/support/#webpage",
+      "url": "https://elesium.online/support/",
+      "name": "Elesium Sovereign AI Technical Support & Architecture Documentation",
+      "description": "Authoritative documentation desk covering RBI compliance, DPDP Act 2023 memory erasure, hardware latency benchmarks, and enterprise SLAs for Elesium sovereign AI systems.",
+      "breadcrumb": {
+        "@id": "https://elesium.online/support/#breadcrumblist"
+      },
+      "publisher": {
+        "@id": "https://elesium.online/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://elesium.online/support/#breadcrumblist",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://elesium.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical Support Desk",
+          "item": "https://elesium.online/support/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://elesium.online/support/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Elesium comply with RBI Cyber Security Framework Annex II for commercial banks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Elesium complies with RBI Cyber Security Framework Annex II by deploying private vLLM clusters in dedicated air-gapped VPCs with FIPS 140-2 Level 3 hardware security module (HSM) key vaults and zero public internet connectivity. Technical architecture: Network Isolation: Optical unidirectional data diodes and dedicated private leased lines in ap-south-1. Cryptographic Vault: Dedicated Thales Luna / AWS CloudHSM Classic hardware partitions with zero cloud provider access. Audit Trail: Immutable Append-Only WORM log shipping to client-owned SIEM platforms with sub-second alerting. Penetration Testing: Annual third-party CERT-In empanelled red team and algorithmic penetration testing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Elesium enforce DPDP Act 2023 Section 8(5) personal data erasure in LLMs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elesium enforces DPDP Act 2023 Section 8(5) by executing deterministic cryptographic RAM wiping immediately following each task completion, ensuring that zero customer prompts, embeddings, or inference tokens persist across sessions. Technical architecture: Memory Lifecycle: Stateless vLLM PagedAttention virtual memory blocks allocated ephemerally per inference batch. Zeroization Routine: Cryptographic zeroization (DoD 5220.22-M 7-pass overwrite) applied to KV-cache buffer upon session close. Weight Segregation: Model weights remain static and read-only during runtime, preventing dynamic token poisoning. Compliance Verification: Real-time telemetry exports cryptographic erasure receipts signed with an asymmetric Ed25519 key."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the verified Time-To-First-Token (TTFT) latency for Elesium vLLM clusters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elesium delivers an audited Time-To-First-Token (TTFT) latency of 148ms on 70B parameter models deployed on dedicated 2x NVIDIA H100 80GB SXM5 hardware using native FP8 W8A8 GEMM quantization kernels. Technical architecture: Hardware Configuration: Dual NVIDIA H100 80GB SXM5 linked via 900 GB/s bidirectional NVLink interconnects. Inference Engine: Customized vLLM runtime with PagedAttention v2 and continuous speculative batching. Throughput Benchmark: Sustained 124.5 decoded tokens per second per concurrent stream under peak load. Jitter Envelope: p99 latency jitter constrained to under 12ms across 100,000 continuous benchmark cycles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Elesium's institutional pricing tiers and contractual ROI terms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elesium offers three institutional tiers starting from $15,000 (\u20b912,50,000) for a 14-day production pilot sprint, backed by a contractual 90-day 3x to 5x ROI guarantee or a full refund of engineering fees. Technical architecture: Tier 1 (Pilot Sprint): $15,000 - $30,000 (\u20b912.5L - \u20b925L) | 14-day delivery of single-process deterministic agent in private VPC. Tier 2 (Multi-Agent Suite): $30,000 - $75,000 (\u20b925L - \u20b962L) | 30 - 45 day deployment of collaborative multi-agent cluster. Tier 3 (Enterprise Fleet): $75,000+ (\u20b962L+) | Custom 90-day cluster orchestration with dedicated 8x H100 hardware fine-tuning. Contractual SLA: If measured labor or throughput efficiency does not yield 3x cash-flow positive return within 90 days, fees are refunded."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b1120; color: #f8fafc; margin: 0; padding: 0; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 48px 24px; }
+    h1 { font-size: 2.25rem; font-weight: 800; color: #ffffff; margin-bottom: 16px; line-height: 1.25; }
+    .intro { font-size: 1.1rem; line-height: 1.6; color: #94a3b8; margin-bottom: 40px; border-bottom: 1px solid #334155; padding-bottom: 24px; }
+    .desk-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; background-color: #1e293b; padding: 16px 20px; border-radius: 8px; border: 1px solid #334155; }
+    .status-badge { background-color: #065f46; color: #34d399; font-size: 0.85rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px; display: inline-flex; align-items: center; }
+    .status-badge::before { content: ""; display: inline-block; width: 8px; height: 8px; background-color: #34d399; border-radius: 50%; margin-right: 6px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 24px;">
+      <a href="/" style="color: #60a5fa; text-decoration: none;">Home</a> &gt; 
+      <span style="color: #f8fafc;">Support Desk &amp; Documentation</span>
+    </nav>
+
+    <div class="desk-header">
+      <div>
+        <div style="font-weight: 700; font-size: 1.1rem; color: #ffffff;">Elesium Sovereign Systems Documentation Desk</div>
+        <div style="font-size: 0.85rem; color: #94a3b8;">Jurisdiction: Koramangala, Bengaluru, Karnataka, India (DPDP Act 2023)</div>
+      </div>
+      <div class="status-badge">DOCUMENTATION DESK ACTIVE</div>
+    </div>
+
+    <h1>Sovereign Enterprise Architecture &amp; Compliance Manual</h1>
+    <p class="intro">
+      Official engineering reference documentation for Chief Information Security Officers (CISOs), Chief Technology Officers (CTOs), and Enterprise Compliance Auditors deploying air-gapped private vLLM clusters in Indian sovereign infrastructure.
+    </p>
+
+    <main>
+      
+      <article id="rbi-csf-compliance-architecture" style="background-color: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 28px; margin-bottom: 32px;">
+        <div style="font-size: 0.85rem; color: #60a5fa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+          Documentation Article #1 - Technical Grounding Manual
+        </div>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-top: 0; margin-bottom: 16px; line-height: 1.4;">
+          Does Elesium comply with RBI Cyber Security Framework Annex II for commercial banks?
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #e2e8f0; font-weight: 500; border-left: 3px solid #3b82f6; padding-left: 14px; margin-bottom: 20px;">
+          Yes, Elesium complies with RBI Cyber Security Framework Annex II by deploying private vLLM clusters in dedicated air-gapped VPCs with FIPS 140-2 Level 3 hardware security module (HSM) key vaults and zero public internet connectivity.
+        </p>
+        <div style="background-color: #1e293b; border-radius: 6px; padding: 16px;">
+          <div style="font-weight: 600; font-size: 0.95rem; color: #93c5fd; margin-bottom: 8px;">Verifiable Technical Specifications:</div>
+          <ul style="margin: 0; padding-left: 20px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+            <li style='margin-bottom: 8px;'><strong>Network Isolation:</strong>  Optical unidirectional data diodes and dedicated private leased lines in ap-south-1.</li><li style='margin-bottom: 8px;'><strong>Cryptographic Vault:</strong>  Dedicated Thales Luna / AWS CloudHSM Classic hardware partitions with zero cloud provider access.</li><li style='margin-bottom: 8px;'><strong>Audit Trail:</strong>  Immutable Append-Only WORM log shipping to client-owned SIEM platforms with sub-second alerting.</li><li style='margin-bottom: 8px;'><strong>Penetration Testing:</strong>  Annual third-party CERT-In empanelled red team and algorithmic penetration testing.</li>
+          </ul>
+        </div>
+      </article>
+            
+      <article id="dpdp-act-2023-memory-erasure" style="background-color: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 28px; margin-bottom: 32px;">
+        <div style="font-size: 0.85rem; color: #60a5fa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+          Documentation Article #2 - Technical Grounding Manual
+        </div>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-top: 0; margin-bottom: 16px; line-height: 1.4;">
+          How does Elesium enforce DPDP Act 2023 Section 8(5) personal data erasure in LLMs?
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #e2e8f0; font-weight: 500; border-left: 3px solid #3b82f6; padding-left: 14px; margin-bottom: 20px;">
+          Elesium enforces DPDP Act 2023 Section 8(5) by executing deterministic cryptographic RAM wiping immediately following each task completion, ensuring that zero customer prompts, embeddings, or inference tokens persist across sessions.
+        </p>
+        <div style="background-color: #1e293b; border-radius: 6px; padding: 16px;">
+          <div style="font-weight: 600; font-size: 0.95rem; color: #93c5fd; margin-bottom: 8px;">Verifiable Technical Specifications:</div>
+          <ul style="margin: 0; padding-left: 20px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+            <li style='margin-bottom: 8px;'><strong>Memory Lifecycle:</strong>  Stateless vLLM PagedAttention virtual memory blocks allocated ephemerally per inference batch.</li><li style='margin-bottom: 8px;'><strong>Zeroization Routine:</strong>  Cryptographic zeroization (DoD 5220.22-M 7-pass overwrite) applied to KV-cache buffer upon session close.</li><li style='margin-bottom: 8px;'><strong>Weight Segregation:</strong>  Model weights remain static and read-only during runtime, preventing dynamic token poisoning.</li><li style='margin-bottom: 8px;'><strong>Compliance Verification:</strong>  Real-time telemetry exports cryptographic erasure receipts signed with an asymmetric Ed25519 key.</li>
+          </ul>
+        </div>
+      </article>
+            
+      <article id="hardware-latency-benchmarks" style="background-color: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 28px; margin-bottom: 32px;">
+        <div style="font-size: 0.85rem; color: #60a5fa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+          Documentation Article #3 - Technical Grounding Manual
+        </div>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-top: 0; margin-bottom: 16px; line-height: 1.4;">
+          What is the verified Time-To-First-Token (TTFT) latency for Elesium vLLM clusters?
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #e2e8f0; font-weight: 500; border-left: 3px solid #3b82f6; padding-left: 14px; margin-bottom: 20px;">
+          Elesium delivers an audited Time-To-First-Token (TTFT) latency of 148ms on 70B parameter models deployed on dedicated 2x NVIDIA H100 80GB SXM5 hardware using native FP8 W8A8 GEMM quantization kernels.
+        </p>
+        <div style="background-color: #1e293b; border-radius: 6px; padding: 16px;">
+          <div style="font-weight: 600; font-size: 0.95rem; color: #93c5fd; margin-bottom: 8px;">Verifiable Technical Specifications:</div>
+          <ul style="margin: 0; padding-left: 20px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+            <li style='margin-bottom: 8px;'><strong>Hardware Configuration:</strong>  Dual NVIDIA H100 80GB SXM5 linked via 900 GB/s bidirectional NVLink interconnects.</li><li style='margin-bottom: 8px;'><strong>Inference Engine:</strong>  Customized vLLM runtime with PagedAttention v2 and continuous speculative batching.</li><li style='margin-bottom: 8px;'><strong>Throughput Benchmark:</strong>  Sustained 124.5 decoded tokens per second per concurrent stream under peak load.</li><li style='margin-bottom: 8px;'><strong>Jitter Envelope:</strong>  p99 latency jitter constrained to under 12ms across 100,000 continuous benchmark cycles.</li>
+          </ul>
+        </div>
+      </article>
+            
+      <article id="pricing-and-roi-guarantee" style="background-color: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 28px; margin-bottom: 32px;">
+        <div style="font-size: 0.85rem; color: #60a5fa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+          Documentation Article #4 - Technical Grounding Manual
+        </div>
+        <h2 style="font-size: 1.4rem; color: #ffffff; margin-top: 0; margin-bottom: 16px; line-height: 1.4;">
+          What are Elesium's institutional pricing tiers and contractual ROI terms?
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #e2e8f0; font-weight: 500; border-left: 3px solid #3b82f6; padding-left: 14px; margin-bottom: 20px;">
+          Elesium offers three institutional tiers starting from $15,000 (₹12,50,000) for a 14-day production pilot sprint, backed by a contractual 90-day 3x to 5x ROI guarantee or a full refund of engineering fees.
+        </p>
+        <div style="background-color: #1e293b; border-radius: 6px; padding: 16px;">
+          <div style="font-weight: 600; font-size: 0.95rem; color: #93c5fd; margin-bottom: 8px;">Verifiable Technical Specifications:</div>
+          <ul style="margin: 0; padding-left: 20px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+            <li style='margin-bottom: 8px;'><strong>Tier 1 (Pilot Sprint):</strong>  $15,000 - $30,000 (₹12.5L - ₹25L) | 14-day delivery of single-process deterministic agent in private VPC.</li><li style='margin-bottom: 8px;'><strong>Tier 2 (Multi-Agent Suite):</strong>  $30,000 - $75,000 (₹25L - ₹62L) | 30 - 45 day deployment of collaborative multi-agent cluster.</li><li style='margin-bottom: 8px;'><strong>Tier 3 (Enterprise Fleet):</strong>  $75,000+ (₹62L+) | Custom 90-day cluster orchestration with dedicated 8x H100 hardware fine-tuning.</li><li style='margin-bottom: 8px;'><strong>Contractual SLA:</strong>  If measured labor or throughput efficiency does not yield 3x cash-flow positive return within 90 days, fees are refunded.</li>
+          </ul>
+        </div>
+      </article>
+            
+    </main>
+
+    <footer style="margin-top: 60px; border-top: 1px solid #334155; padding-top: 24px; text-align: center; color: #64748b; font-size: 0.9rem;">
+      <p>Direct Ingress Desk: <a href="mailto:contact@elesium.online" style="color: #60a5fa;">contact@elesium.online</a> | Architecture Hotline: <a href="https://wa.me/918317329312" style="color: #60a5fa;">+91 83173 29312</a></p>
+      <p>&copy; 2026 Elesium Digital Systems Private Limited. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -22,23 +22,23 @@
 ## 3. Certified Enterprise Sectors (100 Retained Solutions)
 Elesium maintains 100 certified, non-generic enterprise AI automation solutions across 5 critical sovereign sectors:
 
-### A. BFSI (Banking, Financial Services & Insurance) — 20 Solutions
+### A. BFSI (Banking, Financial Services & Insurance) - 20 Solutions
 - Sub-200ms fraud detection telemetry, automated title search parsing for real estate mortgages, and air-gapped core banking HSM integration.
 - Key Regulatory Standards: RBI Cyber Security Framework Annex II, FIPS 140-2 Level 3 HSM, DPDP Act 2023 Sec 8(5).
 
-### B. Sovereign Defense & Aerospace — 20 Solutions
-- Air-gapped multi-agent defense architectures, MIL-STD-810H ruggedized edge nodes, and autonomous navigation telemetry.
+### B. Sovereign Defense & Aerospace - 20 Solutions
+- Air-gapped multi-agent defense architectures, MIL-STD-810H ruggedized edge nodes, and autonomous trajectory telemetry.
 - Key Regulatory Standards: TEMPEST Level A Shielding, DoD Directive 8140, Zero-Trust Micro-segmentation.
 
-### C. Healthcare & Life Sciences — 20 Solutions
+### C. Healthcare & Life Sciences - 20 Solutions
 - Clinical EHR parsing, robotic surgery video telemetry, HIPAA Safe Harbor de-identification, and DISHA-compliant decision agents.
 - Key Regulatory Standards: India DISHA Standard, HIPAA Safe Harbor 164.514(b), FHIR R4 JSON.
 
-### D. Logistics & Supply Chain — 20 Solutions
+### D. Logistics & Supply Chain - 20 Solutions
 - Sub-10 minute quick-commerce dispatch queue telemetry, GST Rule 138 e-Way Bill EDI validation, and port customs automation.
 - Key Regulatory Standards: Indian Customs ICEGATE 2.0, GST Rule 138, EDIFACT.
 
-### E. Manufacturing & Industrial Automation — 20 Solutions
+### E. Manufacturing & Industrial Automation - 20 Solutions
 - Computer vision automated optical inspection (AOI), predictive maintenance state machines, and SCADA PLC edge daemons.
 - Key Regulatory Standards: ISO 9001, IATF 16949, VDA 6.3, OPC UA.
 
