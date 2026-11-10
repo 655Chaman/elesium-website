@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this benchmark data or sovereign AI architecture, please cite it as below."
+authors:
+  - family-names: Shah
+    given-names: Chaman
+    affiliation: Elesium Sovereign AI Systems
+title: "Empirical Latency and Memory Zeroization Benchmarks for Air-Gapped Sovereign Large Language Model Inference"
+version: 2.4.0
+date-released: 2026-03-15
+url: "https://elesium.online/docs/benchmarks/"
+repository-code: "https://github.com/elesium-ai/elesium-sovereign-vllm-benchmarks"
+keywords:
+  - sovereign-ai
+  - vllm
+  - h100
+  - pagedattention
+  - dpdp-act-2023
+  - rbi-csf
