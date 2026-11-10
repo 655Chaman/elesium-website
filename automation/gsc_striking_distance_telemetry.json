@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-11-10T13:11:36.078536",
+  "total_gsc_queries_ingested": 500,
+  "total_striking_distance_queries": 300,
+  "total_impressions_pool": 852107,
+  "total_unrealized_clicks": 839644,
+  "projected_monthly_traffic_uplift": 230388,
+  "total_pages_optimized": 100,
+  "top_opportunities": [
+    {
+      "query": "cross border sez supply zero rated invoice verification agents in tally for it parks in hyderabad benchmark latency",
+      "slug": "cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad",
+      "current_position": 9.3,
+      "impressions": 5900,
+      "current_ctr": 0.023,
+      "opportunity_score": 2239.62,
+      "projected_top3_clicks": 1681,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "automated corporate credit card expense report reconciliation agents with tally prime in gurgaon benchmark latency",
+      "slug": "automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon",
+      "current_position": 8.8,
+      "impressions": 5703,
+      "current_ctr": 0.022,
+      "opportunity_score": 2222.12,
+      "projected_top3_clicks": 1625,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "immutable system prompt kv page locking frameworks for sovereign defense contractors benchmark latency",
+      "slug": "immutable-system-prompt-kv-page-locking-frameworks-for-sovereign-defense-contractors",
+      "current_position": 9.5,
+      "impressions": 5794,
+      "current_ctr": 0.015,
+      "opportunity_score": 2196.44,
+      "projected_top3_clicks": 1651,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "dpdp act statutory audit trail kv cache generators for fintech underwriting benchmark latency",
+      "slug": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
+      "current_position": 8.8,
+      "impressions": 5433,
+      "current_ctr": 0.018,
+      "opportunity_score": 2125.58,
+      "projected_top3_clicks": 1548,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "disaggregated prefill decode schedulers for hospital clinical triage copilots benchmark latency",
+      "slug": "disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots",
+      "current_position": 9.7,
+      "impressions": 5556,
+      "current_ctr": 0.015,
+      "opportunity_score": 2086.9,
+      "projected_top3_clicks": 1583,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "vllm custom paged attention kernel deployment agents for air gapped banking vpcs in india benchmark latency",
+      "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
+      "current_position": 9.2,
+      "impressions": 5425,
+      "current_ctr": 0.024,
+      "opportunity_score": 2067.23,
+      "projected_top3_clicks": 1546,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "industrial iot mtls 1 3 encrypted gateway agents for defense manufacturing facilities benchmark latency",
+      "slug": "industrial-iot-mtls-1-3-encrypted-gateway-agents-for-defense-manufacturing-facilities",
+      "current_position": 8.7,
+      "impressions": 5270,
+      "current_ctr": 0.023,
+      "opportunity_score": 2062.15,
+      "projected_top3_clicks": 1501,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "hospital inpatient discharge turnaround acceleration and pharmacy reconciliation telemetry for private clinics benchmark latency",
+      "slug": "hospital-inpatient-discharge-turnaround-acceleration-and-pharmacy-reconciliation-telemetry-for-private-clinics",
+      "current_position": 11.7,
+      "impressions": 5852,
+      "current_ctr": 0.017,
+      "opportunity_score": 2026.43,
+      "projected_top3_clicks": 1667,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "mixture of depths stability evaluators for sovereign private vpc defense intelligences benchmark latency",
+      "slug": "mixture-of-depths-stability-evaluators-for-sovereign-private-vpc-defense-intelligences",
+      "current_position": 9.1,
+      "impressions": 5268,
+      "current_ctr": 0.021,
+      "opportunity_score": 2023.54,
+      "projected_top3_clicks": 1501,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "b2b e way bill qr code cryptographic signature verification latency telemetry for logistics clearing agents benchmark latency",
+      "slug": "b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
+      "current_position": 11.5,
+      "impressions": 5766,
+      "current_ctr": 0.015,
+      "opportunity_score": 2014.83,
+      "projected_top3_clicks": 1643,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "upi merchant chargeback dispute arbitration autonomous agents for mumbai payment aggregators benchmark latency",
+      "slug": "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
+      "current_position": 9.4,
+      "impressions": 5283,
+      "current_ctr": 0.022,
+      "opportunity_score": 1997.88,
+      "projected_top3_clicks": 1505,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "air gapped contract intelligence agents for mumbai real estate firms with automated title search parsing benchmark latency",
+      "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
+      "current_position": 11.4,
+      "impressions": 5675,
+      "current_ctr": 0.022,
+      "opportunity_score": 1976.01,
+      "projected_top3_clicks": 1617,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "sovereign on premise deepseek v3 clusters for healthcare hipaa and disha compliance benchmark latency",
+      "slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
+      "current_position": 11.1,
+      "impressions": 5546,
+      "current_ctr": 0.019,
+      "opportunity_score": 1958.48,
+      "projected_top3_clicks": 1580,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "sap s4hana manufacturing work order auto confirmation agents based on shopfloor plc counts in india benchmark latency",
+      "slug": "sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india",
+      "current_position": 11.4,
+      "impressions": 5621,
+      "current_ctr": 0.024,
+      "opportunity_score": 1953.2,
+      "projected_top3_clicks": 1601,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "cross border remittance settlement agents bridging upi and rbi cbdc digital rupee benchmark latency",
+      "slug": "cross-border-remittance-settlement-agents-bridging-upi-and-rbi-cbdc-digital-rupee",
+      "current_position": 13.4,
+      "impressions": 5869,
+      "current_ctr": 0.02,
+      "opportunity_score": 1920.2,
+      "projected_top3_clicks": 1672,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "rbi it governance master direction automated compliance scoring telemetry for tier 1 nbfcs benchmark latency",
+      "slug": "rbi-it-governance-master-direction-automated-compliance-scoring-telemetry-for-tier-1-nbfcs",
+      "current_position": 12.2,
+      "impressions": 5503,
+      "current_ctr": 0.018,
+      "opportunity_score": 1871.79,
+      "projected_top3_clicks": 1568,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "sub 8ms multimodal vision fp8 inference controllers for scada manufacturing benchmark latency",
+      "slug": "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
+      "current_position": 12.3,
+      "impressions": 5414,
+      "current_ctr": 0.013,
+      "opportunity_score": 1844.87,
+      "projected_top3_clicks": 1542,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "tally bill of materials bom manufacturing journal auto generation from mes plc telemetry benchmark latency",
+      "slug": "tally-bill-of-materials-bom-manufacturing-journal-auto-generation-from-mes-plc-telemetry",
+      "current_position": 13.5,
+      "impressions": 5648,
+      "current_ctr": 0.023,
+      "opportunity_score": 1836.97,
+      "projected_top3_clicks": 1609,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "air gapped private cloud flashdecoding deployment runbooks for defense installations in india benchmark latency",
+      "slug": "air-gapped-private-cloud-flashdecoding-deployment-runbooks-for-defense-installations-in-india",
+      "current_position": 9.6,
+      "impressions": 4877,
+      "current_ctr": 0.022,
+      "opportunity_score": 1827.17,
+      "projected_top3_clicks": 1389,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    },
+    {
+      "query": "gstr 1 sales return auto compilation agents from tally prime sales ledgers in chennai benchmark latency",
+      "slug": "gstr-1-sales-return-auto-compilation-agents-from-tally-prime-sales-ledgers-in-chennai",
+      "current_position": 13.0,
+      "impressions": 5391,
+      "current_ctr": 0.018,
+      "opportunity_score": 1788.29,
+      "projected_top3_clicks": 1536,
+      "intent": "TECHNICAL_ARCHITECTURE"
+    }
+  ]
+}
