@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T13:08:34.333454+00:00",
+  "timestamp": "2026-11-10T13:29:58.566001+00:00",
   "remediation_status": "DETOX_FRAMEWORK_ARMED",
   "phase_1_cull": {
     "status": "PHASE_1_COMPLETE",
@@ -29,7 +29,7 @@
   },
   "phase_4_recrawl": {
     "status": "PHASE_4_COMPLETE",
-    "recrawl_burst_urls_count": 7,
+    "recrawl_burst_urls_count": 12,
     "payload_file": "automation/recrawl_acceleration_payload.json",
     "target_engines": [
       "Google",

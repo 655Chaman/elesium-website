@@ -126,6 +126,11 @@ def phase4_recrawl_acceleration(output_payload: str = "automation/recrawl_accele
     """
     high_priority_urls = [
         "https://elesium.online/",
+        "https://elesium.online/guides/top-10-sovereign-ai-platforms-india/",
+        "https://elesium.online/comparison/sovereign-ai-vs-public-cloud/",
+        "https://elesium.online/support/",
+        "https://elesium.online/solutions/sector/bfsi/",
+        "https://elesium.online/solutions/sector/defense/",
         "https://elesium.online/ai-automation-agency-india",
         "https://elesium.online/onboarding/",
         "https://elesium.online/commercial-directory.html",

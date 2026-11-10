@@ -1,153 +1,25 @@
 {
   "metadata": {
     "operation": "AUTONOMOUS_FLEET_INDEXATION_SYNCHRONIZATION",
-    "timestamp_iso": "2026-11-09T08:32:40.899732+00:00",
-    "elapsed_seconds": 39.05,
+    "timestamp_iso": "2026-11-10T13:29:12.219912+00:00",
+    "elapsed_seconds": 8.4,
     "domain_host": "elesium.online",
     "indexnow_key": "c8d4529f76a147e09641c8f49f50e82b",
     "key_location": "https://elesium.online/c8d4529f76a147e09641c8f49f50e82b.txt",
     "local_key_proof_verified": true,
-    "total_urls_submitted": 4107,
-    "total_batches_dispatched": 5,
+    "total_urls_submitted": 428,
+    "total_batches_dispatched": 1,
     "priority_breakdown": {
-      "tier1_core": 256,
-      "tier2_solutions": 3795,
+      "tier1_core": 272,
+      "tier2_solutions": 100,
       "tier3_videos": 56
     }
   },
   "batches": [
     {
       "batch_index": 1,
-      "url_count": 1000,
-      "sha256_hash": "1e4cd115fe78dd3d4d7b9255589c82606bf64135f5965163931a5637aa43910d",
-      "endpoints": {
-        "IndexNow Central Gateway": {
-          "url": "https://api.indexnow.org/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Microsoft Bing / Copilot": {
-          "url": "https://www.bing.com/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Yandex Search": {
-          "url": "https://yandex.com/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Seznam Search": {
-          "url": "https://search.seznam.cz/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Naver Search": {
-          "url": "https://indexnow.naver.com/indexnow",
-          "status": 0,
-          "accepted": false
-        }
-      }
-    },
-    {
-      "batch_index": 2,
-      "url_count": 1000,
-      "sha256_hash": "d245b1316bf9fbddb7fc1f1a5a2d14f04a8cd38a2685b617caec63ab1e15a8a5",
-      "endpoints": {
-        "IndexNow Central Gateway": {
-          "url": "https://api.indexnow.org/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Microsoft Bing / Copilot": {
-          "url": "https://www.bing.com/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Yandex Search": {
-          "url": "https://yandex.com/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Seznam Search": {
-          "url": "https://search.seznam.cz/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Naver Search": {
-          "url": "https://indexnow.naver.com/indexnow",
-          "status": 0,
-          "accepted": false
-        }
-      }
-    },
-    {
-      "batch_index": 3,
-      "url_count": 1000,
-      "sha256_hash": "baefe16c87b517ca8483be832d8036b6716da6d76b7b8252f13463689c1ecf11",
-      "endpoints": {
-        "IndexNow Central Gateway": {
-          "url": "https://api.indexnow.org/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Microsoft Bing / Copilot": {
-          "url": "https://www.bing.com/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Yandex Search": {
-          "url": "https://yandex.com/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Seznam Search": {
-          "url": "https://search.seznam.cz/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Naver Search": {
-          "url": "https://indexnow.naver.com/indexnow",
-          "status": 0,
-          "accepted": false
-        }
-      }
-    },
-    {
-      "batch_index": 4,
-      "url_count": 1000,
-      "sha256_hash": "d96e4df253d4d973913ae5fd33e1b90e3f8c0ae9b86b1dc6f23ff6b812a87296",
-      "endpoints": {
-        "IndexNow Central Gateway": {
-          "url": "https://api.indexnow.org/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Microsoft Bing / Copilot": {
-          "url": "https://www.bing.com/IndexNow",
-          "status": 200,
-          "accepted": true
-        },
-        "Yandex Search": {
-          "url": "https://yandex.com/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Seznam Search": {
-          "url": "https://search.seznam.cz/indexnow",
-          "status": 200,
-          "accepted": true
-        },
-        "Naver Search": {
-          "url": "https://indexnow.naver.com/indexnow",
-          "status": 0,
-          "accepted": false
-        }
-      }
-    },
-    {
-      "batch_index": 5,
-      "url_count": 107,
-      "sha256_hash": "66d90362232e6c04806d2c809726c3220530323f8a34bbd637dd8f4ea2b6dabb",
+      "url_count": 428,
+      "sha256_hash": "5549bd0d21b476e23624c56562ad526cf8ee3d7bf16839273062aa2a5636c66e",
       "endpoints": {
         "IndexNow Central Gateway": {
           "url": "https://api.indexnow.org/IndexNow",
