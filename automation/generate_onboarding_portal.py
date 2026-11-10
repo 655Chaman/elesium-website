@@ -48,9 +48,10 @@ BASE_HTML = """<!doctype html>
   <link rel="alternate" hreflang="en-ae" href="https://elesium.online/ae/onboarding/" />
 
   <!-- Favicon & Touch Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
 
   <!-- Preconnect & DNS Prefetch for Core Web Vitals -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
