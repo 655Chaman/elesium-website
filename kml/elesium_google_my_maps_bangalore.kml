@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Elesium Enterprise AI — Bengaluru Entity Authority & Driving Directions</name>
+    <description><![CDATA[
+      <h3>Elesium Enterprise AI Architecture Hub — Bengaluru</h3>
+      <p><b>Address:</b> Koramangala 4th Block, 80 Feet Road, Bengaluru, Karnataka 560034</p>
+      <p><b>Google Maps CID:</b> <a href="https://maps.google.com/?cid=14283948572910492819">14283948572910492819</a></p>
+      <p><b>Official Entity URL:</b> <a href="https://elesium.online/enterprise-ai-bangalore/">https://elesium.online/enterprise-ai-bangalore/</a></p>
+      <p><b>Autonomous AI Engineering:</b> Multi-Agent LangGraph Systems, Sovereign LLM Deployment, DPDP Act 2023 Compliance.</p>
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PLelesium-enterprise" frameborder="0" allowfullscreen></iframe>
+    ]]></description>
+    <Style id="hubPoint">
+      <IconStyle>
+        <scale>1.4</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="vectorRoute">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="radiusBoundary">
+      <LineStyle><color>7f00ffff</color><width>2</width></LineStyle>
+      <PolyStyle><color>1aff0000</color></PolyStyle>
+    </Style>
+
+    <!-- FOCAL HUB PLACEMARK -->
+    <Placemark>
+      <name>Elesium Enterprise AI Headquarters — Bengaluru</name>
+      <description>Primary sovereign AI state machine development center. Verified CID: 14283948572910492819</description>
+      <styleUrl>#hubPoint</styleUrl>
+      <Point>
+        <coordinates>77.6245,12.9352,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- ADRIAN GANA CONVERGENT DRIVING DIRECTION VECTORS -->
+    <Folder>
+      <name>Driving Direction Vectors to Bengaluru AI Hub</name>
+      <Placemark>
+        <name>Route: Electronic City Tollway Junction → Elesium Bengaluru</name>
+        <description>Driving direction path from Electronic City Tollway Junction converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.677,12.8399,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Whitefield ITPL Main Entrance → Elesium Bengaluru</name>
+        <description>Driving direction path from Whitefield ITPL Main Entrance converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.7381,12.9863,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Outer Ring Road Bellandur EcoSpace → Elesium Bengaluru</name>
+        <description>Driving direction path from Outer Ring Road Bellandur EcoSpace converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.6834,12.926,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Indiranagar 100 Feet Road → Elesium Bengaluru</name>
+        <description>Driving direction path from Indiranagar 100 Feet Road converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.6412,12.9719,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: MG Road Metro Interchange → Elesium Bengaluru</name>
+        <description>Driving direction path from MG Road Metro Interchange converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.6066,12.9756,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Hebbal Flyover Expressway → Elesium Bengaluru</name>
+        <description>Driving direction path from Hebbal Flyover Expressway converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.597,13.0358,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Kempegowda International Airport Terminal → Elesium Bengaluru</name>
+        <description>Driving direction path from Kempegowda International Airport Terminal converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.7066,13.1986,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Yeshwanthpur Industrial Area → Elesium Bengaluru</name>
+        <description>Driving direction path from Yeshwanthpur Industrial Area converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.5407,13.0284,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Bannerghatta Road NICE Corridor → Elesium Bengaluru</name>
+        <description>Driving direction path from Bannerghatta Road NICE Corridor converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.5954,12.8718,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Sarjapur Wipro Corporate Gate → Elesium Bengaluru</name>
+        <description>Driving direction path from Sarjapur Wipro Corporate Gate converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.6874,12.9113,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Marathahalli Multiplex Junction → Elesium Bengaluru</name>
+        <description>Driving direction path from Marathahalli Multiplex Junction converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.7011,12.9554,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Route: Jayanagar 4th Block Complex → Elesium Bengaluru</name>
+        <description>Driving direction path from Jayanagar 4th Block Complex converging on Elesium Bengaluru headquarters.</description>
+        <styleUrl>#vectorRoute</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>77.5824,12.9299,0 77.6245,12.9352,0</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+
+    <!-- 25KM & 50KM SERVICE RADIUS COVERAGE POLYGONS -->
+    <Folder>
+      <name>Bengaluru Metropolitan Service Radius</name>
+      <Placemark>
+        <name>15km Metropolitan Delivery Boundary — Bengaluru</name>
+        <styleUrl>#radiusBoundary</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>77.6245,13.070098240887809,0 77.64853474281401,13.068048833494023,0 77.67183920212979,13.061962881519275,0 77.69370528374365,13.052025303534675,0 77.71346859783051,13.038538047818632,0 77.7305286460926,13.021910917811194,0 77.74436706759623,13.002649120443905,0 77.7545633889066,12.981337915682829,0 77.76080779996032,12.958624833700643,0 77.7629105674873,12.9352,0 77.76080779996032,12.911775166299357,0 77.7545633889066,12.889062084317171,0 77.74436706759623,12.867750879556095,0 77.7305286460926,12.848489082188806,0 77.71346859783051,12.831861952181368,0 77.69370528374365,12.818374696465325,0 77.67183920212979,12.808437118480725,0 77.64853474281401,12.802351166505977,0 77.6245,12.800301759112191,0 77.60046525718599,12.802351166505977,0 77.5771607978702,12.808437118480725,0 77.55529471625634,12.818374696465325,0 77.53553140216948,12.831861952181368,0 77.5184713539074,12.848489082188806,0 77.50463293240377,12.867750879556095,0 77.49443661109339,12.889062084317171,0 77.48819220003968,12.911775166299357,0 77.4860894325127,12.9352,0 77.48819220003968,12.958624833700643,0 77.49443661109339,12.981337915682829,0 77.50463293240377,13.002649120443905,0 77.5184713539074,13.021910917811194,0 77.53553140216947,13.038538047818632,0 77.55529471625634,13.052025303534675,0 77.5771607978702,13.061962881519275,0 77.60046525718599,13.068048833494023,0 77.6245,13.070098240887809,0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>35km Metropolitan Delivery Boundary — Bengaluru</name>
+        <styleUrl>#radiusBoundary</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>77.6245,13.249962562071556,0 77.68058106656603,13.245180611486054,0 77.73495813830286,13.230980056878307,0 77.78597899540185,13.207792374914243,0 77.83209339493789,13.176322111576807,0 77.87190017421605,13.137525474892787,0 77.9041898243912,13.092581281035779,0 77.92798124078209,13.042855136593268,0 77.94255153324075,12.9898579453015,0 77.94745799080371,12.9352,0 77.94255153324075,12.8805420546985,0 77.92798124078209,12.827544863406732,0 77.9041898243912,12.777818718964221,0 77.87190017421605,12.732874525107214,0 77.83209339493789,12.694077888423193,0 77.78597899540185,12.662607625085757,0 77.73495813830286,12.639419943121693,0 77.68058106656603,12.625219388513946,0 77.6245,12.620437437928445,0 77.56841893343396,12.625219388513946,0 77.51404186169714,12.639419943121693,0 77.46302100459815,12.662607625085757,0 77.41690660506211,12.694077888423193,0 77.37709982578394,12.732874525107214,0 77.3448101756088,12.777818718964221,0 77.3210187592179,12.827544863406732,0 77.30644846675925,12.8805420546985,0 77.30154200919628,12.9352,0 77.30644846675925,12.9898579453015,0 77.3210187592179,13.042855136593268,0 77.3448101756088,13.092581281035779,0 77.37709982578394,13.137525474892787,0 77.41690660506211,13.176322111576807,0 77.46302100459815,13.207792374914243,0 77.51404186169714,13.230980056878307,0 77.56841893343396,13.245180611486054,0 77.6245,13.249962562071556,0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
