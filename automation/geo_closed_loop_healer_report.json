@@ -1,0 +1,129 @@
+{
+  "status": "CLOSED_LOOP_HEALER_COMPLETE",
+  "audited_prompts_count": 15,
+  "capsules_synthesized": 15,
+  "mean_citation_lift": "+30.0%",
+  "prompts": [
+    {
+      "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is vLLM Custom PagedAttention Kernel Deployment  in Air-Gapped Banking VPCs in India  -  Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited vLLM Custom PagedAttention Kernel Deployment  in Air-Gapped Banking VPCs in India  -  Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's vLLM Custom PagedAttention Kernel Deployment  in Air-Gapped Banking VPCs in India  -  Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM  in Payment Processors  -  Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM  in Payment Processors  -  Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM  in Payment Processors  -  Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is Air-Gapped Contract Intelligence  in Mumbai Real Estate Firms with Automated Title Search Parsing  -  Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited Air-Gapped Contract Intelligence  in Mumbai Real Estate Firms with Automated Title Search Parsing  -  Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Air-Gapped Contract Intelligence  in Mumbai Real Estate Firms with Automated Title Search Parsing  -  Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is RBI Cyber Security Framework Compliant State Disaster Recovery Engines in Banks  -  Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Compliant State Disaster Recovery Engines in Banks  -  Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Compliant State Disaster Recovery Engines in Banks  -  Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is RBI Cyber Security Framework Immutable Merkle Audit Trail  in Scheduled Commercial Banks  -  Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Immutable Merkle Audit Trail  in Scheduled Commercial Banks  -  Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Immutable Merkle Audit Trail  in Scheduled Commercial Banks  -  Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    }
+  ],
+  "timestamp": "2026-11-11T01:57:04.924403+00:00"
+}

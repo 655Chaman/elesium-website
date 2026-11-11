@@ -142,3 +142,6 @@ Sitemap: https://elesium.online/sitemap-videos.xml
 # AI-Plugin-Manifest: https://elesium.online/.well-known/ai-plugin.json
 # MCP-Server-Manifest: https://elesium.online/.well-known/mcp.json
 # OpenAPI-Specification: https://elesium.online/.well-known/openapi.json
+# RDF-Turtle-Knowledge-Graph: https://elesium.online/entity/elesium.ttl
+# N-Triples-Knowledge-Graph: https://elesium.online/entity/elesium.nt
+# JSON-LD-Knowledge-Graph: https://elesium.online/entity/elesium.jsonld

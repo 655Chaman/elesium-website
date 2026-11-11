@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "Corporation"
+      ],
+      "@id": "https://elesium.online/#organization",
+      "name": "Elesium Digital Systems Private Limited",
+      "alternateName": [
+        "Elesium",
+        "Elesium Sovereign AI"
+      ],
+      "url": "https://elesium.online",
+      "logo": "https://elesium.online/chaman-shah.png",
+      "description": "Indian sovereign artificial intelligence infrastructure engineering firm specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines.",
+      "areaServed": [
+        "India",
+        "Global"
+      ],
+      "knowsAbout": [
+        "Sovereign Artificial Intelligence Infrastructure",
+        "Air-Gapped Large Language Model Serving",
+        "vLLM PagedAttention v2 Low-Latency Architecture",
+        "DPDP Act 2023 Section 8(5) Memory Zeroization",
+        "RBI Cyber Security Framework Annex II",
+        "NVIDIA H100 80GB SXM5 FP8 Quantization",
+        "Deterministic Multi-Agent Systems"
+      ],
+      "sameAs": [
+        "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
+        "https://github.com/655Chaman/elesium-website",
+        "https://huggingface.co/elesium"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://elesium.online/authors/chaman-shah#person",
+        "name": "Chaman Shah",
+        "url": "https://elesium.online/authors/chaman-shah"
+      }
+    }
+  ]
+}

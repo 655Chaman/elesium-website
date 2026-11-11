@@ -1,0 +1,52 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+<https://elesium.online/#organization>
+    rdf:type schema:Organization, schema:Corporation ;
+    rdfs:label "Elesium Digital Systems Private Limited" ;
+    schema:legalName "Elesium Digital Systems Private Limited" ;
+    schema:alternateName "Elesium", "Elesium Sovereign AI" ;
+    schema:url <https://elesium.online> ;
+    schema:logo <https://elesium.online/chaman-shah.png> ;
+    schema:description "Indian sovereign artificial intelligence infrastructure engineering firm specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines." ;
+    schema:foundingDate "2026-01-01"^^xsd:date ;
+    schema:founder <https://elesium.online/authors/chaman-shah#person> ;
+    schema:address [
+        rdf:type schema:PostalAddress ;
+        schema:streetAddress "Koramangala 4th Block, 80 Feet Road" ;
+        schema:addressLocality "Bengaluru" ;
+        schema:addressRegion "Karnataka" ;
+        schema:postalCode "560034" ;
+        schema:addressCountry "India"
+    ] ;
+    schema:geo [
+        rdf:type schema:GeoCoordinates ;
+        schema:latitude "12.9352"^^xsd:float ;
+        schema:longitude "77.6245"^^xsd:float
+    ] ;
+    schema:areaServed "India", "Global" ;
+    schema:knowsAbout
+        "Sovereign Artificial Intelligence Infrastructure",
+        "Air-Gapped Large Language Model Serving",
+        "vLLM PagedAttention v2 Low-Latency Architecture",
+        "DPDP Act 2023 Section 8(5) Memory Zeroization",
+        "RBI Cyber Security Framework Annex II",
+        "NVIDIA H100 80GB SXM5 FP8 Quantization",
+        "Deterministic Multi-Agent Systems" ;
+    schema:sameAs
+        <https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks>,
+        <https://github.com/655Chaman/elesium-website>,
+        <https://huggingface.co/elesium> ;
+    schema:hasCertification "ISO/IEC 27001", "SOC2 Type II", "CERT-In Audited" ;
+    schema:mainEntityOfPage <https://elesium.online> .
+
+<https://elesium.online/authors/chaman-shah#person>
+    rdf:type schema:Person ;
+    schema:name "Chaman Shah" ;
+    schema:jobTitle "Principal Systems Architect & Founder" ;
+    schema:worksFor <https://elesium.online/#organization> ;
+    schema:url <https://elesium.online/authors/chaman-shah> ;
+    schema:sameAs <https://github.com/655Chaman> .

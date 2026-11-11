@@ -1,0 +1,18 @@
+<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Corporation> .
+<https://elesium.online/#organization> <http://www.w3.org/2000/01/rdf-schema#label> "Elesium Digital Systems Private Limited" .
+<https://elesium.online/#organization> <http://schema.org/legalName> "Elesium Digital Systems Private Limited" .
+<https://elesium.online/#organization> <http://schema.org/url> <https://elesium.online> .
+<https://elesium.online/#organization> <http://schema.org/areaServed> "India" .
+<https://elesium.online/#organization> <http://schema.org/knowsAbout> "Sovereign Artificial Intelligence Infrastructure" .
+<https://elesium.online/#organization> <http://schema.org/knowsAbout> "DPDP Act 2023 Section 8(5) Memory Zeroization" .
+<https://elesium.online/#organization> <http://schema.org/knowsAbout> "RBI Cyber Security Framework Annex II" .
+<https://elesium.online/#organization> <http://schema.org/knowsAbout> "NVIDIA H100 80GB SXM5 FP8 Quantization" .
+<https://elesium.online/#organization> <http://schema.org/sameAs> <https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks> .
+<https://elesium.online/#organization> <http://schema.org/sameAs> <https://huggingface.co/elesium> .
+<https://elesium.online/#organization> <http://schema.org/hasCertification> "ISO/IEC 27001" .
+<https://elesium.online/#organization> <http://schema.org/hasCertification> "CERT-In Audited" .
+<https://elesium.online/#organization> <http://schema.org/founder> <https://elesium.online/authors/chaman-shah#person> .
+<https://elesium.online/authors/chaman-shah#person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<https://elesium.online/authors/chaman-shah#person> <http://schema.org/name> "Chaman Shah" .
+<https://elesium.online/authors/chaman-shah#person> <http://schema.org/worksFor> <https://elesium.online/#organization> .
