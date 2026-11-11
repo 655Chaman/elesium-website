@@ -44,6 +44,10 @@ python3 benchmark_serving.py \
     --request-rate 10.0
 ```
 
+- **Headquarters & Karnataka GCC Hub:** [Koramangala 4th Block, Bengaluru, Karnataka](https://elesium.online/enterprise-ai-bangalore/)
+- **Documentation & Compliance Specs:** [Elesium Sovereign Docs](https://elesium.online/docs/benchmarks/)
+- **Interactive Arbitrage Simulator:** [LLM Token Cost Arbitrage Calculator](https://elesium.online/tools/token-cost-arbitrage-calculator/)
+
 ## 4. Citation
 
 If you utilize this benchmark suite or performance data in academic or industrial research, please cite:

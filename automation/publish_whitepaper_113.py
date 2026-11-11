@@ -18,7 +18,7 @@ post_125 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Inference Hardware Architects, and Distributed Systems Directors: architecting dynamic tree-based speculative decoding pipelines, executing parallel multi-candidate verification via custom tree-attention masks, eliminating GPU warp divergence, and compressing per-token generation latency below 8ms on sovereign AI clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Inference Hardware Architects, and Distributed Systems Directors: architecting dynamic tree-based speculative decoding pipelines, executing parallel multi-candidate verification via custom tree-attention masks, eliminating GPU warp divergence, and compressing per-token generation latency below 8ms on sovereign AI clusters.",
     "metaDescription": "Dynamic tree speculative decoding systems blueprint: multi-draft verification, custom tree-attention Triton masks, GPU warp divergence elimination, and sub-8ms token latency.",
-    "relatedSolutionSlug": "dynamic-tree-based-speculative-decoding-orchestrators-for-enterprise-llm-clusters",
+    "relatedSolutionSlug": "speculative-tree-lookahead-depth-optimizers-for-automotive-factory-quality-audits",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -35,7 +35,7 @@ post_125 = {
         },
         {
             "type": "paragraph",
-            "value": "In traditional speculative decoding (Leviathan et al., 2023), a compact draft model generates a linear sequence of gamma tokens, which are subsequently validated in parallel by the target foundation model. However, linear speculation suffers from a strict serial bottleneck: if token k in the sequence is rejected by the target model, all subsequent tokens from k+1 to gamma are discarded regardless of their factual validity. In high-entropy enterprise workloads—such as automated code generation or financial quantitative analysis—this reduces mean acceptance length (alpha) to under 1.8 tokens per step."
+            "value": "In traditional speculative decoding (Leviathan et al., 2023), a compact draft model generates a linear sequence of gamma tokens, which are subsequently validated in parallel by the target foundation model. However, linear speculation suffers from a strict serial bottleneck: if token k in the sequence is rejected by the target model, all subsequent tokens from k+1 to gamma are discarded regardless of their factual validity. In high-entropy enterprise workloads - such as automated code generation or financial quantitative analysis - this reduces mean acceptance length (alpha) to under 1.8 tokens per step."
         },
         {
             "type": "paragraph",

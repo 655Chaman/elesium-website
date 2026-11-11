@@ -46,8 +46,8 @@ SECTIONS = [
     {
         "type": "paragraph",
         "value": (
-            "The enactment of India's new criminal and procedural codes—the Bharatiya Nyaya Sanhita (BNS) 2023, the Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, "
-            "and the Bharatiya Sakshya Adhiniyam (BSA) 2023 replacing the colonial-era Indian Evidence Act 1872—has fundamentally restructured the evidentiary landscape "
+            "The enactment of India's new criminal and procedural codes - the Bharatiya Nyaya Sanhita (BNS) 2023, the Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, "
+            "and the Bharatiya Sakshya Adhiniyam (BSA) 2023 replacing the colonial-era Indian Evidence Act 1872 - has fundamentally restructured the evidentiary landscape "
             "for corporate litigation teams, arbitration councils, and criminal law firms across India. Specifically, Section 63 of the BSA expands the definition of "
             "admissible electronic records to encompass cloud-hosted server logs, encrypted chat payloads, biometric telemetry, and digital custody certificates."
         )
@@ -58,7 +58,7 @@ SECTIONS = [
             "Partnering with an enterprise [AI automation agency for legal firms in India](/ai-automation-agency-india) allows top-tier law chambers to replace manual "
             "document discovery with deterministic, air-gapped multi-agent systems. By running sovereign foundation models on local GPU clusters within Indian VPCs, "
             "advocates can index hundreds of thousands of trial exhibits, verify judicial citations against the Supreme Court of India's digital reporters, and draft "
-            "audit-proof court filings in hours instead of weeks—with zero risk of client privilege leakage or hallucinated precedents."
+            "audit-proof court filings in hours instead of weeks - with zero risk of client privilege leakage or hallucinated precedents."
         )
     },
     {
@@ -113,7 +113,7 @@ SECTIONS = [
     {
         "type": "paragraph",
         "value": (
-            "The single greatest operational hazard in legal AI is precedent hallucination—where consumer LLMs invent non-existent judicial citations (such as fabricated AIR "
+            "The single greatest operational hazard in legal AI is precedent hallucination - where consumer LLMs invent non-existent judicial citations (such as fabricated AIR "
             "or SCC reporters). Elesium enforces a strict **Zero-Hallucination Citation Verification Barrier**:\n\n"
             "1. **Deterministic Lexis/SCC Corpus Lookups:** Any citation drafted by generative agent nodes is intercepted and matched against the official Supreme Court "
             "Reports (SCR) and e-Courts Case Information System (CIS) via Case Number Record (CNR) API lookups.\n"
@@ -138,7 +138,7 @@ SECTIONS = [
         "value": (
             "| Litigation Workflow | Manual Associate Preparation | Elesium Sovereign Legal AI Automation |\n"
             "| :--- | :--- | :--- |\n"
-            "| **Special Leave Petition (SLP) Drafting** | 24 – 40 billable associate hours | 3.5 hours (88% reduction with human oversight) |\n"
+            "| **Special Leave Petition (SLP) Drafting** | 24 - 40 billable associate hours | 3.5 hours (88% reduction with human oversight) |\n"
             "| **50,000-page Evidence Discovery** | 2 to 3 weeks of junior advocate review | 45 minutes automated forensic vector clustering |\n"
             "| **Section 63 BSA Certificate Compliance** | Prone to evidentiary defect notices | 100% cryptographic SHA-256 compliance guarantee |\n"
             "| **Precedent Cross-Checking** | Manual SCC / Manupatra search queries | Automated CNR verification across 3,500+ Indian courts |\n"

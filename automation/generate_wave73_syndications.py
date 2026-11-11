@@ -23,7 +23,7 @@ In 671B MoE architectures like DeepSeek-V3, uncompressed multi-head attention an
 MLA compresses the hidden state into a 512-dimensional latent vector c^{{KV}} via a down-projection matrix. In inference decoding, keys and values are generated on-the-fly, or up-projection matrices are absorbed into query weights, bypassing individual key materialization in SRAM.
 
 ## 3. Decoupled Rotary Position Embedding (RoPE) Isolation
-To preserve linear matrix absorption with position-dependent rotary embeddings, MLA decouples positional keys (64 dimensions) from content keys. Total elements stored per token drop from 8,192 down to 576—a 93.3% memory reduction.
+To preserve linear matrix absorption with position-dependent rotary embeddings, MLA decouples positional keys (64 dimensions) from content keys. Total elements stored per token drop from 8,192 down to 576 - a 93.3% memory reduction.
 
 ## 4. Comparative Benchmarks: MHA vs GQA vs MLA on 671B MoE Clusters
 Empirical tests on 4x 8-GPU HGX H100 clusters running DeepSeek-V3 671B at 128k context:

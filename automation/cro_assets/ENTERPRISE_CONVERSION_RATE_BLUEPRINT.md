@@ -1,5 +1,5 @@
 # Enterprise Conversion Rate Optimization & Lead Pipeline Architecture Blueprint
-**Elesium Sovereign AI Systems — Enterprise CRO & Acquisition Engineering**
+**Elesium Sovereign AI Systems - Enterprise CRO & Acquisition Engineering**
 *Document Reference: ELS-CRO-2026-V1*
 *Target Audience: Principal Systems Architects, Growth Engineers, Frontend Core Team*
 *Author: Conversion Architecture Taskforce (Stream A)*
@@ -74,7 +74,7 @@ The economic buyers visiting Elesium surfaces are **CTOs, Chief Risk Officers (C
    - Upon submission, the user receives an alert or receipt stating: *"A senior associate will contact you within 4-12 hours."*
    - During those 4 to 12 hours, **40% to 55% of executive buyer momentum evaporates**. If the buyer is ready at 9 PM after reviewing an architecture diagram, they cannot immediately claim a calendar slot.
 4. **Silent Backend Error Vulnerability**:
-   - Lines 181–186 in `Waitlist.tsx`: If the backend fails or sleeps (Render free/spindown behavior), the catch block logs `console.warn` and sets `submitted(true)` without guaranteed persistence to CRM or fallback storage.
+   - Lines 181-186 in `Waitlist.tsx`: If the backend fails or sleeps (Render free/spindown behavior), the catch block logs `console.warn` and sets `submitted(true)` without guaranteed persistence to CRM or fallback storage.
 5. **Mobile Viewport Displacement**:
    - On screens `< 1024px`, the left column (authority proof) pushes the form 1,200px down. Mobile users have to scroll through 3 viewports before encountering the first input field, leading to a **42% bounce rate at fold 1**.
 
@@ -101,7 +101,7 @@ The economic buyers visiting Elesium surfaces are **CTOs, Chief Risk Officers (C
 
 ---
 
-### Surface 3: Programmatic Solution Pages (`SolutionDetail.tsx` — 1,590 URLs)
+### Surface 3: Programmatic Solution Pages (`SolutionDetail.tsx` - 1,590 URLs)
 
 #### Current Architecture
 - 1,590 programmatic BOFU landing pages built via `automation/compact_landing_generator.py` and `frontend/src/data/solutionsData.ts`.
@@ -117,7 +117,7 @@ The economic buyers visiting Elesium surfaces are **CTOs, Chief Risk Officers (C
    - Average word count per solution page is 1,200 to 1,800 words.
    - A technical reader examining the LangGraph architecture diagram or whitepaper citation at 50% scroll depth has no sticky CTA in view. They must scroll 900px down to the footer or scroll back to the hero.
 3. **Static CTA Copy vs Deep Keyword Context**:
-   - While the H1 is hyper-targeted (e.g., *"AI Automation Agency for Logistics — Autonomous Fleet Dispatch"*), the button text often reverts to generic fallbacks or repetitive phrasing without reflecting the concrete outcome (e.g., *"Eliminate Dispatch Errors & Audit SLA"*).
+   - While the H1 is hyper-targeted (e.g., *"AI Automation Agency for Logistics - Autonomous Fleet Dispatch"*), the button text often reverts to generic fallbacks or repetitive phrasing without reflecting the concrete outcome (e.g., *"Eliminate Dispatch Errors & Audit SLA"*).
 
 ---
 
@@ -218,10 +218,10 @@ MOBILE (390 x 844) - STACKED VIEW WITH PERSISTENT CONVERSION ANCHOR
 
 | Scroll Depth | Behavioral State | Triggered Action | Expected Conversion Impact |
 | :--- | :--- | :--- | :--- |
-| **0% – 25%** | Initial Evaluation / Hook Validation | Render verified corporate trust badges, context ingestion banner, and primary CTA button above the fold. | Establishes immediate authority; captures 35% of high-intent returning visitors. |
-| **25% – 50%** | Technical Verification & Scrutiny | Display architecture state diagrams, code snippets, and statutory compliance frameworks. | Overcomes technical skepticism; validates vendor capability. |
-| **50% – 75%** | Engagement Deepening | Slide in persistent sticky bottom bar (on mobile) or floating contextual booking chip (on desktop). | Prevents drop-off during long technical reading; lifts conversion by +24%. |
-| **75% – 100%** | Validation & FAQ Resolution | Bottom conversion card with dual-track booking (instant Cal.com + sovereign NDA form) and direct WhatsApp bridge. | Captures thorough evaluators who read through all FAQs and citations. |
+| **0% - 25%** | Initial Evaluation / Hook Validation | Render verified corporate trust badges, context ingestion banner, and primary CTA button above the fold. | Establishes immediate authority; captures 35% of high-intent returning visitors. |
+| **25% - 50%** | Technical Verification & Scrutiny | Display architecture state diagrams, code snippets, and statutory compliance frameworks. | Overcomes technical skepticism; validates vendor capability. |
+| **50% - 75%** | Engagement Deepening | Slide in persistent sticky bottom bar (on mobile) or floating contextual booking chip (on desktop). | Prevents drop-off during long technical reading; lifts conversion by +24%. |
+| **75% - 100%** | Validation & FAQ Resolution | Bottom conversion card with dual-track booking (instant Cal.com + sovereign NDA form) and direct WhatsApp bridge. | Captures thorough evaluators who read through all FAQs and citations. |
 | **Exit-Intent (Cursor < 15px top)** | Tab Abandonment / Bounce Risk | Modal: *"Download Your Sovereign AI Architecture & ROI Audit Memo (PDF)"*. Single corporate email input. | Recovers 18% to 26% of bouncing traffic into qualified nurturing pipeline. |
 
 ---
@@ -625,19 +625,19 @@ Instead of a generic *"Wait! Don't leave!"* popup, Elesium offers high-status in
 │                      90-DAY IMPLEMENTATION SPRINT PLAN                      │
 ├───────────────────┬─────────────────────────────────────────────────────────┤
 │ PHASE 1           │ • Deploy CorporateDomainValidator across all forms      │
-│ Days 1 – 15       │ • Cleanse legacy broker copy in WaitingListForm.tsx     │
+│ Days 1 - 15       │ • Cleanse legacy broker copy in WaitingListForm.tsx     │
 │ Quick-Win Sprints │ • Update primary CTA copy across top 50 traffic pages   │
 ├───────────────────┼─────────────────────────────────────────────────────────┤
 │ PHASE 2           │ • Integrate Cal.com Dual-Track booking modal            │
-│ Days 16 – 35      │ • Deploy Contextual Sticky Mobile Bar on SolutionDetail │
+│ Days 16 - 35      │ • Deploy Contextual Sticky Mobile Bar on SolutionDetail │
 │ Pipeline Upgrades │ • Standardize URL parameter passing from 34 tools       │
 ├───────────────────┼─────────────────────────────────────────────────────────┤
 │ PHASE 3           │ • Implement Exit-Intent Architecture Memo modal         │
-│ Days 36 – 60      │ • Deploy Regulatory Attestation Ribbon & SHA-256 seal   │
+│ Days 36 - 60      │ • Deploy Regulatory Attestation Ribbon & SHA-256 seal   │
 │ Tool Optimization │ • Roll out automated PDF memo emailer via Render API    │
 ├───────────────────┼─────────────────────────────────────────────────────────┤
 │ PHASE 4           │ • Launch PostHog / Statsig A/B Testing on CTAs          │
-│ Days 61 – 90      │ • Analyze conversion lift & lead qualification rates    │
+│ Days 61 - 90      │ • Analyze conversion lift & lead qualification rates    │
 │ Scale & Iterate   │ • Roll out dynamic copy across all 1,590 solution pages │
 └───────────────────┴─────────────────────────────────────────────────────────┘
 ```
@@ -657,7 +657,7 @@ Instead of a generic *"Wait! Don't leave!"* popup, Elesium offers high-status in
 By replacing legacy brokerage forms with a **Sovereign Dual-Track Conversion Architecture**, implementing **real-time corporate domain validation**, reinforcing **institutional compliance attestations**, and deploying **exit-intent architecture memo capture across all 34 tools**, Elesium will transform its high-volume organic search and calculator traffic into a predictable, high-ticket enterprise acquisition pipeline.
 
 The following turnkey production modules have been developed to accompany this blueprint:
-1. `automation/cro_assets/corporateDomainValidator.ts` — Real-time MX & corporate domain classification engine.
-2. `automation/cro_assets/ExitIntentMemoModal.tsx` — Exit-intent architecture memo capture modal with Framer Motion.
-3. `automation/cro_assets/CalendarBookingEmbed.tsx` — Cal.com / Calendly dual-track integration component.
-4. `automation/cro_assets/TrustProofRibbon.tsx` — High-trust compliance attestation ribbon with cryptographic SHA-256 seal.
+1. `automation/cro_assets/corporateDomainValidator.ts` - Real-time MX & corporate domain classification engine.
+2. `automation/cro_assets/ExitIntentMemoModal.tsx` - Exit-intent architecture memo capture modal with Framer Motion.
+3. `automation/cro_assets/CalendarBookingEmbed.tsx` - Cal.com / Calendly dual-track integration component.
+4. `automation/cro_assets/TrustProofRibbon.tsx` - High-trust compliance attestation ribbon with cryptographic SHA-256 seal.

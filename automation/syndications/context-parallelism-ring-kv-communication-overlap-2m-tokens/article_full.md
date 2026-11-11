@@ -16,7 +16,7 @@ Context parallelism scales ultra-long sequence inference across distributed GPU 
 
 Modern enterprise autonomous agent swarms, clinical genomic reasoning engines, and legal discovery copilots increasingly require multi-million-token context windows (128k to 2M+ tokens). However, standard transformer architectures encounter a catastrophic memory barrier: the Key-Value (KV) cache activation memory scales linearly with sequence length while the attention score matrix scales quadratically O(S^2). 
 
-For a 70B parameter model operating on a 2M token sequence in FP16 precision, the unpartitioned KV cache consumes over 512 GB of GPU RAM—vastly exceeding the 80 GB physical memory boundary of an NVIDIA H100 GPU and causing fatal Out-Of-Memory (OOM) failures.
+For a 70B parameter model operating on a 2M token sequence in FP16 precision, the unpartitioned KV cache consumes over 512 GB of GPU RAM - vastly exceeding the 80 GB physical memory boundary of an NVIDIA H100 GPU and causing fatal Out-Of-Memory (OOM) failures.
 
 ---
 

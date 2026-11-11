@@ -35,8 +35,8 @@ const FEATURED_WHITEPAPERS = [
   },
   {
     title: 'Sub-200ms Ledger Reconciliation: Python LangGraph State Machines for Core Banking and RBI Compliance',
-    slug: 'sub-200ms-ledger-reconciliation-agents-for-fintechs',
-    path: '/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs/',
+    slug: 'upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators',
+    path: '/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators/',
     category: 'BFSI & FinTech',
     readTime: '16 min read',
     date: 'September 2026'
@@ -67,9 +67,9 @@ export default function AuthorProfile() {
       '@type': 'Organization',
       '@id': 'https://elesium.online/#organization',
       'name': 'Elesium',
-      'url': 'https://elesium.online'
+      'url': 'https://elesium.online/'
     },
-    'url': 'https://elesium.online/authors/chaman-shah',
+    'url': 'https://elesium.online/authors/chaman-shah/',
     'sameAs': [
       'https://github.com/655Chaman',
       'https://linkedin.com/in/chaman-shah-elesium',
@@ -107,28 +107,28 @@ export default function AuthorProfile() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://elesium.online'
+            'item': 'https://elesium.online/'
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Leadership',
-            'item': 'https://elesium.online/team'
+            'item': 'https://elesium.online/team/'
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Chaman Shah',
-            'item': 'https://elesium.online/authors/chaman-shah'
+            'item': 'https://elesium.online/authors/chaman-shah/'
           }
         ]
       },
       {
         '@type': 'ProfilePage',
         '@id': 'https://elesium.online/authors/chaman-shah#webpage',
-        'name': 'Chaman Shah — Principal AI Systems Architect & Founder | Elesium',
+        'name': 'Chaman Shah: Principal AI Systems Architect & Founder | Elesium',
         'description': aeoAnswerCapsule,
-        'url': 'https://elesium.online/authors/chaman-shah',
+        'url': 'https://elesium.online/authors/chaman-shah/',
         'mainEntity': {
           '@id': 'https://elesium.online/authors/chaman-shah#person'
         },
@@ -144,20 +144,20 @@ export default function AuthorProfile() {
     <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300">
       <WhatsAppModal />
       <Helmet>
-        <title>Chaman Shah — Principal AI Systems Architect | Elesium</title>
+        <title>Chaman Shah: Principal AI Systems Architect | Elesium</title>
         <meta 
           name="description" 
           content="Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure." 
         />
         <link rel="canonical" href="https://elesium.online/authors/chaman-shah/" />
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Chaman Shah — Principal AI Systems Architect | Elesium" />
+        <meta property="og:title" content="Chaman Shah: Principal AI Systems Architect | Elesium" />
         <meta property="og:description" content="Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure." />
         <meta property="og:image" content="https://elesium.online/chaman-shah.png" />
         <meta property="og:url" content="https://elesium.online/authors/chaman-shah/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@elesium_ai" />
-        <meta name="twitter:title" content="Chaman Shah — Principal AI Systems Architect | Elesium" />
+        <meta name="twitter:title" content="Chaman Shah: Principal AI Systems Architect | Elesium" />
         <meta name="twitter:description" content="Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure." />
         <meta name="twitter:image" content="https://elesium.online/chaman-shah.png" />
         <script type="application/ld+json">

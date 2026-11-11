@@ -36,19 +36,19 @@ CLOUD_BUCKETS = {
 
 ENTITY_TOPICS = [
     {
-        "slug": "enterprise-ai-agent-architecture",
+        "slug": "air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore",
         "title": "Enterprise AI Agent Architecture & Deterministic State Machines",
         "wikidata": "https://www.wikidata.org/wiki/Q11660",
         "summary": "Comprehensive architectural guide to deploying autonomous multi-agent LangGraph workflows, deterministic state transitions, and air-gapped sovereign VPC LLM inference for Fortune 500 enterprises."
     },
     {
-        "slug": "dpdp-act-2023-ai-compliance",
+        "slug": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
         "title": "DPDP Act 2023 Statutory AI Compliance & Data Fiduciary Safeguards",
         "wikidata": "https://www.wikidata.org/wiki/Q121435216",
         "summary": "Legal and technical infrastructure protocols for deploying sovereign AI systems under India's Digital Personal Data Protection Act 2023, including local NER redaction and RBI audit compliance."
     },
     {
-        "slug": "sovereign-vllm-tensorrt-benchmarks",
+        "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
         "title": "Sovereign On-Premise LLM Inference: vLLM vs TensorRT-LLM Benchmarks",
         "wikidata": "https://www.wikidata.org/wiki/Q11660",
         "summary": "Empirical latency and VRAM throughput benchmarks across NVIDIA H100 and L40S clusters for enterprise sovereign reasoning models with FP8 microscaling."
@@ -84,7 +84,7 @@ def generate_cloud_html(topic: Dict, provider: str, bucket_url: str) -> str:
                     "@type": "Organization",
                     "name": "Elesium Sovereign AI Systems",
                     "url": "https://elesium.online",
-                    "logo": "https://elesium.online/logo.png"
+                    "logo": "https://elesium.online/assets/logo-square.png"
                 },
                 "about": {
                     "@type": "Thing",

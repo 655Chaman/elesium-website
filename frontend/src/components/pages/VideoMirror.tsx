@@ -28,7 +28,39 @@ import {
     shortFormVideos, 
     deepMasterclasses 
 } from '../../data/videoMasterclasses';
+import { isRetainedSolutionSlug } from '../../data/solutionsHubData';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
+
+function resolveVideoActionRoute(slug: string, industry: string): string {
+    if (slug === 'ai-automation-cost-india-2026-pricing' || slug === 'enterprise-ai-roi-calculator') {
+        return '/tools/enterprise-ai-roi-calculator/';
+    }
+    const explicitMap: Record<string, string> = {
+        'langgraph-vs-n8n-enterprise-agents': '/compare/n8n-enterprise-vs-custom-langgraph-agents/',
+        'bfsi-autonomous-loan-underwriting': '/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos/',
+        'enterprise-ai-automation-india-2026': '/enterprise-ai-bangalore/',
+    };
+    if (explicitMap[slug]) {
+        return explicitMap[slug];
+    }
+    if (isRetainedSolutionSlug(slug)) {
+        return `/solutions/${slug}/`;
+    }
+    const lowerInd = (industry || '').toLowerCase();
+    if (lowerInd.includes('bfsi') || lowerInd.includes('bank') || lowerInd.includes('fintech')) {
+        return '/solutions/category/bfsi/';
+    }
+    if (lowerInd.includes('logistics') || lowerInd.includes('supply')) {
+        return '/solutions/category/logistics/';
+    }
+    if (lowerInd.includes('health') || lowerInd.includes('clinical')) {
+        return '/solutions/category/healthcare/';
+    }
+    if (lowerInd.includes('manufactur') || lowerInd.includes('scada')) {
+        return '/solutions/category/manufacturing/';
+    }
+    return '/solutions/';
+}
 
 export default function VideoMirror() {
     const { slug } = useParams<{ slug?: string }>();
@@ -122,7 +154,7 @@ export default function VideoMirror() {
         "@graph": [
             {
                 "@type": "VideoObject",
-                "@id": `https://elesium.online/videos/${activeVideo.slug}#video`,
+                "@id": `https://elesium.online/videos/${activeVideo.slug}/#video`,
                 "name": activeVideo.title,
                 "description": activeVideo.executiveSummary,
                 "thumbnailUrl": [
@@ -133,22 +165,24 @@ export default function VideoMirror() {
                 "uploadDate": activeVideo.uploadDate,
                 "duration": activeVideo.durationIso,
                 "embedUrl": `https://www.youtube-nocookie.com/embed/${activeVideo.youtubeId}`,
-                "contentUrl": `https://elesium.online/videos/${activeVideo.slug}`,
+                "contentUrl": `https://elesium.online/videos/${activeVideo.slug}/`,
                 "transcript": activeVideo.fullTranscript,
                 "publisher": {
                     "@type": "Organization",
                     "name": "Elesium",
-                    "url": "https://elesium.online",
+                    "url": "https://elesium.online/",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://elesium.online/favicon.png"
+                        "url": "https://elesium.online/assets/logo-square.png",
+                        "width": "512",
+                        "height": "512"
                     }
                 },
                 "hasPart": activeVideo.keyMoments.map((km) => ({
                     "@type": "Clip",
                     "name": km.title,
                     "startOffset": km.seconds,
-                    "url": `https://elesium.online/videos/${activeVideo.slug}?t=${km.seconds}`
+                    "url": `https://elesium.online/videos/${activeVideo.slug}/?t=${km.seconds}`
                 }))
             },
             {
@@ -162,9 +196,9 @@ export default function VideoMirror() {
                 "publisher": {
                     "@type": "Organization",
                     "name": "Elesium",
-                    "url": "https://elesium.online"
+                    "url": "https://elesium.online/"
                 },
-                "mainEntityOfPage": `https://elesium.online/videos/${activeVideo.slug}`,
+                "mainEntityOfPage": `https://elesium.online/videos/${activeVideo.slug}/`,
                 "datePublished": activeVideo.uploadDate
             },
             {
@@ -180,13 +214,13 @@ export default function VideoMirror() {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Architecture Video Vault",
-                        "item": "https://elesium.online/videos"
+                        "item": "https://elesium.online/videos/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 3,
                         "name": activeVideo.title,
-                        "item": `https://elesium.online/videos/${activeVideo.slug}`
+                        "item": `https://elesium.online/videos/${activeVideo.slug}/`
                     }
                 ]
             }
@@ -198,10 +232,10 @@ export default function VideoMirror() {
             <Helmet>
                 <title>{activeVideo.title} | Elesium Video Vault</title>
                 <meta name="description" content={activeVideo.executiveSummary} />
-                <link rel="canonical" href={`https://elesium.online/videos/${activeVideo.slug}`} />
+                <link rel="canonical" href={`https://elesium.online/videos/${activeVideo.slug}/`} />
                 <meta property="og:title" content={`${activeVideo.title} | Elesium`} />
                 <meta property="og:description" content={activeVideo.executiveSummary} />
-                <meta property="og:url" content={`https://elesium.online/videos/${activeVideo.slug}`} />
+                <meta property="og:url" content={`https://elesium.online/videos/${activeVideo.slug}/`} />
                 <meta property="og:type" content="video.other" />
                 <meta property="og:image" content={activeVideo.heroImage || "https://elesium.online/og-image.png"} />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -281,7 +315,7 @@ export default function VideoMirror() {
                                 <span className="inline-block w-2 h-2 rounded-full bg-emerald-500" />
                                 <span className="text-gray-300">
                                     {activeVideo.videoType === 'short' 
-                                        ? 'Chad Michael 30s Vertical Production Breakdown • Spoken Keyword in 0-3s' 
+                                        ? '30s Vertical Architecture Breakdown | Sovereign AI Production' 
                                         : 'Deterministic Sovereign VPC Engineering Masterclass'}
                                 </span>
                             </div>
@@ -486,7 +520,7 @@ export default function VideoMirror() {
                                 Comprehensive Video Asset Vault
                             </div>
                             <h2 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white tracking-tight">
-                                Explore All 15 Architecture Breakdowns & Masterclasses
+                                Explore All {videoMasterclasses.length} Architecture Breakdowns & Masterclasses
                             </h2>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 max-w-2xl">
                                 Filter across 30-second vertical BOFU teardowns and deep masterclasses. Every asset features Google Search Central compliant VideoObject JSON-LD.
@@ -686,7 +720,7 @@ export default function VideoMirror() {
                                             </button>
 
                                             <Link
-                                                to={`/videos/${video.slug}`}
+                                                to={`/videos/${video.slug}/`}
                                                 className="flex-1 py-2 rounded-xl bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold transition-all text-center flex items-center justify-center gap-1"
                                             >
                                                 Deep Dive
@@ -712,7 +746,7 @@ export default function VideoMirror() {
                             Ready to Deploy Sovereign Multi-Agent Infrastructure?
                         </h2>
                         <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
-                            We don't sell generic advice. We architect and deploy deterministic agentic systems in private VPCs delivering audited 3x–5x cash-flow ROI in 90 days.
+                            We don't sell generic advice. We architect and deploy deterministic agentic systems in private VPCs delivering audited 3x-5x cash-flow ROI in 90 days.
                         </p>
                     </div>
 
@@ -735,7 +769,7 @@ export default function VideoMirror() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
 
@@ -848,7 +882,7 @@ export default function VideoMirror() {
 
                                 <div className="flex items-center gap-3">
                                     <Link
-                                        to={`/videos/${modalVideo.slug}`}
+                                        to={`/videos/${modalVideo.slug}/`}
                                         onClick={handleClosePlayModal}
                                         className="text-xs font-semibold text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white flex items-center gap-1 px-3 py-2 transition-colors"
                                     >
@@ -857,7 +891,7 @@ export default function VideoMirror() {
                                     </Link>
 
                                     <Link
-                                        to={modalVideo.slug === 'enterprise-ai-roi-calculator' ? '/tools/enterprise-ai-roi-calculator' : `/solutions/${modalVideo.slug}`}
+                                        to={resolveVideoActionRoute(modalVideo.slug, modalVideo.industry)}
                                         onClick={handleClosePlayModal}
                                         className="text-xs font-semibold text-white bg-black dark:text-black dark:bg-white hover:opacity-90 px-4 py-2 rounded-full transition-all shadow-sm"
                                     >

@@ -132,7 +132,7 @@ def inject_geotag(input_image_path: Path, output_image_path: Path, city_key: str
     # Standard EXIF tags (0x010E: ImageDescription, 0x013B: Artist, 0x8298: Copyright)
     exif[0x010E] = geo["description"]
     exif[0x013B] = "Chaman Shah, Principal AI Systems Architect (Elesium)"
-    exif[0x8298] = "Copyright 2026 Elesium Systems Pvt. Ltd. All rights reserved."
+    exif[0x8298] = "Copyright 2026 Elesium Digital Systems Private Limited. All rights reserved."
     
     # GPS IFD (0x8825)
     gps_ifd = exif.get_ifd(0x8825)

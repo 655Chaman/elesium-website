@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-publish_devto_daemon.py — Automated Bounded Dev.to Publication Daemon
+publish_devto_daemon.py - Automated Bounded Dev.to Publication Daemon
 Respects Dev.to's 300-second rate-limit window for new accounts.
 Publishes remaining 5 parasite whitepapers and logs all live URLs.
 """

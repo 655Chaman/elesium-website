@@ -105,7 +105,7 @@ SECTIONS = [
             "| Inspection Parameter | Legacy Manual Inspection | Elesium Autonomous Vision Agent |\n"
             "| :--- | :--- | :--- |\n"
             "| **Inspection Latency per Part** | 12 to 25 Seconds | **8.4 Milliseconds (Inline GigE)** |\n"
-            "| **Defect Detection Accuracy** | 82.5% – 88.0% | **99.78% Verified F1-Score** |\n"
+            "| **Defect Detection Accuracy** | 82.5% - 88.0% | **99.78% Verified F1-Score** |\n"
             "| **Minimum Flaw Resolution** | 0.5 mm (Visual Burrs) | **12 Microns (Micro-Cracks & Porosity)** |\n"
             "| **Inspection Coverage** | 5% Batch Sampling | **100% Full-Production Line Scan** |\n"
             "| **Pneumatic Rejection Response** | Delayed (Downstream Sorting) | **Sub-15ms High-Speed Solenoid Kicker** |\n\n"

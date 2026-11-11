@@ -105,8 +105,8 @@ SECTIONS = [
     {
         "type": "paragraph",
         "value": (
-            "Under queue mode, the n8n main instance only acts as the orchestrator and scheduler. Heavy workflow tasks—including tokenizing documents, "
-            "querying semantic pgvector indices, and invoking local private LLM endpoints (Ollama/vLLM)—are immediately offloaded to auto-scaling "
+            "Under queue mode, the n8n main instance only acts as the orchestrator and scheduler. Heavy workflow tasks - including tokenizing documents, "
+            "querying semantic pgvector indices, and invoking local private LLM endpoints (Ollama/vLLM) - are immediately offloaded to auto-scaling "
             "worker pods. If an ERP gateway or external banking API experiences transient throttling, BullMQ guarantees exponential backoff retries "
             "without freezing the primary workflow engine."
         )
@@ -127,9 +127,9 @@ SECTIONS = [
         "value": (
             "| Operational Dimension | Commercial SaaS (Zapier / Make) | Elesium Self-Hosted n8n Enterprise |\n"
             "| :--- | :--- | :--- |\n"
-            "| **Monthly Execution Cost (2M tasks)** | ₹3,20,000 – ₹4,80,000 / month | ₹48,000 / month (fixed AWS compute) |\n"
-            "| **Annual Infrastructure OPEX** | ₹38,40,000 – ₹57,60,000 / year | ₹5,76,000 / year (85% reduction) |\n"
-            "| **Webhook Execution Latency** | 850ms – 2,400ms (cross-continental) | 85ms – 160ms (local Mumbai peering) |\n"
+            "| **Monthly Execution Cost (2M tasks)** | ₹3,20,000 - ₹4,80,000 / month | ₹48,000 / month (fixed AWS compute) |\n"
+            "| **Annual Infrastructure OPEX** | ₹38,40,000 - ₹57,60,000 / year | ₹5,76,000 / year (85% reduction) |\n"
+            "| **Webhook Execution Latency** | 850ms - 2,400ms (cross-continental) | 85ms - 160ms (local Mumbai peering) |\n"
             "| **Data Sovereignty & Residency** | US Multi-Tenant Cloud (High DPDP risk) | 100% Indian Private VPC (Zero egress) |\n"
             "| **Custom Python / C++ Code Execution** | Strictly sandboxed (memory limits) | Full container runtime flexibility |\n"
             "| **Vector DB & RAG Integration** | Requires 3rd-party SaaS connectors | Native PostgreSQL pgvector nodes |\n"

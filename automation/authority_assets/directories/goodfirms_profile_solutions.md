@@ -1,4 +1,4 @@
-# GoodFirms Official Company Profile — Elesium
+# GoodFirms Official Company Profile - Elesium
 
 ## Company Overview
 - **Name:** Elesium

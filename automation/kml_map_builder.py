@@ -6,10 +6,10 @@ Adrian Gana Google My Maps & Advanced Geotagged Entity Vector Engine
 Engineered for Elesium Online (Adrian Gana Masterclass - Folder 3)
 
 Generates standards-compliant OGC KML 2.2 maps with:
-1. Hub coordinate pins and Google Maps decimal CIDs.
+1. Hub coordinate pins and verified Google Maps coordinate links.
 2. 10-20 multi-point driving direction vectors from surrounding tech parks & landmarks.
 3. 10km, 25km, and 50km service radius polygon boundaries.
-4. Embedded YouTube masterclass iframes, NAP citations, and Wikidata co-references.
+4. Video walkthrough links, NAP citations, and Wikidata co-references.
 5. 1-click import compatibility for Google My Maps (mymaps.google.com) & Google Earth.
 =============================================================================
 """
@@ -26,7 +26,6 @@ METRO_HUBS = {
         "state": "Karnataka",
         "lat": 12.9352,
         "lon": 77.6245,
-        "cid": "14283948572910492819",
         "address": "Koramangala 4th Block, 80 Feet Road, Bengaluru, Karnataka 560034",
         "landmarks": [
             ("Electronic City Tollway Junction", 12.8399, 77.6770),
@@ -48,7 +47,6 @@ METRO_HUBS = {
         "state": "Maharashtra",
         "lat": 19.0657,
         "lon": 72.8687,
-        "cid": "12984719284758192834",
         "address": "Bandra Kurla Complex (BKC), G Block, Mumbai, Maharashtra 400051",
         "landmarks": [
             ("Chhatrapati Shivaji Maharaj Terminus", 18.9401, 72.8354),
@@ -66,9 +64,8 @@ METRO_HUBS = {
     "delhi-ncr": {
         "city": "Delhi NCR",
         "state": "Haryana/Delhi",
-        "lat": 28.4947,
-        "lon": 77.0894,
-        "cid": "11928374659283746519",
+        "lat": 28.4908,
+        "lon": 77.0903,
         "address": "Cyber City, DLF Phase 2, Building 10, Gurugram, Haryana 122002",
         "landmarks": [
             ("Connaught Place Inner Circle", 28.6315, 77.2167),
@@ -103,22 +100,23 @@ def build_kml_for_metro(metro_key: str, metro_data: Dict) -> str:
     city = metro_data["city"]
     hub_lat = metro_data["lat"]
     hub_lon = metro_data["lon"]
-    cid = metro_data["cid"]
     address = metro_data["address"]
     landmarks = metro_data["landmarks"]
+    maps_url = f"https://maps.google.com/?q={hub_lat},{hub_lon}"
+    coord_label = f"GPS: {hub_lat}, {hub_lon}"
 
     kml = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<kml xmlns="http://www.opengis.net/kml/2.2">',
         '  <Document>',
-        f'    <name>Elesium Enterprise AI — {city} Entity Authority & Driving Directions</name>',
+        f'    <name>Elesium Enterprise AI - {city} Entity Authority &amp; Driving Directions</name>',
         f'    <description><![CDATA[',
-        f'      <h3>Elesium Enterprise AI Architecture Hub — {city}</h3>',
+        f'      <h3>Elesium Enterprise AI Architecture Hub - {city}</h3>',
         f'      <p><b>Address:</b> {address}</p>',
-        f'      <p><b>Google Maps CID:</b> <a href="https://maps.google.com/?cid={cid}">{cid}</a></p>',
+        f'      <p><b>Coordinates:</b> <a href="{maps_url}">{coord_label}</a></p>',
         f'      <p><b>Official Entity URL:</b> <a href="https://elesium.online/enterprise-ai-{metro_key}/">https://elesium.online/enterprise-ai-{metro_key}/</a></p>',
         f'      <p><b>Autonomous AI Engineering:</b> Multi-Agent LangGraph Systems, Sovereign LLM Deployment, DPDP Act 2023 Compliance.</p>',
-        f'      <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PLelesium-enterprise" frameborder="0" allowfullscreen></iframe>',
+        f'      <p><b>Architecture Walkthroughs:</b> <a href="https://elesium.online/videos/">https://elesium.online/videos/</a></p>',
         f'    ]]></description>',
         '    <Style id="hubPoint">',
         '      <IconStyle>',
@@ -139,8 +137,8 @@ def build_kml_for_metro(metro_key: str, metro_data: Dict) -> str:
         '',
         '    <!-- FOCAL HUB PLACEMARK -->',
         '    <Placemark>',
-        f'      <name>Elesium Enterprise AI Headquarters — {city}</name>',
-        f'      <description>Primary sovereign AI state machine development center. Verified CID: {cid}</description>',
+        f'      <name>Elesium Enterprise AI Headquarters - {city}</name>',
+        f'      <description>Primary sovereign AI state machine development center. {coord_label}</description>',
         '      <styleUrl>#hubPoint</styleUrl>',
         '      <Point>',
         f'        <coordinates>{hub_lon},{hub_lat},0</coordinates>',
@@ -154,7 +152,7 @@ def build_kml_for_metro(metro_key: str, metro_data: Dict) -> str:
 
     for name, lm_lat, lm_lon in landmarks:
         kml.append('      <Placemark>')
-        kml.append(f'        <name>Route: {name} → Elesium {city}</name>')
+        kml.append(f'        <name>Route: {name} -&gt; Elesium {city}</name>')
         kml.append(f'        <description>Driving direction path from {name} converging on Elesium {city} headquarters.</description>')
         kml.append('        <styleUrl>#vectorRoute</styleUrl>')
         kml.append('        <LineString>')
@@ -173,7 +171,7 @@ def build_kml_for_metro(metro_key: str, metro_data: Dict) -> str:
         poly_coords = generate_circle_coordinates(hub_lat, hub_lon, radius)
         coord_str = " ".join([f"{p[0]},{p[1]},0" for p in poly_coords])
         kml.append('      <Placemark>')
-        kml.append(f'        <name>{int(radius)}km Metropolitan Delivery Boundary — {city}</name>')
+        kml.append(f'        <name>{int(radius)}km Metropolitan Delivery Boundary - {city}</name>')
         kml.append('        <styleUrl>#radiusBoundary</styleUrl>')
         kml.append('        <Polygon>')
         kml.append('          <outerBoundaryIs>')

@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # AI Automation Cost in India: Complete 2026 Pricing Breakdown
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/ai-automation-cost-india-2026-pricing). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/ai-automation-cost-india-2026-pricing). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** A detailed breakdown of AI automation costs in India for 2026, comparing simple workflows, LLM integrations, and full custom agentic systems.
 
@@ -19,7 +19,7 @@ One of the most common questions I receive from enterprise leaders is: "How much
 
 This tier uses platforms like n8n, Make, or Zapier to connect existing SaaS tools. It rarely involves complex custom code or vector databases.
 
-- Typical Cost: ₹2,00,000 – ₹5,00,000
+- Typical Cost: ₹2,00,000 - ₹5,00,000
 - Timeline: 2 to 4 weeks
 - Best for: Data entry automation, simple CRM updates, email routing.
 
@@ -29,7 +29,7 @@ This tier uses platforms like n8n, Make, or Zapier to connect existing SaaS tool
 
 This involves integrating models like GPT-4 or Claude into your existing apps to process text, summarize documents, or act as an internal knowledge base using RAG (Retrieval-Augmented Generation).
 
-- Typical Cost: ₹8,00,000 – ₹25,00,000
+- Typical Cost: ₹8,00,000 - ₹25,00,000
 - Timeline: 1 to 3 months
 - Best for: Customer support co-pilots, document parsing, contract analysis.
 
@@ -39,7 +39,7 @@ This involves integrating models like GPT-4 or Claude into your existing apps to
 
 This is Elesium's specialty. These are autonomous systems capable of planning, utilizing tools, and executing complex, multi-step workflows with minimal human oversight. They require robust error handling, memory management, and specialized cloud infrastructure.
 
-- Typical Cost: ₹30,00,000 – ₹1,00,00,000+
+- Typical Cost: ₹30,00,000 - ₹1,00,00,000+
 - Timeline: 3 to 6 months
 - Best for: Autonomous supply chain management, complex underwriting, full-scale revenue operations automation.
 
@@ -56,11 +56,11 @@ Enterprise capital allocators must distinguish between one-time development CapE
 
 | Cost Category | Tier 1: Low-Code Workflows | Tier 2: Managed LLM RAG | Tier 3: Elesium Agentic Core |
 |---|---|---|---|
-| **Initial Implementation (CapEx)** | ₹2,00,000 – ₹5,00,000 | ₹8,00,000 – ₹25,00,000 | ₹30,00,000 – ₹1,00,00,000+ |
+| **Initial Implementation (CapEx)** | ₹2,00,000 - ₹5,00,000 | ₹8,00,000 - ₹25,00,000 | ₹30,00,000 - ₹1,00,00,000+ |
 | **Delivery Timeframe** | 2 to 4 Weeks | 1 to 3 Months | 3 to 6 Months |
-| **Monthly Infrastructure (OpEx)** | ₹15,000 – ₹35,000 (SaaS) | ₹40,000 – ₹1,20,000 (Tokens) | ₹80,000 – ₹2,50,000 (Private VPC GPU) |
+| **Monthly Infrastructure (OpEx)** | ₹15,000 - ₹35,000 (SaaS) | ₹40,000 - ₹1,20,000 (Tokens) | ₹80,000 - ₹2,50,000 (Private VPC GPU) |
 | **Token Ingress & Egress Risk** | None (Deterministic) | High (Uncapped US API calls) | Zero (Self-hosted Sovereign weights) |
-| **DPDP Act 2023 Audit Cost** | Not Applicable | ₹3,00,000 – ₹8,00,000 | Bundled In Architecture |
+| **DPDP Act 2023 Audit Cost** | Not Applicable | ₹3,00,000 - ₹8,00,000 | Bundled In Architecture |
 | **Audited Enterprise Payback** | 6 to 12 Months | 4 to 6 Months | **Contractual 90-Day Cash ROI** |
 
 
@@ -88,19 +88,19 @@ graph TD
 |                        AI AUTOMATION TCO BENCHMARK (INDIA 2026)                                   |
 |                                                                                                   |
 |  TIER 1: LOW-CODE AUTOMATION (n8n, Zapier)                                                        |
-|  - Setup Cost     : ₹2,00,000 – ₹5,00,000                                                         |
+|  - Setup Cost     : ₹2,00,000 - ₹5,00,000                                                         |
 |  - Timeline       : 2 to 4 weeks                                                                  |
-|  - Annual Opex    : ₹1,50,000 – ₹3,00,000 (SaaS fees + basic maintenance)                         |
+|  - Annual Opex    : ₹1,50,000 - ₹3,00,000 (SaaS fees + basic maintenance)                         |
 |  - Best For       : Internal utility scripts, CRM-Slack sync, basic lead routing                  |
 |                                                                                                   |
 |  TIER 2: STANDARD LLM / RAG INTEGRATION                                                           |
-|  - Setup Cost     : ₹8,00,000 – ₹25,00,000                                                        |
+|  - Setup Cost     : ₹8,00,000 - ₹25,00,000                                                        |
 |  - Timeline       : 1 to 3 months                                                                 |
-|  - Annual Opex    : ₹4,00,000 – ₹12,00,000 (API token ingress + vector DB)                       |
+|  - Annual Opex    : ₹4,00,000 - ₹12,00,000 (API token ingress + vector DB)                       |
 |  - Best For       : Internal knowledge bases, conversational support, PDF summarization           |
 |                                                                                                   |
 |  TIER 3: BESPOKE ENTERPRISE AGENTIC SYSTEMS (ELESIUM SPECIALTY)                                   |
-|  - Setup Cost     : ₹30,00,000 – ₹1,00,00,000+                                                    |
+|  - Setup Cost     : ₹30,00,000 - ₹1,00,00,000+                                                    |
 |  - Timeline       : 3 to 6 months                                                                 |
 |  - Infrastructure : Sovereign AWS ap-south-1 VPC with self-hosted Llama-3 weights                 |
 |  - Audited ROI    : Contractual 90-day cash-flow recovery (avg. 3.8x net return)                  |

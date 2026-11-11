@@ -1,4 +1,4 @@
-# 🔱 Elesium — Enterprise Autonomous AI Systems (India)
+# 🔱 Elesium - Enterprise Autonomous AI Systems (India)
 ### Open-Source Specifications, Architectural Schemas & Telemetry Manifests
 
 [![Website](https://img.shields.io/badge/Website-elesium.online-blue.svg)](https://elesium.online)

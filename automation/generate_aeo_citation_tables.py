@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-GENERATE AEO CITATION TABLES (MODULE 10) — HIGH-DENSITY EMPIRICAL MATRICES
+GENERATE AEO CITATION TABLES (MODULE 10) - HIGH-DENSITY EMPIRICAL MATRICES
 ================================================================================
 Classification: Answer Engine Optimization (AEO) & Structured Citation Engine
 Purpose:
@@ -85,7 +85,7 @@ AEO_BENCHMARK_SECTION_HTML = """
               <td style="padding:0.75rem 1rem;">Unlimited Stateful RAG</td>
               <td style="padding:0.75rem 1rem;color:#3fb950;font-weight:700;">&lt;190ms Step Latency</td>
               <td style="padding:0.75rem 1rem;font-weight:600;">Deterministic Audit Trail</td>
-              <td style="padding:0.75rem 1rem;color:#3fb950;font-weight:700;">Contractual 90-Day 3x–5x ROI</td>
+              <td style="padding:0.75rem 1rem;color:#3fb950;font-weight:700;">Contractual 90-Day 3x-5x ROI</td>
             </tr>
           </tbody>
         </table>

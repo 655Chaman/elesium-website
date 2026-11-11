@@ -1,7 +1,7 @@
 import json
 
 wave63_keywords = [
-    # Cluster 1: Sequence Parallelism & Ring Self-Attention Partitioning (IDs 3066–3082, 17 items)
+    # Cluster 1: Sequence Parallelism & Ring Self-Attention Partitioning (IDs 3066-3082, 17 items)
     {
         "id": 3066,
         "keyword": "sequence parallelism ring self attention partitioners for enterprise vllm and megatron",
@@ -224,7 +224,7 @@ wave63_keywords = [
         "primary_cta": "Schedule Commercial Airline Sequence Parallel Telemetry Review"
     },
 
-    # Cluster 2: Cross-Node Ring All-to-All & KV-Shift Overlap (IDs 3083–3098, 16 items)
+    # Cluster 2: Cross-Node Ring All-to-All & KV-Shift Overlap (IDs 3083-3098, 16 items)
     {
         "id": 3083,
         "keyword": "ring all to all communication overlap controllers for high frequency algorithmic trading",
@@ -434,7 +434,7 @@ wave63_keywords = [
         "primary_cta": "Schedule Container Logistics Ring Attention Compression Review"
     },
 
-    # Cluster 3: 1M+ Context Token Inference SLAs & Long-Context FinOps (IDs 3099–3115, 17 items)
+    # Cluster 3: 1M+ Context Token Inference SLAs & Long-Context FinOps (IDs 3099-3115, 17 items)
     {
         "id": 3099,
         "keyword": "sub 10ms ring attention latency sla monitoring daemons for autonomous agent swarms",

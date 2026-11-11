@@ -18,7 +18,7 @@ post_130 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: architecting DualPipe bidirectional pipeline parallelism, overlapping all-to-all cross-node dispatch/combine communications behind backward computation kernels, eliminating pipeline bubbles to under 2%, and maximizing Model Flops Utilization (MFU) on large-scale DeepSeek-V3 clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: architecting DualPipe bidirectional pipeline parallelism, overlapping all-to-all cross-node dispatch/combine communications behind backward computation kernels, eliminating pipeline bubbles to under 2%, and maximizing Model Flops Utilization (MFU) on large-scale DeepSeek-V3 clusters.",
     "metaDescription": "DualPipe bidirectional pipeline parallelism blueprint: zero-bubble chunked scheduling, all-to-all communication overlap, and DeepSeek-V3 cluster serving.",
-    "relatedSolutionSlug": "dualpipe-bidirectional-pipeline-parallelism-orchestrators-for-deepseek-clusters",
+    "relatedSolutionSlug": "air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",

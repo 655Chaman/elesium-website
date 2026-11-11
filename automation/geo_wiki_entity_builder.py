@@ -4,7 +4,7 @@
 GEO SECONDARY WIKI ENTITY BUILDER (V2026.1)
 =============================================================================
 Classification: Sprint A (Chris M. Walker GEO Curriculum Compliance)
-Curriculum Source: Session 10 (Branded Entities — WikiAlpha, EverybodyWiki, Simple Wikipedia)
+Curriculum Source: Session 10 (Branded Entities - WikiAlpha, EverybodyWiki, Simple Wikipedia)
 
 Objectives:
 1. Generate valid Wikitext articles for secondary open-wiki platforms.
@@ -73,7 +73,8 @@ The company's software runtimes are engineered to comply with Indian and interna
 
 == External links ==
 * [https://elesium.online Official Website]
-* [https://github.com/elesium-ai Official GitHub Organization]
+* [https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks Official GitHub Benchmarks Repository]
+* [https://github.com/655Chaman/elesium-website Official GitHub Website Repository]
 * [https://www.crunchbase.com/organization/elesium-online Crunchbase Profile]
 
 [[Category:Artificial intelligence companies of India]]

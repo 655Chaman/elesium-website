@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-free_researcher.py — Resilient Competitor & SERP Intelligence Engine
+free_researcher.py - Resilient Competitor & SERP Intelligence Engine
 ====================================================================
 Performs zero-cost SERP feature analysis and competitor intelligence extraction.
 Computes Ted Kubaitis Above-the-Fold Interaction Depth, classifies SERP features,
@@ -46,7 +46,7 @@ def classify_serp_depth(keyword: str, serp_html: str) -> SerpInteractionProfile:
             dominant_above_fold_feature="AI_OVERVIEW",
             interaction_depth_score=1,
             triage_channel="ANSWER_CAPSULES_AND_TABLES",
-            actionable_directive="Inject 40–50 word bold Answer Capsules, comparative markdown tables, and direct definitional assertions."
+            actionable_directive="Inject 40-50 word bold Answer Capsules, comparative markdown tables, and direct definitional assertions."
         )
     elif has_local_pack:
         return SerpInteractionProfile(

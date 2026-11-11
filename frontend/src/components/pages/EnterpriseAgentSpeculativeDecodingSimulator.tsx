@@ -97,7 +97,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
   const faqs = [
     {
       q: 'Why is standard autoregressive LLM decoding memory-bandwidth bound?',
-      a: 'During standard autoregressive generation, generating each new token requires loading the entire target model weights (e.g. 140GB for a 70B FP16/INT8 model) from High-Bandwidth Memory (HBM) into GPU SRAM. Because arithmetic intensity is low (one token per full model weight load), Tensor Cores remain idle over 65% of the time waiting for memory bus transfers, resulting in high 45–65ms latencies per token.'
+      a: 'During standard autoregressive generation, generating each new token requires loading the entire target model weights (e.g. 140GB for a 70B FP16/INT8 model) from High-Bandwidth Memory (HBM) into GPU SRAM. Because arithmetic intensity is low (one token per full model weight load), Tensor Cores remain idle over 65% of the time waiting for memory bus transfers, resulting in high 45-65ms latencies per token.'
     },
     {
       q: 'How does dynamic speculative decoding achieve a 2.85x speedup without sacrificing accuracy?',

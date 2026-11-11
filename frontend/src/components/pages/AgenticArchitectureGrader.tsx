@@ -135,7 +135,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
       '@type': 'Organization',
       'name': 'Elesium',
       'url': 'https://elesium.online',
-      'logo': 'https://elesium.online/assets/LOGO_NEW.png'
+      'logo': 'https://elesium.online/assets/logo-square.png'
     }
   };
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-SERP SENTINEL & COMPETITOR OUTRANK ENGINE (PHASE 16 — GRAND FINALE)
+SERP SENTINEL & COMPETITOR OUTRANK ENGINE (PHASE 16 - GRAND FINALE)
 ================================================================================
 Classification: Autonomous Real-Time SERP Monitor & Rank Dominance Engine
 Target Scope:

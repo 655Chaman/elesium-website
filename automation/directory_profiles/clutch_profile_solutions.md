@@ -1,4 +1,4 @@
-# Clutch.co Verified Directory Profile — Elesium
+# Clutch.co Verified Directory Profile - Elesium
 
 > **Platform Authority:** DR 92 (Verified B2B Engineering Directory)  
 > **Target Solutions Hub:** https://elesium.online/solutions  
@@ -33,11 +33,11 @@ Explore our enterprise solutions catalog:
 ---
 
 ## 3. Top Commercial Solutions (BOFU Landing Pages)
-1. [AI Automation Agency for Logistics & Supply Chain](https://elesium.online/solutions/ai-automation-agency-for-logistics) — 82% faster manifest clearance, sub-200ms BoL parsing
-2. [Autonomous Dispatch Software for Freight Carriers](https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers) — Dynamic route optimization cutting fuel overhead by 22%
-3. [Deterministic Warehouse Automation for 3PL Providers](https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers) — 98% error cut in multi-depot WMS reconciliation
-4. [Fleet Route Optimization Agents for Supply Chain Directors](https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors) — 40% reduction in stockouts and missed delivery SLAs
-5. [Custom EDI Parser Agents for Freight Forwarders](https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders) — Automated EDI 214/310 conversion in 1.9s latency
+1. [AI Automation Agency for Logistics & Supply Chain](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers) - 82% faster manifest clearance, sub-200ms BoL parsing
+2. [Autonomous Dispatch Software for Freight Carriers](https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers) - Dynamic route optimization cutting fuel overhead by 22%
+3. [Deterministic Warehouse Automation for 3PL Providers](https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts) - 98% error cut in multi-depot WMS reconciliation
+4. [Fleet Route Optimization Agents for Supply Chain Directors](https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents) - 40% reduction in stockouts and missed delivery SLAs
+5. [Custom EDI Parser Agents for Freight Forwarders](https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders) - Automated EDI 214/310 conversion in 1.9s latency
 
 ---
 

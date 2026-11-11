@@ -151,7 +151,7 @@
       "layout": "left-copy"
     },
     {
-      "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+      "title": "Air-Gapped Sovereign Defense Topology",
       "copy": [
         "The deployment telemetry continuously monitors pipeline stage latency, inter-node InfiniBand queue depths, and tensor bubble overhead. When high-priority missile defense or radar tracking queries arrive, the DualPipe scheduler dynamically re-allocates communication slots, executing emergency inferences with sub-10ms inter-stage handover."
       ],
@@ -161,7 +161,7 @@
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-      "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+      "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
     {

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-authority_stacking_suite.py — Edward Sturm Phase 4 Authority Stacking & Link Acceleration Engine
+authority_stacking_suite.py - Edward Sturm Phase 4 Authority Stacking & Link Acceleration Engine
 Implements Modules 11 & 12 of the Edward Sturm Compact Keywords Master Specification:
 - Non-Website Ecosystem Dominance (Module 11)
 - Link Building & Authority Stacking for Compact Pages (Module 12)
@@ -89,7 +89,7 @@ class B2BDirectoryManager:
         self.nap = nap
 
     def generate_clutch_profile(self) -> str:
-        return f"""# Clutch.co Verified Directory Profile — {self.nap['brand_name']}
+        return f"""# Clutch.co Verified Directory Profile - {self.nap['brand_name']}
 
 ## Company Identity & Statutory NAP
 - **Company Name:** {self.nap['brand_name']}
@@ -127,19 +127,19 @@ Explore our verified production solutions across logistics, BFSI, and manufactur
 
 ## Production Case Studies (Audited Metrics)
 
-### Case Study 1: BFSI — Autonomous Loan Underwriting Pipeline
+### Case Study 1: BFSI - Autonomous Loan Underwriting Pipeline
 - **Target Persona:** Chief Risk Officers & NBFC Credit Directors
 - **Solution Route:** {self.nap['solutions_hub']}/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
 - **Summary:** Replaced manual reconciliation of 48-page GST, ITR, and scanned bank statements with a deterministic VLM multi-agent system.
 - **Results:** Reconciles 1,420 line items in 1.9 seconds, cut underwriting costs by 65%, achieving a verified 340% Year-1 ROI.
 
-### Case Study 2: Logistics — Real-Time Bills of Lading & Customs Clearance
+### Case Study 2: Logistics - Real-Time Bills of Lading & Customs Clearance
 - **Target Persona:** Freight Forwarders & EXIM Directors
 - **Solution Route:** {self.nap['solutions_hub']}/ai-automation-agency-for-logistics-erp
 - **Summary:** Engineered autonomous agents that ingest multi-format BoL PDFs, cross-reference ICEGATE tariff codes, and push verified manifests directly to SAP.
 - **Results:** Reduced manifest handling cycle by 82%, eliminated human error fines, and unlocked 24/7 autonomous port clearance.
 
-### Case Study 3: Manufacturing — Predictive Inventory Reconciliation
+### Case Study 3: Manufacturing - Predictive Inventory Reconciliation
 - **Target Persona:** Plant Heads & Supply Chain VPs
 - **Solution Route:** {self.nap['solutions_hub']}/predictive-inventory-reconciliation-agents-for-sap-s4hana
 - **Summary:** Connected macroeconomic signal tracking with ERP inventory levels, automatically triggering vendor purchase orders.
@@ -166,7 +166,7 @@ Principal AI Systems Architect, Elesium
 """
 
     def generate_goodfirms_profile(self) -> str:
-        return f"""# GoodFirms Official Company Profile — {self.nap['brand_name']}
+        return f"""# GoodFirms Official Company Profile - {self.nap['brand_name']}
 
 ## Company Overview
 - **Name:** {self.nap['brand_name']}
@@ -202,7 +202,7 @@ Elesium bridges the gap between theoretical AI research and mission-critical pro
 """
 
     def generate_g2_profile(self) -> str:
-        return f"""# G2 Product & Platform Profile — {self.nap['brand_name']} AI Automation Platform
+        return f"""# G2 Product & Platform Profile - {self.nap['brand_name']} AI Automation Platform
 
 ## General Information
 - **Product Name:** {self.nap['brand_name']} Enterprise AI Automation Platform
@@ -227,7 +227,7 @@ Elesium bridges the gap between theoretical AI research and mission-critical pro
 """
 
     def generate_crunchbase_profile(self) -> str:
-        return f"""# Crunchbase Profile — {self.nap['brand_name']}
+        return f"""# Crunchbase Profile - {self.nap['brand_name']}
 
 ## Organization Details
 - **Organization Name:** {self.nap['brand_name']}
@@ -388,28 +388,28 @@ class ProductHuntLaunchManager:
 
 ## 4. Launch Day Hour-by-Hour Execution Playbook (PST Timezone)
 
-- **12:01 AM PST — The Launch Switch:**
+- **12:01 AM PST - The Launch Switch:**
   - Submit product listing at 12:01 AM PST sharp.
   - Post Maker's Comment within 60 seconds of publication.
   - Verify link points directly to `{self.nap['solutions_hub']}` with UTM tracking (`?ref=producthunt`).
 
-- **12:05 AM – 04:00 AM PST — The Golden Hour (Global & APAC Surge):**
+- **12:05 AM - 04:00 AM PST - The Golden Hour (Global & APAC Surge):**
   - Trigger internal engineering and core user network alerts.
   - Dispatch personalized messages to technical peers across Bangalore, Singapore, and London.
   - Reply to every incoming comment within 3 minutes with deep technical context.
 
-- **04:00 AM – 08:00 AM PST — European Morning Wave:**
+- **04:00 AM - 08:00 AM PST - European Morning Wave:**
   - Launch announcement on LinkedIn and technical Slack/Discord channels (LangChain, AI Engineers).
   - Publish Twitter/X launch thread highlighting the interactive tool.
 
-- **08:00 AM – 12:00 PM PST — US East Coast Prime Wave:**
+- **08:00 AM - 12:00 PM PST - US East Coast Prime Wave:**
   - High-traffic period: Monitor leaderboard ranking closely (targeting Top 3 Product of the Day).
   - Push VIP founder email blast with direct link to discuss on Product Hunt.
 
-- **12:00 PM – 05:00 PM PST — US West Coast Wave:**
+- **12:00 PM - 05:00 PM PST - US West Coast Wave:**
   - Silicon Valley CTO engagement; answer questions regarding private VPC vs cloud LLM data sovereignty.
 
-- **05:00 PM – 11:59 PM PST — Final Sprint:**
+- **05:00 PM - 11:59 PM PST - Final Sprint:**
   - Post celebratory progress milestone; thank the community for feedback.
   - Consolidate new enterprise leads arriving at `{self.nap['solutions_hub']}`.
 
@@ -544,7 +544,7 @@ class ExpertQuotePREngine:
 
 ---
 
-**Subject:** Quote: {query.topic} — {self.expert['name']}, {self.expert['title']}
+**Subject:** Quote: {query.topic} - {self.expert['name']}, {self.expert['title']}
 
 Hi [Reporter Name],
 
@@ -552,7 +552,7 @@ Here is a concise, data-backed perspective on {query.topic} for your story:
 
 "{query.response_quote}"
 
-— **{self.expert['name']}**  
+- **{self.expert['name']}**  
 **Title:** {self.expert['title']} at [{self.nap['brand_name']}]({target_url})  
 **Credentials & Verification:**  
 - **Bio:** {self.expert['bio_short']}  
@@ -580,7 +580,7 @@ Here is a concise, data-backed perspective on {query.topic} for your story:
 **The Quote (Strict 1-3 Sentence Paragraphs, Zero Fluff):**
 "{body}"
 
-— **{self.expert['name']}**, {self.expert['title']} at [{self.nap['brand_name']}]({target_url})
+- **{self.expert['name']}**, {self.expert['title']} at [{self.nap['brand_name']}]({target_url})
 """
 
     def export_all(self, target_dir: Path) -> List[Path]:
@@ -654,7 +654,7 @@ class MeetupTakeoverManager:
 ## 3. Group Welcome Announcement (Zero Spam, High-Status Technical Focus)
 *Broadcast to the group upon assuming organizer status:*
 
-> **Title:** {proposed_guild_name} is Back — Returning to High-End Engineering Roundtables
+> **Title:** {proposed_guild_name} is Back - Returning to High-End Engineering Roundtables
 > 
 > Hello everyone,
 > 
@@ -803,7 +803,7 @@ class ShortFormVideoSEOEngine:
         - The First-Sentence Rule: Exact keyword at the very beginning of the video title and description.
         - Descript Transcript Method: Insert the full spoken transcript into the description box for rapid snippet inclusion.
         """
-        full_title = f"{data.keyword} — Why Indian Enterprises Are Ditching Zapier for Python Agents"
+        full_title = f"{data.keyword} - Why Indian Enterprises Are Ditching Zapier for Python Agents"
         target_url = f"{self.nap['solutions_hub']}/{data.slug}"
 
         spoken_transcript = (
@@ -872,11 +872,11 @@ FULL TRANSCRIPT (DESCRIPT FORMAT):
 
 | Timecode | Visual Segment | Spoken Voiceover (High-Ticket Authority) | On-Screen Graphic |
 | :--- | :--- | :--- | :--- |
-| **00 – 04s** | Pattern Interrupt: Systems Architect at concrete desk looking directly at camera. | *"{data.hook_contrarian}"* | **STOP PAYING FOR FRAGILE WRAPPERS** |
-| **04 – 12s** | B-Roll: Red terminal error, API timeout warnings, frustrated analyst in Excel. | *"{data.pain_point}"* | **LOW-CODE = 40 HOURS/WK MANUAL WASTE** |
-| **12 – 28s** | Technical Schematic: LangGraph state machine animated diagram $\\to$ Private VPC pod. | *"{data.architecture_solution}"* | **DETERMINISTIC AGENTS // PRIVATE VPC** |
-| **28 – 38s** | Proof Telemetry: Dashboard showing 82% cycle reduction and audited cash-flow metrics. | *"{data.proof_metrics}"* | **HARD 90-DAY CASH-FLOW ROI (SLA)** |
-| **38 – 45s** | Direct CTA: Architect pointing to on-screen URL and QR code for WhatsApp engineering desk. | *"{data.target_cta}"* | **TAP LINK // ELESIUM SOLUTIONS HUB** |
+| **00 - 04s** | Pattern Interrupt: Systems Architect at concrete desk looking directly at camera. | *"{data.hook_contrarian}"* | **STOP PAYING FOR FRAGILE WRAPPERS** |
+| **04 - 12s** | B-Roll: Red terminal error, API timeout warnings, frustrated analyst in Excel. | *"{data.pain_point}"* | **LOW-CODE = 40 HOURS/WK MANUAL WASTE** |
+| **12 - 28s** | Technical Schematic: LangGraph state machine animated diagram $\\to$ Private VPC pod. | *"{data.architecture_solution}"* | **DETERMINISTIC AGENTS // PRIVATE VPC** |
+| **28 - 38s** | Proof Telemetry: Dashboard showing 82% cycle reduction and audited cash-flow metrics. | *"{data.proof_metrics}"* | **HARD 90-DAY CASH-FLOW ROI (SLA)** |
+| **38 - 45s** | Direct CTA: Architect pointing to on-screen URL and QR code for WhatsApp engineering desk. | *"{data.target_cta}"* | **TAP LINK // ELESIUM SOLUTIONS HUB** |
 
 ---
 
@@ -978,7 +978,7 @@ Huge fan of [Podcast Name].
 
 The biggest challenge founders and executives face in 2026 is that 80% of enterprise AI investments fail to demonstrate hard financial payback.
 
-As Principal AI Systems Architect at Elesium ({self.nap['solutions_hub']}), I spend my days auditing enterprise operational workflows and replacing 40-hour manual bottlenecks with autonomous multi-agent pods that deliver an audited 3x–5x cash-flow ROI in under 90 days.
+As Principal AI Systems Architect at Elesium ({self.nap['solutions_hub']}), I spend my days auditing enterprise operational workflows and replacing 40-hour manual bottlenecks with autonomous multi-agent pods that deliver an audited 3x-5x cash-flow ROI in under 90 days.
 
 On your show, I can break down:
 1. The 3 operational workflows where AI agents produce immediate, mathematically verifiable cash-flow savings.
@@ -1005,11 +1005,11 @@ Warmly,
 In this episode, we sit down with **Chaman Shah**, Principal AI Systems Architect at [Elesium]({self.nap['root_url']}), to discuss the realities of enterprise AI automation in 2026. Chaman breaks down why fragile low-code wrappers fail at scale, how deterministic multi-agent state machines are transforming regulated industries, and how enterprises achieve an audited 3x-5x cash-flow ROI within 90 days.
 
 ### Key Discussion Points & Timestamps
-- **04:15** — The death of low-code wrappers: Why Zapier breaks at enterprise scale.
-- **12:30** — Deterministic state machines vs stochastic chat prompts.
-- **21:40** — Deploying sovereign AI in private VPCs under data privacy laws (DPDP Act).
-- **32:10** — Case Study: Slashing enterprise loan underwriting from 5 days to 1.9 seconds.
-- **42:50** — How to audit your company's workflows for AI readiness.
+- **04:15** - The death of low-code wrappers: Why Zapier breaks at enterprise scale.
+- **12:30** - Deterministic state machines vs stochastic chat prompts.
+- **21:40** - Deploying sovereign AI in private VPCs under data privacy laws (DPDP Act).
+- **32:10** - Case Study: Slashing enterprise loan underwriting from 5 days to 1.9 seconds.
+- **42:50** - How to audit your company's workflows for AI readiness.
 
 ### Important Links & Resources
 - **Featured Guest:** [Chaman Shah on LinkedIn]({self.expert['linkedin']})

@@ -656,7 +656,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
               },
               {
                 q: 'How does Elesium deploy neuromorphic SNN agents into sovereign enterprise environments?',
-                a: 'Elesium deploys hybrid neuromorphic pipelines where event-based pre-processing and temporal anomaly detection run on neuromorphic hardware (Intel Loihi 2, SynSense Speck, or FPGA emulations) while large-scale symbolic reasoning and policy validation execute in private sovereign enclaves.'
+                a: 'Elesium deploys hybrid neuromorphic pipelines where event-based pre-processing and temporal anomaly detection run on neuromorphic hardware (Intel Loihi 2, SynSense Speck, or FPGA emulations) while large-scale symbolic reasoning and policy validation execute in sovereign private enclaves.'
               }
             ].map((faq, idx) => (
               <div key={idx} className="border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">

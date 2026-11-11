@@ -141,7 +141,7 @@ ARCHITECTURAL SAFEGUARDS:
     },
     {
       q: "What is the typical reduction in batch record review cycle time?",
-      a: "Commercial deployments in Telangana (Hyderabad Genome Valley) and Gujarat demonstrate a reduction from an 18–24 business day manual QA review cycle down to 3.4 hours of automated pre-audit verification, liberating millions in quarantined working capital."
+      a: "Commercial deployments in Telangana (Hyderabad Genome Valley) and Gujarat demonstrate a reduction from an 18-24 business day manual QA review cycle down to 3.4 hours of automated pre-audit verification, liberating millions in quarantined working capital."
     }
   ];
 

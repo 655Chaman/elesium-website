@@ -35,7 +35,7 @@
 ## 3. Group Welcome Announcement (Zero Spam, High-Status Technical Focus)
 *Broadcast to the group upon assuming organizer status:*
 
-> **Title:** Mumbai FinTech & Sovereign AI Systems Circle is Back — Returning to High-End Engineering Roundtables
+> **Title:** Mumbai FinTech & Sovereign AI Systems Circle is Back - Returning to High-End Engineering Roundtables
 > 
 > Hello everyone,
 > 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ingest_wave27_keywords.py — Ingestion script for Wave 27 BOFU Solutions (IDs 1,191–1,240)
+ingest_wave27_keywords.py - Ingestion script for Wave 27 BOFU Solutions (IDs 1,191-1,240)
 
 Fleet Scaling Target:
 - Add 50 high-lever deep-tech industrial telemetry solutions
@@ -13,7 +13,7 @@ from pathlib import Path
 QUEUE_PATH = Path(__file__).parent / "compact_keywords_queue.json"
 
 wave27_keywords = [
-    # Cluster 1: Quantum Diamond NV Center Magnetometry & Nanoscale Spin Resonance Telemetry (IDs 1,191–1,207, 17 solutions)
+    # Cluster 1: Quantum Diamond NV Center Magnetometry & Nanoscale Spin Resonance Telemetry (IDs 1,191-1,207, 17 solutions)
     {
         "id": 1191,
         "keyword": "quantum diamond nitrogen-vacancy NV center optically detected magnetic resonance ODMR microwave resonance peak telemetry for nanoscale magnetometry",
@@ -236,7 +236,7 @@ wave27_keywords = [
         "primary_cta": "Schedule Rabi Oscillation Fidelity Audit"
     },
 
-    # Cluster 2: Tokamak Disruption Mitigation Massive Gas Injection & Runaway Electron Telemetry (IDs 1,208–1,224, 17 solutions)
+    # Cluster 2: Tokamak Disruption Mitigation Massive Gas Injection & Runaway Electron Telemetry (IDs 1,208-1,224, 17 solutions)
     {
         "id": 1208,
         "keyword": "tokamak disruption mitigation system fast-acting eddy current valve gas plenum discharge pressure telemetry for massive gas injection",
@@ -459,7 +459,7 @@ wave27_keywords = [
         "primary_cta": "Schedule Cryogenic Pellet Freezer Audit"
     },
 
-    # Cluster 3: Subsea Fiber-Optic Acoustic Distributed Sensing (DAS) & Seismic Geophone Node Telemetry (IDs 1,225–1,240, 16 solutions)
+    # Cluster 3: Subsea Fiber-Optic Acoustic Distributed Sensing (DAS) & Seismic Geophone Node Telemetry (IDs 1,225-1,240, 16 solutions)
     {
         "id": 1225,
         "keyword": "ocean bottom node OBN dual-sensor gimbaled four-component 4C geophone orientation resolver telemetry for deepwater seismic imaging",

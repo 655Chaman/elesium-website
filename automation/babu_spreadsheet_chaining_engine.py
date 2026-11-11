@@ -91,7 +91,7 @@ class GoogleSheetsFormulaEngine:
         kw_proper = keyword.strip().title()
         cat_proper = category.strip().title()
         brand_clean = brand.strip()
-        return f"{kw_proper} — {cat_proper} | {brand_clean}"
+        return f"{kw_proper} - {cat_proper} | {brand_clean}"
 
     @staticmethod
     def gs_06_title_length_validator(title: str) -> Dict[str, Any]:
@@ -388,7 +388,7 @@ class CompetitorPaHarvestEngine:
             slug = GoogleSheetsFormulaEngine.gs_04_hyphenated_slug_builder(url.split("/")[-1] or "enterprise-ai")
             title = slug.replace("-", " ").title()
             fixture = {
-                "h1": f"{title} — Consulting & Implementation",
+                "h1": f"{title} - Consulting & Implementation",
                 "h2": ["Key Architectural Capabilities", "Enterprise Deployment Workflow", "Technical Specifications", "Frequently Asked Questions"],
                 "h3": ["Private VPC Deployment", "LangGraph State Machines", "ERP Integration"],
                 "faqs": [f"What is the deployment timeline for {title}?", f"How does {title} maintain data sovereignty?", "What is the guaranteed ROI?"]
@@ -566,7 +566,7 @@ class ProgrammaticKeywordSeeder:
         title = GoogleSheetsFormulaEngine.gs_05_programmatic_title_builder(clean_kw, sector)
         if len(title) > 60:
             # High-intent left-weighting truncation
-            available_kw_len = max(20, 60 - len(f" — {sector} | Elesium"))
+            available_kw_len = max(20, 60 - len(f" - {sector} | Elesium"))
             shortened_kw = clean_kw[:available_kw_len].strip()
             title = GoogleSheetsFormulaEngine.gs_05_programmatic_title_builder(shortened_kw, sector)
             if len(title) > 60:

@@ -62,7 +62,7 @@ def compile_organization_entity() -> Dict[str, Any]:
         "name": "Elesium",
         "legalName": "Elesium Digital Systems Private Limited",
         "url": "https://elesium.online",
-        "logo": "https://elesium.online/logo.png",
+        "logo": "https://elesium.online/assets/logo-square.png",
         "image": "https://elesium.online/og-image.png",
         "telephone": "+91-8317329312",
         "email": "systems@elesium.online",
@@ -84,7 +84,7 @@ def compile_organization_entity() -> Dict[str, Any]:
             "https://elesium.crypto",
             "https://www.goodfirms.co/company/elesium-online",
             "https://clutch.co/profile/elesium",
-            "https://github.com/elesium-systems",
+            "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
             "https://linkedin.com/company/elesium-online",
             "https://www.wikidata.org/wiki/Q11660"  # Artificial Intelligence entity reference
         ],

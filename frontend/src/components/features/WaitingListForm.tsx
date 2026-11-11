@@ -442,7 +442,7 @@ export function MandateApplicationForm({
                     <div className="w-full md:w-7/12 p-6 md:p-12 lg:p-14 flex flex-col justify-center bg-white dark:bg-black">
                         <div className="max-w-lg mx-auto w-full">
                             <AnimatePresence mode="wait">
-                                {/* Step 1 — Identification */}
+                                {/* Step 1: Identification */}
                                 {step === 1 && (
                                     <motion.form
                                         key="step1"
@@ -507,7 +507,7 @@ export function MandateApplicationForm({
                                     </motion.form>
                                 )}
 
-                                {/* Step 2 — Infrastructure Scope & Compliance */}
+                                {/* Step 2: Infrastructure Scope & Compliance */}
                                 {step === 2 && (
                                     <motion.form
                                         key="step2"
@@ -616,7 +616,7 @@ export function MandateApplicationForm({
                                     </motion.form>
                                 )}
 
-                                {/* Step 3 — Executive Profile & Scope */}
+                                {/* Step 3: Executive Profile & Scope */}
                                 {step === 3 && (
                                     <motion.form
                                         key="step3"

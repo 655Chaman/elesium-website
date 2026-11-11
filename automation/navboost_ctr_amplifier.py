@@ -117,7 +117,7 @@ def run_navboost_amplification() -> Dict[str, Any]:
     # Generate Markdown Matrix
     md_content = """# Navboost SERP CTR & Striking-Distance Amplification Report
 
-> Objective: Shatter the Google Navboost Cold-Start Trap by executing high-CTR snippet targeting across positions 8–20.
+> Objective: Shatter the Google Navboost Cold-Start Trap by executing high-CTR snippet targeting across positions 8-20.
 > Methodology: Google Antitrust DOJ Leaks (Navboost GoodClicks / BadClicks) & Brian Kato Wilson Score CTR Modeling.
 
 ## 1. Striking-Distance Optimization Matrix

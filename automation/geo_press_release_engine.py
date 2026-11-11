@@ -4,7 +4,7 @@
 GEO PRESS RELEASE WIRE GENERATOR (V2026.1)
 =============================================================================
 Classification: Sprint A (Chris M. Walker GEO Curriculum Compliance)
-Curriculum Source: Session 06 (Sources — Yahoo Finance, Business Insider & News Syndication)
+Curriculum Source: Session 06 (Sources - Yahoo Finance, Business Insider & News Syndication)
 
 Objectives:
 1. Generate institutional, wire-ready AP-style press releases for distribution

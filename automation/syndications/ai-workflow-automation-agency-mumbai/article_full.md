@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # AI Workflow Automation Agency in Mumbai: Sovereign Financial Orchestration, Multi-Tenant Agent Swarms, and RBI IT Governance Compliance
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/ai-workflow-automation-agency-mumbai). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/ai-workflow-automation-agency-mumbai). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** An architectural blueprint for Mumbai Chief Information Officers, Heads of Digital Transformation, and FinTech CTOs: deploying sovereign multi-agent workflow orchestration, sub-second treasury reconciliation, private VPC inference, and strict RBI IT governance compliance across the financial capital.
 
@@ -74,7 +74,7 @@ Elesium's multi-agent architectures are active across three primary Mumbai enter
 
 ## 6. Frequently Asked Architectural Questions
 
-Explore our high-leverage commercial solution for sub-second ledger reconciliation at our dedicated engineering portal: [Sub-200ms Ledger Reconciliation Agents for FinTechs](/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs), or test high-throughput memory sharding metrics on our interactive [Enterprise Vector Database Sharding Simulator](/tools/enterprise-agent-vector-db-sharding-simulator).
+Explore our high-leverage commercial solution for sub-second ledger reconciliation at our dedicated engineering portal: [Sub-200ms Ledger Reconciliation Agents for FinTechs](/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators), or test high-throughput memory sharding metrics on our interactive [Enterprise Vector Database Sharding Simulator](/tools/enterprise-agent-vector-db-sharding-simulator).
 
 
 ---

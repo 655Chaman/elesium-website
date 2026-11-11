@@ -151,7 +151,7 @@
       "layout": "left-copy"
     },
     {
-      "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+      "title": "Air-Gapped Sovereign Defense Topology",
       "copy": [
         "The monitoring state machine orchestrates predictive tiered pre-fetching. Frequently accessed tactical mission profiles are retained in GPU HBM, while intermediate situational updates are pinned in Host DDR5 RAM, and older battle logs are compressed into high-speed NVMe storage with zstandard encryption. Memory pages are proactively defragmented prior to cross-tier promotion."
       ],
@@ -161,7 +161,7 @@
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-      "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+      "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
     {

@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # Enterprise AI Automation in India: Architecting Deterministic Multi-Agent Systems in Sovereign VPCs
 
-> *Originally published on [Elesium Online](https://elesium.online/videos/enterprise-ai-automation-india-2026). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/videos/enterprise-ai-automation-india-2026). Author: Elesium Architecture Team, Bangalore, India.*
 
 ## Executive Summary
 A comprehensive architectural teardown of how Indian enterprises are moving away from fragile prompt wrappers and monolithic RPA bots toward deterministic, multi-agent state machines deployed inside private, zero-retention cloud VPCs. This session covers state reconciliation, DPDP Act 2023 compliance, and achieving balance sheet cash-flow ROI in 90 days.
@@ -136,19 +136,19 @@ async def ingest_sovereign_docket(
 
 ## Video Key Moments & Timestamp Breakdown
 
-- **`00:00` — The Enterprise AI Trap: Why Prompt Wrappers Fail**: Why probabilistic chat tools create compounding errors when exposed to enterprise ERPs and accounting databases.
-- **`04:12` — Deterministic State Machines vs Autonomous Drifting**: How LangGraph DAGs enforce hard contractual guardrails and human-in-the-loop exception routing.
-- **`09:45` — Sovereign VPC Deployments & India DPDP Act 2023**: Architecting zero-retention inference pipelines with on-premise embeddings and private model weights.
-- **`16:30` — Legacy Core Integration: SAP S/4HANA & Core Banking**: Live execution hooks bridging modern agentic protocols with legacy SOAP, REST, and SQL architectures.
-- **`21:05` — Calculating the 90-Day Cash-Flow Velocity ROI**: How CXOs structure capital allocation to achieve 3x–5x net return on engineering investment.
+- **`00:00` - The Enterprise AI Trap: Why Prompt Wrappers Fail**: Why probabilistic chat tools create compounding errors when exposed to enterprise ERPs and accounting databases.
+- **`04:12` - Deterministic State Machines vs Autonomous Drifting**: How LangGraph DAGs enforce hard contractual guardrails and human-in-the-loop exception routing.
+- **`09:45` - Sovereign VPC Deployments & India DPDP Act 2023**: Architecting zero-retention inference pipelines with on-premise embeddings and private model weights.
+- **`16:30` - Legacy Core Integration: SAP S/4HANA & Core Banking**: Live execution hooks bridging modern agentic protocols with legacy SOAP, REST, and SQL architectures.
+- **`21:05` - Calculating the 90-Day Cash-Flow Velocity ROI**: How CXOs structure capital allocation to achieve 3x-5x net return on engineering investment.
 
 
 ## Verbatim Technical Masterclass Transcript
 
 
-[00:00] Welcome to the Elesium Systems Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
+[00:00] Welcome to the Elesium Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
 
-[01:15] In 2024 and 2025, the market was flooded with prompt wrappers—companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment—whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims—probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
+[01:15] In 2024 and 2025, the market was flooded with prompt wrappers - companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment - whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims - probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
 
 [04:12] This brings us to the core distinction: Probabilistic Generative Models versus Deterministic State Machines. At Elesium, we do not let LLMs make unbound execution decisions. Instead, we use frameworks like LangGraph to construct deterministic state machines. The language model acts merely as a localized parsing or translation node, while the transitions between states, the validation gates, and the business logic are strictly enforced by code.
 

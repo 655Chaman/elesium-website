@@ -116,7 +116,7 @@ export default function EnterpriseGpuCostCalculator() {
   const faqs = [
     {
       q: "How does the autoregressive decode phase roofline model calculate peak token throughput?",
-      a: "In LLM autoregressive generation, memory bandwidth—not raw compute TFLOPS—is the primary bottleneck because model weights must be loaded from HBM to SRAM for every single generated token. The theoretical token throughput ceiling is defined by Aggregate Memory Bandwidth (GB/s) divided by the Model Size in VRAM (GB). On 4x H100 SXM5 GPUs with 13.4 TB/s of aggregate HBM3 bandwidth, a 70B FP8 model (70 GB weights) achieves a memory bandwidth ceiling of ~191 tokens/sec per stream, scaling past 2,500 tokens/sec under continuous batching."
+      a: "In LLM autoregressive generation, memory bandwidth (rather than raw compute TFLOPS) is the primary bottleneck because model weights must be loaded from HBM to SRAM for every single generated token. The theoretical token throughput ceiling is defined by Aggregate Memory Bandwidth (GB/s) divided by the Model Size in VRAM (GB). On 4x H100 SXM5 GPUs with 13.4 TB/s of aggregate HBM3 bandwidth, a 70B FP8 model (70 GB weights) achieves a memory bandwidth ceiling of ~191 tokens/sec per stream, scaling past 2,500 tokens/sec under continuous batching."
     },
     {
       q: "Why does Grouped Query Attention (GQA) dramatically lower KV cache memory requirements?",

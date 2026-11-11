@@ -105,7 +105,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
     };
 
     const handleDownloadSummary = () => {
-        const content = `ELESIUM ONLINE — ENTERPRISE AI ROI FINANCIAL AUDIT\n`
+        const content = `ELESIUM ONLINE | ENTERPRISE AI ROI FINANCIAL AUDIT\n`
             + `Generated on: ${new Date().toLocaleDateString()}\n`
             + `--------------------------------------------------------\n`
             + `Team Size: ${teamSize} Knowledge Workers\n`

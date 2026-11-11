@@ -40,7 +40,7 @@
     },
     {
       "title": "Air-Gapped Proprietary Trial Data Protection",
-      "description": "Maintains confidential clinical trial data and blinded patient safety records on private sovereign Indian cloud servers."
+      "description": "Maintains confidential clinical trial data and blinded patient safety records on sovereign Indian cloud servers."
     }
   ],
   "architectureDiagram": [
@@ -127,7 +127,7 @@
         "Automated MedDRA Terminology Mapping: Accurately maps unstructured clinical symptom descriptions to standardized MedDRA Preferred Terms (PT) with 99.4% precision.",
         "Algorithmic WHO-UMC Causality Scoring: Evaluates drug-event temporal association and biological plausibility using validated algorithmic causality rules.",
         "Instant E2B(R3) Safety XML Package Export: Compiles standardized regulatory electronic safety transmission dossiers ready for direct gateway submission to CDSCO and FDA.",
-        "Air-Gapped Proprietary Trial Data Protection: Maintains confidential clinical trial data and blinded patient safety records on private sovereign Indian cloud servers."
+        "Air-Gapped Proprietary Trial Data Protection: Maintains confidential clinical trial data and blinded patient safety records on sovereign Indian cloud servers."
       ],
       "specs": [
         {

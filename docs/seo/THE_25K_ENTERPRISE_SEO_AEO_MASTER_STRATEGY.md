@@ -6,7 +6,7 @@
 
 ---
 
-## 🏛️ PART 1: FORENSIC AUTOPSY — THE DIRECTORY REVIEW REJECTION MECHANISM
+## 🏛️ PART 1: FORENSIC AUTOPSY - THE DIRECTORY REVIEW REJECTION MECHANISM
 
 ### 1.1 Why GoodFirms / B2B Directories Decline Reviews (The Algorithmic Filters)
 When GoodFirms declined Max’s review, it was not an assessment of Elesium's technical merit. It was triggered by one or more deterministic anti-fraud validation nodes:
@@ -87,7 +87,7 @@ $$\text{GEO Score} = \alpha(\text{Quotations}) + \beta(\text{Statistics}) + \gam
    $$\text{InteractionDepth} = \left\lceil \frac{\text{PixelsToResult}}{\text{ViewportHeight}} \right\rceil$$
    If an organic result is below 2 viewport scrolls ($>2,160\text{px}$), organic click-through rate collapses by **82%**. You must capture Above-the-Fold SERP features (AI Overviews, Video Carousels, Local Packs).
 2. **Shaun Mitchell Pricing Transparency Law:**
-   Google's commercial intent classifier penalizes "Book a Call" gates. Transparent, static-DOM pricing grids (₹1.5L – ₹15L+) trigger instant commercial classification.
+   Google's commercial intent classifier penalizes "Book a Call" gates. Transparent, static-DOM pricing grids (₹1.5L - ₹15L+) trigger instant commercial classification.
 3. **Fountain Hills 1:1 Schema Parity Law (Butler & Kailash):**
    $\text{Rendered DOM} \cap \text{JSON-LD Schema} = 1.0$. Schema without visible, character-for-character on-page copy is an un-indexed null zone.
 4. **Nestor Vasquez Video Mirroring:**
@@ -110,7 +110,7 @@ $$\text{GEO Score} = \alpha(\text{Quotations}) + \beta(\text{Statistics}) + \gam
 │ • Fountain Hills 1:1 Schema Parity across PriceSpecification & OfferCatalog.          │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ PILLAR 2: THE GENERATIVE ENGINE OPTIMIZATION (GEO) SUITE (Princeton Aggarwal)          │
-│ • 40–50 Word Bold Answer Capsules directly under every H2 for AI Overview scraping.   │
+│ • 40-50 Word Bold Answer Capsules directly under every H2 for AI Overview scraping.   │
 │ • Granular Quantification: Hard benchmarks (1.9s, 98% reduction, ₹18.4L saved).        │
 │ • Verbatim Expert Citations & Primary Legal Frameworks (DPDP Act 2023, RBI Guidelines).│
 ├────────────────────────────────────────────────────────────────────────────────────────┤
@@ -137,13 +137,13 @@ $$\text{GEO Score} = \alpha(\text{Quotations}) + \beta(\text{Statistics}) + \gam
 
 ### Step 1: On-Page Mathematical Density Tuning (Kyle Roof Protocol)
 Every primary commercial URL must satisfy this exact anatomical checklist:
-* **Page Title Tag:** `[Primary Keyword] | [Secondary Modifier] — [Brand]` (Under 60 chars).
+* **Page Title Tag:** `[Primary Keyword] | [Secondary Modifier] - [Brand]` (Under 60 chars).
 * **H1 Tag:** Exactly 1 H1 tag containing the exact primary keyword anchor.
 * **First 100 Words:** Include exact primary keyword, secondary intent, and geographical entity (`Bangalore, Karnataka, India`).
 * **Last 100 Words:** Repeat primary keyword in conclusion + direct commercial CTA.
 * **H2 Structure:** Every H2 must follow the pattern:
   `<h2>[Descriptive Keyword-Rich Heading]</h2>`
-  `<p><strong>[40–50 Word Answer Capsule delivering immediate factual definition]</strong></p>`
+  `<p><strong>[40-50 Word Answer Capsule delivering immediate factual definition]</strong></p>`
 
 ### Step 2: Static DOM Pricing Hardening (Shaun Mitchell Protocol)
 * Eradicate any `<details>`, `<accordion>`, or JavaScript toggle hiding prices.
@@ -199,7 +199,7 @@ If delivering or selling this framework to an enterprise client for $25,000+:
 ```
 
 ### The Uncontested Value Proposition:
-*"Traditional agencies sell 20 hours of manual blog writing and broken link building. We engineer a sovereign algorithmic asset that mathematically optimizes your code for Google Search, Google AI Overviews, and Perplexity—guaranteeing top-of-funnel customer acquisition with zero ongoing ad spend."*
+*"Traditional agencies sell 20 hours of manual blog writing and broken link building. We engineer a sovereign algorithmic asset that mathematically optimizes your code for Google Search, Google AI Overviews, and Perplexity - guaranteeing top-of-funnel customer acquisition with zero ongoing ad spend."*
 
 ---
 

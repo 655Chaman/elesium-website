@@ -2,9 +2,9 @@
 
 > **Document Status:** Active PR & Journalist Intake Suite (2026 Editorial Waves)  
 > **Target Platforms:** Connectively, Featured.com, Help a B2B Writer  
-> **Authoritative Source:** Chaman Shah — Principal AI Systems Architect, Elesium Online  
+> **Authoritative Source:** Chaman Shah - Principal AI Systems Architect, Elesium Online  
 > **Compliance Standard:** Edward Sturm Masterclass (Modules 11 & 12)  
-> **Sturm Gate Verification:** 100% Passed (1–3 sentences per paragraph, zero fluff, hard metrics, deep anchor links, full attribution)  
+> **Sturm Gate Verification:** 100% Passed (1-3 sentences per paragraph, zero fluff, hard metrics, deep anchor links, full attribution)  
 > **Published Date:** October 2026  
 
 ---
@@ -13,7 +13,7 @@
 
 To maximize journalist acceptance and syndication across Tier-1 publications (TechCrunch, Forbes, The Economic Times, VentureBeat, LiveMint), every pitch below strictly adheres to these five operational mandates:
 
-1. **Strict 1–3 Sentences Per Paragraph:** Every single paragraph contains at least 1 and at most 3 sentences. No walls of text; high readability.
+1. **Strict 1-3 Sentences Per Paragraph:** Every single paragraph contains at least 1 and at most 3 sentences. No walls of text; high readability.
 2. **Zero Fluff & Throat-Clearing:** Eliminate generic intros ("In today's fast-paced digital world..."). Lead immediately with the architectural friction point and the contrarian technical mechanism.
 3. **Audited Hard Metrics:** Every response embeds verified empirical metrics (e.g., *1.9s latency*, *₹18.4L savings*, *98% error cut*, *40x power reduction*).
 4. **Canonical Credential Attribution:** Comprehensive credential block for Chaman Shah with contact coordinates, headshot asset, and canonical company URLs.
@@ -32,9 +32,9 @@ To maximize journalist acceptance and syndication across Tier-1 publications (Te
 ### Pitch Submission Pack
 
 #### Email Subject Line / Query Header:
-`Expert Quote: DPDP Act 2023 & Consent Architecture for Enterprise AI — Chaman Shah, Principal AI Systems Architect`
+`Expert Quote: DPDP Act 2023 & Consent Architecture for Enterprise AI - Chaman Shah, Principal AI Systems Architect`
 
-#### High-Converting Quote Body (Edward Sturm 1–3 Sentence Format):
+#### High-Converting Quote Body (Edward Sturm 1-3 Sentence Format):
 
 "Complying with India's Digital Personal Data Protection (DPDP) Act 2023 requires enterprise AI teams to abandon multi-tenant public LLM endpoints that cache customer embeddings. Under Section 6 mandates, transmitting unredacted customer PII across shared third-party servers triggers statutory penalties reaching ₹250 Crore per incident.
 
@@ -44,7 +44,7 @@ In our production BFSI deployments across AWS Mumbai and on-premise clusters, th
 
 #### Credential Attribution & Media Bio:
 - **Expert Name:** Chaman Shah
-- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)
+- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)
 - **Authoritative Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), where he engineers deterministic, sovereign multi-agent systems and zero-data-retention AI infrastructure for enterprise BFSI, logistics, and manufacturing.
 - **Corporate Solutions Hub:** [https://elesium.online/solutions](https://elesium.online/solutions)
 - **Macro Intelligence & Signals:** [https://elesium.online/signals](https://elesium.online/signals)
@@ -66,9 +66,9 @@ In our production BFSI deployments across AWS Mumbai and on-premise clusters, th
 ### Pitch Submission Pack
 
 #### Email Subject Line / Query Header:
-`Expert Quote: BSA Section 63 Digital Forensics & AI Evidentiary Admissibility — Chaman Shah, Principal AI Systems Architect`
+`Expert Quote: BSA Section 63 Digital Forensics & AI Evidentiary Admissibility - Chaman Shah, Principal AI Systems Architect`
 
-#### High-Converting Quote Body (Edward Sturm 1–3 Sentence Format):
+#### High-Converting Quote Body (Edward Sturm 1-3 Sentence Format):
 
 "The repeal of Section 65B of the Indian Evidence Act and the implementation of Section 63 of the Bharatiya Sakshya Adhiniyam (BSA) 2023 fundamentally changes how enterprise AI logs must be archived. Standard application logs stored in mutable Elasticsearch clusters or cloud buckets no longer satisfy judicial chain-of-custody scrutiny in corporate fraud litigation.
 
@@ -78,7 +78,7 @@ Implementing hardware-anchored cryptographic audit logs delivers instantaneous 1
 
 #### Credential Attribution & Media Bio:
 - **Expert Name:** Chaman Shah
-- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders)
+- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders)
 - **Authoritative Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering deterministic, sovereign multi-agent infrastructure with mathematical auditability and cryptographic non-repudiation for regulated Indian enterprises.
 - **Corporate Solutions Hub:** [https://elesium.online/solutions](https://elesium.online/solutions)
 - **Market Signals & Intelligence:** [https://elesium.online/signals](https://elesium.online/signals)
@@ -100,9 +100,9 @@ Implementing hardware-anchored cryptographic audit logs delivers instantaneous 1
 ### Pitch Submission Pack
 
 #### Email Subject Line / Query Header:
-`Expert Quote: Why Private VPC Sovereign Multi-Agent Deployments Outperform Public Cloud APIs — Chaman Shah`
+`Expert Quote: Why Private VPC Sovereign Multi-Agent Deployments Outperform Public Cloud APIs - Chaman Shah`
 
-#### High-Converting Quote Body (Edward Sturm 1–3 Sentence Format):
+#### High-Converting Quote Body (Edward Sturm 1-3 Sentence Format):
 
 "Enterprises relying on public LLM cloud APIs suffer from unpredictable latency spikes, egress billing inflation, and catastrophic schema drift during upstream model updates. When multi-agent systems coordinate over shared public endpoints, round-trip network hops compound, causing complex 10-step workflows to time out and fail.
 
@@ -112,7 +112,7 @@ In our production enterprise environments handling over 50,000 monthly transacti
 
 #### Credential Attribution & Media Bio:
 - **Expert Name:** Chaman Shah
-- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/ai-automation-agency-for-logistics)
+- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers)
 - **Authoritative Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), specializing in sovereign private VPC infrastructure, local LLM orchestration, and deterministic multi-agent state machines for enterprise scale.
 - **Corporate Solutions Hub:** [https://elesium.online/solutions](https://elesium.online/solutions)
 - **Market Signals & Intelligence:** [https://elesium.online/signals](https://elesium.online/signals)
@@ -134,9 +134,9 @@ In our production enterprise environments handling over 50,000 monthly transacti
 ### Pitch Submission Pack
 
 #### Email Subject Line / Query Header:
-`Expert Quote: Neuromorphic Event-Driven Compute & SNNs Slashing Datacenter Power OPEX by 40x — Chaman Shah`
+`Expert Quote: Neuromorphic Event-Driven Compute & SNNs Slashing Datacenter Power OPEX by 40x - Chaman Shah`
 
-#### High-Converting Quote Body (Edward Sturm 1–3 Sentence Format):
+#### High-Converting Quote Body (Edward Sturm 1-3 Sentence Format):
 
 "Traditional GPU datacenters consume unsustainable megawatts because synchronous dense matrix multiplication forces billions of transistors to draw power even when processing static background noise. This continuous thermal footprint creates an unsustainable operational expenditure crisis for hyperscalers and edge operators alike.
 
@@ -146,7 +146,7 @@ Deploying asynchronous event-driven models across edge telemetry hubs enabled ou
 
 #### Credential Attribution & Media Bio:
 - **Expert Name:** Chaman Shah
-- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers)
+- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts)
 - **Authoritative Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering next-generation AI systems, neuromorphic edge compute integrations, and ultra-low-power automation for industrial and logistics environments.
 - **Corporate Solutions Hub:** [https://elesium.online/solutions](https://elesium.online/solutions)
 - **Market Signals & Intelligence:** [https://elesium.online/signals](https://elesium.online/signals)
@@ -168,9 +168,9 @@ Deploying asynchronous event-driven models across edge telemetry hubs enabled ou
 ### Pitch Submission Pack
 
 #### Email Subject Line / Query Header:
-`Expert Quote: Micro-Nuclear SMR Telemetry & Autonomous Grid Load Following — Chaman Shah`
+`Expert Quote: Micro-Nuclear SMR Telemetry & Autonomous Grid Load Following - Chaman Shah`
 
-#### High-Converting Quote Body (Edward Sturm 1–3 Sentence Format):
+#### High-Converting Quote Body (Edward Sturm 1-3 Sentence Format):
 
 "As heavy industry and AI compute clusters deploy dedicated Small Modular Reactors (SMRs), operating these units as rigid baseload plants causes extreme economic inefficiencies during variable grid demand. However, managing manual load following creates mechanical thermal fatigue and xenon poisoning risks that human operators cannot dynamically calculate in real time.
 
@@ -180,7 +180,7 @@ Our closed-loop telemetry agents calculate optimal reactor moderation within a d
 
 #### Credential Attribution & Media Bio:
 - **Expert Name:** Chaman Shah
-- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors)
+- **Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents)
 - **Authoritative Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), designing deterministic AI telemetry pipelines, sovereign multi-agent control systems, and mission-critical automation for energy, infrastructure, and heavy enterprise clients.
 - **Corporate Solutions Hub:** [https://elesium.online/solutions](https://elesium.online/solutions)
 - **Market Signals & Intelligence:** [https://elesium.online/signals](https://elesium.online/signals)
@@ -199,7 +199,7 @@ Our closed-loop telemetry agents calculate optimal reactor moderation within a d
 3. **Deep Link Placement:** Include the primary solutions anchor in the author signature line so editors can click through directly.
 
 ### B. Featured.com (Formerly Terkel)
-1. **Word Count Strictness:** Ensure the quote body stays between 100 and 150 words (each quote above is 110–135 words).
+1. **Word Count Strictness:** Ensure the quote body stays between 100 and 150 words (each quote above is 110-135 words).
 2. **Platform Credentials:** Populate the platform profile with Chaman Shah’s full job title and verify the company domain `elesium.online`.
 3. **Question Relevance:** Select queries matching categories: *Information Technology*, *Artificial Intelligence*, *Cybersecurity*, *Legal & Compliance*, or *Energy & Utilities*.
 

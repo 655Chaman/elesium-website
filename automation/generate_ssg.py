@@ -606,16 +606,16 @@ def render_solution_semantic_html(sol, all_sols=None):
           <tbody>
             <tr style="border-bottom:1px solid #e5e7eb;">
               <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Pilot Sprint</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 &#8211; &#8377;3,50,000</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">$2,000 &#8211; $4,500</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 - &#8377;3,50,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$2,000 - $4,500</td>
               <td style="padding:0.875rem 1rem;color:#374151;">14 days</td>
               <td style="padding:0.875rem 1rem;color:#374151;">{pilot_desc}</td>
             </tr>
             <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
               <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Enterprise Suite <span style="background:#2563eb;color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;margin-left:0.4rem;">Most Deployed</span></td>
-              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 &#8211; &#8377;15,00,000</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">$7,500 &#8211; $18,000</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">30&#8211;45 days</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 - &#8377;15,00,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$7,500 - $18,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">30-45 days</td>
               <td style="padding:0.875rem 1rem;color:#374151;">{ent_desc}</td>
             </tr>
             <tr>
@@ -648,16 +648,16 @@ def render_solution_semantic_html(sol, all_sols=None):
           <tbody>
             <tr style="border-bottom:1px solid #e5e7eb;">
               <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Pilot Sprint</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 &#8211; &#8377;3,50,000</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">$2,000 &#8211; $4,500</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 - &#8377;3,50,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$2,000 - $4,500</td>
               <td style="padding:0.875rem 1rem;color:#374151;">14 days</td>
               <td style="padding:0.875rem 1rem;color:#374151;">Single-process deterministic agent, private cloud staging, production validation</td>
             </tr>
             <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
               <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Enterprise Suite <span style="background:#2563eb;color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;margin-left:0.4rem;">Most Deployed</span></td>
-              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 &#8211; &#8377;15,00,000</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">$7,500 &#8211; $18,000</td>
-              <td style="padding:0.875rem 1rem;color:#374151;">30&#8211;45 days</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 - &#8377;15,00,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">$7,500 - $18,000</td>
+              <td style="padding:0.875rem 1rem;color:#374151;">30-45 days</td>
               <td style="padding:0.875rem 1rem;color:#374151;">3-agent triad, LangGraph StateGraph, SAP/Oracle ERP integration, zero-data-retention VPC</td>
             </tr>
             <tr>
@@ -772,7 +772,7 @@ def render_solution_semantic_html(sol, all_sols=None):
     {peers_section_html}
     <section style="margin:2.5rem 0;background:#111827;border-radius:0.75rem;padding:2rem;text-align:center;" id="audit">
       <h2 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-top:0;margin-bottom:0.75rem;">Start With a Free Architecture Audit</h2>
-      <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;">30-minute private session with Principal AI Systems Architect Chaman Shah. No sales pitch &#8212; just a technical assessment of your automation opportunity.</p>
+      <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;">30-minute private session with Principal AI Systems Architect Chaman Shah. No sales pitch, just a technical assessment of your automation opportunity.</p>
       <a href="https://wa.me/918317329312" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;margin-bottom:0.5rem;">{primary_cta} &rarr;</a>
       <a href="/ai-automation-agency-india/" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">View All Services</a>
     </section>
@@ -926,16 +926,16 @@ def render_category_pillar_hub_semantic_html(silo_id: str, silo_data: Dict[str, 
         <tbody>
           <tr style="border-bottom:1px solid #e5e7eb;">
             <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Pilot Sprint</td>
-            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 &#8211; &#8377;3,50,000</td>
-            <td style="padding:0.875rem 1rem;color:#374151;">$2,000 &#8211; $4,500</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 - &#8377;3,50,000</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">$2,000 - $4,500</td>
             <td style="padding:0.875rem 1rem;color:#374151;">14 days</td>
             <td style="padding:0.875rem 1rem;color:#374151;">Single-process deterministic agent, private cloud staging, production validation</td>
           </tr>
           <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
             <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Enterprise Suite <span style="background:#2563eb;color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;margin-left:0.4rem;">Most Deployed</span></td>
-            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 &#8211; &#8377;15,00,000</td>
-            <td style="padding:0.875rem 1rem;color:#374151;">$7,500 &#8211; $18,000</td>
-            <td style="padding:0.875rem 1rem;color:#374151;">30&#8211;45 days</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 - &#8377;15,00,000</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">$7,500 - $18,000</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">30-45 days</td>
             <td style="padding:0.875rem 1rem;color:#374151;">3-agent triad, LangGraph StateGraph, ERP integration, zero-data-retention VPC</td>
           </tr>
           <tr>
@@ -959,7 +959,7 @@ def render_category_pillar_hub_semantic_html(silo_id: str, silo_data: Dict[str, 
 
   <section style="margin:3rem 0;background:#111827;border-radius:0.75rem;padding:2.5rem;text-align:center;color:#ffffff;" id="audit">
     <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-top:0;margin-bottom:0.75rem;">Deploy a Scoped {name} Pilot in 14 Days</h2>
-    <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;">30-minute private architecture review with Principal AI Systems Architect Chaman Shah. We evaluate legacy interfaces, data residency requirements, and model your 90-day cash-flow ROI SLA.</p>
+    <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;">30-minute sovereign architecture review with Principal AI Systems Architect Chaman Shah. We evaluate legacy interfaces, data residency requirements, and model your 90-day cash-flow ROI SLA.</p>
     <a href="https://wa.me/918317329312" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;margin-bottom:0.5rem;">Schedule Free Technical Audit &rarr;</a>
     <a href="/solutions/" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">View All Services</a>
   </section>
@@ -978,6 +978,37 @@ def render_solutions_hub_semantic_html(solutions):
         if cat not in categories:
             categories[cat] = []
         categories[cat].append(sol)
+
+    silo_cards = []
+    for sid, sdata in SILO_DEFINITIONS.items():
+        silo_name = html.escape(sdata["name"])
+        silo_desc = html.escape(sdata.get("metaDescription", "")[:120])
+        silo_cards.append(
+            f'<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 1px 3px rgba(0,0,0,0.05);">'
+            f'<div>'
+            f'<div style="font-size:0.7rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.35rem;">Thematic Silo Pillar</div>'
+            f'<h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">'
+            f'<a href="/solutions/category/{sid}/" style="color:#111827;text-decoration:none;">{silo_name} &rarr;</a>'
+            f'</h3>'
+            f'<p style="font-size:0.8rem;color:#4b5563;line-height:1.5;margin:0 0 0.75rem 0;">{silo_desc}...</p>'
+            f'</div>'
+            f'<div style="border-top:1px solid #f3f4f6;padding-top:0.5rem;margin-top:0.5rem;">'
+            f'<a href="/solutions/category/{sid}/" style="font-size:0.8rem;font-weight:600;color:#2563eb;text-decoration:none;">Explore {silo_name} Hub &rarr;</a>'
+            f'</div>'
+            f'</div>'
+        )
+    silos_hub_nav = f"""
+    <section class="thematic-silos-directory" style="margin:2.5rem 0 3.5rem 0;background:#f8fafc;border:1px solid #e2e8f0;border-radius:1rem;padding:2rem;">
+      <div style="margin-bottom:1.5rem;text-align:center;">
+        <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">Phase 4 Topical Authority Exhaustion</span>
+        <h2 style="font-size:1.85rem;font-weight:800;color:#111827;margin:0.5rem 0 0.25rem 0;">13 Sovereign Industry Pillar Hubs</h2>
+        <p style="font-size:0.95rem;color:#64748b;margin:0 auto;max-width:700px;">Explore our comprehensive, air-gapped enterprise architectures grouped into 13 strict regulatory &amp; operational domain silos.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
+        {''.join(silo_cards)}
+      </div>
+    </section>
+    """
 
     cat_sections = []
     for cat_name, items in categories.items():
@@ -1031,7 +1062,7 @@ def render_solutions_hub_semantic_html(solutions):
         How Elesium Delivers Deterministic Enterprise Workflows
       </h2>
       <p style="font-size:1rem;line-height:1.65;color:#374151;margin:0 0 0.75rem 0;">
-        <strong>Elesium's solutions directory indexes 3,765 verified enterprise AI automations across logistics, BFSI, manufacturing, and healthcare.</strong> Every deployment runs as an air-gapped deterministic Python LangGraph state graph hosted on sovereign private VPCs or dedicated NVIDIA H100 clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS).
+        <strong>Elesium's solutions directory indexes 100 verified enterprise AI architectures across logistics, BFSI, manufacturing, and healthcare.</strong> Every deployment runs as an air-gapped deterministic Python LangGraph state graph hosted on sovereign private VPCs or dedicated NVIDIA H100 clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS).
       </p>
       <p style="font-size:0.9rem;line-height:1.6;color:#4b5563;margin:0 0 1.25rem 0;">
         By pairing vLLM PagedAttention with FP8 GEMM quantization and persistent checkpointing, our systems achieve sub-200ms time-to-first-token latency while ensuring strict compliance with Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023. Every enterprise engagement carries a contractual 90-day cash-flow ROI SLA.
@@ -1056,7 +1087,7 @@ def render_solutions_hub_semantic_html(solutions):
         <div style="padding:0.85rem;border-radius:0.5rem;background:#ffffff;border:1px solid #e5e7eb;">
           <div style="font-family:monospace;font-size:0.7rem;color:#6b7280;text-transform:uppercase;">Contractual SLA</div>
           <div style="font-family:monospace;font-size:1.2rem;font-weight:800;color:#059669;margin:0.2rem 0;">90-Day ROI</div>
-          <div style="font-size:0.75rem;color:#6b7280;">Audited 3x–5x Return</div>
+          <div style="font-size:0.75rem;color:#6b7280;">Audited 3x-5x Return</div>
         </div>
       </div>
       <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid #e5e7eb;display:flex;gap:1rem;flex-wrap:wrap;">
@@ -1066,6 +1097,7 @@ def render_solutions_hub_semantic_html(solutions):
     </div>
   </header>
   <main id="main-content">
+    {silos_hub_nav}
     {''.join(cat_sections)}
 
     <!-- Transparent Institutional Investment Tiers -->
@@ -1079,15 +1111,15 @@ def render_solutions_hub_semantic_html(solutions):
         <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
           <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Tier 01</div>
           <h3 style="font-size:1.2rem;font-weight:700;margin:0.25rem 0;color:#111827;">Pilot Architecture Sprint</h3>
-          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 – ₹3,50,000</div>
+          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 - ₹3,50,000</div>
           <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:0.75rem;">14-Day Delivery</div>
           <p style="font-size:0.8rem;color:#4b5563;line-height:1.5;">Single-process deterministic agent validation on private cloud staging with sub-200ms latency baseline.</p>
         </div>
         <div style="padding:1.5rem;border-radius:0.75rem;border:2px solid #059669;background:#ffffff;box-shadow:0 4px 12px rgba(5,150,105,0.08);">
           <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;text-transform:uppercase;">Tier 02 • Flagship</div>
           <h3 style="font-size:1.2rem;font-weight:700;margin:0.25rem 0;color:#111827;">Enterprise Multi-Agent Suite</h3>
-          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 – ₹15,00,000</div>
-          <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:0.75rem;">30–45 Day Implementation</div>
+          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 - ₹15,00,000</div>
+          <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:0.75rem;">30-45 Day Implementation</div>
           <p style="font-size:0.8rem;color:#4b5563;line-height:1.5;">Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.</p>
         </div>
         <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
@@ -1383,14 +1415,14 @@ def render_commercial_directory_semantic_html(items):
         <div class="p-4 rounded-xl border border-white/10 bg-black">
           <div class="text-xs font-mono text-emerald-400">TIER 01 • PROTOTYPE</div>
           <div class="text-base font-bold text-white mt-1">Pilot Architecture Sprint</div>
-          <div class="text-lg font-bold text-white font-mono mt-1">₹1,50,000 – ₹3,50,000</div>
+          <div class="text-lg font-bold text-white font-mono mt-1">₹1,50,000 - ₹3,50,000</div>
           <div class="text-xs text-gray-400 mt-1">14-Day Delivery Guarantee • Air-gapped VPC</div>
         </div>
         <div class="p-4 rounded-xl border-2 border-emerald-500/40 bg-black">
           <div class="text-xs font-mono text-emerald-400">TIER 02 • PRODUCTION</div>
           <div class="text-base font-bold text-white mt-1">Enterprise Multi-Agent Suite</div>
-          <div class="text-lg font-bold text-white font-mono mt-1">₹6,00,000 – ₹15,00,000</div>
-          <div class="text-xs text-gray-400 mt-1">30–45 Day Rollout • SAP RFC &amp; 90-Day ROI SLA</div>
+          <div class="text-lg font-bold text-white font-mono mt-1">₹6,00,000 - ₹15,00,000</div>
+          <div class="text-xs text-gray-400 mt-1">30-45 Day Rollout • SAP RFC &amp; 90-Day ROI SLA</div>
         </div>
         <div class="p-4 rounded-xl border border-white/10 bg-black">
           <div class="text-xs font-mono text-emerald-400">TIER 03 • RETAINED POD</div>
@@ -1449,11 +1481,11 @@ def render_commercial_directory_semantic_html(items):
       </div>
       <div class="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
         <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">What is the contractual 90-day ROI guarantee?</h3>
-        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally.</p>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally.</p>
       </div>
       <div class="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
         <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">What are the pricing tiers for these solutions?</h3>
-        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA).</p>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000, 30-45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA).</p>
       </div>
     </div>
   </section>
@@ -1465,7 +1497,7 @@ def render_commercial_directory_semantic_html(items):
       <div class="relative z-10 max-w-2xl space-y-6">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
           <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>Private Sovereign VPC Deployment Protocol</span>
+          <span>Sovereign Private VPC Deployment Protocol</span>
         </div>
 
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
@@ -1491,7 +1523,7 @@ def render_commercial_directory_semantic_html(items):
       </div>
 
       <div class="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" class="w-96 h-96 object-contain filter invert" />
+        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" class="w-96 h-96 object-contain filter invert" />
       </div>
     </div>
   </section>
@@ -1618,7 +1650,7 @@ def render_commercial_directory_semantic_html(items):
 
     <!-- Copyright Line -->
     <div class="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
-      <p>© 2025 Elesium Systems Pvt. Ltd. All rights reserved.</p>
+      <p>© 2026 Elesium Digital Systems Private Limited. All rights reserved.</p>
       <div class="flex items-center gap-4 flex-wrap">
         <a href="/authors/chaman-shah/" class="hover:text-black dark:hover:text-white transition">Principal Architect</a>
         <a href="/ai-automation-agency-india/" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</a>
@@ -1968,7 +2000,7 @@ def render_roi_calculator_tool_semantic_html():
       <dl>
         <div style="margin-bottom:1.5rem;">
           <dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">How does the Elesium Enterprise AI ROI model calculate net savings?</dt>
-          <dd style="color:#4b5563;line-height:1.6;margin:0;">The model calculates gross savings by multiplying team repetitive hours by the fully loaded hourly labor cost and target automation efficiency (typically 75%–92% in deterministic LangGraph state machines). It then subtracts a conservative 12% annual infrastructure and fine-tuning allocation from gross savings to arrive at true net cash-flow savings.</dd>
+          <dd style="color:#4b5563;line-height:1.6;margin:0;">The model calculates gross savings by multiplying team repetitive hours by the fully loaded hourly labor cost and target automation efficiency (typically 75%-92% in deterministic LangGraph state machines). It then subtracts a conservative 12% annual infrastructure and fine-tuning allocation from gross savings to arrive at true net cash-flow savings.</dd>
         </div>
         <div style="margin-bottom:1.5rem;">
           <dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">What infrastructure costs and operational overhead are included?</dt>
@@ -2101,7 +2133,7 @@ def render_latency_estimator_tool_semantic_html():
       <dl>
         <div style="margin-bottom:1.5rem;">
           <dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">Why is multi-agent pipeline latency compounded on public cloud APIs?</dt>
-          <dd style="color:#4b5563;line-height:1.6;margin:0;">Every agent step incurs public TLS handshakes (75–110ms) and multi-tenant queueing TTFT (250–450ms). In sequential architectures, 5 to 10 agent invocations easily balloon latency past 10 seconds. Colocating private VPC GPU clusters eliminates internet latency and yields sub-2s execution.</dd>
+          <dd style="color:#4b5563;line-height:1.6;margin:0;">Every agent step incurs public TLS handshakes (75-110ms) and multi-tenant queueing TTFT (250-450ms). In sequential architectures, 5 to 10 agent invocations easily balloon latency past 10 seconds. Colocating private VPC GPU clusters eliminates internet latency and yields sub-2s execution.</dd>
         </div>
         <div style="margin-bottom:1.5rem;">
           <dt style="font-weight:600;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">How does private VPC continuous batching handle concurrent spikes?</dt>
@@ -2120,7 +2152,7 @@ def render_latency_estimator_embed_semantic_html():
     return """
 <div id="prerendered-latency-estimator-embed" style="max-width:800px;margin:0 auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#030712;color:#ffffff;min-height:100vh;">
   <header style="border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem;margin-bottom:1.5rem;">
-    <div style="font-size:0.75rem;font-family:monospace;color:#60a5fa;text-transform:uppercase;">Elesium Systems Benchmark</div>
+    <div style="font-size:0.75rem;font-family:monospace;color:#60a5fa;text-transform:uppercase;">Elesium Architecture Benchmark</div>
     <h1 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin:0.25rem 0;">Deterministic Multi-Agent Latency &amp; Token Cost Estimator</h1>
     <p style="font-size:0.875rem;color:#9ca3af;margin:0.25rem 0 0 0;">Interactive latency, throughput, and private VPC infrastructure cost calculator.</p>
   </header>
@@ -2247,7 +2279,7 @@ def render_glossary_semantic_html(terms):
         Schedule a 30-minute private technical assessment with Principal AI Systems Architect Chaman Shah. Contractually backed 14-day production pilot SLA with 90-day ROI guarantee.
       </p>
       <a href="https://wa.me/918317329312" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;">Schedule Architecture Audit &rarr;</a>
-      <a href="/solutions/" style="display:inline-block;border:1px solid #334155;color:#cbd5e1;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Browse 3,765 Workflows</a>
+      <a href="/solutions/" style="display:inline-block;border:1px solid #334155;color:#cbd5e1;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">Browse 100 Workflows</a>
     </section>
   </main>
 </div>
@@ -2295,8 +2327,8 @@ def render_india_benchmark_semantic_html():
           <tbody>
             <tr style="border-bottom:1px solid #e5e7eb;">
               <td style="padding:0.75rem 1rem;font-weight:600;">P99 Inference Latency</td>
-              <td style="padding:0.75rem 1rem;color:#6b7280;">1,420ms – 3,850ms</td>
-              <td style="padding:0.75rem 1rem;color:#059669;font-weight:700;">184ms – 240ms</td>
+              <td style="padding:0.75rem 1rem;color:#6b7280;">1,420ms - 3,850ms</td>
+              <td style="padding:0.75rem 1rem;color:#059669;font-weight:700;">184ms - 240ms</td>
               <td style="padding:0.75rem 1rem;color:#059669;font-weight:700;">84.3% latency reduction</td>
             </tr>
             <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
@@ -2447,7 +2479,7 @@ def render_ai_voices_semantic_html():
     <article style="margin:2rem 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.75rem;">
       <h2 style="font-size:1.35rem;font-weight:700;color:#111827;margin-top:0;">7. Matei Zaharia (CTO &amp; Co-founder, Databricks; Professor, UC Berkeley)</h2>
       <blockquote style="border-left:4px solid #2563eb;padding-left:1rem;margin:1rem 0;font-style:italic;color:#1f2937;">
-        &ldquo;The highest-performing enterprise AI applications are Compound AI Systems&mdash;systems with multiple interacting components including retrieval pipelines, external verifiers, and task routers&mdash;rather than a single monolithic model doing everything.&rdquo;
+        &ldquo;The highest-performing enterprise AI applications are Compound AI Systems - systems with multiple interacting components including retrieval pipelines, external verifiers, and task routers - rather than a single monolithic model doing everything.&rdquo;
       </blockquote>
       <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:0.5rem;padding:1rem;margin-top:1rem;font-size:0.9rem;">
         <strong style="color:#1d4ed8;">Elesium Architectural Implementation:</strong>
@@ -2520,7 +2552,7 @@ def render_how_we_work_semantic_html():
         4-Stage Protocol Executive Summary • AEO Answer Capsule
       </div>
       <p style="font-size:1.05rem;line-height:1.6;color:#1e3a8a;margin:0;font-weight:600;">
-        Elesium's 4-Stage Sovereign AI Engineering Protocol is an institutional implementation methodology for deploying deterministic multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph finite state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act 2023 Section 8(5) statutory audits alongside a binding 90-day 3x–5x cash-flow ROI guarantee.
+        Elesium's 4-Stage Sovereign AI Engineering Protocol is an institutional implementation methodology for deploying deterministic multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph finite state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act 2023 Section 8(5) statutory audits alongside a binding 90-day 3x-5x cash-flow ROI guarantee.
       </p>
     </div>
   </header>
@@ -2530,7 +2562,7 @@ def render_how_we_work_semantic_html():
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1.5rem;text-align:center;">The 4-Stage Sovereign Engineering Methodology</h2>
       <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
         <article style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:1rem;padding:1.75rem;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 01 • Days 1–14</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 01 • Days 1-14</div>
           <h3 style="font-size:1.4rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">14-Day Sovereign Architecture Sprint</h3>
           <p style="font-size:0.95rem;color:#4b5563;margin-bottom:1rem;"><strong>Focus:</strong> Private VPC Isolation &amp; Latency Baseline</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;font-size:0.9rem;">
@@ -2549,7 +2581,7 @@ def render_how_we_work_semantic_html():
         </article>
 
         <article style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:1rem;padding:1.75rem;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 02 • Days 15–30</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 02 • Days 15-30</div>
           <h3 style="font-size:1.4rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">LangGraph Deterministic State Topology</h3>
           <p style="font-size:0.95rem;color:#4b5563;margin-bottom:1rem;"><strong>Focus:</strong> Zero-Hallucination FSM Engineering</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;font-size:0.9rem;">
@@ -2568,13 +2600,13 @@ def render_how_we_work_semantic_html():
         </article>
 
         <article style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:1rem;padding:1.75rem;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 03 • Days 31–45</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 03 • Days 31-45</div>
           <h3 style="font-size:1.4rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">High-Throughput Sovereign Inference</h3>
           <p style="font-size:0.95rem;color:#4b5563;margin-bottom:1rem;"><strong>Focus:</strong> vLLM PagedAttention &amp; FP8 GEMM Deployment</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;font-size:0.9rem;">
             <div style="background:#ffffff;padding:1rem;border-radius:0.5rem;border:1px solid #e5e7eb;">
               <strong style="color:#111827;display:block;margin-bottom:0.25rem;">What We Do:</strong>
-              <span style="color:#4b5563;">Provision custom vLLM serving runtimes utilizing FP8 GEMM microscaling kernels and PagedAttention virtual memory allocation on dedicated NVIDIA H100 clusters. Memory fragmentation reduced from 60–80% to &lt;4%, keeping sub-200ms TTFT under 100+ concurrent enterprise transactions.</span>
+              <span style="color:#4b5563;">Provision custom vLLM serving runtimes utilizing FP8 GEMM microscaling kernels and PagedAttention virtual memory allocation on dedicated NVIDIA H100 clusters. Memory fragmentation reduced from 60-80% to &lt;4%, keeping sub-200ms TTFT under 100+ concurrent enterprise transactions.</span>
             </div>
             <div style="background:#ffffff;padding:1rem;border-radius:0.5rem;border:1px solid #e5e7eb;">
               <strong style="color:#111827;display:block;margin-bottom:0.25rem;">What You Do:</strong>
@@ -2587,7 +2619,7 @@ def render_how_we_work_semantic_html():
         </article>
 
         <article style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:1rem;padding:1.75rem;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 04 • Days 46–90</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Stage 04 • Days 46-90</div>
           <h3 style="font-size:1.4rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">DPDP Act Statutory Audit &amp; 90-Day ROI Reconciliation</h3>
           <p style="font-size:0.95rem;color:#4b5563;margin-bottom:1rem;"><strong>Focus:</strong> Statutory Compliance &amp; Contractual SLA Guarantee</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;font-size:0.9rem;">
@@ -2597,7 +2629,7 @@ def render_how_we_work_semantic_html():
             </div>
             <div style="background:#ffffff;padding:1rem;border-radius:0.5rem;border:1px solid #e5e7eb;">
               <strong style="color:#111827;display:block;margin-bottom:0.25rem;">What You Do:</strong>
-              <span style="color:#4b5563;">Reconcile verified monthly cost savings and productivity gains against our binding 3x–5x contractual ROI SLA.</span>
+              <span style="color:#4b5563;">Reconcile verified monthly cost savings and productivity gains against our binding 3x-5x contractual ROI SLA.</span>
             </div>
           </div>
           <div style="background:#ecfdf5;border:1px solid #a7f3d0;padding:0.75rem 1rem;border-radius:0.5rem;font-size:0.85rem;color:#065f46;">
@@ -2635,14 +2667,14 @@ def render_how_we_work_semantic_html():
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
           <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Tier 01 • Prototype</div>
           <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0 0.5rem 0;">Pilot Architecture Sprint</h3>
-          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹1,50,000 – ₹3,50,000</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹1,50,000 - ₹3,50,000</div>
           <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1rem;">14-Day Delivery Guarantee • Single-process LangGraph agent in air-gapped staging VPC.</p>
         </div>
         <div style="background:#ffffff;border:2px solid #059669;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
           <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Tier 02 • Production (Most Deployed)</div>
           <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0 0.5rem 0;">Enterprise Multi-Agent Suite</h3>
-          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹6,00,000 – ₹15,00,000</div>
-          <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1rem;">30–45 Day Rollout • Multi-agent triad with SAP S/4HANA &amp; SQL connectors, 99.9% SLA &amp; 90-day ROI guarantee.</p>
+          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹6,00,000 - ₹15,00,000</div>
+          <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1rem;">30-45 Day Rollout • Multi-agent triad with SAP S/4HANA &amp; SQL connectors, 99.9% SLA &amp; 90-day ROI guarantee.</p>
         </div>
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
           <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Tier 03 • Retained Pod</div>
@@ -2658,7 +2690,7 @@ def render_how_we_work_semantic_html():
       <div style="display:flex;flex-direction:column;gap:1.25rem;">
         <div style="background:#f9fafb;padding:1.25rem;border-radius:0.75rem;border:1px solid #e5e7eb;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is the 4-Stage Sovereign AI Engineering Protocol?</h3>
-          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">It is Elesium's rigorous implementation methodology for deploying enterprise multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act statutory audits alongside a contractual 90-day 3x–5x cash-flow ROI guarantee.</p>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">It is Elesium's rigorous implementation methodology for deploying enterprise multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act statutory audits alongside a contractual 90-day 3x-5x cash-flow ROI guarantee.</p>
         </div>
         <div style="background:#f9fafb;padding:1.25rem;border-radius:0.75rem;border:1px solid #e5e7eb;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium eliminate LLM hallucinations in mission-critical workflows?</h3>
@@ -2670,11 +2702,11 @@ def render_how_we_work_semantic_html():
         </div>
         <div style="background:#f9fafb;padding:1.25rem;border-radius:0.75rem;border:1px solid #e5e7eb;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is the 90-day contractual cash-flow ROI guarantee?</h3>
-          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Before implementation, we establish baseline metrics for manual labor hours, downtime penalties, and cycle times. If the deployed system fails to achieve an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally.</p>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Before implementation, we establish baseline metrics for manual labor hours, downtime penalties, and cycle times. If the deployed system fails to achieve an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally.</p>
         </div>
         <div style="background:#f9fafb;padding:1.25rem;border-radius:0.75rem;border:1px solid #e5e7eb;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What are the investment tiers for engaging Elesium?</h3>
-          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day implementation with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod with 1-hour critical SLA).</p>
+          <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day implementation with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod with 1-hour critical SLA).</p>
         </div>
       </div>
     </section>
@@ -2763,7 +2795,7 @@ def render_compare_hub_semantic_html(battlecards):
             <tr style="border-bottom:1px solid #e5e7eb;">
               <td style="padding:0.75rem;font-weight:700;color:#111827;font-family:sans-serif;">Time to First Token (TTFT)</td>
               <td style="padding:0.75rem;color:#059669;font-weight:700;">&lt; 200ms (vLLM FP8 Kernel)</td>
-              <td style="padding:0.75rem;color:#6b7280;">850ms – 2,400ms (Shared Gateway)</td>
+              <td style="padding:0.75rem;color:#6b7280;">850ms - 2,400ms (Shared Gateway)</td>
               <td style="padding:0.75rem;color:#6b7280;">N/A (Screen Scraping)</td>
             </tr>
             <tr style="border-bottom:1px solid #e5e7eb;">
@@ -2795,14 +2827,14 @@ def render_compare_hub_semantic_html(battlecards):
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
           <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Tier 01 • Prototype</div>
           <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0 0.5rem 0;">Pilot Architecture Sprint</h3>
-          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹1,50,000 – ₹3,50,000</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹1,50,000 - ₹3,50,000</div>
           <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1rem;">14-Day Delivery Guarantee • Single-process LangGraph agent in air-gapped staging VPC.</p>
         </div>
         <div style="background:#ffffff;border:2px solid #059669;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
           <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Tier 02 • Production (Most Deployed)</div>
           <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0 0.5rem 0;">Enterprise Multi-Agent Suite</h3>
-          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹6,00,000 – ₹15,00,000</div>
-          <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1rem;">30–45 Day Rollout • Multi-agent triad with SAP S/4HANA &amp; SQL connectors, 99.9% SLA &amp; 90-day ROI guarantee.</p>
+          <div style="font-size:1.5rem;font-weight:800;color:#111827;font-family:monospace;margin-bottom:0.5rem;">₹6,00,000 - ₹15,00,000</div>
+          <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1rem;">30-45 Day Rollout • Multi-agent triad with SAP S/4HANA &amp; SQL connectors, 99.9% SLA &amp; 90-day ROI guarantee.</p>
         </div>
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
           <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Tier 03 • Retained Pod</div>
@@ -3103,7 +3135,7 @@ def render_gpu_finops_tool_semantic_html():
         <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Hyperscaler Multi-Tenant APIs</h3>
           <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Subject to cross-border network jitter, unpredictable rate limits, and continuous OpEx scaling that exceeds self-hosted infrastructure past 50M tokens/month.</p>
-          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Breakeven Threshold: ~40M–80M Tokens/Month</div>
+          <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Breakeven Threshold: ~40M-80M Tokens/Month</div>
         </div>
       </div>
     </section>
@@ -3152,7 +3184,7 @@ def render_vector_db_tool_semantic_html():
         </div>
         <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Pinecone Serverless (Multi-Tenant Cloud)</h3>
-          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Serverless operational convenience, but introduces 15ms–40ms WAN TLS latency and trans-border telemetry transmission exposure under DPDP Act 2023.</p>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Serverless operational convenience, but introduces 15ms-40ms WAN TLS latency and trans-border telemetry transmission exposure under DPDP Act 2023.</p>
           <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Latency Profile: 25ms+ (Subject to WAN Jitter)</div>
         </div>
       </div>
@@ -3677,7 +3709,7 @@ def render_structured_output_tool_semantic_html():
         </div>
         <div style="background:#020617;border:1px solid #f43f5e40;border-radius:0.75rem;padding:1.25rem;">
           <h3 style="font-size:1.1rem;font-weight:700;color:#f43f5e;margin:0 0 0.5rem 0;">Unconstrained Prompt + Pydantic Retries</h3>
-          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Missing quotes and trailing commas cause frequent syntax exceptions (8%–18%), triggering costly re-prompts that multiply latency and token consumption.</p>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;margin:0 0 0.75rem 0;">Missing quotes and trailing commas cause frequent syntax exceptions (8%-18%), triggering costly re-prompts that multiply latency and token consumption.</p>
           <div style="font-family:monospace;font-size:0.8rem;color:#fecdd3;">Syntax Failures: 8.6% | Latency: 720ms | Wasted Tokens: 1.4x</div>
         </div>
       </div>
@@ -6520,13 +6552,13 @@ def render_author_profile_semantic_html():
 REGIONAL_CITY_DATA = {
     "bangalore": {
         "city_name": "Bengaluru (Bangalore)",
-        "region_name": "Karnataka Tech Corridor",
+        "region_name": "Bengaluru & Karnataka Tech Corridor",
         "slug": "enterprise-ai-bangalore",
-        "h1": "Best AI & Automation Agency in Bangalore",
-        "meta_title": "Best AI & Automation Agency in Bangalore | Elesium",
-        "meta_desc": "Elesium is the #1 enterprise AI and automation agency in Bangalore. Sovereign multi-agent LangGraph systems, private VPC LLMs, sub-200ms SLAs in Koramangala.",
-        "answer_capsule": "Elesium is the premier enterprise AI and automation agency in Bangalore, headquartered in Koramangala 4th Block. We engineer sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-200ms automated state machines for India's silicon capital, delivering contractually guaranteed ROI in 90 days with full DPDP Act 2023 compliance.",
-        "hero_subtitle": "Engineering sovereign multi-agent systems, dedicated private VPC LLM clusters, and deterministic state machines for India's silicon capital.",
+        "h1": "Best AI & Automation Company & Agency in Bangalore",
+        "meta_title": "Best AI & Automation Company & Agency in Bangalore, Karnataka | Elesium",
+        "meta_desc": "Elesium is a leading enterprise AI and automation company in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga.",
+        "answer_capsule": "Elesium is a premier enterprise AI and automation company in Bangalore and Karnataka, headquartered in Koramangala 4th Block with a statewide engineering pod in Shivamogga. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
+        "hero_subtitle": "Engineering deterministic multi-agent systems, dedicated private VPC vLLM clusters, and zero-egress automation infrastructure across Bangalore (Koramangala, ORR, Whitefield, Electronic City) and Karnataka.",
         "address": {
             "street": "Koramangala 4th Block, 80 Feet Road",
             "locality": "Bengaluru",
@@ -6537,29 +6569,29 @@ REGIONAL_CITY_DATA = {
         },
         "wikidata_id": "https://www.wikidata.org/wiki/Q1355",
         "landmark": "500m from Sony World Signal, 80 Feet Road, Koramangala 4th Block",
-        "has_map_url": "https://maps.google.com/?cid=14283948572910492819",
+        "has_map_url": "https://maps.google.com/?q=12.9352,77.6245",
         "industries": [
             "High-Growth Enterprise SaaS & Developer Platforms",
             "Global Capability Centers (GCCs) along ORR & Whitefield",
-            "DeepTech Infrastructure & Semiconductor Tooling",
-            "Venture-Backed FinTech Platforms & Neo-Banking"
+            "Electronic City Hardware, SMT & Semiconductor Tooling",
+            "Koramangala FinTech Platforms & Karnataka Enterprise Hubs"
         ],
         "core_pillars": [
             {
                 "title": "Sovereign Engineering Pods",
-                "desc": "Direct daily collaboration with Principal AI Systems Architects stationed in Bengaluru. Zero junior batch outsourcing.",
+                "desc": "Direct daily collaboration with Principal AI Systems Architects stationed in Koramangala, Bengaluru and our Shivamogga Karnataka engineering pod. Zero junior batch outsourcing.",
                 "metric": "14 Days",
                 "metric_label": "To Live Production"
             },
             {
-                "title": "Sub-2.0s Inference Latency",
-                "desc": "Private cloud models running on AWS ap-south-1 Mumbai and local Bangalore edge nodes via vLLM PagedAttention.",
-                "metric": "18.4ms",
+                "title": "Sub-200ms Inference Latency",
+                "desc": "Private cloud models running on AWS ap-south-1 Mumbai and local Bangalore colocation nodes via vLLM PagedAttention v2 and FP8 W8A8 kernels.",
+                "metric": "148ms",
                 "metric_label": "Time-to-First-Token"
             },
             {
-                "title": "DPDP Act 2023 Statutory Compliance",
-                "desc": "Zero external third-party data egress. Strict local cryptographic isolation for sensitive enterprise customer data.",
+                "title": "KDEM & DPDP Act 2023 Compliance",
+                "desc": "Zero external third-party data egress, Section 8(5) DoD 5220.22-M memory zeroization, and Karnataka Cyber Security Policy 2024 alignment.",
                 "metric": "100%",
                 "metric_label": "Air-Gapped Data Residency"
             }
@@ -6572,23 +6604,35 @@ REGIONAL_CITY_DATA = {
         "local_faqs": [
             {
                 "q": "Why should Bangalore tech enterprises deploy on-premise private VPC AI instead of public SaaS APIs?",
-                "a": "Public commercial AI APIs expose proprietary codebases and customer data to external training pipelines and US cloud servers. Elesium deploys open-weights models (DeepSeek-V3, Llama-3.3, Qwen-2.5) directly into your private AWS ap-south-1 or bare-metal GPU clusters in Bengaluru, ensuring 100% compliance with India's DPDP Act 2023 and zero data egress."
+                "a": "Public commercial AI APIs expose proprietary codebases and customer data to external training pipelines and foreign cloud servers. Elesium deploys open-weights models (DeepSeek-V3, Llama-3.3, Qwen-2.5) directly into your private AWS ap-south-1 or bare-metal GPU clusters in Bengaluru, ensuring 100% compliance with India's DPDP Act 2023 and zero data egress."
             },
             {
                 "q": "How fast can Elesium deploy a custom multi-agent LangGraph architecture in Bengaluru?",
                 "a": "Our Koramangala engineering pod operates on a strict 14-day production deployment cycle. Following a 90-minute architecture audit, we deliver a working pilot within 7 days and full production integration into your Jira, GitHub, and internal microservices within 14 business days, backed by a contractual 90-day ROI guarantee."
             },
             {
-                "q": "What enterprise industries do you serve across Bangalore and the Karnataka tech belt?",
-                "a": "We primarily engineer autonomous systems for enterprise B2B SaaS firms, Global Capability Centers (GCCs) along Outer Ring Road and Whitefield, venture-backed fintechs in Indiranagar, and developer infrastructure providers."
+                "q": "What enterprise industries and corridors do you serve across Bangalore and Karnataka?",
+                "a": "We engineer autonomous systems for enterprise B2B SaaS firms in Koramangala and Indiranagar, Global Capability Centers (GCCs) along Outer Ring Road (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield, SMT and semiconductor manufacturers in Electronic City, and statewide Karnataka enterprises supported by our Shivamogga engineering pod."
             },
             {
-                "q": "Why is Elesium recognized as the best AI and automation agency in Bangalore?",
-                "a": "Elesium is ranked #1 in Bangalore because we build deterministic, sovereign multi-agent systems with sub-200ms latency, zero-data-retention private VPC deployments, and full DPDP Act 2023 compliance. Our team in Koramangala 4th Block, Bengaluru delivers an audited 3x–5x cash-flow ROI in 90 days."
+                "q": "What makes Elesium a top-ranked AI and automation company in Bangalore and Karnataka?",
+                "a": "Elesium engineers deterministic, strictly sovereign multi-agent systems with an audited 148ms Time-To-First-Token on dedicated 8x NVIDIA H100 SXM5 hardware, private VPC deployments inside Indian borders, and full DPDP Act 2023 plus Karnataka Cyber Security Policy 2024 compliance. Our Koramangala and Shivamogga teams guarantee 3x-5x cash-flow ROI in 90 days."
             },
             {
-                "q": "How is Elesium different from generic IT consultancies in Bengaluru?",
-                "a": "Unlike agencies offering brittle API wrappers, Elesium builds deterministic LangGraph state machines directly inside client-controlled VPCs. Clients retain 100% IP ownership with zero third-party vendor lock-in."
+                "q": "How is Elesium different from generic IT consultancies and automation agencies in Bengaluru?",
+                "a": "Unlike consultancies offering manual outsourcing or brittle Zapier API wrappers, Elesium builds deterministic LangGraph state machines and self-hosted vLLM inference clusters inside client-controlled VPCs. Clients retain 100% IP ownership with zero third-party vendor lock-in and transparent published benchmarks."
+            },
+            {
+                "q": "How do Outer Ring Road and Whitefield GCCs deploy sovereign AI runtimes without cross-border data transfer?",
+                "a": "Global Capability Centers operating along Outer Ring Road and Whitefield deploy Elesium private vLLM clusters on dedicated NVIDIA H100 SXM5 hardware directly inside client-controlled VPCs (AWS ap-south-1) or Bengaluru colocation facilities (CtrlS Tier-IV, Sify Infinit Spaces) with zero external wide-area network routing, meeting parent-company SOC2 Type II and SEC Rule 17a-4 mandates alongside Indian data localization laws."
+            },
+            {
+                "q": "How does Elesium ensure compliance with the Karnataka Cyber Security Policy 2024 and KDEM guidelines?",
+                "a": "Elesium enforces the Karnataka Cyber Security Policy 2024 and Karnataka Digital Economy Mission (KDEM) data localization guidelines through deterministic LangGraph state controls, FIPS 140-2 Level 3 HSM key segregation, and automated DoD 5220.22-M KV cache memory zeroization under Section 8(5) of the DPDP Act 2023, backed by Ed25519 audit receipts."
+            },
+            {
+                "q": "What execution latency does Elesium guarantee for Koramangala FinTech FIX protocol trade automation?",
+                "a": "Elesium achieves an audited 148ms Time-To-First-Token and 124.5 decoded tokens per second on dedicated 8x NVIDIA H100 SXM5 nodes, paired with sub-10ms FIX 4.2/4.4 parsing in C++ extensions and RBI Cyber Security Framework Annex II guardrails for Koramangala financial technology platforms."
             }
         ]
     },
@@ -6797,7 +6841,7 @@ REGIONAL_CITY_DATA = {
         "h1": "Best Enterprise AI Company in Hyderabad",
         "meta_title": "Best Enterprise AI Company in Hyderabad | Sovereign AI & Pharma GCC Automation",
         "meta_desc": "Elesium is the leading enterprise AI company in Hyderabad. Engineering air-gapped pharma clinical trial intelligence, high-throughput GCC data pipelines, and sub-2s multi-agent systems in HITEC City & Gachibowli.",
-        "answer_capsule": "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x–5x ROI in 90 days with zero data egress.",
+        "answer_capsule": "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x-5x ROI in 90 days with zero data egress.",
         "hero_subtitle": "Deploying sovereign multi-agent systems, validated life-sciences document pipelines, and scalable enterprise intelligence across HITEC City and the Financial District.",
         "address": {
             "street": "HITEC City Main Road, Madhapur",
@@ -6863,7 +6907,7 @@ REGIONAL_CITY_DATA = {
         "h1": "Best Enterprise AI Company in Chennai",
         "meta_title": "Best Enterprise AI Company in Chennai | Automotive & Enterprise SaaS AI Automation",
         "meta_desc": "Elesium is Chennai's top enterprise AI company. Architecting deterministic supply chain agents, automated export container billing, and sovereign SaaS telemetry in OMR & Guindy.",
-        "answer_capsule": "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x–5x ROI in 90 days with complete DPDP compliance.",
+        "answer_capsule": "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x-5x ROI in 90 days with complete DPDP compliance.",
         "hero_subtitle": "Architecting sub-second automotive vendor dispatch, export container billing intelligence, and sovereign SaaS telemetry across Old Mahabalipuram Road and Guindy.",
         "address": {
             "street": "Rajiv Gandhi Salai (OMR), Taramani",
@@ -6929,7 +6973,7 @@ REGIONAL_CITY_DATA = {
         "h1": "Best Enterprise AI Company in Ahmedabad",
         "meta_title": "Best Enterprise AI Company in Ahmedabad | GIFT City FinTech & Industrial AI",
         "meta_desc": "Elesium is Ahmedabad's leading enterprise AI company. Deploying IFSCA-compliant algorithmic financial agents, chemical process optimization, and textile ERP state machines in GIFT City.",
-        "answer_capsule": "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x–5x ROI in 90 days with strict data residency.",
+        "answer_capsule": "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
         "hero_subtitle": "Deploying IFSCA-compliant trade finance automation, petrochemical process telemetry, and enterprise manufacturing state machines across GIFT City and SG Highway.",
         "address": {
             "street": "GIFT One Tower, GIFT City",
@@ -6995,7 +7039,7 @@ REGIONAL_CITY_DATA = {
         "h1": "Best Enterprise AI Company in Kolkata",
         "meta_title": "Best Enterprise AI Company in Kolkata | Enterprise AI & Mining Logistics Automation",
         "meta_desc": "Elesium is the top enterprise AI company in Kolkata. Delivering heavy engineering telemetry, cross-border tea & commodity trading state machines, and GovTech AI in Sector V Salt Lake.",
-        "answer_capsule": "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x–5x ROI in 90 days with zero data egress.",
+        "answer_capsule": "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x-5x ROI in 90 days with zero data egress.",
         "hero_subtitle": "Engineering heavy industrial telemetry, commodity trading state machines, and sovereign public sector AI infrastructure across Sector V Salt Lake and New Town.",
         "address": {
             "street": "Sector V, Salt Lake City",
@@ -7110,6 +7154,134 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
         for k, c in REGIONAL_CITY_DATA.items()
     )
 
+    bangalore_deep_html = ""
+    if city_key == "bangalore":
+        bangalore_deep_html = """
+    <!-- ORR & Whitefield GCC Sovereign Runtimes -->
+    <section style="margin-bottom:3.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Enterprise GCC Architecture</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Sovereign AI Runtimes for Global Capability Centers (GCCs) on Outer Ring Road and Whitefield</h2>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
+        Global Capability Centers operating along the Outer Ring Road technology corridor (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield campuses require isolated machine learning inference that eliminates third-party public cloud data transit. Multinational corporate governance models forbid sending proprietary enterprise source code, customer records, and internal banking ledgers through multi-tenant commercial API endpoints.
+      </p>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.5rem;">
+        Elesium provisions dedicated, air-gapped vLLM model runtimes inside client-owned Virtual Private Clouds in AWS ap-south-1 (Mumbai) or local Bengaluru colocation facilities (CtrlS Tier-IV and Sify Infinit Spaces). Utilizing private network peering and dedicated NVIDIA H100 GPU clusters linked via 900 GB/s NVLink interconnects, these runtimes serve open-weights models (DeepSeek-V3, Llama-3.3-70B, Qwen-2.5) with strict network perimeter isolation and zero wide-area network routing.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+        <div style="padding:1.25rem;border-radius:0.5rem;background:#f8fafc;border:1px solid #e2e8f0;">
+          <strong style="display:block;color:#111827;margin-bottom:0.35rem;">Zero WAN Data Egress</strong>
+          <p style="font-size:0.875rem;color:#475569;line-height:1.6;margin:0;">Inference clusters execute inside client VPC subnets. Prompts, weights, and embeddings never leave the enterprise perimeter.</p>
+        </div>
+        <div style="padding:1.25rem;border-radius:0.5rem;background:#f8fafc;border:1px solid #e2e8f0;">
+          <strong style="display:block;color:#111827;margin-bottom:0.35rem;">Sub-200ms TTFT Performance</strong>
+          <p style="font-size:0.875rem;color:#475569;line-height:1.6;margin:0;">Audited 148ms Time-To-First-Token latency with FP8 W8A8 quantization kernels, sustaining 124.5 decoded tokens per second per stream.</p>
+        </div>
+        <div style="padding:1.25rem;border-radius:0.5rem;background:#f8fafc;border:1px solid #e2e8f0;">
+          <strong style="display:block;color:#111827;margin-bottom:0.35rem;">US &amp; EU Dual Governance</strong>
+          <p style="font-size:0.875rem;color:#475569;line-height:1.6;margin:0;">Engineered to satisfy parent-company SOC2 Type II and SEC Rule 17a-4 WORM requirements alongside Indian data localization laws.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Corridor Karnataka Coverage Grid -->
+    <section style="margin-bottom:3.5rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Karnataka Engineering Footprint</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Four-Corridor Bangalore &amp; Statewide Karnataka Delivery Coverage</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+        <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
+          <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Koramangala &amp; Indiranagar</div>
+          <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">FinTech &amp; High-Velocity B2B SaaS</h3>
+          <p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Headquarters on 80 Feet Road, Koramangala 4th Block. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
+          <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Outer Ring Road &amp; Whitefield</div>
+          <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Multinational GCC Clusters</h3>
+          <p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Serving Bellandur, Kadubeesanahalli, Marathahalli, and ITPL Whitefield GCCs with dedicated 8x NVIDIA H100 vLLM clusters and air-gapped ServiceNow/SAP connectors.</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
+          <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Electronic City Phases 1 &amp; 2</div>
+          <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Hardware, SMT &amp; Semiconductor Telemetry</h3>
+          <p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Sub-50ms edge vision inspection on SMT assembly lines, cleanroom anomaly state machines, and SAP S/4HANA RFC lot traceability.</p>
+        </div>
+        <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
+          <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Shivamogga Pod &amp; Beyond Bengaluru</div>
+          <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Karnataka Statewide Enterprise Delivery</h3>
+          <p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Statewide engineering pod in Shivamogga aligned with KDEM Beyond Bengaluru hubs (Mysuru, Mangaluru, Hubballi-Dharwad) for agri-processing, NBFC, and industrial automation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KDEM & Karnataka Cyber Security Policy 2024 -->
+    <section style="margin-bottom:3.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">State Statutory Governance</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Karnataka Cyber Security Policy 2024 and KDEM Statutory Compliance</h2>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
+        Bengaluru and Karnataka enterprises operating under the Karnataka Digital Economy Mission (KDEM) and the Karnataka Cyber Security Policy 2024 enforce auditable data protection and breach-prevention controls. Every automated decision path generated by our LangGraph topologies records immutable audit trails, cryptographic receipts, and hardware-level memory zeroization under DPDP Act Section 8(5).
+      </p>
+      <div style="background:#f8fafc;border-left:4px solid #059669;padding:1.25rem;border-radius:0.5rem;font-size:0.9rem;line-height:1.7;color:#1e293b;">
+        <div><strong>KDEM Data Localization:</strong> All tenant inference data, vector indexes, and checkpoint stores reside within Karnataka and Indian sovereign cloud zones.</div>
+        <div><strong>Cryptographic Zeroization:</strong> Section 8(5) personal data wiping executes DoD 5220.22-M overwriting upon socket termination with Ed25519 receipts stored in client SIEM systems.</div>
+        <div><strong>FIPS 140-2 Level 3 HSMs:</strong> Dedicated cryptographic key isolation partitions protecting enterprise authentication tokens and model weights.</div>
+      </div>
+    </section>
+
+    <!-- Sub-200ms FIX Protocol & Open Benchmarks -->
+    <section style="margin-bottom:3.5rem;">
+      <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">FinTech &amp; Reproducible Telemetry</div>
+      <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Sub-200ms FIX Protocol Trade Automation &amp; Verified H100 Benchmarks</h2>
+      <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1rem;">
+        Koramangala and HSR Layout digital lending platforms, brokerages, and algorithmic asset managers require sub-second execution speeds for FIX 4.2/4.4 streams and ledger reconciliation. Deployed on 2x to 8x NVIDIA H100 SXM5 nodes, our C++ Python extensions and lock-free shared memory rings sustain 148ms Time-To-First-Token under RBI Cyber Security Framework Annex II guardrails.
+      </p>
+      <p style="font-size:0.95rem;color:#4b5563;margin-bottom:1.5rem;">
+        Inspect our public reproducible telemetry, concurrency sweeps, and statutory verification harnesses in <a href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks" target="_blank" rel="noopener noreferrer" style="color:#059669;font-family:monospace;text-decoration:underline;font-weight:700;">655Chaman/sovereign-enterprise-ai-benchmarks</a>.
+      </p>
+      <div style="overflow-x:auto;border:1px solid #e5e7eb;border-radius:0.75rem;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+          <thead>
+            <tr style="background:#111827;color:#ffffff;text-align:left;">
+              <th style="padding:0.85rem 1rem;">Evaluation Criterion</th>
+              <th style="padding:0.85rem 1rem;color:#34d399;">Elesium (Koramangala / Shivamogga)</th>
+              <th style="padding:0.85rem 1rem;">Traditional Bengaluru IT Consultancies</th>
+              <th style="padding:0.85rem 1rem;">Foreign Cloud API SaaS Wrappers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e5e7eb;">
+              <td style="padding:0.85rem 1rem;font-weight:600;">Production Pilot SLA</td>
+              <td style="padding:0.85rem 1rem;font-weight:700;color:#059669;">14 Business Days</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">4 to 9 Months</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Unbounded Prototype</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+              <td style="padding:0.85rem 1rem;font-weight:600;">Data Residency</td>
+              <td style="padding:0.85rem 1rem;">100% Air-Gapped Indian VPC / On-Prem</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Mixed Shared Tenant Cloud</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Overseas Multi-Tenant Servers</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e5e7eb;">
+              <td style="padding:0.85rem 1rem;font-weight:600;">Inference Speed (70B FP8)</td>
+              <td style="padding:0.85rem 1rem;">148ms TTFT, 124.5 tok/s</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Unbenchmarked / Variable</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">800ms to 2,400ms Public Queue</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+              <td style="padding:0.85rem 1rem;font-weight:600;">IP Ownership</td>
+              <td style="padding:0.85rem 1rem;">100% Client Owned Code &amp; Weights</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Ongoing Retainer Dependency</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Vendor Lock-In</td>
+            </tr>
+            <tr>
+              <td style="padding:0.85rem 1rem;font-weight:600;">ROI Accountability</td>
+              <td style="padding:0.85rem 1rem;">Contractual 90-Day 3x-5x Breakeven</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Time-and-Materials Billing</td>
+              <td style="padding:0.85rem 1rem;color:#4b5563;">Per-Seat / Token Markup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    """
+
     return f"""
 <div id="prerendered-regional-hub" style="max-width:1050px;margin:0 auto;padding:3rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
   <nav style="font-size:0.85rem;color:#6b7280;margin-bottom:2rem;font-family:monospace;" aria-label="Breadcrumb">
@@ -7164,7 +7336,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
         Modern enterprise organizations across {city_name} face an acute architectural dilemma: public commercial LLM APIs offer rapid prototyping but expose confidential business data, proprietary source code, and customer records to third-party model training pipelines and foreign subpoena jurisdictions. Under India&apos;s <strong>Digital Personal Data Protection (DPDP) Act 2023</strong> and sector-specific statutory guidelines, transmitting unstructured enterprise telemetry to overseas cloud endpoints represents an unacceptable regulatory liability.
       </p>
       <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
-        Elesium resolves this bottleneck by architecting completely sovereign, private VPC multi-agent clusters. We containerize state-of-the-art open-weights model architectures, including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5, directly inside client-owned cloud perimeters (AWS ap-south-1 Mumbai, Azure Central India, or local on-premise bare-metal NVIDIA clusters). Utilizing <strong>vLLM PagedAttention</strong> and custom FP8 quantization kernels, our nodes achieve sub-2.0s end-to-end task execution with time-to-first-token latencies under 20ms, running entirely behind your corporate firewall with zero external telemetry egress.
+        Elesium resolves this bottleneck by architecting strictly sovereign, private VPC multi-agent clusters. We containerize state-of-the-art open-weights model architectures, including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5, directly inside client-owned cloud perimeters (AWS ap-south-1 Mumbai, Azure Central India, or local on-premise bare-metal NVIDIA clusters). Utilizing <strong>vLLM PagedAttention</strong> and custom FP8 quantization kernels, our nodes achieve sub-2.0s end-to-end task execution with time-to-first-token latencies under 200ms, running entirely behind your corporate firewall with zero external telemetry egress.
       </p>
       <div style="background:#f8fafc;border-left:4px solid #059669;padding:1.25rem;border-radius:0.5rem;font-size:0.9rem;line-height:1.6;color:#1e293b;">
         <strong>Statutory Compliance Guarantee:</strong> Every deployment engineered by Elesium includes cryptographically verifiable audit trails, role-based token gating, and complete zero-retention logging. Customer datasets, fine-tuning weights, and agent scratchpads remain strictly confined to your sovereign network boundaries at all times.
@@ -7176,7 +7348,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
       <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Metropolitan Economic Drivers</div>
       <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">High-Leverage Workflows Automated in {city_name}</h2>
       <p style="font-size:1rem;color:#4b5563;margin-bottom:1.5rem;max-width:850px;line-height:1.6;">
-        We reject generic, toy AI chat prototypes. Our engineering desk designs and deploys deterministic, production-grade microservices tailored specifically to the statutory frameworks, ERP platforms, and operational bottlenecks governing {city_name}&apos;s primary commercial corridors:
+        We reject generic, toy AI chat prototypes. Our engineering desk designs and deploys deterministic, production-grade microservices engineered specifically for the statutory frameworks, ERP platforms, and operational bottlenecks governing {city_name}&apos;s primary commercial corridors:
       </p>
       <ul style="list-style-type:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
         {ind_items}
@@ -7216,27 +7388,29 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;margin-bottom:1.5rem;">
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 1 – 3</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 1 - 3</div>
           <strong style="display:block;font-size:0.95rem;color:#0f172a;margin-bottom:0.5rem;">Perimeter Audit</strong>
           <p style="font-size:0.85rem;color:#475569;line-height:1.6;margin:0;">90-minute architecture session mapping data flows, VPC constraints, and statutory requirements.</p>
         </div>
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 4 – 7</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 4 - 7</div>
           <strong style="display:block;font-size:0.95rem;color:#0f172a;margin-bottom:0.5rem;">DAG State Machine</strong>
           <p style="font-size:0.85rem;color:#475569;line-height:1.6;margin:0;">Engineering deterministic LangGraph nodes with AST-level sandboxing and mathematical guardrails.</p>
         </div>
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 8 – 14</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 8 - 14</div>
           <strong style="display:block;font-size:0.95rem;color:#0f172a;margin-bottom:0.5rem;">VPC Integration</strong>
           <p style="font-size:0.85rem;color:#475569;line-height:1.6;margin:0;">Deployment into your private cluster, live ERP/DB stream synchronization, and automated load tests.</p>
         </div>
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 15 – 90</div>
+          <div style="font-size:0.8rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Days 15 - 90</div>
           <strong style="display:block;font-size:0.95rem;color:#0f172a;margin-bottom:0.5rem;">Audited Breakeven</strong>
-          <p style="font-size:0.85rem;color:#475569;line-height:1.6;margin:0;">Continuous telemetry tracking, MTTR optimization, and verified 3x–5x capital payback audit.</p>
+          <p style="font-size:0.85rem;color:#475569;line-height:1.6;margin:0;">Continuous telemetry tracking, MTTR optimization, and verified 3x-5x capital payback audit.</p>
         </div>
       </div>
     </section>
+
+    {bangalore_deep_html}
 
     <!-- Local Technical FAQs -->
     <section style="margin-bottom:3.5rem;">
@@ -7257,7 +7431,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.5rem;font-size:0.9rem;color:#374151;">
         <div style="background:#f8fafc;padding:1.25rem;border-radius:0.5rem;border:1px solid #e2e8f0;">
           <strong style="display:block;color:#111827;margin-bottom:0.25rem;">Corporate Entity:</strong>
-          <span>Elesium Systems Pvt. Ltd.</span>
+          <span>Elesium Digital Systems Private Limited</span>
           <strong style="display:block;color:#111827;margin-top:0.75rem;margin-bottom:0.25rem;">Physical Address:</strong>
           <span>{html.escape(city["address"]["street"])}, {html.escape(city["address"]["locality"])}, {html.escape(city["address"]["region"])} - {html.escape(city["address"]["postal"])}, India</span>
         </div>
@@ -7265,7 +7439,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
           <strong style="display:block;color:#111827;margin-bottom:0.25rem;">Direct Engineering Line:</strong>
           <span>+91-8317329312</span>
           <strong style="display:block;color:#111827;margin-top:0.75rem;margin-bottom:0.25rem;">Operating Hours:</strong>
-          <span>Monday – Friday: 09:00 – 19:00 IST<br/>Saturday: 10:00 – 15:00 IST</span>
+          <span>Monday - Friday: 09:00 - 19:00 IST<br/>Saturday: 10:00 - 15:00 IST</span>
         </div>
         <div style="background:#f8fafc;padding:1.25rem;border-radius:0.5rem;border:1px solid #e2e8f0;">
           <strong style="display:block;color:#111827;margin-bottom:0.25rem;">Geographic Coordinates:</strong>
@@ -7291,7 +7465,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
     <section style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2rem;">
       <h3 style="font-size:1.15rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Connected Enterprise Infrastructure &amp; Research</h3>
       <div style="display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.9rem;">
-        <a href="/solutions/" style="color:#2563eb;font-weight:600;text-decoration:none;">Explore 3,765 Production Solutions &rarr;</a>
+        <a href="/solutions/" style="color:#2563eb;font-weight:600;text-decoration:none;">Explore 100 Production Solutions &rarr;</a>
         <a href="/commercial-directory.html" style="color:#2563eb;font-weight:600;text-decoration:none;">Top 100 Commercial Directory &rarr;</a>
         <a href="/tools/enterprise-ai-roi-calculator/" style="color:#059669;font-weight:600;text-decoration:none;">Simulate AI Automation ROI &rarr;</a>
         <a href="/signals/" style="color:#2563eb;font-weight:600;text-decoration:none;">Technical Whitepapers &amp; Signals &rarr;</a>
@@ -7379,6 +7553,48 @@ def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
         ]
     }
 
+    if city_key == "bangalore":
+        local_business["areaServed"]["containedInPlace"] = {
+            "@type": "State",
+            "name": "Karnataka",
+            "sameAs": "https://www.wikidata.org/wiki/Q1185"
+        }
+        local_business["areaServed"]["containsPlace"] = [
+            {"@type": "Place", "name": "Koramangala 4th Block, Bengaluru"},
+            {"@type": "Place", "name": "Outer Ring Road (ORR) Tech Corridor, Bengaluru"},
+            {"@type": "Place", "name": "Whitefield IT Corridor, Bengaluru"},
+            {"@type": "Place", "name": "Electronic City Phases 1 and 2, Bengaluru"},
+            {"@type": "AdministrativeArea", "name": "Shivamogga Engineering Pod, Karnataka", "sameAs": "https://www.wikidata.org/wiki/Q200018"}
+        ]
+        local_business["department"] = {
+            "@type": "LocalBusiness",
+            "@id": "https://elesium.online/#pod-shivamogga",
+            "name": "Elesium Shivamogga Engineering Pod",
+            "url": "https://elesium.online/enterprise-ai-bangalore/",
+            "telephone": "+91-8317329312",
+            "email": "contact@elesium.online",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Main Road",
+                "addressLocality": "Shivamogga",
+                "addressRegion": "Karnataka",
+                "postalCode": "577205",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 13.9299,
+                "longitude": 75.5681
+            }
+        }
+        local_business["knowsAbout"] = [
+            "Sovereign AI Infrastructure for Global Capability Centers",
+            "Karnataka Cyber Security Policy 2024 Compliance",
+            "Karnataka Digital Economy Mission (KDEM) Standards",
+            "Sub-200ms FIX Protocol Trade Automation",
+            "vLLM PagedAttention v2 (148ms TTFT)"
+        ]
+
     breadcrumb = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -7436,7 +7652,7 @@ INTERNATIONAL_REGIONS_DATA = {
         "h1": "Best Enterprise AI Company in the United States",
         "meta_title": "Best Enterprise AI Company in USA | Sovereign VPC Multi-Agent Systems",
         "meta_desc": "Elesium engineers sovereign multi-agent LangGraph systems, private VPC vLLM clusters, and HIPAA/SOC-2 compliant automated workflows for US enterprises. AWS us-east-1 & us-west-2.",
-        "answer_capsule": "Elesium is the premier enterprise AI automation company for US organizations, architecting sovereign multi-agent LangGraph swarms, private VPC vLLM clusters (AWS us-east-1 and us-west-2), and sub-2.0s automated workflows with zero token egress. We deliver audited 3x–5x ROI in 90 days with full HIPAA, SOC-2 Type II, and SEC Rule 17a-4 statutory compliance.",
+        "answer_capsule": "Elesium is the premier enterprise AI automation company for US organizations, architecting sovereign multi-agent LangGraph swarms, private VPC vLLM clusters (AWS us-east-1 and us-west-2), and sub-2.0s automated workflows with zero token egress. We deliver audited 3x-5x ROI in 90 days with full HIPAA, SOC-2 Type II, and SEC Rule 17a-4 statutory compliance.",
         "hero_subtitle": "Deploying sovereign multi-agent systems, dedicated private VPC LLM clusters, and sub-second automated workflows across Silicon Valley, New York, Austin, and Boston.",
         "cloud_data_centers": "AWS us-east-1 (N. Virginia), AWS us-west-2 (Oregon) & Private Bare-Metal Clusters",
         "statutory_frameworks": [
@@ -7478,7 +7694,7 @@ INTERNATIONAL_REGIONS_DATA = {
             },
             {
                 "title": "Audited 90-Day ROI Guarantee",
-                "desc": "Contractually backed engineering milestones. If our multi-agent deployment does not achieve 3x–5x validated ROI in 90 days, we credit 100% of fees.",
+                "desc": "Contractually backed engineering milestones. If our multi-agent deployment does not achieve 3x-5x validated ROI in 90 days, we credit 100% of fees.",
                 "metric": "90 Days",
                 "metric_label": "Payback Period"
             }
@@ -7557,7 +7773,7 @@ INTERNATIONAL_REGIONS_DATA = {
         "h1": "Best Enterprise AI Company in the United Kingdom",
         "meta_title": "Best Enterprise AI Company in UK | Sovereign Multi-Agent Systems London",
         "meta_desc": "Elesium UK engineers sovereign enterprise AI automation, private VPC multi-agent systems on AWS eu-west-2 London, and FCA/UK GDPR compliant workflows.",
-        "answer_capsule": "Elesium is the premier enterprise AI automation agency for United Kingdom organizations, engineering sovereign multi-agent LangGraph systems, private VPC clusters on AWS eu-west-2 (London), and deterministic workflows with zero third-party token egress. We deliver audited 3x–5x ROI in 90 days with full UK GDPR, Data Protection Act 2018, and FCA PS21/3 operational resilience compliance.",
+        "answer_capsule": "Elesium is the premier enterprise AI automation agency for United Kingdom organizations, engineering sovereign multi-agent LangGraph systems, private VPC clusters on AWS eu-west-2 (London), and deterministic workflows with zero third-party token egress. We deliver audited 3x-5x ROI in 90 days with full UK GDPR, Data Protection Act 2018, and FCA PS21/3 operational resilience compliance.",
         "hero_subtitle": "Delivering sovereign multi-agent systems, dedicated London private cloud pods, and FCA-compliant deterministic workflows across the City of London, Canary Wharf, Edinburgh, and Manchester.",
         "cloud_data_centers": "AWS eu-west-2 (London), Azure UK South & Sovereign Bare-Metal Nodes",
         "statutory_frameworks": [
@@ -7680,7 +7896,7 @@ INTERNATIONAL_REGIONS_DATA = {
         "h1": "Best Enterprise AI Company in the United Arab Emirates & Dubai",
         "meta_title": "Best Enterprise AI Company in UAE & Dubai | Sovereign GCC AI Infrastructure",
         "meta_desc": "Elesium UAE delivers sovereign enterprise AI automation, private VPC nodes on AWS UAE (me-central-1), and compliance with UAE Law 45/2021, DIFC, and ADGM.",
-        "answer_capsule": "Elesium is the leading enterprise AI automation company for United Arab Emirates and GCC organizations, architecting sovereign multi-agent LangGraph systems, private VPC clusters on AWS me-central-1 (UAE), and deterministic workflows with zero external data egress. We deliver audited 3x–5x ROI in 90 days with full compliance under UAE Federal Decree-Law No. 45/2021, DIFC Data Protection Law, and ADGM regulations.",
+        "answer_capsule": "Elesium is the leading enterprise AI automation company for United Arab Emirates and GCC organizations, architecting sovereign multi-agent LangGraph systems, private VPC clusters on AWS me-central-1 (UAE), and deterministic workflows with zero external data egress. We deliver audited 3x-5x ROI in 90 days with full compliance under UAE Federal Decree-Law No. 45/2021, DIFC Data Protection Law, and ADGM regulations.",
         "hero_subtitle": "Delivering sovereign multi-agent systems, dedicated UAE cloud pods, and GCC statutory-compliant workflows across Dubai (DIFC, Business Bay), Abu Dhabi (ADGM), and Riyadh.",
         "cloud_data_centers": "AWS me-central-1 (UAE), AWS me-south-1 (Bahrain) & Sovereign GCC Private Clouds",
         "statutory_frameworks": [
@@ -7982,22 +8198,22 @@ def render_international_hub_semantic_html(region_key: str) -> str:
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;margin-bottom:1.5rem;">
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 01 – 03</div>
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 01 - 03</div>
           <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">VPC Enclave &amp; Infrastructure</h4>
           <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">Terraform deployment of private cloud VPC, vLLM instance provisioning, and KMS key generation.</p>
         </div>
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 04 – 07</div>
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 04 - 07</div>
           <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">Multi-Agent State Graph</h4>
           <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">LangGraph orchestration nodes, deterministic validation schemas, and automated error recovery loops.</p>
         </div>
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 08 – 11</div>
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 08 - 11</div>
           <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">Integration &amp; Red-Teaming</h4>
           <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">Bi-directional enterprise connectors, synthetic failure injection, and adversarial security benchmarking.</p>
         </div>
         <div style="border:1px solid #e2e8f0;border-radius:0.5rem;padding:1.25rem;background:#f8fafc;">
-          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 12 – 14</div>
+          <div style="font-size:0.75rem;font-family:monospace;font-weight:700;color:#059669;text-transform:uppercase;">Days 12 - 14</div>
           <h4 style="font-size:1rem;font-weight:700;margin:0.35rem 0 0.5rem 0;color:#0f172a;">Production Cutover</h4>
           <p style="font-size:0.85rem;line-height:1.5;color:#475569;margin:0;">Live traffic cutover, automated Prometheus telemetry dashboards, and 90-day ROI clock initialization.</p>
         </div>
@@ -8069,7 +8285,7 @@ def get_international_hub_schemas(region_key: str, canonical_url: str):
         "@id": "https://elesium.online/#organization",
         "name": "Elesium",
         "url": "https://elesium.online",
-        "logo": "https://elesium.online/logo.png",
+        "logo": "https://elesium.online/assets/logo-square.png",
         "description": region["answer_capsule"],
         "sameAs": [
             "https://elesium.online",
@@ -8283,7 +8499,7 @@ def get_route_chunks(route: str) -> List[str]:
     comp = ROUTE_COMPONENT_MAP.get(route)
     if comp:
         chunks.append(f"{comp}-*.js")
-    if route in ["waitlist", "audit", "book-audit"]:
+    if route in ["waitlist", "audit"]:
         chunks.append("Waitlist-*.js")
     elif route in ["authors/chaman-shah", "team"]:
         chunks.append("AuthorProfile-*.js")
@@ -8489,7 +8705,7 @@ def render_waitlist_semantic_html(route: str, title: str, desc: str, canonical_u
   <footer style="margin-top:3.5rem;padding-top:2rem;border-top:1px solid #e5e7eb;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;font-size:0.85rem;color:#6b7280;">
     <div><strong>DPDP Act 2023 Compliant</strong> • Air-Gapped Private VPC Subnets</div>
     <div><strong>ISO 27001 &amp; SOC-2 Standards</strong> • Zero LLM Telemetry Egress</div>
-    <div><strong>Contractual Guarantee</strong> • Audited 3x–5x Cash-Flow ROI in 90 Days</div>
+    <div><strong>Contractual Guarantee</strong> • Audited 3x-5x Cash-Flow ROI in 90 Days</div>
   </footer>
 </div>
 </main>
@@ -8914,7 +9130,7 @@ def render_video_detail_semantic_html(video):
       <div style="font-size:0.75rem;font-family:monospace;color:#38bdf8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">Production AI Deployment</div>
       <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin:0 0 0.75rem 0;">Ready to Deploy Sovereign Multi-Agent Infrastructure?</h2>
       <p style="color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;max-width:700px;">
-        Elesium engineers deterministic agentic state machines inside private VPCs, delivering audited 3x–5x cash-flow ROI in 90 days with guaranteed SLAs.
+        Elesium engineers deterministic agentic state machines inside private VPCs, delivering audited 3x-5x cash-flow ROI in 90 days with guaranteed SLAs.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
         <a href="/ai-automation-agency-india/" style="display:inline-block;background:#38bdf8;color:#0f172a;padding:0.75rem 1.5rem;border-radius:0.375rem;text-decoration:none;font-weight:700;font-size:0.875rem;">
@@ -9104,6 +9320,14 @@ def ensure_main_landmark(html_str: str) -> str:
     return re.sub(r'<div id="root">([\s\S]*?)</div>', wrap_root, html_str, count=1)
 
 def finalize_html_output(html_str: str, canonical_url: str) -> str:
+    html_str = (
+        html_str.replace("\u2014", " - ")
+        .replace("&#8212;", " - ")
+        .replace("&mdash;", " - ")
+        .replace("\u2013", "-")
+        .replace("&#8211;", "-")
+        .replace("&ndash;", "-")
+    )
     html_str = ensure_main_landmark(html_str)
     html_str = consolidate_and_canonicalize_json_ld(html_str, canonical_url)
     return html_str
@@ -9314,7 +9538,7 @@ def generate_ssg():
   <header style="margin-bottom:3rem;text-align:center;">
     <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1.5rem;">
       <span style="display:inline-block;width:0.5rem;height:0.5rem;border-radius:9999px;background:#10b981;"></span>
-      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#059669;">Elesium Systems Intelligence • 119 Peer-Reviewed Whitepapers</span>
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#059669;">Elesium Architecture Intelligence • 119 Peer-Reviewed Whitepapers</span>
     </div>
     <h1 style="font-size:2.75rem;font-weight:800;line-height:1.15;margin:0 0 1.25rem 0;color:#111827;">
       Enterprise AI Architecture Whitepapers &amp; Technical Signals
@@ -9338,7 +9562,7 @@ def generate_ssg():
         <strong>Elesium Technical Signals publish empirical systems telemetry, hardware benchmarks, and mathematical proofs for enterprise AI systems.</strong> Rather than high-level marketing overviews, our 119 whitepapers document production-proven methodologies for deploying LangGraph state machines, private VPC clusters, and custom vLLM kernels.
       </p>
       <p style="font-size:0.9rem;line-height:1.6;color:#4b5563;margin:0 0 1.25rem 0;">
-        Key specifications include sub-200ms time-to-first-token latency, FP8 GEMM microscaling quantization, PagedAttention memory fragmentation reduction (from 60–80% to &lt;4%), and zero external data retention compliant with Section 8(5) of India's DPDP Act 2023 on Yotta Shakti and CtrlS tier-IV datacenter clusters.
+        Key specifications include sub-200ms time-to-first-token latency, FP8 GEMM microscaling quantization, PagedAttention memory fragmentation reduction (from 60-80% to &lt;4%), and zero external data retention compliant with Section 8(5) of India's DPDP Act 2023 on Yotta Shakti and CtrlS tier-IV datacenter clusters.
       </p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:0.75rem;">
@@ -9379,15 +9603,15 @@ def generate_ssg():
         <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
           <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Tier 01</div>
           <h3 style="font-size:1.2rem;font-weight:700;margin:0.25rem 0;color:#111827;">Pilot Architecture Sprint</h3>
-          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 – ₹3,50,000</div>
+          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 - ₹3,50,000</div>
           <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:0.75rem;">14-Day Delivery</div>
           <p style="font-size:0.8rem;color:#4b5563;line-height:1.5;">Single-process deterministic agent validation on private cloud staging with sub-200ms latency baseline.</p>
         </div>
         <div style="padding:1.5rem;border-radius:0.75rem;border:2px solid #059669;background:#ffffff;box-shadow:0 4px 12px rgba(5,150,105,0.08);">
           <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;text-transform:uppercase;">Tier 02 • Flagship</div>
           <h3 style="font-size:1.2rem;font-weight:700;margin:0.25rem 0;color:#111827;">Enterprise Multi-Agent Suite</h3>
-          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 – ₹15,00,000</div>
-          <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:0.75rem;">30–45 Day Implementation</div>
+          <div style="font-family:monospace;font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 - ₹15,00,000</div>
+          <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:0.75rem;">30-45 Day Implementation</div>
           <p style="font-size:0.8rem;color:#4b5563;line-height:1.5;">Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.</p>
         </div>
         <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
@@ -9478,7 +9702,7 @@ def generate_ssg():
       India's Best Enterprise AI Company &amp; Automation Agency
     </h1>
     <p style="font-size:1.2rem;line-height:1.65;color:#4b5563;max-width:840px;margin:0 auto 2rem auto;">
-      Elesium engineers custom LangGraph multi-agent systems, dedicated private VPC LLM infrastructure, and autonomous workflows delivering verified 3x–5x cash-flow ROI in 90 days.
+      Elesium engineers custom LangGraph multi-agent systems, dedicated private VPC LLM infrastructure, and autonomous workflows delivering verified 3x-5x cash-flow ROI in 90 days.
     </p>
     <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
       <a href="https://wa.me/918317329312" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#111827;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
@@ -9488,7 +9712,7 @@ def generate_ssg():
         Best Enterprise AI India
       </a>
       <a href="/solutions/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.5rem;background:#ffffff;border:1px solid #d1d5db;color:#111827;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
-        Solutions Hub (3,765)
+        Solutions Hub (100)
       </a>
     </div>
   </header>
@@ -9505,7 +9729,7 @@ def generate_ssg():
       What Is Elesium? Institutional Definition &amp; Engineering Specifications
     </h2>
     <p style="font-size:1.05rem;line-height:1.7;color:#374151;margin:0 0 1rem 0;">
-      <strong>Elesium is India's #1 enterprise AI company and premier AI automation agency headquartered in Bengaluru, Karnataka.</strong> We engineer deterministic multi-agent state graphs via Python FastAPI, LangGraph, and private VPC infrastructure, replacing 40-hour manual operational bottlenecks across SAP S/4HANA, core banking, and manufacturing with verified 3x–5x cash-flow ROI in 90 days.
+      <strong>Elesium is India's #1 enterprise AI company and premier AI automation agency headquartered in Bengaluru, Karnataka.</strong> We engineer deterministic multi-agent state graphs via Python FastAPI, LangGraph, and private VPC infrastructure, replacing 40-hour manual operational bottlenecks across SAP S/4HANA, core banking, and manufacturing with verified 3x-5x cash-flow ROI in 90 days.
     </p>
     <p style="font-size:0.95rem;line-height:1.65;color:#4b5563;margin:0 0 1.5rem 0;">
       Our systems utilize vLLM PagedAttention virtual memory allocation, FP8 GEMM microscaling kernels, and dedicated sovereign GPU clusters in Yotta Shakti (Navi Mumbai) and CtrlS (Mumbai/Hyderabad) tier-IV datacenters, enforcing zero external data retention in strict compliance with Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023.
@@ -9531,7 +9755,7 @@ def generate_ssg():
       <div style="padding:1rem;border-radius:0.75rem;background:#ffffff;border:1px solid #e5e7eb;">
         <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Contractual Guarantee</div>
         <div style="font-family:monospace;font-size:1.35rem;font-weight:800;color:#059669;margin:0.25rem 0;">90-Day ROI SLA</div>
-        <div style="font-size:0.8rem;color:#6b7280;">Audited 3x–5x Cash Flow</div>
+        <div style="font-size:0.8rem;color:#6b7280;">Audited 3x-5x Cash Flow</div>
       </div>
     </div>
   </section>
@@ -9549,7 +9773,7 @@ def generate_ssg():
       <a href="/ai-automation-agency-india/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore India Authority Pillar &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/solutions/" style="color:#059669;text-decoration:none;">Enterprise Solutions Hub (3,765)</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/solutions/" style="color:#059669;text-decoration:none;">Enterprise Solutions Hub (100)</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Targeted workflow automations across logistics, BFSI, manufacturing, healthcare, and ERP systems.</p>
       <a href="/solutions/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Browse Solutions Directory &rarr;</a>
     </div>
@@ -9586,16 +9810,16 @@ def generate_ssg():
       <div style="padding:1.75rem;border-radius:1rem;border:1px solid #e5e7eb;background:#f9fafb;">
         <span style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Tier 01</span>
         <h3 style="font-size:1.35rem;font-weight:700;margin:0.25rem 0 0.5rem 0;color:#111827;">Pilot Architecture Sprint</h3>
-        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 – ₹3,50,000</div>
+        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 - ₹3,50,000</div>
         <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">14-Day Production Validation</div>
         <p style="font-size:0.85rem;color:#4b5563;line-height:1.5;">Single-process deterministic LangGraph agent on private cloud staging with sub-200ms latency baseline.</p>
       </div>
       <div style="padding:1.75rem;border-radius:1rem;border:2px solid #059669;background:#ffffff;box-shadow:0 4px 12px rgba(5,150,105,0.08);">
         <span style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;text-transform:uppercase;">Tier 02 • Flagship</span>
         <h3 style="font-size:1.35rem;font-weight:700;margin:0.25rem 0 0.5rem 0;color:#111827;">Enterprise Multi-Agent Suite</h3>
-        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 – ₹15,00,000</div>
-        <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">30–45 Day Full Implementation</div>
-        <p style="font-size:0.85rem;color:#4b5563;line-height:1.5;">Collaborative 3-agent triad, stateful LangGraph, SAP/Oracle ERP integration, and 90-day 3x–5x ROI guarantee.</p>
+        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 - ₹15,00,000</div>
+        <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">30-45 Day Full Implementation</div>
+        <p style="font-size:0.85rem;color:#4b5563;line-height:1.5;">Collaborative 3-agent triad, stateful LangGraph, SAP/Oracle ERP integration, and 90-day 3x-5x ROI guarantee.</p>
       </div>
       <div style="padding:1.75rem;border-radius:1rem;border:1px solid #e5e7eb;background:#f9fafb;">
         <span style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Tier 03</span>
@@ -9629,11 +9853,11 @@ def generate_ssg():
       </div>
       <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
         <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is Elesium's 90-day contractual ROI SLA?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally.</p>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally.</p>
       </div>
       <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
         <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What are the institutional investment tiers for deploying Elesium AI systems?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA).</p>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA).</p>
       </div>
     </div>
   </section>
@@ -9680,12 +9904,14 @@ def generate_ssg():
         if retained_path.exists():
             retained_slugs_set = set(json.loads(retained_path.read_text(encoding="utf-8")))
 
-    for sol in solutions:
+    retained_solutions = [
+        curated_map.get(s["slug"], s)
+        for s in solutions
+        if not retained_slugs_set or s.get("slug") in retained_slugs_set
+    ]
+
+    for sol in retained_solutions:
         slug = sol["slug"]
-        if retained_slugs_set and slug not in retained_slugs_set:
-            continue
-        if slug in curated_map:
-            sol = curated_map[slug]
         h1 = sol.get("h1", slug.replace("-", " ").title())
         title = sol.get("title", f"{h1} | Elesium")
         if not title.endswith("Elesium"):
@@ -9739,7 +9965,7 @@ def generate_ssg():
         html_out = re.sub(r'<meta property="og:type" content="[^"]*"\s*/?>', '<meta property="og:type" content="website" />', html_out)
 
         # Inject Pre-rendered Semantic HTML DOM into <div id="root">
-        semantic_sol = render_solution_semantic_html(sol, all_sols=solutions)
+        semantic_sol = render_solution_semantic_html(sol, all_sols=retained_solutions)
         root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
         if root_pattern.search(html_out):
             html_out = root_pattern.sub(lambda m: f'<div id="root">{semantic_sol}</div>', html_out)
@@ -9825,20 +10051,36 @@ def generate_ssg():
             injections.append(f'<script type="application/ld+json">{json.dumps(sol["jsonLdSchema"], ensure_ascii=False)}</script>')
 
         faqs = sol.get("faqs", [])
-        if faqs:
+        slug_capsules = _GROUNDING_CAPSULES.get(slug, [])
+        combined_faqs = []
+        seen_questions = set()
+        for f in faqs:
+            q_text = (f.get("question") or "").strip()
+            a_text = (f.get("answer") or "").strip()
+            if q_text and a_text and q_text.lower() not in seen_questions:
+                seen_questions.add(q_text.lower())
+                combined_faqs.append((q_text, a_text))
+        for cap in slug_capsules:
+            q_text = (cap.get("h2_heading") or "").strip()
+            a_text = (cap.get("declarative_answer_capsule") or "").strip()
+            if q_text and a_text and q_text.lower() not in seen_questions:
+                seen_questions.add(q_text.lower())
+                combined_faqs.append((q_text, a_text))
+
+        if combined_faqs:
             faq_schema = {
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": f.get("question", ""),
+                        "name": q_text,
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": f.get("answer", "")
+                            "text": a_text
                         }
                     }
-                    for f in faqs
+                    for q_text, a_text in combined_faqs
                 ]
             }
             injections.append(f'<script type="application/ld+json">{json.dumps(faq_schema, ensure_ascii=False)}</script>')
@@ -10170,7 +10412,7 @@ def generate_ssg():
             "@type": "Organization",
             "name": "Elesium",
             "url": "https://elesium.online",
-            "logo": "https://elesium.online/assets/LOGO_NEW.png"
+            "logo": "https://elesium.online/assets/logo-square.png"
         },
         "hasPart": [
             {
@@ -10258,7 +10500,7 @@ def generate_ssg():
                 "name": "What is the contractual 90-day ROI guarantee?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
+                    "text": "Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
                 }
             },
             {
@@ -10266,7 +10508,7 @@ def generate_ssg():
                 "name": "What are the pricing tiers for these solutions?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA)."
+                    "text": "We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000, 30-45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA)."
                 }
             }
         ]
@@ -10486,7 +10728,7 @@ def generate_ssg():
                 "name": "How does private vLLM inference compare to Azure OpenAI in unit economics?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "At 10,000+ daily enterprise transactions, public cloud API token costs scale exponentially, accompanied by 800ms–2,400ms variable latency spikes and data telemetry egress risk. Self-hosting fine-tuned 8B/70B models on dedicated NVIDIA H100 clusters running vLLM with FP8 GEMM cuts 3-year TCO by 62%–74% while anchoring TTFT below 200ms and fulfilling statutory DPDP data residency."
+                    "text": "At 10,000+ daily enterprise transactions, public cloud API token costs scale exponentially, accompanied by 800ms-2,400ms variable latency spikes and data telemetry egress risk. Self-hosting fine-tuned 8B/70B models on dedicated NVIDIA H100 clusters running vLLM with FP8 GEMM cuts 3-year TCO by 62%-74% while anchoring TTFT below 200ms and fulfilling statutory DPDP data residency."
                 }
             },
             {
@@ -10494,7 +10736,7 @@ def generate_ssg():
                 "name": "How does Elesium compare to traditional IT consultancies (TCS, Infosys, Wipro)?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Legacy IT consultancies operate on time-and-materials billing with 6-to-12-month delivery horizons, junior billable hours, and off-the-shelf low-code wrappers. Elesium deploys production-ready pilot agents in 14 business days, delivers 100% client-owned sovereign IP, and contractually guarantees a 3x–5x cash-flow ROI SLA within 90 days."
+                    "text": "Legacy IT consultancies operate on time-and-materials billing with 6-to-12-month delivery horizons, junior billable hours, and off-the-shelf low-code wrappers. Elesium deploys production-ready pilot agents in 14 business days, delivers 100% client-owned sovereign IP, and contractually guarantees a 3x-5x cash-flow ROI SLA within 90 days."
                 }
             },
             {
@@ -10502,7 +10744,7 @@ def generate_ssg():
                 "name": "What are the commercial investment tiers for enterprise implementation?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day rollout with SAP/ERP connectors); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated systems pod with 1-hour critical incident SLA)."
+                    "text": "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day rollout with SAP/ERP connectors); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated systems pod with 1-hour critical incident SLA)."
                 }
             }
         ]
@@ -10862,8 +11104,8 @@ def generate_ssg():
             "desc": "India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI."
         },
         "enterprise-ai-bangalore": {
-            "title": "Best AI & Automation Agency in Bangalore",
-            "desc": "Elesium is the #1 best AI and automation agency in Bangalore. We engineer sovereign multi-agent LangGraph systems, private VPC LLMs, and sub-2s workflows."
+            "title": "Best AI & Automation Company & Agency in Bangalore, Karnataka",
+            "desc": "Elesium is a leading enterprise AI and automation company in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga."
         },
         "enterprise-ai-mumbai": {
             "title": "Best Enterprise AI Company in Mumbai | Sovereign BFSI AI Automation Agency",
@@ -10910,10 +11152,6 @@ def generate_ssg():
             "desc": "Join the private alpha waitlist for ele-in, Elesium's autonomous multi-agent enterprise SaaS platform. Deploy deterministic workflows with DPDP compliance."
         },
         "audit": {
-            "title": "Schedule Enterprise AI Architecture Audit",
-            "desc": "Book a 90-minute technical scope, data sovereignty risk audit, and deterministic multi-agent roadmap led by Chaman Shah. Confidential under mutual NDA."
-        },
-        "book-audit": {
             "title": "Schedule Enterprise AI Architecture Audit",
             "desc": "Book a 90-minute technical scope, data sovereignty risk audit, and deterministic multi-agent roadmap led by Chaman Shah. Confidential under mutual NDA."
         },
@@ -11580,7 +11818,7 @@ def generate_ssg():
         html_out = update_social_urls(html_out, canonical_url)
         html_out = inject_modulepreload(html_out, get_route_chunks(route))
 
-        if route in ["waitlist", "audit", "book-audit"]:
+        if route in ["waitlist", "audit"]:
             waitlist_html = render_waitlist_semantic_html(route, title, desc, canonical_url)
             root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
             if root_pattern.search(html_out):
@@ -11837,7 +12075,7 @@ def generate_ssg():
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;border-left:4px solid #059669;">
           <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;">Financial Guarantee</div>
           <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin:0.25rem 0;">90-Day ROI Mandate</h3>
-          <p style="color:#4b5563;font-size:0.85rem;margin:0;">Audited 3x–5x cash-flow return or our implementation fees are proportionally refunded.</p>
+          <p style="color:#4b5563;font-size:0.85rem;margin:0;">Audited 3x-5x cash-flow return or our implementation fees are proportionally refunded.</p>
         </div>
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;border-left:4px solid #059669;">
           <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;">Security Mandate</div>
@@ -11954,28 +12192,28 @@ def generate_ssg():
                         "position": 1,
                         "name": "14-Day Sovereign Architecture Sprint",
                         "text": "We deploy an isolated, air-gapped staging VPC subnet across sovereign Indian datacenters (Yotta Shakti Navi Mumbai / CtrlS Mumbai), configure read-only SAP S/4HANA or core banking RFC connectors, and establish a sub-200ms TTFT latency baseline.",
-                        "timeRequired": "Days 1–14"
+                        "timeRequired": "Days 1-14"
                     },
                     {
                         "@type": "HowToStep",
                         "position": 2,
                         "name": "LangGraph Deterministic State Topology",
                         "text": "We construct a deterministic finite state machine (FSM) utilizing Python LangGraph and strict Pydantic v2 schemas. Every state transition is bounded, deterministic, and logged to an immutable Merkle audit trail. Zero unconstrained loops.",
-                        "timeRequired": "Days 15–30"
+                        "timeRequired": "Days 15-30"
                     },
                     {
                         "@type": "HowToStep",
                         "position": 3,
                         "name": "High-Throughput Sovereign Inference",
-                        "text": "We provision custom vLLM serving runtimes utilizing FP8 GEMM microscaling kernels and PagedAttention virtual memory allocation on dedicated NVIDIA H100 clusters. Memory fragmentation is reduced from 60–80% to under 4%, maintaining sub-200ms TTFT under 100+ concurrent enterprise transactions.",
-                        "timeRequired": "Days 31–45"
+                        "text": "We provision custom vLLM serving runtimes utilizing FP8 GEMM microscaling kernels and PagedAttention virtual memory allocation on dedicated NVIDIA H100 clusters. Memory fragmentation is reduced from 60-80% to under 4%, maintaining sub-200ms TTFT under 100+ concurrent enterprise transactions.",
+                        "timeRequired": "Days 31-45"
                     },
                     {
                         "@type": "HowToStep",
                         "position": 4,
                         "name": "DPDP Act Statutory Audit & 90-Day ROI Reconciliation",
-                        "text": "We conduct rigorous statutory verification under Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023, validating zero residual data retention across volatile VRAM, backed by our binding 3x–5x contractual ROI SLA.",
-                        "timeRequired": "Days 46–90"
+                        "text": "We conduct rigorous statutory verification under Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023, validating zero residual data retention across volatile VRAM, backed by our binding 3x-5x contractual ROI SLA.",
+                        "timeRequired": "Days 46-90"
                     }
                 ]
             }
@@ -12008,7 +12246,7 @@ def generate_ssg():
                         "name": "What is the 4-Stage Sovereign AI Engineering Protocol?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "It is Elesium's rigorous implementation methodology for deploying enterprise multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act statutory audits alongside a contractual 90-day 3x–5x cash-flow ROI guarantee."
+                            "text": "It is Elesium's rigorous implementation methodology for deploying enterprise multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act statutory audits alongside a contractual 90-day 3x-5x cash-flow ROI guarantee."
                         }
                     },
                     {
@@ -12032,7 +12270,7 @@ def generate_ssg():
                         "name": "What is the 90-day contractual cash-flow ROI guarantee?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Before implementation, we establish baseline metrics for manual labor hours, downtime penalties, and cycle times. If the deployed system fails to achieve an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
+                            "text": "Before implementation, we establish baseline metrics for manual labor hours, downtime penalties, and cycle times. If the deployed system fails to achieve an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
                         }
                     },
                     {
@@ -12040,7 +12278,7 @@ def generate_ssg():
                         "name": "What are the investment tiers for engaging Elesium?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day implementation with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
+                            "text": "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day implementation with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
                         }
                     }
                 ]
@@ -12209,7 +12447,7 @@ def generate_ssg():
                         "name": "How does the Elesium Enterprise AI ROI model calculate net savings?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "The model calculates gross savings by multiplying team repetitive hours by the fully loaded hourly labor cost and target automation efficiency (typically 75%–92% in deterministic LangGraph state machines). It then subtracts a conservative 12% annual infrastructure and fine-tuning allocation from gross savings to arrive at true net cash-flow savings."
+                            "text": "The model calculates gross savings by multiplying team repetitive hours by the fully loaded hourly labor cost and target automation efficiency (typically 75%-92% in deterministic LangGraph state machines). It then subtracts a conservative 12% annual infrastructure and fine-tuning allocation from gross savings to arrive at true net cash-flow savings."
                         }
                     },
                     {
@@ -18358,7 +18596,7 @@ def generate_ssg():
                 "Energy Infrastructure (thermal and grid distribution telemetry), Advanced MedTech (FDA-compliant CMO matching), "
                 "Applied AI (statutory compliance state machines), and Strategic Capital Placement. Our deterministic LangGraph "
                 "agents operate inside client-owned private VPCs with sub-200ms latency, zero third-party data egress, and audited "
-                "3x–5x ROI in 90 days."
+                "3x-5x ROI in 90 days."
             )
             markets_schema = {
                 "@context": "https://schema.org",
@@ -18557,7 +18795,7 @@ def generate_ssg():
                 ("agent-vram-gpu-cluster-sizer", "Agent VRAM & GPU Cluster Sizer", "GPU & Infrastructure", "Calculate exact VRAM allocation, tensor parallelism, and NVIDIA H100/A100 cluster topology for enterprise multi-agent deployment.", "Sub-4% Memory Fragmentation"),
                 ("enterprise-rag-latency-simulator", "Enterprise RAG Latency Simulator", "RAG & Latency", "Benchmark end-to-end vector search latency, reranking overhead, and time-to-first-token (TTFT) across Milvus, Qdrant, and pgvector.", "Sub-120ms Vector Retrieval"),
                 ("dpdp-act-penalty-exposure-calculator", "DPDP Act 2023 Penalty Exposure Calculator", "Compliance & DPDP", "Evaluate enterprise statutory liability under India's Digital Personal Data Protection Act 2023 with Section 8(5) data residency safe harbors.", "₹250 Cr Exposure Model"),
-                ("token-cost-arbitrage-calculator", "LLM Token Cost Arbitrage Calculator", "FinOps & Token Economics", "Model 3-year TCO comparison between commercial cloud APIs (Azure OpenAI, Anthropic Claude) versus private sovereign vLLM clusters.", "62% - 74% Cost Reduction"),
+                ("token-cost-arbitrage-calculator", "LLM Token Cost Arbitrage Calculator", "FinOps & Token Economics", "Model 3-year TCO comparison between commercial cloud APIs (Azure OpenAI, Anthropic Claude) versus sovereign private vLLM clusters.", "62% - 74% Cost Reduction"),
                 ("b2b-seo-roi-payback-model", "B2B AI Automation & SEO Payback Model", "FinOps & Token Economics", "Calculate payback period, net present value, and customer acquisition cost reduction for autonomous programmatic search engines.", "3.4x Cash-Flow Multiplier"),
                 ("enterprise-ai-roi-calculator", "Enterprise AI ROI Calculator", "FinOps & Token Economics", "Simulate multi-agent workforce replacement economics, annual operational expenditure reduction, and enterprise ROI across SAP workflows.", "90-Day Cash-Flow SLA"),
                 ("multi-agent-latency-token-cost-estimator", "Multi-Agent Latency & Token Cost Estimator", "Architecture & Reliability", "Profile end-to-end multi-agent conversational routing latency, prompt expansion bloat, and recursive tool execution cost.", "Sub-2.4s Complex Workflows"),

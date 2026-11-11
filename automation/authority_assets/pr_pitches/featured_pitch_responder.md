@@ -7,10 +7,10 @@
 ## [FEAT-2026-402] Pitch for Forbes Technology Council: Fintech compliance and data sovereignty under strict privacy laws
 - **Platform:** Featured
 - **Compliance Score:** 100/100
-- **Primary Deep Anchor:** https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
+- **Primary Deep Anchor:** https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos
 - **Secondary Deep Anchor:** https://elesium.online/signals
 
-**Subject:** Quote: Fintech compliance and data sovereignty under strict privacy laws — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: Fintech compliance and data sovereignty under strict privacy laws - Chaman Shah, Principal AI Systems Architect
 
 Hi David Patel,
 
@@ -22,8 +22,8 @@ Under the DPDP Act 2023, transmitting unredacted loan records or PII across mult
 
 Deploying sovereign open-weights models inside client-isolated VPCs delivers audited 1.9s latency for 48-page statement verification while maintaining zero external data leakage."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)  
 **Credentials & Authority Proof:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing.  
 - **Enterprise Solutions Hub:** https://elesium.online/solutions  

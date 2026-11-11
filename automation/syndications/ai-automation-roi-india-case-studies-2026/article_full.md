@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # AI Automation ROI: Real Case Studies from Indian Enterprises (2026)
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/ai-automation-roi-india-case-studies-2026). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/ai-automation-roi-india-case-studies-2026). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** Explore 3 real-world case studies demonstrating massive ROI from AI automation in Indian enterprises across BFSI, SaaS, and Manufacturing sectors.
 

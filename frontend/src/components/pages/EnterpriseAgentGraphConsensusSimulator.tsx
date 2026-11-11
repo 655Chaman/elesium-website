@@ -467,8 +467,8 @@ Cluster operating within deterministic state invariants. Ready for sovereign pro
           <div className="max-w-3xl space-y-3">
             <h2 className="text-2xl font-bold text-white">Architectural Principles: Byzantine Consensus for Autonomous AI</h2>
             <p className="text-sm text-slate-400 leading-relaxed">
-              When autonomous multi-agent swarms execute high-stakes operational workflows—such as real-time banking transfers,
-              SAP inventory allocations, or industrial supply chain dispatches—monolithic single-agent decisions introduce catastrophic
+              When autonomous multi-agent swarms execute high-stakes operational workflows, such as real-time banking transfers,
+              SAP inventory allocations, or industrial supply chain dispatches, monolithic single-agent decisions introduce catastrophic
               single points of failure. The Elesium Graph Consensus protocol enforces formal mathematical agreement before state mutations
               are committed to core ledgers.
             </p>

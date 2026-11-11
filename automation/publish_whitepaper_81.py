@@ -60,8 +60,8 @@ SECTIONS_81 = [
     {
         "type": "paragraph",
         "value": (
-            "Indian tertiary care hospitals—across major medical epicenters including Bangalore's Old Airport Road and Bannerghatta Road, "
-            "Delhi NCR's Gurugram health city corridor, and Mumbai's Parel medical district—operate under extreme patient density. "
+            "Indian tertiary care hospitals - across major medical epicenters including Bangalore's Old Airport Road and Bannerghatta Road, "
+            "Delhi NCR's Gurugram health city corridor, and Mumbai's Parel medical district - operate under extreme patient density. "
             "A standard 500-to-1000-bed corporate hospital admits between 120 and 280 acute patients daily, generates over 15,000 lab and "
             "radiology reports every 24 hours, and coordinates with dozens of Third Party Administrators (TPAs) and health insurers. "
             "Despite state-of-the-art medical equipment, the administrative operational machinery remains heavily burdened by legacy Hospital "
@@ -358,7 +358,7 @@ SECTIONS_81 = [
             },
             {
                 "q": "What is the typical deployment timeline for an enterprise hospital AI automation cluster?",
-                "a": "A standard tertiary hospital pilot—including on-premise private VPC setup, HIS database schema integration, and ABDM M1/M2/M3 FHIR testing—is fully operational within 4 weeks. Full multi-department rollout across IPD, OPD, and billing completes in 6 to 8 weeks."
+                "a": "A standard tertiary hospital pilot - including on-premise private VPC setup, HIS database schema integration, and ABDM M1/M2/M3 FHIR testing - is fully operational within 4 weeks. Full multi-department rollout across IPD, OPD, and billing completes in 6 to 8 weeks."
             }
         ]
     }

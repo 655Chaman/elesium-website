@@ -38,5 +38,5 @@ In production 8-GPU NVIDIA H100 SXM5 benchmarks serving Llama-3-70B, Megatron co
 
 ### Enterprise Deployment Architecture
 For sovereign enterprise deployments adhering to Indian DPDP Act 2023 and private VPC isolation mandates, explore our dedicated solutions:
-- [Tensor Parallelism Megatron Column Row Partitioners for Enterprise vLLM and Triton](https://elesium.online/solutions/tensor-parallelism-megatron-column-row-partitioners-for-enterprise-vllm-and-triton)
-- [All-Reduce Communication Overlap Controllers for High Concurrency Fintech Trading Copilots](https://elesium.online/solutions/all-reduce-communication-overlap-controllers-for-high-concurrency-fintech-trading-copilots)
+- [Tensor Parallelism Megatron Column Row Partitioners for Enterprise vLLM and Triton](https://elesium.online/solutions/column-linear-attention-weight-partitioners-for-hospital-clinical-triage-copilots)
+- [All-Reduce Communication Overlap Controllers for High Concurrency Fintech Trading Copilots](https://elesium.online/solutions/100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways)

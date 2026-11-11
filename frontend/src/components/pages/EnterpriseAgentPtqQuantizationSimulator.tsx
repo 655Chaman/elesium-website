@@ -439,7 +439,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
               },
               {
                 q: "How does quantization ensure compliance under the Indian DPDP Act 2023?",
-                a: "Running unquantized 70B models required massive multi-GPU cloud instances, forcing many Indian enterprises to rely on foreign public APIs. By compressing 70B models to under 38 GB of VRAM, enterprises can run sovereign, air-gapped LLM instances entirely on local on-premise hardware inside private Indian datacenters in Bangalore, Mumbai, or Delhi, ensuring 100% data residency compliance."
+                a: "Running unquantized 70B models required massive multi-GPU cloud instances, forcing many Indian enterprises to rely on foreign public APIs. By compressing 70B models to under 38 GB of VRAM, enterprises can run sovereign, air-gapped LLM instances entirely on local on-premise hardware inside sovereign Indian datacenters in Bangalore, Mumbai, or Delhi, ensuring 100% data residency compliance."
               }
             ].map((item, idx) => (
               <div key={idx} className="border border-slate-800 rounded-xl overflow-hidden">
@@ -463,7 +463,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
         {/* Audit Mandate Form Section */}
         <div id="audit" className="mt-16 bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-10 backdrop-blur">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Schedule Private Sovereign Quantization Audit</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Schedule Sovereign Private Quantization Audit</h2>
             <p className="mt-2 text-sm text-slate-400">
               Engage with Elesium's Principal AI Systems Architects to calibrate AWQ 4-bit weights, deploy FP8 KV cache memory scaling,
               and migrate high-concurrency LLM pipelines into sovereign air-gapped VPCs.

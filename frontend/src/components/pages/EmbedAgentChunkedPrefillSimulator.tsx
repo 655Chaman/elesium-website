@@ -158,7 +158,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
           <div>
             <div className="flex justify-between text-slate-300 mb-1">
               <span>Concurrent Users: <strong className="text-white font-mono">{concurrentUsers}</strong></span>
-              <span className="text-slate-500">10 – 1000</span>
+              <span className="text-slate-500">10 - 1000</span>
             </div>
             <input
               type="range"

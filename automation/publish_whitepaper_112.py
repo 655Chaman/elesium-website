@@ -18,7 +18,7 @@ post_124 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Inference Hardware Architects, and Distributed Systems Directors: architecting disaggregated pre-fill and decode clusters, streaming paged KV tensors over 400 Gbps RoCE-v2 fabrics, and slashing Time-to-First-Token (TTFT) below 4ms on sovereign AI deployments.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Inference Hardware Architects, and Distributed Systems Directors: architecting disaggregated pre-fill and decode clusters, streaming paged KV tensors over 400 Gbps RoCE-v2 fabrics, and slashing Time-to-First-Token (TTFT) below 4ms on sovereign AI deployments.",
     "metaDescription": "Disaggregated pre-fill and chunked KV routing guide: decoupled compute/decode pods, cross-node KV paged attention, sub-4ms TTFT, RDMA RoCE-v2 streaming, and heterogeneous GPU pairing.",
-    "relatedSolutionSlug": "disaggregated-pre-fill-and-decode-pod-orchestrators-for-enterprise-vllm-clusters",
+    "relatedSolutionSlug": "disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",

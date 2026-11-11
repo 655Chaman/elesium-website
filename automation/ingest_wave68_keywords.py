@@ -5,7 +5,7 @@ from pathlib import Path
 QUEUE_PATH = Path("automation/compact_keywords_queue.json")
 
 wave68_keywords = [
-    # Cluster 1: Non-Blocking Host-to-Device Asynchronous Memory Offloading (IDs 3316–3332, 17 items)
+    # Cluster 1: Non-Blocking Host-to-Device Asynchronous Memory Offloading (IDs 3316-3332, 17 items)
     {
         "id": 3316,
         "keyword": "asynchronous gpu checkpointing memory offload daemons for slurm clusters",
@@ -228,7 +228,7 @@ wave68_keywords = [
         "primary_cta": "Deploy Pipeline State Synchronizers"
     },
 
-    # Cluster 2: In-Flight State Migration & Zero-Downtime Slurm Failovers (IDs 3333–3349, 17 items)
+    # Cluster 2: In-Flight State Migration & Zero-Downtime Slurm Failovers (IDs 3333-3349, 17 items)
     {
         "id": 3333,
         "keyword": "in-flight agent state migration controllers for preemptible slurm cloud instances",
@@ -451,7 +451,7 @@ wave68_keywords = [
         "primary_cta": "Deploy Spot Eviction Survival Engines"
     },
 
-    # Cluster 3: Disaster Recovery, Cryptographic State Integrity & DPDP Act Compliance (IDs 3350–3365, 16 items)
+    # Cluster 3: Disaster Recovery, Cryptographic State Integrity & DPDP Act Compliance (IDs 3350-3365, 16 items)
     {
         "id": 3350,
         "keyword": "dpdp-act-statutory-audit-trail-state-checkpoint-generators-for-fintechs",

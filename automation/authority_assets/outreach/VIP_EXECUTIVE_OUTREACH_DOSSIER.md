@@ -11,7 +11,7 @@
 ## Profile #01: Logistics & Supply Chain
 - **Target Decision-Maker:** `VP of Operations / Fleet Logistics Director`
 - **Primary Channel:** `LinkedIn / WhatsApp`
-- **Target Solution Architecture:** [ai-automation-agency-for-logistics](https://elesium.online/solutions/ai-automation-agency-for-logistics)
+- **Target Solution Architecture:** [interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers)
 - **Company Archetypes:** Delhivery, Blue Dart, Maersk Logistics, Gati-KWE, Allcargo
 - **Unvarnished Technical Pain:** *40+ hours lost per week reconciling multi-depot shipping manifests, carrier detention billing disputes, and broker fee gouging.*
 
@@ -23,10 +23,10 @@
 ```text
 Hi [First_Name],
 
-Most fleet operations teams treat cross-dock manifest reconciliation as an unsolvable labor cost—absorbing 40+ manual verification hours weekly and thousands in preventable demurrage disputes.
+Most fleet operations teams treat cross-dock manifest reconciliation as an unsolvable labor cost - absorbing 40+ manual verification hours weekly and thousands in preventable demurrage disputes.
 
 At Elesium, we replaced brittle API wrappers with deterministic LangGraph cyclic state machines that reconcile multi-depot telematics and bill-of-lading payloads in sub-200ms cycles:
-👉 https://elesium.online/solutions/ai-automation-agency-for-logistics
+👉 https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers
 
 We also open-sourced two interactive engineering models to evaluate your operations:
 1. Enterprise Labor & Detention Savings Model: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -41,7 +41,7 @@ Hi [First_Name],
 
 Following up on our dispatch architecture note. 
 
-The primary reason legacy WMS and TMS automations fail at scale is linear prompt degradation—stateless LLM chains hallucinate on non-standard bill-of-lading layouts, causing catastrophic pipeline crashes. 
+The primary reason legacy WMS and TMS automations fail at scale is linear prompt degradation - stateless LLM chains hallucinate on non-standard bill-of-lading layouts, causing catastrophic pipeline crashes. 
 
 Our benchmark data shows an append-only PostgreSQL checkpoint architecture cuts detention dispute cycles by 84% while maintaining sub-180ms P95 latency.
 
@@ -66,7 +66,7 @@ If you'd like our engineering team to run a complimentary 30-minute architecture
 ## Profile #02: BFSI & Algorithmic Underwriting
 - **Target Decision-Maker:** `Chief Risk Officer / Head of Digital Lending`
 - **Primary Channel:** `LinkedIn / Email`
-- **Target Solution Architecture:** [deterministic-loan-underwriting-agents-for-bfsi](https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi)
+- **Target Solution Architecture:** [deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)
 - **Company Archetypes:** Bajaj Finance, HDFC Credila, Tata Capital, IDFC First, Piramal Capital
 - **Unvarnished Technical Pain:** *Slow 48-hour credit appraisal turnarounds, stochastic LLM hallucinations violating RBI guidelines, and high data leakage risks on public cloud APIs.*
 
@@ -78,10 +78,10 @@ If you'd like our engineering team to run a complimentary 30-minute architecture
 ```text
 Hi [First_Name],
 
-In commercial lending, stochastic AI models are an existential regulatory risk—you cannot justify a hallucinated credit rejection to an RBI auditor or a credit committee.
+In commercial lending, stochastic AI models are an existential regulatory risk - you cannot justify a hallucinated credit rejection to an RBI auditor or a credit committee.
 
 We engineered a sovereign, air-gapped underwriting engine running deterministic finite state machines in a private VPC. It scores complex corporate balance sheets and GSTN returns in under 2 seconds with mathematically guaranteed 0% hallucination rates:
-👉 https://elesium.online/solutions/deterministic-loan-underwriting-agents-for-bfsi
+👉 https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos
 
 We just open-sourced the underlying financial model for CROs:
 • 3-Year Underwriting TCO & Payback Model: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -96,7 +96,7 @@ Hi [First_Name],
 
 Following up on deterministic underwriting. 
 
-Many NBFCs and private banks struggle with API token pricing exploding when feeding 200-page financial audits into public LLMs. Our private sovereign cluster architecture (2x A100 or 4x H100 vLLM) cuts token expenditure by 74% while maintaining 100% data residency inside Indian sovereign borders.
+Many NBFCs and private banks struggle with API token pricing exploding when feeding 200-page financial audits into public LLMs. Our sovereign private cluster architecture (2x A100 or 4x H100 vLLM) cuts token expenditure by 74% while maintaining 100% data residency inside Indian sovereign borders.
 
 Compare your current underwriting token volume against private GPU leases:
 https://elesium.online/tools/multi-agent-latency-token-cost-estimator
@@ -119,7 +119,7 @@ Happy to send across our DPDP Act 2023 compliance architecture whitepaper if tha
 ## Profile #03: Healthcare AI & Clinical Systems
 - **Target Decision-Maker:** `Chief Technology Officer / Clinical Systems VP`
 - **Primary Channel:** `Email`
-- **Target Solution Architecture:** [prior-authorization-automation-software-for-healthcare-ctos](https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos)
+- **Target Solution Architecture:** [private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts](https://elesium.online/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts)
 - **Company Archetypes:** Apollo Hospitals, Manipal Health, Fortis Healthcare, Max Healthcare, Narayana Health
 - **Unvarnished Technical Pain:** *72-hour prior authorization delays, high clinical denial rates from insurer discrepancies, and severe HIPAA/DISHA data security liability.*
 
@@ -131,10 +131,10 @@ Happy to send across our DPDP Act 2023 compliance architecture whitepaper if tha
 ```text
 Hi [First_Name],
 
-Clinical prior authorizations remain one of healthcare's most severe operational frictions—bleeding clinician hours, delaying oncology interventions, and triggering avoidable insurer claim denials.
+Clinical prior authorizations remain one of healthcare's most severe operational frictions - bleeding clinician hours, delaying oncology interventions, and triggering avoidable insurer claim denials.
 
 We built an air-gapped clinical documentation pipeline that parses unstructured EHR records, cross-references payer medical necessity guidelines, and compiles complete prior-authorization packets in sub-45 minutes:
-👉 https://elesium.online/solutions/prior-authorization-automation-software-for-healthcare-ctos
+👉 https://elesium.online/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts
 
 To evaluate the operational payback on clinician dwell time and commercial API spend:
 • Healthcare AI ROI & Payback Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -172,7 +172,7 @@ Let me know if you would like our Principal AI Systems Architect Chaman Shah to 
 ## Profile #04: Industrial Manufacturing
 - **Target Decision-Maker:** `VP of Manufacturing / Plant Operations Head`
 - **Primary Channel:** `LinkedIn`
-- **Target Solution Architecture:** [predictive-maintenance-multi-agent-systems-for-manufacturing-plants](https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants)
+- **Target Solution Architecture:** [dynamic-branch-pruning-controllers-for-industrial-scada-predictive-maintenance](https://elesium.online/solutions/dynamic-branch-pruning-controllers-for-industrial-scada-predictive-maintenance)
 - **Company Archetypes:** Tata Motors, Bharat Forge, Mahindra & Mahindra, Jindal Steel, Larsen & Toubro
 - **Unvarnished Technical Pain:** *Catastrophic mechanical line stoppages ($50k+/hr downtime), unpredicted CNC spindle bearing failures, and high visual inspection defect leakage.*
 
@@ -187,7 +187,7 @@ Hi [First_Name],
 When a high-tonnage stamping press or CNC spindle fails unexpectedly, standard IT dashboards only alert maintenance after the driveline is already scored.
 
 Elesium engineers edge multi-agent state machines that ingest high-frequency vibration, thermal, and current telemetry directly from PLC sensors, triangulating bearing micro-spalling 60-90 days before mechanical failure:
-👉 https://elesium.online/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants
+👉 https://elesium.online/solutions/dynamic-branch-pruning-controllers-for-industrial-scada-predictive-maintenance
 
 Calculate the payback on mechanical line uptime and visual defect reduction:
 • Industrial Manufacturing ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -200,7 +200,7 @@ Could we discuss your current SCADA telemetry pipeline over a brief 15-minute ca
 ```text
 Hi [First_Name],
 
-Quick technical observation: Most predictive maintenance software fails because it relies on batch cloud processing—by the time the anomaly is flagged in the cloud, thermal runaway has already occurred.
+Quick technical observation: Most predictive maintenance software fails because it relies on batch cloud processing - by the time the anomaly is flagged in the cloud, thermal runaway has already occurred.
 
 Our edge agents run sub-50ms deterministic inference on localized industrial IPCs, triggering automated hydraulic pressure relief and feed-rate throttling before mechanical damage propagates.
 
@@ -225,7 +225,7 @@ Happy to connect you with our engineering lead to walk through our PLC/SCADA con
 ## Profile #05: Corporate Finance & Treasury
 - **Target Decision-Maker:** `Enterprise Chief Financial Officer / VP Finance`
 - **Primary Channel:** `Email`
-- **Target Solution Architecture:** [automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos](https://elesium.online/solutions/automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos)
+- **Target Solution Architecture:** [automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal](https://elesium.online/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal)
 - **Company Archetypes:** Reliance Industries, Infosys, Wipro, Adani Enterprises, HCL Tech
 - **Unvarnished Technical Pain:** *Massive manual bandwidth lost to TDS 26AS/GSTR-2B matching, delayed statutory vendor payments, and recurring interest penalties.*
 
@@ -237,10 +237,10 @@ Happy to connect you with our engineering lead to walk through our PLC/SCADA con
 ```text
 Hi [First_Name],
 
-Every quarter, finance teams burn hundreds of expensive analyst hours manually matching ERP purchase registers against GSTN GSTR-2B and ITD Form 26AS portal feeds—only to end up with mismatch notices and trapped input tax credits.
+Every quarter, finance teams burn hundreds of expensive analyst hours manually matching ERP purchase registers against GSTN GSTR-2B and ITD Form 26AS portal feeds - only to end up with mismatch notices and trapped input tax credits.
 
 We built deterministic reconciliation state machines that execute two-way arithmetic ledger matching in sub-200ms cycles, ensuring complete statutory compliance with zero cent/paise rounding drift:
-👉 https://elesium.online/solutions/automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos
+👉 https://elesium.online/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal
 
 We developed an unvarnished financial model designed specifically for CFOs:
 • 3-Year Enterprise TCO & Payback Tool: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -278,7 +278,7 @@ I'd be glad to share our CFO Investment Memo template if you are preparing your 
 ## Profile #06: Fintech & Core Banking
 - **Target Decision-Maker:** `Chief Technology Officer / Head of Core Banking`
 - **Primary Channel:** `LinkedIn`
-- **Target Solution Architecture:** [sub-200ms-ledger-reconciliation-agents-for-fintechs](https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs)
+- **Target Solution Architecture:** [upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators](https://elesium.online/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators)
 - **Company Archetypes:** PhonePe, Razorpay, CRED, Paytm, Pine Labs
 - **Unvarnished Technical Pain:** *Settlement discrepancies between multiple payment gateways, core banking interface timeouts, and manual dispute arbitration costs.*
 
@@ -293,7 +293,7 @@ Hi [First_Name],
 When payment volume scales past 500,000 daily transactions across UPI, card networks, and netbanking rails, settlement latency spikes and unhandled timeout states turn into massive reconciliation backlogs.
 
 Elesium engineers high-throughput two-phase transactional commit state machines that arbitrate gateway settlement files with sub-180ms execution latency:
-👉 https://elesium.online/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs
+👉 https://elesium.online/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators
 
 Explore our live interactive engineering models:
 • Fintech Reconciliation ROI & Error Cost Modeler: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -331,7 +331,7 @@ Let me know if you would like our whitepaper detailing our UPI/Card two-phase se
 ## Profile #07: Cross-Border Trade & Customs
 - **Target Decision-Maker:** `Managing Director / Customs Operations Head`
 - **Primary Channel:** `WhatsApp / Email`
-- **Target Solution Architecture:** [customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders](https://elesium.online/solutions/customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders)
+- **Target Solution Architecture:** [indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders](https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders)
 - **Company Archetypes:** DHL Global Forwarding, Kuehne+Nagel, Expeditors, DB Schenker, TCI Freight
 - **Unvarnished Technical Pain:** *Demurrage charges from customs classification delays, HSN code misdeclarations triggering statutory penalties, and manual commercial invoice re-typing.*
 
@@ -343,10 +343,10 @@ Let me know if you would like our whitepaper detailing our UPI/Card two-phase se
 ```text
 Hi [First_Name],
 
-Every hour a container sits at port awaiting customs Bill of Entry filing incurs painful demurrage fees and customer escalations—often triggered by human errors in 8-digit HSN code classification.
+Every hour a container sits at port awaiting customs Bill of Entry filing incurs painful demurrage fees and customer escalations - often triggered by human errors in 8-digit HSN code classification.
 
 We deploy zero-drift customs parsing agents that ingest multi-language commercial invoices and packing lists, classify items against ICEGATE statutory tariffs, and generate compliant BoE payloads in sub-minute cycles:
-👉 https://elesium.online/solutions/customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders
+👉 https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders
 
 Calculate your customs processing payback and labor savings:
 • Cross-Border Trade ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -384,7 +384,7 @@ Happy to share our ICEGATE API integration blueprints whenever you're ready.
 ## Profile #08: Pharma & Life Sciences
 - **Target Decision-Maker:** `VP Clinical Operations / Clinical Trials Director`
 - **Primary Channel:** `Email`
-- **Target Solution Architecture:** [clinical-trial-patient-matching-agents-for-oncology-sponsors](https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-oncology-sponsors)
+- **Target Solution Architecture:** [on-premise-llama-3-fine-tuning-and-sovereign-inference-telemetry-for-hyderabad-pharmaceutical-r-and-d](https://elesium.online/solutions/on-premise-llama-3-fine-tuning-and-sovereign-inference-telemetry-for-hyderabad-pharmaceutical-r-and-d)
 - **Company Archetypes:** Dr. Reddy's, Sun Pharma, Biocon, Cipla, Lupin
 - **Unvarnished Technical Pain:** *80% of clinical trials delayed by slow patient cohort recruitment, manual parsing of complex genomic/biomarker inclusion criteria, and high dropout rates.*
 
@@ -396,14 +396,14 @@ Happy to share our ICEGATE API integration blueprints whenever you're ready.
 ```text
 Hi [First_Name],
 
-Oncology trial delays cost biotech and pharma sponsors upwards of $600k per day in lost patent exclusivity—primarily caused by the manual bottleneck of screening complex patient inclusion criteria against thousands of dense EHR documents.
+Oncology trial delays cost biotech and pharma sponsors upwards of $600k per day in lost patent exclusivity - primarily caused by the manual bottleneck of screening complex patient inclusion criteria against thousands of dense EHR documents.
 
 We developed air-gapped clinical trial matching agents that parse genomic mutations, histology reports, and prior lines of therapy to identify eligible trial candidates in sub-hour cycles:
-👉 https://elesium.online/solutions/clinical-trial-patient-matching-agents-for-oncology-sponsors
+👉 https://elesium.online/solutions/on-premise-llama-3-fine-tuning-and-sovereign-inference-telemetry-for-hyderabad-pharmaceutical-r-and-d
 
 Model your clinical trial recruitment acceleration and infrastructure economics:
 • Life Sciences Enterprise ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
-• Private Sovereign Inference Latency Simulator: https://elesium.online/tools/multi-agent-latency-token-cost-estimator
+• Sovereign Private Inference Latency Simulator: https://elesium.online/tools/multi-agent-latency-token-cost-estimator
 
 Would you be open to a 15-minute technical review regarding our air-gapped data isolation architecture?
 ```
@@ -416,7 +416,7 @@ Following up on clinical trial matching.
 
 Patient genetic and clinical data requires strict non-disclosure and statutory privacy compliance. Elesium deploys open-weights bio-specialized LLMs inside client-isolated private VPC boundaries, ensuring zero external model training and full 21 CFR Part 11 audit trail compliance.
 
-Compare private sovereign clusters vs public commercial APIs:
+Compare sovereign private clusters vs public commercial APIs:
 https://elesium.online/tools/multi-agent-latency-token-cost-estimator
 
 Do you have 10 minutes open early next week?
@@ -437,7 +437,7 @@ Let me know if you would like to review our clinical cohort matching whitepaper.
 ## Profile #09: Commercial Real Estate & REITs
 - **Target Decision-Maker:** `Head of Asset Management / General Counsel`
 - **Primary Channel:** `LinkedIn`
-- **Target Solution Architecture:** [commercial-lease-abstraction-agents-for-institutional-landlords](https://elesium.online/solutions/commercial-lease-abstraction-agents-for-institutional-landlords)
+- **Target Solution Architecture:** [air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing](https://elesium.online/solutions/air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing)
 - **Company Archetypes:** Embassy REIT, Mindspace Business Parks, Brookfield India, DLF, Prestige Group
 - **Unvarnished Technical Pain:** *Massive legal expense manually abstracting 150-page commercial lease agreements, missed CAM audit deadlines, and uncollected escalation billings.*
 
@@ -452,7 +452,7 @@ Hi [First_Name],
 Institutional landlords and REIT asset managers lose millions annually to delayed CAM (Common Area Maintenance) reconciliations and miscalculated rent escalation triggers buried in complex 150-page tenant leases.
 
 Elesium deploys deterministic lease abstraction state machines that extract critical commencement, co-tenancy, and statutory tax indemnification clauses with complete mathematical consistency:
-👉 https://elesium.online/solutions/commercial-lease-abstraction-agents-for-institutional-landlords
+👉 https://elesium.online/solutions/air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing
 
 Model your portfolio's abstraction throughput and labor savings:
 • Real Estate Tech ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -490,7 +490,7 @@ Happy to share our commercial real estate lease extraction schema with your lega
 ## Profile #10: Telecom & Digital Infrastructure
 - **Target Decision-Maker:** `Chief Information Officer / Billing Operations Director`
 - **Primary Channel:** `Email`
-- **Target Solution Architecture:** [sub-second-cdr-billing-reconciliation-agents-for-telecom-operators](https://elesium.online/solutions/sub-second-cdr-billing-reconciliation-agents-for-telecom-operators)
+- **Target Solution Architecture:** [interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing](https://elesium.online/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing)
 - **Company Archetypes:** Jio, Bharti Airtel, Vodafone Idea, Tata Communications, Indus Towers
 - **Unvarnished Technical Pain:** *Billions of call detail records (CDRs) processed daily with revenue leakage at interconnect settlement points and roaming rating latency.*
 
@@ -505,13 +505,13 @@ Hi [First_Name],
 Telecom billing teams face a brutal scaling problem: as 5G network traffic explodes, traditional batch billing mediation pipelines suffer from memory exhaustion, allowing revenue leakage to slip past interconnect settlement audits.
 
 We engineer high-throughput Rust and LangGraph state machines that process Call Detail Records (CDRs) with sub-second execution latency, reconciling interconnect roaming feeds with zero revenue drift:
-👉 https://elesium.online/solutions/sub-second-cdr-billing-reconciliation-agents-for-telecom-operators
+👉 https://elesium.online/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing
 
 Evaluate telecom billing mediation economics:
 • Telecom Infrastructure ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
 • High-Throughput Agentic Latency Estimator: https://elesium.online/tools/multi-agent-latency-token-cost-estimator
 
-Could we schedule a 15-minute technical review regarding private sovereign cluster throughput?
+Could we schedule a 15-minute technical review regarding sovereign private cluster throughput?
 ```
 
 #### Touch 2: The Mathematical Proof Follow-Up (Day 4)
@@ -520,7 +520,7 @@ Hi [First_Name],
 
 Checking in on telecom billing mediation latency.
 
-Our benchmarks show that deploying private sovereign GPU/CPU clusters lowers telecom mediation infrastructure spend by 38.5% compared to commercial cloud offerings, while completely complying with statutory TRAI and DoT telecommunications data retention mandates.
+Our benchmarks show that deploying sovereign private GPU/CPU clusters lowers telecom mediation infrastructure spend by 38.5% compared to commercial cloud offerings, while completely complying with statutory TRAI and DoT telecommunications data retention mandates.
 
 Simulate your network CDR volume against private clusters:
 https://elesium.online/tools/multi-agent-latency-token-cost-estimator
@@ -543,7 +543,7 @@ Let me know if you would like our telecom interconnect arbitration technical whi
 ## Profile #11: Aerospace & Avionics
 - **Target Decision-Maker:** `VP Engineering / Avionics Certification Lead`
 - **Primary Channel:** `LinkedIn`
-- **Target Solution Architecture:** [commercial-avionics-do-178c-statutory-verification-state-machines-for-oems](https://elesium.online/solutions/commercial-avionics-do-178c-statutory-verification-state-machines-for-oems)
+- **Target Solution Architecture:** [zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics](https://elesium.online/solutions/zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics)
 - **Company Archetypes:** HAL, Boeing India, Airbus India, Dynamatic Technologies, Tata Advanced Systems
 - **Unvarnished Technical Pain:** *Multi-year software certification cycles for airborne systems under DO-178C Level A, and catastrophic costs of unverified state transitions.*
 
@@ -555,10 +555,10 @@ Let me know if you would like our telecom interconnect arbitration technical whi
 ```text
 Hi [First_Name],
 
-Avionics software engineering teams face excruciating 18-month certification lifecycles to achieve DO-178C Level A structural coverage (MC/DC)—where an unhandled state transition means a grounded platform.
+Avionics software engineering teams face excruciating 18-month certification lifecycles to achieve DO-178C Level A structural coverage (MC/DC) - where an unhandled state transition means a grounded platform.
 
 Elesium builds formal verification state machines that mathematically prove state transition safety, generating bidirectional traceability matrices between requirements and executable code in sub-minute cycles:
-👉 https://elesium.online/solutions/commercial-avionics-do-178c-statutory-verification-state-machines-for-oems
+👉 https://elesium.online/solutions/zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics
 
 Calculate your engineering team's certification payback:
 • Aerospace & Defense ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -596,7 +596,7 @@ Happy to share our DO-178C automated traceability whitepaper with your flight so
 ## Profile #12: GovTech & Sovereign Defense
 - **Target Decision-Maker:** `Chief Technology Officer / Defense Systems Director`
 - **Primary Channel:** `Email`
-- **Target Solution Architecture:** [air-gapped-intelligence-extraction-software-for-defense-agencies](https://elesium.online/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies)
+- **Target Solution Architecture:** [prefill-decode-workload-partitioning-tools-for-sovereign-defense-intelligence-swarms](https://elesium.online/solutions/prefill-decode-workload-partitioning-tools-for-sovereign-defense-intelligence-swarms)
 - **Company Archetypes:** BEL, DRDO Laboratories, L&T Defence, Adani Defence, Solar Industries
 - **Unvarnished Technical Pain:** *Need for intelligence document parsing and entity extraction with strictly zero internet connectivity, zero cloud egress, and complete ITAR compliance.*
 
@@ -608,10 +608,10 @@ Happy to share our DO-178C automated traceability whitepaper with your flight so
 ```text
 Hi [First_Name],
 
-Defense intelligence agencies and tier-1 military contractors cannot route tactical intelligence or sensor telemetry across public commercial APIs—every byte must execute inside air-gapped container boundaries with zero external network sockets.
+Defense intelligence agencies and tier-1 military contractors cannot route tactical intelligence or sensor telemetry across public commercial APIs - every byte must execute inside air-gapped container boundaries with zero external network sockets.
 
 We engineer sovereign intelligence extraction pipelines running open-weights models inside air-gapped, on-premise GPU clusters with sub-150ms entity extraction and cryptographic memory wiping:
-👉 https://elesium.online/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies
+👉 https://elesium.online/solutions/prefill-decode-workload-partitioning-tools-for-sovereign-defense-intelligence-swarms
 
 Model your private infrastructure economics and air-gapped throughput:
 • Sovereign Enterprise AI ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -628,7 +628,7 @@ Following up on our air-gapped sovereign architecture note.
 
 Our systems are engineered to satisfy the strictest defense requirements: complete ephemeral container destruction post-inference, hardware-locked cryptographic keys, and zero telemetry egress to third-party endpoints.
 
-Inspect our private sovereign GPU cluster throughput benchmarks:
+Inspect our sovereign private GPU cluster throughput benchmarks:
 https://elesium.online/tools/multi-agent-latency-token-cost-estimator
 
 Would you have 10 minutes available next week for a technical discussion?
@@ -649,7 +649,7 @@ Let me know if you would like our technical brief on air-gapped intelligence pip
 ## Profile #13: Renewable Energy & Power Grid
 - **Target Decision-Maker:** `VP Grid Operations / Energy Storage Director`
 - **Primary Channel:** `LinkedIn`
-- **Target Solution Architecture:** [renewable-microgrid-battery-energy-storage-dispatch-state-machines](https://elesium.online/solutions/renewable-microgrid-battery-energy-storage-dispatch-state-machines)
+- **Target Solution Architecture:** [electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises](https://elesium.online/solutions/electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises)
 - **Company Archetypes:** Tata Power, Adani Green Energy, ReNew Power, Sterling and Wilson, Azure Power
 - **Unvarnished Technical Pain:** *Sub-optimal battery charge/discharge cycles causing rapid cell degradation, and missing high-margin wholesale grid frequency containment revenue.*
 
@@ -661,10 +661,10 @@ Let me know if you would like our technical brief on air-gapped intelligence pip
 ```text
 Hi [First_Name],
 
-Battery energy storage system (BESS) operators lose millions in potential ancillary services revenue because legacy SCADA control loops are too slow to capture peak frequency response pricing—or they degrade expensive lithium-ion chemistry through unoptimized thermal cycles.
+Battery energy storage system (BESS) operators lose millions in potential ancillary services revenue because legacy SCADA control loops are too slow to capture peak frequency response pricing - or they degrade expensive lithium-ion chemistry through unoptimized thermal cycles.
 
 Elesium deploys deterministic microgrid dispatch state machines that execute autonomous charge/discharge switching in sub-48ms cycles while minimizing cell thermal wear:
-👉 https://elesium.online/solutions/renewable-microgrid-battery-energy-storage-dispatch-state-machines
+👉 https://elesium.online/solutions/electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises
 
 Calculate your battery asset payback and wholesale revenue lift:
 • Clean Energy ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -702,7 +702,7 @@ Happy to share our grid dispatch state machine documentation with your operation
 ## Profile #14: Heavy Mining & Metallurgy
 - **Target Decision-Maker:** `VP Mining Operations / Mineral Processing General Manager`
 - **Primary Channel:** `Email`
-- **Target Solution Architecture:** [open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos](https://elesium.online/solutions/open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos)
+- **Target Solution Architecture:** [sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers](https://elesium.online/solutions/sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers)
 - **Company Archetypes:** NMDC, Vedanta, Hindalco, Coal India, Tata Steel Mining
 - **Unvarnished Technical Pain:** *Primary crusher starvation, long haul truck shovel queuing delays, and high fuel consumption across 400-ton mining fleets.*
 
@@ -714,10 +714,10 @@ Happy to share our grid dispatch state machine documentation with your operation
 ```text
 Hi [First_Name],
 
-In open-pit mining, shovel-to-crusher queuing imbalances are the single largest source of operational waste—burning thousands of liters of diesel while 400-ton haul trucks idle in line and primary crushers run empty.
+In open-pit mining, shovel-to-crusher queuing imbalances are the single largest source of operational waste - burning thousands of liters of diesel while 400-ton haul trucks idle in line and primary crushers run empty.
 
 Elesium builds dynamic dispatch state machines that continuously solve shovel-truck-crusher linear optimization problems in real-time, delivering a measured 14.6% increase in daily ton-miles moved:
-👉 https://elesium.online/solutions/open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos
+👉 https://elesium.online/solutions/sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers
 
 Simulate the financial impact on your fleet's fuel and throughput:
 • Heavy Industrial & Mining ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator
@@ -755,7 +755,7 @@ Let me know if you would like to review our autonomous mine haulage technical do
 ## Profile #15: Enterprise Cybersecurity & Cloud Infrastructure
 - **Target Decision-Maker:** `Chief Information Security Officer / VP Cloud Platform`
 - **Primary Channel:** `LinkedIn / Email`
-- **Target Solution Architecture:** [zero-trust-network-micro-segmentation-policy-engines-for-enterprise-cisos](https://elesium.online/solutions/zero-trust-network-micro-segmentation-policy-engines-for-enterprise-cisos)
+- **Target Solution Architecture:** [hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering](https://elesium.online/solutions/hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering)
 - **Company Archetypes:** HDFC Bank, Jio Platforms, Flipkart, TCS Enterprise Cloud, Axis Bank
 - **Unvarnished Technical Pain:** *Lateral movement attacks across flat enterprise networks, alert fatigue drowning SOC teams, and unmonitored Kubernetes compute waste.*
 
@@ -770,7 +770,7 @@ Hi [First_Name],
 Modern enterprise perimeters are breached in seconds when stolen credentials allow attackers to move laterally across flat corporate networks before tier-1 SOC analysts can investigate alert noise.
 
 We deploy deterministic eBPF micro-segmentation state machines directly in the Linux kernel, automatically containing anomalous lateral network connections in sub-95ms cycles with complete cryptographic audit logging:
-👉 https://elesium.online/solutions/zero-trust-network-micro-segmentation-policy-engines-for-enterprise-cisos
+👉 https://elesium.online/solutions/hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering
 
 Calculate your security automation payback and cloud infrastructure savings:
 • Enterprise Cybersecurity & FinOps ROI Calculator: https://elesium.online/tools/enterprise-ai-roi-calculator

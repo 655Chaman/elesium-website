@@ -264,7 +264,7 @@ KEYWORDS_WAVE35 = [
     },
     {
         "id": 1610,
-        "keyword": "continuous dynamic iteration-level batching queue scheduling telemetry for private enterprise vllm engines",
+        "keyword": "continuous dynamic iteration-level batching queue scheduling telemetry for sovereign enterprise vllm engines",
         "slug": "continuous-dynamic-iteration-level-batching-queue-scheduling-telemetry-for-private-enterprise-vllm-engines",
         "category": "Solutions",
         "hub_category": "Enterprise Architecture",

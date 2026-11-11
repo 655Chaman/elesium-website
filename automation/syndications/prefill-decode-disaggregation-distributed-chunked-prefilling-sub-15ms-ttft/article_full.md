@@ -38,5 +38,5 @@ In production benchmarks serving 70B parameter models at 120 concurrent streams,
 
 ### Enterprise Deployment Architecture
 For sovereign enterprise deployments adhering to Indian DPDP Act 2023 and private VPC isolation mandates, explore our dedicated solutions:
-- [Prefill-Decode Disaggregation Controllers for Enterprise vLLM and SGLang Clusters](https://elesium.online/solutions/prefill-decode-disaggregation-controllers-for-enterprise-vllm-and-sglang-clusters)
-- [Zero-Copy RDMA KV Cache Transfer Daemons for Disaggregated LLM Inference Clusters](https://elesium.online/solutions/zero-copy-rdma-kv-cache-transfer-daemons-for-disaggregated-llm-inference-clusters)
+- [Prefill-Decode Disaggregation Controllers for Enterprise vLLM and SGLang Clusters](https://elesium.online/solutions/air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries)
+- [Zero-Copy RDMA KV Cache Transfer Daemons for Disaggregated LLM Inference Clusters](https://elesium.online/solutions/disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots)

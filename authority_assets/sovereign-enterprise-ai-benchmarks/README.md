@@ -33,10 +33,10 @@ Engineered and maintained by [Elesium Digital Systems](https://elesium.online), 
 
 ## 🏛️ The Sovereign Architecture Manifesto
 
-Enterprise AI in 2026 faces an existential regulatory and architectural reckoning. The prevailing industry pattern—routing sensitive enterprise prompts, financial transactions, and customer PII through multi-tenant, cloud-hosted SaaS APIs located in foreign availability zones—violates core statutory mandates:
+Enterprise AI in 2026 faces an existential regulatory and architectural reckoning. The prevailing industry pattern - routing sensitive enterprise prompts, financial transactions, and customer PII through multi-tenant, cloud-hosted SaaS APIs located in foreign availability zones - violates core statutory mandates:
 
 1. **The Data Sovereignty Trap:** Under the **Digital Personal Data Protection (DPDP) Act, 2023** (Section 16) and the **RBI 2023 Master Direction on IT Governance** (Chapter VII), Indian enterprises in BFSI, Healthcare, and Critical Infrastructure cannot legally exfiltrate customer records to offshore multi-tenant inference clusters.
-2. **The WAN Latency Penalty:** Public cloud API endpoints suffer from erratic wide-area network (WAN) round-trip overhead (300ms–1,200ms TTFT) and unpredictable P99 tail latency due to shared multi-tenant resource contention.
+2. **The WAN Latency Penalty:** Public cloud API endpoints suffer from erratic wide-area network (WAN) round-trip overhead (300ms-1,200ms TTFT) and unpredictable P99 tail latency due to shared multi-tenant resource contention.
 3. **The Non-Deterministic Execution Risk:** Unconstrained linear agent chains hallucinate tool arguments, leading to catastrophic execution failures when connected to core banking APIs or enterprise ERPs.
 
 **The Elesium Solution:** We engineer fully air-gapped, sovereign AI clusters deployed inside customer-owned AWS Mumbai (`ap-south-1`) or on-premise Tier-IV enclaves (CtrlS, STT GDC). By combining **8x NVIDIA H100 SXM5 hardware**, **vLLM FP8 W8A8 kernel optimization**, **PagedAttention v2**, and **deterministic LangGraph state machines backed by Redis MessagePack checkpoints**, we deliver sub-100ms TTFT, zero WAN egress, and provable statutory compliance.
@@ -191,7 +191,7 @@ If you utilize these benchmarks, architectures, or production configs in your re
 ```bibtex
 @misc{shah2026sovereign,
   title={Empirical Latency, KV-Cache Fragmentation Telemetry, and Sovereign Architecture Specifications for Enterprise Large Language Models},
-  author={Shah, Chaman and Elesium Systems Engineering Team},
+  author={Shah, Chaman and Elesium Engineering Team},
   year={2026},
   publisher={Elesium Digital Systems Private Limited},
   howpublished={\url{https://elesium.online/signals}},

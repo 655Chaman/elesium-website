@@ -260,7 +260,7 @@ BASE_HTML = """<!doctype html>
               Enterprise Scoping &amp; Statutory SLA Protocol • Indian Contract Act 1872
             </div>
             <p style="font-size:1.05rem;line-height:1.6;color:#a7f3d0;margin:0;font-weight:600;">
-              Elesium delivers deterministic enterprise AI onboarding across 3 transparent investment tiers: Tier 1 (₹1.5L–₹3.5L 14-day prototype), Tier 2 (₹6L–₹15L 30-day 3-agent triad), and Tier 3 (₹4.5L/month dedicated pod). Every engagement executes under client-owned private VPC enclaves with contractual DPDP Act 2023 zero-data retention and audited 3x–5x ROI in 90 days.
+              Elesium delivers deterministic enterprise AI onboarding across 3 transparent investment tiers: Tier 1 (₹1.5L-₹3.5L 14-day prototype), Tier 2 (₹6L-₹15L 30-day 3-agent triad), and Tier 3 (₹4.5L/month dedicated pod). Every engagement executes under client-owned private VPC enclaves with contractual DPDP Act 2023 zero-data retention and audited 3x-5x ROI in 90 days.
             </p>
           </div>
         </header>
@@ -277,7 +277,7 @@ BASE_HTML = """<!doctype html>
               <div>
                 <div style="font-size:0.75rem;font-family:monospace;color:#38bdf8;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem;">Tier 1 • Rapid Architecture Sprint</div>
                 <h3 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.5rem 0;">Pilot Architecture Sprint</h3>
-                <div style="font-size:1.75rem;font-weight:800;color:#34d399;margin-bottom:0.25rem;">₹1,50,000 – ₹3,50,000</div>
+                <div style="font-size:1.75rem;font-weight:800;color:#34d399;margin-bottom:0.25rem;">₹1,50,000 - ₹3,50,000</div>
                 <div style="font-size:0.8rem;color:#94a3b8;margin-bottom:1.25rem;">14-Day Delivery Timeline</div>
                 <p style="font-size:0.875rem;color:#cbd5e1;line-height:1.5;margin-bottom:1.5rem;">
                   Single-process deterministic agent prototype integrated with your staging API or mock ERP. Includes comprehensive latency audit and architecture specification.
@@ -303,8 +303,8 @@ BASE_HTML = """<!doctype html>
               <div>
                 <div style="font-size:0.75rem;font-family:monospace;color:#34d399;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem;">Tier 2 • Full Production Deployment</div>
                 <h3 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.5rem 0;">Enterprise Multi-Agent Suite</h3>
-                <div style="font-size:1.75rem;font-weight:800;color:#34d399;margin-bottom:0.25rem;">₹6,00,000 – ₹15,00,000</div>
-                <div style="font-size:0.8rem;color:#94a3b8;margin-bottom:1.25rem;">30–45 Day Production Go-Live</div>
+                <div style="font-size:1.75rem;font-weight:800;color:#34d399;margin-bottom:0.25rem;">₹6,00,000 - ₹15,00,000</div>
+                <div style="font-size:0.8rem;color:#94a3b8;margin-bottom:1.25rem;">30-45 Day Production Go-Live</div>
                 <p style="font-size:0.875rem;color:#cbd5e1;line-height:1.5;margin-bottom:1.5rem;">
                   Collaborative 3-agent triad (Supervisor, Worker, Compliance Auditor) integrated directly with SAP S/4HANA, Oracle ERP, or Kafka clusters under dedicated private VPC.
                 </p>
@@ -313,7 +313,7 @@ BASE_HTML = """<!doctype html>
                   <li>✔ SAP S/4HANA / Oracle / Kafka Production Sync</li>
                   <li>✔ Sub-200ms TTFT vLLM Inference Optimization</li>
                   <li>✔ Sovereign Private VPC (Mumbai / Bangalore / Frankfurt)</li>
-                  <li>✔ <strong>Contractual 90-Day 3x–5x ROI SLA</strong></li>
+                  <li>✔ <strong>Contractual 90-Day 3x-5x ROI SLA</strong></li>
                 </ul>
               </div>
               <a href="https://wa.me/918317329312?text=Inquiring%20about%20Tier%202%20Enterprise%20Multi-Agent%20Suite" style="display:block;text-align:center;padding:0.85rem;background:#059669;color:#ffffff;font-weight:700;border-radius:0.75rem;text-decoration:none;font-size:0.9rem;">
@@ -367,7 +367,7 @@ BASE_HTML = """<!doctype html>
               <div style="color:#8b949e;margin-top:0.25rem;">Statutory zero external data retention and ephemeral memory erasure post-inference.</div>
             </div>
             <div style="background:#161b22;padding:1rem;border-radius:0.5rem;border:1px solid #21262d;">
-              <strong style="color:#f0f6fc;">Private Sovereign Cloud VPC</strong>
+              <strong style="color:#f0f6fc;">Sovereign Private Cloud VPC</strong>
               <div style="color:#8b949e;margin-top:0.25rem;">Air-gapped on-premises or dedicated VPCs located in Mumbai, Bengaluru, or Frankfurt.</div>
             </div>
             <div style="background:#161b22;padding:1rem;border-radius:0.5rem;border:1px solid #21262d;">
@@ -383,7 +383,7 @@ BASE_HTML = """<!doctype html>
 
   <footer class="footer-seo-mesh" style="padding:1.5rem 1rem;text-align:center;font-size:0.8rem;color:#9ca3af;border-top:1px solid rgba(255,255,255,0.05);">
     <a href="/commercial-directory.html" style="color:#06b6d4;font-weight:600;text-decoration:none;margin:0 0.5rem;">Top 100 Commercial Directory</a> •
-    <a href="/solutions/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">Solutions Hub (3,765)</a> •
+    <a href="/solutions/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">Solutions Hub (100)</a> •
     <a href="/signals/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">Technical Signals</a> •
     <a href="/onboarding/" style="color:#10b981;font-weight:600;text-decoration:none;margin:0 0.5rem;">Enterprise Onboarding</a> •
     <a href="/how-we-work/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">How We Work</a> •

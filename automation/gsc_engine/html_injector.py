@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — HTML & MONOLITHIC SCHEMA INJECTOR
+GSC STRIKING DISTANCE ENGINE - HTML & MONOLITHIC SCHEMA INJECTOR
 =============================================================================
 Classification: Idempotent Pre-rendered HTML & Consolidated @graph Injector
 Methodology: Preservation of Zero-Width Watermarks, Monolithic @graph & Clean DOM

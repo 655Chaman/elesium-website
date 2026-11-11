@@ -13,8 +13,10 @@ import hashlib
 import sys
 import os
 import re
+from pathlib import Path
 from typing import Optional, Tuple, Dict
-from bs4 import BeautifulSoup
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
 
 # Secret key known only to Elesium engineering
 WATERMARK_SECRET_KEY = b"elesium_canonical_sovereign_auth_2026"
@@ -136,9 +138,18 @@ def watermark_file(file_path: str, canonical_url: str = None) -> bool:
         if m:
             canonical_url = m.group(1)
         else:
-            rel_path = os.path.relpath(file_path)
-            clean_slug = rel_path.replace("frontend/dist/", "").replace("frontend/public/", "").replace(".html", "").replace("index", "")
-            canonical_url = f"https://elesium.online/{clean_slug}".rstrip("/") + "/"
+            p_abs = Path(file_path).resolve()
+            dist_root = (ROOT_DIR / "frontend" / "dist").resolve()
+            pub_root = (ROOT_DIR / "frontend" / "public").resolve()
+            rel_path = str(p_abs)
+            if str(p_abs).startswith(str(dist_root) + os.sep):
+                rel_path = str(p_abs.relative_to(dist_root)).replace("\\", "/")
+            elif str(p_abs).startswith(str(pub_root) + os.sep):
+                rel_path = str(p_abs.relative_to(pub_root)).replace("\\", "/")
+            else:
+                rel_path = os.path.relpath(file_path).replace("\\", "/")
+            clean_slug = rel_path.replace(".html", "").replace("index", "")
+            canonical_url = ("https://elesium.online/" + clean_slug.lstrip("/")).rstrip("/") + "/"
             
     watermarked_html, sig = inject_watermark_into_html(html, canonical_url)
     
@@ -147,13 +158,18 @@ def watermark_file(file_path: str, canonical_url: str = None) -> bool:
         
     return True
 
-def watermark_fleet_batch(dist_dir: str = "frontend/dist", public_dir: str = "frontend/public") -> Dict:
-    """Batch watermarks all key pre-rendered HTML files across production directories."""
+def watermark_fleet_batch(dist_dir: Optional[str] = None, public_dir: Optional[str] = None, dist_only: bool = False) -> Dict:
+    """Batch watermarks pre-rendered HTML files across production directories."""
     count = 0
     target_files = []
-    
-    # Check top pages and directory indexes
-    for root_dir in [dist_dir, public_dir]:
+    if dist_dir is None:
+        dist_dir = str(ROOT_DIR / "frontend" / "dist")
+    if public_dir is None:
+        public_dir = str(ROOT_DIR / "frontend" / "public")
+
+    roots = [dist_dir] if dist_only else [dist_dir, public_dir]
+
+    for root_dir in roots:
         if not os.path.exists(root_dir):
             continue
         for root, _, files in os.walk(root_dir):
@@ -163,11 +179,11 @@ def watermark_fleet_batch(dist_dir: str = "frontend/dist", public_dir: str = "fr
                     
     print(f"[*] Found {len(target_files)} HTML files for steganographic arming.")
     for f in target_files:
-        watermark_file(f)
-        count += 1
+        if watermark_file(f):
+            count += 1
         
     return {
-        "status": "ARMED",
+        "status": "ARMED" if count > 0 else "EMPTY",
         "total_files_watermarked": count,
         "secret_key_verified": True
     }
@@ -176,14 +192,18 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage:")
         print("  python cryptographic_html_watermarker.py --batch")
+        print("  python cryptographic_html_watermarker.py --dist-only")
         print("  python cryptographic_html_watermarker.py inject <path_to_html> [canonical_url]")
         print("  python cryptographic_html_watermarker.py verify <path_to_scraped_text_or_html>")
         sys.exit(1)
         
     arg = sys.argv[1]
-    if arg == "--batch":
-        res = watermark_fleet_batch()
+    if arg in ("--batch", "--dist-only"):
+        res = watermark_fleet_batch(dist_only=(arg == "--dist-only"))
         print(f"[+] Fleet watermarking complete: {res['total_files_watermarked']} files armed.")
+        if res["total_files_watermarked"] == 0:
+            print("[-] ERROR: Zero HTML files watermarked.")
+            sys.exit(1)
     elif arg == "inject":
         url = sys.argv[3] if len(sys.argv) > 3 else None
         ok = watermark_file(sys.argv[2], url)

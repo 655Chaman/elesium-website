@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ingest_wave2_keywords.py — Ingest 25 Wave 2 High-Lever Commercial BOFU Keywords
+ingest_wave2_keywords.py - Ingest 25 Wave 2 High-Lever Commercial BOFU Keywords
 ================================================================================
 Target: automation/compact_keywords_queue.json
 Framework: Edward Sturm Complete Masterclass (Discovery & Keyword Selection)

@@ -6,7 +6,7 @@
     "sub_topic": "DPDP Act 2023 Section 8(5) Data Erasure & Private VPC",
     "buyer_persona": "Chief Information Security Officer (CISO) / Chief Risk Officer (CRO)",
     "intent_stage": "RFP Procurement / Vendor Evaluation",
-    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.5 Cr ($180k - $420k)",
     "required_entities": [
       "DPDP Act 2023",
       "Section 8(5)",
@@ -25,7 +25,7 @@
     "sub_topic": "RBI Cyber Security Framework & Air-Gapped HSM Telemetry",
     "buyer_persona": "Head of Core Banking Infrastructure / Banking CIO",
     "intent_stage": "BOFU / Infrastructure RFP",
-    "contract_value_tier": "₹2.5 Cr – ₹5.0 Cr ($300k – $600k)",
+    "contract_value_tier": "₹2.5 Cr - ₹5.0 Cr ($300k - $600k)",
     "required_entities": [
       "RBI Cyber Security Framework",
       "Air-Gapped",
@@ -44,7 +44,7 @@
     "sub_topic": "Inference Engineering & Data Localization",
     "buyer_persona": "VP of AI Engineering / Chief Technology Officer",
     "intent_stage": "Technical Architecture Validation",
-    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "contract_value_tier": "₹1.2 Cr - ₹2.8 Cr ($145k - $340k)",
     "required_entities": [
       "vLLM",
       "PagedAttention",
@@ -64,7 +64,7 @@
     "sub_topic": "SEBI CSCRF 2024 & Algorithmic Guardrails",
     "buyer_persona": "Chief Compliance Officer / Trading Desk CTO",
     "intent_stage": "RFP Selection",
-    "contract_value_tier": "₹1.8 Cr – ₹4.0 Cr ($220k – $480k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.0 Cr ($220k - $480k)",
     "required_entities": [
       "SEBI",
       "CSCRF",
@@ -84,7 +84,7 @@
     "sub_topic": "Sovereign GPU Infrastructure & Cluster Sizing",
     "buyer_persona": "IT Infrastructure Director / Head of Cloud Architecture",
     "intent_stage": "Procurement Budgeting",
-    "contract_value_tier": "₹3.0 Cr – ₹7.5 Cr ($360k – $900k)",
+    "contract_value_tier": "₹3.0 Cr - ₹7.5 Cr ($360k - $900k)",
     "required_entities": [
       "H100 SXM5",
       "A100 80GB",
@@ -103,7 +103,7 @@
     "sub_topic": "Public Sector Banking (PSB) Sovereign Search & Data Residency",
     "buyer_persona": "General Manager (IT) - Public Sector Bank",
     "intent_stage": "Government Tender / RFP",
-    "contract_value_tier": "₹2.0 Cr – ₹6.0 Cr ($240k – $720k)",
+    "contract_value_tier": "₹2.0 Cr - ₹6.0 Cr ($240k - $720k)",
     "required_entities": [
       "Public Sector Banks",
       "RBI Data Residency",
@@ -122,7 +122,7 @@
     "sub_topic": "Identity Verification & UIDAI / Income Tax Portal Compliance",
     "buyer_persona": "Head of Fraud Risk / Digital Lending CTO",
     "intent_stage": "BOFU Solution Evaluation",
-    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "contract_value_tier": "₹1.0 Cr - ₹2.5 Cr ($120k - $300k)",
     "required_entities": [
       "Aadhaar e-KYC",
       "PAN Verification",
@@ -141,7 +141,7 @@
     "sub_topic": "Open-Weight Sovereign Model Hosting & TCO",
     "buyer_persona": "VP Engineering / IT Procurement Lead",
     "intent_stage": "Commercial Comparison & SOW",
-    "contract_value_tier": "₹1.5 Cr – ₹3.2 Cr ($180k – $390k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.2 Cr ($180k - $390k)",
     "required_entities": [
       "DeepSeek-V3",
       "Qwen-2.5-72B",
@@ -160,7 +160,7 @@
     "sub_topic": "RBI IT Governance Master Direction 2023 Automation",
     "buyer_persona": "Chief Information Officer (CIO) - NBFC",
     "intent_stage": "Regulatory Compliance Audit RFP",
-    "contract_value_tier": "₹1.2 Cr – ₹2.4 Cr ($145k – $290k)",
+    "contract_value_tier": "₹1.2 Cr - ₹2.4 Cr ($145k - $290k)",
     "required_entities": [
       "RBI IT Governance",
       "Master Direction",
@@ -179,7 +179,7 @@
     "sub_topic": "Healthcare DISHA & DPDP Statutory De-identification",
     "buyer_persona": "Chief Medical Information Officer (CMIO) / Hospital Trust CIO",
     "intent_stage": "Institutional Healthcare RFP",
-    "contract_value_tier": "₹1.8 Cr – ₹4.2 Cr ($220k – $510k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.2 Cr ($220k - $510k)",
     "required_entities": [
       "DISHA",
       "DPDP Act",
@@ -199,7 +199,7 @@
     "sub_topic": "NPCI UPI Dispute Settlement Automation",
     "buyer_persona": "Head of Merchant Operations / Payment Aggregator VP",
     "intent_stage": "Payment Gateway RFP",
-    "contract_value_tier": "₹1.4 Cr – ₹3.0 Cr ($170k – $360k)",
+    "contract_value_tier": "₹1.4 Cr - ₹3.0 Cr ($170k - $360k)",
     "required_entities": [
       "UPI",
       "NPCI",
@@ -218,7 +218,7 @@
     "sub_topic": "Digital Rupee (e₹) & Cross-Border Corridor Settlement",
     "buyer_persona": "Head of Treasury / Global Payments Director",
     "intent_stage": "Architecture Pilot",
-    "contract_value_tier": "₹2.2 Cr – ₹5.5 Cr ($265k – $660k)",
+    "contract_value_tier": "₹2.2 Cr - ₹5.5 Cr ($265k - $660k)",
     "required_entities": [
       "CBDC",
       "Digital Rupee",
@@ -237,7 +237,7 @@
     "sub_topic": "Vernacular Voice & Dialect Financial Inclusion",
     "buyer_persona": "Head of Rural Banking / Microfinance Managing Director",
     "intent_stage": "Procurement RFP",
-    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.5 Cr ($180k - $420k)",
     "required_entities": [
       "Vernacular Voice",
       "22 Indian Languages",
@@ -256,7 +256,7 @@
     "sub_topic": "CBIC ICEGATE & Customs Tariff Harmonization (HSN)",
     "buyer_persona": "Supply Chain VP / Freight Forwarding Managing Director",
     "intent_stage": "Commercial Deployment",
-    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "contract_value_tier": "₹1.0 Cr - ₹2.5 Cr ($120k - $300k)",
     "required_entities": [
       "ICEGATE",
       "Bill of Entry",
@@ -275,7 +275,7 @@
     "sub_topic": "GSTN Return Auto-Reconciliation & ITC Mismatch Detection",
     "buyer_persona": "Chief Financial Officer / Head of Tax Compliance",
     "intent_stage": "SaaS/Enterprise Procurement",
-    "contract_value_tier": "₹80 Lakh – ₹1.8 Cr ($95k – $220k)",
+    "contract_value_tier": "₹80 Lakh - ₹1.8 Cr ($95k - $220k)",
     "required_entities": [
       "GSTR-9",
       "GSTN Portal",
@@ -294,7 +294,7 @@
     "sub_topic": "IFSCA Regulatory Sandbox & Confidential Computing",
     "buyer_persona": "IFSC Compliance Director / Offshore Banking CTO",
     "intent_stage": "Multi-Tenant Enclave RFP",
-    "contract_value_tier": "₹2.0 Cr – ₹4.8 Cr ($240k – $580k)",
+    "contract_value_tier": "₹2.0 Cr - ₹4.8 Cr ($240k - $580k)",
     "required_entities": [
       "GIFT City",
       "IFSC",
@@ -313,7 +313,7 @@
     "sub_topic": "Clinical Establishment Act & Biomedical Registry Automation",
     "buyer_persona": "Hospital Group COO / Legal Fiduciary",
     "intent_stage": "Institutional Audit RFP",
-    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "contract_value_tier": "₹1.2 Cr - ₹2.8 Cr ($145k - $340k)",
     "required_entities": [
       "Clinical Establishment Act",
       "Hospital Governance",
@@ -331,7 +331,7 @@
     "sub_topic": "LangGraph StateGraph Architecture for SAP S/4HANA",
     "buyer_persona": "VP Enterprise Applications / SAP Practice Head",
     "intent_stage": "Enterprise Architecture Selection",
-    "contract_value_tier": "₹2.5 Cr – ₹6.0 Cr ($300k – $720k)",
+    "contract_value_tier": "₹2.5 Cr - ₹6.0 Cr ($300k - $720k)",
     "required_entities": [
       "LangGraph",
       "SAP S/4HANA",
@@ -350,7 +350,7 @@
     "sub_topic": "Autonomous 3-Way Matching (PO, GRN, Invoice)",
     "buyer_persona": "Head of Accounts Payable / Finance Operations Director",
     "intent_stage": "BOFU Enterprise Vendor RFP",
-    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.5 Cr ($180k - $420k)",
     "required_entities": [
       "Three-Way Matching",
       "PO GRN Invoice",
@@ -369,7 +369,7 @@
     "sub_topic": "Core Banking System (Finacle / TCS BaNCS) Autonomous Reconciliation",
     "buyer_persona": "Head of Banking Operations / Chief Operating Officer",
     "intent_stage": "Core Banking Modernization RFP",
-    "contract_value_tier": "₹3.0 Cr – ₹7.0 Cr ($360k – $840k)",
+    "contract_value_tier": "₹3.0 Cr - ₹7.0 Cr ($360k - $840k)",
     "required_entities": [
       "Finacle",
       "TCS BaNCS",
@@ -388,7 +388,7 @@
     "sub_topic": "Production LangGraph StateGraph Checkpointing & Durability",
     "buyer_persona": "Lead Systems Architect / Principal Software Engineer",
     "intent_stage": "Technical Evaluation",
-    "contract_value_tier": "₹1.0 Cr – ₹2.2 Cr ($120k – $265k)",
+    "contract_value_tier": "₹1.0 Cr - ₹2.2 Cr ($120k - $265k)",
     "required_entities": [
       "LangGraph",
       "PostgreSQL Checkpointer",
@@ -407,7 +407,7 @@
     "sub_topic": "Oracle ERP Cloud Financial Close Automation",
     "buyer_persona": "VP Corporate Finance / ERP Transformation Lead",
     "intent_stage": "RFP Procurement",
-    "contract_value_tier": "₹1.8 Cr – ₹4.0 Cr ($220k – $480k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.0 Cr ($220k - $480k)",
     "required_entities": [
       "Oracle Fusion",
       "Journal Voucher",
@@ -426,7 +426,7 @@
     "sub_topic": "Tally Prime TDL & Port 9000 Socket Integration",
     "buyer_persona": "Head of IT - Mid-Market / Manufacturing CFO",
     "intent_stage": "Solution Selection",
-    "contract_value_tier": "₹60 Lakh – ₹1.5 Cr ($75k – $180k)",
+    "contract_value_tier": "₹60 Lakh - ₹1.5 Cr ($75k - $180k)",
     "required_entities": [
       "Tally Prime",
       "Port 9000",
@@ -445,7 +445,7 @@
     "sub_topic": "Collaborative Multi-Agent Triad for Commercial Underwriting",
     "buyer_persona": "Chief Credit Officer / Head of SME Lending",
     "intent_stage": "BOFU Lending Platform Selection",
-    "contract_value_tier": "₹2.0 Cr – ₹4.5 Cr ($240k – $540k)",
+    "contract_value_tier": "₹2.0 Cr - ₹4.5 Cr ($240k - $540k)",
     "required_entities": [
       "Credit Appraisal",
       "Multi-Agent Triad",
@@ -465,7 +465,7 @@
     "sub_topic": "Industrial IoT & SAP Plant Maintenance (PM) Module",
     "buyer_persona": "VP Manufacturing Operations / Plant Head",
     "intent_stage": "Industrial AI RFP",
-    "contract_value_tier": "₹2.2 Cr – ₹5.0 Cr ($265k – $600k)",
+    "contract_value_tier": "₹2.2 Cr - ₹5.0 Cr ($265k - $600k)",
     "required_entities": [
       "Predictive Maintenance",
       "SAP PM",
@@ -484,7 +484,7 @@
     "sub_topic": "Hospital EHR Integration & Discharge Medication Reconciliation",
     "buyer_persona": "Chief Medical Officer / Hospital Operations Director",
     "intent_stage": "Healthcare Workflow RFP",
-    "contract_value_tier": "₹1.4 Cr – ₹3.2 Cr ($170k – $390k)",
+    "contract_value_tier": "₹1.4 Cr - ₹3.2 Cr ($170k - $390k)",
     "required_entities": [
       "Inpatient Discharge",
       "Pharmacy Reconciliation",
@@ -503,7 +503,7 @@
     "sub_topic": "High-Frequency Logistics & Urban Micro-Fulfillment",
     "buyer_persona": "VP Engineering - Quick Commerce / Supply Chain Chief",
     "intent_stage": "Tech Architecture Evaluation",
-    "contract_value_tier": "₹1.8 Cr – ₹4.5 Cr ($220k – $540k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.5 Cr ($220k - $540k)",
     "required_entities": [
       "Quick Commerce",
       "Sub-10-Minute",
@@ -522,7 +522,7 @@
     "sub_topic": "High-Value Wire Transfer Approval Gates",
     "buyer_persona": "Head of Transaction Banking / Risk Governance",
     "intent_stage": "Security & Governance Review",
-    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.5 Cr ($180k - $420k)",
     "required_entities": [
       "Human-in-the-Loop",
       "LangGraph Interrupt",
@@ -541,7 +541,7 @@
     "sub_topic": "National Logistics NIC e-Way Bill Automation",
     "buyer_persona": "Logistics Operations VP / Transport Fleet Director",
     "intent_stage": "Solution Selection",
-    "contract_value_tier": "₹70 Lakh – ₹1.6 Cr ($85k – $190k)",
+    "contract_value_tier": "₹70 Lakh - ₹1.6 Cr ($85k - $190k)",
     "required_entities": [
       "e-Way Bill",
       "NIC Portal",
@@ -560,7 +560,7 @@
     "sub_topic": "Health Insurance Claim Auto-Adjudication",
     "buyer_persona": "Head of Medical Billing / Health InsurTech CTO",
     "intent_stage": "BOFU Procurement RFP",
-    "contract_value_tier": "₹1.6 Cr – ₹3.8 Cr ($190k – $460k)",
+    "contract_value_tier": "₹1.6 Cr - ₹3.8 Cr ($190k - $460k)",
     "required_entities": [
       "ICD-10-CM",
       "Clinical Coding",
@@ -579,7 +579,7 @@
     "sub_topic": "Corporate Card Expense & GST Ledger Reconciliation",
     "buyer_persona": "Financial Controller / VP Finance",
     "intent_stage": "Tool/Service RFP",
-    "contract_value_tier": "₹60 Lakh – ₹1.4 Cr ($75k – $170k)",
+    "contract_value_tier": "₹60 Lakh - ₹1.4 Cr ($75k - $170k)",
     "required_entities": [
       "Credit Card Reconciliation",
       "Expense Report",
@@ -598,7 +598,7 @@
     "sub_topic": "Multi-Agent Cyclic Graph Topologies for Re-trying Transactions",
     "buyer_persona": "Principal Enterprise Architect",
     "intent_stage": "Architectural Whitepaper Review",
-    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "contract_value_tier": "₹1.0 Cr - ₹2.5 Cr ($120k - $300k)",
     "required_entities": [
       "Cyclic Graph",
       "LangGraph",
@@ -617,7 +617,7 @@
     "sub_topic": "Vaccine & Biologic Cold Chain Monitoring",
     "buyer_persona": "Quality Assurance Director - Pharma / Logistics Head",
     "intent_stage": "Life Sciences RFP",
-    "contract_value_tier": "₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.5 Cr ($180k - $420k)",
     "required_entities": [
       "Cold Chain",
       "IoT Temperature",
@@ -636,10 +636,10 @@
     "sub_topic": "Commercial SLA & Performance-Backed Consulting",
     "buyer_persona": "Chief Executive Officer / Group CFO",
     "intent_stage": "Strategic Vendor Shortlist",
-    "contract_value_tier": "₹2.0 Cr – ₹6.0 Cr ($240k – $720k)",
+    "contract_value_tier": "₹2.0 Cr - ₹6.0 Cr ($240k - $720k)",
     "required_entities": [
       "90-Day",
-      "3x–5x ROI",
+      "3x-5x ROI",
       "Contractual Guarantee",
       "Rebated Fee",
       "Elesium"
@@ -655,7 +655,7 @@
     "sub_topic": "ISO/IEC 42001:2023 Continuous Compliance Framework",
     "buyer_persona": "Global Head of AI Governance / CISO",
     "intent_stage": "Governance Platform RFP",
-    "contract_value_tier": "₹1.8 Cr – ₹4.5 Cr ($220k – $540k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.5 Cr ($220k - $540k)",
     "required_entities": [
       "ISO 42001",
       "AI Management System",
@@ -674,7 +674,7 @@
     "sub_topic": "Immutable Ledger & Merkle Root Hashing for Agent Decisions",
     "buyer_persona": "Lead Security Architect / Forensic Auditor",
     "intent_stage": "Technical Security Evaluation",
-    "contract_value_tier": "₹1.2 Cr – ₹3.0 Cr ($145k – $360k)",
+    "contract_value_tier": "₹1.2 Cr - ₹3.0 Cr ($145k - $360k)",
     "required_entities": [
       "Merkle Tree",
       "Audit Trail",
@@ -693,7 +693,7 @@
     "sub_topic": "Adversarial Prompt Defense & Llama-Guard / NeMo Guardrails",
     "buyer_persona": "Application Security Director / CISO",
     "intent_stage": "Enterprise AI Security RFP",
-    "contract_value_tier": "₹1.0 Cr – ₹2.5 Cr ($120k – $300k)",
+    "contract_value_tier": "₹1.0 Cr - ₹2.5 Cr ($120k - $300k)",
     "required_entities": [
       "Prompt Injection",
       "Jailbreak Defense",
@@ -712,7 +712,7 @@
     "sub_topic": "DPDP Act Maximum Statutory Penalty Modeling",
     "buyer_persona": "General Counsel / Data Protection Officer (DPO)",
     "intent_stage": "Risk Exposure Assessment",
-    "contract_value_tier": "₹80 Lakh – ₹2.0 Cr ($95k – $240k)",
+    "contract_value_tier": "₹80 Lakh - ₹2.0 Cr ($95k - $240k)",
     "required_entities": [
       "DPDP Act",
       "Fine Exposure",
@@ -731,7 +731,7 @@
     "sub_topic": "Clinical Model Observability & CDSCO/FDA Validation",
     "buyer_persona": "Chief Medical Information Officer / Pathology AI Lead",
     "intent_stage": "Healthcare Clinical Validation RFP",
-    "contract_value_tier": "₹1.5 Cr – ₹3.8 Cr ($180k – $460k)",
+    "contract_value_tier": "₹1.5 Cr - ₹3.8 Cr ($180k - $460k)",
     "required_entities": [
       "Model Drift",
       "Ground Truth Calibration",
@@ -750,7 +750,7 @@
     "sub_topic": "Clinical Governance & Objective Peer Review",
     "buyer_persona": "Director of Medical Affairs / Hospital Quality Lead",
     "intent_stage": "Clinical Governance Procurement",
-    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "contract_value_tier": "₹1.2 Cr - ₹2.8 Cr ($145k - $340k)",
     "required_entities": [
       "Medical Peer Review",
       "Mortality Committee",
@@ -768,7 +768,7 @@
     "sub_topic": "Differential Privacy (ε, δ) for Healthcare RAG",
     "buyer_persona": "Healthcare Privacy Officer / R&D Data Scientist",
     "intent_stage": "Algorithmic Architecture Review",
-    "contract_value_tier": "₹1.4 Cr – ₹3.2 Cr ($170k – $390k)",
+    "contract_value_tier": "₹1.4 Cr - ₹3.2 Cr ($170k - $390k)",
     "required_entities": [
       "Gaussian Mechanism",
       "Differential Privacy",
@@ -787,7 +787,7 @@
     "sub_topic": "Ephemeral In-Memory Processing & Scrubbing Protocols",
     "buyer_persona": "Banking CISO / Head of Security Operations",
     "intent_stage": "Security Certification Audit",
-    "contract_value_tier": "₹1.6 Cr – ₹3.6 Cr ($190k – $440k)",
+    "contract_value_tier": "₹1.6 Cr - ₹3.6 Cr ($190k - $440k)",
     "required_entities": [
       "Zero Data Retention",
       "ZDR",
@@ -806,7 +806,7 @@
     "sub_topic": "Adverse Action Notices & RBI Explainability Mandates",
     "buyer_persona": "Head of Model Risk Management (MRM) / Chief Credit Officer",
     "intent_stage": "Model Risk Governance RFP",
-    "contract_value_tier": "₹1.8 Cr – ₹4.0 Cr ($220k – $480k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.0 Cr ($220k - $480k)",
     "required_entities": [
       "Model Explainability",
       "SHAP Attribution",
@@ -825,7 +825,7 @@
     "sub_topic": "Format-Preserving Encryption & Synthetic Tokenization",
     "buyer_persona": "Data Protection Officer / Enterprise Security Architect",
     "intent_stage": "Privacy Enhancing Technologies (PET) RFP",
-    "contract_value_tier": "₹1.2 Cr – ₹2.8 Cr ($145k – $340k)",
+    "contract_value_tier": "₹1.2 Cr - ₹2.8 Cr ($145k - $340k)",
     "required_entities": [
       "PII Tokenization",
       "Format-Preserving Encryption",
@@ -843,7 +843,7 @@
     "sub_topic": "FDA 21 CFR Part 11 & CDSCO Adverse Drug Reaction (ADR)",
     "buyer_persona": "Global Head of Safety & Pharmacovigilance",
     "intent_stage": "Global Pharma Tender",
-    "contract_value_tier": "₹2.0 Cr – ₹5.0 Cr ($240k – $600k)",
+    "contract_value_tier": "₹2.0 Cr - ₹5.0 Cr ($240k - $600k)",
     "required_entities": [
       "Pharmacovigilance",
       "Adverse Event Triage",
@@ -862,7 +862,7 @@
     "sub_topic": "Medical Device Isolation & IoMT Cyber Defense",
     "buyer_persona": "Director of Biomedical Engineering / Hospital CISO",
     "intent_stage": "Medical Cyber Defense RFP",
-    "contract_value_tier": "₹1.8 Cr – ₹4.2 Cr ($220k – $510k)",
+    "contract_value_tier": "₹1.8 Cr - ₹4.2 Cr ($220k - $510k)",
     "required_entities": [
       "Zero Trust",
       "Medical Device IoT",
@@ -881,7 +881,7 @@
     "sub_topic": "FinOps for Enterprise AI & GPU TCO Modeling",
     "buyer_persona": "Cloud FinOps Lead / VP of IT Finance",
     "intent_stage": "FinOps Tooling & Cost Reduction",
-    "contract_value_tier": "₹80 Lakh – ₹1.8 Cr ($95k – $220k)",
+    "contract_value_tier": "₹80 Lakh - ₹1.8 Cr ($95k - $220k)",
     "required_entities": [
       "Token Cost Arbitrage",
       "Cloud Pricing",
@@ -901,7 +901,7 @@
     "sub_topic": "Hybrid Retrieval & Reciprocal Rank Fusion (RRF)",
     "buyer_persona": "Lead Search Architect / Information Retrieval VP",
     "intent_stage": "Retrieval Engine Selection",
-    "contract_value_tier": "₹1.0 Cr – ₹2.4 Cr ($120k – $290k)",
+    "contract_value_tier": "₹1.0 Cr - ₹2.4 Cr ($120k - $290k)",
     "required_entities": [
       "RAG Latency",
       "Hybrid Vector BM25",
@@ -939,11 +939,11 @@
     "sub_topic": "Verified Multi-Industry Cash-Flow Impact",
     "buyer_persona": "Chief Executive Officer / Managing Director / Board of Directors",
     "intent_stage": "Final Commercial Sign-off",
-    "contract_value_tier": "₹3.0 Cr – ₹10.0 Cr ($360k – $1.2M)",
+    "contract_value_tier": "₹3.0 Cr - ₹10.0 Cr ($360k - $1.2M)",
     "required_entities": [
       "Payback Matrix",
       "Cash-Flow ROI",
-      "3x–5x ROI",
+      "3x-5x ROI",
       "Audited Case Studies",
       "Elesium"
     ],

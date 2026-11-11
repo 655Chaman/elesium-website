@@ -1,5 +1,5 @@
-# Product Hunt Official Launch Kit — Enterprise AI ROI Calculator
-> **Tagline:** Calculate enterprise AI labor savings, payback & TCO (52 chars — Strict < 60 chars verified)
+# Product Hunt Official Launch Kit - Enterprise AI ROI Calculator
+> **Tagline:** Calculate enterprise AI labor savings, payback & TCO (52 chars - Strict < 60 chars verified)
 > **Tool URL:** https://elesium.online/tools/enterprise-ai-roi-calculator
 > **Embed Iframe Route:** https://elesium.online/embed/roi-calculator
 > **Maker:** Chaman Shah (Principal AI Systems Architect)

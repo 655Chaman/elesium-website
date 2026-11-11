@@ -166,7 +166,7 @@ WHITEPAPER_90 = {
     "excerpt": "A definitive guide for Indian Chief Financial Officers, Controllers, and Engineering Leaders: automating Tally ERP 9 and Tally Prime with deterministic multi-agent systems, XML port 9000 gateways, and statutory GST Rule 36(4) reconciliation.",
     "intro": "A definitive guide for Indian Chief Financial Officers, Controllers, and Engineering Leaders: automating Tally ERP 9 and Tally Prime with deterministic multi-agent systems, XML port 9000 gateways, and statutory GST Rule 36(4) reconciliation.",
     "metaDescription": "How to automate Tally ERP and Tally Prime with autonomous LLM agents: XML-over-HTTP port 9000 gateway, TDL schemas, GST Rule 36(4) reconciliation, and LangGraph pipelines.",
-    "relatedSolutionSlug": "automated-scrap-reconciliation-and-work-in-progress-wip-ledger-balancing-agents-for-metal-fabrication",
+    "relatedSolutionSlug": "tally-bill-of-materials-bom-manufacturing-journal-auto-generation-from-mes-plc-telemetry",
     "sections": [
         {
             "type": "paragraph",
@@ -272,7 +272,7 @@ def main():
     print("=" * 80)
 
     words = ANSWER_CAPSULE.split()
-    print(f"Answer Capsule Word Count: {len(words)} words (Strict Window: 40–50 words).")
+    print(f"Answer Capsule Word Count: {len(words)} words (Strict Window: 40-50 words).")
     assert 40 <= len(words) <= 50, f"Capsule word count {len(words)} outside 40-50 window!"
 
     if not BLOG_TS.exists():
@@ -309,7 +309,7 @@ def main():
             print(f"✅ Marked Keyword ID 28 as USED in {QUEUE_JSON}")
 
     print("=" * 80)
-    print("WHITEPAPER #90 PUBLICATION COMPLETE — 100% OF KEYWORDS QUEUE CONSUMED!")
+    print("WHITEPAPER #90 PUBLICATION COMPLETE - 100% OF KEYWORDS QUEUE CONSUMED!")
     print("=" * 80)
 
 if __name__ == "__main__":

@@ -7,10 +7,10 @@
 ## [SOS-2026-119] Pitch for Supply Chain Brain / Logistics Management: Supply chain autonomous dispatch and ERP invoice reconciliation
 - **Platform:** Source of Sources
 - **Compliance Score:** 100/100
-- **Primary Deep Anchor:** https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors
+- **Primary Deep Anchor:** https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents
 - **Secondary Deep Anchor:** https://elesium.online/signals
 
-**Subject:** Quote: Supply chain autonomous dispatch and ERP invoice reconciliation — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: Supply chain autonomous dispatch and ERP invoice reconciliation - Chaman Shah, Principal AI Systems Architect
 
 Hi Michael Chang,
 
@@ -22,8 +22,8 @@ Pairing vision-language models with SAP S/4HANA middleware allows autonomous age
 
 This pipeline yields an immediate 82% compression in manifest processing cycles and delivers ₹18.4L savings per distribution hub while cutting stockouts by 40%."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents)  
 **Credentials & Authority Proof:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing.  
 - **Enterprise Solutions Hub:** https://elesium.online/solutions  

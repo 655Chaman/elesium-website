@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-unified_seo_runner.py — Elesium Unified Dual-Engine Fleet Orchestrator
+unified_seo_runner.py - Elesium Unified Dual-Engine Fleet Orchestrator
 ======================================================================
 Phase 6.3 of the Elesium Master SEO Engine Architecture.
 

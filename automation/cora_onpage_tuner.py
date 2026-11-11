@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-TED KUBAITIS CORA ON-PAGE TUNER CLI (MODULE 1) — TARGETED CALIBRATION
+TED KUBAITIS CORA ON-PAGE TUNER CLI (MODULE 1) - TARGETED CALIBRATION
 =============================================================================
 Classification: Single-Page / Targeted Deficit Analyzer & On-Page Calibrator
 Methodology: Ted Kubaitis (Cora Statistical Tuning & Deficit Elimination)

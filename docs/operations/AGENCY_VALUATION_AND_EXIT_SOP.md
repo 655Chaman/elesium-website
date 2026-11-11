@@ -1,9 +1,9 @@
 # Agency Enterprise Valuation & Exit Standard Operating Procedure (SOP)
 
 > **Document Class:** Definitive Executive M&A & Operational De-risking Specification  
-> **Source Foundation:** Joe Lau (*SEO Rockstars 2026: "How to 2–4x Your Agency's Valuation Without Spending a Dollar More on Marketing"*)  
+> **Source Foundation:** Joe Lau (*SEO Rockstars 2026: "How to 2-4x Your Agency's Valuation Without Spending a Dollar More on Marketing"*)  
 > **Target Enterprise:** Elesium Digital Systems (`elesium.online`)  
-> **Core Objective:** Systematically de-risk the enterprise to transition from a lifestyle SDE multiple (1.5x–2.2x) to an institutional EBITDA multiple (4.0x–5.5x+), unlocking maximum cash-at-close valuation without requiring additional marketing spend.
+> **Core Objective:** Systematically de-risk the enterprise to transition from a lifestyle SDE multiple (1.5x-2.2x) to an institutional EBITDA multiple (4.0x-5.5x+), unlocking maximum cash-at-close valuation without requiring additional marketing spend.
 
 ---
 
@@ -13,7 +13,7 @@ In standard M&A transactions, enterprise value is governed by a deceptively simp
 
 $$\text{Enterprise Valuation} = \text{Normalized Earnings} \times \text{Multiple}$$
 
-Most agency founders erroneously believe that the only route to a higher exit valuation is top-line revenue growth. In reality, an agency generating \$1,000,000 in revenue with high owner dependency and project-based cash flow will sell for **\$600,000 to \$800,000** (2.0x SDE), whereas the exact same revenue base with institutional management, recurring contracts, and proprietary IP will sell for **\$2,500,000 to \$3,500,000** (4.5x–5.0x EBITDA).
+Most agency founders erroneously believe that the only route to a higher exit valuation is top-line revenue growth. In reality, an agency generating \$1,000,000 in revenue with high owner dependency and project-based cash flow will sell for **\$600,000 to \$800,000** (2.0x SDE), whereas the exact same revenue base with institutional management, recurring contracts, and proprietary IP will sell for **\$2,500,000 to \$3,500,000** (4.5x-5.0x EBITDA).
 
 ```mermaid
 flowchart LR
@@ -31,7 +31,7 @@ flowchart LR
         direction TB
         EBITDA["Normalized Clean EBITDA"]
         I1["Delegated AM Layer (Founder Passes 'Yosemite Test')"]
-        I2["12–24 Month Recurring Retainers (<15% Concentration)"]
+        I2["12-24 Month Recurring Retainers (<15% Concentration)"]
         I3["Codified Decision Trees & Operating SOPs"]
         I4["The IP Carve-Out (The Goose vs. The Egg)"]
         InstOutcome["Buyer Premium: Cash-at-Close, Bidding Wars, 4x-5x Multiple"]
@@ -55,7 +55,7 @@ Our operational mandate is to maximize ROI visibility while systematically compr
 ### Lever #1: Earnings Quality (Buyers Buy Future Cash, Not Tax Write-offs)
 * **The Fatal Mistake**: Operating on tax-minimized SDE where personal perks, vehicle leases, and discretionary founder dividends obscure the true unit economics.
 * **The Institutional Standard**: 
-  - Normalize founder compensation to fair market value on the income statement (e.g., standard ₹25L–₹35L or \$120k–\$150k salary for a replacement Managing Director).
+  - Normalize founder compensation to fair market value on the income statement (e.g., standard ₹25L-₹35L or \$120k - \$150k salary for a replacement Managing Director).
   - Eliminate all personal expense mingling.
   - Maintain verified monthly GAAP/Ind-AS accrual accounting with documented, auditor-defensible add-backs.
   - Prepare for independent CPA review/audit 18 to 24 months before entering M&A discussions.
@@ -77,8 +77,8 @@ Our operational mandate is to maximize ROI visibility while systematically compr
 
 ### Lever #4: Systems, Data & The IP Carve-Out ("The Goose vs. The Egg")
 * **The Core Distinction**:
-  - **The Egg (Service Contract)**: The labor hours billed to configure, monitor, and maintain a client's workflows. Valued at traditional agency service multiples (1.5x–2.5x).
-  - **The Goose (Proprietary Software IP)**: The underlying deterministic multi-agent state machines, pre-built ingestion connectors, and custom LangGraph frameworks owned by the agency and licensed to clients. Valued at SaaS/IP multiples (5.0x–8.0x+).
+  - **The Egg (Service Contract)**: The labor hours billed to configure, monitor, and maintain a client's workflows. Valued at traditional agency service multiples (1.5x-2.5x).
+  - **The Goose (Proprietary Software IP)**: The underlying deterministic multi-agent state machines, pre-built ingestion connectors, and custom LangGraph frameworks owned by the agency and licensed to clients. Valued at SaaS/IP multiples (5.0x-8.0x+).
 * **Implementation Protocol**:
   - Standard client Master Services Agreements (MSAs) must grant clients a *non-exclusive, revocable, perpetual commercial license* to execute workflows while strictly retaining all underlying framework source code, algorithmic architectures, and tooling IP within Elesium.
 
@@ -96,10 +96,10 @@ Every operating agency under the Elesium fleet must self-audit against this 12-p
 | **Pillar 4: Systems & IP** | Zero documentation; tribal knowledge stored in founder's head. | Loose Google Docs / Loom videos; custom code given away to clients. | Comprehensive SOPs in Git/Notion; standard MSAs protect work. | Codified Decision Frameworks; IP Carve-Out separates Goose from Egg. |
 
 ### Valuation Multiple Scoring Bracket:
-* **Total Score 0 – 3**: Multiple = **1.2x – 1.8x SDE** (Heavy seller financing, 2-year earnout)
-* **Total Score 4 – 6**: Multiple = **2.0x – 2.8x SDE** (Standard broker listing)
-* **Total Score 7 – 9**: Multiple = **3.0x – 4.2x EBITDA** (Strategic acquirer interest)
-* **Total Score 10 – 12**: Multiple = **4.5x – 6.0x+ EBITDA** (Private equity bidding war, all-cash at close)
+* **Total Score 0 - 3**: Multiple = **1.2x - 1.8x SDE** (Heavy seller financing, 2-year earnout)
+* **Total Score 4 - 6**: Multiple = **2.0x - 2.8x SDE** (Standard broker listing)
+* **Total Score 7 - 9**: Multiple = **3.0x - 4.2x EBITDA** (Strategic acquirer interest)
+* **Total Score 10 - 12**: Multiple = **4.5x - 6.0x+ EBITDA** (Private equity bidding war, all-cash at close)
 
 ---
 

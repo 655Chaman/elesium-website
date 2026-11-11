@@ -720,7 +720,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             {[
               {
                 q: "Why do autonomous enterprise agents require dedicated PKCS#11 HSMs instead of software keys?",
-                a: "Autonomous agents execute thousands of automated decisions per second—issuing payments, modifying enterprise database records, and signing API mandates. Storing private signing keys in software memory (RAM) or environment variables exposes them to memory-scraping attacks, cold-boot extractions, and adversarial prompt injections that instruct the agent to leak its credentials. A PKCS#11 HSM creates an air-gapped cryptographic boundary: private keys are generated inside the silicon and never leave the hardware module; only cryptographic operations (signing, tokenization, decryption) take place within the tamper-proof envelope."
+                a: "Autonomous agents execute thousands of automated decisions per second: issuing payments, modifying enterprise database records, and signing API mandates. Storing private signing keys in software memory (RAM) or environment variables exposes them to memory-scraping attacks, cold-boot extractions, and adversarial prompt injections that instruct the agent to leak its credentials. A PKCS#11 HSM creates an air-gapped cryptographic boundary: private keys are generated inside the silicon and never leave the hardware module; only cryptographic operations (signing, tokenization, decryption) take place within the tamper-proof envelope."
               },
               {
                 q: "What is the difference between FIPS 140-2 Level 3 and FIPS 140-3 Level 4 physical security?",

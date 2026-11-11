@@ -123,7 +123,7 @@ export default function EnterpriseRoiCalculator() {
     const faqs = [
         {
             q: "How does Elesium eliminate per-seat SaaS licensing costs?",
-            a: "Traditional enterprise SaaS vendors charge linear $80–$150/user/month seat fees while forcing human workers to manually copy-paste data between screens. Elesium deploys deterministic multi-agent systems directly into your private VPC. You pay for underlying compute and model token ingestion at actual cost, completely decoupling productivity gains from headcount expansion."
+            a: "Traditional enterprise SaaS vendors charge linear $80-$150/user/month seat fees while forcing human workers to manually copy-paste data between screens. Elesium deploys deterministic multi-agent systems directly into your private VPC. You pay for underlying compute and model token ingestion at actual cost, completely decoupling productivity gains from headcount expansion."
         },
         {
             q: "What is included in the Elesium Sovereign Private VPC Architecture?",
@@ -654,7 +654,7 @@ export default function EnterpriseRoiCalculator() {
                             CFO & CTO Architectural Mandate
                         </div>
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                            Why Legacy SaaS Fails Enterprises — And Why Sovereign VPCs Win
+                            Why Legacy SaaS Fails Enterprises, and Why Sovereign VPCs Win
                         </h2>
                         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                             The fundamental breakdown between subscription software and custom sovereign automation, explained in financial and architectural reality.
@@ -788,7 +788,7 @@ export default function EnterpriseRoiCalculator() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>

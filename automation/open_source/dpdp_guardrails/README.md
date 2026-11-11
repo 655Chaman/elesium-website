@@ -7,7 +7,7 @@
 [![DPDP Act 2023](https://img.shields.io/badge/Statutory_Standard-DPDP_Act_2023_Sec_8(6)-emerald.svg)](https://elesium.online/ai-automation-agency-india)
 [![Architecture Author](https://img.shields.io/badge/Author-Chaman_Shah-purple.svg)](https://elesium.online/authors/chaman-shah)
 
-`dpdp-guardrails` is an open-source, deterministic security package engineered for enterprise AI developers, LangGraph state machines, and FastAPI gateways operating in India. It prevents sensitive personal identifiers—including 12-digit UIDAI Aadhaar numbers, Income Tax PAN cards, phone numbers, and banking metadata—from escaping to external LLM providers, ensuring 100% compliance with India's **Digital Personal Data Protection (DPDP) Act 2023**.
+`dpdp-guardrails` is an open-source, deterministic security package engineered for enterprise AI developers, LangGraph state machines, and FastAPI gateways operating in India. It prevents sensitive personal identifiers - including 12-digit UIDAI Aadhaar numbers, Income Tax PAN cards, phone numbers, and banking metadata - from escaping to external LLM providers, ensuring 100% compliance with India's **Digital Personal Data Protection (DPDP) Act 2023**.
 
 Maintained by **[Chaman Shah](https://elesium.online/authors/chaman-shah)** (Principal AI Systems Architect at **[Elesium](https://elesium.online)**) on [GitHub @655Chaman](https://github.com/655Chaman).
 

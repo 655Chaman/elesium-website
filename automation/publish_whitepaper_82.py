@@ -81,11 +81,11 @@ SECTIONS_82 = [
     {
         "type": "paragraph",
         "value": (
-            "The historical defensive strategy—relying on extensive cohorts of manual Quality Assurance (QA) documentation officers to cross-verify "
-            "thousands of physical binder sheets against digital Supervisory Control and Data Acquisition (SCADA) historians—is no longer sustainable. "
+            "The historical defensive strategy - relying on extensive cohorts of manual Quality Assurance (QA) documentation officers to cross-verify "
+            "thousands of physical binder sheets against digital Supervisory Control and Data Acquisition (SCADA) historians - is no longer sustainable. "
             "A standard tier-1 Indian pharmaceutical manufacturing facility running 45 formulation lines produces upwards of 2.8 million discrete "
             "batch telemetry parameters, environmental sensor measurements, and analytical test results every week. Under manual QA workflows, "
-            "batch record review cycles drag out to 18–24 business days. This delay locks up substantial working capital in quarantined finished "
+            "batch record review cycles drag out to 18-24 business days. This delay locks up substantial working capital in quarantined finished "
             "goods and exposes corporations to catastrophic import alerts. Retaining an enterprise AI automation agency for pharmaceutical companies "
             "in India enables formulation enterprises to transition from fallible post-hoc manual sampling to continuous, deterministic, real-time "
             "ALCOA+ state enforcement across all production suites."
@@ -124,7 +124,7 @@ SECTIONS_82 = [
             "ID and dual-factor credential), Legible (stored in human-readable JSON schema and immutable PDF/A formats), Contemporaneous (timestamped "
             "via synchronized Network Time Protocol servers synchronized with the National Physical Laboratory of India), Original (raw chromatographic "
             "and SCADA telemetry ingested directly without intermediate staging tables), and Accurate (validated against calibrated instrument tolerances). "
-            "The '+' criteria—Complete, Consistent, Enduring, and Available—are guaranteed via append-only Merkle-tree hashing and automated multi-region "
+            "The '+' criteria - Complete, Consistent, Enduring, and Available - are guaranteed via append-only Merkle-tree hashing and automated multi-region "
             "replicated storage within Indian sovereign cloud regions."
         )
     },
@@ -306,13 +306,13 @@ SECTIONS_82 = [
         "value": (
             "| Operational Metric | Legacy Manual Paper / LIMS | Elesium Sovereign AI Architecture | Measured Operational Impact |\n"
             "| :--- | :--- | :--- | :--- |\n"
-            "| **Batch Record Review Velocity** | 18 – 24 Business Days | **3.4 Hours (Autonomous Pre-Audit)** | 98.2% Cycle Time Reduction |\n"
+            "| **Batch Record Review Velocity** | 18 - 24 Business Days | **3.4 Hours (Autonomous Pre-Audit)** | 98.2% Cycle Time Reduction |\n"
             "| **Data Integrity Form 483 Vulnerability** | High (Manual Entry & CDS Gaps) | **Zero (Cryptographic Merkle Logs)** | 100% US FDA 21 CFR Part 11 Adherence |\n"
-            "| **OOS Investigation Drafting** | 7 – 14 Days per Occurrence | **45 Minutes (Auto-Dossier Synthesis)** | 89% Investigation Acceleration |\n"
+            "| **OOS Investigation Drafting** | 7 - 14 Days per Occurrence | **45 Minutes (Auto-Dossier Synthesis)** | 89% Investigation Acceleration |\n"
             "| **LIMS-to-eBMR Transcription Errors** | 4.2 errors per 100 batches | **0.0 errors (Deterministic Telemetry)** | Complete Elimination of Human Typos |\n"
-            "| **Annual Regulatory Audit Prep Overhead** | 6 – 8 Weeks of QA Overtime | **Instantaneous Single-Click Dossier** | ₹3.8 Crore Annual OPEX Savings / Plant |\n"
-            "| **Cleanroom HVAC Excursion Response** | 2 – 4 Hours (Manual Log Check) | **< 850 Milliseconds (Edge Mesh)** | Zero Lost Batches from HVAC Failure |\n"
-            "| **Working Capital Quarantined in Inventory** | ₹42 – ₹65 Crore per Facility | **₹6.8 – ₹9.5 Crore per Facility** | 78% Working Capital Optimization |"
+            "| **Annual Regulatory Audit Prep Overhead** | 6 - 8 Weeks of QA Overtime | **Instantaneous Single-Click Dossier** | ₹3.8 Crore Annual OPEX Savings / Plant |\n"
+            "| **Cleanroom HVAC Excursion Response** | 2 - 4 Hours (Manual Log Check) | **< 850 Milliseconds (Edge Mesh)** | Zero Lost Batches from HVAC Failure |\n"
+            "| **Working Capital Quarantined in Inventory** | ₹42 - ₹65 Crore per Facility | **₹6.8 - ₹9.5 Crore per Facility** | 78% Working Capital Optimization |"
         )
     },
     {
@@ -394,7 +394,7 @@ SECTIONS_82 = [
     {
         "type": "paragraph",
         "value": (
-            "Phase 1: Architecture Audit & Passive Telemetry Mirroring (Days 1–30). Map all plant SCADA nodes, LIMS databases, CDS workstations, "
+            "Phase 1: Architecture Audit & Passive Telemetry Mirroring (Days 1-30). Map all plant SCADA nodes, LIMS databases, CDS workstations, "
             "and environmental monitoring systems. Deploy non-intrusive edge listeners to mirror data streams without modifying active PLC code "
             "or instrument validation baselines."
         )
@@ -402,7 +402,7 @@ SECTIONS_82 = [
     {
         "type": "paragraph",
         "value": (
-            "Phase 2: Deterministic eBMR Ingestion & Parallel Shadow Execution (Days 31–60). Configure typed Pydantic v2 schemas for active batch "
+            "Phase 2: Deterministic eBMR Ingestion & Parallel Shadow Execution (Days 31-60). Configure typed Pydantic v2 schemas for active batch "
             "lines. Run the autonomous LangGraph verification engine alongside existing manual QA processes, cross-verifying deviation flags and "
             "analytical suitability calculations across 100 consecutive commercial batches."
         )
@@ -410,7 +410,7 @@ SECTIONS_82 = [
     {
         "type": "paragraph",
         "value": (
-            "Phase 3: Formal GAMP 5 CSV Validation & Production Cutover (Days 61–90). Execute formal Computerized System Validation (CSV) protocols, "
+            "Phase 3: Formal GAMP 5 CSV Validation & Production Cutover (Days 61-90). Execute formal Computerized System Validation (CSV) protocols, "
             "including Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ). Issue PKI cryptographic "
             "tokens to plant operators and QA heads, conduct certified regulatory training, and cut over to autonomous eBMR pre-audit verification."
         )

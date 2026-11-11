@@ -76,7 +76,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
             { time: "04:12", seconds: 252, title: "Deterministic State Machines vs Autonomous Drifting", description: "How LangGraph DAGs enforce hard contractual guardrails and human-in-the-loop exception routing." },
             { time: "09:45", seconds: 585, title: "Sovereign VPC Deployments & India DPDP Act 2023", description: "Architecting zero-retention inference pipelines with on-premise embeddings and private model weights." },
             { time: "16:30", seconds: 990, title: "Legacy Core Integration: SAP S/4HANA & Core Banking", description: "Live execution hooks bridging modern agentic protocols with legacy SOAP, REST, and SQL architectures." },
-            { time: "21:05", seconds: 1265, title: "Calculating the 90-Day Cash-Flow Velocity ROI", description: "How CXOs structure capital allocation to achieve 3x–5x net return on engineering investment." }
+            { time: "21:05", seconds: 1265, title: "Calculating the 90-Day Cash-Flow Velocity ROI", description: "How CXOs structure capital allocation to achieve 3x-5x net return on engineering investment." }
         ],
         architectureStages: [
             {
@@ -110,7 +110,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 techStack: "SAP OData APIs • PostgreSQL • Kafka • OpenTelemetry"
             }
         ],
-        fullTranscript: `[00:00] Welcome to the Elesium Systems Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
+        fullTranscript: `[00:00] Welcome to the Elesium Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
 
 [01:15] In 2024 and 2025, the market was flooded with prompt wrappers - companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment - whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims - probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
 
@@ -2035,7 +2035,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "time": "00:08",
                 "seconds": 8,
                 "title": "Deterministic Architecture Mechanism",
-                "description": "Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into private sovereign LangGraph controllers."
+                "description": "Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into sovereign private LangGraph controllers."
             },
             {
                 "time": "00:18",
@@ -2104,7 +2104,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "seconds": 8,
                 "title": "Deterministic Architecture Mechanism",
                 "visual": "High-speed network topology diagram showing edge Rust daemon polling OPC-UA servers in sub-10ms into sovereign LangGraph state engine.",
-                "voiceover": "Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into private sovereign LangGraph controllers.",
+                "voiceover": "Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into sovereign private LangGraph controllers.",
                 "caption": "EDGE DAEMON + LANGGRAPH SOVEREIGN CONTROLLER"
             },
             {
@@ -2124,7 +2124,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "caption": "TEST EDGE SIMULATOR // ELESIUM.ONLINE"
             }
         ],
-        "fullTranscript": "Searching for industrial IoT OPC-UA agentic automation that eliminates shop-floor latency? Legacy manufacturing plants suffer 4 hours of weekly unmonitored line stoppage due to brittle PLC polling and unparsed sensor drifts. Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into private sovereign LangGraph controllers. Across 6 discrete assembly plants, we cut line scrap by 32%, reduced unplanned downtime by 85%, and maintained 99.9% deterministic SLA. Test your plant telemetry latency now in our free simulator at elesium.online."
+        "fullTranscript": "Searching for industrial IoT OPC-UA agentic automation that eliminates shop-floor latency? Legacy manufacturing plants suffer 4 hours of weekly unmonitored line stoppage due to brittle PLC polling and unparsed sensor drifts. Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into sovereign private LangGraph controllers. Across 6 discrete assembly plants, we cut line scrap by 32%, reduced unplanned downtime by 85%, and maintained 99.9% deterministic SLA. Test your plant telemetry latency now in our free simulator at elesium.online."
     },
     {
         "id": "sfv-13",

@@ -1,7 +1,7 @@
 import json
 
 wave61_keywords = [
-    # Cluster 1: Pipeline Parallelism & 1F1B Scheduling (IDs 2966–2982, 17 items)
+    # Cluster 1: Pipeline Parallelism & 1F1B Scheduling (IDs 2966-2982, 17 items)
     {
         "id": 2966,
         "keyword": "pipeline parallelism 1f1b schedulers for enterprise vllm and megatron lm clusters",
@@ -224,7 +224,7 @@ wave61_keywords = [
         "primary_cta": "Deploy Telecom Pipeline Synchronization Systems"
     },
 
-    # Cluster 2: Cross-Node Micro-Batching & Inter-Stage P2P Buffers (IDs 2983–2998, 16 items)
+    # Cluster 2: Cross-Node Micro-Batching & Inter-Stage P2P Buffers (IDs 2983-2998, 16 items)
     {
         "id": 2983,
         "keyword": "zero copy p2p activation transfer daemons for distributed llm pipeline clusters",
@@ -434,7 +434,7 @@ wave61_keywords = [
         "primary_cta": "Deploy Megatron-LM Zero-Copy Socket Infrastructure"
     },
 
-    # Cluster 3: Pipeline Bubble Minimization SLAs & Cluster FinOps (IDs 2999–3015, 17 items)
+    # Cluster 3: Pipeline Bubble Minimization SLAs & Cluster FinOps (IDs 2999-3015, 17 items)
     {
         "id": 2999,
         "keyword": "sub 10ms inter stage latency sla monitoring daemons for enterprise agent swarms",

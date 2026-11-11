@@ -8,7 +8,7 @@ framework from SEO Rockstars 2026 Day 2 (Talk 6).
 Core Capabilities:
 1. Regex Persona & Intent Filter: Matches high-converting conversational queries
    (e.g., 'i am', 'you are', 'we need', 'looking for', 'cost of', 'how to automate').
-2. Striking-Distance Query Extractor: Surfaces queries in Positions 4.0 – 20.0 with
+2. Striking-Distance Query Extractor: Surfaces queries in Positions 4.0 - 20.0 with
    high impressions and low CTR for immediate page optimization.
 3. Automated Queue Enrichment: Automatically injects high-opportunity GSC striking
    queries directly into automation/keywords_queue.json for autoblogger execution.

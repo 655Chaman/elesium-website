@@ -1,4 +1,4 @@
-# BetaList Official Submission Kit — Enterprise AI ROI Calculator
+# BetaList Official Submission Kit - Enterprise AI ROI Calculator
 > **Submission URL:** https://betalist.com/submit
 > **Status:** Pre-Approved Ready
 

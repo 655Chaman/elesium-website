@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-instant_indexer.py — Instant IndexNow & Search Engine Pinging Engine
+instant_indexer.py - Instant IndexNow & Search Engine Pinging Engine
 
 Phase 6.2 of the Elesium Master SEO Engine.
 Implements the official IndexNow protocol (Microsoft Bing, Yandex, Seznam, Naver)

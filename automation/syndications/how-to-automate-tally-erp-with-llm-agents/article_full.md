@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # How to Automate Tally ERP with LLM Agents: TDL Server, XML/ODBC Telemetry, and Deterministic Ledger Reconciliation
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/how-to-automate-tally-erp-with-llm-agents). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/how-to-automate-tally-erp-with-llm-agents). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** A definitive guide for Indian Chief Financial Officers, Controllers, and Engineering Leaders: automating Tally ERP 9 and Tally Prime with deterministic multi-agent systems, XML port 9000 gateways, and statutory GST Rule 36(4) reconciliation.
 

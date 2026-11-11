@@ -13,7 +13,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 
 ## 2. Master Entity Ground Truth
 
-- **Legal Entity Name**: `Elesium Systems Pvt. Ltd.`
+- **Legal Entity Name**: `Elesium Digital Systems Private Limited`
 - **Operating Brand**: `Elesium`
 - **Primary Institutional Phone**: `+91 83173 29312`
 - **Primary Engineering Email**: `chaman@elesium.online`
@@ -47,7 +47,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 
 ## 4. Location-by-Location Character-Consistent Submission Templates
 
-### Node 1: Bengaluru (Bangalore) — HQ
+### Node 1: Bengaluru (Bangalore) - HQ
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Bangalore`
 - **Street Address**: `Koramangala 4th Block, 80 Feet Road`
 - **Locality / Area**: `Koramangala`
@@ -61,7 +61,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `500m from Sony World Signal, 80 Feet Road`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 2: Mumbai — Financial Engineering Pod
+### Node 2: Mumbai - Financial Engineering Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Mumbai`
 - **Street Address**: `Bandra Kurla Complex (BKC), G Block`
 - **Locality / Area**: `Bandra East`
@@ -75,7 +75,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `Adjacent to National Stock Exchange (NSE) & Bharat Diamond Bourse`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 3: Delhi NCR — Logistics & GovTech Pod
+### Node 3: Delhi NCR - Logistics & GovTech Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Delhi NCR`
 - **Street Address**: `Cyber City, DLF Phase 2, Building 10`
 - **Locality / Area**: `DLF Phase 2`
@@ -89,7 +89,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `Opposite Cyber Hub Rapid Metro Station`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 4: Pune — Industrial Manufacturing Pod
+### Node 4: Pune - Industrial Manufacturing Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Pune`
 - **Street Address**: `Rajiv Gandhi Infotech Park, Phase 1`
 - **Locality / Area**: `Hinjawadi`
@@ -103,7 +103,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `Near Hinjawadi Phase 1 Circle, Adjacent to Tata Technologies Campus`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 5: Hyderabad — Pharma & Life Sciences GCC Pod
+### Node 5: Hyderabad - Pharma & Life Sciences GCC Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Hyderabad`
 - **Street Address**: `HITEC City Main Road, Madhapur`
 - **Locality / Area**: `HITEC City`
@@ -117,7 +117,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `Adjacent to Cyber Towers, HITEC City Junction`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 6: Chennai — Automotive & SaaS Pod
+### Node 6: Chennai - Automotive & SaaS Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Chennai`
 - **Street Address**: `Rajiv Gandhi Salai (OMR), Taramani`
 - **Locality / Area**: `Taramani`
@@ -131,7 +131,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `Opposite TIDEL Park, Canal Bank Road`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 7: Ahmedabad — GIFT City & FinTech Pod
+### Node 7: Ahmedabad - GIFT City & FinTech Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Ahmedabad`
 - **Street Address**: `GIFT One Tower, GIFT City`
 - **Locality / Area**: `GIFT City`
@@ -145,7 +145,7 @@ Name, Address, and Phone Number (NAP) must maintain character-for-character unif
 - **Landmark**: `GIFT One Tower, 14th Floor, GIFT City International Financial Services Centre`
 - **Opening Hours**: `Mon-Fri: 09:00 - 19:00 IST | Sat: 10:00 - 15:00 IST`
 
-### Node 8: Kolkata — Heavy Industry & Logistics Pod
+### Node 8: Kolkata - Heavy Industry & Logistics Pod
 - **Listing Name**: `Elesium - Best Enterprise AI Company in Kolkata`
 - **Street Address**: `Sector V, Salt Lake City`
 - **Locality / Area**: `Sector V, Salt Lake`

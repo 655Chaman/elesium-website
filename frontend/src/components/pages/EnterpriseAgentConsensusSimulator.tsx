@@ -91,7 +91,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
   const faqs = [
     {
       q: 'Why is single-agent decision-making unacceptable for enterprise-critical workflows?',
-      a: 'Even frontier LLMs exhibit a 5% to 18% hallucination and reasoning drift rate when executing complex, multi-variable logic. In high-stakes enterprise applications—such as automated loan underwriting, algorithmic trade settlement, industrial turbine load balancing, or healthcare pre-authorizations—a single hallucinated JSON parameter can trigger millions of dollars in regulatory fines or operational downtime. Relying on a single agent creates an unmitigated single point of cognitive failure.'
+      a: 'Even frontier LLMs exhibit a 5% to 18% hallucination and reasoning drift rate when executing complex, multi-variable logic. In high-stakes enterprise applications, such as automated loan underwriting, algorithmic trade settlement, industrial turbine load balancing, or healthcare pre-authorizations, a single hallucinated JSON parameter can trigger millions of dollars in regulatory fines or operational downtime. Relying on a single agent creates an unmitigated single point of cognitive failure.'
     },
     {
       q: 'Why does naive N-way majority voting fail in high-throughput enterprise systems?',

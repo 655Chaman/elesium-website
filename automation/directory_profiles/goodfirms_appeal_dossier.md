@@ -4,7 +4,7 @@
 > **Vendor:** Elesium Online (`https://elesium.online`)  
 > **Target Platform:** GoodFirms (`https://www.goodfirms.co`)  
 > **Target Review:** Herculan B.V. (Netherlands) Enterprise AI Automation Review  
-> **Recipient:** Shirley (GoodFirms Review Operations & Moderation Desk — `shirley@goodfirms.co`)  
+> **Recipient:** Shirley (GoodFirms Review Operations & Moderation Desk - `shirley@goodfirms.co`)  
 > **Framework:** Michael Merlino Entity Corroboration & Verification Protocol  
 
 ---
@@ -23,10 +23,10 @@ The review was erroneously flagged by GoodFirms' automated moderation filters du
 
 ## 2. Formal Appeal Communication
 
-**To:** Shirley — Review Moderation Desk (`shirley@goodfirms.co`)  
+**To:** Shirley - Review Moderation Desk (`shirley@goodfirms.co`)  
 **CC:** `reviews@goodfirms.co`, `support@goodfirms.co`  
-**From:** Chaman Syed — Founder & Principal Architect, Elesium Online (`chamansyed655@gmail.com` / `contact@elesium.online`)  
-**Subject:** Formal Appeal & Commercial Verification: Elesium Online (Company ID: `elesium-online`) — Herculan B.V. Client Review  
+**From:** Chaman Syed - Founder & Principal Architect, Elesium Online (`chamansyed655@gmail.com` / `contact@elesium.online`)  
+**Subject:** Formal Appeal & Commercial Verification: Elesium Online (Company ID: `elesium-online`) - Herculan B.V. Client Review  
 
 ---
 
@@ -38,7 +38,7 @@ I am writing to formally request a manual human review and approval for the clie
 
 Our client, Herculan B.V. (headquartered in Meerkerk, Netherlands), recently submitted a comprehensive review detailing our custom engineering engagement: **Project Specification Parsing & ERP Logistics Co-pilot**. We understand that the submission was automatically flagged or held by your automated fraud-prevention heuristics. 
 
-We deeply respect GoodFirms’ stringent review integrity and anti-fraud standards—it is the exact reason we chose GoodFirms as a primary platform for our B2B entity corroboration. However, our internal forensic audit confirms that this submission was an **algorithmic false positive** triggered by:
+We deeply respect GoodFirms’ stringent review integrity and anti-fraud standards - it is the exact reason we chose GoodFirms as a primary platform for our B2B entity corroboration. However, our internal forensic audit confirms that this submission was an **algorithmic false positive** triggered by:
 1. **SSO Identity Discrepancy:** The reviewer authenticated via a legacy personal LinkedIn profile rather than direct corporate SSO, while verifying a corporate `@herculan.com` email address.
 2. **Network/IP Geolocation Anomaly:** The submission was made from a secure Dutch corporate VPN / remote executive location that conflicted with GoodFirms' strict single-subnet geolocation matcher.
 
@@ -134,7 +134,7 @@ The following document represents the bilateral commercial engagement verified b
 | **Engagement Type** | Custom Enterprise AI Engineering & Deterministic Workflow Deployment |
 | **Commercial Consideration** | **€17,500 EUR** ($18,900 USD equivalent) |
 | **Payment Terms** | Milestone-based (30% Inception, 40% Staging Validation, 30% Production Handover) |
-| **Effective Dates** | November 15, 2024 – January 28, 2025 |
+| **Effective Dates** | November 15, 2024 - January 28, 2025 |
 | **Production Handover** | Successfully Deployed to Private Cloud Infrastructure |
 
 ---
@@ -179,7 +179,7 @@ The following document represents the bilateral commercial engagement verified b
   > 
   > *Elesium stepped in and architected a custom, deterministic AI co-pilot deployed securely on our private cloud with zero data retention. Their system automatically ingests raw tender specifications, parses complex material tolerances in seconds, and feeds structured bill-of-materials directly into our logistics pipeline with zero hallucinations.*
   > 
-  > *Tender parsing time dropped from over 3 days to under 5 minutes, saving our team dozens of manual hours every month. Chaman and the Elesium engineering team were outstanding—technically elite, responsive across European time zones, and razor-focused on delivered ROI. Elesium delivered on every single milestone."*
+  > *Tender parsing time dropped from over 3 days to under 5 minutes, saving our team dozens of manual hours every month. Chaman and the Elesium engineering team were outstanding - technically elite, responsive across European time zones, and razor-focused on delivered ROI. Elesium delivered on every single milestone."*
 
 ---
 

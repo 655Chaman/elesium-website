@@ -202,7 +202,7 @@ export function calculateSemanticCacheSimulation(inputs: SemanticCacheInputs): S
   if (similarityThreshold < 0.88) {
     architecturalGuidance = `Similarity threshold of ${similarityThreshold} yields an aggressive ${cacheHitRatePct}% hit rate, saving ~$${monthlyTokenSavingsUsd.toLocaleString()}/mo, but introduces risk of semantic drift (${precisionScorePct}% precision). Recommended for FAQ support and classification agents, but tighten to >=0.92 for code or financial calculations.`;
   } else if (similarityThreshold > 0.95) {
-    architecturalGuidance = `Similarity threshold of ${similarityThreshold} guarantees extreme precision (${precisionScorePct}%), but restricts hit rate to ${cacheHitRatePct}%. Consider lowering to 0.92–0.93 to capture near-paraphrase prompts and unlock an additional ~$${Math.round(monthlyTokenSavingsUsd * 0.4).toLocaleString()}/mo in net savings.`;
+    architecturalGuidance = `Similarity threshold of ${similarityThreshold} guarantees extreme precision (${precisionScorePct}%), but restricts hit rate to ${cacheHitRatePct}%. Consider lowering to 0.92-0.93 to capture near-paraphrase prompts and unlock an additional ~$${Math.round(monthlyTokenSavingsUsd * 0.4).toLocaleString()}/mo in net savings.`;
   } else {
     architecturalGuidance = `Optimal enterprise golden ratio achieved: threshold ${similarityThreshold} delivers ${cacheHitRatePct}% cache hit rate with ${precisionScorePct}% precision. Blended cluster latency is reduced by ${averageLatencyReductionPct}%, slashing monthly API spend by $${monthlyTokenSavingsUsd.toLocaleString()} ($${annualTokenSavingsUsd.toLocaleString()}/year) with zero architectural compromise.`;
   }

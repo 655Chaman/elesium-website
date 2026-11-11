@@ -5,7 +5,7 @@ from pathlib import Path
 QUEUE_PATH = Path("automation/compact_keywords_queue.json")
 
 wave73_keywords = [
-    # Cluster 1: Multi-Head Latent Attention (MLA) Low-Rank Key-Value Projections (IDs 3566–3582, 17 items)
+    # Cluster 1: Multi-Head Latent Attention (MLA) Low-Rank Key-Value Projections (IDs 3566-3582, 17 items)
     {
         "id": 3566,
         "keyword": "multi-head latent attention mla low-rank kv-cache compression daemons for deepseek clusters",
@@ -228,7 +228,7 @@ wave73_keywords = [
         "primary_cta": "Deploy Latent Profiling Exporters"
     },
 
-    # Cluster 2: Decoupled Rotary Position Embedding (RoPE) Isolation (IDs 3583–3595, 13 items)
+    # Cluster 2: Decoupled Rotary Position Embedding (RoPE) Isolation (IDs 3583-3595, 13 items)
     {
         "id": 3583,
         "keyword": "decoupled rotary position embedding rope vector isolation managers for mla architectures",
@@ -399,7 +399,7 @@ wave73_keywords = [
         "primary_cta": "Deploy Positional Erasure Verifiers"
     },
 
-    # Cluster 3: 90% VRAM Footprint Reduction & Up-Projection GEMMs (IDs 3596–3605, 10 items)
+    # Cluster 3: 90% VRAM Footprint Reduction & Up-Projection GEMMs (IDs 3596-3605, 10 items)
     {
         "id": 3596,
         "keyword": "ninety percent vram footprint reduction architects for deepseek-v3 enterprise inference clusters",
@@ -531,7 +531,7 @@ wave73_keywords = [
         "primary_cta": "Retain Green Datacenter MLA Advisers"
     },
 
-    # Cluster 4: Enterprise MLA Cluster Deployment & Sovereign Swarms (IDs 3606–3615, 10 items)
+    # Cluster 4: Enterprise MLA Cluster Deployment & Sovereign Swarms (IDs 3606-3615, 10 items)
     {
         "id": 3606,
         "keyword": "sovereign private vpc deepseek-r1 mla cluster deployment engineers for private banks",

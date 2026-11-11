@@ -118,7 +118,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
     },
     {
       q: "What is the recommended cosine similarity threshold for enterprise deployments?",
-      a: "For structured code generation, legal drafting, or quantitative finance calculations, we enforce strict thresholds between 0.94 and 0.97. For enterprise customer support, internal IT helpdesks, and general FAQ synthesis, 0.90 to 0.92 provides the golden ratio—capturing 35–45% of redundant queries while maintaining >99% answer fidelity."
+      a: "For structured code generation, legal drafting, or quantitative finance calculations, we enforce strict thresholds between 0.94 and 0.97. For enterprise customer support, internal IT helpdesks, and general FAQ synthesis, 0.90 to 0.92 provides the golden ratio: capturing 35-45% of redundant queries while maintaining >99% answer fidelity."
     },
     {
       q: "Can this semantic cache be deployed completely air-gapped on private VPCs?",

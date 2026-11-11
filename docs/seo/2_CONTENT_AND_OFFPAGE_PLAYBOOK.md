@@ -27,7 +27,7 @@ Writing in 2026 requires optimizing not just for blue links on Google, but for c
 Our 3-agent content pipeline automatically adheres to these strict rules:
 
 ### A. The "Answer Capsule" Rule (Direct AI Overview Bait)
-Immediately beneath every `<h2>` heading, there must be a **bolded 40–50 word definitive definition**. 
+Immediately beneath every `<h2>` heading, there must be a **bolded 40-50 word definitive definition**. 
 * *Why:* LLM scrapers prioritize standalone, high-density definition blocks when synthesizing direct answers.
 
 ### B. Proprietary Frameworks & Methodologies

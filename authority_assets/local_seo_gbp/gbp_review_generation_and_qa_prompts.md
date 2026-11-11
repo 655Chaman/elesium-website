@@ -27,7 +27,7 @@ Google's local map pack algorithm weighs review signals across three critical di
 > "Hi [Client First Name], Chaman here. Our telemetry shows your LangGraph triage agents in [Bengaluru / Mumbai / Pune] just cleared week 6 with [84% MTTR reduction / sub-200ms reconciliation]. We're expanding our regional engineering pod visibility on Google Maps. Could you take 60 seconds to drop an honest review of our sovereign private VPC setup and latency benchmarks on our verified profile? It helps other CTOs in [City] know we actually deliver: [Direct GBP Shortlink]. Thank you!"
 
 ### Template B: Day-90 Formal ROI Memorandum Email
-> **Subject**: Audited 90-Day Breakeven Milestone & Architecture Review — Elesium Systems  
+> **Subject**: Audited 90-Day Breakeven Milestone & Architecture Review - Elesium  
 > **Dear [Client Name]**,  
 > As of this morning, your private VPC multi-agent pipeline has reached its audited 90-day milestone, generating [₹XX Lakhs] in verified OPEX savings with 100% DPDP Act compliance.  
 > As agreed in our mutual SLA, we would deeply appreciate your executive review on our verified [City] Google Business Profile. If helpful, you can comment on:  
@@ -36,7 +36,7 @@ Google's local map pack algorithm weighs review signals across three critical di
 > 3. The zero-overhead collaboration with our engineering desk.  
 > **Review Link**: [Direct GBP Shortlink]  
 > Best regards,  
-> **Chaman Shah**, Principal AI Systems Architect, Elesium Systems Pvt. Ltd.
+> **Chaman Shah**, Principal AI Systems Architect, Elesium Digital Systems Private Limited
 
 ---
 

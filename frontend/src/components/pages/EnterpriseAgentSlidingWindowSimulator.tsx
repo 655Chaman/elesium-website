@@ -99,7 +99,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
     },
     {
       q: "Why are Attention Sinks required to prevent perplexity collapse?",
-      a: "Research demonstrates that transformer attention heads allocate an immense amount of attention score to the very first 2 to 4 tokens in the prompt—irrespective of their semantic content. If these initial tokens are evicted from the KV cache, the softmax normalizer collapses, causing perplexity to explode and the model to output gibberish. Preserving these initial tokens as 'attention sinks' stabilizes streaming inference indefinitely."
+      a: "Research demonstrates that transformer attention heads allocate an immense amount of attention score to the very first 2 to 4 tokens in the prompt, irrespective of their semantic content. If these initial tokens are evicted from the KV cache, the softmax normalizer collapses, causing perplexity to explode and the model to output gibberish. Preserving these initial tokens as 'attention sinks' stabilizes streaming inference indefinitely."
     },
     {
       q: "How does circular Ring KV eviction achieve sub-5ms per-token decode latency?",

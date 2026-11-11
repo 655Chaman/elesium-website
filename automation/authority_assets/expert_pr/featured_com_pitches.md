@@ -3,11 +3,11 @@
 ### [Featured.com] Pitch: How to Accurately Measure the True ROI of AI Automation in 2026
 **Target Publication:** Entrepreneur Magazine  
 **Deadline:** Tomorrow 12:00 PM PST  
-**Target BOFU Landing URL:** https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors  
+**Target BOFU Landing URL:** https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos  
 
 ---
 
-**Subject:** Quote: How to Accurately Measure the True ROI of AI Automation in 2026 — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: How to Accurately Measure the True ROI of AI Automation in 2026 - Chaman Shah, Principal AI Systems Architect
 
 Hi [Reporter Name],
 
@@ -19,8 +19,8 @@ Generating 1,000 marketing emails in five minutes yields zero enterprise value i
 
 To achieve a true 3x to 5x cash-flow payback within 90 days, companies must deploy AI agents exclusively against high-friction back-office bottlenecks where human labor is consumed by manual verification."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)  
 **Credentials & Verification:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online), an enterprise AI engineering firm that deploys deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing enterprises.  
 - **Corporate Solutions Hub:** https://elesium.online/solutions  

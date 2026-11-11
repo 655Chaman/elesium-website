@@ -151,7 +151,7 @@
       "layout": "left-copy"
     },
     {
-      "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+      "title": "Air-Gapped Sovereign Defense Topology",
       "copy": [
         "The prefix reservation state machine guarantees that every incoming tactical query shares the identical pre-computed doctrine attention states with zero compute overhead. When a tactical commander enters a query, the model begins autoregressive decoding immediately at token position 1, bypassing the 16K-token doctrine prefill phase entirely and slashing TTFT from 850ms to sub-10ms."
       ],
@@ -161,7 +161,7 @@
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-      "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+      "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
     {

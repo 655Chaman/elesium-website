@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate_ph_visual_assets.py — Product Hunt 6-Slide Vector Gallery Asset Generator
+generate_ph_visual_assets.py - Product Hunt 6-Slide Vector Gallery Asset Generator
 ==================================================================================
 Framework: Edward Sturm Complete Masterclass (Module 11: Product Hunt Launch Visuals)
 Target: Elesium Enterprise AI ROI Calculator

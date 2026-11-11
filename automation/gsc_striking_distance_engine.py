@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE CLI (MODULE 4) — MASTER EXECUTOR
+GSC STRIKING DISTANCE ENGINE CLI (MODULE 4) - MASTER EXECUTOR
 =============================================================================
 Classification: Brian Kato GSC Striking Distance Discovery & Optimization
 Methodology: Brian Kato (SEO Rockstars 2026 Day 2) & Dan Kurtz Compounding Loop

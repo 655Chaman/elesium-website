@@ -7,7 +7,7 @@
   "hubCategory": "Sovereign Defense",
   "title": "Enterprise Sovereign KV-Cache Compression | Elesium",
   "h1": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries - Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries with sovereign VPC isolation,. Schedule private audit.",
+  "metaDescription": "Deploy Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries with sovereign VPC. Audit Defense Ministries architecture.",
   "targetPersona": "Defense Intelligence HPC Architects & Military Data Storage Infrastructure Specialists",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -151,7 +151,7 @@
       "layout": "left-copy"
     },
     {
-      "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+      "title": "Air-Gapped Sovereign Defense Topology",
       "copy": [
         "The compression telemetry engine continuously verifies that compression does not degrade analytical accuracy on critical military named entities, geographic coordinates, and tactical timestamps. Deployed across air-gapped sovereign defense datacenters, the solution allows standard 80GB GPU nodes to handle contexts that previously required 320GB of memory."
       ],
@@ -161,7 +161,7 @@
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-      "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+      "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
     {

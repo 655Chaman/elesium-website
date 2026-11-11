@@ -45,7 +45,7 @@ WHITEPAPER_84 = {
         },
         {
             "type": "paragraph",
-            "value": "As Indian enterprises across banking, financial services, insurance (BFSI), telecom, healthcare, and critical logistics transition from experimental chatbots to autonomous production agents, the operational threat surface undergoes an exponential expansion. When language models are granted direct access to tool-calling APIs, private enterprise vector stores (pgvector, Qdrant), core banking databases, and ERP execution endpoints (SAP S/4HANA, Finacle), traditional perimeter firewalls become entirely ineffective. Attackers exploit the foundational vulnerability of transformer architectures: the structural conflation between control instructions and untrusted data."
+            "value": "As Indian enterprises across banking, financial services, insurance (BFSI), telecom, healthcare, and critical logistics transition from experimental chatbots to autonomous production agents, the operational threat surface undergoes an exponential expansion. When language models are granted direct access to tool-calling APIs, sovereign enterprise vector stores (pgvector, Qdrant), core banking databases, and ERP execution endpoints (SAP S/4HANA, Finacle), traditional perimeter firewalls become entirely ineffective. Attackers exploit the foundational vulnerability of transformer architectures: the structural conflation between control instructions and untrusted data."
         },
         {
             "type": "paragraph",
@@ -53,7 +53,7 @@ WHITEPAPER_84 = {
         },
         {
             "type": "paragraph",
-            "value": "Once triggered, an unmitigated injection payload can command the autonomous agent to exfiltrate database records via webhook callbacks, manipulate corporate financial ledgers, generate unauthorized API keys, or hallucinate binding commercial commitments. Furthermore, modern attackers employ 'Crescendo attacks'—multi-turn conversational techniques that progressively guide the LLM across conversational boundaries without triggering single-turn keyword filters. For enterprise fiduciaries in India, relying on public cloud safety APIs introduces severe latency overheads (400ms to 900ms per turn), opaque decision models, and data sovereignty violations under the Digital Personal Data Protection (DPDP) Act 2023."
+            "value": "Once triggered, an unmitigated injection payload can command the autonomous agent to exfiltrate database records via webhook callbacks, manipulate corporate financial ledgers, generate unauthorized API keys, or hallucinate binding commercial commitments. Furthermore, modern attackers employ 'Crescendo attacks' - multi-turn conversational techniques that progressively guide the LLM across conversational boundaries without triggering single-turn keyword filters. For enterprise fiduciaries in India, relying on public cloud safety APIs introduces severe latency overheads (400ms to 900ms per turn), opaque decision models, and data sovereignty violations under the Digital Personal Data Protection (DPDP) Act 2023."
         },
         {
             "type": "paragraph",
@@ -77,7 +77,7 @@ WHITEPAPER_84 = {
         },
         {
             "type": "paragraph",
-            "value": "The architectural core of Elesium's enterprise guardrail pipeline utilizes NVIDIA NeMo Guardrails paired with Colang 2.0—a domain-specific modeling language designed for defining conversational flows, deterministic execution constraints, and programmatic boundary enforcements. Colang 2.0 decouples agent safety logic from the stochastic behavior of the underlying foundation model, ensuring that security policies execute with mathematical determinism."
+            "value": "The architectural core of Elesium's enterprise guardrail pipeline utilizes NVIDIA NeMo Guardrails paired with Colang 2.0 - a domain-specific modeling language designed for defining conversational flows, deterministic execution constraints, and programmatic boundary enforcements. Colang 2.0 decouples agent safety logic from the stochastic behavior of the underlying foundation model, ensuring that security policies execute with mathematical determinism."
         },
         {
             "type": "paragraph",

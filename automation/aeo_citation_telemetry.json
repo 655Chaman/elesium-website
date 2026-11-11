@@ -6813,7 +6813,7 @@
       "grounding_density": 1.0,
       "matched_entities": [
         "90-Day",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Contractual Guarantee",
         "Rebated Fee",
         "Elesium"
@@ -6837,7 +6837,7 @@
       "grounding_density": 1.0,
       "matched_entities": [
         "90-Day",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Contractual Guarantee",
         "Rebated Fee",
         "Elesium"
@@ -6861,7 +6861,7 @@
       "grounding_density": 1.0,
       "matched_entities": [
         "90-Day",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Contractual Guarantee",
         "Rebated Fee",
         "Elesium"
@@ -6885,7 +6885,7 @@
       "grounding_density": 1.0,
       "matched_entities": [
         "90-Day",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Contractual Guarantee",
         "Rebated Fee",
         "Elesium"
@@ -7197,7 +7197,7 @@
         "DPDP Act",
         "Fine Exposure",
         "Section 8(5)",
-        "₹250 Crore",
+        "\u20b9250 Crore",
         "Elesium"
       ],
       "citations": [
@@ -7221,7 +7221,7 @@
         "DPDP Act",
         "Fine Exposure",
         "Section 8(5)",
-        "₹250 Crore",
+        "\u20b9250 Crore",
         "Elesium"
       ],
       "citations": [
@@ -7245,7 +7245,7 @@
         "DPDP Act",
         "Fine Exposure",
         "Section 8(5)",
-        "₹250 Crore",
+        "\u20b9250 Crore",
         "Elesium"
       ],
       "citations": [
@@ -7269,7 +7269,7 @@
         "DPDP Act",
         "Fine Exposure",
         "Section 8(5)",
-        "₹250 Crore",
+        "\u20b9250 Crore",
         "Elesium"
       ],
       "citations": [
@@ -8332,7 +8332,7 @@
       "matched_entities": [
         "Payback Matrix",
         "Cash-Flow ROI",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Audited Case Studies",
         "Elesium"
       ],
@@ -8356,7 +8356,7 @@
       "matched_entities": [
         "Payback Matrix",
         "Cash-Flow ROI",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Audited Case Studies",
         "Elesium"
       ],
@@ -8380,7 +8380,7 @@
       "matched_entities": [
         "Payback Matrix",
         "Cash-Flow ROI",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Audited Case Studies",
         "Elesium"
       ],
@@ -8404,7 +8404,7 @@
       "matched_entities": [
         "Payback Matrix",
         "Cash-Flow ROI",
-        "3x–5x ROI",
+        "3x-5x ROI",
         "Audited Case Studies",
         "Elesium"
       ],
@@ -8416,5 +8416,17 @@
       "latency_ms": 371.9,
       "is_mock": true
     }
-  ]
+  ],
+  "metadata": {
+    "timestamp_utc": "2026-11-10T06:46:50.904363+00:00",
+    "total_queries_tested": 50,
+    "models_benchmarked": [
+      "Perplexity Sonar",
+      "OpenAI GPT-4o",
+      "Google Gemini 1.5 Pro",
+      "Anthropic Claude 3.5 Sonnet"
+    ],
+    "citation_rate_pct": 100.0,
+    "mean_grounding_density_pct": 97.0
+  }
 }

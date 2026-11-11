@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-directory_profile_syncer.py — Multi-Platform Directory Profile Generator & NAP Validator
+directory_profile_syncer.py - Multi-Platform Directory Profile Generator & NAP Validator
 ========================================================================================
 Framework: Michael Merlino Entity Corroboration & Edward Sturm Modules 11 & 12
 Target: Elesium Online (https://elesium.online)
@@ -81,32 +81,32 @@ CANONICAL_NAP = {
 TOP_5_BOFU_PAGES = [
     {
         "title": "AI Automation Agency for Logistics & Supply Chain",
-        "url": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
-        "slug": "ai-automation-agency-for-logistics",
+        "url": "https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
+        "slug": "interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
         "key_metric": "82% faster manifest clearance, sub-200ms BoL parsing"
     },
     {
         "title": "Autonomous Dispatch Software for Freight Carriers",
-        "url": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
-        "slug": "autonomous-dispatch-software-for-freight-carriers",
+        "url": "https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers",
+        "slug": "automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers",
         "key_metric": "Dynamic route optimization cutting fuel overhead by 22%"
     },
     {
         "title": "Deterministic Warehouse Automation for 3PL Providers",
-        "url": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
-        "slug": "deterministic-warehouse-automation-for-3pl-providers",
+        "url": "https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
+        "slug": "optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
         "key_metric": "98% error cut in multi-depot WMS reconciliation"
     },
     {
         "title": "Fleet Route Optimization Agents for Supply Chain Directors",
-        "url": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
-        "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+        "url": "https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
+        "slug": "b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
         "key_metric": "40% reduction in stockouts and missed delivery SLAs"
     },
     {
         "title": "Custom EDI Parser Agents for Freight Forwarders",
-        "url": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
-        "slug": "custom-edi-parser-agents-for-freight-forwarders",
+        "url": "https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+        "slug": "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
         "key_metric": "Automated EDI 214/310 conversion in 1.9s latency"
     }
 ]
@@ -237,7 +237,7 @@ class DirectoryProfileSyncer:
             "bofu_solutions": self.bofu_pages
         }
 
-        md = f"""# Clutch.co Verified Directory Profile — {self.canonical['brand_name']}
+        md = f"""# Clutch.co Verified Directory Profile - {self.canonical['brand_name']}
 
 > **Platform Authority:** DR 92 (Verified B2B Engineering Directory)  
 > **Target Solutions Hub:** {self.canonical['solutions_hub']}  
@@ -272,11 +272,11 @@ Explore our enterprise solutions catalog:
 ---
 
 ## 3. Top Commercial Solutions (BOFU Landing Pages)
-1. [{self.bofu_pages[0]['title']}]({self.bofu_pages[0]['url']}) — {self.bofu_pages[0]['key_metric']}
-2. [{self.bofu_pages[1]['title']}]({self.bofu_pages[1]['url']}) — {self.bofu_pages[1]['key_metric']}
-3. [{self.bofu_pages[2]['title']}]({self.bofu_pages[2]['url']}) — {self.bofu_pages[2]['key_metric']}
-4. [{self.bofu_pages[3]['title']}]({self.bofu_pages[3]['url']}) — {self.bofu_pages[3]['key_metric']}
-5. [{self.bofu_pages[4]['title']}]({self.bofu_pages[4]['url']}) — {self.bofu_pages[4]['key_metric']}
+1. [{self.bofu_pages[0]['title']}]({self.bofu_pages[0]['url']}) - {self.bofu_pages[0]['key_metric']}
+2. [{self.bofu_pages[1]['title']}]({self.bofu_pages[1]['url']}) - {self.bofu_pages[1]['key_metric']}
+3. [{self.bofu_pages[2]['title']}]({self.bofu_pages[2]['url']}) - {self.bofu_pages[2]['key_metric']}
+4. [{self.bofu_pages[3]['title']}]({self.bofu_pages[3]['url']}) - {self.bofu_pages[3]['key_metric']}
+5. [{self.bofu_pages[4]['title']}]({self.bofu_pages[4]['url']}) - {self.bofu_pages[4]['key_metric']}
 
 ---
 
@@ -325,7 +325,7 @@ Clutch requires a 10-15 minute independent telephone interview for client verifi
             "target_solutions": self.bofu_pages
         }
 
-        md = f"""# GoodFirms Official Company Profile — {self.canonical['brand_name']}
+        md = f"""# GoodFirms Official Company Profile - {self.canonical['brand_name']}
 
 > **Platform Authority:** DR 86 (B2B Leaders Matrix Directory)  
 > **Canonical Entity:** {self.canonical['legal_name']}, {self.canonical['city']}, {self.canonical['country']}
@@ -391,7 +391,7 @@ Explore our audited production architectures:
             "bofu_features": self.bofu_pages
         }
 
-        md = f"""# G2 Product & Platform Profile — {self.canonical['brand_name']} AI Automation Platform
+        md = f"""# G2 Product & Platform Profile - {self.canonical['brand_name']} AI Automation Platform
 
 > **Platform Authority:** DR 91 (Gartner & B2B Software Evaluator)  
 > **Vendor:** {self.canonical['legal_name']}
@@ -461,7 +461,7 @@ Discover live commercial deployments:
             "top_solutions": self.bofu_pages
         }
 
-        md = f"""# Crunchbase Profile — {self.canonical['brand_name']}
+        md = f"""# Crunchbase Profile - {self.canonical['brand_name']}
 
 > **Platform Authority:** DR 91 (Global Entity Knowledge Graph Anchor)
 
@@ -529,7 +529,7 @@ Detailed solution architecture pods and client case studies:
         csv_str = output.getvalue()
 
         # Markdown documentation
-        md = f"""# Semrush Local & Yext 70+ Directory Syndication Feed — {self.canonical['brand_name']}
+        md = f"""# Semrush Local & Yext 70+ Directory Syndication Feed - {self.canonical['brand_name']}
 
 > **Platform Authority:** High Multi-Platform Syndication (Apple Maps, Bing, YellowPages, Here, TomTom)  
 > **Network Reach:** 70+ Local & Global Citation Networks
@@ -580,7 +580,7 @@ Detailed solution architecture pods and client case studies:
             "bofu_case_studies": self.bofu_pages
         }
 
-        md = f"""# Trustpilot Official Business Profile — {self.canonical['brand_name']}
+        md = f"""# Trustpilot Official Business Profile - {self.canonical['brand_name']}
 
 > **Platform Authority:** DR 93 (Global Consumer & Commercial Trust Anchor)  
 > **Target Canonical Domain:** {self.canonical['website']}

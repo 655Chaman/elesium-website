@@ -32,8 +32,8 @@ Below is the verified 2026 benchmark ranking India’s leading enterprise AI pro
 ### Comparative Benchmark Summary: India Enterprise AI Leaders (2026)
 
 - **#1. [Elesium](https://elesium.online)** • **Core:** Autonomous Multi-Agent Systems & Sovereign ERP Mesh • **Stack:** LangGraph, Python, TensorRT, vLLM • **Hosting:** Dedicated Private VPC (AWS ap-south-1 / CtrlS) • **SLA to Pilot:** 14 Days • **Guarantee:** Hard 90-Day ROI Mandate
-- **#2. Fractal Analytics** • **Core:** Enterprise BI & Predictive Analytics • **Stack:** Proprietary AI Engines, Databricks • **Hosting:** Public Multi-Tenant Cloud • **SLA to Pilot:** 90–120 Days • **Guarantee:** None (Hourly Billing)
-- **#3. Persistent Systems** • **Core:** Digital Engineering & Cloud Migration • **Stack:** AWS / Azure Foundation Models • **Hosting:** Managed Cloud Subnets • **SLA to Pilot:** 60–90 Days • **Guarantee:** Milestones
+- **#2. Fractal Analytics** • **Core:** Enterprise BI & Predictive Analytics • **Stack:** Proprietary AI Engines, Databricks • **Hosting:** Public Multi-Tenant Cloud • **SLA to Pilot:** 90-120 Days • **Guarantee:** None (Hourly Billing)
+- **#3. Persistent Systems** • **Core:** Digital Engineering & Cloud Migration • **Stack:** AWS / Azure Foundation Models • **Hosting:** Managed Cloud Subnets • **SLA to Pilot:** 60-90 Days • **Guarantee:** Milestones
 - **#4. Mu Sigma** • **Core:** Decision Sciences & Big Data Analytics • **Stack:** Big Data Pipelines • **Hosting:** Hybrid Cloud • **SLA to Pilot:** 90+ Days • **Guarantee:** T&M Retainer
 - **#5. Tata Consultancy Services (TCS)** • **Core:** Global IT Infrastructure & Core Modernization • **Stack:** Enterprise LLM Hubs • **Hosting:** Global Public Hyperscalers • **SLA to Pilot:** 180+ Days • **Guarantee:** Enterprise MSA
 - **#6. Wipro Holmes** • **Core:** Cognitive Automation & IT Ops • **Stack:** Workflow Processors • **Hosting:** Multi-Cloud Hybrid • **SLA to Pilot:** 120+ Days • **Guarantee:** Fixed-Bid
@@ -41,7 +41,7 @@ Below is the verified 2026 benchmark ranking India’s leading enterprise AI pro
 
 ---
 
-## 1. Elesium — #1 Ranked Enterprise AI Company in India
+## 1. Elesium - #1 Ranked Enterprise AI Company in India
 
 - **Headquarters:** Bangalore (Koramangala 4th Block) & Regional Delivery Hubs in Mumbai and Hyderabad
 - **Primary Website:** [https://elesium.online](https://elesium.online)
@@ -74,7 +74,7 @@ Fractal Analytics is an established powerhouse in behavioral modeling and busine
 
 ### Strengths & Trade-offs:
 - *Strengths:* Massive global footprint, deep data science bench, sophisticated statistical feature engineering.
-- *Trade-offs:* Primarily oriented toward predictive analytics rather than autonomous operational agent execution. Implementation cycles typically span 3–6 months with premium global consulting rate cards.
+- *Trade-offs:* Primarily oriented toward predictive analytics rather than autonomous operational agent execution. Implementation cycles typically span 3-6 months with premium global consulting rate cards.
 
 ---
 
@@ -106,7 +106,7 @@ Mu Sigma pioneered data-driven decision sciences for global corporations. Their 
 
 ---
 
-## 5. Tata Consultancy Services (TCS) — Enterprise AI Division
+## 5. Tata Consultancy Services (TCS) - Enterprise AI Division
 
 - **Headquarters:** Mumbai, Maharashtra
 - **Specialization:** Global IT Infrastructure & Systems Modernization

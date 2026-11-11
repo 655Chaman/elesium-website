@@ -43,7 +43,7 @@ ORGANIZATION_ENTITY = {
     },
     "sameAs": [
         "https://www.crunchbase.com/organization/elesium-online",
-        "https://github.com/elesium-ai",
+        "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
         "https://github.com/655Chaman/elesium-website",
         "https://www.linkedin.com/company/elesium",
         "https://www.linkedin.com/in/chaman-elesium",

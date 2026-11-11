@@ -30,7 +30,7 @@ def build_document():
         footer = section.footer
         fp = footer.paragraphs[0]
         fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        frun = fp.add_run("CONFIDENTIAL & PROPRIETARY — ELESIUM INTELLIGENCE CORE — ALL RIGHTS RESERVED")
+        frun = fp.add_run("CONFIDENTIAL & PROPRIETARY - ELESIUM INTELLIGENCE CORE - ALL RIGHTS RESERVED")
         frun.font.name = "Arial"
         frun.font.size = Pt(8)
         frun.font.color.rgb = RGBColor(148, 163, 184)
@@ -276,7 +276,7 @@ def build_document():
     add_bullet("Satisfies 100% of user query intent within the first viewport (0.5 seconds), eliminating pogo-sticking back to the SERP.", "1. Navboost Dwell Lock: ")
     add_bullet("Provides statistically verified, novel data not present on any competing URL (Information Gain US Patent 10,754,904 B2).", "2. Information Entropy Reduction: ")
     add_bullet("Employs exact character-for-character parity between human-rendered HTML and JSON-LD Knowledge Graph schemas.", "3. Algorithmic Entity Grounding: ")
-    add_bullet("Maintains a Moz On-Page optimization score strictly in the 96–98 sweet spot while deploying micro-paragraphs (<= 3 sentences).", "4. Compact Sturm Tri-Alignment: ")
+    add_bullet("Maintains a Moz On-Page optimization score strictly in the 96-98 sweet spot while deploying micro-paragraphs (<= 3 sentences).", "4. Compact Sturm Tri-Alignment: ")
     add_bullet("Corroborates corporate NAP (Name, Address, Phone) across at least 4 independent Tier-1 business directories with dofollow editorial citations.", "5. Multi-Platform Entity Corroboration: ")
     add_body("...it becomes mathematically impossible for Google to favor a generic, slow, unstructured competitor. Ranking #1 is the inevitable equilibrium.")
 
@@ -285,7 +285,7 @@ def build_document():
     add_body("In May 2024, an unprecedented leak of over 2,500 internal modules and 14,000+ attributes from Google's private ContentWarehouse API confirmed what search insiders long suspected: Google's public PR statements diverge dramatically from its actual ranking code.")
 
     add_h2("2.1 The Navboost User Interaction Telemetry Engine")
-    add_body("Google's core ranking relies heavily on Navboost—a machine-learning re-ranking system trained on billions of real user click logs and Chrome browser interaction streams. The leak confirmed the exact telemetry fields:")
+    add_body("Google's core ranking relies heavily on Navboost - a machine-learning re-ranking system trained on billions of real user click logs and Chrome browser interaction streams. The leak confirmed the exact telemetry fields:")
     
     headers_nav = ["Attribute Name", "Internal Module", "Type", "Algorithmic Function & Ranking Impact"]
     rows_nav = [
@@ -341,11 +341,11 @@ def build_document():
 
     add_h2("3.1 The Tri-Alignment Integrity Rule")
     add_body("Google's crawl parsers evaluate the thematic consistency between three critical on-page anchors. In the Sturm framework, these three elements must achieve 100% character-for-character matching:")
-    add_bullet("The clean, hyphen-separated keyword (e.g., /solutions/ai-automation-agency-for-logistics).", "1. Exact URL Slug: ")
-    add_bullet("Starts with the exact keyword followed by a brand separator (e.g., AI Automation Agency for Logistics — Autonomous Fleet Dispatch | Elesium).", "2. Meta Page Title: ")
+    add_bullet("The clean, hyphen-separated keyword (e.g., /solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers).", "1. Exact URL Slug: ")
+    add_bullet("Starts with the exact keyword followed by a brand separator (e.g., AI Automation Agency for Logistics - Autonomous Fleet Dispatch | Elesium).", "2. Meta Page Title: ")
     add_bullet("Matches the exact keyword with zero extraneous prefixes or conversational fluff.", "3. Single Primary <h1> Tag: ")
 
-    add_h2("3.2 The Moz 96–98 Optimization Sweet Spot")
+    add_h2("3.2 The Moz 96-98 Optimization Sweet Spot")
     add_body("A pervasive mistake in algorithmic SEO is trying to score 100 on page optimization tools (Moz On-Page Grader, SurferSEO, PageOptimizer Pro). The leaked Google documents and Sturm's empirical testing confirm that pages scoring 100 trigger Google's over-optimization / search-engine-manipulation classifier.")
     
     add_callout(
@@ -360,7 +360,7 @@ def build_document():
     )
 
     add_h2("3.3 Word Count & Micro-Paragraph Gate")
-    add_bullet("Total page word count must remain strictly between 400 and 550 words. Pages under 400 risk 'Thin Content' flags; pages over 600 dilute the exact keyword density.", "The 400–550 Word Boundary: ")
+    add_bullet("Total page word count must remain strictly between 400 and 550 words. Pages under 400 risk 'Thin Content' flags; pages over 600 dilute the exact keyword density.", "The 400-550 Word Boundary: ")
     add_bullet("No paragraph may exceed 3 sentences. The human eye and mobile viewport lose focus on large blocks of text, triggering badClicks.", "The 3-Sentence Micro-Paragraph: ")
     add_bullet("Zero introduction fluff ('In today's fast-paced digital world...'). Sentence 1 must state the exact solution and keyword immediately.", "Immediate Intent Resolution: ")
 
@@ -411,19 +411,19 @@ def build_document():
     add_bullet("Rank positions 16+. Scheduled for keyword cannibalization audits and structural rewrite.", "Tier 3: UNDERPERFORMING: ")
 
     add_h2("4.5 The Chad Michael Multimodal Grounding Model")
-    add_body("Chad Michael demonstrated that pairing every text URL with a 15–30 second vertical video grounded in Google Cloud Vision API entities boosts organic page authority by up to 240%.")
-    add_bullet("0–3s: Exact spoken keyword hook with on-screen caption.", "Second-by-Second Structure: ")
-    add_bullet("3–8s: Visceral enterprise operational friction point.", "")
-    add_bullet("8–18s: Concrete technological mechanism (FastAPI, LangGraph, private VPC).", "")
-    add_bullet("18–26s: Quantitative benchmark metrics (1.9s latency, ₹18.4L saved, 98% error cut).", "")
-    add_bullet("26–30s: Single frictionless conversion call-to-action.", "")
+    add_body("Chad Michael demonstrated that pairing every text URL with a 15-30 second vertical video grounded in Google Cloud Vision API entities boosts organic page authority by up to 240%.")
+    add_bullet("0-3s: Exact spoken keyword hook with on-screen caption.", "Second-by-Second Structure: ")
+    add_bullet("3-8s: Visceral enterprise operational friction point.", "")
+    add_bullet("8-18s: Concrete technological mechanism (FastAPI, LangGraph, private VPC).", "")
+    add_bullet("18-26s: Quantitative benchmark metrics (1.9s latency, ₹18.4L saved, 98% error cut).", "")
+    add_bullet("26-30s: Single frictionless conversion call-to-action.", "")
     add_bullet("Embed on the page with full VideoObject Schema.org containing transcript and thumbnail.", "1:1 Schema Injection: ")
 
     add_h2("4.6 The Joe Lau IP vs OpCo Valuation Carve-Out")
     add_body("Joe Lau's framework ensures that the digital engine builds long-term institutional enterprise value:")
     add_bullet("HoldCo IP (The Goose): The proprietary codebase, programmatic pipelines, simulators, and internal tools.", "Asset Isolation: ")
     add_bullet("OpCo Service Book (The Egg): Active client retainer and consulting contracts.", "")
-    add_bullet("By isolating proprietary software assets from human service delivery, agency valuation multiples escalate from 1.5x–2.0x EBITDA to 5.0x–8.0x+ SaaS-grade multiples.", "Valuation Escalation: ")
+    add_bullet("By isolating proprietary software assets from human service delivery, agency valuation multiples escalate from 1.5x-2.0x EBITDA to 5.0x-8.0x+ SaaS-grade multiples.", "Valuation Escalation: ")
 
     add_h2("4.7 The Matt McDermott Decentralized Sovereignty Protocol")
     add_body("Matt McDermott established that pinning content and authority proofs to decentralized protocols (IPFS, Arweave) creates immutable citation hashes that survive domain migrations, hosting outages, and algorithmic resets while being indexed by major search engines.")
@@ -432,7 +432,7 @@ def build_document():
     add_h1("CHAPTER 5: PRINCETON & GEORGIA TECH GENERATIVE ENGINE OPTIMIZATION (GEO & AEO)")
     add_body("With the rise of Perplexity, Google Gemini AI Overviews, SearchGPT, and Claude Search, ranking on traditional Google is only half the battle. Your content must be optimized to be cited as the primary authority by generative LLMs.")
 
-    add_h2("5.1 The 42–48 Word Answer Capsule")
+    add_h2("5.1 The 42-48 Word Answer Capsule")
     add_body("Princeton research (Aggarwal et al.) revealed that LLM retrieval engines extract concise, information-dense paragraphs placed immediately beneath a question header (<h2>):")
     add_bullet("Must be strictly between 42 and 48 words. Shorter answers lack semantic context; longer answers exceed the LLM's extractive attention window.", "Word Count Boundary: ")
     add_bullet("Must follow the exact syntax: [Entity] is [Category Definition] that [Specific Mechanism] delivering [Audited Quantitative Metric] under [Statutory / Legal Standard].", "Syntactic Structure: ")
@@ -441,7 +441,7 @@ def build_document():
         "SAMPLE 45-WORD ANSWER CAPSULE:\n"
         "Elesium is India's premier enterprise AI automation company, engineering sovereign multi-agent architectures, "
         "private VPC fine-tuned LLM clusters, and sub-2s automated pipelines from our Shivamogga engineering pod. "
-        "We deliver contractually guaranteed 3x–5x ROI in 90 days with full DPDP Act 2023 statutory compliance."
+        "We deliver contractually guaranteed 3x-5x ROI in 90 days with full DPDP Act 2023 statutory compliance."
     )
 
     add_h2("5.2 Wikidata QID Grounding & Entity Triples")
@@ -467,8 +467,8 @@ def build_document():
     add_h2("6.2 Hierarchical Sitemap Index Architecture")
     add_body("When managing over 500 URLs, never stuff all links into a single sitemap.xml. Large flat sitemaps exhaust crawler bandwidth and delay new page discovery:")
     add_bullet("sitemap.xml (Master index file containing pointers to child sub-sitemaps).", "Structure: ")
-    add_bullet("sitemap-core.xml (High-priority pages: Homepage, Services Hub, Calculators, Whitepapers, Videos - Priority 0.8–1.0, Weekly/Daily).", "")
-    add_bullet("sitemap-solutions.xml (Programmatic long-tail BOFU landing pages - Priority 0.6–0.7, Monthly).", "")
+    add_bullet("sitemap-core.xml (High-priority pages: Homepage, Services Hub, Calculators, Whitepapers, Videos - Priority 0.8-1.0, Weekly/Daily).", "")
+    add_bullet("sitemap-solutions.xml (Programmatic long-tail BOFU landing pages - Priority 0.6-0.7, Monthly).", "")
 
     add_h2("6.3 Instant IndexNow Real-Time Broadcast")
     add_body("Waiting for Googlebot or Bingbot to crawl your site organically is obsolete. The IndexNow protocol allows publishers to instantly notify search engines of newly created or updated URLs via a direct API POST:")
@@ -516,7 +516,7 @@ def build_document():
     add_h2("7.3 Digital PR Pitching (Connectively, Featured, Help a B2B Writer)")
     add_body("Securing editorial links from Forbes, Economic Times, TechCrunch, or Inc42 requires zero PR retainer fees if you deploy the Edward Sturm Expert Quote pitching framework:")
     add_bullet("Respond within 20 minutes of query publication.", "Rule 1: Speed to Lead: ")
-    add_bullet("1–3 sentences per paragraph, zero generic fluff, immediate hard numbers.", "Rule 2: Sturm Format: ")
+    add_bullet("1-3 sentences per paragraph, zero generic fluff, immediate hard numbers.", "Rule 2: Sturm Format: ")
     add_bullet("Cite specific engineering metrics (e.g. 'slashed latency from 4.8s to 180ms while maintaining DPDP Act 2023 compliance').", "Rule 3: Technical Precision: ")
     add_bullet("Provide clean attribution with founder credentials and deep target anchor link.", "Rule 4: Dofollow Signature: ")
 
@@ -546,13 +546,13 @@ def build_document():
 
     add_h2("Phase 2: Programmatic Landing Page Construction")
     add_bullet("Generate pages adhering strictly to Sturm Tri-Alignment (Slug = Title = H1).", "Step 2.1: ")
-    add_bullet("Assert 400–550 word count and <= 3 sentences per paragraph.", "Step 2.2: ")
-    add_bullet("Audit the Moz score to confirm it hits the 96–98 sweet spot (never 100).", "Step 2.3: ")
+    add_bullet("Assert 400-550 word count and <= 3 sentences per paragraph.", "Step 2.2: ")
+    add_bullet("Audit the Moz score to confirm it hits the 96-98 sweet spot (never 100).", "Step 2.3: ")
     add_bullet("Ensure the Primary CTA button precedes the hero graphic in the mobile DOM.", "Step 2.4: ")
 
     add_h2("Phase 3: Generative Whitepaper & Answer Capsule Injection")
     add_bullet("Generate 1,800+ word technical whitepapers answering core industry architectural questions.", "Step 3.1: ")
-    add_bullet("Inject a 42–48 word Answer Capsule directly beneath the primary <h2> question.", "Step 3.2: ")
+    add_bullet("Inject a 42-48 word Answer Capsule directly beneath the primary <h2> question.", "Step 3.2: ")
     add_bullet("Ground all concepts with canonical Wikidata QID triples in JSON-LD markup.", "Step 3.3: ")
 
     add_h2("Phase 4: Technical Build, SSG & Instant Indexing")

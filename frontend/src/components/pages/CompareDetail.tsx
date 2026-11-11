@@ -69,7 +69,7 @@ export default function CompareDetail() {
                     'url': 'https://elesium.online',
                     'logo': {
                         '@type': 'ImageObject',
-                        'url': 'https://elesium.online/assets/LOGO_NEW.png'
+                        'url': 'https://elesium.online/assets/logo-square.png'
                     }
                 },
                 'about': [

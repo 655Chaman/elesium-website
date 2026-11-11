@@ -1,5 +1,5 @@
 """
-syndication_enhancements.py — Technical whitepaper enhancements for Elesium Parasite SEO.
+syndication_enhancements.py - Technical whitepaper enhancements for Elesium Parasite SEO.
 Craig Campbell Parasite Syndication Protocol (SEO Rockstars 2026).
 Provides production Mermaid diagrams, ASCII schematics, Python code implementations,
 and deep architectural analysis for all 8 flagship syndications.
@@ -134,11 +134,11 @@ Enterprise capital allocators must distinguish between one-time development CapE
 
 | Cost Category | Tier 1: Low-Code Workflows | Tier 2: Managed LLM RAG | Tier 3: Elesium Agentic Core |
 |---|---|---|---|
-| **Initial Implementation (CapEx)** | ₹2,00,000 – ₹5,00,000 | ₹8,00,000 – ₹25,00,000 | ₹30,00,000 – ₹1,00,00,000+ |
+| **Initial Implementation (CapEx)** | ₹2,00,000 - ₹5,00,000 | ₹8,00,000 - ₹25,00,000 | ₹30,00,000 - ₹1,00,00,000+ |
 | **Delivery Timeframe** | 2 to 4 Weeks | 1 to 3 Months | 3 to 6 Months |
-| **Monthly Infrastructure (OpEx)** | ₹15,000 – ₹35,000 (SaaS) | ₹40,000 – ₹1,20,000 (Tokens) | ₹80,000 – ₹2,50,000 (Private VPC GPU) |
+| **Monthly Infrastructure (OpEx)** | ₹15,000 - ₹35,000 (SaaS) | ₹40,000 - ₹1,20,000 (Tokens) | ₹80,000 - ₹2,50,000 (Private VPC GPU) |
 | **Token Ingress & Egress Risk** | None (Deterministic) | High (Uncapped US API calls) | Zero (Self-hosted Sovereign weights) |
-| **DPDP Act 2023 Audit Cost** | Not Applicable | ₹3,00,000 – ₹8,00,000 | Bundled In Architecture |
+| **DPDP Act 2023 Audit Cost** | Not Applicable | ₹3,00,000 - ₹8,00,000 | Bundled In Architecture |
 | **Audited Enterprise Payback** | 6 to 12 Months | 4 to 6 Months | **Contractual 90-Day Cash ROI** |
 """,
         "mermaid": """```mermaid
@@ -158,19 +158,19 @@ graph TD
 |                        AI AUTOMATION TCO BENCHMARK (INDIA 2026)                                   |
 |                                                                                                   |
 |  TIER 1: LOW-CODE AUTOMATION (n8n, Zapier)                                                        |
-|  - Setup Cost     : ₹2,00,000 – ₹5,00,000                                                         |
+|  - Setup Cost     : ₹2,00,000 - ₹5,00,000                                                         |
 |  - Timeline       : 2 to 4 weeks                                                                  |
-|  - Annual Opex    : ₹1,50,000 – ₹3,00,000 (SaaS fees + basic maintenance)                         |
+|  - Annual Opex    : ₹1,50,000 - ₹3,00,000 (SaaS fees + basic maintenance)                         |
 |  - Best For       : Internal utility scripts, CRM-Slack sync, basic lead routing                  |
 |                                                                                                   |
 |  TIER 2: STANDARD LLM / RAG INTEGRATION                                                           |
-|  - Setup Cost     : ₹8,00,000 – ₹25,00,000                                                        |
+|  - Setup Cost     : ₹8,00,000 - ₹25,00,000                                                        |
 |  - Timeline       : 1 to 3 months                                                                 |
-|  - Annual Opex    : ₹4,00,000 – ₹12,00,000 (API token ingress + vector DB)                       |
+|  - Annual Opex    : ₹4,00,000 - ₹12,00,000 (API token ingress + vector DB)                       |
 |  - Best For       : Internal knowledge bases, conversational support, PDF summarization           |
 |                                                                                                   |
 |  TIER 3: BESPOKE ENTERPRISE AGENTIC SYSTEMS (ELESIUM SPECIALTY)                                   |
-|  - Setup Cost     : ₹30,00,000 – ₹1,00,00,000+                                                    |
+|  - Setup Cost     : ₹30,00,000 - ₹1,00,00,000+                                                    |
 |  - Timeline       : 3 to 6 months                                                                 |
 |  - Infrastructure : Sovereign AWS ap-south-1 VPC with self-hosted Llama-3 weights                 |
 |  - Audited ROI    : Contractual 90-day cash-flow recovery (avg. 3.8x net return)                  |
@@ -435,7 +435,7 @@ Choosing the wrong framework can cause technical debt, high latency, and vendor 
 | **Execution Topology** | Strictly Linear DAG | Linear Chains + ReAct Tool Calling | **Cyclical Graph with Feedback Loops** |
 | **State Persistence** | In-Memory Webhooks | Session Storage / Redis | **PostgreSQL ACID Checkpoints** |
 | **Failure Recovery** | Restart Entire Flow | Node-level retry | **Zero-Loss Mid-Graph Resume** |
-| **Inference Latency** | 800ms – 2,500ms | 500ms – 1,800ms | **180ms – 420ms (Direct C++/Python)** |
+| **Inference Latency** | 800ms - 2,500ms | 500ms - 1,800ms | **180ms - 420ms (Direct C++/Python)** |
 | **Self-Hosted VPC Readiness** | Docker / K8s Manual | High (Python env) | **Turnkey AWS ap-south-1 Sovereign VPC** |
 | **DPDP Act Compliance** | Manual Configuration | Developer Dependent | **Zero-Retention Hard Perimeter** |
 | **Best Application** | Lightweight Internal Webhooks | Knowledge Base Q&A | **Mission-Critical Revenue Operations** |
@@ -485,7 +485,7 @@ flowchart TD
 |  ───────────────────────────────────────────────────────────────────────────────────────────────  |
 |  Execution Architecture     Linear Directed Acyclic   Chains / ReAct Agent    Cyclical State Graph|
 |  State Persistence          In-Memory Execution       Session Memory          PostgreSQL ACID     |
-|  Inference Latency          800ms – 2,500ms           500ms – 1,800ms         180ms – 420ms       |
+|  Inference Latency          800ms - 2,500ms           500ms - 1,800ms         180ms - 420ms       |
 |  DPDP Act 2023 Compliance   Manual Container Setup    Python VPC Dependent    Native Sovereign VPC|
 |  Human-in-the-Loop          Webhook Wait Node         Thread Suspension Hack  Native Interrupt Gate|
 |  Best Enterprise Fit        Internal Office Utilities Knowledge Base Q&A      Core Revenue Systems|

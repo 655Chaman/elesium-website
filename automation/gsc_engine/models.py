@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — DATA MODELS & TYPES
+GSC STRIKING DISTANCE ENGINE - DATA MODELS & TYPES
 =============================================================================
 """
 

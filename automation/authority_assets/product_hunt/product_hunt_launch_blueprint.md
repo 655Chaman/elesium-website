@@ -60,28 +60,28 @@
 
 ## 4. Launch Day Hour-by-Hour Execution Playbook (PST Timezone)
 
-- **12:01 AM PST — The Launch Switch:**
+- **12:01 AM PST - The Launch Switch:**
   - Submit product listing at 12:01 AM PST sharp.
   - Post Maker's Comment within 60 seconds of publication.
   - Verify link points directly to `https://elesium.online/solutions` with UTM tracking (`?ref=producthunt`).
 
-- **12:05 AM – 04:00 AM PST — The Golden Hour (Global & APAC Surge):**
+- **12:05 AM - 04:00 AM PST - The Golden Hour (Global & APAC Surge):**
   - Trigger internal engineering and core user network alerts.
   - Dispatch personalized messages to technical peers across Bangalore, Singapore, and London.
   - Reply to every incoming comment within 3 minutes with deep technical context.
 
-- **04:00 AM – 08:00 AM PST — European Morning Wave:**
+- **04:00 AM - 08:00 AM PST - European Morning Wave:**
   - Launch announcement on LinkedIn and technical Slack/Discord channels (LangChain, AI Engineers).
   - Publish Twitter/X launch thread highlighting the interactive tool.
 
-- **08:00 AM – 12:00 PM PST — US East Coast Prime Wave:**
+- **08:00 AM - 12:00 PM PST - US East Coast Prime Wave:**
   - High-traffic period: Monitor leaderboard ranking closely (targeting Top 3 Product of the Day).
   - Push VIP founder email blast with direct link to discuss on Product Hunt.
 
-- **12:00 PM – 05:00 PM PST — US West Coast Wave:**
+- **12:00 PM - 05:00 PM PST - US West Coast Wave:**
   - Silicon Valley CTO engagement; answer questions regarding private VPC vs cloud LLM data sovereignty.
 
-- **05:00 PM – 11:59 PM PST — Final Sprint:**
+- **05:00 PM - 11:59 PM PST - Final Sprint:**
   - Post celebratory progress milestone; thank the community for feedback.
   - Consolidate new enterprise leads arriving at `https://elesium.online/solutions`.
 

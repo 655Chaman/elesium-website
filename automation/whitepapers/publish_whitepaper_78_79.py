@@ -86,8 +86,8 @@ SECTIONS_78 = [
             "60,000,000 inference tokens per day across document summarization, code generation, and agentic workflows, multi-tenant API fees "
             "routinely exceed ₹32,00,000 ($38,500) monthly. Worse, public API round-trips from Indian commercial centers to North American or "
             "European cloud datacenters incur unavoidable transatlantic network latency penalties of 380ms to 750ms, crippling deterministic "
-            "real-time state machines. Deploying sovereign open-source models—such as DeepSeek-R1, Llama 3 70B, and specialized Indian foundation "
-            "models—within an on-premise, air-gapped private VPC eliminates external data egress, locks monthly operating expenditures to predictable "
+            "real-time state machines. Deploying sovereign open-source models - such as DeepSeek-R1, Llama 3 70B, and specialized Indian foundation "
+            "models - within an on-premise, air-gapped private VPC eliminates external data egress, locks monthly operating expenditures to predictable "
             "hardware amortizations, and delivers an audited 18.4ms time-to-first-token (TTFT) response latency. Partnering with a specialized "
             "[enterprise AI automation agency in India](/ai-automation-agency-india) ensures production-grade deployment with zero telemetry leakage."
         )
@@ -109,8 +109,8 @@ SECTIONS_78 = [
         "type": "paragraph",
         "value": (
             "The two primary quantization paradigms deployed in enterprise Indian infrastructure are Activation-aware Weight Quantization (AWQ) "
-            "and GGUF (formerly GGML). While standard integer quantization (such as round-to-nearest RTN) treats all weights equally—causing severe "
-            "perplexity degradation in multi-step mathematical and code generation tasks—AWQ observes the activation distribution during forward passes. "
+            "and GGUF (formerly GGML). While standard integer quantization (such as round-to-nearest RTN) treats all weights equally - causing severe "
+            "perplexity degradation in multi-step mathematical and code generation tasks - AWQ observes the activation distribution during forward passes. "
             "By identifying the top 1% of salient weight channels that protect critical reasoning tokens and scaling them prior to INT4 quantization, "
             "AWQ preserves 99.2% of unquantized FP16 MMLU and GSM8K benchmark accuracy."
         )
@@ -119,7 +119,7 @@ SECTIONS_78 = [
         "type": "paragraph",
         "value": (
             "From a memory footprint perspective, INT4 AWQ reduces the 70B parameter model weights from 140GB down to 38.5GB VRAM. This dramatic "
-            "reduction allows a complete 70B parameter model—such as Llama 3 70B or the distilled DeepSeek-R1 70B—to run on a cost-effective "
+            "reduction allows a complete 70B parameter model - such as Llama 3 70B or the distilled DeepSeek-R1 70B - to run on a cost-effective "
             "dual NVIDIA L40S (48GB VRAM each) or a single NVIDIA A100 (80GB VRAM) server. For edge industrial deployments or air-gapped regional "
             "branch offices lacking dedicated datacenter cooling, GGUF 4-bit (Q4_K_M) quantization enables heterogeneous offloading across system RAM "
             "and consumer workstation GPUs, maintaining 22.4 tokens/second generation rates on dual workstation rigs."
@@ -145,8 +145,8 @@ SECTIONS_78 = [
             "The vLLM serving framework resolves memory thrashing via PagedAttention, an algorithm modeled on the virtual memory paging architectures "
             "of modern operating systems. Instead of demanding contiguous memory buffers, PagedAttention segments the KV cache into fixed-size physical "
             "blocks (typically 16 tokens per block). Logical block tables track the physical memory pages assigned to each token sequence, dynamically "
-            "allocating memory on demand as new tokens are generated. When combined with continuous batching—which injects incoming requests into the "
-            "active generation loop at iteration-level granularity rather than waiting for entire batches to finish—vLLM increases GPU throughput by 3.8x "
+            "allocating memory on demand as new tokens are generated. When combined with continuous batching - which injects incoming requests into the "
+            "active generation loop at iteration-level granularity rather than waiting for entire batches to finish - vLLM increases GPU throughput by 3.8x "
             "compared to standard Hugging Face Text Generation Inference (TGI)."
         )
     },
@@ -422,7 +422,7 @@ SECTIONS_79 = [
     {
         "type": "paragraph",
         "value": (
-            "Enterprise financial and supply chain operations across India process hundreds of millions of commercial documents each month—including "
+            "Enterprise financial and supply chain operations across India process hundreds of millions of commercial documents each month - including "
             "vendor tax invoices, transporter lorry receipts (LRs), railway consignment notes, customs bills of entry, and purchase orders. "
             "Despite widespread digital transformation initiatives, corporate accounts payable (AP) departments remain crippled by manual document "
             "re-keying, manual audit verification, and persistent tax mismatches. This systemic bottleneck stems from the fundamental mismatch between "
@@ -477,7 +477,7 @@ SECTIONS_79 = [
         "type": "paragraph",
         "value": (
             "To successfully process Indian regional documents, the LayoutLMv3 architecture is fine-tuned with vernacular Indic language tokenizers "
-            "derived from IndicBERT. Indian commercial invoices frequently feature hybrid language layouts—for instance, an English invoice template "
+            "derived from IndicBERT. Indian commercial invoices frequently feature hybrid language layouts - for instance, an English invoice template "
             "with vendor names in Devanagari (Hindi/Marathi) and item descriptions in Tamil script. Standard Western tokenizers decompose Devanagari and "
             "Dravidian conjunct characters into unaligned Unicode fragments, causing immediate parsing collapse. By incorporating script-aware "
             "subword tokenizers and specialized preprocessing filters (including CLAHE contrast normalization for faint thermal receipts), the "
@@ -614,7 +614,7 @@ SECTIONS_79 = [
         "value": (
             "To maintain deterministic audit standards, documents pass through an automated Human-in-the-Loop (HITL) exception gate. Invoices "
             "exhibiting an aggregate token extraction confidence score of 96.5% or higher proceed straight-through to automated ERP posting. "
-            "Invoices scoring below 96.5%—or exhibiting a GST Rule 36(4) discrepancy—are routed to an internal review portal where audit personnel "
+            "Invoices scoring below 96.5% - or exhibiting a GST Rule 36(4) discrepancy - are routed to an internal review portal where audit personnel "
             "inspect side-by-side visual bounding boxes with 1-click verification, slashing human audit time by 82%."
         )
     },

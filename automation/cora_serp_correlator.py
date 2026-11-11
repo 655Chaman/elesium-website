@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATOR CLI (MODULE 1) — MASTER RUNNER
+TED KUBAITIS CORA SERP CORRELATOR CLI (MODULE 1) - MASTER RUNNER
 =============================================================================
 Classification: Statistical Factor Correlation & Visibility-First Interaction Depth
 Methodology: Ted Kubaitis (SEO Rockstars 2026 Day 1 - Cora 20,000+ Ranking Factors)

@@ -6,7 +6,7 @@ Enterprise autonomous LLM inference optimizes GPU VRAM by partitioning key-value
 
 ## 1. The Memory Wall: Why KV-Cache Bottlenecks Enterprise Multi-Agent Swarms
 
-In high-throughput enterprise deployments—such as automated invoice parsing, real-time banking compliance audits, and multi-agent customer service swarms—large language models do not fail due to a lack of raw floating-point operations (FLOPS). They fail because of the GPU memory wall. Specifically, the Key-Value (KV) cache generated during autoregressive token generation consumes massive amounts of high-bandwidth memory (HBM), creating severe throughput bottlenecks.
+In high-throughput enterprise deployments - such as automated invoice parsing, real-time banking compliance audits, and multi-agent customer service swarms - large language models do not fail due to a lack of raw floating-point operations (FLOPS). They fail because of the GPU memory wall. Specifically, the Key-Value (KV) cache generated during autoregressive token generation consumes massive amounts of high-bandwidth memory (HBM), creating severe throughput bottlenecks.
 
 Across 80 transformer layers in Llama-3 70B, with a hidden dimension of 8,192 and multi-query attention, each token requires ~262 KB of KV-cache memory. When an autonomous agent analyzes a 32,000-token legal document or financial ledger, its KV cache alone demands 8.4 GB of VRAM. A cluster of 10 concurrent agent workers processing documents simultaneously quickly exhausts an 80 GB NVIDIA H100 or A100 GPU before computation even begins.
 

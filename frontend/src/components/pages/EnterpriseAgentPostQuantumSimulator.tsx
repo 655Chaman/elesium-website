@@ -217,10 +217,10 @@ ${results.nistSecurityLevel >= 3
                 onChange={e => setCryptographicSuite(e.target.value as any)}
                 className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
               >
-                <option value="legacy_rsa_ecc">Legacy RSA-2048 / ECDH (Level 0 — Shor Vulnerable)</option>
+                <option value="legacy_rsa_ecc">Legacy RSA-2048 / ECDH (Level 0 - Shor Vulnerable)</option>
                 <option value="hybrid_x25519_kyber768">Hybrid X25519 + ML-KEM-768 (Transitional Defense)</option>
-                <option value="ml_kem_768_pure">NIST FIPS 203 ML-KEM-768 (Level 3 — Enterprise Standard)</option>
-                <option value="ml_kem_1024_military">NIST FIPS 203 ML-KEM-1024 (Level 5 — Military Grade)</option>
+                <option value="ml_kem_768_pure">NIST FIPS 203 ML-KEM-768 (Level 3 - Enterprise Standard)</option>
+                <option value="ml_kem_1024_military">NIST FIPS 203 ML-KEM-1024 (Level 5 - Military Grade)</option>
               </select>
             </div>
 
@@ -232,8 +232,8 @@ ${results.nistSecurityLevel >= 3
                 onChange={e => setDigitalSignatureScheme(e.target.value as any)}
                 className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
               >
-                <option value="ecdsa_p256">Legacy ECDSA P-256 (Level 0 — Broken by Shor)</option>
-                <option value="ed25519">Legacy Ed25519 (Level 0 — Broken by Shor)</option>
+                <option value="ecdsa_p256">Legacy ECDSA P-256 (Level 0 - Broken by Shor)</option>
+                <option value="ed25519">Legacy Ed25519 (Level 0 - Broken by Shor)</option>
                 <option value="ml_dsa_44">NIST FIPS 204 ML-DSA-44 (Dilithium-2 / Level 2)</option>
                 <option value="ml_dsa_65">NIST FIPS 204 ML-DSA-65 (Dilithium-3 / Level 3 Standard)</option>
                 <option value="ml_dsa_87">NIST FIPS 204 ML-DSA-87 (Dilithium-5 / Level 5 Maximum)</option>

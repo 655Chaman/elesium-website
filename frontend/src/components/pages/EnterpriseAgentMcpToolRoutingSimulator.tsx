@@ -285,8 +285,8 @@ Note: ${results.recommendationNote}
                 className="w-full bg-slate-800 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-indigo-500 font-medium"
               >
                 <option value="conservative">Conservative (Retain top 40% candidate tools)</option>
-                <option value="balanced">Balanced (Retain top 18% candidate tools — Recommended)</option>
-                <option value="ultra_pruned">Ultra-Pruned (Retain top 8% candidate tools — High Throughput)</option>
+                <option value="balanced">Balanced (Retain top 18% candidate tools - Recommended)</option>
+                <option value="ultra_pruned">Ultra-Pruned (Retain top 8% candidate tools - High Throughput)</option>
               </select>
             </div>
 
@@ -471,7 +471,7 @@ Note: ${results.recommendationNote}
               </div>
               <h3 className="text-sm font-bold text-white font-mono uppercase">Context Pruning Engines</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Injecting 200 JSON tool schemas consumes 50,000+ context tokens before user prompt injection. Semantic embedding rerankers select the exact 3–5 tools required for the task.
+                Injecting 200 JSON tool schemas consumes 50,000+ context tokens before user prompt injection. Semantic embedding rerankers select the exact 3-5 tools required for the task.
               </p>
             </div>
 
@@ -500,7 +500,7 @@ Note: ${results.recommendationNote}
               },
               {
                 q: 'How does dynamic context pruning prevent prompt token saturation?',
-                a: 'Each tool definition in OpenAI or Anthropic format carries a detailed JSON schema with parameter descriptions (averaging 250–350 tokens per tool). When an enterprise registers 100 tools, 30,000+ tokens are consumed on every request just to declare tools. Dynamic pruning uses semantic similarity to filter the tool catalog down to the top 3–5 relevant tools for that specific turn, slashing token overhead by 85–92%.'
+                a: 'Each tool definition in OpenAI or Anthropic format carries a detailed JSON schema with parameter descriptions (averaging 250-350 tokens per tool). When an enterprise registers 100 tools, 30,000+ tokens are consumed on every request just to declare tools. Dynamic pruning uses semantic similarity to filter the tool catalog down to the top 3-5 relevant tools for that specific turn, slashing token overhead by 85-92%.'
               },
               {
                 q: 'Can MCP servers run entirely on-premise or within private Indian VPCs?',

@@ -35,32 +35,32 @@
   "target_solutions": [
     {
       "title": "AI Automation Agency for Logistics & Supply Chain",
-      "url": "https://elesium.online/solutions/ai-automation-agency-for-logistics",
-      "slug": "ai-automation-agency-for-logistics",
+      "url": "https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
+      "slug": "interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
       "key_metric": "82% faster manifest clearance, sub-200ms BoL parsing"
     },
     {
       "title": "Autonomous Dispatch Software for Freight Carriers",
-      "url": "https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers",
-      "slug": "autonomous-dispatch-software-for-freight-carriers",
+      "url": "https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers",
+      "slug": "automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers",
       "key_metric": "Dynamic route optimization cutting fuel overhead by 22%"
     },
     {
       "title": "Deterministic Warehouse Automation for 3PL Providers",
-      "url": "https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers",
-      "slug": "deterministic-warehouse-automation-for-3pl-providers",
+      "url": "https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
+      "slug": "optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
       "key_metric": "98% error cut in multi-depot WMS reconciliation"
     },
     {
       "title": "Fleet Route Optimization Agents for Supply Chain Directors",
-      "url": "https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors",
-      "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
+      "url": "https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
+      "slug": "b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
       "key_metric": "40% reduction in stockouts and missed delivery SLAs"
     },
     {
       "title": "Custom EDI Parser Agents for Freight Forwarders",
-      "url": "https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders",
-      "slug": "custom-edi-parser-agents-for-freight-forwarders",
+      "url": "https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
+      "slug": "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
       "key_metric": "Automated EDI 214/310 conversion in 1.9s latency"
     }
   ]

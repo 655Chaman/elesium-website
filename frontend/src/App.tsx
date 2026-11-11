@@ -240,7 +240,7 @@ function App() {
                             <Route path="/waitlist" element={<Waitlist />} />
                             <Route path="/onboarding" element={<EnterpriseOnboarding />} />
                             <Route path="/audit" element={<Waitlist />} />
-                            <Route path="/book-audit" element={<Waitlist />} />
+                            <Route path="/book-audit" element={<Navigate to="/audit/" replace />} />
                             <Route path="/authors/chaman-shah" element={<AuthorProfile />} />
                             <Route path="/team/chaman-shah" element={<Navigate to="/authors/chaman-shah/" replace />} />
                             <Route path="/team" element={<AuthorProfile />} />
@@ -254,6 +254,11 @@ function App() {
                             <Route path="/glossary" element={<Glossary />} />
                             <Route path="/tools" element={<ToolsHub />} />
                             <Route path="/tools/" element={<ToolsHub />} />
+                            <Route path="/tools/token-cost-arbitrage" element={<Navigate to="/tools/token-cost-arbitrage-calculator/" replace />} />
+                            <Route path="/tools/dpdp-penalty-calculator" element={<Navigate to="/tools/dpdp-act-penalty-exposure-calculator/" replace />} />
+                            <Route path="/tools/rag-latency-simulator" element={<Navigate to="/tools/enterprise-rag-latency-simulator/" replace />} />
+                            <Route path="/tools/gpu-cluster-sizer" element={<Navigate to="/tools/agent-vram-gpu-cluster-sizer/" replace />} />
+                            <Route path="/tools/b2b-seo-roi-model" element={<Navigate to="/tools/b2b-seo-roi-payback-model/" replace />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator/" replace />} />
                             <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />

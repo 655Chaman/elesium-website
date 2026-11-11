@@ -63,11 +63,11 @@ def generate_video_script(slug: str, keyword: str, title: str = "") -> Path:
 
 | Timecode | Visual Segment | Spoken Voiceover (High-Ticket Authority) | On-Screen Text Graphic |
 | :--- | :--- | :--- | :--- |
-| **00 – 03s** | Pattern Interrupt Close-Up: Avatar looks directly into camera with intense focus. | *"Stop paying ₹15 Lakhs for Zapier workflows that break on high API volumes."* | **STOP PAYING ₹15L FOR FRAGILE WRAPPERS** |
-| **03 – 08s** | Cutaway B-Roll: Red error console, timeout latency alert over legacy ERP dashboard. | *"Legacy Indian agencies sell wrappers. When your ERP fails, they quote 4 months of billables."* | **LEGACY AGENCIES = 4-MONTH BILLABLE TRAPS** |
-| **08 – 18s** | Rapid Cutaways (every 2.5s): LangGraph state machine flow diagram $\\to$ Private VPC terminal. | *"Elesium builds deterministic multi-agent pods in your private cloud with zero data retention."* | **DETERMINISTIC LANGGRAPH PODS // PRIVATE VPC** |
-| **18 – 26s** | Proof B-Roll: Production dashboard showing operational hours saved and cash-flow metrics. | *"BFSI & manufacturing clients hit cash-flow positive ROI in under 90 days. Guaranteed by SLA."* | **HARD 90-DAY CASH-FLOW POSITIVE ROI** |
-| **26 – 30s** | Avatar Call-to-Action: Direct gaze with on-screen WhatsApp QR code and tap indicator. | *"Tap the link to speak directly with an AI systems engineer on WhatsApp."* | **TAP LINK // DIRECT WHATSAPP DESK (+91 8317329312)** |
+| **00 - 03s** | Pattern Interrupt Close-Up: Avatar looks directly into camera with intense focus. | *"Stop paying ₹15 Lakhs for Zapier workflows that break on high API volumes."* | **STOP PAYING ₹15L FOR FRAGILE WRAPPERS** |
+| **03 - 08s** | Cutaway B-Roll: Red error console, timeout latency alert over legacy ERP dashboard. | *"Legacy Indian agencies sell wrappers. When your ERP fails, they quote 4 months of billables."* | **LEGACY AGENCIES = 4-MONTH BILLABLE TRAPS** |
+| **08 - 18s** | Rapid Cutaways (every 2.5s): LangGraph state machine flow diagram $\\to$ Private VPC terminal. | *"Elesium builds deterministic multi-agent pods in your private cloud with zero data retention."* | **DETERMINISTIC LANGGRAPH PODS // PRIVATE VPC** |
+| **18 - 26s** | Proof B-Roll: Production dashboard showing operational hours saved and cash-flow metrics. | *"BFSI & manufacturing clients hit cash-flow positive ROI in under 90 days. Guaranteed by SLA."* | **HARD 90-DAY CASH-FLOW POSITIVE ROI** |
+| **26 - 30s** | Avatar Call-to-Action: Direct gaze with on-screen WhatsApp QR code and tap indicator. | *"Tap the link to speak directly with an AI systems engineer on WhatsApp."* | **TAP LINK // DIRECT WHATSAPP DESK (+91 8317329312)** |
 
 ---
 

@@ -108,7 +108,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
       a: 'The compiler identifies semantic redundancy, strips boilerplate conversational padding, and automatically synthesizes high-density few-shot examples from historical ground-truth runs. By expressing identical constraints in fewer, mathematically precise tokens, input payload size decreases by 38.2%, directly slashing LLM API spend across high-throughput production workloads.'
     },
     {
-      q: 'Does continuous prompt optimization require exposing private enterprise data to external model providers?',
+      q: 'Does continuous prompt optimization require exposing sovereign enterprise data to external model providers?',
       a: 'Zero customer training or evaluation data is leaked externally. The optimization loop runs entirely within your customer-managed Virtual Private Cloud (VPC), utilizing self-hosted evaluation harnesses and air-gapped synthetic mutators that never persist telemetry to third-party endpoints.'
     }
   ];

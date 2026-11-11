@@ -9,7 +9,7 @@
 
 ## 1. The Core Philosophy: The Yosemite 30-Day Protocol
 
-Owner dependency is the single greatest destroyer of agency enterprise value. If a business requires the founder to make daily decisions, the business is not an investable asset—it is merely a high-stress self-employment contract.
+Owner dependency is the single greatest destroyer of agency enterprise value. If a business requires the founder to make daily decisions, the business is not an investable asset - it is merely a high-stress self-employment contract.
 
 To pass the **Yosemite 30-Day Test**, all decisions must fall into one of two categories:
 1. **Type 1 Decisions (Irreversible / Asymmetric Risk)**: Structural capitalization, equity issuance, core corporate restructuring, or binding legal commitments $> \text{₹15,00,000}$. *Requires Board/Founder review.*
@@ -104,4 +104,4 @@ To maintain gross margins $\ge 70\%$ and ensure valuation multiple expansion:
 
 ## 5. Summary: Operational Autonomy Check
 
-When every engineer, AM, and operations specialist follows these frameworks, founder involvement drops from 60+ hours per week to $<5$ hours per month. The agency shifts from a founder-centric lifestyle practice to an institutional enterprise asset commanding a **4.5x–5.5x EBITDA valuation multiple**.
+When every engineer, AM, and operations specialist follows these frameworks, founder involvement drops from 60+ hours per week to $<5$ hours per month. The agency shifts from a founder-centric lifestyle practice to an institutional enterprise asset commanding a **4.5x-5.5x EBITDA valuation multiple**.

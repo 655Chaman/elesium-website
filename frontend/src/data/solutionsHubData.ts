@@ -257,7 +257,7 @@ export const topHighLeverSolutions: SolutionSummaryItem[] = [
   {
     "id": 2381,
     "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
-    "h1": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India \u2014 Sovereign Enterprise Architecture",
+    "h1": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture",
     "hubCategory": "BFSI",
     "targetPersona": "Chief Technology Officers & Banking Infrastructure Architects",
     "mozScore": 98,
@@ -285,7 +285,7 @@ export const topHighLeverSolutions: SolutionSummaryItem[] = [
   {
     "id": 2150,
     "slug": "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration",
-    "h1": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration \u2014 Sovereign Enterprise Architecture",
+    "h1": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture",
     "hubCategory": "Logistics & Supply Chain",
     "targetPersona": "Chief Information Officers & Logistics IT Infrastructure Directors",
     "mozScore": 98,
@@ -313,7 +313,7 @@ export const topHighLeverSolutions: SolutionSummaryItem[] = [
   {
     "id": 3760,
     "slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
-    "h1": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance \u2014 Sovereign Enterprise Architecture",
+    "h1": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance - Sovereign Enterprise Architecture",
     "hubCategory": "Healthcare & Life Sciences",
     "targetPersona": "Chief Medical Information Officers & Hospital Trust Technology Directors",
     "mozScore": 98,
@@ -341,7 +341,7 @@ export const topHighLeverSolutions: SolutionSummaryItem[] = [
   {
     "id": 1641,
     "slug": "electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises",
-    "h1": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises \u2014 Sovereign Enterprise Architecture",
+    "h1": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises - Sovereign Enterprise Architecture",
     "hubCategory": "Manufacturing & Industrial",
     "targetPersona": "Chief Technology Officers & Plant Automation Directors in Electronic City",
     "mozScore": 98,
@@ -369,7 +369,7 @@ export const topHighLeverSolutions: SolutionSummaryItem[] = [
   {
     "id": 2010,
     "slug": "air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore",
-    "h1": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore \u2014 Sovereign Enterprise Architecture",
+    "h1": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore - Sovereign Enterprise Architecture",
     "hubCategory": "Sovereign Defense",
     "targetPersona": "Chief Information Security Officers & AI Infrastructure Directors at Bangalore GCCs",
     "mozScore": 98,
@@ -408,7 +408,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2150,
         "slug": "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration",
-        "h1": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Chief Information Officers & Logistics IT Infrastructure Directors",
         "mozScore": 98,
@@ -436,7 +436,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1678,
         "slug": "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
-        "h1": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders \u2014 Sovereign Enterprise Architecture",
+        "h1": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Customs Brokerage Directors & International Freight Forwarding Operations Heads",
         "mozScore": 98,
@@ -464,7 +464,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2160,
         "slug": "automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore",
-        "h1": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Enterprise Controllers & Billing Operations Directors in Bangalore",
         "mozScore": 98,
@@ -492,7 +492,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2170,
         "slug": "automated-lut-letter-of-undertaking-export-invoice-filing-agents-integrated-with-tally-prime",
-        "h1": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Export Finance Directors & International Trade Controllers",
         "mozScore": 98,
@@ -520,7 +520,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2223,
         "slug": "e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments",
-        "h1": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments \u2014 Sovereign Enterprise Architecture",
+        "h1": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Billing Department Managers & Accounts Payable Controllers",
         "mozScore": 98,
@@ -548,7 +548,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2226,
         "slug": "bilingual-vernacular-invoice-ocr-agents-for-tally-prime-automated-voucher-entry",
-        "h1": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry \u2014 Sovereign Enterprise Architecture",
+        "h1": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Logistics Finance Controllers & Freight Clearing Accounts Managers",
         "mozScore": 98,
@@ -576,7 +576,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2161,
         "slug": "gstr-1-sales-return-auto-compilation-agents-from-tally-prime-sales-ledgers-in-chennai",
-        "h1": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai \u2014 Sovereign Enterprise Architecture",
+        "h1": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Chennai Manufacturing Financial Controllers & Indirect Tax Compliance Heads",
         "mozScore": 98,
@@ -604,7 +604,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2159,
         "slug": "automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi",
-        "h1": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Warehouse Logistics Heads & Supply Chain Dispatch Directors in Delhi NCR",
         "mozScore": 98,
@@ -632,7 +632,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2166,
         "slug": "automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal",
-        "h1": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Chief Financial Officers, Senior Tax Partners & Corporate Statutory Auditors",
         "mozScore": 98,
@@ -660,7 +660,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2142,
         "slug": "tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing",
-        "h1": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing \u2014 Sovereign Enterprise Architecture",
+        "h1": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Logistics IT Infrastructure Directors & Enterprise Accounting Integration Leads",
         "mozScore": 98,
@@ -688,7 +688,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1829,
         "slug": "interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
-        "h1": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers \u2014 Sovereign Enterprise Architecture",
+        "h1": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Fleet Operations Directors & Long-Haul Logistics Compliance Managers",
         "mozScore": 98,
@@ -716,7 +716,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2224,
         "slug": "automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers",
-        "h1": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Logistics Dispatch Supervisors & Warehouse Transport Controllers",
         "mozScore": 98,
@@ -744,7 +744,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2509,
         "slug": "fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india",
-        "h1": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India \u2014 Sovereign Enterprise Architecture",
+        "h1": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Enterprise Accounting Systems Architects & Head of AI Infrastructure",
         "mozScore": 98,
@@ -772,7 +772,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1633,
         "slug": "optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
-        "h1": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts \u2014 Sovereign Enterprise Architecture",
+        "h1": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Warehouse Operations Directors & Freight Audit Operations Leads",
         "mozScore": 98,
@@ -800,7 +800,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1628,
         "slug": "b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents",
-        "h1": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents \u2014 Sovereign Enterprise Architecture",
+        "h1": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Logistics Compliance Directors & Border Checkpoint Clearing Agents",
         "mozScore": 98,
@@ -828,7 +828,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1636,
         "slug": "three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap",
-        "h1": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP \u2014 Sovereign Enterprise Architecture",
+        "h1": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Enterprise SAP Controllers & Accounts Payable Shared Services Directors",
         "mozScore": 98,
@@ -856,7 +856,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1810,
         "slug": "quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs",
-        "h1": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs \u2014 Sovereign Enterprise Architecture",
+        "h1": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Quick-Commerce Vice Presidents of Operations & Dark Store Logistics Directors",
         "mozScore": 98,
@@ -884,7 +884,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1762,
         "slug": "pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs",
-        "h1": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs \u2014 Sovereign Enterprise Architecture",
+        "h1": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Cold Chain Quality Assurance Directors & Pharmaceutical Distribution Heads",
         "mozScore": 98,
@@ -912,7 +912,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2172,
         "slug": "cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad",
-        "h1": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad \u2014 Sovereign Enterprise Architecture",
+        "h1": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "SEZ Financial Controllers, Tax Compliance Directors & IT Park Operations Heads in Hyderabad",
         "mozScore": 98,
@@ -940,7 +940,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2185,
         "slug": "automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon",
-        "h1": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon - Sovereign Enterprise Architecture",
         "hubCategory": "Logistics & Supply Chain",
         "targetPersona": "Corporate Financial Controllers & Accounts Payable Directors in Gurgaon",
         "mozScore": 98,
@@ -978,7 +978,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2381,
         "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
-        "h1": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India \u2014 Sovereign Enterprise Architecture",
+        "h1": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Chief Technology Officers & Banking Infrastructure Architects",
         "mozScore": 98,
@@ -1006,7 +1006,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1598,
         "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
-        "h1": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors \u2014 Sovereign Enterprise Architecture",
+        "h1": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Payment Gateway CISOs & Cryptographic Security Officers",
         "mozScore": 98,
@@ -1034,7 +1034,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2020,
         "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
-        "h1": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Real Estate Legal Heads, Real Estate Developers & Corporate Fiduciaries",
         "mozScore": 98,
@@ -1062,7 +1062,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3353,
         "slug": "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
-        "h1": "RBI Cyber Security Framework Compliant State Disaster Recovery Engines for Banks \u2014 Sovereign Enterprise Architecture",
+        "h1": "RBI Cyber Security Framework Compliant State Disaster Recovery Engines for Banks - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Banking Chief Information Officers & Business Continuity Directors",
         "mozScore": 98,
@@ -1090,7 +1090,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1875,
         "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
-        "h1": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks \u2014 Sovereign Enterprise Architecture",
+        "h1": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Bank Chief Information Security Officers & Compliance Auditors",
         "mozScore": 98,
@@ -1118,7 +1118,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3607,
         "slug": "rbi-cyber-security-framework-compliant-mla-latent-memory-isolation-auditors",
-        "h1": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors \u2014 Sovereign Enterprise Architecture",
+        "h1": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Enterprise AI Infrastructure Architects & Multi-Tenant Security Auditors",
         "mozScore": 98,
@@ -1146,7 +1146,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1878,
         "slug": "rbi-it-governance-master-direction-automated-compliance-scoring-telemetry-for-tier-1-nbfcs",
-        "h1": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs \u2014 Sovereign Enterprise Architecture",
+        "h1": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "NBFC Chief Risk Officers & IT Governance Steering Committees",
         "mozScore": 98,
@@ -1174,7 +1174,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2012,
         "slug": "sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization",
-        "h1": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Public Sector Bank Executive Directors & Enterprise Knowledge Managers",
         "mozScore": 98,
@@ -1202,7 +1202,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2018,
         "slug": "private-vpc-compliance-monitoring-bots-for-chennai-nbfcs-with-automated-rbi-audit-reporting",
-        "h1": "Private VPC Compliance Monitoring Bots for Chennai NBFCs with Automated RBI Audit Reporting \u2014 Sovereign Enterprise Architecture",
+        "h1": "Private VPC Compliance Monitoring Bots for Chennai NBFCs with Automated RBI Audit Reporting - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "NBFC Chief Technology Officers & Information Security Auditors",
         "mozScore": 98,
@@ -1230,7 +1230,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2019,
         "slug": "sovereign-financial-underwriting-chatbots-for-pune-microfinance-institutions-with-vernacular-voice-support",
-        "h1": "Sovereign Financial Underwriting Chatbots for Pune Microfinance Institutions with Vernacular Voice Support \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sovereign Financial Underwriting Chatbots for Pune Microfinance Institutions with Vernacular Voice Support - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Microfinance Operations Heads & Rural Credit Appraisal Directors",
         "mozScore": 98,
@@ -1258,7 +1258,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1521,
         "slug": "n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai",
-        "h1": "n8n Banking Loan Eligibility Webhook Processing Latency Telemetry for Private NBFCs in Mumbai \u2014 Sovereign Enterprise Architecture",
+        "h1": "n8n Banking Loan Eligibility Webhook Processing Latency Telemetry for Private NBFCs in Mumbai - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Digital Lending Product Heads & Integration Engineering Leads",
         "mozScore": 98,
@@ -1286,7 +1286,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3764,
         "slug": "deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos",
-        "h1": "Deterministic Automated Loan Underwriting Unified DeepSeek Agents for Fintech CTOs \u2014 Sovereign Enterprise Architecture",
+        "h1": "Deterministic Automated Loan Underwriting Unified DeepSeek Agents for Fintech CTOs - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Fintech Chief Technology Officers & Head of Credit Risk Analytics",
         "mozScore": 98,
@@ -1314,7 +1314,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3400,
         "slug": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",
-        "h1": "DPDP Act Statutory Audit Trail KV-Cache Generators for Fintech Underwriting \u2014 Sovereign Enterprise Architecture",
+        "h1": "DPDP Act Statutory Audit Trail KV-Cache Generators for Fintech Underwriting - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Chief Privacy Officers, Fintech General Counsels & Data Protection Officers",
         "mozScore": 98,
@@ -1342,7 +1342,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1681,
         "slug": "aadhaar-e-kyc-and-pan-verification-fraud-defense-telemetry-for-digital-lending-platforms",
-        "h1": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms \u2014 Sovereign Enterprise Architecture",
+        "h1": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Fintech Chief Risk Officers, Fraud Prevention Heads & Compliance Directors",
         "mozScore": 98,
@@ -1370,7 +1370,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1965,
         "slug": "upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators",
-        "h1": "UPI Merchant Chargeback Dispute Arbitration Autonomous Agents for Mumbai Payment Aggregators \u2014 Sovereign Enterprise Architecture",
+        "h1": "UPI Merchant Chargeback Dispute Arbitration Autonomous Agents for Mumbai Payment Aggregators - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Payment Aggregator Dispute Operations Heads & Merchant Settlement Directors",
         "mozScore": 98,
@@ -1398,7 +1398,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2358,
         "slug": "cross-border-remittance-settlement-agents-bridging-upi-and-rbi-cbdc-digital-rupee",
-        "h1": "Cross-Border Remittance Settlement Agents Bridging UPI and RBI CBDC Digital Rupee \u2014 Sovereign Enterprise Architecture",
+        "h1": "Cross-Border Remittance Settlement Agents Bridging UPI and RBI CBDC Digital Rupee - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Cross-Border Remittance Directors, Treasury Heads & Foreign Exchange Operations Officers",
         "mozScore": 98,
@@ -1426,7 +1426,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3261,
         "slug": "100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways",
-        "h1": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways \u2014 Sovereign Enterprise Architecture",
+        "h1": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Payment Gateway Chief Risk Officers & Real-Time Fraud Operations Directors",
         "mozScore": 98,
@@ -1454,7 +1454,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3001,
         "slug": "1f1b-bubble-reduction-sla-compliance-monitors-for-sovereign-private-banking-in-india",
-        "h1": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India \u2014 Sovereign Enterprise Architecture",
+        "h1": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "HPC Infrastructure Engineers & Private Banking AI Platform Directors",
         "mozScore": 98,
@@ -1482,7 +1482,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3085,
         "slug": "nvlink-ring-attention-bandwidth-saturation-controllers-for-sovereign-banking-fraud-forensics",
-        "h1": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics \u2014 Sovereign Enterprise Architecture",
+        "h1": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Fraud Forensics Directors & Sovereign Banking High-Performance Computing Leads",
         "mozScore": 98,
@@ -1510,7 +1510,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2149,
         "slug": "tally-journal-voucher-automated-foreign-exchange-fluctuation-adjustment-agents-in-mumbai",
-        "h1": "Tally Journal Voucher Automated Foreign Exchange Fluctuation Adjustment Agents in Mumbai \u2014 Sovereign Enterprise Architecture",
+        "h1": "Tally Journal Voucher Automated Foreign Exchange Fluctuation Adjustment Agents in Mumbai - Sovereign Enterprise Architecture",
         "hubCategory": "BFSI",
         "targetPersona": "Corporate Treasury Controllers & Chief Financial Officers in Mumbai",
         "mozScore": 98,
@@ -1548,7 +1548,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1641,
         "slug": "electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises",
-        "h1": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises \u2014 Sovereign Enterprise Architecture",
+        "h1": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Chief Technology Officers & Plant Automation Directors in Electronic City",
         "mozScore": 98,
@@ -1576,7 +1576,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1654,
         "slug": "electronic-city-phase-1-factory-line-machine-vision-defect-classification-telemetry-for-smt-assembly",
-        "h1": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly \u2014 Sovereign Enterprise Architecture",
+        "h1": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Quality Assurance Directors & Surface Mount Technology (SMT) Operations Heads",
         "mozScore": 98,
@@ -1604,7 +1604,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2070,
         "slug": "sovereign-multi-agent-order-state-machine-telemetry-for-automotive-manufacturing-just-in-time-lines",
-        "h1": "Sovereign Multi-Agent Order State Machine Telemetry for Automotive Manufacturing Just-In-Time Lines \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sovereign Multi-Agent Order State Machine Telemetry for Automotive Manufacturing Just-In-Time Lines - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Automotive Assembly Plant Directors & Just-In-Time (JIT) Supply Chain Heads",
         "mozScore": 98,
@@ -1632,7 +1632,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2125,
         "slug": "sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india",
-        "h1": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India \u2014 Sovereign Enterprise Architecture",
+        "h1": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Operations Vice Presidents & SAP ERP Integration Architects for Indian Manufacturing Plants",
         "mozScore": 98,
@@ -1660,13 +1660,13 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2095,
         "slug": "air-gapped-purdue-model-level-2-scada-isolation-telemetry-for-pharmaceutical-cleanroom-facilities",
-        "h1": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Pharmaceutical CISO, Cleanroom Validation Directors & Industrial Cyber Security Heads",
         "mozScore": 98,
         "metaDescription": "Deploy Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
         "hero": {
-          "subheadline": "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems\u2014such as HVAC blowers, differential pressure dampers, and particle monitors\u2014to ransomware and cyber intrusions."
+          "subheadline": "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions."
         },
         "trustSection": {
           "metrics": [
@@ -1688,7 +1688,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1747,
         "slug": "pharmaceutical-sterile-injectable-cleanroom-particle-counter-telemetry-for-aseptic-manufacturing-suites",
-        "h1": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites \u2014 Sovereign Enterprise Architecture",
+        "h1": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Cleanroom Quality Assurance Heads & Sterility Assurance Managers for Injectable Formulations",
         "mozScore": 98,
@@ -1716,7 +1716,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2701,
         "slug": "continuous-telemetry-anomaly-detection-agents-for-semiconductor-fabrication-cleanrooms",
-        "h1": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms \u2014 Sovereign Enterprise Architecture",
+        "h1": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Semiconductor Fab Directors, Microelectronics Yield Engineers & Cleanroom Facilities Managers",
         "mozScore": 98,
@@ -1744,7 +1744,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2205,
         "slug": "industrial-iot-mtls-1-3-encrypted-gateway-agents-for-defense-manufacturing-facilities",
-        "h1": "Industrial IoT mTLS 1.3 Encrypted Gateway Agents for Defense Manufacturing Facilities \u2014 Sovereign Enterprise Architecture",
+        "h1": "Industrial IoT mTLS 1.3 Encrypted Gateway Agents for Defense Manufacturing Facilities - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Defense Manufacturing CISOs, Aerospace Plant Security Officers & Sensitive Facility IT Directors",
         "mozScore": 98,
@@ -1772,7 +1772,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2126,
         "slug": "raw-material-batch-traceability-barcode-scan-validation-agents-for-automotive-tier-1-audits-in-chennai",
-        "h1": "Raw Material Batch Traceability Barcode Scan Validation Agents for Automotive Tier-1 Audits in Chennai \u2014 Sovereign Enterprise Architecture",
+        "h1": "Raw Material Batch Traceability Barcode Scan Validation Agents for Automotive Tier-1 Audits in Chennai - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Quality Assurance Directors & Tier-1 Automotive Component Manufacturing Heads in Chennai",
         "mozScore": 98,
@@ -1800,7 +1800,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2151,
         "slug": "tally-bill-of-materials-bom-manufacturing-journal-auto-generation-from-mes-plc-telemetry",
-        "h1": "Tally Bill of Materials (BOM) Manufacturing Journal Auto-Generation from MES PLC Telemetry \u2014 Sovereign Enterprise Architecture",
+        "h1": "Tally Bill of Materials (BOM) Manufacturing Journal Auto-Generation from MES PLC Telemetry - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Manufacturing Managing Directors & Factory Financial Controllers Using Tally Prime",
         "mozScore": 98,
@@ -1828,7 +1828,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2911,
         "slug": "speculative-tree-lookahead-depth-optimizers-for-automotive-factory-quality-audits",
-        "h1": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits \u2014 Sovereign Enterprise Architecture",
+        "h1": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Quality Engineering Directors & Automotive Manufacturing AI Infrastructure Architects",
         "mozScore": 98,
@@ -1856,7 +1856,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2192,
         "slug": "sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers",
-        "h1": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Plant Automation Engineers & Operational Technology (OT) Systems Integration Specialists",
         "mozScore": 98,
@@ -1884,7 +1884,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2940,
         "slug": "p2p-nvlink-cross-instance-kv-cache-bridges-for-automotive-factory-quality-audits",
-        "h1": "P2P NVLink Cross-Instance KV-Cache Bridges for Automotive Factory Quality Audits \u2014 Sovereign Enterprise Architecture",
+        "h1": "P2P NVLink Cross-Instance KV-Cache Bridges for Automotive Factory Quality Audits - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "High-Performance Computing AI Infrastructure Architects & Smart Factory Systems Directors",
         "mozScore": 98,
@@ -1912,7 +1912,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2193,
         "slug": "modbus-tcp-binary-packet-parsing-agents-for-automotive-assembly-line-directors",
-        "h1": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors \u2014 Sovereign Enterprise Architecture",
+        "h1": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Assembly Line Directors & Automotive Electrical Engineering Managers",
         "mozScore": 98,
@@ -1940,7 +1940,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3140,
         "slug": "nvlink-expert-dispatch-latency-optimizers-for-automotive-assembly-robotic-arms",
-        "h1": "NVLink Expert Dispatch Latency Optimizers for Automotive Assembly Robotic Arms \u2014 Sovereign Enterprise Architecture",
+        "h1": "NVLink Expert Dispatch Latency Optimizers for Automotive Assembly Robotic Arms - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Robotics Engineering Directors & Automotive Automation Systems Architects",
         "mozScore": 98,
@@ -1968,13 +1968,13 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2872,
         "slug": "dynamic-branch-pruning-controllers-for-industrial-scada-predictive-maintenance",
-        "h1": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance \u2014 Sovereign Enterprise Architecture",
+        "h1": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Predictive Maintenance Directors & Reliability Engineering Heads for Heavy Industrial Equipment",
         "mozScore": 98,
         "metaDescription": "Deploy Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
         "hero": {
-          "subheadline": "Heavy industrial machinery\u2014including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps\u2014generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes."
+          "subheadline": "Heavy industrial machinery - including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps - generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes."
         },
         "trustSection": {
           "metrics": [
@@ -1996,7 +1996,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3040,
         "slug": "nvlink-all-reduce-latency-optimizers-for-automotive-factory-quality-inspection",
-        "h1": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection \u2014 Sovereign Enterprise Architecture",
+        "h1": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Smart Factory Infrastructure Architects & AI Quality Inspection Engineering Leads",
         "mozScore": 98,
@@ -2024,7 +2024,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3242,
         "slug": "interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing",
-        "h1": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing \u2014 Sovereign Enterprise Architecture",
+        "h1": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Industrial AI Infrastructure Engineers & SCADA Systems Automation Directors",
         "mozScore": 98,
@@ -2052,7 +2052,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3275,
         "slug": "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
-        "h1": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Computer Vision Architects & Manufacturing Automation Directors",
         "mozScore": 98,
@@ -2080,13 +2080,13 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 117,
         "slug": "automotive-paint-shop-surface-defect-inspection-agents-for-assembly-plants",
-        "h1": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants - Sovereign Enterprise Architecture",
         "hubCategory": "Manufacturing & Industrial",
         "targetPersona": "Paint Shop Operations Managers & Automotive Quality Assurance Directors",
         "mozScore": 98,
         "metaDescription": "Deploy Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
         "hero": {
-          "subheadline": "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects\u2014such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness\u2014require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects."
+          "subheadline": "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects."
         },
         "trustSection": {
           "metrics": [
@@ -2118,7 +2118,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3760,
         "slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
-        "h1": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Chief Medical Information Officers & Hospital Trust Technology Directors",
         "mozScore": 98,
@@ -2146,7 +2146,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1712,
         "slug": "private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
-        "h1": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts \u2014 Sovereign Enterprise Architecture",
+        "h1": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Hospital Trust Chief Information Officers & Clinical Safety Committees",
         "mozScore": 98,
@@ -2174,7 +2174,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2011,
         "slug": "on-premise-llama-3-fine-tuning-and-sovereign-inference-telemetry-for-hyderabad-pharmaceutical-r-and-d",
-        "h1": "On-Premise Llama-3 Fine-Tuning and Sovereign Inference Telemetry for Hyderabad Pharmaceutical R&D \u2014 Sovereign Enterprise Architecture",
+        "h1": "On-Premise Llama-3 Fine-Tuning and Sovereign Inference Telemetry for Hyderabad Pharmaceutical R&D - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Pharmaceutical Research & Development Vice Presidents & Chief Scientific Officers in Hyderabad",
         "mozScore": 98,
@@ -2202,7 +2202,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1730,
         "slug": "hospital-biomedical-equipment-preventive-maintenance-and-uptime-sla-telemetry-for-clinical-engineering",
-        "h1": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering \u2014 Sovereign Enterprise Architecture",
+        "h1": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Biomedical Engineering Directors & Hospital Operations Vice Presidents",
         "mozScore": 98,
@@ -2230,7 +2230,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3069,
         "slug": "chunked-sequence-attention-weight-partitioners-for-hospital-clinical-ehr-copilots",
-        "h1": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots \u2014 Sovereign Enterprise Architecture",
+        "h1": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Hospital Chief Technology Officers & Clinical Informatics Architects",
         "mozScore": 98,
@@ -2258,7 +2258,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3019,
         "slug": "column-linear-attention-weight-partitioners-for-hospital-clinical-triage-copilots",
-        "h1": "Column-Linear Attention Weight Partitioners for Hospital Clinical Triage Copilots \u2014 Sovereign Enterprise Architecture",
+        "h1": "Column-Linear Attention Weight Partitioners for Hospital Clinical Triage Copilots - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Emergency Department Directors & Critical Care Clinical Leads",
         "mozScore": 98,
@@ -2286,7 +2286,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 34,
         "slug": "pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads",
-        "h1": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads \u2014 Sovereign Enterprise Architecture",
+        "h1": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Pharmacovigilance Vice Presidents & Clinical Drug Safety Directors",
         "mozScore": 98,
@@ -2314,7 +2314,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2919,
         "slug": "disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots",
-        "h1": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots \u2014 Sovereign Enterprise Architecture",
+        "h1": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Hospital AI Systems Architects & Clinical Computing Platform Directors",
         "mozScore": 98,
@@ -2342,7 +2342,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2969,
         "slug": "1f1b-micro-batching-coordinators-for-hospital-clinical-triage-copilots",
-        "h1": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots \u2014 Sovereign Enterprise Architecture",
+        "h1": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Emergency Care Systems Engineers & Clinical High-Performance Computing Leads",
         "mozScore": 98,
@@ -2370,7 +2370,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3258,
         "slug": "100b-parameter-medical-imaging-multimodal-agent-deployment-architectures",
-        "h1": "100B-Parameter Medical Imaging Multimodal Agent Deployment Architectures \u2014 Sovereign Enterprise Architecture",
+        "h1": "100B-Parameter Medical Imaging Multimodal Agent Deployment Architectures - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Chief Radiologists, Diagnostic Imaging Directors & Medical AI Infrastructure Leads",
         "mozScore": 98,
@@ -2398,7 +2398,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1715,
         "slug": "electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries",
-        "h1": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries \u2014 Sovereign Enterprise Architecture",
+        "h1": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Clinical Research Registry Directors & Health Data Protection Officers",
         "mozScore": 98,
@@ -2426,13 +2426,13 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1717,
         "slug": "hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering",
-        "h1": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering \u2014 Sovereign Enterprise Architecture",
+        "h1": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Hospital Chief Information Security Officers & Biomedical Network Security Leads",
         "mozScore": 98,
         "metaDescription": "Deploy Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering with sub-100ms deterministic execution, private VPC isolation, and Healthcare & Life Sciences compliance. Schedule architecture audit.",
         "hero": {
-          "subheadline": "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices\u2014including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries."
+          "subheadline": "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices - including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries."
         },
         "trustSection": {
           "metrics": [
@@ -2454,7 +2454,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1698,
         "slug": "hospital-inpatient-discharge-turnaround-acceleration-and-pharmacy-reconciliation-telemetry-for-private-clinics",
-        "h1": "Hospital Inpatient Discharge Turnaround Acceleration and Pharmacy Reconciliation Telemetry for Private Clinics \u2014 Sovereign Enterprise Architecture",
+        "h1": "Hospital Inpatient Discharge Turnaround Acceleration and Pharmacy Reconciliation Telemetry for Private Clinics - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Private Hospital Chief Operating Officers & Inpatient Pharmacy Directors",
         "mozScore": 98,
@@ -2482,7 +2482,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1718,
         "slug": "automated-medical-peer-review-and-mortality-committee-dossier-preparation-telemetry-for-hospital-governance",
-        "h1": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance \u2014 Sovereign Enterprise Architecture",
+        "h1": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Chief Medical Officers, Clinical Governance Chairs & Medical Quality Directors",
         "mozScore": 98,
@@ -2510,7 +2510,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1294,
         "slug": "gaussian-mechanism-noise-multiplier-sigma-calibration-telemetry-for-electronic-health-record-ehr-embeddings",
-        "h1": "Gaussian Mechanism Noise Multiplier Sigma Calibration Telemetry for Electronic Health Record (EHR) Embeddings \u2014 Sovereign Enterprise Architecture",
+        "h1": "Gaussian Mechanism Noise Multiplier Sigma Calibration Telemetry for Electronic Health Record (EHR) Embeddings - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Health AI Privacy Researchers & Chief Data Protection Officers",
         "mozScore": 98,
@@ -2538,7 +2538,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1740,
         "slug": "private-hospital-statutory-clinical-establishment-act-registration-renewal-telemetry-for-legal-fiduciaries",
-        "h1": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries \u2014 Sovereign Enterprise Architecture",
+        "h1": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Hospital Legal Counsels, Medical Directors & Regulatory Compliance Fiduciaries",
         "mozScore": 98,
@@ -2566,7 +2566,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1737,
         "slug": "hospital-pharmacy-cold-chain-temperature-sensor-and-insulin-integrity-telemetry-for-hospital-pharmacists",
-        "h1": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists \u2014 Sovereign Enterprise Architecture",
+        "h1": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Chief Pharmacists & Hospital Cold Chain Quality Managers",
         "mozScore": 98,
@@ -2594,7 +2594,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1695,
         "slug": "icd-10-cm-automated-diagnostic-coding-and-clinical-discrepancy-telemetry-for-medical-billing-controllers",
-        "h1": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers \u2014 Sovereign Enterprise Architecture",
+        "h1": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Medical Billing Controllers & Hospital Revenue Cycle Directors",
         "mozScore": 98,
@@ -2622,7 +2622,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1716,
         "slug": "medical-ai-diagnostic-model-drift-and-clinical-ground-truth-calibration-telemetry-for-clinical-pathology",
-        "h1": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology \u2014 Sovereign Enterprise Architecture",
+        "h1": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Clinical Pathology Directors & Hospital AI Governance Chairs",
         "mozScore": 98,
@@ -2650,7 +2650,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1693,
         "slug": "abdm-m3-health-information-user-consent-artifact-decryption-telemetry-for-clinical-diagnostic-centers",
-        "h1": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers \u2014 Sovereign Enterprise Architecture",
+        "h1": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers - Sovereign Enterprise Architecture",
         "hubCategory": "Healthcare & Life Sciences",
         "targetPersona": "Diagnostic Center Chief Information Officers & Health Information Network Directors",
         "mozScore": 98,
@@ -2724,7 +2724,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2010,
         "slug": "air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore",
-        "h1": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Chief Information Security Officers & AI Infrastructure Directors at Bangalore GCCs",
         "mozScore": 98,
@@ -2752,13 +2752,13 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3405,
         "slug": "air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries",
-        "h1": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Ministry Technology Directors & Sovereign Military Intelligence Architects",
         "mozScore": 98,
         "metaDescription": "Deploy Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries with sub-100ms deterministic execution, private VPC isolation, and Sovereign Defense compliance. Schedule architecture audit.",
         "hero": {
-          "subheadline": "National defense ministries processing classified multi-source intelligence\u2014including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks\u2014require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations."
+          "subheadline": "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations."
         },
         "trustSection": {
           "metrics": [
@@ -2780,7 +2780,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3575,
         "slug": "mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves",
-        "h1": "MLA Latent Memory Pool Defragmentation Managers for Sovereign Air-Gapped Defense Enclaves \u2014 Sovereign Enterprise Architecture",
+        "h1": "MLA Latent Memory Pool Defragmentation Managers for Sovereign Air-Gapped Defense Enclaves - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Intelligence HPC Architects & Military AI Infrastructure Engineers",
         "mozScore": 98,
@@ -2808,7 +2808,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3528,
         "slug": "multi-tiered-kv-memory-fragmentation-monitors-for-sovereign-air-gapped-defense-enclaves",
-        "h1": "Multi-Tiered KV Memory Fragmentation Monitors for Sovereign Air-Gapped Defense Enclaves \u2014 Sovereign Enterprise Architecture",
+        "h1": "Multi-Tiered KV Memory Fragmentation Monitors for Sovereign Air-Gapped Defense Enclaves - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Command & Control (C2) AI Infrastructure Heads & Defense Cloud Enclave Administrators",
         "mozScore": 98,
@@ -2836,7 +2836,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3489,
         "slug": "static-prefix-sink-reservation-daemons-for-air-gapped-sovereign-defense-enclaves",
-        "h1": "Static Prefix Sink Reservation Daemons for Air-Gapped Sovereign Defense Enclaves \u2014 Sovereign Enterprise Architecture",
+        "h1": "Static Prefix Sink Reservation Daemons for Air-Gapped Sovereign Defense Enclaves - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Military Intelligence Systems Architects & Joint Operations Center (JOC) AI Engineers",
         "mozScore": 98,
@@ -2864,7 +2864,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1399,
         "slug": "ml-kem-1024-military-grade-key-encapsulation-telemetry-for-sovereign-defense-ai-swarms",
-        "h1": "ML-KEM-1024 Military-Grade Key Encapsulation Telemetry for Sovereign Defense AI Swarms \u2014 Sovereign Enterprise Architecture",
+        "h1": "ML-KEM-1024 Military-Grade Key Encapsulation Telemetry for Sovereign Defense AI Swarms - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Cryptography Directors & Autonomous Unmanned Systems Security Leads",
         "mozScore": 98,
@@ -2892,7 +2892,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1601,
         "slug": "true-random-number-generator-trng-continuous-entropy-health-monitoring-telemetry-for-sovereign-crypto-enclaves",
-        "h1": "True Random Number Generator (TRNG) Continuous Entropy Health Monitoring Telemetry for Sovereign Crypto Enclaves \u2014 Sovereign Enterprise Architecture",
+        "h1": "True Random Number Generator (TRNG) Continuous Entropy Health Monitoring Telemetry for Sovereign Crypto Enclaves - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Military Cryptographic Evaluation Heads & Defense Hardware Security Module (HSM) Engineers",
         "mozScore": 98,
@@ -2920,7 +2920,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 1999,
         "slug": "paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters",
-        "h1": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters \u2014 Sovereign Enterprise Architecture",
+        "h1": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Datacenter Infrastructure Directors & Air-Gapped High-Performance Computing Architects",
         "mozScore": 98,
@@ -2948,7 +2948,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2532,
         "slug": "air-gapped-private-cloud-flashdecoding-deployment-runbooks-for-defense-installations-in-india",
-        "h1": "Air-Gapped Private Cloud FlashDecoding++ Deployment Runbooks for Defense Installations in India \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped Private Cloud FlashDecoding++ Deployment Runbooks for Defense Installations in India - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Military Cloud Computing Directors & Indian Defense R&D AI Infrastructure Specialists",
         "mozScore": 98,
@@ -2976,7 +2976,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2471,
         "slug": "awq-quantized-deepseek-r1-reasoning-model-deployment-agents-for-air-gapped-defense-servers",
-        "h1": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers \u2014 Sovereign Enterprise Architecture",
+        "h1": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Tactical AI Systems Engineers & Defense Edge Computing Operations Leads",
         "mozScore": 98,
@@ -3004,7 +3004,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2755,
         "slug": "multi-lora-adapter-stability-evaluators-for-sovereign-private-vpc-defense-intelligences",
-        "h1": "Multi-LoRA Adapter Stability Evaluators for Sovereign Private VPC Defense Intelligences \u2014 Sovereign Enterprise Architecture",
+        "h1": "Multi-LoRA Adapter Stability Evaluators for Sovereign Private VPC Defense Intelligences - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Intelligence AI Architects & Military Domain Specialization Leads",
         "mozScore": 98,
@@ -3032,7 +3032,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2703,
         "slug": "zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics",
-        "h1": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics \u2014 Sovereign Enterprise Architecture",
+        "h1": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Avionics Software Engineering Directors & Military Aerospace Systems Safety Officers",
         "mozScore": 98,
@@ -3060,7 +3060,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2805,
         "slug": "mixture-of-depths-stability-evaluators-for-sovereign-private-vpc-defense-intelligences",
-        "h1": "Mixture-of-Depths Stability Evaluators for Sovereign Private VPC Defense Intelligences \u2014 Sovereign Enterprise Architecture",
+        "h1": "Mixture-of-Depths Stability Evaluators for Sovereign Private VPC Defense Intelligences - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Intelligence HPC Architects & Military AI Research Directors",
         "mozScore": 98,
@@ -3088,7 +3088,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2931,
         "slug": "prefill-decode-workload-partitioning-tools-for-sovereign-defense-intelligence-swarms",
-        "h1": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms \u2014 Sovereign Enterprise Architecture",
+        "h1": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Autonomous Swarm Systems Architects & Joint All-Domain Command and Control (JADC2) Leads",
         "mozScore": 98,
@@ -3116,7 +3116,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2608,
         "slug": "multi-agent-prefix-tree-partitioning-software-for-sovereign-cloud-air-gapped-servers",
-        "h1": "Multi-Agent Prefix Tree Partitioning Software for Sovereign Cloud Air-Gapped Servers \u2014 Sovereign Enterprise Architecture",
+        "h1": "Multi-Agent Prefix Tree Partitioning Software for Sovereign Cloud Air-Gapped Servers - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Military Multi-Agent AI Infrastructure Directors & Air-Gapped Cloud Operations Leads",
         "mozScore": 98,
@@ -3144,7 +3144,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3515,
         "slug": "enterprise-sovereign-kv-cache-compression-deployment-advisors-for-defense-ministries",
-        "h1": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries \u2014 Sovereign Enterprise Architecture",
+        "h1": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Intelligence HPC Architects & Military Data Storage Infrastructure Specialists",
         "mozScore": 98,
@@ -3172,7 +3172,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3707,
         "slug": "air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants",
-        "h1": "Air-Gapped Defense Ministry DualPipe Inference Infrastructure Deployment Consultants \u2014 Sovereign Enterprise Architecture",
+        "h1": "Air-Gapped Defense Ministry DualPipe Inference Infrastructure Deployment Consultants - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense AI Cloud Infrastructure Directors & Military Supercomputing Facility Leads",
         "mozScore": 98,
@@ -3200,7 +3200,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2597,
         "slug": "immutable-system-prompt-kv-page-locking-frameworks-for-sovereign-defense-contractors",
-        "h1": "Immutable System Prompt KV-Page Locking Frameworks for Sovereign Defense Contractors \u2014 Sovereign Enterprise Architecture",
+        "h1": "Immutable System Prompt KV-Page Locking Frameworks for Sovereign Defense Contractors - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Contractor CISOs & Military Information Security Compliance Directors",
         "mozScore": 98,
@@ -3228,7 +3228,7 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 3465,
         "slug": "sovereign-enterprise-speculative-decoding-deployment-advisors-for-defense-ministries",
-        "h1": "Sovereign Enterprise Speculative Decoding Deployment Advisors for Defense Ministries \u2014 Sovereign Enterprise Architecture",
+        "h1": "Sovereign Enterprise Speculative Decoding Deployment Advisors for Defense Ministries - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Military AI Operations Directors & Defense Strategic Planning AI Architects",
         "mozScore": 98,
@@ -3256,13 +3256,13 @@ export const solutionCategories: SolutionCategoryGroup[] = [
       {
         "id": 2689,
         "slug": "attention-sink-stability-evaluators-for-sovereign-private-vpc-defense-intelligences",
-        "h1": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences \u2014 Sovereign Enterprise Architecture",
+        "h1": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences - Sovereign Enterprise Architecture",
         "hubCategory": "Sovereign Defense",
         "targetPersona": "Defense Intelligence AI Infrastructure Heads & Military HPC Research Scientists",
         "mozScore": 98,
         "metaDescription": "Deploy Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences with sub-100ms deterministic execution, private VPC isolation, and Sovereign Defense compliance. Schedule architecture audit.",
         "hero": {
-          "subheadline": "Military command platforms monitoring continuous multi-day telemetry\u2014such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking\u2014require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit."
+          "subheadline": "Military command platforms monitoring continuous multi-day telemetry - such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking - require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit."
         },
         "trustSection": {
           "metrics": [

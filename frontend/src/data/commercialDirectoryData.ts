@@ -1025,8 +1025,8 @@ export const commercialSolutions: CommercialSolution[] = [
         "slug": "private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
         "canonicalUrl": "https://elesium.online/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts",
         "title": "Private VPC Air-gapped Clinical LLM Deployment Telemetry for Hospital Trusts",
-        "anchorText": "Hospital Trust Private Air-Gapped Clinical LLM Deployment",
-        "description": "Deploy enterprise Hospital Trust Private Air-Gapped Clinical LLM Deployment with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance.",
+        "anchorText": "Hospital Trust Sovereign Air-Gapped Clinical LLM Deployment",
+        "description": "Deploy enterprise Hospital Trust Sovereign Air-Gapped Clinical LLM Deployment with sub-200ms deterministic execution, air-gapped private VPC data isolation, and strict DPDP Act 2023 statutory compliance.",
         "complianceTags": [
             "DPDP Act 2023",
             "ISO 27001",

@@ -96,7 +96,6 @@ def generate_sitemap():
         {"path": "/", "priority": "1.0", "changefreq": "daily", "file": "frontend/src/components/pages/Home.tsx"},
         {"path": "/markets/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/Industries.tsx"},
         {"path": "/how-we-work/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/HowWeWork.tsx"},
-        {"path": "/ai-automation/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/AIAutomation.tsx"},
         {"path": "/resources/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/Resources.tsx"},
         {"path": "/ai-automation-agency-india/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/AIAutomationIndia.tsx"},
         {"path": "/enterprise-ai-bangalore/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/RegionalCityHub.tsx"},

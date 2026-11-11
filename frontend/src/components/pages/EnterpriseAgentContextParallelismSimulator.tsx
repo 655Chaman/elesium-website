@@ -506,7 +506,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
           </h2>
           <div className="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-4">
             <p>
-              In foundation model inference across two-million-token sequence horizons, the computational bottleneck shifts decisively from parameter weights to the dynamic <strong>Key-Value (KV) cache activation memory</strong>. A single 70B parameter model operating at 2M sequence length generates over <strong>512 GB of uncompressed FP16 KV states</strong>—exceeding the 80 GB VRAM physical capacity of single H100 GPUs by over 6.4x.
+              In foundation model inference across two-million-token sequence horizons, the computational bottleneck shifts decisively from parameter weights to the dynamic <strong>Key-Value (KV) cache activation memory</strong>. A single 70B parameter model operating at 2M sequence length generates over <strong>512 GB of uncompressed FP16 KV states</strong>, exceeding the 80 GB VRAM physical capacity of single H100 GPUs by over 6.4x.
             </p>
             <p>
               Elesium&apos;s Context Parallelism (CP) architecture shards this sequence horizon across distributed GPU ranks in a peer-to-peer logical ring. As local query vectors calculate attention scores against the current KV chunk on CUDA stream 0, an asynchronous non-blocking NCCL stream shifts the preceding KV chunk to the adjacent rank on CUDA stream 2. When interconnect bandwidth exceeds 400 GB/s (InfiniBand NDR / NVLink 4), the transfer latency is completely absorbed by the local matrix multiplication, delivering sub-12ms forward step times.

@@ -13,7 +13,7 @@ Yet beneath this surge of operational efficiency lies an existential statutory v
 
 With the gazetting of the **Digital Personal Data Protection (DPDP) Act, 2023 (Act No. 22 of 2023)** and the imminent operationalization of the **Data Protection Board of India (DPBI)**, Indian enterprises operating as **Data Fiduciaries** face statutory penalties reaching **₹250 Crore (INR 2.5 Billion)** per violation under Schedule Section 33.
 
-The central problem is structural: **The default architectural pattern of modern enterprise AI—transmitting proprietary enterprise data and customer personal identifiers across public WAN connections to multi-tenant, cloud-hosted Large Language Model (LLM) APIs located in foreign availability zones—is intrinsically non-compliant with Indian data protection law.**
+The central problem is structural: **The default architectural pattern of modern enterprise AI - transmitting proprietary enterprise data and customer personal identifiers across public WAN connections to multi-tenant, cloud-hosted Large Language Model (LLM) APIs located in foreign availability zones - is intrinsically non-compliant with Indian data protection law.**
 
 When an Indian customer interacts with an enterprise support agent, and that agent queries an external API (such as OpenAI, Anthropic, or US-hosted cloud hyperscalers), their Permanent Account Number (PAN), Aadhaar token, phone number, and account balance traverse foreign network boundaries. Furthermore, that data is indexed into vector databases where it persists indefinitely, violating statutory retention limits.
 
@@ -47,14 +47,14 @@ The DPDP Act 2023 establishes four non-negotiable statutory pillars that directl
 
 ### 1.1 Section 16: Cross-Border Data Residency and Sovereign Enclaves
 
-Section 16 of the DPDP Act grants the Central Government the authority to restrict the transfer of personal data outside Indian territory. For regulated sectors—most notably banking, financial services, and insurance (BFSI) governed by the Reserve Bank of India (RBI)—data localization has long been a mandatory requirement.
+Section 16 of the DPDP Act grants the Central Government the authority to restrict the transfer of personal data outside Indian territory. For regulated sectors - most notably banking, financial services, and insurance (BFSI) governed by the Reserve Bank of India (RBI) - data localization has long been a mandatory requirement.
 
 When an enterprise routes prompts through a public cloud LLM API:
 - Outbound TCP packets travel across transatlantic or transpacific submarine fiber cables.
 - In-flight data traverses intermediate autonomous systems (ASNs), exposing financial and identity records to foreign intelligence intercepts and foreign subpoenas (e.g., US CLOUD Act).
 - The enterprise forfeits physical control over the underlying silicon where intermediate activations and key-value (KV) caches reside in DRAM.
 
-**The Sovereign Imperative:** Enterprise AI inference must occur strictly on hardware located physically within Indian borders—either within on-premise Tier-IV data centers (such as CtrlS, STT GDC, or Yotta) or within isolated, private VPC subnets in AWS Mumbai (`ap-south-1`) with all outbound internet gateways severed.
+**The Sovereign Imperative:** Enterprise AI inference must occur strictly on hardware located physically within Indian borders - either within on-premise Tier-IV data centers (such as CtrlS, STT GDC, or Yotta) or within isolated, private VPC subnets in AWS Mumbai (`ap-south-1`) with all outbound internet gateways severed.
 
 ---
 
@@ -228,14 +228,14 @@ Prior generation LLM deployments relied on FP16 or BF16 weights, requiring 140GB
 
 On NVIDIA Hopper (H100) architecture, we utilize native **FP8 (W8A8) Quantization** powered by fourth-generation Tensor Cores and the Transformer Engine:
 - **Memory Footprint Reduction:** Llama-3.3-70B model weights occupy just 70GB of aggregate VRAM across the cluster.
-- **Compute Throughput:** FP8 Tensor Cores deliver up to 3,958 TFLOPS—twice the throughput of 16-bit floating point operations.
+- **Compute Throughput:** FP8 Tensor Cores deliver up to 3,958 TFLOPS - twice the throughput of 16-bit floating point operations.
 - **Expanded KV Cache Headroom:** The remaining 570GB of aggregate High Bandwidth Memory (HBM3) is allocated entirely to dynamic PagedAttention v2 token pages, enabling support for over 128 concurrent enterprise streams at sub-15ms inter-token latency.
 
 ---
 
 ## 6. Empirical Telemetry: Sovereign H100 vs Public Cloud APIs
 
-To evaluate real-world performance, Elesium conducted 100 empirical benchmark cycles comparing our sovereign H100 cluster against leading public cloud APIs. The results demonstrate that sovereign deployment is not merely a compliance necessity—it is an enormous performance upgrade:
+To evaluate real-world performance, Elesium conducted 100 empirical benchmark cycles comparing our sovereign H100 cluster against leading public cloud APIs. The results demonstrate that sovereign deployment is not merely a compliance necessity - it is an enormous performance upgrade:
 
 | Metric | Sovereign H100 Cluster (Llama-3.3-70B-FP8) | Public Cloud API (GPT-4o) | Public Cloud API (Claude 3.5 Sonnet) | Enterprise Performance Advantage |
 | :--- | :--- | :--- | :--- | :--- |
@@ -282,7 +282,7 @@ For enterprise leaders preparing their organizations for DPDP Act enforcement, w
 
 ## Conclusion: Turning Compliance into a Competitive Moat
 
-The Digital Personal Data Protection Act of 2023 is not an obstacle to enterprise innovation—it is a clear mandate for engineering excellence. Organizations that continue to pipe sensitive corporate data into multi-tenant public APIs expose themselves to catastrophic financial penalties, reputational damage, and loss of customer trust.
+The Digital Personal Data Protection Act of 2023 is not an obstacle to enterprise innovation - it is a clear mandate for engineering excellence. Organizations that continue to pipe sensitive corporate data into multi-tenant public APIs expose themselves to catastrophic financial penalties, reputational damage, and loss of customer trust.
 
 Conversely, enterprises that invest in **Sovereign Enterprise AI** achieve total data ownership, sub-100ms operational latency, and complete immunity from regulatory enforcement.
 

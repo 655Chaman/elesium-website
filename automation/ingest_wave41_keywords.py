@@ -578,7 +578,7 @@ KEYWORDS_WAVE41 = [
     },
     {
         "id": 1934,
-        "keyword": "ceph distributed block storage osd flapping remediation telemetry for private enterprise openstack",
+        "keyword": "ceph distributed block storage osd flapping remediation telemetry for sovereign enterprise openstack",
         "slug": "ceph-distributed-block-storage-osd-flapping-remediation-telemetry-for-private-enterprise-openstack",
         "category": "Solutions",
         "hub_category": "AI Agents & Autonomous Workflows",

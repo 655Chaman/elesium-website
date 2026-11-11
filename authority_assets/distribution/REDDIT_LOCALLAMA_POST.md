@@ -148,7 +148,7 @@ Distributed across $TP=8$, each GPU stores $\frac{1.28 \text{ GB}}{8} = 160 \tex
 │ vLLM PagedAttention v2 Allocator:                                           │
 │ [Page 0 (16t)][Page 1 (16t)][Page 2 (16t)] ... Non-Contiguous Physical VRAM │
 │ >>> 26,617 MB Allocated | 415 MB Waste (< 1.6% Fragmentation)               │
-│ >>> ZERO CRASHES — STABLE AT CONCURRENCY 128+                               │
+│ >>> ZERO CRASHES - STABLE AT CONCURRENCY 128+                               │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 

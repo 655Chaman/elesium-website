@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-link_builder.py — Craig Campbell Parasite Syndication & White-Hat Link Building Engine
+link_builder.py - Craig Campbell Parasite Syndication & White-Hat Link Building Engine
 Implements the Craig Campbell Parasite SEO & Canonical Syndication Architecture (SEO Rockstars 2026).
 
 Extracts complete, authoritative technical articles from blogPosts.ts and videoMasterclasses.ts,
@@ -108,7 +108,7 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
         md.append(f'cover_image: https://elesium.online/og-image.png')
         md.append("---\n")
         md.append(f"# {vm['title']}\n")
-        md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Systems Architecture Team, Bangalore, India.*\n")
+        md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Architecture Team, Bangalore, India.*\n")
         md.append(f"## Executive Summary\n{vm['executiveSummary']}\n")
         
         md.append("### Audited Enterprise ROI Benchmarks\n")
@@ -142,7 +142,7 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
 
         md.append("## Video Key Moments & Timestamp Breakdown\n")
         for km in vm.get("keyMoments", []):
-            md.append(f"- **`{km['time']}` — {km['title']}**: {km['description']}")
+            md.append(f"- **`{km['time']}` - {km['title']}**: {km['description']}")
         md.append("\n")
 
         md.append("## Verbatim Technical Masterclass Transcript\n")
@@ -167,7 +167,7 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
         md.append(f'cover_image: https://elesium.online/og-image.png')
         md.append("---\n")
         md.append(f"# {p['title']}\n")
-        md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Systems Architecture Team, Bangalore, India.*\n")
+        md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Architecture Team, Bangalore, India.*\n")
         if p.get("excerpt"):
             md.append(f"**Abstract:** {p['excerpt']}\n")
         
@@ -226,7 +226,7 @@ def compile_full_parasite_markdown(slug: str, title: str, canonical_url: str) ->
     md.append(f'cover_image: https://elesium.online/og-image.png')
     md.append("---\n")
     md.append(f"# {title}\n")
-    md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Systems Architecture Team, Bangalore, India.*\n")
+    md.append(f"> *Originally published on [Elesium Online]({canonical_url}). Author: Elesium Architecture Team, Bangalore, India.*\n")
     md.append("## The 2026 Enterprise AI Architecture Paradigm")
     md.append("Indian enterprises are transitioning rapidly from fragile, monolithic RPA bots and probabilistic ChatGPT wrappers toward deterministic, multi-agent state machines.\n")
     md.append("### Core Architectural Requirements")
@@ -403,7 +403,7 @@ def generate_social_drafts(slug: str, title: str, url: str):
 **Navboost Brand Query:** `Elesium AI automation agency India`
 
 ## LinkedIn Thought Leadership Post
-Indian enterprise leaders are realizing that generative AI is not a prompt trick—it is a distributed systems engineering challenge.
+Indian enterprise leaders are realizing that generative AI is not a prompt trick - it is a distributed systems engineering challenge.
 
 In our latest architectural benchmark: "{title}"
 
@@ -422,7 +422,7 @@ Or search Google for: "Elesium AI automation agency India" to run our interactiv
 ---
 
 ## X (Twitter) 6-Part Technical Thread
-1/6 🧵 In 2026, 70% of enterprise AI pilots fail in production. Here's why—and how Indian enterprises are engineering fault-tolerant multi-agent architectures:
+1/6 🧵 In 2026, 70% of enterprise AI pilots fail in production. Here's why - and how Indian enterprises are engineering fault-tolerant multi-agent architectures:
 
 2/6 The Root Cause: Monolithic RPA and raw LLM API calls lack bounded state. When an upstream ERP schema shifts, the pipeline fractures.
 

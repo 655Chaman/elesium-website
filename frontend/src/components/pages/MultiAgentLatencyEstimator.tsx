@@ -367,7 +367,7 @@ export default function MultiAgentLatencyEstimator() {
                     </div>
                   </div>
 
-                  {/* Private Sovereign Cluster Dropdown */}
+                  {/* Sovereign Private Cluster Dropdown */}
                   <div className="space-y-1.5">
                     <label className="text-xs text-slate-400 block font-medium">
                       Sovereign Private VPC Cluster:
@@ -542,7 +542,7 @@ export default function MultiAgentLatencyEstimator() {
               {[
                 {
                   q: "Why do multi-agent chains suffer exponential latency compounding on public cloud APIs?",
-                  a: "In multi-agent systems, agents execute sequential or branching DAG steps. When relying on commercial APIs (OpenAI or Anthropic), each agent step incurs three latency penalties: 1) Public internet TLS handshake and network RTT (75–110ms), 2) Multi-tenant queueing and Time to First Token (TTFT, 250–450ms), and 3) Token generation streaming time. In a 7-step sequential pipeline, this sums to over 8,500ms of end-to-end latency. Sovereign VPC clusters colocated with your application eliminate internet hops and leverage TensorRT-LLM continuous batching to reduce P50 latency to under 1,400ms."
+                  a: "In multi-agent systems, agents execute sequential or branching DAG steps. When relying on commercial APIs (OpenAI or Anthropic), each agent step incurs three latency penalties: 1) Public internet TLS handshake and network RTT (75-110ms), 2) Multi-tenant queueing and Time to First Token (TTFT, 250-450ms), and 3) Token generation streaming time. In a 7-step sequential pipeline, this sums to over 8,500ms of end-to-end latency. Sovereign VPC clusters colocated with your application eliminate internet hops and leverage TensorRT-LLM continuous batching to reduce P50 latency to under 1,400ms."
                 },
                 {
                   q: "How does private VPC hosting compare against public multi-tenant APIs for enterprise data privacy?",
@@ -550,7 +550,7 @@ export default function MultiAgentLatencyEstimator() {
                 },
                 {
                   q: "At what request volume does dedicated private GPU hosting become more economical than pay-per-token APIs?",
-                  a: "For workloads exceeding 40,000–60,000 multi-step agent executions per month, dedicated NVIDIA A100 or H100 instances deliver 65% to 88% net cost reductions compared to GPT-4o or Claude 3.5 Sonnet. While cloud APIs charge variable fees for every input and output token, private cluster leases are fixed-cost assets. As your workflow scales from 50k to 500k monthly runs, the marginal cost per execution approaches near-zero."
+                  a: "For workloads exceeding 40,000-60,000 multi-step agent executions per month, dedicated NVIDIA A100 or H100 instances deliver 65% to 88% net cost reductions compared to GPT-4o or Claude 3.5 Sonnet. While cloud APIs charge variable fees for every input and output token, private cluster leases are fixed-cost assets. As your workflow scales from 50k to 500k monthly runs, the marginal cost per execution approaches near-zero."
                 },
                 {
                   q: "What is deterministic LangGraph state machine orchestration and how does it prevent token waste?",

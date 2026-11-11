@@ -853,7 +853,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/asynchronous-gpu-checkpointing-memory-offload-daemons-for-slurm-clusters/index.html": {
+    "frontend/public/solutions/paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -909,7 +909,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/tensor-parallelism-megatron-column-row-partitioners-for-enterprise-vllm-and-triton/index.html": {
+    "frontend/public/solutions/column-linear-attention-weight-partitioners-for-hospital-clinical-triage-copilots/index.html": {
       "word_count": 1370,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -1429,7 +1429,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/all-reduce-communication-overlap-controllers-for-high-concurrency-fintech-trading-copilots/index.html": {
+    "frontend/public/solutions/100b-parameter-autonomous-fraud-detection-agent-swarms-for-payment-gateways/index.html": {
       "word_count": 1375,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -1693,7 +1693,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/sequence-parallelism-ring-self-attention-partitioners-for-enterprise-vllm-and-megatron/index.html": {
+    "frontend/public/solutions/column-linear-attention-weight-partitioners-for-hospital-clinical-triage-copilots/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -4186,7 +4186,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/pipeline-parallelism-1f1b-schedulers-for-enterprise-vllm-and-megatron-lm-clusters/index.html": {
+    "frontend/public/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing/index.html": {
       "word_count": 1370,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -5180,7 +5180,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/apache-kafka-partitioned-event-stream-consumption-telemetry-for-high-velocity-agent-swarms/index.html": {
+    "frontend/public/solutions/sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers/index.html": {
       "word_count": 1377,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -5412,7 +5412,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/sub-second-cdr-billing-reconciliation-agents-for-telecom-operators/index.html": {
+    "frontend/public/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing/index.html": {
       "word_count": 1357,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -6484,7 +6484,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/radix-attention-prefix-caching-agents-for-high-concurrency-multi-tenant-rag-systems/index.html": {
+    "frontend/public/solutions/multi-agent-prefix-tree-partitioning-software-for-sovereign-cloud-air-gapped-servers/index.html": {
       "word_count": 1376,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -6908,7 +6908,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/dynamic-tree-based-speculative-decoding-orchestrators-for-enterprise-llm-clusters/index.html": {
+    "frontend/public/solutions/speculative-tree-lookahead-depth-optimizers-for-automotive-factory-quality-audits/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -7076,7 +7076,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/computer-vision-defect-inspection-agents-for-automotive-suppliers/index.html": {
+    "frontend/public/solutions/automotive-paint-shop-surface-defect-inspection-agents-for-assembly-plants/index.html": {
       "word_count": 1356,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -7420,7 +7420,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/prior-authorization-automation-software-for-healthcare-ctos/index.html": {
+    "frontend/public/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts/index.html": {
       "word_count": 1354,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -7737,7 +7737,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/multi-head-latent-attention-mla-low-rank-kv-cache-compression-daemons-for-deepseek-clusters/index.html": {
+    "frontend/public/solutions/mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -8081,7 +8081,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/fp8-gemm-tensor-core-acceleration-controllers-for-enterprise-vllm-inference-clusters/index.html": {
+    "frontend/public/solutions/sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -8401,7 +8401,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/deterministic-loan-underwriting-agents-for-bfsi/index.html": {
+    "frontend/public/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos/index.html": {
       "word_count": 1344,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -8473,7 +8473,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/private-vpc-air-gapped-llm-deployment-for-defense-contractors/index.html": {
+    "frontend/public/solutions/air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries/index.html": {
       "word_count": 1364,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -9467,7 +9467,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/dynamic-kv-cache-eviction-and-attention-sink-compression-daemons-for-2m-context-llms/index.html": {
+    "frontend/public/solutions/attention-sink-stability-evaluators-for-sovereign-private-vpc-defense-intelligences/index.html": {
       "word_count": 1375,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -9475,7 +9475,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/automated-scrap-reconciliation-and-work-in-progress-wip-ledger-balancing-agents-for-metal-fabrication/index.html": {
+    "frontend/public/solutions/tally-bill-of-materials-bom-manufacturing-journal-auto-generation-from-mes-plc-telemetry/index.html": {
       "word_count": 1386,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -9872,7 +9872,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs/index.html": {
+    "frontend/public/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators/index.html": {
       "word_count": 1344,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -10112,7 +10112,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/multi-lora-dynamic-adapter-switching-routers-for-multi-tenant-saas/index.html": {
+    "frontend/public/solutions/multi-lora-adapter-stability-evaluators-for-sovereign-private-vpc-defense-intelligences/index.html": {
       "word_count": 1363,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -10184,7 +10184,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/pagedattention-kv-cache-block-allocation-agents-for-enterprise-vllm-clusters-in-private-vpc/index.html": {
+    "frontend/public/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/index.html": {
       "word_count": 1380,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -10656,7 +10656,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/predictive-maintenance-multi-agent-systems-for-manufacturing-plants/index.html": {
+    "frontend/public/solutions/dynamic-branch-pruning-controllers-for-industrial-scada-predictive-maintenance/index.html": {
       "word_count": 1355,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -11000,7 +11000,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/expert-parallelism-moe-dynamic-dispatch-controllers-for-enterprise-vllm-and-triton/index.html": {
+    "frontend/public/solutions/nvlink-expert-dispatch-latency-optimizers-for-automotive-assembly-robotic-arms/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -11176,7 +11176,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/air-gapped-intelligence-extraction-software-for-defense-agencies/index.html": {
+    "frontend/public/solutions/prefill-decode-workload-partitioning-tools-for-sovereign-defense-intelligence-swarms/index.html": {
       "word_count": 1363,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -11200,7 +11200,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/hierarchical-hbm-to-nvme-kv-cache-tiered-storage-paging-daemons-for-enterprise-llm-clusters/index.html": {
+    "frontend/public/solutions/multi-tiered-kv-memory-fragmentation-monitors-for-sovereign-air-gapped-defense-enclaves/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -11472,7 +11472,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/ai-automation-agency-for-logistics/index.html": {
+    "frontend/public/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers/index.html": {
       "word_count": 1344,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -11480,7 +11480,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders/index.html": {
+    "frontend/public/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/index.html": {
       "word_count": 1363,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -11973,7 +11973,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/sliding-window-attention-streaming-agents-for-high-velocity-iot-telemetry/index.html": {
+    "frontend/public/solutions/static-prefix-sink-reservation-daemons-for-air-gapped-sovereign-defense-enclaves/index.html": {
       "word_count": 1371,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -12021,7 +12021,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/dualpipe-bidirectional-pipeline-parallelism-orchestrators-for-deepseek-clusters/index.html": {
+    "frontend/public/solutions/air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants/index.html": {
       "word_count": 1361,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -13541,7 +13541,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/commercial-avionics-do-178c-statutory-verification-state-machines-for-oems/index.html": {
+    "frontend/public/solutions/zero-memory-leak-streaming-agent-architectures-for-mission-critical-aerospace-avionics/index.html": {
       "word_count": 1380,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -13757,7 +13757,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/multi-agent-langgraph-workflow-engineering-for-enterprise-ctos/index.html": {
+    "frontend/public/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore/index.html": {
       "word_count": 1362,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -13957,7 +13957,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/grand-unified-deepseek-serving-fabric-orchestrators-for-enterprise-llm-clusters/index.html": {
+    "frontend/public/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore/index.html": {
       "word_count": 1363,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -14741,7 +14741,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/multi-token-prediction-mtp-speculative-drafting-daemons-for-deepseek-clusters/index.html": {
+    "frontend/public/solutions/sovereign-enterprise-speculative-decoding-deployment-advisors-for-defense-ministries/index.html": {
       "word_count": 1367,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -15077,7 +15077,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/3d-parallelism-mesh-sharding-controllers-for-enterprise-megatron-deepspeed-clusters/index.html": {
+    "frontend/public/solutions/air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants/index.html": {
       "word_count": 1364,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -15549,7 +15549,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/automated-statutory-tax-deduction-reconciliation-agents-for-enterprise-cfos/index.html": {
+    "frontend/public/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/index.html": {
       "word_count": 1367,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -16989,7 +16989,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/flashdecoding-sequence-parallelization-deployment-agents-for-long-context-128k-enterprise-agents/index.html": {
+    "frontend/public/solutions/air-gapped-private-cloud-flashdecoding-deployment-runbooks-for-defense-installations-in-india/index.html": {
       "word_count": 1367,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -18509,7 +18509,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/model-context-protocol-multi-server-dynamic-tool-discovery-agents-for-ai-architects/index.html": {
+    "frontend/public/solutions/true-random-number-generator-trng-continuous-entropy-health-monitoring-telemetry-for-sovereign-crypto-enclaves/index.html": {
       "word_count": 1375,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -18525,7 +18525,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/context-parallelism-ring-kv-exchange-controllers-for-enterprise-vllm-and-megatron-core/index.html": {
+    "frontend/public/solutions/nvlink-ring-attention-bandwidth-saturation-controllers-for-sovereign-banking-fraud-forensics/index.html": {
       "word_count": 1375,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -19690,7 +19690,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/renewable-microgrid-battery-energy-storage-dispatch-state-machines/index.html": {
+    "frontend/public/solutions/electronic-city-edge-iot-scada-and-sap-erp-synchronization-telemetry-for-manufacturing-enterprises/index.html": {
       "word_count": 1377,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -21951,7 +21951,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/open-pit-autonomous-haul-truck-dispatch-engines-for-mining-cos/index.html": {
+    "frontend/public/solutions/sub-10ms-edge-protocol-translation-agents-for-industrial-manufacturing-engineers/index.html": {
       "word_count": 1368,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -22175,7 +22175,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/custom-edi-parser-agents-for-freight-forwarders/index.html": {
+    "frontend/public/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/index.html": {
       "word_count": 1355,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -22223,7 +22223,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/cryptographic-state-audit-trails-dpdp-act-2023/index.html": {
+    "frontend/public/solutions/dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting/index.html": {
       "word_count": 1360,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -22604,7 +22604,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/kv-cache-memory-compaction-controllers-for-enterprise-multi-tenant-kubernetes/index.html": {
+    "frontend/public/solutions/p2p-nvlink-cross-instance-kv-cache-bridges-for-automotive-factory-quality-audits/index.html": {
       "word_count": 1364,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -23068,7 +23068,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/zero-copy-rdma-kv-cache-transfer-daemons-for-disaggregated-llm-inference-clusters/index.html": {
+    "frontend/public/solutions/disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots/index.html": {
       "word_count": 1376,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -23204,7 +23204,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/awq-4-bit-weight-quantization-deployment-agents-for-sovereign-on-premise-llama-3-clusters/index.html": {
+    "frontend/public/solutions/awq-quantized-deepseek-r1-reasoning-model-deployment-agents-for-air-gapped-defense-servers/index.html": {
       "word_count": 1386,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -23740,7 +23740,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/disaggregated-pre-fill-and-decode-pod-orchestrators-for-enterprise-vllm-clusters/index.html": {
+    "frontend/public/solutions/disaggregated-prefill-decode-schedulers-for-hospital-clinical-triage-copilots/index.html": {
       "word_count": 1362,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -24284,7 +24284,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/speculative-decoding-draft-verification-agents-for-accelerated-enterprise-agent-responses/index.html": {
+    "frontend/public/solutions/sovereign-enterprise-speculative-decoding-deployment-advisors-for-defense-ministries/index.html": {
       "word_count": 1362,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -26052,7 +26052,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/chunked-cross-attention-document-sharding-agents-for-high-density-enterprise-rag/index.html": {
+    "frontend/public/solutions/chunked-sequence-attention-weight-partitioners-for-hospital-clinical-ehr-copilots/index.html": {
       "word_count": 1370,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -26132,7 +26132,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/deterministic-warehouse-automation-for-3pl-providers/index.html": {
+    "frontend/public/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts/index.html": {
       "word_count": 1348,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -26164,7 +26164,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/autonomous-dispatch-software-for-freight-carriers/index.html": {
+    "frontend/public/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers/index.html": {
       "word_count": 1349,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -26316,7 +26316,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/sap-erp-agentic-workflow-integration-for-enterprise-cios/index.html": {
+    "frontend/public/solutions/sap-s4hana-manufacturing-work-order-auto-confirmation-agents-based-on-shopfloor-plc-counts-in-india/index.html": {
       "word_count": 1357,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -26532,7 +26532,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/mixture-of-depths-dynamic-compute-allocators-for-high-concurrency-agent-swarms/index.html": {
+    "frontend/public/solutions/mixture-of-depths-stability-evaluators-for-sovereign-private-vpc-defense-intelligences/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -27012,7 +27012,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/fleet-route-optimization-agents-for-supply-chain-directors/index.html": {
+    "frontend/public/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents/index.html": {
       "word_count": 1360,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -27444,7 +27444,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/tree-based-draft-token-verification-controllers-for-enterprise-vllm-and-sglang/index.html": {
+    "frontend/public/solutions/speculative-tree-lookahead-depth-optimizers-for-automotive-factory-quality-audits/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -28209,7 +28209,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/zero-trust-network-micro-segmentation-policy-engines-for-enterprise-cisos/index.html": {
+    "frontend/public/solutions/hospital-zero-trust-network-microsegmentation-and-medical-device-iot-defense-telemetry-for-biomedical-engineering/index.html": {
       "word_count": 1364,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -28761,7 +28761,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/salesforce-custom-autonomous-agents-for-enterprise-sales-teams/index.html": {
+    "frontend/public/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore/index.html": {
       "word_count": 1367,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -29518,7 +29518,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/prefill-decode-disaggregation-controllers-for-enterprise-vllm-and-sglang-clusters/index.html": {
+    "frontend/public/solutions/air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries/index.html": {
       "word_count": 1363,
       "total_slop_count": 0,
       "em_dash_count": 2,
@@ -30534,7 +30534,7 @@
       "cleanliness_score": 99.0,
       "flagged_phrases": []
     },
-    "frontend/public/solutions/zero-copy-p2p-activation-transfer-daemons-for-distributed-llm-pipeline-clusters/index.html": {
+    "frontend/public/solutions/p2p-nvlink-cross-instance-kv-cache-bridges-for-automotive-factory-quality-audits/index.html": {
       "word_count": 1369,
       "total_slop_count": 0,
       "em_dash_count": 2,

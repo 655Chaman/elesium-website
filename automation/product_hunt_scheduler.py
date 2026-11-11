@@ -109,7 +109,7 @@ def dispatch_vip(config: Dict[str, Any]):
     print("=" * 78)
     vips = config.get("vip_executive_outreach", [])
     for v in vips:
-        print(f"\n[Profile #{v['id']}] {v['vertical']} — {v['target_persona']}")
+        print(f"\n[Profile #{v['id']}] {v['vertical']} - {v['target_persona']}")
         print(f"Preferred Channel: {v['channel']}")
         print("-" * 50)
         print(v["message"])
@@ -249,7 +249,7 @@ def execute_launch_dispatch(config: Dict[str, Any]):
     }
     RECEIPT_PATH.write_text(json.dumps(receipt, indent=2), encoding="utf-8")
     print("=" * 78)
-    print(f"  🔥 EXECUTING OFFICIAL PRODUCT HUNT LAUNCH DISPATCH — {now_iso}")
+    print(f"  🔥 EXECUTING OFFICIAL PRODUCT HUNT LAUNCH DISPATCH - {now_iso}")
     print("=" * 78)
     print("\n[1] MAKER'S COMMENT TO POST ON PRODUCT HUNT:")
     print(config.get("maker_comment"))

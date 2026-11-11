@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-upgrade_ssg_fleet.py — Applies architectural scale upgrades to automation/generate_ssg.py
+upgrade_ssg_fleet.py - Applies architectural scale upgrades to automation/generate_ssg.py
 """
 
 import re
@@ -24,7 +24,7 @@ def apply_upgrades():
     <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Enterprise AI Solutions &amp; Sovereign Automation Workflows</h1>
     <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem auto 2rem auto;max-width:850px;text-align:left;">
       <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">Enterprise Directory Executive Summary • Architectural Answer Capsule</div>
-      <p style="font-size:1.1rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">Elesium engineers production-grade deterministic multi-agent architectures, private sovereign cloud VPCs, and automated workflows across Logistics, BFSI, Healthcare, and Industrial Manufacturing with audited sub-200ms latency and hard 90-day ROI guarantees.</p>
+      <p style="font-size:1.1rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">Elesium engineers production-grade deterministic multi-agent architectures, sovereign private cloud VPCs, and automated workflows across Logistics, BFSI, Healthcare, and Industrial Manufacturing with audited sub-200ms latency and hard 90-day ROI guarantees.</p>
     </div>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;">
       <a href="/tools/enterprise-ai-roi-calculator" style="display:inline-block;background:#0284c7;color:#ffffff;padding:0.6rem 1.25rem;border-radius:0.375rem;text-decoration:none;font-weight:600;font-size:0.875rem;">Simulate AI Automation ROI &rarr;</a>
@@ -140,7 +140,7 @@ def apply_upgrades():
 
     # 6. Compare hub answer capsule
     old_cmp_hub_header = """    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Enterprise AI Framework &amp; Architecture Comparisons</h1>
-    <p style="font-size:1.2rem;line-height:1.6;color:#4b5563;max-width:800px;margin:0 auto;">Objective, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models. No vendor hype—only audited production latency benchmarks, token economics, and failure recovery protocols.</p>
+    <p style="font-size:1.2rem;line-height:1.6;color:#4b5563;max-width:800px;margin:0 auto;">Objective, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models. No vendor hype - only audited production latency benchmarks, token economics, and failure recovery protocols.</p>
   </header>"""
 
     new_cmp_hub_header = """    <h1 style="font-size:2.75rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Enterprise AI Framework &amp; Architecture Comparisons</h1>
@@ -148,7 +148,7 @@ def apply_upgrades():
       <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:0.35rem;">
         Architecture Comparisons Executive Summary • AEO Answer Capsule
       </div>
-      <p style="font-size:1.1rem;line-height:1.6;color:#1e3a8a;margin:0;font-weight:600;">Objective, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models. No vendor hype—only audited production latency benchmarks, token economics, and failure recovery protocols.</p>
+      <p style="font-size:1.1rem;line-height:1.6;color:#1e3a8a;margin:0;font-weight:600;">Objective, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models. No vendor hype - only audited production latency benchmarks, token economics, and failure recovery protocols.</p>
     </div>
   </header>"""
 

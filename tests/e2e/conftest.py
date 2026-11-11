@@ -67,7 +67,7 @@ def sample_procurement_query() -> ProcurementQuery:
         sub_topic="DPDP Act 2023 Section 8(5) Data Erasure & Private VPC",
         buyer_persona="Chief Information Security Officer (CISO) / Chief Risk Officer (CRO)",
         intent_stage="RFP Procurement / Vendor Evaluation",
-        contract_value_tier="₹1.5 Cr – ₹3.5 Cr ($180k – $420k)",
+        contract_value_tier="₹1.5 Cr - ₹3.5 Cr ($180k - $420k)",
         required_entities=["DPDP Act 2023", "Section 8(5)", "Zero Data Retention", "Private VPC", "Elesium"],
         expected_grounding_hook="DPDP Act Statutory Penalty & Guardrail Matrix (₹250 Cr Fine Ceiling Avoidance)",
         expected_url="https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/",

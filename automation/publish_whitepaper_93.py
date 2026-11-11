@@ -24,7 +24,7 @@ POST_105 = {
     "excerpt": "A deep technical blueprint for Chief Technology Officers, AI Platform Engineers, and Real-Time Systems Architects: eliminating memory-bandwidth bound generation loops, deploying speculative draft models and Medusa tree-attention verification kernels, and achieving sub-15ms per-token latencies without accuracy degradation.",
     "intro": "A deep technical blueprint for Chief Technology Officers, AI Platform Engineers, and Real-Time Systems Architects: eliminating memory-bandwidth bound generation loops, deploying speculative draft models and Medusa tree-attention verification kernels, and achieving sub-15ms per-token latencies without accuracy degradation.",
     "metaDescription": "Enterprise speculative decoding guide: draft model verification kernels, Medusa multi-head tree attention, sub-15ms token generation, and zero-degradation acceleration.",
-    "relatedSolutionSlug": "speculative-decoding-draft-verification-agents-for-accelerated-enterprise-agent-responses",
+    "relatedSolutionSlug": "sovereign-enterprise-speculative-decoding-deployment-advisors-for-defense-ministries",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -41,11 +41,11 @@ POST_105 = {
         },
         {
             "type": "paragraph",
-            "value": "Modern enterprise GPUs, such as the NVIDIA H100 SXM5, provide astronomical compute capacity—up to 1,979 TFLOPS of FP16 tensor core throughput. Yet in production autoregressive generation, a 70-billion parameter model operates at an arithmetic intensity of less than 1.0 FLOP per byte transferred from High-Bandwidth Memory (HBM). To generate a single token, the entire 140 GB weight tensor (or 38 GB in 4-bit quantization) must be read from memory into SRAM."
+            "value": "Modern enterprise GPUs, such as the NVIDIA H100 SXM5, provide astronomical compute capacity - up to 1,979 TFLOPS of FP16 tensor core throughput. Yet in production autoregressive generation, a 70-billion parameter model operates at an arithmetic intensity of less than 1.0 FLOP per byte transferred from High-Bandwidth Memory (HBM). To generate a single token, the entire 140 GB weight tensor (or 38 GB in 4-bit quantization) must be read from memory into SRAM."
         },
         {
             "type": "paragraph",
-            "value": "This memory bandwidth bottleneck forces the GPU's tensor cores to sit idle for over 90% of execution time. For mission-critical enterprise workflows—such as algorithmic financial execution, live voice agent speech generation, or real-time cybersecurity packet analysis—generating 150 tokens sequentially at 35ms per token imposes an unacceptable 5.25-second latency barrier. Enterprises cannot scale interactive agent swarms without breaking past the sequential generation paradigm."
+            "value": "This memory bandwidth bottleneck forces the GPU's tensor cores to sit idle for over 90% of execution time. For mission-critical enterprise workflows - such as algorithmic financial execution, live voice agent speech generation, or real-time cybersecurity packet analysis - generating 150 tokens sequentially at 35ms per token imposes an unacceptable 5.25-second latency barrier. Enterprises cannot scale interactive agent swarms without breaking past the sequential generation paradigm."
         },
         {
             "type": "heading",

@@ -1,5 +1,5 @@
 """
-config.py — Central configuration for Elesium SEO Automation Pipeline
+config.py - Central configuration for Elesium SEO Automation Pipeline
 All API keys are loaded from environment variables (never hardcoded).
 """
 
@@ -25,7 +25,7 @@ BUSINESS_NAME = "Elesium"
 BUSINESS_URL = "https://elesium.online"
 BUSINESS_DESCRIPTION = (
     "Elesium is a B2B buyer-matching and dealflow platform that connects "
-    "businesses—especially manufacturers, enterprise companies, and growth-stage firms—"
+    "businesses - especially manufacturers, enterprise companies, and growth-stage firms - "
     "with verified, high-ticket buyers through signal-driven outbound, strategic "
     "introductions, and proprietary data infrastructure. Elesium specialises in "
     "accelerating enterprise sales cycles, brokering exclusive B2B partnerships, "
@@ -106,18 +106,18 @@ TRENDS_TOP_N = 50
 # ─────────────────────────────────────────────
 # KEYWORD SCORING WEIGHTS
 # ─────────────────────────────────────────────
-# Google Trends interest score (0–100) is the PRIMARY signal.
+# Google Trends interest score (0-100) is the PRIMARY signal.
 # 100 = peak worldwide search interest right now.
 # 0   = no measurable search interest.
-INTEREST_SCORE_WEIGHT = 0.55  # Google Trends 0–100 interest (primary)
+INTEREST_SCORE_WEIGHT = 0.55  # Google Trends 0-100 interest (primary)
 RELEVANCE_WEIGHT = 0.35       # How relevant to Elesium's business model
 VOLUME_WEIGHT = 0.10          # Estimated absolute search volume (optional)
 
 # Drop any keyword with a Google Trends interest score below this threshold
 # (prevents low-momentum keywords from entering the content pipeline)
-MIN_INTEREST_SCORE = 30        # 0–100 scale — below 30 = not trending enough
+MIN_INTEREST_SCORE = 30        # 0-100 scale - below 30 = not trending enough
 
-# Minimum business relevance score to include a keyword (0.0 – 1.0)
+# Minimum business relevance score to include a keyword (0.0 - 1.0)
 MIN_RELEVANCE_SCORE = 0.15
 
 # Top N keywords to pass to the content generator (split: 10 AM + 10 PM)
@@ -141,10 +141,10 @@ BLOCK_KEYWORDS_EACH = 10   # keywords per block
 CURRENT_YEAR = 2026
 
 # ─────────────────────────────────────────────
-# PILLAR 3 — DYNAMIC TOPIC CLUSTERING (Themed Weeks)
+# PILLAR 3 - DYNAMIC TOPIC CLUSTERING (Themed Weeks)
 # ─────────────────────────────────────────────
 # The script rotates through these themes weekly (by ISO week number).
-# This builds "Topical Authority" — Google rewards sites that go DEEP on a niche.
+# This builds "Topical Authority" - Google rewards sites that go DEEP on a niche.
 # Week 1 = B2B Sales & Dealflow, Week 2 = Manufacturing & Industrial, etc.
 WEEKLY_THEME_ROTATION = [
     "B2B Sales & Dealflow",
@@ -157,7 +157,7 @@ WEEKLY_THEME_ROTATION = [
 ]
 
 # ─────────────────────────────────────────────
-# PILLAR 4 — E-E-A-T: ELESIUM CASE STUDIES
+# PILLAR 4 - E-E-A-T: ELESIUM CASE STUDIES
 # ─────────────────────────────────────────────
 # Google now aggressively filters AI-generated content that lacks first-hand
 # experience (the first 'E' in E-E-A-T). These proof points are injected into
@@ -168,7 +168,7 @@ WEEKLY_THEME_ROTATION = [
 ELESIUM_CASE_STUDIES = [
     "An OEM supplier in the mid-market segment reduced their average sales cycle by over 60% after Elesium facilitated three verified introductions to procurement directors within their target vertical.",
     "A growth-stage SaaS firm secured two enterprise pilots within 45 days of onboarding with Elesium, bypassing what would have been six months of cold outreach.",
-    "A manufacturing buyer closed a high-ticket supply contract through a single Elesium-facilitated introduction — the buyer had an active mandate that standard lead generation tools never would have surfaced.",
+    "A manufacturing buyer closed a high-ticket supply contract through a single Elesium-facilitated introduction - the buyer had an active mandate that standard lead generation tools never would have surfaced.",
     "Enterprise firms using Elesium's signal-driven model report that over 70% of introductions lead to a qualified first conversation, compared to an industry average of under 5% for cold outreach.",
     "Elesium's proprietary buyer-readiness signal has been shown to cut time-to-first-meeting from an average of 90 days (cold outreach) to under 14 days.",
 ]
@@ -185,7 +185,7 @@ BLOGPOSTS_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "blogPosts.ts"
 # Keyword logs are still stored locally for auditing
 OUTPUT_KEYWORD_LOGS_DIR = BASE_DIR / "keyword_logs"
 
-# Temp dir for transient .md (auto-deleted after injection — not stored)
+# Temp dir for transient .md (auto-deleted after injection - not stored)
 OUTPUT_SEO_BLOCKS_DIR = BASE_DIR / "daily_seo_blocks"
 
 OUTPUT_KEYWORD_LOGS_DIR.mkdir(exist_ok=True)

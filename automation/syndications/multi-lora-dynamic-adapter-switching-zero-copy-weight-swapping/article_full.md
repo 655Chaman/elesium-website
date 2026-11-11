@@ -14,13 +14,13 @@ Multi-LoRA dynamic adapter switching multiplexes hundreds of task-specific low-r
 
 ## 1. The Multi-Tenant Serving Bottleneck in Enterprise Agent Swarms
 
-In enterprise multi-agent deployments—such as routing between legal contract analysis, financial fraud triage, customer sentiment scoring, and code generation—each task requires specialized domain fine-tuning. Deploying dedicated 70-billion-parameter models for each task leads to unsustainable GPU hardware costs, severe VRAM fragmentation, and idle compute capacity.
+In enterprise multi-agent deployments - such as routing between legal contract analysis, financial fraud triage, customer sentiment scoring, and code generation - each task requires specialized domain fine-tuning. Deploying dedicated 70-billion-parameter models for each task leads to unsustainable GPU hardware costs, severe VRAM fragmentation, and idle compute capacity.
 
 ---
 
 ## 2. Low-Rank Adaptation (LoRA) Delta Weights & Rank Slicing
 
-Instead of fine-tuning all model weights, LoRA decomposes weight updates into two low-rank matrices: $\Delta W = B \times A$, where $A \in \mathbb{R}^{r \times d_{in}}$ and $B \in \mathbb{R}^{d_{out} \times r}$ with rank $r \ll d$. For a 70B parameter model, a rank-16 adapter requires only 40MB to 120MB of parameters—a 99.8% reduction in checkpoint storage compared to full model weights.
+Instead of fine-tuning all model weights, LoRA decomposes weight updates into two low-rank matrices: $\Delta W = B \times A$, where $A \in \mathbb{R}^{r \times d_{in}}$ and $B \in \mathbb{R}^{d_{out} \times r}$ with rank $r \ll d$. For a 70B parameter model, a rank-16 adapter requires only 40MB to 120MB of parameters - a 99.8% reduction in checkpoint storage compared to full model weights.
 
 ---
 

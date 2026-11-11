@@ -3,9 +3,9 @@
 
 **Document Control:** ELESIUM-TEARDOWN-GROWW-2026-V1  
 **Classification:** Strictly Confidential / Board & CISO Advisory  
-**Target Entity:** Nextbillion Technology Private Limited (Groww — SEBI Reg. INZ000301838, Depository Participant IN-DP-417-2019)  
+**Target Entity:** Nextbillion Technology Private Limited (Groww - SEBI Reg. INZ000301838, Depository Participant IN-DP-417-2019)  
 **Target Recipients:** Chief Information Security Officer (CISO), Chief Risk Officer (CRO), Chief Technology Officer (CTO), Head of Compliance  
-**Issuing Authority:** Elesium Digital Systems (https://elesium.online) — Bangalore, India  
+**Issuing Authority:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
 **Date of Issuance:** November 2026  
 **Statutory Scope:** RBI Master Direction on IT Governance (2023) | SEBI Cybersecurity & Cyber Resilience Framework (CSCRF 2024) | DPDP Act 2023 (Section 8(5) & 16) | Aadhaar Act Section 29  
 
@@ -62,7 +62,7 @@ Hyperscalers utilize shared KV-cache paging algorithms to reduce TTFT for multi-
 ```
 User: "What is my capital gains tax liability on my 1,500 shares of CDSL sold via Demat 12081600XXXX?"
 ```
-In a shared cloud LLM deployment, this prompt—containing Demat ID, trade volume, ticker, and inferred net worth—is tokenized and placed into the server's VRAM KV-cache. While providers claim virtual tenant segregation, memory forensics and GPU side-channel attacks (e.g., Rowhammer-style memory bleed, cache-timing side channels, and prompt injection extraction) pose catastrophic risks for regulated institutions.
+In a shared cloud LLM deployment, this prompt - containing Demat ID, trade volume, ticker, and inferred net worth - is tokenized and placed into the server's VRAM KV-cache. While providers claim virtual tenant segregation, memory forensics and GPU side-channel attacks (e.g., Rowhammer-style memory bleed, cache-timing side channels, and prompt injection extraction) pose catastrophic risks for regulated institutions.
 
 ### 3.2 The Failure of "Soft Deletion" in RAG Vector Databases
 When an investor deletes their Groww account under DPDP Act Section 12, Groww issues a database delete command. However, in modern AI stacks that utilize Vector Databases (`pgvector`, Milvus, Pinecone) for financial document retrieval:
@@ -297,7 +297,7 @@ To guarantee mathematically provable data erasure without rebuilding massive HNS
 | **Annual Inference OPEX** | **₹29.40 Crore ($3.54M USD)** | **₹4.92 Crore ($592k USD)** | **₹24.48 Crore Savings** |
 | **SEBI / RBI Non-Compliance Exposure** | Up to ₹250 Cr (DPDP) + Regulatory Sanctions | ₹0 (Mathematically Certified Compliant) | **Total Risk Elimination** |
 | **Forensic Audit Labor Savings** | ₹4.20 Crore (Manual audit reconciliations) | ₹0.60 Crore (Instant Redis trace replay) | **₹3.60 Crore Savings** |
-| **Net Annual Cash Flow Benefit** | — | — | **+₹28.08 Crore** |
+| **Net Annual Cash Flow Benefit** | - | - | **+₹28.08 Crore** |
 
 ---
 
@@ -309,7 +309,7 @@ Elesium executes a structured, zero-disruption migration designed to run concurr
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                   90-DAY SOVEREIGN BFSI TRANSITION PLAN                      │
 ├─────────────────────┬──────────────────────┬─────────────────────────────────┤
-│ PHASE 1: DAYS 1–30  │ PHASE 2: DAYS 31–60  │ PHASE 3: DAYS 61–90             │
+│ PHASE 1: DAYS 1-30  │ PHASE 2: DAYS 31-60  │ PHASE 3: DAYS 61-90             │
 │ Enclave Isolation & │ Deterministic States │ Production Cutover &            │
 │ Statutory Masking   │ & Shadow Replay      │ SEBI CSCRF Audit Pack           │
 ├─────────────────────┼──────────────────────┼─────────────────────────────────┤

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Wave 29 Keywords Ingestion (IDs 1,291 to 1,340 - 50 Commercial BOFU Solutions):
-- Cluster 1 (IDs 1,291–1,307, 17 solutions): Differential Privacy & Gradient Sanitization in Federated Healthcare & Genomic Agent Systems
-- Cluster 2 (IDs 1,308–1,324, 17 solutions): Photonic Integrated Circuit (PIC) & Co-Packaged Optics (CPO) Laser Interconnect Telemetry
-- Cluster 3 (IDs 1,325–1,340, 16 solutions): Magnetohydrodynamic (MHD) Liquid Metal Flow & Molten Salt Pump Telemetry
+- Cluster 1 (IDs 1,291-1,307, 17 solutions): Differential Privacy & Gradient Sanitization in Federated Healthcare & Genomic Agent Systems
+- Cluster 2 (IDs 1,308-1,324, 17 solutions): Photonic Integrated Circuit (PIC) & Co-Packaged Optics (CPO) Laser Interconnect Telemetry
+- Cluster 3 (IDs 1,325-1,340, 16 solutions): Magnetohydrodynamic (MHD) Liquid Metal Flow & Molten Salt Pump Telemetry
 """
 
 import json
@@ -19,7 +19,7 @@ def slugify(text: str) -> str:
 
 wave29_items = [
     # ----------------------------------------------------------------------------------
-    # Cluster 1: Differential Privacy & Gradient Sanitization in Healthcare & Genomes (IDs 1,291–1,307, 17 items)
+    # Cluster 1: Differential Privacy & Gradient Sanitization in Healthcare & Genomes (IDs 1,291-1,307, 17 items)
     # ----------------------------------------------------------------------------------
     (
         "differential privacy DPSGD per-sample gradient clipping norm telemetry for federated clinical trial records",
@@ -125,7 +125,7 @@ wave29_items = [
     ),
 
     # ----------------------------------------------------------------------------------
-    # Cluster 2: Photonic Integrated Circuit (PIC) & Co-Packaged Optics (CPO) Telemetry (IDs 1,308–1,324, 17 items)
+    # Cluster 2: Photonic Integrated Circuit (PIC) & Co-Packaged Optics (CPO) Telemetry (IDs 1,308-1,324, 17 items)
     # ----------------------------------------------------------------------------------
     (
         "silicon photonics microring resonator thermal phase shift heater control loop telemetry for optical interconnects",
@@ -231,7 +231,7 @@ wave29_items = [
     ),
 
     # ----------------------------------------------------------------------------------
-    # Cluster 3: Magnetohydrodynamic (MHD) Liquid Metal Flow & Molten Salt Telemetry (IDs 1,325–1,340, 16 items)
+    # Cluster 3: Magnetohydrodynamic (MHD) Liquid Metal Flow & Molten Salt Telemetry (IDs 1,325-1,340, 16 items)
     # ----------------------------------------------------------------------------------
     (
         "liquid metal sodium potassium NaK electromagnetic pump linear induction coil temperature telemetry for fast reactors",

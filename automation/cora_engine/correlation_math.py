@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — STATISTICAL CORRELATION MATH
+TED KUBAITIS CORA SERP CORRELATION ENGINE - STATISTICAL CORRELATION MATH
 =============================================================================
 Classification: Spearman Rank & Pearson Correlation Engine with Student's t CDF
 Methodology: Ted Kubaitis (Cora Statistical Significance & Deficit Formulas)

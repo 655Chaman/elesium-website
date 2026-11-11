@@ -2,7 +2,7 @@
 
 > **Document Status:** Active Commercial Operations & Directory Unblocking Kit  
 > **Vendor:** Elesium Online (`https://elesium.online`)  
-> **Corporate Identity:** Chaman Shah — Principal AI Systems Architect (`contact@elesium.online` / `chamansyed655@gmail.com`)  
+> **Corporate Identity:** Chaman Shah - Principal AI Systems Architect (`contact@elesium.online` / `chamansyed655@gmail.com`)  
 > **Target Platforms:** GoodFirms, Clutch.co, Trustpilot, G2  
 > **Framework:** Michael Merlino Entity Corroboration & Edward Sturm Authority Stacking Protocols  
 > **Generated:** October 2026  
@@ -31,11 +31,11 @@ This kit provides the tactical, copy-paste operational action pack to unlock, ve
 # SECTION 1: GoodFirms Moderation Appeal & Verification Pack
 
 ## 1.1 Overview & Recipient Routing
-- **Primary Recipient:** Shirley — GoodFirms Review Operations & Moderation Desk (`shirley@goodfirms.co`)
+- **Primary Recipient:** Shirley - GoodFirms Review Operations & Moderation Desk (`shirley@goodfirms.co`)
 - **Carbon Copy (CC):** `reviews@goodfirms.co`, `support@goodfirms.co`
-- **Sender:** Chaman Shah / Chaman Syed — Founder & Principal AI Systems Architect (`chamansyed655@gmail.com` / `contact@elesium.online`)
+- **Sender:** Chaman Shah / Chaman Syed - Founder & Principal AI Systems Architect (`chamansyed655@gmail.com` / `contact@elesium.online`)
 - **Company Profile:** Elesium Online (`https://www.goodfirms.co/company/elesium-online`)
-- **Flagged Review:** Herculan B.V. (Netherlands) — Custom ERP Logistics & Tender Parsing AI Co-pilot
+- **Flagged Review:** Herculan B.V. (Netherlands) - Custom ERP Logistics & Tender Parsing AI Co-pilot
 
 ---
 
@@ -45,7 +45,7 @@ This kit provides the tactical, copy-paste operational action pack to unlock, ve
 To: shirley@goodfirms.co
 CC: reviews@goodfirms.co, support@goodfirms.co
 From: Chaman Shah <chamansyed655@gmail.com>
-Subject: Formal Appeal & Commercial Verification: Elesium Online (Company ID: elesium-online) — Herculan B.V. Client Review
+Subject: Formal Appeal & Commercial Verification: Elesium Online (Company ID: elesium-online) - Herculan B.V. Client Review
 Attachments:
   - 01_PCE_SOW_Herculan_Elesium_Signed.pdf
   - 02_Invoice_ELS-HRC-2025-Q1-084_Receipt.pdf
@@ -60,7 +60,7 @@ I am writing to formally request a manual human review and immediate approval fo
 
 Our enterprise client, Herculan B.V. (Industrieweg 24, 4231 VG Meerkerk, Netherlands), recently submitted a comprehensive evaluation detailing our custom software engineering engagement: "Autonomous Project Specification Parsing & ERP Logistics Co-pilot" (Contract Ref: ELS-HRC-2025-Q1-084; Total Consideration: €17,500 EUR). We understand that the submission was held by your automated anti-fraud filters.
 
-We respect GoodFirms’ stringent review integrity and anti-spam protocols—it is why your platform holds such high commercial authority in our ecosystem. However, our technical audit confirms this hold was an algorithmic false positive resulting from two benign network and identity conditions:
+We respect GoodFirms’ stringent review integrity and anti-spam protocols - it is why your platform holds such high commercial authority in our ecosystem. However, our technical audit confirms this hold was an algorithmic false positive resulting from two benign network and identity conditions:
 
 1. OAuth SSO Identity Discrepancy: The reviewer authenticated via an older personal LinkedIn account while verifying his official corporate domain address (m.***@herculan.com). The automated filter flagged the token disparity.
 2. Dutch Corporate VPN & Multi-Subnet Gateway: Herculan B.V. routes remote executive traffic through secure enterprise VPN nodes (KPN/Ziggo dynamic subnets) rather than a static municipal IP block at their Meerkerk manufacturing headquarters, triggering a geolocation mismatch alert.
@@ -95,7 +95,7 @@ Office: Koramangala 4th Block, Bengaluru, Karnataka 560034, India
 To: shirley@goodfirms.co
 CC: reviews@goodfirms.co, support@goodfirms.co
 From: Chaman Shah <chamansyed655@gmail.com>
-Subject: URGENT FOLLOW-UP: Review Appeal Ticket [Company ID: elesium-online] — Herculan B.V. Verification Dossier
+Subject: URGENT FOLLOW-UP: Review Appeal Ticket [Company ID: elesium-online] - Herculan B.V. Verification Dossier
 
 Dear Shirley and GoodFirms Review Operations,
 
@@ -169,7 +169,7 @@ Before transmitting Email Template 1, verify that all 6 files are compiled in PD
 ## 2.1 Strategic Rationale
 - **Platform Authority:** DR 92 (The Gold Standard for Global B2B Software Procurement)
 - **Review Type:** 15-Minute Direct Telephone / Zoom Verification Interview with a Clutch Research Analyst
-- **Reviewer:** Guy #2 (Enterprise Client Champion — VP of Operations & Engineering)
+- **Reviewer:** Guy #2 (Enterprise Client Champion - VP of Operations & Engineering)
 - **Target Badge:** `"Verified by Clutch via Telephone Call"`
 - **Why It Matters:** Phone reviews completely bypass automated web filters, OAuth bugs, IP geofencing, and spam quarantines. They carry 2x the ranking weight of self-service web submissions on the Clutch Leaders Matrix.
 
@@ -276,7 +276,7 @@ Elesium Online | +91-8317329312
 - **Analyst Question:** *"What measurable business outcomes, ROI, or improvements did your organization achieve from Elesium's system?"*
 - **Model Answer for Guy #2 (The Numbers Capsule):**
   > *"The quantifiable impact was immediate and remarkable:
-  > • Processing Latency: Our document intake and specification parsing cycle plummeted from 3.5 business days down to 4.2 minutes—representing a greater than 95% reduction in latency.
+  > • Processing Latency: Our document intake and specification parsing cycle plummeted from 3.5 business days down to 4.2 minutes - representing a greater than 95% reduction in latency.
   > • Labor Efficiency: We liberated over 160+ manual engineering hours per month, allowing our senior analysts to focus on high-margin strategic accounts.
   > • Operational Precision: Data accuracy reached 99.4%, cutting downstream reconciliation discrepancies by 98%.
   > • Commercial Payback: We recouped 100% of our engineering investment within 62 days of production deployment."*
@@ -286,12 +286,12 @@ Elesium Online | +91-8317329312
 - **Model Answer for Guy #2:**
   - **Quality of Service:** 5.0 / 5.0 (*"Rock-solid, deterministic, enterprise-grade architecture."*)
   - **Schedule / Timeliness:** 5.0 / 5.0 (*"Every sprint milestone delivered on time."*)
-  - **Cost / Value:** 5.0 / 5.0 (*"Outstanding value—delivered 3x the ROI of legacy consultancies."*)
+  - **Cost / Value:** 5.0 / 5.0 (*"Outstanding value - delivered 3x the ROI of legacy consultancies."*)
   - **Willingness to Refer:** 5.0 / 5.0 (*"Unreservedly recommend them to any enterprise executive."*)
   - **Overall Score:** 5.0 / 5.0
 - **Analyst Question:** *"Is there any area where you feel Elesium could improve, or any advice for prospective enterprise clients?"*
 - **Model Answer for Guy #2 (Constructive Framing):**
-  > *"From an engineering delivery perspective, there was virtually nothing to critique. My primary recommendation for prospective enterprise clients is to engage your internal security and compliance teams early during onboarding. Elesium builds and ships very quickly—much faster than typical enterprise IT—so having your VPC credentials and database endpoints provisioned upfront will allow them to deliver value even faster."*
+  > *"From an engineering delivery perspective, there was virtually nothing to critique. My primary recommendation for prospective enterprise clients is to engage your internal security and compliance teams early during onboarding. Elesium builds and ships very quickly - much faster than typical enterprise IT - so having your VPC credentials and database endpoints provisioned upfront will allow them to deliver value even faster."*
 
 ---
 
@@ -308,7 +308,7 @@ Elesium Online | +91-8317329312
 ---
 
 ## 2.6 Post-Interview Approval Protocol
-1. Within 24–48 hours of the phone interview, Clutch’s editorial team prepares a formal transcript.
+1. Within 24-48 hours of the phone interview, Clutch’s editorial team prepares a formal transcript.
 2. Clutch sends Guy #2 an email titled: *"Review Your Clutch Interview Transcript for Elesium Online"*.
 3. Guy #2 clicks the link, confirms the facts, and clicks **"Approve Transcript"**.
 4. The review publishes with the verified telephone badge, instantly locking Elesium’s Clutch rating at **5.0 / 5.0**.
@@ -463,7 +463,7 @@ Principal AI Systems Architect | Elesium Online
 - **Pricing & Packaging:**
   - Pricing Model: *Custom / Enterprise Contract*
   - Minimum Contract Value: *$10,000+*
-  - Engineering Billing Range: *$25 – $49 / hour* (Milestone-based delivery)
+  - Engineering Billing Range: *$25 - $49 / hour* (Milestone-based delivery)
   - Free Trial: *No (Enterprise Proof of Concept / Pilot available upon qualified architecture review)*
 - **Security & Compliance Credentials:**
   - SOC2 Type II Alignment: Supported on dedicated VPC topologies

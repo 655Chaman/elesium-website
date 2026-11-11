@@ -1,4 +1,4 @@
-# TEST_READY.md — AEO Grounding & Reverse-RAG E2E Test Suite Readiness
+# TEST_READY.md - AEO Grounding & Reverse-RAG E2E Test Suite Readiness
 
 ## 1. Test Suite Status: READY & PASSING (109/109)
 
@@ -23,8 +23,8 @@ python3 -m pytest tests/e2e/ -v
 
 | Test Tier | Description | Target Threshold | Actual Tests Implemented | Pass Rate |
 |---|---|:---:|:---:|:---:|
-| **Tier 1** | Baseline Feature Coverage (F1–F10) | >= 5 tests per feature (>= 50 total) | **50 tests** (5 × 10 features) | **100% (50/50)** |
-| **Tier 2** | Boundary, Corner & Edge Cases (F1–F10) | >= 5 tests per feature (>= 50 total) | **50 tests** (5 × 10 features) | **100% (50/50)** |
+| **Tier 1** | Baseline Feature Coverage (F1 - F10) | >= 5 tests per feature (>= 50 total) | **50 tests** (5 × 10 features) | **100% (50/50)** |
+| **Tier 2** | Boundary, Corner & Edge Cases (F1 - F10) | >= 5 tests per feature (>= 50 total) | **50 tests** (5 × 10 features) | **100% (50/50)** |
 | **Tier 3** | Cross-Feature Interactions & Pipelines | Cross-module pairwise & end-to-end | **6 tests** | **100% (6/6)** |
 | **Tier 4** | Real-World Enterprise Procurement Workflows | Realistic CISO, BFSI, Healthcare audits | **3 scenarios** | **100% (3/3)** |
 | **Total** | **Comprehensive E2E Test Battery** | **>= 106 tests** | **109 tests** | **100% (109/109)** |

@@ -131,7 +131,7 @@
   },
   "predictive-maintenance-multi-agent-systems-for-manufacturing-plants": {
     "slug": "vention-manufacturing-dealflow-3",
-    "title": "Vention: Securing K in Deals in Under 60 Days \u2014 Industrial Edge Analytics and Machinery Downtime Prevention",
+    "title": "Vention: Securing K in Deals in Under 60 Days - Industrial Edge Analytics and Machinery Downtime Prevention",
     "excerpt": "Industrial IoT telemetry architecture capturing high-frequency vibration and thermal sensors to predict spindle failures before catastrophic seizure.",
     "readTime": "5 min read",
     "category": "Matchmaking Frameworks",
@@ -262,7 +262,7 @@
   "private-vpc-air-gapped-llm-deployment-for-defense-contractors": {
     "slug": "cost-of-enterprise-ai-automation-india",
     "title": "Technical Whitepaper: Cost Architecture, Deterministic State Machines, and Regulatory Compliance for Enterprise AI Automation in India",
-    "excerpt": "Architectural blueprints for hosting FP8 quantized open weights on air-gapped private sovereign hardware with zero external internet routing.",
+    "excerpt": "Architectural blueprints for hosting FP8 quantized open weights on air-gapped sovereign private hardware with zero external internet routing.",
     "readTime": "9 min read",
     "category": "AI Automation",
     "verifiedDate": "October 2026",

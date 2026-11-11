@@ -546,7 +546,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               </h3>
               <p className="text-xs text-slate-400 leading-relaxed">
                 In Silicon-on-Insulator (SOI) waveguides, light at 1550 nm travels at group velocity $v_g = c / n_&#123;\text&#123;eff&#125;&#125; \approx 1.22 \times 10^8 \text&#123; m/s&#125;$.
-                A full $256 \times 256$ matrix calculation completes in 180 picoseconds of physical flight time—an acceleration that is fundamentally unachievable in clocked silicon logic.
+                A full $256 \times 256$ matrix calculation completes in 180 picoseconds of physical flight time, an acceleration that is fundamentally unachievable in clocked silicon logic.
               </p>
             </div>
 

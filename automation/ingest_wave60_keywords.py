@@ -1,7 +1,7 @@
 import json
 
 wave60_keywords = [
-    # Cluster 1: Prefill-Decode Disaggregation & Chunked Prompt Execution (IDs 2916–2932, 17 items)
+    # Cluster 1: Prefill-Decode Disaggregation & Chunked Prompt Execution (IDs 2916-2932, 17 items)
     {
         "id": 2916,
         "keyword": "prefill decode disaggregation controllers for enterprise vllm and sglang clusters",
@@ -224,7 +224,7 @@ wave60_keywords = [
         "primary_cta": "Deploy Telecom Chunked Prefill NOC Infrastructure"
     },
 
-    # Cluster 2: RDMA & Distributed KV Transport for Disaggregated Clusters (IDs 2933–2948, 16 items)
+    # Cluster 2: RDMA & Distributed KV Transport for Disaggregated Clusters (IDs 2933-2948, 16 items)
     {
         "id": 2933,
         "keyword": "zero copy rdma kv cache transfer daemons for disaggregated llm inference clusters",
@@ -434,7 +434,7 @@ wave60_keywords = [
         "primary_cta": "Deploy TensorRT-LLM Zero-Copy Socket Infrastructure"
     },
 
-    # Cluster 3: TTFT Latency SLAs & Enterprise Multi-Tenant GPU Disaggregation (IDs 2949–2965, 17 items)
+    # Cluster 3: TTFT Latency SLAs & Enterprise Multi-Tenant GPU Disaggregation (IDs 2949-2965, 17 items)
     {
         "id": 2949,
         "keyword": "sub 15ms ttft sla monitoring daemons for enterprise conversational agent swarms",

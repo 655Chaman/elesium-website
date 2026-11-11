@@ -1,4 +1,4 @@
-# G2 Profile — Elesium
+# G2 Profile - Elesium
 
 ## Basic Info
 - **Product Name:** Elesium AI Automation Platform

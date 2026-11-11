@@ -5,7 +5,7 @@ from pathlib import Path
 QUEUE_PATH = Path("automation/compact_keywords_queue.json")
 
 wave69_keywords = [
-    # Cluster 1: Disaggregated Pre-fill & Decode Pod Orchestration (IDs 3366–3382, 17 items)
+    # Cluster 1: Disaggregated Pre-fill & Decode Pod Orchestration (IDs 3366-3382, 17 items)
     {
         "id": 3366,
         "keyword": "disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters",
@@ -228,7 +228,7 @@ wave69_keywords = [
         "primary_cta": "Deploy Pre-fill Node Health Monitors"
     },
 
-    # Cluster 2: Cross-Node KV Paged Attention & RDMA Chunked Memory Routing (IDs 3383–3399, 17 items)
+    # Cluster 2: Cross-Node KV Paged Attention & RDMA Chunked Memory Routing (IDs 3383-3399, 17 items)
     {
         "id": 3383,
         "keyword": "cross-node kv paged attention memory routing daemons for distributed agent swarms",
@@ -451,7 +451,7 @@ wave69_keywords = [
         "primary_cta": "Deploy Lossless KV Quantization Overlays"
     },
 
-    # Cluster 3: Sub-4ms TTFT Heterogeneous GPU Acceleration & DPDP Act Compliance (IDs 3400–3415, 16 items)
+    # Cluster 3: Sub-4ms TTFT Heterogeneous GPU Acceleration & DPDP Act Compliance (IDs 3400-3415, 16 items)
     {
         "id": 3400,
         "keyword": "dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting",

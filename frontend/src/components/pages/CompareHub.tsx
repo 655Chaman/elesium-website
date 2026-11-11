@@ -28,15 +28,15 @@ const compareFaqs = [
     },
     {
         q: "How does private vLLM inference compare to Azure OpenAI in unit economics?",
-        a: "At 10,000+ daily enterprise transactions, public cloud API token costs scale exponentially, accompanied by 800ms–2,400ms variable latency spikes and data telemetry egress risk. Self-hosting fine-tuned 8B/70B models on dedicated NVIDIA H100 clusters running vLLM with FP8 GEMM cuts 3-year TCO by 62%–74% while anchoring TTFT below 200ms and fulfilling statutory DPDP data residency."
+        a: "At 10,000+ daily enterprise transactions, public cloud API token costs scale exponentially, accompanied by 800ms-2,400ms variable latency spikes and data telemetry egress risk. Self-hosting fine-tuned 8B/70B models on dedicated NVIDIA H100 clusters running vLLM with FP8 GEMM cuts 3-year TCO by 62%-74% while anchoring TTFT below 200ms and fulfilling statutory DPDP data residency."
     },
     {
         q: "How does Elesium compare to traditional IT consultancies (TCS, Infosys, Wipro)?",
-        a: "Legacy IT consultancies operate on time-and-materials billing with 6-to-12-month delivery horizons, junior billable hours, and off-the-shelf low-code wrappers. Elesium deploys production-ready pilot agents in 14 business days, delivers 100% client-owned sovereign IP, and contractually guarantees a 3x–5x cash-flow ROI SLA within 90 days."
+        a: "Legacy IT consultancies operate on time-and-materials billing with 6-to-12-month delivery horizons, junior billable hours, and off-the-shelf low-code wrappers. Elesium deploys production-ready pilot agents in 14 business days, delivers 100% client-owned sovereign IP, and contractually guarantees a 3x-5x cash-flow ROI SLA within 90 days."
     },
     {
         q: "What are the commercial investment tiers for enterprise implementation?",
-        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day rollout with SAP/ERP connectors); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated systems pod with 1-hour critical incident SLA)."
+        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day rollout with SAP/ERP connectors); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated systems pod with 1-hour critical incident SLA)."
     }
 ]
 
@@ -68,7 +68,7 @@ export default function CompareHub() {
                     '@type': 'Organization',
                     'name': 'Elesium',
                     'url': 'https://elesium.online',
-                    'logo': 'https://elesium.online/assets/LOGO_NEW.png'
+                    'logo': 'https://elesium.online/assets/logo-square.png'
                 },
                 'hasPart': compareData.map((item: CompareBattlecardItem) => ({
                     '@type': 'Article',
@@ -171,7 +171,7 @@ export default function CompareHub() {
                         Enterprise AI Framework & Architecture Comparisons
                     </h1>
                     <p className="text-base sm:text-lg text-gray-300 max-w-4xl leading-relaxed">
-                        Deterministic, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, state machine engines, and enterprise automation delivery models. No superficial vendor marketing—only empirical latency benchmarks, token economics, and failure recovery protocols.
+                        Deterministic, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, state machine engines, and enterprise automation delivery models. No superficial vendor marketing: only empirical latency benchmarks, token economics, and failure recovery protocols.
                     </p>
 
                     {/* AEO Answer Capsule */}
@@ -240,7 +240,7 @@ export default function CompareHub() {
                                 <tr>
                                     <td className="py-3.5 px-4 font-semibold text-white font-sans">Time to First Token (TTFT)</td>
                                     <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">&lt; 200ms (vLLM FP8 Kernel)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">850ms – 2,400ms (Shared Gateway)</td>
+                                    <td className="py-3.5 px-4 text-gray-400">850ms - 2,400ms (Shared Gateway)</td>
                                     <td className="py-3.5 px-4 text-gray-400">N/A (Static Screen Scraping)</td>
                                 </tr>
                                 <tr>
@@ -445,7 +445,7 @@ export default function CompareHub() {
                             <div>
                                 <div className="text-xs font-mono text-emerald-400 mb-1">TIER 01 • PROTOTYPE</div>
                                 <h3 className="text-xl font-bold text-white">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold text-white mt-3 font-mono">₹1,50,000 – ₹3,50,000</div>
+                                <div className="text-2xl font-bold text-white mt-3 font-mono">₹1,50,000 - ₹3,50,000</div>
                                 <div className="text-xs text-gray-400 mt-1 mb-4">14-Day Delivery Guarantee</div>
                                 <ul className="space-y-2 text-xs text-gray-300">
                                     <li className="flex items-center gap-2">
@@ -477,8 +477,8 @@ export default function CompareHub() {
                             <div>
                                 <div className="text-xs font-mono text-emerald-400 mb-1">TIER 02 • PRODUCTION</div>
                                 <h3 className="text-xl font-bold text-white">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold text-white mt-3 font-mono">₹6,00,000 – ₹15,00,000</div>
-                                <div className="text-xs text-gray-400 mt-1 mb-4">30–45 Day Implementation</div>
+                                <div className="text-2xl font-bold text-white mt-3 font-mono">₹6,00,000 - ₹15,00,000</div>
+                                <div className="text-xs text-gray-400 mt-1 mb-4">30-45 Day Implementation</div>
                                 <ul className="space-y-2 text-xs text-gray-300">
                                     <li className="flex items-center gap-2">
                                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />

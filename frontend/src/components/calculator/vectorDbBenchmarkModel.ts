@@ -167,7 +167,7 @@ export function calculateVectorBenchmark(inputs: VectorBenchmarkInputs): VectorB
       threeYearTcoUsd: pinecone3YrTco,
       dataSovereigntyRating: 'Multi-Tenant US-Cloud',
       dpdpComplianceReady: false,
-      notes: 'Serverless operational convenience, but introduces WAN network latency (15–40ms) and trans-border telemetry transmission risks under DPDP Act 2023.'
+      notes: 'Serverless operational convenience, but introduces WAN network latency (15-40ms) and trans-border telemetry transmission risks under DPDP Act 2023.'
     },
     {
       name: 'Milvus Distributed (Linux Foundation)',

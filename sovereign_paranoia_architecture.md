@@ -35,7 +35,7 @@ Never trust the host machine, the network, or simple timeout assumptions. A simp
 **Objective:** Physically prevent users and developers from breaking the system through haste, confusion, or bad configuration.
 **Core Prompt:** *"How will an impatient user or a sleep-deprived developer accidentally weaponize this interface?"*
 
-Checking for an existing MD5 hash in application code before inserting a job fails when 50 clicks arrive within the same millisecond—all 50 read checks pass simultaneously before the first write completes. Enforce constraints atomically at the storage layer.
+Checking for an existing MD5 hash in application code before inserting a job fails when 50 clicks arrive within the same millisecond - all 50 read checks pass simultaneously before the first write completes. Enforce constraints atomically at the storage layer.
 
 *   **Atomic Deduplication:** Enforce a unique database index on the workspace ID and payload SHA-256 hash using `ON CONFLICT DO NOTHING`.
 *   **Config Sanitization:** Strip whitespace, filter empty strings, and validate key prefixes at boot before accepting `.env` arrays.
@@ -47,7 +47,7 @@ Checking for an existing MD5 hash in application code before inserting a job fai
 **Objective:** Defend against malicious actors, weaponized payloads, and lying upstream dependencies.
 **Core Prompt:** *"How would an attacker or a hallucinating upstream API exploit this exact code path?"*
 
-Assume every external input—including responses from third-party APIs and LLMs—is actively trying to exhaust memory, inject commands, or corrupt state.
+Assume every external input - including responses from third-party APIs and LLMs - is actively trying to exhaust memory, inject commands, or corrupt state.
 
 *   **Payload Bounds:** Reject URLs resolving to private IP ranges (SSRF protection) and cap response stream sizes to prevent memory bombs.
 *   **Output Verification:** Never trust LLM output formatting; validate all returned JSON against a strict schema before downstream execution.
@@ -71,7 +71,7 @@ Code that passes unit tests often hides unbounded memory growth, full-table scan
 **Objective:** Ensure your defensive mechanisms do not accidentally trigger a system-wide meltdown.
 **Core Prompt:** *"How will my own retry logic or recovery mechanism destroy the cluster during an outage?"*
 
-If a specific job causes an Out-Of-Memory (OOM) crash, a naive Layer 1 zombie-recovery script will reset it to `pending` forever—crashing every worker in your fleet in a continuous loop.
+If a specific job causes an Out-Of-Memory (OOM) crash, a naive Layer 1 zombie-recovery script will reset it to `pending` forever - crashing every worker in your fleet in a continuous loop.
 
 *   **Dead-Letter Queues (DLQ):** Increment an `attempt_count` *before* execution begins; route jobs exceeding 3 crashes directly to a Dead-Letter Queue.
 *   **Jittered Backoff:** Add randomized jitter to all retry timers so recovering workers do not hammer the database in synchronized waves.

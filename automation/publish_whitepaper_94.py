@@ -24,7 +24,7 @@ POST_106 = {
     "excerpt": "A master engineering blueprint for Chief Technology Officers, AI Platform Architects, and Enterprise FinOps Directors: compressing 70B+ sovereign LLMs from FP16 to 4-bit and 8-bit precision using AWQ, SmoothQuant mathematical migration, and Hopper FP8 tensor cores without exceeding 1% perplexity degradation.",
     "intro": "A master engineering blueprint for Chief Technology Officers, AI Platform Architects, and Enterprise FinOps Directors: compressing 70B+ sovereign LLMs from FP16 to 4-bit and 8-bit precision using AWQ, SmoothQuant mathematical migration, and Hopper FP8 tensor cores without exceeding 1% perplexity degradation.",
     "metaDescription": "Enterprise post-training quantization guide: AWQ 4-bit, SmoothQuant W8A8, FP8 tensor cores, sub-1% perplexity calibration, and GPU FinOps.",
-    "relatedSolutionSlug": "awq-4-bit-weight-quantization-deployment-agents-for-sovereign-on-premise-llama-3-clusters",
+    "relatedSolutionSlug": "awq-quantized-deepseek-r1-reasoning-model-deployment-agents-for-air-gapped-defense-servers",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -53,7 +53,7 @@ POST_106 = {
         },
         {
             "type": "paragraph",
-            "value": "Historically, round-to-nearest (RTN) weight quantization destroyed reasoning capabilities in large language models, causing catastrophic perplexity spikes. The breakthrough insight of Activation-Aware Weight Quantization (Lin et al., AWQ) is that weights are not equally important. In transformer architectures, fewer than 1% of hidden channels—known as salient channels—carry disproportionate activation magnitudes and dictate downstream reasoning."
+            "value": "Historically, round-to-nearest (RTN) weight quantization destroyed reasoning capabilities in large language models, causing catastrophic perplexity spikes. The breakthrough insight of Activation-Aware Weight Quantization (Lin et al., AWQ) is that weights are not equally important. In transformer architectures, fewer than 1% of hidden channels - known as salient channels - carry disproportionate activation magnitudes and dictate downstream reasoning."
         },
         {
             "type": "paragraph",
@@ -161,7 +161,7 @@ POST_106 = {
         },
         {
             "q": "How much GPU VRAM does a 70B parameter model save under AWQ 4-bit?",
-            "a": "An unquantized FP16 70B model requires ~140 GB of VRAM. Under AWQ 4-bit (W4A16), the static weight footprint drops to ~38 GB—a 73% memory reduction that allows the entire model to fit on a single 80 GB GPU with generous space for KV cache."
+            "a": "An unquantized FP16 70B model requires ~140 GB of VRAM. Under AWQ 4-bit (W4A16), the static weight footprint drops to ~38 GB - a 73% memory reduction that allows the entire model to fit on a single 80 GB GPU with generous space for KV cache."
         }
     ],
     "internalLinks": [

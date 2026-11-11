@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-LEAD ROUTING ENGINE (MODULE 13) — ENTERPRISE B2B QUALIFICATION & DISPATCH
+LEAD ROUTING ENGINE (MODULE 13) - ENTERPRISE B2B QUALIFICATION & DISPATCH
 ================================================================================
 Classification: Automated CRO & High-Ticket Lead Routing Protocol
 Scoring Index:
-  - 80–100 : PRIORITY_ALPHA (Immediate 15-Min Lead Architect Escalation)
-  - 60–79  : PRIORITY_BETA (Automated Architecture Dossier + 24-Hr Booking)
+  - 80-100 : PRIORITY_ALPHA (Immediate 15-Min Lead Architect Escalation)
+  - 60-79  : PRIORITY_BETA (Automated Architecture Dossier + 24-Hr Booking)
   - < 60   : PRIORITY_STANDARD (Self-Serve Micro-SaaS Nurture Sequence)
 Webhook Formats:
   - Slack / Discord Rich Embed
@@ -26,8 +26,8 @@ TELEMETRY_PATH = ROOT_DIR / "automation" / "lead_routing_telemetry.json"
 
 BUDGET_WEIGHTS = {
     "tier-3": 35,  # Autonomous AI Engineering Pod (₹4,50,000/mo)
-    "tier-2": 25,  # Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000)
-    "tier-1": 15,  # Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000)
+    "tier-2": 25,  # Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000)
+    "tier-1": 15,  # Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000)
 }
 
 STACK_WEIGHTS = {

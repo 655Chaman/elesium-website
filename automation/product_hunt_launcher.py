@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-product_hunt_launcher.py — Product Hunt & BetaList Launch Asset Generator for Elesium Micro-SaaS
+product_hunt_launcher.py - Product Hunt & BetaList Launch Asset Generator for Elesium Micro-SaaS
 ==============================================================================================
 Framework: Edward Sturm Complete Masterclass (Modules 11 & 12: Micro-SaaS Launch Engine)
 Target: Elesium Enterprise AI ROI Calculator (/tools/enterprise-ai-roi-calculator)
@@ -359,8 +359,8 @@ Join the discussion and share your feedback on Product Hunt today:
         # 2. Complete Product Hunt Asset Guide (Markdown)
         ph_md = output_dir / "PRODUCT_HUNT_LAUNCH_ASSETS.md"
         ph_content = [
-            f"# Product Hunt Official Launch Kit — {bundle.product_name}",
-            f"> **Tagline:** {bundle.tagline} ({len(bundle.tagline)} chars — Strict < 60 chars verified)",
+            f"# Product Hunt Official Launch Kit - {bundle.product_name}",
+            f"> **Tagline:** {bundle.tagline} ({len(bundle.tagline)} chars - Strict < 60 chars verified)",
             f"> **Tool URL:** {bundle.primary_url}",
             f"> **Embed Iframe Route:** {bundle.embed_url}",
             f"> **Maker:** {self.config['maker_name']} ({self.config['maker_title']})\n",
@@ -404,7 +404,7 @@ Join the discussion and share your feedback on Product Hunt today:
         bl_md = output_dir / "BETALIST_LAUNCH_ASSETS.md"
         bl_payload = bundle.betalist_payload
         bl_content = [
-            f"# BetaList Official Submission Kit — {bundle.product_name}",
+            f"# BetaList Official Submission Kit - {bundle.product_name}",
             f"> **Submission URL:** https://betalist.com/submit",
             f"> **Status:** Pre-Approved Ready\n",
             "---\n",

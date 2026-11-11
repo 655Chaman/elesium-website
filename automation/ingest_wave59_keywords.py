@@ -1,7 +1,7 @@
 import json
 
 wave59_keywords = [
-    # Cluster 1: Speculative Decoding & Tree-Based Candidate Verification (IDs 2866–2882, 17 items)
+    # Cluster 1: Speculative Decoding & Tree-Based Candidate Verification (IDs 2866-2882, 17 items)
     {
         "id": 2866,
         "keyword": "tree based draft token verification controllers for enterprise vllm and sglang",
@@ -224,7 +224,7 @@ wave59_keywords = [
         "primary_cta": "Schedule Maritime Speculative Verification Review"
     },
 
-    # Cluster 2: Non-Uniform Branch Pruning & Dynamic Tree Attention Masks (IDs 2883–2898, 16 items)
+    # Cluster 2: Non-Uniform Branch Pruning & Dynamic Tree Attention Masks (IDs 2883-2898, 16 items)
     {
         "id": 2883,
         "keyword": "dynamic tree attention mask generators for multi candidate speculative decoding",
@@ -434,7 +434,7 @@ wave59_keywords = [
         "primary_cta": "Audit Energy Pipeline Speculative Systems"
     },
 
-    # Cluster 3: Enterprise Speculative Verification SLAs & FinOps Scaling (IDs 2899–2915, 17 items)
+    # Cluster 3: Enterprise Speculative Verification SLAs & FinOps Scaling (IDs 2899-2915, 17 items)
     {
         "id": 2899,
         "keyword": "speculative decoding 2 8x throughput accelerators for enterprise multi tenant kubernetes",

@@ -88,11 +88,11 @@ const commercialFaqs = [
     },
     {
         q: "What contractual ROI SLA is provided with each commercial deployment?",
-        a: "Every commercial deployment carries an audited 90-day cash-flow ROI SLA delivering 3x–5x return on engineering investment, backed by contractually guaranteed fee rebate provisions."
+        a: "Every commercial deployment carries an audited 90-day cash-flow ROI SLA delivering 3x-5x return on engineering investment, backed by contractually guaranteed fee rebate provisions."
     },
     {
         q: "What are the commercial pricing tiers?",
-        a: "Tier 1: Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); Tier 3: Autonomous AI Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
+        a: "Tier 1: Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000, 14 days); Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000, 30-45 days); Tier 3: Autonomous AI Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
     }
 ]
 
@@ -152,18 +152,23 @@ export default function CommercialDirectory() {
                     '@type': 'Organization',
                     '@id': 'https://elesium.online/#organization',
                     'name': 'Elesium',
-                    'url': 'https://elesium.online',
-                    'logo': 'https://elesium.online/og-image.png'
+                    'url': 'https://elesium.online/',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://elesium.online/assets/logo-square.png',
+                        'width': '512',
+                        'height': '512'
+                    }
                 },
                 'hasPart': commercialSolutions.map((item) => ({
                     '@type': 'Service',
                     'name': item.anchorText,
-                    'url': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}`,
+                    'url': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}/`,
                     'description': item.description,
                     'provider': {
                         '@type': 'Organization',
                         'name': 'Elesium',
-                        'url': 'https://elesium.online'
+                        'url': 'https://elesium.online/'
                     }
                 })),
                 'mainEntity': {
@@ -174,7 +179,7 @@ export default function CommercialDirectory() {
                         '@type': 'ListItem',
                         'position': index + 1,
                         'name': item.anchorText,
-                        'item': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}`
+                        'item': item.canonicalUrl || `https://elesium.online/solutions/${item.slug}/`
                     }))
                 },
                 'breadcrumb': {
@@ -191,7 +196,7 @@ export default function CommercialDirectory() {
                             '@type': 'ListItem',
                             'position': 2,
                             'name': 'Solutions',
-                            'item': 'https://elesium.online/solutions'
+                            'item': 'https://elesium.online/solutions/'
                         },
                         {
                             '@type': 'ListItem',
@@ -534,7 +539,7 @@ export default function CommercialDirectory() {
                             <div>
                                 <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
                                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
                                 <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
@@ -555,8 +560,8 @@ export default function CommercialDirectory() {
                             <div>
                                 <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
                                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30-45 Day Implementation</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
                                 </p>
@@ -631,7 +636,7 @@ export default function CommercialDirectory() {
                     <div className="relative z-10 max-w-2xl space-y-6">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                            <span>Private Sovereign VPC Deployment Protocol</span>
+                            <span>Sovereign Private VPC Deployment Protocol</span>
                         </div>
 
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
@@ -665,7 +670,7 @@ export default function CommercialDirectory() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>

@@ -5,7 +5,7 @@ from pathlib import Path
 QUEUE_PATH = Path("automation/compact_keywords_queue.json")
 
 wave72_keywords = [
-    # Cluster 1: Hierarchical HBM3e-to-CXL/NVMe KV-Cache Tiered Storage Paging (IDs 3516–3532, 17 items)
+    # Cluster 1: Hierarchical HBM3e-to-CXL/NVMe KV-Cache Tiered Storage Paging (IDs 3516-3532, 17 items)
     {
         "id": 3516,
         "keyword": "hierarchical hbm-to-nvme kv-cache tiered storage paging daemons for enterprise llm clusters",
@@ -228,7 +228,7 @@ wave72_keywords = [
         "primary_cta": "Deploy NVMe-oF Remote KV Fabrics"
     },
 
-    # Cluster 2: Asynchronous Direct Memory Access (DMA) & Zero-Copy Prefetching (IDs 3533–3545, 13 items)
+    # Cluster 2: Asynchronous Direct Memory Access (DMA) & Zero-Copy Prefetching (IDs 3533-3545, 13 items)
     {
         "id": 3533,
         "keyword": "asynchronous cuda dma kv-cache prefetch engines for anticipatory token context retrieval",
@@ -399,7 +399,7 @@ wave72_keywords = [
         "primary_cta": "Deploy NVMe Striping Controllers"
     },
 
-    # Cluster 3: Sub-10ms Page Fault Servicing for 10M+ Context Swarms (IDs 3546–3555, 10 items)
+    # Cluster 3: Sub-10ms Page Fault Servicing for 10M+ Context Swarms (IDs 3546-3555, 10 items)
     {
         "id": 3546,
         "keyword": "sub-10ms kv page fault servicing engines for ultra-long context financial compliance swarms",
@@ -531,7 +531,7 @@ wave72_keywords = [
         "primary_cta": "Deploy Memory Tier Threshold Calibrators"
     },
 
-    # Cluster 4: Statutory Zero-Remanence NVMe Shredding & Enterprise FinOps (IDs 3556–3565, 10 items)
+    # Cluster 4: Statutory Zero-Remanence NVMe Shredding & Enterprise FinOps (IDs 3556-3565, 10 items)
     {
         "id": 3556,
         "keyword": "statutory zero-remanence nvme kv-cache memory shredders for dpdp act 2023 compliance",

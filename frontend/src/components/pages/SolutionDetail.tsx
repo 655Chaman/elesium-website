@@ -520,7 +520,7 @@ export default function SolutionDetail() {
                         <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-950 flex flex-col justify-between">
                             <div>
                                 <div className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Pilot Sprint (14 Days)</div>
-                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;1,50,000 &#8211; &#8377;3,50,000</div>
+                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;1,50,000 - &#8377;3,50,000</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.pilot}</p>
                             </div>
                             <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/10 text-xs font-mono text-emerald-600 dark:text-emerald-400">
@@ -531,7 +531,7 @@ export default function SolutionDetail() {
                             <span className="absolute -top-3 right-4 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white uppercase tracking-wider">Most Deployed</span>
                             <div>
                                 <div className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400">Enterprise Suite (30-45 Days)</div>
-                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;6,00,000 &#8211; &#8377;15,00,000</div>
+                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;6,00,000 - &#8377;15,00,000</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.enterprise}</p>
                             </div>
                             <div className="mt-6 pt-4 border-t border-blue-200 dark:border-blue-900/40 text-xs font-mono text-blue-600 dark:text-blue-400">

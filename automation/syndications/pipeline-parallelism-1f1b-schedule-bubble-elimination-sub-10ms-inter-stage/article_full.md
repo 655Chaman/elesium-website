@@ -14,7 +14,7 @@ Pipeline parallelism partitions large foundation models across sequential GPU st
 
 ## 1. The Pipeline Bubble Crisis in Distributed Multi-Node Model Serving
 
-When serving 70B to 405B parameter models exceeding single-node memory capacities, pipeline parallelism splits model layers across sequential GPU stages. In naive pipeline schedules (like GPipe), earlier stages sit completely idle waiting for later stages to finish the batch—creating massive idle periods termed pipeline bubbles that waste up to 45% of total GPU compute time.
+When serving 70B to 405B parameter models exceeding single-node memory capacities, pipeline parallelism splits model layers across sequential GPU stages. In naive pipeline schedules (like GPipe), earlier stages sit completely idle waiting for later stages to finish the batch - creating massive idle periods termed pipeline bubbles that waste up to 45% of total GPU compute time.
 
 ---
 
@@ -38,5 +38,5 @@ In production multi-node benchmarks serving 405B parameter models across 4x 8-GP
 
 ### Enterprise Deployment Architecture
 For sovereign enterprise deployments adhering to Indian DPDP Act 2023 and private VPC isolation mandates, explore our dedicated solutions:
-- [Pipeline Parallelism 1F1B Schedulers for Enterprise vLLM and Megatron-LM Clusters](https://elesium.online/solutions/pipeline-parallelism-1f1b-schedulers-for-enterprise-vllm-and-megatron-lm-clusters)
-- [Zero-Copy P2P Activation Transfer Daemons for Distributed LLM Pipeline Clusters](https://elesium.online/solutions/zero-copy-p2p-activation-transfer-daemons-for-distributed-llm-pipeline-clusters)
+- [Pipeline Parallelism 1F1B Schedulers for Enterprise vLLM and Megatron-LM Clusters](https://elesium.online/solutions/interleaved-1f1b-stage-communication-overlap-monitors-for-scada-manufacturing)
+- [Zero-Copy P2P Activation Transfer Daemons for Distributed LLM Pipeline Clusters](https://elesium.online/solutions/p2p-nvlink-cross-instance-kv-cache-bridges-for-automotive-factory-quality-audits)

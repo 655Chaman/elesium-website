@@ -156,7 +156,7 @@ You MUST return ONLY valid JSON matching this TypeScript structure. Do not wrap 
   "date": "<Current date formatted as Month DD, YYYY>",
   "readTime": "6 min read",
   "excerpt": "<A compelling 2-sentence summary>",
-  "intro": "Elesium architecture insights — 2026. Keywords: enterprise architecture, agentic systems, operational scale.",
+  "intro": "Elesium architecture insights - 2026. Keywords: enterprise architecture, agentic systems, operational scale.",
   "metaDescription": "<Punchy SEO meta description under 155 characters>",
   "weeklyTheme": "Enterprise AI & Scalability",
   "faq": [

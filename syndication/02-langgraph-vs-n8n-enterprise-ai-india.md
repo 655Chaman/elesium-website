@@ -51,7 +51,7 @@ Here is the unvarnished engineering post-mortem: where each tool excels, where e
 - **LangGraph:** Compiler-level Abstract Syntax Tree (AST) firewalls with strict Pydantic schemas and cryptographic dual-key token gating.
 
 ### ⚡ 6. Concurrency Ceiling
-- **n8n:** ~150–250 concurrent requests per container before heap memory pressure and event loop lag.
+- **n8n:** ~150-250 concurrent requests per container before heap memory pressure and event loop lag.
 - **LangGraph:** 1,500+ concurrent requests per lightweight worker pod with zero memory leaks.
 
 ---
@@ -62,7 +62,7 @@ We are not dogmatic. **n8n is an exceptional, developer-friendly orchestration t
 
 ### The Sweet Spot for n8n:
 1. **Linear, Rule-Based Integrations (Deterministic I/O):**
-   If your workflow is purely linear—such as listening to a HubSpot webhook, transforming a payload, and appending a row to Google Sheets or PostgreSQL—n8n is unmatched in development speed.
+   If your workflow is purely linear - such as listening to a HubSpot webhook, transforming a payload, and appending a row to Google Sheets or PostgreSQL - n8n is unmatched in development speed.
 2. **Internal Tooling & Team Velocity:**
    Non-AI engineers and DevOps specialists can visually inspect executions, diagnose failed API calls, and adjust cron schedules without deploying code.
 3. **Self-Hosted Privacy:**

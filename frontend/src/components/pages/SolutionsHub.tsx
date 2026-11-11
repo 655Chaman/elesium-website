@@ -53,11 +53,11 @@ const solutionFaqs = [
     },
     {
         q: "What is the contractual 90-day cash-flow ROI SLA?",
-        a: "Before deploying any enterprise solution, we model your baseline operational costs, manual labor hours, and turnaround friction. If the deployed multi-agent system does not generate an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
+        a: "Before deploying any enterprise solution, we model your baseline operational costs, manual labor hours, and turnaround friction. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
     },
     {
         q: "What are the pricing tiers for deploying Elesium enterprise solutions?",
-        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day production pilot); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day deployment with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal architect)."
+        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day production pilot); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal architect)."
     }
 ]
 
@@ -66,39 +66,44 @@ export default function SolutionsHub() {
     const [openFaq, setOpenFaq] = useState<number | null>(null)
     const topHighLever = getTopHighLeverSolutions()
 
-    // Structured Data: CollectionPage schema
+    const allCatalogSolutions = solutionCategories.flatMap(cat => cat.solutions)
+
+    // Structured Data: CollectionPage + ItemList + FAQPage schema
     const structuredData = {
         '@context': 'https://schema.org',
         '@graph': [
             {
                 '@type': 'CollectionPage',
-                '@id': 'https://elesium.online/solutions#collection',
+                '@id': 'https://elesium.online/solutions/#collection',
                 'name': 'Enterprise AI Solutions & Sovereign Automation Workflows',
                 'description': 'Direct index of production enterprise AI automation solutions and sovereign multi-agent workflows engineered by Elesium.',
-                'url': 'https://elesium.online/solutions',
+                'url': 'https://elesium.online/solutions/',
                 'publisher': {
                     '@type': 'Organization',
                     '@id': 'https://elesium.online/#organization',
                     'name': 'Elesium',
-                    'url': 'https://elesium.online',
-                    'logo': 'https://elesium.online/og-image.png'
+                    'url': 'https://elesium.online/',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://elesium.online/assets/logo-square.png',
+                        'width': '512',
+                        'height': '512'
+                    }
                 },
-                'hasPart': solutionCategories.flatMap(cat =>
-                    cat.solutions.map(sol => ({
-                        '@type': 'Service',
-                        'name': sol.h1,
-                        'url': `https://elesium.online/solutions/${sol.slug}`,
-                        'description': sol.metaDescription,
-                        'provider': {
-                            '@type': 'Organization',
-                            'name': 'Elesium',
-                            'url': 'https://elesium.online'
-                        }
-                    }))
-                ),
+                'hasPart': allCatalogSolutions.map(sol => ({
+                    '@type': 'Service',
+                    'name': sol.h1,
+                    'url': `https://elesium.online/solutions/${sol.slug}/`,
+                    'description': sol.metaDescription,
+                    'provider': {
+                        '@type': 'Organization',
+                        'name': 'Elesium',
+                        'url': 'https://elesium.online/'
+                    }
+                })),
                 'breadcrumb': {
                     '@type': 'BreadcrumbList',
-                    '@id': 'https://elesium.online/solutions#breadcrumb',
+                    '@id': 'https://elesium.online/solutions/#breadcrumb',
                     'itemListElement': [
                         {
                             '@type': 'ListItem',
@@ -110,14 +115,26 @@ export default function SolutionsHub() {
                             '@type': 'ListItem',
                             'position': 2,
                             'name': 'Solutions',
-                            'item': 'https://elesium.online/solutions'
+                            'item': 'https://elesium.online/solutions/'
                         }
                     ]
                 }
             },
             {
+                '@type': 'ItemList',
+                '@id': 'https://elesium.online/solutions/#itemlist',
+                'name': 'Enterprise AI Solutions & Sovereign Automation Catalog',
+                'numberOfItems': allCatalogSolutions.length,
+                'itemListElement': allCatalogSolutions.map((sol, index) => ({
+                    '@type': 'ListItem',
+                    'position': index + 1,
+                    'name': sol.h1,
+                    'item': `https://elesium.online/solutions/${sol.slug}/`
+                }))
+            },
+            {
                 '@type': 'FAQPage',
-                '@id': 'https://elesium.online/solutions#faq',
+                '@id': 'https://elesium.online/solutions/#faq',
                 'mainEntity': solutionFaqs.map(faq => ({
                     '@type': 'Question',
                     'name': faq.q,
@@ -378,7 +395,7 @@ export default function SolutionsHub() {
                             <div>
                                 <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
                                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
                                 <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
@@ -399,8 +416,8 @@ export default function SolutionsHub() {
                             <div>
                                 <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
                                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30-45 Day Implementation</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
                                 </p>
@@ -475,7 +492,7 @@ export default function SolutionsHub() {
                     <div className="relative z-10 max-w-2xl space-y-6">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                            <span>Private Sovereign VPC Deployment Protocol</span>
+                            <span>Sovereign Private VPC Deployment Protocol</span>
                         </div>
 
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
@@ -509,7 +526,7 @@ export default function SolutionsHub() {
                     </div>
 
                     <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
+                        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
                     </div>
                 </div>
             </section>

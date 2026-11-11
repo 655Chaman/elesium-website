@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # Best AI Automation Agency in India for Manufacturing: Edge Industrial IoT, OPC-UA Telemetry, and Deterministic Shopfloor Multi-Agent Systems
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/best-ai-automation-agency-in-india-for-manufacturing). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/best-ai-automation-agency-in-india-for-manufacturing). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** A definitive guide for Indian manufacturing leaders, Chief Technology Officers, and Plant Heads: deploying deterministic edge multi-agent systems, OPC-UA Industrial IoT gateways, and private VPC architectures across automotive, precision engineering, and industrial machinery plants.
 
@@ -21,7 +21,7 @@ India's manufacturing sector is undergoing an aggressive Industry 4.0 expansion 
 
 However, traditional software consultancies and naive cloud AI startups repeatedly fail on the shopfloor. Cloud-only AI architectures suffer from severe bandwidth constraints and latency jitter (P99 exceeding 800ms over WAN), making real-time CNC tool protection or high-speed sorting impossible. Furthermore, factory floors are heterogeneous environments operating legacy Programmable Logic Controllers (PLCs), Computer Numerical Control (CNC) machines, and SCADA systems running proprietary fieldbus protocols (Modbus TCP, Profinet, EtherCAT, and OPC-UA).
 
-Selecting the best AI automation agency in India requires evaluating whether the partner understands operational technology (OT) reality: deterministic edge computing, air-gapped network segmentation (Purdue Model Levels 1–3), industrial protocol normalization, and sub-50ms deterministic multi-agent state machines that operate even when external cloud connections fail.
+Selecting the best AI automation agency in India requires evaluating whether the partner understands operational technology (OT) reality: deterministic edge computing, air-gapped network segmentation (Purdue Model Levels 1-3), industrial protocol normalization, and sub-50ms deterministic multi-agent state machines that operate even when external cloud connections fail.
 
 
 ## 2. Core Architectural Pillars of Sovereign Industrial AI Automation
@@ -30,7 +30,7 @@ Elesium's manufacturing automation practice is engineered from first principles 
 
 - Deterministic Edge Protocol Normalization: Lightweight industrial gateway daemons running locally on industrial PCs (IPCs) that translate heterogeneous PLC signals (Siemens S7, Allen-Bradley CIP, Fanuc FOCAS, Modbus) into standard OPC-UA and MQTT JSON streams.
 - Sub-50ms Edge Multi-Agent Swarms: Autonomous agents executing on local edge servers (NVIDIA Jetson AGX / industrial x86 nodes) performing real-time vibration spectral analysis, spindle thermal drift compensation, and immediate CNC feed-hold triggers.
-- Purdue Enterprise Model & Air-Gap Compliance: Strict separation between OT networks (Levels 1–3) and corporate enterprise IT (Level 4/5). Industrial telemetry is cryptographically authenticated and unidirectionally mirrored to private VPC clouds via Kafka without exposing plant machinery to inbound internet threats.
+- Purdue Enterprise Model & Air-Gap Compliance: Strict separation between OT networks (Levels 1-3) and corporate enterprise IT (Level 4/5). Industrial telemetry is cryptographically authenticated and unidirectionally mirrored to private VPC clouds via Kafka without exposing plant machinery to inbound internet threats.
 - Automated ERP & SAP S/4HANA Closed-Loop Feedback: Autonomous agents reconcile shopfloor scrap counts, work-in-progress (WIP) batch movements, and maintenance work orders directly into SAP S/4HANA and legacy ERPs without manual operator data entry.
 
 
@@ -39,7 +39,7 @@ Elesium's manufacturing automation practice is engineered from first principles 
 
 The foundational backbone of modern industrial intelligence is the Open Platform Communications Unified Architecture (OPC-UA). OPC-UA provides a platform-independent, service-oriented architecture that standardizes industrial device data models, security encryption (X.509 certificates), and bidirectional telemetry exchange.
 
-Elesium deploys localized OPC-UA aggregation servers at each factory facility. High-frequency analog signals (bearing acceleration, hydraulic pressure, spindle drive current) are sampled at 100Hz–1kHz at the edge. Dedicated sensor feature extractors calculate root-mean-square (RMS) velocity, peak-to-peak displacement, and Fast Fourier Transform (FFT) frequency spectrums directly in local memory, transmitting only compressed anomaly indicators and health index scores to upstream agents.
+Elesium deploys localized OPC-UA aggregation servers at each factory facility. High-frequency analog signals (bearing acceleration, hydraulic pressure, spindle drive current) are sampled at 100Hz-1kHz at the edge. Dedicated sensor feature extractors calculate root-mean-square (RMS) velocity, peak-to-peak displacement, and Fast Fourier Transform (FFT) frequency spectrums directly in local memory, transmitting only compressed anomaly indicators and health index scores to upstream agents.
 
 
 ## 4. Production Python Implementation: High-Throughput Edge OPC-UA Gateway

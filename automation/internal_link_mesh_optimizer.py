@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-INTERNAL LINK MESH OPTIMIZER — GRAPH-THEORETIC PAGERANK & ENTROPY SOLVER
+INTERNAL LINK MESH OPTIMIZER - GRAPH-THEORETIC PAGERANK & ENTROPY SOLVER
 ================================================================================
 Classification: Production Engineering Tool & Graph-Theoretic Centrality Solver
 Module: 11 (Programmatic Internal Linking Graph Theory)
@@ -260,7 +260,7 @@ def compute_semantic_affinity(node_a: Dict[str, Any], node_b: Dict[str, Any]) ->
 def generate_safe_anchor(target_node: Dict[str, Any], variant_index: int, unique_registry: Set[str]) -> Tuple[str, str]:
     """
     Allocates anchor text following the 15/45/25/15 Safe Portfolio Allocation:
-      1. Exact-Match Keyword (15%) — strictly injective (unique across site)
+      1. Exact-Match Keyword (15%) - strictly injective (unique across site)
       2. Partial-Match / Long-Tail (45%)
       3. Semantic LSI / Synonyms (25%)
       4. Brand / Navigational (15%)
@@ -291,7 +291,7 @@ def generate_safe_anchor(target_node: Dict[str, Any], variant_index: int, unique
         anchor_type = "PARTIAL_MATCH"
     elif slot == 3:
         # PARTIAL MATCH 3
-        candidate = f"{short_kw} in private sovereign VPC"
+        candidate = f"{short_kw} in sovereign private VPC"
         anchor_type = "PARTIAL_MATCH"
     elif slot == 4:
         # SEMANTIC LSI (25%)
@@ -938,7 +938,7 @@ class DampedSemanticMeshSynthesizer:
 
 def main():
     print("=" * 80)
-    print(" 🔱 INTERNAL LINK MESH OPTIMIZER — GRAPH-THEORETIC SEO ENGINE 🔱")
+    print(" 🔱 INTERNAL LINK MESH OPTIMIZER - GRAPH-THEORETIC SEO ENGINE 🔱")
     print("=" * 80)
 
     dist_dir = ROOT_DIR / "frontend" / "dist"

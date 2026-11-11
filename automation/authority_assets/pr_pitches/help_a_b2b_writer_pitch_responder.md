@@ -7,10 +7,10 @@
 ## [HAB-2026-554] Pitch for CIO Magazine / Enterprise SaaS Review: Enterprise LLM architecture: Deterministic state machines vs probabilistic chat
 - **Platform:** Help a B2B Writer
 - **Compliance Score:** 100/100
-- **Primary Deep Anchor:** https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers
+- **Primary Deep Anchor:** https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts
 - **Secondary Deep Anchor:** https://elesium.online/signals
 
-**Subject:** Quote: Enterprise LLM architecture: Deterministic state machines vs probabilistic chat — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: Enterprise LLM architecture: Deterministic state machines vs probabilistic chat - Chaman Shah, Principal AI Systems Architect
 
 Hi Elena Rostova,
 
@@ -22,8 +22,8 @@ Mission-critical operations require LangGraph finite state machines where agent 
 
 In production deployments across BFSI and logistics, our architectures achieve a verified 98% error cut, 1.9s latency, and a 65% reduction in underwriting cycle times."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts)  
 **Credentials & Authority Proof:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing.  
 - **Enterprise Solutions Hub:** https://elesium.online/solutions  

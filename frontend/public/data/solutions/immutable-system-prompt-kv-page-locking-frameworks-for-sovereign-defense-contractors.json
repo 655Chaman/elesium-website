@@ -151,7 +151,7 @@
       "layout": "left-copy"
     },
     {
-      "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+      "title": "Air-Gapped Sovereign Defense Topology",
       "copy": [
         "The locking state machine enforces continuous memory integrity verification. Every subsequent inference pass hashes the system prompt memory pages; any unauthorized alteration triggers an instantaneous hardware security alert, halts active inference sessions, and purges the volatile VRAM within 1.5ms."
       ],
@@ -161,7 +161,7 @@
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-      "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+      "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
     {

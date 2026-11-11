@@ -4,7 +4,7 @@ Hey r/LocalLLaMA and r/developersIndia,
 
 Over the past few months, our engineering team at Elesium (https://elesium.online) has been working on a challenge that many enterprise devs in India are facing: building completely private, air-gapped LLM runtimes for scheduled commercial banks and regulated institutions.
 
-Under RBI CSF and DPDP Act regulations, customer prompts and financial transactions cannot touch public multi-tenant APIs like OpenAI or Claude. Everything must run inside a private sovereign VPC (ap-south-1 Mumbai / Bengaluru) with zero WAN transit.
+Under RBI CSF and DPDP Act regulations, customer prompts and financial transactions cannot touch public multi-tenant APIs like OpenAI or Claude. Everything must run inside a sovereign private VPC (ap-south-1 Mumbai / Bengaluru) with zero WAN transit.
 
 Here are the key technical takeaways from our production deployments:
 

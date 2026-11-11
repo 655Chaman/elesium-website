@@ -104,9 +104,9 @@ def main():
         for endpoint in INDEXNOW_ENDPOINTS:
             status, response_body = submit_chunk(endpoint, chunk)
             if status in (200, 202):
-                print(f"   ✅ [{status}] {endpoint} — Accepted {len(chunk)} URLs.")
+                print(f"   ✅ [{status}] {endpoint} - Accepted {len(chunk)} URLs.")
             else:
-                print(f"   ⚠️ [{status}] {endpoint} — Response: {response_body[:100]}")
+                print(f"   ⚠️ [{status}] {endpoint} - Response: {response_body[:100]}")
         time.sleep(1) # respectful pacing between chunk submissions
         
     print(f"\n🎉 IndexNow submission cycle finished. All {total_urls} URLs broadcast to global search indexes.")

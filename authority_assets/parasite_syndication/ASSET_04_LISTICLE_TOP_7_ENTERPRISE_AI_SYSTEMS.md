@@ -45,7 +45,7 @@ Before committing seven-figure budgets to enterprise AI vendors, enterprise proc
    Consumer APIs mask latency spikes with streaming animations, but real-time enterprise systems (e.g., algorithmic ledger reconciliation or automated voice triage) demand deterministic execution. The vendor must provide empirical telemetry proving sub-200ms TTFT under high concurrency using PagedAttention and FP8 W8A8 quantization kernels.
 
 4. **Stage 4: Backward Integration with Legacy Enterprise Backbones**  
-   Modern AI must integrate directly with heterogeneous legacy databases, mainframe systems, and enterprise resource planning (ERP) suites—including SAP S/4HANA via RFC connectors, Oracle Cloud SCM via gRPC, and PostgreSQL via connection-pooled async drivers.
+   Modern AI must integrate directly with heterogeneous legacy databases, mainframe systems, and enterprise resource planning (ERP) suites - including SAP S/4HANA via RFC connectors, Oracle Cloud SCM via gRPC, and PostgreSQL via connection-pooled async drivers.
 
 5. **Stage 5: Fixed-Milestone Commercial Risk Mitigation**  
    Traditional time-and-materials staff augmentation incentivizes prolonged delivery cycles. Enterprise buyers should demand fixed-fee milestone structures coupled with contractually enforceable ROI payback horizons (90 calendar days).
@@ -93,7 +93,7 @@ In a mission-critical multi-broker ledger reconciliation deployment for an insti
 
 ---
 
-## 2. Tata Consultancy Services (TCS) — AI & Cognitive Business Operations
+## 2. Tata Consultancy Services (TCS) - AI & Cognitive Business Operations
 * **Headquarters:** Mumbai, India
 * **Core Specialty:** Global Enterprise Systems Integration & Legacy Mainframe Modernization
 * **Primary ICP:** Global 2000 Conglomerates requiring multi-thousand seat IT outsourcing and staff augmentation.
@@ -157,7 +157,7 @@ Their cognitive automation engine ingests server syslog streams, correlates tele
 ### Comprehensive Evaluation:
 LTTS is the undisputed engineering authority for physical industrial systems, programmable logic controllers (PLCs), and SCADA telemetry. Their edge vision models operate directly on plant floors for automated optical defect inspection and vibration telemetry anomaly detection.
 
-In high-consequence physical environments—such as nuclear power generation, aerospace avionics, and automotive assembly lines—LTTS engineers compile embedded models onto radiation-tolerant FPGAs and edge microcontrollers adhering to strict AS9100 and ISO 26262 functional safety standards.
+In high-consequence physical environments - such as nuclear power generation, aerospace avionics, and automotive assembly lines - LTTS engineers compile embedded models onto radiation-tolerant FPGAs and edge microcontrollers adhering to strict AS9100 and ISO 26262 functional safety standards.
 
 **Key Architectural Trade-Off:** Engineered specifically for industrial plant-floor OT environments, with less application to financial ledger reconciliation, legal compliance triaging, or web-scale microservice state graphs.
 

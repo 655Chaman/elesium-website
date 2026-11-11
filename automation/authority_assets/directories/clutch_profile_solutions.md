@@ -1,4 +1,4 @@
-# Clutch.co Verified Directory Profile — Elesium
+# Clutch.co Verified Directory Profile - Elesium
 
 ## Company Identity & Statutory NAP
 - **Company Name:** Elesium
@@ -36,21 +36,21 @@ https://elesium.online/solutions
 
 ## Production Case Studies (Audited Metrics)
 
-### Case Study 1: BFSI — Autonomous Loan Underwriting Pipeline
+### Case Study 1: BFSI - Autonomous Loan Underwriting Pipeline
 - **Target Persona:** Chief Risk Officers & NBFC Credit Directors
-- **Solution Route:** https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
+- **Solution Route:** https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos
 - **Summary:** Replaced manual reconciliation of 48-page GST, ITR, and scanned bank statements with a deterministic VLM multi-agent system.
 - **Results:** Reconciles 1,420 line items in 1.9 seconds, cut underwriting costs by 65%, achieving a verified 340% Year-1 ROI.
 
-### Case Study 2: Logistics — Real-Time Bills of Lading & Customs Clearance
+### Case Study 2: Logistics - Real-Time Bills of Lading & Customs Clearance
 - **Target Persona:** Freight Forwarders & EXIM Directors
-- **Solution Route:** https://elesium.online/solutions/ai-automation-agency-for-logistics-erp
+- **Solution Route:** https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing
 - **Summary:** Engineered autonomous agents that ingest multi-format BoL PDFs, cross-reference ICEGATE tariff codes, and push verified manifests directly to SAP.
 - **Results:** Reduced manifest handling cycle by 82%, eliminated human error fines, and unlocked 24/7 autonomous port clearance.
 
-### Case Study 3: Manufacturing — Predictive Inventory Reconciliation
+### Case Study 3: Manufacturing - Predictive Inventory Reconciliation
 - **Target Persona:** Plant Heads & Supply Chain VPs
-- **Solution Route:** https://elesium.online/solutions/predictive-inventory-reconciliation-agents-for-sap-s4hana
+- **Solution Route:** https://elesium.online/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap
 - **Summary:** Connected macroeconomic signal tracking with ERP inventory levels, automatically triggering vendor purchase orders.
 - **Results:** Decreased stockouts by 40%, slashed holding costs by 22%, and achieved a 410% cash-flow ROI in 18 months.
 

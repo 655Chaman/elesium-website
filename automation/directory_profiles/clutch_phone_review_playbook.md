@@ -107,7 +107,7 @@ Clutch business analysts follow a standardized, structured interview script divi
 
 * **Analyst Question:** *"Could you briefly introduce your company, your role, and the size of your team?"*
 * **Guy #2 Recommended Response:**
-  > *"I am the [VP of Operations / Director of Technology] at [Company Name]. We are an enterprise [Logistics / FinTech / Industrial Distribution] firm with [100–500 employees / $50M+ ARR]. I oversee our core technical infrastructure and operational efficiency programs."*
+  > *"I am the [VP of Operations / Director of Technology] at [Company Name]. We are an enterprise [Logistics / FinTech / Industrial Distribution] firm with [100-500 employees / $50M+ ARR]. I oversee our core technical infrastructure and operational efficiency programs."*
 
 ---
 
@@ -152,7 +152,7 @@ Clutch business analysts follow a standardized, structured interview script divi
 * **Analyst Question:** *"What measurable business outcomes, ROI, or improvements did you achieve from Elesium's system?"*
 * **Guy #2 Recommended Response (The Numbers Capsule):**
   > *"The impact was immediate and transformative:
-  > - **Processing Latency:** Our document verification and data harmonization cycle dropped from **3 business days down to under 5 minutes**—a **95%+ reduction in latency**.
+  > - **Processing Latency:** Our document verification and data harmonization cycle dropped from **3 business days down to under 5 minutes** - a **95%+ reduction in latency**.
   > - **Labor Hours Saved:** We eliminated over **160+ hours of manual repetitive data entry every month**, allowing our analysts to focus on high-margin strategic work.
   > - **Accuracy:** Data accuracy jumped to **99.4%**, virtually eliminating expensive downstream reconciliation errors.
   > - **Payback Period:** We achieved full cash-flow payback on the engineering engagement in **under 65 days**."*
@@ -172,7 +172,7 @@ Clutch business analysts follow a standardized, structured interview script divi
 
 * **Analyst Question:** *"Is there any area where you feel Elesium could improve, or any advice for prospective clients?"*
 * **Guy #2 Constructive Critique (Positive Framing):**
-  > *"Honestly, very little on their technical delivery. My only recommendation for prospective clients is to involve your internal compliance and security teams early in the scoping phase. Elesium moves very fast—faster than typical enterprise IT—so having your API keys, database access, and VPC environments provisioned upfront will allow them to deliver even faster."*
+  > *"Honestly, very little on their technical delivery. My only recommendation for prospective clients is to involve your internal compliance and security teams early in the scoping phase. Elesium moves very fast - faster than typical enterprise IT - so having your API keys, database access, and VPC environments provisioned upfront will allow them to deliver even faster."*
 
 ---
 
@@ -191,7 +191,7 @@ Clutch business analysts follow a standardized, structured interview script divi
 ## 5. Post-Interview Approval & Publication Protocol
 
 Once the 15-minute phone interview concludes:
-1. **Transcription Turnaround (24–48 Hours):** Clutch's editorial team compiles an edited transcript into standard Clutch QA format.
+1. **Transcription Turnaround (24-48 Hours):** Clutch's editorial team compiles an edited transcript into standard Clutch QA format.
 2. **Reviewer Email Notification:** Clutch emails Guy #2 with a private link to review the final draft.
 3. **One-Click Sign-Off:** Guy #2 clicks *"Approve Transcript"*. (No changes needed unless a proprietary internal metric needs masking).
 4. **Immediate Publication:** The review is published with the prominent green badge:  

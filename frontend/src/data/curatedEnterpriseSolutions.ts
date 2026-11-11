@@ -1326,7 +1326,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "BFSI",
     "title": "RBI Cyber Security Framework Compliant MLA Latent | Elesium",
     "h1": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy RBI Cyber Security Framework Compliant with sovereign VPC isolation, sub-100ms execution, and BFSI compliance. Schedule an enterprise audit.",
+    "metaDescription": "Deploy sovereign RBI Cyber Security Framework with air-gapped VPC isolation, sub-100ms latency, and BFSI compliance. Schedule architecture audit.",
     "targetPersona": "Enterprise AI Infrastructure Architects & Multi-Tenant Security Auditors",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -5518,7 +5518,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Logistics & Supply Chain",
     "title": "Indian Customs ICEGATE Automated Bill of Entry | Elesium",
     "h1": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders with. Schedule an architecture audit.",
+    "metaDescription": "Deploy Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders. Audit Freight Forwarders architecture.",
     "targetPersona": "Customs Brokerage Directors & International Freight Forwarding Operations Heads",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -7942,7 +7942,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       },
       {
         "question": "How does the system justify the reason for transit delay to tax authorities?",
-        "answer": "The engine records automated telematics proof - such as GPS stationary dwell time, highway accident reports, or engine breakdown codes - attaching it as statutory justification."
+        "answer": "The engine records automated telematics proof, such as GPS stationary dwell time, highway accident reports, or engine breakdown codes, attaching it as statutory justification."
       },
       {
         "question": "Can the system operate if the transport truck passes through cellular dead zones?",
@@ -10496,7 +10496,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Healthcare & Life Sciences",
     "title": "Sovereign On-Premise DeepSeek V3 Clusters for | Elesium",
     "h1": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance with sovereign VPC isolation,. Schedule architecture audit.",
+    "metaDescription": "Deploy Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance with sovereign VPC. Audit Disha Compliance architecture.",
     "targetPersona": "Chief Medical Information Officers & Hospital Trust Technology Directors",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -11282,7 +11282,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Healthcare & Life Sciences",
     "title": "Hospital Biomedical Equipment Preventive | Elesium",
     "h1": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering with. Schedule an architecture audit.",
+    "metaDescription": "Deploy Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering. Audit Clinical Engineering architecture.",
     "targetPersona": "Biomedical Engineering Directors & Hospital Operations Vice Presidents",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -12101,7 +12101,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       },
       {
         "title": "Air-Gapped Proprietary Trial Data Protection",
-        "description": "Maintains confidential clinical trial data and blinded patient safety records on private sovereign Indian cloud servers."
+        "description": "Maintains confidential clinical trial data and blinded patient safety records on sovereign Indian cloud servers."
       }
     ],
     "architectureDiagram": [
@@ -12188,7 +12188,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Automated MedDRA Terminology Mapping: Accurately maps unstructured clinical symptom descriptions to standardized MedDRA Preferred Terms (PT) with 99.4% precision.",
           "Algorithmic WHO-UMC Causality Scoring: Evaluates drug-event temporal association and biological plausibility using validated algorithmic causality rules.",
           "Instant E2B(R3) Safety XML Package Export: Compiles standardized regulatory electronic safety transmission dossiers ready for direct gateway submission to CDSCO and FDA.",
-          "Air-Gapped Proprietary Trial Data Protection: Maintains confidential clinical trial data and blinded patient safety records on private sovereign Indian cloud servers."
+          "Air-Gapped Proprietary Trial Data Protection: Maintains confidential clinical trial data and blinded patient safety records on sovereign Indian cloud servers."
         ],
         "specs": [
           {
@@ -12330,7 +12330,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Healthcare & Life Sciences",
     "title": "Disaggregated Prefill-Decode Schedulers for | Elesium",
     "h1": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots with sovereign VPC isolation,. Schedule an architecture audit.",
+    "metaDescription": "Deploy Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots with sovereign VPC isolation,. Audit Triage Copilots architecture.",
     "targetPersona": "Hospital AI Systems Architects & Clinical Computing Platform Directors",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -12592,7 +12592,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Healthcare & Life Sciences",
     "title": "1F1B Micro-Batching Coordinators for Hospital | Elesium",
     "h1": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy 1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots with sovereign VPC isolation, sub-100ms. Schedule architecture audit.",
+    "metaDescription": "Deploy 1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots with sovereign VPC isolation,. Audit Triage Copilots architecture.",
     "targetPersona": "Emergency Care Systems Engineers & Clinical High-Performance Computing Leads",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -13391,7 +13391,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "heroImageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering",
     "paragraphs": [
-      "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices - including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
+      "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
       "Our sovereign hospital cybersecurity architecture deploys zero-trust software-defined microsegmentation policies directly at the local switch and hypervisor boundary across hospital networks. The system continuously profiles medical device network traffic over isolated medical VLANs, mapping Layer 4 to Layer 7 communication signatures against approved manufacturer clinical protocols (DICOM, HL7, IEEE 11073).",
       "The intrusion defense state machine evaluates device behavior against baseline clinical traffic in real time. If an infusion pump or vitals monitor attempts unauthorized port scanning, non-clinical outbound internet connections, or unusual lateral SMB handshakes, the microsegmentation controller instantly isolates the compromised device into a quarantine VLAN in under 1.5 milliseconds, terminating lateral attack paths while preserving active medical telemetry.",
       "Statutory compliance satisfies IEC 80001-1 (Application of risk management for IT-networks incorporating medical devices), CERT-In cybersecurity directions, and Section 8(5) of the DPDP Act 2023. Real-time telemetry dashboards monitor 10,000+ medical IoT devices simultaneously, guaranteeing zero lateral ransomware propagation across clinical wards."
@@ -13481,7 +13481,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     },
     "hero": {
       "hookSentence": "Isolate medical devices and IoT infusion pumps behind zero-trust microsegmentation perimeters, blocking lateral ransomware propagation across hospital networks in sub-1.5ms.",
-      "subheadline": "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices - including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
+      "subheadline": "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
       "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -13491,7 +13491,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Deterministic Operational Capabilities & Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering",
         "copy": [
-          "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices - including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
+          "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
           "Our sovereign hospital cybersecurity architecture deploys zero-trust software-defined microsegmentation policies directly at the local switch and hypervisor boundary across hospital networks. The system continuously profiles medical device network traffic over isolated medical VLANs, mapping Layer 4 to Layer 7 communication signatures against approved manufacturer clinical protocols (DICOM, HL7, IEEE 11073)."
         ],
         "bullets": [
@@ -14950,7 +14950,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Healthcare & Life Sciences",
     "title": "ICD-10-CM Automated Diagnostic Coding and | Elesium",
     "h1": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers with. Schedule architecture audit.",
+    "metaDescription": "Deploy ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers. Audit Billing Controllers architecture.",
     "targetPersona": "Medical Billing Controllers & Hospital Revenue Cycle Directors",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -15998,7 +15998,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Manufacturing & Industrial",
     "title": "Electronic City Phase 1 Factory Line Machine | Elesium",
     "h1": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Electronic City with sovereign VPC isolation, sub-100ms execution, and Manufacturing & Industrial compliance. Schedule an enterprise audit.",
+    "metaDescription": "Deploy Electronic City Phase 1 with deterministic air-gapped VPC isolation and Manufacturing & Industrial compliance. Schedule architecture audit.",
     "targetPersona": "Quality Assurance Directors & Surface Mount Technology (SMT) Operations Heads",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -17308,7 +17308,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Manufacturing & Industrial",
     "title": "Continuous Telemetry Anomaly Detection Agents for | Elesium",
     "h1": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms with sovereign VPC. Schedule an architecture audit.",
+    "metaDescription": "Deploy Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms with sovereign. Audit Fabrication Cleanrooms architecture.",
     "targetPersona": "Semiconductor Fab Directors, Microelectronics Yield Engineers & Cleanroom Facilities Managers",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -20997,7 +20997,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "capabilities": [
       {
         "title": "Air-Gapped 671B MoE Orchestration",
-        "description": "Deploys DeepSeek-R1 across private enterprise GPU nodes with zero external internet dependencies."
+        "description": "Deploys DeepSeek-R1 across sovereign enterprise GPU nodes with zero external internet dependencies."
       },
       {
         "title": "FP8 Multi-Node Tensor Parallelism",
@@ -21093,7 +21093,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Our sovereign architecture deploys DeepSeek-R1 (671B MoE and distilled variants) within an air-gapped, on-premises private datacenter enclave. The infrastructure leverages multi-node FP8 execution on dedicated GPU clusters interconnected by 3.2 Tbps InfiniBand fabrics. Telemetry daemons monitor tensor parallelism ranks, inter-node all-to-all communications, and attention memory usage without touching public network interfaces."
         ],
         "bullets": [
-          "Air-Gapped 671B MoE Orchestration: Deploys DeepSeek-R1 across private enterprise GPU nodes with zero external internet dependencies.",
+          "Air-Gapped 671B MoE Orchestration: Deploys DeepSeek-R1 across sovereign enterprise GPU nodes with zero external internet dependencies.",
           "FP8 Multi-Node Tensor Parallelism: Optimized 8-bit execution across 8x H100/H200 nodes utilizing 3.2 Tbps InfiniBand RDMA.",
           "Sub-15ms TTFT Telemetry: Continuous microsecond monitoring of prefill and decode stages with automated load balancing.",
           "Autonomous Chain-of-Thought Guardrails: Real-time auditing of reasoning trajectories to prevent confidential data leakage."
@@ -21120,7 +21120,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The inference state machine enforces strict role-based access control and payload verification. Incoming reasoning prompts are validated against enterprise DLP (Data Loss Prevention) rules at the perimeter gateway. The inference orchestrator dynamically allocates reasoning tokens, monitoring token-by-token Chain-of-Thought (CoT) generation while maintaining sub-15ms Time-To-First-Token (TTFT) and verifying complete context privacy."
         ],
@@ -21130,7 +21130,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -21382,7 +21382,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The enclaves communicate across an air-gapped RoCEv2/InfiniBand RDMA fabric. When a tactical query arrives, the Prefill Enclave processes the classified dossier, writes the resulting KV cache directly into the Decode Enclave's VRAM via remote direct memory access in sub-8ms, and immediately frees its compute cores for subsequent intelligence batches."
         ],
@@ -21392,7 +21392,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -21644,7 +21644,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The defragmentation state machine continuously monitors memory pool entropy and allocation gaps. When fragmentation exceeds 12%, the compaction daemon executes an interleaved memory roll during GPU kernel idle bubbles in sub-3ms, completely avoiding pipeline stalls or inference pauses during active military target tracking."
         ],
@@ -21654,7 +21654,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -21906,7 +21906,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The monitoring state machine orchestrates predictive tiered pre-fetching. Frequently accessed tactical mission profiles are retained in GPU HBM, while intermediate situational updates are pinned in Host DDR5 RAM, and older battle logs are compressed into high-speed NVMe storage with zstandard encryption. Memory pages are proactively defragmented prior to cross-tier promotion."
         ],
@@ -21916,7 +21916,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -22168,7 +22168,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The prefix reservation state machine guarantees that every incoming tactical query shares the identical pre-computed doctrine attention states with zero compute overhead. When a tactical commander enters a query, the model begins autoregressive decoding immediately at token position 1, bypassing the 16K-token doctrine prefill phase entirely and slashing TTFT from 850ms to sub-10ms."
         ],
@@ -22178,7 +22178,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -22430,7 +22430,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The cryptographic telemetry daemon continuously monitors key generation entropy, encapsulation cycle times, and side-channel electromagnetic emissions. If electronic warfare jamming or voltage manipulation attempts are detected on a drone's cryptographic coprocessor, the health monitor triggers an autonomous zeroization sequence, destroying ephemeral keys within 500 microseconds."
         ],
@@ -22440,7 +22440,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -22692,7 +22692,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The health state machine executes continuous Repetition Count Tests (RCT) and Adaptive Proportion Tests (APT) across rolling 1,024-bit windows. If noise source entropy drops below 7.999 bits per byte or consecutive identical bits exceed physical statistical thresholds, the monitor disables the cryptographic key generation pipeline within 1.2 microseconds and logs an immutable audit event."
         ],
@@ -22702,7 +22702,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -22810,7 +22810,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Sovereign Defense",
     "title": "PagedAttention Virtual Memory Allocation and Page | Elesium",
     "h1": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters with. Schedule architecture audit.",
+    "metaDescription": "Architect PagedAttention in air-gapped private VPCs with deterministic sub-200ms execution and Sovereign Defense controls. Request technical audit.",
     "targetPersona": "Defense Datacenter Infrastructure Directors & Air-Gapped High-Performance Computing Architects",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -22954,7 +22954,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The telemetry state machine dynamically tunes block size parameters (16 vs 32 tokens per block) and predictive swap-out watermarks based on live incoming tactical query queue depths. When a burst of priority reconnaissance imagery queries enters the cluster, the allocator automatically evicts background batch jobs to host memory while pinning high-priority command sessions in ultra-fast HBM3e pages."
         ],
@@ -22964,7 +22964,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -23216,7 +23216,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The deployment telemetry verifies complete mathematical determinism and numerical stability across FP8, BF16, and FP16 precision regimes. In contested operational scenarios, the runbook configures hardware-enforced isolation, zero-egress network policies, and automated failover scripts, ensuring that tactical inference continues uninterrupted even during local hardware failures."
         ],
@@ -23226,7 +23226,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -23478,7 +23478,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The deployment telemetry continuously monitors activation outlier distributions and layer-by-layer perplexity metrics during live execution. Running on ruggedized 2-node or 4-node industrial GPU servers inside air-gapped mobile command shelters, the agent delivers full-tier reasoning capabilities using 72% less GPU memory and consuming 65% less electrical power."
         ],
@@ -23488,7 +23488,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -23740,7 +23740,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The evaluation state machine continuously monitors adapter activation variance, gradient orthogonality, and cross-adapter memory interference. If an electronic warfare adapter produces anomalous activation drift that threatens base model stability, the evaluator isolates the adapter within 2.5ms, logging an incident report to defense AI auditors."
         ],
@@ -23750,7 +23750,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -24002,7 +24002,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The streaming telemetry monitor enforces bounded execution time limits and cycle-accurate memory accounting. If a streaming inference token takes longer than 15ms or an internal stack pointer drifts beyond pre-calculated static boundaries, the hardware watchdog triggers an instantaneous deterministic state reset without disrupting flight control surfaces."
         ],
@@ -24012,7 +24012,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -24264,7 +24264,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The stability state machine prevents router collapse and token starvation. If a high-intensity crisis scenario causes routing routers to bias compute toward narrow feature subspaces, the evaluator applies dynamic load balancing and entropy regularization within 4ms, ensuring that subtle strategic indicators receive full reasoning depth."
         ],
@@ -24274,7 +24274,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -24526,7 +24526,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The partitioning state machine continuously monitors tactical radio link bandwidth, packet loss rates, and drone battery state-of-charge. If enemy electronic jamming degrades the communications link, the partitioning tool seamlessly migrates decode workloads back to local drone micro-processors within 8ms, ensuring uninterrupted autonomous flight safety."
         ],
@@ -24536,7 +24536,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -24788,7 +24788,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The prefix tree manager dynamically balances tree nodes across multi-GPU memory spaces using lock-free atomic pointers. When multiple defense agents analyze the same satellite target simultaneously, the system achieves over 82% KV-cache deduplication, freeing VRAM for broader multi-agent collaboration."
         ],
@@ -24798,7 +24798,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -24906,7 +24906,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "hubCategory": "Sovereign Defense",
     "title": "Enterprise Sovereign KV-Cache Compression | Elesium",
     "h1": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries - Sovereign Enterprise Architecture",
-    "metaDescription": "Deploy Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries with sovereign VPC isolation,. Schedule private audit.",
+    "metaDescription": "Deploy Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries with sovereign VPC. Audit Defense Ministries architecture.",
     "targetPersona": "Defense Intelligence HPC Architects & Military Data Storage Infrastructure Specialists",
     "intent": "High-Lever BOFU",
     "primaryCta": "Schedule AI Architecture Audit",
@@ -25050,7 +25050,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The compression telemetry engine continuously verifies that compression does not degrade analytical accuracy on critical military named entities, geographic coordinates, and tactical timestamps. Deployed across air-gapped sovereign defense datacenters, the solution allows standard 80GB GPU nodes to handle contexts that previously required 320GB of memory."
         ],
@@ -25060,7 +25060,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -25312,7 +25312,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The deployment telemetry continuously monitors pipeline stage latency, inter-node InfiniBand queue depths, and tensor bubble overhead. When high-priority missile defense or radar tracking queries arrive, the DualPipe scheduler dynamically re-allocates communication slots, executing emergency inferences with sub-10ms inter-stage handover."
         ],
@@ -25322,7 +25322,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -25574,7 +25574,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The locking state machine enforces continuous memory integrity verification. Every subsequent inference pass hashes the system prompt memory pages; any unauthorized alteration triggers an instantaneous hardware security alert, halts active inference sessions, and purges the volatile VRAM within 1.5ms."
         ],
@@ -25584,7 +25584,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -25836,7 +25836,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The speculative deployment engine continuously monitors draft acceptance rates across defense taxonomy domains (naval, aerospace, cyber, logistics). The system dynamically adjusts speculative lookahead horizons between 3 and 7 tokens depending on text entropy, maximizing generation throughput while guaranteeing 100% mathematical fidelity to the full foundation model."
         ],
@@ -25846,7 +25846,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {
@@ -26098,7 +26098,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "layout": "left-copy"
       },
       {
-        "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+        "title": "Air-Gapped Sovereign Defense Topology",
         "copy": [
           "The evaluation state machine monitors attention sink softmax distributions, entropy stability, and layer-by-layer perplexity during multi-day continuous streaming. If an adversary attempts to inject token sequences designed to disrupt attention sink anchoring, the evaluator detects the attention divergence within 3ms and restores canonical attention weights."
         ],
@@ -26108,7 +26108,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-        "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+        "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
       {

@@ -134,7 +134,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   const getCircuitBadge = (state: CircuitBreakerState) => {
     switch (state) {
       case 'OPEN':
-        return <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/40">OPEN (TRIPPED — FAST FAIL)</span>;
+        return <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/40">OPEN (TRIPPED - FAST FAIL)</span>;
       case 'HALF_OPEN':
         return <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/40">HALF_OPEN (PROBING)</span>;
       case 'CLOSED':

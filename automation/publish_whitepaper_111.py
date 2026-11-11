@@ -18,7 +18,7 @@ post_123 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Slurm Cluster Architects, and Distributed Systems Directors: deploying non-blocking asynchronous GPU checkpointing via pinned host memory offloading and RDMA state replication to eliminate pause bubbles and achieve zero-downtime failovers on sovereign AI clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Slurm Cluster Architects, and Distributed Systems Directors: deploying non-blocking asynchronous GPU checkpointing via pinned host memory offloading and RDMA state replication to eliminate pause bubbles and achieve zero-downtime failovers on sovereign AI clusters.",
     "metaDescription": "Asynchronous GPU checkpointing guide: non-blocking host offloading, pinned memory buffers, causal graph serialization, Slurm preemption survival, and zero-downtime failover.",
-    "relatedSolutionSlug": "asynchronous-gpu-checkpointing-memory-offload-daemons-for-slurm-clusters",
+    "relatedSolutionSlug": "paged-attention-virtual-memory-allocation-and-page-table-swap-telemetry-for-sovereign-air-gapped-datacenters",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",

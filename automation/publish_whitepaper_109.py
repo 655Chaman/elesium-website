@@ -18,7 +18,7 @@ post_121 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, HPC Platform Directors, and Infrastructure Architects: unifying Tensor Parallelism (TP), Pipeline Parallelism (PP), and ZeRO-3 Memory Partitioning with zero-bubble interleaved 1F1B schedules to execute 100B+ autonomous agent swarms with sub-8ms communication overhead.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, HPC Platform Directors, and Infrastructure Architects: unifying Tensor Parallelism (TP), Pipeline Parallelism (PP), and ZeRO-3 Memory Partitioning with zero-bubble interleaved 1F1B schedules to execute 100B+ autonomous agent swarms with sub-8ms communication overhead.",
     "metaDescription": "3D Parallelism guide: Megatron-DeepSpeed 3D mesh, zero-bubble interleaved 1F1B pipeline, ZeRO-3 memory sharding, and sub-8ms step latency for 100B+ agent clusters.",
-    "relatedSolutionSlug": "3d-parallelism-mesh-sharding-controllers-for-enterprise-megatron-deepspeed-clusters",
+    "relatedSolutionSlug": "air-gapped-defense-ministry-dualpipe-inference-infrastructure-deployment-consultants",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",

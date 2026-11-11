@@ -3,11 +3,11 @@
 ### [Connectively] Pitch: Why Low-Code and Zapier AI Fails in High-Volume Enterprise Workflows
 **Target Publication:** Fast Company / TechCrunch  
 **Deadline:** Today 5:00 PM EST  
-**Target BOFU Landing URL:** https://elesium.online/solutions/ai-automation-agency-for-logistics-erp  
+**Target BOFU Landing URL:** https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing  
 
 ---
 
-**Subject:** Quote: Why Low-Code and Zapier AI Fails in High-Volume Enterprise Workflows — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: Why Low-Code and Zapier AI Fails in High-Volume Enterprise Workflows - Chaman Shah, Principal AI Systems Architect
 
 Hi [Reporter Name],
 
@@ -19,8 +19,8 @@ When an enterprise processes 50,000 invoices or loan documents a month, even a 2
 
 Forward-thinking enterprises are discarding low-code wrappers in favor of deterministic Python state machines (like LangGraph) deployed on private VPCs, where agent decision boundaries are mathematically bounded and data never leaves the client's sovereign perimeter."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/ai-automation-agency-for-logistics-erp)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing)  
 **Credentials & Verification:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online), an enterprise AI engineering firm that deploys deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing enterprises.  
 - **Corporate Solutions Hub:** https://elesium.online/solutions  

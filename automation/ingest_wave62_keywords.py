@@ -1,7 +1,7 @@
 import json
 
 wave62_keywords = [
-    # Cluster 1: Tensor Parallelism & Megatron Column/Row Partitioning (IDs 3016–3032, 17 items)
+    # Cluster 1: Tensor Parallelism & Megatron Column/Row Partitioning (IDs 3016-3032, 17 items)
     {
         "id": 3016,
         "keyword": "tensor parallelism megatron column row partitioners for enterprise vllm and triton",
@@ -224,7 +224,7 @@ wave62_keywords = [
         "primary_cta": "Deploy Telecom Tensor Parallel Synchronization"
     },
 
-    # Cluster 2: NVLink All-Reduce Collective Communication Overlap (IDs 3033–3048, 16 items)
+    # Cluster 2: NVLink All-Reduce Collective Communication Overlap (IDs 3033-3048, 16 items)
     {
         "id": 3033,
         "keyword": "all reduce gemm computation overlap daemons for distributed llm inference clusters",
@@ -434,7 +434,7 @@ wave62_keywords = [
         "primary_cta": "Deploy Megatron-LM All-Reduce Socket Infrastructure"
     },
 
-    # Cluster 3: Intra-Node Tensor Sharding SLAs & Multi-GPU FinOps (IDs 3049–3065, 17 items)
+    # Cluster 3: Intra-Node Tensor Sharding SLAs & Multi-GPU FinOps (IDs 3049-3065, 17 items)
     {
         "id": 3049,
         "keyword": "sub 5ms intra node all reduce latency sla monitoring daemons for agent swarms",

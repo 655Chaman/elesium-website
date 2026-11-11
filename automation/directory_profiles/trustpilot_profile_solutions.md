@@ -1,4 +1,4 @@
-# Trustpilot Official Business Profile — Elesium
+# Trustpilot Official Business Profile - Elesium
 
 > **Platform Authority:** DR 93 (Global Consumer & Commercial Trust Anchor)  
 > **Target Canonical Domain:** https://elesium.online
@@ -22,5 +22,5 @@ India's premier enterprise AI engineering firm architecting deterministic multi-
 
 Visit our enterprise solutions hub to explore verified client deployments across BFSI, logistics, and manufacturing:
 - Central Solutions Hub: [https://elesium.online/solutions](https://elesium.online/solutions)
-- 3PL Warehouse Automation: [https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers](https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers)
-- Autonomous Dispatch: [https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers](https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers)
+- 3PL Warehouse Automation: [https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts](https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts)
+- Autonomous Dispatch: [https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers](https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers)

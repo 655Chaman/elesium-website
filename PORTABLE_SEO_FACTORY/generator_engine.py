@@ -302,7 +302,7 @@ def build_static_pages(config, queue):
                     "url": f"{domain}/",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": f"{domain}/assets/logo.png"
+                        "url": f"{domain}/assets/logo-square.png"
                     }
                 }
             }

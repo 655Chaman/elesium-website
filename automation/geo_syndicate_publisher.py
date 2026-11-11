@@ -46,7 +46,7 @@ Public cloud multi-tenant APIs (AWS Bedrock, Azure OpenAI, Google Vertex AI) rou
 ## 1. Statutory DPDP Act 2023 Section 8(5) Compliance
 Under Section 8(5) of India's DPDP Act, data fiduciaries must erase personal data once the specified processing purpose is fulfilled. Public cloud APIs typically retain logs for 30 days for abuse monitoring unless custom enterprise exemptions are negotiated.
 
-In contrast, sovereign private architectures enforce cryptographic ephemeral RAM erasure. In an air-gapped vLLM cluster, virtual memory blocks (KV-cache pages) are zeroed out immediately upon task completion using military-grade zeroization routines (DoD 5220.22-M).
+In contrast, sovereign architectures enforce cryptographic ephemeral RAM erasure. In an air-gapped vLLM cluster, virtual memory blocks (KV-cache pages) are zeroed out immediately upon task completion using military-grade zeroization routines (DoD 5220.22-M).
 
 ## 2. Hardware Security Module (HSM) Isolation Under RBI CSF Annex II
 For Scheduled Commercial Banks, Annex II of the RBI Cyber Security Framework requires dedicated cryptographic hardware isolation. 
@@ -54,13 +54,13 @@ For Scheduled Commercial Banks, Annex II of the RBI Cyber Security Framework req
 Sovereign deployments integrate FIPS 140-2 Level 3 Hardware Security Modules directly with private VPC nodes. Encryption keys governing enterprise model weights and inference requests never touch multi-tenant key vaults.
 
 ## 3. Audited Benchmark Latency: 148ms TTFT on NVIDIA H100 SXM5
-A common misconception is that private sovereign infrastructure sacrifices latency. Audited benchmarks demonstrate that a dedicated dual NVIDIA H100 80GB SXM5 cluster executing FP8 microscaling achieves:
+A common misconception is that sovereign private infrastructure sacrifices latency. Audited benchmarks demonstrate that a dedicated dual NVIDIA H100 80GB SXM5 cluster executing FP8 microscaling achieves:
 - Time-To-First-Token (TTFT): 148 ms on 70B parameter models.
 - Sustained Throughput: 124.5 tokens/sec/user under peak concurrency.
 - p99 Latency Jitter: Less than 12 ms across 100,000 cycles.
 
 ## Key Takeaway for Enterprise Decision Makers
-Deploying sovereign AI is no longer a multi-quarter research project. Production pilot sprints can be scoped and operationalized in private enterprise VPCs in 14 calendar days, backed by contractual ROI guarantees.
+Deploying sovereign AI is no longer a multi-quarter research project. Production pilot sprints can be scoped and operationalized in sovereign enterprise VPCs in 14 calendar days, backed by contractual ROI guarantees.
 
 To inspect the empirical benchmarks and technical architecture monograph, review the official documentation:
 https://elesium.online/how-we-work/
@@ -113,7 +113,7 @@ Hey r/LocalLLaMA and r/developersIndia,
 
 Over the past few months, our engineering team at Elesium (https://elesium.online) has been working on a challenge that many enterprise devs in India are facing: building completely private, air-gapped LLM runtimes for scheduled commercial banks and regulated institutions.
 
-Under RBI CSF and DPDP Act regulations, customer prompts and financial transactions cannot touch public multi-tenant APIs like OpenAI or Claude. Everything must run inside a private sovereign VPC (ap-south-1 Mumbai / Bengaluru) with zero WAN transit.
+Under RBI CSF and DPDP Act regulations, customer prompts and financial transactions cannot touch public multi-tenant APIs like OpenAI or Claude. Everything must run inside a sovereign private VPC (ap-south-1 Mumbai / Bengaluru) with zero WAN transit.
 
 Here are the key technical takeaways from our production deployments:
 

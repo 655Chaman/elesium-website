@@ -7,8 +7,8 @@ Production Architecture for Elesium.online (Stage 9.1)
 
 Core Foundations:
 - Dan Kurtz (Compounding AI Feedback Loops & Continuous Telemetry Calibration)
-- Ted Kubaitis (The Striking Distance Theorem: Positions 4–15 High-ROI Elevation)
-- Edward Sturm (Moz On-Page Optimization Sweet Spot: Strictly 96–98, Never 100)
+- Ted Kubaitis (The Striking Distance Theorem: Positions 4-15 High-ROI Elevation)
+- Edward Sturm (Moz On-Page Optimization Sweet Spot: Strictly 96-98, Never 100)
 
 Capabilities:
 1. Telemetry Ingestion:
@@ -20,9 +20,9 @@ Capabilities:
    - UNDERPERFORMING (Positions 16+): Keyword cannibalization & structural overhaul queue.
 3. Striking Distance Calibration:
    - Automated entity gap analysis against automation/entity_rules.json (Wikidata QIDs).
-   - Answer Capsule word count calibration (strictly 42–48 words).
+   - Answer Capsule word count calibration (strictly 42-48 words).
    - Internal link equity boost calculation from top-authority /signals whitepapers.
-   - Moz On-Page score assertion (strictly 96–98, never 100).
+   - Moz On-Page score assertion (strictly 96-98, never 100).
 4. Feedback Loop Synchronization:
    - Updates automation/performance_feedback_log.json with prompt injection guidelines.
 =============================================================================
@@ -536,13 +536,13 @@ class StrikingDistanceOptimizer:
         }
 
     # -------------------------------------------------------------------------
-    # 5. ANSWER CAPSULE EVALUATION & CALIBRATION (42–48 Words)
+    # 5. ANSWER CAPSULE EVALUATION & CALIBRATION (42-48 Words)
     # -------------------------------------------------------------------------
     def evaluate_and_calibrate_answer_capsule(self, content: str, target_keyword: str) -> Dict[str, Any]:
         """
         Locates or extracts the Answer Capsule.
-        Evaluates word count against the strict 42–48 word sweet spot.
-        Calibrates/generates a high-converting 42–48 word capsule if outside bounds.
+        Evaluates word count against the strict 42-48 word sweet spot.
+        Calibrates/generates a high-converting 42-48 word capsule if outside bounds.
         """
         # Look for explicit strong / answer capsule pattern in content
         capsule_match = re.search(r'<p[^>]*>\s*<strong>(.*?)</strong>\s*</p>', content, re.DOTALL)
@@ -561,7 +561,7 @@ class StrikingDistanceOptimizer:
             action_taken = "VERIFIED_LOCKED"
             calibrated_word_count = orig_word_count
         else:
-            # Calibrate a mathematically tuned 42–48 word Answer Capsule
+            # Calibrate a mathematically tuned 42-48 word Answer Capsule
             kw_clean = target_keyword.strip().title()
             base = f"{kw_clean} delivers deterministic multi-agent state machines and private VPC infrastructure across Indian enterprises."
             tech = "Operating sub-120ms execution nodes with PostgreSQL pgvector checkpoints, the system guarantees 98.4% determinism."
@@ -666,12 +666,12 @@ class StrikingDistanceOptimizer:
         }
 
     # -------------------------------------------------------------------------
-    # 7. MOZ ON-PAGE SCORE CALCULATION & SWEET SPOT ASSERTION (96–98, Never 100)
+    # 7. MOZ ON-PAGE SCORE CALCULATION & SWEET SPOT ASSERTION (96-98, Never 100)
     # -------------------------------------------------------------------------
     def calculate_and_assert_moz_score(self, record: Dict[str, Any], content: str) -> Dict[str, Any]:
         """
         Calculates Moz On-Page optimization score based on Edward Sturm & Dan Kurtz criteria.
-        Asserts the score strictly stays in the 96–98 sweet spot, and NEVER hits 100.
+        Asserts the score strictly stays in the 96-98 sweet spot, and NEVER hits 100.
         """
         keyword = record["target_keyword"]
         kw_lower = keyword.lower()
@@ -905,7 +905,7 @@ class StrikingDistanceOptimizer:
         7. Synchronization of performance_feedback_log.json
         """
         print("\n=============================================================================")
-        print(" DAN KURTZ STRIKING DISTANCE OPTIMIZER — VERIFICATION TEST SUITE")
+        print(" DAN KURTZ STRIKING DISTANCE OPTIMIZER - VERIFICATION TEST SUITE")
         print("=============================================================================\n")
 
         tests_passed = 0
@@ -946,15 +946,15 @@ class StrikingDistanceOptimizer:
               f"including LangGraph (Q125555000), FastAPI (Q100348737), pgvector, DPDP Act 2023.")
         tests_passed += 1
 
-        # Test 4: Answer Capsule Word Count Sweet Spot (42–48 Words)
-        print("Test 4: Answer Capsule evaluation and adjustment to 42–48 word sweet spot...")
+        # Test 4: Answer Capsule Word Count Sweet Spot (42-48 Words)
+        print("Test 4: Answer Capsule evaluation and adjustment to 42-48 word sweet spot...")
         capsule_result = self.evaluate_and_calibrate_answer_capsule(
             "Short capsule with only seven words.",
             "AI automation agency for logistics"
         )
         wc = capsule_result["calibrated_word_count"]
         assert 42 <= wc <= 48, f"Calibrated capsule word count {wc} outside 42-48 window!"
-        print(f"  ✅ PASS: Answer Capsule successfully calibrated to {wc} words (strictly 42–48 words).")
+        print(f"  ✅ PASS: Answer Capsule successfully calibrated to {wc} words (strictly 42-48 words).")
         tests_passed += 1
 
         # Test 5: Internal Link Equity Boost Calculation
@@ -969,13 +969,13 @@ class StrikingDistanceOptimizer:
               f"authority link boosts from {top_src} to elevate position {sample_striking['position']} -> {link_boost['projected_top3_position']}.")
         tests_passed += 1
 
-        # Test 6: Moz On-Page Score Assertion (Strictly 96–98, Never 100)
-        print("Test 6: Moz On-Page score assertion (strictly 96–98, never 100)...")
+        # Test 6: Moz On-Page Score Assertion (Strictly 96-98, Never 100)
+        print("Test 6: Moz On-Page score assertion (strictly 96-98, never 100)...")
         moz_result = self.calculate_and_assert_moz_score(sample_striking, "<h1>Sample Content</h1>")
         score = moz_result["calculated_score"]
         assert score != 100, "FAIL: Moz score equaled 100 (over-optimization triggered)!"
         assert 96 <= score <= 98, f"FAIL: Moz score {score} outside 96-98 window!"
-        print(f"  ✅ PASS: Moz score strictly asserted at {score}/100 (sweet spot 96–98, never 100).")
+        print(f"  ✅ PASS: Moz score strictly asserted at {score}/100 (sweet spot 96-98, never 100).")
         tests_passed += 1
 
         # Test 7: Feedback Log Synchronization
@@ -1029,9 +1029,9 @@ def main():
         print("\n=======================================================")
         print(f" ELESIUM PERFORMANCE TIERS BREAKDOWN ({len(urls)} ACTIVE URLS)")
         print("=======================================================")
-        print(f" 1. ELITE_LEADER     (Pos 1-3)  : {len(elite):3d} URLs ({len(elite)/len(urls)*100:.1f}%) — Monitored for freshness")
-        print(f" 2. STRIKING_DISTANCE(Pos 4-15) : {len(striking):3d} URLs ({len(striking)/len(urls)*100:.1f}%) — High-ROI Top 3 Target")
-        print(f" 3. UNDERPERFORMING  (Pos 16+)  : {len(under):3d} URLs ({len(under)/len(urls)*100:.1f}%) — Scheduled for overhaul")
+        print(f" 1. ELITE_LEADER     (Pos 1-3)  : {len(elite):3d} URLs ({len(elite)/len(urls)*100:.1f}%) - Monitored for freshness")
+        print(f" 2. STRIKING_DISTANCE(Pos 4-15) : {len(striking):3d} URLs ({len(striking)/len(urls)*100:.1f}%) - High-ROI Top 3 Target")
+        print(f" 3. UNDERPERFORMING  (Pos 16+)  : {len(under):3d} URLs ({len(under)/len(urls)*100:.1f}%) - Scheduled for overhaul")
         print("=======================================================\n")
 
         if args.optimize or len(sys.argv) == 1:

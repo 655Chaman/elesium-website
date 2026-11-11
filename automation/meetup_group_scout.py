@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-meetup_group_scout.py — Meetup Group Scout, Acquisition Crawler & Co-Hosting Playbook Generator
+meetup_group_scout.py - Meetup Group Scout, Acquisition Crawler & Co-Hosting Playbook Generator
 =============================================================================================
 Framework: Edward Sturm Complete Masterclass (Modules 11 & 12) & Non-Website Ecosystem Dominance
 Target: Elesium Online (https://elesium.online)
@@ -8,11 +8,11 @@ Target: Elesium Online (https://elesium.online)
 Key Capabilities:
 1. Multi-City Meetup Crawler / Intake Parser:
    - Scans and evaluates tech/AI meetups in 5 Tier-1 & Tier-2 Indian tech hubs:
-     1. Bangalore (Bengaluru) — Primary Enterprise & GCC Hub
-     2. Mumbai — BFSI & Corporate Commercial Capital
-     3. Delhi (NCR: Delhi, Gurgaon, Noida) — Enterprise SaaS & Policy/GovTech
-     4. Hyderabad — Enterprise Cloud & Pharma/BioTech Tech Hub
-     5. Pune — Automotive, Manufacturing & Industrial Tech Hub
+     1. Bangalore (Bengaluru) - Primary Enterprise & GCC Hub
+     2. Mumbai - BFSI & Corporate Commercial Capital
+     3. Delhi (NCR: Delhi, Gurgaon, Noida) - Enterprise SaaS & Policy/GovTech
+     4. Hyderabad - Enterprise Cloud & Pharma/BioTech Tech Hub
+     5. Pune - Automotive, Manufacturing & Industrial Tech Hub
    - Ingests query feeds or live Meetup API responses for flags:
      'Needs Organizer', 'Looking for an Organizer', 'Organizer Stepped Down', 'Pending Deregistration'.
 2. Automated Succession & Takeover Pitch Generator:
@@ -229,7 +229,7 @@ LinkedIn: {self.speaker['linkedin']}
     def generate_welcome_announcement(self, group: MeetupTargetGroup, city_info: Dict[str, str]) -> str:
         """Announcement broadcast to group members upon stepping in as co-organizers."""
         target_solution_url = f"{self.speaker['solutions_hub']}/{city_info['target_slug']}"
-        return f"""**Title:** {group.proposed_rebrand} is Back — In-Person Engineering Roundtables in {group.city}
+        return f"""**Title:** {group.proposed_rebrand} is Back - In-Person Engineering Roundtables in {group.city}
 
 Hello {group.group_name} Community,
 
@@ -248,13 +248,13 @@ Before our first in-person session, explore our technical architectural pods and
 
 Our upcoming session dates and speaker roster will be announced right here next week. Please reply to this discussion with the exact technical bottlenecks your team is facing!
 
-— **{self.speaker['name']}**, Co-Organizer & Principal AI Systems Architect, Elesium
+- **{self.speaker['name']}**, Co-Organizer & Principal AI Systems Architect, Elesium
 """
 
     def generate_cohosting_proposal(self, group: MeetupTargetGroup, city_info: Dict[str, str]) -> str:
         """Pitch sent to active sister tech meetups in the same city to co-host an event."""
         target_solution_url = f"{self.speaker['solutions_hub']}/{city_info['target_slug']}"
-        return f"""**Subject:** Joint Masterclass in {group.city}: Beyond Chatbots — Deterministic AI Multi-Agent Systems
+        return f"""**Subject:** Joint Masterclass in {group.city}: Beyond Chatbots - Deterministic AI Multi-Agent Systems
 
 Hi [Sister Group Organizer],
 

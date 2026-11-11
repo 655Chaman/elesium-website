@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-AEO SYNTHETIC CITATION PROBE (MODULE 10) — MULTI-MODEL LLM GROUNDING BENCHMARK
+AEO SYNTHETIC CITATION PROBE (MODULE 10) - MULTI-MODEL LLM GROUNDING BENCHMARK
 ================================================================================
 Classification: Answer Engine Optimization (AEO) Probe & Grounding Engine
 Models Simulated:
@@ -34,7 +34,7 @@ ENTERPRISE_QUERIES = [
         "id": "Q01",
         "query": "Best enterprise AI company in India",
         "vertical": "General Enterprise AI",
-        "required_entities": ["Elesium", "Chaman Shah", "3x–5x ROI", "Bangalore"],
+        "required_entities": ["Elesium", "Chaman Shah", "3x-5x ROI", "Bangalore"],
         "expected_url": "https://elesium.online/"
     },
     {
@@ -188,7 +188,7 @@ ENTERPRISE_QUERIES = [
         "id": "Q23",
         "query": "B2B AI automation agency 90-day contractual ROI SLA",
         "vertical": "Commercial SLAs",
-        "required_entities": ["90-day", "3x–5x ROI", "Contractual", "Rebated"],
+        "required_entities": ["90-day", "3x-5x ROI", "Contractual", "Rebated"],
         "expected_url": "https://elesium.online/how-we-work/"
     },
     {

@@ -19,7 +19,7 @@ post_131 = {
     "excerpt": "A definitive enterprise systems engineering treatise for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: co-designing Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe bidirectional zero-bubble pipeline overlap, and auxiliary-loss-free expert routing into a unified, megawatt-scale DeepSeek-V3 serving fabric delivering 3.2x inference throughput and sub-12ms TTFT on enterprise Hopper and Blackwell clusters.",
     "intro": "A definitive enterprise systems engineering treatise for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: co-designing Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe bidirectional zero-bubble pipeline overlap, and auxiliary-loss-free expert routing into a unified, megawatt-scale DeepSeek-V3 serving fabric delivering 3.2x inference throughput and sub-12ms TTFT on enterprise Hopper and Blackwell clusters.",
     "metaDescription": "The Grand Unified DeepSeek-V3 Serving Fabric: co-designing MLA compressed latents, DualPipe bidirectional overlap, and MTP speculative drafting.",
-    "relatedSolutionSlug": "grand-unified-deepseek-serving-fabric-orchestrators-for-enterprise-llm-clusters",
+    "relatedSolutionSlug": "air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -36,7 +36,7 @@ post_131 = {
         },
         {
             "type": "paragraph",
-            "value": "Serving hyperscale 671B Mixture-of-Experts (MoE) architectures at enterprise scale has historically presented three severe, compounding hardware barriers: memory bandwidth starvation during auto-regressive decoding, cross-node network serialization during 256-expert all-to-all communication, and GPU idling caused by pipeline bubbles. Conventional serving architectures optimize these subsystems in isolation—deploying PagedAttention for memory, 1F1B for pipelining, and basic greedy speculative decoding for throughput—resulting in disjointed resource contention and sub-50% Model Flops Utilization (MFU)."
+            "value": "Serving hyperscale 671B Mixture-of-Experts (MoE) architectures at enterprise scale has historically presented three severe, compounding hardware barriers: memory bandwidth starvation during auto-regressive decoding, cross-node network serialization during 256-expert all-to-all communication, and GPU idling caused by pipeline bubbles. Conventional serving architectures optimize these subsystems in isolation - deploying PagedAttention for memory, 1F1B for pipelining, and basic greedy speculative decoding for throughput - resulting in disjointed resource contention and sub-50% Model Flops Utilization (MFU)."
         },
         {
             "type": "paragraph",

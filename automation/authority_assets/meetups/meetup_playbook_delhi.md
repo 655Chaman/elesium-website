@@ -2,7 +2,7 @@
 > **Target Hub:** Delhi, Delhi NCR (Gurgaon / Noida)
 > **Sector Focus:** Enterprise SaaS, GovTech / DPDP Compliance, B2B Outbound
 > **Recommended Venue:** Cyber City DLF Phase 2, Gurgaon
-> **Deep Anchor:** https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29
+> **Deep Anchor:** https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore
 
 ---
 
@@ -31,7 +31,7 @@ We would love to step in and fully support the community:
 4. **Zero Sales Pitches:** All sessions will focus strictly on production engineering (deterministic LangGraph state machines, private VPC open-weights LLMs, and ERP middleware).
 
 Here is a preview of the production architectures we build and share open-access:
-👉 [https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29](https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29)
+👉 [https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29](https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore)
 
 Would you be open to a quick 5-minute phone or WhatsApp chat this week to transfer co-organizer rights and keep the group alive?
 
@@ -44,7 +44,7 @@ LinkedIn: https://www.linkedin.com/in/chaman-elesium
 
 ---
 ## 3. Post-Takeover Group Welcome Announcement
-**Title:** Delhi NCR Sovereign Cloud & Enterprise AI Guild is Back — In-Person Engineering Roundtables in Delhi
+**Title:** Delhi NCR Sovereign Cloud & Enterprise AI Guild is Back - In-Person Engineering Roundtables in Delhi
 
 Hello Delhi NCR Cloud Native & Microservices Developers Community,
 
@@ -58,17 +58,17 @@ We are excited to share that our community is officially active again under the 
 ### Free Open-Source Architecture Blueprints
 Before our first in-person session, explore our technical architectural pods and case studies:
 - Enterprise Solutions Hub: [https://elesium.online/solutions](https://elesium.online/solutions)
-- Enterprise SaaS, GovTech / DPDP Compliance, B2B Outbound Deep-Dive: [https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29](https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29)
+- Enterprise SaaS, GovTech / DPDP Compliance, B2B Outbound Deep-Dive: [https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29](https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore)
 - Real-Time Market Signals: [https://elesium.online/signals](https://elesium.online/signals)
 
 Our upcoming session dates and speaker roster will be announced right here next week. Please reply to this discussion with the exact technical bottlenecks your team is facing!
 
-— **Chaman Shah**, Co-Organizer & Principal AI Systems Architect, Elesium
+- **Chaman Shah**, Co-Organizer & Principal AI Systems Architect, Elesium
 
 
 ---
 ## 4. Co-Hosting Outreach Proposal to Active Sister Meetups
-**Subject:** Joint Masterclass in Delhi: Beyond Chatbots — Deterministic AI Multi-Agent Systems
+**Subject:** Joint Masterclass in Delhi: Beyond Chatbots - Deterministic AI Multi-Agent Systems
 
 Hi [Sister Group Organizer],
 
@@ -83,7 +83,7 @@ We are proposing a high-impact joint masterclass for our combined communities in
 - **Full Venue & AV Sponsorship:** Hosted at Cyber City DLF Phase 2, Gurgaon for up to 100 developers.
 - **Catering & Refreshments:** High-quality food and beverages for all attendees.
 - **Deep-Dive Technical Session:** A 45-minute live architecture teardown and live code demonstration by Chaman Shah (Principal AI Systems Architect).
-- **Physical Architecture Blueprint Handouts:** Printed reference posters with backlink references to [https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29](https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29).
+- **Physical Architecture Blueprint Handouts:** Printed reference posters with backlink references to [https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29](https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore).
 
 Both of our groups will be listed as co-hosts on Meetup, sharing cross-promotion visibility and building valuable backlinks between our community pages and web properties.
 
@@ -98,4 +98,4 @@ Best,
 ## 5. Backlink & Authority Stacking Verification
 - Primary Solutions Hub: https://elesium.online/solutions
 - Signals Intelligence Hub: https://elesium.online/signals
-- City Target BOFU Page: https://elesium.online/solutions/b2b-pipeline-automation-software-and-executive-sal-ii-29
+- City Target BOFU Page: https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore

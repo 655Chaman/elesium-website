@@ -1065,7 +1065,7 @@ VIDEO_SPECIFICATIONS: List[Dict[str, Any]] = [
                             "seconds": 8,
                             "title": "Deterministic Architecture Mechanism",
                             "visual": "High-speed network topology diagram showing edge Rust daemon polling OPC-UA servers in sub-10ms into sovereign LangGraph state engine.",
-                            "voiceover": "Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into private sovereign LangGraph controllers.",
+                            "voiceover": "Elesium deploys deterministic edge daemon nodes bridging Modbus, Profinet, and OPC-UA directly into sovereign private LangGraph controllers.",
                             "caption": "EDGE DAEMON + LANGGRAPH SOVEREIGN CONTROLLER"
                     },
                     {
@@ -5556,7 +5556,7 @@ def build_video_schema(video: Dict[str, Any], transcript: str) -> Dict[str, Any]
     slug = video["slug"]
     keyword = video["keyword"]
     benefit = video["key_benefit"]
-    title = f"{keyword.title()} — {benefit} | Elesium"
+    title = f"{keyword.title()} - {benefit} | Elesium"
     description = (
         f"A 30-second technical architecture breakdown of {keyword} for enterprise leaders. "
         f"Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, "
@@ -5607,7 +5607,7 @@ def generate_video_script_markdown(video: Dict[str, Any]) -> str:
     slug = video["slug"]
     industry = video["industry"]
     persona = video["target_persona"]
-    title = f"{keyword.title()} — {benefit} | Elesium"
+    title = f"{keyword.title()} - {benefit} | Elesium"
     transcript = build_verbatim_transcript(video)
     schema = build_video_schema(video, transcript)
 
@@ -5714,7 +5714,7 @@ def generate_all_scripts(output_dir: Path = SCRIPTS_DIR) -> List[Path]:
             "key_benefit": video["key_benefit"],
             "industry": video["industry"],
             "target_persona": video["target_persona"],
-            "title": f"{video['keyword'].title()} — {video['key_benefit']} | Elesium",
+            "title": f"{video['keyword'].title()} - {video['key_benefit']} | Elesium",
             "duration": "0:30",
             "durationIso": "PT30S",
             "uploadDate": "2026-10-19T08:00:00Z",
@@ -5734,7 +5734,7 @@ def sync_frontend_data(output_file: Path = FRONTEND_DATA_FILE):
     short_entries = []
     for v in VIDEO_SPECIFICATIONS:
         transcript = build_verbatim_transcript(v)
-        title = f"{v['keyword'].title()} — {v['key_benefit']} | Elesium"
+        title = f"{v['keyword'].title()} - {v['key_benefit']} | Elesium"
         
         # Build keyMoments matching the 5 second-by-second stages
         km_list = [
@@ -5855,7 +5855,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
             { time: "04:12", seconds: 252, title: "Deterministic State Machines vs Autonomous Drifting", description: "How LangGraph DAGs enforce hard contractual guardrails and human-in-the-loop exception routing." },
             { time: "09:45", seconds: 585, title: "Sovereign VPC Deployments & India DPDP Act 2023", description: "Architecting zero-retention inference pipelines with on-premise embeddings and private model weights." },
             { time: "16:30", seconds: 990, title: "Legacy Core Integration: SAP S/4HANA & Core Banking", description: "Live execution hooks bridging modern agentic protocols with legacy SOAP, REST, and SQL architectures." },
-            { time: "21:05", seconds: 1265, title: "Calculating the 90-Day Cash-Flow Velocity ROI", description: "How CXOs structure capital allocation to achieve 3x–5x net return on engineering investment." }
+            { time: "21:05", seconds: 1265, title: "Calculating the 90-Day Cash-Flow Velocity ROI", description: "How CXOs structure capital allocation to achieve 3x-5x net return on engineering investment." }
         ],
         architectureStages: [
             {
@@ -5889,9 +5889,9 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 techStack: "SAP OData APIs • PostgreSQL • Kafka • OpenTelemetry"
             }
         ],
-        fullTranscript: `[00:00] Welcome to the Elesium Systems Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
+        fullTranscript: `[00:00] Welcome to the Elesium Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
 
-[01:15] In 2024 and 2025, the market was flooded with prompt wrappers—companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment—whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims—probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
+[01:15] In 2024 and 2025, the market was flooded with prompt wrappers - companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment - whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims - probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
 
 [04:12] This brings us to the core distinction: Probabilistic Generative Models versus Deterministic State Machines. At Elesium, we do not let LLMs make unbound execution decisions. Instead, we use frameworks like LangGraph to construct deterministic state machines. The language model acts merely as a localized parsing or translation node, while the transitions between states, the validation gates, and the business logic are strictly enforced by code.
 
@@ -5963,7 +5963,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         ],
         fullTranscript: `[00:00] Today we are resolving one of the most contentious debates among enterprise technical architects: Should you build your business workflows with visual automation engines like n8n, or should you deploy programmatic code-first frameworks like LangGraph?
 
-[01:30] Let's be fair: n8n is fantastic for linear automation. If you need to watch a webhook, format a payload, and update HubSpot or Airtable, n8n provides rapid prototyping and clean visual observability. But when you move to mission-critical revenue operations—where an agent must read financial statements, cross-examine multiple databases, recover from partial failures, and handle cyclical loops—visual tools hit an architectural wall.
+[01:30] Let's be fair: n8n is fantastic for linear automation. If you need to watch a webhook, format a payload, and update HubSpot or Airtable, n8n provides rapid prototyping and clean visual observability. But when you move to mission-critical revenue operations - where an agent must read financial statements, cross-examine multiple databases, recover from partial failures, and handle cyclical loops - visual tools hit an architectural wall.
 
 [05:10] The primary advantage of LangGraph is cyclical execution and stateful checkpointing. Traditional DAGs are linear: node A leads to node B, which leads to node C. But agentic reasoning is iterative. An agent generates a response, validates it against a business rule, realizes there is an inconsistency, and must loop back to re-query the database. LangGraph models workflows as graphs with cycles, persisting state into PostgreSQL after every node execution. If a server restarts midway through a transaction, LangGraph resumes exactly where it stopped.
 
@@ -6033,11 +6033,11 @@ export const videoMasterclasses: VideoMasterclass[] = [
 
 [02:15] In this technical case study, we examine the architecture Elesium engineered for an institutional lending client. Their credit team was spending 48 hours per application simply compiling raw financial inputs into a Credit Appraisal Memo (CAM).
 
-[05:40] Step one is robust ingestion. Financial PDFs in India are notoriously messy—scanned at low resolutions, stamped with watermarks, or formatted in non-standard tabular grids. We deployed a multi-stage Vision-Language extraction pipeline that segments documents into bounding-box coordinates, normalizes rotations, and outputs strongly typed Pydantic models with 99.4% precision.
+[05:40] Step one is robust ingestion. Financial PDFs in India are notoriously messy - scanned at low resolutions, stamped with watermarks, or formatted in non-standard tabular grids. We deployed a multi-stage Vision-Language extraction pipeline that segments documents into bounding-box coordinates, normalizes rotations, and outputs strongly typed Pydantic models with 99.4% precision.
 
 [09:20] Step two is the cross-verification audit triad. Credit risk is not assessed from a single document. Our LangGraph agent cluster cross-examines three distinct data streams: bank statement credits, GST revenue declarations (GSTR-1 and GSTR-3B), and filed Income Tax Returns (ITR). If a borrower claims 20 Crores in annual revenue, but banking credits only reflect 12 Crores, the reconciliation engine immediately flags the circular transaction pattern and highlights the discrepancy in red.
 
-[15:10] Step three is automated CAM generation. Once cross-validation passes, the system calculates critical debt ratios—Debt Service Coverage Ratio (DSCR), Interest Coverage Ratio, and Maximum Permissible Bank Finance (MPBF)—outputting an executive-ready CAM complete with source document annotations. The credit manager does not have to hunt for numbers; every figure in the memo links directly to the highlighted bounding box in the original bank statement.
+[15:10] Step three is automated CAM generation. Once cross-validation passes, the system calculates critical debt ratios - Debt Service Coverage Ratio (DSCR), Interest Coverage Ratio, and Maximum Permissible Bank Finance (MPBF) - outputting an executive-ready CAM complete with source document annotations. The credit manager does not have to hunt for numbers; every figure in the memo links directly to the highlighted bounding box in the original bank statement.
 
 [19:00] The outcome: underwriting turnaround was compressed from 48 hours to just 18 minutes. The client recovered 12,000 analyst hours every month, expanded originations by 300% without hiring, and achieved an audited 3.8x cash-flow ROI in the first quarter of deployment.`
     },
@@ -6150,7 +6150,7 @@ def generate_all_scripts(output_dir: Path = SCRIPTS_DIR) -> List[Path]:
             "key_benefit": video["key_benefit"],
             "industry": video["industry"],
             "target_persona": video["target_persona"],
-            "title": f"{video['keyword'].title()} — {video['key_benefit']} | Elesium",
+            "title": f"{video['keyword'].title()} - {video['key_benefit']} | Elesium",
             "duration": "0:30",
             "durationIso": "PT30S",
             "uploadDate": "2026-10-19T08:00:00Z",

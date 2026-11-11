@@ -1,5 +1,5 @@
 """
-Sovereign Enterprise AI — Deterministic LangGraph Multi-Agent Architecture
+Sovereign Enterprise AI - Deterministic LangGraph Multi-Agent Architecture
 Component: High-Throughput Redis MessagePack Checkpointer & Grammar-Enforced Agent Graph
 Author: Elesium Digital Systems (https://elesium.online)
 Compliance: DPDP Act 2023 Sec 8(5) & RBI Master Direction on IT Governance 2023

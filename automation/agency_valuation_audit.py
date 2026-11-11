@@ -61,7 +61,7 @@ class AgencyValuationEngine:
             p1_notes = "Sub-15% operating margins; vulnerable to cost fluctuations."
         elif sde / annual_revenue < 0.28:
             p1_score = 2
-            p1_notes = "Healthy 15–28% margins with clear add-backs and clean accounting."
+            p1_notes = "Healthy 15-28% margins with clear add-backs and clean accounting."
         else:
             p1_score = 3
             p1_notes = "Elite 28%+ normalized margins, clean accrual books, audited P&L ready."

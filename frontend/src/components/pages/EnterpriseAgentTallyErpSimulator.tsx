@@ -73,7 +73,7 @@ export default function EnterpriseAgentTallyErpSimulator() {
   const executiveMemo = useMemo(() => {
     return `================================================================================
 EXECUTIVE ENGINEERING MEMORANDUM: AUTONOMOUS TALLY ERP INTEGRATION
-CONFIDENTIAL & PROPRIETARY — PREPARED BY ELESIUM ENTERPRISE AI
+CONFIDENTIAL & PROPRIETARY | PREPARED BY ELESIUM ENTERPRISE AI
 ================================================================================
 Generated Date: ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
 Target ERP Platform: Tally ERP 9 / Tally Prime 4.x

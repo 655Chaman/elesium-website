@@ -120,7 +120,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         title: "Deterministic State Machines vs Stochastic Role-Play",
         subtitle: "Why prompt-driven delegation breaks at enterprise scale",
         analysisParagraphs: [
-          "In production environments processing thousands of daily transactions—such as cross-dock freight reconciliation or automated underwriting—treating LLMs as autonomous managers leads to systemic failure. CrewAI assigns agents 'roles' and 'backstories', expecting the model to self-coordinate.",
+          "In production environments processing thousands of daily transactions (such as cross-dock freight reconciliation or automated underwriting), treating LLMs as autonomous managers leads to systemic failure. CrewAI assigns agents 'roles' and 'backstories', expecting the model to self-coordinate.",
           "Under production concurrency, stochastic delegation degenerates: agents frequently re-delegate identical tasks, enter circular arguments, or fail to terminate cleanly. In contrast, LangGraph decouples orchestration logic from model weights by using explicit cyclic finite state machines governed by typed transition rules."
         ],
         keyMetric: {
@@ -162,14 +162,14 @@ export const compareBattlecards: CompareBattlecardItem[] = [
   {
     id: 2,
     slug: "private-vpc-vllm-vs-azure-openai",
-    title: "Private Sovereign VPC vLLM vs Azure OpenAI: True 3-Year TCO, Latency & Data Residency",
-    h1: "Private Sovereign VPC vLLM vs Azure OpenAI: True 3-Year TCO, Latency & Data Residency",
+    title: "Sovereign Private VPC vLLM vs Azure OpenAI: True 3-Year TCO, Latency & Data Residency",
+    h1: "Sovereign Private VPC vLLM vs Azure OpenAI: True 3-Year TCO, Latency & Data Residency",
     metaDescription: "Comprehensive TCO and latency comparison between deploying open-weights models on private vLLM clusters vs commercial Azure OpenAI enterprise instances.",
     primaryKeyword: "private vpc vllm vs azure openai",
     secondaryKeywords: ["sovereign LLM infrastructure cost", "vLLM vs Azure OpenAI latency", "DPDP Act 2023 cloud AI compliance"],
-    entityA: "Private Sovereign VPC (vLLM / TensorRT-LLM)",
+    entityA: "Sovereign Private VPC (vLLM / TensorRT-LLM)",
     entityB: "Commercial Cloud API (Azure OpenAI Enterprise)",
-    entityALabel: "Private Sovereign VPC",
+    entityALabel: "Sovereign Private VPC",
     entityBLabel: "Azure OpenAI",
     category: "Infrastructure & Sovereign Cloud",
     verdictSummary: "For low-volume experimentation (<5M tokens/month), Azure OpenAI offers zero upfront hardware commitment. But once transaction volume crosses 25M tokens/month, sovereign private VPC clusters running vLLM deliver a 74% reduction in annual cloud spend, sub-18ms TTFT, and zero data residency compliance exposure under the DPDP Act 2023.",
@@ -214,7 +214,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         subtitle: "Why high-volume enterprises migrate from per-token billing",
         analysisParagraphs: [
           "Enterprise finance leaders evaluating generative AI face an insidious cost trap: pilots on Azure OpenAI appear affordable when developers process a few thousand prompt tokens during prototyping. However, once automated document pipelines process 50,000 monthly insurance claims or 100,000 invoices, monthly API invoices skyrocket into six figures.",
-          "A dual NVIDIA H100 GPU cluster leased on reserved cloud pricing costs approximately ₹3,80,000 to ₹4,50,000 monthly. The same token volume on commercial APIs costs in excess of ₹16,50,000—delivering an immediate ₹12L+ monthly cash-flow savings."
+          "A dual NVIDIA H100 GPU cluster leased on reserved cloud pricing costs approximately ₹3,80,000 to ₹4,50,000 monthly. The same token volume on commercial APIs costs in excess of ₹16,50,000, delivering an immediate ₹12L+ monthly cash-flow savings."
         ],
         keyMetric: {
           label: "3-Year Cumulative TCO Savings",
@@ -321,7 +321,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         subtitle: "Why CFOs mandate migration away from task-based SaaS tiers",
         analysisParagraphs: [
           "Zapier and Make charge customers per 'task' or 'operation'. A single customer onboarding process might require 25 individual steps: verifying identity, checking credit registries, extracting tax returns, and updating three databases.",
-          "At 10,000 onboardings monthly, this represents 250,000 tasks—rapidly pushing the company into enterprise tier contracts with massive recurring costs. Custom code deployed in client-owned containers eliminates per-task taxes entirely."
+          "At 10,000 onboardings monthly, this represents 250,000 tasks, rapidly pushing the company into enterprise tier contracts with massive recurring costs. Custom code deployed in client-owned containers eliminates per-task taxes entirely."
         ],
         keyMetric: {
           label: "Annual Software Tooling Tax",
@@ -444,9 +444,9 @@ export const compareBattlecards: CompareBattlecardItem[] = [
     entityALabel: "Elesium",
     entityBLabel: "Traditional IT Giants",
     category: "Delivery Model",
-    verdictSummary: "Traditional IT consultancies bill for hundreds of junior hours across 12–18 month bloated timelines with zero contracted performance guarantees. Elesium deploys elite Principal AI Systems Architects delivering production-ready, sovereign multi-agent infrastructure in 14 to 30 days with a contracted 90-day cash-flow ROI SLA.",
+    verdictSummary: "Traditional IT consultancies bill for hundreds of junior hours across 12-18 month bloated timelines with zero contracted performance guarantees. Elesium deploys elite Principal AI Systems Architects delivering production-ready, sovereign multi-agent infrastructure in 14 to 30 days with a contracted 90-day cash-flow ROI SLA.",
     fastFacts: [
-      { label: "Deployment Velocity", value: "14 Days vs 12–18 Months", description: "Direct deployment of pre-tested deterministic state machine kernels." },
+      { label: "Deployment Velocity", value: "14 Days vs 12-18 Months", description: "Direct deployment of pre-tested deterministic state machine kernels." },
       { label: "Commercial Model", value: "Fixed Contracted ROI vs T&M Billing", description: "Contractually committed 90-day cash-flow ROI payback." },
       { label: "IP Ownership", value: "100% Client-Owned Sovereign Code", description: "Zero proprietary platform lock-in or recurring per-seat fees." }
     ],
@@ -772,7 +772,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         subtitle: "Why conversational multi-agent swarms fail under enterprise concurrency",
         analysisParagraphs: [
           "In AutoGen's GroupChatManager architecture, an LLM prompt inspects the recent conversation history and dynamically decides which agent should speak next. In controlled demos, this mimics human brainstorming.",
-          "Under production stress—such as reconciling high-volume ERP ledgers or adjudicating insurance claims—stochastic speaker selection degrades rapidly. Agents enter repetitive confirmation loops or hand off tasks to inappropriate roles. LangGraph replaces prompt-driven turn selection with deterministic conditional routing edges that evaluate programmatic invariants."
+          "Under production stress (such as reconciling high-volume ERP ledgers or adjudicating insurance claims), stochastic speaker selection degrades rapidly. Agents enter repetitive confirmation loops or hand off tasks to inappropriate roles. LangGraph replaces prompt-driven turn selection with deterministic conditional routing edges that evaluate programmatic invariants."
         ],
         keyMetric: {
           label: "Orchestration Determinism",
@@ -785,7 +785,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         title: "Asynchronous Persistence & Human-in-the-Loop Interrupts",
         subtitle: "Scaling long-running statutory workflows across distributed workers",
         analysisParagraphs: [
-          "Enterprise compliance mandates that high-stakes actions—such as initiating bank transfers over ₹5,00,000 or updating health record diagnoses—require human supervisor sign-off before commitment.",
+          "Enterprise compliance mandates that high-stakes actions (such as initiating bank transfers over ₹5,00,000 or updating health record diagnoses) require human supervisor sign-off before commitment.",
           "LangGraph's checkpointer model persists the exact execution graph state to PostgreSQL at each transition step. The worker thread yields immediately, freeing compute resources. Once human approval arrives via webhook, any available worker resumes the state machine with zero context loss."
         ],
         keyMetric: {
@@ -842,7 +842,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         optionA: "Native Python/Regex/Spacy/Transformer pipeline with custom Verhoeff checksum validators.",
         optionB: "Pre-trained managed recognizers with custom entity recognition requiring extensive training datasets.",
         verdict: "Option A Superior",
-        technicalExplanation: "Presidio allows instant programmatic injection of custom Indian PII recognizers—such as 12-digit Aadhaar numbers with Verhoeff mathematical validation—without re-training models."
+        technicalExplanation: "Presidio allows instant programmatic injection of custom Indian PII recognizers (such as 12-digit Aadhaar numbers with Verhoeff mathematical validation) without re-training models."
       },
       {
         dimension: "Inference Latency & Throughput",
@@ -923,9 +923,9 @@ export const compareBattlecards: CompareBattlecardItem[] = [
     entityALabel: "Elesium",
     entityBLabel: "Big 4 Consulting",
     category: "Delivery Model",
-    verdictSummary: "Big 4 consulting firms excel at enterprise political risk mitigation and strategic governance slide decks, but charge $500k–$2M for multi-year roadmaps with zero working code; Elesium is an elite autonomous engineering squad that delivers hardened, air-gapped production architectures in 90 days with contractual ROI guarantees.",
+    verdictSummary: "Big 4 consulting firms excel at enterprise political risk mitigation and strategic governance slide decks, but charge $500k-$2M for multi-year roadmaps with zero working code; Elesium is an elite autonomous engineering squad that delivers hardened, air-gapped production architectures in 90 days with contractual ROI guarantees.",
     fastFacts: [
-      { label: "Time to Production Code", value: "14 Days vs 9–18 Months", description: "Live working pilot in production vs multi-quarter stakeholder interview decks." },
+      { label: "Time to Production Code", value: "14 Days vs 9-18 Months", description: "Live working pilot in production vs multi-quarter stakeholder interview decks." },
       { label: "Engagement Model", value: "Fixed-Price & Milestone vs Time & Materials", description: "Contractual deliverable SLAs vs open-ended billable hourly staff augmentation." },
       { label: "Code & IP Ownership", value: "100% Client-Owned vs Proprietary Lock-In", description: "Full source code, Dockerfiles, and weights transferred directly to client repos." }
     ],
@@ -985,7 +985,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         title: "True Cost of Ownership: Fixed Milestone vs Time-and-Materials Burn",
         subtitle: "Analyzing the 3-year enterprise cost of implementation",
         analysisParagraphs: [
-          "An 18-month Big 4 consulting engagement routinely consumes ₹2.8Cr to ₹8.5Cr ($350k–$1.2M) in advisory retainers, often concluding with a PDF recommendation report recommending yet another implementation phase.",
+          "An 18-month Big 4 consulting engagement routinely consumes ₹2.8Cr to ₹8.5Cr ($350k-$1.2M) in advisory retainers, often concluding with a PDF recommendation report recommending yet another implementation phase.",
           "Elesium contracts on fixed milestone deliverables: you invest between ₹45L and ₹95L for complete end-to-end deployment, with explicit SLA milestones and guaranteed operational expense reductions verified in production."
         ],
         keyMetric: {
@@ -1056,7 +1056,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         optionA: "Flat infrastructure cost tied to standard NVMe SSDs and RAM on existing enterprise database nodes.",
         optionB: "Usage-based pricing scaling rapidly with write units, read units, and vector storage tiers.",
         verdict: "Option A Superior",
-        technicalExplanation: "Storing 10 million 1536-dimensional vectors in pgvector costs approximately $150/month in dedicated RAM/SSD resources, compared to $1,200–$2,800/month on managed serverless vector platforms."
+        technicalExplanation: "Storing 10 million 1536-dimensional vectors in pgvector costs approximately $150/month in dedicated RAM/SSD resources, compared to $1,200-$2,800/month on managed serverless vector platforms."
       },
       {
         dimension: "ACID Guarantees & Real-Time Deletion",
@@ -1123,7 +1123,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
     entityALabel: "FastAPI Asyncio",
     entityBLabel: "Celery + Redis",
     category: "Framework Architecture",
-    verdictSummary: "Celery + Redis is the traditional workhorse for long-running batch jobs, but adds 15–40ms of serialization and broker overhead per step; for low-latency agentic multi-turn loops, FastAPI native Asyncio coroutines deliver sub-5ms inter-agent RPC dispatch with 85% lower memory footprint.",
+    verdictSummary: "Celery + Redis is the traditional workhorse for long-running batch jobs, but adds 15-40ms of serialization and broker overhead per step; for low-latency agentic multi-turn loops, FastAPI native Asyncio coroutines deliver sub-5ms inter-agent RPC dispatch with 85% lower memory footprint.",
     fastFacts: [
       { label: "Step Dispatch Latency", value: "1.2ms vs 28.4ms", description: "Native non-blocking in-memory event loop vs Redis broker serialization round-trips." },
       { label: "Memory Footprint", value: "45MB vs 320MB", description: "Lightweight async coroutines vs dedicated prefork worker operating system processes." },

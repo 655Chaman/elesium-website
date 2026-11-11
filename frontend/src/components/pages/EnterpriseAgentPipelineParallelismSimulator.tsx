@@ -348,7 +348,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                     <div key={idx} className="bg-slate-900/80 border border-indigo-500/30 rounded-lg p-3 space-y-1">
                       <div className="text-xs font-bold text-indigo-400">Stage {idx + 1}</div>
                       <div className="text-[11px] text-slate-300 font-mono">
-                        Layers {Math.round((idx / pipelineStages) * 80)}–{Math.round(((idx + 1) / pipelineStages) * 80)}
+                        Layers {Math.round((idx / pipelineStages) * 80)} - {Math.round(((idx + 1) / pipelineStages) * 80)}
                       </div>
                       <div className="text-[10px] text-emerald-400 font-mono">
                         {scheduleMode === '1f1b_interleaved' ? '1F1B Interleaved' : '1F1B Active'}

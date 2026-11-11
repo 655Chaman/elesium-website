@@ -197,8 +197,8 @@ const enterprisePricingTiers: PricingTier[] = [
     {
         tierCode: "Tier 1 // 14-Day Sprint",
         name: "Pilot Architecture Sprint",
-        priceFormatted: "₹1,50,000 – ₹3,50,000",
-        priceSubtext: "($2,000 – $4,500 USD) • Fixed Investment",
+        priceFormatted: "₹1,50,000 - ₹3,50,000",
+        priceSubtext: "($2,000 - $4,500 USD) • Fixed Investment",
         features: [
             "Single-Process Deterministic Agent",
             "Private Cloud Staging Deployment",
@@ -223,8 +223,8 @@ const enterprisePricingTiers: PricingTier[] = [
     {
         tierCode: "Tier 2 // Production Suite",
         name: "Enterprise Multi-Agent Suite",
-        priceFormatted: "₹6,00,000 – ₹15,00,000",
-        priceSubtext: "($7,500 – $18,000 USD) • Milestone-Based",
+        priceFormatted: "₹6,00,000 - ₹15,00,000",
+        priceSubtext: "($7,500 - $18,000 USD) • Milestone-Based",
         features: [
             "Multi-Agent Collaborative Triad (LangGraph)",
             "Private VPC / Zero-Data-Retention Deployment",
@@ -309,9 +309,9 @@ export default function AIAutomationIndia() {
     const calculatedAnnualHoursSaved = Math.round(intakeHours * 50 * 0.82);
     const calculatedAnnualCostSavings = calculatedAnnualHoursSaved * 1250;
     const recommendedSprint = intakeHours <= 40 
-        ? 'Tier 1: Pilot Architecture Sprint (₹1.5L – ₹3.5L)' 
+        ? 'Tier 1: Pilot Architecture Sprint (₹1.5L - ₹3.5L)' 
         : intakeHours <= 150 
-            ? 'Tier 2: Enterprise Multi-Agent Suite (₹6L – ₹15L)' 
+            ? 'Tier 2: Enterprise Multi-Agent Suite (₹6L - ₹15L)' 
             : 'Tier 3: Autonomous AI Engineering Pod (₹4.5L/mo Retainer)';
 
     const handleTransmitIntake = () => {
@@ -389,7 +389,7 @@ export default function AIAutomationIndia() {
                     </div>
 
                     <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases—delivering a hard, audited ROI within 90 days.
+                        We don't sell fragile Zapier wrappers or generic chat widgets. We engineer fault-tolerant agentic infrastructure that integrates deeply with SAP, Oracle, and enterprise databases, delivering a hard, audited ROI within 90 days.
                     </p>
 
                     {/* Dual Conversion Action Buttons */}
@@ -472,10 +472,10 @@ export default function AIAutomationIndia() {
                             </p>
                             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400">
                                 <p>
-                                    As Indian enterprises scale rapidly, manual data entry and fragmented legacy systems become crippling bottlenecks. Elesium solves this by building custom AI architectures tailored to your proprietary data. We serve forward-thinking leaders who demand more than a shiny ChatGPT clone—they require deterministic, fault-tolerant AI agents that execute multi-step workflows autonomously.
+                                    As Indian enterprises scale rapidly, manual data entry and fragmented legacy systems become crippling bottlenecks. Elesium solves this by building custom AI architectures configured for your proprietary data. We serve forward-thinking leaders who demand more than a shiny ChatGPT clone: they require deterministic, fault-tolerant AI agents that execute multi-step workflows autonomously.
                                 </p>
                                 <p>
-                                    Our engineers don't just prompt—we architect. We leverage <strong>LangGraph, custom Python execution environments, vector databases (Pinecone/Weaviate), and private fine-tuned LLMs</strong>. Whether it's processing massive unstructured supply-chain documents or building multi-agent revenue operations, we deliver compliance-ready infrastructure built for India's scale.
+                                    Our engineers don't just prompt; we architect. We leverage <strong>LangGraph, custom Python execution environments, vector databases (Pinecone/Weaviate), and private fine-tuned LLMs</strong>. Whether it's processing massive unstructured supply-chain documents or building multi-agent revenue operations, we deliver compliance-ready infrastructure built for India's scale.
                                 </p>
                             </div>
                         </div>
@@ -1107,7 +1107,7 @@ export default function AIAutomationIndia() {
                                         </div>
                                         <div className="flex justify-between">
                                             <span className="text-gray-500">Deployment Lead Time:</span>
-                                            <span className="font-mono text-emerald-500 font-bold">14 – 21 Business Days</span>
+                                            <span className="font-mono text-emerald-500 font-bold">14 - 21 Business Days</span>
                                         </div>
                                     </div>
                                 </div>

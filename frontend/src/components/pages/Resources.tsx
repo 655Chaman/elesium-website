@@ -81,11 +81,11 @@ export default function Resources() {
             <WhatsAppModal />
             <Helmet>
                 <title>AI Automation Resources & Guides | Elesium</title>
-                <meta name="description" content="Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency." />
+                <meta name="description" content="Free AI automation playbooks, case studies and implementation guides from Elesium, India's leading AI automation agency." />
                 
                 {/* Open Graph */}
                 <meta property="og:title" content="AI Automation Resources & Guides | Elesium" />
-                <meta property="og:description" content="Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency." />
+                <meta property="og:description" content="Free AI automation playbooks, case studies and implementation guides from Elesium, India's leading AI automation agency." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://elesium.online/resources/" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />

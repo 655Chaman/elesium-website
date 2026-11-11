@@ -431,7 +431,7 @@ def main():
 
             # GS-05 & GS-06: Programmatic Title Tag & Length Validator (<= 60 chars)
             # Left-weighting keyword preservation
-            available_len = max(18, 60 - len(f" — {cat} | Elesium"))
+            available_len = max(18, 60 - len(f" - {cat} | Elesium"))
             shortened_kw = kw[:available_len].strip().title()
             title = GoogleSheetsFormulaEngine.gs_05_programmatic_title_builder(shortened_kw, cat)
             if len(title) > 60:

@@ -14,7 +14,7 @@ QUEUE_PATH = ROOT / "automation" / "compact_keywords_queue.json"
 
 KEYWORDS_125 = [
     # -------------------------------------------------------------------------
-    # Cluster 1: Edge Industrial IoT, OPC-UA & SCADA Automation (IDs 2191–2215, 25 items)
+    # Cluster 1: Edge Industrial IoT, OPC-UA & SCADA Automation (IDs 2191-2215, 25 items)
     # -------------------------------------------------------------------------
     {
         "id": 2191,
@@ -343,7 +343,7 @@ KEYWORDS_125 = [
     },
 
     # -------------------------------------------------------------------------
-    # Cluster 2: TallyPrime, SAP & ERP Accounting Reconciliation (IDs 2216–2240, 25 items)
+    # Cluster 2: TallyPrime, SAP & ERP Accounting Reconciliation (IDs 2216-2240, 25 items)
     # -------------------------------------------------------------------------
     {
         "id": 2216,
@@ -672,7 +672,7 @@ KEYWORDS_125 = [
     },
 
     # -------------------------------------------------------------------------
-    # Cluster 3: Model Context Protocol (MCP) & Multi-Server Tool Orchestration (IDs 2241–2265, 25 items)
+    # Cluster 3: Model Context Protocol (MCP) & Multi-Server Tool Orchestration (IDs 2241-2265, 25 items)
     # -------------------------------------------------------------------------
     {
         "id": 2241,
@@ -1001,7 +1001,7 @@ KEYWORDS_125 = [
     },
 
     # -------------------------------------------------------------------------
-    # Cluster 4: High-Throughput Inference, Radix Attention & Vector Sharding (IDs 2266–2290, 25 items)
+    # Cluster 4: High-Throughput Inference, Radix Attention & Vector Sharding (IDs 2266-2290, 25 items)
     # -------------------------------------------------------------------------
     {
         "id": 2266,
@@ -1330,7 +1330,7 @@ KEYWORDS_125 = [
     },
 
     # -------------------------------------------------------------------------
-    # Cluster 5: Regulatory Compliance, ABDM FHIR & 21 CFR Part 11 Pharma GAMP 5 (IDs 2291–2315, 25 items)
+    # Cluster 5: Regulatory Compliance, ABDM FHIR & 21 CFR Part 11 Pharma GAMP 5 (IDs 2291-2315, 25 items)
     # -------------------------------------------------------------------------
     {
         "id": 2291,

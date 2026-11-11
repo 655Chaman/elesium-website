@@ -1,7 +1,7 @@
 import json
 
 wave58_keywords = [
-    # Cluster 1: KV-Cache Dynamic Virtual Memory Compaction & Defragmentation (IDs 2816–2832, 17 items)
+    # Cluster 1: KV-Cache Dynamic Virtual Memory Compaction & Defragmentation (IDs 2816-2832, 17 items)
     {
         "id": 2816,
         "keyword": "kv cache memory compaction controllers for enterprise multi tenant kubernetes",
@@ -224,7 +224,7 @@ wave58_keywords = [
         "primary_cta": "Schedule Forex Memory Threshold Tuning"
     },
 
-    # Cluster 2: Zero-Copy CUDA Memory Descriptors & Multi-Tenant Page Table Management (IDs 2833–2848, 16 items)
+    # Cluster 2: Zero-Copy CUDA Memory Descriptors & Multi-Tenant Page Table Management (IDs 2833-2848, 16 items)
     {
         "id": 2833,
         "keyword": "cumemaddressreserve virtual memory allocators for multi tenant llm serving",
@@ -434,7 +434,7 @@ wave58_keywords = [
         "primary_cta": "Audit Refinery Sensor Memory Defragmentation"
     },
 
-    # Cluster 3: Enterprise OOM Elimination & Multi-Stream Concurrency Scaling (IDs 2849–2865, 17 items)
+    # Cluster 3: Enterprise OOM Elimination & Multi-Stream Concurrency Scaling (IDs 2849-2865, 17 items)
     {
         "id": 2849,
         "keyword": "gpu out of memory crash prevention engines for enterprise multi tenant clusters",

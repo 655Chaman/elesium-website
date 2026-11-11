@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — ON-PAGE CALIBRATOR
+TED KUBAITIS CORA SERP CORRELATION ENGINE - ON-PAGE CALIBRATOR
 =============================================================================
 Classification: Algorithmic Deficit Resolution & HTML Injection Engine
 Methodology: Ted Kubaitis (Cora Statistical Tuning & Deficit Elimination)

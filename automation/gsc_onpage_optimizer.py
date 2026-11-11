@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-GSC ON-PAGE OPTIMIZER CLI (MODULE 4) — TARGETED CONTENT & SCHEMA EXPANSION
+GSC ON-PAGE OPTIMIZER CLI (MODULE 4) - TARGETED CONTENT & SCHEMA EXPANSION
 =============================================================================
 Classification: On-Page Striking Distance Optimizer & Edward Sturm Capsule Injector
 Methodology: Edward Sturm Moz Sweet Spot (42-48 Words) & Brian Kato RE2 Grounding

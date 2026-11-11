@@ -436,7 +436,7 @@ HEALTHCARE_PROFILES: Dict[str, Dict[str, Any]] = {
       },
       {
         "title": "Air-Gapped Proprietary Trial Data Protection",
-        "description": "Maintains confidential clinical trial data and blinded patient safety records on private sovereign Indian cloud servers."
+        "description": "Maintains confidential clinical trial data and blinded patient safety records on sovereign Indian cloud servers."
       }
     ],
     "specs": [
@@ -751,7 +751,7 @@ HEALTHCARE_PROFILES: Dict[str, Dict[str, Any]] = {
     "target_persona": "Hospital Chief Information Security Officers & Biomedical Network Security Leads",
     "first_sentence": "Isolate medical devices and IoT infusion pumps behind zero-trust microsegmentation perimeters, blocking lateral ransomware propagation across hospital networks in sub-1.5ms.",
     "paragraphs": [
-      "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices—including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
+      "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
       "Our sovereign hospital cybersecurity architecture deploys zero-trust software-defined microsegmentation policies directly at the local switch and hypervisor boundary across hospital networks. The system continuously profiles medical device network traffic over isolated medical VLANs, mapping Layer 4 to Layer 7 communication signatures against approved manufacturer clinical protocols (DICOM, HL7, IEEE 11073).",
       "The intrusion defense state machine evaluates device behavior against baseline clinical traffic in real time. If an infusion pump or vitals monitor attempts unauthorized port scanning, non-clinical outbound internet connections, or unusual lateral SMB handshakes, the microsegmentation controller instantly isolates the compromised device into a quarantine VLAN in under 1.5 milliseconds, terminating lateral attack paths while preserving active medical telemetry.",
       "Statutory compliance satisfies IEC 80001-1 (Application of risk management for IT-networks incorporating medical devices), CERT-In cybersecurity directions, and Section 8(5) of the DPDP Act 2023. Real-time telemetry dashboards monitor 10,000+ medical IoT devices simultaneously, guaranteeing zero lateral ransomware propagation across clinical wards."

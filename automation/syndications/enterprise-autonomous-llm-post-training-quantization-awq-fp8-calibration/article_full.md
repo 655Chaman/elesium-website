@@ -12,7 +12,7 @@ Furthermore, because LLM token generation is bound by memory bandwidth rather th
 
 ## 2. Activation-Aware Weight Quantization (AWQ): Protecting the Salient 1%
 
-Historically, round-to-nearest (RTN) weight quantization destroyed reasoning capabilities in large language models, causing catastrophic perplexity spikes. The breakthrough insight of Activation-Aware Weight Quantization (Lin et al., AWQ) is that weights are not equally important. In transformer architectures, fewer than 1% of hidden channels—known as salient channels—carry disproportionate activation magnitudes and dictate downstream reasoning.
+Historically, round-to-nearest (RTN) weight quantization destroyed reasoning capabilities in large language models, causing catastrophic perplexity spikes. The breakthrough insight of Activation-Aware Weight Quantization (Lin et al., AWQ) is that weights are not equally important. In transformer architectures, fewer than 1% of hidden channels - known as salient channels - carry disproportionate activation magnitudes and dictate downstream reasoning.
 
 Rather than keeping salient weights in FP16 (which ruins memory coalescing and parallel tensor core GEMM efficiency), AWQ optimizes per-channel scaling factors $ to minimize quantization error specifically on salient activation dimensions. The optimization objective is formulated as:
 

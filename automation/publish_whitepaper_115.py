@@ -18,7 +18,7 @@ post_127 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, High-Performance Compute Engineers, and Sovereign Cloud Directors: architecting multi-tiered memory hierarchies spanning HBM3e, CXL 3.0 DRAM, and PCIe Gen5 NVMe SSDs, implementing asynchronous direct memory access (DMA) prefetching, and delivering sub-10ms page fault servicing for 10M+ token agentic clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, High-Performance Compute Engineers, and Sovereign Cloud Directors: architecting multi-tiered memory hierarchies spanning HBM3e, CXL 3.0 DRAM, and PCIe Gen5 NVMe SSDs, implementing asynchronous direct memory access (DMA) prefetching, and delivering sub-10ms page fault servicing for 10M+ token agentic clusters.",
     "metaDescription": "Hierarchical KV-cache paging blueprint: HBM3e, CXL 3.0, PCIe Gen5 NVMe SSDs, asynchronous DMA prefetch, sub-10ms page faults, and 10M+ context serving.",
-    "relatedSolutionSlug": "hierarchical-hbm-to-nvme-kv-cache-tiered-storage-paging-daemons-for-enterprise-llm-clusters",
+    "relatedSolutionSlug": "multi-tiered-kv-memory-fragmentation-monitors-for-sovereign-air-gapped-defense-enclaves",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -126,11 +126,11 @@ post_127 = {
             "value": [
                 {
                     "q": "How does hierarchical KV paging differ from standard vLLM PagedAttention?",
-                    "a": "Standard PagedAttention manages non-contiguous virtual memory exclusively within GPU HBM. Elesium Hierarchical KV Paging extends virtual memory management across physical hardware boundaries—transparently orchestrating blocks across GPU HBM, CXL DRAM, and PCIe Gen5 NVMe storage."
+                    "a": "Standard PagedAttention manages non-contiguous virtual memory exclusively within GPU HBM. Elesium Hierarchical KV Paging extends virtual memory management across physical hardware boundaries - transparently orchestrating blocks across GPU HBM, CXL DRAM, and PCIe Gen5 NVMe storage."
                 },
                 {
                     "q": "What is the worst-case latency impact if a page fault misses both HBM and CXL caches?",
-                    "a": "On a full Tier 3 NVMe page fault, our asynchronous prefetcher and direct storage driver fetch the missing 16-token KV block in 6.4ms to 9.2ms—well within the acceptable human conversation perception threshold of under 100ms."
+                    "a": "On a full Tier 3 NVMe page fault, our asynchronous prefetcher and direct storage driver fetch the missing 16-token KV block in 6.4ms to 9.2ms - well within the acceptable human conversation perception threshold of under 100ms."
                 },
                 {
                     "q": "Can hierarchical paging be combined with 4-bit KV cache quantization?",

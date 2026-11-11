@@ -7,7 +7,7 @@
 
 ---
 
-## 1. Tier-1 B2B Directories (DR 86 - 93) — 100% NAP Parity
+## 1. Tier-1 B2B Directories (DR 86 - 93) - 100% NAP Parity
 All 6 platforms have been programmatically matched to our ground-truth corporate entity:
 - **Clutch.co (DR 92):** Profile URL: `https://clutch.co/profile/elesium-online`. Focus: Mid-market & enterprise AI systems.
 - **GoodFirms (DR 86):** Profile URL: `https://www.goodfirms.co/company/elesium-online`. Top AI Agency ranking dossier + Herculan B.V. proof.
@@ -20,7 +20,7 @@ All 6 platforms have been programmatically matched to our ground-truth corporate
 
 ## 2. Product Hunt & BetaList Launch Kit
 - **Tool:** Enterprise AI ROI Calculator (`/tools/enterprise-ai-roi-calculator`)
-- **Tagline:** `Calculate enterprise AI labor savings, payback & TCO` (52 chars — strict < 60 chars verified)
+- **Tagline:** `Calculate enterprise AI labor savings, payback & TCO` (52 chars - strict < 60 chars verified)
 - **Maker:** Chaman Shah (Principal AI Systems Architect)
 - **Gallery Assets:** 6 Production Vector SVGs generated in `automation/authority_assets/product_hunt/slides/`
   1. `ph_thumbnail_glyph.svg` (240x240 px hex glyph with emerald data pulse)

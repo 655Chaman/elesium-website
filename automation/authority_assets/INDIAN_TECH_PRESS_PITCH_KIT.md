@@ -2,7 +2,7 @@
 **Target Publications:** *YourStory, Inc42, Analytics India Magazine (AIM), LiveMint, The Economic Times Tech*  
 **Spokesperson:** Chaman Shah, Principal AI Systems Architect & Founder at Elesium  
 **Author Hub:** `https://elesium.online/authors/chaman-shah`  
-**Goal:** Secure 3–5 high-DR, permanent editorial co-citations and backlinks to establish Elesium as the definitive #1 enterprise AI company in India.
+**Goal:** Secure 3-5 high-DR, permanent editorial co-citations and backlinks to establish Elesium as the definitive #1 enterprise AI company in India.
 
 ---
 

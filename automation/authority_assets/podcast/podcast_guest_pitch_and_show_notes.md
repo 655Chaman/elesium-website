@@ -67,7 +67,7 @@ Huge fan of [Podcast Name].
 
 The biggest challenge founders and executives face in 2026 is that 80% of enterprise AI investments fail to demonstrate hard financial payback.
 
-As Principal AI Systems Architect at Elesium (https://elesium.online/solutions), I spend my days auditing enterprise operational workflows and replacing 40-hour manual bottlenecks with autonomous multi-agent pods that deliver an audited 3x–5x cash-flow ROI in under 90 days.
+As Principal AI Systems Architect at Elesium (https://elesium.online/solutions), I spend my days auditing enterprise operational workflows and replacing 40-hour manual bottlenecks with autonomous multi-agent pods that deliver an audited 3x-5x cash-flow ROI in under 90 days.
 
 On your show, I can break down:
 1. The 3 operational workflows where AI agents produce immediate, mathematically verifiable cash-flow savings.
@@ -94,18 +94,18 @@ https://elesium.online/solutions
 In this episode, we sit down with **Chaman Shah**, Principal AI Systems Architect at [Elesium](https://elesium.online), to discuss the realities of enterprise AI automation in 2026. Chaman breaks down why fragile low-code wrappers fail at scale, how deterministic multi-agent state machines are transforming regulated industries, and how enterprises achieve an audited 3x-5x cash-flow ROI within 90 days.
 
 ### Key Discussion Points & Timestamps
-- **04:15** — The death of low-code wrappers: Why Zapier breaks at enterprise scale.
-- **12:30** — Deterministic state machines vs stochastic chat prompts.
-- **21:40** — Deploying sovereign AI in private VPCs under data privacy laws (DPDP Act).
-- **32:10** — Case Study: Slashing enterprise loan underwriting from 5 days to 1.9 seconds.
-- **42:50** — How to audit your company's workflows for AI readiness.
+- **04:15** - The death of low-code wrappers: Why Zapier breaks at enterprise scale.
+- **12:30** - Deterministic state machines vs stochastic chat prompts.
+- **21:40** - Deploying sovereign AI in private VPCs under data privacy laws (DPDP Act).
+- **32:10** - Case Study: Slashing enterprise loan underwriting from 5 days to 1.9 seconds.
+- **42:50** - How to audit your company's workflows for AI readiness.
 
 ### Important Links & Resources
 - **Featured Guest:** [Chaman Shah on LinkedIn](https://www.linkedin.com/in/chaman-elesium)
 - **Enterprise AI Solutions Hub:** Explore verified production architectures and case studies at the [Elesium Enterprise AI Solutions Hub](https://elesium.online/solutions).
 - **Industry Solutions:**
-  - [AI Automation Agency for Logistics ERP](https://elesium.online/solutions/ai-automation-agency-for-logistics-erp)
-  - [Autonomous Loan Underwriting Agents for BFSI](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)
+  - [AI Automation Agency for Logistics ERP](https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing)
+  - [Autonomous Loan Underwriting Agents for BFSI](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)
 - **Free ROI Calculator:** Compute your operational labor savings and payback period using the [Elesium Interactive AI ROI Engine](https://elesium.online/solutions#roi-calculator).
 ```
 
@@ -116,8 +116,8 @@ In this episode, we sit down with **Chaman Shah**, Principal AI Systems Architec
 <p><strong>Featured Links:</strong></p>
 <ul>
   <li>Explore production case studies at the <a href="https://elesium.online/solutions" target="_blank">Elesium Enterprise AI Solutions Hub</a>.</li>
-  <li>Learn about our specialized <a href="https://elesium.online/solutions/ai-automation-agency-for-logistics-erp" target="_blank">AI Automation Agency for Logistics ERP</a>.</li>
-  <li>Read our architectural breakdown of <a href="https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors" target="_blank">Autonomous Loan Underwriting Agents for BFSI Compliance</a>.</li>
+  <li>Learn about our specialized <a href="https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing" target="_blank">AI Automation Agency for Logistics ERP</a>.</li>
+  <li>Read our architectural breakdown of <a href="https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos" target="_blank">Autonomous Loan Underwriting Agents for BFSI Compliance</a>.</li>
   <li>Calculate your payback period with the <a href="https://elesium.online/solutions#roi-calculator" target="_blank">Elesium Interactive AI ROI Calculator</a>.</li>
   <li>Connect with <a href="https://www.linkedin.com/in/chaman-elesium" target="_blank">Chaman Shah on LinkedIn</a>.</li>
 </ul>

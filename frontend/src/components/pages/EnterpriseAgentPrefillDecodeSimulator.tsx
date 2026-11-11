@@ -113,7 +113,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
     },
     {
       q: "How does zero-copy RDMA network transport prevent KV-cache transfer bottlenecks?",
-      a: "Once a prefill instance finishes computing key-value tensors for a prompt chunk, copying those tensors to CPU memory and across standard TCP sockets adds 8–15ms of latency. Using RoCE v2 or InfiniBand Remote Direct Memory Access (RDMA), GPU memory is copied directly across the high-speed datacenter fabric in sub-1.2ms without CPU intervention."
+      a: "Once a prefill instance finishes computing key-value tensors for a prompt chunk, copying those tensors to CPU memory and across standard TCP sockets adds 8-15ms of latency. Using RoCE v2 or InfiniBand Remote Direct Memory Access (RDMA), GPU memory is copied directly across the high-speed datacenter fabric in sub-1.2ms without CPU intervention."
     },
     {
       q: "Why does disaggregated serving deliver significant FinOps infrastructure savings?",

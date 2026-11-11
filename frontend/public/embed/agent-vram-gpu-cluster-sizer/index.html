@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
+<html lang="en" class="dark">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Embed: Multi-Agent GPU VRAM &amp; Tensor Parallelism Cluster Sizer | Elesium</title>
-<meta content="Size GPU cluster requirements for multi-agent workloads. Calculate VRAM for DeepSeek-V3, Llama-3.3, KV-cache scaling, and tensor parallelism across H100 and L40S pods." name="description"/>
-<meta content="noindex, follow" name="robots"/>
-<meta content="#090d16" name="theme-color"/>
-<link href="https://elesium.online/tools/agent-vram-gpu-cluster-sizer/" rel="canonical"/>
-<script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed: Multi-Agent GPU VRAM & Tensor Parallelism Cluster Sizer | Elesium</title>
+  <meta name="description" content="Size GPU cluster requirements for multi-agent workloads. Calculate VRAM for DeepSeek-V3, Llama-3.3, KV-cache scaling, and tensor parallelism across H100 and L40S pods.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#090d16">
+  <link rel="canonical" href="https://elesium.online/tools/agent-vram-gpu-cluster-sizer/">
+  
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -34,17 +34,79 @@
         "availability": "https://schema.org/InStock"
       },
       "creator": {
-        "@type": "Corporation",
-        "@id": "https://elesium.online/#localbusiness-hq",
-        "name": "Elesium - Enterprise AI & Automation",
-        "url": "https://elesium.online"
+        "@id": "https://elesium.online/#organization"
       },
+      "provider": {
+        "@id": "https://elesium.online/#organization"
+      },
+      "about": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Graphics Processing Unit",
+          "sameAs": "https://www.wikidata.org/wiki/Q178655",
+          "identifier": "/m/01k93",
+          "url": "https://www.google.com/search?kgmid=/m/01k93"
+        },
+        {
+          "@type": "Thing",
+          "name": "Nvidia H100",
+          "sameAs": "https://www.wikidata.org/wiki/Q111384074",
+          "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+        }
+      ],
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Graphics Processing Unit",
+          "sameAs": "https://www.wikidata.org/wiki/Q178655",
+          "identifier": "/m/01k93",
+          "url": "https://www.google.com/search?kgmid=/m/01k93"
+        },
+        {
+          "@type": "Thing",
+          "name": "Nvidia H100",
+          "sameAs": "https://www.wikidata.org/wiki/Q111384074",
+          "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+        }
+      ],
       "featureList": [
         "The Multi-Agent GPU VRAM & Cluster Sizer computes exact physical hardware allocations for sovereign on-premise foundation model serving. It calculates model weight memory, PagedAttention KV-cache scaling per concurrent agent, and determines optimal Tensor Parallelism (TP) mesh topologies across NVIDIA H100 SXM5, A100, and L40S server clusters.",
         "Instant client-side calculation with zero data retention",
         "Responsive iframe embed code with dynamic postMessage auto-resizing",
         "Mathematical methodology and empirical benchmark documentation"
       ]
+    },
+    {
+      "@type": [
+        "Organization",
+        "Corporation"
+      ],
+      "@id": "https://elesium.online/#organization",
+      "name": "Elesium - Enterprise AI & Automation",
+      "legalName": "Elesium Digital Systems Private Limited",
+      "url": "https://elesium.online",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://elesium.online/#logo",
+        "url": "https://elesium.online/assets/logo-square.png",
+        "width": "512",
+        "height": "512"
+      },
+      "telephone": "+91-8317329312",
+      "email": "contact@elesium.online",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "80 Feet Road, 4th Block, Koramangala",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560034",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9352,
+        "longitude": 77.6245
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -73,7 +135,8 @@
   ]
 }
   </script>
-<style>
+
+  <style>
 
     :root {
       --bg: #090d16;
@@ -122,68 +185,76 @@
   </style>
 </head>
 <body>
+
 <div class="calculator-container" id="widget">
-<div class="header">
-<h1>🖥️ Autonomous Agent GPU VRAM &amp; Cluster Sizer</h1>
-<p>Compute exact VRAM allocation: Model weights, KV-cache scaling, and Tensor Parallelism (TP)﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​‌‍​‌‌​​​‌​‍​‌‌​​‌​‌‍​‌‌​​‌​​‍​​‌​‌‌‌‌‍​‌‌​​​​‌‍​‌‌​​‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌‌​‌​​‍​​‌​‌‌​‌‍​‌‌‌​‌‌​‍​‌‌‌​​‌​‍​‌‌​​​​‌‍​‌‌​‌‌​‌‍​​‌​‌‌​‌‍​‌‌​​‌‌‌‍​‌‌‌​​​​‍​‌‌‌​‌​‌‍​​‌​‌‌​‌‍​‌‌​​​‌‌‍​‌‌​‌‌​​‍​‌‌‌​‌​‌‍​‌‌‌​​‌‌‍​‌‌‌​‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​​‌​‌‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌‌​‌​‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌​​‌‌‍​​‌‌‌​​​‍​​‌‌​‌‌‌‍​‌‌​​​‌​‍​​‌‌​​‌​‍​​‌‌​‌​‌‍​​‌‌‌​​‌‍​‌‌​​‌​​‍​​‌‌​​‌‌‍​‌‌​​​‌​‍​‌‌​​​‌‌‍​‌‌​​‌​​‍​‌‌​​​‌‌‍​‌‌​​‌‌​‍​​‌‌​‌‌​‍​‌‌​​​‌‌﻿.</p>
+  <div class="header">
+    <h1>🖥️ Autonomous Agent GPU VRAM & Cluster Sizer</h1>
+    <p>Compute exact VRAM allocation: Model weights, KV-cache scaling, and Tensor Parallelism (TP).</p>
+  </div>
+
+  <div class="input-row">
+    <div>
+      <label class="select-label">Base Model Architecture:</label>
+      <select class="select-box" id="modelArch">
+        <option value="deepseek_671b">DeepSeek-V3 / R1 (671B MoE - 37B active)</option>
+        <option value="llama_70b">Llama-3.3 (70B Dense)</option>
+        <option value="qwen_72b">Qwen-2.5 (72B Dense)</option>
+        <option value="mistral_8x22b">Mixtral-8x22B (MoE)</option>
+      </select>
+    </div>
+    <div>
+      <label class="select-label">Quantization / Precision:</label>
+      <select class="select-box" id="precision">
+        <option value="fp8">FP8 (Production Sovereign Standard)</option>
+        <option value="awq4">INT4 / AWQ (Compressed Edge)</option>
+        <option value="bf16">BF16 (Uncompressed Full Precision)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Concurrent Autonomous Agents / Requests:</span>
+      <span id="agentsDisplay" style="color: var(--accent);">32 Agents</span>
+    </div>
+    <input type="range" min="1" max="128" value="32" class="slider" id="agentsSlider">
+  </div>
+
+  <div class="slider-group">
+    <div class="label-row">
+      <span>Context Window Per Agent (Tokens):</span>
+      <span id="contextDisplay" style="color: var(--accent);">16,384 Tokens (16k)</span>
+    </div>
+    <input type="range" min="4" max="128" step="4" value="16" class="slider" id="contextSlider">
+  </div>
+
+  <div class="gpu-recommendation-box">
+    <div class="gpu-title">RECOMMENDED SOVEREIGN ON-PREM CLUSTER</div>
+    <div class="gpu-hardware" id="clusterHardware">4x NVIDIA H100 SXM5 (80GB)</div>
+    <div style="font-size: 13px; color: var(--text-muted);" id="clusterTopology">Tensor Parallelism (TP=4) • vLLM PagedAttention v2</div>
+
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div style="font-size: 11px; color: var(--text-muted);">Model Weights VRAM</div>
+        <div class="spec-val" id="weightsVram">185 GB</div>
+      </div>
+      <div class="spec-card">
+        <div style="font-size: 11px; color: var(--text-muted);">KV Cache Memory</div>
+        <div class="spec-val" id="kvCacheVram">84 GB</div>
+      </div>
+      <div class="spec-card">
+        <div style="font-size: 11px; color: var(--text-muted);">Total Cluster VRAM</div>
+        <div class="spec-val" id="totalVram">320 GB</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="watermark-footer">
+    <span>Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener noreferrer">Elesium Enterprise AI Solutions</a></span>
+    <span>vLLM FlashAttention-3 Sizing Matrix</span>
+  </div>
 </div>
-<div class="input-row">
-<div>
-<label class="select-label">Base Model Architecture:</label>
-<select class="select-box" id="modelArch">
-<option value="deepseek_671b">DeepSeek-V3 / R1 (671B MoE - 37B active)</option>
-<option value="llama_70b">Llama-3.3 (70B Dense)</option>
-<option value="qwen_72b">Qwen-2.5 (72B Dense)</option>
-<option value="mistral_8x22b">Mixtral-8x22B (MoE)</option>
-</select>
-</div>
-<div>
-<label class="select-label">Quantization / Precision:</label>
-<select class="select-box" id="precision">
-<option value="fp8">FP8 (Production Sovereign Standard)</option>
-<option value="awq4">INT4 / AWQ (Compressed Edge)</option>
-<option value="bf16">BF16 (Uncompressed Full Precision)</option>
-</select>
-</div>
-</div>
-<div class="slider-group">
-<div class="label-row">
-<span>Concurrent Autonomous Agents / Requests:</span>
-<span id="agentsDisplay" style="color: var(--accent);">32 Agents</span>
-</div>
-<input class="slider" id="agentsSlider" max="128" min="1" type="range" value="32"/>
-</div>
-<div class="slider-group">
-<div class="label-row">
-<span>Context Window Per Agent (Tokens):</span>
-<span id="contextDisplay" style="color: var(--accent);">16,384 Tokens (16k)</span>
-</div>
-<input class="slider" id="contextSlider" max="128" min="4" step="4" type="range" value="16"/>
-</div>
-<div class="gpu-recommendation-box">
-<div class="gpu-title">RECOMMENDED SOVEREIGN ON-PREM CLUSTER</div>
-<div class="gpu-hardware" id="clusterHardware">4x NVIDIA H100 SXM5 (80GB)</div>
-<div id="clusterTopology" style="font-size: 13px; color: var(--text-muted);">Tensor Parallelism (TP=4) • vLLM PagedAttention v2</div>
-<div class="specs-grid">
-<div class="spec-card">
-<div style="font-size: 11px; color: var(--text-muted);">Model Weights VRAM</div>
-<div class="spec-val" id="weightsVram">185 GB</div>
-</div>
-<div class="spec-card">
-<div style="font-size: 11px; color: var(--text-muted);">KV Cache Memory</div>
-<div class="spec-val" id="kvCacheVram">84 GB</div>
-</div>
-<div class="spec-card">
-<div style="font-size: 11px; color: var(--text-muted);">Total Cluster VRAM</div>
-<div class="spec-val" id="totalVram">320 GB</div>
-</div>
-</div>
-</div>
-<div class="watermark-footer">
-<span>Calculated via <a href="https://elesium.online/solutions" rel="noopener noreferrer" target="_blank">Elesium Enterprise AI Solutions</a></span>
-<span>vLLM FlashAttention-3 Sizing Matrix</span>
-</div>
-</div>
+
 <script>
 const modelArch = document.getElementById('modelArch');
   const precision = document.getElementById('precision');
@@ -278,5 +349,6 @@ const modelArch = document.getElementById('modelArch');
   setTimeout(sendHeight, 500);
 })();
 </script>
+
 </body>
 </html>

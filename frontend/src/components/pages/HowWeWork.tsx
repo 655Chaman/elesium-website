@@ -29,7 +29,7 @@ const protocolStages: ProtocolStage[] = [
     {
         number: '01',
         title: '14-Day Sovereign Architecture Sprint',
-        duration: 'Days 1–14',
+        duration: 'Days 1-14',
         focus: 'Private VPC Isolation & Latency Baseline',
         weDo: 'We deploy an isolated, air-gapped staging VPC subnet across AWS, Azure, GCP, or sovereign Indian datacenters (Yotta Shakti Navi Mumbai / CtrlS Mumbai). We configure read-only SAP S/4HANA or core banking RFC connectors and establish a sub-200ms TTFT latency baseline.',
         youDo: 'Provide read-only API access to your staging environment and nominate your lead domain engineer for a 45-minute technical discovery session.',
@@ -38,7 +38,7 @@ const protocolStages: ProtocolStage[] = [
     {
         number: '02',
         title: 'LangGraph Deterministic State Topology',
-        duration: 'Days 15–30',
+        duration: 'Days 15-30',
         focus: 'Zero-Hallucination FSM Engineering',
         weDo: 'We construct a deterministic finite state machine (FSM) utilizing Python LangGraph and strict Pydantic v2 schemas. Every state transition is bounded, deterministic, and logged to an immutable Merkle audit trail. Zero unconstrained or recursive LLM loops are permitted in production.',
         youDo: 'Review boundary conditions, exception escalation pathways, and corporate policy rules during bi-weekly engineering reviews.',
@@ -47,19 +47,19 @@ const protocolStages: ProtocolStage[] = [
     {
         number: '03',
         title: 'High-Throughput Sovereign Inference',
-        duration: 'Days 31–45',
+        duration: 'Days 31-45',
         focus: 'vLLM PagedAttention & FP8 GEMM Deployment',
-        weDo: 'We provision custom vLLM serving runtimes utilizing FP8 GEMM microscaling kernels and PagedAttention virtual memory allocation on dedicated NVIDIA H100 clusters. Memory fragmentation is reduced from 60–80% to under 4%, maintaining sub-200ms TTFT under 100+ concurrent enterprise transactions.',
+        weDo: 'We provision custom vLLM serving runtimes utilizing FP8 GEMM microscaling kernels and PagedAttention virtual memory allocation on dedicated NVIDIA H100 clusters. Memory fragmentation is reduced from 60-80% to under 4%, maintaining sub-200ms TTFT under 100+ concurrent enterprise transactions.',
         youDo: 'Run end-to-end user acceptance testing (UAT) against production load simulations alongside our systems pod.',
         deliverable: 'Sub-200ms latency certification under full enterprise concurrency with zero external data egress.'
     },
     {
         number: '04',
         title: 'DPDP Act Statutory Audit & 90-Day ROI Reconciliation',
-        duration: 'Days 46–90',
+        duration: 'Days 46-90',
         focus: 'Statutory Compliance & Contractual SLA Guarantee',
         weDo: 'We conduct rigorous statutory verification under Section 8(5) of India\'s Digital Personal Data Protection (DPDP) Act 2023, validating zero residual data retention across volatile VRAM. Concurrently, our FinOps dashboard tracks hours saved, downtime penalties averted, and financial ROI.',
-        youDo: 'Reconcile verified monthly cost savings and productivity gains against our binding 3x–5x contractual ROI SLA.',
+        youDo: 'Reconcile verified monthly cost savings and productivity gains against our binding 3x-5x contractual ROI SLA.',
         deliverable: 'Formal DPDP Statutory Compliance Certificate + Audited 90-Day Cash-Flow ROI Attestation.'
     }
 ]
@@ -67,7 +67,7 @@ const protocolStages: ProtocolStage[] = [
 const howWeWorkFaqs = [
     {
         q: "What is the 4-Stage Sovereign AI Engineering Protocol?",
-        a: "It is Elesium's rigorous implementation methodology for deploying enterprise multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act statutory audits alongside a contractual 90-day 3x–5x cash-flow ROI guarantee."
+        a: "It is Elesium's rigorous implementation methodology for deploying enterprise multi-agent systems without operational risk: Stage 1 delivers a 14-day air-gapped pilot sprint; Stage 2 constructs a deterministic LangGraph state machine; Stage 3 optimizes inference throughput via vLLM PagedAttention on sovereign NVIDIA H100 clusters; and Stage 4 conducts DPDP Act statutory audits alongside a contractual 90-day 3x-5x cash-flow ROI guarantee."
     },
     {
         q: "How does Elesium eliminate LLM hallucinations in mission-critical workflows?",
@@ -79,11 +79,11 @@ const howWeWorkFaqs = [
     },
     {
         q: "What is the 90-day contractual cash-flow ROI guarantee?",
-        a: "Before implementation, we establish baseline metrics for manual labor hours, downtime penalties, and cycle times. If the deployed system fails to achieve an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
+        a: "Before implementation, we establish baseline metrics for manual labor hours, downtime penalties, and cycle times. If the deployed system fails to achieve an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
     },
     {
         q: "What are the investment tiers for engaging Elesium?",
-        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30–45 day implementation with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
+        a: "We maintain three transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day implementation with ERP integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod with 1-hour critical SLA)."
     }
 ]
 
@@ -197,11 +197,11 @@ export default function HowWeWork() {
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black dark:text-white mb-6 leading-[1.1]">
-                        How We Work — The 4-Stage Sovereign AI Engineering Protocol
+                        How We Work: The 4-Stage Sovereign AI Engineering Protocol
                     </h1>
 
                     <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8 font-normal">
-                        We don&apos;t deliver raw vendor API keys, fragile Zapier loops, or generic chatbot wrappers. We engineer deterministic Python LangGraph state machines deployed directly inside your private VPC—integrating with SAP S/4HANA, Oracle ERP, and core banking systems with a legally binding 90-day ROI guarantee.
+                        We don&apos;t deliver raw vendor API keys, fragile Zapier loops, or generic chatbot wrappers. We engineer deterministic Python LangGraph state machines deployed directly inside your private VPC, integrating with SAP S/4HANA, Oracle ERP, and core banking systems with a legally binding 90-day ROI guarantee.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-3">
@@ -237,7 +237,7 @@ export default function HowWeWork() {
                         <strong>Elesium executes a structured 4-stage sovereign deployment protocol delivering verified production AI systems within 45 days.</strong> Workflows operate as deterministic finite state machines (FSM) via Python LangGraph, eliminating infinite hallucination loops while ensuring sub-200ms time-to-first-token execution.
                     </p>
                     <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                        All inference runs within client-owned private VPCs or dedicated NVIDIA H100 clusters hosted in sovereign tier-IV Indian datacenters (Yotta Shakti Navi Mumbai and CtrlS Hyderabad). Deployments enforce strict Section 8(5) DPDP Act 2023 compliance with zero external data retention, backed by a contractual 90-day 3x–5x cash-flow ROI guarantee.
+                        All inference runs within client-owned private VPCs or dedicated NVIDIA H100 clusters hosted in sovereign tier-IV Indian datacenters (Yotta Shakti Navi Mumbai and CtrlS Hyderabad). Deployments enforce strict Section 8(5) DPDP Act 2023 compliance with zero external data retention, backed by a contractual 90-day 3x-5x cash-flow ROI guarantee.
                     </p>
 
                     {/* Telemetry Matrix */}
@@ -260,7 +260,7 @@ export default function HowWeWork() {
                         <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
                             <div className="text-[10px] font-mono text-gray-500 uppercase">Contractual ROI</div>
                             <div className="text-base font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">90-Day SLA</div>
-                            <div className="text-[10px] text-gray-400">Audited 3x–5x Return</div>
+                            <div className="text-[10px] text-gray-400">Audited 3x-5x Return</div>
                         </div>
                     </div>
                 </section>
@@ -347,7 +347,7 @@ export default function HowWeWork() {
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Incentivized by ROI SLA</h3>
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                                We tie our financial success directly to your operational cash-flow ROI. If the deployed system fails to return 3x–5x in 90 days, fees are rebated.
+                                We tie our financial success directly to your operational cash-flow ROI. If the deployed system fails to return 3x-5x in 90 days, fees are rebated.
                             </p>
                         </div>
                         <div className="p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.01]">
@@ -427,7 +427,7 @@ export default function HowWeWork() {
                             <div>
                                 <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
                                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
                                 <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
@@ -448,8 +448,8 @@ export default function HowWeWork() {
                             <div>
                                 <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
                                 <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
+                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30-45 Day Implementation</div>
                                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
                                 </p>

@@ -10,7 +10,7 @@
 
 If you are running LLM applications in regulated sectors (BFSI, healthcare, defense, enterprise legal), using multi-tenant cloud APIs (OpenAI, Anthropic, Bedrock) introduces three major architectural liabilities:
 1. **Data Exfiltration & Compliance Breach:** Under statutory frameworks like the **Digital Personal Data Protection (DPDP) Act 2023** (Section 16) or **RBI Master Directions on IT Governance**, exfiltrating customer PII, banking credentials, or internal documents to offshore cloud endpoints is an immediate statutory violation.
-2. **WAN Latency & Jitter:** Public internet transit adds 120ms–250ms of network overhead, pushing Time-to-First-Token (TTFT) past 800ms–1,200ms. In contrast, an in-VPC local node achieves **sub-130ms TTFT** with zero network jitter.
+2. **WAN Latency & Jitter:** Public internet transit adds 120ms-250ms of network overhead, pushing Time-to-First-Token (TTFT) past 800ms-1,200ms. In contrast, an in-VPC local node achieves **sub-130ms TTFT** with zero network jitter.
 3. **Runaway Operational Costs:** At sustained enterprise volumes (>50M tokens/day), cloud API token fees rapidly outpace the amortization cost of dedicated bare-metal GPU clusters.
 
 This guide is an end-to-end, copy-paste ready sysadmin runbook for deploying **Llama-3.3-70B** or **DeepSeek-R1** in a strictly isolated, zero-egress RFC-1918 VPC. It includes:

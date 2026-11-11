@@ -29,7 +29,7 @@ export default function AgentIntro() {
             >
                 <div className="w-full lg:w-1/2 text-center lg:text-left py-12 md:py-24 lg:py-[50vh] relative z-20">
                     <TextReveal className="lg:min-h-screen flex items-center justify-center lg:justify-start">
-                        We don't rely on passive networks—we actively engineer your pipeline to connect you directly with ready-to-move decision-makers.
+                        We don&apos;t rely on passive networks; instead, we actively engineer your pipeline to connect you directly with ready-to-move decision-makers.
                     </TextReveal>
                 </div>
 

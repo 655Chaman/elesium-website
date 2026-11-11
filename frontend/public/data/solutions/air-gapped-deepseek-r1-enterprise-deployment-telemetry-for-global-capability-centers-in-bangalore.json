@@ -28,7 +28,7 @@
   "capabilities": [
     {
       "title": "Air-Gapped 671B MoE Orchestration",
-      "description": "Deploys DeepSeek-R1 across private enterprise GPU nodes with zero external internet dependencies."
+      "description": "Deploys DeepSeek-R1 across sovereign enterprise GPU nodes with zero external internet dependencies."
     },
     {
       "title": "FP8 Multi-Node Tensor Parallelism",
@@ -124,7 +124,7 @@
         "Our sovereign architecture deploys DeepSeek-R1 (671B MoE and distilled variants) within an air-gapped, on-premises private datacenter enclave. The infrastructure leverages multi-node FP8 execution on dedicated GPU clusters interconnected by 3.2 Tbps InfiniBand fabrics. Telemetry daemons monitor tensor parallelism ranks, inter-node all-to-all communications, and attention memory usage without touching public network interfaces."
       ],
       "bullets": [
-        "Air-Gapped 671B MoE Orchestration: Deploys DeepSeek-R1 across private enterprise GPU nodes with zero external internet dependencies.",
+        "Air-Gapped 671B MoE Orchestration: Deploys DeepSeek-R1 across sovereign enterprise GPU nodes with zero external internet dependencies.",
         "FP8 Multi-Node Tensor Parallelism: Optimized 8-bit execution across 8x H100/H200 nodes utilizing 3.2 Tbps InfiniBand RDMA.",
         "Sub-15ms TTFT Telemetry: Continuous microsecond monitoring of prefill and decode stages with automated load balancing.",
         "Autonomous Chain-of-Thought Guardrails: Real-time auditing of reasoning trajectories to prevent confidential data leakage."
@@ -151,7 +151,7 @@
       "layout": "left-copy"
     },
     {
-      "title": "Air-Gapped Sovereign Sovereign Defense Topology",
+      "title": "Air-Gapped Sovereign Defense Topology",
       "copy": [
         "The inference state machine enforces strict role-based access control and payload verification. Incoming reasoning prompts are validated against enterprise DLP (Data Loss Prevention) rules at the perimeter gateway. The inference orchestrator dynamically allocates reasoning tokens, monitoring token-by-token Chain-of-Thought (CoT) generation while maintaining sub-15ms Time-To-First-Token (TTFT) and verifying complete context privacy."
       ],
@@ -161,7 +161,7 @@
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
       "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-      "imageAlt": "Sovereign Sovereign Defense Architecture Diagram",
+      "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
     {

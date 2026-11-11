@@ -39,14 +39,36 @@ TOOLS_MANIFEST: List[Dict[str, Any]] = [
         "category": "DeepTech & Cloud FinOps",
         "tagline": "Model monthly operating expense divergence: Proprietary Cloud APIs vs On-Premise Sovereign vLLM Clusters.",
         "meta_description": "Calculate enterprise token cost divergence between GPT-4o, Claude 3.5 Sonnet, and sovereign on-premise vLLM clusters. Amortize hardware and reduce TCO by up to 86%.",
-        "answer_capsule": "The Enterprise LLM Token Cost Arbitrage Calculator models monthly operating expense divergence between hyperscaler multi-tenant APIs (GPT-4o, Claude 3.5 Sonnet) and on-premise private sovereign clusters (DeepSeek-V3, vLLM). It dynamically amortizes dedicated GPU hardware, power consumption, and network egress against peak token velocity to reveal 78% to 86% TCO reduction.",
+        "answer_capsule": "The Enterprise LLM Token Cost Arbitrage Calculator models monthly operating expense divergence between hyperscaler multi-tenant APIs (GPT-4o, Claude 3.5 Sonnet) and on-premise sovereign private clusters (DeepSeek-V3, vLLM). It dynamically amortizes dedicated GPU hardware, power consumption, and network egress against peak token velocity to reveal 78% to 86% TCO reduction.",
         "calc_type": "token_arbitrage",
         "source_calc_file": "token_cost_arbitrage_calculator.html",
         "accent_color": "#06b6d4",
         "accent_glow": "rgba(6, 182, 212, 0.2)",
+        "entities": [
+            {
+                "@type": "DefinedTerm",
+                "name": "Large Language Model",
+                "sameAs": "https://www.wikidata.org/wiki/Q1153059",
+                "identifier": "/g/11s_677k1m",
+                "url": "https://www.google.com/search?kgmid=/g/11s_677k1m"
+            },
+            {
+                "@type": "DefinedTerm",
+                "name": "Cloud Computing",
+                "sameAs": "https://www.wikidata.org/wiki/Q483639",
+                "identifier": "/m/0283dt",
+                "url": "https://www.google.com/search?kgmid=/m/0283dt"
+            },
+            {
+                "@type": "Thing",
+                "name": "DeepSeek",
+                "sameAs": "https://www.wikidata.org/wiki/Q124378121",
+                "url": "https://en.wikipedia.org/wiki/DeepSeek"
+            }
+        ],
         "methodology": """
 <h3>1. Mathematical Formulation & Amortization Mechanics</h3>
-<p>The total cost of ownership (TCO) for foundation model inference diverges significantly between multi-tenant public APIs and dedicated private sovereign clusters. The model implements the following dual-cost formulation:</p>
+<p>The total cost of ownership (TCO) for foundation model inference diverges significantly between multi-tenant public APIs and dedicated sovereign private clusters. The model implements the following dual-cost formulation:</p>
 <pre><code>C_cloud = ((T_in * P_in + T_out * P_out) / 1,000,000) * 12
 C_sovereign = C_hw_amortized + C_power_cooling + C_network_egress
 Net_Annual_Savings = C_cloud - C_sovereign
@@ -61,7 +83,7 @@ Arbitrage_Ratio = (Net_Annual_Savings / C_cloud) * 100%</code></pre>
 </ul>
 
 <h3>3. Data Residency & Legal Non-Financial Dividend</h3>
-<p>In addition to raw dollar arbitrage, private sovereign clusters eliminate statutory risk under India's DPDP Act 2023, EU GDPR Article 44 cross-border transfer prohibitions, and RBI circular RBI/2023-24/104 regarding confidential banking telemetry retention on external multi-tenant infrastructure.</p>
+<p>In addition to raw dollar arbitrage, sovereign private clusters eliminate statutory risk under India's DPDP Act 2023, EU GDPR Article 44 cross-border transfer prohibitions, and RBI circular RBI/2023-24/104 regarding confidential banking telemetry retention on external multi-tenant infrastructure.</p>
 """
     },
     {
@@ -78,15 +100,31 @@ Arbitrage_Ratio = (Net_Annual_Savings / C_cloud) * 100%</code></pre>
         "source_calc_file": "dpdp_act_penalty_exposure_calculator.html",
         "accent_color": "#f59e0b",
         "accent_glow": "rgba(245, 158, 11, 0.2)",
+        "entities": [
+            {
+                "@type": "Legislation",
+                "name": "Digital Personal Data Protection Act, 2023",
+                "alternateName": "DPDP Act 2023 (Act No. 22 of 2023)",
+                "sameAs": "https://www.wikidata.org/wiki/Q121434948",
+                "url": "https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023"
+            },
+            {
+                "@type": "DefinedTerm",
+                "name": "Information Privacy",
+                "sameAs": "https://www.wikidata.org/wiki/Q219460",
+                "identifier": "/m/01k8wb",
+                "url": "https://www.google.com/search?kgmid=/m/01k8wb"
+            }
+        ],
         "methodology": """
 <h3>1. Statutory Framework (Act No. 22 of 2023)</h3>
 <p>The Digital Personal Data Protection Act, 2023 establishes significant financial liabilities under Section 33 and The Schedule for Data Fiduciaries and Significant Data Fiduciaries (SDFs):</p>
 <ul>
-  <li><strong>Schedule Item 1 (Section 8(5)):</strong> Breach in observing reasonable security safeguards to prevent personal data breach — Statutory fine up to <strong>₹250 Crores ($30.1M USD)</strong>.</li>
-  <li><strong>Schedule Item 2 (Section 8(6)):</strong> Failure to notify Data Protection Board of India and affected data principals of personal data breach — Statutory fine up to <strong>₹200 Crores</strong>.</li>
-  <li><strong>Schedule Item 3 (Section 9):</strong> Non-fulfillment of additional obligations in relation to children or individuals with disabilities — Statutory fine up to <strong>₹200 Crores</strong>.</li>
-  <li><strong>Schedule Item 4 (Section 10):</strong> Non-fulfillment of statutory obligations by Significant Data Fiduciaries (Periodic audits, DPIA, DPO appointment) — Statutory fine up to <strong>₹150 Crores</strong>.</li>
-  <li><strong>Schedule Item 5:</strong> Breach of any other provision or rule framed under the Act — Statutory fine up to <strong>₹50 Crores</strong>.</li>
+  <li><strong>Schedule Item 1 (Section 8(5)):</strong> Breach in observing reasonable security safeguards to prevent personal data breach: Statutory fine up to <strong>₹250 Crores ($30.1M USD)</strong>.</li>
+  <li><strong>Schedule Item 2 (Section 8(6)):</strong> Failure to notify Data Protection Board of India and affected data principals of personal data breach: Statutory fine up to <strong>₹200 Crores</strong>.</li>
+  <li><strong>Schedule Item 3 (Section 9):</strong> Non-fulfillment of additional obligations in relation to children or individuals with disabilities: Statutory fine up to <strong>₹200 Crores</strong>.</li>
+  <li><strong>Schedule Item 4 (Section 10):</strong> Non-fulfillment of statutory obligations by Significant Data Fiduciaries (Periodic audits, DPIA, DPO appointment): Statutory fine up to <strong>₹150 Crores</strong>.</li>
+  <li><strong>Schedule Item 5:</strong> Breach of any other provision or rule framed under the Act: Statutory fine up to <strong>₹50 Crores</strong>.</li>
 </ul>
 
 <h3>2. Volumetric Liability Scaling Formula</h3>
@@ -112,6 +150,20 @@ Statutory_Exposure = min(250, max(Base_Risk, Sum(Violation_Weights)) * Volumetri
         "source_calc_file": "enterprise_rag_latency_simulator.html",
         "accent_color": "#8b5cf6",
         "accent_glow": "rgba(139, 92, 246, 0.2)",
+        "entities": [
+            {
+                "@type": "DefinedTerm",
+                "name": "Retrieval-Augmented Generation",
+                "sameAs": "https://www.wikidata.org/wiki/Q125503857",
+                "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+            },
+            {
+                "@type": "DefinedTerm",
+                "name": "Vector Database",
+                "sameAs": "https://www.wikidata.org/wiki/Q118745585",
+                "url": "https://en.wikipedia.org/wiki/Vector_database"
+            }
+        ],
         "methodology": """
 <h3>1. Pipeline Execution Waterfall Physics</h3>
 <p>Production enterprise Retrieval-Augmented Generation (RAG) involves sequential and parallelized stages, each contributing discrete latency envelopes:</p>
@@ -123,10 +175,10 @@ L_p99 = L_p50 * 1.85 + 2 * Sigma_network</code></pre>
 <ul>
   <li><strong>Dense Vector Search (Top-K=5, 1536-dim):</strong>
     <ul>
-      <li><em>Qdrant:</em> In-memory HNSW graphs with SIMD AVX-512 vector distance kernels: <strong>6–10 ms</strong>.</li>
-      <li><em>Milvus:</em> Distributed sharded cluster with GPU-accelerated search: <strong>12–16 ms</strong>.</li>
-      <li><em>pgvector (Postgres 16):</em> In-process HNSW index with shared buffer overhead: <strong>22–28 ms</strong>.</li>
-      <li><em>Pinecone Serverless:</em> Multi-tenant HTTPS round-trip and remote partition lookup: <strong>45–85 ms</strong>.</li>
+      <li><em>Qdrant:</em> In-memory HNSW graphs with SIMD AVX-512 vector distance kernels: <strong>6-10 ms</strong>.</li>
+      <li><em>Milvus:</em> Distributed sharded cluster with GPU-accelerated search: <strong>12-16 ms</strong>.</li>
+      <li><em>pgvector (Postgres 16):</em> In-process HNSW index with shared buffer overhead: <strong>22-28 ms</strong>.</li>
+      <li><em>Pinecone Serverless:</em> Multi-tenant HTTPS round-trip and remote partition lookup: <strong>45-85 ms</strong>.</li>
     </ul>
   </li>
   <li><strong>Cross-Encoder Re-Ranking:</strong> Two-stage retrieval utilizing FlashRank (ONNX runtime) or bge-reranker-large: <code>T = 15ms + (K * 2.4ms)</code>.</li>
@@ -134,7 +186,7 @@ L_p99 = L_p50 * 1.85 + 2 * Sigma_network</code></pre>
     <ul>
       <li><em>On-Prem vLLM (DeepSeek-V3 FP8):</em> Time-to-First-Token (TTFT) ~120 ms; token streaming ~192 tok/s (5.2 ms/token).</li>
       <li><em>On-Prem vLLM (Llama-3.3-70B FP8):</em> TTFT ~90 ms; token streaming ~263 tok/s (3.8 ms/token).</li>
-      <li><em>Cloud Multi-Tenant APIs (GPT-4o / Claude 3.5):</em> TTFT 450–750 ms; token streaming ~70–80 tok/s (12.5–14.0 ms/token).</li>
+      <li><em>Cloud Multi-Tenant APIs (GPT-4o / Claude 3.5):</em> TTFT 450-750 ms; token streaming ~70-80 tok/s (12.5-14.0 ms/token).</li>
     </ul>
   </li>
 </ul>
@@ -154,6 +206,21 @@ L_p99 = L_p50 * 1.85 + 2 * Sigma_network</code></pre>
         "source_calc_file": "agent_vram_gpu_cluster_sizer.html",
         "accent_color": "#10b981",
         "accent_glow": "rgba(16, 185, 129, 0.2)",
+        "entities": [
+            {
+                "@type": "DefinedTerm",
+                "name": "Graphics Processing Unit",
+                "sameAs": "https://www.wikidata.org/wiki/Q178655",
+                "identifier": "/m/01k93",
+                "url": "https://www.google.com/search?kgmid=/m/01k93"
+            },
+            {
+                "@type": "Thing",
+                "name": "Nvidia H100",
+                "sameAs": "https://www.wikidata.org/wiki/Q111384074",
+                "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+            }
+        ],
         "methodology": """
 <h3>1. Memory Component Breakdown</h3>
 <p>Total GPU cluster memory required ($M_{\\text{total}}$) is partitioned into three discrete pools:</p>
@@ -191,6 +258,21 @@ M_total = (M_weights + M_kv_cache + M_activations) * 1.20 (CUDA Headroom Factor)
         "source_calc_file": "b2b_seo_roi_payback_model.html",
         "accent_color": "#38bdf8",
         "accent_glow": "rgba(56, 189, 248, 0.2)",
+        "entities": [
+            {
+                "@type": "DefinedTerm",
+                "name": "Customer Acquisition Cost",
+                "sameAs": "https://www.wikidata.org/wiki/Q5196425",
+                "url": "https://en.wikipedia.org/wiki/Customer_acquisition_cost"
+            },
+            {
+                "@type": "DefinedTerm",
+                "name": "Business Process Automation",
+                "sameAs": "https://www.wikidata.org/wiki/Q2900762",
+                "identifier": "/m/04z9c",
+                "url": "https://www.google.com/search?kgmid=/m/04z9c"
+            }
+        ],
         "methodology": """
 <h3>1. The Edward Sturm Economic Sigmoid Framework</h3>
 <p>Traditional SEO agencies focus on high-volume top-of-funnel (TOFU) informational keywords with negligible commercial intent (conversion rates &lt; 0.2%). The Programmatic BOFU model deploys thousands of highly specific long-tail operational queries with search intent directly correlated to procurement decisions:</p>
@@ -232,43 +314,62 @@ def generate_schema_json(tool: Dict[str, Any]) -> str:
                     "availability": "https://schema.org/InStock"
                 },
                 "creator": {
-                    "@type": "Corporation",
-                    "@id": "https://elesium.online/#organization",
-                    "name": "Elesium - Enterprise AI & Automation",
-                    "url": "https://elesium.online"
+                    "@id": "https://elesium.online/#organization"
                 },
                 "provider": {
                     "@id": "https://elesium.online/#organization"
                 },
-                "about": [
+                "about": tool.get("entities", [
                     {
                         "@type": "DefinedTerm",
                         "name": tool["category"],
                         "sameAs": "https://www.wikidata.org/wiki/Q11660"
                     }
-                ],
-                "knowsAbout": [
+                ]),
+                "knowsAbout": tool.get("entities", [
                     {
                         "@type": "DefinedTerm",
                         "name": "Artificial Intelligence",
                         "sameAs": "https://www.wikidata.org/wiki/Q11660",
                         "identifier": "/m/0mkz",
                         "url": "https://www.google.com/search?kgmid=/m/0mkz"
-                    },
-                    {
-                        "@type": "DefinedTerm",
-                        "name": "Autonomous Agent",
-                        "sameAs": "https://www.wikidata.org/wiki/Q116139474",
-                        "identifier": "/g/11t6w8b67f",
-                        "url": "https://www.google.com/search?kgmid=/g/11t6w8b67f"
                     }
-                ],
+                ]),
                 "featureList": [
                     tool["answer_capsule"],
                     "Instant client-side calculation with zero data retention",
                     "Responsive iframe embed code with dynamic postMessage auto-resizing",
                     "Mathematical methodology and empirical benchmark documentation"
                 ]
+            },
+            {
+                "@type": ["Organization", "Corporation"],
+                "@id": "https://elesium.online/#organization",
+                "name": "Elesium - Enterprise AI & Automation",
+                "legalName": "Elesium Digital Systems Private Limited",
+                "url": "https://elesium.online",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://elesium.online/#logo",
+                    "url": "https://elesium.online/assets/logo-square.png",
+                    "width": "512",
+                    "height": "512"
+                },
+                "telephone": "+91-8317329312",
+                "email": "contact@elesium.online",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "80 Feet Road, 4th Block, Koramangala",
+                    "addressLocality": "Bengaluru",
+                    "addressRegion": "Karnataka",
+                    "postalCode": "560034",
+                    "addressCountry": "IN"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 12.9352,
+                    "longitude": 77.6245
+                }
             },
             {
                 "@type": "BreadcrumbList",
@@ -869,9 +970,9 @@ def build_all():
         # 2. Render Standalone Tool Page
         standalone_html = render_standalone_page(tool, css, widget_html, js)
         
-        # Slugs to write for embed: canonical embed_slug and slug
+        # Slugs to write: embeds support both embed_slug and slug; standalone tools only canonical slug
         embed_slugs = [tool["embed_slug"], tool["slug"]]
-        tool_slugs = [tool["slug"], tool["embed_slug"]]
+        tool_slugs = [tool["slug"]]
         
         # Write to public/embed/
         for eslug in embed_slugs:

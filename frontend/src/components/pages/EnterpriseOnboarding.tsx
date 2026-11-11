@@ -19,7 +19,7 @@ const TIERS = [
     {
         id: 'tier-1',
         name: 'Tier 1: Pilot Architecture Sprint',
-        price: '₹1,50,000 – ₹3,50,000',
+        price: '₹1,50,000 - ₹3,50,000',
         timeline: '14-Day Delivery',
         description: 'Single-process deterministic agent prototype integrated with your test API or staging ERP. Includes complete architecture dossier and latency audit.',
         features: [
@@ -33,8 +33,8 @@ const TIERS = [
     {
         id: 'tier-2',
         name: 'Tier 2: Enterprise Multi-Agent Suite',
-        price: '₹6,00,000 – ₹15,00,000',
-        timeline: '30–45 Day Production Deployment',
+        price: '₹6,00,000 - ₹15,00,000',
+        timeline: '30-45 Day Production Deployment',
         popular: true,
         description: 'Collaborative 3-agent triad (Supervisor, Worker, Auditor) integrated directly with SAP S/4HANA, Oracle ERP, or custom Kafka clusters.',
         features: [
@@ -42,7 +42,7 @@ const TIERS = [
             'SAP S/4HANA / Oracle / Kafka Production Sync',
             'Sub-200ms TTFT vLLM Inference Tuning',
             'Private VPC Enclave (Mumbai / Bangalore / Frankfurt)',
-            'Contractual 90-Day 3x–5x ROI SLA'
+            'Contractual 90-Day 3x-5x ROI SLA'
         ]
     },
     {

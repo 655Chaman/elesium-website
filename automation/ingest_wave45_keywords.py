@@ -672,7 +672,7 @@ KEYWORDS_WAVE45 = [
 
 def main():
     print("=" * 80)
-    print("INGESTING WAVE 45 COMMERCIAL KEYWORDS (IDs 2,091 TO 2,140 — 50 SOLUTIONS)")
+    print("INGESTING WAVE 45 COMMERCIAL KEYWORDS (IDs 2,091 TO 2,140 - 50 SOLUTIONS)")
     print("=" * 80)
 
     if not QUEUE_PATH.exists():

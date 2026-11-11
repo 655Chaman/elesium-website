@@ -14,7 +14,7 @@ Streaming enterprise LLM inference with sliding-window attention restricts key-v
 
 ## 1. The Streaming Memory Wall in Continuous Enterprise AI Agents
 
-In continuous enterprise agent environments—such as financial market data feeds, industrial SCADA telemetry routers, customer conversational voice bots, and cyber defense monitors—LLMs run unbounded inference loops over hours or days. Standard attention caches all previous key-value pairs in GPU VRAM, leading to linear O(N) memory growth that inevitably causes fatal CUDA Out-of-Memory crashes or multi-second latency degradation.
+In continuous enterprise agent environments - such as financial market data feeds, industrial SCADA telemetry routers, customer conversational voice bots, and cyber defense monitors - LLMs run unbounded inference loops over hours or days. Standard attention caches all previous key-value pairs in GPU VRAM, leading to linear O(N) memory growth that inevitably causes fatal CUDA Out-of-Memory crashes or multi-second latency degradation.
 
 ---
 

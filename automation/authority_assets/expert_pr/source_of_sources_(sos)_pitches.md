@@ -3,11 +3,11 @@
 ### [Source of Sources (SOS)] Pitch: Sovereign AI and Private VPC Deployment Trends for Regulated Sectors
 **Target Publication:** VentureBeat  
 **Deadline:** Rolling / Urgent  
-**Target BOFU Landing URL:** https://elesium.online/solutions/private-vpc-ai-deployment-indian-bfsi  
+**Target BOFU Landing URL:** https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india  
 
 ---
 
-**Subject:** Quote: Sovereign AI and Private VPC Deployment Trends for Regulated Sectors — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: Sovereign AI and Private VPC Deployment Trends for Regulated Sectors - Chaman Shah, Principal AI Systems Architect
 
 Hi [Reporter Name],
 
@@ -19,8 +19,8 @@ Under statutes like India's DPDP Act 2023, transmitting unredacted financial or 
 
 We are seeing institutional banks migrate exclusively to sovereign private VPC architectures running quantized open-weights models (like Llama 3 and DeepSeek), ensuring zero external data transmission and an immutable cryptographic audit log."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/private-vpc-ai-deployment-indian-bfsi)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india)  
 **Credentials & Verification:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online), an enterprise AI engineering firm that deploys deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing enterprises.  
 - **Corporate Solutions Hub:** https://elesium.online/solutions  

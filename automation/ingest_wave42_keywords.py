@@ -643,7 +643,7 @@ KEYWORDS_WAVE42 = [
     },
     {
         "id": 1989,
-        "keyword": "private sovereign lora adapter hot swapping and vram eviction race condition telemetry for enterprise llms",
+        "keyword": "sovereign private lora adapter hot swapping and vram eviction race condition telemetry for enterprise llms",
         "slug": "private-sovereign-lora-adapter-hot-swapping-and-vram-eviction-race-condition-telemetry-for-enterprise-llms",
         "category": "Solutions",
         "hub_category": "Enterprise Cybersecurity & Cloud Infrastructure",

@@ -1,6 +1,6 @@
-# Google Search Console Striking Distance Engine — Executive Optimization Report
+# Google Search Console Striking Distance Engine - Executive Optimization Report
 
-**Execution Timestamp:** `2026-11-11T12:06:00.347068`  
+**Execution Timestamp:** `2026-11-11T18:13:18.841786`  
 **GSC Authentication Mode:** `MOCK_SIMULATOR`  
 **Target Site:** `https://elesium.online`  
 
@@ -9,9 +9,9 @@
 | Metric | Value | Reference Standard |
 | :--- | :--- | :--- |
 | **Total GSC Queries Ingested** | `500` | Web Search Analytics (90-day window) |
-| **Striking Distance Queries (Pos 8.0–20.0)** | `300` | Brian Kato SEO Rockstars 2026 Day 2 |
+| **Striking Distance Queries (Pos 8.0-20.0)** | `300` | Brian Kato SEO Rockstars 2026 Day 2 |
 | **Total Impressions Pool** | `852,107` | High-intent B2B search volume |
-| **Unrealized Clicks (Current Pos 8–20)** | `839,644` | Impressions * (1 - CTR) |
+| **Unrealized Clicks (Current Pos 8-20)** | `839,644` | Impressions * (1 - CTR) |
 | **Projected Monthly Traffic Uplift (Top 3)** | `+230,388 clicks/mo` | Organic Top 3 Blended CTR (28.5%) |
 | **Enterprise Solution Pages Optimized** | `100` | 100 Curated Enterprise Solutions |
 
@@ -19,10 +19,10 @@
 
 The Striking Distance Engine executes Brian Kato's SEO Rockstars 2026 Day 2 framework and Dan Kurtz's compounding telemetry loop:
 
-1. **Position Isolation (8.0–20.0):** Google has established topical relevance for the entity; it merely lacks query-specific token prominence and direct answer capsules to cross into positions 1–3.
+1. **Position Isolation (8.0-20.0):** Google has established topical relevance for the entity; it merely lacks query-specific token prominence and direct answer capsules to cross into positions 1-3.
 2. **Mathematical Opportunity Scoring:**
    $$\text{Opportunity Score} = \text{Impressions} \times (1 - \text{CTR}) \times \frac{M_{\text{intent}}}{\log_2(\text{Position})}$$
-3. **Edward Sturm Moz Sweet Spot:** Synthesizes an exact-match semantic Answer Capsule calibrated strictly to **42–48 words** with zero fluff.
+3. **Edward Sturm Moz Sweet Spot:** Synthesizes an exact-match semantic Answer Capsule calibrated strictly to **42-48 words** with zero fluff.
 4. **Engineering Specifics (Non-Generic):** Injects verifiable compute hardware (H100 SXM5, NVLink), tail latency SLAs (sub-140ms p99), and statutory compliance mandates (DPDP Act 2023 §8(5), RBI CSF Annex II).
 5. **Structured FAQPage JSON-LD Microdata:** Generates machine-readable Question/Answer schemas to capture Google Rich Snippets and AI Overview recommendation citations.
 

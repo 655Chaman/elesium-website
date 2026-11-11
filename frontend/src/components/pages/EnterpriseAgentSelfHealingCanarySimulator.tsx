@@ -107,7 +107,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
       a: 'Elesium forks a 5% shadow traffic partition to an ephemeral sandboxed canary instance. Telemetry engines apply continuous Kolmogorov-Smirnov distribution checks across agent token entropy, tool call patterns, and latency. If a schema anomaly is detected, the canary triggers automated AST structural patches or instantaneous sub-320ms rollback to the verified golden snapshot, maintaining 99.98% recovery fidelity without polluting production databases.'
     },
     {
-      q: 'How does this architecture integrate with private sovereign enterprise VPCs?',
+      q: 'How does this architecture integrate with sovereign enterprise VPCs?',
       a: 'All shadow routing, anomaly detection telemetry, and canary verifications execute within your dedicated private VPC (AWS, Azure, GCP, or on-premise Kubernetes). No production operational data or prompts traverse third-party multi-tenant servers, ensuring full compliance with India’s Digital Personal Data Protection Act (DPDP Act 2023) and ISO 27001 standards.'
     }
   ];

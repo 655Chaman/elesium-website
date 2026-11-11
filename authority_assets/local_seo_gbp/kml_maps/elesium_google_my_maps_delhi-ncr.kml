@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Elesium Enterprise AI — Delhi NCR Entity Authority & Driving Directions</name>
+    <name>Elesium Enterprise AI - Delhi NCR Entity Authority &amp; Driving Directions</name>
     <description><![CDATA[
-      <h3>Elesium Enterprise AI Architecture Hub — Delhi NCR</h3>
+      <h3>Elesium Enterprise AI Architecture Hub - Delhi NCR</h3>
       <p><b>Address:</b> Cyber City, DLF Phase 2, Building 10, Gurugram, Haryana 122002</p>
-      <p><b>Google Maps CID:</b> <a href="https://maps.google.com/?cid=11928374659283746519">11928374659283746519</a></p>
+      <p><b>Coordinates:</b> <a href="https://maps.google.com/?q=28.4908,77.0903">GPS: 28.4908, 77.0903</a></p>
       <p><b>Official Entity URL:</b> <a href="https://elesium.online/enterprise-ai-delhi-ncr/">https://elesium.online/enterprise-ai-delhi-ncr/</a></p>
       <p><b>Autonomous AI Engineering:</b> Multi-Agent LangGraph Systems, Sovereign LLM Deployment, DPDP Act 2023 Compliance.</p>
-      <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PLelesium-enterprise" frameborder="0" allowfullscreen></iframe>
+      <p><b>Architecture Walkthroughs:</b> <a href="https://elesium.online/videos/">https://elesium.online/videos/</a></p>
     ]]></description>
     <Style id="hubPoint">
       <IconStyle>
@@ -29,11 +29,11 @@
 
     <!-- FOCAL HUB PLACEMARK -->
     <Placemark>
-      <name>Elesium Enterprise AI Headquarters — Delhi NCR</name>
-      <description>Primary sovereign AI state machine development center. Verified CID: 11928374659283746519</description>
+      <name>Elesium Enterprise AI Headquarters - Delhi NCR</name>
+      <description>Primary sovereign AI state machine development center. GPS: 28.4908, 77.0903</description>
       <styleUrl>#hubPoint</styleUrl>
       <Point>
-        <coordinates>77.0894,28.4947,0</coordinates>
+        <coordinates>77.0903,28.4908,0</coordinates>
       </Point>
     </Placemark>
 
@@ -41,93 +41,93 @@
     <Folder>
       <name>Driving Direction Vectors to Delhi NCR AI Hub</name>
       <Placemark>
-        <name>Route: Connaught Place Inner Circle → Elesium Delhi NCR</name>
+        <name>Route: Connaught Place Inner Circle -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Connaught Place Inner Circle converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.2167,28.6315,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.2167,28.6315,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Nehru Place Financial District → Elesium Delhi NCR</name>
+        <name>Route: Nehru Place Financial District -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Nehru Place Financial District converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.2514,28.5492,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.2514,28.5492,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Noida Sector 62 Electronic City → Elesium Delhi NCR</name>
+        <name>Route: Noida Sector 62 Electronic City -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Noida Sector 62 Electronic City converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.3649,28.628,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.3649,28.628,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: IGI Airport Terminal 3 Aerocity → Elesium Delhi NCR</name>
+        <name>Route: IGI Airport Terminal 3 Aerocity -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from IGI Airport Terminal 3 Aerocity converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.0999,28.5562,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.0999,28.5562,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Golf Course Road Cyber Park → Elesium Delhi NCR</name>
+        <name>Route: Golf Course Road Cyber Park -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Golf Course Road Cyber Park converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.0924,28.4595,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.0924,28.4595,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Okhla Industrial Area Phase 3 → Elesium Delhi NCR</name>
+        <name>Route: Okhla Industrial Area Phase 3 -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Okhla Industrial Area Phase 3 converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.2732,28.5355,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.2732,28.5355,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Udyog Vihar Phase 4 Gateway → Elesium Delhi NCR</name>
+        <name>Route: Udyog Vihar Phase 4 Gateway -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Udyog Vihar Phase 4 Gateway converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.0811,28.5021,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.0811,28.5021,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Saket District Centre → Elesium Delhi NCR</name>
+        <name>Route: Saket District Centre -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Saket District Centre converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.2185,28.5284,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.2185,28.5284,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Faridabad NH-19 Tollway → Elesium Delhi NCR</name>
+        <name>Route: Faridabad NH-19 Tollway -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Faridabad NH-19 Tollway converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.3178,28.4089,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.3178,28.4089,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Noida Greater Expressway Sector 128 → Elesium Delhi NCR</name>
+        <name>Route: Noida Greater Expressway Sector 128 -&gt; Elesium Delhi NCR</name>
         <description>Driving direction path from Noida Greater Expressway Sector 128 converging on Elesium Delhi NCR headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
-          <coordinates>77.3789,28.5147,0 77.0894,28.4947,0</coordinates>
+          <coordinates>77.3789,28.5147,0 77.0903,28.4908,0</coordinates>
         </LineString>
       </Placemark>
     </Folder>
@@ -136,23 +136,23 @@
     <Folder>
       <name>Delhi NCR Metropolitan Service Radius</name>
       <Placemark>
-        <name>15km Metropolitan Delivery Boundary — Delhi NCR</name>
+        <name>15km Metropolitan Delivery Boundary - Delhi NCR</name>
         <styleUrl>#radiusBoundary</styleUrl>
         <Polygon>
           <outerBoundaryIs>
             <LinearRing>
-              <coordinates>77.0894,28.629598240887812,0 77.11605361998127,28.627548833494025,0 77.1418973832068,28.621462881519275,0 77.16614604000854,28.611525303534677,0 77.18806280721999,28.598038047818633,0 77.20698175495986,28.581410917811194,0 77.2223280405745,28.562149120443905,0 77.23363537494113,28.540837915682832,0 77.24056019042679,28.518124833700643,0 77.24289208001707,28.4947,0 77.24056019042679,28.47127516629936,0 77.23363537494113,28.44856208431717,0 77.2223280405745,28.427250879556098,0 77.20698175495986,28.40798908218881,0 77.18806280721999,28.39136195218137,0 77.16614604000854,28.377874696465327,0 77.1418973832068,28.36793711848073,0 77.11605361998127,28.36185116650598,0 77.0894,28.35980175911219,0 77.06274638001872,28.36185116650598,0 77.0369026167932,28.36793711848073,0 77.01265395999145,28.377874696465327,0 76.99073719278,28.39136195218137,0 76.97181824504014,28.40798908218881,0 76.9564719594255,28.427250879556098,0 76.94516462505887,28.44856208431717,0 76.9382398095732,28.47127516629936,0 76.93590791998292,28.4947,0 76.9382398095732,28.518124833700643,0 76.94516462505887,28.540837915682832,0 76.9564719594255,28.562149120443905,0 76.97181824504014,28.581410917811194,0 76.99073719278,28.598038047818633,0 77.01265395999145,28.611525303534677,0 77.0369026167932,28.621462881519275,0 77.06274638001872,28.627548833494025,0 77.0894,28.629598240887812,0</coordinates>
+              <coordinates>77.0903,28.62569824088781,0 77.11695263523694,28.623648833494023,0 77.14279544363909,28.617562881519273,0 77.16704320455025,28.607625303534675,0 77.18895916202509,28.59413804781863,0 77.20787741078573,28.577510917811193,0 77.22322312941668,28.558249120443904,0 77.23453004602267,28.53693791568283,0 77.24145460566417,28.51422483370064,0 77.2437864091005,28.4908,0 77.24145460566417,28.46737516629936,0 77.23453004602267,28.44466208431717,0 77.22322312941668,28.423350879556097,0 77.20787741078573,28.404089082188808,0 77.18895916202509,28.38746195218137,0 77.16704320455025,28.373974696465325,0 77.14279544363909,28.364037118480727,0 77.11695263523694,28.357951166505977,0 77.0903,28.35590175911219,0 77.06364736476306,28.357951166505977,0 77.03780455636091,28.364037118480727,0 77.01355679544974,28.373974696465325,0 76.99164083797491,28.38746195218137,0 76.97272258921427,28.404089082188808,0 76.95737687058332,28.423350879556097,0 76.94606995397733,28.44466208431717,0 76.93914539433582,28.46737516629936,0 76.9368135908995,28.4908,0 76.93914539433582,28.51422483370064,0 76.94606995397733,28.53693791568283,0 76.95737687058332,28.558249120443904,0 76.97272258921427,28.577510917811193,0 76.99164083797491,28.59413804781863,0 77.01355679544974,28.607625303534675,0 77.03780455636091,28.617562881519273,0 77.06364736476306,28.623648833494023,0 77.0903,28.62569824088781,0</coordinates>
             </LinearRing>
           </outerBoundaryIs>
         </Polygon>
       </Placemark>
       <Placemark>
-        <name>35km Metropolitan Delivery Boundary — Delhi NCR</name>
+        <name>35km Metropolitan Delivery Boundary - Delhi NCR</name>
         <styleUrl>#radiusBoundary</styleUrl>
         <Polygon>
           <outerBoundaryIs>
             <LinearRing>
-              <coordinates>77.0894,28.80946256207156,0 77.1515917799563,28.804680611486056,0 77.21189389414918,28.79048005687831,0 77.26847409335325,28.767292374914245,0 77.31961321684665,28.73582211157681,0 77.36375742823967,28.697025474892786,0 77.39956542800716,28.65208128103578,0 77.42594920819596,28.60235513659327,0 77.44210711099583,28.5493579453015,0 77.44754818670651,28.4947,0 77.44210711099583,28.4400420546985,0 77.42594920819596,28.387044863406732,0 77.39956542800716,28.337318718964223,0 77.36375742823967,28.292374525107217,0 77.31961321684665,28.253577888423195,0 77.26847409335325,28.22210762508576,0 77.21189389414918,28.198919943121695,0 77.1515917799563,28.184719388513948,0 77.0894,28.179937437928444,0 77.02720822004369,28.184719388513948,0 76.96690610585081,28.198919943121695,0 76.91032590664675,28.22210762508576,0 76.85918678315335,28.253577888423195,0 76.81504257176033,28.292374525107217,0 76.77923457199283,28.337318718964223,0 76.75285079180404,28.387044863406732,0 76.73669288900416,28.4400420546985,0 76.73125181329348,28.4947,0 76.73669288900416,28.5493579453015,0 76.75285079180404,28.60235513659327,0 76.77923457199283,28.65208128103578,0 76.81504257176033,28.697025474892786,0 76.85918678315335,28.73582211157681,0 76.91032590664675,28.767292374914245,0 76.96690610585081,28.79048005687831,0 77.02720822004369,28.804680611486056,0 77.0894,28.80946256207156,0</coordinates>
+              <coordinates>77.0903,28.805562562071557,0 77.15248948221954,28.800780611486054,0 77.21278936849122,28.786580056878307,0 77.26936747728391,28.763392374914243,0 77.32050471139185,28.731922111576807,0 77.36464729183335,28.693125474892785,0 77.40045396863893,28.64818128103578,0 77.42683677405289,28.59845513659327,0 77.44299407988308,28.5454579453015,0 77.44843495456783,28.4908,0 77.44299407988308,28.4361420546985,0 77.42683677405289,28.38314486340673,0 77.40045396863893,28.33341871896422,0 77.36464729183335,28.288474525107215,0 77.32050471139185,28.249677888423193,0 77.26936747728391,28.218207625085757,0 77.21278936849122,28.195019943121693,0 77.15248948221954,28.180819388513946,0 77.0903,28.176037437928443,0 77.02811051778046,28.180819388513946,0 76.96781063150878,28.195019943121693,0 76.91123252271609,28.218207625085757,0 76.86009528860815,28.249677888423193,0 76.81595270816665,28.288474525107215,0 76.78014603136107,28.33341871896422,0 76.75376322594711,28.38314486340673,0 76.73760592011692,28.4361420546985,0 76.73216504543217,28.4908,0 76.73760592011692,28.5454579453015,0 76.75376322594711,28.59845513659327,0 76.78014603136107,28.64818128103578,0 76.81595270816665,28.693125474892785,0 76.86009528860815,28.731922111576807,0 76.91123252271609,28.763392374914243,0 76.96781063150878,28.786580056878307,0 77.02811051778046,28.800780611486054,0 77.0903,28.805562562071557,0</coordinates>
             </LinearRing>
           </outerBoundaryIs>
         </Polygon>

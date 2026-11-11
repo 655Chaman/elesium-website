@@ -18,7 +18,7 @@ post_122 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, AI Hardware Architects, and Distributed Systems Directors: deploying OCP MXFP8 and MXFP4 microscaling formats with shared block-level exponent shifting to double Tensor Core GEMM throughput while capping perplexity degradation below 1% on sovereign enterprise clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, AI Hardware Architects, and Distributed Systems Directors: deploying OCP MXFP8 and MXFP4 microscaling formats with shared block-level exponent shifting to double Tensor Core GEMM throughput while capping perplexity degradation below 1% on sovereign enterprise clusters.",
     "metaDescription": "FP8 and MXFP8 microscaling guide: OCP microscaling formats, dynamic block exponent shifting, FP4 quantization, CUTLASS WGMMA kernels, and sub-1% perplexity.",
-    "relatedSolutionSlug": "fp8-gemm-tensor-core-acceleration-controllers-for-enterprise-vllm-inference-clusters",
+    "relatedSolutionSlug": "sub-8ms-multimodal-vision-fp8-inference-controllers-for-scada-manufacturing",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -39,7 +39,7 @@ post_122 = {
         },
         {
             "type": "paragraph",
-            "value": "Standard FP8 formats—specifically E4M3 (1 sign bit, 4 exponent bits, 3 mantissa bits) for forward activations and weights, and E5M2 (1 sign bit, 5 exponent bits, 2 mantissa bits) for backward gradients—offer higher dynamic range than INT8. However, under standard per-tensor or per-channel scaling, activation outliers in deep Transformer layers cause underflow in small weight values or clipping in high-magnitude tokens, precipitating perplexity degradation exceeding 5% to 8% in complex reasoning tasks."
+            "value": "Standard FP8 formats - specifically E4M3 (1 sign bit, 4 exponent bits, 3 mantissa bits) for forward activations and weights, and E5M2 (1 sign bit, 5 exponent bits, 2 mantissa bits) for backward gradients - offer higher dynamic range than INT8. However, under standard per-tensor or per-channel scaling, activation outliers in deep Transformer layers cause underflow in small weight values or clipping in high-magnitude tokens, precipitating perplexity degradation exceeding 5% to 8% in complex reasoning tasks."
         },
         {
             "type": "heading",

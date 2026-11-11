@@ -16,7 +16,7 @@ const signals = [
         id: 2,
         sector: 'LEGAL RISK',
         status: 'ACTIVE SLA',
-        description: 'Active engagement: Class-action settlement restructuring RFQ — decision-maker contacts engaged directly.',
+        description: 'Active engagement: Class-action settlement restructuring RFQ, with decision-maker contacts engaged directly.',
         metric: '22 verified contacts',
         timeframe: '96 hours',
     },
@@ -40,7 +40,7 @@ const signals = [
         id: 5,
         sector: 'RISK MITIGATION',
         status: 'EXECUTING',
-        description: 'Regulatory integration engagement — connecting high-exposure financial institutions with audit specialists.',
+        description: 'Regulatory integration engagement connecting high-exposure financial institutions with audit specialists.',
         metric: '18 qualified leads surfaced',
         timeframe: '4 days',
     },
@@ -126,7 +126,7 @@ export default function ActiveSignals() {
                             <div className="flex items-center gap-2">
                                 <Terminal className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                                 <span className="text-xs font-mono text-gray-500 dark:text-gray-400 tracking-wider">
-                                    elesium-signals — active_engagement.log
+                                    elesium-signals | active_engagement.log
                                 </span>
                             </div>
                             <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">

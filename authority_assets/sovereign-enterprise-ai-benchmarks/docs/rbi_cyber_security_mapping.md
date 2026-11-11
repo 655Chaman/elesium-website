@@ -1,8 +1,8 @@
-# Reserve Bank of India (RBI) IT Governance & Cyber Controls — Sovereign AI Architecture Mapping
+# Reserve Bank of India (RBI) IT Governance & Cyber Controls - Sovereign AI Architecture Mapping
 
 **Document Identifier:** ELESIUM-RBI-MAPPING-2026-V1  
 **Author:** Elesium Digital Systems (https://elesium.online)  
-**Governing Regulation:** RBI Master Direction – Information Technology Governance, Risk, Controls and Assurance Practices Directions, 2023  
+**Governing Regulation:** RBI Master Direction - Information Technology Governance, Risk, Controls and Assurance Practices Directions, 2023  
 **RBI Notification Reference:** RBI/2023-24/107 DoS.CO.CSITE.SEC.No.3/31.01.015/2023-24 (Effective April 1, 2024)  
 **Target Entities:** Scheduled Commercial Banks, NBFCs (Upper & Middle Layer), Payment System Operators, Small Finance Banks.
 

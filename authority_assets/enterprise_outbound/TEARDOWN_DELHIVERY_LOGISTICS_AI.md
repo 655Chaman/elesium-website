@@ -5,7 +5,7 @@
 **Classification:** Confidential / Enterprise Technical Advisory  
 **Target Entity:** Delhivery Limited (CIN: L63090DL2011PLC221234)  
 **Target Recipients:** Chief Technology Officer (CTO), Chief Information Security Officer (CISO), Head of Core Engineering  
-**Issuing Authority:** Elesium Digital Systems (https://elesium.online) — Bangalore, India  
+**Issuing Authority:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
 **Date of Issuance:** November 2026  
 **Statutory Scope:** Digital Personal Data Protection (DPDP) Act, 2023 (Act No. 22 of 2023) | MeitY Sovereign Data Directives | IT Act Section 43A  
 
@@ -22,7 +22,7 @@
 
 ## 1. Executive Summary & Operational Context
 
-Delhivery operates the undisputed backbone of Indian supply chain tech, processing upwards of **2.8 million to 5 million express parcels per day** across 100+ automated sortation hubs, 3,500+ express delivery centers, and 18,000+ serviceable PIN codes. At this hyper-scale, microscopic operational efficiencies—or microscopic technical liabilities—compound into hundreds of crores in enterprise impact.
+Delhivery operates the undisputed backbone of Indian supply chain tech, processing upwards of **2.8 million to 5 million express parcels per day** across 100+ automated sortation hubs, 3,500+ express delivery centers, and 18,000+ serviceable PIN codes. At this hyper-scale, microscopic operational efficiencies - or microscopic technical liabilities - compound into hundreds of crores in enterprise impact.
 
 Over the past 24 months, the rapid adoption of deep learning and generative AI has modernized three mission-critical workflows across Delhivery's automated sortation belts and dispatch nodes:
 1. **Automated Waybill Vision-OCR:** Extracting consignee details, barcode numbers, contact numbers, merchant SKUs, and destination addresses from thermal-printed, crumpled, or partially occluded parcel labels moving at 2.5 meters/second on sortation cross-belt systems.
@@ -34,7 +34,7 @@ While these systems have driven measurable operational throughput, an independen
 
 - **Statutory Non-Compliance (DPDP Act 2023 Section 8(5) & Section 16):** Consignee names, physical street addresses, and mobile numbers are being embedded into dense vector stores and routed through public cloud inference endpoints hosted outside sovereign boundaries or within shared multi-tenant SaaS environments. Under the DPDP Act 2023, retaining personal data in vector embeddings past the point of delivery fulfillment exposes Delhivery to **statutory penalties of up to ₹250 Crore per incident**.
 - **The WAN Latency Penalty on Automated Cross-Belts:** Automated tilt-tray and cross-belt sorters in mega-gateways (Tauru, Bilaspur, Bhiwandi) require parcel routing decisions within **40 to 60 milliseconds**. Routing image OCR prompts or complex address strings across public WAN internet routes to hyperscaler cloud endpoints incurs **350ms to 1,200ms Time-To-First-Token (TTFT)**, causing sortation lane stalling, buffer overflow, and manual diversion costs.
-- **Inference Margin Bleed:** Processing 3.5 million daily waybills and address disambiguations via multi-tenant vision-LLM cloud APIs costs between **$0.003 and $0.008 per query**, generating an annualized variable inference overhead of **₹32 Crore to ₹84 Crore ($3.8M – $10.1M USD)** that directly erodes Delhivery’s adjusted EBITDA.
+- **Inference Margin Bleed:** Processing 3.5 million daily waybills and address disambiguations via multi-tenant vision-LLM cloud APIs costs between **$0.003 and $0.008 per query**, generating an annualized variable inference overhead of **₹32 Crore to ₹84 Crore ($3.8M - $10.1M USD)** that directly erodes Delhivery’s adjusted EBITDA.
 
 **The Strategic Imperative:** Delhivery must migrate from unconstrained public cloud APIs to an **Air-Gapped Sovereign Private VPC Inference Enclave** deployed within AWS Mumbai (`ap-south-1`) or dedicated Tier-IV on-premise clusters. Utilizing **8x NVIDIA H100 SXM5 architectures, vLLM FP8 W8A8 kernel execution, PagedAttention v2, and deterministic LangGraph state graphs with automated 48-hour cryptographic tombstoning**, Delhivery can achieve **14ms TTFT, 99.99% OCR field extraction accuracy, 100% DPDP statutory compliance, and a 74% reduction in inference OPEX**.
 
@@ -192,7 +192,7 @@ Elesium Digital Systems engineers and deploys a turnkey, fully sovereign AI arch
 ## 5. Technical Deep-Dive: Zero-Latency Waybill OCR & Deterministic Geocoding
 
 ### 5.1 Sub-Cent Waybill OCR on Hopper FP8 Tensor Cores
-Traditional cloud vision APIs charge between **$0.003 and $0.008 per image** (equivalent to ₹0.25 – ₹0.66 per waybill). Across 3.5 million waybills daily, Delhivery expends between **₹8,75,000 and ₹23,10,000 per day** solely on API fees.
+Traditional cloud vision APIs charge between **$0.003 and $0.008 per image** (equivalent to ₹0.25 - ₹0.66 per waybill). Across 3.5 million waybills daily, Delhivery expends between **₹8,75,000 and ₹23,10,000 per day** solely on API fees.
 
 The Elesium architecture replaces public cloud endpoints with an **8x NVIDIA H100 SXM5 cluster running a distilled 8B parameter Vision-Language Model in FP8 W8A8 precision**.
 
@@ -200,7 +200,7 @@ The Elesium architecture replaces public cloud endpoints with an **8x NVIDIA H10
 | Metric | Public Cloud Vision LLM API (US-East) | Elesium Sovereign H100 Cluster (`ap-south-1`) | Delta / Improvement |
 | :--- | :--- | :--- | :--- |
 | **Network Roundtrip Egress** | Public WAN (~210ms) | Zero-Egress Private VPC (0.4ms) | **525x Faster Network** |
-| **Time-To-First-Token (TTFT)** | 620ms – 1,140ms | **14.2ms** | **97.7% Latency Reduction** |
+| **Time-To-First-Token (TTFT)** | 620ms - 1,140ms | **14.2ms** | **97.7% Latency Reduction** |
 | **End-to-End Extraction Latency** | 1,450ms | **42.8ms** | **97.0% Latency Reduction** |
 | **Cost Per 1,000 Waybills** | $4.50 (₹375.00) | **$0.32 (₹26.80)** | **92.8% Direct Cost Savings** |
 | **DPDP Act Egress Violations** | 100% of calls cross WAN | **0.0% (Air-Gapped Enclave)** | **Statutory Immunity** |
@@ -313,12 +313,12 @@ $$;
 
 | Cost Component | Public Multi-Tenant Cloud AI (OpenAI / Azure) | Elesium Sovereign 8x H100 Cluster | Annual Savings (INR) |
 | :--- | :--- | :--- | :--- |
-| **Inference Cost Per Waybill** | ₹0.42 ($0.005 USD) | ₹0.027 ($0.00032 USD) | — |
+| **Inference Cost Per Waybill** | ₹0.42 ($0.005 USD) | ₹0.027 ($0.00032 USD) | - |
 | **Daily Inference Spend** | ₹14,70,000 | ₹94,500 | ₹13,75,500 / day |
 | **Annual Inference OPEX** | **₹53.65 Crore ($6.46M USD)** | **₹3.45 Crore ($415k USD)** | **₹50.20 Crore Savings** |
 | **Automated Sorter Mis-sort Losses** | ₹12.40 Crore (due to WAN timeout stalls) | ₹0.85 Crore (local 14ms response) | **₹11.55 Crore Savings** |
 | **DPDP Act Regulatory Fines Exposure**| Up to ₹250 Crore statutory exposure | ₹0 (Zero-Egress Sovereign Enclave) | **Zero Penalty Risk** |
-| **Net 1-Year Financial Impact** | — | — | **+₹61.75 Crore Cash Flow** |
+| **Net 1-Year Financial Impact** | - | - | **+₹61.75 Crore Cash Flow** |
 
 ---
 
@@ -330,7 +330,7 @@ Elesium engages with Delhivery under a strict, milestone-governed deployment sch
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                  90-DAY SOVEREIGN TRANSITION TIMELINE                        │
 ├─────────────────────┬──────────────────────┬─────────────────────────────────┤
-│ PHASE 1: DAYS 1–30  │ PHASE 2: DAYS 31–60  │ PHASE 3: DAYS 61–90             │
+│ PHASE 1: DAYS 1-30  │ PHASE 2: DAYS 31-60  │ PHASE 3: DAYS 61-90             │
 │ Enclave Provision & │ Dual-Run Shadow Mode │ Cutover, Belt Integration &     │
 │ VLM Distillation    │ & Outlines Grammar   │ Cash-Flow ROI Verification      │
 ├─────────────────────┼──────────────────────┼─────────────────────────────────┤

@@ -1,5 +1,5 @@
 """
-keyword_researcher.py — Step 2 of the Elesium SEO Automation Pipeline
+keyword_researcher.py - Step 2 of the Elesium SEO Automation Pipeline
 
 What it does:
   1. Takes the ranked keyword list from trend_fetcher.py
@@ -123,7 +123,7 @@ def expand_keywords_with_pytrends(
                     for _, row in rising_df.head(5).iterrows():
                         query = str(row["query"]).strip()
                         value = row["value"]
-                        # "Breakout" means >5000% increase — treat as high value
+                        # "Breakout" means >5000% increase - treat as high value
                         if isinstance(value, str) and "Breakout" in value:
                             norm_value = 95.0
                         else:
@@ -151,7 +151,7 @@ def expand_keywords_with_pytrends(
 
 
 # ─────────────────────────────────────────────────────
-# SEARCH VOLUME ENRICHMENT (DataForSEO — optional)
+# SEARCH VOLUME ENRICHMENT (DataForSEO - optional)
 # ─────────────────────────────────────────────────────
 
 def enrich_with_dataforseo(keywords: list) -> dict:
@@ -240,10 +240,10 @@ def compute_final_scores(
         if relevance < config.MIN_RELEVANCE_SCORE:
             continue
 
-        # Trending score (0–1)
+        # Trending score (0-1)
         trending_norm = min(item.get("trending_score", 0) / 100.0, 1.0)
 
-        # Volume score (0–1, log-normalised)
+        # Volume score (0-1, log-normalised)
         vol_data = volume_map.get(kw_lower, {})
         raw_volume = vol_data.get("volume", 0)
         if raw_volume > 0:
@@ -370,7 +370,7 @@ def run(
     Returns top ranked keywords ready for content generation.
     """
     log("=" * 60)
-    log("STEP 2 — Keyword Researcher")
+    log("STEP 2 - Keyword Researcher")
     log("=" * 60)
 
     today = date or datetime.now().strftime("%Y-%m-%d")

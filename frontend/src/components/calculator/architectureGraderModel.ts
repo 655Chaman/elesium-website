@@ -91,7 +91,7 @@ export const CONCURRENCY_OPTIONS: Record<ConcurrencyChoice, DimensionOption<Conc
     description: 'An LLM decides next steps via prose parsing without deterministic schema guarantees or fallback circuit breakers.',
     score: 45,
     fragilityWeight: 0.55,
-    riskProfile: 'Non-deterministic. Router classifications drift by 12–18% under varying prompt temperature and context lengths.'
+    riskProfile: 'Non-deterministic. Router classifications drift by 12-18% under varying prompt temperature and context lengths.'
   },
   unconstrained_react: {
     id: 'unconstrained_react',

@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.org/LocalBusiness",
   "version": "2026.1",
-  "organization": "Elesium Systems Pvt. Ltd.",
+  "organization": "Elesium Digital Systems Private Limited",
   "brand": "Elesium",
   "primary_phone": "+91 83173 29312",
   "primary_email": "chaman@elesium.online",
@@ -42,7 +42,7 @@
         "saturday": "10:00-15:00",
         "sunday": "CLOSED"
       },
-      "description": "Elesium is Bengaluru's premier enterprise AI automation company, engineering sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-2s automated pipelines from our Koramangala engineering pod. We deliver contractually guaranteed 3x–5x ROI in 90 days with full DPDP Act 2023 statutory compliance. Serving Tier-1 B2B SaaS, Global Capability Centers (GCCs), and venture-backed fintechs across Bangalore.",
+      "description": "Elesium is Bengaluru's premier enterprise AI automation company, engineering sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-2s automated pipelines from our Koramangala engineering pod. We deliver contractually guaranteed 3x-5x ROI in 90 days with full DPDP Act 2023 statutory compliance. Serving Tier-1 B2B SaaS, Global Capability Centers (GCCs), and venture-backed fintechs across Bangalore.",
       "services": [
         {
           "name": "Sovereign Multi-Agent Architecture Audit",
@@ -248,7 +248,7 @@
         "saturday": "10:00-15:00",
         "sunday": "CLOSED"
       },
-      "description": "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x–5x ROI in 90 days with zero data egress for pharma and cloud GCCs.",
+      "description": "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x-5x ROI in 90 days with zero data egress for pharma and cloud GCCs.",
       "services": [
         {
           "name": "US-FDA 21 CFR Part 11 Batch Record Verification",
@@ -298,7 +298,7 @@
         "saturday": "10:00-15:00",
         "sunday": "CLOSED"
       },
-      "description": "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x–5x ROI in 90 days with complete DPDP compliance.",
+      "description": "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x-5x ROI in 90 days with complete DPDP compliance.",
       "services": [
         {
           "name": "Maritime Port Logistics & Shipping Bill OCR",
@@ -348,7 +348,7 @@
         "saturday": "10:00-15:00",
         "sunday": "CLOSED"
       },
-      "description": "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x–5x ROI in 90 days with strict data residency.",
+      "description": "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
       "services": [
         {
           "name": "IFSCA Trade Finance & SWIFT Validation Engine",
@@ -398,7 +398,7 @@
         "saturday": "10:00-15:00",
         "sunday": "CLOSED"
       },
-      "description": "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x–5x ROI in 90 days with zero data egress.",
+      "description": "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x-5x ROI in 90 days with zero data egress.",
       "services": [
         {
           "name": "Heavy Industrial Predictive Equipment Telemetry",

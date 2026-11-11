@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-OPTIMIZE CORE WEB VITALS (MODULE 03) — PRODUCTION PERFORMANCE ENGINE
+OPTIMIZE CORE WEB VITALS (MODULE 03) - PRODUCTION PERFORMANCE ENGINE
 ================================================================================
 Classification: Core Web Vitals (CWV) & Real-User Experience (CrUX) Optimizer
 Targets:
@@ -29,7 +29,7 @@ PUBLIC_DIR = ROOT_DIR / "frontend" / "public"
 
 CRITICAL_CSS = """
   /* ==========================================================================
-     ELESIUM CRITICAL CSS — SUB-50ms FIRST CONTENTFUL PAINT & 0 CLS ENGINE
+     ELESIUM CRITICAL CSS - SUB-50ms FIRST CONTENTFUL PAINT & 0 CLS ENGINE
      ========================================================================== */
   :root {
     --bg-primary: #0a0a0c;

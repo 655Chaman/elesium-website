@@ -1,4 +1,4 @@
-# Crunchbase Profile — Elesium
+# Crunchbase Profile - Elesium
 
 ## Organization Details
 - **Organization Name:** Elesium

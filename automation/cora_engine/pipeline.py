@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — MASTER PIPELINE
+TED KUBAITIS CORA SERP CORRELATION ENGINE - MASTER PIPELINE
 =============================================================================
 Classification: End-to-End SERP Correlation, ATF Triage & Deficit Tuning
 Methodology: Ted Kubaitis (SEO Rockstars 2026 Day 1 - Cora 20,000+ Ranking Factors)

@@ -18,7 +18,7 @@ post_129 = {
     "excerpt": "A publication-grade systems audit for Chief Technology Officers, Enterprise Architects, and Head of SEOs: empirical telemetry on Googlebot two-wave indexing queues, why client-side React frameworks suffer a 24-day indexation lag, and the sub-50ms pre-rendered Static Site Generation (SSG) architecture that secures instant Wave-1 indexation.",
     "intro": "A publication-grade systems audit for Chief Technology Officers, Enterprise Architects, and Head of SEOs: empirical telemetry on Googlebot two-wave indexing queues, why client-side React frameworks suffer a 24-day indexation lag, and the sub-50ms pre-rendered Static Site Generation (SSG) architecture that secures instant Wave-1 indexation.",
     "metaDescription": "Empirical analysis of Googlebot two-wave rendering queue: 24-day indexing delays in client-side React apps, DOM parsing telemetry, and zero-JS SSG architecture.",
-    "relatedSolutionSlug": "deterministic-warehouse-automation-for-3pl-providers",
+    "relatedSolutionSlug": "optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -113,7 +113,7 @@ post_130 = {
     "excerpt": "An exhaustive technical runbook for enterprise e-commerce directors, retail systems architects, and technical SEO leads: architectural governance of faceted query parameters, self-referential canonical containment, dynamic robots.txt directives, and the Mochi Shoes zero-drop catalog migration framework.",
     "intro": "An exhaustive technical runbook for enterprise e-commerce directors, retail systems architects, and technical SEO leads: architectural governance of faceted query parameters, self-referential canonical containment, dynamic robots.txt directives, and the Mochi Shoes zero-drop catalog migration framework.",
     "metaDescription": "Enterprise faceted navigation architecture: canonical parameter containment, robots.txt crawl budget governance, and zero-drop URL migration frameworks.",
-    "relatedSolutionSlug": "customs-bill-of-entry-classification-agents-for-cross-border-freight-forwarders",
+    "relatedSolutionSlug": "indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",

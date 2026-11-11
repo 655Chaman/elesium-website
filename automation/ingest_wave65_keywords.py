@@ -1,7 +1,7 @@
 import json
 
 wave65_keywords = [
-    # Cluster 1: Context Parallelism & Ring KV Exchange (IDs 3166–3182, 17 items)
+    # Cluster 1: Context Parallelism & Ring KV Exchange (IDs 3166-3182, 17 items)
     {
         "id": 3166,
         "keyword": "context parallelism ring kv exchange controllers for enterprise vllm and megatron core",
@@ -224,7 +224,7 @@ wave65_keywords = [
         "primary_cta": "Integrate Supply Chain Context Parallel Compression"
     },
 
-    # Cluster 2: Asynchronous Distributed Attention & Multi-Million Token Swarms (IDs 3183–3198, 16 items)
+    # Cluster 2: Asynchronous Distributed Attention & Multi-Million Token Swarms (IDs 3183-3198, 16 items)
     {
         "id": 3183,
         "keyword": "asynchronous distributed attention controllers for low latency quantitative trading desks",
@@ -434,7 +434,7 @@ wave65_keywords = [
         "primary_cta": "Schedule Genomic Context Parallel Collective Tuning"
     },
 
-    # Cluster 3: Ultra-Long Context FinOps & Sovereign Enterprise AI (IDs 3199–3215, 17 items)
+    # Cluster 3: Ultra-Long Context FinOps & Sovereign Enterprise AI (IDs 3199-3215, 17 items)
     {
         "id": 3199,
         "keyword": "context parallelism finops calculators for enterprise two million token gpu clusters",

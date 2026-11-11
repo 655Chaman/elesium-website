@@ -5,7 +5,7 @@ from pathlib import Path
 QUEUE_PATH = Path("automation/compact_keywords_queue.json")
 
 wave71_keywords = [
-    # Cluster 1: Dynamic KV-Cache Eviction & H2O Heavy-Hitter Activation Oracles (IDs 3466–3482, 17 items)
+    # Cluster 1: Dynamic KV-Cache Eviction & H2O Heavy-Hitter Activation Oracles (IDs 3466-3482, 17 items)
     {
         "id": 3466,
         "keyword": "dynamic kv-cache eviction and attention sink compression daemons for 2m context llms",
@@ -228,7 +228,7 @@ wave71_keywords = [
         "primary_cta": "Retain KV-Cache FinOps Auditors"
     },
 
-    # Cluster 2: Attention Sink Preservation & StreamingLLM Infinite Window Buffers (IDs 3483–3498, 16 items)
+    # Cluster 2: Attention Sink Preservation & StreamingLLM Infinite Window Buffers (IDs 3483-3498, 16 items)
     {
         "id": 3483,
         "keyword": "streamingllm attention sink preservation allocators for infinite context enterprise agents",
@@ -438,7 +438,7 @@ wave71_keywords = [
         "primary_cta": "Deploy Sink Replication Controllers"
     },
 
-    # Cluster 3: 4x Memory Compression & 2M-Context Distributed Swarm FinOps (IDs 3499–3515, 17 items)
+    # Cluster 3: 4x Memory Compression & 2M-Context Distributed Swarm FinOps (IDs 3499-3515, 17 items)
     {
         "id": 3499,
         "keyword": "four-x kv-cache memory compression architects for two-million token enterprise agent swarms",

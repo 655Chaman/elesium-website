@@ -318,11 +318,11 @@ export function calculateVoiceAgentLatency(inputs: VoiceAgentInputs): VoiceAgent
   } else if (totalTurnTakingLatencyMs <= 750) {
     conversationalGrade = 'NATURAL_ENTERPRISE';
     gradeColor = 'text-emerald-400';
-    gradeBadge = 'Enterprise Production Grade (450–750ms)';
+    gradeBadge = 'Enterprise Production Grade (450-750ms)';
   } else if (totalTurnTakingLatencyMs <= 1100) {
     conversationalGrade = 'NOTICEABLE_LAG';
     gradeColor = 'text-amber-400';
-    gradeBadge = 'Noticeable Hesitation (750–1,100ms)';
+    gradeBadge = 'Noticeable Hesitation (750-1,100ms)';
   } else {
     conversationalGrade = 'COLLISION_ZONE';
     gradeColor = 'text-rose-400';

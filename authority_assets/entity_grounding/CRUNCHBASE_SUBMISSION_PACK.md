@@ -1,4 +1,4 @@
-# Crunchbase & Wellfound Entity Grounding Pack — Elesium Digital Systems
+# Crunchbase & Wellfound Entity Grounding Pack - Elesium Digital Systems
 
 **Entity Profile Target:** Crunchbase, Wellfound (formerly AngelList Talent), PitchBook, Tracxn  
 **Organization:** Elesium Digital Systems Private Limited  

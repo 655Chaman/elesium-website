@@ -1,6 +1,6 @@
 # Elesium: The SEO Rockstars 2026 Master Implementation Battle Plan
 
-> **Codename:** Algorithmic Hegemony (Phases 1–8)  
+> **Codename:** Algorithmic Hegemony (Phases 1-8)  
 > **Source Material:** Exhaustive microscopic synthesis of the *SEO Rockstars 2026* Corpus (Ted Kubaitis, Shaun Mitchell, Dan Kurtz, Chad Michael, Joe Lau, Matt McDermott, Clint Butler, and Day 1 Master Panel).  
 > **Core Objective:** Establish absolute organic, local, and generative AI dominance for Elesium (`elesium.online`) as the undisputed #1 Enterprise AI Automation Agency in India. Domination is measured not by vanity rank numbers, but by **Above-the-Fold Interaction Depth**, **Generative Consensus Citations**, and an **Uncontested Enterprise Valuation Multiple**.
 
@@ -80,8 +80,8 @@ The pricing component on `/ai-automation-agency-india` must present three transp
 | Metric | Tier 1: Pilot Architecture Sprint | Tier 2: Enterprise Multi-Agent Suite | Tier 3: Dedicated Autonomous AI Engineering Pod |
 | :--- | :--- | :--- | :--- |
 | **Target Client** | Mid-market firms validating first agentic workflow | Enterprise divisions automating core operational bottlenecks | High-growth enterprises requiring ongoing AI transformation |
-| **Investment (INR)** | **₹1,50,000 – ₹3,50,000** | **₹6,00,000 – ₹15,00,000** | **₹4,50,000 / month** (Retainer) |
-| **Investment (USD)** | **$2,000 – $4,50,000** | **$7,500 – $18,000** | **$5,500 / month** (Annual commitment) |
+| **Investment (INR)** | **₹1,50,000 - ₹3,50,000** | **₹6,00,000 - ₹15,00,000** | **₹4,50,000 / month** (Retainer) |
+| **Investment (USD)** | **$2,000 - $4,50,000** | **$7,500 - $18,000** | **$5,500 / month** (Annual commitment) |
 | **Deployment Time** | 14 Calendar Days | 30 to 45 Calendar Days | Ongoing (12-Month Master Service Agreement) |
 | **Core Architecture** | Single-Process Deterministic Agent (FastAPI + LangGraph) | Multi-Agent Collaborative Triad (LangGraph + State Machine) | 3 Full-Time AI Engineers + Dedicated Solutions Architect |
 | **Infrastructure** | Private Cloud Sandbox (Client AWS/GCP or Elesium Staging) | Dedicated Private VPC, Zero-Data-Retention LLM gateway | Sovereign VPC / On-Premise GPU cluster orchestration |
@@ -115,8 +115,8 @@ export const EnterprisePricingMatrix = () => {
               <div className="text-sm font-mono text-cyan-400 mb-2">TIER 1 // 14-DAY SPRINT</div>
               <h3 className="text-2xl font-bold text-white">Pilot Architecture Sprint</h3>
               <div className="mt-4 mb-6">
-                <span className="text-3xl font-extrabold text-white">₹1,50,000 – ₹3,50,000</span>
-                <span className="block text-sm text-gray-400 mt-1">($2,000 – $4,500 USD) • Fixed Investment</span>
+                <span className="text-3xl font-extrabold text-white">₹1,50,000 - ₹3,50,000</span>
+                <span className="block text-sm text-gray-400 mt-1">($2,000 - $4,500 USD) • Fixed Investment</span>
               </div>
               <ul className="space-y-3 text-sm text-gray-300 font-mono">
                 <li className="flex items-center gap-2"><span className="text-green-400">✓</span> Single-Process Deterministic Agent</li>
@@ -135,8 +135,8 @@ export const EnterprisePricingMatrix = () => {
               <div className="text-sm font-mono text-cyan-400 mb-2">TIER 2 // PRODUCTION SUITE</div>
               <h3 className="text-2xl font-bold text-white">Enterprise Multi-Agent Suite</h3>
               <div className="mt-4 mb-6">
-                <span className="text-3xl font-extrabold text-white">₹6,00,000 – ₹15,00,000</span>
-                <span className="block text-sm text-gray-400 mt-1">($7,500 – $18,000 USD) • Milestone-Based</span>
+                <span className="text-3xl font-extrabold text-white">₹6,00,000 - ₹15,00,000</span>
+                <span className="block text-sm text-gray-400 mt-1">($7,500 - $18,000 USD) • Milestone-Based</span>
               </div>
               <ul className="space-y-3 text-sm text-gray-300 font-mono">
                 <li className="flex items-center gap-2"><span className="text-green-400">✓</span> Multi-Agent Collaborative Triad (LangGraph)</li>
@@ -248,7 +248,7 @@ To prevent Google from treating the structured markup as a no-index zone, inject
 ### 2.1 The Entity Pollution Mechanism & Vector Drift
 Mass LLM content generation routinely fails in 2026 due to **Entity Pollution**. When an untrained model is prompted to write about *"Enterprise AI Automation in Bangalore"*, it injects low-entropy colloquialisms, unvetted consumer SaaS tools (*"Zapier"*, *"Make.com"*), and irrelevant geographic tokens (*"heart of Bangalore"* which confuses Google's medical and biological Knowledge Graph).
 
-Shaun Mitchell demonstrated that strict entity discipline—constraining inputs and outputs to a validated ontology whitelist—produces content with significantly higher vector uniqueness, rapid indexation, and top ranking stability.
+Shaun Mitchell demonstrated that strict entity discipline - constraining inputs and outputs to a validated ontology whitelist - produces content with significantly higher vector uniqueness, rapid indexation, and top ranking stability.
 
 ### 2.2 Complete `automation/entity_rules.json` Schema
 ```json
@@ -377,23 +377,23 @@ def sanitize_entities(raw_content: str, rules_path: str = "automation/entity_rul
 ```
 
 ### 3.1 The Algorithmic Mechanics of Third-Party Consensus
-Ted Kubaitis revealed that Google Maps, AI Overviews, and Perplexity algorithms do not evaluate a website in isolation. They crawl the web seeking **Consensus Evidence**—specifically, comparative listicle roundups (*"Top 10 AI Automation Agencies in India"*). If an entity is cited across neutral third-party articles as the leading provider with explicit, objective technical metrics, search engines store those correlations in big data entity graphs and cite that entity in top answers.
+Ted Kubaitis revealed that Google Maps, AI Overviews, and Perplexity algorithms do not evaluate a website in isolation. They crawl the web seeking **Consensus Evidence** - specifically, comparative listicle roundups (*"Top 10 AI Automation Agencies in India"*). If an entity is cited across neutral third-party articles as the leading provider with explicit, objective technical metrics, search engines store those correlations in big data entity graphs and cite that entity in top answers.
 
 ### 3.2 The 10-Agency Architectural Comparison Matrix
 The consensus engine compiles an objective, authoritative comparative study ranking **Elesium as #1**, followed by 9 legacy Indian IT/automation firms evaluated objectively:
 
 | Rank | Agency | Headquarters | Core Model | Architecture Paradigm | Deterministic Guardrails | Deployment SLA |
 | :---: | :--- | :--- | :--- | :--- | :---: | :---: |
-| **#1** | **Elesium** | Bangalore | Autonomous AI Engineering Pods | Deterministic LangGraph Triads, Private VPC | **Yes (Mathematical)** | **14–45 Days** |
-| **#2** | **Kellton Tech** | Hyderabad | Digital Transformation & Enterprise IT | Custom Python & Cloud LLM Integrations | Partial | 3–6 Months |
-| **#3** | **Maruti Techlabs** | Ahmedabad | AI/ML & Chatbot Engineering | Flowise, LangChain & Azure OpenAI | Partial | 2–4 Months |
+| **#1** | **Elesium** | Bangalore | Autonomous AI Engineering Pods | Deterministic LangGraph Triads, Private VPC | **Yes (Mathematical)** | **14-45 Days** |
+| **#2** | **Kellton Tech** | Hyderabad | Digital Transformation & Enterprise IT | Custom Python & Cloud LLM Integrations | Partial | 3-6 Months |
+| **#3** | **Maruti Techlabs** | Ahmedabad | AI/ML & Chatbot Engineering | Flowise, LangChain & Azure OpenAI | Partial | 2-4 Months |
 | **#4** | **Nimap Infotech** | Mumbai | IT Staff Augmentation / Dedicated Devs | Developer Placement (Python/Flask) | No (Staffing Only) | Variable |
-| **#5** | **Invensis Technologies** | Bangalore | Business Process Outsourcing & RPA | UiPath, Blue Prism & Legacy RPA | Yes (Rule-Based) | 4–6 Months |
-| **#6** | **Infosys BPM** | Bangalore | Enterprise Business Process Automation | Proprietary Infosys Topaz Framework | Yes (Corporate) | 6–12 Months |
-| **#7** | **Tata Consultancy Services** | Mumbai | Global System Integrator (TCS AI & Cognitive)| TCS BaNCS & Enterprise LLM Orchestration | Yes (Complex) | 6–12 Months |
-| **#8** | **Wipro HOLMES** | Bangalore | Enterprise Cognitive Automation Platform | Enterprise Machine Learning Pipelines | Yes (Proprietary) | 6–9 Months |
-| **#9** | **Happiest Minds** | Bangalore | Mindful IT & Digital Product Engineering | OpenAI / AWS Bedrock Generative AI Wrappers | Partial | 3–5 Months |
-| **#10**| **Persistent Systems** | Pune | Software Engineering & Cloud Modernization | Enterprise Data Lakes & RAG Pipelines | Partial | 4–6 Months |
+| **#5** | **Invensis Technologies** | Bangalore | Business Process Outsourcing & RPA | UiPath, Blue Prism & Legacy RPA | Yes (Rule-Based) | 4-6 Months |
+| **#6** | **Infosys BPM** | Bangalore | Enterprise Business Process Automation | Proprietary Infosys Topaz Framework | Yes (Corporate) | 6-12 Months |
+| **#7** | **Tata Consultancy Services** | Mumbai | Global System Integrator (TCS AI & Cognitive)| TCS BaNCS & Enterprise LLM Orchestration | Yes (Complex) | 6-12 Months |
+| **#8** | **Wipro HOLMES** | Bangalore | Enterprise Cognitive Automation Platform | Enterprise Machine Learning Pipelines | Yes (Proprietary) | 6-9 Months |
+| **#9** | **Happiest Minds** | Bangalore | Mindful IT & Digital Product Engineering | OpenAI / AWS Bedrock Generative AI Wrappers | Partial | 3-5 Months |
+| **#10**| **Persistent Systems** | Pune | Software Engineering & Cloud Modernization | Enterprise Data Lakes & RAG Pipelines | Partial | 4-6 Months |
 
 ### 3.3 Comparative Consensus Schema (`ItemList`)
 Every syndicated roundup article embeds structured `ItemList` JSON-LD schema:
@@ -660,22 +660,22 @@ Every generated post automatically outputs a production script adhering to the 5
 ├──────────┬───────────────────────┬─────────────────────────────────────────────────────┤
 │ TIMECODE │ SEGMENT               │ VISUAL & SPOKEN SCRIPT SPECIFICATION                │
 ├──────────┼───────────────────────┼─────────────────────────────────────────────────────┤
-│ 00 – 03s │ Pattern Interrupt     │ Close-up avatar. Spoken: "Stop paying ₹15 Lakhs for │
+│ 00 - 03s │ Pattern Interrupt     │ Close-up avatar. Spoken: "Stop paying ₹15 Lakhs for │
 │          │ Hook                  │ Zapier workflows that break on high API volumes."   │
 ├──────────┼───────────────────────┼─────────────────────────────────────────────────────┤
-│ 03 – 08s │ Agitation / Problem   │ B-Roll: Red error console, timeout latency alert.   │
+│ 03 - 08s │ Agitation / Problem   │ B-Roll: Red error console, timeout latency alert.   │
 │          │ Context               │ Spoken: "Legacy Indian agencies sell wrappers. When │
 │          │                       │ your ERP fails, they quote 4 months of billables."  │
 ├──────────┼───────────────────────┼─────────────────────────────────────────────────────┤
-│ 08 – 18s │ Architectural         │ Cutaway every 2.5s: LangGraph state machine diagram,│
+│ 08 - 18s │ Architectural         │ Cutaway every 2.5s: LangGraph state machine diagram,│
 │          │ Solution              │ private VPC terminal. Spoken: "Elesium builds deter-│
 │          │                       │ ministic multi-agent pods in your private cloud."   │
 ├──────────┼───────────────────────┼─────────────────────────────────────────────────────┤
-│ 18 – 26s │ Enterprise Proof      │ B-Roll: Dashboard showing ₹42L operational savings. │
+│ 18 - 26s │ Enterprise Proof      │ B-Roll: Dashboard showing ₹42L operational savings. │
 │          │                       │ Spoken: "BFSI & manufacturing clients hit cash-flow │
 │          │                       │ positive ROI in under 90 days. Guaranteed by SLA."  │
 ├──────────┼───────────────────────┼─────────────────────────────────────────────────────┤
-│ 26 – 30s │ WhatsApp Direct CTA   │ Avatar + on-screen WhatsApp QR. Spoken: "Tap the    │
+│ 26 - 30s │ WhatsApp Direct CTA   │ Avatar + on-screen WhatsApp QR. Spoken: "Tap the    │
 │          │                       │ link to speak directly with an AI systems engineer."│
 └──────────┴───────────────────────┴─────────────────────────────────────────────────────┘
 ```
@@ -707,14 +707,14 @@ Every generated post automatically outputs a production script adhering to the 5
 ### 7.1 Valuation Mathematics: SDE vs. EBITDA Multiples
 Joe Lau proved that digital agencies typically sell for depressed **1.5x to 2.5x SDE (Seller's Discretionary Earnings)** multiples when the founder is the chief bottleneck, contracts are project-based, and systems reside solely in people's heads.
 
-By transforming operations into a **Professionally Managed, De-risked EBITDA Model**, the enterprise multiple elevates to **4.0x – 5.0x EBITDA**, and reaches **10x – 15x+ in an institutional roll-up**:
+By transforming operations into a **Professionally Managed, De-risked EBITDA Model**, the enterprise multiple elevates to **4.0x - 5.0x EBITDA**, and reaches **10x - 15x+ in an institutional roll-up**:
 
 | Metric / Dimension | Low-Valuation Agency (Status Quo) | De-risked Elesium Platform (Post-Phase 7) | Institutional Roll-Up Multiplier |
 | :--- | :--- | :--- | :--- |
 | **Earnings Metric** | SDE (Tax-optimized, founder expenses mixed) | **Normalized EBITDA** (Clean books, market-rate salary) | **Audited Institutional EBITDA** |
-| **Valuation Multiple** | **1.5x – 2.5x SDE** | **4.0x – 5.0x EBITDA** | **10.0x – 15.0x EBITDA** |
+| **Valuation Multiple** | **1.5x - 2.5x SDE** | **4.0x - 5.0x EBITDA** | **10.0x - 15.0x EBITDA** |
 | **Owner Dependency** | Fails Yosemite 30-Day Test (Founder closes & codes)| **Passes Yosemite 90-Day Test** (Automated pipelines) | Complete executive independence |
-| **Revenue Model** | One-off build projects (₹5L–₹10L lumpy cash flow) | **12–24 Month Retainers** (Dedicated Pods ₹4.5L/mo) | Long-term master contracts |
+| **Revenue Model** | One-off build projects (₹5L-₹10L lumpy cash flow) | **12-24 Month Retainers** (Dedicated Pods ₹4.5L/mo) | Long-term master contracts |
 | **Client Concentration** | Single whale client represents > 35% of revenue | **Zero client represents > 15% of revenue** | Highly diversified enterprise client base |
 | **Intellectual Property** | Entangled with client service delivery contracts | **Clean IP Carve-Out** (Proprietary engine in HoldCo) | Sovereign IP with recurring SaaS licensing |
 
@@ -739,7 +739,7 @@ Joe Lau’s core valuation principle is to **never sell the "Goose" (the proprie
 │  • The Client Services Vehicle ("The Egg").                                                     │
 │  • Holds all client master service agreements (MSAs) and retainer contracts.                   │
 │  • Delivers engineering services utilizing licensed software from HoldCo.                       │
-│  • Sold to Private Equity / Acquirers at 4.5x–5.0x EBITDA without sacrificing founder software. │
+│  • Sold to Private Equity / Acquirers at 4.5x-5.0x EBITDA without sacrificing founder software. │
 └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -818,9 +818,9 @@ Neural search engines (Perplexity, ChatGPT Search, Claude Artifacts, Google AI O
 ### 9.2 GSC Pattern Detection & Striking-Distance Expansion (`automation/gsc_query_expander.py`)
 Torches 90% of bloated SEO SaaS tools by relying on Google Search Console regex filters:
 - **High-Intent Persona Regex:** `^(i am|you are|we need|looking for|cost of|pricing for|how to automate|best ai agency)`
-- **Striking-Distance Query Triage:** Queries in Positions 4.0 – 20.0 with Impressions $\ge 100$:
-  - Positions 4–10: Injected as explicit H2 headings with 45-word bold Answer Capsules.
-  - Positions 11–20: Enriched into `keywords_queue.json` for dedicated 2,000-word cluster articles.
+- **Striking-Distance Query Triage:** Queries in Positions 4.0 - 20.0 with Impressions $\ge 100$:
+  - Positions 4-10: Injected as explicit H2 headings with 45-word bold Answer Capsules.
+  - Positions 11-20: Enriched into `keywords_queue.json` for dedicated 2,000-word cluster articles.
 
 ### 9.3 Anti-Thin Programmatic Geo Guardrails (Day 2 Talk 2 Warning)
 Mass-generated AI city pages incur site-wide thin content penalties. To safely scale across Bangalore, Mumbai, Delhi-NCR, Hyderabad, and Pune:
@@ -845,7 +845,7 @@ Mass-generated AI city pages incur site-wide thin content penalties. To safely s
 | **09** | `automation/video_script_generator.py` | Create | Build automated 30s video script generator following Chad Michael 5-segment timeline. | `python3 automation/video_script_generator.py` |
 | **10** | `docs/operations/AGENCY_VALUATION_AND_EXIT_SOP.md` | Modify | Codify Joe Lau 7 value drivers, IP carve-out, and Section 5 Partner Vesting & Phantom Equity. | View markdown integrity |
 | **11** | `automation/web3_publisher.py` | Create | Implement IPFS manifest generator and pinning script for sovereign entity verification. | `python3 automation/web3_publisher.py` |
-| **12** | `automation/orchestrator.py` | Modify | Integrate Phase 1–9 hooks into master automated linear execution chain. | `python3 automation/orchestrator.py` |
+| **12** | `automation/orchestrator.py` | Modify | Integrate Phase 1-9 hooks into master automated linear execution chain. | `python3 automation/orchestrator.py` |
 
 ---
 

@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — CONFIGURATION & THRESHOLDS (MODULE 4/6)
+GSC STRIKING DISTANCE ENGINE - CONFIGURATION & THRESHOLDS (MODULE 4/6)
 =============================================================================
 Classification: Google Search Console (GSC) API v3 Striking Distance Optimization
 Methodology: Brian Kato (SEO Rockstars 2026 Day 2) & Dan Kurtz Compounding AI Loop

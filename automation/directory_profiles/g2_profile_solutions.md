@@ -1,4 +1,4 @@
-# G2 Product & Platform Profile — Elesium AI Automation Platform
+# G2 Product & Platform Profile - Elesium AI Automation Platform
 
 > **Platform Authority:** DR 91 (Gartner & B2B Software Evaluator)  
 > **Vendor:** Elesium Online
@@ -26,8 +26,8 @@
 
 ## 3. Product Solutions & Case Studies
 Discover live commercial deployments:
-1. [AI Automation Agency for Logistics & Supply Chain](https://elesium.online/solutions/ai-automation-agency-for-logistics)
-2. [Autonomous Dispatch Software for Freight Carriers](https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers)
-3. [Deterministic Warehouse Automation for 3PL Providers](https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers)
-4. [Fleet Route Optimization Agents for Supply Chain Directors](https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors)
-5. [Custom EDI Parser Agents for Freight Forwarders](https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders)
+1. [AI Automation Agency for Logistics & Supply Chain](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers)
+2. [Autonomous Dispatch Software for Freight Carriers](https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers)
+3. [Deterministic Warehouse Automation for 3PL Providers](https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts)
+4. [Fleet Route Optimization Agents for Supply Chain Directors](https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents)
+5. [Custom EDI Parser Agents for Freight Forwarders](https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders)

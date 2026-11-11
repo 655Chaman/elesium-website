@@ -18,7 +18,7 @@ post_129 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: architecting Multi-Token Prediction (MTP) pipelines, implementing sequential speculative drafting modules, orchestrating dual verification trees, and achieving 2.8x inference decoding throughput on distributed DeepSeek-V3 clusters without perplexity degradation.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: architecting Multi-Token Prediction (MTP) pipelines, implementing sequential speculative drafting modules, orchestrating dual verification trees, and achieving 2.8x inference decoding throughput on distributed DeepSeek-V3 clusters without perplexity degradation.",
     "metaDescription": "Multi-Token Prediction (MTP) technical blueprint: sequential drafting modules, speculative tree verification, 2.8x decode speedup, and DeepSeek-V3 enterprise serving.",
-    "relatedSolutionSlug": "multi-token-prediction-mtp-speculative-drafting-daemons-for-deepseek-clusters",
+    "relatedSolutionSlug": "sovereign-enterprise-speculative-decoding-deployment-advisors-for-defense-ministries",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",

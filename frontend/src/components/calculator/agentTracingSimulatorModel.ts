@@ -106,7 +106,7 @@ export function simulateAgentTracing(inputs: AgentTracingInputs): AgentTracingSi
     annualizedCostUSD: Math.round(syncMonthlyCost * 12),
     meanTimeToResolutionMinutes: 38,
     rootCauseAccuracyPct: 92.0,
-    observabilityVerdict: 'High critical-path latency inflation (+45ms–180ms) and explosive SaaS telemetry bills.'
+    observabilityVerdict: 'High critical-path latency inflation (+45ms-180ms) and explosive SaaS telemetry bills.'
   };
 
   // 3. Elesium Sovereign Async OpenTelemetry Batch Pipeline

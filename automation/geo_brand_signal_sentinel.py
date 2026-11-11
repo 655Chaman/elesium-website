@@ -4,7 +4,7 @@
 GEO MULTI-MODEL BRAND SIGNAL & SENTIMENT SENTINEL (V2026.1)
 =============================================================================
 Classification: Phase 5 (Chris M. Walker GEO Curriculum Compliance)
-Curriculum Source: Session 11 (Tracking Your Progress — BrandSignal.ai Architecture)
+Curriculum Source: Session 11 (Tracking Your Progress - BrandSignal.ai Architecture)
 
 Objectives:
 1. Automated multi-model GEO tracking across OpenAI, Gemini, Claude, Grok, and Perplexity.
@@ -204,7 +204,7 @@ class GeoBrandSignalSentinel:
         report_lines = [
             "# GEO Brand Signal Multi-Model Sentiment & Visibility Report",
             "",
-            "> Architecture: Chris M. Walker GEO Curriculum (Session 11 — BrandSignal.ai Telemetry).",
+            "> Architecture: Chris M. Walker GEO Curriculum (Session 11 - BrandSignal.ai Telemetry).",
             f"> Audited At: {telemetry['timestamp']} | Monitored Brand: {self.brand_name}",
             "",
             "## 1. Executive Multi-Model Visibility Matrix",

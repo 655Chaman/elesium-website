@@ -41,18 +41,8 @@ DESLOP_RULES = [
         re.IGNORECASE
     ),
     # 3. Buzzwords to Grounded Technical Terms
-    (r'\bsovereign enterprise clusters\b', 'private GPU clusters', re.IGNORECASE),
-    (r'\bsovereign infrastructure\b', 'private infrastructure', re.IGNORECASE),
-    (r'\bsovereign clusters\b', 'local GPU clusters', re.IGNORECASE),
-    (r'\bsovereign AI clusters\b', 'on-premise clusters', re.IGNORECASE),
-    (r'\bsovereign private VPC\b', 'dedicated private VPC', re.IGNORECASE),
-    (r'\bsovereign deployments?\b', 'private deployments', re.IGNORECASE),
-    (r'\bsovereign\b', 'private', re.IGNORECASE),
-    (r'\bdeterministic operational workflows\b', 'automated workflows', re.IGNORECASE),
-    (r'\bdeterministic finite state machines?\b', 'state machines', re.IGNORECASE),
-    (r'\bdeterministic state machines?\b', 'state machines', re.IGNORECASE),
-    (r'\bdeterministic models?\b', 'rules engines', re.IGNORECASE),
-    (r'\bdeterministic\b', 'reliable', re.IGNORECASE),
+    # Preserved intentionally: "sovereign" and "deterministic" are canonical
+    # technical/domain terms in Elesium architecture and entity_rules.json.
     (r'\bcatastrophic out-of-memory \(OOM\) faults\b', 'out-of-memory (OOM) errors', re.IGNORECASE),
     (r'\bcatastrophic machine breakdown\b', 'major machine failure', re.IGNORECASE),
     (r'\bcatastrophic\b', 'major', re.IGNORECASE),

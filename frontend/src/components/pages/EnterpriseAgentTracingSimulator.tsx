@@ -159,7 +159,7 @@ Audit performed via https://elesium.online/tools/enterprise-agent-tracing-opente
     },
     {
       q: "How does Elesium's non-blocking RingBuffer batch exporter achieve sub-1.5ms overhead?",
-      a: "Elesium decouples telemetry capture from agent execution. As agents transition between DAG states, spans are emitted directly into a lock-free, zero-copy shared memory RingBuffer in sub-10 microseconds. A dedicated background daemon asynchronously drains the buffer, batches spans, and pushes them to ClickHouse or Jaeger over persistent gRPC channels—completely insulating the agent execution loop from network jitter."
+      a: "Elesium decouples telemetry capture from agent execution. As agents transition between DAG states, spans are emitted directly into a lock-free, zero-copy shared memory RingBuffer in sub-10 microseconds. A dedicated background daemon asynchronously drains the buffer, batches spans, and pushes them to ClickHouse or Jaeger over persistent gRPC channels, completely insulating the agent execution loop from network jitter."
     },
     {
       q: "What is tail-based sampling and how does it cut cloud observability bills by 80%?",

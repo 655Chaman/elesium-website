@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-pr_campaign_tracker.py — Automated PR Outreach, Podcast & Directory Tracker
+pr_campaign_tracker.py - Automated PR Outreach, Podcast & Directory Tracker
 ==========================================================================
 Part of the Elesium Master Agent Operating Architecture.
 Tracks journalist pitches, podcast booking campaigns, and directory disputes.
@@ -233,7 +233,7 @@ def check_followups(db_path: Path = DEFAULT_DB_PATH) -> None:
         status = c["status"]
         print(f"\n{Color.RED}[!] OVERDUE ({elapsed} days since last action, cadence: {cadence} days):{Color.RESET}")
         print(f"    Record ID:   {Color.BOLD}{rec_id}{Color.RESET} ({c['type']})")
-        print(f"    Target:      {outlet} — {target}")
+        print(f"    Target:      {outlet} - {target}")
         print(f"    Topic:       {c['topic']}")
         print(f"    Current:     {STATUS_COLORS.get(status, '')}{status}{Color.RESET}")
         
@@ -311,8 +311,8 @@ def export_report(args, db_path: Path = DEFAULT_DB_PATH) -> None:
             f.write("| ID | Type | Outlet | DA | Status | Date Sent | Topic | Published Link |\n")
             f.write("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n")
             for c in campaigns:
-                link = f"[Link]({c['published_link']})" if c.get("published_link") else "—"
-                f.write(f"| {c['id']} | {c['type']} | {c['outlet']} | {c.get('da', '—')} | **{c['status']}** | {c['date_sent']} | {c['topic']} | {link} |\n")
+                link = f"[Link]({c['published_link']})" if c.get("published_link") else " - "
+                f.write(f"| {c['id']} | {c['type']} | {c['outlet']} | {c.get('da', ' - ')} | **{c['status']}** | {c['date_sent']} | {c['topic']} | {link} |\n")
         print(f"{Color.GREEN}[✓] Exported Markdown report to: {out_file}{Color.RESET}")
 
 def main():

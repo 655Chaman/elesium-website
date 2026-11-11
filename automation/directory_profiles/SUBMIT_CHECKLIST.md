@@ -1,4 +1,4 @@
-# Elesium Directory Profiles — Submission Checklist
+# Elesium Directory Profiles - Submission Checklist
 
 Follow these steps to publish and optimize Elesium's presence on the top three B2B directories.
 

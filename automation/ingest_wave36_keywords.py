@@ -290,7 +290,7 @@ KEYWORDS_WAVE36 = [
     },
     {
         "id": 1662,
-        "keyword": "zero-knowledge stark validity state rollup proof verification telemetry for private enterprise ledgers",
+        "keyword": "zero-knowledge stark validity state rollup proof verification telemetry for sovereign enterprise ledgers",
         "slug": "zero-knowledge-stark-validity-state-rollup-proof-verification-telemetry-for-private-enterprise-ledgers",
         "category": "Solutions",
         "hub_category": "Cybersecurity & Zero-Trust",
@@ -394,7 +394,7 @@ KEYWORDS_WAVE36 = [
     },
     {
         "id": 1670,
-        "keyword": "sub-50ms finality state commitment telemetry for sovereign private multi-agent clusters",
+        "keyword": "sub-50ms finality state commitment telemetry for sovereign multi-agent clusters",
         "slug": "sub-50ms-finality-state-commitment-telemetry-for-sovereign-private-multi-agent-clusters",
         "category": "Solutions",
         "hub_category": "Sovereign AI Infrastructure",

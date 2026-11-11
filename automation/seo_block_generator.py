@@ -1,5 +1,5 @@
 """
-seo_block_generator.py — Step 3 of the Elesium SEO Automation Pipeline
+seo_block_generator.py - Step 3 of the Elesium SEO Automation Pipeline
 
 What it does:
   1. Loads today's top-ranked keywords (scored by Google Trends interest 0-100)
@@ -111,7 +111,7 @@ def mock_keywords() -> dict:
 
 
 # ─────────────────────────────────────────────────────
-# PROMPT ENGINEERING — 2-PHASE KEYWORD-FIRST STRATEGY
+# PROMPT ENGINEERING - 2-PHASE KEYWORD-FIRST STRATEGY
 # ─────────────────────────────────────────────────────
 
 def build_gemini_prompt(keywords: List[Dict], block_label: str, related_posts: List[Dict] = None) -> str:
@@ -141,7 +141,7 @@ def build_gemini_prompt(keywords: List[Dict], block_label: str, related_posts: L
 ---
 
 ## TODAY'S TARGET KEYWORDS ({block_label})
-These keywords are ranked by their Google Trends interest score (0–100).
+These keywords are ranked by their Google Trends interest score (0-100).
 Higher score = more people searching this RIGHT NOW globally.
 
 {kw_block}
@@ -150,12 +150,12 @@ Higher score = more people searching this RIGHT NOW globally.
 
 ## YOUR 2-PHASE WRITING STRATEGY
 
-### PHASE 1 — Keyword anchoring (do this mentally before writing)
+### PHASE 1 - Keyword anchoring (do this mentally before writing)
 Take each keyword above as a standalone anchor. Do NOT stretch it into a phrase yet.
 Just note: these are the exact terms people are typing into Google right now.
-Every keyword on this list should appear at least once in your content — exactly as written.
+Every keyword on this list should appear at least once in your content - exactly as written.
 
-### PHASE 2 — Build tight statements around each anchor
+### PHASE 2 - Build tight statements around each anchor
 For each keyword anchor, write ONE punchy, enterprise-grade sentence that:
   - Contains the keyword verbatim (bold it with **)
   - Adds a sharp insight or commercial implication specific to Elesium's model
@@ -163,20 +163,20 @@ For each keyword anchor, write ONE punchy, enterprise-grade sentence that:
 
 Example transformation:
   Keyword anchor:   "enterprise dealflow"
-  Statement:        "**Enterprise dealflow** doesn't stall because of product — it stalls because introductions arrive too late, too generic, and through the wrong channel."
+  Statement:        "**Enterprise dealflow** doesn't stall because of product - it stalls because introductions arrive too late, too generic, and through the wrong channel."
 
 ---
 
 ## CONTENT REQUIREMENTS
-1. **Word count**: 550–650 words
-2. **Format**: Markdown — one H2 title, two or three H3 subheadings, tight paragraphs
-3. **Keyword density**: Each keyword appears 1–3 times naturally. No keyword stuffing.
+1. **Word count**: 550-650 words
+2. **Format**: Markdown - one H2 title, two or three H3 subheadings, tight paragraphs
+3. **Keyword density**: Each keyword appears 1-3 times naturally. No keyword stuffing.
 4. **H2 title**: Must contain 2+ primary keywords (highest interest scores)
 5. **News-Jacking Opening**: The very first line MUST frame the topic around a "Recent Market Shift" or "Trending Signal" to create immediate urgency, much like a news article.
 6. **Query Fan-Out**: Explicitly branch out and cover 3-4 highly specific, niche sub-topics (e.g., specific manufacturing verticals, specific job titles like "VP Operations") to capture long-tail AI fan-out queries.
 7. **Meta description**: 150-char HTML comment at the very top
 8. **CTA**: Final paragraph ends with a subtle invitation to partner with Elesium
-9. **No .md formatting artifacts** — clean markdown only
+9. **No .md formatting artifacts** - clean markdown only
 
 ## CORE-EEAT CONSTRAINTS (AARON MARKETING SKILLS)
 You must apply these exact constraints to sound like a true industry leader:
@@ -194,12 +194,12 @@ You must apply these exact constraints to sound like a true industry leader:
 12. Entity Precision: Use full names for people and organizations.
 13. Practical Tools: Add a template, checklist, or actionable framework.
 
-## PILLAR 4 — E-E-A-T: USE THESE REAL ELESIUM OUTCOMES AS PROOF POINTS
+## PILLAR 4 - E-E-A-T: USE THESE REAL ELESIUM OUTCOMES AS PROOF POINTS
 Google rewards content with genuine first-hand experience. Weave at least 2 of these into your content naturally:
 
 {chr(10).join(f'  - {cs}' for cs in getattr(config, 'ELESIUM_CASE_STUDIES', []))}
 
-{f'''## PILLAR 1 — INTERNAL LINKING
+{f'''## PILLAR 1 - INTERNAL LINKING
 Naturally reference and link to these related Elesium intelligence posts at least once in the body:
 {chr(10).join(f'  - [{rp["title"]}](/signals/{rp["slug"]})' for rp in (related_posts or [])[:2])}
 Use markdown link format exactly as shown above.
@@ -221,7 +221,7 @@ AI search engines (ChatGPT, Perplexity, Gemini) heavily prioritize structured, a
 - NEVER start a sentence with "However," or "Furthermore,"
 - NEVER write a generic sentence that could apply to any B2B company
 - EVERY sentence must be specific to Elesium's model: signal-driven outbound, buyer matching, verified dealflow, manufacturing verticals
-- Year references must say {config.CURRENT_YEAR} — never {config.CURRENT_YEAR - 1}
+- Year references must say {config.CURRENT_YEAR} - never {config.CURRENT_YEAR - 1}
 
 ## OUTPUT FORMAT
 Return ONLY the markdown. Start with the HTML meta comment. Nothing else.
@@ -231,7 +231,7 @@ Return ONLY the markdown. Start with the HTML meta comment. Nothing else.
 
 ## [H2 Title with primary keywords]
 
-[Opening paragraph — bold claim, no filler]
+[Opening paragraph - bold claim, no filler]
 
 ### [H3 subheading]
 [2-3 tight paragraphs using Phase 2 statements, embedding dense statistics]
@@ -241,7 +241,7 @@ Return ONLY the markdown. Start with the HTML meta comment. Nothing else.
 ### [H3 subheading]
 [2-3 tight paragraphs]
 
-### [H3 subheading — optional]
+### [H3 subheading - optional]
 [1-2 paragraphs]
 
 [Closing CTA paragraph]
@@ -404,38 +404,38 @@ def generate_mock_content(keywords: List[Dict], block_label: str) -> str:
     """Generate placeholder content for test mode."""
     kws = [item["keyword"] for item in keywords[:5]]
     today = datetime.now().strftime("%Y-%m-%d")
-    return f"""<!-- META: Elesium engineers signal-driven dealflow for manufacturers and enterprise B2B firms — verified buyers, shortened cycles, measurable outcomes. -->
+    return f"""<!-- META: Elesium engineers signal-driven dealflow for manufacturers and enterprise B2B firms - verified buyers, shortened cycles, measurable outcomes. -->
 
 ## {kws[0].title()}: The Elesium Model for Enterprise Dealflow in {config.CURRENT_YEAR}
 
-Cold outreach is not a pipeline strategy. It is a volume strategy — and volume without signal is noise.
+Cold outreach is not a pipeline strategy. It is a volume strategy - and volume without signal is noise.
 
 ### {kws[1].title()} at Enterprise Scale
 
 **{kws[0].title()}** does not fail because the product is wrong. It fails because the introduction arrives before the buyer has a mandate, a budget, or a decision window. Elesium intercepts that window.
 
-**{kws[1].title()}** through Elesium means one thing: a verified, high-context connection between a capable seller and an operationally ready buyer — not a lead, not a list, not a sequence. A conversation that closes.
+**{kws[1].title()}** through Elesium means one thing: a verified, high-context connection between a capable seller and an operationally ready buyer - not a lead, not a list, not a sequence. A conversation that closes.
 
 ### {kws[2].title()} for Manufacturers and OEMs
 
-**{kws[2].title()}** in industrial verticals operates on a different clock. Procurement cycles are long, gatekeepers are real, and the buyers that matter — plant managers, VP Operations, procurement directors — do not respond to LinkedIn outreach.
+**{kws[2].title()}** in industrial verticals operates on a different clock. Procurement cycles are long, gatekeepers are real, and the buyers that matter - plant managers, VP Operations, procurement directors - do not respond to LinkedIn outreach.
 
 Elesium's **{kws[3].title()}** maps active capability gaps to verified buyers. The result is an introduction that arrives as a solution, not a pitch.
 
 ### The Commercial Outcome
 
-**{kws[4].title()}** closes 60–75% faster when the introduction is engineered rather than discovered. That is the Elesium proposition.
+**{kws[4].title()}** closes 60-75% faster when the introduction is engineered rather than discovered. That is the Elesium proposition.
 
 Apply to access Elesium's verified buyer network and receive your first qualified introduction within 14 days.
 
 ---
-*Generated by Elesium SEO Automation — {today}*
+*Generated by Elesium SEO Automation - {today}*
 """
 
 
 
 # ─────────────────────────────────────────────────────
-# PILLAR 1 — INTERNAL LINKING: Find related posts
+# PILLAR 1 - INTERNAL LINKING: Find related posts
 # ─────────────────────────────────────────────────────
 
 def find_related_posts(current_keywords: List[str], ts_path: Path, limit: int = 2) -> List[Dict]:
@@ -468,7 +468,7 @@ def find_related_posts(current_keywords: List[str], ts_path: Path, limit: int = 
 
 
 # ─────────────────────────────────────────────────────
-# PILLAR 2 — JSON-LD SCHEMA BUILDER
+# PILLAR 2 - JSON-LD SCHEMA BUILDER
 # ─────────────────────────────────────────────────────
 
 def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, faq_items: list, keywords: List[Dict]) -> str:
@@ -519,7 +519,7 @@ def build_json_ld_schema(title: str, meta_desc: str, slug: str, date_str: str, f
 
 
 # ─────────────────────────────────────────────────────
-# PILLAR 5 — FAQ GENERATOR (People Also Ask capture)
+# PILLAR 5 - FAQ GENERATOR (People Also Ask capture)
 # ─────────────────────────────────────────────────────
 
 def generate_faq(keywords: List[Dict], test_mode: bool = False) -> List[Dict]:
@@ -533,15 +533,15 @@ def generate_faq(keywords: List[Dict], test_mode: bool = False) -> List[Dict]:
         return [
             {
                 "q": f"What is {kws[0]} and how does Elesium use it?",
-                "a": f"Elesium uses {kws[0]} to connect verified, high-intent buyers with enterprise sellers — eliminating cold outreach and replacing it with signal-driven introductions that arrive at the right moment."
+                "a": f"Elesium uses {kws[0]} to connect verified, high-intent buyers with enterprise sellers - eliminating cold outreach and replacing it with signal-driven introductions that arrive at the right moment."
             },
             {
                 "q": f"How does {kws[1] if len(kws) > 1 else kws[0]} differ from traditional B2B lead generation?",
-                "a": f"Traditional B2B lead generation relies on volume and cold contact. {kws[1] if len(kws) > 1 else kws[0]} through Elesium is precision-targeted — every introduction is backed by verified budget authority and an active purchase mandate."
+                "a": f"Traditional B2B lead generation relies on volume and cold contact. {kws[1] if len(kws) > 1 else kws[0]} through Elesium is precision-targeted - every introduction is backed by verified budget authority and an active purchase mandate."
             },
             {
                 "q": "How quickly can Elesium deliver a qualified buyer introduction?",
-                "a": "Elesium clients typically receive their first verified buyer introduction within 7–14 days of onboarding. The platform's signal-driven matching ensures only operationally ready buyers are introduced."
+                "a": "Elesium clients typically receive their first verified buyer introduction within 7-14 days of onboarding. The platform's signal-driven matching ensures only operationally ready buyers are introduced."
             }
         ]
 
@@ -568,7 +568,7 @@ Return ONLY a valid JSON array. No preamble. No explanation. Example format:
     return []
 
 # ─────────────────────────────────────────────────────
-# PILLAR 6 — GUEST POST / BACKLINK ASSET GENERATOR
+# PILLAR 6 - GUEST POST / BACKLINK ASSET GENERATOR
 # ─────────────────────────────────────────────────────
 
 def generate_guest_post(keywords: List[Dict], date_str: str, test_mode: bool = False) -> Optional[str]:
@@ -589,7 +589,7 @@ Write a 1,000-1,200 word thought leadership article about: {kw_list}
 
 RULES:
 - Reference Elesium ONCE naturally as "Elesium (elesium.online), a B2B buyer-matching platform" in a sentence that makes sense contextually.
-- Year references must say {config.CURRENT_YEAR} — never {config.CURRENT_YEAR - 1}.
+- Year references must say {config.CURRENT_YEAR} - never {config.CURRENT_YEAR - 1}.
 - Include a compelling headline, 3-4 subheadings (plain text), and short paragraphs.
 - Return the full article in clean plain text format ONLY. DO NOT use any Markdown formatting (no asterisks for bolding, no hashtags for headers). Do NOT wrap in JSON."""
 
@@ -599,7 +599,7 @@ RULES:
         
         guest_path = config.OUTPUT_KEYWORD_LOGS_DIR / f"guest_post_{date_str}.txt"
         with open(guest_path, "w", encoding="utf-8") as f:
-            f.write(f"GUEST POST — {date_str}\nTarget: Forbes / SalesHacker / LinkedIn\n\n")
+            f.write(f"GUEST POST - {date_str}\nTarget: Forbes / SalesHacker / LinkedIn\n\n")
             f.write(content)
         log(f"  ✅ Guest post saved locally to: {guest_path}")
         
@@ -640,7 +640,7 @@ def analyze_keyword_density(content: str, keywords: List[Dict]) -> dict:
 
 
 # ─────────────────────────────────────────────────────
-# BLOGPOSTS.TS INJECTION — DIRECT AUTO-INJECT
+# BLOGPOSTS.TS INJECTION - DIRECT AUTO-INJECT
 # ─────────────────────────────────────────────────────
 
 def build_blog_sections(content: str) -> str:
@@ -736,7 +736,7 @@ def build_ts_entry(
 
     # Extract H2 title
     title_match = re.search(r'^##\s+(.+)$', content, re.MULTILINE)
-    title = title_match.group(1) if title_match else f"B2B Market Intelligence — {date_str}"
+    title = title_match.group(1) if title_match else f"B2B Market Intelligence - {date_str}"
     # Strip ** from title for clean rendering
     title = title.replace("**", "")
 
@@ -774,7 +774,7 @@ def build_ts_entry(
     safe_title = title.replace("'", "\\'")
     safe_meta = meta_desc.replace("'", "\\'")
     safe_excerpt = excerpt.replace("'", "\\'")
-    safe_intro = f"Elesium market intelligence — {config.CURRENT_YEAR}. Keywords: {top_kws}.".replace("'", "\\'")
+    safe_intro = f"Elesium market intelligence - {config.CURRENT_YEAR}. Keywords: {top_kws}.".replace("'", "\\'")
 
     # Build FAQ TS string
     faq_str = ""
@@ -861,7 +861,7 @@ def git_push(website_root: Path, date_str: str, block_label: str) -> bool:
         stderr = e.stderr.decode() if e.stderr else ""
         stdout = e.stdout.decode() if e.stdout else ""
         log(f"  Deploy failed: {stderr.strip() or stdout.strip()}", "WARN")
-        log("  (Changes are injected locally — push manually if needed)", "WARN")
+        log("  (Changes are injected locally - push manually if needed)", "WARN")
         return False
 
 
@@ -882,7 +882,7 @@ def run(
     Returns True if both blocks succeeded.
     """
     log("=" * 60)
-    log("STEP 3 — SEO Block Generator (2-Block Mode)")
+    log("STEP 3 - SEO Block Generator (2-Block Mode)")
     log("=" * 60)
 
     today = date or datetime.now().strftime("%Y-%m-%d")
@@ -913,7 +913,7 @@ def run(
 
     for block_label, block_kws, block_id in blocks:
         if not block_kws:
-            log(f"  Skipping {block_label} — no keywords available.", "WARN")
+            log(f"  Skipping {block_label} - no keywords available.", "WARN")
             continue
 
         log(f"\n{'─' * 60}")
@@ -961,14 +961,14 @@ def run(
             f"{density['total_words']} words")
         if verbose:
             for kw_item in density["found"][:5]:
-                log(f"    ✓ '{kw_item['keyword']}' — {kw_item['count']}× ({kw_item['density_pct']}%)")
+                log(f"    ✓ '{kw_item['keyword']}' - {kw_item['count']}× ({kw_item['density_pct']}%)")
 
         # ── Build JSON-LD schema & TS entry ──
         next_id = get_next_blog_id(config.BLOGPOSTS_TS_PATH)
         meta_match = re.search(r'<!--\s*META:\s*(.*?)\s*-->', content)
         meta_desc_for_schema = meta_match.group(1) if meta_match else ""
         title_match_s = re.search(r'^##\s+(.+)$', content, re.MULTILINE)
-        title_for_schema = title_match_s.group(1) if title_match_s else f"B2B Market Intelligence — {today}"
+        title_for_schema = title_match_s.group(1) if title_match_s else f"B2B Market Intelligence - {today}"
         
         slug_for_schema = re.sub(r'[^a-z0-9]+', '-', title_for_schema.lower()).strip('-')[:55]
         if block_id == 2:
@@ -1039,7 +1039,7 @@ def run(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Elesium SEO Block Generator — 2-Block Mode")
+    parser = argparse.ArgumentParser(description="Elesium SEO Block Generator - 2-Block Mode")
     parser.add_argument("--date", type=str, help="Target date (YYYY-MM-DD)")
     parser.add_argument("--test", action="store_true", help="Mock mode, no API call")
     parser.add_argument("--no-push", action="store_true", help="Skip git push after injection")

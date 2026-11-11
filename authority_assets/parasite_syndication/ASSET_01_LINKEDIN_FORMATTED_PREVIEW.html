@@ -117,7 +117,7 @@
 
   <p>With the gazetting of the <strong>Digital Personal Data Protection (DPDP) Act, 2023 (Act No. 22 of 2023)</strong> and the imminent operationalization of the <strong>Data Protection Board of India (DPBI)</strong>, Indian enterprises operating as Data Fiduciaries face statutory penalties reaching <strong>₹250 Crore (INR 2.5 Billion)</strong> per violation under Schedule Section 33.</p>
 
-  <p>The central problem is structural: <strong>The default architectural pattern of modern enterprise AI—transmitting proprietary enterprise data and customer personal identifiers across public WAN connections to multi-tenant, cloud-hosted Large Language Model (LLM) APIs located in foreign availability zones—is intrinsically non-compliant with Indian data protection law.</strong></p>
+  <p>The central problem is structural: <strong>The default architectural pattern of modern enterprise AI - transmitting proprietary enterprise data and customer personal identifiers across public WAN connections to multi-tenant, cloud-hosted Large Language Model (LLM) APIs located in foreign availability zones - is intrinsically non-compliant with Indian data protection law.</strong></p>
 
   <p>When an Indian customer interacts with an enterprise support agent, and that agent queries an external API (such as OpenAI, Anthropic, or US-hosted cloud hyperscalers), their Permanent Account Number (PAN), Aadhaar token, phone number, and account balance traverse foreign network boundaries. Furthermore, that data is indexed into vector databases where it persists indefinitely, violating statutory retention limits.</p>
 
@@ -130,32 +130,32 @@
   <p>The DPDP Act 2023 establishes four non-negotiable statutory pillars that directly conflict with traditional cloud-hosted AI architectures:</p>
 
   <div class="card">
-    <div class="card-title">⚖️ Statutory Risk Vector 1: Section 8(5) — Data Retention & Right to Erasure</div>
+    <div class="card-title">⚖️ Statutory Risk Vector 1: Section 8(5) - Data Retention & Right to Erasure</div>
     <p><strong>Cloud AI Failure Mode:</strong> Vector embeddings and raw prompt logs persist indefinitely in multi-tenant cloud storage caches with zero cryptographic audit receipts of deletion.<br>
-    <strong>Statutory Exposure:</strong> Class 1 Violation — Up to ₹250 Crore penalty for failure to purge personal data upon purpose completion.</p>
+    <strong>Statutory Exposure:</strong> Class 1 Violation - Up to ₹250 Crore penalty for failure to purge personal data upon purpose completion.</p>
   </div>
 
   <div class="card">
-    <div class="card-title">🌐 Statutory Risk Vector 2: Section 16 — Cross-Border Data Residency</div>
+    <div class="card-title">🌐 Statutory Risk Vector 2: Section 16 - Cross-Border Data Residency</div>
     <p><strong>Cloud AI Failure Mode:</strong> Inbound prompt payloads traverse public WAN connections to US/EU availability zones outside sovereign Indian borders without statutory notices.<br>
     <strong>Statutory Exposure:</strong> Immediate regulatory injunction and suspension of automated processing licenses.</p>
   </div>
 
   <div class="card">
-    <div class="card-title">🛡️ Statutory Risk Vector 3: Section 8(4) — Duty of Reasonable Security Safeguards</div>
+    <div class="card-title">🛡️ Statutory Risk Vector 3: Section 8(4) - Duty of Reasonable Security Safeguards</div>
     <p><strong>Cloud AI Failure Mode:</strong> Plaintext citizen identifiers (Aadhaar, PAN, phone numbers) exposed to third-party multi-tenant model training loops and foreign sub-processors.<br>
     <strong>Statutory Exposure:</strong> Regulatory audit sanctions under the RBI IT Governance Master Direction and CERT-In Section 70B directives.</p>
   </div>
 
   <div class="card">
-    <div class="card-title">📋 Statutory Risk Vector 4: Section 6 — Purpose Limitation & Notice</div>
+    <div class="card-title">📋 Statutory Risk Vector 4: Section 6 - Purpose Limitation & Notice</div>
     <p><strong>Cloud AI Failure Mode:</strong> Consent collected for banking or logistics workflows does not legally authorize transmission of customer telemetry to external commercial AI providers.<br>
     <strong>Statutory Exposure:</strong> Civil damages and prosecution of corporate executive officers.</p>
   </div>
 
   <h3>1.1 Section 16: Cross-Border Data Residency and Sovereign Enclaves</h3>
 
-  <p>Section 16 of the DPDP Act grants the Central Government the authority to restrict the transfer of personal data outside Indian territory. For regulated sectors—most notably banking, financial services, and insurance (BFSI) governed by the Reserve Bank of India (RBI)—data localization has long been a mandatory requirement.</p>
+  <p>Section 16 of the DPDP Act grants the Central Government the authority to restrict the transfer of personal data outside Indian territory. For regulated sectors - most notably banking, financial services, and insurance (BFSI) governed by the Reserve Bank of India (RBI) - data localization has long been a mandatory requirement.</p>
 
   <p>When an enterprise routes prompts through a public cloud LLM API:</p>
   <ul>
@@ -164,7 +164,7 @@
     <li>The enterprise forfeits physical control over the underlying silicon where intermediate activations and key-value (KV) caches reside in DRAM.</li>
   </ul>
 
-  <p><strong>The Sovereign Imperative:</strong> Enterprise AI inference must occur strictly on hardware located physically within Indian borders—either within on-premise Tier-IV data centers (such as CtrlS, STT GDC, or Yotta) or within isolated, private VPC subnets in AWS Mumbai (<code>ap-south-1</code>) with all outbound internet gateways severed.</p>
+  <p><strong>The Sovereign Imperative:</strong> Enterprise AI inference must occur strictly on hardware located physically within Indian borders - either within on-premise Tier-IV data centers (such as CtrlS, STT GDC, or Yotta) or within isolated, private VPC subnets in AWS Mumbai (<code>ap-south-1</code>) with all outbound internet gateways severed.</p>
 
   <h3>1.2 Section 8(5): The Algorithmic Dilemma of the Right to Erasure</h3>
 
@@ -258,8 +258,8 @@ class SovereignPIISanitizer:
   <div class="card">
     <div class="card-title">🔄 The 3-Tier Rolling Partition Lifecycle</div>
     <ul>
-      <li><strong>Active Partition (Hours 0–24):</strong> Ingesting real-time agent embeddings; active local HNSW index; AES-256-GCM Session Key in memory.</li>
-      <li><strong>Retained Partition (Hours 24–48):</strong> Read-only historical retrieval queries; active local HNSW index; AES-256-GCM Session Key in KMS vault.</li>
+      <li><strong>Active Partition (Hours 0-24):</strong> Ingesting real-time agent embeddings; active local HNSW index; AES-256-GCM Session Key in memory.</li>
+      <li><strong>Retained Partition (Hours 24-48):</strong> Read-only historical retrieval queries; active local HNSW index; AES-256-GCM Session Key in KMS vault.</li>
       <li><strong>Expired Partition (Hour 48+): HARD STATUTORY CUTOFF.</strong> Automated execution of <code>DROP TABLE ... CASCADE</code>. O(1) filesystem unlink; physical SSD block wipe; unassailable cryptographic receipt generated.</li>
     </ul>
   </div>
@@ -314,7 +314,7 @@ class SovereignPIISanitizer:
 
   <h2>6. Conclusion: Turning Compliance into a Competitive Moat</h2>
 
-  <p>The Digital Personal Data Protection Act of 2023 is not an obstacle to enterprise innovation—it is a clear mandate for engineering excellence. Organizations that continue to pipe sensitive corporate data into multi-tenant public APIs expose themselves to catastrophic financial penalties, reputational damage, and loss of customer trust.</p>
+  <p>The Digital Personal Data Protection Act of 2023 is not an obstacle to enterprise innovation - it is a clear mandate for engineering excellence. Organizations that continue to pipe sensitive corporate data into multi-tenant public APIs expose themselves to catastrophic financial penalties, reputational damage, and loss of customer trust.</p>
 
   <p>Conversely, enterprises that invest in <strong>Sovereign Enterprise AI</strong> achieve total data ownership, sub-100ms operational latency, and complete immunity from regulatory enforcement.</p>
 

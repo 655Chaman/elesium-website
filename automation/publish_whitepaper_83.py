@@ -61,8 +61,8 @@ SECTIONS_83 = [
         "type": "paragraph",
         "value": (
             "India's retail commerce ecosystem represents a $1.1 trillion market undergoing rapid structural transformation. "
-            "Enterprise retail operators—spanning FMCG conglomerates, multi-brand apparel chains, and quick-commerce dark store "
-            "networks across Mumbai MMR, Delhi NCR, Bangalore, Pune, and Hyderabad—navigate extreme operational complexity. "
+            "Enterprise retail operators - spanning FMCG conglomerates, multi-brand apparel chains, and quick-commerce dark store "
+            "networks across Mumbai MMR, Delhi NCR, Bangalore, Pune, and Hyderabad - navigate extreme operational complexity. "
             "A standard multi-store retail enterprise manages between 35,000 and 180,000 active Stock Keeping Units (SKUs) distributed "
             "across mother regional distribution centers (RDCs), mother warehouses, physical flagship stores, and micro-fulfillment dark stores. "
             "Concurrently, inventory feeds must be published dynamically across proprietary mobile applications, third-party marketplaces "
@@ -364,21 +364,21 @@ SECTIONS_83 = [
     {
         "type": "paragraph",
         "value": (
-            "Phase 1: Inventory Discovery & ERP Telemetry Ingestion (Days 1–30). Connect non-intrusive CDC listeners to existing SAP S/4HANA and WMS "
+            "Phase 1: Inventory Discovery & ERP Telemetry Ingestion (Days 1-30). Connect non-intrusive CDC listeners to existing SAP S/4HANA and WMS "
             "databases. Model catalog hierarchies in Pydantic v2 schemas and benchmark phantom inventory discrepancies across a pilot cluster of 20 stores."
         )
     },
     {
         "type": "paragraph",
         "value": (
-            "Phase 2: ONDC Beckn Gateway & Shadow Allocation Engine (Days 31–60). Deploy the Beckn protocol proxy and parallel LangGraph stock "
+            "Phase 2: ONDC Beckn Gateway & Shadow Allocation Engine (Days 31-60). Deploy the Beckn protocol proxy and parallel LangGraph stock "
             "allocation engine. Benchmark ATP accuracy and dynamic pricing elasticity against historical sales across 50,000 live catalog queries."
         )
     },
     {
         "type": "paragraph",
         "value": (
-            "Phase 3: Omnichannel Production Cutover & Vernacular Activation (Days 61–90). Connect dark store fulfillment centers to the autonomous "
+            "Phase 3: Omnichannel Production Cutover & Vernacular Activation (Days 61-90). Connect dark store fulfillment centers to the autonomous "
             "reservation ledger, activate vernacular voice search on customer-facing apps, and cut over to real-time ONDC order processing."
         )
     },

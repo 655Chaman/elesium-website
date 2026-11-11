@@ -1,7 +1,7 @@
 import json
 
 wave67_keywords = [
-    # Cluster 1: FP8 GEMM Tensor Core Acceleration & Hopper/Blackwell Compute (IDs 3266–3282, 17 items)
+    # Cluster 1: FP8 GEMM Tensor Core Acceleration & Hopper/Blackwell Compute (IDs 3266-3282, 17 items)
     {
         "id": 3266,
         "keyword": "fp8 gemm tensor core acceleration controllers for enterprise vllm inference clusters",
@@ -224,7 +224,7 @@ wave67_keywords = [
         "primary_cta": "Deploy Zero-Underflow FP8 Bias Adjusters"
     },
 
-    # Cluster 2: OCP MXFP8 / MXFP4 Microscaling & Block Dynamic Range (IDs 3283–3299, 17 items)
+    # Cluster 2: OCP MXFP8 / MXFP4 Microscaling & Block Dynamic Range (IDs 3283-3299, 17 items)
     {
         "id": 3283,
         "keyword": "ocp mxfp8 microscaling format parsers for distributed agent cluster swarms",
@@ -447,7 +447,7 @@ wave67_keywords = [
         "primary_cta": "Schedule Enterprise Microscaling Architecture Audit"
     },
 
-    # Cluster 3: Enterprise Sub-1% Perplexity Quantization & vLLM Serving (IDs 3300–3315, 16 items)
+    # Cluster 3: Enterprise Sub-1% Perplexity Quantization & vLLM Serving (IDs 3300-3315, 16 items)
     {
         "id": 3300,
         "keyword": "sub 1 percent perplexity degradation quantization auditors for enterprise ai",

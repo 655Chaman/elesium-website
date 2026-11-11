@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — CONFIGURATION & THRESHOLDS
+TED KUBAITIS CORA SERP CORRELATION ENGINE - CONFIGURATION & THRESHOLDS
 =============================================================================
 Classification: Statistical Factor Correlation & Visibility-First Interaction Depth
 Methodology: Ted Kubaitis (SEO Rockstars 2026 Day 1 - Cora 20,000+ Ranking Factors)

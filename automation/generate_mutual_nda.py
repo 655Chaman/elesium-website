@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-GENERATE MUTUAL NDA (MODULE 13) — INSTITUTIONAL B2B CONFIDENTIALITY ENCLAVE
+GENERATE MUTUAL NDA (MODULE 13) - INSTITUTIONAL B2B CONFIDENTIALITY ENCLAVE
 ================================================================================
 Classification: Enterprise Legal Automation & Mutual Non-Disclosure Generator
 Governing Law: Indian Contract Act, 1872 (Exclusive Jurisdiction of Bengaluru)

@@ -7,9 +7,9 @@ Specifically designed for Phase 2 Semantic Synthesis, Framework Distillation
 and High-Leverage Asset Generation deliverables:
   - Gate 1: Asset Parity & Reciprocal Linking (20 pts)
   - Gate 2: Volume Depth & Word Count Minimums (20 pts)
-  - Gate 3: Anti-AI Slop Purity (25 pts) — 0 Banned AI words from 105+ list on non-quoted analytical copy
-  - Gate 4: Cadence & Humanization Metrics (15 pts) — Burstiness sigma >= 8.0 & Adjective density <= 7.0%
-  - Gate 5: Transcript Fidelity & Lineage Matrix (20 pts) — Direct grounding in Phase 1 modules & 0 hallucinations
+  - Gate 3: Anti-AI Slop Purity (25 pts) - 0 Banned AI words from 105+ list on non-quoted analytical copy
+  - Gate 4: Cadence & Humanization Metrics (15 pts) - Burstiness sigma >= 8.0 & Adjective density <= 7.0%
+  - Gate 5: Transcript Fidelity & Lineage Matrix (20 pts) - Direct grounding in Phase 1 modules & 0 hallucinations
 
 Usage:
   python3 automation/evaluate_phase2_deliverables.py --file "SEO SOURCE/phase2/GROWTH_SCALE_EXECUTIVE_BIBLE.md"

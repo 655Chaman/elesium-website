@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — NON-GENERIC CONTENT SYNTHESIZER
+GSC STRIKING DISTANCE ENGINE - NON-GENERIC CONTENT SYNTHESIZER
 =============================================================================
 Classification: Technical Answer Capsule & Schema Synthesis Engine
 Methodology: Edward Sturm Moz Sweet Spot (42-48 Words) & Brian Kato RE2 Grounding
@@ -35,7 +35,7 @@ def calibrate_answer_capsule(
 ) -> Tuple[str, int]:
     """
     Synthesizes an exact-match semantic Answer Capsule strictly calibrated
-    to 42–48 words (Edward Sturm Moz On-Page Sweet Spot).
+    to 42-48 words (Edward Sturm Moz On-Page Sweet Spot).
     Injects deep engineering specifics (C++/CUDA, DPDP, hardware specs, p99 latency)
     guaranteeing complete grammatical closure without word slicing.
     """

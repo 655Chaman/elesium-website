@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — DEFICIT CALCULATOR
+TED KUBAITIS CORA SERP CORRELATION ENGINE - DEFICIT CALCULATOR
 =============================================================================
 Classification: Multi-Factor Correlation & Deficit Vector Calculator
 Methodology: Ted Kubaitis (Cora Deficit Tuning & Factor Prescription Engine)

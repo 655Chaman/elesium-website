@@ -92,7 +92,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
   const faqs = [
     {
       q: 'Why does uncheckpointed agent execution cause catastrophic token waste in enterprise DAGs?',
-      a: 'When multi-agent workflows execute strictly in volatile memory, any downstream exception—such as an API rate-limit, invalid JSON formatting, tool timeout, or human-in-the-loop rejection—aborts the entire run. To retry, the orchestrator must re-run every preceding node from scratch, re-querying vector databases and re-billing thousands of prompt and completion tokens. At enterprise volume (350k+ runs/mo with an 8.5% intervention rate), uncheckpointed execution leaks tens of thousands of dollars monthly in redundant LLM spend and stalls operations for 15-45 seconds per failure.'
+      a: 'When multi-agent workflows execute strictly in volatile memory, any downstream exception (such as an API rate-limit, invalid JSON formatting, tool timeout, or human-in-the-loop rejection) aborts the entire run. To retry, the orchestrator must re-run every preceding node from scratch, re-querying vector databases and re-billing thousands of prompt and completion tokens. At enterprise volume (350k+ runs/mo with an 8.5% intervention rate), uncheckpointed execution leaks tens of thousands of dollars monthly in redundant LLM spend and stalls operations for 15-45 seconds per failure.'
     },
     {
       q: 'How does synchronous relational checkpointing degrade agent critical-path latency?',

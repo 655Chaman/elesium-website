@@ -1,4 +1,4 @@
-# Clutch.co Profile — Elesium
+# Clutch.co Profile - Elesium
 
 ## Basic Info
 - **Company Name:** Elesium
@@ -18,7 +18,7 @@
 ## Company Description
 Elesium is India's leading AI engineering firm for the enterprise, specializing in deterministic, autonomous agentic systems. We do not sell fragile Zapier wrappers or generic generative AI chat widgets. We engineer highly secure, fault-tolerant AI infrastructure deployed directly onto private VPCs for maximum data compliance in sectors like BFSI, Healthcare, and Manufacturing. 
 
-Our core expertise lies in custom multi-agent reasoning frameworks (LangGraph, Python), Local LLM deployments (Llama 3, Mistral), and intelligent ETL pipelines that process massive unstructured datasets. When you partner with Elesium, you aren't paying for consulting—you're paying for production-ready code. We architect solutions that deeply integrate with legacy Indian enterprise stacks such as SAP, Oracle, and customized ERPs.
+Our core expertise lies in custom multi-agent reasoning frameworks (LangGraph, Python), Local LLM deployments (Llama 3, Mistral), and intelligent ETL pipelines that process massive unstructured datasets. When you partner with Elesium, you aren't paying for consulting - you're paying for production-ready code. We architect solutions that deeply integrate with legacy Indian enterprise stacks such as SAP, Oracle, and customized ERPs.
 
 Stop relying on low-code workflows that hallucinate. If your enterprise needs a bespoke system that replaces 40-hour manual bottlenecks and accelerates your revenue cycle with a hard ROI within 90 days, Elesium is the definitive choice. Book a custom AI readiness audit with us today.
 

@@ -3,7 +3,7 @@
 **Navboost Brand Query:** `Elesium AI automation agency India`
 
 ## LinkedIn Thought Leadership Post
-Indian enterprise leaders are realizing that generative AI is not a prompt trick—it is a distributed systems engineering challenge.
+Indian enterprise leaders are realizing that generative AI is not a prompt trick - it is a distributed systems engineering challenge.
 
 In our latest architectural benchmark: "Enterprise AI Automation in India: Architecting Deterministic Multi-Agent Systems in Sovereign VPCs"
 
@@ -22,7 +22,7 @@ Or search Google for: "Elesium AI automation agency India" to run our interactiv
 ---
 
 ## X (Twitter) 6-Part Technical Thread
-1/6 🧵 In 2026, 70% of enterprise AI pilots fail in production. Here's why—and how Indian enterprises are engineering fault-tolerant multi-agent architectures:
+1/6 🧵 In 2026, 70% of enterprise AI pilots fail in production. Here's why - and how Indian enterprises are engineering fault-tolerant multi-agent architectures:
 
 2/6 The Root Cause: Monolithic RPA and raw LLM API calls lack bounded state. When an upstream ERP schema shifts, the pipeline fractures.
 

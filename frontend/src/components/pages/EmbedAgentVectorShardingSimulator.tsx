@@ -156,7 +156,7 @@ export default function EmbedAgentVectorShardingSimulator() {
           <div>
             <div className="flex justify-between text-slate-300 mb-1">
               <span>Total Vectors: <strong className="text-white font-mono">{totalVectorsMillions}M</strong></span>
-              <span className="text-slate-500">1M – 500M</span>
+              <span className="text-slate-500">1M - 500M</span>
             </div>
             <input
               type="range"
@@ -173,7 +173,7 @@ export default function EmbedAgentVectorShardingSimulator() {
             <div>
               <div className="flex justify-between text-slate-300 mb-1">
                 <span>Cluster Shards: <strong className="text-white font-mono">{shardCount}</strong></span>
-                <span className="text-slate-500">1 – 64</span>
+                <span className="text-slate-500">1 - 64</span>
               </div>
               <input
                 type="range"
@@ -189,7 +189,7 @@ export default function EmbedAgentVectorShardingSimulator() {
             <div>
               <div className="flex justify-between text-slate-300 mb-1">
                 <span>efSearch: <strong className="text-white font-mono">{hnswEfSearch}</strong></span>
-                <span className="text-slate-500">16 – 256</span>
+                <span className="text-slate-500">16 - 256</span>
               </div>
               <input
                 type="range"

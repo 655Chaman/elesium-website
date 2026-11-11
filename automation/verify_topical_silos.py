@@ -100,6 +100,14 @@ def check_gate2_and_3_solution_leaves() -> Tuple[bool, List[str]]:
     
     solutions_list = load_solutions_via_node()
     solutions_by_slug = {s["slug"]: s for s in solutions_list}
+    curated_path = BASE_DIR / "automation" / "curated_enterprise_solutions.json"
+    if curated_path.exists():
+        try:
+            curated_list = json.loads(curated_path.read_text(encoding="utf-8"))
+            for s in curated_list:
+                solutions_by_slug[s["slug"]] = s
+        except Exception:
+            pass
     print(f"Loaded {len(solutions_list)} ground-truth solution records for semantic verification.")
 
     # Audit direct .html files in dist/solutions (excluding index.html and category/)

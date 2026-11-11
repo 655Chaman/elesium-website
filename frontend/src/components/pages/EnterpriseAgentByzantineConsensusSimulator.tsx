@@ -291,7 +291,7 @@ ${results.toleranceConditionSatisfied
                 onChange={e => setAggregationAlgorithm(e.target.value as any)}
                 className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
               >
-                <option value="fedavg">Federated Averaging / FedAvg (Naive Mean — Zero Tolerance f=0)</option>
+                <option value="fedavg">Federated Averaging / FedAvg (Naive Mean - Zero Tolerance f=0)</option>
                 <option value="coordinate_median">Coordinate-wise Median (Resilient to f &lt; N/2)</option>
                 <option value="trimmed_mean">Trimmed Mean (β-trimmed Coordinate Rejection)</option>
                 <option value="multi_krum">Multi-Krum (Euclidean Neighborhood Pre-selection)</option>

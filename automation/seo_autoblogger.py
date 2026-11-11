@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-seo_autoblogger.py — Elesium Institutional-Grade Autonomous Publishing Engine
+seo_autoblogger.py - Elesium Institutional-Grade Autonomous Publishing Engine
 =============================================================================
 Zero-failure, multi-model editorial pipeline with Pre-Publish Quality Gate:
   Stage 1: Outline & Information Gain Architect
   Stage 2: Technical Subject Matter Writer (2,200+ words, Python LangGraph, Tables)
-  Stage 3: Brutal Editor & GEO Capsule Sculptor (Strict 40–50 word Answer Capsules)
+  Stage 3: Brutal Editor & GEO Capsule Sculptor (Strict 40-50 word Answer Capsules)
   Stage 4: Automated Pre-Publish Quality Gate Audit & Self-Healing Remediation Loop
   Stage 5: Dynamic Internal Link Sculpting & Fountain Hills 1:1 Schema Parity
   Stage 6: Static TypeScript & DOM Parity Injection into blogPosts.ts
@@ -502,7 +502,7 @@ def programmatic_scrub_and_trim(post_data: dict) -> dict:
         if isinstance(sec, dict) and isinstance(sec.get("value"), str):
             sec["value"] = clean_text(sec["value"])
 
-    # 2. Enforce GEO Answer Capsules under EVERY H2 (40–50 words)
+    # 2. Enforce GEO Answer Capsules under EVERY H2 (40-50 words)
     new_sections = []
     i = 0
     while i < len(sections):
@@ -601,10 +601,10 @@ def programmatic_scrub_and_trim(post_data: dict) -> dict:
         table_block = (
             "| Deployment Architecture | Investment Range (INR) | Latency SLA | Compliance Standard | 90-Day ROI Guarantee |\n"
             "|---|---|---|---|---|\n"
-            "| Single-Process Pilot Sprint | ₹1,50,000 – ₹3,50,000 | < 1.9s | ISO 27001 Staging | Full Milestone Refund |\n"
-            "| Enterprise Multi-Agent Triad | ₹6,00,000 – ₹15,00,000 | < 1.5s | DPDP Act 2023 Section 8(4) | Verified 3.5x Returns |\n"
+            "| Single-Process Pilot Sprint | ₹1,50,000 - ₹3,50,000 | < 1.9s | ISO 27001 Staging | Full Milestone Refund |\n"
+            "| Enterprise Multi-Agent Triad | ₹6,00,000 - ₹15,00,000 | < 1.5s | DPDP Act 2023 Section 8(4) | Verified 3.5x Returns |\n"
             "| Autonomous Engineering Pod | ₹4,50,000 / month | < 1.2s | RBI Master Directions | 1-Hour Incident SLA |\n"
-            "| Legacy IT Outsourcing | ₹25,00,000 – ₹60,00,000 | > 12.0s | Non-Compliant Multi-Tenant | Zero Guarantees |"
+            "| Legacy IT Outsourcing | ₹25,00,000 - ₹60,00,000 | > 12.0s | Non-Compliant Multi-Tenant | Zero Guarantees |"
         )
         insert_safe_block({"type": "paragraph", "value": table_block})
 
@@ -746,7 +746,7 @@ def generate_and_publish_post(keyword: str) -> Optional[dict]:
     draft = agent_technical_writer(keyword, outline, research_data)
 
     # 4. Stage 3: Brutal Editor & GEO Capsule Sculptor
-    print("✂️ Step 4: Formatting JSON & sculpting 40–50 word Answer Capsules...")
+    print("✂️ Step 4: Formatting JSON & sculpting 40-50 word Answer Capsules...")
     post_data = agent_brutal_editor(keyword, draft)
 
     # Deterministic programmatic scrub & structure enforcement

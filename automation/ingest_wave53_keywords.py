@@ -1,7 +1,7 @@
 import json
 
 wave53_keywords = [
-    # Cluster 1: Chunked Prefix Caching & Radix Attention Multi-Tenancy (IDs 2566–2582, 17 items)
+    # Cluster 1: Chunked Prefix Caching & Radix Attention Multi-Tenancy (IDs 2566-2582, 17 items)
     {
         "id": 2566,
         "keyword": "radix attention prefix caching agents for high concurrency multi tenant rag systems",
@@ -224,7 +224,7 @@ wave53_keywords = [
         "primary_cta": "Request Sovereign Cache Telemetry Demo"
     },
 
-    # Cluster 2: Zero-Copy KV-Cache Memory Virtualization & Paged KV Allocations (IDs 2583–2598, 16 items)
+    # Cluster 2: Zero-Copy KV-Cache Memory Virtualization & Paged KV Allocations (IDs 2583-2598, 16 items)
     {
         "id": 2583,
         "keyword": "zero copy kv cache memory virtualization drivers for nvidia hopper and blackwell clusters",
@@ -434,7 +434,7 @@ wave53_keywords = [
         "primary_cta": "Schedule Cold Start KV Recovery Assessment"
     },
 
-    # Cluster 3: Enterprise Shared System Prompts, Agent Fleet Concurrency & Latency SLAs (IDs 2599–2615, 17 items)
+    # Cluster 3: Enterprise Shared System Prompts, Agent Fleet Concurrency & Latency SLAs (IDs 2599-2615, 17 items)
     {
         "id": 2599,
         "keyword": "enterprise shared system prompt kv cache optimizers for high concurrency erp bots",

@@ -73,7 +73,7 @@
     },
     {
       "question": "How does the system justify the reason for transit delay to tax authorities?",
-      "answer": "The engine records automated telematics proof - such as GPS stationary dwell time, highway accident reports, or engine breakdown codes - attaching it as statutory justification."
+      "answer": "The engine records automated telematics proof, such as GPS stationary dwell time, highway accident reports, or engine breakdown codes, attaching it as statutory justification."
     },
     {
       "question": "Can the system operate if the transport truck passes through cellular dead zones?",

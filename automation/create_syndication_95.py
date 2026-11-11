@@ -20,7 +20,7 @@ Enterprise autonomous LLM FlashDecoding accelerates long-context inference by pa
 
 ## 1. The Generation Scalability Wall: Why Long Context Stalls Transformers
 
-In production enterprise agent swarms—such as legal contract auditing, multi-year medical record longitudinal synthesis, and codebase reasoning—autonomous agents ingest massive context windows spanning 32,000 to 128,000 tokens. While FlashAttention-2 and FlashAttention-3 successfully parallelized the prefill phase across batch and sequence dimensions, autoregressive token generation (the decode phase) encounters an architectural barrier.
+In production enterprise agent swarms - such as legal contract auditing, multi-year medical record longitudinal synthesis, and codebase reasoning - autonomous agents ingest massive context windows spanning 32,000 to 128,000 tokens. While FlashAttention-2 and FlashAttention-3 successfully parallelized the prefill phase across batch and sequence dimensions, autoregressive token generation (the decode phase) encounters an architectural barrier.
 
 During decoding, the query sequence length is strictly 1 (the single next token to be emitted), while the key-value (KV) cache spans the entire historical prompt length $N$. In standard multi-head attention (MHA) or grouped-query attention (GQA), parallelization is traditionally mapped across batch size and attention heads. For a batch size of 1 with 8 GQA key-value heads on an NVIDIA H100 (which contains 132 Streaming Multiprocessors), only 8 SMs can be engaged. The remaining 124 SMs sit completely idle while those 8 SMs choke reading 128,000 KV tokens sequentially from High-Bandwidth Memory (HBM).
 
@@ -30,7 +30,7 @@ Consequently, generation latency degrades linearly with prompt length: generatin
 
 FlashDecoding (Dao et al., 2023) breaks past this hardware underutilization by parallelizing along a third dimension: the keys and values sequence length. Rather than assigning an entire 128k KV cache to a single thread block, FlashDecoding partitions the KV sequence into small, independent chunks (typically 256 or 512 tokens each).
 
-For a 64k prompt partitioned into 256-token chunks, the workload yields 256 independent parallel chunks per attention head. Multiplied across 8 heads, this generates 2,048 parallel thread blocks—fully saturating all 132 SMs of an NVIDIA H100 GPU.
+For a 64k prompt partitioned into 256-token chunks, the workload yields 256 independent parallel chunks per attention head. Multiplied across 8 heads, this generates 2,048 parallel thread blocks - fully saturating all 132 SMs of an NVIDIA H100 GPU.
 
 Each SM computes local scaled dot-product attention on its assigned KV chunk in high-speed SRAM, producing two intermediate outputs: a partial attention output vector $O_m$ and the local log-sum-exp normalization factor $L_m = \\log \\sum_j \\exp(S_{{mj}})$.
 

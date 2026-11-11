@@ -1,5 +1,5 @@
 """
-run_pipeline.py — Master Orchestrator for the Elesium SEO Automation Pipeline
+run_pipeline.py - Master Orchestrator for the Elesium SEO Automation Pipeline
 
 This is the SINGLE ENTRY POINT. Running this script executes the full pipeline:
   Step 1 → trend_fetcher.py     (Google Trends worldwide)
@@ -85,13 +85,13 @@ def validate_environment() -> bool:
             __import__(import_name)
             log(f"  ✓ {pip_name}")
         except ImportError:
-            log(f"  ✗ {pip_name} — run: pip install {pip_name}", "ERROR")
+            log(f"  ✗ {pip_name} - run: pip install {pip_name}", "ERROR")
             all_ok = False
 
     # Check Gemini API key
     if not config.GEMINI_API_KEY:
         log(
-            "  ✗ GEMINI_API_KEY not set — add it to your .env file.",
+            "  ✗ GEMINI_API_KEY not set - add it to your .env file.",
             "WARN",
         )
         log("    Get your free key at: https://aistudio.google.com/app/apikey", "WARN")
@@ -103,7 +103,7 @@ def validate_environment() -> bool:
     if config.DATAFORSEO_LOGIN:
         log(f"  ✓ DataForSEO credentials set (volume enrichment enabled)")
     else:
-        log(f"  ℹ DataForSEO not set — volume data will not be available (optional)")
+        log(f"  ℹ DataForSEO not set - volume data will not be available (optional)")
 
     # Check output dirs exist
     log(f"  ✓ SEO blocks dir: {config.OUTPUT_SEO_BLOCKS_DIR}")
@@ -133,7 +133,7 @@ def run_full_pipeline(
     today = date or datetime.now().strftime("%Y-%m-%d")
     start_time = datetime.now()
 
-    separator(f"ELESIUM SEO PIPELINE — {today}")
+    separator(f"ELESIUM SEO PIPELINE - {today}")
     log(f"Mode: {'TEST (mock data)' if test_mode else 'LIVE (real APIs)'}")
     log(f"Gemini model: {config.GEMINI_MODEL}")
     log(f"Output dir: {config.OUTPUT_SEO_BLOCKS_DIR}")
@@ -160,7 +160,7 @@ def run_full_pipeline(
             "status": "success",
             "keywords_found": len(trending_keywords),
         }
-        log(f"\n✅ Step 1 complete — {len(trending_keywords)} trending keywords found.")
+        log(f"\n✅ Step 1 complete - {len(trending_keywords)} trending keywords found.")
     except SystemExit:
         raise
     except Exception as e:
@@ -188,7 +188,7 @@ def run_full_pipeline(
         results["output_files"]["keywords"] = str(
             config.OUTPUT_KEYWORD_LOGS_DIR / f"keywords_{today}.json"
         )
-        log(f"\n✅ Step 2 complete — {len(final_keywords)} keywords scored and ranked.")
+        log(f"\n✅ Step 2 complete - {len(final_keywords)} keywords scored and ranked.")
     except SystemExit:
         raise
     except Exception as e:
@@ -214,7 +214,7 @@ def run_full_pipeline(
             "status": "success" if success else "partial",
         }
         results["output_files"]["blogpost_ts"] = str(config.BLOGPOSTS_TS_PATH)
-        log(f"\n✅ Step 3 complete — SEO blocks injected into {config.BLOGPOSTS_TS_PATH}")
+        log(f"\n✅ Step 3 complete - SEO blocks injected into {config.BLOGPOSTS_TS_PATH}")
     except SystemExit:
         raise
     except Exception as e:
@@ -308,7 +308,7 @@ def list_generated_blocks() -> None:
             import re
             title_match = re.search(r'^##\s+(.+)$', content, re.MULTILINE)
             title = title_match.group(1)[:55] if title_match else "No title"
-            log(f"  📄 {block_path.name} — {word_count} words")
+            log(f"  📄 {block_path.name} - {word_count} words")
             log(f"     '{title}'")
         except Exception:
             log(f"  📄 {block_path.name}")

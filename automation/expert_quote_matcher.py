@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-expert_quote_matcher.py — Automated Journalist Query Intake Parser & Pitch Generator
+expert_quote_matcher.py - Automated Journalist Query Intake Parser & Pitch Generator
 ====================================================================================
 Framework: Edward Sturm Complete Masterclass (Modules 11 & 12) & SEO Rockstars
 Target: Elesium Online (https://elesium.online)
@@ -385,14 +385,14 @@ class ExpertQuoteMatcher:
         primary_anchor = f"{self.credentials['solutions_hub']}/{target_slug}"
         secondary_anchor = self.credentials["signals_hub"]
 
-        subject = f"Quote: {query.topic} — {self.credentials['name']}, {self.credentials['title']}"
+        subject = f"Quote: {query.topic} - {self.credentials['name']}, {self.credentials['title']}"
 
         full_body = (
             f"**Subject:** {subject}\n\n"
             f"Hi {query.journalist_name},\n\n"
             f"Here is a concise, data-backed perspective on {query.topic} for {query.outlet}:\n\n"
             f'"{raw_quote}"\n\n'
-            f"— **{self.credentials['name']}**  \n"
+            f" - **{self.credentials['name']}**  \n"
             f"**Title:** {self.credentials['title']} at [{self.credentials['company']}]({primary_anchor})  \n"
             f"**Credentials & Authority Proof:**  \n"
             f"- **Bio:** {self.credentials['bio_short']}  \n"

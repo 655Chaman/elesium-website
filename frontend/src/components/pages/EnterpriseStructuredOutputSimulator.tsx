@@ -167,7 +167,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
     },
     {
       q: "How does self-hosted constrained vLLM compare to OpenAI or Claude Function Calling?",
-      a: "Commercial APIs provide proprietary server-side function calling, but charge premium frontier token prices ($2.50 to $15.00 per 1M tokens) and introduce vendor lock-in with unpredictable latency spikes. Running open-weights models (like Llama 3.3 70B or Qwen 2.5 72B) on sovereign private vLLM clusters with XGrammar delivers 100% deterministic schema adherence at $0.35 to $0.85 per 1M tokens—reducing enterprise structured extraction costs by up to 85%."
+      a: "Commercial APIs provide proprietary server-side function calling, but charge premium frontier token prices ($2.50 to $15.00 per 1M tokens) and introduce vendor lock-in with unpredictable latency spikes. Running open-weights models (like Llama 3.3 70B or Qwen 2.5 72B) on sovereign private vLLM clusters with XGrammar delivers 100% deterministic schema adherence at $0.35 to $0.85 per 1M tokens, reducing enterprise structured extraction costs by up to 85%."
     }
   ];
 

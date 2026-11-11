@@ -1,7 +1,7 @@
 # Hacker News Show HN Submission Package
 
 ## Submission Details
-* **Title:** Show HN: Sovereign AI Benchmarks – 121ms TTFT on 8x H100 SXM5 with vLLM FP8
+* **Title:** Show HN: Sovereign AI Benchmarks - 121ms TTFT on 8x H100 SXM5 with vLLM FP8
 * **URL:** https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks
 * **Target Category:** Show HN
 * **Author / Submitter Handle:** chaman_shah / elesium
@@ -21,10 +21,10 @@ Research writeup & interactive charts: https://elesium.online/signals
 Enterprise LLM deployments face two major infrastructure bottlenecks:
 
 1. The Multi-Tenant Cloud Latency Penalty:
-Public cloud endpoints (Azure OpenAI, AWS Bedrock) exhibit unpredictable Time-to-First-Token (TTFT), regularly exceeding 800ms–1,200ms due to public WAN transit, TLS negotiation, multi-tenant scheduling queues, and lack of prompt-chunking isolation. For real-time conversational agents, anything over 250ms is perceived as an awkward pause.
+Public cloud endpoints (Azure OpenAI, AWS Bedrock) exhibit unpredictable Time-to-First-Token (TTFT), regularly exceeding 800ms-1,200ms due to public WAN transit, TLS negotiation, multi-tenant scheduling queues, and lack of prompt-chunking isolation. For real-time conversational agents, anything over 250ms is perceived as an awkward pause.
 
 2. The KV-Cache Fragmentation Trap:
-Standard PyTorch contiguous memory allocation pre-reserves static tensor buffers for maximum context windows (e.g., 8,192 tokens). In production workloads where queries average 1,000–2,000 tokens, 65% to 82% of allocated VRAM sits completely idle as internal fragmentation. As concurrent streams scale, this naive strategy triggers catastrophic CUDA Out-Of-Memory (OOM) crashes at concurrency 44.
+Standard PyTorch contiguous memory allocation pre-reserves static tensor buffers for maximum context windows (e.g., 8,192 tokens). In production workloads where queries average 1,000-2,000 tokens, 65% to 82% of allocated VRAM sits completely idle as internal fragmentation. As concurrent streams scale, this naive strategy triggers catastrophic CUDA Out-Of-Memory (OOM) crashes at concurrency 44.
 
 ### What We Did
 

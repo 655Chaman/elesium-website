@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-quality_gate.py — Elesium Institutional-Grade Pre-Publish Automated Quality Gate
+quality_gate.py - Elesium Institutional-Grade Pre-Publish Automated Quality Gate
 ================================================================================
 Implements the 4 Research Specialist Disciplines for Zero-Failure Publishing:
   1. Penalty Avoidance: Regex scan for banned AI clichés, burstiness variance & n-gram repetition.
   2. Information Gain Verification: Code blocks, comparative tables, empirical statistics & standards.
-  3. GEO Answer Capsules: Strict 40–50 word count verification directly beneath every H2.
+  3. GEO Answer Capsules: Strict 40-50 word count verification directly beneath every H2.
   4. Dynamic Internal Link Sculptor & Graph Distribution: Semantic linking to Money Pages & clusters.
   5. Fountain Hills 1:1 Schema Parity: Character-exact JSON-LD BlogPosting + FAQPage schema.
 """
@@ -85,7 +85,7 @@ class QualityGateReport:
         lines = [
             f"=== QUALITY GATE REPORT: {status_emoji} (Score: {self.total_score}/100) ===",
             f"• Word Count: {self.word_count} words",
-            f"• Answer Capsules: {self.capsules_passing_word_count}/{self.answer_capsules_count} compliant (40–50 words)",
+            f"• Answer Capsules: {self.capsules_passing_word_count}/{self.answer_capsules_count} compliant (40-50 words)",
             f"• Information Gain: {self.code_blocks_count} Code Blocks, {self.tables_count} Tables, {self.empirical_metrics_count} Metrics, {self.regulatory_citations_count} Standard Citations",
             f"• Internal Link Graph: {self.internal_links_count} Contextual Links (Money Page Linked: {self.money_page_linked})",
             f"• Schema Parity: {'Verified 1:1' if self.schema_parity_verified else 'Missing/Unverified'}",
@@ -208,13 +208,13 @@ def audit_penalty_avoidance(post_data: Dict[str, Any]) -> List[QualityGateViolat
 
 
 # ---------------------------------------------------------------------------
-# GATE 2: GEO ANSWER CAPSULE STRICT VALIDATOR (40–50 WORDS)
+# GATE 2: GEO ANSWER CAPSULE STRICT VALIDATOR (40-50 WORDS)
 # ---------------------------------------------------------------------------
 
 def audit_answer_capsules(post_data: Dict[str, Any]) -> Tuple[List[QualityGateViolation], int, int]:
     """
     Scans every H2 heading to ensure it is immediately followed by a bolded Answer Capsule.
-    Validates exact word count: Target is 40–50 words (strict tolerance 38–52 words).
+    Validates exact word count: Target is 40-50 words (strict tolerance 38-52 words).
     """
     violations = []
     sections = post_data.get("sections", [])
@@ -267,10 +267,10 @@ def audit_answer_capsules(post_data: Dict[str, Any]) -> Tuple[List[QualityGateVi
                 gate_name="Gate 2: GEO Answer Capsules",
                 severity="CRITICAL",
                 rule_id="CAPSULE_WORD_COUNT_VIOLATION",
-                message=f"Answer Capsule beneath '{h2_title}' has {word_count} words. Must be strictly 40–50 words (tolerated 38–52).",
+                message=f"Answer Capsule beneath '{h2_title}' has {word_count} words. Must be strictly 40-50 words (tolerated 38-52).",
                 location=f"sections[{idx+1}]",
                 snippet=f"({word_count} words) {clean_text[:120]}...",
-                suggested_fix=f"Trim or expand Answer Capsule to exactly 42–48 words. Current count is {word_count} words."
+                suggested_fix=f"Trim or expand Answer Capsule to exactly 42-48 words. Current count is {word_count} words."
             ))
         else:
             compliant_capsules += 1
@@ -467,7 +467,7 @@ def sculpt_internal_links(post_data: Dict[str, Any], current_slug: str) -> Tuple
     """
     Analyzes post content and dynamically injects:
       1. Exactly 1 contextual money page link (/ai-automation-agency-india)
-      2. 2–3 contextual links to related pillar blog posts (/signals/<slug>)
+      2. 2-3 contextual links to related pillar blog posts (/signals/<slug>)
       3. Populates internalLinks array with connected slugs.
     """
     violations = []
@@ -658,7 +658,7 @@ def run_pre_publish_quality_gate(post_data: Dict[str, Any], slug: str) -> Tuple[
     """
     Executes the comprehensive pre-publish quality gate suite across all 5 disciplines:
       1. Penalty Avoidance
-      2. GEO Answer Capsules (40–50 words)
+      2. GEO Answer Capsules (40-50 words)
       3. Information Gain Checklist
       4. Dynamic Link Sculpting
       5. Fountain Hills Schema Parity

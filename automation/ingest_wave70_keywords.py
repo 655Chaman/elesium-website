@@ -5,7 +5,7 @@ from pathlib import Path
 QUEUE_PATH = Path("automation/compact_keywords_queue.json")
 
 wave70_keywords = [
-    # Cluster 1: Dynamic Multi-Candidate Speculative Decoding Trees & Medusa/Eagle-2 Verification Heads (IDs 3416–3432, 17 items)
+    # Cluster 1: Dynamic Multi-Candidate Speculative Decoding Trees & Medusa/Eagle-2 Verification Heads (IDs 3416-3432, 17 items)
     {
         "id": 3416,
         "keyword": "dynamic tree-based speculative decoding orchestrators for enterprise llm clusters",
@@ -228,7 +228,7 @@ wave70_keywords = [
         "primary_cta": "Deploy Edge Speculative Accelerators"
     },
 
-    # Cluster 2: GPU Warp Divergence Elimination & Cross-Node Speculative Branch Pruning (IDs 3433–3448, 16 items)
+    # Cluster 2: GPU Warp Divergence Elimination & Cross-Node Speculative Branch Pruning (IDs 3433-3448, 16 items)
     {
         "id": 3433,
         "keyword": "gpu warp divergence elimination controllers for tree-based speculative decoding",
@@ -438,7 +438,7 @@ wave70_keywords = [
         "primary_cta": "Commission Speculative FinOps Audit"
     },
 
-    # Cluster 3: Sub-8ms Token Latency & Heterogeneous Speculative Draft Pod Orchestration (IDs 3449–3465, 17 items)
+    # Cluster 3: Sub-8ms Token Latency & Heterogeneous Speculative Draft Pod Orchestration (IDs 3449-3465, 17 items)
     {
         "id": 3449,
         "keyword": "sub-8ms token latency speculative decoding architects for conversational voice ai",

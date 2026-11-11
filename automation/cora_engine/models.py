@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — DATA MODELS
+TED KUBAITIS CORA SERP CORRELATION ENGINE - DATA MODELS
 =============================================================================
 """
 

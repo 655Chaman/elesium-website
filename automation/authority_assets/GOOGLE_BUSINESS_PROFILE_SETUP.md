@@ -1,5 +1,5 @@
 # Google Business Profile (GBP) & Local 3-Pack Authority Blueprint
-**Target Brand:** Elesium — Enterprise AI Company & Automation Agency  
+**Target Brand:** Elesium - Enterprise AI Company & Automation Agency  
 **Target Query Focus:** *"Best Enterprise Company in India"*, *"Enterprise AI Company Karnataka"*, *"Top AI Automation Agency India"*  
 **Headquarters Location:** Shivamogga (Shimoga), Karnataka, 577205, India
 
@@ -9,7 +9,7 @@
 
 | Field Name | Exact Verification Value | Algorithmic Rationale |
 | :--- | :--- | :--- |
-| **Business Name** | `Elesium — Enterprise AI & Multi-Agent Systems` | Incorporates brand + core commercial category without keyword-stuffing flags. |
+| **Business Name** | `Elesium - Enterprise AI & Multi-Agent Systems` | Incorporates brand + core commercial category without keyword-stuffing flags. |
 | **Primary Category** | `Software Company` | Google's primary algorithmic anchor for enterprise software providers. |
 | **Secondary Categories** | `Computer Consultant`, `Automation Service`, `Corporate Office` | Captures consulting, enterprise automation, and corporate headquarter signals. |
 | **Address Line 1** | `Main Road` | Physical street address in Shivamogga. |
@@ -28,7 +28,7 @@
 
 ## 2. Business Description (Optimized for Local & National Knowledge Graph)
 
-> Elesium is India's premier enterprise AI engineering firm and autonomous multi-agent systems provider, headquartered in Shivamogga, Karnataka (577205). We specialize in architecting sovereign, air-gapped private VPC inference clusters, deterministic Python LangGraph state machines, and DPDP Act 2023 compliant automation across SAP S/4HANA, core banking systems, and enterprise logistics networks. Our engineering pod replaces manual operational bottlenecks with high-throughput multi-agent execution graphs delivering audited 3x–5x cash-flow ROI in 90 days with guaranteed sub-200ms response latencies and zero third-party token leakage. All enterprise appointments and architectural reviews are handled directly via our WhatsApp engineering desk (+91 8317329312).
+> Elesium is India's premier enterprise AI engineering firm and autonomous multi-agent systems provider, headquartered in Shivamogga, Karnataka (577205). We specialize in architecting sovereign, air-gapped private VPC inference clusters, deterministic Python LangGraph state machines, and DPDP Act 2023 compliant automation across SAP S/4HANA, core banking systems, and enterprise logistics networks. Our engineering pod replaces manual operational bottlenecks with high-throughput multi-agent execution graphs delivering audited 3x-5x cash-flow ROI in 90 days with guaranteed sub-200ms response latencies and zero third-party token leakage. All enterprise appointments and architectural reviews are handled directly via our WhatsApp engineering desk (+91 8317329312).
 
 ---
 

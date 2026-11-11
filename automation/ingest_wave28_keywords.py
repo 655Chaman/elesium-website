@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Wave 28 Keywords Ingestion (IDs 1,241 to 1,290 - 50 Commercial BOFU Solutions):
-- Cluster 1 (IDs 1,241–1,257, 17 solutions): Epistemic Uncertainty & OOD Calibration in Mission-Critical BFSI & Quantitative Trading
-- Cluster 2 (IDs 1,258–1,274, 17 solutions): Neuromorphic Event-Based Vision & Spiking Neural Network (SNN) Sub-Millisecond Industrial Telemetry
-- Cluster 3 (IDs 1,275–1,290, 16 solutions): Spacecraft Reaction Wheel Micro-Vibration & High-Precision Attitude Control Gyro Telemetry
+- Cluster 1 (IDs 1,241-1,257, 17 solutions): Epistemic Uncertainty & OOD Calibration in Mission-Critical BFSI & Quantitative Trading
+- Cluster 2 (IDs 1,258-1,274, 17 solutions): Neuromorphic Event-Based Vision & Spiking Neural Network (SNN) Sub-Millisecond Industrial Telemetry
+- Cluster 3 (IDs 1,275-1,290, 16 solutions): Spacecraft Reaction Wheel Micro-Vibration & High-Precision Attitude Control Gyro Telemetry
 """
 
 import json
@@ -20,7 +20,7 @@ import re
 
 wave28_items = [
     # ----------------------------------------------------------------------------------
-    # Cluster 1: Epistemic Uncertainty & OOD Calibration in BFSI & Trading (IDs 1,241–1,257, 17 items)
+    # Cluster 1: Epistemic Uncertainty & OOD Calibration in BFSI & Trading (IDs 1,241-1,257, 17 items)
     # ----------------------------------------------------------------------------------
     (
         "dirichlet prior bayesian neural network epistemic uncertainty telemetry for algorithmic trading order execution",
@@ -126,7 +126,7 @@ wave28_items = [
     ),
 
     # ----------------------------------------------------------------------------------
-    # Cluster 2: Neuromorphic Event-Based Vision & SNN Telemetry (IDs 1,258–1,274, 17 items)
+    # Cluster 2: Neuromorphic Event-Based Vision & SNN Telemetry (IDs 1,258-1,274, 17 items)
     # ----------------------------------------------------------------------------------
     (
         "dynamic vision sensor DVS asynchronous micro-second pixel event stream telemetry for high-speed industrial sorting",
@@ -232,7 +232,7 @@ wave28_items = [
     ),
 
     # ----------------------------------------------------------------------------------
-    # Cluster 3: Spacecraft Reaction Wheel & Attitude Gyro Telemetry (IDs 1,275–1,290, 16 items)
+    # Cluster 3: Spacecraft Reaction Wheel & Attitude Gyro Telemetry (IDs 1,275-1,290, 16 items)
     # ----------------------------------------------------------------------------------
     (
         "spacecraft reaction wheel magnetic bearing micro-vibration piezo-electric accelerometer telemetry for optical payload jitter suppression",

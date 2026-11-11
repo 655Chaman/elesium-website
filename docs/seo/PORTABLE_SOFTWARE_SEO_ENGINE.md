@@ -98,7 +98,7 @@ Never ask a client or colleague to "write a review from scratch." Writing is fri
 
    [Company Name] stepped in and architected a custom, deterministic [Software/AI System] deployed directly on our private cloud with zero data retention. Their system automatically processes [Key Data Type] in seconds and flags discrepancies in real time.
 
-   Turnaround time dropped from [X Days] to under [Y Minutes], saving our team dozens of hours monthly. [Founder Name] was exceptional to work with—technically sharp, transparent, and focused on hard ROI. [Company Name] delivered on every promise.
+   Turnaround time dropped from [X Days] to under [Y Minutes], saving our team dozens of hours monthly. [Founder Name] was exceptional to work with - technically sharp, transparent, and focused on hard ROI. [Company Name] delivered on every promise.
    ```
 4. **The LinkedIn Auth Hack:** Ensure they authenticate using their corporate LinkedIn account. Directory QA moderators verify the LinkedIn profile and approve the review within 24 hours.
 
@@ -123,7 +123,7 @@ Google ranks video carousels above organic text results for high-value commercia
 ## Engine 5: The Craig Campbell Parasite Syndication Pipeline
 
 ### The Strategy:
-A young root domain has low Domain Rating (DR 10–20). Ranking for competitive terms takes months. However, platforms like **Dev.to (DR 90)**, **Hashnode (DR 88)**, and **Medium (DR 95)** get indexed by Google in **under 15 minutes** and can rank on Page 1 within 48 hours.
+A young root domain has low Domain Rating (DR 10-20). Ranking for competitive terms takes months. However, platforms like **Dev.to (DR 90)**, **Hashnode (DR 88)**, and **Medium (DR 95)** get indexed by Google in **under 15 minutes** and can rank on Page 1 within 48 hours.
 
 ### The Execution (`automation/link_builder.py`):
 1. **Compile Full-Length Whitepapers (1,500+ Words):**
@@ -141,12 +141,12 @@ A young root domain has low Domain Rating (DR 10–20). Ranking for competitive 
 ## Engine 6: Chris M. Walker's Navboost Behavioral Referral Engine
 
 ### The Science of Navboost:
-Google’s core ranking engine is heavily governed by Navboost—a machine learning system that logs user click patterns from Google Search and Google Chrome.
+Google’s core ranking engine is heavily governed by Navboost - a machine learning system that logs user click patterns from Google Search and Google Chrome.
 * If users search a generic keyword, they bounce between 5 tabs (pogo-sticking = negative signal).
 * If users search a **Brand + Keyword query** (e.g. *"Elesium AI automation agency India"*), click the top result, and **dwell on the page for 2+ minutes**, Google registers an undeniable authority signal.
 
 ### The Navboost Social Funnel:
-1. **Never drop raw outbound links as the primary post link on LinkedIn or X.** (Social algorithms throttle posts with outbound links by 60–80%).
+1. **Never drop raw outbound links as the primary post link on LinkedIn or X.** (Social algorithms throttle posts with outbound links by 60-80%).
 2. **Deliver 90% of the value in the post itself:** High-status technical breakdown, architecture diagram, or unvarnished pricing truth.
 3. **Use the Behavioral Search Call-to-Action:**
    > *"To inspect our live architecture teardown and audited performance logs:*  
@@ -164,7 +164,7 @@ To maintain constant organic freshness without human burnout, deploy an automate
 2. **Agent 2 (The Technical Writer):** Drafts a 1,800+ word deep-dive using real Python/TypeScript code snippets, strict mathematical formulas, and comparative tables.
 3. **Agent 3 (The Brutal GEO Editor):**
    * Eliminates AI slop ("In today's fast-paced digital world...").
-   * Injects **GEO Answer Capsules**: A 40–50 word bolded summary directly under every `<h2>` specifically formatted for Google AI Overviews.
+   * Injects **GEO Answer Capsules**: A 40-50 word bolded summary directly under every `<h2>` specifically formatted for Google AI Overviews.
    * Auto-links primary money page anchors to sculpt PageRank hierarchy.
 
 ---

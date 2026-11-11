@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # How to Choose an AI Automation Agency in India: 7 Non-Negotiables
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/how-to-choose-ai-automation-agency-india). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/how-to-choose-ai-automation-agency-india). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** The 7 non-negotiable criteria Indian enterprises must evaluate when selecting an AI automation agency in 2026, from tech stack depth to ROI accountability.
 
@@ -27,7 +27,7 @@ The Indian enterprise ecosystem has unique constraints regarding legacy systems 
 
 ## **3. Focus on Tangible ROI, Not Just "Innovation"**
 
-AI for the sake of AI is a waste of capital. A reputable agency will map out exact metrics—hours saved, error rates reduced, or revenue cycle acceleration—before writing a line of code.
+AI for the sake of AI is a waste of capital. A reputable agency will map out exact metrics - hours saved, error rates reduced, or revenue cycle acceleration - before writing a line of code.
 
 
 ## **4. Robust Post-Deployment Support**

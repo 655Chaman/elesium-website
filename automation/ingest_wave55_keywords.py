@@ -1,7 +1,7 @@
 import json
 
 wave55_keywords = [
-    # Cluster 1: Sliding-Window Attention & Streaming Agent Runtimes (IDs 2666–2682, 17 items)
+    # Cluster 1: Sliding-Window Attention & Streaming Agent Runtimes (IDs 2666-2682, 17 items)
     {
         "id": 2666,
         "keyword": "sliding window attention streaming agents for high velocity iot telemetry",
@@ -224,7 +224,7 @@ wave55_keywords = [
         "primary_cta": "Schedule Tier 4 Datacenter Sliding Window Review"
     },
 
-    # Cluster 2: Ring KV Eviction & Attention Sink Memory Virtualization (IDs 2683–2698, 16 items)
+    # Cluster 2: Ring KV Eviction & Attention Sink Memory Virtualization (IDs 2683-2698, 16 items)
     {
         "id": 2683,
         "keyword": "circular ring kv buffer eviction modules for infinite streaming large language models",
@@ -434,7 +434,7 @@ wave55_keywords = [
         "primary_cta": "Schedule Tier 4 Datacenter Ring Buffer Blueprint Review"
     },
 
-    # Cluster 3: Enterprise Real-Time Telemetry, IoT Streams & Constant-VRAM SLAs (IDs 2699–2715, 17 items)
+    # Cluster 3: Enterprise Real-Time Telemetry, IoT Streams & Constant-VRAM SLAs (IDs 2699-2715, 17 items)
     {
         "id": 2699,
         "keyword": "constant vram streaming llm inference architectures for smart electric grid sensors",

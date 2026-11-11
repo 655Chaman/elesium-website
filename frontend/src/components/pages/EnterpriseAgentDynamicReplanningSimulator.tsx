@@ -91,7 +91,7 @@ RECOMMENDATION: Replace unconstrained LLM self-reflection with DAG-constrained b
   const faqs = [
     {
       q: 'Why does naive agent self-reflection cause runaway latency and token exhaustion?',
-      a: 'In unconstrained ReAct or Reflexion patterns, when an agent encounters an unexpected tool output or API failure, it prompts the LLM to analyze the error and formulate a new plan. Without deterministic DAG boundaries, the LLM frequently oscillates between conflicting hypotheses, taking 4 to 8 conversational turns to converge—or getting trapped in circular prompt arguments. In enterprise production, this inflates P99 latency past 15 seconds and burns 5x-10x more tokens than nominal execution.'
+      a: 'In unconstrained ReAct or Reflexion patterns, when an agent encounters an unexpected tool output or API failure, it prompts the LLM to analyze the error and formulate a new plan. Without deterministic DAG boundaries, the LLM frequently oscillates between conflicting hypotheses, taking 4 to 8 conversational turns to converge, or getting trapped in circular prompt arguments. In enterprise production, this inflates P99 latency past 15 seconds and burns 5x-10x more tokens than nominal execution.'
     },
     {
       q: 'What is wrong with simple static retry circuit breakers (e.g., abort after 2 tries)?',

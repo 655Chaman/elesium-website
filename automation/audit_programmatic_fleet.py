@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-audit_programmatic_fleet.py — Comprehensive Fleet Architecture & Scale Auditor
+audit_programmatic_fleet.py - Comprehensive Fleet Architecture & Scale Auditor
 
 Audits all 8,254 HTML files in frontend/dist across:
 1. Title, meta description, and canonical integrity (0 missing, 0 malformed, 0 unindexed redirects).

@@ -225,7 +225,7 @@ export default function DownloadFooter() {
                 <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div className="flex flex-col gap-1.5">
                         <span className="text-xs font-semibold tracking-wider text-gray-900 dark:text-white uppercase">
-                            Elesium — India&apos;s Principal Enterprise AI &amp; Multi-Agent Engineering Firm
+                            Elesium: India&apos;s Principal Enterprise AI &amp; Multi-Agent Engineering Firm
                         </span>
                         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
                             Headquartered in Bangalore, Karnataka, India. Engineering sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for Fortune 500, BFSI, and high-growth industrial leaders across India and global markets.
@@ -248,7 +248,7 @@ export default function DownloadFooter() {
 
                 {/* Copyright Line */}
                 <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
-                    <p>© {new Date().getFullYear()} Elesium Systems Pvt. Ltd. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Elesium Digital Systems Private Limited. All rights reserved.</p>
                     <div className="flex items-center gap-4 flex-wrap">
                         <Link to="/authors/chaman-shah/" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
                         <Link to="/ai-automation-agency-india/" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>

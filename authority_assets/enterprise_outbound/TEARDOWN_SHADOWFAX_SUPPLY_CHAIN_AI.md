@@ -5,7 +5,7 @@
 **Classification:** Confidential / C-Suite Engineering Advisory  
 **Target Entity:** Shadowfax Technologies Private Limited  
 **Target Recipients:** Chief Technology Officer (CTO), Head of AI & Machine Learning, VP of Core Logistics Engineering  
-**Issuing Authority:** Elesium Digital Systems (https://elesium.online) — Bangalore, India  
+**Issuing Authority:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
 **Date of Issuance:** November 2026  
 **Operational Scope:** Quick-Commerce Dispatch | Hyperlocal Rider Batching | Vernacular Voice Agent Latency | DPDP Act Sec 8(5)  
 
@@ -34,7 +34,7 @@ To power this complex physical grid, Shadowfax relies on three core AI and autom
 ### The Architectural Crisis: The Public Cloud Latency Wall
 While conversational AI and LLM dispatch copilots promise unprecedented automation, **Shadowfax's reliance on public multi-tenant cloud LLM APIs (OpenAI GPT-4o/mini, Anthropic Claude, Google Gemini via WAN) has hit a hard architectural wall:**
 
-- **The Conversational Voice Paralysis (800ms–1,800ms TTFT):** Human conversational speech breaks down when acoustic turnaround latency exceeds **400ms**. Public cloud LLM APIs exhibit **600ms to 1,200ms Time-To-First-Token (TTFT)** over Indian WAN connections, spiking past **2,500ms during evening dinner and grocery surges (19:00 to 22:00 IST)**. Combined with Automated Speech Recognition (ASR) and Text-to-Speech (TTS), total voice response latency exceeds **1,600ms**, causing awkward dead air, user speech overlap, and high customer call abandonment rates (**>34% failure on doorstep verification calls**).
+- **The Conversational Voice Paralysis (800ms-1,800ms TTFT):** Human conversational speech breaks down when acoustic turnaround latency exceeds **400ms**. Public cloud LLM APIs exhibit **600ms to 1,200ms Time-To-First-Token (TTFT)** over Indian WAN connections, spiking past **2,500ms during evening dinner and grocery surges (19:00 to 22:00 IST)**. Combined with Automated Speech Recognition (ASR) and Text-to-Speech (TTS), total voice response latency exceeds **1,600ms**, causing awkward dead air, user speech overlap, and high customer call abandonment rates (**>34% failure on doorstep verification calls**).
 - **Inference Expense Leakage:** Processing 1.5M daily order dispatches and 350,000 conversational voice verification sessions via public cloud APIs costs Shadowfax upwards of **$180,000 per month (₹1.50 Crore/month)** in variable API tokens, subject to unpredictable USD-INR currency volatility and multi-tenant rate limiting.
 - **State Race Conditions & Hallucinated Dispatches:** Naive linear LLM chains lack deterministic state enforcement, resulting in phantom rider assignments, unhandled edge-case loops, and non-reproducible routing failures.
 
@@ -71,10 +71,10 @@ The physics of real-time voice conversations cannot be cheated. The table below 
 #### Detailed Latency Telemetry Benchmark:
 | Operational Metric | Public Cloud AI API (Azure / OpenAI US-East) | Elesium Sovereign Cluster (AWS `ap-south-1`) | Architectural Advantage |
 | :--- | :--- | :--- | :--- |
-| **Network Egress Roundtrip** | 185ms – 320ms (Public WAN) | 0.4ms – 1.2ms (Private VPC Peering) | **260x Lower Network Overhead** |
+| **Network Egress Roundtrip** | 185ms - 320ms (Public WAN) | 0.4ms - 1.2ms (Private VPC Peering) | **260x Lower Network Overhead** |
 | **P50 Time-To-First-Token (TTFT)**| 640ms | **28.4ms (8B) / 121.2ms (70B)** | **95.6% Latency Reduction** |
 | **P99 Latency (Evening Surge Peak)**| 2,850ms (Severe GPU throttling) | **44.8ms (8B) / 168.0ms (70B)** | **Zero Evening Jitter** |
-| **Inter-Token Latency (ITL)** | 24ms – 45ms per token | **3.8ms per token (Hopper FP8)** | **6.3x Faster Generation** |
+| **Inter-Token Latency (ITL)** | 24ms - 45ms per token | **3.8ms per token (Hopper FP8)** | **6.3x Faster Generation** |
 | **Voice Agent Hangup Rate** | 34.2% (Dead air frustration) | **4.1% (Natural cadence)** | **88.0% Retention Improvement** |
 | **Cost Per Voice Verification Call**| ₹1.45 ($0.0174 USD) | **₹0.18 ($0.0021 USD)** | **87.6% Per-Call Cost Savings** |
 
@@ -85,7 +85,7 @@ The physics of real-time voice conversations cannot be cheated. The table below 
 ### 3.1 Real-Time Dynamic Rider Allocation & Multi-Drop Batching
 In quick-commerce deliveries (10-to-15 minute SLAs for Zepto and Blinkit), order assignment algorithms cannot afford non-deterministic execution. When an order surge occurs at a dark store in Koramangala or Indiranagar:
 - **The Failure Mode:** Standard cloud-based dispatch agents relying on unconstrained function-calling frequently produce invalid JSON, invent non-existent rider IDs, or fail to resolve multi-drop route constraints before the 60-second merchant dispatch timeout expires.
-- **The Consequence:** Delayed dispatch cascades across subsequent orders, triggering merchant SLA penalty clauses (typically ₹25–₹50 per late drop) and frustrating riders who lose optimal trip batching bonuses.
+- **The Consequence:** Delayed dispatch cascades across subsequent orders, triggering merchant SLA penalty clauses (typically ₹25-₹50 per late drop) and frustrating riders who lose optimal trip batching bonuses.
 
 ### 3.2 Doorstep Failed Delivery Attempt (FDA) Fraud Verification
 A major operational leak in Indian e-commerce is the **False "Customer Not Available" Delivery Attempt**, where a delivery partner marks a package as undelivered without visiting the doorstep.
@@ -257,13 +257,13 @@ class SovereignDispatchCoordinator:
 
 | Cost Category | Public Cloud AI (OpenAI / Azure / Twilio) | Elesium Sovereign 8x H100 Enclave | Annual Financial Delta |
 | :--- | :--- | :--- | :--- |
-| **Dispatch Inference (1.5M/day)** | ₹0.18 per API pass ($0.0022 USD) | ₹0.018 (Amortized Hardware) | — |
-| **Voice Verification Calls (350k/day)**| ₹1.45 per completed turn ($0.0174) | ₹0.18 (Local vLLM + Whisper + TTS) | — |
+| **Dispatch Inference (1.5M/day)** | ₹0.18 per API pass ($0.0022 USD) | ₹0.018 (Amortized Hardware) | - |
+| **Voice Verification Calls (350k/day)**| ₹1.45 per completed turn ($0.0174) | ₹0.18 (Local vLLM + Whisper + TTS) | - |
 | **Monthly Variable AI Spend** | ₹1,52,25,000 ($183,000 USD) | ₹48,50,000 ($58,400 USD) | ₹1,03,75,000 / month |
 | **Annualized Inference OPEX** | **₹18.27 Crore ($2.20M USD)** | **₹5.82 Crore ($701k USD)** | **₹12.45 Crore Savings (68.1%)** |
 | **Failed Delivery Verification Loss** | ₹8.60 Crore (Manual call center costs) | ₹1.80 Crore (Automated 210ms voice) | **₹6.80 Crore Savings** |
 | **Quick-Commerce SLA Penalties** | ₹4.10 Crore (Dispatch delay fines) | ₹0.40 Crore (Sub-50ms deterministic) | **₹3.70 Crore Savings** |
-| **Net 1-Year Financial Impact** | — | — | **+₹22.95 Crore Cash Flow** |
+| **Net 1-Year Financial Impact** | - | - | **+₹22.95 Crore Cash Flow** |
 
 ---
 
@@ -275,7 +275,7 @@ Elesium engages with Shadowfax under a phased, non-disruptive implementation mod
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                 90-DAY SHADOWFAX SOVEREIGN IMPLEMENTATION                     │
 ├─────────────────────┬──────────────────────┬─────────────────────────────────┤
-│ PHASE 1: DAYS 1–30  │ PHASE 2: DAYS 31–60  │ PHASE 3: DAYS 61–90             │
+│ PHASE 1: DAYS 1-30  │ PHASE 2: DAYS 31-60  │ PHASE 3: DAYS 61-90             │
 │ Enclave Provision & │ Vernacular Audio &   │ Production Cutover &            │
 │ Model Distillation  │ Shadow Dispatch      │ 68% Cost Reduction Verification │
 ├─────────────────────┼──────────────────────┼─────────────────────────────────┤

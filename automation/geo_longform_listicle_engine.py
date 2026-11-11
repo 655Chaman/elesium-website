@@ -113,7 +113,7 @@ PLATFORMS_DATA = [
         "latency_ttft": "390 ms",
         "throughput": "60.0 tokens/sec/user",
         "compliance": "Indian Data Residency",
-        "verdict": "Affordable hourly GPU compute for startups and model fine-tuning experiments, though shared networking limits mission-critical SLAs. Highly accessible self-service control panel, making it suitable for rapid prototyping before migrating to private sovereign VPCs."
+        "verdict": "Affordable hourly GPU compute for startups and model fine-tuning experiments, though shared networking limits mission-critical SLAs. Highly accessible self-service control panel, making it suitable for rapid prototyping before migrating to sovereign private VPCs."
     },
     {
         "rank": 10,

@@ -1,7 +1,7 @@
 import json
 
 wave57_keywords = [
-    # Cluster 1: Mixture-of-Depths (MoD) Dynamic Compute Allocation & Token Early Exits (IDs 2766–2782, 17 items)
+    # Cluster 1: Mixture-of-Depths (MoD) Dynamic Compute Allocation & Token Early Exits (IDs 2766-2782, 17 items)
     {
         "id": 2766,
         "keyword": "mixture of depths dynamic compute allocators for high concurrency agent swarms",
@@ -224,7 +224,7 @@ wave57_keywords = [
         "primary_cta": "Schedule Scaleup Mixture-of-Depths FinOps Review"
     },
 
-    # Cluster 2: Conditional Capacity Routing & Residual Token Bypass Infrastructure (IDs 2783–2798, 16 items)
+    # Cluster 2: Conditional Capacity Routing & Residual Token Bypass Infrastructure (IDs 2783-2798, 16 items)
     {
         "id": 2783,
         "keyword": "static tensor shape memory allocators for non uniform transformer routing",
@@ -434,7 +434,7 @@ wave57_keywords = [
         "primary_cta": "Schedule Maritime Fleet Token Routing Audit"
     },
 
-    # Cluster 3: Enterprise Static-Shape Hardware Alignment & 50% FLOP Reduction (IDs 2799–2815, 17 items)
+    # Cluster 3: Enterprise Static-Shape Hardware Alignment & 50% FLOP Reduction (IDs 2799-2815, 17 items)
     {
         "id": 2799,
         "keyword": "sovereign mixture of depths deployment blueprints for tier 4 datacenters in mumbai and delhi",

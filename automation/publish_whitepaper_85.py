@@ -31,8 +31,8 @@ WHITEPAPER_85 = {
     "title": TITLE_85,
     "date": "2026-10-20",
     "readTime": "16 min read",
-    "excerpt": "An architectural handbook for Bangalore Chief Technology Officers, Infrastructure VPs, and Principal SRE Leads: implementing deterministic multi-agent incident auto-remediation, sub-second Kubernetes pod self-healing, eBPF telemetry correlation, and private sovereign runbook automation across tech corridors.",
-    "intro": "An architectural handbook for Bangalore Chief Technology Officers, Infrastructure VPs, and Principal SRE Leads: implementing deterministic multi-agent incident auto-remediation, sub-second Kubernetes pod self-healing, eBPF telemetry correlation, and private sovereign runbook automation across tech corridors.",
+    "excerpt": "An architectural handbook for Bangalore Chief Technology Officers, Infrastructure VPs, and Principal SRE Leads: implementing deterministic multi-agent incident auto-remediation, sub-second Kubernetes pod self-healing, eBPF telemetry correlation, and sovereign private runbook automation across tech corridors.",
+    "intro": "An architectural handbook for Bangalore Chief Technology Officers, Infrastructure VPs, and Principal SRE Leads: implementing deterministic multi-agent incident auto-remediation, sub-second Kubernetes pod self-healing, eBPF telemetry correlation, and sovereign private runbook automation across tech corridors.",
     "metaDescription": "Agentic AI solutions for IT ops in Bangalore deploy autonomous site reliability engineering agents, sub-second Kubernetes pod self-healing, and eBPF telemetry across",
     "sections": [
         {
@@ -45,11 +45,11 @@ WHITEPAPER_85 = {
         },
         {
             "type": "paragraph",
-            "value": "Bangalore—anchoring India's technology ecosystem across Whitefield, Electronic City, Bellandur, the Outer Ring Road (ORR) tech corridor, and Koramangala—houses thousands of high-velocity engineering organizations, Global Capability Centers (GCCs), and unicorn tier fintech and SaaS architectures. In these hyper-distributed production environments, modern applications consist of hundreds of interdependent containerized microservices running on Kubernetes clusters across Amazon Web Services (AWS ap-south-1), Microsoft Azure (Central India / South India), and sovereign on-premise OpenStack or VMware clouds."
+            "value": "Bangalore - anchoring India's technology ecosystem across Whitefield, Electronic City, Bellandur, the Outer Ring Road (ORR) tech corridor, and Koramangala - houses thousands of high-velocity engineering organizations, Global Capability Centers (GCCs), and unicorn tier fintech and SaaS architectures. In these hyper-distributed production environments, modern applications consist of hundreds of interdependent containerized microservices running on Kubernetes clusters across Amazon Web Services (AWS ap-south-1), Microsoft Azure (Central India / South India), and sovereign on-premise OpenStack or VMware clouds."
         },
         {
             "type": "paragraph",
-            "value": "As deployment frequencies accelerate to dozens of releases per day, conventional IT Operations (ITOps) and Site Reliability Engineering (SRE) paradigms reach breaking points. A single transient database connection pool saturation or memory leak in a messaging broker can trigger an avalanche of cascading downstream alerts: Prometheus firing 4,000 notifications in Slack, Datadog flagging APM latency anomalies, and PagerDuty waking multiple on-call engineering squads at 3:00 AM. This condition—known as alert fatigue—degrades engineer productivity, increases burnout, and extends Mean Time to Resolution (MTTR) to 45–90 minutes per critical incident."
+            "value": "As deployment frequencies accelerate to dozens of releases per day, conventional IT Operations (ITOps) and Site Reliability Engineering (SRE) paradigms reach breaking points. A single transient database connection pool saturation or memory leak in a messaging broker can trigger an avalanche of cascading downstream alerts: Prometheus firing 4,000 notifications in Slack, Datadog flagging APM latency anomalies, and PagerDuty waking multiple on-call engineering squads at 3:00 AM. This condition - known as alert fatigue - degrades engineer productivity, increases burnout, and extends Mean Time to Resolution (MTTR) to 45-90 minutes per critical incident."
         },
         {
             "type": "paragraph",
@@ -81,14 +81,14 @@ WHITEPAPER_85 = {
         },
         {
             "type": "paragraph",
-            "value": "Incoming OpenTelemetry (OTel) traces, metrics, and structured JSON logs are continuously streamed into a high-throughput in-memory temporal dependency graph. When an anomaly occurs—such as a sudden spike in P99 latency on a gRPC authentication endpoint—the agentic inference engine initiates a three-stage automated investigation:"
+            "value": "Incoming OpenTelemetry (OTel) traces, metrics, and structured JSON logs are continuously streamed into a high-throughput in-memory temporal dependency graph. When an anomaly occurs - such as a sudden spike in P99 latency on a gRPC authentication endpoint - the agentic inference engine initiates a three-stage automated investigation:"
         },
         {
             "type": "list",
             "value": [
                 "Stage 1: Directed Acyclic Graph (DAG) Anomaly Isolation: The agent maps upstream ingress requests through Istio service mesh proxies down to leaf microservices and database connection pools, instantly pruning healthy nodes from the diagnostic search space.",
                 "Stage 2: Deterministic Causal Hypothesis Generation: Rather than querying a generic public LLM, the agent utilizes a local fine-tuned diagnostic model operating on private VPC hardware. It evaluates container memory saturation (OOMKilled events), thread pool deadlocks, TLS handshake timeouts, and noisy-neighbor CPU throttling.",
-                "Stage 3: Runbook Remediation Synthesis & Sandbox Verification: The agent selects the optimal mitigation protocol—such as rolling back a faulty canary deployment, scaling a read-replica pool, or executing an ephemeral circuit-breaker rate limit—and validates the plan against security policies before dispatching commands via Kubernetes API client mTLS."
+                "Stage 3: Runbook Remediation Synthesis & Sandbox Verification: The agent selects the optimal mitigation protocol - such as rolling back a faulty canary deployment, scaling a read-replica pool, or executing an ephemeral circuit-breaker rate limit - and validates the plan against security policies before dispatching commands via Kubernetes API client mTLS."
             ]
         },
         {
@@ -101,7 +101,7 @@ WHITEPAPER_85 = {
         },
         {
             "type": "paragraph",
-            "value": "When a container exhibits progressive memory degradation (creeping toward an Out-Of-Memory termination) or becomes unresponsive to liveness probes, the agentic controller does not wait for a catastrophic crash. Instead, it dynamically modifies Istio `VirtualService` and `DestinationRule` traffic weights, gracefully draining ingress traffic away from the degrading pod. Once active connections reach zero, the agent triggers a rolling restart or thread-dump diagnostic snapshot, spins up a fresh replica, verifies readiness probes, and smoothly rebalances traffic weights—all within 4.8 seconds without dropping a single active customer transaction."
+            "value": "When a container exhibits progressive memory degradation (creeping toward an Out-Of-Memory termination) or becomes unresponsive to liveness probes, the agentic controller does not wait for a catastrophic crash. Instead, it dynamically modifies Istio `VirtualService` and `DestinationRule` traffic weights, gracefully draining ingress traffic away from the degrading pod. Once active connections reach zero, the agent triggers a rolling restart or thread-dump diagnostic snapshot, spins up a fresh replica, verifies readiness probes, and smoothly rebalances traffic weights - all within 4.8 seconds without dropping a single active customer transaction."
         },
         {
             "type": "paragraph",

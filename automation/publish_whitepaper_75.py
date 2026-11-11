@@ -57,8 +57,8 @@ SECTIONS = [
         "type": "paragraph",
         "value": (
             "Deploying [conversational AI agents for e-commerce in India](/ai-automation-agency-india) bridges this linguistic and transactional divide. "
-            "By synthesizing ultra-low-latency automatic speech recognition (ASR), multi-dialect intent extraction, and open protocol commerce architectures—such "
-            "as the government-backed Open Network for Digital Commerce (ONDC)—retail brands can provide high-converting, human-like voice commerce that guides "
+            "By synthesizing ultra-low-latency automatic speech recognition (ASR), multi-dialect intent extraction, and open protocol commerce architectures - such "
+            "as the government-backed Open Network for Digital Commerce (ONDC) - retail brands can provide high-converting, human-like voice commerce that guides "
             "buyers from initial discovery to UPI payment confirmation in under two minutes."
         )
     },

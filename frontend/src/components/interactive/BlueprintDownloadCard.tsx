@@ -58,7 +58,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
         const svgContent = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#050811"/>
-  <text x="60" y="80" fill="#38bdf8" font-family="monospace" font-size="20" font-weight="bold">ELESIUM ONLINE — ENTERPRISE ARCHITECTURE BLUEPRINT</text>
+  <text x="60" y="80" fill="#38bdf8" font-family="monospace" font-size="20" font-weight="bold">ELESIUM ONLINE | ENTERPRISE ARCHITECTURE BLUEPRINT</text>
   <text x="60" y="120" fill="#94a3b8" font-family="sans-serif" font-size="16">Blueprint ID: ${blueprint.id} | ${blueprint.version}</text>
   <text x="60" y="150" fill="#64748b" font-family="sans-serif" font-size="14">Compliance: ${blueprint.compliance}</text>
   
@@ -80,7 +80,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
   <line x1="360" y1="280" x2="440" y2="280" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,6"/>
   <line x1="740" y1="280" x2="820" y2="280" stroke="#10b981" stroke-width="3" stroke-dasharray="6,6"/>
   
-  <text x="60" y="740" fill="#475569" font-family="monospace" font-size="12">Confidential &amp; Proprietary — Elesium Online Institutional Engineering</text>
+  <text x="60" y="740" fill="#475569" font-family="monospace" font-size="12">Confidential &amp; Proprietary | Elesium Online Institutional Engineering</text>
 </svg>`;
 
         const blob = new Blob([svgContent], { type: 'image/svg+xml;charset=utf-8' });

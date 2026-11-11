@@ -1,7 +1,7 @@
 import json
 
 wave56_keywords = [
-    # Cluster 1: Multi-LoRA Dynamic Adapter Switching & Task Multiplexing Runtimes (IDs 2716–2732, 17 items)
+    # Cluster 1: Multi-LoRA Dynamic Adapter Switching & Task Multiplexing Runtimes (IDs 2716-2732, 17 items)
     {
         "id": 2716,
         "keyword": "multi lora dynamic adapter switching routers for multi tenant saas",
@@ -224,7 +224,7 @@ wave56_keywords = [
         "primary_cta": "Schedule Generative AI Multi-LoRA FinOps Review"
     },
 
-    # Cluster 2: Zero-Copy Weight Swapping & Paged Unified Adapter Memory (IDs 2733–2748, 16 items)
+    # Cluster 2: Zero-Copy Weight Swapping & Paged Unified Adapter Memory (IDs 2733-2748, 16 items)
     {
         "id": 2733,
         "keyword": "unified paged gpu memory pools for hundreds of concurrent lora adapters",
@@ -434,7 +434,7 @@ wave56_keywords = [
         "primary_cta": "Audit Fintech Multi-LoRA Memory Bounds"
     },
 
-    # Cluster 3: Enterprise Multi-Tenant Agent Serving & Sovereign VPC Deployment (IDs 2749–2765, 17 items)
+    # Cluster 3: Enterprise Multi-Tenant Agent Serving & Sovereign VPC Deployment (IDs 2749-2765, 17 items)
     {
         "id": 2749,
         "keyword": "sovereign multi lora deployment blueprints for tier 4 datacenters in mumbai and delhi",

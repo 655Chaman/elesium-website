@@ -1,6 +1,6 @@
 # GEO Listicle Hunter: High-Authority Editorial Outreach Pipeline
 
-> Methodology: Chris M. Walker GEO Curriculum (Session 08) — Guest Product Insertion & Link Updates.
+> Methodology: Chris M. Walker GEO Curriculum (Session 08) - Guest Product Insertion & Link Updates.
 
 ## 1. Executive Pipeline Summary
 - **Target Listicle Opportunities Identified:** 5

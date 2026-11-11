@@ -7,10 +7,10 @@
 ## [CONN-2026-881] Pitch for TechCrunch / VentureBeat: AI automation: Why low-code tools break at enterprise scale
 - **Platform:** Connectively
 - **Compliance Score:** 100/100
-- **Primary Deep Anchor:** https://elesium.online/solutions/ai-automation-agency-for-logistics
+- **Primary Deep Anchor:** https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers
 - **Secondary Deep Anchor:** https://elesium.online/signals
 
-**Subject:** Quote: AI automation: Why low-code tools break at enterprise scale — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: AI automation: Why low-code tools break at enterprise scale - Chaman Shah, Principal AI Systems Architect
 
 Hi Sarah Jenkins,
 
@@ -22,8 +22,8 @@ When an enterprise processes 50,000 monthly transactions, even a 2% document for
 
 By replacing brittle wrappers with deterministic Python state machines deployed on private VPCs, our engineering teams consistently achieve an audited 98% error cut and ₹18.4L savings within the first quarter."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/ai-automation-agency-for-logistics)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers)  
 **Credentials & Authority Proof:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing.  
 - **Enterprise Solutions Hub:** https://elesium.online/solutions  
@@ -38,10 +38,10 @@ By replacing brittle wrappers with deterministic Python state machines deployed 
 ## [CONN-2026-912] Pitch for The Economic Times / LiveMint Tech: DPDP Act readiness: Sovereign on-premise AI deployments in India
 - **Platform:** Connectively
 - **Compliance Score:** 100/100
-- **Primary Deep Anchor:** https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
+- **Primary Deep Anchor:** https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos
 - **Secondary Deep Anchor:** https://elesium.online/signals
 
-**Subject:** Quote: DPDP Act readiness: Sovereign on-premise AI deployments in India — Chaman Shah, Principal AI Systems Architect
+**Subject:** Quote: DPDP Act readiness: Sovereign on-premise AI deployments in India - Chaman Shah, Principal AI Systems Architect
 
 Hi Arjun Roy,
 
@@ -53,8 +53,8 @@ Sending customer financial data to offshore LLM endpoints violates sovereign com
 
 Our sovereign VPC deployments in AWS Mumbai keep customer data fully isolated, slashing reconciliation latency to 1.9s while delivering an audited ₹18.4L savings annually."
 
-— **Chaman Shah**  
-**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)  
+- **Chaman Shah**  
+**Title:** Principal AI Systems Architect at [Elesium](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)  
 **Credentials & Authority Proof:**  
 - **Bio:** Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online/solutions), engineering deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing.  
 - **Enterprise Solutions Hub:** https://elesium.online/solutions  

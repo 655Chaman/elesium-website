@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — MATHEMATICAL SCORING & CLUSTERING
+GSC STRIKING DISTANCE ENGINE - MATHEMATICAL SCORING & CLUSTERING
 =============================================================================
 Classification: Striking Distance Analyzer & Opportunity Prioritizer
 Methodology: Brian Kato (SEO Rockstars 2026 Day 2) & Dan Kurtz Compounding Loop

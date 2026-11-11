@@ -1,4 +1,4 @@
-# TEST_INFRA.md — AEO Grounding Probe & Reverse-RAG Injection Test Infrastructure
+# TEST_INFRA.md - AEO Grounding Probe & Reverse-RAG Injection Test Infrastructure
 
 ## 1. Test Philosophy: Opaque-Box & Requirement-Driven
 
@@ -12,7 +12,7 @@ The test suite for the Elesium Answer Engine Optimization (AEO) Citation Groundi
    - Tests assert both the **Baseline (pre-injection)** state (reflecting generic web state with incumbent SI dominance) and the **Post-Injection** state (reflecting dense data-citation grounding, empirical benchmarks, and statutory compliance facts).
 3. **Defense-in-Depth Tiered Architecture**:
    - Testing is divided into four exhaustive tiers:
-     - **Tier 1**: Baseline Feature Coverage (>= 5 test cases per feature for F1–F10)
+     - **Tier 1**: Baseline Feature Coverage (>= 5 test cases per feature for F1 - F10)
      - **Tier 2**: Boundary, Edge & Corner Cases (>= 5 test cases per feature where boundaries exist)
      - **Tier 3**: Cross-Feature Interactions & Multi-Module Integration
      - **Tier 4**: Real-World Enterprise AI Procurement Scenarios (high-ticket buyer audits across CISO, BFSI, and Healthcare governance)
@@ -92,7 +92,7 @@ The test suite for the Elesium Answer Engine Optimization (AEO) Citation Groundi
 - **Scope**:
   - `F1`: Missing API keys in live mode, HTTP 429 rate limit with `Retry-After` header parsing, connection timeout, HTTP 500 error payload, and malformed provider JSON.
   - `F2`: Empty query string in mock, unknown scenario fallback, unknown provider fallback, high-concurrency deterministic hashing collision resistance, and unicode query text.
-  - `F3`: Extreme query length (500+ characters), special characters (e.g. `₹250 Crore`, em-dash `—`, quotes), whitespace-padded fields, duplicate ID validation, and missing optional fields.
+  - `F3`: Extreme query length (500+ characters), special characters (e.g. `₹250 Crore`, em-dash ` - `, quotes), whitespace-padded fields, duplicate ID validation, and missing optional fields.
   - `F4`: Empty text content, overlapping URLs in text, negative brand qualification ("Elesium is not recommended"), subdomains (`subdomain.elesium.online`), and malformed markdown hyperlinks.
   - `F5`: Special XML characters in slug/category, missing category fallback, extreme numeric values in tables, missing statutory section metadata, and single-entity queries.
   - `F6`: Missing target audit marker fallback, pre-existing duplicate section removal/replacement, non-existent slug handling, read-only file permission handling, and whitespace-varied HTML formatting.

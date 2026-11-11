@@ -8,7 +8,7 @@ cover_image: https://elesium.online/og-image.png
 
 # n8n vs LangChain vs Custom Agents: What Indian Enterprises Need in 2026
 
-> *Originally published on [Elesium Online](https://elesium.online/signals/n8n-vs-langchain-vs-custom-agents-india-2026). Author: Elesium Systems Architecture Team, Bangalore, India.*
+> *Originally published on [Elesium Online](https://elesium.online/signals/n8n-vs-langchain-vs-custom-agents-india-2026). Author: Elesium Architecture Team, Bangalore, India.*
 
 **Abstract:** A technical deep-dive into the architectural choices for AI automation in India: comparing n8n, LangChain, and fully custom agentic architectures.
 
@@ -56,7 +56,7 @@ Choosing the wrong framework can cause technical debt, high latency, and vendor 
 | **Execution Topology** | Strictly Linear DAG | Linear Chains + ReAct Tool Calling | **Cyclical Graph with Feedback Loops** |
 | **State Persistence** | In-Memory Webhooks | Session Storage / Redis | **PostgreSQL ACID Checkpoints** |
 | **Failure Recovery** | Restart Entire Flow | Node-level retry | **Zero-Loss Mid-Graph Resume** |
-| **Inference Latency** | 800ms – 2,500ms | 500ms – 1,800ms | **180ms – 420ms (Direct C++/Python)** |
+| **Inference Latency** | 800ms - 2,500ms | 500ms - 1,800ms | **180ms - 420ms (Direct C++/Python)** |
 | **Self-Hosted VPC Readiness** | Docker / K8s Manual | High (Python env) | **Turnkey AWS ap-south-1 Sovereign VPC** |
 | **DPDP Act Compliance** | Manual Configuration | Developer Dependent | **Zero-Retention Hard Perimeter** |
 | **Best Application** | Lightweight Internal Webhooks | Knowledge Base Q&A | **Mission-Critical Revenue Operations** |
@@ -114,7 +114,7 @@ flowchart TD
 |  ───────────────────────────────────────────────────────────────────────────────────────────────  |
 |  Execution Architecture     Linear Directed Acyclic   Chains / ReAct Agent    Cyclical State Graph|
 |  State Persistence          In-Memory Execution       Session Memory          PostgreSQL ACID     |
-|  Inference Latency          800ms – 2,500ms           500ms – 1,800ms         180ms – 420ms       |
+|  Inference Latency          800ms - 2,500ms           500ms - 1,800ms         180ms - 420ms       |
 |  DPDP Act 2023 Compliance   Manual Container Setup    Python VPC Dependent    Native Sovereign VPC|
 |  Human-in-the-Loop          Webhook Wait Node         Thread Suspension Hack  Native Interrupt Gate|
 |  Best Enterprise Fit        Internal Office Utilities Knowledge Base Q&A      Core Revenue Systems|

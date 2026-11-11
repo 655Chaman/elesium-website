@@ -60,9 +60,9 @@ SECTIONS_80 = [
     {
         "type": "paragraph",
         "value": (
-            "Over the past decade, enterprise process automation across Bangalore's major technology corridors—specifically "
+            "Over the past decade, enterprise process automation across Bangalore's major technology corridors - specifically "
             "along the Outer Ring Road (ORR) from Bellandur to Mahadevapura, the Whitefield export enclaves, and Electronic City "
-            "Phases 1 and 2—relied almost exclusively on brittle Robotic Process Automation (RPA) scripts. These legacy bots "
+            "Phases 1 and 2 - relied almost exclusively on brittle Robotic Process Automation (RPA) scripts. These legacy bots "
             "depended on static screen scraping, brittle XPath selectors, and hardcoded conditional branches. When ERP web frontends "
             "or supplier document schemas shifted by even a few pixels, entire corporate accounting and reconciliation pipelines stalled. "
             "The operational fallout across India's Tier-1 tech enterprises was severe: mounting exception queues, hundreds of manual "
@@ -75,8 +75,8 @@ SECTIONS_80 = [
             "Modern business process automation AI fundamentally redefines this paradigm by replacing brittle procedural scripts "
             "with deterministic, cyclical multi-agent graphs built on LangGraph, Pydantic v2 validation contracts, and sovereign "
             "in-VPC LLM inference nodes. Rather than attempting to automate end-to-end tasks with a single monolithic prompt, "
-            "enterprise state machine architectures decompose complex corporate operations—such as 3-way vendor invoice matching, "
-            "GST Rule 36(4) tax reconciliation, and cross-border customs declarations—into specialized, self-correcting agent nodes. "
+            "enterprise state machine architectures decompose complex corporate operations - such as 3-way vendor invoice matching, "
+            "GST Rule 36(4) tax reconciliation, and cross-border customs declarations - into specialized, self-correcting agent nodes. "
             "Each agent operates with bounded responsibilities, strict typed memory invariants, and automated circuit breakers that halt "
             "execution and isolate state before any erroneous payload touches down in SAP S/4HANA or Oracle Cloud ERP."
         )
@@ -103,7 +103,7 @@ SECTIONS_80 = [
             "| **SAP / Oracle ERP Synchronization** | Batch asynchronous (hourly/nightly) | Fragile REST webhooks | **Bi-directional RFC sub-200ms idempotent stream** |\n"
             "| **DPDP Act 2023 Statutory Compliance** | Borderline (PII logs unencrypted in text) | Severe Breach (Data exfiltration to US API servers) | **100% Air-Gapped Sovereign VPC (Zero external egress)** |\n"
             "| **Exception Handling Resolution** | 100% Manual Human Queue (48h SLA) | Partial automated retry | **Automated Multi-Agent Reflection + HITL Escalation (<4 min)** |\n"
-            "| **Annual Operational Cost per 10k Invoices** | ₹28.5 Lakhs (License + Maintenance) | ₹19.2 Lakhs (API Token Burn + Drift Fixes) | **₹5.4 Lakhs (Consolidated sovereign private compute)** |"
+            "| **Annual Operational Cost per 10k Invoices** | ₹28.5 Lakhs (License + Maintenance) | ₹19.2 Lakhs (API Token Burn + Drift Fixes) | **₹5.4 Lakhs (Consolidated sovereign compute)** |"
         )
     },
     {
@@ -284,7 +284,7 @@ SECTIONS_80 = [
         "type": "paragraph",
         "value": (
             "For Bangalore enterprises handling banking, healthcare, retail, and manufacturing transactions, compliance with the "
-            "Digital Personal Data Protection (DPDP) Act 2023 is not an elective optimization—it is an absolute legal mandate. "
+            "Digital Personal Data Protection (DPDP) Act 2023 is not an elective optimization - it is an absolute legal mandate. "
             "Under Section 8(5) and Section 9 of the DPDP Act, organizations acting as Data Fiduciaries must implement robust technical "
             "safeguards to prevent unauthorized data processing, exfiltration, or cross-border transfer of sensitive personal identifiers. "
             "Routing unstructured corporate documents through public third-party LLM endpoints located outside India constitutes an immediate "
@@ -326,7 +326,7 @@ SECTIONS_80 = [
     {
         "type": "paragraph",
         "value": (
-            "A Tier-1 supply chain and 3PL distributor headquartered on the Outer Ring Road (Marathahalli–Sarjapur cluster) faced severe "
+            "A Tier-1 supply chain and 3PL distributor headquartered on the Outer Ring Road (Marathahalli-Sarjapur cluster) faced severe "
             "operational bottlenecks. Their operations team processed over 45,000 consignment notes, e-way bills, and multi-state GST "
             "invoices monthly. The legacy manual workflow required 38 full-time data entry personnel, suffered from a 6.8% data capture "
             "error rate, and generated recurring vendor reconciliation disputes."
@@ -366,7 +366,7 @@ SECTIONS_80 = [
             },
             {
                 "q": "What is the typical deployment timeline for an enterprise automation pipeline in Bangalore?",
-                "a": "A typical enterprise pilot—including on-premise VPC provisioning, custom schema modeling, and SAP/ERP sandbox integration—is fully operational within 3 to 4 weeks. Full production cutover across high-volume transaction corridors typically concludes within 6 to 8 weeks."
+                "a": "A typical enterprise pilot - including on-premise VPC provisioning, custom schema modeling, and SAP/ERP sandbox integration - is fully operational within 3 to 4 weeks. Full production cutover across high-volume transaction corridors typically concludes within 6 to 8 weeks."
             }
         ]
     }

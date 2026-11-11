@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — BRIAN KATO RE2 REGEX PATTERN CLASSIFIER
+GSC STRIKING DISTANCE ENGINE - BRIAN KATO RE2 REGEX PATTERN CLASSIFIER
 =============================================================================
 Classification: RE2 Regex Intent Classification for AI Search Behaviors
 Reference: Brian Kato (SEO Rockstars 2026 Day 2 - GSC Pattern Detection)

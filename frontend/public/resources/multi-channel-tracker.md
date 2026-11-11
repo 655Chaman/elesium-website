@@ -3,13 +3,13 @@
 Welcome to the **Elesium Multi-Channel Tracker**. This system provides absolute clarity on your lead flow across all social platforms, transforming chaotic DMs into predictable revenue.
 
 > "You can't scale what you don't measure." 
-> — Elesium Insights
+> - Elesium Insights
 
 ---
 
 ## Executive Overview
 
-This tracker provides a bird's-eye view of your entire lead pipeline—from the first sign of interest to a booked high-ticket sales call. It automatically aggregates data from your daily efforts across LinkedIn, Facebook, Instagram, X, and TikTok into a dynamic dashboard.
+This tracker provides a bird's-eye view of your entire lead pipeline - from the first sign of interest to a booked high-ticket sales call. It automatically aggregates data from your daily efforts across LinkedIn, Facebook, Instagram, X, and TikTok into a dynamic dashboard.
 
 ### Core Architecture
 

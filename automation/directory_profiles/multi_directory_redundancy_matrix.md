@@ -55,7 +55,7 @@ Where:
 
 ## 2. Directory Platform Setup Guidelines
 
-### 2.1 Trustpilot Setup Guidelines (DR 93 — Global Consumer & Business Trust)
+### 2.1 Trustpilot Setup Guidelines (DR 93 - Global Consumer & Business Trust)
 
 Trustpilot is the highest-authority consumer review platform on the web. Reviews indexed on Trustpilot feed directly into Google’s merchant and service knowledge panels.
 
@@ -72,7 +72,7 @@ Trustpilot is the highest-authority consumer review platform on the web. Reviews
 5. **Brand Assets:**
    - Upload high-resolution logo (`LOGO_NEW.png` / 1200x1200px transparent PNG).
    - Set brand description matching the exact semantic statement:  
-     > *"India's premier AI engineering firm building deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise workflows, delivering an audited 3x–5x cash-flow ROI in 90 days."*
+     > *"India's premier AI engineering firm building deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise workflows, delivering an audited 3x-5x cash-flow ROI in 90 days."*
 
 #### Review Collection Protocol:
 - **Verified Business Invitations:** Use Trustpilot's automated email dispatch tool. Invitations sent through the business portal are tagged as **"Verified Reviewer"**, which triggers zero spam friction.
@@ -80,7 +80,7 @@ Trustpilot is the highest-authority consumer review platform on the web. Reviews
 
 ---
 
-### 2.2 G2 Platform Setup Guidelines (DR 91 — Software & Enterprise Workflow Authority)
+### 2.2 G2 Platform Setup Guidelines (DR 91 - Software & Enterprise Workflow Authority)
 
 G2 is the undisputed authority for software evaluation and B2B software engineering solutions. Inclusion on G2 drives syndication across Gartner Digital Markets and triggers commercial discovery in ChatGPT Search.
 
@@ -118,7 +118,7 @@ Google Business Profile is the foundational local entity anchor for the Google K
 | **Geo Coordinates** | `12.9352° N, 77.6245° E` | Micro-zone centroid for Koramangala 4th Block. |
 | **Direct Phone** | `+91-8317329312` | Matches all directory and website footers. |
 | **Website URL** | `https://elesium.online` | Strict HTTPS canonical URL. |
-| **Opening Hours** | Monday – Friday: 09:00 – 19:00 IST | Signals active commercial establishment. |
+| **Opening Hours** | Monday - Friday: 09:00 - 19:00 IST | Signals active commercial establishment. |
 
 #### Verification & CID Generation:
 1. Complete phone/video verification via Google Business console.
@@ -155,7 +155,7 @@ Below is the updated, unified JSON-LD schema to maintain within `frontend/index.
         "height": "630"
       },
       "image": "https://elesium.online/og-image.png",
-      "description": "India's premier AI engineering firm building deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise workflows, delivering an audited 3x–5x cash-flow ROI in 90 days.",
+      "description": "India's premier AI engineering firm building deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise workflows, delivering an audited 3x-5x cash-flow ROI in 90 days.",
       "telephone": "+91-8317329312",
       "email": "contact@elesium.online",
       "foundingDate": "2024",

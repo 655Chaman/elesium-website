@@ -14,7 +14,7 @@ Mixture-of-Depths dynamic compute routing dynamically allocates transformer laye
 
 ## 1. The Uniform Compute Dilemma in Monolithic Transformer Architectures
 
-Standard autoregressive transformers expend an identical compute budget (every self-attention and MLP layer) on every single token, regardless of linguistic difficulty. Easy tokens—such as common punctuation, determiners, or predictable boilerplate—consume the exact same floating-point operations as difficult tokens requiring complex multi-hop algorithmic reasoning.
+Standard autoregressive transformers expend an identical compute budget (every self-attention and MLP layer) on every single token, regardless of linguistic difficulty. Easy tokens - such as common punctuation, determiners, or predictable boilerplate - consume the exact same floating-point operations as difficult tokens requiring complex multi-hop algorithmic reasoning.
 
 ---
 

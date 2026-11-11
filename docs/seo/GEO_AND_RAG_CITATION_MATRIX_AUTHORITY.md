@@ -29,7 +29,7 @@ In generative answer engines, being ranked #1 in traditional organic search no l
 
 To dominate this landscape, content must be architected not for human skimming, but for **deterministic machine extraction**:
 1. **Mathematical Optimization:** Enforcing the empirical findings of the seminal Princeton/Georgia Tech GEO study (+37.4% lift from statistics, +31.2% lift from citations, +28.8% lift from practitioner quotes).
-2. **Vector Space Alignment:** Structuring text blocks to match the 256–512 token chunking boundaries and cross-encoder re-ranking algorithms of Perplexity and ChatGPT Search.
+2. **Vector Space Alignment:** Structuring text blocks to match the 256-512 token chunking boundaries and cross-encoder re-ranking algorithms of Perplexity and ChatGPT Search.
 3. **Entity Disambiguation:** Hard-wiring Wikidata Knowledge Graph identifiers (QIDs) directly into JSON-LD `@graph` architectures to eliminate semantic ambiguity.
 
 ---
@@ -94,9 +94,9 @@ Understanding how Perplexity and ChatGPT Search process web pages requires mappi
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                              THE MODERN AI SEARCH PIPELINE                             │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 1. Query Expansion: User query ──► 3–5 sub-queries (HyDE + Entity Resolution)          │
+│ 1. Query Expansion: User query ──► 3-5 sub-queries (HyDE + Entity Resolution)          │
 │ 2. Headless Scraping: DOM downloaded ──► Navigation/Ads stripped ──► Markdown AST      │
-│ 3. Document Chunking: Split at H1/H2 boundaries into 256–512 token windows             │
+│ 3. Document Chunking: Split at H1/H2 boundaries into 256-512 token windows             │
 │ 4. Dual Retrieval: Sparse (BM25/SPLADE) + Dense (Cosine Sim on Embeddings) ──► Top 100 │
 │ 5. Cross-Encoder Re-Ranking: Cohere Rerank / BGE evaluates Token Relevance ──► Top 10 │
 │ 6. Context Window Packing: Chunks injected into LLM System Prompt with Citation Tags   │
@@ -134,7 +134,7 @@ RAG parsers process tables through deterministic serialization:
 
 ### 2.4 Header Hierarchy as Semantic Splitting Anchors
 * Document parsers (such as LangChain's `MarkdownHeaderTextSplitter`) use Markdown headers (`# H1`, `## H2`, `### H3`) as deterministic boundary splits.
-* When an `## H2` poses a direct query and is **immediately followed by a 40–50 word bold Answer Capsule**, that entire block forms an atomic chunk of ~60–80 tokens.
+* When an `## H2` poses a direct query and is **immediately followed by a 40-50 word bold Answer Capsule**, that entire block forms an atomic chunk of ~60-80 tokens.
 * This chunk achieves maximum bi-encoder cosine similarity because 100% of its tokens are directly relevant to the query intent, with zero noise dilution.
 
 ---
@@ -149,23 +149,23 @@ To guarantee maximum citation probability across Google AI Overviews, Perplexity
 │ └── Intro Hook (First 100 words): E-E-A-T credentials, exact keyword, zero fluff       │
 │                                                                                        │
 │ [H2]: Question-Formatted Direct Ingestion Anchor                                       │
-│ ├── [Answer Capsule]: STRICTLY 40–50 Words, Bolded, Direct Definition + Stat + Triad   │
+│ ├── [Answer Capsule]: STRICTLY 40-50 Words, Bolded, Direct Definition + Stat + Triad   │
 │ ├── Deep Dive Technical Analysis (LangGraph / Python / Architecture)                   │
 │ └── Verbatim Practitioner Quotation ("...") with Named Title & Credentials             │
 │                                                                                        │
 │ [H2]: Empirical Benchmark / Comparative Matrix Anchor                                  │
-│ ├── [Answer Capsule]: STRICTLY 40–50 Words, Bolded                                     │
-│ └── [Markdown Pipe Table]: 3–4 Columns, Minimum 3 Rows, Formatted Numbers & Standards  │
+│ ├── [Answer Capsule]: STRICTLY 40-50 Words, Bolded                                     │
+│ └── [Markdown Pipe Table]: 3-4 Columns, Minimum 3 Rows, Formatted Numbers & Standards  │
 │                                                                                        │
 │ [H2]: Regulatory Compliance & Enterprise Security Anchor                               │
-│ ├── [Answer Capsule]: STRICTLY 40–50 Words, Bolded                                     │
+│ ├── [Answer Capsule]: STRICTLY 40-50 Words, Bolded                                     │
 │ └── Statutory Citations: DPDP Act 2023, ISO 27001, RBI Master Directions               │
 │                                                                                        │
 │ [H2]: Architectural Implementation & Code Blueprint Anchor                            │
-│ ├── [Answer Capsule]: STRICTLY 40–50 Words, Bolded                                     │
+│ ├── [Answer Capsule]: STRICTLY 40-50 Words, Bolded                                     │
 │ └── Production Code Block (Python / LangGraph State Graph / FastAPI)                   │
 │                                                                                        │
-│ [FAQ Section]: 3–5 High-Intent Questions Mirroring H2s for Accordion Scraping          │
+│ [FAQ Section]: 3-5 High-Intent Questions Mirroring H2s for Accordion Scraping          │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -182,7 +182,7 @@ To guarantee maximum citation probability across Google AI Overviews, Perplexity
   `### [Component / Tier Name]: [Technical Specification or Metric]`
   * *Exemplar:* `### Tier 1: Deterministic LangGraph State Machine Architecture`
 
-### 3.2 The "Answer Capsule" Rule (Strictly 40–50 Words)
+### 3.2 The "Answer Capsule" Rule (Strictly 40-50 Words)
 Directly beneath every `## H2` heading, the first paragraph must be an **Answer Capsule** formatted in **bold**.
 
 #### The Tripartite Formula:
@@ -205,9 +205,9 @@ Every post must include at least one structured Markdown table using strict pipe
 ```markdown
 | Implementation Tier | Typical Investment (INR) | Deployment Timeline | Target Enterprise Architecture |
 | :--- | :--- | :--- | :--- |
-| Tier 1: Single Workflow Agent | ₹3,50,000 – ₹7,50,000 | 2 to 4 weeks | FastAPI, Single-task tool calling, Cloud run |
-| Tier 2: Deterministic Triad | ₹12,00,000 – ₹25,00,000 | 6 to 10 weeks | LangGraph, PostgreSQL pgvector, Private VPC |
-| Tier 3: Full Autonomous Core | ₹35,00,000 – ₹1,20,00,000+ | 3 to 6 months | Distributed multi-agent state machines, On-prem LLM |
+| Tier 1: Single Workflow Agent | ₹3,50,000 - ₹7,50,000 | 2 to 4 weeks | FastAPI, Single-task tool calling, Cloud run |
+| Tier 2: Deterministic Triad | ₹12,00,000 - ₹25,00,000 | 6 to 10 weeks | LangGraph, PostgreSQL pgvector, Private VPC |
+| Tier 3: Full Autonomous Core | ₹35,00,000 - ₹1,20,00,000+ | 3 to 6 months | Distributed multi-agent state machines, On-prem LLM |
 ```
 
 #### Schema 2: Benchmark Latency & Reliability Comparison Schema
@@ -259,7 +259,7 @@ Below is the master specification for blog posts injected into `frontend/src/dat
     date: 'October 17, 2026',
     readTime: '8 min read',
     excerpt: 'An authoritative technical guide on replacing fragile probabilistic LLM loops with deterministic LangGraph state machines, private VPC isolation, and DPDP Act compliance.',
-    intro: 'Elesium engineering intelligence — 2026. Target query: deterministic multi-agent systems india.',
+    intro: 'Elesium engineering intelligence - 2026. Target query: deterministic multi-agent systems india.',
     metaDescription: 'Complete 2026 technical guide to deterministic multi-agent systems in India. Benchmarks, LangGraph architecture, DPDP compliance, and enterprise pricing.',
     faq: [
         {
@@ -311,7 +311,7 @@ Below is the master specification for blog posts injected into `frontend/src/dat
         },
         {
             type: 'paragraph',
-            value: '| Implementation Tier | Typical Investment (INR) | Deployment Timeline | Target Enterprise Architecture |\n| :--- | :--- | :--- | :--- |\n| Tier 1: Single Workflow Agent | ₹3,50,000 – ₹7,50,000 | 2 to 4 weeks | FastAPI, Single-task tool calling, Cloud run |\n| Tier 2: Deterministic Triad | ₹12,00,000 – ₹25,00,000 | 6 to 10 weeks | LangGraph, PostgreSQL pgvector, Private VPC |\n| Tier 3: Full Autonomous Core | ₹35,00,000 – ₹1,20,00,000+ | 3 to 6 months | Distributed multi-agent state machines, On-prem LLM |'
+            value: '| Implementation Tier | Typical Investment (INR) | Deployment Timeline | Target Enterprise Architecture |\n| :--- | :--- | :--- | :--- |\n| Tier 1: Single Workflow Agent | ₹3,50,000 - ₹7,50,000 | 2 to 4 weeks | FastAPI, Single-task tool calling, Cloud run |\n| Tier 2: Deterministic Triad | ₹12,00,000 - ₹25,00,000 | 6 to 10 weeks | LangGraph, PostgreSQL pgvector, Private VPC |\n| Tier 3: Full Autonomous Core | ₹35,00,000 - ₹1,20,00,000+ | 3 to 6 months | Distributed multi-agent state machines, On-prem LLM |'
         }
     ]
 }

@@ -18,7 +18,7 @@ post_126 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Systems Directors: architecting dynamic KV-cache eviction protocols, preserving attention sinks in StreamingLLM ring buffers, executing online H2O heavy-hitter pruning, and achieving 4x memory compression across multi-million token distributed agent clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Systems Directors: architecting dynamic KV-cache eviction protocols, preserving attention sinks in StreamingLLM ring buffers, executing online H2O heavy-hitter pruning, and achieving 4x memory compression across multi-million token distributed agent clusters.",
     "metaDescription": "Dynamic KV-cache eviction systems blueprint: H2O heavy hitter oracle, attention sink preservation, StreamingLLM ring buffers, 4x memory compression, and 2M-context serving.",
-    "relatedSolutionSlug": "dynamic-kv-cache-eviction-and-attention-sink-compression-daemons-for-2m-context-llms",
+    "relatedSolutionSlug": "attention-sink-stability-evaluators-for-sovereign-private-vpc-defense-intelligences",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -35,7 +35,7 @@ post_126 = {
         },
         {
             "type": "paragraph",
-            "value": "As autonomous agent swarms execute iterative planning, code synthesis, and multi-turn collaborative debate, conversation context lengths routinely exceed 128k to 2 million tokens. In standard FP16 serving, a 70B model with Grouped Query Attention (GQA, 8 key-value heads, 128 head dimension, 80 layers) consumes 0.32 MB of High Bandwidth Memory (HBM) per token. At 2,000,000 tokens across a swarm of 32 concurrent agents, the raw KV cache exceeds 20.48 Terabytes—far outstripping the aggregate 640 GB HBM3 capacity of an 8x NVIDIA H100 node."
+            "value": "As autonomous agent swarms execute iterative planning, code synthesis, and multi-turn collaborative debate, conversation context lengths routinely exceed 128k to 2 million tokens. In standard FP16 serving, a 70B model with Grouped Query Attention (GQA, 8 key-value heads, 128 head dimension, 80 layers) consumes 0.32 MB of High Bandwidth Memory (HBM) per token. At 2,000,000 tokens across a swarm of 32 concurrent agents, the raw KV cache exceeds 20.48 Terabytes - far outstripping the aggregate 640 GB HBM3 capacity of an 8x NVIDIA H100 node."
         },
         {
             "type": "paragraph",

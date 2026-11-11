@@ -1,5 +1,5 @@
 # Clutch.co & GoodFirms B2B Directory Verification Dossier
-**Target Company:** Elesium Online (Elesium Systems Pvt. Ltd.)  
+**Target Company:** Elesium Online (Elesium Digital Systems Private Limited)  
 **Categories:** Top AI Automation Agencies in India, Best Enterprise Software Development Companies Bangalore  
 **Canonical Domain:** `https://elesium.online`  
 **Target Location:** Bengaluru, India  
@@ -31,7 +31,7 @@
 ### Clutch Company Overview (Copy & Paste)
 > Elesium is a premier enterprise AI engineering firm based in Bengaluru, India. We engineer deterministic multi-agent state machines and sovereign private VPC inference infrastructure that replace fragile manual workflows with automated execution. 
 > 
-> Calibrated for enterprise leaders across BFSI, supply chain logistics, and manufacturing, our systems deliver verified 3x–5x cash-flow ROI within 90 days. We specialize in air-gapped on-premise GPU clusters running quantized open-source models (vLLM, DeepSeek-R1, Llama 3) with full DPDP Act 2023, ISO 27001, and SOC-2 Type II compliance guarantees.
+> Calibrated for enterprise leaders across BFSI, supply chain logistics, and manufacturing, our systems deliver verified 3x-5x cash-flow ROI within 90 days. We specialize in air-gapped on-premise GPU clusters running quantized open-source models (vLLM, DeepSeek-R1, Llama 3) with full DPDP Act 2023, ISO 27001, and SOC-2 Type II compliance guarantees.
 
 ---
 

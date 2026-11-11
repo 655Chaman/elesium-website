@@ -122,7 +122,7 @@ def build_compliance_badges(sector: str) -> List[str]:
 
 def sanitize_em_dashes(obj):
     if isinstance(obj, str):
-        return obj.replace("—", " - ")
+        return obj.replace("—", " - ").replace("&#8212;", " - ").replace("&mdash;", " - ")
     elif isinstance(obj, list):
         return [sanitize_em_dashes(item) for item in obj]
     elif isinstance(obj, dict):
@@ -140,14 +140,16 @@ def generate_seo_title(h1_title: str) -> str:
         cut = cut.rsplit(" ", 1)[0]
     return f"{cut}{suffix}"
 
-def generate_seo_meta_desc(h1_title: str, sector: str) -> str:
-    clean_h1 = h1_title.replace("—", "-").strip()
+def generate_seo_meta_desc(h1_title: str, sector: str, used_descs: set, slug: str = "") -> str:
+    clean_h1 = h1_title.replace("—", "-").replace("&#8212;", "-").replace("&mdash;", "-").strip()
     templates = [
         ("Deploy ", f" with air-gapped VPC isolation, deterministic sub-100ms execution, and statutory {sector} compliance. Schedule architecture audit."),
         ("Deploy ", f" with sovereign VPC isolation, sub-100ms execution, and {sector} compliance. Schedule an enterprise audit."),
         ("Deploy ", f" with deterministic air-gapped VPC isolation and {sector} compliance. Schedule architecture audit."),
         ("Deploy sovereign ", f" with air-gapped VPC isolation, sub-100ms latency, and {sector} compliance. Schedule architecture audit."),
         ("Deploy ", f" with private VPC isolation and statutory {sector} compliance. Schedule architecture audit today."),
+        ("Architect ", f" in air-gapped private VPCs with deterministic sub-200ms execution and {sector} controls. Request technical audit."),
+        ("Operate ", f" inside dedicated H100 VPC enclaves with cryptographic memory zeroing and {sector} governance. Book architecture review."),
     ]
     for prefix, suffix in templates:
         target_name_len = 150 - len(prefix) - len(suffix)
@@ -160,11 +162,17 @@ def generate_seo_meta_desc(h1_title: str, sector: str) -> str:
         else:
             cut = clean_h1
         cand = f"{prefix}{cut}{suffix}"
-        if 145 <= len(cand) <= 155:
+        if 145 <= len(cand) <= 155 and cand not in used_descs:
+            used_descs.add(cand)
             return cand
 
-    base = f"Deploy {clean_h1} with sovereign VPC isolation, sub-100ms execution, and {sector} compliance."
+    # Disambiguate using trailing distinctive words from clean_h1 or slug when truncated heads collide
+    slug_tokens = [w.capitalize() for w in slug.replace("-", " ").split() if len(w) > 2]
+    tail_hint = " ".join(slug_tokens[-2:]) if len(slug_tokens) >= 2 else (slug_tokens[-1] if slug_tokens else sector)
     cta_options = [
+        f" Audit {tail_hint} architecture.",
+        f" Review {tail_hint} deployment.",
+        f" Scope {tail_hint} enclave.",
         " Schedule architecture audit.",
         " Schedule an architecture audit.",
         " Schedule an enterprise audit.",
@@ -172,15 +180,33 @@ def generate_seo_meta_desc(h1_title: str, sector: str) -> str:
         " Schedule architecture audit today.",
         " Schedule enterprise audit today.",
     ]
-    for cta in cta_options:
-        avail_base = 150 - len(cta)
-        cut = base[:avail_base]
-        if " " in cut:
-            cut = cut.rsplit(" ", 1)[0]
-        cand = f"{cut}.{cta}"
-        if 145 <= len(cand) <= 155:
-            return cand
-    return cand
+    for intro in ["Deploy", "Architect", "Operate", "Run"]:
+        base = f"{intro} {clean_h1} with sovereign VPC isolation, sub-200ms latency, and {sector} compliance."
+        for cta in cta_options:
+            avail_base = 152 - len(cta)
+            if avail_base < 40:
+                continue
+            cut = base[:avail_base]
+            if " " in cut:
+                cut = cut.rsplit(" ", 1)[0]
+            cand = f"{cut.rstrip('.')}.{cta}"
+            if 145 <= len(cand) <= 155 and cand not in used_descs:
+                used_descs.add(cand)
+                return cand
+            # Pad deterministically if slightly short (<145)
+            if len(cand) < 145:
+                padded = f"{cut.rstrip('.')} under DPDP Act 2023.{cta}"
+                if len(padded) > 155:
+                    padded = f"{cut[:148 - len(cta)].rstrip('.')}.{cta}"
+                if 140 <= len(padded) <= 155 and padded not in used_descs:
+                    used_descs.add(padded)
+                    return padded
+
+    # Final guaranteed unique fallback
+    short_tag = f"[{slug[-12:]}]" if slug else sector[:10]
+    fallback = f"Deploy {clean_h1[:68]} ({short_tag}) in sovereign {sector} VPCs. Request enterprise architecture audit."
+    used_descs.add(fallback)
+    return fallback
 
 def assemble():
     print("=== Assembling Curated 100 Enterprise Solutions Catalog ===")
@@ -194,6 +220,7 @@ def assemble():
 
     catalog = []
     token_sets = {}
+    used_descs = set()
 
     for idx, slug in enumerate(retained_slugs):
         sector = determine_sector(slug)
@@ -225,7 +252,7 @@ def assemble():
         h1_title = prof["title"].replace("—", "-").strip()
         h1_clean = f"{h1_title} - Sovereign Enterprise Architecture"
         seo_title = generate_seo_title(h1_title)
-        meta_desc = generate_seo_meta_desc(h1_title, sector)
+        meta_desc = generate_seo_meta_desc(h1_title, sector, used_descs, slug)
 
         block1_bullets = [f"{c['title']}: {c['description']}" for c in caps]
         block1_specs = [{"label": s["label"], "value": s["value"], "desc": s["detail"]} for s in specs]

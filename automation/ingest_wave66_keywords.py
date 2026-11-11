@@ -1,7 +1,7 @@
 import json
 
 wave66_keywords = [
-    # Cluster 1: 3D Parallelism & Megatron-DeepSpeed Mesh Sharding (IDs 3216–3232, 17 items)
+    # Cluster 1: 3D Parallelism & Megatron-DeepSpeed Mesh Sharding (IDs 3216-3232, 17 items)
     {
         "id": 3216,
         "keyword": "3d parallelism mesh sharding controllers for enterprise megatron deepspeed clusters",
@@ -224,7 +224,7 @@ wave66_keywords = [
         "primary_cta": "Deploy Deterministic 3D State Snapshot Recovery"
     },
 
-    # Cluster 2: ZeRO-3 Memory Partitioning & Interleaved 1F1B Zero-Bubble Schedulers (IDs 3233–3249, 17 items)
+    # Cluster 2: ZeRO-3 Memory Partitioning & Interleaved 1F1B Zero-Bubble Schedulers (IDs 3233-3249, 17 items)
     {
         "id": 3233,
         "keyword": "zero bubble interleaved 1f1b pipeline schedulers for enterprise agent swarms",
@@ -447,7 +447,7 @@ wave66_keywords = [
         "primary_cta": "Schedule Telecom Pipeline Parallelism Audit"
     },
 
-    # Cluster 3: Enterprise 100B+ Autonomous Agent Clusters & Slurm Orchestration (IDs 3250–3265, 16 items)
+    # Cluster 3: Enterprise 100B+ Autonomous Agent Clusters & Slurm Orchestration (IDs 3250-3265, 16 items)
     {
         "id": 3250,
         "keyword": "slurm workload manager 3d parallel job plugins for enterprise agent clusters",

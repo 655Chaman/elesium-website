@@ -10,9 +10,14 @@ Also updates <title> to '410 Gone | Content Retired | Elesium' and re-compresses
 import json
 import re
 import gzip
-import brotli
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
+
+try:
+    import brotli
+    HAS_BROTLI = True
+except ImportError:
+    HAS_BROTLI = False
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 PRUNED_FILE = ROOT_DIR / "automation" / "pruned_solution_slugs.json"
@@ -53,6 +58,7 @@ def update_html_content(content: str) -> str:
     content = re.sub(r'<meta\s+name=[\'\"]description[\'\"].*?>',
                      '<meta name="description" content="This programmatic specification has been permanently retired under Elesium\'s Algorithmic Quality & Enterprise Architecture Curation mandate." />',
                      content, count=1, flags=re.I)
+    content = re.sub(r'<link\s+[^>]*rel=[\'\"]canonical[\'\"].*?>', '', content, flags=re.I)
     content = re.sub(r'<link\s+rel=[\'\"]canonical[\'\"].*?>', '', content, flags=re.I)
     content = ROBOTS_REGEX1.sub("", content)
     content = ROBOTS_REGEX2.sub("", content)
@@ -81,7 +87,7 @@ def process_slug(slug: str) -> int:
         br_p = DIST_SOL / slug / "index.html.br"
         if gz_p.exists():
             gz_p.write_bytes(gzip.compress(b, compresslevel=9))
-        if br_p.exists():
+        if br_p.exists() and HAS_BROTLI:
             br_p.write_bytes(brotli.compress(b, quality=9))
         count += 1
 
@@ -96,7 +102,7 @@ def process_slug(slug: str) -> int:
         br_p2 = DIST_SOL / f"{slug}.html.br"
         if gz_p2.exists():
             gz_p2.write_bytes(gzip.compress(b, compresslevel=9))
-        if br_p2.exists():
+        if br_p2.exists() and HAS_BROTLI:
             br_p2.write_bytes(brotli.compress(b, quality=9))
         count += 1
 

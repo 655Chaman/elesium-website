@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ingest_wave26_keywords.py — Ingestion script for Wave 26 BOFU Solutions (IDs 1,141–1,190)
+ingest_wave26_keywords.py - Ingestion script for Wave 26 BOFU Solutions (IDs 1,141-1,190)
 
 Fleet Scaling Target:
 - Add 50 high-lever deep-tech industrial telemetry solutions
@@ -13,7 +13,7 @@ from pathlib import Path
 QUEUE_PATH = Path(__file__).parent / "compact_keywords_queue.json"
 
 wave26_keywords = [
-    # Cluster 1: High-NA EUV Photolithography Wafer Stage Interferometry & Pellicle Degradation Telemetry (IDs 1,141–1,157, 17 solutions)
+    # Cluster 1: High-NA EUV Photolithography Wafer Stage Interferometry & Pellicle Degradation Telemetry (IDs 1,141-1,157, 17 solutions)
     {
         "id": 1141,
         "keyword": "high-NA EUV lithography anamorphic projection optics thermal wavefront distortion interferometer telemetry for aberration control",
@@ -236,7 +236,7 @@ wave26_keywords = [
         "primary_cta": "Schedule Pre-Aligner Telemetry Audit"
     },
 
-    # Cluster 2: Hypersonic Scramjet Propulsion Shock-Train & Active Cryogenic Methane Cooling Telemetry (IDs 1,158–1,174, 17 solutions)
+    # Cluster 2: Hypersonic Scramjet Propulsion Shock-Train & Active Cryogenic Methane Cooling Telemetry (IDs 1,158-1,174, 17 solutions)
     {
         "id": 1158,
         "keyword": "scramjet isolator pseudo-shock wave boundary layer separation dynamic piezo-resistive pressure transducer array telemetry for unstart prevention",
@@ -459,7 +459,7 @@ wave26_keywords = [
         "primary_cta": "Schedule Igniter Torch Stability Audit"
     },
 
-    # Cluster 3: Subsea Ultra-Deepwater Production Wellhead Electric BOP Acoustic Multiplex Telemetry (IDs 1,175–1,190, 16 solutions)
+    # Cluster 3: Subsea Ultra-Deepwater Production Wellhead Electric BOP Acoustic Multiplex Telemetry (IDs 1,175-1,190, 16 solutions)
     {
         "id": 1175,
         "keyword": "subsea all-electric blowout preventer BOP ram actuator brushless DC motor torque and resolver angle telemetry for emergency shearing",

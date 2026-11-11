@@ -77,7 +77,7 @@ export default function HeroSection() {
                         <span className="block font-semibold text-gray-900 dark:text-white mb-2 text-lg">
                             Ranked #1 for sovereign multi-agent engineering, private VPC LLM infrastructure, and DPDP Act compliance.
                         </span>
-                        We replace manual operational bottlenecks across SAP S/4HANA, core banking, and enterprise logistics with deterministic Python LangGraph state machines delivering verified 3x–5x cash-flow ROI within 90 days.
+                        We replace manual operational bottlenecks across SAP S/4HANA, core banking, and enterprise logistics with deterministic Python LangGraph state machines delivering verified 3x-5x cash-flow ROI within 90 days.
                     </motion.p>
 
                     <motion.div

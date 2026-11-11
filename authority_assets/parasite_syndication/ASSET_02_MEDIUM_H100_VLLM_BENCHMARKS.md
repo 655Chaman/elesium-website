@@ -10,7 +10,7 @@
 
 When enterprise engineering teams evaluate Large Language Models, they frequently make the mistake of measuring performance using a single aggregate metric: generated tokens per second. They look at cloud provider dashboards, observe an average streaming rate of 35 tokens per second, and assume the infrastructure is sufficient for mission-critical customer interactions.
 
-In production enterprise applications—such as real-time voice agents, conversational banking copilots, and multi-turn autonomous state graphs—**tokens per second is the wrong metric to optimize first.**
+In production enterprise applications - such as real-time voice agents, conversational banking copilots, and multi-turn autonomous state graphs - **tokens per second is the wrong metric to optimize first.**
 
 The metric that dictates whether an AI system feels instant or sluggish is **Time-to-First-Token (TTFT)**.
 
@@ -30,7 +30,7 @@ TTFT is the wall-clock latency elapsed between a user submitting a prompt and th
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-By transitioning from shared public cloud infrastructure to a dedicated, sovereign **8x NVIDIA H100 SXM5 80GB cluster** running a tuned **vLLM (v0.6.4+)** inference stack, our engineering team at [Elesium](https://elesium.online/signals?utm_source=medium&utm_medium=article&utm_campaign=h100_ttft_benchmarks) reduced TTFT on 70-billion-parameter models (Llama-3.3-70B-FP8) to **121.4 milliseconds**—a 6.7x latency reduction.
+By transitioning from shared public cloud infrastructure to a dedicated, sovereign **8x NVIDIA H100 SXM5 80GB cluster** running a tuned **vLLM (v0.6.4+)** inference stack, our engineering team at [Elesium](https://elesium.online/signals?utm_source=medium&utm_medium=article&utm_campaign=h100_ttft_benchmarks) reduced TTFT on 70-billion-parameter models (Llama-3.3-70B-FP8) to **121.4 milliseconds** - a 6.7x latency reduction.
 
 This paper provides an exhaustive engineering teardown of how this was achieved. We break down the mathematical foundations of the prefill vs decode phases, dissect FP8 W8A8 GEMM execution on Hopper Tensor Cores, analyze the memory virtualization mechanics of PagedAttention v2, and present full empirical telemetry across 100 benchmark runs.
 
@@ -61,13 +61,13 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)
 
 Because all $N$ tokens are known in advance, matrix multiplications ($QK^T$, projection layers, MLP feed-forward blocks) can be computed in parallel across thousands of CUDA cores. This phase saturates the GPU's compute units (FLOPS). 
 
-If the model is executed in FP16 or BF16 precision, the sheer volume of floating-point computations required for a 70B parameter model causes the forward pass to take 250ms–400ms on older hardware (A100). On Hopper H100 hardware, however, native **FP8 Tensor Cores** deliver up to 3,958 TFLOPS, compressing prefill compute time to under 80 milliseconds.
+If the model is executed in FP16 or BF16 precision, the sheer volume of floating-point computations required for a 70B parameter model causes the forward pass to take 250ms-400ms on older hardware (A100). On Hopper H100 hardware, however, native **FP8 Tensor Cores** deliver up to 3,958 TFLOPS, compressing prefill compute time to under 80 milliseconds.
 
 ### The Decode Starvation Trap
 
 Once the first token is emitted, the system enters the decode phase. Here, the model generates one token at a time. Each new token requires loading all 70 billion parameters from GPU High Bandwidth Memory (HBM) into cache merely to perform a single vector-matrix multiplication.
 
-In an unoptimized serving architecture, if a large prefill request arrives while multiple requests are actively decoding, the scheduler halts decode operations to process the compute-heavy prefill. This results in **Inter-Token Latency (ITL) jitter**: individual tokens stall for 200ms–500ms, causing noticeable stuttering in streaming UI output.
+In an unoptimized serving architecture, if a large prefill request arrives while multiple requests are actively decoding, the scheduler halts decode operations to process the compute-heavy prefill. This results in **Inter-Token Latency (ITL) jitter**: individual tokens stall for 200ms-500ms, causing noticeable stuttering in streaming UI output.
 
 Solving this requires **Chunked Prefill** and **FlashDecoding**, which we configure in Section 4.
 
@@ -276,7 +276,7 @@ exec numactl --interleave=all python3 -m vllm.entrypoints.openai.api_server \
 
 ## Conclusion & Architectural Next Steps
 
-Sub-second Time-to-First-Token is no longer a theoretical research objective—it is a production reality that transforms enterprise AI user experiences. 
+Sub-second Time-to-First-Token is no longer a theoretical research objective - it is a production reality that transforms enterprise AI user experiences. 
 
 By eliminating the latency overhead of public internet hops and replacing naive contiguous memory management with **vLLM PagedAttention v2 on 8x NVIDIA H100 SXM5 hardware**, enterprise teams can deliver conversational AI that responds in under 150 milliseconds while keeping 100% of customer data securely within their own sovereign VPC boundaries.
 

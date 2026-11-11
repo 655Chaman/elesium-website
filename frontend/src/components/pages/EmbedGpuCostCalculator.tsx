@@ -220,7 +220,7 @@ export default function EmbedGpuCostCalculator() {
         <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
           <div className="flex items-center gap-1.5">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Private Sovereign VPC Deployment</span>
+            <span>Sovereign Private VPC Deployment</span>
           </div>
 
           <div>

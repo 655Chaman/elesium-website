@@ -50,8 +50,8 @@ SECTIONS = [
         "type": "paragraph",
         "value": (
             "Partnering with a specialized [AI automation agency for logistics in India](/ai-automation-agency-india) enables enterprise supply chain "
-            "directors to replace probabilistic human dispatch with deterministic multi-agent systems. By orchestrating national digital infrastructure—including "
-            "NPCI NETC FASTag toll data, the Unified Logistics Interface Platform (ULIP), and core ERPs—enterprises can achieve sub-minute automated dispatch "
+            "directors to replace probabilistic human dispatch with deterministic multi-agent systems. By orchestrating national digital infrastructure - including "
+            "NPCI NETC FASTag toll data, the Unified Logistics Interface Platform (ULIP), and core ERPs - enterprises can achieve sub-minute automated dispatch "
             "and measurable logistics cost reductions."
         )
     },

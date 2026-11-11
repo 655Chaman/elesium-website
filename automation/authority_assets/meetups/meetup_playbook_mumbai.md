@@ -2,7 +2,7 @@
 > **Target Hub:** Mumbai, Maharashtra
 > **Sector Focus:** BFSI, NBFC Automated Underwriting, FinTech Compliance
 > **Recommended Venue:** BKC Enterprise Hub / Lower Parel WeWork
-> **Deep Anchor:** https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
+> **Deep Anchor:** https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos
 
 ---
 
@@ -31,7 +31,7 @@ We would love to step in and fully support the community:
 4. **Zero Sales Pitches:** All sessions will focus strictly on production engineering (deterministic LangGraph state machines, private VPC open-weights LLMs, and ERP middleware).
 
 Here is a preview of the production architectures we build and share open-access:
-👉 [https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)
+👉 [https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)
 
 Would you be open to a quick 5-minute phone or WhatsApp chat this week to transfer co-organizer rights and keep the group alive?
 
@@ -44,7 +44,7 @@ LinkedIn: https://www.linkedin.com/in/chaman-elesium
 
 ---
 ## 3. Post-Takeover Group Welcome Announcement
-**Title:** Mumbai BFSI AI & Quantitative Workflow Guild is Back — In-Person Engineering Roundtables in Mumbai
+**Title:** Mumbai BFSI AI & Quantitative Workflow Guild is Back - In-Person Engineering Roundtables in Mumbai
 
 Hello Mumbai FinTech & Algorithmic Automation Builders Community,
 
@@ -58,17 +58,17 @@ We are excited to share that our community is officially active again under the 
 ### Free Open-Source Architecture Blueprints
 Before our first in-person session, explore our technical architectural pods and case studies:
 - Enterprise Solutions Hub: [https://elesium.online/solutions](https://elesium.online/solutions)
-- BFSI, NBFC Automated Underwriting, FinTech Compliance Deep-Dive: [https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)
+- BFSI, NBFC Automated Underwriting, FinTech Compliance Deep-Dive: [https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)
 - Real-Time Market Signals: [https://elesium.online/signals](https://elesium.online/signals)
 
 Our upcoming session dates and speaker roster will be announced right here next week. Please reply to this discussion with the exact technical bottlenecks your team is facing!
 
-— **Chaman Shah**, Co-Organizer & Principal AI Systems Architect, Elesium
+- **Chaman Shah**, Co-Organizer & Principal AI Systems Architect, Elesium
 
 
 ---
 ## 4. Co-Hosting Outreach Proposal to Active Sister Meetups
-**Subject:** Joint Masterclass in Mumbai: Beyond Chatbots — Deterministic AI Multi-Agent Systems
+**Subject:** Joint Masterclass in Mumbai: Beyond Chatbots - Deterministic AI Multi-Agent Systems
 
 Hi [Sister Group Organizer],
 
@@ -83,7 +83,7 @@ We are proposing a high-impact joint masterclass for our combined communities in
 - **Full Venue & AV Sponsorship:** Hosted at BKC Enterprise Hub / Lower Parel WeWork for up to 100 developers.
 - **Catering & Refreshments:** High-quality food and beverages for all attendees.
 - **Deep-Dive Technical Session:** A 45-minute live architecture teardown and live code demonstration by Chaman Shah (Principal AI Systems Architect).
-- **Physical Architecture Blueprint Handouts:** Printed reference posters with backlink references to [https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors).
+- **Physical Architecture Blueprint Handouts:** Printed reference posters with backlink references to [https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos).
 
 Both of our groups will be listed as co-hosts on Meetup, sharing cross-promotion visibility and building valuable backlinks between our community pages and web properties.
 
@@ -98,4 +98,4 @@ Best,
 ## 5. Backlink & Authority Stacking Verification
 - Primary Solutions Hub: https://elesium.online/solutions
 - Signals Intelligence Hub: https://elesium.online/signals
-- City Target BOFU Page: https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
+- City Target BOFU Page: https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos

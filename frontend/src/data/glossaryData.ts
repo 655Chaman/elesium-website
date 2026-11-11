@@ -130,7 +130,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: 'Sovereign Private VPC Enclave',
     category: 'Sovereign & DPDP',
     shortDefinition: 'An isolated virtual private cloud environment bounded by dedicated security groups, air-gapped private subnets, and customer-managed KMS encryption keys for enterprise AI model hosting.',
-    technicalDeepDive: 'By deploying vLLM or Ollama backends inside dedicated VPC enclaves without public internet gateways, all prompt tokens, embedding vectors, and RAG documents remain strictly confined to private enterprise networks. Egress filtering drops all unauthorized external connections.',
+    technicalDeepDive: 'By deploying vLLM or Ollama backends inside dedicated VPC enclaves without public internet gateways, all prompt tokens, embedding vectors, and RAG documents remain strictly confined to sovereign enterprise networks. Egress filtering drops all unauthorized external connections.',
     productionBenchmark: 'Zero external network egress; 100% compliance with ISO 27001 and SOC-2 Type II standards.',
     relatedToolSlug: 'enterprise-gpu-finops-cost-calculator',
     relatedSolutionUrl: '/compare/private-vpc-vllm-vs-azure-openai'
@@ -233,8 +233,8 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: 'PagedAttention Virtual Memory Block Allocation',
     category: 'Inference & Serving',
     shortDefinition: 'An inference memory management algorithm inspired by OS virtual memory paging that divides KV cache into non-contiguous physical blocks to eliminate VRAM fragmentation.',
-    technicalDeepDive: 'Traditional LLM serving engines pre-allocate contiguous memory chunks for maximum context lengths, resulting in 60–80% internal and external memory waste. PagedAttention maps logical token sequences to physical GPU memory pages, allowing dynamic allocation on-demand and zero memory fragmentation.',
-    productionBenchmark: 'Near-zero ( < 4%) GPU memory waste; 2x–4x higher serving concurrency on H100 clusters.',
+    technicalDeepDive: 'Traditional LLM serving engines pre-allocate contiguous memory chunks for maximum context lengths, resulting in 60-80% internal and external memory waste. PagedAttention maps logical token sequences to physical GPU memory pages, allowing dynamic allocation on-demand and zero memory fragmentation.',
+    productionBenchmark: 'Near-zero ( < 4%) GPU memory waste; 2x-4x higher serving concurrency on H100 clusters.',
     relatedToolSlug: 'enterprise-agent-pagedattention-cache-simulator',
     relatedSolutionUrl: '/tools/enterprise-llm-context-kv-cache-simulator'
   },
@@ -264,7 +264,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     category: 'Inference & Serving',
     shortDefinition: 'An inference acceleration method where a lightweight draft model predicts candidate token trees that are verified in a single forward pass by the large target model.',
     technicalDeepDive: 'Autoregressive generation is strictly memory-bandwidth bound, reading entire multi-billion parameter weights from VRAM for every single generated token. Medusa speculative decoding uses multiple parallel prediction heads to generate branching candidate token trees, validating multiple tokens per target forward pass.',
-    productionBenchmark: '2.4x–3.1x end-to-end inference acceleration without changing model output distribution.',
+    productionBenchmark: '2.4x-3.1x end-to-end inference acceleration without changing model output distribution.',
     relatedToolSlug: 'enterprise-agent-medusa-speculative-tree-simulator',
     relatedSolutionUrl: '/tools/enterprise-agent-speculative-decoding-simulator'
   },

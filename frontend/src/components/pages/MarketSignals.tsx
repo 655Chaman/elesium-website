@@ -25,7 +25,7 @@ const signalsFaqs = [
     },
     {
         q: "How does Elesium benchmark sub-200ms TTFT for enterprise agentic workflows?",
-        a: "We benchmark inference on dedicated NVIDIA H100 and A100 SXM5 clusters utilizing custom FP8 GEMM microscaling kernels and vLLM PagedAttention page-table swapping. This reduces KV-cache memory fragmentation from 60–80% to under 4%, maintaining sub-200ms time-to-first-token even during heavy concurrent enterprise ERP reconciliation."
+        a: "We benchmark inference on dedicated NVIDIA H100 and A100 SXM5 clusters utilizing custom FP8 GEMM microscaling kernels and vLLM PagedAttention page-table swapping. This reduces KV-cache memory fragmentation from 60-80% to under 4%, maintaining sub-200ms time-to-first-token even during heavy concurrent enterprise ERP reconciliation."
     },
     {
         q: "How do sovereign GPU clusters ensure compliance with India's DPDP Act 2023 Section 8(5)?",
@@ -33,11 +33,11 @@ const signalsFaqs = [
     },
     {
         q: "What contractual guarantees accompany implementations of these architectures?",
-        a: "All production deployments derived from our technical signals carry a binding 90-day contractual SLA guaranteeing a 3x–5x audited cash-flow ROI, backed by proportional engineering fee rebate terms."
+        a: "All production deployments derived from our technical signals carry a binding 90-day contractual SLA guaranteeing a 3x-5x audited cash-flow ROI, backed by proportional engineering fee rebate terms."
     },
     {
         q: "What are the commercial engagement tiers for implementing these architectures?",
-        a: "Tier 1: Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); Tier 3: Autonomous AI Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical production SLA)."
+        a: "Tier 1: Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000, 14 days); Tier 2: Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000, 30-45 days); Tier 3: Autonomous AI Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical production SLA)."
     }
 ]
 
@@ -195,7 +195,7 @@ export default function MarketSignals() {
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 transition-colors duration-300">
             <WhatsAppModal />
-            {/* SEO Helmet — Pillar 2: JSON-LD Schema & GEO Meta Tags */}
+            {/* SEO Helmet - Pillar 2: JSON-LD Schema & GEO Meta Tags */}
             {activeArticle ? (
                 <Helmet>
                     <title>{activeArticle.title.replace(/\*\*/g, '')} | Elesium</title>
@@ -228,19 +228,19 @@ export default function MarketSignals() {
                                     "@type": "ListItem",
                                     "position": 1,
                                     "name": "Home",
-                                    "item": "https://elesium.online"
+                                    "item": "https://elesium.online/"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 2,
                                     "name": "Market Signals",
-                                    "item": "https://elesium.online/signals"
+                                    "item": "https://elesium.online/signals/"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 3,
                                     "name": activeArticle.title.replace(/\*\*/g, ''),
-                                    "item": `https://elesium.online/signals/${activeArticle.slug}`
+                                    "item": `https://elesium.online/signals/${activeArticle.slug}/`
                                 }
                             ]
                         })}
@@ -279,20 +279,25 @@ export default function MarketSignals() {
                             "@graph": [
                                 {
                                     "@type": "CollectionPage",
-                                    "@id": "https://elesium.online/signals#collection",
+                                    "@id": "https://elesium.online/signals/#collection",
                                     "name": "Enterprise AI Architecture Whitepapers & Technical Signals",
                                     "description": "Peer-reviewed technical whitepapers and architecture telemetry on private VPC LLMs, vLLM PagedAttention, FP8 GEMM kernels, and DPDP Act 2023 compliance.",
-                                    "url": "https://elesium.online/signals",
+                                    "url": "https://elesium.online/signals/",
                                     "publisher": {
                                         "@type": "Organization",
                                         "@id": "https://elesium.online/#organization",
                                         "name": "Elesium",
-                                        "url": "https://elesium.online",
-                                        "logo": "https://elesium.online/og-image.png"
+                                        "url": "https://elesium.online/",
+                                        "logo": {
+                                            "@type": "ImageObject",
+                                            "url": "https://elesium.online/assets/logo-square.png",
+                                            "width": "512",
+                                            "height": "512"
+                                        }
                                     },
                                     "breadcrumb": {
                                         "@type": "BreadcrumbList",
-                                        "@id": "https://elesium.online/signals#breadcrumb",
+                                        "@id": "https://elesium.online/signals/#breadcrumb",
                                         "itemListElement": [
                                             {
                                                 "@type": "ListItem",
@@ -304,21 +309,33 @@ export default function MarketSignals() {
                                                 "@type": "ListItem",
                                                 "position": 2,
                                                 "name": "Technical Signals",
-                                                "item": "https://elesium.online/signals"
+                                                "item": "https://elesium.online/signals/"
                                             }
                                         ]
                                     }
                                 },
                                 {
+                                    "@type": "ItemList",
+                                    "@id": "https://elesium.online/signals/#itemlist",
+                                    "name": "Enterprise AI Architecture Whitepapers & Technical Signals",
+                                    "numberOfItems": blogPosts.length,
+                                    "itemListElement": blogPosts.map((post, index) => ({
+                                        "@type": "ListItem",
+                                        "position": index + 1,
+                                        "name": post.title.replace(/\*\*/g, ''),
+                                        "item": `https://elesium.online/signals/${post.slug}/`
+                                    }))
+                                },
+                                {
                                     "@type": "Blog",
-                                    "@id": "https://elesium.online/signals#blog",
+                                    "@id": "https://elesium.online/signals/#blog",
                                     "name": "Elesium Market Signals & Intelligence Ledger",
-                                    "description": "Technical intelligence ledger and engineering blueprints by Elesium Systems Architects.",
-                                    "url": "https://elesium.online/signals",
+                                    "description": "Technical intelligence ledger and engineering blueprints by Elesium Architects.",
+                                    "url": "https://elesium.online/signals/",
                                     "publisher": {
                                         "@type": "Organization",
                                         "name": "Elesium",
-                                        "url": "https://elesium.online"
+                                        "url": "https://elesium.online/"
                                     }
                                 },
                                 {
@@ -400,7 +417,7 @@ export default function MarketSignals() {
                                         <strong>Elesium Technical Signals publish empirical systems telemetry, hardware benchmarks, and mathematical proofs for enterprise AI systems.</strong> Rather than high-level marketing overviews, our 119 whitepapers document production-proven methodologies for deploying LangGraph state machines, private VPC clusters, and custom vLLM kernels.
                                     </p>
                                     <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                                        Key specifications include sub-200ms time-to-first-token latency, FP8 GEMM microscaling quantization, PagedAttention memory fragmentation reduction (from 60–80% to &lt;4%), and zero external data retention compliant with Section 8(5) of India's DPDP Act 2023 on Yotta Shakti and CtrlS tier-IV datacenter clusters.
+                                        Key specifications include sub-200ms time-to-first-token latency, FP8 GEMM microscaling quantization, PagedAttention memory fragmentation reduction (from 60-80% to &lt;4%), and zero external data retention compliant with Section 8(5) of India's DPDP Act 2023 on Yotta Shakti and CtrlS tier-IV datacenter clusters.
                                     </p>
 
                                     {/* Telemetry Matrix */}
@@ -492,7 +509,7 @@ export default function MarketSignals() {
                                         <div>
                                             <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
                                             <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 – ₹3,50,000</div>
+                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
                                             <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
                                             <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                                 Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
@@ -513,8 +530,8 @@ export default function MarketSignals() {
                                         <div>
                                             <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
                                             <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 – ₹15,00,000</div>
-                                            <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30–45 Day Implementation</div>
+                                            <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
+                                            <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30-45 Day Implementation</div>
                                             <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                                 Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
                                             </p>
@@ -927,7 +944,7 @@ export default function MarketSignals() {
                                     </div>
                                 )}
 
-                                {/* Pillar 1: Related Posts — Internal Linking */}
+                                {/* Pillar 1: Related Posts - Internal Linking */}
                                 {relatedPosts.length > 0 && (
                                     <div className="mt-12 border-t border-gray-200 dark:border-white/10 pt-8">
                                         <h2 className="text-lg font-bold text-black dark:text-white mb-4 flex items-center gap-2">

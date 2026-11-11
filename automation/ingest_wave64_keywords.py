@@ -1,7 +1,7 @@
 import json
 
 wave64_keywords = [
-    # Cluster 1: Expert Parallelism & MoE Token Routing (IDs 3116–3132, 17 items)
+    # Cluster 1: Expert Parallelism & MoE Token Routing (IDs 3116-3132, 17 items)
     {
         "id": 3116,
         "keyword": "expert parallelism moe dynamic dispatch controllers for enterprise vllm and triton",
@@ -224,7 +224,7 @@ wave64_keywords = [
         "primary_cta": "Schedule Jet Turbine Expert Parallel Telemetry Review"
     },
 
-    # Cluster 2: Asynchronous All-to-All Dispatch & Combine Overlap (IDs 3133–3148, 16 items)
+    # Cluster 2: Asynchronous All-to-All Dispatch & Combine Overlap (IDs 3133-3148, 16 items)
     {
         "id": 3133,
         "keyword": "all to all dispatch overlap controllers for low latency quantitative trading desks",
@@ -434,7 +434,7 @@ wave64_keywords = [
         "primary_cta": "Schedule Supply Chain Expert Activation Compression Review"
     },
 
-    # Cluster 3: Sparse MoE Cluster FinOps & Sovereign Enterprise AI (IDs 3149–3165, 17 items)
+    # Cluster 3: Sparse MoE Cluster FinOps & Sovereign Enterprise AI (IDs 3149-3165, 17 items)
     {
         "id": 3149,
         "keyword": "sub 8ms expert dispatch latency sla monitoring daemons for autonomous agents",

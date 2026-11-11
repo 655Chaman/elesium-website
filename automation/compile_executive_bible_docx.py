@@ -6,7 +6,7 @@ Publication-Grade Markdown-to-DOCX Compiler for The Growth Scale Executive Bible
 Engineered with python-docx 1.2.0 and low-level OXML styling:
   - 1.0-inch margins all around with distinct first-page header/footer
   - Running Header: "THE GROWTH SCALE EXECUTIVE BIBLE | ENTERPRISE PRODUCTION SPECIFICATION" (Slate-400 #94A3B8)
-  - Running Footer: "CONFIDENTIAL & PROPRIETARY — ELESIUM INTELLIGENCE CORE — ALL RIGHTS RESERVED" (Slate-400 #94A3B8)
+  - Running Footer: "CONFIDENTIAL & PROPRIETARY - ELESIUM INTELLIGENCE CORE - ALL RIGHTS RESERVED" (Slate-400 #94A3B8)
   - Typography Hierarchy:
       * Document Title: Arial 24pt Bold (#0F172A)
       * Document Subtitle: Arial 12pt Regular (#475569)
@@ -407,7 +407,7 @@ class ExecutiveBibleCompiler:
             footer = section.footer
             fp = footer.paragraphs[0]
             fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            frun = fp.add_run("CONFIDENTIAL & PROPRIETARY — ELESIUM INTELLIGENCE CORE — ALL RIGHTS RESERVED")
+            frun = fp.add_run("CONFIDENTIAL & PROPRIETARY - ELESIUM INTELLIGENCE CORE - ALL RIGHTS RESERVED")
             frun.font.name = "Arial"
             frun.font.size = Pt(8.0)
             frun.font.color.rgb = COLOR_SLATE_400

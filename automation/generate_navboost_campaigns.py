@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate_navboost_campaigns.py — Navboost Behavioral Referral Engine
+generate_navboost_campaigns.py - Navboost Behavioral Referral Engine
 Implements Chris M. Walker's Navboost Search Telemetry Protocol (SEO Rockstars 2026).
 
 Generates 5 executive-tier, non-generic social/email/WhatsApp campaign scripts.
@@ -66,7 +66,7 @@ Click the first result, open the *India Enterprise* portal, and test the live te
 
 Alternatively, reply directly here if you'd like our engineering lead to walk your technical team through a 15-minute VPC architecture proof-of-concept.
 
-— Elesium Systems Architecture Team | Bangalore"""
+- Elesium Architecture Team | Bangalore"""
     },
     {
         "id": "campaign_2_manufacturing_sap",
@@ -116,7 +116,7 @@ Hi [Name],
 
 Reaching out from Elesium's enterprise engineering pod in Bangalore.
 
-We just published an architecture teardown detailing how Indian manufacturing enterprises are eliminating assembly line stockout penalties (often ₹15L–₹30L per incident) by deploying autonomous agents directly onto their SAP S/4HANA ledgers.
+We just published an architecture teardown detailing how Indian manufacturing enterprises are eliminating assembly line stockout penalties (often ₹15L-₹30L per incident) by deploying autonomous agents directly onto their SAP S/4HANA ledgers.
 
 The agent monitors real-time burn rates and auto-drafts procurement POs with 1-tap WhatsApp executive approvals.
 
@@ -126,7 +126,7 @@ Open the top link, head to *Masterclasses*, and watch the Supply Chain Teardown.
 
 Let us know if your plant operations team would like a direct architecture demo.
 
-— Elesium Architecture Pod"""
+- Elesium Architecture Pod"""
     },
     {
         "id": "campaign_3_death_of_rpa",
@@ -151,7 +151,7 @@ In 2026, deterministic Agentic AI has rendered UI screen-scraping obsolete:
 Instead of brittle desktop clicks, our systems employ:
 1. Resilient API-first connectors and headless Browser-Use agents with vision self-healing.
 2. LangGraph state machines that handle unexpected schema variations without human intervention.
-3. Strict deterministic guardrails—zero stochastic hallucination in financial transactions.
+3. Strict deterministic guardrails - zero stochastic hallucination in financial transactions.
 4. Total infrastructure sovereignty: deployed on your private cloud or on-prem servers.
 
 Result: 90% reduction in maintenance tickets. 10x faster execution speed. And zero per-bot licensing gouging.
@@ -183,14 +183,14 @@ Click the first result and read our *How We Work* architecture whitepaper.
 
 Always happy to share the repository architecture with your tech leads.
 
-— Elesium Engineering Desk"""
+- Elesium Engineering Desk"""
     },
     {
         "id": "campaign_4_pricing_truth",
         "title": "Campaign 4: The ₹1.5L vs ₹25L Pricing Truth for Enterprise AI",
         "target_persona": "Founders, Managing Directors, Promoters, and Business Unit Heads",
-        "pain_point": "Getting quoted ₹25L–₹50L and 6-month timelines by legacy IT consulting firms for basic AI proof-of-concepts.",
-        "solution": "14-day production pilot architecture sprint at ₹1.5L–₹3.5L with a hard 90-day ROI mandate.",
+        "pain_point": "Getting quoted ₹25L-₹50L and 6-month timelines by legacy IT consulting firms for basic AI proof-of-concepts.",
+        "solution": "14-day production pilot architecture sprint at ₹1.5L-₹3.5L with a hard 90-day ROI mandate.",
         "navboost_search_query": "Elesium AI automation agency India",
         "navboost_action": "Click the first result (Elesium.online), scroll to the 'Interactive Architecture Intake & ROI Calculator', and calculate exact annual hours and cost savings.",
         "linkedin_post": """How much does Enterprise AI Automation actually cost in India in 2026?
@@ -203,10 +203,10 @@ That is an archaic business model designed to bill engineering hours, not delive
 
 At Elesium, we publish our investment tiers openly because enterprise engineering should be transparent:
 
-• Tier 1: Pilot Architecture Sprint (₹1.5L – ₹3.5L)
+• Tier 1: Pilot Architecture Sprint (₹1.5L - ₹3.5L)
 Single-process deterministic agent deployed in 14 days on private VPC staging. Guaranteed delivery. Validates technical feasibility and hard ROI before enterprise-wide capital commitment.
 
-• Tier 2: Enterprise Multi-Agent Suite (₹6L – ₹15L)
+• Tier 2: Enterprise Multi-Agent Suite (₹6L - ₹15L)
 Comprehensive multi-department autonomous workflow (e.g., end-to-end invoice reconciliation + ERP synchronization + executive WhatsApp alerts). 30 to 45 day deployment.
 
 • Tier 3: Dedicated Autonomous AI Engineering Pod (₹4.5L/mo)
@@ -238,9 +238,9 @@ We built a live interactive calculator that models your exact weekly manual hour
 👉 Search Google for: *Elesium AI automation agency India*
 Open the top link, scroll to the *Enterprise Architecture Intake*, and configure your workflow in 30 seconds.
 
-Zero sales pressure—just clean engineering benchmarks.
+Zero sales pressure - just clean engineering benchmarks.
 
-— Elesium Architecture Team"""
+- Elesium Architecture Team"""
     },
     {
         "id": "campaign_5_sovereign_ai_dpdp",
@@ -300,7 +300,7 @@ Click the first result and review our *Zero Retention Security Guarantees*.
 
 We are available to conduct a confidential architectural audit with your security team upon request.
 
-— Elesium Enterprise Security Group | Bangalore"""
+- Elesium Enterprise Security Group | Bangalore"""
     }
 ]
 
@@ -311,7 +311,7 @@ def generate_all_campaigns():
     output_file = output_dir / "navboost_campaigns.md"
 
     content = []
-    content.append("# Navboost Behavioral Referral Engine — Executive Campaign Suite")
+    content.append("# Navboost Behavioral Referral Engine - Executive Campaign Suite")
     content.append("> **Protocol Owner:** Chris M. Walker Navboost Search Telemetry (SEO Rockstars 2026)")
     content.append("> **Primary Target Brand & Commercial Query:** `Elesium AI automation agency India`")
     content.append("> **Objective:** Drive high-intent organic Google searches, 100% CTR on Elesium, deep dwell time, and authoritative Navboost re-ranking.\n")

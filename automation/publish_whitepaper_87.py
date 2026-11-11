@@ -209,7 +209,7 @@ WHITEPAPER_87 = {
             "type": "list",
             "value": [
                 "Data Privacy & Sovereignty: Public GPTs: Multi-tenant, foreign cloud hosting with privacy policy opt-outs vs. Elesium Sovereign: 100% private VPC air-gapped within Indian borders.",
-                "Billing Model: Public GPTs: Per-seat recurring license ($20–$30/user/mo) plus API token metering vs. Elesium: Fixed amortized infrastructure compute cost in INR.",
+                "Billing Model: Public GPTs: Per-seat recurring license ($20-$30/user/mo) plus API token metering vs. Elesium: Fixed amortized infrastructure compute cost in INR.",
                 "Custom Fine-Tuning: Public GPTs: Limited to basic RAG text files and system prompts vs. Elesium: Full PEFT/LoRA adapter fine-tuning on internal domain lexicons and vernacular corpora.",
                 "System Prompt Extraction Risk: Public GPTs: Highly vulnerable to jailbreak and prompt leakage vs. Elesium: Formal NeMo Guardrails and semantic firewall token filters.",
                 "Citations & Provenance: Public GPTs: Hallucinatory web browsing links vs. Elesium: Deterministic vector chunk IDs with exact document page coordinates."
@@ -238,7 +238,7 @@ WHITEPAPER_87 = {
         },
         {
             "type": "paragraph",
-            "value": "Explore our production-grade high-leverage commercial solution at [Private VPC Air-Gapped LLM Deployment for Healthcare](/solutions/private-vpc-air-gapped-llm-deployment-for-healthcare), or model memory efficiency with our interactive [Enterprise Chunked Prefill & Radix Attention KV Cache Simulator](/tools/enterprise-agent-chunked-prefill-radix-attention-simulator)."
+            "value": "Explore our production-grade high-leverage commercial solution at [Private VPC Air-Gapped LLM Deployment for Healthcare](/solutions/sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance), or model memory efficiency with our interactive [Enterprise Chunked Prefill & Radix Attention KV Cache Simulator](/tools/enterprise-agent-chunked-prefill-radix-attention-simulator)."
         }
     ]
 }

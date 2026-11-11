@@ -39,11 +39,11 @@ const homeFaqs: FaqItem[] = [
     },
     {
         q: "What is Elesium's 90-day contractual ROI SLA?",
-        a: "Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
+        a: "Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
     },
     {
         q: "What are the institutional investment tiers for deploying Elesium AI systems?",
-        a: "Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 – ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 – ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA)."
+        a: "Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA)."
     }
 ]
 
@@ -64,18 +64,18 @@ export default function Home() {
                 <title>Elesium | Best Enterprise AI Company in India</title>
                 <meta
                     name="description"
-                    content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days."
+                    content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days."
                 />
                 <link rel="canonical" href="https://elesium.online/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Elesium | Best Enterprise AI Company in India" />
-                <meta property="og:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days." />
+                <meta property="og:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days." />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta property="og:url" content="https://elesium.online/" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@elesium_ai" />
                 <meta name="twitter:title" content="Elesium | Best Enterprise AI Company in India" />
-                <meta name="twitter:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days." />
+                <meta name="twitter:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
             </Helmet>
 
@@ -148,7 +148,7 @@ export default function Home() {
                                     <span>Contractual SLA</span>
                                 </div>
                                 <div className="text-xl font-bold font-mono text-emerald-600 dark:text-emerald-400">90-Day ROI</div>
-                                <div className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">Audited 3x–5x Cash Flow</div>
+                                <div className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">Audited 3x-5x Cash Flow</div>
                             </div>
                         </div>
                     </div>
@@ -190,7 +190,7 @@ export default function Home() {
                                 <span className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Tier 01</span>
                                 <h3 className="text-xl font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
                                 <div className="text-3xl font-bold text-gray-950 dark:text-white font-mono mb-1">
-                                    ₹1,50,000 <span className="text-sm font-normal text-gray-500">– ₹3,50,000</span>
+                                    ₹1,50,000 <span className="text-sm font-normal text-gray-500"> - ₹3,50,000</span>
                                 </div>
                                 <p className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-6">14-Day Production Validation</p>
                                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300 mb-8">
@@ -229,9 +229,9 @@ export default function Home() {
                                 <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Tier 02</span>
                                 <h3 className="text-xl font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
                                 <div className="text-3xl font-bold text-gray-950 dark:text-white font-mono mb-1">
-                                    ₹6,00,000 <span className="text-sm font-normal text-gray-500">– ₹15,00,000</span>
+                                    ₹6,00,000 <span className="text-sm font-normal text-gray-500"> - ₹15,00,000</span>
                                 </div>
-                                <p className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-6">30–45 Day Full Implementation</p>
+                                <p className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-6">30-45 Day Full Implementation</p>
                                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300 mb-8">
                                     <li className="flex items-start gap-2">
                                         <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
@@ -247,7 +247,7 @@ export default function Home() {
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                                        <span>Contractual 90-day 3x–5x cash-flow ROI guarantee</span>
+                                        <span>Contractual 90-day 3x-5x cash-flow ROI guarantee</span>
                                     </li>
                                 </ul>
                             </div>

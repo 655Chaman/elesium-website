@@ -90,10 +90,10 @@ SECTIONS = [
         "value": (
             "### 2.2 Sovereign GPU Inference Compute: Self-Hosted vLLM vs Cloud APIs\n"
             "For Indian BFSI and healthcare institutions bound by data localization mandates, sending customer queries to third-party US cloud APIs is legally untenable. "
-            "Deploying fine-tuned 14B or 70B parameter models (e.g., Llama-3.3-70B or Qwen-2.5-72B quantized via AWQ/GPTQ) on private compute requires:\n\n"
+            "Deploying fine-tuned 14B or 70B parameter models (e.g., Llama-3.3-70B or Qwen-2.5-72B quantized via AWQ/GPTQ) on sovereign compute requires:\n\n"
             "* **AWS Mumbai (`ap-south-1`) `g5.12xlarge`** (4x NVIDIA A10G 96GB VRAM): ~₹5,12,000/month on on-demand pricing, or ~₹3,35,000/month on 1-Year Reserved Instances.\n"
             "* **Indian Sovereign Cloud (Yotta / E2E Networks)** (NVIDIA H100 SXM5 80GB): ~₹2,85,000 to ₹4,20,000/month per node.\n"
-            "* **Comparative API Token Burn:** An enterprise processing 50,000 daily queries averaging 3,500 input tokens (retrieved context) and 400 output tokens consumes 195 million tokens monthly, generating a variable monthly bill of **₹2,90,000 to ₹6,80,000** under third-party commercial APIs—without data sovereignty guarantees."
+            "* **Comparative API Token Burn:** An enterprise processing 50,000 daily queries averaging 3,500 input tokens (retrieved context) and 400 output tokens consumes 195 million tokens monthly, generating a variable monthly bill of **₹2,90,000 to ₹6,80,000** under third-party commercial APIs - without data sovereignty guarantees."
         )
     },
     {

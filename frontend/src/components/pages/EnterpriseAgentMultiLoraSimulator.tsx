@@ -96,7 +96,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
   const faqs = [
     {
       q: "What is Multi-LoRA Dynamic Adapter Switching and why is it critical for enterprise AI?",
-      a: "Multi-LoRA serving runtimes allow hundreds of specialized domain adapters (for legal review, financial underwriting, medical triage, or customer sentiment) to execute on a single base foundation model instance. Rather than deploying dozens of separate 70B models—which multiplies GPU cloud spend by 10x to 50x—Multi-LoRA dynamically loads and executes lightweight low-rank delta matrices in-flight on shared hardware."
+      a: "Multi-LoRA serving runtimes allow hundreds of specialized domain adapters (for legal review, financial underwriting, medical triage, or customer sentiment) to execute on a single base foundation model instance. Rather than deploying dozens of separate 70B models (which multiplies GPU cloud spend by 10x to 50x), Multi-LoRA dynamically loads and executes lightweight low-rank delta matrices in-flight on shared hardware."
     },
     {
       q: "How does Zero-Copy Weight Swapping achieve sub-10ms switching latency?",

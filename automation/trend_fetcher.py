@@ -1,5 +1,5 @@
 """
-trend_fetcher.py — Step 1 of the Elesium SEO Automation Pipeline
+trend_fetcher.py - Step 1 of the Elesium SEO Automation Pipeline
 
 What it does:
   1. Connects to Google Trends (worldwide) using pytrends
@@ -35,13 +35,13 @@ def log(msg: str, level: str = "INFO") -> None:
 
 
 def fuzzy_match_score(a: str, b: str) -> float:
-    """Return similarity ratio between two strings (0.0 – 1.0)."""
+    """Return similarity ratio between two strings (0.0 - 1.0)."""
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
 def keyword_relevance_score(keyword: str) -> float:
     """
-    Score a keyword's relevance to Elesium's business (0.0 – 1.0).
+    Score a keyword's relevance to Elesium's business (0.0 - 1.0).
 
     Strategy:
       - Exact substring match with seed keywords → high score
@@ -301,12 +301,12 @@ def fetch_realtime_trending(verbose: bool = False) -> list:
 
     # ── Tier 3 fallback ──────────────────────────────────
     if len(all_data) < 10:
-        log(f"Only {len(all_data)} entries from live sources — activating Tier 3 fallback.")
+        log(f"Only {len(all_data)} entries from live sources - activating Tier 3 fallback.")
         t3 = fetch_tier3_curated()
         all_data.extend(t3)
         log(f"  Tier 3 added {len(t3)} curated keywords.")
     else:
-        log(f"Live data sufficient ({len(all_data)} entries) — Tier 3 not needed.")
+        log(f"Live data sufficient ({len(all_data)} entries) - Tier 3 not needed.")
 
     log(f"Collected {len(all_data)} total keyword entries across all tiers.")
     return all_data
@@ -383,7 +383,7 @@ def score_and_filter(keywords: list, verbose: bool = False) -> list:
                 log(f"  ✗ FILTERED [{relevance:.2f}] {kw}")
             continue
 
-        # Normalise trending score to 0–1
+        # Normalise trending score to 0-1
         trending_norm = min(item["trending_score"] / 100.0, 1.0)
 
         # Composite score
@@ -418,7 +418,7 @@ def run(test_mode: bool = False, verbose: bool = False) -> list:
     Returns the final ranked keyword list.
     """
     log("=" * 60)
-    log("STEP 1 — Google Trends Fetcher")
+    log("STEP 1 - Google Trends Fetcher")
     log("=" * 60)
 
     # Fetch raw data

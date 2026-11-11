@@ -49,7 +49,7 @@ const TOOLS_LIST: ToolCard[] = [
         slug: "token-cost-arbitrage-calculator",
         title: "LLM Token Cost Arbitrage Calculator",
         category: "FinOps & Token Economics",
-        description: "Model 3-year TCO comparison between commercial cloud APIs (Azure OpenAI, Anthropic Claude) versus private sovereign vLLM clusters.",
+        description: "Model 3-year TCO comparison between commercial cloud APIs (Azure OpenAI, Anthropic Claude) versus sovereign private vLLM clusters.",
         metric: "62% - 74% Cost Reduction",
         badge: "FinOps Arbitrage"
     },

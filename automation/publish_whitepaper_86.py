@@ -225,7 +225,7 @@ WHITEPAPER_86 = {
         },
         {
             "type": "paragraph",
-            "value": "Explore our high-leverage commercial solution for sub-second ledger reconciliation at our dedicated engineering portal: [Sub-200ms Ledger Reconciliation Agents for FinTechs](/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs), or test high-throughput memory sharding metrics on our interactive [Enterprise Vector Database Sharding Simulator](/tools/enterprise-agent-vector-db-sharding-simulator)."
+            "value": "Explore our high-leverage commercial solution for sub-second ledger reconciliation at our dedicated engineering portal: [Sub-200ms Ledger Reconciliation Agents for FinTechs](/solutions/upi-merchant-chargeback-dispute-arbitration-autonomous-agents-for-mumbai-payment-aggregators), or test high-throughput memory sharding metrics on our interactive [Enterprise Vector Database Sharding Simulator](/tools/enterprise-agent-vector-db-sharding-simulator)."
         }
     ]
 }

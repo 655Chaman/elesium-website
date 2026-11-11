@@ -111,7 +111,7 @@ def render_news_article(rel: Dict[str, Any], raw_markdown: str) -> str:
                 "description": rel["description"],
                 "image": {
                     "@type": "ImageObject",
-                    "url": "https://elesium.online/assets/hero-corporate.png",
+                    "url": "https://elesium.online/og-image.png",
                     "width": 1200,
                     "height": 630
                 },

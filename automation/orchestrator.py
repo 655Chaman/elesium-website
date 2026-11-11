@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-orchestrator.py — Elesium Master SEO & AEO Pipeline Orchestrator
+orchestrator.py - Elesium Master SEO & AEO Pipeline Orchestrator
 ================================================================
 Executes a strictly linear, zero-discrepancy autonomous publishing chain:
   Phase 1: Competitor Intelligence & GSC Pattern Detection

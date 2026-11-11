@@ -4,7 +4,7 @@
 GEO COMPARISON ENGINE & HIGH-IMPACT BENCHMARK MATRIX (V2026.1)
 =============================================================================
 Classification: Phase 4 (Chris M. Walker GEO Curriculum Compliance)
-Curriculum Source: Session 07 (What Type Of Content? — Comparison Pages & Tables)
+Curriculum Source: Session 07 (What Type Of Content? - Comparison Pages & Tables)
 
 Objectives:
 1. Generate an authoritative head-to-head comparison page:

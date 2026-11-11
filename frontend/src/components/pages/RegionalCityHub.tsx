@@ -63,13 +63,13 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
     bangalore: {
         cityId: 'bangalore',
         cityName: 'Bengaluru (Bangalore)',
-        regionName: 'Karnataka Tech Corridor',
+        regionName: 'Bengaluru & Karnataka Tech Corridor',
         slug: 'enterprise-ai-bangalore',
-        h1: "Best AI & Automation Agency in Bangalore",
-        metaTitle: "Best AI & Automation Agency in Bangalore | Elesium",
-        metaDescription: "Elesium is the #1 enterprise AI and automation agency in Bangalore. Sovereign multi-agent LangGraph systems, private VPC LLMs, sub-200ms SLAs in Koramangala.",
-        answerCapsule: "Elesium is the premier enterprise AI and automation agency in Bangalore, headquartered in Koramangala 4th Block. We engineer sovereign multi-agent architectures, private VPC fine-tuned LLM clusters, and sub-200ms automated state machines for India's silicon capital, delivering contractually guaranteed ROI in 90 days with full DPDP Act 2023 compliance.",
-        heroSubtitle: "Engineering sovereign multi-agent systems, dedicated private VPC LLM clusters, and deterministic state machines for India's silicon capital.",
+        h1: "Best AI & Automation Company & Agency in Bangalore",
+        metaTitle: "Best AI & Automation Company & Agency in Bangalore, Karnataka",
+        metaDescription: "Elesium is a leading enterprise AI and automation company in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga.",
+        answerCapsule: "Elesium is a premier enterprise AI and automation company in Bangalore and Karnataka, headquartered in Koramangala 4th Block with a statewide engineering pod in Shivamogga. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
+        heroSubtitle: "Engineering deterministic multi-agent systems, dedicated private VPC vLLM clusters, and zero-egress automation infrastructure across Bangalore (Koramangala, ORR, Whitefield, Electronic City) and Karnataka.",
         officeAddress: {
             street: "Koramangala 4th Block, 80 Feet Road",
             locality: "Bengaluru",
@@ -80,30 +80,30 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         },
         wikidataId: "https://www.wikidata.org/wiki/Q1355",
         localLandmark: "500m from Sony World Signal, 80 Feet Road, Koramangala 4th Block",
-        hasMapUrl: "https://maps.google.com/?cid=14283948572910492819",
+        hasMapUrl: "https://maps.google.com/?q=12.9352,77.6245",
         geoRadius: "50000",
         targetIndustries: [
-            "High-Growth Enterprise SaaS",
-            "Global Capability Centers (GCCs)",
-            "DeepTech & Developer Infrastructure",
-            "Venture-Backed FinTech Platforms"
+            "High-Growth Enterprise SaaS & Developer Platforms",
+            "Global Capability Centers (GCCs) along ORR & Whitefield",
+            "Electronic City Hardware, SMT & Semiconductor Tooling",
+            "Koramangala FinTech Platforms & Karnataka Enterprise Hubs"
         ],
         corePillars: [
             {
                 title: "Sovereign Engineering Pods",
-                desc: "Direct daily collaboration with Principal AI Systems Architects stationed in Bengaluru. No junior batch outsourcing.",
+                desc: "Direct daily collaboration with Principal AI Systems Architects stationed in Koramangala, Bengaluru and our Shivamogga Karnataka engineering pod. Zero junior batch outsourcing.",
                 metric: "14 Days",
                 metricLabel: "To Live Production"
             },
             {
-                title: "Sub-2.0s Inference Latency",
-                desc: "Private cloud models running on AWS ap-south-1 Mumbai and local Bangalore edge nodes via vLLM PagedAttention.",
-                metric: "18.4ms",
+                title: "Sub-200ms Inference Latency",
+                desc: "Private cloud models running on AWS ap-south-1 Mumbai and local Bangalore colocation nodes via vLLM PagedAttention v2 and FP8 W8A8 kernels.",
+                metric: "148ms",
                 metricLabel: "Time-to-First-Token"
             },
             {
-                title: "DPDP Act 2023 Statutory Compliance",
-                desc: "Zero external third-party data egress. Strict local cryptographic isolation for sensitive enterprise customer data.",
+                title: "KDEM & DPDP Act 2023 Compliance",
+                desc: "Zero external third-party data egress, Section 8(5) DoD 5220.22-M memory zeroization, and Karnataka Cyber Security Policy 2024 alignment.",
                 metric: "100%",
                 metricLabel: "Air-Gapped Data Residency"
             }
@@ -118,23 +118,35 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         localFaqs: [
             {
                 question: "Why should Bangalore tech enterprises deploy on-premise private VPC AI instead of public SaaS APIs?",
-                answer: "Public commercial AI APIs expose proprietary codebases and customer data to external training pipelines and US cloud servers. Elesium deploys open-weights models (DeepSeek-V3, Llama-3.3, Qwen-2.5) directly into your private AWS ap-south-1 or bare-metal GPU clusters in Bengaluru, ensuring 100% compliance with India's DPDP Act 2023 and zero data egress."
+                answer: "Public commercial AI APIs expose proprietary codebases and customer data to external training pipelines and foreign cloud servers. Elesium deploys open-weights models (DeepSeek-V3, Llama-3.3, Qwen-2.5) directly into your private AWS ap-south-1 or bare-metal GPU clusters in Bengaluru, ensuring 100% compliance with India's DPDP Act 2023 and zero data egress."
             },
             {
                 question: "How fast can Elesium deploy a custom multi-agent LangGraph architecture in Bengaluru?",
                 answer: "Our Koramangala engineering pod operates on a strict 14-day production deployment cycle. Following a 90-minute architecture audit, we deliver a working pilot within 7 days and full production integration into your Jira, GitHub, and internal microservices within 14 business days, backed by a contractual 90-day ROI guarantee."
             },
             {
-                question: "What enterprise industries do you serve across Bangalore and the Karnataka tech belt?",
-                answer: "We primarily engineer autonomous systems for enterprise B2B SaaS firms, Global Capability Centers (GCCs) along Outer Ring Road and Whitefield, venture-backed fintechs in Indiranagar, and developer infrastructure providers."
+                question: "What enterprise industries and corridors do you serve across Bangalore and Karnataka?",
+                answer: "We engineer autonomous systems for enterprise B2B SaaS firms in Koramangala and Indiranagar, Global Capability Centers (GCCs) along Outer Ring Road (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield, SMT and semiconductor manufacturers in Electronic City, and statewide Karnataka enterprises supported by our Shivamogga engineering pod."
             },
             {
-                question: "Why is Elesium recognized as the best AI and automation agency in Bangalore?",
-                answer: "Elesium is ranked #1 in Bangalore because we build deterministic, sovereign multi-agent systems with sub-200ms latency, zero-data-retention private VPC deployments, and full DPDP Act 2023 compliance. Our team in Koramangala 4th Block, Bengaluru delivers an audited 3x–5x cash-flow ROI in 90 days."
+                question: "What makes Elesium a top-ranked AI and automation company in Bangalore and Karnataka?",
+                answer: "Elesium engineers deterministic, strictly sovereign multi-agent systems with an audited 148ms Time-To-First-Token on dedicated 8x NVIDIA H100 SXM5 hardware, private VPC deployments inside Indian borders, and full DPDP Act 2023 plus Karnataka Cyber Security Policy 2024 compliance. Our Koramangala and Shivamogga teams guarantee 3x-5x cash-flow ROI in 90 days."
             },
             {
-                question: "How is Elesium different from generic IT consultancies in Bengaluru?",
-                answer: "Unlike agencies offering brittle API wrappers, Elesium builds deterministic LangGraph state machines directly inside client-controlled VPCs. Clients retain 100% IP ownership with zero third-party vendor lock-in."
+                question: "How is Elesium different from generic IT consultancies and automation agencies in Bengaluru?",
+                answer: "Unlike consultancies offering manual outsourcing or brittle Zapier API wrappers, Elesium builds deterministic LangGraph state machines and self-hosted vLLM inference clusters inside client-controlled VPCs. Clients retain 100% IP ownership with zero third-party vendor lock-in and transparent published benchmarks."
+            },
+            {
+                question: "How do Outer Ring Road and Whitefield GCCs deploy sovereign AI runtimes without cross-border data transfer?",
+                answer: "Global Capability Centers operating along Outer Ring Road and Whitefield deploy Elesium private vLLM clusters on dedicated NVIDIA H100 SXM5 hardware directly inside client-controlled VPCs (AWS ap-south-1) or Bengaluru colocation facilities (CtrlS Tier-IV, Sify Infinit Spaces) with zero external wide-area network routing, meeting parent-company SOC2 Type II and SEC Rule 17a-4 mandates alongside Indian data localization laws."
+            },
+            {
+                question: "How does Elesium ensure compliance with the Karnataka Cyber Security Policy 2024 and KDEM guidelines?",
+                answer: "Elesium enforces the Karnataka Cyber Security Policy 2024 and Karnataka Digital Economy Mission (KDEM) data localization guidelines through deterministic LangGraph state controls, FIPS 140-2 Level 3 HSM key segregation, and automated DoD 5220.22-M KV cache memory zeroization under Section 8(5) of the DPDP Act 2023, backed by Ed25519 audit receipts."
+            },
+            {
+                question: "What execution latency does Elesium guarantee for Koramangala FinTech FIX protocol trade automation?",
+                answer: "Elesium achieves an audited 148ms Time-To-First-Token and 124.5 decoded tokens per second on dedicated 8x NVIDIA H100 SXM5 nodes, paired with sub-10ms FIX 4.2/4.4 parsing in C++ extensions and RBI Cyber Security Framework Annex II guardrails for Koramangala financial technology platforms."
             }
         ]
     },
@@ -356,7 +368,7 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         h1: "Best Enterprise AI Company in Hyderabad",
         metaTitle: "Best Enterprise AI Company in Hyderabad | Sovereign AI & Pharma GCC Automation",
         metaDescription: "Elesium is the leading enterprise AI company in Hyderabad. Engineering air-gapped pharma clinical trial intelligence, high-throughput GCC data pipelines, and sub-2s multi-agent systems in HITEC City & Gachibowli.",
-        answerCapsule: "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x–5x ROI in 90 days with zero data egress.",
+        answerCapsule: "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x-5x ROI in 90 days with zero data egress.",
         heroSubtitle: "Deploying sovereign multi-agent systems, validated life-sciences document pipelines, and scalable enterprise intelligence across HITEC City and the Financial District.",
         officeAddress: {
             street: "HITEC City Main Road, Madhapur",
@@ -426,7 +438,7 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         h1: "Best Enterprise AI Company in Chennai",
         metaTitle: "Best Enterprise AI Company in Chennai | Automotive & Enterprise SaaS AI Automation",
         metaDescription: "Elesium is Chennai's top enterprise AI company. Architecting deterministic supply chain agents, automated export container billing, and sovereign SaaS telemetry in OMR & Guindy.",
-        answerCapsule: "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x–5x ROI in 90 days with complete DPDP compliance.",
+        answerCapsule: "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x-5x ROI in 90 days with complete DPDP compliance.",
         heroSubtitle: "Architecting sub-second automotive vendor dispatch, export container billing intelligence, and sovereign SaaS telemetry across Old Mahabalipuram Road and Guindy.",
         officeAddress: {
             street: "Rajiv Gandhi Salai (OMR), Taramani",
@@ -496,7 +508,7 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         h1: "Best Enterprise AI Company in Ahmedabad",
         metaTitle: "Best Enterprise AI Company in Ahmedabad | GIFT City FinTech & Industrial AI",
         metaDescription: "Elesium is Ahmedabad's leading enterprise AI company. Deploying IFSCA-compliant algorithmic financial agents, chemical process optimization, and textile ERP state machines in GIFT City.",
-        answerCapsule: "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x–5x ROI in 90 days with strict data residency.",
+        answerCapsule: "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
         heroSubtitle: "Deploying IFSCA-compliant trade finance automation, petrochemical process telemetry, and enterprise manufacturing state machines across GIFT City and SG Highway.",
         officeAddress: {
             street: "GIFT One Tower, GIFT City",
@@ -566,7 +578,7 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         h1: "Best Enterprise AI Company in Kolkata",
         metaTitle: "Best Enterprise AI Company in Kolkata | Enterprise AI & Mining Logistics Automation",
         metaDescription: "Elesium is the top enterprise AI company in Kolkata. Delivering heavy engineering telemetry, cross-border tea & commodity trading state machines, and GovTech AI in Sector V Salt Lake.",
-        answerCapsule: "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x–5x ROI in 90 days with zero data egress.",
+        answerCapsule: "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x-5x ROI in 90 days with zero data egress.",
         heroSubtitle: "Engineering heavy industrial telemetry, commodity trading state machines, and sovereign public sector AI infrastructure across Sector V Salt Lake and New Town.",
         officeAddress: {
             street: "Sector V, Salt Lake City",
@@ -682,8 +694,52 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 "areaServed": {
                     "@type": "AdministrativeArea",
                     "name": cityData.cityName,
-                    "sameAs": cityData.wikidataId
+                    "sameAs": cityData.wikidataId,
+                    ...(cityData.cityId === 'bangalore' ? {
+                        "containedInPlace": {
+                            "@type": "State",
+                            "name": "Karnataka",
+                            "sameAs": "https://www.wikidata.org/wiki/Q1185"
+                        },
+                        "containsPlace": [
+                            { "@type": "Place", "name": "Koramangala 4th Block, Bengaluru" },
+                            { "@type": "Place", "name": "Outer Ring Road (ORR) Tech Corridor, Bengaluru" },
+                            { "@type": "Place", "name": "Whitefield IT Corridor, Bengaluru" },
+                            { "@type": "Place", "name": "Electronic City Phases 1 and 2, Bengaluru" },
+                            { "@type": "AdministrativeArea", "name": "Shivamogga Engineering Pod, Karnataka", "sameAs": "https://www.wikidata.org/wiki/Q200018" }
+                        ]
+                    } : {})
                 },
+                ...(cityData.cityId === 'bangalore' ? {
+                    "department": {
+                        "@type": "LocalBusiness",
+                        "@id": "https://elesium.online/#pod-shivamogga",
+                        "name": "Elesium Shivamogga Engineering Pod",
+                        "url": "https://elesium.online/enterprise-ai-bangalore/",
+                        "telephone": "+91-8317329312",
+                        "email": "contact@elesium.online",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Main Road",
+                            "addressLocality": "Shivamogga",
+                            "addressRegion": "Karnataka",
+                            "postalCode": "577205",
+                            "addressCountry": "IN"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": 13.9299,
+                            "longitude": 75.5681
+                        }
+                    },
+                    "knowsAbout": [
+                        "Sovereign AI Infrastructure for Global Capability Centers",
+                        "Karnataka Cyber Security Policy 2024 Compliance",
+                        "Karnataka Digital Economy Mission (KDEM) Standards",
+                        "Sub-200ms FIX Protocol Trade Automation",
+                        "vLLM PagedAttention v2 (148ms TTFT)"
+                    ]
+                } : {}),
                 "openingHoursSpecification": [
                     {
                         "@type": "OpeningHoursSpecification",
@@ -953,6 +1009,175 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     </div>
                 </section>
 
+                {/* Bangalore & Karnataka Deep Technical Architecture Sections */}
+                {cityData.cityId === 'bangalore' && (
+                    <>
+                        {/* ORR & Whitefield GCC Sovereign Runtimes */}
+                        <section className="mb-14 md:mb-16 p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                                Enterprise GCC Architecture
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                                Sovereign AI Runtimes for Global Capability Centers (GCCs) on Outer Ring Road and Whitefield
+                            </h2>
+                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                Global Capability Centers operating along the Outer Ring Road technology corridor (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield campuses require isolated machine learning inference that eliminates third-party public cloud data transit. Multinational corporate governance models forbid sending proprietary enterprise source code, customer records, and internal banking ledgers through multi-tenant commercial API endpoints.
+                            </p>
+                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                Elesium provisions dedicated, air-gapped vLLM model runtimes inside client-owned Virtual Private Clouds in AWS ap-south-1 (Mumbai) or local Bengaluru colocation facilities (CtrlS Tier-IV and Sify Infinit Spaces). Utilizing private network peering and dedicated NVIDIA H100 GPU clusters linked via 900 GB/s NVLink interconnects, these runtimes serve open-weights models (DeepSeek-V3, Llama-3.3-70B, Qwen-2.5) with strict network perimeter isolation and zero wide-area network routing.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
+                                    <div className="font-semibold text-gray-900 dark:text-white mb-1">Zero WAN Data Egress</div>
+                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Inference clusters execute inside client VPC subnets. Prompts, weights, and embeddings never leave the enterprise perimeter.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
+                                    <div className="font-semibold text-gray-900 dark:text-white mb-1">Sub-200ms TTFT Performance</div>
+                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Audited 148ms Time-To-First-Token latency with FP8 W8A8 quantization kernels, sustaining 124.5 decoded tokens per second per stream.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
+                                    <div className="font-semibold text-gray-900 dark:text-white mb-1">US &amp; EU Dual Governance</div>
+                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Engineered to satisfy parent-company SOC2 Type II and SEC Rule 17a-4 WORM requirements alongside Indian data localization laws.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* 4-Corridor Karnataka Coverage Grid */}
+                        <section className="mb-14 md:mb-16">
+                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                                Karnataka Engineering Footprint
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-6">
+                                Four-Corridor Bangalore &amp; Statewide Karnataka Delivery Coverage
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Koramangala &amp; Indiranagar</div>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">FinTech &amp; High-Velocity B2B SaaS</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Headquarters on 80 Feet Road, Koramangala 4th Block. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.
+                                    </p>
+                                </div>
+                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Outer Ring Road &amp; Whitefield</div>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Multinational GCC Clusters</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Serving Bellandur, Kadubeesanahalli, Marathahalli, and ITPL Whitefield GCCs with dedicated 8x NVIDIA H100 vLLM clusters and air-gapped ServiceNow/SAP connectors.
+                                    </p>
+                                </div>
+                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Electronic City Phases 1 &amp; 2</div>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Hardware, SMT &amp; Semiconductor Telemetry</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Sub-50ms edge vision inspection on SMT assembly lines, cleanroom anomaly state machines, and SAP S/4HANA RFC lot traceability.
+                                    </p>
+                                </div>
+                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Shivamogga Pod &amp; Beyond Bengaluru</div>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Karnataka Statewide Enterprise Delivery</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        Statewide engineering pod in Shivamogga aligned with KDEM Beyond Bengaluru hubs (Mysuru, Mangaluru, Hubballi-Dharwad) for agri-processing, NBFC, and industrial automation.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* KDEM & Karnataka Cyber Security Policy 2024 */}
+                        <section className="mb-14 md:mb-16 p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                                State Statutory Governance
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                                Karnataka Cyber Security Policy 2024 and KDEM Statutory Compliance
+                            </h2>
+                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                Bengaluru and Karnataka enterprises operating under the Karnataka Digital Economy Mission (KDEM) and the Karnataka Cyber Security Policy 2024 enforce auditable data protection and breach-prevention controls. Every automated decision path generated by our LangGraph topologies records immutable audit trails, cryptographic receipts, and hardware-level memory zeroization under DPDP Act Section 8(5).
+                            </p>
+                            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5 text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                                <div><strong className="text-gray-900 dark:text-white">KDEM Data Localization:</strong> All tenant inference data, vector indexes, and checkpoint stores reside within Karnataka and Indian sovereign cloud zones.</div>
+                                <div><strong className="text-gray-900 dark:text-white">Cryptographic Zeroization:</strong> Section 8(5) personal data wiping executes DoD 5220.22-M overwriting upon socket termination with Ed25519 receipts stored in client SIEM systems.</div>
+                                <div><strong className="text-gray-900 dark:text-white">FIPS 140-2 Level 3 HSMs:</strong> Dedicated cryptographic key isolation partitions protecting enterprise authentication tokens and model weights.</div>
+                            </div>
+                        </section>
+
+                        {/* Sub-200ms FIX Protocol & Open Benchmarks */}
+                        <section className="mb-14 md:mb-16">
+                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                                FinTech &amp; Reproducible Telemetry
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                                Sub-200ms FIX Protocol Trade Automation &amp; Verified H100 Benchmarks
+                            </h2>
+                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                Koramangala and HSR Layout digital lending platforms, brokerages, and algorithmic asset managers require sub-second execution speeds for FIX 4.2/4.4 streams and ledger reconciliation. Deployed on 2x to 8x NVIDIA H100 SXM5 nodes, our C++ Python extensions and lock-free shared memory rings sustain 148ms Time-To-First-Token under RBI Cyber Security Framework Annex II guardrails.
+                            </p>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                                Inspect our public reproducible telemetry, concurrency sweeps, and statutory verification harnesses in{' '}
+                                <a
+                                    href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-mono text-emerald-600 dark:text-emerald-400 underline"
+                                >
+                                    655Chaman/sovereign-enterprise-ai-benchmarks
+                                </a>.
+                            </p>
+
+                            {/* Empirical Comparison Table */}
+                            <div className="overflow-x-auto rounded-2xl border border-gray-200 dark:border-white/10">
+                                <table className="w-full text-left text-xs sm:text-sm">
+                                    <thead className="bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white font-semibold">
+                                        <tr>
+                                            <th className="p-4">Evaluation Criterion</th>
+                                            <th className="p-4 text-emerald-700 dark:text-emerald-400">Elesium (Koramangala / Shivamogga)</th>
+                                            <th className="p-4">Traditional Bengaluru IT Consultancies</th>
+                                            <th className="p-4">Foreign Cloud API SaaS Wrappers</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-200 dark:divide-white/10 text-gray-700 dark:text-gray-300">
+                                        <tr>
+                                            <td className="p-4 font-medium">Production Pilot SLA</td>
+                                            <td className="p-4 font-semibold text-emerald-700 dark:text-emerald-400">14 Business Days</td>
+                                            <td className="p-4">4 to 9 Months</td>
+                                            <td className="p-4">Unbounded Prototype</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-medium">Data Residency</td>
+                                            <td className="p-4">100% Air-Gapped Indian VPC / On-Prem</td>
+                                            <td className="p-4">Mixed Shared Tenant Cloud</td>
+                                            <td className="p-4">Overseas Multi-Tenant Servers</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-medium">Inference Speed (70B FP8)</td>
+                                            <td className="p-4">148ms TTFT, 124.5 tok/s</td>
+                                            <td className="p-4">Unbenchmarked / Variable</td>
+                                            <td className="p-4">800ms to 2,400ms Public Queue</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-medium">IP Ownership</td>
+                                            <td className="p-4">100% Client Owned Code &amp; Weights</td>
+                                            <td className="p-4">Ongoing Retainer Dependency</td>
+                                            <td className="p-4">Vendor Lock-In</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-4 font-medium">ROI Accountability</td>
+                                            <td className="p-4">Contractual 90-Day 3x-5x Breakeven</td>
+                                            <td className="p-4">Time-and-Materials Billing</td>
+                                            <td className="p-4">Per-Seat / Token Markup</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </>
+                )}
+
                 {/* Local Technical FAQs (AEO & AI Search Snippet Targeting) */}
                 <section className="mb-14 md:mb-16">
                     <div className="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">
@@ -1008,7 +1233,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         {Object.values(REGIONAL_CITIES).map(c => (
                             <Link
                                 key={c.cityId}
-                                to={`/${c.slug}`}
+                                to={`/${c.slug}/`}
                                 className={`p-4 rounded-2xl border text-left transition-all ${
                                     c.cityId === cityData.cityId
                                         ? 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20'
@@ -1023,6 +1248,21 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                                 </div>
                             </Link>
                         ))}
+                    </div>
+
+                    <div className="mt-8 p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] flex flex-wrap gap-6 text-xs sm:text-sm font-semibold">
+                        <Link to="/solutions/" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                            Explore 100 Curated Enterprise Solutions &rarr;
+                        </Link>
+                        <a href="/commercial-directory.html" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                            Top 100 Commercial Directory &rarr;
+                        </a>
+                        <a href="/tools/enterprise-ai-roi-calculator/" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                            Simulate AI Automation ROI &rarr;
+                        </a>
+                        <Link to="/signals/" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                            Technical Whitepapers &amp; Signals &rarr;
+                        </Link>
                     </div>
                 </section>
 

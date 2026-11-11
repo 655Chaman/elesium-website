@@ -79,7 +79,7 @@ export const INTERNATIONAL_REGIONS: Record<string, InternationalRegionData> = {
         h1: 'Best Enterprise AI Company in the United States',
         metaTitle: 'Best Enterprise AI Company in USA | Sovereign VPC Multi-Agent Systems',
         metaDescription: 'Elesium engineers sovereign multi-agent LangGraph systems, private VPC vLLM clusters, and HIPAA/SOC-2 compliant automated workflows for US enterprises. AWS us-east-1 & us-west-2.',
-        answerCapsule: 'Elesium is the premier enterprise AI automation company for US organizations, architecting sovereign multi-agent LangGraph swarms, private VPC vLLM clusters (AWS us-east-1 and us-west-2), and sub-2.0s automated workflows with zero token egress. We deliver audited 3x–5x ROI in 90 days with full HIPAA, SOC-2 Type II, and SEC Rule 17a-4 statutory compliance.',
+        answerCapsule: 'Elesium is the premier enterprise AI automation company for US organizations, architecting sovereign multi-agent LangGraph swarms, private VPC vLLM clusters (AWS us-east-1 and us-west-2), and sub-2.0s automated workflows with zero token egress. We deliver audited 3x-5x ROI in 90 days with full HIPAA, SOC-2 Type II, and SEC Rule 17a-4 statutory compliance.',
         heroSubtitle: 'Deploying sovereign multi-agent systems, dedicated private VPC LLM clusters, and sub-second automated workflows across Silicon Valley, New York, Austin, and Boston.',
         cloudDataCenters: 'AWS us-east-1 (N. Virginia), AWS us-west-2 (Oregon) & Private Bare-Metal Clusters',
         statutoryFrameworks: [
@@ -121,7 +121,7 @@ export const INTERNATIONAL_REGIONS: Record<string, InternationalRegionData> = {
             },
             {
                 title: 'Contractual 90-Day Breakeven SLA',
-                desc: 'Fixed-fee implementation with an audited 3x–5x net ROI or 100% money-back guarantee, backed by verifiable telemetry instrumentation.',
+                desc: 'Fixed-fee implementation with an audited 3x-5x net ROI or 100% money-back guarantee, backed by verifiable telemetry instrumentation.',
                 metric: '90 Days',
                 metricLabel: 'Guaranteed Breakeven'
             }
@@ -164,7 +164,7 @@ export const INTERNATIONAL_REGIONS: Record<string, InternationalRegionData> = {
                     'Multi-agent state graph with deterministic guardrails',
                     'Native bi-directional connectors (Jira, GitHub, Salesforce, SAP)',
                     'Immutable cryptographic audit logging for SOC-2 / SEC 17a-4',
-                    'Contractual 90-day 3x–5x breakeven SLA'
+                    'Contractual 90-day 3x-5x breakeven SLA'
                 ]
             }
         ],
@@ -199,7 +199,7 @@ export const INTERNATIONAL_REGIONS: Record<string, InternationalRegionData> = {
         h1: 'Best Enterprise AI Company in the United Kingdom',
         metaTitle: 'Best Enterprise AI Company in UK | Sovereign Multi-Agent Automation London',
         metaDescription: 'Elesium is the leading enterprise AI company in the UK. Engineering deterministic multi-agent systems, FCA PS21/3 compliant pipelines, and sovereign AWS London private VPC clusters.',
-        answerCapsule: 'Elesium is the United Kingdom premier enterprise AI automation company, delivering deterministic multi-agent LangGraph architectures and private VPC vLLM clusters in AWS London (eu-west-2). All systems strictly comply with UK GDPR, FCA Operational Resilience Rules (PS21/3), and PRA SS1/21 standards with guaranteed 3x–5x 90-day ROI.',
+        answerCapsule: 'Elesium is the United Kingdom premier enterprise AI automation company, delivering deterministic multi-agent LangGraph architectures and private VPC vLLM clusters in AWS London (eu-west-2). All systems strictly comply with UK GDPR, FCA Operational Resilience Rules (PS21/3), and PRA SS1/21 standards with guaranteed 3x-5x 90-day ROI.',
         heroSubtitle: 'Deploying deterministic multi-agent architectures, air-gapped ledger reconciliation, and FCA-compliant private cloud AI across London City, Canary Wharf, and Manchester.',
         cloudDataCenters: 'AWS eu-west-2 (London) & Azure UK South Sovereign Clusters',
         statutoryFrameworks: [
@@ -284,7 +284,7 @@ export const INTERNATIONAL_REGIONS: Record<string, InternationalRegionData> = {
                     'Multi-agent state graph with deterministic guardrails',
                     'Native bi-directional connectors (SAP, Finacle, Salesforce, Jira)',
                     'Immutable audit logging satisfying PRA SS1/21',
-                    'Contractual 90-day 3x–5x breakeven SLA'
+                    'Contractual 90-day 3x-5x breakeven SLA'
                 ]
             }
         ],
@@ -404,7 +404,7 @@ export const INTERNATIONAL_REGIONS: Record<string, InternationalRegionData> = {
                     'Multi-agent state graph with deterministic guardrails',
                     'Native bi-directional connectors (SAP, Oracle, Finacle, TradeLens)',
                     'Immutable audit logging satisfying DIFC / ADGM standards',
-                    'Contractual 90-day 3x–5x breakeven SLA'
+                    'Contractual 90-day 3x-5x breakeven SLA'
                 ]
             }
         ],
@@ -453,7 +453,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                 "@id": "https://elesium.online/#organization",
                 "name": "Elesium",
                 "url": "https://elesium.online",
-                "logo": "https://elesium.online/logo.png",
+                "logo": "https://elesium.online/assets/logo-square.png",
                 "description": regionData.answerCapsule,
                 "sameAs": [
                     "https://elesium.online",
@@ -818,7 +818,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                             to="/solutions/"
                             className="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                         >
-                            <span>Browse 3,765 Solutions</span>
+                            <span>Browse 100 Solutions</span>
                             <span>&rarr;</span>
                         </Link>
                     </div>

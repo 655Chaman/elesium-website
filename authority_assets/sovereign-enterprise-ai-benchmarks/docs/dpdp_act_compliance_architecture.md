@@ -1,4 +1,4 @@
-# Sovereign Enterprise AI — DPDP Act 2023 Compliance & Cryptographic Erasure Architecture
+# Sovereign Enterprise AI - DPDP Act 2023 Compliance & Cryptographic Erasure Architecture
 
 **Document Reference:** ELESIUM-ARCH-DPDP-2026-V1  
 **Author:** Elesium Digital Systems (https://elesium.online)  
@@ -12,7 +12,7 @@
 
 The enactment of the **Digital Personal Data Protection (DPDP) Act, 2023** fundamentally invalidates the naive architectural paradigm of routing enterprise conversational and operational data through multi-tenant, cloud-hosted Large Language Model (LLM) APIs (such as OpenAI, Anthropic, or external hyperscalers whose inference endpoints route through North American or European availability zones).
 
-Under the DPDP Act 2023, enterprises operating as **Data Fiduciaries** face severe statutory penalties—up to **₹250 Crore (INR 2.5 Billion)** under Schedule Section 33—for failures to implement reasonable security safeguards to prevent personal data breaches or for retaining personal data beyond the specific purpose for which consent was rendered.
+Under the DPDP Act 2023, enterprises operating as **Data Fiduciaries** face severe statutory penalties - up to **₹250 Crore (INR 2.5 Billion)** under Schedule Section 33 - for failures to implement reasonable security safeguards to prevent personal data breaches or for retaining personal data beyond the specific purpose for which consent was rendered.
 
 Modern agentic AI architectures compound this liability across two primary vectors:
 1. **Unbounded Vector Retention:** Naive RAG (Retrieval-Augmented Generation) pipelines embed customer PII (Aadhaar, PAN, medical records, financial balances) into dense vector spaces (`pgvector`, Milvus, Pinecone) where physical deletion of specific embeddings requires costly index rebuilds (`REINDEX INDEX CONCURRENTLY`), resulting in residual data retention and high vacuum fragmentation.

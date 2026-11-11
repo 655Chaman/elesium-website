@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — ATF REAL ESTATE & INTERACTION DEPTH
+TED KUBAITIS CORA SERP CORRELATION ENGINE - ATF REAL ESTATE & INTERACTION DEPTH
 =============================================================================
 Classification: Visibility-First SERP Layout & Interaction Depth Triage
 Methodology: Ted Kubaitis (SEO Rockstars 2026 Day 1 - Visibility-First SEO)

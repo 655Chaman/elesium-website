@@ -502,7 +502,7 @@ SILO_DEFINITIONS: Dict[str, Dict[str, Any]] = {
             {"q": "What is Confidential Computing and how does it protect our proprietary AI weights?", "a": "Confidential Computing encrypts data in-use inside CPU/GPU hardware enclaves (AMD SEV-SNP, AWS Nitro). Even a cloud provider administrator with root access cannot inspect memory contents."},
             {"q": "Can your inference stack serve open-weight foundation models like DeepSeek-R1 and Llama-3?", "a": "Yes. We maintain optimized vLLM and TensorRT-LLM runtimes with FP8 GEMM microscaling kernels specifically tuned for DeepSeek-R1, Llama-3, and Mistral models on private cloud clusters."},
             {"q": "How do your prompt firewalls prevent prompt injection and jailbreak attacks?", "a": "We implement multi-stage semantic vector guardrails and heuristic token filters that evaluate prompt intent before passing tokens to downstream reasoning agents, dropping malicious injections with zero latency penalty."},
-            {"q": "What is the deployment SLA for a private sovereign cloud AI enclave?", "a": "A fully functional, air-gapped private VPC inference cluster with automated SecOps monitoring is deployed and validated within 14 business days, backed by a 90-day contractual ROI guarantee."}
+            {"q": "What is the deployment SLA for a sovereign private cloud AI enclave?", "a": "A fully functional, air-gapped private VPC inference cluster with automated SecOps monitoring is deployed and validated within 14 business days, backed by a 90-day contractual ROI guarantee."}
         ]
     }
 }

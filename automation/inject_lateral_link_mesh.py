@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-INJECT LATERAL LINK MESH — DOM INJECTION & EQUALIZING PAGERANK ENGINE
+INJECT LATERAL LINK MESH - DOM INJECTION & EQUALIZING PAGERANK ENGINE
 ================================================================================
 Classification: Production Engineering Tool & DOM Transformer
 Module: 11 (Programmatic Internal Linking Graph Theory)
@@ -263,8 +263,27 @@ def inject_category_hubs_complete_catalog():
     if not QUEUE_PATH.exists():
         return
 
-    with open(QUEUE_PATH, "r", encoding="utf-8") as f:
-        queue = json.load(f)
+    retained_path = ROOT_DIR / "automation" / "retained_solution_slugs.json"
+    retained_slugs = set()
+    if retained_path.exists():
+        try:
+            retained_slugs = set(json.loads(retained_path.read_text(encoding="utf-8")))
+        except Exception:
+            pass
+
+    curated_path = ROOT_DIR / "automation" / "curated_enterprise_solutions.json"
+    if curated_path.exists():
+        try:
+            queue = json.loads(curated_path.read_text(encoding="utf-8"))
+        except Exception:
+            with open(QUEUE_PATH, "r", encoding="utf-8") as f:
+                queue = json.load(f)
+    else:
+        with open(QUEUE_PATH, "r", encoding="utf-8") as f:
+            queue = json.load(f)
+
+    if retained_slugs:
+        queue = [it for it in queue if it.get("slug") in retained_slugs]
 
     silo_to_sols: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     for it in queue:
@@ -298,7 +317,7 @@ def inject_category_hubs_complete_catalog():
       <div style="margin-bottom:1.5rem;">
         <span style="font-size:0.75rem;font-family:monospace;letter-spacing:0.1em;text-transform:uppercase;color:#059669;font-weight:700;">Complete Exhaustive Catalog</span>
         <h3 style="font-size:1.5rem;font-weight:800;color:#0f172a;margin-top:0.25rem;">All {len(sols)} {html.escape(sdata["name"])} Production Solution Blueprints</h3>
-        <p style="font-size:0.875rem;color:#64748b;margin-top:0.25rem;">Every workflow is production-verified under private sovereign VPC architectures with zero cloud data retention.</p>
+        <p style="font-size:0.875rem;color:#64748b;margin-top:0.25rem;">Every workflow is production-verified under sovereign private VPC architectures with zero cloud data retention.</p>
       </div>
       <div style="max-height:600px;overflow-y:auto;border:1px solid #e2e8f0;border-radius:0.75rem;padding:1.5rem;background:#f8fafc;">
         <ul style="list-style-type:none;padding:0;margin:0;columns:2;column-gap:2rem;">

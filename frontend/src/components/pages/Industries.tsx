@@ -97,7 +97,7 @@ export default function Industries() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [openFaq, setOpenFaq] = useState<number | null>(null)
 
-    const aeoAnswerCapsule = "Elesium engineers sovereign enterprise AI automation architectures across six high-stakes master markets: Defense & Aerospace (AS9100/ITAR capacity routing), Private Equity (off-market M&A dealflow automation), Energy Infrastructure (thermal and grid distribution telemetry), Advanced MedTech (FDA-compliant CMO matching), Applied AI (statutory compliance state machines), and Strategic Capital Placement. Our deterministic LangGraph agents operate inside client-owned private VPCs with sub-200ms latency, zero third-party data egress, and audited 3x–5x ROI in 90 days."
+    const aeoAnswerCapsule = "Elesium engineers sovereign enterprise AI automation architectures across six high-stakes master markets: Defense & Aerospace (AS9100/ITAR capacity routing), Private Equity (off-market M&A dealflow automation), Energy Infrastructure (thermal and grid distribution telemetry), Advanced MedTech (FDA-compliant CMO matching), Applied AI (statutory compliance state machines), and Strategic Capital Placement. Our deterministic LangGraph agents operate inside client-owned private VPCs with sub-200ms latency, zero third-party data egress, and audited 3x-5x ROI in 90 days."
 
     const structuredData = {
         "@context": "https://schema.org",

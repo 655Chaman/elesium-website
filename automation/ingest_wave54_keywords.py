@@ -1,7 +1,7 @@
 import json
 
 wave54_keywords = [
-    # Cluster 1: Chunked Context Cross-Attention & Document Sharding (IDs 2616–2632, 17 items)
+    # Cluster 1: Chunked Context Cross-Attention & Document Sharding (IDs 2616-2632, 17 items)
     {
         "id": 2616,
         "keyword": "chunked cross attention document sharding agents for high density enterprise rag",
@@ -224,7 +224,7 @@ wave54_keywords = [
         "primary_cta": "Schedule Tier 4 Datacenter Cross Attention Review"
     },
 
-    # Cluster 2: Distributed RAG Memory Sharding & Tensor Parallel Retrieval (IDs 2633–2648, 16 items)
+    # Cluster 2: Distributed RAG Memory Sharding & Tensor Parallel Retrieval (IDs 2633-2648, 16 items)
     {
         "id": 2633,
         "keyword": "distributed rag memory sharding frameworks for multi gigabyte corporate manuals",
@@ -434,7 +434,7 @@ wave54_keywords = [
         "primary_cta": "Schedule Support Escalation Document Shard Review"
     },
 
-    # Cluster 3: Enterprise Long-Document Knowledge Graphs & Real-Time Query SLAs (IDs 2649–2665, 17 items)
+    # Cluster 3: Enterprise Long-Document Knowledge Graphs & Real-Time Query SLAs (IDs 2649-2665, 17 items)
     {
         "id": 2649,
         "keyword": "enterprise long document knowledge graph cross attention engines for supply chain visibility",

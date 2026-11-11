@@ -1,4 +1,4 @@
-# Semrush Local & Yext 70+ Directory Syndication Feed — Elesium
+# Semrush Local & Yext 70+ Directory Syndication Feed - Elesium
 
 > **Platform Authority:** High Multi-Platform Syndication (Apple Maps, Bing, YellowPages, Here, TomTom)  
 > **Network Reach:** 70+ Local & Global Citation Networks
@@ -19,4 +19,4 @@
 ---
 
 ## 2. Integrated Solutions
-https://elesium.online/solutions/ai-automation-agency-for-logistics; https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers; https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers; https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors; https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders
+https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers; https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers; https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts; https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents; https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders

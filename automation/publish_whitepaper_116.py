@@ -18,7 +18,7 @@ post_128 = {
     "excerpt": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: architecting Multi-Head Latent Attention (MLA) pipelines, implementing joint low-rank key-value down-projections, isolating decoupled Rotary Position Embedding (RoPE) vectors, and slashing KV-cache VRAM consumption by 90% on distributed DeepSeek-V3 and DeepSeek-R1 clusters.",
     "intro": "A publication-grade technical systems blueprint for Chief Technology Officers, Foundation Model Infrastructure Architects, and High-Performance Compute Engineers: architecting Multi-Head Latent Attention (MLA) pipelines, implementing joint low-rank key-value down-projections, isolating decoupled Rotary Position Embedding (RoPE) vectors, and slashing KV-cache VRAM consumption by 90% on distributed DeepSeek-V3 and DeepSeek-R1 clusters.",
     "metaDescription": "Multi-Head Latent Attention (MLA) blueprint: low-rank KV compression, decoupled RoPE vectors, 90% VRAM reduction, and DeepSeek-V3/R1 long-context serving.",
-    "relatedSolutionSlug": "multi-head-latent-attention-mla-low-rank-kv-cache-compression-daemons-for-deepseek-clusters",
+    "relatedSolutionSlug": "mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -35,7 +35,7 @@ post_128 = {
         },
         {
             "type": "paragraph",
-            "value": "In contemporary frontier foundation models, the Key-Value (KV) cache is the primary bottleneck constraining batch concurrency and sustained context length. While Multi-Head Attention (MHA) allocates dedicated key and value heads for each query head, its memory footprint scales linearly with context and head count. Grouped-Query Attention (GQA)—utilized by Llama-3—mitigates this by sharing key-value heads across query groups (e.g., 8 KV heads for 64 query heads in a 70B parameter model)."
+            "value": "In contemporary frontier foundation models, the Key-Value (KV) cache is the primary bottleneck constraining batch concurrency and sustained context length. While Multi-Head Attention (MHA) allocates dedicated key and value heads for each query head, its memory footprint scales linearly with context and head count. Grouped-Query Attention (GQA) - utilized by Llama-3 - mitigates this by sharing key-value heads across query groups (e.g., 8 KV heads for 64 query heads in a 70B parameter model)."
         },
         {
             "type": "paragraph",
@@ -63,7 +63,7 @@ post_128 = {
         },
         {
             "type": "paragraph",
-            "value": "The key vector is bifurcated into two distinct components: the content key k_t^C (derived from the cached latent vector c_t^{KV}) and a decoupled positional key k_t^R (derived via W_{KR} * h_t and rotated using standard RoPE). The query vector is similarly split into q_{t, i}^C and q_{t, i}^R. The resulting attention logit is the sum of content-content scoring and position-position scoring: A_{i, j} = (q_{t, i}^C * k_{j, i}^C + q_{t, i}^R * k_{j, i}^R) / sqrt(d_h + d_R). By caching only the 512-dim latent vector c_t^{KV} and a compact 64-dim decoupled RoPE key k_t^R, total cached elements per token collapse from 8,192 numbers down to just 576 numbers—an immediate 93.3% memory reduction."
+            "value": "The key vector is bifurcated into two distinct components: the content key k_t^C (derived from the cached latent vector c_t^{KV}) and a decoupled positional key k_t^R (derived via W_{KR} * h_t and rotated using standard RoPE). The query vector is similarly split into q_{t, i}^C and q_{t, i}^R. The resulting attention logit is the sum of content-content scoring and position-position scoring: A_{i, j} = (q_{t, i}^C * k_{j, i}^C + q_{t, i}^R * k_{j, i}^R) / sqrt(d_h + d_R). By caching only the 512-dim latent vector c_t^{KV} and a compact 64-dim decoupled RoPE key k_t^R, total cached elements per token collapse from 8,192 numbers down to just 576 numbers - an immediate 93.3% memory reduction."
         },
         {
             "type": "heading",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-GSC LIVE CONNECTOR CLI (MODULE 4) — GOOGLE SEARCH CONSOLE API v3
+GSC LIVE CONNECTOR CLI (MODULE 4) - GOOGLE SEARCH CONSOLE API v3
 =============================================================================
 Classification: Google Search Console (GSC) API v3 Live Connector
 Methodology: Brian Kato (SEO Rockstars 2026 Day 2)

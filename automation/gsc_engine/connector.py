@@ -1,6 +1,6 @@
 """
 =============================================================================
-GSC STRIKING DISTANCE ENGINE — GOOGLE SEARCH CONSOLE API V3 CONNECTOR
+GSC STRIKING DISTANCE ENGINE - GOOGLE SEARCH CONSOLE API V3 CONNECTOR
 =============================================================================
 Classification: API v3 Client with Service Account, OAuth2 & Mock Fallback
 Methodology: Brian Kato (SEO Rockstars 2026 Day 2)

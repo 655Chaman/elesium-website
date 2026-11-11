@@ -1,6 +1,6 @@
 """
 =============================================================================
-TED KUBAITIS CORA SERP CORRELATION ENGINE — FACTOR EXTRACTOR
+TED KUBAITIS CORA SERP CORRELATION ENGINE - FACTOR EXTRACTOR
 =============================================================================
 Classification: DOM, Semantic & Schema Algorithmic Factor Extraction
 Methodology: Ted Kubaitis (Cora 500+ Algorithmic Factor Measurement Engine)

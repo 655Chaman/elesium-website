@@ -311,7 +311,7 @@ export default function AIAutomation() {
                 <div className="rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] p-8 sm:p-12 text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-xs font-mono text-gray-700 dark:text-gray-300 mb-6">
                         <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span>Private Sovereign VPC Deployment Protocol</span>
+                        <span>Sovereign Private VPC Deployment Protocol</span>
                     </div>
 
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">

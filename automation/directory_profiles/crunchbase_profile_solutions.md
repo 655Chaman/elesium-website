@@ -1,4 +1,4 @@
-# Crunchbase Profile — Elesium
+# Crunchbase Profile - Elesium
 
 > **Platform Authority:** DR 91 (Global Entity Knowledge Graph Anchor)
 
@@ -23,8 +23,8 @@ India's premier enterprise AI engineering firm architecting deterministic multi-
 
 Detailed solution architecture pods and client case studies:
 - Hub: [https://elesium.online/solutions](https://elesium.online/solutions)
-- Logistics: [https://elesium.online/solutions/ai-automation-agency-for-logistics](https://elesium.online/solutions/ai-automation-agency-for-logistics)
-- Freight Dispatch: [https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers](https://elesium.online/solutions/autonomous-dispatch-software-for-freight-carriers)
-- Warehouse Automation: [https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers](https://elesium.online/solutions/deterministic-warehouse-automation-for-3pl-providers)
-- Fleet Optimization: [https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors](https://elesium.online/solutions/fleet-route-optimization-agents-for-supply-chain-directors)
-- EDI Parser: [https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders](https://elesium.online/solutions/custom-edi-parser-agents-for-freight-forwarders)
+- Logistics: [https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers)
+- Freight Dispatch: [https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers](https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers)
+- Warehouse Automation: [https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts](https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts)
+- Fleet Optimization: [https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents](https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents)
+- EDI Parser: [https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders](https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders)

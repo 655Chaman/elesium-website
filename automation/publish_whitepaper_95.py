@@ -24,7 +24,7 @@ POST_107 = {
     "excerpt": "A definitive technical architecture manual for Chief Technology Officers, AI Systems Engineers, and High-Performance Computing Leads: overcoming the sequential decoding barrier in massive 64k-128k context windows, executing FlashDecoding split-KV parallel attention, and achieving sub-10ms token generation on NVIDIA Hopper and Blackwell clusters.",
     "intro": "A definitive technical architecture manual for Chief Technology Officers, AI Systems Engineers, and High-Performance Computing Leads: overcoming the sequential decoding barrier in massive 64k-128k context windows, executing FlashDecoding split-KV parallel attention, and achieving sub-10ms token generation on NVIDIA Hopper and Blackwell clusters.",
     "metaDescription": "Enterprise FlashDecoding guide: sequence parallelism, split-KV partial softmax reduction, sub-10ms token generation at 128k context, and private VPC deployment.",
-    "relatedSolutionSlug": "flashdecoding-sequence-parallelization-deployment-agents-for-long-context-128k-enterprise-agents",
+    "relatedSolutionSlug": "air-gapped-private-cloud-flashdecoding-deployment-runbooks-for-defense-installations-in-india",
     "author": {
         "name": "Chaman Shah",
         "role": "Principal AI Systems Architect",
@@ -41,7 +41,7 @@ POST_107 = {
         },
         {
             "type": "paragraph",
-            "value": "In production enterprise agent swarms—such as legal contract auditing, multi-year medical record longitudinal synthesis, and codebase reasoning—autonomous agents ingest massive context windows spanning 32,000 to 128,000 tokens. While FlashAttention-2 and FlashAttention-3 successfully parallelized the prefill phase across batch and sequence dimensions, autoregressive token generation (the decode phase) encounters an architectural barrier."
+            "value": "In production enterprise agent swarms - such as legal contract auditing, multi-year medical record longitudinal synthesis, and codebase reasoning - autonomous agents ingest massive context windows spanning 32,000 to 128,000 tokens. While FlashAttention-2 and FlashAttention-3 successfully parallelized the prefill phase across batch and sequence dimensions, autoregressive token generation (the decode phase) encounters an architectural barrier."
         },
         {
             "type": "paragraph",
@@ -61,7 +61,7 @@ POST_107 = {
         },
         {
             "type": "paragraph",
-            "value": "For a 64k prompt partitioned into 256-token chunks, the workload yields 256 independent parallel chunks per attention head. Multiplied across 8 heads, this generates 2,048 parallel thread blocks—fully saturating all 132 SMs of an NVIDIA H100 GPU."
+            "value": "For a 64k prompt partitioned into 256-token chunks, the workload yields 256 independent parallel chunks per attention head. Multiplied across 8 heads, this generates 2,048 parallel thread blocks - fully saturating all 132 SMs of an NVIDIA H100 GPU."
         },
         {
             "type": "paragraph",
