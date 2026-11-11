@@ -1,4 +1,4 @@
-# Elesium — Defense & Aerospace AI Autonomous Systems Manifest
+# Elesium - Defense & Aerospace AI Autonomous Systems Manifest
 > Machine Context for Aerospace Systems Engineers, Defense Program Directors, and Autonomous Swarm Architects.
 
 ## Core Capabilities
@@ -8,8 +8,9 @@
 - **Electronic Warfare Resilience:** Localized vLLM PagedAttention inference operating in GPS-denied and zero-connectivity environments.
 
 ## Representative Verified Endpoints
-- https://elesium.online/solutions/autonomous-uav-swarm-telemetry-agents-with-mil-std-1553-bus/
-- https://elesium.online/solutions/as9100-certified-mission-critical-avionics-inference-enclaves/
-- https://elesium.online/solutions/itar-compliant-edge-sensor-fusion-networks-for-defense-aerospace/
-- https://elesium.online/solutions/radiation-tolerant-fpga-neural-compilation-for-orbital-payloads/
-- https://elesium.online/solutions/real-time-electronic-warfare-countermeasure-state-machines/
+- https://elesium.online/solutions/air-gapped-deepseek-r1-enterprise-deployment-telemetry-for-global-capability-centers-in-bangalore/
+- https://elesium.online/solutions/air-gapped-sovereign-pre-fill-and-decode-enclave-architects-for-defense-ministries/
+- https://elesium.online/solutions/mla-latent-memory-pool-defragmentation-managers-for-sovereign-air-gapped-defense-enclaves/
+- https://elesium.online/solutions/immutable-system-prompt-kv-page-locking-frameworks-for-sovereign-defense-contractors/
+- https://elesium.online/solutions/mixture-of-depths-stability-evaluators-for-sovereign-private-vpc-defense-intelligences/
+- https://elesium.online/solutions/sovereign-enterprise-speculative-decoding-deployment-advisors-for-defense-ministries/

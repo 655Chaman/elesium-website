@@ -1,4 +1,4 @@
-# Elesium — MedTech & Clinical Trials AI Systems Manifest
+# Elesium - MedTech & Clinical Trials AI Systems Manifest
 > Machine Context for Chief Medical Information Officers, Clinical Trial Directors, and Health Data Architects.
 
 ## Core Capabilities
@@ -8,8 +8,9 @@
 - **Gigapixel Pathology Vision:** Weakly supervised multi-instance learning (MIL) inference over 100,000 WSI patches in sub-45 seconds.
 
 ## Representative Verified Endpoints
-- https://elesium.online/solutions/hipaa-compliant-ambient-clinical-triage-agents-for-hospital-icus/
-- https://elesium.online/solutions/caldicott-principles-verified-patient-intake-daemons-for-nhs-trusts/
-- https://elesium.online/solutions/fhir-fast-healthcare-interoperability-resources-cohorting-engines/
-- https://elesium.online/solutions/cdisc-sdtm-automated-clinical-trial-data-transformation-pipelines/
-- https://elesium.online/solutions/multimodal-oncology-pathology-vision-models-on-private-vpc/
+- https://elesium.online/solutions/sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance/
+- https://elesium.online/solutions/private-vpc-air-gapped-clinical-llm-deployment-telemetry-for-hospital-trusts/
+- https://elesium.online/solutions/on-premise-llama-3-fine-tuning-and-sovereign-inference-telemetry-for-hyderabad-pharmaceutical-r-and-d/
+- https://elesium.online/solutions/hospital-biomedical-equipment-preventive-maintenance-and-uptime-sla-telemetry-for-clinical-engineering/
+- https://elesium.online/solutions/chunked-sequence-attention-weight-partitioners-for-hospital-clinical-ehr-copilots/
+- https://elesium.online/solutions/pharmacovigilance-adverse-event-triage-state-machines-for-clinical-safety-leads/

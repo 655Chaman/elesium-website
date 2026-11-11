@@ -1,4 +1,4 @@
-# Elesium — Industrial Manufacturing & Industry 4.0 AI Manifest
+# Elesium  -  Industrial Manufacturing & Industry 4.0 AI Manifest
 > Sub-Directory Manifest for Discrete Manufacturing, Automotive OEMs, Process Plants, and Industrial Automation.
 > Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
 

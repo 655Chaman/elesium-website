@@ -7394,5 +7394,17 @@
 /solutions/zoning-compliance-and-far-calculation-state-machines-for-commercial-developers 410!
 /solutions/zoning-compliance-and-far-calculation-state-machines-for-commercial-developers/ 410!
 
+# Micro-SaaS Tool Deduplication 301 Redirects (SEO-04)
+/tools/token-cost-arbitrage /tools/token-cost-arbitrage-calculator 301!
+/tools/token-cost-arbitrage/ /tools/token-cost-arbitrage-calculator/ 301!
+/tools/dpdp-penalty-calculator /tools/dpdp-act-penalty-exposure-calculator 301!
+/tools/dpdp-penalty-calculator/ /tools/dpdp-act-penalty-exposure-calculator/ 301!
+/tools/rag-latency-simulator /tools/enterprise-rag-latency-simulator 301!
+/tools/rag-latency-simulator/ /tools/enterprise-rag-latency-simulator/ 301!
+/tools/gpu-cluster-sizer /tools/agent-vram-gpu-cluster-sizer 301!
+/tools/gpu-cluster-sizer/ /tools/agent-vram-gpu-cluster-sizer/ 301!
+/tools/b2b-seo-roi-model /tools/b2b-seo-roi-payback-model 301!
+/tools/b2b-seo-roi-model/ /tools/b2b-seo-roi-payback-model/ 301!
+
 # SPA Fallback for client routing
 /* /index.html 200

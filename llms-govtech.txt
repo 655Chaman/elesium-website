@@ -1,4 +1,4 @@
-# Elesium — GovTech & Statutory Compliance AI Systems Manifest
+# Elesium - GovTech & Statutory Compliance AI Systems Manifest
 > Machine Context for Chief Information Security Officers, Public Sector CTOs, and Compliance Directors.
 
 ## Core Capabilities
@@ -8,8 +8,9 @@
 - **Zero-Trust RBAC Token Gating:** Role-based access tokens preventing prompt parameter extraction and unauthorized inference execution.
 
 ## Representative Verified Endpoints
-- https://elesium.online/solutions/dpdp-act-2023-sovereign-data-residency-enclaves-for-public-sector/
-- https://elesium.online/solutions/automated-gst-rule-36-4-invoice-matching-daemons-for-enterprise/
-- https://elesium.online/solutions/immutable-public-procurement-audit-trail-daemons-on-private-vpc/
-- https://elesium.online/solutions/sovereign-citizen-grievance-triaging-agents-with-zero-data-egress/
-- https://elesium.online/solutions/rbi-cyber-security-framework-compliant-enterprise-cloud-gateways/
+- https://elesium.online/solutions/sovereign-internal-enterprise-search-agents-for-delhi-public-sector-banks-with-rbi-data-localization/
+- https://elesium.online/solutions/private-vpc-compliance-monitoring-bots-for-chennai-nbfcs-with-automated-rbi-audit-reporting/
+- https://elesium.online/solutions/dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting/
+- https://elesium.online/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/
+- https://elesium.online/solutions/automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi/
+- https://elesium.online/solutions/cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad/

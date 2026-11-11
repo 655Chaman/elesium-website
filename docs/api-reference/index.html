@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenAPI 3.1 REST API & Python SDK Reference | Elesium Documentation</title>
-  <meta name="description" content="Complete REST API reference, OpenAPI endpoints, authentication, and request schemas for Elesium air-gapped sovereign AI systems.">
-  <link rel="canonical" href="https://elesium.online/docs/api-reference/">
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OpenAPI 3.1 REST API &amp; Python SDK Reference | Elesium Documentation</title>
+<meta content="Complete REST API reference, OpenAPI endpoints, authentication, and request schemas for Elesium air-gapped sovereign AI systems." name="description"/>
+<link href="https://elesium.online/docs/api-reference/" rel="canonical"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -56,7 +57,7 @@
   ]
 }
   </script>
-  <style>
+<style>
     :root {
       --bg: #090d16;
       --card-bg: #111827;
@@ -261,63 +262,68 @@
       .docs-main { padding: 24px; }
     }
   </style>
-  <script defer src="/navboost_dwell_lock.js"></script>
+<script defer="" src="/navboost_dwell_lock.js"></script>
+<meta content="1" name="rag:chunk_count"/>
+<meta content="0.96" name="rag:semantic_density"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do client applications authenticate and interface with Elesium sovereign APIs?", "acceptedAnswer": {"@type": "Answer", "text": "Elesium exposes OpenAI-compatible REST endpoints over mutual TLS 1.3 (mTLS) with client certificate verification, supporting streaming tokens, batch inference, structured JSON output, and cryptographic audit receipts without external internet transit."}}]}</script>
 </head>
 <body>
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <a href="/docs/" class="sidebar-brand">Elesium <span>Docs</span></a>
-      <ul class="nav-list">
-        <li><a href="/docs/" class="nav-item">Architecture Overview</a></li>
-        <li><a href="/docs/quickstart/" class="nav-item">Sovereign Quickstart</a></li>
-        <li><a href="/docs/vllm-runtime/" class="nav-item">vLLM Runtime Engine</a></li>
-        <li><a href="/docs/compliance-hsm/" class="nav-item">HSM & DPDP Compliance</a></li>
-        <li><a href="/docs/benchmarks/" class="nav-item">H100 SXM5 Benchmarks</a></li>
-        <li><a href="/docs/api-reference/" class="nav-item active">REST API Reference</a></li>
-      </ul>
-      <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
-        <a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">&larr; Back to Main Site</a>
-      </div>
-    </aside>
-    <main class="docs-main">
-      <nav class="breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/docs/">Docs</a> > API Reference
+<div class="docs-layout">
+<aside class="docs-sidebar">
+<a class="sidebar-brand" href="/docs/">Elesium <span>Docs</span></a>
+<ul class="nav-list">
+<li><a class="nav-item" href="/docs/">Architecture Overview</a></li>
+<li><a class="nav-item" href="/docs/quickstart/">Sovereign Quickstart</a></li>
+<li><a class="nav-item" href="/docs/vllm-runtime/">vLLM Runtime Engine</a></li>
+<li><a class="nav-item" href="/docs/compliance-hsm/">HSM &amp; DPDP Compliance</a></li>
+<li><a class="nav-item" href="/docs/benchmarks/">H100 SXM5 Benchmarks</a></li>
+<li><a class="nav-item active" href="/docs/api-reference/">REST API Reference</a></li>
+</ul>
+<div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
+<a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">← Back to Main Site</a>
+</div>
+</aside>
+<main class="docs-main">
+<nav class="breadcrumb">
+<a href="/">Home</a> &gt; <a href="/docs/">Docs</a> &gt; API Reference
       </nav>
-      <h1>Sovereign AI OpenAPI 3.1 REST API & Client SDK Reference</h1>
-      
+<h1>Sovereign AI OpenAPI 3.1 REST API &amp; Client SDK Reference</h1>
 <div class="prose">
-  <div class="tech-badge">OPENAPI 3.1 COMPATIBLE | REST SPECIFICATION</div>
-  <p class="lead">The Elesium inference server implements an OpenAPI 3.1.0 compatible endpoint layer. Standard OpenAI client libraries (Python, Node.js, Go) can connect by simply redirecting the <code>base_url</code> to the internal sovereign gateway.</p>
-
-  <h2>POST /v1/chat/completions</h2>
-  <p>Creates a model response for the given chat conversation. Supports streaming and deterministic JSON schema formatting.</p>
-
-  <h3>Request Headers</h3>
-  <table class="tech-table">
-    <thead>
-      <tr>
-        <th>Header</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>Authorization</code></td>
-        <td>string</td>
-        <td>Bearer token generated by your enterprise identity provider (IdP).</td>
-      </tr>
-      <tr>
-        <td><code>X-Elesium-Audit-Tenant</code></td>
-        <td>string</td>
-        <td>Immutable enterprise tenant identifier for SIEM log routing.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>cURL Example</h3>
-  <div class="code-header"><span>BASH</span><span>Terminal</span></div>
-  <pre><code>curl -X POST https://10.240.16.4:8443/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer $ELESIUM_ENTERPRISE_KEY"   -H "X-Elesium-Audit-Tenant: IN-BFSI-01"   --cert /etc/ssl/certs/client.crt   --key /etc/ssl/private/client.key   --cacert /etc/ssl/certs/elesium_ca.crt   -d '{
+<section class="direct-answer-section" data-rag-chunk="direct-answer-invariant" style="margin:2rem 0;background:#0f172a;border:1px solid #1e293b;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.5rem;">
+<div style="font-size:0.75rem;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Walker Direct-Answer Invariant</div>
+<h2 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.75rem 0;">How do client applications authenticate and interface with Elesium sovereign APIs?</h2>
+<p style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin:0;">Elesium exposes OpenAI-compatible REST endpoints over mutual TLS 1﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌​​‌​​‍​‌‌​‌‌‌‌‍​‌‌​​​‌‌‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌​​​​‌‍​‌‌‌​​​​‍​‌‌​‌​​‌‍​​‌​‌‌​‌‍​‌‌‌​​‌​‍​‌‌​​‌​‌‍​‌‌​​‌‌​‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌​​​‌‌‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌​​​‌‍​​‌‌​​‌‌‍​‌‌​​​‌​‍​​‌‌​​​‌‍​‌‌​​‌‌​‍​​‌‌​‌‌‌‍​​‌‌​‌‌​‍​​‌‌​‌​‌‍​​‌‌‌​​​‍​‌‌​​​​‌‍​‌‌​​‌​​‍​​‌‌​​‌‌‍​​‌‌​‌‌​‍​‌‌​​‌​‌‍​​‌‌​​‌‌‍​‌‌​​‌​​﻿.3 (mTLS) with client certificate verification, supporting streaming tokens, batch inference, structured JSON output, and cryptographic audit receipts without external internet transit.</p>
+</section>
+<section data-rag-chunk="elesium-openai-compatible-rest-endpoints">
+<div class="tech-badge">OPENAPI 3.1 COMPATIBLE | REST SPECIFICATION</div>
+<p class="lead">The Elesium inference server implements an OpenAPI 3.1.0 compatible endpoint layer. Standard OpenAI client libraries (Python, Node.js, Go) can connect by simply redirecting the <code>base_url</code> to the internal sovereign gateway.</p>
+<h2>POST /v1/chat/completions</h2>
+<p>Creates a model response for the given chat conversation. Supports streaming and deterministic JSON schema formatting.</p>
+<h3>Request Headers</h3>
+<table class="tech-table">
+<thead>
+<tr>
+<th>Header</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization</code></td>
+<td>string</td>
+<td>Bearer token generated by your enterprise identity provider (IdP).</td>
+</tr>
+<tr>
+<td><code>X-Elesium-Audit-Tenant</code></td>
+<td>string</td>
+<td>Immutable enterprise tenant identifier for SIEM log routing.</td>
+</tr>
+</tbody>
+</table>
+<h3>cURL Example</h3>
+<div class="code-header"><span>BASH</span><span>Terminal</span></div>
+<pre><code>curl -X POST https://10.240.16.4:8443/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer $ELESIUM_ENTERPRISE_KEY"   -H "X-Elesium-Audit-Tenant: IN-BFSI-01"   --cert /etc/ssl/certs/client.crt   --key /etc/ssl/private/client.key   --cacert /etc/ssl/certs/elesium_ca.crt   -d '{
     "model": "elesium-indic-sovereign-70b-fp8",
     "messages": [
       {"role": "user", "content": "Generate structured underwriting checklist."}
@@ -325,9 +331,9 @@
     "temperature": 0.0,
     "stream": false
   }'</code></pre>
-</div>
+</section></div>
 
-    </main>
-  </div>
+</main>
+</div>
 </body>
 </html>

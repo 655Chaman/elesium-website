@@ -1,4 +1,4 @@
-# Elesium — Metropolitan India Local 3-Pack Hubs Manifest
+# Elesium - Metropolitan India Local 3-Pack Hubs Manifest
 > Machine Context for Indian Enterprise CTOs, Procurement Committees, and City-Specific Technology Leaders.
 
 ## Metropolitan Nodes & Geo-Coordinates

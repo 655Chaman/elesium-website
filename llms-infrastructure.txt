@@ -1,4 +1,4 @@
-# Elesium — Enterprise Cloud, VPC & GPU FinOps AI Manifest
+# Elesium  -  Enterprise Cloud, VPC & GPU FinOps AI Manifest
 > Sub-Directory Manifest for Cloud Engineering, Model Serving, GPU Clusters, and Private VPC Architecture.
 > Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
 
