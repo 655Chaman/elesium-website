@@ -23,6 +23,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 PRUNED_FILE = ROOT_DIR / "automation" / "pruned_solution_slugs.json"
 DIST_SOL = ROOT_DIR / "frontend" / "dist" / "solutions"
 PUB_SOL = ROOT_DIR / "frontend" / "public" / "solutions"
+DIST_ONLY = False
 
 ROBOTS_REGEX1 = re.compile(r'<meta\s+[^>]*name=["\'](?:robots|googlebot)["\'][^>]*>', re.I)
 ROBOTS_REGEX2 = re.compile(r'<meta\s+[^>]*content=[^>]*name=["\'](?:robots|googlebot)["\'][^>]*>', re.I)
@@ -54,12 +55,20 @@ REPLACEMENT_ROOT_410 = '''<div id="root">
 
 
 def update_html_content(content: str) -> str:
+    # 1. Fast idempotency check: if already fully transformed into 410 tombstone, return as is
+    if ("<title>410 Gone | Content Retired | Elesium</title>" in content and
+        'name="robots" content="noindex, follow"' in content and
+        'name="googlebot" content="noindex, follow"' in content and
+        'HTTP 410 &bull; Content Retired' in content and
+        'rel="canonical"' not in content.lower()):
+        return content
+
     content = TITLE_REGEX.sub("<title>410 Gone | Content Retired | Elesium</title>", content, count=1)
     content = re.sub(r'<meta\s+name=[\'\"]description[\'\"].*?>',
                      '<meta name="description" content="This programmatic specification has been permanently retired under Elesium\'s Algorithmic Quality & Enterprise Architecture Curation mandate." />',
                      content, count=1, flags=re.I)
-    content = re.sub(r'<link\s+[^>]*rel=[\'\"]canonical[\'\"].*?>', '', content, flags=re.I)
-    content = re.sub(r'<link\s+rel=[\'\"]canonical[\'\"].*?>', '', content, flags=re.I)
+    content = re.sub(r'\s*<link\s+[^>]*rel=[\'\"]canonical[\'\"].*?>', '', content, flags=re.I)
+    content = re.sub(r'\s*<link\s+rel=[\'\"]canonical[\'\"].*?>', '', content, flags=re.I)
     content = ROBOTS_REGEX1.sub("", content)
     content = ROBOTS_REGEX2.sub("", content)
     new_tags = '\n  <meta name="robots" content="noindex, follow" />\n  <meta name="googlebot" content="noindex, follow" />'
@@ -81,7 +90,8 @@ def process_slug(slug: str) -> int:
     if p1.exists():
         text = p1.read_text(encoding="utf-8", errors="ignore")
         new_text = update_html_content(text)
-        p1.write_text(new_text, encoding="utf-8")
+        if new_text != text:
+            p1.write_text(new_text, encoding="utf-8")
         b = new_text.encode("utf-8")
         gz_p = DIST_SOL / slug / "index.html.gz"
         br_p = DIST_SOL / slug / "index.html.br"
@@ -96,7 +106,8 @@ def process_slug(slug: str) -> int:
     if p2.exists():
         text = p2.read_text(encoding="utf-8", errors="ignore")
         new_text = update_html_content(text)
-        p2.write_text(new_text, encoding="utf-8")
+        if new_text != text:
+            p2.write_text(new_text, encoding="utf-8")
         b = new_text.encode("utf-8")
         gz_p2 = DIST_SOL / f"{slug}.html.gz"
         br_p2 = DIST_SOL / f"{slug}.html.br"
@@ -107,24 +118,34 @@ def process_slug(slug: str) -> int:
         count += 1
 
     # 3. public/solutions/{slug}/index.html
-    p3 = PUB_SOL / slug / "index.html"
-    if p3.exists():
-        text = p3.read_text(encoding="utf-8", errors="ignore")
-        new_text = update_html_content(text)
-        p3.write_text(new_text, encoding="utf-8")
-        count += 1
+    if not DIST_ONLY:
+        p3 = PUB_SOL / slug / "index.html"
+        if p3.exists():
+            text = p3.read_text(encoding="utf-8", errors="ignore")
+            new_text = update_html_content(text)
+            if new_text != text:
+                p3.write_text(new_text, encoding="utf-8")
+            count += 1
 
     return count
 
 
 def main():
+    global DIST_ONLY
+    import argparse
+    parser = argparse.ArgumentParser(description="Inject noindex and 410 tombstones for pruned slugs.")
+    parser.add_argument("--dist-only", action="store_true", help="Only process frontend/dist targets")
+    args = parser.parse_args()
+    DIST_ONLY = args.dist_only
+
     if not PRUNED_FILE.exists():
         raise FileNotFoundError(f"Pruned slugs file not found: {PRUNED_FILE}")
 
     with open(PRUNED_FILE, "r", encoding="utf-8") as f:
         pruned_slugs = json.load(f)
 
-    print(f"Injecting noindex, follow into {len(pruned_slugs)} pruned solution pages...")
+    target_desc = "frontend/dist" if DIST_ONLY else "frontend/dist and frontend/public"
+    print(f"Injecting noindex, follow into {len(pruned_slugs)} pruned solution pages ({target_desc})...")
     with ThreadPoolExecutor(max_workers=16) as executor:
         results = list(executor.map(process_slug, pruned_slugs))
 

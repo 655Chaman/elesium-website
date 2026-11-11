@@ -33,6 +33,7 @@ from typing import Set
 import pytest
 
 from automation.verify_pruning_and_curation import (
+    AUTOMATION_DIR,
     BLOG_POSTS_FILE,
     CATEGORY_DIR,
     COMPARE_DATA_FILE,
@@ -119,6 +120,51 @@ class TestGate1Http410Configuration:
         assert has_plugin and has_status, (
             "Vite configuration missing http410Plugin middleware for returning 410 status codes in dev/preview"
         )
+
+    def test_cloudflare_worker_script_exists(self):
+        """Verifies that automation/cloudflare_worker_410_handler.js exists."""
+        worker_file = AUTOMATION_DIR / "cloudflare_worker_410_handler.js"
+        assert worker_file.exists(), f"Cloudflare worker script missing: {worker_file}"
+
+    def test_cloudflare_worker_retained_slugs_exact_match(self, partitions):
+        """Verifies that RETAINED_SLUGS in cloudflare_worker_410_handler.js matches exactly the 100 retained enterprise slugs."""
+        _, retained_slugs = partitions
+        worker_file = AUTOMATION_DIR / "cloudflare_worker_410_handler.js"
+        assert worker_file.exists(), "Cloudflare worker script must exist"
+        content = worker_file.read_text(encoding="utf-8")
+
+        m = re.search(r'const RETAINED_SLUGS = new Set\(\[(\s*[\s\S]*?\s*)\]\);', content)
+        assert m, "RETAINED_SLUGS Set not found in cloudflare_worker_410_handler.js"
+
+        worker_slugs = set(re.findall(r'"([a-z0-9-]+)"', m.group(1)))
+        assert len(worker_slugs) == 100, f"Expected exactly 100 retained slugs in Cloudflare Worker, found {len(worker_slugs)}"
+        assert worker_slugs == retained_slugs, (
+            f"Cloudflare Worker RETAINED_SLUGS does not match true retained slugs. "
+            f"Missing from worker: {retained_slugs - worker_slugs}. "
+            f"Unexpected in worker: {worker_slugs - retained_slugs}."
+        )
+
+    def test_inject_noindex_pruned_idempotency(self):
+        """Verifies that update_html_content in inject_noindex_pruned.py is strictly idempotent."""
+        from automation.inject_noindex_pruned import update_html_content
+        sample_html = '''<!DOCTYPE html>
+<html>
+<head>
+  <title>Original Title</title>
+  <meta name="description" content="Original Description" />
+  <link rel="canonical" href="https://elesium.online/solutions/sample" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+  <div id="root"><div>Old dynamic content</div></div>
+</body>
+</html>'''
+        first_pass = update_html_content(sample_html)
+        second_pass = update_html_content(first_pass)
+        assert first_pass == second_pass, "update_html_content must be strictly idempotent"
+        assert '<meta name="robots" content="noindex, follow" />' in first_pass
+        assert '<title>410 Gone | Content Retired | Elesium</title>' in first_pass
+        assert 'rel="canonical"' not in first_pass.lower()
 
     def test_gate_1_full_certification(self, verifier: PruningAndCurationVerifier):
         """Master Gate 1 certification assertion."""
