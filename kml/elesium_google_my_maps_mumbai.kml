@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Elesium Enterprise AI — Mumbai Entity Authority & Driving Directions</name>
+    <name>Elesium Enterprise AI - Mumbai Entity Authority &amp; Driving Directions</name>
     <description><![CDATA[
-      <h3>Elesium Enterprise AI Architecture Hub — Mumbai</h3>
+      <h3>Elesium Enterprise AI Architecture Hub - Mumbai</h3>
       <p><b>Address:</b> Bandra Kurla Complex (BKC), G Block, Mumbai, Maharashtra 400051</p>
-      <p><b>Google Maps CID:</b> <a href="https://maps.google.com/?cid=12984719284758192834">12984719284758192834</a></p>
+      <p><b>Coordinates:</b> <a href="https://maps.google.com/?q=19.0657,72.8687">GPS: 19.0657, 72.8687</a></p>
       <p><b>Official Entity URL:</b> <a href="https://elesium.online/enterprise-ai-mumbai/">https://elesium.online/enterprise-ai-mumbai/</a></p>
       <p><b>Autonomous AI Engineering:</b> Multi-Agent LangGraph Systems, Sovereign LLM Deployment, DPDP Act 2023 Compliance.</p>
-      <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PLelesium-enterprise" frameborder="0" allowfullscreen></iframe>
+      <p><b>Architecture Walkthroughs:</b> <a href="https://elesium.online/videos/">https://elesium.online/videos/</a></p>
     ]]></description>
     <Style id="hubPoint">
       <IconStyle>
@@ -29,8 +29,8 @@
 
     <!-- FOCAL HUB PLACEMARK -->
     <Placemark>
-      <name>Elesium Enterprise AI Headquarters — Mumbai</name>
-      <description>Primary sovereign AI state machine development center. Verified CID: 12984719284758192834</description>
+      <name>Elesium Enterprise AI Headquarters - Mumbai</name>
+      <description>Primary sovereign AI state machine development center. GPS: 19.0657, 72.8687</description>
       <styleUrl>#hubPoint</styleUrl>
       <Point>
         <coordinates>72.8687,19.0657,0</coordinates>
@@ -41,7 +41,7 @@
     <Folder>
       <name>Driving Direction Vectors to Mumbai AI Hub</name>
       <Placemark>
-        <name>Route: Chhatrapati Shivaji Maharaj Terminus → Elesium Mumbai</name>
+        <name>Route: Chhatrapati Shivaji Maharaj Terminus -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Chhatrapati Shivaji Maharaj Terminus converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -50,7 +50,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Nariman Point Express Towers → Elesium Mumbai</name>
+        <name>Route: Nariman Point Express Towers -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Nariman Point Express Towers converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -59,7 +59,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Andheri East MIDC SEEPZ Gate → Elesium Mumbai</name>
+        <name>Route: Andheri East MIDC SEEPZ Gate -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Andheri East MIDC SEEPZ Gate converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -68,7 +68,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Powai Hiranandani Business Park → Elesium Mumbai</name>
+        <name>Route: Powai Hiranandani Business Park -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Powai Hiranandani Business Park converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -77,7 +77,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Lower Parel One International Center → Elesium Mumbai</name>
+        <name>Route: Lower Parel One International Center -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Lower Parel One International Center converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -86,7 +86,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Vashi Navi Mumbai Infotech Park → Elesium Mumbai</name>
+        <name>Route: Vashi Navi Mumbai Infotech Park -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Vashi Navi Mumbai Infotech Park converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -95,7 +95,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Thane Majiwada Golden Quadrilateral → Elesium Mumbai</name>
+        <name>Route: Thane Majiwada Golden Quadrilateral -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Thane Majiwada Golden Quadrilateral converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -104,7 +104,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Worli Sea Face Coastal Road Link → Elesium Mumbai</name>
+        <name>Route: Worli Sea Face Coastal Road Link -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Worli Sea Face Coastal Road Link converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -113,7 +113,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Goregaon NESCO Exhibition Centre → Elesium Mumbai</name>
+        <name>Route: Goregaon NESCO Exhibition Centre -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Goregaon NESCO Exhibition Centre converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -122,7 +122,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Bandra West Linking Road Junction → Elesium Mumbai</name>
+        <name>Route: Bandra West Linking Road Junction -&gt; Elesium Mumbai</name>
         <description>Driving direction path from Bandra West Linking Road Junction converging on Elesium Mumbai headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -136,7 +136,7 @@
     <Folder>
       <name>Mumbai Metropolitan Service Radius</name>
       <Placemark>
-        <name>15km Metropolitan Delivery Boundary — Mumbai</name>
+        <name>15km Metropolitan Delivery Boundary - Mumbai</name>
         <styleUrl>#radiusBoundary</styleUrl>
         <Polygon>
           <outerBoundaryIs>
@@ -147,7 +147,7 @@
         </Polygon>
       </Placemark>
       <Placemark>
-        <name>35km Metropolitan Delivery Boundary — Mumbai</name>
+        <name>35km Metropolitan Delivery Boundary - Mumbai</name>
         <styleUrl>#radiusBoundary</styleUrl>
         <Polygon>
           <outerBoundaryIs>

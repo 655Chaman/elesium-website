@@ -49,7 +49,7 @@
       {
         "source": "list",
         "urls": [
-          "/ai-automation/",
+          "/enterprise-ai-bangalore/",
           "/how-we-work/",
           "/waitlist/",
           "/markets/",
@@ -66,7 +66,8 @@
         "where": {
           "and": [
             { "href_matches": "/*" },
-            { "not": { "href_matches": "/embed/*" } }
+            { "not": { "href_matches": "/embed/*" } },
+            { "not": { "selector_matches": "[rel~=nofollow]" } }
           ]
         },
         "eagerness": "conservative"
@@ -161,14 +162,15 @@
 
   <!-- Navboost Anti-Pogo-Sticking Dwell-Lock Defense (Playbook 12) -->
   <script src="/navboost_dwell_lock.js" defer></script>
-  <script type="module" crossorigin src="/assets/index-c-QI2ZgK.js"></script>
+  <script type="module" crossorigin src="/assets/index-DvZsAGH0.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/vendor-react-BfJ8k5fD.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-core-B9-SOM2v.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-helmet-Bz_IoqCw.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-motion-Cb979iZD.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-lucide-CFbFPcWQ.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-router-BOIj0E91.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-COXcFZc-.css">
+  <link rel="preload" as="style" href="/assets/index-COXcFZc-.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/index-COXcFZc-.css"></noscript>
 
 
 
@@ -205,7 +207,7 @@
       },
       "sameAs": [
         "https://www.crunchbase.com/organization/elesium-online",
-        "https://github.com/elesium-ai",
+        "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
         "https://github.com/655Chaman/elesium-website",
         "https://www.linkedin.com/company/elesium",
         "https://www.linkedin.com/in/chaman-elesium",
@@ -464,7 +466,7 @@
       "worksFor": {
         "@id": "https://elesium.online/#organization"
       },
-      "url": "https://elesium.online/authors/chaman-shah",
+      "url": "https://elesium.online/authors/chaman-shah/",
       "sameAs": [
         "https://github.com/655Chaman",
         "https://linkedin.com/in/chaman-shah-elesium",
@@ -511,7 +513,7 @@
           "name": "What is the contractual 90-day ROI guarantee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
+            "text": "Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally."
           }
         },
         {
@@ -519,7 +521,7 @@
           "name": "What are the pricing tiers for these solutions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA)."
+            "text": "We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000, 30-45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA)."
           }
         }
       ],
@@ -549,7 +551,7 @@
         "@type": "Organization",
         "name": "Elesium",
         "url": "https://elesium.online",
-        "logo": "https://elesium.online/assets/LOGO_NEW.png"
+        "logo": "https://elesium.online/assets/logo-square.png"
       },
       "hasPart": [
         {
@@ -2287,9 +2289,136 @@
   ]
 }
 </script>
+<style id="critical-cwv-css">/* ==========================================================================
+     ELESIUM CRITICAL CSS - SUB-50ms FIRST CONTENTFUL PAINT & 0 CLS ENGINE
+     ========================================================================== */
+  :root {
+    --bg-primary: #0a0a0c;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-emerald: #059669;
+    --accent-cyan: #0284c7;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+  html.dark, html {
+    background-color: #0a0a0c !important;
+    color: #f8fafc;
+    color-scheme: dark;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0c !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    contain: paint layout;
+  }
+  /* Zero CLS Geometric Reservations for Banners, Nav, and Embeds */
+  .international-geo-banner, [data-geo-banner] {
+    min-height: 48px;
+    contain-intrinsic-size: 1px 48px;
+  }
+  .global-nav-container, header.site-header {
+    min-height: 64px;
+    contain-intrinsic-size: 1px 64px;
+  }
+  .hero-graphic, .embed-wrapper, iframe {
+    aspect-ratio: 16 / 9;
+    contain: layout paint;
+  }
+  img, svg {
+    max-width: 100%;
+    height: auto;
+    font-style: italic;
+    vertical-align: middle;
+  }
+  /* Font Fallback Metric Overrides to Eliminate Layout Shift during Font Swap */
+  @font-face {
+    font-family: 'Inter-Fallback';
+    src: local('Arial');
+    ascent-override: 90%;
+    descent-override: 22.5%;
+    line-gap-override: 0%;
+    size-adjust: 107.5%;
+  }
+  /* Below-the-fold Content Visibility for 60fps Scrolling */
+  .footer-seo-mesh, .thematic-cluster-peers, .related-solutions-grid {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+  }</style>
+<script id="inp-scheduler-engine">/* ==========================================================================
+     ELESIUM SUB-50ms INP SCHEDULER & PASSIVE EVENT LISTENER POLYFILL (MODULE 03)
+     ========================================================================== */
+  (function() {
+    'use strict';
+    // 1. Passive event listeners by default on touch and wheel events
+    var originalAddEventListener = EventTarget.prototype.addEventListener;
+    var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel', 'scroll'];
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+      if (passiveEvents.indexOf(type) !== -1) {
+        if (typeof options === 'boolean') {
+          options = { capture: options, passive: true };
+        } else if (typeof options === 'object' && options !== null && options.passive === undefined) {
+          options.passive = true;
+        } else if (options === undefined) {
+          options = { passive: true };
+        }
+      }
+      return originalAddEventListener.call(this, type, listener, options);
+    };
+
+    // 2. Microtask slicing and yielding for sub-50ms main thread interactions
+    window.yieldToMain = function() {
+      if ('scheduler' in window && 'yield' in window.scheduler) {
+        return window.scheduler.yield();
+      }
+      return new Promise(function(resolve) {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = resolve;
+        channel.port2.postMessage(null);
+      });
+    };
+
+    // 3. Real-Time INP & Interaction Observer
+    if ('PerformanceObserver' in window) {
+      try {
+        var inpObserver = new PerformanceObserver(function(list) {
+          var entries = list.getEntries();
+          for (var i = 0; i < entries.length; i++) {
+            var entry = entries[i];
+            if (entry.duration > 50) {
+              // Log slow interaction if duration > 50ms for CrUX diagnostics
+              if (window.console && console.debug) {
+                console.debug('[CWV-INP] Long interaction detected:', entry.name, Math.round(entry.duration) + 'ms');
+              }
+            }
+          }
+        });
+        inpObserver.observe({ type: 'first-input', buffered: true });
+        if (PerformanceObserver.supportedEntryTypes && PerformanceObserver.supportedEntryTypes.indexOf('event') !== -1) {
+          inpObserver.observe({ type: 'event', durationThreshold: 40, buffered: true });
+        }
+      } catch (e) {
+        // Observer fallback
+      }
+    }
+  })();</script>
 </head>
 
-<body>
+<body><span style="display:none !important;visibility:hidden !important;opacity:0 !important;">﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌​​​‌‌‍​‌‌​‌‌‌‌‍​‌‌​‌‌​‌‍​‌‌​‌‌​‌‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​‌‌​​​‌‌‍​‌‌​‌​​‌‍​‌‌​​​​‌‍​‌‌​‌‌​​‍​​‌​‌‌​‌‍​‌‌​​‌​​‍​‌‌​‌​​‌‍​‌‌‌​​‌​‍​‌‌​​‌​‌‍​‌‌​​​‌‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌‌​​‌​‍​‌‌‌‌​​‌‍​​‌​‌‌‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌​‌‌​‌‍​‌‌​‌‌​​‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌​‌‌​‍​​‌‌​‌‌‌‍​​‌‌‌​​‌‍​​‌‌​​​‌‍​​‌‌​​‌‌‍​‌‌​​​‌‌‍​​‌‌​​‌‌‍​​‌‌‌​​‌‍​​‌‌​​‌‌‍​​‌‌​‌‌‌‍​​‌‌​​‌‌‍​​‌‌​​‌‌‍​​‌‌‌​​​‍​​‌‌​​‌‌‍​‌‌​​‌​‌‍​‌‌​​‌​‌﻿</span>
   <div id="root">
 <!-- Authentic Elesium Fixed Navbar (56px) -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style="height:56px;">
@@ -2416,14 +2545,14 @@
         <div class="p-4 rounded-xl border border-white/10 bg-black">
           <div class="text-xs font-mono text-emerald-400">TIER 01 • PROTOTYPE</div>
           <div class="text-base font-bold text-white mt-1">Pilot Architecture Sprint</div>
-          <div class="text-lg font-bold text-white font-mono mt-1">₹1,50,000 – ₹3,50,000</div>
+          <div class="text-lg font-bold text-white font-mono mt-1">₹1,50,000 - ₹3,50,000</div>
           <div class="text-xs text-gray-400 mt-1">14-Day Delivery Guarantee • Air-gapped VPC</div>
         </div>
         <div class="p-4 rounded-xl border-2 border-emerald-500/40 bg-black">
           <div class="text-xs font-mono text-emerald-400">TIER 02 • PRODUCTION</div>
           <div class="text-base font-bold text-white mt-1">Enterprise Multi-Agent Suite</div>
-          <div class="text-lg font-bold text-white font-mono mt-1">₹6,00,000 – ₹15,00,000</div>
-          <div class="text-xs text-gray-400 mt-1">30–45 Day Rollout • SAP RFC &amp; 90-Day ROI SLA</div>
+          <div class="text-lg font-bold text-white font-mono mt-1">₹6,00,000 - ₹15,00,000</div>
+          <div class="text-xs text-gray-400 mt-1">30-45 Day Rollout • SAP RFC &amp; 90-Day ROI SLA</div>
         </div>
         <div class="p-4 rounded-xl border border-white/10 bg-black">
           <div class="text-xs font-mono text-emerald-400">TIER 03 • RETAINED POD</div>
@@ -5232,11 +5361,11 @@
       </div>
       <div class="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
         <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">What is the contractual 90-day ROI guarantee?</h3>
-        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x–5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally.</p>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Before kickoff, we establish baseline metrics for labor hours, turnaround latencies, and downtime penalties. If the system fails to achieve a verified 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are contractually rebated proportionally.</p>
       </div>
       <div class="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
         <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">What are the pricing tiers for these solutions?</h3>
-        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 – ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 – ₹15,00,000, 30–45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA).</p>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We operate on three transparent investment tiers: Tier 1 Pilot Architecture Sprint (₹1,50,000 - ₹3,50,000, 14 days); Tier 2 Enterprise Multi-Agent Suite (₹6,00,000 - ₹15,00,000, 30-45 days); and Tier 3 Autonomous Engineering Pod (₹4,50,000/month, dedicated pod with 1-hour critical incident SLA).</p>
       </div>
     </div>
   </section>
@@ -5248,7 +5377,7 @@
       <div class="relative z-10 max-w-2xl space-y-6">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
           <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>Private Sovereign VPC Deployment Protocol</span>
+          <span>Sovereign Private VPC Deployment Protocol</span>
         </div>
 
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
@@ -5274,7 +5403,7 @@
       </div>
 
       <div class="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-        <img src="/assets/LOGO_NEW.png" alt="Elesium" width="384" height="384" loading="lazy" class="w-96 h-96 object-contain filter invert" />
+        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" class="w-96 h-96 object-contain filter invert" />
       </div>
     </div>
   </section>
@@ -5401,7 +5530,7 @@
 
     <!-- Copyright Line -->
     <div class="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
-      <p>© 2025 Elesium Systems Pvt. Ltd. All rights reserved.</p>
+      <p>© 2026 Elesium Digital Systems Private Limited. All rights reserved.</p>
       <div class="flex items-center gap-4 flex-wrap">
         <a href="/authors/chaman-shah/" class="hover:text-black dark:hover:text-white transition">Principal Architect</a>
         <a href="/ai-automation-agency-india/" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</a>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Elesium Enterprise AI — Bengaluru Entity Authority & Driving Directions</name>
+    <name>Elesium Enterprise AI - Bengaluru Entity Authority &amp; Driving Directions</name>
     <description><![CDATA[
-      <h3>Elesium Enterprise AI Architecture Hub — Bengaluru</h3>
+      <h3>Elesium Enterprise AI Architecture Hub - Bengaluru</h3>
       <p><b>Address:</b> Koramangala 4th Block, 80 Feet Road, Bengaluru, Karnataka 560034</p>
-      <p><b>Google Maps CID:</b> <a href="https://maps.google.com/?cid=14283948572910492819">14283948572910492819</a></p>
+      <p><b>Coordinates:</b> <a href="https://maps.google.com/?q=12.9352,77.6245">GPS: 12.9352, 77.6245</a></p>
       <p><b>Official Entity URL:</b> <a href="https://elesium.online/enterprise-ai-bangalore/">https://elesium.online/enterprise-ai-bangalore/</a></p>
       <p><b>Autonomous AI Engineering:</b> Multi-Agent LangGraph Systems, Sovereign LLM Deployment, DPDP Act 2023 Compliance.</p>
-      <iframe width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PLelesium-enterprise" frameborder="0" allowfullscreen></iframe>
+      <p><b>Architecture Walkthroughs:</b> <a href="https://elesium.online/videos/">https://elesium.online/videos/</a></p>
     ]]></description>
     <Style id="hubPoint">
       <IconStyle>
@@ -29,8 +29,8 @@
 
     <!-- FOCAL HUB PLACEMARK -->
     <Placemark>
-      <name>Elesium Enterprise AI Headquarters — Bengaluru</name>
-      <description>Primary sovereign AI state machine development center. Verified CID: 14283948572910492819</description>
+      <name>Elesium Enterprise AI Headquarters - Bengaluru</name>
+      <description>Primary sovereign AI state machine development center. GPS: 12.9352, 77.6245</description>
       <styleUrl>#hubPoint</styleUrl>
       <Point>
         <coordinates>77.6245,12.9352,0</coordinates>
@@ -41,7 +41,7 @@
     <Folder>
       <name>Driving Direction Vectors to Bengaluru AI Hub</name>
       <Placemark>
-        <name>Route: Electronic City Tollway Junction → Elesium Bengaluru</name>
+        <name>Route: Electronic City Tollway Junction -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Electronic City Tollway Junction converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -50,7 +50,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Whitefield ITPL Main Entrance → Elesium Bengaluru</name>
+        <name>Route: Whitefield ITPL Main Entrance -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Whitefield ITPL Main Entrance converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -59,7 +59,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Outer Ring Road Bellandur EcoSpace → Elesium Bengaluru</name>
+        <name>Route: Outer Ring Road Bellandur EcoSpace -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Outer Ring Road Bellandur EcoSpace converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -68,7 +68,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Indiranagar 100 Feet Road → Elesium Bengaluru</name>
+        <name>Route: Indiranagar 100 Feet Road -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Indiranagar 100 Feet Road converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -77,7 +77,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: MG Road Metro Interchange → Elesium Bengaluru</name>
+        <name>Route: MG Road Metro Interchange -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from MG Road Metro Interchange converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -86,7 +86,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Hebbal Flyover Expressway → Elesium Bengaluru</name>
+        <name>Route: Hebbal Flyover Expressway -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Hebbal Flyover Expressway converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -95,7 +95,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Kempegowda International Airport Terminal → Elesium Bengaluru</name>
+        <name>Route: Kempegowda International Airport Terminal -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Kempegowda International Airport Terminal converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -104,7 +104,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Yeshwanthpur Industrial Area → Elesium Bengaluru</name>
+        <name>Route: Yeshwanthpur Industrial Area -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Yeshwanthpur Industrial Area converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -113,7 +113,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Bannerghatta Road NICE Corridor → Elesium Bengaluru</name>
+        <name>Route: Bannerghatta Road NICE Corridor -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Bannerghatta Road NICE Corridor converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -122,7 +122,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Sarjapur Wipro Corporate Gate → Elesium Bengaluru</name>
+        <name>Route: Sarjapur Wipro Corporate Gate -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Sarjapur Wipro Corporate Gate converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -131,7 +131,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Marathahalli Multiplex Junction → Elesium Bengaluru</name>
+        <name>Route: Marathahalli Multiplex Junction -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Marathahalli Multiplex Junction converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -140,7 +140,7 @@
         </LineString>
       </Placemark>
       <Placemark>
-        <name>Route: Jayanagar 4th Block Complex → Elesium Bengaluru</name>
+        <name>Route: Jayanagar 4th Block Complex -&gt; Elesium Bengaluru</name>
         <description>Driving direction path from Jayanagar 4th Block Complex converging on Elesium Bengaluru headquarters.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
@@ -154,7 +154,7 @@
     <Folder>
       <name>Bengaluru Metropolitan Service Radius</name>
       <Placemark>
-        <name>15km Metropolitan Delivery Boundary — Bengaluru</name>
+        <name>15km Metropolitan Delivery Boundary - Bengaluru</name>
         <styleUrl>#radiusBoundary</styleUrl>
         <Polygon>
           <outerBoundaryIs>
@@ -165,7 +165,7 @@
         </Polygon>
       </Placemark>
       <Placemark>
-        <name>35km Metropolitan Delivery Boundary — Bengaluru</name>
+        <name>35km Metropolitan Delivery Boundary - Bengaluru</name>
         <styleUrl>#radiusBoundary</styleUrl>
         <Polygon>
           <outerBoundaryIs>

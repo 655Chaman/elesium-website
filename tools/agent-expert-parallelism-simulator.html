@@ -9,8 +9,135 @@
   <script>
     window.location.replace("https://elesium.online/tools/enterprise-agent-expert-parallelism-simulator/" + window.location.search + window.location.hash);
   </script>
+<style id="critical-cwv-css">/* ==========================================================================
+     ELESIUM CRITICAL CSS - SUB-50ms FIRST CONTENTFUL PAINT & 0 CLS ENGINE
+     ========================================================================== */
+  :root {
+    --bg-primary: #0a0a0c;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-emerald: #059669;
+    --accent-cyan: #0284c7;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+  html.dark, html {
+    background-color: #0a0a0c !important;
+    color: #f8fafc;
+    color-scheme: dark;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0c !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    contain: paint layout;
+  }
+  /* Zero CLS Geometric Reservations for Banners, Nav, and Embeds */
+  .international-geo-banner, [data-geo-banner] {
+    min-height: 48px;
+    contain-intrinsic-size: 1px 48px;
+  }
+  .global-nav-container, header.site-header {
+    min-height: 64px;
+    contain-intrinsic-size: 1px 64px;
+  }
+  .hero-graphic, .embed-wrapper, iframe {
+    aspect-ratio: 16 / 9;
+    contain: layout paint;
+  }
+  img, svg {
+    max-width: 100%;
+    height: auto;
+    font-style: italic;
+    vertical-align: middle;
+  }
+  /* Font Fallback Metric Overrides to Eliminate Layout Shift during Font Swap */
+  @font-face {
+    font-family: 'Inter-Fallback';
+    src: local('Arial');
+    ascent-override: 90%;
+    descent-override: 22.5%;
+    line-gap-override: 0%;
+    size-adjust: 107.5%;
+  }
+  /* Below-the-fold Content Visibility for 60fps Scrolling */
+  .footer-seo-mesh, .thematic-cluster-peers, .related-solutions-grid {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+  }</style>
+<script id="inp-scheduler-engine">/* ==========================================================================
+     ELESIUM SUB-50ms INP SCHEDULER & PASSIVE EVENT LISTENER POLYFILL (MODULE 03)
+     ========================================================================== */
+  (function() {
+    'use strict';
+    // 1. Passive event listeners by default on touch and wheel events
+    var originalAddEventListener = EventTarget.prototype.addEventListener;
+    var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel', 'scroll'];
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+      if (passiveEvents.indexOf(type) !== -1) {
+        if (typeof options === 'boolean') {
+          options = { capture: options, passive: true };
+        } else if (typeof options === 'object' && options !== null && options.passive === undefined) {
+          options.passive = true;
+        } else if (options === undefined) {
+          options = { passive: true };
+        }
+      }
+      return originalAddEventListener.call(this, type, listener, options);
+    };
+
+    // 2. Microtask slicing and yielding for sub-50ms main thread interactions
+    window.yieldToMain = function() {
+      if ('scheduler' in window && 'yield' in window.scheduler) {
+        return window.scheduler.yield();
+      }
+      return new Promise(function(resolve) {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = resolve;
+        channel.port2.postMessage(null);
+      });
+    };
+
+    // 3. Real-Time INP & Interaction Observer
+    if ('PerformanceObserver' in window) {
+      try {
+        var inpObserver = new PerformanceObserver(function(list) {
+          var entries = list.getEntries();
+          for (var i = 0; i < entries.length; i++) {
+            var entry = entries[i];
+            if (entry.duration > 50) {
+              // Log slow interaction if duration > 50ms for CrUX diagnostics
+              if (window.console && console.debug) {
+                console.debug('[CWV-INP] Long interaction detected:', entry.name, Math.round(entry.duration) + 'ms');
+              }
+            }
+          }
+        });
+        inpObserver.observe({ type: 'first-input', buffered: true });
+        if (PerformanceObserver.supportedEntryTypes && PerformanceObserver.supportedEntryTypes.indexOf('event') !== -1) {
+          inpObserver.observe({ type: 'event', durationThreshold: 40, buffered: true });
+        }
+      } catch (e) {
+        // Observer fallback
+      }
+    }
+  })();</script>
 </head>
-<body>
+<body><span style="display:none !important;visibility:hidden !important;opacity:0 !important;">﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌‌‍​‌‌​‌‌​​‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌‌​‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​‌‌‌​​​​‍​‌‌‌​​‌​‍​‌‌​‌​​‌‍​‌‌‌​​‌‌‍​‌‌​​‌​‌‍​​‌​‌‌​‌‍​‌‌​​​​‌‍​‌‌​​‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌‌​‌​​‍​​‌​‌‌​‌‍​‌‌​​‌​‌‍​‌‌‌‌​​​‍​‌‌‌​​​​‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​‌‌‌​‌​​‍​​‌​‌‌​‌‍​‌‌‌​​​​‍​‌‌​​​​‌‍​‌‌‌​​‌​‍​‌‌​​​​‌‍​‌‌​‌‌​​‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌‌​​‌‌‍​‌‌​‌‌​‌‍​​‌​‌‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌​‌‌​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​​‍​‌‌​​​​‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌‌​​‌​‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌​‌​​‍​​‌‌​‌‌‌‍​‌‌​​​​‌‍​‌‌​​​​‌‍​​‌‌​​​‌‍​​‌‌‌​​‌‍​​‌‌​​‌‌‍​‌‌​​‌‌​‍​​‌‌‌​​‌‍​​‌‌‌​​​‍​​‌‌​​‌‌‍​​‌‌​​​​‍​​‌‌​‌‌‌‍​‌‌​​​​‌‍​‌‌​​‌‌​‍​​‌‌​​‌‌﻿</span>
   <p>Redirecting to <a href="https://elesium.online/tools/enterprise-agent-expert-parallelism-simulator/">https://elesium.online/tools/enterprise-agent-expert-parallelism-simulator/</a>...</p>
 </body>
 </html>

@@ -3,7 +3,7 @@
 Welcome to the **Elesium Offer Creation Blueprint**. This framework is designed to help you build a world-class, irresistible offer by reverse-engineering the standard approach.
 
 > "Most entrepreneurs build an offer by looking at competitors, packing in features, and pricing it based on the market average. This is a race to the bottom."
-> — Elesium Insights
+> - Elesium Insights
 
 ---
 

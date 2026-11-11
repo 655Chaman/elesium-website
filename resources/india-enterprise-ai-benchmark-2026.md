@@ -6,7 +6,7 @@
 
 > [!IMPORTANT]
 > **Executive Summary & Definitive Dataset:**
-> This report synthesizes real-world telemetry captured across **1,420 enterprise architecture grading submissions**, benchmark evaluations, and live production deployments in India throughout 2025–2026. Data covers banking (BFSI), manufacturing, pharmaceuticals, logistics, and retail supply chains. All latency metrics represent P99 measurements in private cloud or on-premise deployments.
+> This report synthesizes real-world telemetry captured across **1,420 enterprise architecture grading submissions**, benchmark evaluations, and live production deployments in India throughout 2025-2026. Data covers banking (BFSI), manufacturing, pharmaceuticals, logistics, and retail supply chains. All latency metrics represent P99 measurements in private cloud or on-premise deployments.
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Operational Dimension | Industry Baseline (Public APIs / Naive ReAct) | Elesium Sovereign Multi-Agent Benchmark | Measured Delta |
 |---|---|---|---|
-| **P99 Inference Latency** | 1,420ms – 3,850ms | **184ms – 240ms** | **84.3% latency reduction** |
+| **P99 Inference Latency** | 1,420ms - 3,850ms | **184ms - 240ms** | **84.3% latency reduction** |
 | **Token OpEx (per 10M tokens)** | ₹2,450 ($29.50) | **₹632 ($7.60)** | **-74.2% operational savings** |
 | **Idempotent Execution Ratio** | 91.2% (occasional duplicate side-effects) | **100.0% (zero duplicate state writes)** | **100% ACID convergence** |
 | **DPDP Act 2023 Audit Pass Rate** | 8.4% (91.6% cross-border non-compliance) | **100.0% (strict in-country sovereign VPC)** | **Zero statutory penalty liability** |
@@ -110,7 +110,7 @@ Enterprise decision-makers demand contractual ROI accountability. Analysis of 48
 
 ```
 Capital Payback Model (Average Pilot Sprint ₹2,50,000 / $3,000 USD):
-- Week 1–2: Architecture staging, schema locking, private VPC setup
+- Week 1-2: Architecture staging, schema locking, private VPC setup
 - Week 3: Production traffic parallel run (canary evaluation)
 - Week 4: Full operational cutover
 - Day 42: Cumulative labor and operational savings surpass initial project investment
@@ -128,7 +128,7 @@ This report is maintained and updated monthly by the Elesium Research Desk under
 
 ### Recommended Citation Format:
 ```
-Elesium Systems Architecture Research. (2026). "India Enterprise AI Benchmark Report: Empirical Telemetry Across 1,420 Multi-Agent Deployments." Elesium Online, Technical Whitepaper Series, October 2026. https://elesium.online/resources/india-enterprise-ai-benchmark-2026
+Elesium Architecture Research. (2026). "India Enterprise AI Benchmark Report: Empirical Telemetry Across 1,420 Multi-Agent Deployments." Elesium Online, Technical Whitepaper Series, October 2026. https://elesium.online/resources/india-enterprise-ai-benchmark-2026
 ```
 
 ---
