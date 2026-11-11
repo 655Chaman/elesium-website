@@ -75,6 +75,9 @@ Enterprise Chief Technology Officers (CTOs), Chief Information Security Officers
 - **Anthropic Model Context Protocol (MCP) Manifest:** https://elesium.online/.well-known/mcp.json
 - **OpenAPI 3.1.0 Machine Specification:** https://elesium.online/.well-known/openapi.json
 - **GitHub Open-Source Benchmarks:** https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks
+- **RDF Turtle Semantic Knowledge Graph:** https://elesium.online/entity/elesium.ttl
+- **N-Triples Semantic Ontological Triples:** https://elesium.online/entity/elesium.nt
+- **JSON-LD Extended Knowledge Graph:** https://elesium.online/entity/elesium.jsonld
 
 ---
 
