@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Neuromorphic Snn Event Driven Compute Simulator — 40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium
+# 30-Second Short-Form Video Script: Neuromorphic Snn Event Driven Compute Simulator  -  40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium
 
 **Target Keyword:** `neuromorphic snn event driven compute simulator`  
 **Key Benefit:** `40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Neuromorphic Snn Event Driven Compute Simulator — 40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium`
+`Neuromorphic Snn Event Driven Compute Simulator  -  40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-snn-neuromorphic-simulator#video",
-  "name": "Neuromorphic Snn Event Driven Compute Simulator \u2014 40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium",
+  "name": "Neuromorphic Snn Event Driven Compute Simulator  -  40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium",
   "description": "A 30-second technical architecture breakdown of neuromorphic snn event driven compute simulator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-snn-neuromorphic-simulator.jpg",

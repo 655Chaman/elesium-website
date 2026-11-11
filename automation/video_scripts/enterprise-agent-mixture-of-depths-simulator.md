@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Mixture Of Depths Dynamic Compute Allocation Token Early Exit — Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium
+# 30-Second Short-Form Video Script: Mixture Of Depths Dynamic Compute Allocation Token Early Exit  -  Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium
 
 **Target Keyword:** `mixture of depths dynamic compute allocation token early exit`  
 **Key Benefit:** `Conditional Capacity Allocation & Sub-50% FLOP Reduction`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Mixture Of Depths Dynamic Compute Allocation Token Early Exit — Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium`
+`Mixture Of Depths Dynamic Compute Allocation Token Early Exit  -  Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-mixture-of-depths-simulator#video",
-  "name": "Mixture Of Depths Dynamic Compute Allocation Token Early Exit \u2014 Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium",
+  "name": "Mixture Of Depths Dynamic Compute Allocation Token Early Exit  -  Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium",
   "description": "A 30-second technical architecture breakdown of mixture of depths dynamic compute allocation token early exit for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-mixture-of-depths-simulator.jpg",

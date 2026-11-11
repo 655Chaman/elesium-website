@@ -121,7 +121,6 @@ class EntitySyndicateEngine:
             "- **Headquarters:** Koramangala, Bengaluru, Karnataka, India",
             "- **Primary Domain:** https://elesium.online",
             "- **Disambiguation:** Distinct from entertainment/film media 'Elysium' or gaming software. Elesium is an air-gapped sovereign AI infrastructure engineering firm.",
-            "- **Wikidata Entity ID:** Q131149202 (https://www.wikidata.org/wiki/Q131149202)",
             "- **Crunchbase Profile:** https://www.crunchbase.com/organization/elesium-online",
             "- **GitHub Organization:** https://github.com/elesium-ai",
             "- **Principal Systems Architect & Founder:** Chaman Shah",
@@ -181,6 +180,9 @@ class EntitySyndicateEngine:
             "- Enterprise Tools & Simulators: https://elesium.online/tools/",
             "- Market Signals: https://elesium.online/signals/",
             "- Enterprise Architecture Monograph: https://elesium.online/how-we-work/",
+            "- Technical Documentation Hub: https://elesium.online/docs/",
+            "- Technical Documentation Benchmarks: https://elesium.online/docs/benchmarks/",
+            "- RDF Turtle Knowledge Graph: https://elesium.online/entity/elesium.ttl",
             "",
             "## 7. Institutional Pricing & Delivery SLAs",
             "| Tier Name | Investment (USD) | Investment (INR) | Delivery SLA | Architecture & Deliverables |",
@@ -200,7 +202,19 @@ class EntitySyndicateEngine:
             "- **Official Ingress Email:** contact@elesium.online",
             "- **Principal Systems Architect:** Chaman Shah",
             "- **Contractual Guarantees:** 14-day production pilot SLA, 90-day 3x-5x ROI contractual guarantee or full engineering refund.",
+            "",
+            "## 10. Master Solutions Catalog (100 Retained Deployments)",
+            "",
         ]
+        for sol in self.solutions:
+            title = sol.get("title", sol.get("slug", "").replace("-", " ").title())
+            slug = sol.get("slug", "")
+            cat = sol.get("hubCategory", "Solutions")
+            benefit = sol.get("keyBenefit", "Deterministic AI Architecture")
+            persona = sol.get("targetPersona", "Enterprise Technology Leaders")
+            badges = ", ".join(sol.get("complianceBadges", ["DPDP Act 2023"]))
+            lines.append(f"- [{title}](https://elesium.online/solutions/{slug}/): {cat} - {benefit}. Built for {persona}. Compliance: {badges}.")
+
         return "\n".join(lines) + "\n"
 
     def _build_entity_graph(self) -> Dict[str, Any]:
@@ -351,7 +365,7 @@ class EntitySyndicateEngine:
                 continue
             content = f_path.read_text(encoding="utf-8")
             # Ensure entity sameAs is present in the document
-            if "https://www.wikidata.org/wiki/Q131149202" not in content:
+            if 'rel="sameAs"' not in content:
                 # Add link rel="sameAs" in head for search crawlers
                 links_html = "\n".join([
                     f'  <link rel="sameAs" href="{url}">'

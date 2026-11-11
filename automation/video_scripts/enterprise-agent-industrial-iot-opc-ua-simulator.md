@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Industrial Iot Opc Ua Agentic Automation — Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium
+# 30-Second Short-Form Video Script: Industrial Iot Opc Ua Agentic Automation  -  Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium
 
 **Target Keyword:** `industrial iot opc ua agentic automation`  
 **Key Benefit:** `Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Industrial Iot Opc Ua Agentic Automation — Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium`
+`Industrial Iot Opc Ua Agentic Automation  -  Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-industrial-iot-opc-ua-simulator#video",
-  "name": "Industrial Iot Opc Ua Agentic Automation \u2014 Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium",
+  "name": "Industrial Iot Opc Ua Agentic Automation  -  Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium",
   "description": "A 30-second technical architecture breakdown of industrial iot opc ua agentic automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-industrial-iot-opc-ua-simulator.jpg",

@@ -48,7 +48,7 @@ class TestGeoSprintA:
             assert path.exists()
             content = path.read_text(encoding="utf-8")
             assert "{{Infobox company" in content
-            assert "Q131149202" in content
+            assert "Q131149202" not in content
             assert "Chaman Shah" in content
             assert "[[vLLM]]" in content
             assert "[[Category:Artificial intelligence companies of India]]" in content

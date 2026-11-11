@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Autonomous Dispatch Software For Freight Carriers — Real-Time Telematics & Dynamic Route Planning | Elesium
+# 30-Second Short-Form Video Script: Autonomous Dispatch Software For Freight Carriers  -  Real-Time Telematics & Dynamic Route Planning | Elesium
 
 **Target Keyword:** `autonomous dispatch software for freight carriers`  
 **Key Benefit:** `Real-Time Telematics & Dynamic Route Planning`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Autonomous Dispatch Software For Freight Carriers — Real-Time Telematics & Dynamic Route Planning | Elesium`
+`Autonomous Dispatch Software For Freight Carriers  -  Real-Time Telematics & Dynamic Route Planning | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/autonomous-dispatch-software-for-freight-carriers#video",
-  "name": "Autonomous Dispatch Software For Freight Carriers \u2014 Real-Time Telematics & Dynamic Route Planning | Elesium",
+  "name": "Autonomous Dispatch Software For Freight Carriers  -  Real-Time Telematics & Dynamic Route Planning | Elesium",
   "description": "A 30-second technical architecture breakdown of autonomous dispatch software for freight carriers for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/autonomous-dispatch-software-for-freight-carriers.jpg",

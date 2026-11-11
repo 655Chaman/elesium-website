@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Prefill Decode Disaggregation Chunked Prompt Execution Ttft — Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium
+# 30-Second Short-Form Video Script: Prefill Decode Disaggregation Chunked Prompt Execution Ttft  -  Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium
 
 **Target Keyword:** `prefill decode disaggregation chunked prompt execution ttft`  
 **Key Benefit:** `Zero-Interference K-V Transport & Sub-15ms TTFT`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Prefill Decode Disaggregation Chunked Prompt Execution Ttft — Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium`
+`Prefill Decode Disaggregation Chunked Prompt Execution Ttft  -  Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-prefill-decode-disaggregation-simulator#video",
-  "name": "Prefill Decode Disaggregation Chunked Prompt Execution Ttft \u2014 Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium",
+  "name": "Prefill Decode Disaggregation Chunked Prompt Execution Ttft  -  Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium",
   "description": "A 30-second technical architecture breakdown of prefill decode disaggregation chunked prompt execution ttft for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-prefill-decode-disaggregation-simulator.jpg",

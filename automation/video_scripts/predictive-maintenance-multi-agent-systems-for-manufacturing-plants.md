@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Predictive Maintenance Multi-Agent Systems For Manufacturing Plants — Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium
+# 30-Second Short-Form Video Script: Predictive Maintenance Multi-Agent Systems For Manufacturing Plants  -  Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium
 
 **Target Keyword:** `predictive maintenance multi-agent systems for manufacturing plants`  
 **Key Benefit:** `Vibration Telemetry Analysis & Zero Unplanned Downtime`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Predictive Maintenance Multi-Agent Systems For Manufacturing Plants — Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium`
+`Predictive Maintenance Multi-Agent Systems For Manufacturing Plants  -  Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/predictive-maintenance-multi-agent-systems-for-manufacturing-plants#video",
-  "name": "Predictive Maintenance Multi-Agent Systems For Manufacturing Plants \u2014 Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium",
+  "name": "Predictive Maintenance Multi-Agent Systems For Manufacturing Plants  -  Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium",
   "description": "A 30-second technical architecture breakdown of predictive maintenance multi-agent systems for manufacturing plants for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/predictive-maintenance-multi-agent-systems-for-manufacturing-plants.jpg",

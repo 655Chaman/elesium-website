@@ -112,7 +112,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         ],
         fullTranscript: `[00:00] Welcome to the Elesium Systems Architecture Masterclass. Today, we are breaking down why 90% of enterprise AI projects fail to transition from pilot to production, and the exact architectural blueprint Indian enterprises are deploying to achieve deterministic, cash-flow positive returns.
 
-[01:15] In 2024 and 2025, the market was flooded with prompt wrappers—companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment—whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims—probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
+[01:15] In 2024 and 2025, the market was flooded with prompt wrappers - companies claiming to solve enterprise workflows simply by feeding thousands of tokens into an OpenAI or Anthropic API. But in an enterprise environment - whether you are an NBFC underwriting loans, a manufacturing firm ordering raw materials through SAP, or an insurer handling claims - probabilistic drift is catastrophic. A 98% accuracy rate sounds impressive to a marketer, but to a Chief Risk Officer, a 2% failure rate across 50,000 monthly transactions means 1,000 corrupted entries, compliance penalties, and direct capital loss.
 
 [04:12] This brings us to the core distinction: Probabilistic Generative Models versus Deterministic State Machines. At Elesium, we do not let LLMs make unbound execution decisions. Instead, we use frameworks like LangGraph to construct deterministic state machines. The language model acts merely as a localized parsing or translation node, while the transitions between states, the validation gates, and the business logic are strictly enforced by code.
 
@@ -184,7 +184,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         ],
         fullTranscript: `[00:00] Today we are resolving one of the most contentious debates among enterprise technical architects: Should you build your business workflows with visual automation engines like n8n, or should you deploy programmatic code-first frameworks like LangGraph?
 
-[01:30] Let's be fair: n8n is fantastic for linear automation. If you need to watch a webhook, format a payload, and update HubSpot or Airtable, n8n provides rapid prototyping and clean visual observability. But when you move to mission-critical revenue operations—where an agent must read financial statements, cross-examine multiple databases, recover from partial failures, and handle cyclical loops—visual tools hit an architectural wall.
+[01:30] Let's be fair: n8n is fantastic for linear automation. If you need to watch a webhook, format a payload, and update HubSpot or Airtable, n8n provides rapid prototyping and clean visual observability. But when you move to mission-critical revenue operations - where an agent must read financial statements, cross-examine multiple databases, recover from partial failures, and handle cyclical loops - visual tools hit an architectural wall.
 
 [05:10] The primary advantage of LangGraph is cyclical execution and stateful checkpointing. Traditional DAGs are linear: node A leads to node B, which leads to node C. But agentic reasoning is iterative. An agent generates a response, validates it against a business rule, realizes there is an inconsistency, and must loop back to re-query the database. LangGraph models workflows as graphs with cycles, persisting state into PostgreSQL after every node execution. If a server restarts midway through a transaction, LangGraph resumes exactly where it stopped.
 
@@ -254,11 +254,11 @@ export const videoMasterclasses: VideoMasterclass[] = [
 
 [02:15] In this technical case study, we examine the architecture Elesium engineered for an institutional lending client. Their credit team was spending 48 hours per application simply compiling raw financial inputs into a Credit Appraisal Memo (CAM).
 
-[05:40] Step one is robust ingestion. Financial PDFs in India are notoriously messy—scanned at low resolutions, stamped with watermarks, or formatted in non-standard tabular grids. We deployed a multi-stage Vision-Language extraction pipeline that segments documents into bounding-box coordinates, normalizes rotations, and outputs strongly typed Pydantic models with 99.4% precision.
+[05:40] Step one is robust ingestion. Financial PDFs in India are notoriously messy - scanned at low resolutions, stamped with watermarks, or formatted in non-standard tabular grids. We deployed a multi-stage Vision-Language extraction pipeline that segments documents into bounding-box coordinates, normalizes rotations, and outputs strongly typed Pydantic models with 99.4% precision.
 
 [09:20] Step two is the cross-verification audit triad. Credit risk is not assessed from a single document. Our LangGraph agent cluster cross-examines three distinct data streams: bank statement credits, GST revenue declarations (GSTR-1 and GSTR-3B), and filed Income Tax Returns (ITR). If a borrower claims 20 Crores in annual revenue, but banking credits only reflect 12 Crores, the reconciliation engine immediately flags the circular transaction pattern and highlights the discrepancy in red.
 
-[15:10] Step three is automated CAM generation. Once cross-validation passes, the system calculates critical debt ratios—Debt Service Coverage Ratio (DSCR), Interest Coverage Ratio, and Maximum Permissible Bank Finance (MPBF)—outputting an executive-ready CAM complete with source document annotations. The credit manager does not have to hunt for numbers; every figure in the memo links directly to the highlighted bounding box in the original bank statement.
+[15:10] Step three is automated CAM generation. Once cross-validation passes, the system calculates critical debt ratios - Debt Service Coverage Ratio (DSCR), Interest Coverage Ratio, and Maximum Permissible Bank Finance (MPBF) - outputting an executive-ready CAM complete with source document annotations. The credit manager does not have to hunt for numbers; every figure in the memo links directly to the highlighted bounding box in the original bank statement.
 
 [19:00] The outcome: underwriting turnaround was compressed from 48 hours to just 18 minutes. The client recovered 12,000 analyst hours every month, expanded originations by 300% without hiring, and achieved an audited 3.8x cash-flow ROI in the first quarter of deployment.`
     },
@@ -329,7 +329,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
 {
         "id": "sfv-1",
         "slug": "ai-automation-agency-for-logistics",
-        "title": "Ai Automation Agency For Logistics \u2014 Autonomous Fleet Dispatch & ERP Synchronization | Elesium",
+        "title": "Ai Automation Agency For Logistics  -  Autonomous Fleet Dispatch & ERP Synchronization | Elesium",
         "youtubeId": "LgX9n2101a",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -479,7 +479,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-2",
         "slug": "autonomous-dispatch-software-for-freight-carriers",
-        "title": "Autonomous Dispatch Software For Freight Carriers \u2014 Real-Time Telematics & Dynamic Route Planning | Elesium",
+        "title": "Autonomous Dispatch Software For Freight Carriers  -  Real-Time Telematics & Dynamic Route Planning | Elesium",
         "youtubeId": "FrT8m1920b",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -629,7 +629,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-3",
         "slug": "deterministic-warehouse-automation-for-3pl-providers",
-        "title": "Deterministic Warehouse Automation For 3Pl Providers \u2014 WMS State Machines & Inventory Accuracy | Elesium",
+        "title": "Deterministic Warehouse Automation For 3Pl Providers  -  WMS State Machines & Inventory Accuracy | Elesium",
         "youtubeId": "Wh3L9402c",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -779,7 +779,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-4",
         "slug": "fleet-route-optimization-agents-for-supply-chain-directors",
-        "title": "Fleet Route Optimization Agents For Supply Chain Directors \u2014 Multi-Depot Routing & Fuel Cost Elimination | Elesium",
+        "title": "Fleet Route Optimization Agents For Supply Chain Directors  -  Multi-Depot Routing & Fuel Cost Elimination | Elesium",
         "youtubeId": "RtSc0192d",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -929,7 +929,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-5",
         "slug": "sub-200ms-ledger-reconciliation-agents-for-fintechs",
-        "title": "Sub-200Ms Ledger Reconciliation Agents For Fintechs \u2014 Cryptographic Settlement & Zero Ledger Drift | Elesium",
+        "title": "Sub-200Ms Ledger Reconciliation Agents For Fintechs  -  Cryptographic Settlement & Zero Ledger Drift | Elesium",
         "youtubeId": "LdG8m203e",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1079,7 +1079,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-6",
         "slug": "aml-compliance-automation-software-for-private-banks",
-        "title": "Aml Compliance Automation Software For Private Banks \u2014 Sanctions Screening & Real-Time SAR Generation | Elesium",
+        "title": "Aml Compliance Automation Software For Private Banks  -  Sanctions Screening & Real-Time SAR Generation | Elesium",
         "youtubeId": "Am7Bn394f",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1229,7 +1229,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-7",
         "slug": "deterministic-loan-underwriting-agents-for-bfsi",
-        "title": "Deterministic Loan Underwriting Agents For Bfsi \u2014 Sub-Second Credit Scoring & RBI Compliance | Elesium",
+        "title": "Deterministic Loan Underwriting Agents For Bfsi  -  Sub-Second Credit Scoring & RBI Compliance | Elesium",
         "youtubeId": "Bf9Ln481g",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1379,7 +1379,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-8",
         "slug": "predictive-maintenance-multi-agent-systems-for-manufacturing-plants",
-        "title": "Predictive Maintenance Multi-Agent Systems For Manufacturing Plants \u2014 Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium",
+        "title": "Predictive Maintenance Multi-Agent Systems For Manufacturing Plants  -  Vibration Telemetry Analysis & Zero Unplanned Downtime | Elesium",
         "youtubeId": "Mn8Kp103h",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1529,7 +1529,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-9",
         "slug": "computer-vision-defect-inspection-agents-for-automotive-suppliers",
-        "title": "Computer Vision Defect Inspection Agents For Automotive Suppliers \u2014 Sub-Millimeter Surface Defect Classification | Elesium",
+        "title": "Computer Vision Defect Inspection Agents For Automotive Suppliers  -  Sub-Millimeter Surface Defect Classification | Elesium",
         "youtubeId": "Cv9Mo204i",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1679,7 +1679,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-10",
         "slug": "prior-authorization-automation-software-for-healthcare-ctos",
-        "title": "Prior Authorization Automation Software For Healthcare Ctos \u2014 Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium",
+        "title": "Prior Authorization Automation Software For Healthcare Ctos  -  Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium",
         "youtubeId": "Hc8Pz305j",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1829,7 +1829,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-11",
         "slug": "enterprise-ai-roi-calculator",
-        "title": "Enterprise Ai Roi Calculator \u2014 Model Labor Savings & Capital Payback | Elesium",
+        "title": "Enterprise Ai Roi Calculator  -  Model Labor Savings & Capital Payback | Elesium",
         "youtubeId": "Ro1C4196k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -1979,7 +1979,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-12",
         "slug": "enterprise-agent-industrial-iot-opc-ua-simulator",
-        "title": "Industrial Iot Opc Ua Agentic Automation \u2014 Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium",
+        "title": "Industrial Iot Opc Ua Agentic Automation  -  Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion | Elesium",
         "youtubeId": "IoT9uP101a",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -2129,7 +2129,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-13",
         "slug": "enterprise-agent-tally-erp-xml-simulator",
-        "title": "Tally Erp Llm Agent Automation \u2014 Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium",
+        "title": "Tally Erp Llm Agent Automation  -  Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium",
         "youtubeId": "Tly8eR102b",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -2279,7 +2279,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-14",
         "slug": "enterprise-agent-mcp-tool-routing-simulator",
-        "title": "Model Context Protocol Multi Server Routing \u2014 Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium",
+        "title": "Model Context Protocol Multi Server Routing  -  Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium",
         "youtubeId": "Mcp7tR103c",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -2429,7 +2429,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-15",
         "slug": "enterprise-agent-chunked-prefill-radix-attention-simulator",
-        "title": "Chunked Prefill Radix Attention Kv Cache \u2014 Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium",
+        "title": "Chunked Prefill Radix Attention Kv Cache  -  Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium",
         "youtubeId": "Rdx6kP104d",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -2579,7 +2579,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-16",
         "slug": "enterprise-agent-vector-db-sharding-simulator",
-        "title": "Vector Database Sharding Hnsw Indexing \u2014 Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium",
+        "title": "Vector Database Sharding Hnsw Indexing  -  Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium",
         "youtubeId": "Vct5sH105e",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -2729,7 +2729,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-17",
         "slug": "enterprise-agent-aiops-incident-remediation-simulator",
-        "title": "Aiops Incident Auto Remediation Chaos Simulator \u2014 Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium",
+        "title": "Aiops Incident Auto Remediation Chaos Simulator  -  Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium",
         "youtubeId": "Aio4iR106f",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -2879,7 +2879,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-18",
         "slug": "enterprise-agent-nemo-guardrails-simulator",
-        "title": "Nemo Guardrails Prompt Injection Firewall \u2014 Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium",
+        "title": "Nemo Guardrails Prompt Injection Firewall  -  Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium",
         "youtubeId": "Nmo3gR107g",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3029,7 +3029,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-19",
         "slug": "enterprise-agent-ondc-retail-inventory-simulator",
-        "title": "Ondc Retail Inventory Multi Ecosystem Automation \u2014 Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium",
+        "title": "Ondc Retail Inventory Multi Ecosystem Automation  -  Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium",
         "youtubeId": "Ond2rI108h",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3179,7 +3179,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-20",
         "slug": "enterprise-agent-cfr-part-11-validation-simulator",
-        "title": "21 Cfr Part 11 Electronic Batch Record Automation \u2014 Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium",
+        "title": "21 Cfr Part 11 Electronic Batch Record Automation  -  Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium",
         "youtubeId": "Cfr1vR109i",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3329,7 +3329,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-21",
         "slug": "enterprise-agent-abdm-fhir-privacy-simulator",
-        "title": "Abdm Fhir Health Information Exchange Privacy \u2014 Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium",
+        "title": "Abdm Fhir Health Information Exchange Privacy  -  Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium",
         "youtubeId": "Abd0fP110j",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3479,7 +3479,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-22",
         "slug": "enterprise-agent-hsm-pkcs11-simulator",
-        "title": "Hsm Pkcs11 Air Gapped Key Derivation \u2014 FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium",
+        "title": "Hsm Pkcs11 Air Gapped Key Derivation  -  FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium",
         "youtubeId": "Hsm9kP111k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3629,7 +3629,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-23",
         "slug": "enterprise-agent-snn-neuromorphic-simulator",
-        "title": "Neuromorphic Snn Event Driven Compute Simulator \u2014 40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium",
+        "title": "Neuromorphic Snn Event Driven Compute Simulator  -  40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity | Elesium",
         "youtubeId": "Snn8eC112l",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3779,7 +3779,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-24",
         "slug": "enterprise-agent-smart-contract-formal-verification-simulator",
-        "title": "Smart Contract Formal Verification Agent \u2014 Automated SMT Theorem Proving & ZK Invariant Verification | Elesium",
+        "title": "Smart Contract Formal Verification Agent  -  Automated SMT Theorem Proving & ZK Invariant Verification | Elesium",
         "youtubeId": "Scf7vP113m",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3929,7 +3929,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-25",
         "slug": "enterprise-agent-pagedattention-cache-simulator",
-        "title": "Gpu Vram Pagedattention Allocator \u2014 Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium",
+        "title": "Gpu Vram Pagedattention Allocator  -  Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium",
         "youtubeId": "PvRamP489k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4079,7 +4079,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-26",
         "slug": "enterprise-agent-medusa-speculative-tree-simulator",
-        "title": "Speculative Decoding Draft Model Verification Kernels \u2014 Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium",
+        "title": "Speculative Decoding Draft Model Verification Kernels  -  Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium",
         "youtubeId": "Med5Sp499m",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4229,7 +4229,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-27",
         "slug": "enterprise-agent-ptq-quantization-perplexity-simulator",
-        "title": "Post Training Quantization Awq Fp8 Calibration \u2014 AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium",
+        "title": "Post Training Quantization Awq Fp8 Calibration  -  AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium",
         "youtubeId": "PtqQ499v8k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4379,7 +4379,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-28",
         "slug": "enterprise-agent-flashdecoding-parallelism-simulator",
-        "title": "Flashdecoding Sequence Parallelization Enterprise Llms \u2014 Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium",
+        "title": "Flashdecoding Sequence Parallelization Enterprise Llms  -  Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium",
         "youtubeId": "FlshDec522k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4529,7 +4529,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-29",
         "slug": "enterprise-agent-kvcache-prefix-caching-simulator",
-        "title": "Kv Cache Prefix Caching Enterprise Llms \u2014 Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium",
+        "title": "Kv Cache Prefix Caching Enterprise Llms  -  Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium",
         "youtubeId": "PrfxCch53k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4679,7 +4679,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-30",
         "slug": "enterprise-agent-chunked-cross-attention-simulator",
-        "title": "Chunked Cross Attention Document Sharding Enterprise Rag \u2014 Distributed Document Sharding & Sub-Second Query Reasoning | Elesium",
+        "title": "Chunked Cross Attention Document Sharding Enterprise Rag  -  Distributed Document Sharding & Sub-Second Query Reasoning | Elesium",
         "youtubeId": "CrssAttn54k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4829,7 +4829,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-31",
         "slug": "enterprise-agent-sliding-window-attention-simulator",
-        "title": "Sliding Window Attention Ring Kv Eviction Streaming Llm \u2014 Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium",
+        "title": "Sliding Window Attention Ring Kv Eviction Streaming Llm  -  Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium",
         "youtubeId": "SldWndw55k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -4979,7 +4979,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-32",
         "slug": "enterprise-agent-multi-lora-routing-simulator",
-        "title": "Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping \u2014 Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium",
+        "title": "Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping  -  Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium",
         "youtubeId": "MltLora56k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -5129,7 +5129,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-33",
         "slug": "enterprise-agent-mixture-of-depths-simulator",
-        "title": "Mixture Of Depths Dynamic Compute Allocation Token Early Exit \u2014 Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium",
+        "title": "Mixture Of Depths Dynamic Compute Allocation Token Early Exit  -  Conditional Capacity Allocation & Sub-50% FLOP Reduction | Elesium",
         "youtubeId": "MixDepths57k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -5279,7 +5279,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-34",
         "slug": "enterprise-agent-kvcache-memory-compaction-simulator",
-        "title": "Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation \u2014 Paged Block Compaction & Zero-Copy Defragmentation | Elesium",
+        "title": "Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation  -  Paged Block Compaction & Zero-Copy Defragmentation | Elesium",
         "youtubeId": "KVCacheCmp58k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -5429,7 +5429,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-35",
         "slug": "enterprise-agent-speculative-verification-simulator",
-        "title": "Speculative Decoding Tree Based Draft Verification Branch Pruning \u2014 Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium",
+        "title": "Speculative Decoding Tree Based Draft Verification Branch Pruning  -  Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium",
         "youtubeId": "SpecVerify59k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -5579,7 +5579,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-36",
         "slug": "enterprise-agent-prefill-decode-disaggregation-simulator",
-        "title": "Prefill Decode Disaggregation Chunked Prompt Execution Ttft \u2014 Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium",
+        "title": "Prefill Decode Disaggregation Chunked Prompt Execution Ttft  -  Zero-Interference K-V Transport & Sub-15ms TTFT | Elesium",
         "youtubeId": "PDDisagg60k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -5729,7 +5729,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-37",
         "slug": "enterprise-agent-pipeline-parallelism-simulator",
-        "title": "Pipeline Parallelism 1F1B Schedule Bubble Elimination \u2014 Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium",
+        "title": "Pipeline Parallelism 1F1B Schedule Bubble Elimination  -  Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium",
         "youtubeId": "PipelinePP61k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -5879,7 +5879,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-38",
         "slug": "enterprise-agent-tensor-parallelism-simulator",
-        "title": "Tensor Parallelism Megatron Column Row All-Reduce Overlap \u2014 Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium",
+        "title": "Tensor Parallelism Megatron Column Row All-Reduce Overlap  -  Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium",
         "youtubeId": "TensorPP62k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6029,7 +6029,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-39",
         "slug": "enterprise-agent-sequence-parallelism-simulator",
-        "title": "Sequence Parallelism Ring Self Attention Distributed Qkv \u2014 1M+ Context Token Inference & Sub-10ms Step Latency | Elesium",
+        "title": "Sequence Parallelism Ring Self Attention Distributed Qkv  -  1M+ Context Token Inference & Sub-10ms Step Latency | Elesium",
         "youtubeId": "SeqPP63k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6179,7 +6179,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-40",
         "slug": "enterprise-agent-expert-parallelism-simulator",
-        "title": "Expert Parallelism Moe Dynamic Dispatch All To All Overlap \u2014 Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium",
+        "title": "Expert Parallelism Moe Dynamic Dispatch All To All Overlap  -  Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium",
         "youtubeId": "ExpPP64k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6329,7 +6329,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-41",
         "slug": "enterprise-agent-context-parallelism-simulator",
-        "title": "Context Parallelism Ring Kv Communication Overlap 2M Tokens \u2014 Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium",
+        "title": "Context Parallelism Ring Kv Communication Overlap 2M Tokens  -  Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium",
         "youtubeId": "CtxPP65k",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6479,7 +6479,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-42",
         "slug": "enterprise-agent-3d-parallelism-simulator",
-        "title": "3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms \u2014 Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium",
+        "title": "3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms  -  Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium",
         "youtubeId": "3dParMesh42",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6629,7 +6629,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-43",
         "slug": "enterprise-agent-fp8-microscaling-simulator",
-        "title": "Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity \u2014 2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium",
+        "title": "Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity  -  2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium",
         "youtubeId": "fp8Micro43",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6779,7 +6779,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-44",
         "slug": "enterprise-agent-async-checkpointing-simulator",
-        "title": "Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters \u2014 Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium",
+        "title": "Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters  -  Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium",
         "youtubeId": "asyncChk44",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -6929,7 +6929,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-45",
         "slug": "enterprise-agent-disaggregated-prefill-simulator",
-        "title": "Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters \u2014 Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium",
+        "title": "Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters  -  Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium",
         "youtubeId": "disaggPrefill45",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7079,7 +7079,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-46",
         "slug": "enterprise-agent-speculative-tree-simulator",
-        "title": "Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters \u2014 3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium",
+        "title": "Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters  -  3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium",
         "youtubeId": "specTree46",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7229,7 +7229,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-47",
         "slug": "enterprise-agent-kv-cache-eviction-simulator",
-        "title": "Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms \u2014 4x Memory Compression & Sub-1% Perplexity Degradation | Elesium",
+        "title": "Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms  -  4x Memory Compression & Sub-1% Perplexity Degradation | Elesium",
         "youtubeId": "kvEvict47",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7379,7 +7379,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-48",
         "slug": "enterprise-agent-hierarchical-storage-paging-simulator",
-        "title": "Hierarchical Hbm-To-Nvme Kv-Cache Tiered Storage Paging Daemons For Enterprise Llm Clusters \u2014 Sub-10ms Page Faults & 10M+ Context Window Scaling | Elesium",
+        "title": "Hierarchical Hbm-To-Nvme Kv-Cache Tiered Storage Paging Daemons For Enterprise Llm Clusters  -  Sub-10ms Page Faults & 10M+ Context Window Scaling | Elesium",
         "youtubeId": "hierarchStorage48",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7529,7 +7529,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-49",
         "slug": "enterprise-agent-mla-latent-projection-simulator",
-        "title": "Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters \u2014 90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium",
+        "title": "Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters  -  90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium",
         "youtubeId": "mlaLatentAttn49",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7679,7 +7679,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-50",
         "slug": "enterprise-agent-mtp-speculative-draft-simulator",
-        "title": "Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters \u2014 2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium",
+        "title": "Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters  -  2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium",
         "youtubeId": "mtpSpeculative50",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7829,7 +7829,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-51",
         "slug": "enterprise-agent-dualpipe-pipeline-parallelism-simulator",
-        "title": "Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters \u2014 Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium",
+        "title": "Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters  -  Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium",
         "youtubeId": "dualpipePipeline51",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -7979,7 +7979,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-52",
         "slug": "enterprise-agent-deepseek-v3-serving-fabric-simulator",
-        "title": "Grand Unified Deepseek Serving Fabric Orchestrators For Enterprise Llm Clusters \u2014 MLA Latent Compression, DualPipe Overlap & 3.2x Throughput | Elesium",
+        "title": "Grand Unified Deepseek Serving Fabric Orchestrators For Enterprise Llm Clusters  -  MLA Latent Compression, DualPipe Overlap & 3.2x Throughput | Elesium",
         "youtubeId": "DskUnf75s",
         "duration": "0:30",
         "durationIso": "PT30S",

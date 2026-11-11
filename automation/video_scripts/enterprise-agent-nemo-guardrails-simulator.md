@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Nemo Guardrails Prompt Injection Firewall — Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium
+# 30-Second Short-Form Video Script: Nemo Guardrails Prompt Injection Firewall  -  Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium
 
 **Target Keyword:** `nemo guardrails prompt injection firewall`  
 **Key Benefit:** `Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Nemo Guardrails Prompt Injection Firewall — Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium`
+`Nemo Guardrails Prompt Injection Firewall  -  Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-nemo-guardrails-simulator#video",
-  "name": "Nemo Guardrails Prompt Injection Firewall \u2014 Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium",
+  "name": "Nemo Guardrails Prompt Injection Firewall  -  Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception | Elesium",
   "description": "A 30-second technical architecture breakdown of nemo guardrails prompt injection firewall for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-nemo-guardrails-simulator.jpg",

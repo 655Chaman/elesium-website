@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters — 3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium
+# 30-Second Short-Form Video Script: Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters  -  3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium
 
 **Target Keyword:** `dynamic tree-based speculative decoding orchestrators for enterprise llm clusters`  
 **Key Benefit:** `3.8x Throughput Acceleration & Sub-8ms Token Latency`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters — 3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium`
+`Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters  -  3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-speculative-tree-simulator#video",
-  "name": "Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters \u2014 3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium",
+  "name": "Dynamic Tree-Based Speculative Decoding Orchestrators For Enterprise Llm Clusters  -  3.8x Throughput Acceleration & Sub-8ms Token Latency | Elesium",
   "description": "A 30-second technical architecture breakdown of dynamic tree-based speculative decoding orchestrators for enterprise llm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-speculative-tree-simulator.jpg",

@@ -58,9 +58,11 @@ def build_podcast_xml(videos) -> str:
     
     items_xml = []
     for idx, v in enumerate(videos):
-        title = html.escape(v.get("title", ""))
+        raw_title = v.get("title", "").replace("—", " - ")
+        raw_summary = v.get("executiveSummary", "").replace("—", " - ")
+        title = html.escape(raw_title)
         slug = html.escape(v.get("slug", ""))
-        summary = html.escape(v.get("executiveSummary", ""))
+        summary = html.escape(raw_summary)
         duration = html.escape(v.get("duration", "20:00"))
         link = f"https://elesium.online/videos/{slug}/"
         guid = f"elesium-podcast-{slug}"

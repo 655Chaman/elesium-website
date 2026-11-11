@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Prior Authorization Automation Software For Healthcare Ctos — Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium
+# 30-Second Short-Form Video Script: Prior Authorization Automation Software For Healthcare Ctos  -  Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium
 
 **Target Keyword:** `prior authorization automation software for healthcare CTOs`  
 **Key Benefit:** `Clinical Guidelines Verification & Sub-Hour Claims Decisioning`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Prior Authorization Automation Software For Healthcare Ctos — Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium`
+`Prior Authorization Automation Software For Healthcare Ctos  -  Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/prior-authorization-automation-software-for-healthcare-ctos#video",
-  "name": "Prior Authorization Automation Software For Healthcare Ctos \u2014 Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium",
+  "name": "Prior Authorization Automation Software For Healthcare Ctos  -  Clinical Guidelines Verification & Sub-Hour Claims Decisioning | Elesium",
   "description": "A 30-second technical architecture breakdown of prior authorization automation software for healthcare CTOs for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/prior-authorization-automation-software-for-healthcare-ctos.jpg",

@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Sovereign Defense Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Sovereign Defense",
-  "title": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences | Elesium",
-  "h1": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences with sub-100ms deterministic execution, private VPC isolation, and Sovereign Defense compliance. Schedule architecture audit.",
+  "title": "Attention Sink Stability Evaluators for Sovereign | Elesium",
+  "h1": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Attention Sink Stability with sovereign VPC isolation, sub-100ms execution, and Sovereign Defense compliance. Schedule an enterprise audit.",
   "targetPersona": "Defense Intelligence AI Infrastructure Heads & Military HPC Research Scientists",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -20,7 +20,7 @@
   "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
   "heroImageAlt": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences",
   "paragraphs": [
-    "Military command platforms monitoring continuous multi-day telemetry—such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking—require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
+    "Military command platforms monitoring continuous multi-day telemetry - such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking - require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
     "Our sovereign attention sink stability evaluator implements streaming attention mechanisms that retain the initial token attention sinks (the first 4 tokens) alongside a rolling window of recent tactical observations. By preserving the massive attention scores naturally focused on initial tokens, the model maintains perfect numerical stability indefinitely.",
     "The evaluation state machine monitors attention sink softmax distributions, entropy stability, and layer-by-layer perplexity during multi-day continuous streaming. If an adversary attempts to inject token sequences designed to disrupt attention sink anchoring, the evaluator detects the attention divergence within 3ms and restores canonical attention weights.",
     "Enabling infinite-horizon continuous streaming inference on air-gapped military servers with fixed, bounded VRAM consumption, the solution allows defense ministries to maintain 24/7 autonomous monitoring of strategic borders and sea lanes with zero operational interruptions."
@@ -110,7 +110,7 @@
   },
   "hero": {
     "hookSentence": "Evaluate and stabilize attention sink tokens in streaming defense intelligence reasoning models for infinite-context operations.",
-    "subheadline": "Military command platforms monitoring continuous multi-day telemetry—such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking—require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
+    "subheadline": "Military command platforms monitoring continuous multi-day telemetry - such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking - require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
     "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -120,7 +120,7 @@
     {
       "title": "Deterministic Operational Capabilities & Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences",
       "copy": [
-        "Military command platforms monitoring continuous multi-day telemetry—such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking—require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
+        "Military command platforms monitoring continuous multi-day telemetry - such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking - require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
         "Our sovereign attention sink stability evaluator implements streaming attention mechanisms that retain the initial token attention sinks (the first 4 tokens) alongside a rolling window of recent tactical observations. By preserving the massive attention scores naturally focused on initial tokens, the model maintains perfect numerical stability indefinitely."
       ],
       "bullets": [

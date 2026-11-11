@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Manufacturing & Industrial Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Manufacturing & Industrial",
-  "title": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance | Elesium",
-  "h1": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
+  "title": "Dynamic Branch Pruning Controllers for Industrial | Elesium",
+  "h1": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Dynamic Branch with sovereign VPC isolation, sub-100ms execution, and Manufacturing & Industrial compliance. Schedule an enterprise audit.",
   "targetPersona": "Predictive Maintenance Directors & Reliability Engineering Heads for Heavy Industrial Equipment",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -20,7 +20,7 @@
   "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
   "heroImageAlt": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance",
   "paragraphs": [
-    "Heavy industrial machinery—including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps—generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
+    "Heavy industrial machinery - including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps - generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
     "Our sovereign dynamic branch pruning controller optimizes deep neural predictive maintenance architectures by dynamically evaluating and pruning redundant decision trees at runtime. When machinery operates within normal, stable operating regimes, the controller prunes up to 85% of inactive neural branches, focusing computational power exclusively on baseline stability confirmation.",
     "If high-frequency vibration sensors detect micro-pitting in bearing races or hydraulic cavitations, the state machine instantly reactivates specialized diagnostic branches. The controller computes Remaining Useful Life (RUL) projections and bearing fatigue curves in sub-20ms, alerting maintenance engineers hours before thermal seizure occurs.",
     "Operating across 12,000 connected industrial assets with zero cloud egress, the solution cuts edge compute resource consumption by 68.2%, extends sensor battery life in wireless meshes, and delivers 99.4% predictive accuracy compliant with ISO 13374 machinery condition monitoring standards."
@@ -110,7 +110,7 @@
   },
   "hero": {
     "hookSentence": "Prune neural decision branches dynamically for real-time SCADA predictive maintenance on turbines, compressors, and hydraulic pumps.",
-    "subheadline": "Heavy industrial machinery—including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps—generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
+    "subheadline": "Heavy industrial machinery - including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps - generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
     "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -120,7 +120,7 @@
     {
       "title": "Deterministic Operational Capabilities & Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance",
       "copy": [
-        "Heavy industrial machinery—including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps—generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
+        "Heavy industrial machinery - including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps - generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
         "Our sovereign dynamic branch pruning controller optimizes deep neural predictive maintenance architectures by dynamically evaluating and pruning redundant decision trees at runtime. When machinery operates within normal, stable operating regimes, the controller prunes up to 85% of inactive neural branches, focusing computational power exclusively on baseline stability confirmation."
       ],
       "bullets": [

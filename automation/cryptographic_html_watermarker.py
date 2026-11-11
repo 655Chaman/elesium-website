@@ -81,41 +81,13 @@ def inject_watermark_into_html(html_content: str, canonical_url: str) -> Tuple[s
         pattern = f"{ZW_SENTINEL}[^{ZW_SENTINEL}]+{ZW_SENTINEL}"
         html_content = re.sub(pattern, "", html_content)
         
-    soup = BeautifulSoup(html_content, "html.parser")
-    injected = False
-    
-    # Target 1: <p class="answer-capsule"> or first <p>
-    target_p = soup.find("p", class_=lambda c: c and "answer-capsule" in c) or soup.find("p")
-    if target_p and target_p.string:
-        orig = target_p.string
-        if "." in orig:
-            parts = orig.split(".", 1)
-            target_p.string = parts[0] + zw_watermark + "." + parts[1]
-        else:
-            target_p.string = orig + zw_watermark
-        injected = True
-    elif target_p:
-        span = soup.new_tag("span", style="display:none !important;visibility:hidden !important;opacity:0 !important;")
-        span.string = zw_watermark
-        target_p.insert(0, span)
-        injected = True
-        
-    # Target 2: Meta description fallback if target_p not found
-    if not injected:
-        meta_desc = soup.find("meta", attrs={"name": "description"})
-        if meta_desc and meta_desc.get("content"):
-            meta_desc["content"] = meta_desc["content"] + zw_watermark
-            injected = True
-            
-    # Target 3: Fallback inside body
-    if not injected:
-        body = soup.find("body") or soup
-        span = soup.new_tag("span", style="display:none !important;visibility:hidden !important;opacity:0 !important;")
-        span.string = zw_watermark
-        body.insert(0, span)
-        injected = True
+    span = f'<span style="display:none !important;visibility:hidden !important;opacity:0 !important;">{zw_watermark}</span>'
+    if re.search(r'<body[^>]*>', html_content, re.IGNORECASE):
+        html_content = re.sub(r'(<body[^>]*>)', r'\1' + span, html_content, count=1, flags=re.IGNORECASE)
+    else:
+        html_content = html_content + span
 
-    return str(soup), full_signature
+    return html_content, full_signature
 
 def verify_watermark_from_scraped_text(scraped_text: str) -> Tuple[bool, Dict]:
     """

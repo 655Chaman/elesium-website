@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: 3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms — Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium
+# 30-Second Short-Form Video Script: 3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms  -  Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium
 
 **Target Keyword:** `3d parallelism tensor pipeline zero3 interleaved execution 100b swarms`  
 **Key Benefit:** `Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms — Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium`
+`3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms  -  Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-3d-parallelism-simulator#video",
-  "name": "3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms \u2014 Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium",
+  "name": "3D Parallelism Tensor Pipeline Zero3 Interleaved Execution 100B Swarms  -  Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh | Elesium",
   "description": "A 30-second technical architecture breakdown of 3d parallelism tensor pipeline zero3 interleaved execution 100b swarms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-3d-parallelism-simulator.jpg",

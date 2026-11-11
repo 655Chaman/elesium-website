@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping — Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium
+# 30-Second Short-Form Video Script: Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping  -  Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium
 
 **Target Keyword:** `multi lora dynamic adapter switching zero copy weight swapping`  
 **Key Benefit:** `Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping — Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium`
+`Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping  -  Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-multi-lora-routing-simulator#video",
-  "name": "Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping \u2014 Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium",
+  "name": "Multi Lora Dynamic Adapter Switching Zero Copy Weight Swapping  -  Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing | Elesium",
   "description": "A 30-second technical architecture breakdown of multi lora dynamic adapter switching zero copy weight swapping for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-multi-lora-routing-simulator.jpg",

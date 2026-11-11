@@ -20,6 +20,7 @@ const FEATURED_WHITEPAPERS = [
   {
     title: 'On-Premise Open-Source LLM Deployment in India: Sovereign Private Cloud, vLLM PagedAttention, and DPDP Act 2023',
     slug: 'open-source-llm-deployment-on-premise-india',
+    path: '/signals/open-source-llm-deployment-on-premise-india/',
     category: 'Sovereign AI Infrastructure',
     readTime: '14 min read',
     date: 'October 2026'
@@ -27,6 +28,7 @@ const FEATURED_WHITEPAPERS = [
   {
     title: 'Enterprise AI-Driven Document Processing in India: Multimodal OCR, LayoutLMv3, and GST Rule 36(4) Reconciliation',
     slug: 'ai-driven-document-processing-india',
+    path: '/signals/ai-driven-document-processing-india/',
     category: 'Enterprise Automation',
     readTime: '12 min read',
     date: 'October 2026'
@@ -34,13 +36,15 @@ const FEATURED_WHITEPAPERS = [
   {
     title: 'Sub-200ms Ledger Reconciliation: Python LangGraph State Machines for Core Banking and RBI Compliance',
     slug: 'sub-200ms-ledger-reconciliation-agents-for-fintechs',
+    path: '/solutions/sub-200ms-ledger-reconciliation-agents-for-fintechs/',
     category: 'BFSI & FinTech',
     readTime: '16 min read',
     date: 'September 2026'
   },
   {
     title: 'DPDP Act 2023 Technical Implementation: Consent Artifact Architecture, Data Principal Rights, and Air-Gapped VPCs',
-    slug: 'dpdp-act-2023-ai-compliance-guide',
+    slug: 'dpdp-act-2023',
+    path: '/solutions/compliance/dpdp-act-2023/',
     category: 'Statutory Compliance',
     readTime: '15 min read',
     date: 'August 2026'
@@ -331,7 +335,7 @@ export default function AuthorProfile() {
             {FEATURED_WHITEPAPERS.map((paper) => (
               <Link
                 key={paper.slug}
-                to={`/signals/${paper.slug}/`}
+                to={paper.path || `/signals/${paper.slug}/`}
                 className="block p-5 bg-gray-50/50 dark:bg-white/[0.02] hover:bg-gray-100 dark:hover:bg-white/[0.05] border border-gray-200 dark:border-white/10 rounded-2xl transition-all group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">

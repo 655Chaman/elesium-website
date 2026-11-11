@@ -28,8 +28,8 @@ All metrics measured across 100,000 continuous benchmark cycles using dedicated 
 
 ```bash
 # Clone the repository
-git clone https://github.com/elesium-ai/elesium-sovereign-vllm-benchmarks.git
-cd elesium-sovereign-vllm-benchmarks
+git clone https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks.git
+cd sovereign-enterprise-ai-benchmarks
 
 # Install dependencies
 pip install -r requirements.txt
@@ -54,6 +54,6 @@ If you utilize this benchmark suite or performance data in academic or industria
   title = {Empirical Latency and Memory Zeroization Benchmarks for Air-Gapped Sovereign Large Language Model Inference},
   year = {2026},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/elesium-ai/elesium-sovereign-vllm-benchmarks}}
+  howpublished = {\url{https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks}}
 }
 ```

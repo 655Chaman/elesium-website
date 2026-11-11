@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters — 2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium
+# 30-Second Short-Form Video Script: Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters  -  2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium
 
 **Target Keyword:** `multi-token prediction mtp speculative drafting daemons for deepseek clusters`  
 **Key Benefit:** `2.8x Decode Throughput & 82%+ Acceptance Ratio`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters — 2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium`
+`Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters  -  2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-mtp-speculative-draft-simulator#video",
-  "name": "Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters \u2014 2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium",
+  "name": "Multi-Token Prediction Mtp Speculative Drafting Daemons For Deepseek Clusters  -  2.8x Decode Throughput & 82%+ Acceptance Ratio | Elesium",
   "description": "A 30-second technical architecture breakdown of multi-token prediction mtp speculative drafting daemons for deepseek clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-mtp-speculative-draft-simulator.jpg",

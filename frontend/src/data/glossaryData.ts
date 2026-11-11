@@ -192,8 +192,8 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDefinition: 'A dedicated tamper-resistant physical appliance generating and storing cryptographic keys to digitally sign every agentic state transition and financial transaction.',
     technicalDeepDive: 'FIPS 140-2 Level 3 certified HSM appliances sign state snapshots produced by autonomous agents. If an adversary compromises the application host, they cannot forge legitimate execution signatures or tamper with the append-only operational audit log without triggering hardware self-zeroization.',
     productionBenchmark: 'Sub-5ms hardware signing latency; tamper-proof non-repudiation.',
-    relatedToolSlug: 'enterprise-agent-hsm-simulator',
-    relatedSolutionUrl: '/tools/enterprise-agent-hsm-simulator'
+    relatedToolSlug: 'enterprise-agent-hsm-pkcs11-simulator',
+    relatedSolutionUrl: '/tools/enterprise-agent-hsm-pkcs11-simulator'
   },
   {
     slug: 'homomorphic-enclave-computation',
@@ -397,8 +397,8 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDefinition: 'An orchestration capability enabling multi-agent workflows to cleanly unwind multi-step database mutations when downstream tool executions fail.',
     technicalDeepDive: 'If an autonomous supply chain agent reserves inventory, calculates taxes, but fails during payment verification, standard linear workflows leave orphaned state records. Atomic state rollback implements the Saga pattern, executing compensating transactions in reverse order to return systems to clean equilibrium.',
     productionBenchmark: 'Zero stranded state records; 100% database ACID integrity across distributed APIs.',
-    relatedToolSlug: 'enterprise-agent-state-rollback-simulator',
-    relatedSolutionUrl: '/tools/enterprise-agent-state-rollback-simulator'
+    relatedToolSlug: 'enterprise-agent-state-snapshot-rollback-simulator',
+    relatedSolutionUrl: '/tools/enterprise-agent-state-snapshot-rollback-simulator'
   },
   {
     slug: 'cross-encoder-reranking-pipeline',

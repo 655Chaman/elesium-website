@@ -42,8 +42,6 @@ ORGANIZATION_ENTITY = {
         "height": "512"
     },
     "sameAs": [
-        "https://www.wikidata.org/wiki/Q131149202",
-        "https://www.wikidata.org/wiki/Special:EntityData/Q131149202.json",
         "https://www.crunchbase.com/organization/elesium-online",
         "https://github.com/elesium-ai",
         "https://github.com/655Chaman/elesium-website",

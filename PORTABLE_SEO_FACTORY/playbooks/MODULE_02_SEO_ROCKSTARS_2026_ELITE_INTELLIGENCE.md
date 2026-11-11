@@ -438,8 +438,7 @@ To enable search engines to reconcile your domain with your global entity footpr
         "https://www.crunchbase.com/organization/elesium",
         "https://clutch.co/profile/elesium",
         "https://www.g2.com/sellers/elesium",
-        "https://twitter.com/elesium_ai",
-        "https://www.wikidata.org/wiki/Q131149202"
+        "https://twitter.com/elesium_ai"
       ],
       "knowsAbout": [
         "https://www.wikidata.org/wiki/Q11660",

@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Sub-200Ms Ledger Reconciliation Agents For Fintechs — Cryptographic Settlement & Zero Ledger Drift | Elesium
+# 30-Second Short-Form Video Script: Sub-200Ms Ledger Reconciliation Agents For Fintechs  -  Cryptographic Settlement & Zero Ledger Drift | Elesium
 
 **Target Keyword:** `sub-200ms ledger reconciliation agents for fintechs`  
 **Key Benefit:** `Cryptographic Settlement & Zero Ledger Drift`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Sub-200Ms Ledger Reconciliation Agents For Fintechs — Cryptographic Settlement & Zero Ledger Drift | Elesium`
+`Sub-200Ms Ledger Reconciliation Agents For Fintechs  -  Cryptographic Settlement & Zero Ledger Drift | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/sub-200ms-ledger-reconciliation-agents-for-fintechs#video",
-  "name": "Sub-200Ms Ledger Reconciliation Agents For Fintechs \u2014 Cryptographic Settlement & Zero Ledger Drift | Elesium",
+  "name": "Sub-200Ms Ledger Reconciliation Agents For Fintechs  -  Cryptographic Settlement & Zero Ledger Drift | Elesium",
   "description": "A 30-second technical architecture breakdown of sub-200ms ledger reconciliation agents for fintechs for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/sub-200ms-ledger-reconciliation-agents-for-fintechs.jpg",

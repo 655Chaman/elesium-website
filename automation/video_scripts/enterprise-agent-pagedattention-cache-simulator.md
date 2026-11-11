@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Gpu Vram Pagedattention Allocator — Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium
+# 30-Second Short-Form Video Script: Gpu Vram Pagedattention Allocator  -  Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium
 
 **Target Keyword:** `gpu vram pagedattention allocator`  
 **Key Benefit:** `Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Gpu Vram Pagedattention Allocator — Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium`
+`Gpu Vram Pagedattention Allocator  -  Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-pagedattention-cache-simulator#video",
-  "name": "Gpu Vram Pagedattention Allocator \u2014 Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium",
+  "name": "Gpu Vram Pagedattention Allocator  -  Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut | Elesium",
   "description": "A 30-second technical architecture breakdown of gpu vram pagedattention allocator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-pagedattention-cache-simulator.jpg",

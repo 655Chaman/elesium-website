@@ -120,6 +120,68 @@ def build_compliance_badges(sector: str) -> List[str]:
             "TEMPEST Level A Shielding / DoD Directive 8140"
         ]
 
+def sanitize_em_dashes(obj):
+    if isinstance(obj, str):
+        return obj.replace("—", " - ")
+    elif isinstance(obj, list):
+        return [sanitize_em_dashes(item) for item in obj]
+    elif isinstance(obj, dict):
+        return {k: sanitize_em_dashes(v) for k, v in obj.items()}
+    return obj
+
+def generate_seo_title(h1_title: str) -> str:
+    suffix = " | Elesium"
+    avail = 60 - len(suffix)  # 50 chars max
+    clean_h1 = h1_title.replace("—", "-").strip()
+    if len(clean_h1) <= avail:
+        return f"{clean_h1}{suffix}"
+    cut = clean_h1[:avail]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return f"{cut}{suffix}"
+
+def generate_seo_meta_desc(h1_title: str, sector: str) -> str:
+    clean_h1 = h1_title.replace("—", "-").strip()
+    templates = [
+        ("Deploy ", f" with air-gapped VPC isolation, deterministic sub-100ms execution, and statutory {sector} compliance. Schedule architecture audit."),
+        ("Deploy ", f" with sovereign VPC isolation, sub-100ms execution, and {sector} compliance. Schedule an enterprise audit."),
+        ("Deploy ", f" with deterministic air-gapped VPC isolation and {sector} compliance. Schedule architecture audit."),
+        ("Deploy sovereign ", f" with air-gapped VPC isolation, sub-100ms latency, and {sector} compliance. Schedule architecture audit."),
+        ("Deploy ", f" with private VPC isolation and statutory {sector} compliance. Schedule architecture audit today."),
+    ]
+    for prefix, suffix in templates:
+        target_name_len = 150 - len(prefix) - len(suffix)
+        if target_name_len < 15:
+            continue
+        if len(clean_h1) >= target_name_len:
+            cut = clean_h1[:target_name_len]
+            if " " in cut:
+                cut = cut.rsplit(" ", 1)[0]
+        else:
+            cut = clean_h1
+        cand = f"{prefix}{cut}{suffix}"
+        if 145 <= len(cand) <= 155:
+            return cand
+
+    base = f"Deploy {clean_h1} with sovereign VPC isolation, sub-100ms execution, and {sector} compliance."
+    cta_options = [
+        " Schedule architecture audit.",
+        " Schedule an architecture audit.",
+        " Schedule an enterprise audit.",
+        " Schedule private audit.",
+        " Schedule architecture audit today.",
+        " Schedule enterprise audit today.",
+    ]
+    for cta in cta_options:
+        avail_base = 150 - len(cta)
+        cut = base[:avail_base]
+        if " " in cut:
+            cut = cut.rsplit(" ", 1)[0]
+        cand = f"{cut}.{cta}"
+        if 145 <= len(cand) <= 155:
+            return cand
+    return cand
+
 def assemble():
     print("=== Assembling Curated 100 Enterprise Solutions Catalog ===")
     with open(RETAINED_PATH, "r", encoding="utf-8") as f:
@@ -136,6 +198,7 @@ def assemble():
     for idx, slug in enumerate(retained_slugs):
         sector = determine_sector(slug)
         prof = get_profile(slug)
+        prof = sanitize_em_dashes(prof)
 
         # Generate benchmarks, hardware, schematics
         benchmarks = generate_benchmarks(slug, sector)
@@ -159,9 +222,10 @@ def assemble():
         faqs = prof["faqs"]
         pricing = prof["pricing_tiers"]
 
-        h1_title = prof["title"]
-        h1_clean = f"{h1_title} — Sovereign Enterprise Architecture"
-        meta_desc = f"Deploy {h1_title} with sub-100ms deterministic execution, private VPC isolation, and {sector} compliance. Schedule architecture audit."
+        h1_title = prof["title"].replace("—", "-").strip()
+        h1_clean = f"{h1_title} - Sovereign Enterprise Architecture"
+        seo_title = generate_seo_title(h1_title)
+        meta_desc = generate_seo_meta_desc(h1_title, sector)
 
         block1_bullets = [f"{c['title']}: {c['description']}" for c in caps]
         block1_specs = [{"label": s["label"], "value": s["value"], "desc": s["detail"]} for s in specs]
@@ -238,7 +302,7 @@ def assemble():
             "keyBenefit": f"Deterministic {sector} Architecture & Operational Guardrails",
             "category": "Solutions",
             "hubCategory": sector,
-            "title": f"{h1_title} | Elesium",
+            "title": seo_title,
             "h1": h1_clean,
             "metaDescription": meta_desc,
             "targetPersona": prof["target_persona"],

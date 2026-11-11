@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Hsm Pkcs11 Air Gapped Key Derivation — FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium
+# 30-Second Short-Form Video Script: Hsm Pkcs11 Air Gapped Key Derivation  -  FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium
 
 **Target Keyword:** `hsm pkcs11 air gapped key derivation`  
 **Key Benefit:** `FIPS 140-3 Level 4 Hardware Security Module Key Derivation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Hsm Pkcs11 Air Gapped Key Derivation — FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium`
+`Hsm Pkcs11 Air Gapped Key Derivation  -  FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-hsm-pkcs11-simulator#video",
-  "name": "Hsm Pkcs11 Air Gapped Key Derivation \u2014 FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium",
+  "name": "Hsm Pkcs11 Air Gapped Key Derivation  -  FIPS 140-3 Level 4 Hardware Security Module Key Derivation | Elesium",
   "description": "A 30-second technical architecture breakdown of hsm pkcs11 air gapped key derivation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-hsm-pkcs11-simulator.jpg",

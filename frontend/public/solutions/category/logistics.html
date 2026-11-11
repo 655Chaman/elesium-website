@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Logistics & Supply Chain Sovereign AI Solutions | Elesium</title>
+  <meta name="description" content="Deploy enterprise autonomous logistics AI with sub-200ms dispatch latency, MoRTH ULIP & FASTag telematics integration, and private VPC security. Read technical architecture." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#0a0a0c" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0c" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0a0a0c" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="canonical" href="https://elesium.online/solutions/category/logistics/" />
+  <link rel="alternate" hreflang="en" href="https://elesium.online/solutions/category/logistics/" />
+  <link rel="alternate" hreflang="x-default" href="https://elesium.online/solutions/category/logistics/" />
+  <link rel="alternate" type="text/markdown" title="LLM Machine Readable Manifest" href="https://elesium.online/llms.txt" />
+  <link rel="alternate" type="text/markdown" title="Expanded Knowledge Graph" href="https://elesium.online/llms-full.txt" />
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+
+  <!-- Preconnect & DNS Prefetch for Core Web Vitals -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Geotagging & Local Search Authority (Bangalore, Karnataka, India) -->
+  <meta name="geo.region" content="IN-KA" />
+  <meta name="geo.placename" content="Bengaluru" />
+  <meta name="geo.position" content="12.9352;77.6245" />
+  <meta name="ICBM" content="12.9352, 77.6245" />
+
+  <!-- Security & Crawler Optimization Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Speculation Rules API for 0ms Instant Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "source": "list",
+        "urls": [
+          "/ai-automation/",
+          "/how-we-work/",
+          "/waitlist/",
+          "/markets/",
+          "/solutions/",
+          "/signals/",
+          "/compare/"
+        ],
+        "eagerness": "moderate"
+      }
+    ],
+    "prefetch": [
+      {
+        "source": "document",
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/embed/*" } }
+          ]
+        },
+        "eagerness": "conservative"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elesium.online/solutions/category/logistics/" />
+  <meta property="og:site_name" content="Elesium" />
+  <meta property="og:title" content="Logistics & Supply Chain Sovereign AI Solutions | Elesium" />
+  <meta property="og:description" content="Deploy enterprise autonomous logistics AI with sub-200ms dispatch latency, MoRTH ULIP & FASTag telematics integration, and private VPC security. Read technical architecture." />
+  <meta property="og:image" content="https://elesium.online/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://elesium.online/solutions/category/logistics/" />
+  <meta name="twitter:title" content="Elesium | Best Enterprise AI Company in India" />
+  <meta name="twitter:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x–5x ROI in 90 days." />
+  <meta name="twitter:image" content="https://elesium.online/og-image.png" />
+
+  <!-- Schema.org JSON-LD Knowledge Graph -->
+  
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP6JM8KXS8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YP6JM8KXS8');
+  </script>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Asynchronous Non-Blocking Google Fonts Loading -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+  </noscript>
+
+  <!-- Dark Mode Locked -->
+  <script>
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  </script>
+
+  <!-- GitHub Pages SPA Router Fix -->
+  <!-- Decodes the path that 404.html redirected as a query param -->
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+      // Handle the ?/path encoding from 404.html
+      var l = window.location;
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function(s) {
+          return s.replace(/~and~/g, '&');
+        });
+        window.history.replaceState(
+          null, null,
+          l.pathname.slice(0, -1) + decoded[0] +
+          (decoded[1] ? '?' + decoded[1] : '') +
+          l.hash
+        );
+      }
+    })();
+  </script>
+
+  <!-- Navboost Anti-Pogo-Sticking Dwell-Lock Defense (Playbook 12) -->
+  <script src="/navboost_dwell_lock.js" defer></script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "Corporation",
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
+      "@id": "https://elesium.online/#organization",
+      "name": "Elesium",
+      "alternateName": [
+        "Elesium Online",
+        "Elesium Enterprise AI",
+        "Elesium India",
+        "Elesium AI Automation",
+        "Elesium AI Engineering"
+      ],
+      "legalName": "Elesium Digital Systems Private Limited",
+      "disambiguatingDescription": "Elesium Digital Systems Private Limited is an Indian enterprise AI engineering firm and autonomous systems agency headquartered in Koramangala, Bengaluru, distinct from film/entertainment entity Elysium or consumer gaming platforms.",
+      "url": "https://elesium.online",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://elesium.online/#logo",
+        "url": "https://elesium.online/assets/logo-square.png",
+        "caption": "Elesium - Best Enterprise AI Company in India",
+        "width": "512",
+        "height": "512"
+      },
+      "sameAs": [
+        "https://www.crunchbase.com/organization/elesium-online",
+        "https://github.com/elesium-ai",
+        "https://github.com/655Chaman/elesium-website",
+        "https://www.linkedin.com/company/elesium",
+        "https://www.linkedin.com/in/chaman-elesium",
+        "https://www.g2.com/products/elesium-ai-automation-platform",
+        "https://clutch.co/profile/elesium-online",
+        "https://www.trustpilot.com/review/elesium.online",
+        "https://www.goodfirms.co/company/elesium-online",
+        "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
+        "https://medium.com/@chamanshah",
+        "https://hackernoon.com/u/chamanshah"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://elesium.online/authors/chaman-shah#person",
+        "name": "Chaman Shah",
+        "jobTitle": "Principal Systems Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/chaman-elesium",
+          "https://github.com/655Chaman",
+          "https://medium.com/@chamanshah",
+          "https://hackernoon.com/u/chamanshah"
+        ]
+      },
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Artificial Intelligence",
+          "sameAs": "https://www.wikidata.org/wiki/Q11660",
+          "identifier": "/m/0mkz",
+          "url": "https://www.google.com/search?kgmid=/m/0mkz",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Machine Learning",
+          "sameAs": "https://www.wikidata.org/wiki/Q2539",
+          "identifier": "/m/01hyh_",
+          "url": "https://www.google.com/search?kgmid=/m/01hyh_",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Large Language Model",
+          "sameAs": "https://www.wikidata.org/wiki/Q1153059",
+          "identifier": "/g/11s_677k1m",
+          "url": "https://www.google.com/search?kgmid=/g/11s_677k1m",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Natural Language Processing",
+          "sameAs": "https://www.wikidata.org/wiki/Q30642",
+          "identifier": "/m/05b1n",
+          "url": "https://www.google.com/search?kgmid=/m/05b1n",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Autonomous Agent",
+          "sameAs": "https://www.wikidata.org/wiki/Q116139474",
+          "identifier": "/g/11t6w8b67f",
+          "url": "https://www.google.com/search?kgmid=/g/11t6w8b67f",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Cloud Computing",
+          "sameAs": "https://www.wikidata.org/wiki/Q483639",
+          "identifier": "/m/0283dt",
+          "url": "https://www.google.com/search?kgmid=/m/0283dt",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Graphics Processing Unit",
+          "sameAs": "https://www.wikidata.org/wiki/Q178655",
+          "identifier": "/m/01k93",
+          "url": "https://www.google.com/search?kgmid=/m/01k93",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Retrieval-Augmented Generation",
+          "sameAs": "https://www.wikidata.org/wiki/Q125503857",
+          "identifier": "RAG_WIKIDATA_Q125503857",
+          "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Vector Database",
+          "sameAs": "https://www.wikidata.org/wiki/Q118745585",
+          "identifier": "VECTOR_DB_WIKIDATA_Q118745585",
+          "url": "https://en.wikipedia.org/wiki/Vector_database",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Business Process Automation",
+          "sameAs": "https://www.wikidata.org/wiki/Q2900762",
+          "identifier": "/m/04z9c",
+          "url": "https://www.google.com/search?kgmid=/m/04z9c",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Enterprise Software",
+          "sameAs": "https://www.wikidata.org/wiki/Q1662918",
+          "identifier": "/m/03w7f",
+          "url": "https://www.google.com/search?kgmid=/m/03w7f",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Enterprise Resource Planning",
+          "sameAs": "https://www.wikidata.org/wiki/Q131201",
+          "identifier": "/m/02p4m",
+          "url": "https://www.google.com/search?kgmid=/m/02p4m",
+          "inDefinedTermSet": "https://www.wikidata.org"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Bengaluru",
+          "sameAs": "https://www.wikidata.org/wiki/Q1355",
+          "identifier": "/m/09c17",
+          "url": "https://www.google.com/search?kgmid=/m/09c17"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai",
+          "sameAs": "https://www.wikidata.org/wiki/Q1156",
+          "identifier": "/m/04vmp",
+          "url": "https://www.google.com/search?kgmid=/m/04vmp"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi NCR",
+          "sameAs": "https://www.wikidata.org/wiki/Q83367",
+          "identifier": "/m/093_3",
+          "url": "https://www.google.com/search?kgmid=/m/093_3"
+        },
+        {
+          "@type": "City",
+          "name": "Hyderabad",
+          "sameAs": "https://www.wikidata.org/wiki/Q1361",
+          "identifier": "/m/03bwt",
+          "url": "https://www.google.com/search?kgmid=/m/03bwt"
+        },
+        {
+          "@type": "City",
+          "name": "Pune",
+          "sameAs": "https://www.wikidata.org/wiki/Q1538",
+          "identifier": "/m/01662y",
+          "url": "https://www.google.com/search?kgmid=/m/01662y"
+        },
+        {
+          "@type": "City",
+          "name": "Chennai",
+          "sameAs": "https://www.wikidata.org/wiki/Q1352",
+          "identifier": "/m/0c529",
+          "url": "https://www.google.com/search?kgmid=/m/0c529"
+        },
+        {
+          "@type": "Country",
+          "name": "India",
+          "sameAs": "https://www.wikidata.org/wiki/Q668",
+          "identifier": "/m/03rk0",
+          "url": "https://www.google.com/search?kgmid=/m/03rk0"
+        },
+        {
+          "@type": "Country",
+          "name": "United States",
+          "sameAs": "https://www.wikidata.org/wiki/Q30",
+          "identifier": "/m/09c7w0",
+          "url": "https://www.google.com/search?kgmid=/m/09c7w0"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom",
+          "sameAs": "https://www.wikidata.org/wiki/Q145",
+          "identifier": "/m/07ssc",
+          "url": "https://www.google.com/search?kgmid=/m/07ssc"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates",
+          "sameAs": "https://www.wikidata.org/wiki/Q878",
+          "identifier": "/m/07t21",
+          "url": "https://www.google.com/search?kgmid=/m/07t21"
+        }
+      ],
+      "telephone": "+91-8317329312",
+      "email": "contact@elesium.online",
+      "priceRange": "$$$$",
+      "currenciesAccepted": "INR, USD, EUR, GBP",
+      "paymentAccepted": "Wire Transfer, Corporate Invoicing",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "80 Feet Road, 4th Block, Koramangala",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560034",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9352,
+        "longitude": 77.6245
+      },
+      "hasMap": "https://maps.google.com/?q=12.9352,77.6245",
+      "department": [
+        {
+          "@type": [
+            "ResearchOrganization",
+            "LocalBusiness"
+          ],
+          "@id": "https://elesium.online/#pod-shivamogga",
+          "name": "Elesium R&D Engineering Pod",
+          "url": "https://elesium.online",
+          "description": "Secondary R&D facility and high-throughput systems benchmarking lab for Elesium.",
+          "telephone": "+91-8317329312",
+          "email": "contact@elesium.online",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Main Road",
+            "addressLocality": "Shivamogga",
+            "addressRegion": "Karnataka",
+            "postalCode": "577205",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 13.9299,
+            "longitude": 75.5681
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://elesium.online/#website",
+      "url": "https://elesium.online",
+      "name": "Elesium - Best Enterprise AI Company in India",
+      "publisher": {
+        "@id": "https://elesium.online/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://elesium.online/authors/chaman-shah#person",
+      "name": "Chaman Shah",
+      "jobTitle": "Principal AI Systems Architect & Founder",
+      "image": "https://elesium.online/chaman-shah.png",
+      "worksFor": {
+        "@id": "https://elesium.online/#organization"
+      },
+      "url": "https://elesium.online/authors/chaman-shah",
+      "sameAs": [
+        "https://github.com/655Chaman",
+        "https://linkedin.com/in/chaman-shah-elesium",
+        "https://x.com/chamanshah_ai"
+      ],
+      "knowsAbout": [
+        "Enterprise Multi-Agent Systems",
+        "LangGraph State Topology",
+        "vLLM PagedAttention",
+        "DPDP Act 2023 Compliance",
+        "Dedicated Private VPC Cloud Infrastructure"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://elesium.online/solutions/category/logistics/#webpage",
+      "url": "https://elesium.online/solutions/category/logistics/",
+      "name": "Logistics & Supply Chain Sovereign AI Solutions | Elesium",
+      "description": "Deploy enterprise autonomous logistics AI with sub-200ms dispatch latency, MoRTH ULIP & FASTag telematics integration, and private VPC security. Read technical architecture.",
+      "isPartOf": {
+        "@id": "https://elesium.online/#website"
+      },
+      "about": {
+        "@id": "https://elesium.online/#organization"
+      },
+      "mentions": [
+        {
+          "@type": "GovernmentOrganization",
+          "name": "Ministry of Road Transport and Highways",
+          "alternateName": "MoRTH",
+          "sameAs": "https://www.wikidata.org/wiki/Q6874836",
+          "identifier": "/m/047f2_j",
+          "url": "https://www.google.com/search?kgmid=/m/047f2_j"
+        },
+        {
+          "@type": "GovernmentOrganization",
+          "name": "Directorate General of Civil Aviation",
+          "alternateName": "DGCA",
+          "sameAs": "https://www.wikidata.org/wiki/Q5205574",
+          "identifier": "/m/05zsg5",
+          "url": "https://www.google.com/search?kgmid=/m/05zsg5"
+        },
+        {
+          "@type": "Legislation",
+          "name": "Digital Personal Data Protection Act, 2023",
+          "alternateName": "DPDP Act 2023 (Act No. 22 of 2023)",
+          "sameAs": "https://www.wikidata.org/wiki/Q121434948",
+          "url": "https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023"
+        },
+        {
+          "@type": "Thing",
+          "name": "Freight Transport",
+          "sameAs": "https://www.wikidata.org/wiki/Q11222",
+          "identifier": "/m/02vy3",
+          "url": "https://www.google.com/search?kgmid=/m/02vy3"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vehicle Routing Problem",
+          "sameAs": "https://www.wikidata.org/wiki/Q2571217",
+          "url": "https://en.wikipedia.org/wiki/Vehicle_routing_problem"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://elesium.online/solutions/category/logistics/#collection",
+      "url": "https://elesium.online/solutions/category/logistics/",
+      "name": "Logistics & Supply Chain Sovereign AI Solutions | Elesium",
+      "description": "Deploy enterprise autonomous logistics AI with sub-200ms dispatch latency, MoRTH ULIP & FASTag telematics integration, and private VPC security. Read technical architecture.",
+      "isPartOf": {
+        "@id": "https://elesium.online/#website"
+      },
+      "hasPart": [
+        {
+          "@type": "Service",
+          "name": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents/",
+          "description": "Deploy B2B E-Way Bill QR with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts/",
+          "description": "Deploy Optical Character with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap/",
+          "description": "Deploy Three-Way Invoice-Purchase with deterministic air-gapped VPC isolation and Logistics & Supply Chain compliance. Schedule architecture audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/",
+          "description": "Deploy Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders with. Schedule an architecture audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs/",
+          "description": "Deploy Pharmaceutical Cold with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs/",
+          "description": "Deploy Quick-Commerce Sub-10-Minute with deterministic air-gapped VPC isolation and Logistics & Supply Chain compliance. Schedule architecture audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers/",
+          "description": "Deploy Interstate E-Way with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing/",
+          "description": "Deploy Tally ERP 9 TDL Port with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration/",
+          "description": "Deploy Air-Gapped Local with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi/",
+          "description": "Deploy Automated NIC E-Way with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore/",
+          "description": "Deploy Automated IRN E-Invoice JSON with deterministic air-gapped VPC isolation and Logistics & Supply Chain compliance. Schedule architecture audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/gstr-1-sales-return-auto-compilation-agents-from-tally-prime-sales-ledgers-in-chennai/",
+          "description": "Deploy GSTR-1 Sales Return with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/",
+          "description": "Deploy Automated GSTR-9 with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-lut-letter-of-undertaking-export-invoice-filing-agents-integrated-with-tally-prime/",
+          "description": "Deploy Automated LUT (Letter of with deterministic air-gapped VPC isolation and Logistics & Supply Chain compliance. Schedule architecture audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad/",
+          "description": "Deploy Cross-Border SEZ with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon/",
+          "description": "Deploy Automated Corporate with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments/",
+          "description": "Deploy E-Invoice IRN and QR with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers/",
+          "description": "Deploy Automated E-Way Bill with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/bilingual-vernacular-invoice-ocr-agents-for-tally-prime-automated-voucher-entry/",
+          "description": "Deploy Bilingual Vernacular with sovereign VPC isolation, sub-100ms execution, and Logistics & Supply Chain compliance. Schedule an enterprise audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india/",
+          "description": "Deploy FP8 Inference Acceleration with deterministic air-gapped VPC isolation and Logistics & Supply Chain compliance. Schedule architecture audit.",
+          "provider": {
+            "@id": "https://elesium.online/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://elesium.online/solutions/category/logistics/#itemlist",
+      "name": "Logistics & Supply Chain AI Architecture Catalog",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/gstr-1-sales-return-auto-compilation-agents-from-tally-prime-sales-ledgers-in-chennai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-lut-letter-of-undertaking-export-invoice-filing-agents-integrated-with-tally-prime/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/bilingual-vernacular-invoice-ocr-agents-for-tally-prime-automated-voucher-entry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India - Sovereign Enterprise Architecture",
+          "url": "https://elesium.online/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+  <div id="root">
+<main id="main-content">
+<div id="prerendered-category-hub" style="max-width:1000px;margin:0 auto;padding:2rem 1.5rem 5rem 1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav aria-label="Breadcrumb" style="margin-bottom:2rem;font-size:0.8rem;font-family:monospace;color:#6b7280;">
+    <a href="/" style="color:#6b7280;text-decoration:none;">Home</a> &rarr;
+    <a href="/solutions/" style="color:#6b7280;text-decoration:none;">Solutions</a> &rarr;
+    <span style="color:#059669;font-weight:700;">Logistics &amp; Supply Chain</span>
+  </nav>
+
+  <header style="margin-bottom:2.5rem;">
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1rem;color:#059669;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">
+      Thematic Silo Architecture • Logistics &amp; Supply Chain
+    </div>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1.25rem 0;color:#111827;">Autonomous Multi-Carrier Fleet Dispatch, Real-Time Telematics &amp; ERP Synchronization</h1>
+    
+    <div class="answer-capsule" style="background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#15803d;margin-bottom:0.35rem;">Architectural Answer Capsule • Executive Summary</div>
+      <p style="font-size:1.15rem;line-height:1.6;color:#166534;margin:0;font-weight:600;">Elesium&#x27;s logistics AI architecture executes deterministic LangGraph state machines for multi-depot vehicle routing (VRP), dynamic multi-carrier freight re-routing, and cold-chain telematics synchronization directly into SAP TM, Oracle SCM, and FarEye with sub-200ms latency and zero external data retention.</p>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <a href="#audit" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 1.75rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Schedule Technical Architecture Audit &rarr;</a>
+      <a href="/solutions/" style="display:inline-block;border:1px solid #d1d5db;color:#374151;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">View All 13 Industry Silos</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:2rem 0;">
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;text-align:center;"><div style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;">Dispatch Latency</div><div style="font-size:1.5rem;font-weight:800;color:#111827;margin-top:0.25rem;">&lt; 180ms</div><div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">Deterministic multi-carrier allocation</div></div><div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;text-align:center;"><div style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;">Empty-Mile Reduction</div><div style="font-size:1.5rem;font-weight:800;color:#111827;margin-top:0.25rem;">24.6%</div><div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">Dynamic backhaul graph optimization</div></div><div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;text-align:center;"><div style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;">SLA Uptime</div><div style="font-size:1.5rem;font-weight:800;color:#111827;margin-top:0.25rem;">99.99%</div><div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">Air-gapped private VPC high availability</div></div><div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1rem;text-align:center;"><div style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;">ERP Integration</div><div style="font-size:1.5rem;font-weight:800;color:#111827;margin-top:0.25rem;">Sub-14 Days</div><div style="font-size:0.75rem;color:#6b7280;margin-top:0.25rem;">Native SAP TM &amp; Oracle SCM connectors</div></div>
+    </div>
+  </header>
+
+  <section style="margin:2.5rem 0;background:#f8fafc;border:1px solid #e2e8f0;border-radius:0.75rem;padding:1.75rem;">
+    <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-top:0;margin-bottom:0.75rem;">Statutory &amp; Regulatory Compliance Matrix</h2>
+    <p style="color:#334155;margin-bottom:0.5rem;"><strong>Governing Authorities:</strong> MoRTH, ULIP, DGCA &amp; DPDP Act 2023</p>
+    <p style="color:#64748b;font-size:0.9rem;line-height:1.6;margin-bottom:1rem;">MoRTH National Logistics Policy (NLP), Unified Logistics Interface Platform (ULIP) API Integration, FASTag Electronic Toll Telematics, DGCA Part 107 Drone Rules, and Section 8(5) DPDP Act 2023 statutory data erasure.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;font-size:0.8rem;font-family:monospace;">
+      <div style="background:#ffffff;border:1px solid #cbd5e1;padding:0.75rem;border-radius:0.375rem;">
+        <strong style="color:#059669;display:block;margin-bottom:0.25rem;">DPDP Act 2023 Sec 8(5)</strong>
+        Automatic statutory data erasure upon workflow execution completion.
+      </div>
+      <div style="background:#ffffff;border:1px solid #cbd5e1;padding:0.75rem;border-radius:0.375rem;">
+        <strong style="color:#059669;display:block;margin-bottom:0.25rem;">Sovereign Data Residency</strong>
+        Tier-IV Indian datacenters (CtrlS, Yotta Shakti) with zero foreign telemetry.
+      </div>
+      <div style="background:#ffffff;border:1px solid #cbd5e1;padding:0.75rem;border-radius:0.375rem;">
+        <strong style="color:#059669;display:block;margin-bottom:0.25rem;">Cryptographic Hashing</strong>
+        SHA-256 state ledger verification for statutory explainability audits.
+      </div>
+    </div>
+  </section>
+
+  <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+    <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1.25rem;">Deterministic Multi-Agent Architecture</h2>
+    <p style="margin-bottom:1.25rem;line-height:1.75;color:#374151;">Modern enterprise supply chains face severe operational friction when legacy Transportation Management Systems (TMS) fail to dynamically respond to driver shortages, weather anomalies, dock congestion, and sudden fuel price volatility. Elesium deploys deterministic multi-agent systems that model fleet operations as a continuous, directed acyclic graph (DAG) of state transitions, eliminating manual dispatcher intervention while preserving strict business rule guardrails.</p><p style="margin-bottom:1.25rem;line-height:1.75;color:#374151;">Our logistics state machine architecture decouples planning from real-time execution. A primary Dispatch Orchestration Agent continuously ingests GPS telematics, OBD-II diagnostic fault codes, and electronic logging device (ELD) hours-of-service feeds via high-throughput Kafka streaming pipelines. When traffic disruptions or mechanical exceptions occur, the agent executes localized Dijkstra and A* graph re-routing algorithms in sub-180ms, updating driver mobile endpoints and customer delivery milestones synchronously.</p><p style="margin-bottom:1.25rem;line-height:1.75;color:#374151;">All outbound carrier communications, bill of lading (BOL) extractions, and freight audit reconciliations execute inside dedicated private VPC enclaves hosted in sovereign Indian tier-IV datacenters (CtrlS and Yotta Shakti). In strict compliance with DPDP Act 2023 Section 8(5), all driver personal location history and biometric authentication data is cryptographically expunged immediately upon voyage completion, eliminating enterprise statutory liability.</p>
+  </section>
+
+  <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+    <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1.25rem;">Enterprise Production Capabilities</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
+      <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;"><h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Deterministic Fleet Dispatching</h3><p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Automated multi-carrier rate shopping, load-to-vehicle optimization, and automated driver assignment based on hours-of-service compliance.</p></div><div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;"><h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Dynamic Exception Re-Routing</h3><p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Sub-200ms graph re-routing around traffic incidents, checkpoint delays, and severe weather with automated ETA updates to ERP systems.</p></div><div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;"><h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Cold-Chain IoT Telemetry</h3><p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Continuous temperature and humidity threshold monitoring with automated emergency re-route triggers before cargo spoilage thresholds are breached.</p></div><div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;"><h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Automated Freight Invoice Audit</h3><p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Three-way matching of purchase orders, electronic proof of delivery (ePOD), and carrier invoices with automated discrepancy flagging.</p></div>
+    </div>
+  </section>
+
+  <section style="margin:3rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.5rem;">Logistics &amp; Supply Chain Production Architectures</h2>
+    <p style="color:#6b7280;font-size:0.9rem;margin-bottom:1.5rem;">Verified production-ready sovereign AI solutions in the Logistics &amp; Supply Chain thematic cluster.</p>
+    <ul style="padding:0;margin:0;">
+      <li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents/" style="color:#2563eb;text-decoration:none;">B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy B2B E-Way Bill QR with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/b2b-e-way-bill-qr-code-cryptographic-signature-verification-latency-telemetry-for-logistics-clearing-agents/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts/" style="color:#2563eb;text-decoration:none;">Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Optical Character with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/optical-character-recognition-ocr-degradation-handling-for-thermal-print-transport-bills-and-warehouse-receipts/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap/" style="color:#2563eb;text-decoration:none;">Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Three-Way Invoice-Purchase with deterministic air-gapped VPC isolation and Logistics &amp; Supply Chain compliance. Schedule architecture audit.</p><a href="/solutions/three-way-invoice-purchase-order-goods-receipt-po-grn-matching-tolerance-telemetry-for-enterprise-sap/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/" style="color:#2563eb;text-decoration:none;">Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders with. Schedule an architecture audit.</p><a href="/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs/" style="color:#2563eb;text-decoration:none;">Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Pharmaceutical Cold with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/pharmaceutical-cold-chain-vaccine-warehouse-multi-point-iot-temperature-telemetry-for-logistics-hubs/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs/" style="color:#2563eb;text-decoration:none;">Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Quick-Commerce Sub-10-Minute with deterministic air-gapped VPC isolation and Logistics &amp; Supply Chain compliance. Schedule architecture audit.</p><a href="/solutions/quick-commerce-sub-10-minute-dispatch-queue-telemetry-for-urban-micro-fulfillment-hubs/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers/" style="color:#2563eb;text-decoration:none;">Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Interstate E-Way with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing/" style="color:#2563eb;text-decoration:none;">Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Tally ERP 9 TDL Port with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration/" style="color:#2563eb;text-decoration:none;">Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Air-Gapped Local with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi/" style="color:#2563eb;text-decoration:none;">Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Automated NIC E-Way with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/automated-nic-e-way-bill-portal-generation-agents-from-tally-prime-delivery-challans-in-delhi/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore/" style="color:#2563eb;text-decoration:none;">Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Automated IRN E-Invoice JSON with deterministic air-gapped VPC isolation and Logistics &amp; Supply Chain compliance. Schedule architecture audit.</p><a href="/solutions/automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/gstr-1-sales-return-auto-compilation-agents-from-tally-prime-sales-ledgers-in-chennai/" style="color:#2563eb;text-decoration:none;">GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy GSTR-1 Sales Return with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/gstr-1-sales-return-auto-compilation-agents-from-tally-prime-sales-ledgers-in-chennai/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/" style="color:#2563eb;text-decoration:none;">Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Automated GSTR-9 with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/automated-gstr-9-annual-return-reconciliation-agents-matching-tally-ledgers-with-gstn-portal/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/automated-lut-letter-of-undertaking-export-invoice-filing-agents-integrated-with-tally-prime/" style="color:#2563eb;text-decoration:none;">Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Automated LUT (Letter of with deterministic air-gapped VPC isolation and Logistics &amp; Supply Chain compliance. Schedule architecture audit.</p><a href="/solutions/automated-lut-letter-of-undertaking-export-invoice-filing-agents-integrated-with-tally-prime/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad/" style="color:#2563eb;text-decoration:none;">Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Cross-Border SEZ with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/cross-border-sez-supply-zero-rated-invoice-verification-agents-in-tally-for-it-parks-in-hyderabad/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon/" style="color:#2563eb;text-decoration:none;">Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Automated Corporate with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/automated-corporate-credit-card-expense-report-reconciliation-agents-with-tally-prime-in-gurgaon/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments/" style="color:#2563eb;text-decoration:none;">E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy E-Invoice IRN and QR with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/e-invoice-irn-and-qr-code-generation-agents-for-tally-prime-billing-departments/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers/" style="color:#2563eb;text-decoration:none;">Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Automated E-Way Bill with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/bilingual-vernacular-invoice-ocr-agents-for-tally-prime-automated-voucher-entry/" style="color:#2563eb;text-decoration:none;">Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy Bilingual Vernacular with sovereign VPC isolation, sub-100ms execution, and Logistics &amp; Supply Chain compliance. Schedule an enterprise audit.</p><a href="/solutions/bilingual-vernacular-invoice-ocr-agents-for-tally-prime-automated-voucher-entry/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li><li style="margin-bottom:1rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.25rem;list-style:none;"><h3 style="margin:0 0 0.5rem 0;font-size:1.125rem;font-weight:700;"><a href="/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india/" style="color:#2563eb;text-decoration:none;">FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India - Sovereign Enterprise Architecture &rarr;</a></h3><p style="color:#4b5563;font-size:0.875rem;line-height:1.6;margin:0 0 0.5rem 0;">Deploy FP8 Inference Acceleration with deterministic air-gapped VPC isolation and Logistics &amp; Supply Chain compliance. Schedule architecture audit.</p><a href="/solutions/fp8-inference-acceleration-agents-for-tally-erp-port-9000-xml-invoice-parsing-in-india/" style="color:#059669;font-weight:600;font-size:0.8rem;text-decoration:none;">View Architecture Blueprint &rarr;</a></li>
+    </ul>
+  </section>
+
+  <section style="margin:2.5rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;" id="pricing">
+    <h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1rem;">Engagement Tiers &amp; Institutional Pricing</h2>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+        <thead>
+          <tr style="background:#111827;color:#ffffff;">
+            <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Tier</th>
+            <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Investment (INR)</th>
+            <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">USD Equiv.</th>
+            <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Timeline</th>
+            <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Deliverables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Pilot Sprint</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;1,50,000 &#8211; &#8377;3,50,000</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">$2,000 &#8211; $4,500</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">14 days</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">Single-process deterministic agent, private cloud staging, production validation</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+            <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">Enterprise Suite <span style="background:#2563eb;color:#fff;font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;margin-left:0.4rem;">Most Deployed</span></td>
+            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;6,00,000 &#8211; &#8377;15,00,000</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">$7,500 &#8211; $18,000</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">30&#8211;45 days</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">3-agent triad, LangGraph StateGraph, ERP integration, zero-data-retention VPC</td>
+          </tr>
+          <tr>
+            <td style="padding:0.875rem 1rem;font-weight:600;color:#111827;">AI Engineering Pod</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">&#8377;4,50,000 / month</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">$5,500 / month</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">12-month retainer</td>
+            <td style="padding:0.875rem 1rem;color:#374151;">3 AI engineers + 1 principal architect, continuous fine-tuning, 1-hour critical SLA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;">
+    <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1.5rem;">Frequently Asked Questions</h2>
+    <dl>
+      <div style="margin-bottom:1.5rem;"><dt style="font-weight:700;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">How does Elesium integrate with existing SAP TM or Oracle Transportation Management?</dt><dd style="color:#4b5563;line-height:1.6;margin:0;">We deploy secure, bi-directional REST webhooks and read-replica database connectors that interface with standard SAP BTP and Oracle Integration Cloud interfaces without requiring disruptive modifications to core ERP transaction tables.</dd></div><div style="margin-bottom:1.5rem;"><dt style="font-weight:700;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">What happens if cellular connectivity is lost in rural transit corridors?</dt><dd style="color:#4b5563;line-height:1.6;margin:0;">Mobile driver client agents maintain an offline SQLite state cache. Telematics and proof-of-delivery snapshots are cryptographically hashed and queued locally, automatically synchronizing via two-phase commit protocols upon reconnection.</dd></div><div style="margin-bottom:1.5rem;"><dt style="font-weight:700;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">How does the architecture comply with India&#x27;s Unified Logistics Interface Platform (ULIP)?</dt><dd style="color:#4b5563;line-height:1.6;margin:0;">Elesium features pre-built adapters for ULIP&#x27;s national logistics gateway, enabling real-time verification of vehicle registration (VAHAN), driver credentials (SARATHI), and toll movement (FASTag) within automated state checks.</dd></div><div style="margin-bottom:1.5rem;"><dt style="font-weight:700;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">What is the contractual deployment SLA for a logistics pilot?</dt><dd style="color:#4b5563;line-height:1.6;margin:0;">A fully functional logistics dispatch or freight audit agent is deployed within 14 business days, backed by our contractual 90-day cash-flow ROI guarantee.</dd></div><div style="margin-bottom:1.5rem;"><dt style="font-weight:700;font-size:1.125rem;color:#111827;margin-bottom:0.5rem;">Can the agents handle multi-modal logistics (road, rail, air cargo)?</dt><dd style="color:#4b5563;line-height:1.6;margin:0;">Yes. Our state graph schema supports multi-leg intermodal transshipment nodes, synchronizing container rail manifests, air waybills, and last-mile trucking fleets within a single unified control plane.</dd></div>
+    </dl>
+  </section>
+
+  <section style="margin:3rem 0;background:#111827;border-radius:0.75rem;padding:2.5rem;text-align:center;color:#ffffff;" id="audit">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-top:0;margin-bottom:0.75rem;">Deploy a Scoped Logistics &amp; Supply Chain Pilot in 14 Days</h2>
+    <p style="color:#9ca3af;margin-bottom:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;">30-minute private architecture review with Principal AI Systems Architect Chaman Shah. We evaluate legacy interfaces, data residency requirements, and model your 90-day cash-flow ROI SLA.</p>
+    <a href="https://wa.me/918317329312" style="display:inline-block;background:#2563eb;color:#ffffff;padding:0.875rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:700;margin-right:0.75rem;margin-bottom:0.5rem;">Schedule Free Technical Audit &rarr;</a>
+    <a href="/solutions/" style="display:inline-block;border:1px solid #475569;color:#94a3b8;padding:0.875rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-size:0.875rem;">View All Services</a>
+  </section>
+</div>
+</main>
+</div>
+  <footer class="footer-seo-mesh" style="padding:1.5rem 1rem;text-align:center;font-size:0.8rem;color:#9ca3af;border-top:1px solid rgba(255,255,255,0.05);">
+    <a href="/commercial-directory.html" style="color:#06b6d4;font-weight:600;text-decoration:none;margin:0 0.5rem;">Top 100 Commercial Directory</a> •
+    <a href="/solutions/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">Solutions Hub (3,765)</a> •
+    <a href="/signals/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">Technical Signals</a> •
+    <a href="/how-we-work/" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">How We Work</a> •
+    <a href="/sitemap.xml" style="color:#9ca3af;text-decoration:none;margin:0 0.5rem;">Sitemap</a>
+  </footer>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation — Paged Block Compaction & Zero-Copy Defragmentation | Elesium
+# 30-Second Short-Form Video Script: Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation  -  Paged Block Compaction & Zero-Copy Defragmentation | Elesium
 
 **Target Keyword:** `kv cache memory compaction dynamic virtual memory reallocation`  
 **Key Benefit:** `Paged Block Compaction & Zero-Copy Defragmentation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation — Paged Block Compaction & Zero-Copy Defragmentation | Elesium`
+`Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation  -  Paged Block Compaction & Zero-Copy Defragmentation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-kvcache-memory-compaction-simulator#video",
-  "name": "Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation \u2014 Paged Block Compaction & Zero-Copy Defragmentation | Elesium",
+  "name": "Kv Cache Memory Compaction Dynamic Virtual Memory Reallocation  -  Paged Block Compaction & Zero-Copy Defragmentation | Elesium",
   "description": "A 30-second technical architecture breakdown of kv cache memory compaction dynamic virtual memory reallocation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-kvcache-memory-compaction-simulator.jpg",

@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Aml Compliance Automation Software For Private Banks — Sanctions Screening & Real-Time SAR Generation | Elesium
+# 30-Second Short-Form Video Script: Aml Compliance Automation Software For Private Banks  -  Sanctions Screening & Real-Time SAR Generation | Elesium
 
 **Target Keyword:** `AML compliance automation software for private banks`  
 **Key Benefit:** `Sanctions Screening & Real-Time SAR Generation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Aml Compliance Automation Software For Private Banks — Sanctions Screening & Real-Time SAR Generation | Elesium`
+`Aml Compliance Automation Software For Private Banks  -  Sanctions Screening & Real-Time SAR Generation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/aml-compliance-automation-software-for-private-banks#video",
-  "name": "Aml Compliance Automation Software For Private Banks \u2014 Sanctions Screening & Real-Time SAR Generation | Elesium",
+  "name": "Aml Compliance Automation Software For Private Banks  -  Sanctions Screening & Real-Time SAR Generation | Elesium",
   "description": "A 30-second technical architecture breakdown of AML compliance automation software for private banks for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/aml-compliance-automation-software-for-private-banks.jpg",

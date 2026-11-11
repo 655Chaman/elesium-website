@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Chunked Prefill Radix Attention Kv Cache — Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium
+# 30-Second Short-Form Video Script: Chunked Prefill Radix Attention Kv Cache  -  Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium
 
 **Target Keyword:** `chunked prefill radix attention kv cache`  
 **Key Benefit:** `Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Chunked Prefill Radix Attention Kv Cache — Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium`
+`Chunked Prefill Radix Attention Kv Cache  -  Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-chunked-prefill-radix-attention-simulator#video",
-  "name": "Chunked Prefill Radix Attention Kv Cache \u2014 Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium",
+  "name": "Chunked Prefill Radix Attention Kv Cache  -  Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill | Elesium",
   "description": "A 30-second technical architecture breakdown of chunked prefill radix attention kv cache for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-chunked-prefill-radix-attention-simulator.jpg",

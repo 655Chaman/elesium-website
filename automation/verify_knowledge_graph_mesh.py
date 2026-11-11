@@ -5,7 +5,7 @@ Knowledge Graph Entity Stacking & Deep Schema Mesh Automated Verifier
 Module 01 / 02: Authority Stacking, Wikidata Q-IDs & Google kgmid Ontologies
 ===============================================================================
 Executes 6 rigorous verification gates:
-  Gate 1: Root Organization & Corporation Entity Stacking (Q131149202 + Profiles)
+  Gate 1: Root Organization & Corporation Entity Stacking (Authority Profiles)
   Gate 2: Google Knowledge Graph Entity Identifiers (kgmid in knowsAbout & areaServed)
   Gate 3: 13 Thematic Silo Hubs @graph Co-Reference Interlinking (about & mentions)
   Gate 4: Regulatory Authority Entity Disambiguation (RBI, SEBI, MoRTH, CDSCO, DPDP)
@@ -69,14 +69,14 @@ def run_gate_1_root_entity_stacking() -> bool:
             all_ok = False
             continue
 
-        # Check Wikidata Q131149202
+        # Verify absence of poisoned entity Q131149202 (salt marsh botany paper)
         same_as = org.get("sameAs", [])
-        has_wikidata = any("Q131149202" in s for s in same_as)
-        if not has_wikidata:
-            log_fail(f"Wikidata Q131149202 missing in sameAs of {t.relative_to(ROOT_DIR)}")
+        has_poisoned_wikidata = any("Q131149202" in s for s in same_as)
+        if has_poisoned_wikidata:
+            log_fail(f"Poisoned Wikidata Q131149202 detected in sameAs of {t.relative_to(ROOT_DIR)}")
             all_ok = False
         else:
-            log_pass(f"Wikidata Q131149202 verified in {t.relative_to(ROOT_DIR)}")
+            log_pass(f"Zero entity poisoning verified in {t.relative_to(ROOT_DIR)}")
 
         # Check Authority Profiles
         required_profiles = ["crunchbase", "github", "linkedin", "g2", "trustpilot"]

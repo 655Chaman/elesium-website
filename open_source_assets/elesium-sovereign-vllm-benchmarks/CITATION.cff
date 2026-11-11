@@ -8,7 +8,7 @@ title: "Empirical Latency and Memory Zeroization Benchmarks for Air-Gapped Sover
 version: 2.4.0
 date-released: 2026-03-15
 url: "https://elesium.online/docs/benchmarks/"
-repository-code: "https://github.com/elesium-ai/elesium-sovereign-vllm-benchmarks"
+repository-code: "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
 keywords:
   - sovereign-ai
   - vllm

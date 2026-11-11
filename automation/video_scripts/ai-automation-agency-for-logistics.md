@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Ai Automation Agency For Logistics — Autonomous Fleet Dispatch & ERP Synchronization | Elesium
+# 30-Second Short-Form Video Script: Ai Automation Agency For Logistics  -  Autonomous Fleet Dispatch & ERP Synchronization | Elesium
 
 **Target Keyword:** `AI automation agency for logistics`  
 **Key Benefit:** `Autonomous Fleet Dispatch & ERP Synchronization`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Ai Automation Agency For Logistics — Autonomous Fleet Dispatch & ERP Synchronization | Elesium`
+`Ai Automation Agency For Logistics  -  Autonomous Fleet Dispatch & ERP Synchronization | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/ai-automation-agency-for-logistics#video",
-  "name": "Ai Automation Agency For Logistics \u2014 Autonomous Fleet Dispatch & ERP Synchronization | Elesium",
+  "name": "Ai Automation Agency For Logistics  -  Autonomous Fleet Dispatch & ERP Synchronization | Elesium",
   "description": "A 30-second technical architecture breakdown of AI automation agency for logistics for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/ai-automation-agency-for-logistics.jpg",

@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Manufacturing & Industrial Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Manufacturing & Industrial",
-  "title": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities | Elesium",
-  "h1": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
+  "title": "Air-Gapped Purdue Model Level 2 SCADA Isolation | Elesium",
+  "h1": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Air-Gapped Purdue with sovereign VPC isolation, sub-100ms execution, and Manufacturing & Industrial compliance. Schedule an enterprise audit.",
   "targetPersona": "Pharmaceutical CISO, Cleanroom Validation Directors & Industrial Cyber Security Heads",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -20,8 +20,8 @@
   "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
   "heroImageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities",
   "paragraphs": [
-    "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems—such as HVAC blowers, differential pressure dampers, and particle monitors—to ransomware and cyber intrusions.",
-    "Our sovereign isolation architecture implements strict Purdue Enterprise Reference Architecture (PERA) Level 2 separation using hardware data diodes and air-gapped unidirectional optical data links. Critical cleanroom environmental parameters—including room differential pressure (Pascals), relative humidity, laminar airflow velocity, and temperature—are mirrored to Level 3 historians without permitting any reverse IP ingress.",
+    "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
+    "Our sovereign isolation architecture implements strict Purdue Enterprise Reference Architecture (PERA) Level 2 separation using hardware data diodes and air-gapped unidirectional optical data links. Critical cleanroom environmental parameters - including room differential pressure (Pascals), relative humidity, laminar airflow velocity, and temperature - are mirrored to Level 3 historians without permitting any reverse IP ingress.",
     "The telemetry processor enforces immutable cryptographic hash chaining on every transmitted data frame. If differential pressure between Grade A aseptic filling suites and Grade B preparation corridors drifts outside strict 15 Pa specifications, the Level 2 controller triggers autonomous physical interlocks while the isolated diode replicates the out-of-spec alarm to enterprise monitoring consoles.",
     "The deployment guarantees zero cyber attack surface for mission-critical cleanroom environmental controllers while providing complete continuous compliance documentation. Validated under GAMP 5 computerized system guidelines, the platform eliminates manual chart recorder reviews and ensures seamless US FDA and WHO regulatory audit readiness."
   ],
@@ -110,7 +110,7 @@
   },
   "hero": {
     "hookSentence": "Enforce strict Purdue Model Level 2 SCADA network isolation for sterile pharmaceutical cleanrooms with air-gapped unidirectional telemetry replication.",
-    "subheadline": "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems—such as HVAC blowers, differential pressure dampers, and particle monitors—to ransomware and cyber intrusions.",
+    "subheadline": "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
     "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -120,8 +120,8 @@
     {
       "title": "Deterministic Operational Capabilities & Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities",
       "copy": [
-        "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems—such as HVAC blowers, differential pressure dampers, and particle monitors—to ransomware and cyber intrusions.",
-        "Our sovereign isolation architecture implements strict Purdue Enterprise Reference Architecture (PERA) Level 2 separation using hardware data diodes and air-gapped unidirectional optical data links. Critical cleanroom environmental parameters—including room differential pressure (Pascals), relative humidity, laminar airflow velocity, and temperature—are mirrored to Level 3 historians without permitting any reverse IP ingress."
+        "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
+        "Our sovereign isolation architecture implements strict Purdue Enterprise Reference Architecture (PERA) Level 2 separation using hardware data diodes and air-gapped unidirectional optical data links. Critical cleanroom environmental parameters - including room differential pressure (Pascals), relative humidity, laminar airflow velocity, and temperature - are mirrored to Level 3 historians without permitting any reverse IP ingress."
       ],
       "bullets": [
         "Hardware Unidirectional Data Diode: Physically guarantees zero reverse packet flow into Purdue Level 2 cleanroom automation rings.",

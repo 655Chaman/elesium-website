@@ -353,11 +353,17 @@ def scan_fleet_topology(dist_dir: Path) -> Tuple[DirectedWebGraph, Dict[str, Dic
     canon_to_files: Dict[str, List[Path]] = defaultdict(list)
     node_metadata: Dict[str, Dict[str, Any]] = {}
     
+    retained_file = ROOT_DIR / "automation" / "retained_solution_slugs.json"
+    retained_slugs = set(json.loads(retained_file.read_text(encoding="utf-8"))) if retained_file.exists() else set()
+
     # Pass 1: Discover all unique canonical URLs
     for f in html_files:
         try:
             content = f.read_text(encoding="utf-8", errors="ignore")
         except Exception:
+            continue
+
+        if "noindex" in content:
             continue
             
         m_canon = canon_regex.search(content)
@@ -371,6 +377,12 @@ def scan_fleet_topology(dist_dir: Path) -> Tuple[DirectedWebGraph, Dict[str, Dic
                 canon = f"https://elesium.online/{rel[:-11]}"
             else:
                 canon = f"https://elesium.online/{rel[:-5]}"
+        
+        slug = canon.replace("https://elesium.online/", "").strip("/")
+        if slug.startswith("solutions/") and not slug.startswith("solutions/category") and slug != "solutions":
+            sol_slug = slug.replace("solutions/", "").strip("/")
+            if retained_slugs and sol_slug not in retained_slugs:
+                continue
         
         canon_to_files[canon].append(f)
         
@@ -736,18 +748,27 @@ class DampedSemanticMeshSynthesizer:
                     "anchor_type": "BRAND_NAVIGATIONAL"
                 })
 
-        # Mega-hubs distribute to solutions to ensure uniform link equity diffusion
-        cd = "https://elesium.online/commercial-directory.html"
-        sol_hub = "https://elesium.online/solutions"
-        sig = "https://elesium.online/signals"
-        hww = "https://elesium.online/how-we-work"
-        agency = "https://elesium.online/ai-automation-agency-india"
-        for s in self.solutions:
-            self.graph.add_edge(cd, s, {"edge_type": "DIRECTORY_DOWNWARD", "anchor_type": "EXACT_MATCH"})
-            self.graph.add_edge(sol_hub, s, {"edge_type": "SOLUTIONS_CATALOG_DOWNWARD", "anchor_type": "PARTIAL_MATCH"})
-            self.graph.add_edge(sig, s, {"edge_type": "SIGNALS_DOWNWARD", "anchor_type": "PARTIAL_MATCH"})
-            self.graph.add_edge(hww, s, {"edge_type": "HWW_DOWNWARD", "anchor_type": "PARTIAL_MATCH"})
-            self.graph.add_edge(agency, s, {"edge_type": "AGENCY_DOWNWARD", "anchor_type": "PARTIAL_MATCH"})
+        # Mega-hubs distribute to solutions and all leaves to ensure uniform link equity diffusion (Gini <= 0.42)
+        top_diffusers = [
+            "https://elesium.online",
+            "https://elesium.online/commercial-directory.html",
+            "https://elesium.online/solutions",
+            "https://elesium.online/signals",
+            "https://elesium.online/how-we-work",
+            "https://elesium.online/ai-automation-agency-india"
+        ]
+        for td in top_diffusers:
+            if td in self.graph.node_to_idx:
+                for target in self.graph.nodes:
+                    if target != td:
+                        self.graph.add_edge(td, target, {"edge_type": "EQUITY_DIFFUSION", "anchor_type": "BRAND_NAVIGATIONAL"})
+
+        # Ring linkage among leaf nodes to diffuse PageRank mass across periphery
+        leaves = [n for n in self.graph.nodes if n not in top_diffusers]
+        for i, leaf in enumerate(leaves):
+            for offset in [1, 2, 3, 4]:
+                nxt = leaves[(i + offset) % len(leaves)]
+                self.graph.add_edge(leaf, nxt, {"edge_type": "RING_DIFFUSION", "anchor_type": "PARTIAL_MATCH"})
 
         # ----------------------------------------------------------------------
         # Phase 5: Absolute Orphan Immunity Sweep (d_in >= 3 across ALL nodes)

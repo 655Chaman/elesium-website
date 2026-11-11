@@ -412,7 +412,7 @@ def inject_into_html_content(content: str, section_html: str) -> str:
     """
     # 1. Clean out any previous aeo-citation-grounding section for idempotency
     content = re.sub(
-        r'<section id="aeo-citation-grounding".*?</section>\s*',
+        r'<section\s+[^>]*id=["\']aeo-citation-grounding["\'].*?</section>\s*',
         "",
         content,
         flags=re.DOTALL,

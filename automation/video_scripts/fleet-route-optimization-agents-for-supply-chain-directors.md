@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Fleet Route Optimization Agents For Supply Chain Directors — Multi-Depot Routing & Fuel Cost Elimination | Elesium
+# 30-Second Short-Form Video Script: Fleet Route Optimization Agents For Supply Chain Directors  -  Multi-Depot Routing & Fuel Cost Elimination | Elesium
 
 **Target Keyword:** `fleet route optimization agents for supply chain directors`  
 **Key Benefit:** `Multi-Depot Routing & Fuel Cost Elimination`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Fleet Route Optimization Agents For Supply Chain Directors — Multi-Depot Routing & Fuel Cost Elimination | Elesium`
+`Fleet Route Optimization Agents For Supply Chain Directors  -  Multi-Depot Routing & Fuel Cost Elimination | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/fleet-route-optimization-agents-for-supply-chain-directors#video",
-  "name": "Fleet Route Optimization Agents For Supply Chain Directors \u2014 Multi-Depot Routing & Fuel Cost Elimination | Elesium",
+  "name": "Fleet Route Optimization Agents For Supply Chain Directors  -  Multi-Depot Routing & Fuel Cost Elimination | Elesium",
   "description": "A 30-second technical architecture breakdown of fleet route optimization agents for supply chain directors for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/fleet-route-optimization-agents-for-supply-chain-directors.jpg",

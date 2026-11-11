@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity — 2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium
+# 30-Second Short-Form Video Script: Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity  -  2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium
 
 **Target Keyword:** `fp8 microscaling dynamic block exponent shifting sub 1 percent perplexity`  
 **Key Benefit:** `2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity — 2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium`
+`Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity  -  2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-fp8-microscaling-simulator#video",
-  "name": "Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity \u2014 2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium",
+  "name": "Fp8 Microscaling Dynamic Block Exponent Shifting Sub 1 Percent Perplexity  -  2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8 | Elesium",
   "description": "A 30-second technical architecture breakdown of fp8 microscaling dynamic block exponent shifting sub 1 percent perplexity for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-fp8-microscaling-simulator.jpg",

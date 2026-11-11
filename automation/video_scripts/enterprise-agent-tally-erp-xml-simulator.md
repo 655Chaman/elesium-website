@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Tally Erp Llm Agent Automation — Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium
+# 30-Second Short-Form Video Script: Tally Erp Llm Agent Automation  -  Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium
 
 **Target Keyword:** `tally erp llm agent automation`  
 **Key Benefit:** `Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Tally Erp Llm Agent Automation — Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium`
+`Tally Erp Llm Agent Automation  -  Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-tally-erp-xml-simulator#video",
-  "name": "Tally Erp Llm Agent Automation \u2014 Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium",
+  "name": "Tally Erp Llm Agent Automation  -  Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation | Elesium",
   "description": "A 30-second technical architecture breakdown of tally erp llm agent automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-tally-erp-xml-simulator.jpg",

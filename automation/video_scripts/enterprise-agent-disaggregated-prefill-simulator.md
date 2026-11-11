@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters — Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium
+# 30-Second Short-Form Video Script: Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters  -  Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium
 
 **Target Keyword:** `disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters`  
 **Key Benefit:** `Sub-4ms TTFT & 5.4x Decode Concurrency Scaling`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters — Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium`
+`Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters  -  Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-disaggregated-prefill-simulator#video",
-  "name": "Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters \u2014 Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium",
+  "name": "Disaggregated Pre-Fill And Decode Pod Orchestrators For Enterprise Vllm Clusters  -  Sub-4ms TTFT & 5.4x Decode Concurrency Scaling | Elesium",
   "description": "A 30-second technical architecture breakdown of disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-disaggregated-prefill-simulator.jpg",

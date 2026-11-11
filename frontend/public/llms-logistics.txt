@@ -1,4 +1,4 @@
-# Elesium — Logistics & Supply Chain AI Systems Manifest
+# Elesium - Logistics & Supply Chain AI Systems Manifest
 > Machine Context for Logistics Operations VPs, Fleet Directors, and Global Supply Chain Architects.
 
 ## Core Capabilities
@@ -8,8 +8,9 @@
 - **Sub-Second ERP Synchronization:** Bi-directional RFC connectors to SAP S/4HANA and gRPC streams to Oracle Cloud SCM.
 
 ## Representative Verified Endpoints
-- https://elesium.online/solutions/autonomous-multi-depot-vehicle-routing-vrp-tw-optimization-agents/
-- https://elesium.online/solutions/dynamic-warehouse-management-wms-state-machines-for-cross-docking/
-- https://elesium.online/solutions/rfid-freight-tracking-telemetry-synchronization-for-global-cargo/
-- https://elesium.online/solutions/automated-cold-chain-temperature-compliance-monitors-for-pharma/
-- https://elesium.online/solutions/real-time-intermodal-shipping-container-allocation-state-machines/
+- https://elesium.online/solutions/air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration/
+- https://elesium.online/solutions/indian-customs-icegate-automated-bill-of-entry-tariff-reconciliation-telemetry-for-freight-forwarders/
+- https://elesium.online/solutions/automated-irn-e-invoice-json-generation-and-qr-code-embedding-agents-for-tally-erp-in-bangalore/
+- https://elesium.online/solutions/automated-lut-letter-of-undertaking-export-invoice-filing-agents-integrated-with-tally-prime/
+- https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers/
+- https://elesium.online/solutions/automated-e-way-bill-generation-agents-integrated-with-tally-prime-for-logistics-dispatchers/

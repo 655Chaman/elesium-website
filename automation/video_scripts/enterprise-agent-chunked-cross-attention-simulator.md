@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Chunked Cross Attention Document Sharding Enterprise Rag — Distributed Document Sharding & Sub-Second Query Reasoning | Elesium
+# 30-Second Short-Form Video Script: Chunked Cross Attention Document Sharding Enterprise Rag  -  Distributed Document Sharding & Sub-Second Query Reasoning | Elesium
 
 **Target Keyword:** `chunked cross attention document sharding enterprise rag`  
 **Key Benefit:** `Distributed Document Sharding & Sub-Second Query Reasoning`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Chunked Cross Attention Document Sharding Enterprise Rag — Distributed Document Sharding & Sub-Second Query Reasoning | Elesium`
+`Chunked Cross Attention Document Sharding Enterprise Rag  -  Distributed Document Sharding & Sub-Second Query Reasoning | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-chunked-cross-attention-simulator#video",
-  "name": "Chunked Cross Attention Document Sharding Enterprise Rag \u2014 Distributed Document Sharding & Sub-Second Query Reasoning | Elesium",
+  "name": "Chunked Cross Attention Document Sharding Enterprise Rag  -  Distributed Document Sharding & Sub-Second Query Reasoning | Elesium",
   "description": "A 30-second technical architecture breakdown of chunked cross attention document sharding enterprise rag for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-chunked-cross-attention-simulator.jpg",

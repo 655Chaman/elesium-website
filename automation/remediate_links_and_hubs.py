@@ -26,6 +26,20 @@ SOLUTIONS_DIST = DIST_DIR / "solutions"
 CATEGORY_DIST = SOLUTIONS_DIST / "category"
 DIST_INDEX = DIST_DIR / "index.html"
 
+PUBLIC_DIR = ROOT_DIR / "frontend" / "public"
+SOLUTIONS_PUB = PUBLIC_DIR / "solutions"
+CATEGORY_PUB = SOLUTIONS_PUB / "category"
+
+GROUNDING_CAPSULES_FILE = ROOT_DIR / "automation" / "geo_grounding_capsules.json"
+_GROUNDING_CAPSULES = {}
+if GROUNDING_CAPSULES_FILE.exists():
+    try:
+        raw_caps = json.loads(GROUNDING_CAPSULES_FILE.read_text(encoding="utf-8"))
+        for c in raw_caps.get("capsules", []):
+            _GROUNDING_CAPSULES.setdefault(c["solution_slug"], []).append(c)
+    except Exception:
+        pass
+
 from automation.topical_silos_data import (
     SILO_DEFINITIONS,
     get_silo_for_solution,
@@ -133,7 +147,7 @@ def main():
     hub_semantic = hub_semantic.replace("indexes 3,765 verified enterprise AI automations", "indexes 100 verified enterprise AI architectures")
     hub_semantic = hub_semantic.replace("indexes 3,795 verified enterprise AI automations", "indexes 100 verified enterprise AI architectures")
 
-    root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+    root_pattern = re.compile(r'<div id="root">[\s\S]*?</div>(?=\s*<footer|\s*<script|\s*</body>)', re.DOTALL)
     if root_pattern.search(hub_html):
         hub_html = root_pattern.sub(lambda m: f'<div id="root">{hub_semantic}</div>', hub_html)
     else:
@@ -193,16 +207,20 @@ def main():
     hub_html = hub_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(hub_collection_schema, ensure_ascii=False)}</script>\n</head>')
 
     final_hub = finalize_html_output(hub_html, hub_canonical)
-    write_compressed(SOLUTIONS_DIST / "index.html", final_hub)
+    final_hub = final_hub.replace("—", " - ")
     write_compressed(SOLUTIONS_DIST / "index.html", final_hub)
     write_compressed(DIST_DIR / "solutions.html", final_hub)
-    print("✅ Solutions Hub written to frontend/dist/solutions/index.html & solutions.html")
+    SOLUTIONS_PUB.mkdir(parents=True, exist_ok=True)
+    (SOLUTIONS_PUB / "index.html").write_text(final_hub, encoding="utf-8")
+    (PUBLIC_DIR / "solutions.html").write_text(final_hub, encoding="utf-8")
+    print("✅ Solutions Hub written to frontend/dist/solutions/index.html & solutions.html and frontend/public mirror")
 
     # =========================================================================
     # 2. Regenerate 13 Category Pillar Hubs (solutions/category/<silo_id>)
     # =========================================================================
     print("Generating 13 Category Pillar Hubs with retained solutions...")
     CATEGORY_DIST.mkdir(parents=True, exist_ok=True)
+    CATEGORY_PUB.mkdir(parents=True, exist_ok=True)
 
     for silo_id, silo_data in SILO_DEFINITIONS.items():
         silo_retained_sols = [s for s in retained_solutions if get_silo_for_solution(s) == silo_id]
@@ -282,15 +300,19 @@ def main():
         }
         cat_html = cat_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(cat_schema, ensure_ascii=False)}</script>\n</head>')
         final_cat = finalize_html_output(cat_html, cat_canonical)
+        final_cat = final_cat.replace("—", " - ")
 
         write_compressed(CATEGORY_DIST / silo_id / "index.html", final_cat)
         write_compressed(CATEGORY_DIST / f"{silo_id}.html", final_cat)
+        (CATEGORY_PUB / silo_id).mkdir(parents=True, exist_ok=True)
+        (CATEGORY_PUB / silo_id / "index.html").write_text(final_cat, encoding="utf-8")
+        (CATEGORY_PUB / f"{silo_id}.html").write_text(final_cat, encoding="utf-8")
         print(f"  Generated Category Pillar: /solutions/category/{silo_id} ({len(silo_retained_sols)} retained solutions)")
 
     # =========================================================================
-    # 3. Clean Peer Links in all 100 Retained Solution HTML Files
+    # 3. Clean Peer Links & Enrich Metadata in all 100 Retained Solution HTML Files
     # =========================================================================
-    print("Re-rendering peer links for all 100 retained enterprise solutions...")
+    print("Re-rendering peer links & metadata for all 100 retained enterprise solutions...")
     retained_dict = {s["slug"]: s for s in retained_solutions}
 
     # Helper mapping of silo -> retained solutions
@@ -312,28 +334,70 @@ def main():
 
         # Re-render semantic HTML for this solution
         sol_semantic = render_solution_semantic_html(sol, all_sols=peers)
+        sol_title = sol.get("title", f"{sol.get('h1', slug)} | Elesium")
+        sol_desc = sol.get("metaDescription", "")
 
-        # Update nested and flat HTML files
-        for html_path in [SOLUTIONS_DIST / slug / "index.html", SOLUTIONS_DIST / f"{slug}.html"]:
-            if html_path.exists():
-                text = html_path.read_text(encoding="utf-8", errors="ignore")
-                # Replace root semantic DOM
-                if root_pattern.search(text):
-                    text = root_pattern.sub(lambda m: f'<div id="root">{sol_semantic}</div>', text)
-                
-                # Check for any lingering pruned solution links in text
-                href_matches = re.findall(r'href=["\'](?:https?://elesium\.online)?/solutions/([^"\'#?]+)/?["\']', text)
-                for target in href_matches:
-                    clean_target = target.strip("/").strip()
-                    if clean_target in pruned_slugs:
-                        # Replace with the first peer's slug or self
-                        replacement = peers[0]["slug"] if peers else slug
-                        text = text.replace(f"/solutions/{clean_target}/", f"/solutions/{replacement}/")
-                        text = text.replace(f"/solutions/{clean_target}", f"/solutions/{replacement}/")
+        faq_items = [
+            {"@type": "Question", "name": f.get("question", ""), "acceptedAnswer": {"@type": "Answer", "text": f.get("answer", "")}}
+            for f in sol.get("faqs", []) if f.get("question") and f.get("answer")
+        ]
+        slug_caps = _GROUNDING_CAPSULES.get(slug, [])
+        for c in slug_caps:
+            faq_items.append({"@type": "Question", "name": c["h2_heading"], "acceptedAnswer": {"@type": "Answer", "text": c["declarative_answer_capsule"]}})
 
-                write_compressed(html_path, text)
+        # Update dist and public HTML files from dist template
+        dist_html_path = SOLUTIONS_DIST / slug / "index.html"
+        if not dist_html_path.exists():
+            continue
+        text = dist_html_path.read_text(encoding="utf-8", errors="ignore")
 
-    print("✅ All 100 retained solutions updated with 0 pruned peer links.")
+        # Replace title
+        text = re.sub(r"<title>.*?</title>", f"<title>{html.escape(sol_title)}</title>", text, flags=re.IGNORECASE | re.DOTALL)
+        # Replace description (handling any attribute order)
+        text = re.sub(r'<meta\s+[^>]*name=[\"\']description[\"\'][^>]*>', f'<meta name="description" content="{html.escape(sol_desc)}" />', text, flags=re.IGNORECASE)
+        # Replace OG title/desc
+        text = re.sub(r'<meta\s+[^>]*property=[\"\']og:title[\"\'][^>]*>', f'<meta property="og:title" content="{html.escape(sol_title)}" />', text, flags=re.IGNORECASE)
+        text = re.sub(r'<meta\s+[^>]*property=[\"\']og:description[\"\'][^>]*>', f'<meta property="og:description" content="{html.escape(sol_desc)}" />', text, flags=re.IGNORECASE)
+        # Replace Twitter title/desc
+        text = re.sub(r'<meta\s+[^>]*name=[\"\']twitter:title[\"\'][^>]*>', f'<meta name="twitter:title" content="{html.escape(sol_title)}" />', text, flags=re.IGNORECASE)
+        text = re.sub(r'<meta\s+[^>]*name=[\"\']twitter:description[\"\'][^>]*>', f'<meta name="twitter:description" content="{html.escape(sol_desc)}" />', text, flags=re.IGNORECASE)
+
+        # Replace root semantic DOM cleanly
+        clean_root_regex = re.compile(r'<div id="root">[\s\S]*?</div>(?=\s*<footer|\s*<script|\s*</body>)', re.DOTALL)
+        if clean_root_regex.search(text):
+            text = clean_root_regex.sub(lambda m: f'<div id="root">{sol_semantic}</div>', text)
+        else:
+            text = text.replace('<div id="root"></div>', f'<div id="root">{sol_semantic}</div>')
+
+        # Inject FAQPage schema if not present
+        if faq_items and '"@type": "FAQPage"' not in text and '</head>' in text:
+            faq_schema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faq_items
+            }
+            faq_script = f'\n<script type="application/ld+json">{json.dumps(faq_schema, ensure_ascii=False)}</script>'
+            text = text.replace("</head>", f"{faq_script}\n</head>")
+
+        # Scrub all em dashes
+        text = text.replace("—", " - ")
+
+        # Check for any lingering pruned solution links in text
+        href_matches = re.findall(r'href=["\'](?:https?://elesium\.online)?/solutions/([^"\'#?]+)/?["\']', text)
+        for target in href_matches:
+            clean_target = target.strip("/").strip()
+            if clean_target in pruned_slugs:
+                replacement = peers[0]["slug"] if peers else slug
+                text = text.replace(f"/solutions/{clean_target}/", f"/solutions/{replacement}/")
+                text = text.replace(f"/solutions/{clean_target}", f"/solutions/{replacement}/")
+
+        write_compressed(SOLUTIONS_DIST / slug / "index.html", text)
+        write_compressed(SOLUTIONS_DIST / f"{slug}.html", text)
+        (SOLUTIONS_PUB / slug).mkdir(parents=True, exist_ok=True)
+        (SOLUTIONS_PUB / slug / "index.html").write_text(text, encoding="utf-8")
+        (SOLUTIONS_PUB / f"{slug}.html").write_text(text, encoding="utf-8")
+
+    print("✅ All 100 retained solutions updated across dist and public with verified peer links, titles, and schema.")
 
 
 if __name__ == "__main__":

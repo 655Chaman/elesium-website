@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Kv Cache Prefix Caching Enterprise Llms — Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium
+# 30-Second Short-Form Video Script: Kv Cache Prefix Caching Enterprise Llms  -  Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium
 
 **Target Keyword:** `kv cache prefix caching enterprise llms`  
 **Key Benefit:** `Radix Attention Prompt Reuse & 85% Prefill Latency Cut`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Kv Cache Prefix Caching Enterprise Llms — Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium`
+`Kv Cache Prefix Caching Enterprise Llms  -  Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-kvcache-prefix-caching-simulator#video",
-  "name": "Kv Cache Prefix Caching Enterprise Llms \u2014 Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium",
+  "name": "Kv Cache Prefix Caching Enterprise Llms  -  Radix Attention Prompt Reuse & 85% Prefill Latency Cut | Elesium",
   "description": "A 30-second technical architecture breakdown of kv cache prefix caching enterprise llms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-kvcache-prefix-caching-simulator.jpg",

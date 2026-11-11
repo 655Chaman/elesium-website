@@ -109,6 +109,12 @@ def render_news_article(rel: Dict[str, Any], raw_markdown: str) -> str:
                 "url": canonical_url,
                 "headline": rel["title"],
                 "description": rel["description"],
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://elesium.online/assets/hero-corporate.png",
+                    "width": 1200,
+                    "height": 630
+                },
                 "datePublished": rel["date_iso"],
                 "dateModified": rel["date_iso"],
                 "inLanguage": "en-US",
@@ -119,7 +125,9 @@ def render_news_article(rel: Dict[str, Any], raw_markdown: str) -> str:
                     "url": "https://elesium.online",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://elesium.online/chaman-shah.png"
+                        "url": "https://elesium.online/assets/logo-square.png",
+                        "width": 512,
+                        "height": 512
                     }
                 },
                 "author": {
@@ -164,6 +172,7 @@ def render_news_article(rel: Dict[str, Any], raw_markdown: str) -> str:
   <title>{rel["title"]} | Elesium Newsroom</title>
   <meta name="description" content="{rel["description"]}">
   <link rel="canonical" href="{canonical_url}">
+  <script defer src="/navboost_dwell_lock.js"></script>
   <script type="application/ld+json">
 {schema_json}
   </script>
@@ -317,6 +326,7 @@ def render_news_hub(releases: List[Dict[str, Any]]) -> str:
   <meta name="description" content="Official corporate press releases, regulatory compliance disclosures, and sovereign AI benchmark telemetry from Elesium Digital Systems.">
   <link rel="canonical" href="{canonical_url}">
   <link rel="alternate" type="application/rss+xml" title="Elesium Official News Wire RSS" href="https://elesium.online/news/feed.xml">
+  <script defer src="/navboost_dwell_lock.js"></script>
   <script type="application/ld+json">
 {schema_json}
   </script>

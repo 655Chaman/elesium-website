@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Manufacturing & Industrial Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Manufacturing & Industrial",
-  "title": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants | Elesium",
-  "h1": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
+  "title": "Automotive Paint Shop Surface Defect Inspection | Elesium",
+  "h1": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Automotive Paint with sovereign VPC isolation, sub-100ms execution, and Manufacturing & Industrial compliance. Schedule an enterprise audit.",
   "targetPersona": "Paint Shop Operations Managers & Automotive Quality Assurance Directors",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -20,7 +20,7 @@
   "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
   "heroImageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants",
   "paragraphs": [
-    "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects—such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness—require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
+    "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
     "Our sovereign paint inspection agents deploy multi-stripe phase-measuring deflectometry and dark-field LED lighting tunnels directly at the clearcoat oven exit. Running custom high-resolution vision kernels on local edge servers, the agent inspects the entire 3D automotive body surface in under 25 seconds as the skid conveyor moves continuously through the tunnel.",
     "The inspection state machine maps defect coordinates (x, y, z) directly onto the vehicle's 3D CAD digital twin. Detected defects are classified by severity and automatically routed to downstream robotic polishers or manual touch-up stations, where laser pointers project defect locations directly onto the car body for immediate operator rectification.",
     "Operating with sub-0.1mm defect spatial resolution and 98.6% defect classification accuracy across 60 car bodies per hour, the solution eliminates post-assembly customer paint complaints, cuts manual inspection labor by 70%, and ensures compliance with global automotive OEM surface finish standards."
@@ -110,7 +110,7 @@
   },
   "hero": {
     "hookSentence": "Inspect automotive painted car bodies for orange peel, dust nibs, and paint runs with high-speed deflected-light vision agents.",
-    "subheadline": "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects—such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness—require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
+    "subheadline": "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
     "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -120,7 +120,7 @@
     {
       "title": "Deterministic Operational Capabilities & Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants",
       "copy": [
-        "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects—such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness—require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
+        "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
         "Our sovereign paint inspection agents deploy multi-stripe phase-measuring deflectometry and dark-field LED lighting tunnels directly at the clearcoat oven exit. Running custom high-resolution vision kernels on local edge servers, the agent inspects the entire 3D automotive body surface in under 25 seconds as the skid conveyor moves continuously through the tunnel."
       ],
       "bullets": [

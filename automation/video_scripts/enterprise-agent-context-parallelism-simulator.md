@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Context Parallelism Ring Kv Communication Overlap 2M Tokens — Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium
+# 30-Second Short-Form Video Script: Context Parallelism Ring Kv Communication Overlap 2M Tokens  -  Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium
 
 **Target Keyword:** `context parallelism ring kv communication overlap 2m tokens`  
 **Key Benefit:** `Sub-12ms 2M-Token Steps & Ring Attention KV Overlap`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Context Parallelism Ring Kv Communication Overlap 2M Tokens — Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium`
+`Context Parallelism Ring Kv Communication Overlap 2M Tokens  -  Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-context-parallelism-simulator#video",
-  "name": "Context Parallelism Ring Kv Communication Overlap 2M Tokens \u2014 Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium",
+  "name": "Context Parallelism Ring Kv Communication Overlap 2M Tokens  -  Sub-12ms 2M-Token Steps & Ring Attention KV Overlap | Elesium",
   "description": "A 30-second technical architecture breakdown of context parallelism ring kv communication overlap 2m tokens for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-context-parallelism-simulator.jpg",

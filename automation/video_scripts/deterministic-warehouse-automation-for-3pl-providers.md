@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Deterministic Warehouse Automation For 3Pl Providers — WMS State Machines & Inventory Accuracy | Elesium
+# 30-Second Short-Form Video Script: Deterministic Warehouse Automation For 3Pl Providers  -  WMS State Machines & Inventory Accuracy | Elesium
 
 **Target Keyword:** `deterministic warehouse automation for 3PL providers`  
 **Key Benefit:** `WMS State Machines & Inventory Accuracy`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Deterministic Warehouse Automation For 3Pl Providers — WMS State Machines & Inventory Accuracy | Elesium`
+`Deterministic Warehouse Automation For 3Pl Providers  -  WMS State Machines & Inventory Accuracy | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/deterministic-warehouse-automation-for-3pl-providers#video",
-  "name": "Deterministic Warehouse Automation For 3Pl Providers \u2014 WMS State Machines & Inventory Accuracy | Elesium",
+  "name": "Deterministic Warehouse Automation For 3Pl Providers  -  WMS State Machines & Inventory Accuracy | Elesium",
   "description": "A 30-second technical architecture breakdown of deterministic warehouse automation for 3PL providers for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/deterministic-warehouse-automation-for-3pl-providers.jpg",

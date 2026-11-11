@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Sovereign Defense Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Sovereign Defense",
-  "title": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries | Elesium",
-  "h1": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries with sub-100ms deterministic execution, private VPC isolation, and Sovereign Defense compliance. Schedule architecture audit.",
+  "title": "Air-Gapped Sovereign Pre-Fill and Decode Enclave | Elesium",
+  "h1": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Air-Gapped Sovereign Pre-Fill and with deterministic air-gapped VPC isolation and Sovereign Defense compliance. Schedule architecture audit.",
   "targetPersona": "Defense Ministry Technology Directors & Sovereign Military Intelligence Architects",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -20,7 +20,7 @@
   "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
   "heroImageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries",
   "paragraphs": [
-    "National defense ministries processing classified multi-source intelligence—including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks—require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
+    "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
     "Our sovereign disaggregated architecture physically and logically partitions inference workloads into dedicated Prefill Enclaves and Decode Enclaves. Prefill clusters leverage high-compute FP8 matrix cores to ingest massive 128K context dossiers, while Decode clusters optimize high-bandwidth memory (HBM3e) channels to stream responses to operational commanders at maximum throughput.",
     "The enclaves communicate across an air-gapped RoCEv2/InfiniBand RDMA fabric. When a tactical query arrives, the Prefill Enclave processes the classified dossier, writes the resulting KV cache directly into the Decode Enclave's VRAM via remote direct memory access in sub-8ms, and immediately frees its compute cores for subsequent intelligence batches.",
     "Operating under strict Tempest Level A TEMPEST emission standards and Common Criteria EAL6+ guidelines, this disaggregated architecture delivers a 3.2x improvement in intelligence processing concurrency while eliminating decode starvation, providing battle commanders with deterministic, sub-10ms response times for tactical intelligence queries."
@@ -110,7 +110,7 @@
   },
   "hero": {
     "hookSentence": "Architect disaggregated prefill and decode enclaves for sovereign defense intelligence processing with sub-8ms inter-enclave RDMA communications.",
-    "subheadline": "National defense ministries processing classified multi-source intelligence—including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks—require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
+    "subheadline": "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
     "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -120,7 +120,7 @@
     {
       "title": "Deterministic Operational Capabilities & Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries",
       "copy": [
-        "National defense ministries processing classified multi-source intelligence—including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks—require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
+        "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
         "Our sovereign disaggregated architecture physically and logically partitions inference workloads into dedicated Prefill Enclaves and Decode Enclaves. Prefill clusters leverage high-compute FP8 matrix cores to ingest massive 128K context dossiers, while Decode clusters optimize high-bandwidth memory (HBM3e) channels to stream responses to operational commanders at maximum throughput."
       ],
       "bullets": [

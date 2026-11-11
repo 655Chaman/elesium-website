@@ -180,6 +180,7 @@ const EnterpriseAgentDualpipePipelineSimulator = lazy(() => import('./components
 const EmbedAgentDualpipePipelineSimulator = lazy(() => import('./components/pages/EmbedAgentDualpipePipelineSimulator'))
 const EnterpriseAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components/pages/EnterpriseAgentDeepseekUnifiedFabricSimulator'))
 const EmbedAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components/pages/EmbedAgentDeepseekUnifiedFabricSimulator'))
+const NotFound = lazy(() => import('./components/pages/NotFound'))
 
 import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
@@ -481,6 +482,7 @@ function App() {
                             <Route path="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" element={<EnterpriseAgentDeepseekUnifiedFabricSimulator />} />
                             <Route path="/tools/agent-deepseek-v3-serving-fabric-simulator" element={<Navigate to="/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator/" replace />} />
                             <Route path="/embed/agent-deepseek-v3-serving-fabric-simulator" element={<EmbedAgentDeepseekUnifiedFabricSimulator />} />
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     </Suspense>
                 </AnimatePresence>

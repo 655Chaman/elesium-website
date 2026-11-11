@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Pipeline Parallelism 1F1B Schedule Bubble Elimination — Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium
+# 30-Second Short-Form Video Script: Pipeline Parallelism 1F1B Schedule Bubble Elimination  -  Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium
 
 **Target Keyword:** `pipeline parallelism 1f1b schedule bubble elimination`  
 **Key Benefit:** `Zero-Interference Cross-Node Micro-Batching & <10ms Latency`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Pipeline Parallelism 1F1B Schedule Bubble Elimination — Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium`
+`Pipeline Parallelism 1F1B Schedule Bubble Elimination  -  Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-pipeline-parallelism-simulator#video",
-  "name": "Pipeline Parallelism 1F1B Schedule Bubble Elimination \u2014 Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium",
+  "name": "Pipeline Parallelism 1F1B Schedule Bubble Elimination  -  Zero-Interference Cross-Node Micro-Batching & <10ms Latency | Elesium",
   "description": "A 30-second technical architecture breakdown of pipeline parallelism 1f1b schedule bubble elimination for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-pipeline-parallelism-simulator.jpg",

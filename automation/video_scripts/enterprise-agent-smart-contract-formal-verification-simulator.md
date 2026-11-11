@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Smart Contract Formal Verification Agent — Automated SMT Theorem Proving & ZK Invariant Verification | Elesium
+# 30-Second Short-Form Video Script: Smart Contract Formal Verification Agent  -  Automated SMT Theorem Proving & ZK Invariant Verification | Elesium
 
 **Target Keyword:** `smart contract formal verification agent`  
 **Key Benefit:** `Automated SMT Theorem Proving & ZK Invariant Verification`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Smart Contract Formal Verification Agent — Automated SMT Theorem Proving & ZK Invariant Verification | Elesium`
+`Smart Contract Formal Verification Agent  -  Automated SMT Theorem Proving & ZK Invariant Verification | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-smart-contract-formal-verification-simulator#video",
-  "name": "Smart Contract Formal Verification Agent \u2014 Automated SMT Theorem Proving & ZK Invariant Verification | Elesium",
+  "name": "Smart Contract Formal Verification Agent  -  Automated SMT Theorem Proving & ZK Invariant Verification | Elesium",
   "description": "A 30-second technical architecture breakdown of smart contract formal verification agent for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-smart-contract-formal-verification-simulator.jpg",

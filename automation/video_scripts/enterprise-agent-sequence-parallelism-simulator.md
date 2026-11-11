@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Sequence Parallelism Ring Self Attention Distributed Qkv — 1M+ Context Token Inference & Sub-10ms Step Latency | Elesium
+# 30-Second Short-Form Video Script: Sequence Parallelism Ring Self Attention Distributed Qkv  -  1M+ Context Token Inference & Sub-10ms Step Latency | Elesium
 
 **Target Keyword:** `sequence parallelism ring self attention distributed qkv`  
 **Key Benefit:** `1M+ Context Token Inference & Sub-10ms Step Latency`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Sequence Parallelism Ring Self Attention Distributed Qkv — 1M+ Context Token Inference & Sub-10ms Step Latency | Elesium`
+`Sequence Parallelism Ring Self Attention Distributed Qkv  -  1M+ Context Token Inference & Sub-10ms Step Latency | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-sequence-parallelism-simulator#video",
-  "name": "Sequence Parallelism Ring Self Attention Distributed Qkv \u2014 1M+ Context Token Inference & Sub-10ms Step Latency | Elesium",
+  "name": "Sequence Parallelism Ring Self Attention Distributed Qkv  -  1M+ Context Token Inference & Sub-10ms Step Latency | Elesium",
   "description": "A 30-second technical architecture breakdown of sequence parallelism ring self attention distributed qkv for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-sequence-parallelism-simulator.jpg",

@@ -27,9 +27,12 @@ from typing import Dict, List, Any, Tuple
 BASE_DIR = Path(__file__).resolve().parent
 WEBSITE_ROOT = BASE_DIR.parent
 DIST_DIR = WEBSITE_ROOT / "frontend" / "dist"
+PUBLIC_DIR = WEBSITE_ROOT / "frontend" / "public"
 SOLUTIONS_DIR = DIST_DIR / "solutions"
+PUBLIC_SOLUTIONS_DIR = PUBLIC_DIR / "solutions"
 CURATED_SOLUTIONS_PATH = BASE_DIR / "curated_enterprise_solutions.json"
 SITEMAP_CORE_PATH = DIST_DIR / "sitemap-core.xml"
+PUBLIC_SITEMAP_CORE_PATH = PUBLIC_DIR / "sitemap-core.xml"
 NGINX_CONF_PATH = BASE_DIR / "prg_faceted_nginx.conf"
 
 FACET_DEFINITIONS = {
@@ -567,10 +570,14 @@ class FacetedNavigationEngine:
                 filter_fn = facet_meta["filter_fn"]
                 matching = [s for s in self.solutions if filter_fn(s)]
 
-                # Write to disk
+                # Write to disk (both dist and public for edge serving parity)
                 facet_dir = SOLUTIONS_DIR / facet_group / facet_slug
                 facet_dir.mkdir(parents=True, exist_ok=True)
                 html_file = facet_dir / "index.html"
+
+                pub_facet_dir = PUBLIC_SOLUTIONS_DIR / facet_group / facet_slug
+                pub_facet_dir.mkdir(parents=True, exist_ok=True)
+                pub_html_file = pub_facet_dir / "index.html"
 
                 html_content = build_faceted_html_page(
                     facet_group=facet_group,
@@ -579,6 +586,7 @@ class FacetedNavigationEngine:
                     matching_solutions=matching,
                 )
                 html_file.write_text(html_content, encoding="utf-8")
+                pub_html_file.write_text(html_content, encoding="utf-8")
 
                 canonical_url = f"https://elesium.online/solutions/{facet_group}/{facet_slug}/"
                 canonical_urls.append(canonical_url)
@@ -654,6 +662,8 @@ class FacetedNavigationEngine:
             addition = "\n".join(new_entries)
             content = content.replace("</urlset>", f"{addition}\n</urlset>")
             SITEMAP_CORE_PATH.write_text(content, encoding="utf-8")
+            if PUBLIC_SITEMAP_CORE_PATH.exists():
+                PUBLIC_SITEMAP_CORE_PATH.write_text(content, encoding="utf-8")
 
 
 if __name__ == "__main__":

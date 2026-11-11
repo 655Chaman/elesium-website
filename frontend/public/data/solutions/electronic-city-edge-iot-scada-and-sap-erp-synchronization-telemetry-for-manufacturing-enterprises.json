@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Manufacturing & Industrial Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Manufacturing & Industrial",
-  "title": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises | Elesium",
-  "h1": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
+  "title": "Electronic City Edge IoT SCADA and SAP ERP | Elesium",
+  "h1": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Electronic City with sovereign VPC isolation, sub-100ms execution, and Manufacturing & Industrial compliance. Schedule an enterprise audit.",
   "targetPersona": "Chief Technology Officers & Plant Automation Directors in Electronic City",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -21,7 +21,7 @@
   "heroImageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises",
   "paragraphs": [
     "Electronics and precision manufacturing facilities across Electronic City, Bangalore, face severe data synchronization gaps between operational technology (OT) sensor rings and enterprise resource planning (ERP) systems. Legacy SCADA systems log millions of telemetry ticks from Siemens and Allen-Bradley PLCs, but manual batch synchronization into SAP S/4HANA causes hours of latency, causing blind inventory allocation, phantom stockouts, and uncoordinated production scheduling.",
-    "Our sovereign edge telemetry architecture deploys localized IoT gateway nodes right at the factory perimeter. Ingesting raw industrial protocol streams—including OPC-UA, Modbus TCP, and PROFINET—the edge telemetry agent normalizes machine states, cycle times, and scrap counts through an in-memory ring buffer. An air-gapped bidirectional connector maps line telemetry directly into SAP S/4HANA PP-PI (Production Planning for Process Industries) tables via secure RFC BAPIs.",
+    "Our sovereign edge telemetry architecture deploys localized IoT gateway nodes right at the factory perimeter. Ingesting raw industrial protocol streams - including OPC-UA, Modbus TCP, and PROFINET - the edge telemetry agent normalizes machine states, cycle times, and scrap counts through an in-memory ring buffer. An air-gapped bidirectional connector maps line telemetry directly into SAP S/4HANA PP-PI (Production Planning for Process Industries) tables via secure RFC BAPIs.",
     "The synchronization engine employs a dual-stage transactional state machine. Every production step confirmation is checked against PLC pulse counts and photo-eye sensors before posting material consumption goods issues (Movement Type 261). Network partitions trigger local NVMe write-ahead log spooling; once connectivity is restored, idempotent state replay guarantees zero dropped records and sub-1.2ms ledger reconciliation.",
     "Operational telemetry delivers verified sub-12ms event-to-ERP latency across 48 continuous manufacturing lines. The deployment eliminates manual work order confirmations, improves overall equipment effectiveness (OEE) tracking by 28.4%, and enforces complete audit traceability compliant with ISO 9001 and IEC 62443 industrial security standards."
   ],
@@ -121,7 +121,7 @@
       "title": "Deterministic Operational Capabilities & Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises",
       "copy": [
         "Electronics and precision manufacturing facilities across Electronic City, Bangalore, face severe data synchronization gaps between operational technology (OT) sensor rings and enterprise resource planning (ERP) systems. Legacy SCADA systems log millions of telemetry ticks from Siemens and Allen-Bradley PLCs, but manual batch synchronization into SAP S/4HANA causes hours of latency, causing blind inventory allocation, phantom stockouts, and uncoordinated production scheduling.",
-        "Our sovereign edge telemetry architecture deploys localized IoT gateway nodes right at the factory perimeter. Ingesting raw industrial protocol streams—including OPC-UA, Modbus TCP, and PROFINET—the edge telemetry agent normalizes machine states, cycle times, and scrap counts through an in-memory ring buffer. An air-gapped bidirectional connector maps line telemetry directly into SAP S/4HANA PP-PI (Production Planning for Process Industries) tables via secure RFC BAPIs."
+        "Our sovereign edge telemetry architecture deploys localized IoT gateway nodes right at the factory perimeter. Ingesting raw industrial protocol streams - including OPC-UA, Modbus TCP, and PROFINET - the edge telemetry agent normalizes machine states, cycle times, and scrap counts through an in-memory ring buffer. An air-gapped bidirectional connector maps line telemetry directly into SAP S/4HANA PP-PI (Production Planning for Process Industries) tables via secure RFC BAPIs."
       ],
       "bullets": [
         "OPC-UA to SAP RFC BAPI Bridge: Bi-directional gateway translating high-frequency PLC states directly into SAP S/4HANA work order confirmation documents.",

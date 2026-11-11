@@ -39,7 +39,8 @@ class TestEntitySyndicateEngine:
         """llms-full.txt must contain organization identity, sectors, benchmarks, and hubs."""
         content = (DIST_DIR / "llms-full.txt").read_text(encoding="utf-8")
         assert "Elesium Digital Systems Private Limited" in content
-        assert "Q131149202" in content
+        assert "Q131149202" not in content
+        assert "crunchbase.com" in content
         assert "DPDP Act 2023 Section 8(5)" in content
         assert "RBI Cyber Security Framework Annex II" in content
         assert "BFSI (Banking, Financial Services & Insurance)" in content

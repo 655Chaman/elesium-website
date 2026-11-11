@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Vector Database Sharding Hnsw Indexing — Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium
+# 30-Second Short-Form Video Script: Vector Database Sharding Hnsw Indexing  -  Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium
 
 **Target Keyword:** `vector database sharding hnsw indexing`  
 **Key Benefit:** `Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Vector Database Sharding Hnsw Indexing — Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium`
+`Vector Database Sharding Hnsw Indexing  -  Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-vector-db-sharding-simulator#video",
-  "name": "Vector Database Sharding Hnsw Indexing \u2014 Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium",
+  "name": "Vector Database Sharding Hnsw Indexing  -  Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings | Elesium",
   "description": "A 30-second technical architecture breakdown of vector database sharding hnsw indexing for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-vector-db-sharding-simulator.jpg",

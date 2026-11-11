@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Deterministic Loan Underwriting Agents For Bfsi — Sub-Second Credit Scoring & RBI Compliance | Elesium
+# 30-Second Short-Form Video Script: Deterministic Loan Underwriting Agents For Bfsi  -  Sub-Second Credit Scoring & RBI Compliance | Elesium
 
 **Target Keyword:** `deterministic loan underwriting agents for BFSI`  
 **Key Benefit:** `Sub-Second Credit Scoring & RBI Compliance`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Deterministic Loan Underwriting Agents For Bfsi — Sub-Second Credit Scoring & RBI Compliance | Elesium`
+`Deterministic Loan Underwriting Agents For Bfsi  -  Sub-Second Credit Scoring & RBI Compliance | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/deterministic-loan-underwriting-agents-for-bfsi#video",
-  "name": "Deterministic Loan Underwriting Agents For Bfsi \u2014 Sub-Second Credit Scoring & RBI Compliance | Elesium",
+  "name": "Deterministic Loan Underwriting Agents For Bfsi  -  Sub-Second Credit Scoring & RBI Compliance | Elesium",
   "description": "A 30-second technical architecture breakdown of deterministic loan underwriting agents for BFSI for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/deterministic-loan-underwriting-agents-for-bfsi.jpg",

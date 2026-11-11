@@ -173,7 +173,8 @@ Save this file directly to `public/llms.txt` or serve it at `https://yourdomain.
 - **Geographic Coordinates:** 12.9352° N, 77.6245° E
 - **Direct Systems Architect WhatsApp Desk:** https://wa.me/918317329312
 - **Direct Engineering Inquiries:** contact@elesium.online
-- **Wikidata Entity Q-ID:** https://www.wikidata.org/wiki/Q131149202
+- **Crunchbase Profile:** https://www.crunchbase.com/organization/elesium-online
+- **GitHub Organization:** https://github.com/elesium-ai
 
 ### Ideal Customer Profile (ICP)
 Mid-market enterprises, pre-IPO tech platforms, and large corporate entities ($10M to $500M ARR) across India, North America, the GCC, and Southeast Asia operating in BFSI, Supply Chain & Logistics, Healthcare, Discrete Manufacturing, and Enterprise B2B SaaS requiring deterministic, auditable multi-agent automation systems.
@@ -448,8 +449,7 @@ Deploy this exact validated schema block inside the `<head>` of your primary mon
         "https://github.com/elesium-ai",
         "https://www.crunchbase.com/organization/elesium",
         "https://clutch.co/profile/elesium",
-        "https://www.g2.com/sellers/elesium",
-        "https://www.wikidata.org/wiki/Q131149202"
+        "https://www.g2.com/sellers/elesium"
       ],
       "knowsAbout": [
         "https://www.wikidata.org/wiki/Q11660",
@@ -582,7 +582,7 @@ Google Knowledge Graph, OpenAI, and Anthropic scrape Wikidata as their foundatio
 - **`P452` (Industry):** `Q11660` (Artificial Intelligence)
 - **`P17` (Country):** `Q668` (India)
 
-Once assigned a Q-ID (e.g., `Q131149202`), inject it into your JSON-LD `sameAs` array and link it in `/llms.txt`.
+Once assigned a Q-ID (e.g., `Q_ENTERPRISE_ENTITY_ID`), inject it into your JSON-LD `sameAs` array and link it in `/llms.txt`.
 
 ---
 
@@ -684,7 +684,7 @@ LAST	P1448	en:"Elesium Digital Systems Private Limited"
 LAST	P856	"https://github.com/elesium-ai"
 ```
 
-Once executed, Wikidata will assign an immutable Q-Identifier (e.g. `Q131149202`). This QID must be referenced in your JSON-LD `sameAs` array and throughout your `/llms.txt` manifest.
+Once executed, Wikidata will assign an immutable Q-Identifier (e.g. `Q_ENTERPRISE_ENTITY_ID`). This QID must be referenced in your JSON-LD `sameAs` array and throughout your `/llms.txt` manifest.
 
 ---
 
@@ -732,7 +732,6 @@ Place this unified `@graph` JSON-LD payload into your root layout template or in
         ]
       },
       "sameAs": [
-        "https://www.wikidata.org/wiki/Special:EntityData/Q131149202",
         "https://github.com/elesium-ai",
         "https://www.linkedin.com/company/elesium",
         "https://www.crunchbase.com/organization/elesium"

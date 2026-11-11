@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Manufacturing & Industrial Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Manufacturing & Industrial",
-  "title": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms | Elesium",
-  "h1": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
+  "title": "Continuous Telemetry Anomaly Detection Agents for | Elesium",
+  "h1": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms with sovereign VPC. Schedule an architecture audit.",
   "targetPersona": "Semiconductor Fab Directors, Microelectronics Yield Engineers & Cleanroom Facilities Managers",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -21,7 +21,7 @@
   "heroImageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms",
   "paragraphs": [
     "Advanced semiconductor fabrication cleanrooms (Class 1 / ISO Class 3) operate under near-impossible environmental tolerances. Nanometer-scale photolithography and plasma etching processes are vulnerable to microscopic fluctuations: parts-per-billion chemical contamination, milli-Hertz floor vibrations from nearby construction, or millibar fluctuations in vacuum and ultra-pure argon lines can ruin millions of dollars in silicon wafer lots.",
-    "Our sovereign semiconductor telemetry platform deploys multivariate transformer anomaly detection models directly on on-premises edge computing nodes within the fab. Ingesting over 200,000 sensor telemetry channels per second—spanning seismic geophones, laser particle counters, mass spectrometer gas purifiers, and chilled water pressure sensors—the agent constructs dynamic multi-sensor correlation matrices.",
+    "Our sovereign semiconductor telemetry platform deploys multivariate transformer anomaly detection models directly on on-premises edge computing nodes within the fab. Ingesting over 200,000 sensor telemetry channels per second - spanning seismic geophones, laser particle counters, mass spectrometer gas purifiers, and chilled water pressure sensors - the agent constructs dynamic multi-sensor correlation matrices.",
     "The anomaly detection state machine detects subtle pre-cursor drift signatures up to 45 minutes before critical machine tolerance thresholds are breached. When gas delivery manifolds show micro-cavitation or HVAC HEPA fans show harmonic bearing degradation, the system pinpoints the root cause sensor group and notifies fab process engineers before wafer defects manifest.",
     "Deployed across front-end-of-line (FEOL) and back-end-of-line (BEOL) fab bays, the solution improves overall wafer yield by 3.8%, prevents catastrophic tool crash events, and provides complete SEMI E10 equipment reliability and E30 GEM/SECS-II event records."
   ],
@@ -121,7 +121,7 @@
       "title": "Deterministic Operational Capabilities & Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms",
       "copy": [
         "Advanced semiconductor fabrication cleanrooms (Class 1 / ISO Class 3) operate under near-impossible environmental tolerances. Nanometer-scale photolithography and plasma etching processes are vulnerable to microscopic fluctuations: parts-per-billion chemical contamination, milli-Hertz floor vibrations from nearby construction, or millibar fluctuations in vacuum and ultra-pure argon lines can ruin millions of dollars in silicon wafer lots.",
-        "Our sovereign semiconductor telemetry platform deploys multivariate transformer anomaly detection models directly on on-premises edge computing nodes within the fab. Ingesting over 200,000 sensor telemetry channels per second—spanning seismic geophones, laser particle counters, mass spectrometer gas purifiers, and chilled water pressure sensors—the agent constructs dynamic multi-sensor correlation matrices."
+        "Our sovereign semiconductor telemetry platform deploys multivariate transformer anomaly detection models directly on on-premises edge computing nodes within the fab. Ingesting over 200,000 sensor telemetry channels per second - spanning seismic geophones, laser particle counters, mass spectrometer gas purifiers, and chilled water pressure sensors - the agent constructs dynamic multi-sensor correlation matrices."
       ],
       "bullets": [
         "200,000 Channels/Sec Ingestion: Ultra-high-throughput edge streaming across distributed semiconductor fab sensor grids.",

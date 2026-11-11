@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters — Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium
+# 30-Second Short-Form Video Script: Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters  -  Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium
 
 **Target Keyword:** `dualpipe bidirectional pipeline parallelism orchestrators for deepseek clusters`  
 **Key Benefit:** `Zero-Bubble Execution & 63%+ Model Flops Utilization`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters — Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium`
+`Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters  -  Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-dualpipe-pipeline-parallelism-simulator#video",
-  "name": "Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters \u2014 Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium",
+  "name": "Dualpipe Bidirectional Pipeline Parallelism Orchestrators For Deepseek Clusters  -  Zero-Bubble Execution & 63%+ Model Flops Utilization | Elesium",
   "description": "A 30-second technical architecture breakdown of dualpipe bidirectional pipeline parallelism orchestrators for deepseek clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-dualpipe-pipeline-parallelism-simulator.jpg",

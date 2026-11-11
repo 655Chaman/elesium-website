@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Flashdecoding Sequence Parallelization Enterprise Llms — Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium
+# 30-Second Short-Form Video Script: Flashdecoding Sequence Parallelization Enterprise Llms  -  Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium
 
 **Target Keyword:** `flashdecoding sequence parallelization enterprise llms`  
 **Key Benefit:** `Split-KV Parallel Attention & Sub-10ms Long-Context Generation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Flashdecoding Sequence Parallelization Enterprise Llms — Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium`
+`Flashdecoding Sequence Parallelization Enterprise Llms  -  Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-flashdecoding-parallelism-simulator#video",
-  "name": "Flashdecoding Sequence Parallelization Enterprise Llms \u2014 Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium",
+  "name": "Flashdecoding Sequence Parallelization Enterprise Llms  -  Split-KV Parallel Attention & Sub-10ms Long-Context Generation | Elesium",
   "description": "A 30-second technical architecture breakdown of flashdecoding sequence parallelization enterprise llms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-flashdecoding-parallelism-simulator.jpg",

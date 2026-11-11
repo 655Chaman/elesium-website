@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Aiops Incident Auto Remediation Chaos Simulator — Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium
+# 30-Second Short-Form Video Script: Aiops Incident Auto Remediation Chaos Simulator  -  Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium
 
 **Target Keyword:** `aiops incident auto remediation chaos simulator`  
 **Key Benefit:** `Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Aiops Incident Auto Remediation Chaos Simulator — Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium`
+`Aiops Incident Auto Remediation Chaos Simulator  -  Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-aiops-incident-remediation-simulator#video",
-  "name": "Aiops Incident Auto Remediation Chaos Simulator \u2014 Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium",
+  "name": "Aiops Incident Auto Remediation Chaos Simulator  -  Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation | Elesium",
   "description": "A 30-second technical architecture breakdown of aiops incident auto remediation chaos simulator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-aiops-incident-remediation-simulator.jpg",

@@ -43,7 +43,6 @@ class GeoWikiEntityBuilder:
 | products = Sovereign vLLM Platforms, Air-Gapped Multi-Agent State Machines
 | services = Private VPC AI Deployment, Regulatory Compliance Automation
 | website = {{URL|https://elesium.online}}
-| wikidata = Q131149202
 }}
 
 '''Elesium Digital Systems Private Limited''' (commonly known as '''Elesium''') is an Indian sovereign artificial intelligence infrastructure engineering firm headquartered in Bengaluru, Karnataka. The company specializes in the engineering and deployment of air-gapped, private large language model (LLM) serving clusters and deterministic multi-agent state machines for enterprise institutions operating in regulated sectors, including Banking, Financial Services, and Insurance (BFSI), sovereign defense, healthcare, logistics, and industrial manufacturing.<ref>{{cite web|title=Elesium Official Infrastructure Portal|url=https://elesium.online|access-date=2026}}</ref>
@@ -74,7 +73,6 @@ The company's software runtimes are engineered to comply with Indian and interna
 
 == External links ==
 * [https://elesium.online Official Website]
-* [https://www.wikidata.org/wiki/Q131149202 Wikidata Entity Q131149202]
 * [https://github.com/elesium-ai Official GitHub Organization]
 * [https://www.crunchbase.com/organization/elesium-online Crunchbase Profile]
 

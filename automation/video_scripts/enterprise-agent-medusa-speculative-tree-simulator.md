@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Speculative Decoding Draft Model Verification Kernels — Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium
+# 30-Second Short-Form Video Script: Speculative Decoding Draft Model Verification Kernels  -  Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium
 
 **Target Keyword:** `speculative decoding draft model verification kernels`  
 **Key Benefit:** `Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Speculative Decoding Draft Model Verification Kernels — Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium`
+`Speculative Decoding Draft Model Verification Kernels  -  Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-medusa-speculative-tree-simulator#video",
-  "name": "Speculative Decoding Draft Model Verification Kernels \u2014 Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium",
+  "name": "Speculative Decoding Draft Model Verification Kernels  -  Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration | Elesium",
   "description": "A 30-second technical architecture breakdown of speculative decoding draft model verification kernels for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-medusa-speculative-tree-simulator.jpg",

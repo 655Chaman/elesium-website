@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters — Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium
+# 30-Second Short-Form Video Script: Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters  -  Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium
 
 **Target Keyword:** `asynchronous gpu checkpointing memory offload daemons for slurm clusters`  
 **Key Benefit:** `Sub-50ms Masked Saves & Zero-Downtime Slurm Failover`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters — Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium`
+`Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters  -  Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-async-checkpointing-simulator#video",
-  "name": "Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters \u2014 Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium",
+  "name": "Asynchronous Gpu Checkpointing Memory Offload Daemons For Slurm Clusters  -  Sub-50ms Masked Saves & Zero-Downtime Slurm Failover | Elesium",
   "description": "A 30-second technical architecture breakdown of asynchronous gpu checkpointing memory offload daemons for slurm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-async-checkpointing-simulator.jpg",

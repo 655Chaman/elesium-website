@@ -48,6 +48,16 @@ except ImportError:
     except ImportError:
         SILO_KNOWLEDGE_MESH, STATUTORY_ENTITIES, ORGANIZATION_ENTITY = {}, {}, {}
 
+GROUNDING_CAPSULES_FILE = BASE_DIR / "automation" / "geo_grounding_capsules.json"
+_GROUNDING_CAPSULES = {}
+if GROUNDING_CAPSULES_FILE.exists():
+    try:
+        raw_caps = json.loads(GROUNDING_CAPSULES_FILE.read_text(encoding="utf-8"))
+        for c in raw_caps.get("capsules", []):
+            _GROUNDING_CAPSULES.setdefault(c["solution_slug"], []).append(c)
+    except Exception as e:
+        print(f"Warning loading grounding capsules: {e}")
+
 def load_commercial_urls():
     if COMMERCIAL_URLS_PATH.exists():
         try:
@@ -103,8 +113,8 @@ def load_solutions_via_node():
                     solutions.append({
                         "id": item.get("id", slug),
                         "slug": slug,
-                        "h1": f"{keyword} — {benefit}",
-                        "title": f"{keyword} — {benefit} | Elesium",
+                        "h1": f"{keyword} - {benefit}",
+                        "title": f"{keyword} - {benefit} | Elesium",
                         "metaDescription": f"Deploy {keyword} with sub-200ms deterministic workflows, private VPC security, and enterprise ERP integration. Request an architecture audit.",
                         "hubCategory": item.get("hub_category", "Logistics & Supply Chain"),
                         "category": item.get("hub_category", "Logistics & Supply Chain"),
@@ -510,8 +520,14 @@ def render_solution_semantic_html(sol, all_sols=None):
       </div>
     </div>"""
 
-    peers = get_peer_solutions_in_silo(slug, silo_id, all_sols or [], count=4)
-    if is_curated or not peers:
+    if all_sols and all(isinstance(p, dict) and p.get("slug") != slug for p in all_sols) and 0 < len(all_sols) <= 4:
+        peers = all_sols
+    else:
+        peers = get_peer_solutions_in_silo(slug, silo_id, all_sols or [], count=4)
+        if not peers and all_sols:
+            peers = [p for p in all_sols if isinstance(p, dict) and p.get("slug") != slug][:4]
+
+    if not peers:
         peers_section_html = ""
     else:
         peer_cards_html = "".join(
@@ -530,7 +546,7 @@ def render_solution_semantic_html(sol, all_sols=None):
             for p in peers
         )
         peers_section_html = f"""
-    <section class="thematic-cluster-peers" style="margin:3rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;">
+    <section class="thematic-cluster-peers" data-rag-chunk="thematic-cluster-peers" style="margin:3rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.5rem;">
         <div>
           <h2 style="font-size:1.35rem;font-weight:800;color:#111827;margin:0;">Thematic Cluster Peers: Related {silo_name_esc} Workflows</h2>
@@ -545,10 +561,10 @@ def render_solution_semantic_html(sol, all_sols=None):
     """
 
     benchmarks_section_html = f"""
-    <section style="margin:2.5rem 0;" id="empirical-benchmarks">
+    <section data-rag-chunk="empirical-benchmarks" style="margin:2.5rem 0;" id="empirical-benchmarks">
       {bench_table_html}
     </section>
-    <section style="margin:2.5rem 0;" id="hardware-specification">
+    <section data-rag-chunk="hardware-specification" style="margin:2.5rem 0;" id="hardware-specification">
       {hw_card_html}
     </section>
     """ if (is_curated and bench_table_html) else ""
@@ -685,7 +701,32 @@ def render_solution_semantic_html(sol, all_sols=None):
     </section>
     """
 
-    return f"""
+    slug_capsules = _GROUNDING_CAPSULES.get(slug, [])
+    grounding_section_html = ""
+    if slug_capsules:
+        caps_blocks = []
+        for c in slug_capsules:
+            h2_text = html.escape(c["h2_heading"])
+            ans_text = html.escape(c["declarative_answer_capsule"])
+            stage_name = html.escape(c.get("funnel_stage", "direct_answer").replace("_", " ").title())
+            caps_blocks.append(f"""
+      <div class="grounding-capsule-item" style="background:#ffffff;border:1px solid #bbf7d0;border-left:4px solid #16a34a;border-radius:0.5rem;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+        <div style="font-size:0.7rem;font-weight:700;color:#15803d;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">Direct-Answer Invariant • {stage_name}</div>
+        <h2 style="font-size:1.35rem;font-weight:700;color:#111827;margin:0 0 0.75rem 0;line-height:1.4;">{h2_text}</h2>
+        <p style="font-size:1rem;line-height:1.6;color:#374151;margin:0;">{ans_text}</p>
+      </div>""")
+        grounding_section_html = f"""
+    <section data-rag-chunk="grounding-capsules" class="answer-grounding-section" style="margin:2.5rem 0;border-top:2px solid #e5e7eb;padding-top:2rem;">
+      <div style="margin-bottom:1.5rem;">
+        <span style="font-size:0.75rem;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.08em;background:#ecfdf5;padding:0.25rem 0.6rem;border-radius:0.375rem;border:1px solid #a7f3d0;">Walker Direct-Answer Invariant</span>
+        <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0.5rem 0 0.25rem 0;">Deterministic Architectural Direct Answers</h2>
+        <p style="font-size:0.875rem;color:#6b7280;margin:0;">Audited declarative answers optimized for LLM RAG pipelines, zero-shot answer retrieval, and statutory compliance audits.</p>
+      </div>
+      {"".join(caps_blocks)}
+    </section>
+    """
+
+    rendered_html = f"""
 <main id="main-content">
 <div id="prerendered-solution" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header style="margin-bottom:2.5rem;">
@@ -707,15 +748,15 @@ def render_solution_semantic_html(sol, all_sols=None):
     {evidence_cards_html}
   </header>
   <div class="solution-body">
-    <section style="margin:2.5rem 0;">
+    <section data-rag-chunk="operational-capabilities" style="margin:2.5rem 0;">
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Deterministic Operational Capabilities</h2>
       {f'<ul style="list-style-type:none;padding:0;">{caps_html}</ul>' if caps_html else ''}
       <div style="margin-top:1.5rem;">{p_html}</div>
     </section>
     {benchmarks_section_html}
     {tool_callout_html}
-    {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Technical Specifications &amp; SLAs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">{specs_html}</div></section>' if specs_html else ''}
-    <section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;background:#f9fafb;padding:1.5rem;border-radius:0.5rem;">
+    {f'<section data-rag-chunk="technical-specifications" style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Technical Specifications &amp; SLAs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">{specs_html}</div></section>' if specs_html else ''}
+    <section data-rag-chunk="sovereignty-compliance" style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;background:#f9fafb;padding:1.5rem;border-radius:0.5rem;">
       <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">{html.escape(trust_title)}</h3>
       <p style="color:#4b5563;margin-bottom:0.75rem;">{html.escape(trust_sla)}</p>
       <ul style="list-style-type:none;padding:0;margin:0;">{badges_html}</ul>
@@ -724,7 +765,8 @@ def render_solution_semantic_html(sol, all_sols=None):
         <a href="/ai-automation-agency-india/" style="color:#059669;font-weight:600;text-decoration:underline;">{rotating_anchor} &rarr;</a>
       </div>
     </section>
-    {f'<section style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
+    {grounding_section_html}
+    {f'<section data-rag-chunk="frequently-asked-questions" style="margin:2.5rem 0;border-top:1px solid #e5e7eb;padding-top:2rem;"><h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently Asked Questions</h2><dl>{faqs_html}</dl></section>' if faqs_html else ''}
     {pricing_section_html}
     {right_fit_section}
     {peers_section_html}
@@ -738,6 +780,7 @@ def render_solution_semantic_html(sol, all_sols=None):
 </div>
 </main>
 """
+    return rendered_html.replace("—", " - ")
 
 def render_category_pillar_hub_semantic_html(silo_id: str, silo_data: Dict[str, Any], silo_solutions: List[Dict[str, Any]]) -> str:
     """
@@ -1553,7 +1596,7 @@ def render_commercial_directory_semantic_html(items):
     <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
       <div class="flex flex-col gap-1.5">
         <span class="text-xs font-semibold tracking-wider text-gray-900 dark:text-white uppercase">
-          Elesium — India's Principal Enterprise AI &amp; Multi-Agent Engineering Firm
+          Elesium - India's Principal Enterprise AI &amp; Multi-Agent Engineering Firm
         </span>
         <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
           Headquartered in Bangalore, Karnataka, India. Engineering sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for Fortune 500, BFSI, and high-growth industrial leaders across India and global markets.
@@ -1582,7 +1625,7 @@ def render_commercial_directory_semantic_html(items):
         <a href="/commercial-directory.html" class="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</a>
         <a href="/resources/" class="hover:text-black dark:hover:text-white transition">Resources</a>
         <a href="/waitlist/" class="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</a>
-        <a href="/sitemap-commercial-top100.xml" class="hover:text-black dark:hover:text-white transition">Top-100 Sitemap</a>
+        <a href="/sitemap-solutions.xml" class="hover:text-black dark:hover:text-white transition">Top-100 Sitemap</a>
         <a href="/sitemap.xml" class="hover:text-black dark:hover:text-white transition">Sitemap</a>
       </div>
     </div>
@@ -7121,7 +7164,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
         Modern enterprise organizations across {city_name} face an acute architectural dilemma: public commercial LLM APIs offer rapid prototyping but expose confidential business data, proprietary source code, and customer records to third-party model training pipelines and foreign subpoena jurisdictions. Under India&apos;s <strong>Digital Personal Data Protection (DPDP) Act 2023</strong> and sector-specific statutory guidelines, transmitting unstructured enterprise telemetry to overseas cloud endpoints represents an unacceptable regulatory liability.
       </p>
       <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
-        Elesium resolves this bottleneck by architecting completely sovereign, private VPC multi-agent clusters. We containerize state-of-the-art open-weights model architectures—including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5—directly inside client-owned cloud perimeters (AWS ap-south-1 Mumbai, Azure Central India, or local on-premise bare-metal NVIDIA clusters). Utilizing <strong>vLLM PagedAttention</strong> and custom FP8 quantization kernels, our nodes achieve sub-2.0s end-to-end task execution with time-to-first-token latencies under 20ms, running entirely behind your corporate firewall with zero external telemetry egress.
+        Elesium resolves this bottleneck by architecting completely sovereign, private VPC multi-agent clusters. We containerize state-of-the-art open-weights model architectures, including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5, directly inside client-owned cloud perimeters (AWS ap-south-1 Mumbai, Azure Central India, or local on-premise bare-metal NVIDIA clusters). Utilizing <strong>vLLM PagedAttention</strong> and custom FP8 quantization kernels, our nodes achieve sub-2.0s end-to-end task execution with time-to-first-token latencies under 20ms, running entirely behind your corporate firewall with zero external telemetry egress.
       </p>
       <div style="background:#f8fafc;border-left:4px solid #059669;padding:1.25rem;border-radius:0.5rem;font-size:0.9rem;line-height:1.6;color:#1e293b;">
         <strong>Statutory Compliance Guarantee:</strong> Every deployment engineered by Elesium includes cryptographically verifiable audit trails, role-based token gating, and complete zero-retention logging. Customer datasets, fine-tuning weights, and agent scratchpads remain strictly confined to your sovereign network boundaries at all times.
@@ -7887,7 +7930,7 @@ def render_international_hub_semantic_html(region_key: str) -> str:
         For enterprise leaders operating across {region_name}, commercial cloud API models introduce severe regulatory vulnerabilities, risk of proprietary IP leakage into public foundation model corpora, and unexpected per-token pricing escalation. Sending sensitive customer records, financial ledgers, or proprietary source code to shared public endpoints violates regional compliance standards.
       </p>
       <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1.25rem;">
-        Elesium engineers custom, sovereign private VPC clusters containerized within your corporate cloud perimeter ({cloud_data_centers}). Our architectures leverage state-of-the-art open-weights model backbones—including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5—accelerated with <strong>vLLM PagedAttention</strong> and custom FP8 quantization. This produces sub-2.0s multi-agent reasoning, sub-20ms time-to-first-token throughput, and up to 74% compute cost reduction compared to legacy API routes, all operating strictly behind your firewall.
+        Elesium engineers custom, sovereign private VPC clusters containerized within your corporate cloud perimeter ({cloud_data_centers}). Our architectures leverage state-of-the-art open-weights model backbones, including DeepSeek-V3, Llama-3.3-70B, and Qwen-2.5, accelerated with <strong>vLLM PagedAttention</strong> and custom FP8 quantization. This produces sub-2.0s multi-agent reasoning, sub-20ms time-to-first-token throughput, and up to 74% compute cost reduction compared to legacy API routes, all operating strictly behind your firewall.
       </p>
       <div style="background:#f8fafc;border-left:4px solid #059669;padding:1.25rem;border-radius:0.5rem;font-size:0.9rem;line-height:1.6;color:#1e293b;">
         <strong>Sovereign Zero-Retention Guarantee:</strong> Zero external API egress. Zero customer telemetry retention. All model weights, fine-tuned LoRA adapters, and agent scratchpad memories remain permanently within your dedicated tenant VPC boundary.
@@ -8126,7 +8169,7 @@ def replace_canonical(html_content, target_url):
     For all other deep programmatic and utility pages, injects self-referential
     hreflang tags (en, x-default) to prevent Googlebot 404 hreflang errors.
     """
-    pattern = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\'][^"\']*["\']\s*/?>', re.IGNORECASE)
+    pattern = re.compile(r'<link\s+[^>]*rel=["\']canonical["\'][^>]*>|<link\s+[^>]*href=["\'][^"\']*["\'][^>]*rel=["\']canonical["\'][^>]*>', re.IGNORECASE)
     replacement = f'<link rel="canonical" href="{target_url}" />'
     if pattern.search(html_content):
         html_content = pattern.sub(replacement, html_content)
@@ -8135,7 +8178,7 @@ def replace_canonical(html_content, target_url):
         html_content = html_content.replace("</head>", f'  {replacement}\n</head>')
 
     # Remove all existing hreflang tags to avoid duplicates/stale tags
-    html_content = re.sub(r'\s*<link\s+rel=["\']alternate["\']\s+hreflang=["\'][^"\']*["\']\s+href=["\'][^"\']*["\']\s*/?>', '', html_content, flags=re.IGNORECASE)
+    html_content = re.sub(r'\s*<link\s+[^>]*hreflang=["\'][^"\']*["\'][^>]*>', '', html_content, flags=re.IGNORECASE)
 
     # Inject appropriate hreflang tags right after canonical
     if target_url in RECIPROCAL_HREFLANG_URLS:
@@ -10791,7 +10834,7 @@ def generate_ssg():
             "desc": "Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows."
         },
         "how-we-work": {
-            "title": "How We Work — Sovereign AI Engineering",
+            "title": "How We Work - Sovereign AI Engineering",
             "desc": "Elesium's 4-stage engineering protocol: 14-day sovereign pilot sprint, deterministic LangGraph FSM, private VPCs, and contractual 90-day ROI."
         },
         "markets": {
@@ -10800,7 +10843,7 @@ def generate_ssg():
         },
         "resources": {
             "title": "AI Automation Resources & Guides",
-            "desc": "Free AI automation playbooks, case studies and implementation guides from Elesium — India's leading AI automation agency."
+            "desc": "Free AI automation playbooks, case studies and implementation guides from Elesium - India's leading AI automation agency."
         },
         "tools": {
             "title": "Enterprise AI Calculators & Architecture Simulators",
@@ -10863,7 +10906,7 @@ def generate_ssg():
             "desc": "Elesium UAE delivers sovereign enterprise AI automation, private VPC nodes on AWS UAE (me-central-1), and compliance with UAE Law 45/2021, DIFC, and ADGM."
         },
         "waitlist": {
-            "title": "ele-in Waitlist — Enterprise AI Platform",
+            "title": "ele-in Waitlist - Enterprise AI Platform",
             "desc": "Join the private alpha waitlist for ele-in, Elesium's autonomous multi-agent enterprise SaaS platform. Deploy deterministic workflows with DPDP compliance."
         },
         "audit": {
@@ -11475,7 +11518,7 @@ def generate_ssg():
             "desc": "Interactive embed widget modeling MLA compressed latents, DualPipe bidirectional overlap, and MTP speculative drafting."
         },
         "authors/chaman-shah": {
-            "title": "Chaman Shah — Principal AI Systems Architect",
+            "title": "Chaman Shah - Principal AI Systems Architect",
             "desc": "Principal AI Systems Architect and Founder at Elesium. Engineering sovereign multi-agent systems, private VPC vLLM clusters, and enterprise infrastructure."
         },
         "team": {
@@ -11731,15 +11774,15 @@ def generate_ssg():
       <h2 style="font-size:1.75rem;font-weight:700;color:#111827;margin-bottom:1rem;">Production Investment Tiers & Deliverables</h2>
       <ul style="list-style-type:none;padding:0;">
         <li style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.5rem;margin-bottom:1rem;">
-          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">Pilot Architecture Sprint — ₹1,50,000 to ₹3,50,000</h3>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">Pilot Architecture Sprint - ₹1,50,000 to ₹3,50,000</h3>
           <p style="color:#4b5563;margin:0.5rem 0;">Single-Process Deterministic Agent, Private Cloud Staging Deployment, FastAPI + LangGraph Architecture, 14-Day Delivery Guarantee.</p>
         </li>
         <li style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.5rem;margin-bottom:1rem;">
-          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">Enterprise Multi-Agent Suite — ₹6,00,000 to ₹15,00,000</h3>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">Enterprise Multi-Agent Suite - ₹6,00,000 to ₹15,00,000</h3>
           <p style="color:#4b5563;margin:0.5rem 0;">Multi-Agent Collaborative Triad (LangGraph), Private VPC / Zero-Data-Retention Deployment, Deep Legacy ERP/SAP & SQL Integration, 99.9% Production SLA & 90-Day ROI Guarantee.</p>
         </li>
         <li style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;padding:1.5rem;margin-bottom:1rem;">
-          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">Autonomous Engineering Pod — ₹4,50,000 / month</h3>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-top:0;">Autonomous Engineering Pod - ₹4,50,000 / month</h3>
           <p style="color:#4b5563;margin:0.5rem 0;">3 Dedicated AI Systems Engineers + Architect, Continuous Fine-Tuning & Vector Optimization, Omnichannel Voice + WhatsApp Systems, 1-Hour Critical Incident Response SLA.</p>
         </li>
       </ul>

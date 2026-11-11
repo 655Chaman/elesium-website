@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Sliding Window Attention Ring Kv Eviction Streaming Llm — Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium
+# 30-Second Short-Form Video Script: Sliding Window Attention Ring Kv Eviction Streaming Llm  -  Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium
 
 **Target Keyword:** `sliding window attention ring kv eviction streaming llm`  
 **Key Benefit:** `Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Sliding Window Attention Ring Kv Eviction Streaming Llm — Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium`
+`Sliding Window Attention Ring Kv Eviction Streaming Llm  -  Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-sliding-window-attention-simulator#video",
-  "name": "Sliding Window Attention Ring Kv Eviction Streaming Llm \u2014 Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium",
+  "name": "Sliding Window Attention Ring Kv Eviction Streaming Llm  -  Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation | Elesium",
   "description": "A 30-second technical architecture breakdown of sliding window attention ring kv eviction streaming llm for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-sliding-window-attention-simulator.jpg",

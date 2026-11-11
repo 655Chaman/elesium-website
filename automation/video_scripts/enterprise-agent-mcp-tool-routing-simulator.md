@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Model Context Protocol Multi Server Routing — Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium
+# 30-Second Short-Form Video Script: Model Context Protocol Multi Server Routing  -  Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium
 
 **Target Keyword:** `model context protocol multi server routing`  
 **Key Benefit:** `Dynamic Tool Routing, Speculative Execution & Context Pruning`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Model Context Protocol Multi Server Routing — Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium`
+`Model Context Protocol Multi Server Routing  -  Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-mcp-tool-routing-simulator#video",
-  "name": "Model Context Protocol Multi Server Routing \u2014 Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium",
+  "name": "Model Context Protocol Multi Server Routing  -  Dynamic Tool Routing, Speculative Execution & Context Pruning | Elesium",
   "description": "A 30-second technical architecture breakdown of model context protocol multi server routing for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-mcp-tool-routing-simulator.jpg",

@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Speculative Decoding Tree Based Draft Verification Branch Pruning — Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium
+# 30-Second Short-Form Video Script: Speculative Decoding Tree Based Draft Verification Branch Pruning  -  Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium
 
 **Target Keyword:** `speculative decoding tree based draft verification branch pruning`  
 **Key Benefit:** `Dynamic Draft Tree Slicing & Sub-8ms Verification Latency`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Speculative Decoding Tree Based Draft Verification Branch Pruning — Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium`
+`Speculative Decoding Tree Based Draft Verification Branch Pruning  -  Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-speculative-verification-simulator#video",
-  "name": "Speculative Decoding Tree Based Draft Verification Branch Pruning \u2014 Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium",
+  "name": "Speculative Decoding Tree Based Draft Verification Branch Pruning  -  Dynamic Draft Tree Slicing & Sub-8ms Verification Latency | Elesium",
   "description": "A 30-second technical architecture breakdown of speculative decoding tree based draft verification branch pruning for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-speculative-verification-simulator.jpg",

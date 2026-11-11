@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters — 90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium
+# 30-Second Short-Form Video Script: Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters  -  90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium
 
 **Target Keyword:** `multi-head latent attention mla low-rank kv-cache compression daemons for deepseek clusters`  
 **Key Benefit:** `90% VRAM Footprint Reduction & 512+ Stream Concurrency`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters — 90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium`
+`Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters  -  90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-mla-latent-projection-simulator#video",
-  "name": "Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters \u2014 90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium",
+  "name": "Multi-Head Latent Attention Mla Low-Rank Kv-Cache Compression Daemons For Deepseek Clusters  -  90% VRAM Footprint Reduction & 512+ Stream Concurrency | Elesium",
   "description": "A 30-second technical architecture breakdown of multi-head latent attention mla low-rank kv-cache compression daemons for deepseek clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-mla-latent-projection-simulator.jpg",

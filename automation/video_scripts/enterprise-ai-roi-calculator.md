@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Enterprise Ai Roi Calculator — Model Labor Savings & Capital Payback | Elesium
+# 30-Second Short-Form Video Script: Enterprise Ai Roi Calculator  -  Model Labor Savings & Capital Payback | Elesium
 
 **Target Keyword:** `enterprise AI ROI calculator`  
 **Key Benefit:** `Model Labor Savings & Capital Payback`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Enterprise Ai Roi Calculator — Model Labor Savings & Capital Payback | Elesium`
+`Enterprise Ai Roi Calculator  -  Model Labor Savings & Capital Payback | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-ai-roi-calculator#video",
-  "name": "Enterprise Ai Roi Calculator \u2014 Model Labor Savings & Capital Payback | Elesium",
+  "name": "Enterprise Ai Roi Calculator  -  Model Labor Savings & Capital Payback | Elesium",
   "description": "A 30-second technical architecture breakdown of enterprise AI ROI calculator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-ai-roi-calculator.jpg",

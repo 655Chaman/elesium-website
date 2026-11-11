@@ -1,4 +1,4 @@
-# Elesium — BFSI & Algorithmic Trading AI Systems Manifest
+# Elesium - BFSI & Algorithmic Trading AI Systems Manifest
 > Machine Context for Quantitative Trading Directors, FinTech CTOs, and Risk Management Architects.
 
 ## Core Capabilities
@@ -8,8 +8,9 @@
 - **Automated Loan Underwriting:** LangGraph state machine credit risk adjudication with AST logit masking.
 
 ## Representative Verified Endpoints
-- https://elesium.online/solutions/sub-200ms-multi-broker-ledger-reconciliation-daemons-for-fintechs/
-- https://elesium.online/solutions/sec-17a-4-immutable-audit-trail-generators-for-algorithmic-trading/
-- https://elesium.online/solutions/mifid-ii-compliant-transaction-reporting-pipelines-in-python/
-- https://elesium.online/solutions/high-frequency-order-book-anomaly-detection-agents-with-vllm/
-- https://elesium.online/solutions/automated-commercial-loan-underwriting-state-machines-for-banks/
+- https://elesium.online/solutions/vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india/
+- https://elesium.online/solutions/rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors/
+- https://elesium.online/solutions/air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing/
+- https://elesium.online/solutions/rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks/
+- https://elesium.online/solutions/rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks/
+- https://elesium.online/solutions/dpdp-act-statutory-audit-trail-kv-cache-generators-for-fintech-underwriting/

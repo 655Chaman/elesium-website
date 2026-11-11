@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: 21 Cfr Part 11 Electronic Batch Record Automation — Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium
+# 30-Second Short-Form Video Script: 21 Cfr Part 11 Electronic Batch Record Automation  -  Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium
 
 **Target Keyword:** `21 cfr part 11 electronic batch record automation`  
 **Key Benefit:** `Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`21 Cfr Part 11 Electronic Batch Record Automation — Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium`
+`21 Cfr Part 11 Electronic Batch Record Automation  -  Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-cfr-part-11-validation-simulator#video",
-  "name": "21 Cfr Part 11 Electronic Batch Record Automation \u2014 Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium",
+  "name": "21 Cfr Part 11 Electronic Batch Record Automation  -  Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance | Elesium",
   "description": "A 30-second technical architecture breakdown of 21 cfr part 11 electronic batch record automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-cfr-part-11-validation-simulator.jpg",

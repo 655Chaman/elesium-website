@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Tensor Parallelism Megatron Column Row All-Reduce Overlap — Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium
+# 30-Second Short-Form Video Script: Tensor Parallelism Megatron Column Row All-Reduce Overlap  -  Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium
 
 **Target Keyword:** `tensor parallelism megatron column row all-reduce overlap`  
 **Key Benefit:** `Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Tensor Parallelism Megatron Column Row All-Reduce Overlap — Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium`
+`Tensor Parallelism Megatron Column Row All-Reduce Overlap  -  Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-tensor-parallelism-simulator#video",
-  "name": "Tensor Parallelism Megatron Column Row All-Reduce Overlap \u2014 Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium",
+  "name": "Tensor Parallelism Megatron Column Row All-Reduce Overlap  -  Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier | Elesium",
   "description": "A 30-second technical architecture breakdown of tensor parallelism megatron column row all-reduce overlap for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-tensor-parallelism-simulator.jpg",

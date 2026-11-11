@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Post Training Quantization Awq Fp8 Calibration — AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium
+# 30-Second Short-Form Video Script: Post Training Quantization Awq Fp8 Calibration  -  AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium
 
 **Target Keyword:** `post training quantization awq fp8 calibration`  
 **Key Benefit:** `AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Post Training Quantization Awq Fp8 Calibration — AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium`
+`Post Training Quantization Awq Fp8 Calibration  -  AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-ptq-quantization-perplexity-simulator#video",
-  "name": "Post Training Quantization Awq Fp8 Calibration \u2014 AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium",
+  "name": "Post Training Quantization Awq Fp8 Calibration  -  AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration | Elesium",
   "description": "A 30-second technical architecture breakdown of post training quantization awq fp8 calibration for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-ptq-quantization-perplexity-simulator.jpg",

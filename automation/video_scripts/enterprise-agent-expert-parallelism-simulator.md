@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Expert Parallelism Moe Dynamic Dispatch All To All Overlap — Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium
+# 30-Second Short-Form Video Script: Expert Parallelism Moe Dynamic Dispatch All To All Overlap  -  Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium
 
 **Target Keyword:** `expert parallelism moe dynamic dispatch all to all overlap`  
 **Key Benefit:** `Sub-8ms Sparse MoE Inference & Top-k Routing Optimization`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Expert Parallelism Moe Dynamic Dispatch All To All Overlap — Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium`
+`Expert Parallelism Moe Dynamic Dispatch All To All Overlap  -  Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-expert-parallelism-simulator#video",
-  "name": "Expert Parallelism Moe Dynamic Dispatch All To All Overlap \u2014 Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium",
+  "name": "Expert Parallelism Moe Dynamic Dispatch All To All Overlap  -  Sub-8ms Sparse MoE Inference & Top-k Routing Optimization | Elesium",
   "description": "A 30-second technical architecture breakdown of expert parallelism moe dynamic dispatch all to all overlap for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-expert-parallelism-simulator.jpg",

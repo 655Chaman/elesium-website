@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Abdm Fhir Health Information Exchange Privacy — Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium
+# 30-Second Short-Form Video Script: Abdm Fhir Health Information Exchange Privacy  -  Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium
 
 **Target Keyword:** `abdm fhir health information exchange privacy`  
 **Key Benefit:** `Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Abdm Fhir Health Information Exchange Privacy — Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium`
+`Abdm Fhir Health Information Exchange Privacy  -  Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-abdm-fhir-privacy-simulator#video",
-  "name": "Abdm Fhir Health Information Exchange Privacy \u2014 Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium",
+  "name": "Abdm Fhir Health Information Exchange Privacy  -  Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy | Elesium",
   "description": "A 30-second technical architecture breakdown of abdm fhir health information exchange privacy for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-abdm-fhir-privacy-simulator.jpg",

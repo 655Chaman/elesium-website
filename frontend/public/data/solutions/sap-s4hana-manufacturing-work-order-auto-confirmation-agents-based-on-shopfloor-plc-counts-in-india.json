@@ -5,9 +5,9 @@
   "keyBenefit": "Deterministic Manufacturing & Industrial Architecture & Operational Guardrails",
   "category": "Solutions",
   "hubCategory": "Manufacturing & Industrial",
-  "title": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India | Elesium",
-  "h1": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India — Sovereign Enterprise Architecture",
-  "metaDescription": "Deploy SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India with sub-100ms deterministic execution, private VPC isolation, and Manufacturing & Industrial compliance. Schedule architecture audit.",
+  "title": "SAP S/4HANA Manufacturing Work Order | Elesium",
+  "h1": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India - Sovereign Enterprise Architecture",
+  "metaDescription": "Deploy SAP S/4HANA Manufacturing with deterministic air-gapped VPC isolation and Manufacturing & Industrial compliance. Schedule architecture audit.",
   "targetPersona": "Operations Vice Presidents & SAP ERP Integration Architects for Indian Manufacturing Plants",
   "intent": "High-Lever BOFU",
   "primaryCta": "Schedule AI Architecture Audit",
@@ -21,7 +21,7 @@
   "heroImageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India",
   "paragraphs": [
     "Indian manufacturing operations in automotive, machining, and heavy engineering struggle with delayed shopfloor reporting. Operators manually enter finished piece counts into SAP terminals at the end of twelve-hour shifts, resulting in inaccurate inventory balances, delayed raw material replenishment, and frequent discrepancies between actual machine output and ERP ledger records.",
-    "Our sovereign edge automation agents interface directly with shopfloor programmable logic controllers—including Siemens S7-1200/1500, Mitsubishi MELSEC, and Omron CP series—polling output counters, cycle timers, and reject diverters every 10 milliseconds. Raw pulse counts are validated against machine power signatures to eliminate ghost cycling and false triggers.",
+    "Our sovereign edge automation agents interface directly with shopfloor programmable logic controllers - including Siemens S7-1200/1500, Mitsubishi MELSEC, and Omron CP series - polling output counters, cycle timers, and reject diverters every 10 milliseconds. Raw pulse counts are validated against machine power signatures to eliminate ghost cycling and false triggers.",
     "The state machine translates verified machine stroke pulses into SAP S/4HANA BAPI_PRODORDCONF_CREATE_TT calls in real time. Scrap pieces diverted by optical or weight check-weighers are automatically posted with specific defect codes (Reason for Variance), immediately crediting raw material stores (Movement 261) and posting finished goods inventory (Movement 101).",
     "By automating 100% of production order confirmations directly from physical machine cycles, the solution eliminates end-of-shift clerical bottlenecks, cuts material ledger reconciliation from 4 days to real time, and ensures strict adherence to excise, GST, and ISO/TS 16949 audit requirements."
   ],
@@ -121,7 +121,7 @@
       "title": "Deterministic Operational Capabilities & SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India",
       "copy": [
         "Indian manufacturing operations in automotive, machining, and heavy engineering struggle with delayed shopfloor reporting. Operators manually enter finished piece counts into SAP terminals at the end of twelve-hour shifts, resulting in inaccurate inventory balances, delayed raw material replenishment, and frequent discrepancies between actual machine output and ERP ledger records.",
-        "Our sovereign edge automation agents interface directly with shopfloor programmable logic controllers—including Siemens S7-1200/1500, Mitsubishi MELSEC, and Omron CP series—polling output counters, cycle timers, and reject diverters every 10 milliseconds. Raw pulse counts are validated against machine power signatures to eliminate ghost cycling and false triggers."
+        "Our sovereign edge automation agents interface directly with shopfloor programmable logic controllers - including Siemens S7-1200/1500, Mitsubishi MELSEC, and Omron CP series - polling output counters, cycle timers, and reject diverters every 10 milliseconds. Raw pulse counts are validated against machine power signatures to eliminate ghost cycling and false triggers."
       ],
       "bullets": [
         "Direct PLC Stroke Pulse Ingestion: High-frequency polling of physical machine counters with electrical debouncing and load validation.",

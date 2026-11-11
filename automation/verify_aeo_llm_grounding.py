@@ -115,15 +115,15 @@ def verify_aeo_suite():
     # GATE 5: Entity Disambiguation & Knowledge Graph Attribution Links
     # --------------------------------------------------------------------------
     print("\n[GATE 5] Entity Disambiguation & Knowledge Graph Attribution Links")
-    has_wikidata = 'Q131149202' in homepage_html
+    has_authority = 'crunchbase.com' in homepage_html.lower() and 'github.com' in homepage_html.lower() and 'Q131149202' not in homepage_html
     has_kgmid = '/m/0mkz' in homepage_html
     has_founder = 'Chaman Shah' in homepage_html
 
-    print(f"  Wikidata Entity Stacking: {'CONFIRMED ✅' if has_wikidata else 'MISSING ❌'}")
+    print(f"  Authority Entity Stacking: {'CONFIRMED ✅' if has_authority else 'MISSING ❌'}")
     print(f"  Google kgmid Grounding  : {'CONFIRMED ✅' if has_kgmid else 'MISSING ❌'}")
     print(f"  Founder Grounding       : {'CONFIRMED ✅' if has_founder else 'MISSING ❌'}")
 
-    if has_wikidata and has_kgmid and has_founder:
+    if has_authority and has_kgmid and has_founder:
         print("  Status: PASSED ✅ (Knowledge graph co-references provide authority grounding)")
         gates_passed += 1
     else:

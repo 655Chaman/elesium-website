@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Ondc Retail Inventory Multi Ecosystem Automation — Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium
+# 30-Second Short-Form Video Script: Ondc Retail Inventory Multi Ecosystem Automation  -  Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium
 
 **Target Keyword:** `ondc retail inventory multi ecosystem automation`  
 **Key Benefit:** `Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Ondc Retail Inventory Multi Ecosystem Automation — Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium`
+`Ondc Retail Inventory Multi Ecosystem Automation  -  Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-ondc-retail-inventory-simulator#video",
-  "name": "Ondc Retail Inventory Multi Ecosystem Automation \u2014 Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium",
+  "name": "Ondc Retail Inventory Multi Ecosystem Automation  -  Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium",
   "description": "A 30-second technical architecture breakdown of ondc retail inventory multi ecosystem automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-ondc-retail-inventory-simulator.jpg",

@@ -8,6 +8,7 @@ and generates authoritative XML sitemaps for Elesium (sitemap-core.xml, sitemap-
 and master sitemap.xml index).
 """
 
+import sys
 import json
 import re
 import html
@@ -18,6 +19,8 @@ from pathlib import Path
 # Paths relative to this script
 BASE_DIR = Path(__file__).resolve().parent
 WEBSITE_ROOT = BASE_DIR.parent
+if str(WEBSITE_ROOT) not in sys.path:
+    sys.path.insert(0, str(WEBSITE_ROOT))
 APP_TSX_PATH = WEBSITE_ROOT / "frontend" / "src" / "App.tsx"
 TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "blogPosts.ts"
 SOLUTIONS_TS_PATH = WEBSITE_ROOT / "frontend" / "src" / "data" / "solutionsData.ts"
@@ -146,6 +149,35 @@ def generate_sitemap():
             "lastmod": fallback_date
         })
     print("Mapped 13 Category Pillar Hubs to sitemap-core.xml.")
+
+    # Map 6 Enterprise Docs pages
+    docs_slugs = ["", "quickstart", "vllm-runtime", "compliance-hsm", "benchmarks", "api-reference"]
+    for d_slug in docs_slugs:
+        u = f"{BASE_URL}/docs/{d_slug + '/' if d_slug else ''}"
+        core_urls.append({
+            "loc": u,
+            "priority": "0.9" if not d_slug else "0.8",
+            "changefreq": "weekly",
+            "lastmod": fallback_date
+        })
+    print(f"Mapped {len(docs_slugs)} Enterprise Docs pages to sitemap-core.xml.")
+
+    # Map 12 Canonical Facet Hubs
+    try:
+        from automation.faceted_navigation_engine import FACET_DEFINITIONS
+        facet_count = 0
+        for facet_group, facets in FACET_DEFINITIONS.items():
+            for facet_slug in facets:
+                core_urls.append({
+                    "loc": f"{BASE_URL}/solutions/{facet_group}/{facet_slug}/",
+                    "priority": "0.8",
+                    "changefreq": "weekly",
+                    "lastmod": fallback_date
+                })
+                facet_count += 1
+        print(f"Mapped {facet_count} Canonical Facet Hubs to sitemap-core.xml.")
+    except Exception as e:
+        print(f"Notice: Failed to load FACET_DEFINITIONS ({e})")
 
     # Read dynamic blog slugs
     if TS_PATH.exists():
@@ -377,8 +409,8 @@ def generate_sitemap():
                 except Exception as e:
                     print(f"Notice reading solutionsData JSON: {e}")
 
-    # Ground-truth date of solutionsData.ts
-    solutions_date = date_map.get("frontend/src/data/solutionsData.ts", "2026-10-22")
+    # Ground-truth date of solutionsData.ts and curated enterprise solutions (updated 2026-11-11)
+    solutions_date = max(date_map.get("frontend/src/data/solutionsData.ts", "2026-10-22"), "2026-11-11")
     solution_urls = []
     for slug in sorted(solution_slugs):
         solution_urls.append({
@@ -418,8 +450,10 @@ def generate_sitemap():
             xml_lines.append('    <priority>0.8</priority>')
             xml_lines.append('    <video:video>')
             xml_lines.append(f'      <video:thumbnail_loc>{html.escape(v["thumbnail_loc"])}</video:thumbnail_loc>')
-            xml_lines.append(f'      <video:title>{html.escape(v["title"])}</video:title>')
-            xml_lines.append(f'      <video:description>{html.escape(v["description"])}</video:description>')
+            clean_title = v["title"].replace("—", " - ")
+            clean_desc = v["description"].replace("—", " - ")
+            xml_lines.append(f'      <video:title>{html.escape(clean_title)}</video:title>')
+            xml_lines.append(f'      <video:description>{html.escape(clean_desc)}</video:description>')
             if v.get("player_loc"):
                 xml_lines.append(f'      <video:player_loc>{html.escape(v["player_loc"])}</video:player_loc>')
             if v.get("duration"):

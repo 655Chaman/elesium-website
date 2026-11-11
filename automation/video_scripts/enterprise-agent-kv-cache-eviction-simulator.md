@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms — 4x Memory Compression & Sub-1% Perplexity Degradation | Elesium
+# 30-Second Short-Form Video Script: Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms  -  4x Memory Compression & Sub-1% Perplexity Degradation | Elesium
 
 **Target Keyword:** `dynamic kv-cache eviction and attention sink compression daemons for 2m context llms`  
 **Key Benefit:** `4x Memory Compression & Sub-1% Perplexity Degradation`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms — 4x Memory Compression & Sub-1% Perplexity Degradation | Elesium`
+`Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms  -  4x Memory Compression & Sub-1% Perplexity Degradation | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/enterprise-agent-kv-cache-eviction-simulator#video",
-  "name": "Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms \u2014 4x Memory Compression & Sub-1% Perplexity Degradation | Elesium",
+  "name": "Dynamic Kv-Cache Eviction And Attention Sink Compression Daemons For 2M Context Llms  -  4x Memory Compression & Sub-1% Perplexity Degradation | Elesium",
   "description": "A 30-second technical architecture breakdown of dynamic kv-cache eviction and attention sink compression daemons for 2m context llms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/enterprise-agent-kv-cache-eviction-simulator.jpg",

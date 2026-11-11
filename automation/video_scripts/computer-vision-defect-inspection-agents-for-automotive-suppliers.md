@@ -1,4 +1,4 @@
-# 30-Second Short-Form Video Script: Computer Vision Defect Inspection Agents For Automotive Suppliers — Sub-Millimeter Surface Defect Classification | Elesium
+# 30-Second Short-Form Video Script: Computer Vision Defect Inspection Agents For Automotive Suppliers  -  Sub-Millimeter Surface Defect Classification | Elesium
 
 **Target Keyword:** `computer vision defect inspection agents for automotive suppliers`  
 **Key Benefit:** `Sub-Millimeter Surface Defect Classification`  
@@ -25,7 +25,7 @@
 ## YouTube Shorts & TikTok SEO Metadata (Edward Sturm Descript Model)
 
 ### Video Title
-`Computer Vision Defect Inspection Agents For Automotive Suppliers — Sub-Millimeter Surface Defect Classification | Elesium`
+`Computer Vision Defect Inspection Agents For Automotive Suppliers  -  Sub-Millimeter Surface Defect Classification | Elesium`
 
 ### Description Box (Word-for-Word Transcript Indexed for Google Video Search)
 ```text
@@ -81,7 +81,7 @@ Direct Engineering Desk on WhatsApp: https://elesium.online/waitlist
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "@id": "https://elesium.online/videos/computer-vision-defect-inspection-agents-for-automotive-suppliers#video",
-  "name": "Computer Vision Defect Inspection Agents For Automotive Suppliers \u2014 Sub-Millimeter Surface Defect Classification | Elesium",
+  "name": "Computer Vision Defect Inspection Agents For Automotive Suppliers  -  Sub-Millimeter Surface Defect Classification | Elesium",
   "description": "A 30-second technical architecture breakdown of computer vision defect inspection agents for automotive suppliers for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
   "thumbnailUrl": [
     "https://elesium.online/video_thumbnails/computer-vision-defect-inspection-agents-for-automotive-suppliers.jpg",
