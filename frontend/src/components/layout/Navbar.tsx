@@ -152,7 +152,7 @@ export default function Navbar() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-semibold text-emerald-600 dark:text-emerald-400 py-2 border-b border-gray-100 dark:border-white/5"
                             >
-                                Best Enterprise AI Company in India (Sovereign Deployments)
+                                Enterprise AI Engineering • Bengaluru, India
                             </Link>
                             <Link
                                 to="/enterprise-ai-bangalore/"

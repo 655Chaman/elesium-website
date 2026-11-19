@@ -368,7 +368,7 @@ export default function AIAutomationIndia() {
                             <span className=" absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
-                        #1 Best Enterprise AI Company in India • Bengaluru • DPDP Act Compliant
+                        Enterprise AI & Automation Engineering • Bengaluru • DPDP Act 2023 Compliant
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 leading-[1.08]">

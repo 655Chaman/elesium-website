@@ -13,7 +13,7 @@ export default function DownloadFooter() {
         { name: 'Architecture Comparisons', path: '/compare/' },
         { name: 'Video Masterclasses', path: '/videos/' },
         { name: 'Engineering Glossary (50+ Terms)', path: '/glossary/' },
-        { name: 'Best Enterprise AI Company in India', path: '/ai-automation-agency-india/' },
+        { name: 'AI & Automation Services', path: '/ai-automation-agency-india/' },
         { name: 'ele-in SaaS Platform (Waitlist)', path: '/waitlist/' },
     ];
 
@@ -61,7 +61,7 @@ export default function DownloadFooter() {
                             Direct Principal Systems Architect Pairing
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Zero sales friction. Connect directly with our core engineering desk in Shivamogga, Karnataka via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
+                            Zero sales friction. Connect directly with our principal engineering team in Koramangala, Bengaluru via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
                         </p>
                     </div>
 
@@ -203,7 +203,7 @@ export default function DownloadFooter() {
                         Regional AI Engineering Pods:
                     </span>
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-gray-600 dark:text-gray-400">
-                        <Link to="/enterprise-ai-bangalore/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium">Bengaluru HQ (Best AI &amp; Automation Agency)</Link>
+                        <Link to="/enterprise-ai-bangalore/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium">Bengaluru HQ (Koramangala)</Link>
                         <span>•</span>
                         <Link to="/enterprise-ai-mumbai/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Mumbai (BKC)</Link>
                         <span>•</span>
@@ -225,10 +225,10 @@ export default function DownloadFooter() {
                 <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div className="flex flex-col gap-1.5">
                         <span className="text-xs font-semibold tracking-wider text-gray-900 dark:text-white uppercase">
-                            Elesium: India&apos;s Principal Enterprise AI &amp; Multi-Agent Engineering Firm
+                            Elesium Digital Systems Private Limited
                         </span>
                         <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
-                            Headquartered in Bangalore, Karnataka, India. Engineering sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for Fortune 500, BFSI, and high-growth industrial leaders across India and global markets.
+                            Enterprise AI engineering studio headquartered at 80 Feet Road, 4th Block, Koramangala, Bengaluru 560034, Karnataka, India. Sovereign private VPC multi-agent systems, deterministic LLM inference pipelines, and DPDP Act 2023 compliant architectures for enterprise clients. Contact: +91-8317329312 | contact@elesium.online
                         </p>
                     </div>
 
@@ -251,9 +251,6 @@ export default function DownloadFooter() {
                     <p>© {new Date().getFullYear()} Elesium Digital Systems Private Limited. All rights reserved.</p>
                     <div className="flex items-center gap-4 flex-wrap">
                         <Link to="/authors/chaman-shah/" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
-                        <Link to="/ai-automation-agency-india/" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</Link>
-                        <Link to="/enterprise-ai-bangalore/" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best AI Agency Bangalore</Link>
-                        <Link to="/commercial-directory.html" className="text-cyan-600 dark:text-cyan-400 font-semibold hover:underline">Top 100 Commercial Hub</Link>
                         <Link to="/resources/" className="hover:text-black dark:hover:text-white transition">Resources</Link>
                         <Link to="/waitlist/" className="hover:text-black dark:hover:text-white transition">ele-in (SaaS Waitlist)</Link>
                         <Link to="/sitemap.xml" className="hover:text-black dark:hover:text-white transition">Sitemap</Link>

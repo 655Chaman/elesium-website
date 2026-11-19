@@ -61,20 +61,20 @@ export default function Home() {
             className="relative z-10 bg-white dark:bg-black text-gray-900 dark:text-white"
         >
             <Helmet>
-                <title>Elesium | Best Enterprise AI Company in India</title>
+                <title>Elesium | Enterprise AI & Multi-Agent Systems Engineering • Bengaluru</title>
                 <meta
                     name="description"
                     content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days."
                 />
                 <link rel="canonical" href="https://elesium.online/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Elesium | Best Enterprise AI Company in India" />
+                <meta property="og:title" content="Elesium | Enterprise AI & Multi-Agent Systems Engineering • Bengaluru" />
                 <meta property="og:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days." />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta property="og:url" content="https://elesium.online/" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@elesium_ai" />
-                <meta name="twitter:title" content="Elesium | Best Enterprise AI Company in India" />
+                <meta name="twitter:title" content="Elesium | Enterprise AI & Multi-Agent Systems Engineering • Bengaluru" />
                 <meta name="twitter:description" content="Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
             </Helmet>

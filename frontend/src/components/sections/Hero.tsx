@@ -50,7 +50,7 @@ export default function HeroSection() {
                         >
                             {/* Text elesium.online & Rank Authority */}
                             <span className="text-[11px] md:text-[12.5px] font-semibold font-heading tracking-[0.28em] uppercase text-emerald-600 dark:text-emerald-400">
-                                #1 Best Enterprise AI Company in India • elesium.online
+                                Enterprise Multi-Agent & DPDP-Compliant AI Engineering • Bengaluru
                             </span>
                         </motion.div>
                     </div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
                             duration={0.3}
                             className="text-black dark:text-white font-bold"
                         >
-                            India's Best Enterprise AI Company &amp; Automation Agency
+                            Sovereign Enterprise AI Systems & Multi-Agent Architectures
                         </TextAnimate>
                     </h1>
 
