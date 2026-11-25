@@ -19,7 +19,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className, sticky = 
         throw new Error("TextReveal: children must be a string")
     }
 
-    const words = children.split(" ")
+    const words = children.trim().split(/\s+/)
 
     return (
         <div ref={targetRef} className={cn("relative z-0", sticky && "h-[200vh]", className)}>
@@ -30,9 +30,8 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className, sticky = 
                 )}
             >
                 <span
-                    ref={targetRef}
                     className={
-                        "flex flex-wrap justify-center lg:justify-start p-5 text-2xl font-bold text-black/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl dark:text-white/20"
+                        "flex flex-wrap justify-center lg:justify-start p-5 text-2xl font-bold md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
                     }
                 >
                     {words.map((word, i) => {
@@ -57,16 +56,13 @@ interface WordProps {
 }
 
 const Word: FC<WordProps> = ({ children, progress, range }) => {
-    const opacity = useTransform(progress, range, [0, 1])
+    const opacity = useTransform(progress, range, [0.2, 1])
     return (
-        <span className="xl:lg-3 relative mx-1 lg:mx-1.5">
-            <span className="absolute opacity-30">{children}</span>
-            <motion.span
-                style={{ opacity: opacity }}
-                className={"text-black dark:text-white"}
-            >
-                {children}
-            </motion.span>
-        </span>
+        <motion.span
+            style={{ opacity }}
+            className="inline-block mx-1 lg:mx-1.5 text-black dark:text-white transition-opacity duration-150"
+        >
+            {children}
+        </motion.span>
     )
 }
