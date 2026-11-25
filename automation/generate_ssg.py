@@ -11071,6 +11071,14 @@ def generate_ssg():
 
     print("Starting SSG Generation for static pages...")
     static_pages = {
+        "ai": {
+            "title": "Enterprise AI & Multi-Agent Systems Engineering • Bengaluru",
+            "desc": "Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days."
+        },
+        "connector": {
+            "title": "Elesium Connect - High-Velocity B2B Pipeline & Strategic Matchmaking",
+            "desc": "Elesium Connect actively engineers high-trust B2B pipelines connecting verified enterprise buyers with pre-vetted technical providers, capital, and suppliers. 72-hour matching SLA."
+        },
         "ai-automation": {
             "title": "Best AI & Automation Company in Bangalore",
             "desc": "Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows."

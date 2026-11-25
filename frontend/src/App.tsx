@@ -10,6 +10,8 @@ import RouteProgressBar from './components/ui/RouteProgressBar'
 import { initNavboostDwellLock } from './utils/dwellLock'
 
 // Lazy load heavy below-the-fold components and secondary pages
+const Gateway = lazy(() => import('./components/pages/Gateway'))
+const ConnectorHome = lazy(() => import('./components/pages/ConnectorHome'))
 const Home = lazy(() => import('./components/pages/Home'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
@@ -187,6 +189,9 @@ import AIAutomationIndia from './components/pages/AIAutomationIndia'
 function App() {
     const location = useLocation();
     const isEmbed = location.pathname.startsWith('/embed');
+    const isGateway = location.pathname === '/' || location.pathname === '';
+    const isConnector = location.pathname.startsWith('/connector');
+    const hideMainLayout = isEmbed || isGateway || isConnector;
 
     // Since we're using React Router now, the Navbar and Footer are rendered once outside Routes
     // and we only animate the inner content changing.
@@ -206,14 +211,18 @@ function App() {
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
             <SmoothScroll />
             <NoiseOverlay />
-            {!isEmbed && <InternationalGeoBanner />}
-            {!isEmbed && <Navbar />}
+            {!hideMainLayout && <InternationalGeoBanner />}
+            {!hideMainLayout && <Navbar />}
 
             <div className="flex-1 min-h-[100vh] flex flex-col relative">
                 <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
                     <Suspense fallback={<RouteProgressBar />}>
                         <Routes location={location} key={location.pathname}>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/" element={<Gateway />} />
+                            <Route path="/ai" element={<Home />} />
+                            <Route path="/ai/" element={<Home />} />
+                            <Route path="/connector" element={<ConnectorHome />} />
+                            <Route path="/connector/" element={<ConnectorHome />} />
                             <Route path="/how-we-work" element={<HowWeWork />} />
                             <Route path="/industries" element={<Navigate to="/markets/" replace />} />
                             <Route path="/markets" element={<Industries />} />
@@ -493,7 +502,7 @@ function App() {
                 </AnimatePresence>
             </div>
 
-            {!isEmbed && <DownloadFooter />}
+            {!hideMainLayout && <DownloadFooter />}
         </div>
     )
 }

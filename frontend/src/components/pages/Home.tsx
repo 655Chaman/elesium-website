@@ -13,7 +13,6 @@ import {
     Scale
 } from 'lucide-react'
 import HeroSection from '../sections/Hero'
-import AgentIntro from '../sections/AgentIntro'
 import ActiveSignals from '../sections/ActiveSignals'
 import FeatureExplorer from '../sections/FeatureExplorer'
 import Solutions from '../sections/Solutions'
@@ -154,9 +153,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-            {/* Agent Intro with Visual Nodes */}
-            <AgentIntro />
 
             {/* Active Signals Ledger */}
             <ActiveSignals />

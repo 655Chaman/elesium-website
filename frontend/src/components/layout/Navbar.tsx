@@ -15,7 +15,7 @@ export default function Navbar() {
             <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md dark:bg-black/95 dark:border-b dark:border-white/10 transition-colors duration-300" style={{ height: '56px' }}>
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-full flex items-center justify-between">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center cursor-pointer">
+                    <Link to="/ai/" className="flex items-center cursor-pointer">
                         <img
                             src={logo}
                             alt="Elesium Logo"
@@ -60,16 +60,20 @@ export default function Navbar() {
                             Engineering Tools
                         </Link>
                         <Link
-                            to="/waitlist/"
-                            className="btn-nav text-xs xl:text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition"
+                            to="/connector/"
+                            className="btn-nav text-xs xl:text-sm font-semibold text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 bg-indigo-50 dark:bg-indigo-950/40 hover:bg-indigo-100 dark:hover:bg-indigo-950/70 px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-sm"
+                            title="Switch to Elesium Connect (B2B Matchmaking & Pipeline Division)"
                         >
-                            ele-in (SaaS)
+                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+                            <span>Connector Division</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
                         </Link>
                         <Link
-                            to="/ai-automation-agency-india/"
-                            className="btn-nav text-xs xl:text-sm font-semibold text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition flex items-center gap-1"
+                            to="/"
+                            className="btn-nav text-xs font-mono text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white px-2 py-1.5 rounded-lg transition"
+                            title="Return to Enterprise Dual Gateway"
                         >
-                            <span>Best Enterprise AI India</span>
+                            Portal
                         </Link>
                     </div>
 
@@ -112,6 +116,21 @@ export default function Navbar() {
                         className="fixed inset-x-0 top-[56px] z-40 bg-white dark:bg-[#0A0A0A] border-b border-gray-200 dark:border-white/10 shadow-2xl lg:hidden max-h-[85vh] overflow-y-auto px-6 py-6"
                     >
                         <div className="flex flex-col gap-4">
+                            <Link
+                                to="/connector/"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-semibold text-indigo-600 dark:text-indigo-400 py-2 border-b border-gray-100 dark:border-white/5 flex items-center justify-between"
+                            >
+                                <span>Elesium Connect (B2B Matchmaking)</span>
+                                <ArrowUpRight className="w-4 h-4" />
+                            </Link>
+                            <Link
+                                to="/"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-medium text-gray-500 dark:text-gray-400 py-2 border-b border-gray-100 dark:border-white/5"
+                            >
+                                Enterprise Gateway (Home Selection)
+                            </Link>
                             <Link
                                 to="/how-we-work/"
                                 onClick={() => setIsMobileMenuOpen(false)}

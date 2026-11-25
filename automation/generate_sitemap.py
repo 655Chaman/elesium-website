@@ -93,7 +93,9 @@ def generate_sitemap():
 
     # Core high-authority routes and their backing source files
     core_static_defs = [
-        {"path": "/", "priority": "1.0", "changefreq": "daily", "file": "frontend/src/components/pages/Home.tsx"},
+        {"path": "/", "priority": "1.0", "changefreq": "daily", "file": "frontend/src/components/pages/Gateway.tsx"},
+        {"path": "/ai/", "priority": "1.0", "changefreq": "daily", "file": "frontend/src/components/pages/Home.tsx"},
+        {"path": "/connector/", "priority": "0.95", "changefreq": "daily", "file": "frontend/src/components/pages/ConnectorHome.tsx"},
         {"path": "/markets/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/Industries.tsx"},
         {"path": "/how-we-work/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/HowWeWork.tsx"},
         {"path": "/resources/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/src/components/pages/Resources.tsx"},
