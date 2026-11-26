@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect } from 'react'
+import { Suspense, lazy, useEffect, useState } from 'react'
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
@@ -13,6 +13,7 @@ import { initNavboostDwellLock } from './utils/dwellLock'
 const Gateway = lazy(() => import('./components/pages/Gateway'))
 const ConnectorHome = lazy(() => import('./components/pages/ConnectorHome'))
 const Portfolio = lazy(() => import('./components/pages/Portfolio'))
+const PortfolioEssay = lazy(() => import('./components/pages/PortfolioEssay'))
 const Home = lazy(() => import('./components/pages/Home'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
@@ -183,9 +184,8 @@ const EnterpriseAgentDualpipePipelineSimulator = lazy(() => import('./components
 const EmbedAgentDualpipePipelineSimulator = lazy(() => import('./components/pages/EmbedAgentDualpipePipelineSimulator'))
 const EnterpriseAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components/pages/EnterpriseAgentDeepseekUnifiedFabricSimulator'))
 const EmbedAgentDeepseekUnifiedFabricSimulator = lazy(() => import('./components/pages/EmbedAgentDeepseekUnifiedFabricSimulator'))
+const AIAutomationIndia = lazy(() => import('./components/pages/AIAutomationIndia'))
 const NotFound = lazy(() => import('./components/pages/NotFound'))
-
-import AIAutomationIndia from './components/pages/AIAutomationIndia'
 
 function App() {
     const location = useLocation();
@@ -195,23 +195,33 @@ function App() {
     const isPortfolio = location.pathname.startsWith('/portfolio');
     const hideMainLayout = isEmbed || isGateway || isConnector || isPortfolio;
     const isCleanSurface = isGateway || isConnector || isPortfolio;
+    const [enableNoiseOverlay, setEnableNoiseOverlay] = useState(false);
 
     // Since we're using React Router now, the Navbar and Footer are rendered once outside Routes
     // and we only animate the inner content changing.
 
     // Initialize Navboost Anti-Pogo-Sticking Dwell-Lock (Playbook 12)
+    useEffect(() => initNavboostDwellLock(), []);
+
+    // Skip NoiseOverlay on mobile, coarse-pointer, or reduced-motion devices to avoid GPU compositing overhead
     useEffect(() => {
-        initNavboostDwellLock();
+        if (typeof window === 'undefined') return;
+        const coarse = window.matchMedia('(pointer: coarse)');
+        const mobile = window.matchMedia('(max-width: 767px)');
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const update = () => {
+            setEnableNoiseOverlay(!coarse.matches && !mobile.matches && !reduced.matches);
+        };
+        update();
+        coarse.addEventListener?.('change', update);
+        mobile.addEventListener?.('change', update);
+        reduced.addEventListener?.('change', update);
+        return () => {
+            coarse.removeEventListener?.('change', update);
+            mobile.removeEventListener?.('change', update);
+            reduced.removeEventListener?.('change', update);
+        };
     }, []);
-    
-    // Sync clean route class for Gateway, Connector & Portfolio views
-    useEffect(() => {
-        if (isCleanSurface) {
-            document.documentElement.classList.add('elesium-clean-route');
-        } else {
-            document.documentElement.classList.remove('elesium-clean-route');
-        }
-    }, [isCleanSurface]);
 
     // Scroll to top on route change
     useEffect(() => {
@@ -220,13 +230,13 @@ function App() {
     }, [location.pathname]);
 
     return (
-        <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
+        <div className="relative min-h-[100dvh] bg-white dark:bg-black transition-colors duration-300 flex flex-col">
             {!isCleanSurface && <SmoothScroll />}
-            {!isCleanSurface && <NoiseOverlay />}
+            {!isCleanSurface && enableNoiseOverlay && <NoiseOverlay />}
             {!hideMainLayout && <InternationalGeoBanner />}
             {!hideMainLayout && <Navbar />}
 
-            <div className="flex-1 min-h-[100vh] flex flex-col relative">
+            <div className="flex-1 min-h-[100dvh] flex flex-col relative">
                 <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
                     <Suspense fallback={<RouteProgressBar />}>
                         <Routes location={location} key={location.pathname}>
@@ -237,6 +247,8 @@ function App() {
                             <Route path="/connector/" element={<ConnectorHome />} />
                             <Route path="/portfolio" element={<Portfolio />} />
                             <Route path="/portfolio/" element={<Portfolio />} />
+                            <Route path="/portfolio/:slug" element={<PortfolioEssay />} />
+                            <Route path="/portfolio/:slug/" element={<PortfolioEssay />} />
                             <Route path="/how-we-work" element={<HowWeWork />} />
                             <Route path="/industries" element={<Navigate to="/markets/" replace />} />
                             <Route path="/markets" element={<Industries />} />
@@ -277,11 +289,18 @@ function App() {
                             <Route path="/glossary" element={<Glossary />} />
                             <Route path="/tools" element={<ToolsHub />} />
                             <Route path="/tools/" element={<ToolsHub />} />
+                            <Route path="/tools/token-cost-arbitrage-calculator" element={<EnterpriseModelRoutingSimulator />} />
                             <Route path="/tools/token-cost-arbitrage" element={<Navigate to="/tools/token-cost-arbitrage-calculator/" replace />} />
+                            <Route path="/tools/dpdp-act-penalty-exposure-calculator" element={<DpdpStatutoryAuditSimulator />} />
                             <Route path="/tools/dpdp-penalty-calculator" element={<Navigate to="/tools/dpdp-act-penalty-exposure-calculator/" replace />} />
+                            <Route path="/tools/enterprise-rag-latency-simulator" element={<MultiAgentLatencyEstimator />} />
                             <Route path="/tools/rag-latency-simulator" element={<Navigate to="/tools/enterprise-rag-latency-simulator/" replace />} />
+                            <Route path="/tools/agent-vram-gpu-cluster-sizer" element={<EnterpriseGpuCostCalculator />} />
                             <Route path="/tools/gpu-cluster-sizer" element={<Navigate to="/tools/agent-vram-gpu-cluster-sizer/" replace />} />
+                            <Route path="/tools/b2b-seo-roi-payback-model" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/b2b-seo-roi-model" element={<Navigate to="/tools/b2b-seo-roi-payback-model/" replace />} />
+                            <Route path="/docs" element={<Navigate to="/resources/" replace />} />
+                            <Route path="/docs/*" element={<Navigate to="/resources/" replace />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator/" replace />} />
                             <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />

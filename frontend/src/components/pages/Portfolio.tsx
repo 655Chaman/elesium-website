@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight, ChevronDown } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import emblem from '../../assets/LOGO_EMBLEM.png'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
+import { diaryEntries, type DiaryCategory } from '../../data/diaryEntries'
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -73,9 +74,23 @@ const systemsBuilt = [
     },
 ]
 
+const categories: Array<'All' | DiaryCategory> = [
+    'All',
+    'The Humane Experience',
+    'Essays',
+    'Mind Dumps',
+    'Elesium',
+]
+
 export default function Portfolio() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [openSystem, setOpenSystem] = useState<string | null>(systemsBuilt[0].name)
+    const [activeCategory, setActiveCategory] = useState<'All' | DiaryCategory>('All')
+
+    const visibleEntries =
+        activeCategory === 'All'
+            ? diaryEntries
+            : diaryEntries.filter((entry) => entry.category === activeCategory)
 
     const portfolioSchema = {
         '@context': 'https://schema.org',
@@ -156,15 +171,15 @@ export default function Portfolio() {
                 <div className="max-w-2xl mx-auto px-6 h-full flex items-center justify-between">
                     <Link
                         to="/"
-                        className="inline-flex items-center justify-center p-1.5 rounded-full hover:bg-white/10 transition active:scale-[0.97]"
+                        className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition active:scale-[0.97]"
                         aria-label="Return to Elesium Portal"
                     >
-                        <img src={emblem} alt="Elesium" width="24" height="24" className="h-6 w-6 object-contain" />
+                        <img src={emblem} alt="Elesium" width="24" height="24" loading="eager" decoding="async" className="h-6 w-6 object-contain" />
                     </Link>
 
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition active:scale-[0.97]"
+                        className="min-h-[44px] px-2 inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition active:scale-[0.97]"
                     >
                         <ArrowLeft className="w-3.5 h-3.5" />
                         <span>Back</span>
@@ -186,6 +201,8 @@ export default function Portfolio() {
                         alt="Chaman Shah"
                         width="80"
                         height="80"
+                        loading="eager"
+                        decoding="async"
                         className="h-20 w-20 rounded-full object-cover border border-white/15 grayscale"
                     />
                 </motion.div>
@@ -211,13 +228,13 @@ export default function Portfolio() {
                 {/* Direct Contact Links */}
                 <motion.div
                     variants={itemVariants}
-                    className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm pb-10 border-b border-white/10"
+                    className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm pb-10 border-b border-white/10"
                 >
                     <a
                         href="https://github.com/655Chaman"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                        className="min-h-[44px] py-2.5 inline-flex items-center text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
                     >
                         GitHub
                     </a>
@@ -225,7 +242,7 @@ export default function Portfolio() {
                         href="https://linkedin.com/in/chaman-shah-elesium"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                        className="min-h-[44px] py-2.5 inline-flex items-center text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
                     >
                         LinkedIn
                     </a>
@@ -233,24 +250,75 @@ export default function Portfolio() {
                         href="https://x.com/chamanshah_ai"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                        className="min-h-[44px] py-2.5 inline-flex items-center text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
                     >
                         X
                     </a>
                     <a
                         href="mailto:contact@elesium.online"
-                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                        className="min-h-[44px] py-2.5 inline-flex items-center text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
                     >
                         Email
                     </a>
                     <button
                         type="button"
                         onClick={openWhatsApp}
-                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                        className="min-h-[44px] py-2.5 inline-flex items-center text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
                     >
                         WhatsApp
                     </button>
                 </motion.div>
+
+                {/* Writing & Mind Dumps from My Diary */}
+                <motion.section variants={itemVariants} className="py-10 border-b border-white/10">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                        <p className="text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500">
+                            Writing &amp; Mind Dumps ({visibleEntries.length})
+                        </p>
+                        <div className="flex flex-wrap gap-1.5">
+                            {categories.map((cat) => {
+                                const active = activeCategory === cat
+                                return (
+                                    <button
+                                        key={cat}
+                                        type="button"
+                                        onClick={() => setActiveCategory(cat)}
+                                        className={`px-2.5 py-1 text-[11px] font-mono rounded-full border transition active:scale-[0.97] ${
+                                            active
+                                                ? 'bg-white text-black border-white'
+                                                : 'bg-transparent text-neutral-400 border-white/15 hover:border-white/35 hover:text-white'
+                                        }`}
+                                    >
+                                        {cat}
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+                    <div className="divide-y divide-white/10">
+                        {visibleEntries.map((entry) => (
+                            <Link
+                                key={entry.slug}
+                                to={`/portfolio/${entry.slug}/`}
+                                className="py-3.5 flex items-baseline justify-between gap-4 group"
+                            >
+                                <div className="min-w-0">
+                                    <h2 className="text-sm sm:text-base font-medium text-white group-hover:text-neutral-300 transition-colors">
+                                        {entry.title}
+                                    </h2>
+                                    <p className="text-xs text-neutral-500 mt-1 line-clamp-1">
+                                        {entry.excerpt}
+                                    </p>
+                                </div>
+                                <div className="flex items-center gap-2 shrink-0 text-[11px] font-mono text-neutral-500 group-hover:text-white transition-colors">
+                                    <span className="hidden sm:inline">{entry.readTime}</span>
+                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </motion.section>
 
                 {/* Minimal Text List of Real Systems Built */}
                 <motion.section variants={itemVariants} className="py-10 border-b border-white/10">
@@ -261,11 +329,12 @@ export default function Portfolio() {
                         {systemsBuilt.map((sys) => {
                             const isOpen = openSystem === sys.name
                             return (
-                                <div key={sys.name} className="py-3.5">
+                                <div key={sys.name} className="py-1.5">
                                     <button
                                         type="button"
+                                        aria-expanded={isOpen}
                                         onClick={() => setOpenSystem(isOpen ? null : sys.name)}
-                                        className="w-full flex items-center justify-between gap-4 text-left group"
+                                        className="w-full min-h-[44px] py-2.5 flex items-center justify-between gap-4 text-left group"
                                     >
                                         <span className="text-sm sm:text-base font-medium text-white group-hover:text-neutral-300 transition-colors">
                                             {sys.name}
@@ -308,10 +377,10 @@ export default function Portfolio() {
                         Elesium
                     </p>
 
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-1">
                         <Link
                             to="/connector/"
-                            className="inline-flex items-center justify-between py-2 text-base text-neutral-200 hover:text-white transition group"
+                            className="min-h-[44px] inline-flex items-center justify-between py-2.5 text-base text-neutral-200 hover:text-white transition group"
                         >
                             <span>Elesium Connector Model</span>
                             <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition" />
@@ -319,7 +388,7 @@ export default function Portfolio() {
 
                         <Link
                             to="/ai/"
-                            className="inline-flex items-center justify-between py-2 text-base text-neutral-200 hover:text-white transition group"
+                            className="min-h-[44px] inline-flex items-center justify-between py-2.5 text-base text-neutral-200 hover:text-white transition group"
                         >
                             <span>AI &amp; Automation Elesium</span>
                             <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition" />

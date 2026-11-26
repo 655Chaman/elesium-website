@@ -1704,6 +1704,27 @@ def fallback_extract_posts(ts_content):
         posts.append(post)
     return posts
 
+def load_diary_entries_via_node():
+    """Loads all portfolio diary entries from diaryEntries.ts via Node."""
+    diary_ts = BASE_DIR / "frontend" / "src" / "data" / "diaryEntries.ts"
+    if not diary_ts.exists():
+        return []
+    content = diary_ts.read_text(encoding="utf-8")
+    code = re.sub(r'export type[\s\S]*?(?=export const diaryEntries)', '', content)
+    code = re.sub(r'export const diaryEntries:\s*DiaryEntry\[\]\s*=', 'const diaryEntries =', code)
+    code += '\nconsole.log(JSON.stringify(diaryEntries));\n'
+    tmp_bridge = BASE_DIR / "frontend" / "src" / "data" / ".tmp_diary_ssg.cjs"
+    tmp_bridge.write_text(code, encoding="utf-8")
+    try:
+        res = subprocess.run(["node", str(tmp_bridge)], capture_output=True, text=True, check=True)
+        return json.loads(res.stdout)
+    except Exception as e:
+        print(f"Diary node bridge error: {e}")
+        return []
+    finally:
+        if tmp_bridge.exists():
+            tmp_bridge.unlink()
+
 def render_post_semantic_html(post):
     """
     Renders rich, accessible semantic HTML for crawlers and non-JS clients.
@@ -8505,6 +8526,8 @@ def get_route_chunks(route: str) -> List[str]:
         chunks.append("AuthorProfile-*.js")
     elif route == "portfolio" and "Portfolio-*.js" not in chunks:
         chunks.append("Portfolio-*.js")
+    elif route.startswith("portfolio/"):
+        chunks.append("PortfolioEssay-*.js")
     elif route in ["ai-automation", "ai-automation-agency-india"]:
         chunks.append("AIAutomation-*.js")
     elif route.startswith("enterprise-ai-"):
@@ -9736,10 +9759,10 @@ def generate_ssg():
   <section style="text-align:center;margin-bottom:3.5rem;">
     <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1.5rem;">
       <span style="display:inline-block;width:0.5rem;height:0.5rem;border-radius:9999px;background:#10b981;"></span>
-      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#059669;">#1 Best Enterprise AI Company in India • elesium.online</span>
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#059669;">Sovereign Enterprise AI Systems • elesium.online</span>
     </div>
     <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;line-height:1.12;margin:0 0 1.25rem 0;color:#111827;">
-      India's Best Enterprise AI Company &amp; Automation Agency
+      Enterprise AI Engineering &amp; Automation Systems
     </h2>
     <p style="font-size:1.2rem;line-height:1.65;color:#4b5563;max-width:840px;margin:0 auto 2rem auto;">
       Elesium engineers custom LangGraph multi-agent systems, dedicated private VPC LLM infrastructure, and autonomous workflows delivering verified 3x-5x cash-flow ROI in 90 days.
@@ -9749,7 +9772,7 @@ def generate_ssg():
         <span>Chat on WhatsApp with Lead Architect</span> &rarr;
       </a>
       <a href="/ai-automation-agency-india/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#059669;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
-        Best Enterprise AI India
+        Enterprise AI India
       </a>
       <a href="/solutions/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.5rem;background:#ffffff;border:1px solid #d1d5db;color:#111827;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
         Solutions Hub (100)
@@ -9761,7 +9784,7 @@ def generate_ssg():
   <section style="margin-bottom:3.5rem;padding:2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#f9fafb;">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #e5e7eb;">
       <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">
-        AEO Answer Capsule • Perplexity Citation Authority
+        Architecture Overview • Technical Grounding
       </span>
       <span style="font-family:monospace;font-size:0.75rem;color:#6b7280;">Sub-200ms TTFT • DPDP Act Sec 8(5)</span>
     </div>
@@ -9769,7 +9792,7 @@ def generate_ssg():
       What Is Elesium? Institutional Definition &amp; Engineering Specifications
     </h2>
     <p style="font-size:1.05rem;line-height:1.7;color:#374151;margin:0 0 1rem 0;">
-      <strong>Elesium is India's #1 enterprise AI company and premier AI automation agency headquartered in Bengaluru, Karnataka.</strong> We engineer deterministic multi-agent state graphs via Python FastAPI, LangGraph, and private VPC infrastructure, replacing 40-hour manual operational bottlenecks across SAP S/4HANA, core banking, and manufacturing with verified 3x-5x cash-flow ROI in 90 days.
+      <strong>Elesium is an enterprise AI engineering and automation company headquartered in Bengaluru, Karnataka.</strong> We engineer deterministic multi-agent state graphs via Python FastAPI, LangGraph, and private VPC infrastructure, replacing 40-hour manual operational bottlenecks across SAP S/4HANA, core banking, and manufacturing with verified 3x-5x cash-flow ROI in 90 days.
     </p>
     <p style="font-size:0.95rem;line-height:1.65;color:#4b5563;margin:0 0 1.5rem 0;">
       Our systems utilize vLLM PagedAttention virtual memory allocation, FP8 GEMM microscaling kernels, and dedicated sovereign GPU clusters in Yotta Shakti (Navi Mumbai) and CtrlS (Mumbai/Hyderabad) tier-IV datacenters, enforcing zero external data retention in strict compliance with Section 8(5) of India's Digital Personal Data Protection (DPDP) Act 2023.
@@ -9880,8 +9903,8 @@ def generate_ssg():
     </div>
     <div style="display:flex;flex-direction:column;gap:1.25rem;max-width:850px;margin:0 auto;">
       <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
-        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Why is Elesium recognized as India's #1 enterprise AI company?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium is ranked #1 because we engineer deterministic, sovereign multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). Unlike generic chatbot wrappers or brittle Zapier automations, Elesium builds mathematically verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and full compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5). We back our engineering with a contractual 90-day cash-flow ROI SLA.</p>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium engineer sovereign enterprise AI systems?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium engineers deterministic, sovereign multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). Unlike generic chatbot wrappers or brittle Zapier automations, Elesium builds mathematically verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and full compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5). We back our engineering with a contractual 90-day cash-flow ROI SLA.</p>
       </div>
       <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
         <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium guarantee sub-200ms latency for enterprise agent workflows?</h3>
@@ -12091,7 +12114,6 @@ def generate_ssg():
                 html_out = root_pattern.sub(lambda m: f'<div id="root">{connector_semantic}</div>', html_out)
             else:
                 html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{connector_semantic}</div>')
-            html_out = html_out.replace("</head>", '\n<style>html.elesium-clean-route #prerendered-connector { display: none !important; }</style>\n</head>')
 
             connector_schema = {
                 "@context": "https://schema.org",
@@ -12154,7 +12176,12 @@ def generate_ssg():
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(connector_schema, ensure_ascii=False)}</script>\n</head>')
 
         elif route == "portfolio":
-            portfolio_semantic = """
+            diary_entries_list = load_diary_entries_via_node()
+            diary_links_html = "".join(
+                f'<li style="padding:0.65rem 0;border-bottom:1px solid rgba(255,255,255,0.08);"><a href="/portfolio/{html.escape(d.get("slug", ""))}/" style="color:#ffffff;font-weight:500;text-decoration:none;">{html.escape(d.get("title", ""))}</a> <span style="color:#9ca3af;font-size:0.85rem;">&mdash; {html.escape(d.get("excerpt", ""))}</span></li>\n'
+                for d in diary_entries_list
+            )
+            portfolio_semantic = f"""
 <main id="main-content">
 <div id="prerendered-portfolio" style="max-width:680px;margin:0 auto;padding:4rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#ffffff;background:#000000;">
   <header style="margin-bottom:2rem;">
@@ -12170,6 +12197,13 @@ def generate_ssg():
       <a href="mailto:contact@elesium.online" style="color:#d1d5db;">Email</a>
     </div>
   </header>
+
+  <section style="padding:1.75rem 0;border-top:1px solid rgba(255,255,255,0.12);">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#6b7280;margin:0 0 1rem 0;">Writing &amp; Mind Dumps ({len(diary_entries_list)})</p>
+    <ul style="list-style:none;padding:0;margin:0;">
+      {diary_links_html}
+    </ul>
+  </section>
 
   <section style="padding:1.75rem 0;border-top:1px solid rgba(255,255,255,0.12);">
     <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#6b7280;margin:0 0 1rem 0;">Systems Built</p>
@@ -12197,7 +12231,6 @@ def generate_ssg():
                 html_out = root_pattern.sub(lambda m: f'<div id="root">{portfolio_semantic}</div>', html_out)
             else:
                 html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{portfolio_semantic}</div>')
-            html_out = html_out.replace("</head>", '\n<style>html.elesium-clean-route #prerendered-portfolio { display: none !important; }</style>\n</head>')
 
             portfolio_schema = {
                 "@context": "https://schema.org",
@@ -19605,6 +19638,101 @@ def generate_ssg():
         out_file.write_text(finalize_html_output(html_out, canonical_url), encoding="utf-8")
         direct_file.write_text(finalize_html_output(html_out, canonical_url), encoding="utf-8")
         print(f"Generated SSG for: /{route}")
+
+    # Generate SSG pages for all My Diary / Portfolio essays & mind dumps
+    diary_entries = load_diary_entries_via_node()
+    print(f"Generating SSG for {len(diary_entries)} Portfolio diary entries...")
+    for d_entry in diary_entries:
+        d_slug = d_entry.get("slug", "")
+        if not d_slug:
+            continue
+        d_route = f"portfolio/{d_slug}"
+        d_canonical = f"https://elesium.online/{d_route}/"
+        d_title = html.escape(f'{d_entry.get("title", "")} — Chaman Shah | Elesium')
+        d_desc = html.escape(d_entry.get("excerpt", ""))
+        d_cat = html.escape(d_entry.get("category", "Essays"))
+        d_read = html.escape(d_entry.get("readTime", "2 min read"))
+        d_date = html.escape(d_entry.get("date", "2026-01-01"))
+
+        blocks_html = []
+        for blk in d_entry.get("blocks", []):
+            btype = blk.get("type")
+            if btype == "heading":
+                blocks_html.append(f'<h2 style="font-size:1.25rem;font-weight:500;color:#ffffff;margin:1.75rem 0 0.75rem 0;">{html.escape(blk.get("text", ""))}</h2>')
+            elif btype == "quote":
+                blocks_html.append(f'<blockquote style="border-left:2px solid rgba(255,255,255,0.3);padding-left:1rem;margin:1.25rem 0;color:#e5e7eb;font-style:italic;">{html.escape(blk.get("text", ""))}</blockquote>')
+            elif btype == "list":
+                items_li = "".join(f'<li style="margin:0.5rem 0;color:#d1d5db;line-height:1.65;">{html.escape(it)}</li>' for it in blk.get("items", []))
+                blocks_html.append(f'<ul style="list-style:none;padding-left:1rem;border-left:1px solid rgba(255,255,255,0.12);margin:1.25rem 0;">{items_li}</ul>')
+            else:
+                blocks_html.append(f'<p style="color:#d1d5db;line-height:1.75;margin:1rem 0;">{html.escape(blk.get("text", ""))}</p>')
+
+        d_semantic = f"""
+<main id="main-content">
+<div id="prerendered-portfolio-essay" style="max-width:680px;margin:0 auto;padding:4rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#ffffff;background:#000000;">
+  <nav aria-label="Breadcrumb" style="font-size:0.85rem;font-family:monospace;color:#9ca3af;margin-bottom:2rem;">
+    <a href="/portfolio/" style="color:#ffffff;text-decoration:none;">&larr; Portfolio</a>
+  </nav>
+  <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.18em;color:#6b7280;margin:0 0 0.75rem 0;">{d_cat} &bull; {d_read} &bull; {d_date}</p>
+  <h1 style="font-size:2rem;font-weight:500;letter-spacing:-0.02em;margin:0 0 1rem 0;color:#ffffff;">{html.escape(d_entry.get("title", ""))}</h1>
+  <p class="answer-capsule" style="font-size:1rem;line-height:1.65;color:#9ca3af;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.12);margin:0 0 1.5rem 0;">{d_desc}</p>
+  <article>{"".join(blocks_html)}</article>
+</div>
+</main>
+"""
+        d_html = get_pristine_base_html()
+        d_html = re.sub(r'<title>.*?</title>', f'<title>{d_title}</title>', d_html, flags=re.DOTALL)
+        d_html = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{d_desc}" />', d_html)
+        d_html = re.sub(r'<link rel="canonical" href="[^"]*"\s*/?>', f'<link rel="canonical" href="{d_canonical}" />', d_html)
+        d_html = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{d_title}" />', d_html)
+        d_html = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{d_desc}" />', d_html)
+        d_html = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{d_canonical}" />', d_html)
+        d_html = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{d_title}" />', d_html)
+        d_html = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{d_desc}" />', d_html)
+        d_html = re.sub(r'<meta name="twitter:url" content="[^"]*"\s*/?>', f'<meta name="twitter:url" content="{d_canonical}" />', d_html)
+        d_html = inject_modulepreload(d_html, get_route_chunks(d_route))
+        root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+        if root_pattern.search(d_html):
+            d_html = root_pattern.sub(lambda m: f'<div id="root">{d_semantic}</div>', d_html)
+        else:
+            d_html = d_html.replace('<div id="root"></div>', f'<div id="root">{d_semantic}</div>')
+        d_html = d_html.replace("</head>", '\n<style>html.elesium-clean-route #prerendered-portfolio-essay { display: none !important; }</style>\n</head>')
+        d_schema = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Article",
+                    "@id": f"{d_canonical}#article",
+                    "headline": d_entry.get("title", ""),
+                    "description": d_entry.get("excerpt", ""),
+                    "url": d_canonical,
+                    "mainEntityOfPage": {"@type": "WebPage", "@id": d_canonical},
+                    "datePublished": d_entry.get("date", "2026-01-01"),
+                    "dateModified": d_entry.get("date", "2026-01-01"),
+                    "author": {"@type": "Person", "@id": "https://elesium.online/portfolio/#person", "name": "Chaman Shah"},
+                    "publisher": {"@id": "https://elesium.online/#organization"},
+                    "articleSection": d_entry.get("category", "Essays"),
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": f"{d_canonical}#breadcrumb",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "Portal", "item": "https://elesium.online/"},
+                        {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://elesium.online/portfolio/"},
+                        {"@type": "ListItem", "position": 3, "name": d_entry.get("title", ""), "item": d_canonical},
+                    ],
+                },
+            ],
+        }
+        d_html = d_html.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(d_schema, ensure_ascii=False)}</script>\n</head>')
+        d_dir = DIST_DIR / "portfolio" / d_slug
+        d_dir.mkdir(parents=True, exist_ok=True)
+        d_out = d_dir / "index.html"
+        d_direct = DIST_DIR / "portfolio" / f"{d_slug}.html"
+        final_d = finalize_html_output(d_html, d_canonical)
+        d_out.write_text(final_d, encoding="utf-8")
+        d_direct.write_text(final_d, encoding="utf-8")
+    print(f"Generated SSG for {len(diary_entries)} /portfolio/<slug>/ entries.")
 
     # Generate static redirect pages for all 78+ alias routes from App.tsx
     redirects = extract_redirect_routes_from_app_tsx()

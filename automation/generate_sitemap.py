@@ -209,6 +209,21 @@ def generate_sitemap():
     else:
         print(f"Warning: {TS_PATH} not found.")
 
+    # Portfolio / My Diary essays & mind dumps
+    diary_ts_path = WEBSITE_ROOT / "frontend" / "src" / "data" / "diaryEntries.ts"
+    if diary_ts_path.exists():
+        d_content = diary_ts_path.read_text(encoding="utf-8")
+        d_slugs = re.findall(r"slug:\s*'([^']+)'", d_content)
+        d_file_date = date_map.get("frontend/src/data/diaryEntries.ts", fallback_date)
+        for d_slug in d_slugs:
+            core_urls.append({
+                "loc": f"{BASE_URL}/portfolio/{d_slug}/",
+                "priority": "0.8",
+                "changefreq": "monthly",
+                "lastmod": d_file_date,
+            })
+        print(f"Mapped {len(d_slugs)} portfolio diary entries to sitemap-core.xml.")
+
     # 75 Tool routes mapped to their component commit dates
     tool_map = get_tool_route_component_map(APP_TSX_PATH)
     for slug in sorted(tool_map.keys()):
@@ -291,7 +306,9 @@ def generate_sitemap():
                 seen_video_slugs.add(slug)
                 raw_date = date_m.group(1) if date_m else fallback_date
                 dt = raw_date.split("T")[0] if "T" in raw_date else raw_date
-                yt_id = yt_m.group(1) if yt_m else "dQw4w9WgXcQ"
+                yt_id = yt_m.group(1) if yt_m else ""
+                if not yt_id or yt_id == "dQw4w9WgXcQ":
+                    continue
                 dur_str = dur_m.group(1) if dur_m else "15:00"
                 dur_sec = 900
                 if ":" in dur_str:
@@ -322,7 +339,9 @@ def generate_sitemap():
                     seen_video_slugs.add(slug)
                     raw_date = item.get("uploadDate", fallback_date)
                     dt = raw_date.split("T")[0] if "T" in raw_date else raw_date
-                    yt_id = item.get("youtubeId", "dQw4w9WgXcQ")
+                    yt_id = item.get("youtubeId", "")
+                    if not yt_id or yt_id == "dQw4w9WgXcQ":
+                        continue
                     dur_str = item.get("duration", "0:30")
                     dur_sec = 30
                     if ":" in dur_str:
