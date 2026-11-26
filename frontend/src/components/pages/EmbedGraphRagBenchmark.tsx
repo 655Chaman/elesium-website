@@ -40,7 +40,7 @@ export default function EmbedGraphRagBenchmark() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise GraphRAG Benchmark Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -89,7 +89,7 @@ export default function EmbedGraphRagBenchmark() {
           <select
             value={queryComplexity}
             onChange={(e) => setQueryComplexity(e.target.value as QueryComplexity)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="single_hop_lookup">Single-Hop Point Lookup</option>
             <option value="multi_hop_cross_entity">Multi-Hop Cross-Entity</option>
@@ -104,7 +104,7 @@ export default function EmbedGraphRagBenchmark() {
           <select
             value={extractionLlmEngine}
             onChange={(e) => setExtractionLlmEngine(e.target.value as ExtractionEngine)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="local-qwen-72b">Local Qwen 2.5 72B ($0.35/1M)</option>
             <option value="gpt-4o">OpenAI GPT-4o ($2.50 in)</option>
@@ -119,7 +119,7 @@ export default function EmbedGraphRagBenchmark() {
           <select
             value={graphTraversalDepth}
             onChange={(e) => setGraphTraversalDepth(Number(e.target.value) as 1 | 2 | 3)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="1">k = 1 (Direct)</option>
             <option value="2">k = 2 (2nd-Order)</option>
@@ -133,7 +133,7 @@ export default function EmbedGraphRagBenchmark() {
         {results.paradigms.map((p) => (
           <div
             key={p.id}
-            className={`p-3 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs ${
+            className={`p-3 rounded-[18px] border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs ${
               p.id === 'graph_rag'
                 ? 'bg-white/[0.05] border-white/30 text-neutral-200'
                 : p.id === 'hybrid_rerank'
@@ -169,7 +169,7 @@ export default function EmbedGraphRagBenchmark() {
       </div>
 
       {/* Summary Banner */}
-      <div className="bg-neutral-900/90 rounded-xl border border-neutral-800 p-3 mb-4 text-xs flex items-center justify-between gap-2">
+      <div className="bg-neutral-900/90 rounded-[18px] border border-neutral-800 p-3 mb-4 text-xs flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-neutral-200 shrink-0" />
           <span className="text-neutral-300 text-[11px]">
@@ -185,7 +185,7 @@ export default function EmbedGraphRagBenchmark() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-colors"
+          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-all duration-300"
         >
           <span>Elesium Enterprise AI Solutions</span>
           <ExternalLink className="w-3 h-3" />

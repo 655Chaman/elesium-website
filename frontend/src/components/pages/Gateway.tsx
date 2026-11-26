@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
 import emblem from '../../assets/LOGO_EMBLEM.png'
 import MetallicPaint from '../ui/MetallicPaint'
 import { ConnectorFieldCanvas, AiLatticeCanvas } from '../ui/GatewayCanvases'
@@ -20,8 +20,13 @@ const titleSpring = {
 }
 
 export default function Gateway() {
+    const navigate = useNavigate()
+    const prefersReducedMotion = useReducedMotion()
     const [hovered, setHovered] = useState<'connector' | 'ai' | null>(null)
+    const [medallionHovered, setMedallionHovered] = useState(false)
+    const [isZoomingToPortfolio, setIsZoomingToPortfolio] = useState(false)
     const mainRef = useRef<HTMLElement>(null)
+    const navigatedRef = useRef(false)
 
     // Smooth cursor tracking along center divider axis (transform-only GPU motion)
     const dividerPos = useMotionValue(0)
@@ -42,13 +47,14 @@ export default function Gateway() {
     const rightY = useSpring(rightRawY, titleSpring)
 
     const handleRootPointerMove = (e: React.PointerEvent<HTMLElement>) => {
-        if (!mainRef.current) return
+        if (!mainRef.current || isZoomingToPortfolio) return
         const rect = mainRef.current.getBoundingClientRect()
         dividerPos.set(e.clientY - rect.top - 96)
         dividerX.set(e.clientX - rect.left - 96)
     }
 
     const handleHalfMove = (side: 'connector' | 'ai', e: React.PointerEvent<HTMLAnchorElement>) => {
+        if (isZoomingToPortfolio) return
         const rect = e.currentTarget.getBoundingClientRect()
         const nx = (e.clientX - rect.left) / rect.width - 0.5
         const ny = (e.clientY - rect.top) / rect.height - 0.5
@@ -72,6 +78,19 @@ export default function Gateway() {
         }
     }
 
+    const triggerLogoZoom = () => {
+        if (isZoomingToPortfolio) return
+        setHovered(null)
+        setMedallionHovered(false)
+        setIsZoomingToPortfolio(true)
+    }
+
+    const completePortfolioNavigation = () => {
+        if (navigatedRef.current) return
+        navigatedRef.current = true
+        navigate('/portfolio/')
+    }
+
     return (
         <main
             ref={mainRef}
@@ -92,9 +111,13 @@ export default function Gateway() {
                 {/* LEFT / TOP: Elesium Connector Model */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.97 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={entrySpring}
-                    className="relative h-full w-full overflow-hidden"
+                    animate={isZoomingToPortfolio ? { opacity: 0, scale: 0.96 } : { opacity: 1, scale: 1 }}
+                    transition={
+                        isZoomingToPortfolio
+                            ? { duration: 0.2, ease: [0.4, 0, 0.2, 1] }
+                            : entrySpring
+                    }
+                    className={`relative h-full w-full overflow-hidden ${isZoomingToPortfolio ? 'pointer-events-none' : ''}`}
                 >
                     <ConnectorFieldCanvas
                         isFocused={hovered === 'connector'}
@@ -130,9 +153,13 @@ export default function Gateway() {
                 {/* RIGHT / BOTTOM: AI & Automation Elesium */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.97 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={entrySpring}
-                    className="relative h-full w-full overflow-hidden"
+                    animate={isZoomingToPortfolio ? { opacity: 0, scale: 0.96 } : { opacity: 1, scale: 1 }}
+                    transition={
+                        isZoomingToPortfolio
+                            ? { duration: 0.2, ease: [0.4, 0, 0.2, 1] }
+                            : entrySpring
+                    }
+                    className={`relative h-full w-full overflow-hidden ${isZoomingToPortfolio ? 'pointer-events-none' : ''}`}
                 >
                     <AiLatticeCanvas
                         isFocused={hovered === 'ai'}
@@ -167,36 +194,53 @@ export default function Gateway() {
             </div>
 
             {/* Center Vertical Hairline + Specular Trace (Desktop) */}
-            <div
+            <motion.div
                 aria-hidden="true"
+                animate={isZoomingToPortfolio ? { opacity: 0, scale: 0.96 } : { opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
                 className="pointer-events-none hidden md:block absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-white/[0.06] via-white/20 to-white/[0.06] z-20 overflow-hidden"
             >
                 <motion.div
                     style={{ y: smoothDividerY }}
                     className="h-48 w-px bg-gradient-to-b from-transparent via-white/80 to-transparent"
                 />
-            </div>
+            </motion.div>
 
             {/* Center Horizontal Hairline + Specular Trace (Mobile) */}
-            <div
+            <motion.div
                 aria-hidden="true"
+                animate={isZoomingToPortfolio ? { opacity: 0, scale: 0.96 } : { opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
                 className="pointer-events-none block md:hidden absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-gradient-to-r from-white/[0.06] via-white/20 to-white/[0.06] z-20 overflow-hidden"
             >
                 <motion.div
                     style={{ x: smoothDividerX }}
                     className="w-48 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent"
                 />
-            </div>
+            </motion.div>
 
-            {/* Centered Live Liquid-Chrome Brand Medallion */}
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center"
-            >
-                {/* Outer precision hairline orbit */}
-                <div className="relative flex h-24 w-24 sm:h-28 sm:w-28 items-center justify-center rounded-full bg-black border border-white/15 shadow-[0_0_50px_rgba(0,0,0,0.95)]">
-                    <div className="absolute inset-1.5 rounded-full border border-white/[0.07]" />
-                    <div className="h-12 w-12 sm:h-14 sm:w-14">
+            {/* Centered Live Liquid-Chrome Brand Medallion -> Founder Portfolio */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center">
+                <motion.button
+                    type="button"
+                    onClick={triggerLogoZoom}
+                    disabled={isZoomingToPortfolio}
+                    aria-label="Open Founder Portfolio"
+                    onPointerEnter={() => setMedallionHovered(true)}
+                    onPointerLeave={() => setMedallionHovered(false)}
+                    onFocus={() => setMedallionHovered(true)}
+                    onBlur={() => setMedallionHovered(false)}
+                    whileHover={prefersReducedMotion ? undefined : { scale: 1.06 }}
+                    whileTap={prefersReducedMotion ? undefined : { scale: 0.97 }}
+                    animate={isZoomingToPortfolio ? { opacity: 0 } : { opacity: 1 }}
+                    transition={{ type: 'spring', stiffness: 360, damping: 28, mass: 0.7 }}
+                    className="group relative flex h-24 w-24 sm:h-28 sm:w-28 cursor-pointer items-center justify-center rounded-full bg-black border border-white/15 shadow-[0_0_50px_rgba(0,0,0,0.95)] transition-colors duration-300 hover:border-white/35 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-1.5 rounded-full border border-white/[0.07] transition-colors duration-300 group-hover:border-white/20"
+                    />
+                    <div aria-hidden="true" className="pointer-events-none h-12 w-12 sm:h-14 sm:w-14">
                         <MetallicPaint
                             imageSrc={emblem}
                             alt="Elesium"
@@ -213,8 +257,62 @@ export default function Gateway() {
                             resolution={384}
                         />
                     </div>
-                </div>
+                </motion.button>
+
+                <AnimatePresence>
+                    {medallionHovered && !isZoomingToPortfolio && (
+                        <motion.span
+                            initial={{ opacity: 0, y: -4 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -4 }}
+                            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+                            aria-hidden="true"
+                            className="pointer-events-none absolute top-full mt-3 whitespace-nowrap text-[10px] font-mono uppercase tracking-[0.26em] text-white/65"
+                        >
+                            Portfolio
+                        </motion.span>
+                    )}
+                </AnimatePresence>
             </div>
+
+            {/* Netflix-Style Logo Zoom-Out Transition Overlay */}
+            <AnimatePresence>
+                {isZoomingToPortfolio && (
+                    <motion.div
+                        aria-hidden="true"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.18, ease: [0.4, 0, 0.2, 1] }}
+                        className="fixed inset-0 z-50 bg-black flex items-center justify-center pointer-events-none overflow-hidden"
+                    >
+                        {prefersReducedMotion ? (
+                            <motion.img
+                                src={emblem}
+                                alt=""
+                                initial={{ opacity: 1 }}
+                                animate={{ opacity: 0 }}
+                                transition={{ duration: 0.22, ease: 'easeOut' }}
+                                onAnimationComplete={completePortfolioNavigation}
+                                className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
+                            />
+                        ) : (
+                            <motion.img
+                                src={emblem}
+                                alt=""
+                                initial={{ scale: 1, opacity: 1 }}
+                                animate={{ scale: 28, opacity: [1, 1, 0] }}
+                                transition={{
+                                    duration: 0.72,
+                                    ease: [0.65, 0, 0.35, 1],
+                                    times: [0, 0.62, 1],
+                                }}
+                                onAnimationComplete={completePortfolioNavigation}
+                                className="h-12 w-12 sm:h-14 sm:w-14 object-contain will-change-transform"
+                            />
+                        )}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </main>
     )
 }

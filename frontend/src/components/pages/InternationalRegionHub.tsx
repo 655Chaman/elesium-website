@@ -553,11 +553,11 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                 {/* Hero Header */}
                 <header className="mb-14">
                     <div className="flex flex-wrap items-center gap-2 mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white text-xs font-mono">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white text-xs font-mono">
                             <Globe2 className="w-3.5 h-3.5" />
                             <span>{regionData.flag} {regionData.regionName} Enterprise Portal &bull; {regionData.currency}</span>
                         </div>
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 text-xs font-mono">
+                        <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 text-xs font-mono">
                             <Cloud className="w-3.5 h-3.5" />
                             <span>{regionData.cloudDataCenters}</span>
                         </div>
@@ -572,7 +572,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                     </p>
 
                     {/* AEO Answer Capsule */}
-                    <div className="answer-capsule p-6 sm:p-7 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 border-l-4 border-l-black dark:border-l-white mb-8">
+                    <div className="answer-capsule p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 border-l-4 border-l-black dark:border-l-white mb-8">
                         <div className="text-xs font-mono uppercase tracking-wider text-black dark:text-white font-semibold mb-2 flex items-center gap-2">
                             <TrendingUp className="w-4 h-4" />
                             <span>{regionData.regionName} Executive Engineering Brief &bull; AEO Answer Capsule</span>
@@ -586,7 +586,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                     <div className="flex flex-col sm:flex-row items-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Schedule Principal Architect Call ({regionData.currencySymbol})</span>
@@ -595,7 +595,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
 
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in Private Alpha Waitlist</span>
                             <span>&rarr;</span>
@@ -613,7 +613,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                         {regionData.corePillars.map((pillar, i) => (
                             <div
                                 key={i}
-                                className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between"
+                                className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between h-full"
                             >
                                 <div>
                                     <div className="text-3xl font-bold font-mono text-black dark:text-white mb-1">
@@ -635,7 +635,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                 </section>
 
                 {/* Statutory Frameworks & Data Residency */}
-                <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <section className="mb-14 md:mb-16 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="max-w-3xl mb-6">
                         <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold flex items-center gap-1.5">
                             <Lock className="w-3.5 h-3.5 text-black dark:text-white" />
@@ -651,7 +651,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {regionData.statutoryFrameworks.map((framework, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div key={i} className="flex items-center gap-3 p-4 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                 <ShieldCheck className="w-5 h-5 text-black dark:text-white flex-shrink-0" />
                                 <span className="text-sm font-medium text-black dark:text-white">{framework}</span>
                             </div>
@@ -667,7 +667,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {regionData.targetSectors.map((sector, i) => (
-                            <div key={i} className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div key={i} className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
                                 <div className="flex items-center gap-2 mb-3">
                                     <Building2 className="w-4 h-4 text-black dark:text-white" />
                                     <h3 className="text-base font-semibold text-black dark:text-white">{sector.title}</h3>
@@ -682,7 +682,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
 
                 {/* Audited Regional Case Study */}
                 <section className="mb-14 md:mb-16">
-                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-8 sm:p-10 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                         <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2">
                             <TrendingUp className="w-4 h-4 text-black dark:text-white" />
                             <span>Audited {regionData.regionName} Deployment Benchmark</span>
@@ -695,13 +695,13 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-sm">
-                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                 <div className="font-semibold text-black dark:text-white mb-1">Operational Bottleneck:</div>
                                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {regionData.caseStudy.challenge}
                                 </p>
                             </div>
-                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                 <div className="font-semibold text-black dark:text-white mb-1">Engineered Architecture:</div>
                                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {regionData.caseStudy.solution}
@@ -709,7 +709,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                             </div>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-sm">
+                        <div className="p-4 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-sm">
                             <strong>Measured Production Outcome:</strong> {regionData.caseStudy.roiMetric}
                         </div>
                     </div>
@@ -733,15 +733,15 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                         {regionData.pricingTiers.map((tier, i) => (
                             <div
                                 key={i}
-                                className={`p-6 sm:p-7 rounded-xl border flex flex-col justify-between ${
+                                className={`p-6 sm:p-7 rounded-[24px] border flex flex-col justify-between h-full transition-all duration-300 ${
                                     i === 1
-                                        ? 'border-black dark:border-white bg-neutral-50 dark:bg-neutral-950 relative'
+                                        ? 'border-2 border-black dark:border-white bg-neutral-50 dark:bg-neutral-950 relative'
                                         : 'border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950'
                                 }`}
                             >
                                 <div>
                                     {i === 1 && (
-                                        <span className="absolute -top-3 left-6 px-2.5 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider bg-black text-white dark:bg-white dark:text-black font-bold">
+                                        <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black text-white dark:bg-white dark:text-black font-bold">
                                             Most Popular
                                         </span>
                                     )}
@@ -763,7 +763,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                                 </div>
                                 <button
                                     onClick={openWhatsApp}
-                                    className="w-full py-2.5 rounded-lg bg-black text-white dark:bg-white dark:text-black font-semibold text-xs transition-all hover:opacity-90 active:scale-[0.97] flex items-center justify-center gap-1.5"
+                                    className="w-full py-2.5 px-5 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold text-xs transition-all duration-300 hover:opacity-90 active:scale-[0.97] flex items-center justify-center gap-1.5"
                                 >
                                     <span>Select {tier.name}</span>
                                     <ArrowRight className="w-3.5 h-3.5" />
@@ -789,14 +789,14 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                             return (
                                 <div
                                     key={i}
-                                    className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950"
+                                    className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
                                     <button
                                         onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                                         className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
                                     >
                                         <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
+                                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
                                     </button>
                                     <AnimatePresence initial={false}>
                                         {isOpen && (
@@ -804,7 +804,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                 className="accordion-panel overflow-hidden"
                                             >
                                                 <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
@@ -834,10 +834,10 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
                         <Link
                             to="/"
-                            className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 text-left transition-all"
+                            className="p-5 rounded-[20px] border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 text-left transition-all duration-300 h-full flex flex-col justify-between"
                         >
                             <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-1">
                                 Global / India
@@ -850,7 +850,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                             <Link
                                 key={r.regionId}
                                 to={`/${r.slug}/`}
-                                className={`p-4 rounded-xl border text-left transition-all ${
+                                className={`p-5 rounded-[20px] border text-left transition-all duration-300 h-full flex flex-col justify-between ${
                                     r.regionId === regionData.regionId
                                         ? 'border-black dark:border-white bg-neutral-100 dark:bg-neutral-900'
                                         : 'border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30'
@@ -868,8 +868,8 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                 </section>
 
                 {/* Bottom CTA Card */}
-                <section className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
-                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 border border-white/20 px-3 py-1 rounded-lg inline-flex items-center gap-1.5">
+                <section className="p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
+                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 border border-white/20 px-3.5 py-1 rounded-full inline-flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5" />
                         <span>Sovereign Production SLA &bull; 90-Day Guaranteed Breakeven</span>
                     </span>
@@ -883,7 +883,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -891,7 +891,7 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in Private Alpha Waitlist</span>
                             <span>&rarr;</span>

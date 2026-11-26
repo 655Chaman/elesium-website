@@ -120,7 +120,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
       {/* Hero Section */}
       <header className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-800 bg-neutral-950">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono uppercase tracking-wider mb-6">
             <ShieldCheck className="w-4 h-4" />
             <span>Interactive MicroVM &amp; AST Formal Verification Lab</span>
           </div>
@@ -136,7 +136,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
       {/* Main Interactive Grid */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Sliders Block */}
-        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 sm:p-8 mb-8 shadow-2xl">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] p-6 sm:p-8 mb-8 shadow-2xl">
           <div className="flex items-center justify-between mb-6 pb-4 border-b border-neutral-800">
             <div className="flex items-center gap-2">
               <Sliders className="w-5 h-5 text-neutral-200" />
@@ -144,14 +144,14 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
             </div>
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] text-xs font-mono text-neutral-200 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/20 transition-colors"
+              className="active:scale-[0.97] text-xs font-mono text-neutral-200 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/20 transition-all duration-300"
             >
               <Code className="w-3.5 h-3.5" />
               <span>Embed Widget</span>
@@ -172,7 +172,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
                 step={25000}
                 value={monthlyCodeExecutions}
                 onChange={(e) => setMonthlyCodeExecutions(Number(e.target.value))}
-                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
               />
               <span className="text-[11px] text-neutral-400 mt-1 block">
                 Total REPL and tool execution invocations across agent swarms.
@@ -192,7 +192,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
                 step={50}
                 value={avgExecutionTimeMs}
                 onChange={(e) => setAvgExecutionTimeMs(Number(e.target.value))}
-                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
               />
               <span className="text-[11px] text-neutral-400 mt-1 block">
                 Payload computation wall-clock duration excluding sandbox boot.
@@ -212,7 +212,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
                 step={0.5}
                 value={adversarialOrMaliciousScriptPct}
                 onChange={(e) => setAdversarialOrMaliciousScriptPct(Number(e.target.value))}
-                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
               />
               <span className="text-[11px] text-neutral-400 mt-1 block">
                 Rate of hallucinated, prompt-injected, or untrusted user scripts.
@@ -223,7 +223,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
 
         {/* Top Impact KPI Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-[24px] relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-white/80"></div>
             <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Annual Cost Savings</span>
             <span className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
@@ -232,7 +232,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
             <span className="text-xs text-neutral-400 block mt-1">Compute &amp; Security Remediation</span>
           </div>
 
-          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-[24px] relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-white/80"></div>
             <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Cold Boot Speedup</span>
             <span className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
@@ -241,7 +241,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
             <span className="text-xs text-neutral-400 block mt-1">{results.sovereignMicrovm.coldBootOverheadMs}ms vs {results.naiveDocker.coldBootOverheadMs}ms</span>
           </div>
 
-          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-[24px] relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-white/80"></div>
             <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Breakout Suppression</span>
             <span className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
@@ -250,7 +250,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
             <span className="text-xs text-neutral-400 block mt-1">0.00% MicroVM Escape Risk</span>
           </div>
 
-          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-[24px] relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-amber-500"></div>
             <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Formal Invariant Pass</span>
             <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">
@@ -261,7 +261,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
         </div>
 
         {/* 3-Tier Architecture Benchmark Table */}
-        <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden mb-8 shadow-2xl">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] overflow-hidden mb-8 shadow-2xl">
           <div className="p-5 border-b border-neutral-800 flex items-center justify-between">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
               <Terminal className="w-4 h-4 text-neutral-200" />
@@ -328,7 +328,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
         </div>
 
         {/* Executive Memo Generator */}
-        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 sm:p-8 mb-8 shadow-2xl">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] p-6 sm:p-8 mb-8 shadow-2xl">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
               <Cpu className="w-4 h-4 text-neutral-200" />
@@ -336,7 +336,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
             </h3>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] text-xs font-semibold px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black transition-colors flex items-center gap-1.5"
+              className="active:scale-[0.97] text-xs font-semibold px-3 py-1.5 rounded-full bg-white hover:bg-neutral-200 text-black transition-all duration-300 flex items-center gap-1.5"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy SecOps Memo'}</span>
@@ -345,7 +345,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
           <p className="text-xs text-neutral-400 mb-4 leading-relaxed">
             Generate an instant, mathematically verified architectural justification memo comparing ephemeral KVM microVMs against naive Docker container overhead:
           </p>
-          <div className="bg-neutral-950 border border-neutral-800 rounded-xl p-4 font-mono text-xs text-neutral-300 leading-relaxed overflow-x-auto select-all">
+          <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 font-mono text-xs text-neutral-300 leading-relaxed overflow-x-auto select-all">
             <p className="text-white mb-2 font-bold">ENTERPRISE AGENT SANDBOX CODE EXECUTION &amp; FORMAL VERIFICATION MEMO</p>
             <p className="mb-2">Workload: {(inputs.monthlyCodeExecutions / 1000).toFixed(0)}k executions/mo | Runtime: {inputs.avgExecutionTimeMs}ms | Untrusted Rate: {inputs.adversarialOrMaliciousScriptPct}%</p>
             <p className="text-neutral-400 mb-1">1. Unconstrained Host: 2.0ms boot | Breakout Risk: {results.unconstrainedHost.breakoutVulnerabilityPct}% | Remediation Loss: ${results.unconstrainedHost.annualizedTotalCostUSD.toLocaleString()}</p>
@@ -356,17 +356,17 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
         </div>
 
         {/* FAQs Accordion */}
-        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 sm:p-8 mb-8 shadow-2xl">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] p-6 sm:p-8 mb-8 shadow-2xl">
           <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
             <Lock className="w-5 h-5 text-neutral-200" />
             <span>Frequently Asked Architectural &amp; SecOps Questions</span>
           </h3>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full text-left p-4 flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white bg-neutral-950/50 transition-colors"
+                  className="active:scale-[0.97] w-full text-left p-4 flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white bg-neutral-950/50 transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openFaq === idx ? 'rotate-180 text-neutral-200' : 'text-neutral-400'}`} />
@@ -382,7 +382,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
         </div>
 
         {/* CTA Card */}
-        <div className="bg-neutral-950 border border-white/20 rounded-xl p-8 text-center relative overflow-hidden shadow-2xl">
+        <div className="bg-neutral-950 border border-white/20 rounded-[32px] p-8 text-center relative overflow-hidden shadow-2xl">
           <div className="max-w-2xl mx-auto space-y-4">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
               Harden Your Autonomous Agent Execution Pipeline
@@ -402,7 +402,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
               </ExpandableScreen>
               <Link
                 to="/solutions/"
-                className="px-6 py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-colors border border-neutral-700"
+                className="px-6 py-3 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-all duration-300 border border-neutral-700"
               >
                 Explore All Sovereign Solutions
               </Link>
@@ -414,7 +414,7 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1"
@@ -428,14 +428,14 @@ RECOMMENDATION: Deploy ephemeral KVM microVMs with eBPF syscall filtering and fo
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this snippet into your engineering documentation, intranet, or technical blog:
             </p>
-            <div className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
               {embedCode}
             </div>
             <div className="flex items-center justify-between">
               <span className="text-[11px] text-neutral-400">Watermarked to Elesium Sovereign Architecture</span>
               <button
                 onClick={copyEmbedToClipboard}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all duration-300 flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Code Copied!' : 'Copy Embed Snippet'}</span>

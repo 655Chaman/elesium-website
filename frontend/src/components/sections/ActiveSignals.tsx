@@ -64,7 +64,7 @@ export default function ActiveSignals() {
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="flex items-center justify-between mb-10 md:mb-14"
                 >
                     <div className="flex items-center gap-3">
@@ -81,16 +81,16 @@ export default function ActiveSignals() {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.98, y: 16 }}
                     animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.1 }}
-                    className="grid grid-cols-1 md:grid-cols-12 gap-8"
+                    transition={{ type: 'spring', stiffness: 260, damping: 28, delay: 0.1 }}
+                    className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch"
                 >
                     {/* Left side: Interactive List */}
-                    <div className="md:col-span-4 flex flex-col gap-2">
+                    <div className="md:col-span-4 flex flex-col justify-between gap-2.5">
                         {signals.map((signal, i) => (
                             <button
                                 key={signal.id}
                                 onClick={() => setActiveIndex(i)}
-                                className={`text-left p-4 rounded-xl transition-all duration-200 border active:scale-[0.98] ${
+                                className={`flex-1 text-left p-4 rounded-[20px] transition-all duration-200 border active:scale-[0.98] ${
                                     i === activeIndex 
                                     ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white' 
                                     : 'bg-neutral-50 dark:bg-neutral-950 border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/25 text-black dark:text-white'
@@ -116,9 +116,9 @@ export default function ActiveSignals() {
                     </div>
 
                     {/* Right side: Active Signal Detail */}
-                    <div className="md:col-span-8 border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
+                    <div className="md:col-span-8 border border-neutral-200 dark:border-white/10 rounded-[32px] overflow-hidden bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                         {/* Terminal bar */}
-                        <div className="flex items-center justify-between px-6 py-3.5 border-b border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                        <div className="flex items-center justify-between px-7 py-4 border-b border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                             <div className="flex items-center gap-2">
                                 <Terminal className="w-3.5 h-3.5 text-black dark:text-white" />
                                 <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 tracking-wider">
@@ -131,14 +131,14 @@ export default function ActiveSignals() {
                         </div>
 
                         {/* Active signal display */}
-                        <div className="p-6 md:p-10 flex-1 flex flex-col justify-center">
+                        <div className="p-7 md:p-10 flex-1 flex flex-col justify-center">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeIndex}
                                     initial={{ opacity: 0, y: 8 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -8 }}
-                                    transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                                    transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                                     className="space-y-6"
                                 >
                                     <div className="flex items-center gap-3">
@@ -165,13 +165,13 @@ export default function ActiveSignals() {
                         </div>
 
                         {/* WhatsApp CTA Action Bar */}
-                        <div className="p-6 border-t border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div className="px-7 py-6 border-t border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div className="text-xs text-neutral-600 dark:text-neutral-400">
                                 Deploy targeted outbound pipeline for your specific sector.
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-5 py-2.5 rounded-lg text-xs sm:text-sm active:scale-[0.97] transition-all"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3 rounded-full text-xs sm:text-sm active:scale-[0.97] transition-all"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Deploy via WhatsApp Desk</span>

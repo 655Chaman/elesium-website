@@ -18,7 +18,7 @@ export default function About() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="text-center mb-16 md:mb-20"
                 >
                     <h2 className="display-lg mb-6 text-black dark:text-white">
@@ -32,7 +32,7 @@ export default function About() {
                     </p>
                 </motion.div>
 
-                <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-24">
+                <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-24 items-stretch">
                     {stats.map((stat, index) => {
                         const Icon = stat.icon
                         return (
@@ -40,10 +40,10 @@ export default function About() {
                                 key={stat.label}
                                 initial={{ opacity: 0, scale: 0.97 }}
                                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.97 }}
-                                transition={{ type: 'spring', stiffness: 260, damping: 26, delay: index * 0.1 }}
+                                transition={{ type: 'spring', stiffness: 260, damping: 28, delay: index * 0.1 }}
                                 className="text-center"
                             >
-                                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 mb-6">
+                                <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 mb-6">
                                     <Icon className="text-black dark:text-white" size={28} />
                                 </div>
                                 <div className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
@@ -60,21 +60,21 @@ export default function About() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.2 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28, delay: 0.2 }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-black dark:text-white mb-12">Our Engineering Ethos</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div className="bg-neutral-50 dark:bg-neutral-950 p-8 rounded-xl border border-neutral-200 dark:border-white/10 transition-colors">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 transition-colors h-full">
                             <Lightbulb className="w-8 h-8 text-black dark:text-white mb-6" />
                             <h3 className="text-xl font-bold text-black dark:text-white mb-3">Hard ROI Over Hype</h3>
                             <p className="text-neutral-600 dark:text-neutral-400">Every agentic system we architect is mapped directly to a financial metric: hours saved, error rates reduced, or revenue cycle accelerated.</p>
                         </div>
-                        <div className="bg-neutral-50 dark:bg-neutral-950 p-8 rounded-xl border border-neutral-200 dark:border-white/10 transition-colors">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 transition-colors h-full">
                             <ShieldCheck className="w-8 h-8 text-black dark:text-white mb-6" />
                             <h3 className="text-xl font-bold text-black dark:text-white mb-3">Defensible Architecture</h3>
                             <p className="text-neutral-600 dark:text-neutral-400">We build custom Python environments, deploy vector databases on your private VPC, and orchestrate multi-agent reasoning frameworks that handle real enterprise edge cases.</p>
                         </div>
-                        <div className="bg-neutral-50 dark:bg-neutral-950 p-8 rounded-xl border border-neutral-200 dark:border-white/10 transition-colors">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 transition-colors h-full">
                             <Zap className="w-8 h-8 text-black dark:text-white mb-6" />
                             <h3 className="text-xl font-bold text-black dark:text-white mb-3">Legacy System Mastery</h3>
                             <p className="text-neutral-600 dark:text-neutral-400">Enterprise data is fragmented. We build ETL pipelines that connect modern AI reasoning engines to on-prem SAP, Oracle, and customized ERPs.</p>

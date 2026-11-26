@@ -8503,6 +8503,8 @@ def get_route_chunks(route: str) -> List[str]:
         chunks.append("Waitlist-*.js")
     elif route in ["authors/chaman-shah", "team"]:
         chunks.append("AuthorProfile-*.js")
+    elif route == "portfolio" and "Portfolio-*.js" not in chunks:
+        chunks.append("Portfolio-*.js")
     elif route in ["ai-automation", "ai-automation-agency-india"]:
         chunks.append("AIAutomation-*.js")
     elif route.startswith("enterprise-ai-"):
@@ -9720,6 +9722,7 @@ def generate_ssg():
     <nav aria-label="Primary Gateway Navigation" style="display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:0.9rem;font-weight:600;margin-bottom:1.5rem;">
       <a href="/connector/" style="color:#111827;text-decoration:underline;">Elesium Connector Model</a>
       <a href="/ai/" style="color:#059669;text-decoration:underline;">AI &amp; Automation Elesium</a>
+      <a href="/portfolio/" style="color:#111827;text-decoration:underline;">Chaman Shah — Founder Portfolio</a>
       <a href="/solutions/" style="color:#374151;text-decoration:none;">Solutions Hub (100)</a>
       <a href="/tools/" style="color:#374151;text-decoration:none;">Architecture Simulators</a>
       <a href="/signals/" style="color:#374151;text-decoration:none;">Technical Signals</a>
@@ -11120,6 +11123,10 @@ def generate_ssg():
             "title": "Elesium Connector Model | Direct B2B Pipeline & Partner Matching",
             "desc": "Find the right partners faster with context, qualification, and trust. Elesium Connector Model connects verified enterprise buyers and suppliers directly."
         },
+        "portfolio": {
+            "title": "Chaman Shah — Founder & Principal Systems Architect",
+            "desc": "Portfolio of Chaman Shah, Founder of Elesium. Architecting high-trust B2B market conduits (Elesium Connector Model) and sovereign multi-agent AI systems."
+        },
         "ai-automation": {
             "title": "Best AI & Automation Company in Bangalore",
             "desc": "Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows."
@@ -12069,10 +12076,11 @@ def generate_ssg():
   </main>
 
   <footer style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:#9ca3af;">
-    <span>Elesium Digital Systems Private Limited &bull; Bengaluru</span>
-    <div style="display:flex;gap:1.5rem;">
+    <span>Elesium Digital Systems Private Limited &bull; 80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034, India &bull; +91-8317329312</span>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
       <a href="/" style="color:#d1d5db;text-decoration:none;">Portal</a>
       <a href="/ai/" style="color:#ffffff;text-decoration:none;">AI &amp; Automation &rarr;</a>
+      <a href="/portfolio/" style="color:#d1d5db;text-decoration:none;">Founder Portfolio</a>
       <a href="mailto:connect@elesium.online" style="color:#d1d5db;text-decoration:none;">connect@elesium.online</a>
     </div>
   </footer>
@@ -12144,6 +12152,226 @@ def generate_ssg():
                 ]
             }
             html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(connector_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "portfolio":
+            portfolio_capsule = (
+                "Chaman Shah is the Founder and Principal Systems Architect of Elesium Digital Systems Private Limited "
+                "(Koramangala 4th Block, Bengaluru), architecting high-trust B2B market conduits via the Elesium Connector Model "
+                "and sovereign multi-agent AI systems via AI & Automation Elesium. With 8+ years of distributed systems engineering, "
+                "his work combines compliance-verified buyer-supplier matchmaking with deterministic LangGraph state machines, "
+                "private VPC vLLM clusters (sub-200ms TTFT), and DPDP Act 2023 statutory compliance."
+            )
+            portfolio_semantic = f"""
+<main id="main-content">
+<div id="prerendered-portfolio" style="max-width:1120px;margin:0 auto;padding:2.5rem 1.5rem 5rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#f8fafc;background:#000000;">
+  <nav aria-label="Breadcrumb" style="font-size:0.85rem;font-family:monospace;color:#9ca3af;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <div>
+      <a href="/" style="color:#ffffff;text-decoration:none;">Portal</a> / <span style="color:#d1d5db;font-weight:700;">Chaman Shah - Founder Portfolio</span>
+    </div>
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;">
+      <a href="/connector/" style="color:#d1d5db;text-decoration:none;">Connector Model</a>
+      <a href="/ai/" style="color:#d1d5db;text-decoration:none;">AI &amp; Automation</a>
+      <a href="/authors/chaman-shah/" style="color:#ffffff;text-decoration:underline;">Author Dossier</a>
+    </div>
+  </nav>
+
+  <header style="margin-bottom:3.5rem;padding:2rem;border:1px solid rgba(255,255,255,0.12);border-radius:1rem;background:#050507;">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.22em;color:#9ca3af;margin:0 0 0.75rem 0;">
+      Founder &amp; Principal Systems Architect &bull; Elesium Digital Systems Private Limited
+    </p>
+    <h1 style="font-size:2.75rem;font-weight:700;letter-spacing:-0.03em;line-height:1.12;margin:0 0 0.75rem 0;color:#ffffff;">
+      Chaman Shah
+    </h1>
+    <p style="font-size:1.05rem;color:#d1d5db;margin:0 0 1.5rem 0;">
+      80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034, India &bull; +91-8317329312 &bull; contact@elesium.online
+    </p>
+    <div class="answer-capsule" style="padding:1.25rem 1.5rem;border:1px solid rgba(255,255,255,0.16);border-left:4px solid #ffffff;border-radius:0.75rem;background:#0a0a0c;margin-bottom:1.5rem;">
+      <div style="font-family:monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.15em;color:#9ca3af;margin-bottom:0.4rem;">
+        Principal Systems Architect Bio &amp; Executive Summary
+      </div>
+      <p style="font-size:1rem;line-height:1.65;color:#e5e7eb;margin:0;">
+        {html.escape(portfolio_capsule)}
+      </p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.85rem;align-items:center;">
+      <a href="https://wa.me/918317329312" style="display:inline-block;padding:0.75rem 1.5rem;background:#ffffff;color:#000000;font-weight:600;border-radius:0.375rem;text-decoration:none;font-size:0.875rem;">Connect on WhatsApp (+91-8317329312) &rarr;</a>
+      <a href="https://github.com/655Chaman" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.75rem 1.25rem;border:1px solid rgba(255,255,255,0.2);color:#ffffff;font-weight:500;border-radius:0.375rem;text-decoration:none;font-size:0.875rem;">GitHub / 655Chaman</a>
+      <a href="https://linkedin.com/in/chaman-shah-elesium" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.75rem 1.25rem;border:1px solid rgba(255,255,255,0.2);color:#ffffff;font-weight:500;border-radius:0.375rem;text-decoration:none;font-size:0.875rem;">LinkedIn</a>
+      <a href="https://x.com/chamanshah_ai" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.75rem 1.25rem;border:1px solid rgba(255,255,255,0.2);color:#ffffff;font-weight:500;border-radius:0.375rem;text-decoration:none;font-size:0.875rem;">@chamanshah_ai</a>
+    </div>
+  </header>
+
+  <section id="ventures" style="margin-bottom:3.5rem;">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Dual Operating Divisions</p>
+    <h2 style="font-size:1.85rem;font-weight:600;color:#ffffff;margin:0 0 1.5rem 0;">Dual Ventures Architected Under Elesium</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;">
+      <article style="padding:1.75rem;border:1px solid rgba(255,255,255,0.14);border-radius:0.75rem;background:#050507;">
+        <div style="font-family:monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:#9ca3af;margin-bottom:0.4rem;">Venture 01 &bull; B2B Market Conduits</div>
+        <h3 style="font-size:1.35rem;font-weight:600;color:#ffffff;margin:0 0 0.65rem 0;"><a href="/connector/" style="color:#ffffff;text-decoration:none;">Elesium Connector Model &rarr;</a></h3>
+        <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0 0 1rem 0;">
+          High-trust B2B pipeline engineering connecting pre-vetted enterprise suppliers with qualified buyers (Supply -&gt; Elesium -&gt; Demand) through proprietary target intelligence, compliance-verified introductions, and multi-signal qualification.
+        </p>
+        <a href="/connector/" style="font-size:0.85rem;font-weight:600;color:#ffffff;text-decoration:underline;">Explore Elesium Connector Model</a>
+      </article>
+      <article style="padding:1.75rem;border:1px solid rgba(255,255,255,0.14);border-radius:0.75rem;background:#050507;">
+        <div style="font-family:monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:#9ca3af;margin-bottom:0.4rem;">Venture 02 &bull; Sovereign Multi-Agent AI</div>
+        <h3 style="font-size:1.35rem;font-weight:600;color:#ffffff;margin:0 0 0.65rem 0;"><a href="/ai/" style="color:#ffffff;text-decoration:none;">AI &amp; Automation Elesium &rarr;</a></h3>
+        <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0 0 1rem 0;">
+          Deterministic Python LangGraph state machines, private VPC vLLM clusters hosted in Yotta Shakti and CtrlS tier-IV Indian datacenters, DPDP Act 2023 Section 8(5) compliance, and contractual 90-day 3x-5x ROI guarantees.
+        </p>
+        <a href="/ai/" style="font-size:0.85rem;font-weight:600;color:#ffffff;text-decoration:underline;">Explore AI &amp; Automation Elesium</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="milestones" style="margin-bottom:3.5rem;">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Production Track Record</p>
+    <h2 style="font-size:1.85rem;font-weight:600;color:#ffffff;margin:0 0 1.5rem 0;">Engineering Milestones &amp; Sovereign Infrastructure</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1.25rem;">
+      <div style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">148ms TTFT</div>
+        <h3 style="font-size:1rem;font-weight:600;color:#e5e7eb;margin:0 0 0.4rem 0;">Sovereign vLLM Clusters</h3>
+        <p style="font-size:0.875rem;color:#9ca3af;margin:0;line-height:1.55;">Air-gapped NVIDIA H100 SXM5 inference fabrics with PagedAttention, FP8 GEMM microscaling, and zero external token egress.</p>
+      </div>
+      <div style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">100+ Blueprints</div>
+        <h3 style="font-size:1rem;font-weight:600;color:#e5e7eb;margin:0 0 0.4rem 0;">Enterprise Multi-Agent Systems</h3>
+        <p style="font-size:0.875rem;color:#9ca3af;margin:0;line-height:1.55;">Production LangGraph topologies across BFSI, SAP S/4HANA ERP, logistics dispatch, manufacturing, and healthcare (<a href="/solutions/" style="color:#d1d5db;">Solutions Hub</a>).</p>
+      </div>
+      <div style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">75+ Simulators</div>
+        <h3 style="font-size:1rem;font-weight:600;color:#e5e7eb;margin:0 0 0.4rem 0;">Interactive Diagnostic Suite</h3>
+        <p style="font-size:0.875rem;color:#9ca3af;margin:0;line-height:1.55;">Open-access FinOps TCO, KV-cache, speculative decoding, and DPDP Act 2023 audit simulators (<a href="/tools/" style="color:#d1d5db;">Tools Hub</a>).</p>
+      </div>
+      <div style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">DPDP Sec 8(5)</div>
+        <h3 style="font-size:1rem;font-weight:600;color:#e5e7eb;margin:0 0 0.4rem 0;">Statutory Compliance Enclaves</h3>
+        <p style="font-size:0.875rem;color:#9ca3af;margin:0;line-height:1.55;">Cryptographic state audit trails engineered for RBI, SEBI, HIPAA, and Indian DPDP Act 2023 data residency mandates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-source" style="margin-bottom:3.5rem;padding:2rem;border:1px solid rgba(255,255,255,0.14);border-radius:0.75rem;background:#050507;">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Open Source &amp; Telemetry</p>
+    <h2 style="font-size:1.65rem;font-weight:600;color:#ffffff;margin:0 0 0.75rem 0;">sovereign-enterprise-ai-benchmarks</h2>
+    <p style="font-size:0.95rem;line-height:1.65;color:#d1d5db;margin:0 0 1.25rem 0;">
+      Reproducible benchmark suites measuring sovereign vLLM PagedAttention throughput, KV-cache memory compaction, FP8 quantization perplexity bounds, and deterministic multi-agent state convergence across private VPC clusters.
+    </p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.7rem 1.25rem;background:#ffffff;color:#000000;font-weight:600;border-radius:0.375rem;text-decoration:none;font-size:0.875rem;">View sovereign-enterprise-ai-benchmarks on GitHub &rarr;</a>
+      <a href="https://github.com/655Chaman/elesium-website" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:0.7rem 1.25rem;border:1px solid rgba(255,255,255,0.2);color:#ffffff;font-weight:500;border-radius:0.375rem;text-decoration:none;font-size:0.875rem;">elesium-website Repository</a>
+    </div>
+  </section>
+
+  <section id="research" style="margin-bottom:3.5rem;">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Publications &amp; Technical Signals</p>
+    <h2 style="font-size:1.85rem;font-weight:600;color:#ffffff;margin:0 0 1.25rem 0;">Research Dossiers</h2>
+    <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;">
+      <li style="padding:1.25rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <a href="/signals/open-source-llm-deployment-on-premise-india/" style="color:#ffffff;font-weight:600;text-decoration:none;display:block;margin-bottom:0.4rem;">On-Premise Open-Source LLM Deployment in India &rarr;</a>
+        <span style="font-size:0.85rem;color:#9ca3af;">Sovereign Private Cloud, vLLM PagedAttention, and DPDP Act 2023.</span>
+      </li>
+      <li style="padding:1.25rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <a href="/signals/ai-driven-document-processing-india/" style="color:#ffffff;font-weight:600;text-decoration:none;display:block;margin-bottom:0.4rem;">Enterprise AI-Driven Document Processing in India &rarr;</a>
+        <span style="font-size:0.85rem;color:#9ca3af;">Multimodal OCR, LayoutLMv3, and GST Rule 36(4) Reconciliation.</span>
+      </li>
+      <li style="padding:1.25rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <a href="/resources/india-enterprise-ai-benchmark-2026/" style="color:#ffffff;font-weight:600;text-decoration:none;display:block;margin-bottom:0.4rem;">India Enterprise AI Benchmark Report 2026 &rarr;</a>
+        <span style="font-size:0.85rem;color:#9ca3af;">Empirical telemetry across 1,420 Indian enterprise deployments.</span>
+      </li>
+      <li style="padding:1.25rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+        <a href="/authors/chaman-shah/" style="color:#ffffff;font-weight:600;text-decoration:none;display:block;margin-bottom:0.4rem;">Chaman Shah - Author &amp; Architecture Profile &rarr;</a>
+        <span style="font-size:0.85rem;color:#9ca3af;">Full systems engineering dossier, Shivamogga R&amp;D pod, and whitepapers.</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:#9ca3af;">
+    <span>Elesium Digital Systems Private Limited &bull; 80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034, India &bull; +91-8317329312</span>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+      <a href="/" style="color:#d1d5db;text-decoration:none;">Portal</a>
+      <a href="/connector/" style="color:#d1d5db;text-decoration:none;">Connector Model</a>
+      <a href="/ai/" style="color:#ffffff;text-decoration:none;">AI &amp; Automation</a>
+      <a href="mailto:contact@elesium.online" style="color:#d1d5db;text-decoration:none;">contact@elesium.online</a>
+    </div>
+  </footer>
+</div>
+</main>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{portfolio_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{portfolio_semantic}</div>')
+            html_out = html_out.replace("</head>", '\n<style>html.elesium-clean-route #prerendered-portfolio { display: none !important; }</style>\n</head>')
+
+            portfolio_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://elesium.online/portfolio/#person",
+                        "name": "Chaman Shah",
+                        "givenName": "Chaman",
+                        "familyName": "Shah",
+                        "jobTitle": "Founder & Principal Systems Architect",
+                        "image": "https://elesium.online/chaman-shah.png",
+                        "url": canonical_url,
+                        "telephone": "+91-8317329312",
+                        "email": "contact@elesium.online",
+                        "worksFor": {
+                            "@id": "https://elesium.online/#organization"
+                        },
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "80 Feet Road, 4th Block, Koramangala",
+                            "addressLocality": "Bengaluru",
+                            "addressRegion": "Karnataka",
+                            "postalCode": "560034",
+                            "addressCountry": "IN"
+                        },
+                        "sameAs": [
+                            "https://elesium.online/authors/chaman-shah/",
+                            "https://github.com/655Chaman",
+                            "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
+                            "https://linkedin.com/in/chaman-shah-elesium",
+                            "https://x.com/chamanshah_ai"
+                        ],
+                        "knowsAbout": [
+                            "B2B Market Conduits",
+                            "Enterprise Multi-Agent Systems",
+                            "LangGraph State Topology",
+                            "vLLM PagedAttention Inference",
+                            "DPDP Act 2023 Statutory Compliance",
+                            "Dedicated Private VPC Cloud Infrastructure"
+                        ],
+                        "description": desc
+                    },
+                    {
+                        "@type": ["ProfilePage", "WebPage"],
+                        "@id": f"{canonical_url}#webpage",
+                        "url": canonical_url,
+                        "name": full_title,
+                        "description": desc,
+                        "isPartOf": {"@id": "https://elesium.online/#website"},
+                        "about": {"@id": "https://elesium.online/#organization"},
+                        "mainEntity": {"@id": "https://elesium.online/portfolio/#person"},
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": f"{canonical_url}#breadcrumb",
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": 1, "name": "Portal", "item": "https://elesium.online/"},
+                            {"@type": "ListItem", "position": 2, "name": "Chaman Shah - Founder Portfolio", "item": canonical_url}
+                        ]
+                    }
+                ]
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(portfolio_schema, ensure_ascii=False)}</script>\n</head>')
 
         elif route == "ai":
             ai_category_links = "".join(

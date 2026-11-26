@@ -36,7 +36,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Agent Memory Drift &amp; Context Compression Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -58,7 +58,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
             href="https://elesium.online/tools/enterprise-agent-memory-drift-compression-simulator"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-neutral-200 hover:text-white transition-colors font-mono"
+            className="inline-flex items-center gap-1 text-xs text-neutral-200 hover:text-white transition-all duration-300 font-mono"
           >
             <span>Full Simulator</span>
             <ExternalLink className="w-3 h-3" />
@@ -80,7 +80,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
             step={10000}
             value={monthlyMultiTurnSessions}
             onChange={(e) => setMonthlyMultiTurnSessions(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -96,7 +96,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
             step={5}
             value={avgTurnsPerSession}
             onChange={(e) => setAvgTurnsPerSession(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -112,14 +112,14 @@ export default function EmbedAgentMemoryDriftSimulator() {
             step={50}
             value={tokensPerTurnBaseline}
             onChange={(e) => setTokensPerTurnBaseline(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
       </div>
 
       {/* Live Result Metrics */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Annual Savings</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             ${(results.annualCostSavingsUSD / 1000).toFixed(1)}k
@@ -127,7 +127,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
           <span className="text-[9px] text-neutral-400 block mt-0.5">Tokens &amp; Triage Reruns</span>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Compression</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             {results.tokenCompressionPct}%
@@ -135,7 +135,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
           <span className="text-[9px] text-neutral-400 block mt-0.5">Context Token Reduction</span>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Drift Suppression</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             {results.driftSuppressionPct}%
@@ -143,7 +143,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
           <span className="text-[9px] text-neutral-400 block mt-0.5">&lt;0.05% Error in 50+ Turns</span>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Recall Latency</span>
           <span className="text-base sm:text-lg font-bold text-amber-400 font-mono">
             {results.sovereignHierarchical.retrievalLatencyOverheadMs} ms

@@ -142,21 +142,21 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           <div className="flex items-center gap-2 shrink-0">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 text-xs font-medium text-neutral-300 hover:text-white hover:bg-neutral-800 transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-700 bg-neutral-900 text-xs font-medium text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all duration-300"
             >
               <Code className="w-3.5 h-3.5" />
               <span>Embed Widget</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 bg-white/[0.05] text-xs font-medium text-neutral-200 hover:bg-white/10 transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/20 bg-white/[0.05] text-xs font-medium text-neutral-200 hover:bg-white/10 transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
@@ -166,7 +166,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
 
         {/* Top Summary Banner */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+          <div className="p-4 rounded-2xl border border-white/20 bg-neutral-950">
             <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">MTTR Acceleration</div>
             <div className="text-2xl sm:text-3xl font-black text-white mt-1">
               {results.mttrAccelerationFactor}x Faster
@@ -174,7 +174,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             <div className="text-[11px] text-neutral-400 mt-0.5">320ms automated recovery vs 2 hrs</div>
           </div>
 
-          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+          <div className="p-4 rounded-2xl border border-white/20 bg-neutral-950">
             <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Cascade Risk Suppression</div>
             <div className="text-2xl sm:text-3xl font-black text-neutral-200 mt-1">
               -{results.cascadeRiskSuppressionPct}%
@@ -182,7 +182,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             <div className="text-[11px] text-neutral-400 mt-0.5">0.02% failure propagation rate</div>
           </div>
 
-          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+          <div className="p-4 rounded-2xl border border-white/20 bg-neutral-950">
             <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Pipeline Recovery Rate</div>
             <div className="text-2xl sm:text-3xl font-black text-neutral-200 mt-1">
               {results.uninterruptedSlaFidelityPct}%
@@ -190,7 +190,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             <div className="text-[11px] text-neutral-400 mt-0.5">Autonomous AST healing &amp; canary check</div>
           </div>
 
-          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+          <div className="p-4 rounded-2xl border border-white/20 bg-neutral-950">
             <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Annual Cost Protected</div>
             <div className="text-2xl sm:text-3xl font-black text-white mt-1">
               ${(results.annualCostSavingsUSD / 1000).toFixed(0)}k/yr
@@ -202,7 +202,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
         {/* Interactive Controls & Architecture Comparison */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Sliders Form (5 cols) */}
-          <div className="lg:col-span-5 p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 space-y-6">
+          <div className="lg:col-span-5 p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/70 space-y-6">
             <div className="flex items-center gap-2 border-b border-neutral-800 pb-3">
               <Sliders className="w-4 h-4 text-neutral-200" />
               <h2 className="text-sm font-semibold tracking-wider uppercase text-neutral-200">
@@ -223,7 +223,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={25000}
                 value={monthlyProductionInvocations}
                 onChange={(e) => setMonthlyProductionInvocations(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>25k calls</span>
@@ -245,7 +245,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={1}
                 value={avgAgentChainDepth}
                 onChange={(e) => setAvgAgentChainDepth(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>3 steps</span>
@@ -267,7 +267,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={1}
                 value={upstreamSchemaDriftEventsPerMonth}
                 onChange={(e) => setUpstreamSchemaDriftEventsPerMonth(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>2 events</span>
@@ -289,7 +289,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={2500}
                 value={costPerIncidentDowntimeUSD}
                 onChange={(e) => setCostPerIncidentDowntimeUSD(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>$5k</span>
@@ -299,7 +299,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             </div>
 
             {/* Architectural Callout Card */}
-            <div className="p-4 rounded-xl border border-white/15 bg-white/[0.05] text-xs space-y-2">
+            <div className="p-4 rounded-2xl border border-white/15 bg-white/[0.05] text-xs space-y-2">
               <div className="flex items-center gap-1.5 font-semibold text-white">
                 <Sparkles className="w-4 h-4 text-neutral-200" />
                 <span>Deterministic Canary Protection</span>
@@ -313,8 +313,8 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           {/* Comparative Cards (7 cols) */}
           <div className="lg:col-span-7 space-y-4">
             {/* Elesium Tier (Top Card) */}
-            <div className="p-6 rounded-xl border-2 border-white/30 bg-neutral-950 shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-white text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg font-mono uppercase tracking-wider">
+            <div className="p-6 rounded-[24px] border-2 border-white/30 bg-neutral-950 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-white text-black text-[10px] font-bold px-3 py-1 rounded-bl-xl font-mono uppercase tracking-wider">
                 Production Benchmark
               </div>
 
@@ -355,9 +355,9 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             </div>
 
             {/* Naive Retry Loop Tier */}
-            <div className="p-5 rounded-xl border border-neutral-800 bg-neutral-900/50 hover:border-neutral-700 transition">
+            <div className="p-5 rounded-[24px] border border-neutral-800 bg-neutral-900/50 hover:border-neutral-700 transition">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+                <div className="p-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400">
                   <GitBranch className="w-4 h-4 text-amber-400" />
                 </div>
                 <div>
@@ -390,9 +390,9 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             </div>
 
             {/* Unmonitored Monolith Tier */}
-            <div className="p-5 rounded-xl border border-red-950/40 bg-red-950/10 hover:border-white/30 transition">
+            <div className="p-5 rounded-[24px] border border-red-950/40 bg-red-950/10 hover:border-white/30 transition">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400">
+                <div className="p-2 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400">
                   <ShieldAlert className="w-4 h-4 text-red-400" />
                 </div>
                 <div>
@@ -427,7 +427,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
         </div>
 
         {/* Technical Architecture Deep Dive */}
-        <div className="p-8 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-6">
+        <div className="p-8 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-6">
           <div className="flex items-center gap-2 border-b border-neutral-800 pb-4">
             <Activity className="w-5 h-5 text-neutral-200" />
             <h2 className="text-lg font-bold text-white tracking-wide">
@@ -436,21 +436,21 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs leading-relaxed text-neutral-300">
-            <div className="space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-950/60">
+            <div className="space-y-2 p-4 rounded-2xl border border-neutral-800 bg-neutral-950/60">
               <div className="text-white font-mono font-semibold uppercase">1. Ephemeral Shadow Canary</div>
               <p>
                 Live production traffic splits 5% into an isolated shadow sandbox. The shadow agent executes candidate schema changes against sanitized state snapshots, confirming tool invocation validity prior to production routing.
               </p>
             </div>
 
-            <div className="space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-950/60">
+            <div className="space-y-2 p-4 rounded-2xl border border-neutral-800 bg-neutral-950/60">
               <div className="text-white font-mono font-semibold uppercase">2. Kolmogorov-Smirnov Drift Gate</div>
               <p>
                 Continuous statistical distribution testing on output token entropy, response latency, and tool selection distributions detects behavioral anomalies in sub-9 seconds, eliminating silent semantic hallucinations.
               </p>
             </div>
 
-            <div className="space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-950/60">
+            <div className="space-y-2 p-4 rounded-2xl border border-neutral-800 bg-neutral-950/60">
               <div className="text-white font-mono font-semibold uppercase">3. Sub-320ms AST Rollback</div>
               <p>
                 If execution diverges from baseline, the self-healing controller executes an atomic rollback to the golden LangGraph checkpoint within 320ms, dispatching an automated synthetic test case to your engineering alerts.
@@ -466,7 +466,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl border border-neutral-800 bg-neutral-900/40 cursor-pointer transition hover:border-neutral-700"
+                className="p-4 rounded-2xl border border-neutral-800 bg-neutral-900/40 cursor-pointer transition hover:border-neutral-700"
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
               >
                 <div className="flex items-center justify-between text-sm font-semibold text-neutral-200">
@@ -484,7 +484,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="p-8 sm:p-10 rounded-xl border border-white/20 bg-neutral-950 text-center space-y-4">
+        <div className="p-8 sm:p-10 rounded-[32px] border border-white/20 bg-neutral-950 text-center space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Protect Your Multi-Agent Production Workflows Against Outages
           </h2>
@@ -507,7 +507,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
 
             <Link
               to="/solutions/"
-              className="px-6 py-3 rounded-xl border border-neutral-700 hover:bg-neutral-800 text-neutral-300 font-medium text-sm transition"
+              className="px-6 py-3 rounded-full border border-neutral-700 hover:bg-neutral-800 text-neutral-300 font-medium text-sm transition-all duration-300"
             >
               Explore Sovereign Solutions
             </Link>
@@ -518,7 +518,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -545,13 +545,13 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             <div className="flex justify-end gap-2 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-3 py-1.5 rounded-lg border border-neutral-700 text-xs text-neutral-300 hover:bg-neutral-800 transition"
+                className="active:scale-[0.97] px-3 py-1.5 rounded-full border border-neutral-700 text-xs text-neutral-300 hover:bg-neutral-800 transition-all duration-300"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="active:scale-[0.97] px-4 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs inline-flex items-center gap-1.5 transition"
+                className="active:scale-[0.97] px-4 py-1.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs inline-flex items-center gap-1.5 transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Snippet'}</span>

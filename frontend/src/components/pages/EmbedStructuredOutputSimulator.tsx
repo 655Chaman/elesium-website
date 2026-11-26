@@ -40,7 +40,7 @@ export default function EmbedStructuredOutputSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Structured Output &amp; JSON Grammar Decoding Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -89,7 +89,7 @@ export default function EmbedStructuredOutputSimulator() {
           <select
             value={schemaComplexity}
             onChange={(e) => setSchemaComplexity(e.target.value as SchemaComplexity)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="simple">Flat JSON (4-6 keys)</option>
             <option value="medium">Nested Schema (Enums &amp; Arrays)</option>
@@ -104,7 +104,7 @@ export default function EmbedStructuredOutputSimulator() {
           <select
             value={hardwareDeployment}
             onChange={(e) => setHardwareDeployment(e.target.value as HardwareDeployment)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="sovereign_vllm">Sovereign vLLM (Llama 3.3 70B)</option>
             <option value="cloud_frontier">Cloud Frontier API (GPT-4o / Claude)</option>
@@ -114,7 +114,7 @@ export default function EmbedStructuredOutputSimulator() {
 
       {/* Comparison Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 text-xs font-mono">
-        <div className="p-3 rounded-xl bg-white/[0.05] border border-white/20">
+        <div className="p-3 rounded-[18px] bg-white/[0.05] border border-white/20">
           <div className="flex items-center justify-between text-white text-[10px] font-bold uppercase mb-1">
             <span>Elesium Constrained</span>
             <ShieldCheck className="w-3.5 h-3.5 text-neutral-200" />
@@ -128,7 +128,7 @@ export default function EmbedStructuredOutputSimulator() {
           </div>
         </div>
 
-        <div className="p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
+        <div className="p-3 rounded-[18px] bg-neutral-900/60 border border-neutral-800">
           <div className="flex items-center justify-between text-white text-[10px] font-bold uppercase mb-1">
             <span>Vendor Tool Calling</span>
             <Cpu className="w-3.5 h-3.5 text-neutral-200" />
@@ -142,7 +142,7 @@ export default function EmbedStructuredOutputSimulator() {
           </div>
         </div>
 
-        <div className="p-3 rounded-xl bg-red-950/20 border border-red-500/30">
+        <div className="p-3 rounded-[18px] bg-red-950/20 border border-red-500/30">
           <div className="flex items-center justify-between text-red-400 text-[10px] font-bold uppercase mb-1">
             <span>Prompt + Pydantic</span>
             <TrendingDown className="w-3.5 h-3.5 text-red-400" />
@@ -169,7 +169,7 @@ export default function EmbedStructuredOutputSimulator() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center space-x-1 text-neutral-200 hover:text-white font-medium transition-colors"
+          className="inline-flex items-center space-x-1 text-neutral-200 hover:text-white font-medium transition-all duration-300"
         >
           <span>Elesium Sovereign AI Systems</span>
           <ExternalLink className="w-3 h-3" />

@@ -64,17 +64,17 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
 
         {/* Top KPI Cards */}
         <div className="grid grid-cols-3 gap-3">
-          <div className="p-3 rounded-xl border border-white/20 bg-neutral-900/60 text-center">
+          <div className="p-3 rounded-[18px] border border-white/20 bg-neutral-900/60 text-center">
             <div className="text-[10px] font-mono text-neutral-200 uppercase">MTTR Acceleration</div>
             <div className="text-lg sm:text-xl font-black text-white mt-0.5">{results.mttrAccelerationFactor}x</div>
             <div className="text-[9px] text-neutral-500">320ms vs 2 hrs</div>
           </div>
-          <div className="p-3 rounded-xl border border-white/20 bg-neutral-900/60 text-center">
+          <div className="p-3 rounded-[18px] border border-white/20 bg-neutral-900/60 text-center">
             <div className="text-[10px] font-mono text-neutral-200 uppercase">Recovery Rate</div>
             <div className="text-lg sm:text-xl font-black text-neutral-200 mt-0.5">{results.sovereignCanary.pipelineRecoverySuccessPct}%</div>
             <div className="text-[9px] text-neutral-500">Autonomous AST patch</div>
           </div>
-          <div className="p-3 rounded-xl border border-white/20 bg-neutral-900/60 text-center">
+          <div className="p-3 rounded-[18px] border border-white/20 bg-neutral-900/60 text-center">
             <div className="text-[10px] font-mono text-neutral-200 uppercase">Annual Protected</div>
             <div className="text-lg sm:text-xl font-black text-neutral-200 mt-0.5">${(results.annualCostSavingsUSD / 1000).toFixed(0)}k/yr</div>
             <div className="text-[9px] text-neutral-500">Zero death-loop waste</div>
@@ -82,7 +82,7 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
         </div>
 
         {/* Controls */}
-        <div className="p-4 rounded-xl border border-neutral-800 bg-neutral-900/50 space-y-4">
+        <div className="p-4 rounded-2xl border border-neutral-800 bg-neutral-900/50 space-y-4">
           <div className="flex items-center gap-1.5 text-xs font-semibold text-neutral-300 uppercase">
             <Sliders className="w-3.5 h-3.5 text-neutral-200" />
             <span>Interactive Controls</span>
@@ -158,7 +158,7 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
         {/* Comparison Rows */}
         <div className="space-y-2.5">
           {/* Sovereign Canary */}
-          <div className="p-3.5 rounded-xl border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="p-3.5 rounded-2xl border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div className="flex items-center gap-2.5">
               <div className="p-1.5 rounded-lg bg-white/[0.04] text-neutral-200">
                 <RefreshCw className="w-4 h-4" />
@@ -177,7 +177,7 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
           </div>
 
           {/* Naive Retry */}
-          <div className="p-3 rounded-xl border border-neutral-800 bg-neutral-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+          <div className="p-3 rounded-[18px] border border-neutral-800 bg-neutral-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
             <div className="flex items-center gap-2.5">
               <div className="p-1.5 rounded-lg bg-amber-500/10 text-amber-400">
                 <GitBranch className="w-4 h-4" />
@@ -196,7 +196,7 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
           </div>
 
           {/* Unmonitored Monolith */}
-          <div className="p-3 rounded-xl border border-red-950/40 bg-red-950/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+          <div className="p-3 rounded-[18px] border border-red-950/40 bg-red-950/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
             <div className="flex items-center gap-2.5">
               <div className="p-1.5 rounded-lg bg-red-500/10 text-red-400">
                 <ShieldAlert className="w-4 h-4" />

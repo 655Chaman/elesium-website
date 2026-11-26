@@ -127,7 +127,7 @@ export default function EmbedAgentDeadlockVisualizer() {
                     setUpstreamErrorRate(90);
                   }
                 }}
-                className={`active:scale-[0.97] px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium flex items-center gap-1.5 border transition-all ${
+                className={`active:scale-[0.97] px-2.5 py-1.5 rounded-full text-xs font-mono font-medium flex items-center gap-1.5 border transition-all duration-300 ${
                   isSelected
                     ? 'border-white/30 bg-white/10 text-white'
                     : 'border-neutral-800 bg-neutral-900/60 text-neutral-400 hover:text-neutral-200'
@@ -141,7 +141,7 @@ export default function EmbedAgentDeadlockVisualizer() {
         </div>
 
         {/* Graph Visual Canvas */}
-        <div className="relative w-full h-56 bg-neutral-950/90 rounded-xl border border-neutral-800/90 overflow-hidden flex items-center justify-center p-2 mb-4">
+        <div className="relative w-full h-56 bg-neutral-950/90 rounded-[24px] border border-neutral-800/90 overflow-hidden flex items-center justify-center p-2 mb-4">
           <svg className="w-full h-full absolute inset-0 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
               <marker id="embed-arrow-active" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
@@ -203,26 +203,26 @@ export default function EmbedAgentDeadlockVisualizer() {
 
         {/* Quantified Metrics Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">Runaway Tokens</div>
             <div className="text-sm font-bold text-red-400">{results.wastedTokens.toLocaleString()}</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">FSM Bounded</div>
             <div className="text-sm font-bold text-white">{results.boundedFsmTokens.toLocaleString()}</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">Unconstrained P99</div>
             <div className="text-sm font-bold text-red-400">{results.unconstrainedP99Ms}ms</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">FSM Fail-Fast</div>
             <div className="text-sm font-bold text-white">{results.fsmP99Ms}ms</div>
           </div>
         </div>
 
         {/* Quick Sliders */}
-        <div className="grid grid-cols-2 gap-3 p-3 rounded-xl bg-neutral-900/80 border border-neutral-800 mb-4">
+        <div className="grid grid-cols-2 gap-3 p-3 rounded-[18px] bg-neutral-900/80 border border-neutral-800 mb-4">
           <div>
             <div className="flex justify-between text-[10px] font-mono mb-1">
               <span className="text-neutral-400">Upstream Error:</span>
@@ -247,7 +247,7 @@ export default function EmbedAgentDeadlockVisualizer() {
             </div>
             <button
               onClick={() => setCircuitBreakerEnabled(!circuitBreakerEnabled)}
-              className={`active:scale-[0.97] w-full py-1 rounded text-[10px] font-mono font-semibold transition-colors ${
+              className={`active:scale-[0.97] w-full py-1 rounded text-[10px] font-mono font-semibold transition-all duration-300 ${
                 circuitBreakerEnabled ? 'bg-white text-black' : 'bg-neutral-800 text-neutral-400'
               }`}
             >
@@ -264,7 +264,7 @@ export default function EmbedAgentDeadlockVisualizer() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-colors"
+          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-all duration-300"
         >
           <span>Elesium Enterprise AI Solutions</span>
           <ExternalLink className="w-3 h-3" />

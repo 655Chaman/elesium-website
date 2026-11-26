@@ -134,11 +134,11 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   const getCircuitBadge = (state: CircuitBreakerState) => {
     switch (state) {
       case 'OPEN':
-        return <span className="px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-red-500/20 text-red-400 border border-red-500/40">OPEN (TRIPPED - FAST FAIL)</span>;
+        return <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-red-500/20 text-red-400 border border-red-500/40">OPEN (TRIPPED - FAST FAIL)</span>;
       case 'HALF_OPEN':
-        return <span className="px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/40">HALF_OPEN (PROBING)</span>;
+        return <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/40">HALF_OPEN (PROBING)</span>;
       case 'CLOSED':
-        return <span className="px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-white/10 text-white border border-white/30">CLOSED (HEALTHY FLOW)</span>;
+        return <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-white/10 text-white border border-white/30">CLOSED (HEALTHY FLOW)</span>;
     }
   };
 
@@ -206,16 +206,16 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Navigation Breadcrumb */}
         <nav className="flex items-center space-x-2 text-xs font-mono text-neutral-400 mb-8">
-          <Link to="/" className="hover:text-neutral-200 transition-colors">Home</Link>
+          <Link to="/" className="hover:text-neutral-200 transition-all duration-300">Home</Link>
           <span>/</span>
-          <Link to="/solutions/" className="hover:text-neutral-200 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-neutral-200 transition-all duration-300">Solutions</Link>
           <span>/</span>
           <span className="text-red-400">Agent Deadlock & Circuit Breaker Visualizer</span>
         </nav>
 
         {/* Hero Section */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 border border-white/30 text-white text-xs font-mono uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/30 text-white text-xs font-mono uppercase tracking-wider mb-4">
             <Network className="w-3.5 h-3.5" />
             Deterministic Agentic Reliability Sandbox
           </div>
@@ -283,7 +283,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                       setUpstreamErrorRate(90);
                     }
                   }}
-                  className={`active:scale-[0.97] p-4 rounded-xl text-left border transition-all ${
+                  className={`active:scale-[0.97] p-4 rounded-[20px] text-left border transition-all duration-300 ${
                     isSelected
                       ? 'border-white/30 bg-white/10 shadow-lg'
                       : 'border-neutral-800 bg-neutral-900/60 ' + item.color
@@ -306,7 +306,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm">
               <h3 className="text-sm font-mono uppercase tracking-wider text-neutral-300 mb-6 flex items-center justify-between">
                 <span>Simulation Parameters</span>
                 <Sliders className="w-4 h-4 text-neutral-400" />
@@ -325,7 +325,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   step="1"
                   value={agentCount}
                   onChange={e => setAgentCount(parseInt(e.target.value))}
-                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-lg"
+                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-full"
                 />
                 <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                   <span>3 (Minimal Triad)</span>
@@ -348,7 +348,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   step="5"
                   value={upstreamErrorRate}
                   onChange={e => setUpstreamErrorRate(parseInt(e.target.value))}
-                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-lg"
+                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-full"
                 />
                 <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                   <span>0% (Ideal Cloud)</span>
@@ -358,7 +358,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </div>
 
               {/* Circuit Breaker Toggle */}
-              <div className="mb-6 p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+              <div className="mb-6 p-4 rounded-2xl bg-neutral-950/60 border border-neutral-800">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <ShieldCheck className={`w-5 h-5 ${circuitBreakerEnabled ? 'text-neutral-200' : 'text-neutral-500'}`} />
@@ -369,7 +369,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   </div>
                   <button
                     onClick={() => setCircuitBreakerEnabled(!circuitBreakerEnabled)}
-                    className={`active:scale-[0.97] relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    className={`active:scale-[0.97] relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-300 ${
                       circuitBreakerEnabled ? 'bg-white/80' : 'bg-neutral-700'
                     }`}
                   >
@@ -395,7 +395,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   step="1"
                   value={failureThreshold}
                   onChange={e => setFailureThreshold(parseInt(e.target.value))}
-                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-lg"
+                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-full"
                 />
                 <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                   <span>2 (Aggressive Fast-Fail)</span>
@@ -417,7 +417,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   step="1"
                   value={concurrencyLevel}
                   onChange={e => setConcurrencyLevel(parseInt(e.target.value))}
-                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-lg"
+                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-full"
                 />
               </div>
 
@@ -428,7 +428,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <select
                     value={maxRetryAttempts}
                     onChange={e => setMaxRetryAttempts(parseInt(e.target.value))}
-                    className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-xs font-mono text-neutral-200"
+                    className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs font-mono text-neutral-200"
                   >
                     <option value={1}>1 Retry</option>
                     <option value={2}>2 Retries</option>
@@ -441,7 +441,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <select
                     value={baseBackoffMs}
                     onChange={e => setBaseBackoffMs(parseInt(e.target.value))}
-                    className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-xs font-mono text-neutral-200"
+                    className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs font-mono text-neutral-200"
                   >
                     <option value={200}>200 ms</option>
                     <option value={500}>500 ms</option>
@@ -453,20 +453,20 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </div>
 
             {/* Circuit State & Reliability Card */}
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono text-neutral-400 uppercase tracking-wider">Circuit Breaker Telemetry</span>
                 {getCircuitBadge(results.circuitBreakerState)}
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800">
                   <div className="text-[10px] font-mono text-neutral-400 uppercase">MTTR Resiliency</div>
                   <div className="text-base font-bold text-white mt-1">
                     {typeof results.mttrSeconds === 'string' ? 'Manual Reboot Required' : `${results.mttrSeconds}s Fast Reset`}
                   </div>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800">
                   <div className="text-[10px] font-mono text-neutral-400 uppercase">Reliability Index</div>
                   <div className={`text-base font-bold mt-1 ${
                     results.systemReliabilityScore > 80 ? 'text-neutral-200' : results.systemReliabilityScore > 50 ? 'text-amber-400' : 'text-white'
@@ -477,7 +477,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </div>
 
               {/* Mathematical Formula Capsule */}
-              <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800 font-mono text-[11px] text-neutral-400 space-y-1">
+              <div className="p-3 rounded-[18px] bg-neutral-950 border border-neutral-800 font-mono text-[11px] text-neutral-400 space-y-1">
                 <div className="text-white font-semibold text-[10px] uppercase">Exponential Backoff With Full Jitter Formula:</div>
                 <div className="text-neutral-300">
                   t = min(t_max, t_base · 2^attempt) · Uniform(0, 1)
@@ -492,7 +492,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           {/* Visual Graph & Metrics Column */}
           <div className="lg:col-span-7 space-y-6">
             {/* Visual Agent Graph Canvas */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm relative overflow-hidden">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm relative overflow-hidden">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <Activity className="w-4 h-4 text-white" />
@@ -517,7 +517,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
               {/* Deadlock Banner Alert */}
               {results.hasDeadlock && (
-                <div className="mb-4 p-3 rounded-xl bg-white/10 border border-white/30 flex items-start gap-3">
+                <div className="mb-4 p-3 rounded-[18px] bg-white/10 border border-white/30 flex items-start gap-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
                   <div className="text-xs text-white">
                     <span className="font-bold text-white">Circular Wait Condition:</span> An unhandled directed cycle formed between{' '}
@@ -530,7 +530,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               )}
 
               {/* SVG Topology Visualization */}
-              <div className="relative w-full h-80 bg-neutral-950/80 rounded-xl border border-neutral-800/80 overflow-hidden flex items-center justify-center p-4">
+              <div className="relative w-full h-80 bg-neutral-950/80 rounded-[24px] border border-neutral-800/80 overflow-hidden flex items-center justify-center p-4">
                 <svg className="w-full h-full absolute inset-0 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <defs>
                     <marker id="arrow-active" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
@@ -607,7 +607,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
             {/* Comparative Quantified Impact Dashboard */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Runaway Token Burn</div>
                 <div className="text-xl font-extrabold text-white mt-1">
                   {results.wastedTokens.toLocaleString()}
@@ -615,7 +615,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 <div className="text-[10px] text-neutral-500 font-mono mt-0.5">Tokens Burned</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">FSM Bounded Tokens</div>
                 <div className="text-xl font-extrabold text-neutral-200 mt-1">
                   {results.boundedFsmTokens.toLocaleString()}
@@ -625,7 +625,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Unconstrained P99</div>
                 <div className="text-xl font-extrabold text-white mt-1">
                   {results.unconstrainedP99Ms} <span className="text-xs font-normal">ms</span>
@@ -633,7 +633,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 <div className="text-[10px] text-neutral-500 font-mono mt-0.5">Infinite Timeout</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/80 border border-neutral-800">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">FSM Fail-Fast P99</div>
                 <div className="text-xl font-extrabold text-neutral-200 mt-1">
                   {results.fsmP99Ms} <span className="text-xs font-normal">ms</span>
@@ -645,7 +645,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </div>
 
             {/* Step-by-Step State Transition Audit Log */}
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm">
               <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-4 flex items-center gap-2">
                 <Code className="w-4 h-4 text-white" />
                 State Machine Transition Audit Trail
@@ -654,7 +654,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 {results.history.map(record => (
                   <div
                     key={record.step}
-                    className="p-3 rounded-xl bg-neutral-950/70 border border-neutral-800/80 flex items-start justify-between gap-3"
+                    className="p-3 rounded-[18px] bg-neutral-950/70 border border-neutral-800/80 flex items-start justify-between gap-3"
                   >
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-[10px] text-neutral-400">
@@ -679,7 +679,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         </div>
 
         {/* Action Row & Embed Drawer */}
-        <div className="flex flex-wrap items-center justify-between gap-4 p-6 rounded-xl bg-neutral-950 border border-neutral-800 mb-16">
+        <div className="flex flex-wrap items-center justify-between gap-4 p-6 rounded-[24px] bg-neutral-950 border border-neutral-800 mb-16">
           <div>
             <h4 className="text-lg font-bold text-white mb-1">
               Embed This Deadlock & Circuit Breaker Visualizer
@@ -691,21 +691,21 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           <div className="flex items-center gap-3">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] px-4 py-2.5 rounded-xl border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-mono font-medium text-neutral-200 transition-colors flex items-center gap-2"
+              className="active:scale-[0.97] px-4 py-2.5 rounded-full border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-mono font-medium text-neutral-200 transition-all duration-300 flex items-center gap-2"
             >
               <Code className="w-3.5 h-3.5 text-white" />
               Embed Sandbox
             </button>
             <button
               onClick={copyArchitecturalMemo}
-              className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-mono font-medium text-neutral-200 transition-colors flex items-center gap-2"
+              className="active:scale-[0.97] px-4 py-2.5 rounded-full border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-mono font-medium text-neutral-200 transition-all duration-300 flex items-center gap-2"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Brief'}
@@ -747,10 +747,10 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               a: 'When an upstream tool or LLM endpoint fails consecutively beyond a configured threshold (e.g., 4 consecutive 503 or 429 timeouts), the circuit breaker transitions from CLOSED to OPEN. In the OPEN state, all subsequent requests fail fast in under 15ms without sending requests or prompt tokens to the LLM API, serving pre-computed deterministic heuristics instead. This bounds runaway token spend to zero and protects enterprise budgets.'
             }
           ].map((item, idx) => (
-            <div key={idx} className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden">
+            <div key={idx} className="rounded-[24px] border border-neutral-800 bg-neutral-900/60 overflow-hidden">
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="active:scale-[0.97] w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-neutral-200 hover:text-white transition-colors"
+                className="active:scale-[0.97] w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-neutral-200 hover:text-white transition-all duration-300"
               >
                 <span>{item.q}</span>
                 <ChevronDown className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180 text-white' : ''}`} />
@@ -768,7 +768,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-2xl w-full p-6 relative shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-2xl w-full p-6 relative shadow-2xl">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -782,13 +782,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this HTML snippet into your technical documentation, blog, or dashboard:
             </p>
-            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 font-mono text-xs text-white break-all select-all mb-4">
+            <div className="bg-neutral-950 p-4 rounded-2xl border border-neutral-800 font-mono text-xs text-white break-all select-all mb-4">
               {embedCodeSnippet}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-red-500 hover:bg-neutral-200 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-xs font-mono font-bold text-black flex items-center gap-2 transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Code'}

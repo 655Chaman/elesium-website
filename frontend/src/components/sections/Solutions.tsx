@@ -23,7 +23,7 @@ export default function Solutions() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="text-center mb-12 md:mb-16"
                 >
                     <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400 mb-3 block">
@@ -34,13 +34,13 @@ export default function Solutions() {
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
                     {/* Tier 1 */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97, y: 20 }}
                         animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.97, y: 20 }}
-                        transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.1 }}
-                        className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-col justify-between h-full rounded-xl p-8 md:p-10 transition-colors"
+                        transition={{ type: 'spring', stiffness: 260, damping: 28, delay: 0.1 }}
+                        className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-col justify-between h-full rounded-[32px] p-8 md:p-10 transition-colors"
                     >
                         <div>
                             <span className="text-[11px] font-medium tracking-[0.08em] text-neutral-600 dark:text-neutral-400 uppercase mb-4 block">
@@ -57,7 +57,7 @@ export default function Solutions() {
                         <div className="pt-6 border-t border-neutral-200 dark:border-white/10 flex flex-col sm:flex-row items-center gap-3">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3 rounded-lg text-sm active:scale-[0.97] transition-all"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3 rounded-full text-sm active:scale-[0.97] transition-all"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp</span>
@@ -65,7 +65,7 @@ export default function Solutions() {
                             </button>
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto text-center px-4 py-3 text-xs text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
+                                className="w-full sm:w-auto inline-flex items-center justify-center text-center px-5 py-3 rounded-full border border-neutral-200 dark:border-white/10 text-xs font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-white/10 active:scale-[0.97] transition-all"
                             >
                                 ele-in SaaS Waitlist &rarr;
                             </Link>
@@ -76,8 +76,8 @@ export default function Solutions() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97, y: 20 }}
                         animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.97, y: 20 }}
-                        transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.2 }}
-                        className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-col justify-between h-full rounded-xl p-8 md:p-10 transition-colors"
+                        transition={{ type: 'spring', stiffness: 260, damping: 28, delay: 0.2 }}
+                        className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-col justify-between h-full rounded-[32px] p-8 md:p-10 transition-colors"
                     >
                         <div>
                             <span className="text-[11px] font-medium tracking-[0.08em] text-neutral-600 dark:text-neutral-400 uppercase mb-4 block">
@@ -94,7 +94,7 @@ export default function Solutions() {
                         <div className="pt-6 border-t border-neutral-200 dark:border-white/10 flex flex-col sm:flex-row items-center gap-3">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3 rounded-lg text-sm active:scale-[0.97] transition-all"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3 rounded-full text-sm active:scale-[0.97] transition-all"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp</span>
@@ -102,7 +102,7 @@ export default function Solutions() {
                             </button>
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto text-center px-4 py-3 text-xs text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
+                                className="w-full sm:w-auto inline-flex items-center justify-center text-center px-5 py-3 rounded-full border border-neutral-200 dark:border-white/10 text-xs font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-white/10 active:scale-[0.97] transition-all"
                             >
                                 ele-in SaaS Waitlist &rarr;
                             </Link>

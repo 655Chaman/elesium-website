@@ -41,7 +41,7 @@ export default function EmbedPromptFirewallSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Agentic Prompt Injection Firewall Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -90,7 +90,7 @@ export default function EmbedPromptFirewallSimulator() {
           <select
             value={attackVector}
             onChange={(e) => setAttackVector(e.target.value as AttackVector)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="indirect_prompt_injection">Indirect Injection via RAG / Web Doc</option>
             <option value="tool_parameter_sql_injection">Tool Parameter SQL Injection</option>
@@ -103,7 +103,7 @@ export default function EmbedPromptFirewallSimulator() {
       {/* Defense Architecture Benchmark Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
         {/* Tier 1: Naive Direct Ingestion */}
-        <div className="bg-neutral-900/60 border border-red-500/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-neutral-900/60 border border-red-500/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-red-400 font-bold uppercase tracking-wider">
               Naive Direct Model
@@ -131,7 +131,7 @@ export default function EmbedPromptFirewallSimulator() {
         </div>
 
         {/* Tier 2: Secondary Guardrail LLM */}
-        <div className="bg-neutral-900/60 border border-amber-500/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-neutral-900/60 border border-amber-500/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-amber-400 font-bold uppercase tracking-wider">
               Secondary Guardrail LLM
@@ -159,7 +159,7 @@ export default function EmbedPromptFirewallSimulator() {
         </div>
 
         {/* Tier 3: Elesium AST Firewall */}
-        <div className="bg-white/[0.05] border border-white/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-white/[0.05] border border-white/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-white font-bold uppercase tracking-wider">
               Elesium AST Syntax Firewall
@@ -188,7 +188,7 @@ export default function EmbedPromptFirewallSimulator() {
       </div>
 
       {/* Forensic Verdict Box */}
-      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-3 mb-4 text-xs font-mono">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-[18px] p-3 mb-4 text-xs font-mono">
         <div className="text-neutral-400 text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center justify-between">
           <span>Forensic Attack Payload Breakdown</span>
           <span className="text-neutral-200 flex items-center gap-1">

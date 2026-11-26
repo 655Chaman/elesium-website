@@ -186,7 +186,7 @@ export default function HowWeWork() {
                 <motion.header 
                     initial={{ opacity: 0, scale: 0.97, y: 16 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="mb-14 md:mb-16 max-w-4xl"
                 >
                     <div className="mb-4">
@@ -206,7 +206,7 @@ export default function HowWeWork() {
                     <div className="flex flex-col sm:flex-row items-center gap-3">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current text-white dark:text-black" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -214,7 +214,7 @@ export default function HowWeWork() {
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white font-medium px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
@@ -222,7 +222,7 @@ export default function HowWeWork() {
                 </motion.header>
 
                 {/* Technical Overview Capsule */}
-                <section className="mb-14 p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <section className="mb-14 p-6 sm:p-8 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="mb-3">
                         <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold">
                             Technical Grounding
@@ -239,23 +239,23 @@ export default function HowWeWork() {
                     </p>
 
                     {/* Telemetry Matrix */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 items-stretch">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Phase 1 Delivery</div>
                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">14 Calendar Days</div>
                             <div className="text-[10px] text-neutral-500">Production Pilot</div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Inference SLA</div>
                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">&lt; 200ms TTFT</div>
                             <div className="text-[10px] text-neutral-500">FP8 GEMM + vLLM</div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Data Isolation</div>
                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">Air-Gapped VPC</div>
                             <div className="text-[10px] text-neutral-500">DPDP Act Sec 8(5)</div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Contractual ROI</div>
                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">90-Day SLA</div>
                             <div className="text-[10px] text-neutral-500">Audited 3x-5x Return</div>
@@ -268,7 +268,7 @@ export default function HowWeWork() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="mb-16"
                 >
                     <div className="mb-8 border-b border-neutral-200 dark:border-white/10 pb-4">
@@ -282,11 +282,11 @@ export default function HowWeWork() {
                         {protocolStages.map((stage) => (
                             <div 
                                 key={stage.number} 
-                                className="border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-6 md:p-8 rounded-xl space-y-4 hover:border-black dark:hover:border-white/30 transition-colors"
+                                className="border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-6 md:p-8 rounded-[28px] space-y-4 hover:border-black dark:hover:border-white/30 transition-colors"
                             >
                                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-200 dark:border-white/10 pb-4">
                                     <div className="flex items-center gap-3">
-                                        <span className="text-xs font-mono font-bold tracking-widest text-black dark:text-white uppercase bg-white dark:bg-black border border-neutral-200 dark:border-white/10 px-2.5 py-1 rounded-md">
+                                        <span className="text-xs font-mono font-bold tracking-widest text-black dark:text-white uppercase bg-white dark:bg-black border border-neutral-200 dark:border-white/10 px-3 py-1 rounded-full shrink-0">
                                             Stage {stage.number}
                                         </span>
                                         <h3 className="text-xl font-bold text-black dark:text-white">{stage.title}</h3>
@@ -327,7 +327,7 @@ export default function HowWeWork() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="mb-16"
                 >
                     <div className="mb-8 border-b border-neutral-200 dark:border-white/10 pb-4">
@@ -336,9 +336,9 @@ export default function HowWeWork() {
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">Why This Protocol Succeeds</h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
-                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-3">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+                        <div className="p-6 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full">
+                            <div className="w-10 h-10 rounded-[16px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-4">
                                 <Scale className="w-4 h-4" />
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Incentivized by ROI SLA</h3>
@@ -346,8 +346,8 @@ export default function HowWeWork() {
                                 We tie our financial success directly to your operational cash-flow ROI. If the deployed system fails to return 3x-5x in 90 days, fees are rebated.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
-                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-3">
+                        <div className="p-6 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full">
+                            <div className="w-10 h-10 rounded-[16px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-4">
                                 <Cpu className="w-4 h-4" />
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Deterministic State Topology</h3>
@@ -355,8 +355,8 @@ export default function HowWeWork() {
                                 We replace unconstrained LLM loops with mathematically bounded state transitions and Pydantic schemas, eliminating hallucination risks entirely.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
-                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-3">
+                        <div className="p-6 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full">
+                            <div className="w-10 h-10 rounded-[16px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-4">
                                 <Lock className="w-4 h-4" />
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Air-Gapped Sovereign Hosting</h3>
@@ -372,8 +372,8 @@ export default function HowWeWork() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
-                    className="mb-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 md:p-10"
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
+                    className="mb-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[32px] p-6 md:p-10"
                 >
                     <div className="mb-8 text-center max-w-xl mx-auto">
                         <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400 mb-1 block">
@@ -382,8 +382,8 @@ export default function HowWeWork() {
                         <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">The Counterparty Filter</h2>
                         <p className="text-neutral-600 dark:text-neutral-400 text-sm">We maintain strict engineering qualification standards to ensure total alignment.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                        <div className="space-y-3 p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+                        <div className="space-y-3 p-6 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                             <div className="flex items-center gap-2.5 text-black dark:text-white mb-2">
                                 <CheckCircle2 className="w-5 h-5 shrink-0" />
                                 <h3 className="text-base font-bold">Who We Partner With</h3>
@@ -392,7 +392,7 @@ export default function HowWeWork() {
                                 Enterprise leaders across BFSI, Logistics, Manufacturing, and Healthcare managing mission-critical SAP, Oracle, or core banking workflows with &gt;₹100Cr annual turnover who require air-gapped private VPC data isolation, sub-200ms SLAs, and contractual ROI guarantees.
                             </p>
                         </div>
-                        <div className="space-y-3 p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                        <div className="space-y-3 p-6 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                             <div className="flex items-center gap-2.5 text-neutral-500 mb-2">
                                 <XCircle className="w-5 h-5 shrink-0" />
                                 <h3 className="text-base font-bold text-black dark:text-white">Who We Do Not Work With</h3>
@@ -405,7 +405,7 @@ export default function HowWeWork() {
                 </motion.section>
 
                 {/* Transparent Institutional Pricing Tiers */}
-                <section className="mb-16 p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <section className="mb-16 p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 block">
                             Direct Commercial Engagement
@@ -418,10 +418,12 @@ export default function HowWeWork() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                        <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
+                                <div className="flex items-center justify-between gap-2 mb-1 min-h-[22px]">
+                                    <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
+                                </div>
                                 <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
                                 <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
                                 <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">14-Day Delivery</div>
@@ -431,20 +433,20 @@ export default function HowWeWork() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-3 px-4 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Inquire Tier 1 &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
-                            <div className="mb-2">
-                                <span className="inline-block px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded uppercase tracking-wider">
-                                    Most Deployed
-                                </span>
-                            </div>
+                        <div className="p-6 rounded-[24px] border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
                             <div>
-                                <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase">Tier 02</span>
+                                <div className="flex items-center justify-between gap-2 mb-1 min-h-[22px]">
+                                    <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase">Tier 02</span>
+                                    <span className="inline-block px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
+                                        Most Deployed
+                                    </span>
+                                </div>
                                 <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
                                 <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
                                 <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">30-45 Day Implementation</div>
@@ -454,15 +456,17 @@ export default function HowWeWork() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-3 px-4 rounded-full bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Deploy Suite &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
+                                <div className="flex items-center justify-between gap-2 mb-1 min-h-[22px]">
+                                    <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
+                                </div>
                                 <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
                                 <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹4,50,000 / month</div>
                                 <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">Dedicated Team</div>
@@ -472,7 +476,7 @@ export default function HowWeWork() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-3 px-4 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Retain Pod &rarr;
                             </button>
@@ -495,7 +499,7 @@ export default function HowWeWork() {
                         {howWeWorkFaqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-white dark:bg-black"
+                                className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-black"
                             >
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -507,10 +511,11 @@ export default function HowWeWork() {
                                 <AnimatePresence initial={false}>
                                     {openFaq === idx && (
                                         <motion.div
+                                            data-open="true"
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                                             className="accordion-panel overflow-hidden"
                                         >
                                             <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
@@ -525,7 +530,7 @@ export default function HowWeWork() {
                 </section>
 
                 {/* Bottom Conversion Card */}
-                <div className="p-8 sm:p-12 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                <div className="p-8 sm:p-12 rounded-[32px] bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
                     <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
                         Direct Principal Systems Pairing
                     </span>
@@ -538,7 +543,7 @@ export default function HowWeWork() {
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current text-black" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -546,7 +551,7 @@ export default function HowWeWork() {
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>

@@ -172,7 +172,7 @@ ARCHITECTURAL SAFEGUARDS:
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/[0.03] via-transparent to-transparent pointer-events-none"></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Simulator #38 • Pharma &amp; Life Sciences</span>
           </div>
@@ -192,14 +192,14 @@ ARCHITECTURAL SAFEGUARDS:
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-semibold text-neutral-200 transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-semibold text-neutral-200 transition-all duration-300 shadow-sm"
             >
               <Code className="w-4 h-4 text-neutral-200" />
               <span>Embed This Simulator</span>
@@ -207,22 +207,22 @@ ARCHITECTURAL SAFEGUARDS:
 
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/[0.04] hover:bg-neutral-200/20 border border-white/20 text-xs font-semibold text-white transition-all"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] hover:bg-neutral-200/20 border border-white/20 text-xs font-semibold text-white transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-200" />}
               <span>{hasCopiedMemo ? 'Audit Memo Copied!' : 'Copy Executive Audit Memo'}</span>
             </button>
 
-            <div className="ml-auto flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-lg p-1 text-xs">
+            <div className="ml-auto flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-full p-1 text-xs">
               <button
                 onClick={() => setCurrency('INR')}
-                className={`active:scale-[0.97] px-2.5 py-1 rounded-md transition-colors ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
+                className={`active:scale-[0.97] px-2.5 py-1 rounded-full transition-all duration-300 ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
               >
                 INR (₹)
               </button>
               <button
                 onClick={() => setCurrency('USD')}
-                className={`active:scale-[0.97] px-2.5 py-1 rounded-md transition-colors ${currency === 'USD' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
+                className={`active:scale-[0.97] px-2.5 py-1 rounded-full transition-all duration-300 ${currency === 'USD' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
               >
                 USD ($)
               </button>
@@ -236,7 +236,7 @@ ARCHITECTURAL SAFEGUARDS:
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Interactive Controls */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm space-y-5">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm space-y-5">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <span className="text-sm font-bold text-white flex items-center gap-2">
                   <Sliders className="w-4 h-4 text-neutral-200" />
@@ -261,7 +261,7 @@ ARCHITECTURAL SAFEGUARDS:
                   value={batchRecordVolumePerMonth}
                   onChange={(e) => setBatchRecordVolumePerMonth(Number(e.target.value))}
                   aria-label="Monthly Batch Record Volume"
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] text-neutral-500 mt-1">
                   <span>50 (Pilot Plant)</span>
@@ -341,7 +341,7 @@ ARCHITECTURAL SAFEGUARDS:
             </div>
 
             {/* Quick Architecture Callout */}
-            <div className="bg-neutral-950 border border-white/15 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-950 border border-white/15 rounded-[24px] p-5 space-y-3">
               <div className="flex items-center gap-2 text-white font-semibold text-xs">
                 <ShieldCheck className="w-4 h-4" />
                 <span>Section 63 BSA 2023 Admissibility Guarantee</span>
@@ -357,37 +357,37 @@ ARCHITECTURAL SAFEGUARDS:
           <div className="lg:col-span-7 space-y-6">
             {/* KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] text-neutral-400 block mb-1">eBMR Verification Latency</span>
                 <span className="text-2xl font-mono font-bold text-white">{results.auditTrailVerificationLatencyMs} ms</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">Per commercial batch</span>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] text-neutral-400 block mb-1">Tamper Confidence</span>
                 <span className="text-2xl font-mono font-bold text-white">{results.tamperDetectionConfidencePercentage}%</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">Merkle chain integrity</span>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 col-span-2 sm:col-span-1">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 col-span-2 sm:col-span-1">
                 <span className="text-[11px] text-neutral-400 block mb-1">Form 483 Risk</span>
                 <span className="text-2xl font-mono font-bold text-white">{results.regulatoryFindingRiskPercentage}%</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">Down from 4.5% baseline</span>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] text-neutral-400 block mb-1">Pre-Audit Throughput</span>
                 <span className="text-2xl font-mono font-bold text-white">{results.eBmrThroughputBatchesPerHour.toLocaleString()}</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">Batches / hour max</span>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] text-neutral-400 block mb-1">Statutory Compliance</span>
                 <span className="text-2xl font-mono font-bold text-white">{results.statutoryComplianceScore}%</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">GAMP 5 &amp; CDSCO</span>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 col-span-2 sm:col-span-1">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 col-span-2 sm:col-span-1">
                 <span className="text-[11px] text-neutral-400 block mb-1">Annual OPEX Savings</span>
                 <span className="text-2xl font-mono font-bold text-white">
                   {currency === 'INR' ? `₹${(results.annualValidationOpexReduction / 100000).toFixed(1)}L` : `$${(results.annualValidationOpexReduction / 1000).toFixed(0)}k`}
@@ -397,7 +397,7 @@ ARCHITECTURAL SAFEGUARDS:
             </div>
 
             {/* Interactive Telemetry Oscilloscope */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-5 space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-white flex items-center gap-2">
@@ -417,7 +417,7 @@ ARCHITECTURAL SAFEGUARDS:
                 </div>
               </div>
 
-              <div className="w-full h-[140px] bg-neutral-950/80 rounded-xl p-3 border border-neutral-800 flex items-center justify-center">
+              <div className="w-full h-[140px] bg-neutral-950/80 rounded-[18px] p-3 border border-neutral-800 flex items-center justify-center">
                 <svg viewBox="0 0 500 140" className="w-full h-full overflow-visible">
                   <line x1="0" y1="35" x2="500" y2="35" stroke="#262626" strokeWidth="1" strokeDasharray="4,4" />
                   <line x1="0" y1="70" x2="500" y2="70" stroke="#262626" strokeWidth="1" strokeDasharray="4,4" />
@@ -453,7 +453,7 @@ ARCHITECTURAL SAFEGUARDS:
             </div>
 
             {/* CTA Audit Module */}
-            <div className="bg-neutral-950 border border-white/20 rounded-xl p-6 space-y-4">
+            <div className="bg-neutral-950 border border-white/20 rounded-[24px] p-6 space-y-4">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-base font-bold text-white">Deploy Sovereign 21 CFR Part 11 AI Across Your Plants</h3>
@@ -500,7 +500,7 @@ ARCHITECTURAL SAFEGUARDS:
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-[24px] p-5 space-y-3">
               <div className="p-2.5 rounded-xl bg-white/[0.04] text-neutral-200 w-fit">
                 <Lock className="w-5 h-5" />
               </div>
@@ -511,7 +511,7 @@ ARCHITECTURAL SAFEGUARDS:
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-[24px] p-5 space-y-3">
               <div className="p-2.5 rounded-xl bg-white/[0.04] text-neutral-200 w-fit">
                 <Database className="w-5 h-5" />
               </div>
@@ -522,7 +522,7 @@ ARCHITECTURAL SAFEGUARDS:
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-[24px] p-5 space-y-3">
               <div className="p-2.5 rounded-xl bg-white/[0.04] text-neutral-200 w-fit">
                 <Cpu className="w-5 h-5" />
               </div>
@@ -535,14 +535,14 @@ ARCHITECTURAL SAFEGUARDS:
           </div>
 
           {/* FAQ Accordion */}
-          <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-6 space-y-4">
+          <div className="bg-neutral-900/40 border border-neutral-800 rounded-[24px] p-6 space-y-4">
             <h3 className="text-lg font-bold text-white mb-2">Frequently Asked Architectural Questions</h3>
             <div className="space-y-3">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="border border-neutral-800/80 rounded-xl overflow-hidden bg-neutral-950/60">
+                <div key={idx} className="border border-neutral-800/80 rounded-[24px] overflow-hidden bg-neutral-950/60">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
+                    className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
@@ -562,7 +562,7 @@ ARCHITECTURAL SAFEGUARDS:
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <div className="flex items-center gap-2 text-white font-bold text-sm">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -570,7 +570,7 @@ ARCHITECTURAL SAFEGUARDS:
               </div>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-full"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -590,13 +590,13 @@ ARCHITECTURAL SAFEGUARDS:
             <div className="flex justify-end gap-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-semibold text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-semibold text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}</span>

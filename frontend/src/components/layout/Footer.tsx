@@ -49,7 +49,7 @@ export default function DownloadFooter() {
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col justify-between">
 
                 {/* Top Conversion Bar */}
-                <div className="mb-12 p-6 sm:p-8 rounded-2xl bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <div className="mb-12 p-6 sm:p-8 rounded-[32px] bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
                     <div className="space-y-2 max-w-2xl">
                         <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">
                             Direct Engineering Intake
@@ -228,6 +228,7 @@ export default function DownloadFooter() {
                     <p>&copy; {new Date().getFullYear()} Elesium Digital Systems Private Limited. All rights reserved.</p>
                     <div className="flex items-center gap-4 flex-wrap">
                         <Link to="/" className="hover:text-black dark:hover:text-white transition">Portal</Link>
+                        <Link to="/portfolio/" className="hover:text-black dark:hover:text-white transition">Portfolio</Link>
                         <Link to="/connector/" className="hover:text-black dark:hover:text-white transition">Connector Model</Link>
                         <Link to="/authors/chaman-shah/" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
                         <Link to="/resources/" className="hover:text-black dark:hover:text-white transition">Resources</Link>

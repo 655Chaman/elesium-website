@@ -38,7 +38,7 @@ export default function EmbedEventSourcingSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Multi-Agent Event Sourcing Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -87,7 +87,7 @@ export default function EmbedEventSourcingSimulator() {
           <select
             value={failureScenario}
             onChange={(e) => setFailureScenario(e.target.value as FailureScenario)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="hallucinated_tool_call">Agent Hallucinated Parameter</option>
             <option value="tampered_payload">Cryptographic Tamper Attack</option>
@@ -103,7 +103,7 @@ export default function EmbedEventSourcingSimulator() {
           <select
             value={complianceFramework}
             onChange={(e) => setComplianceFramework(e.target.value as ComplianceFramework)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="dpdp_act_2023">DPDP Act 2023 (India)</option>
             <option value="soc2_type2">SOC-2 Type II Non-Repudiation</option>
@@ -141,7 +141,7 @@ export default function EmbedEventSourcingSimulator() {
       </div>
 
       {/* Diagnostic Note */}
-      <div className="bg-neutral-900/90 rounded-xl border border-neutral-800 p-3 mb-4 text-xs flex items-center justify-between gap-2">
+      <div className="bg-neutral-900/90 rounded-[18px] border border-neutral-800 p-3 mb-4 text-xs flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <RotateCcw className="w-4 h-4 text-neutral-200 shrink-0" />
           <span className="text-neutral-300 text-[11px] leading-snug">
@@ -160,7 +160,7 @@ export default function EmbedEventSourcingSimulator() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-colors"
+          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-all duration-300"
         >
           <span>Elesium Enterprise AI Solutions</span>
           <ExternalLink className="w-3 h-3" />

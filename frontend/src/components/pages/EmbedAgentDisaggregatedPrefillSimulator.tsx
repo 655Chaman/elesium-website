@@ -36,7 +36,7 @@ export default function EmbedAgentDisaggregatedPrefillSimulator() {
   const results = useMemo(() => calculateDisaggregatedPrefill(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Disaggregated Pre-fill &amp; KV Routing Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-disaggregated-prefill-simulator" />
@@ -57,7 +57,7 @@ export default function EmbedAgentDisaggregatedPrefillSimulator() {
           href="https://elesium.online/tools/enterprise-agent-disaggregated-prefill-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-colors"
+          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-all duration-300"
         >
           Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>
@@ -70,7 +70,7 @@ export default function EmbedAgentDisaggregatedPrefillSimulator() {
           <select
             value={modelArchitecture}
             onChange={(e) => setModelArchitecture(e.target.value as DisaggregatedModelArchitecture)}
-            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-2 text-white font-mono"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-2 text-white font-mono"
           >
             <option value="sovereign_100b_agent">Sovereign 100B Autonomous Agent</option>
             <option value="llama_3_1_70b">Meta Llama-3.1 70B</option>
@@ -84,7 +84,7 @@ export default function EmbedAgentDisaggregatedPrefillSimulator() {
           <select
             value={servingArchitecture}
             onChange={(e) => setServingArchitecture(e.target.value as ServingArchitecture)}
-            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
           >
             <option value="disaggregated_rdma_roce">Disaggregated 400G RoCE-v2 RDMA Fabric</option>
             <option value="disaggregated_infiniband_ndr">Disaggregated 800G NDR InfiniBand P2P</option>
@@ -95,7 +95,7 @@ export default function EmbedAgentDisaggregatedPrefillSimulator() {
       </div>
 
       {/* Output Telemetry Card */}
-      <div className="bg-neutral-950/80 border border-neutral-800 rounded-lg p-3 font-mono text-xs space-y-2 mb-3">
+      <div className="bg-neutral-950/80 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs space-y-2 mb-3">
         <div className="flex justify-between items-center text-neutral-400">
           <span>Time-to-First-Token (TTFT):</span>
           <span className={results.timeToFirstTokenMs <= 4.5 ? 'text-white font-bold' : 'text-amber-400 font-bold'}>

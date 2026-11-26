@@ -138,7 +138,7 @@ export default function SolutionDetail() {
                     <title>410 Gone | Content Retired | Elesium</title>
                 </Helmet>
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white border border-neutral-200 dark:border-white/10 mb-6">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white border border-neutral-200 dark:border-white/10 mb-6">
                         HTTP 410 • Content Retired
                     </div>
                     <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
@@ -152,14 +152,14 @@ export default function SolutionDetail() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
                             to="/solutions/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-black hover:opacity-90 text-white dark:bg-white dark:text-black active:scale-[0.97] font-medium transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-black hover:opacity-90 text-white dark:bg-white dark:text-black active:scale-[0.97] font-medium transition-all duration-300"
                         >
                             Explore 100 Enterprise Architectures
                             <ArrowRight className="w-4 h-4" />
                         </Link>
                         <Link
                             to="/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-neutral-50 dark:bg-neutral-950 hover:bg-neutral-100 dark:hover:bg-neutral-900 text-black dark:text-white font-medium border border-neutral-200 dark:border-white/10 active:scale-[0.97] transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-neutral-50 dark:bg-neutral-950 hover:bg-neutral-100 dark:hover:bg-neutral-900 text-black dark:text-white font-medium border border-neutral-200 dark:border-white/10 active:scale-[0.97] transition-all duration-300"
                         >
                             Return Home
                         </Link>
@@ -241,7 +241,7 @@ export default function SolutionDetail() {
             <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
                 <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-neutral-200 dark:border-white/10">
                     <div className="flex items-center gap-3">
-                        <span className="px-3 py-1 rounded-lg text-xs font-mono uppercase tracking-wider border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase tracking-wider border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                             {solution.hubCategory}
                         </span>
                         <span className="text-xs font-mono text-black dark:text-white">
@@ -290,7 +290,7 @@ export default function SolutionDetail() {
                         <div className="flex flex-wrap items-center gap-3.5 mb-8 lg:mb-10">
                             <button
                                 onClick={openWhatsApp}
-                                className="px-6 py-3.5 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2"
+                                className="px-7 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -299,7 +299,7 @@ export default function SolutionDetail() {
 
                             <Link
                                 to="/waitlist/"
-                                className="px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/20 hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 text-black dark:text-white"
+                                className="px-6 py-3.5 rounded-full border border-neutral-200 dark:border-white/20 hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 text-black dark:text-white"
                             >
                                 <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
@@ -317,7 +317,7 @@ export default function SolutionDetail() {
 
                     {/* 4. Hero Graphic / Terminal Simulator (Sticky on xl+, stacks cleanly below < xl) */}
                     <div className="xl:col-span-4 w-full xl:sticky xl:top-28 space-y-6 mt-8 xl:mt-0 flex flex-col gap-4">
-                        <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 font-mono text-xs text-neutral-800 dark:text-neutral-300">
+                        <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 font-mono text-xs text-neutral-800 dark:text-neutral-300">
                             <div className="flex items-center justify-between pb-3 mb-4 border-b border-neutral-200 dark:border-white/10 text-[11px] text-neutral-500">
                                 <div className="flex items-center gap-2">
                                     <span className="w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600" />
@@ -338,7 +338,7 @@ export default function SolutionDetail() {
                                 <p className="text-neutral-800 dark:text-neutral-200">
                                     &gt; SLA: Sub-200ms Response Latency
                                 </p>
-                                <div className="p-3 my-2 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 space-y-1">
+                                <div className="p-3.5 my-2 rounded-2xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 space-y-1">
                                     <div className="text-[10px] uppercase tracking-wider text-neutral-500">
                                         Hardware & Execution Target
                                     </div>
@@ -359,7 +359,7 @@ export default function SolutionDetail() {
                         </div>
 
                         {/* Quick Technical Specs Snapshot */}
-                        <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-neutral-950 space-y-2">
+                        <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-neutral-950 space-y-2">
                             <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">
                                 Operational Authority
                             </div>
@@ -376,11 +376,11 @@ export default function SolutionDetail() {
             {/* BLOCK 1 DETAIL: Feature Bullets */}
             {block1 && block1.bullets && block1.bullets.length > 0 && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                    <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                         <h2 className="text-sm font-mono uppercase tracking-wider text-neutral-500 mb-4">
                             Operational Capabilities
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                             {block1.bullets.map((bullet, idx) => (
                                 <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
                                     <CheckCircle2 className="w-4 h-4 text-black dark:text-white shrink-0 mt-0.5" />
@@ -395,11 +395,11 @@ export default function SolutionDetail() {
             {/* BLOCK 2: Right Copy / Left Architecture Diagram (Visual Rhythm Rule) */}
             {block2 && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-8 sm:p-10 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             {/* Graphic / Bullets on Left */}
                             <div className="lg:col-span-6 order-2 lg:order-1 font-mono text-xs">
-                                <div className="p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black space-y-3">
+                                <div className="p-6 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black space-y-3">
                                     <div className="text-[11px] text-neutral-500 uppercase tracking-widest pb-1 border-b border-neutral-200 dark:border-white/10">
                                         System Architecture Topology
                                     </div>
@@ -443,7 +443,7 @@ export default function SolutionDetail() {
             {/* BLOCK 3: Centered Specification Card with Subtle Divider Lines */}
             {block3 && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-                    <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-neutral-950">
+                    <div className="p-8 sm:p-12 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-neutral-950">
                         <div className="text-center max-w-2xl mx-auto mb-10">
                             <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
                                 Operational Benchmarks
@@ -515,7 +515,7 @@ export default function SolutionDetail() {
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
+                        <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between h-full">
                             <div>
                                 <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Pilot Sprint (14 Days)</div>
                                 <div className="text-xl font-bold mt-2 text-black dark:text-white">&#8377;1,50,000 - &#8377;3,50,000</div>
@@ -525,8 +525,8 @@ export default function SolutionDetail() {
                                 Sub-14 Day Delivery SLA
                             </div>
                         </div>
-                        <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between relative">
-                            <span className="absolute -top-3 right-4 px-2 py-0.5 rounded-md text-[10px] font-bold bg-black text-white dark:bg-white dark:text-black uppercase tracking-wider">Most Deployed</span>
+                        <div className="p-6 sm:p-7 rounded-[24px] border-2 border-black dark:border-white bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between h-full relative">
+                            <span className="absolute -top-3 right-4 px-3 py-0.5 rounded-full text-[10px] font-bold bg-black text-white dark:bg-white dark:text-black uppercase tracking-wider">Most Deployed</span>
                             <div>
                                 <div className="text-xs font-mono uppercase tracking-wider text-black dark:text-white font-semibold">Enterprise Suite (30-45 Days)</div>
                                 <div className="text-xl font-bold mt-2 text-black dark:text-white">&#8377;6,00,000 - &#8377;15,00,000</div>
@@ -536,7 +536,7 @@ export default function SolutionDetail() {
                                 Hard 90-Day ROI Guarantee
                             </div>
                         </div>
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
+                        <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between h-full">
                             <div>
                                 <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Institutional Retainer</div>
                                 <div className="text-xl font-bold mt-2 text-black dark:text-white">&#8377;4,50,000 / month</div>
@@ -553,7 +553,7 @@ export default function SolutionDetail() {
             {/* Sturm Module 10: Underlying Technical Architecture & Whitepaper Evidence Citation */}
             {solution.whitepaperCitation && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-14 md:my-16">
-                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 relative overflow-hidden">
+                    <div className="p-8 sm:p-10 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 relative overflow-hidden">
                         <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-neutral-200 dark:border-white/10">
                             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-black dark:text-white font-semibold">
                                 <FileText className="w-4 h-4" />
@@ -567,7 +567,7 @@ export default function SolutionDetail() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             <div className="lg:col-span-8 space-y-3.5">
-                                <span className="inline-block text-[11px] font-mono px-2.5 py-0.5 rounded-lg bg-neutral-200 dark:bg-white/10 text-black dark:text-white font-medium">
+                                <span className="inline-block text-[11px] font-mono px-3 py-0.5 rounded-full bg-neutral-200 dark:bg-white/10 text-black dark:text-white font-medium">
                                     {solution.whitepaperCitation.category}
                                 </span>
                                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-black dark:text-white leading-snug">
@@ -592,7 +592,7 @@ export default function SolutionDetail() {
                             <div className="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-2.5">
                                 <Link
                                     to={`/signals/${solution.whitepaperCitation.slug}/`}
-                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs font-mono tracking-wide transition-all"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs font-mono tracking-wide transition-all duration-300"
                                 >
                                     <span>Read Technical Whitepaper</span>
                                     <ArrowRight className="w-3.5 h-3.5" />
@@ -608,7 +608,7 @@ export default function SolutionDetail() {
 
             {/* LOWER HALF: Reusable Enterprise Trust & Security Components */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-14 md:my-16">
-                <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <div className="p-8 sm:p-10 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="max-w-2xl mb-8 space-y-2">
                         <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
                             Enterprise Sovereignty Standard
@@ -621,9 +621,9 @@ export default function SolutionDetail() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-6">
                         {solution.trustSection.complianceBadges.map((badge, idx) => (
-                            <div key={idx} className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black space-y-1.5">
+                            <div key={idx} className="p-4 rounded-[18px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black space-y-1.5 h-full flex items-center">
                                 <div className="flex items-center gap-2 text-xs font-mono font-medium text-black dark:text-white">
                                     <ShieldCheck className="w-4 h-4 text-black dark:text-white shrink-0" />
                                     <span>{badge}</span>
@@ -632,9 +632,9 @@ export default function SolutionDetail() {
                         ))}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                         {solution.trustSection.metrics.map((metric, idx) => (
-                            <div key={idx} className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                            <div key={idx} className="p-5 rounded-[18px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black h-full flex flex-col justify-between">
                                 <div className="text-xl font-mono font-semibold text-black dark:text-white">{metric.value}</div>
                                 <div className="text-xs font-mono text-black dark:text-white mt-0.5">{metric.label}</div>
                                 <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">{metric.description}</div>
@@ -666,7 +666,7 @@ export default function SolutionDetail() {
                                     {faq.question}
                                 </span>
                                 <ChevronDown
-                                    className={`w-5 h-5 text-neutral-400 transition-transform duration-200 shrink-0 ${
+                                    className={`w-5 h-5 text-neutral-400 transition-transform duration-300 shrink-0 ${
                                         openFaqIndex === idx ? 'rotate-180 text-black dark:text-white' : ''
                                     }`}
                                 />
@@ -678,7 +678,7 @@ export default function SolutionDetail() {
                                         initial={{ opacity: 0, height: 0 }}
                                         animate={{ opacity: 1, height: 'auto' }}
                                         exit={{ opacity: 0, height: 0 }}
-                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                         className="accordion-panel overflow-hidden"
                                     >
                                         <p className="pt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -712,12 +712,12 @@ export default function SolutionDetail() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {relatedSolutions.map(rel => (
                         <Link
                             key={rel.slug}
                             to={`/solutions/${rel.slug}/`}
-                            className="group p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30 transition-all flex flex-col justify-between"
+                            className="group p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30 transition-all duration-300 flex flex-col justify-between h-full"
                         >
                             <div className="space-y-2">
                                 <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-wider truncate block">
@@ -739,8 +739,8 @@ export default function SolutionDetail() {
 
             {/* Final Bottom Conversion Card */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-                <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/10 text-xs font-mono">
+                <div className="p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                         <Terminal className="w-3.5 h-3.5 text-white" />
                         <span>Production Deployment Intake</span>
                     </div>
@@ -757,7 +757,7 @@ export default function SolutionDetail() {
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="px-8 py-4 rounded-lg bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-sm transition-all flex items-center gap-2 group"
+                            className="px-8 py-4 rounded-full bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-sm transition-all duration-300 flex items-center gap-2 group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -766,7 +766,7 @@ export default function SolutionDetail() {
 
                         <Link
                             to="/waitlist/"
-                            className="px-6 py-4 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium text-sm transition-all flex items-center gap-2"
+                            className="px-7 py-4 rounded-full border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium text-sm transition-all duration-300 flex items-center gap-2"
                         >
                             <span>Join ele-in SaaS Waitlist &rarr;</span>
                         </Link>

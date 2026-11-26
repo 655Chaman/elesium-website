@@ -138,7 +138,7 @@ export default function MultiAgentLatencyEstimator() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/20 text-neutral-200 text-xs font-mono mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/20 text-neutral-200 text-xs font-mono mb-4">
               <Cpu className="w-3.5 h-3.5" />
               <span>SYSTEMS ARCHITECTURE BENCHMARK ENGINE</span>
             </div>
@@ -154,7 +154,7 @@ export default function MultiAgentLatencyEstimator() {
               <div className="inline-flex rounded-lg bg-neutral-900 border border-neutral-800 p-1">
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                  className={`active:scale-[0.97] px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                     currency === 'USD'
                       ? 'bg-white text-black shadow-sm'
                       : 'text-neutral-400 hover:text-neutral-200'
@@ -164,7 +164,7 @@ export default function MultiAgentLatencyEstimator() {
                 </button>
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                  className={`active:scale-[0.97] px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                     currency === 'INR'
                       ? 'bg-white text-black shadow-sm'
                       : 'text-neutral-400 hover:text-neutral-200'
@@ -176,7 +176,7 @@ export default function MultiAgentLatencyEstimator() {
 
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-xs text-neutral-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-xs text-neutral-300 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5 text-neutral-200" />
                 <span>Embed Widget</span>
@@ -184,7 +184,7 @@ export default function MultiAgentLatencyEstimator() {
 
               <button
                 onClick={copySpecJson}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-xs text-neutral-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-xs text-neutral-300 transition-all duration-300"
               >
                 {hasCopiedSpec ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
                 <span>{hasCopiedSpec ? 'Spec Copied!' : 'Copy JSON Spec'}</span>
@@ -197,7 +197,7 @@ export default function MultiAgentLatencyEstimator() {
             {/* Left Column: Interactive Parameters */}
             <div className="lg:col-span-7 space-y-6">
               {/* Card 1: DAG Topology */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-sm font-semibold tracking-wider text-neutral-300 uppercase flex items-center gap-2">
                     <Layers className="w-4 h-4 text-neutral-200" />
@@ -216,7 +216,7 @@ export default function MultiAgentLatencyEstimator() {
                       <button
                         key={key}
                         onClick={() => setTopology(key)}
-                        className={`active:scale-[0.97] text-left p-3.5 rounded-xl border transition-all ${
+                        className={`active:scale-[0.97] text-left p-3.5 rounded-xl border transition-all duration-300 ${
                           isSelected
                             ? 'bg-white/[0.05] border-white/30 shadow-md ring-1 ring-white/20'
                             : 'bg-neutral-950/40 border-neutral-800/80 hover:border-neutral-700 hover:bg-neutral-800/40'
@@ -242,7 +242,7 @@ export default function MultiAgentLatencyEstimator() {
                     step="1"
                     value={nodeCount}
                     onChange={(e) => setNodeCount(Number(e.target.value))}
-                    className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                    className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-neutral-500">
                     <span>1 (Single Agent)</span>
@@ -254,7 +254,7 @@ export default function MultiAgentLatencyEstimator() {
               </div>
 
               {/* Card 2: Workload & Token Dynamics */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <h2 className="text-sm font-semibold tracking-wider text-neutral-300 uppercase flex items-center gap-2 mb-4">
                   <Activity className="w-4 h-4 text-neutral-200" />
                   <span>2. Token Volume & Monthly Traffic</span>
@@ -276,7 +276,7 @@ export default function MultiAgentLatencyEstimator() {
                       step="1000"
                       value={monthlyRuns}
                       onChange={(e) => setMonthlyRuns(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[10px] font-mono text-neutral-500">
                       <span>1,000</span>
@@ -301,7 +301,7 @@ export default function MultiAgentLatencyEstimator() {
                       step="500"
                       value={inputTokensPerNode}
                       onChange={(e) => setInputTokensPerNode(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[10px] font-mono text-neutral-500">
                       <span>500 (Lean Prompt)</span>
@@ -326,7 +326,7 @@ export default function MultiAgentLatencyEstimator() {
                       step="100"
                       value={outputTokensPerNode}
                       onChange={(e) => setOutputTokensPerNode(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[10px] font-mono text-neutral-500">
                       <span>100 (Structured JSON)</span>
@@ -339,7 +339,7 @@ export default function MultiAgentLatencyEstimator() {
               </div>
 
               {/* Card 3: Infrastructure Benchmarking Selection */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <h2 className="text-sm font-semibold tracking-wider text-neutral-300 uppercase flex items-center gap-2 mb-4">
                   <Server className="w-4 h-4 text-neutral-200" />
                   <span>3. Compute Infrastructure Comparison</span>
@@ -394,7 +394,7 @@ export default function MultiAgentLatencyEstimator() {
             {/* Right Column: Mathematical Benchmark Outputs */}
             <div className="lg:col-span-5 space-y-6">
               {/* Primary Output Card: Latency & Cost Verdict */}
-              <div className="bg-neutral-950 border border-white/20 rounded-xl p-6 shadow-2xl relative overflow-hidden">
+              <div className="bg-neutral-950 border border-white/20 rounded-[24px] p-6 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/[0.04] rounded-lg blur-3xl pointer-events-none" />
 
                 <div className="flex items-center justify-between border-b border-neutral-800 pb-4 mb-5">
@@ -404,7 +404,7 @@ export default function MultiAgentLatencyEstimator() {
                       Performance & Cost Delta
                     </span>
                   </div>
-                  <span className="text-xs font-mono px-2 py-0.5 rounded-lg bg-white/[0.05] border border-white/30 text-white font-semibold">
+                  <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-white/[0.05] border border-white/30 text-white font-semibold">
                     {results.latencyImprovementPct}% FASTER
                   </span>
                 </div>
@@ -421,7 +421,7 @@ export default function MultiAgentLatencyEstimator() {
                         {formatNumber(results.publicP50LatencyMs)}ms / {formatNumber(results.publicP99LatencyMs)}ms
                       </span>
                     </div>
-                    <div className="w-full bg-neutral-950 rounded-lg h-3 overflow-hidden border border-neutral-800">
+                    <div className="w-full bg-neutral-950 rounded-full h-3 overflow-hidden border border-neutral-800">
                       <div
                         className="bg-amber-500 h-full rounded-lg transition-all duration-500"
                         style={{ width: '100%' }}
@@ -439,7 +439,7 @@ export default function MultiAgentLatencyEstimator() {
                         {formatNumber(results.privateP50LatencyMs)}ms / {formatNumber(results.privateP99LatencyMs)}ms
                       </span>
                     </div>
-                    <div className="w-full bg-neutral-950 rounded-lg h-3 overflow-hidden border border-neutral-800">
+                    <div className="w-full bg-neutral-950 rounded-full h-3 overflow-hidden border border-neutral-800">
                       <div
                         className="border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-200 h-full rounded-lg transition-all duration-500"
                         style={{
@@ -452,7 +452,7 @@ export default function MultiAgentLatencyEstimator() {
 
                 {/* Financial Impact Comparison */}
                 <div className="grid grid-cols-2 gap-3 pt-4 border-t border-neutral-800 mb-6">
-                  <div className="bg-neutral-950/60 p-3 rounded-xl border border-neutral-800/80">
+                  <div className="bg-neutral-950/60 p-3 rounded-[18px] border border-neutral-800/80">
                     <div className="text-[11px] text-neutral-400 mb-1">Public Cloud Token Spend:</div>
                     <div className="text-lg font-bold font-mono text-amber-300">
                       {results.currencySymbol}{formatNumber(results.publicMonthlyCost)}
@@ -463,7 +463,7 @@ export default function MultiAgentLatencyEstimator() {
                     </div>
                   </div>
 
-                  <div className="bg-neutral-950/60 p-3 rounded-xl border border-white/15">
+                  <div className="bg-neutral-950/60 p-3 rounded-[18px] border border-white/15">
                     <div className="text-[11px] text-neutral-400 mb-1">Private VPC Cluster:</div>
                     <div className="text-lg font-bold font-mono text-white">
                       {results.currencySymbol}{formatNumber(results.privateMonthlyCost)}
@@ -476,7 +476,7 @@ export default function MultiAgentLatencyEstimator() {
                 </div>
 
                 {/* Net Annual Savings Spotlight */}
-                <div className="bg-white/[0.05] border border-white/20 rounded-xl p-4 text-center mb-6">
+                <div className="bg-white/[0.05] border border-white/20 rounded-2xl p-4 text-center mb-6">
                   <div className="text-xs uppercase tracking-wider text-white font-semibold mb-1">
                     Net Annual Infrastructure Savings
                   </div>
@@ -489,7 +489,7 @@ export default function MultiAgentLatencyEstimator() {
                 </div>
 
                 {/* Breakeven Inflection Indicator */}
-                <div className="flex items-center justify-between text-xs font-mono bg-neutral-950/80 p-3 rounded-xl border border-neutral-800 mb-6">
+                <div className="flex items-center justify-between text-xs font-mono bg-neutral-950/80 p-3 rounded-[18px] border border-neutral-800 mb-6">
                   <span className="text-neutral-400">Breakeven Crossover:</span>
                   <span className={`font-bold ${results.isBreakevenReached ? 'text-white' : 'text-amber-400'}`}>
                     {results.isBreakevenReached ? '✅ Breakeven Exceeded' : `At ${formatNumber(results.breakevenRunsPerMonth)} runs/mo`}
@@ -500,7 +500,7 @@ export default function MultiAgentLatencyEstimator() {
                 <div className="pt-2">
                   <button
                     onClick={openWhatsApp}
-                    className="active:scale-[0.97] w-full justify-center bg-white text-black hover:bg-neutral-200 font-semibold py-3.5 rounded-lg text-sm shadow-sm transition-all flex items-center gap-2"
+                    className="active:scale-[0.97] w-full justify-center bg-white text-black hover:bg-neutral-200 font-semibold py-3.5 rounded-full text-sm shadow-sm transition-all duration-300 flex items-center gap-2"
                   >
                     <span className="w-2 h-2 rounded-lg bg-black" />
                     Chat on WhatsApp to Lock Benchmarks
@@ -512,7 +512,7 @@ export default function MultiAgentLatencyEstimator() {
               </div>
 
               {/* Monthly Token Footprint Summary */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5 text-xs font-mono space-y-2">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5 text-xs font-mono space-y-2">
                 <div className="text-neutral-400 font-sans font-semibold text-xs mb-2 uppercase tracking-wider">
                   Token Throughprint Metrics
                 </div>
@@ -559,7 +559,7 @@ export default function MultiAgentLatencyEstimator() {
               ].map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-neutral-900/60 border border-neutral-800 rounded-xl overflow-hidden transition-colors"
+                  className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -587,7 +587,7 @@ export default function MultiAgentLatencyEstimator() {
       {/* Embed Modal Drawer */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-2xl w-full p-6 relative shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-2xl w-full p-6 relative shadow-2xl">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -601,19 +601,19 @@ export default function MultiAgentLatencyEstimator() {
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this HTML snippet into your technical documentation, blog post, or engineering portal. The embed is lightweight, mobile-responsive, and automatically inherits dark mode styling.
             </p>
-            <div className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all mb-4">
+            <div className="bg-neutral-950 p-3 rounded-[18px] border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all mb-4">
               {embedCode}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-semibold text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-semibold text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedSnippet}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-lg transition-all"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-lg transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied to Clipboard!' : 'Copy Embed Code'}</span>

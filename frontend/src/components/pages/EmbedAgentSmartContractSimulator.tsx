@@ -33,7 +33,7 @@ export default function EmbedAgentSmartContractSimulator() {
   const results = useMemo(() => calculateSmartContractAudit(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Web3 Smart Contract Formal Verification Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-smart-contract-formal-verification-simulator" />
@@ -56,7 +56,7 @@ export default function EmbedAgentSmartContractSimulator() {
           href="https://elesium.online/tools/enterprise-agent-smart-contract-formal-verification-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-[11px] font-mono text-neutral-200 hover:text-white transition"
+          className="inline-flex items-center gap-1 text-[11px] font-mono text-neutral-200 hover:text-white transition-all duration-300"
         >
           <span>Full Tool</span>
           <ArrowUpRight className="w-3 h-3" />
@@ -77,7 +77,7 @@ export default function EmbedAgentSmartContractSimulator() {
             step="100"
             value={contractLinesOfCode}
             onChange={(e) => setContractLinesOfCode(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -87,7 +87,7 @@ export default function EmbedAgentSmartContractSimulator() {
             <select
               value={formalVerificationEngine}
               onChange={(e) => setFormalVerificationEngine(e.target.value as FormalVerificationEngine)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="certora_prover">Certora Prover</option>
               <option value="halmos_symbolic">Halmos Symbolic</option>
@@ -100,7 +100,7 @@ export default function EmbedAgentSmartContractSimulator() {
             <select
               value={zkProofSystem}
               onChange={(e) => setZkProofSystem(e.target.value as ZkProofSystem)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="groth16_snark">Groth16 SNARK</option>
               <option value="plonk_halo2">PLONK / Halo2</option>
@@ -113,19 +113,19 @@ export default function EmbedAgentSmartContractSimulator() {
 
       {/* Outputs Cards */}
       <div className="grid grid-cols-3 gap-2 mb-4">
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Verification Latency</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.verificationLatencySeconds}s
           </div>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Invariant Coverage</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.invariantCoveragePct}%
           </div>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Exploit Block</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.exploitInterceptionRatePct}%
@@ -139,7 +139,7 @@ export default function EmbedAgentSmartContractSimulator() {
           href="https://elesium.online/tools/enterprise-agent-smart-contract-formal-verification-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[11px] text-neutral-400 hover:text-white transition"
+          className="text-[11px] text-neutral-400 hover:text-white transition-all duration-300"
         >
           Calculated via <span className="text-white font-semibold underline">Elesium Sovereign Web3 Security</span>
         </a>

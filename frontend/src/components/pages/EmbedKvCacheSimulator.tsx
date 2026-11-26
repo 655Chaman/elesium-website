@@ -102,7 +102,7 @@ export default function EmbedKvCacheSimulator() {
               <button
                 key={prec}
                 onClick={() => setCachePrecision(prec)}
-                className={`active:scale-[0.97] py-1 text-[10px] font-mono rounded border transition-colors ${
+                className={`active:scale-[0.97] py-1 text-[10px] font-mono rounded border transition-all duration-300 ${
                   cachePrecision === prec
                     ? 'border-white/30 bg-white/10 text-white font-semibold'
                     : 'border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -163,17 +163,17 @@ export default function EmbedKvCacheSimulator() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-3 gap-2 mb-4">
-        <div className="p-3 rounded-xl border border-white/20 bg-white/[0.05] text-center">
+        <div className="p-3 rounded-[18px] border border-white/20 bg-white/[0.05] text-center">
           <div className="text-[10px] font-mono text-neutral-200">TTFT Cut</div>
           <div className="text-base font-bold text-white font-mono">{results.ttftReductionPercentage}%</div>
           <div className="text-[10px] text-neutral-400">{results.averageTtftMs}ms avg</div>
         </div>
-        <div className="p-3 rounded-xl border border-white/20 bg-white/[0.05] text-center">
+        <div className="p-3 rounded-[18px] border border-white/20 bg-white/[0.05] text-center">
           <div className="text-[10px] font-mono text-neutral-200">Total KV VRAM</div>
           <div className="text-base font-bold text-white font-mono">{results.totalKvCacheVramGb} GB</div>
           <div className="text-[10px] text-neutral-400">{results.vramSaturationPercentage}% VRAM</div>
         </div>
-        <div className="p-3 rounded-xl border border-white/20 bg-white/[0.05] text-center">
+        <div className="p-3 rounded-[18px] border border-white/20 bg-white/[0.05] text-center">
           <div className="text-[10px] font-mono text-neutral-200">Monthly Saved</div>
           <div className="text-base font-bold text-white font-mono">${results.monthlySavingsUsd.toLocaleString()}</div>
           <div className="text-[10px] text-neutral-400">Vs Closed API</div>
@@ -186,7 +186,7 @@ export default function EmbedKvCacheSimulator() {
           href="https://elesium.online/tools/enterprise-llm-context-kv-cache-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white flex items-center gap-1 transition-colors"
+          className="hover:text-white flex items-center gap-1 transition-all duration-300"
         >
           Open Full Simulator
           <ExternalLink className="w-3 h-3 text-neutral-200" />

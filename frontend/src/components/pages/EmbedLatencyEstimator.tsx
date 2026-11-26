@@ -52,7 +52,7 @@ export default function EmbedLatencyEstimator() {
         <link rel="canonical" href="https://elesium.online/embed/latency-estimator" />
       </Helmet>
 
-      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[640px] flex flex-col justify-between border border-neutral-800 rounded-xl shadow-xl">
+      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[640px] flex flex-col justify-between border border-neutral-800 rounded-[24px] shadow-xl">
         <div>
           {/* Top Bar */}
           <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
@@ -153,7 +153,7 @@ export default function EmbedLatencyEstimator() {
               <select
                 value={publicModel}
                 onChange={(e) => setPublicModel(e.target.value as PublicModelKey)}
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-lg p-1.5 text-neutral-200 font-mono text-[11px]"
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl p-1.5 text-neutral-200 font-mono text-[11px]"
               >
                 {(Object.keys(PUBLIC_MODELS) as PublicModelKey[]).map((k) => (
                   <option key={k} value={k}>
@@ -167,7 +167,7 @@ export default function EmbedLatencyEstimator() {
               <select
                 value={privateCluster}
                 onChange={(e) => setPrivateCluster(e.target.value as PrivateClusterKey)}
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-lg p-1.5 text-neutral-200 font-mono text-[11px]"
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl p-1.5 text-neutral-200 font-mono text-[11px]"
               >
                 {(Object.keys(PRIVATE_CLUSTERS) as PrivateClusterKey[]).map((k) => (
                   <option key={k} value={k}>
@@ -179,7 +179,7 @@ export default function EmbedLatencyEstimator() {
           </div>
 
           {/* Benchmark Results Display */}
-          <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 mb-4">
+          <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 mb-4">
             <div className="flex justify-between items-center mb-3">
               <span className="text-xs text-neutral-400 flex items-center gap-1.5">
                 <Gauge className="w-3.5 h-3.5 text-neutral-200" />
@@ -203,13 +203,13 @@ export default function EmbedLatencyEstimator() {
 
             {/* Financial Comparison */}
             <div className="grid grid-cols-2 gap-2 pt-3 border-t border-neutral-800 text-xs">
-              <div className="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[10px] text-neutral-500">Cloud API / Mo:</div>
                 <div className="font-mono font-bold text-amber-300">
                   {results.currencySymbol}{formatNumber(results.publicMonthlyCost)}
                 </div>
               </div>
-              <div className="bg-neutral-950 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[10px] text-neutral-500">Private Cluster / Mo:</div>
                 <div className="font-mono font-bold text-white">
                   {results.currencySymbol}{formatNumber(results.privateMonthlyCost)}

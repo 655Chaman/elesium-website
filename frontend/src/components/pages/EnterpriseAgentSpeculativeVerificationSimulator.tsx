@@ -138,7 +138,7 @@ SLA Status: ${results.slaStatus}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e90a_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e90a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-4">
             <Network className="w-3.5 h-3.5" />
             TOOL #58: SPECULATIVE DECODING &amp; VERIFICATION KERNELS
           </div>
@@ -154,28 +154,28 @@ SLA Status: ${results.slaStatus}
           <div className="flex flex-wrap items-center gap-3 mt-6">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white transition-all duration-300 shadow-sm"
             >
               <Code className="w-3.5 h-3.5 text-neutral-200" />
               Embed This Tool
             </button>
             <button
               onClick={handleCopyMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white transition-all duration-300 shadow-sm"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Export Executive Memo'}
             </button>
             <button
               onClick={resetDefaults}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-400 hover:text-neutral-200 transition-all shadow-sm ml-auto"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-400 hover:text-neutral-200 transition-all duration-300 shadow-sm ml-auto"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               Reset Parameters
@@ -190,7 +190,7 @@ SLA Status: ${results.slaStatus}
           
           {/* Controls Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-6 shadow-xl">
+            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <div className="flex items-center gap-2">
                   <Sliders className="w-4 h-4 text-neutral-200" />
@@ -198,7 +198,7 @@ SLA Status: ${results.slaStatus}
                     Speculative Parameters
                   </h2>
                 </div>
-                <div className="flex items-center gap-1 bg-neutral-900 p-0.5 rounded-lg border border-neutral-800">
+                <div className="flex items-center gap-1 bg-neutral-900 p-0.5 rounded-full border border-neutral-800">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2 py-0.5 text-xs font-mono rounded ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
@@ -279,7 +279,7 @@ SLA Status: ${results.slaStatus}
                     step="8"
                     value={candidateBranches}
                     onChange={(e) => setCandidateBranches(Number(e.target.value))}
-                    className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                    className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                   />
                   <div className="flex justify-between text-[10px] text-neutral-400 mt-1 font-mono">
                     <span>16 (Minimal)</span>
@@ -300,7 +300,7 @@ SLA Status: ${results.slaStatus}
                     step="1"
                     value={maxTreeDepth}
                     onChange={(e) => setMaxTreeDepth(Number(e.target.value))}
-                    className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                    className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                   />
                   <div className="flex justify-between text-[10px] text-neutral-400 mt-1 font-mono">
                     <span>2 Tokens</span>
@@ -321,7 +321,7 @@ SLA Status: ${results.slaStatus}
                     step="0.05"
                     value={pruningThreshold}
                     onChange={(e) => setPruningThreshold(Number(e.target.value))}
-                    className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                    className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                   />
                   <div className="flex justify-between text-[10px] text-neutral-400 mt-1 font-mono">
                     <span>5% (Permissive)</span>
@@ -339,7 +339,7 @@ SLA Status: ${results.slaStatus}
             
             {/* KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-2xl p-4 shadow-lg text-center">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   Speedup Multiplier
                 </div>
@@ -351,7 +351,7 @@ SLA Status: ${results.slaStatus}
                 </div>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-2xl p-4 shadow-lg text-center">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   Verify Latency
                 </div>
@@ -363,7 +363,7 @@ SLA Status: ${results.slaStatus}
                 </div>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-2xl p-4 shadow-lg text-center">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   Acceptance Rate
                 </div>
@@ -375,7 +375,7 @@ SLA Status: ${results.slaStatus}
                 </div>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-2xl p-4 shadow-lg text-center">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   FinOps Savings
                 </div>
@@ -389,7 +389,7 @@ SLA Status: ${results.slaStatus}
             </div>
 
             {/* Visual Speculative Candidate Tree HUD */}
-            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-6 shadow-xl">
+            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-5">
                 <div className="flex items-center gap-2">
                   <Gauge className="w-4 h-4 text-neutral-200" />
@@ -415,7 +415,7 @@ SLA Status: ${results.slaStatus}
                 {results.treeNodes.map((node) => (
                   <div
                     key={node.id}
-                    className={`h-16 rounded-lg border flex flex-col items-center justify-center p-1 text-center transition-all ${
+                    className={`h-16 rounded-full border flex flex-col items-center justify-center p-1 text-center transition-all ${
                       node.status === 'ACCEPTED'
                         ? 'bg-white/[0.05] border-white/15 text-neutral-200'
                         : node.status === 'VERIFIED'
@@ -434,7 +434,7 @@ SLA Status: ${results.slaStatus}
               </div>
 
               {/* Architecture Explanation Box */}
-              <div className="bg-neutral-950/60 rounded-xl p-4 border border-neutral-800/80 text-xs text-neutral-300 leading-relaxed space-y-2 font-mono">
+              <div className="bg-neutral-950/60 rounded-2xl p-4 border border-neutral-800/80 text-xs text-neutral-300 leading-relaxed space-y-2 font-mono">
                 <div className="text-white font-bold flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5" />
                   Single-Pass Tree Attention Mask Compilation Status
@@ -446,7 +446,7 @@ SLA Status: ${results.slaStatus}
             </div>
 
             {/* Architecture Comparison Table */}
-            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-6 shadow-xl">
+            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-[24px] p-6 shadow-xl">
               <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-200 font-mono mb-4 pb-2 border-b border-neutral-800">
                 Comparative Architecture Matrix: Standard vs. Tree Speculative
               </h3>
@@ -508,11 +508,11 @@ SLA Status: ${results.slaStatus}
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl overflow-hidden transition-all"
+                className="bg-[#0a0a0a] border border-neutral-800/80 rounded-[24px] overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-medium text-white hover:text-white transition-colors"
+                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-medium text-white hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -530,10 +530,10 @@ SLA Status: ${results.slaStatus}
         </div>
 
         {/* CRO Conversion Block: Architecture Mandate Form */}
-        <div className="mt-20 max-w-4xl mx-auto bg-gradient-to-b from-neutral-900/60 to-[#0a0a0a] border border-neutral-800 rounded-xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <div className="mt-20 max-w-4xl mx-auto bg-gradient-to-b from-neutral-900/60 to-[#0a0a0a] border border-neutral-800 rounded-[24px] p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.04] rounded-lg blur-3xl pointer-events-none" />
           <div className="relative z-10 text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-3">
               <CheckCircle2 className="w-3.5 h-3.5" />
               SOVEREIGN INFERENCE ACCELERATION AUDIT
             </div>
@@ -545,8 +545,8 @@ SLA Status: ${results.slaStatus}
             </p>
           </div>
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -559,7 +559,7 @@ SLA Status: ${results.slaStatus}
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -575,10 +575,10 @@ SLA Status: ${results.slaStatus}
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-[#0a0a0a] border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+          <div className="bg-[#0a0a0a] border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white transition-all duration-300"
             >
               <X className="w-5 h-5" />
             </button>
@@ -591,19 +591,19 @@ SLA Status: ${results.slaStatus}
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this clean HTML snippet into your technical documentation, internal Wiki, or partner engineering blog:
             </p>
-            <div className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all select-all mb-4 max-h-36 overflow-y-auto">
+            <div className="bg-neutral-950 p-3 rounded-[18px] border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all select-all mb-4 max-h-36 overflow-y-auto">
               {embedSnippet}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg text-xs font-mono bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-mono bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800"
               >
                 Close
               </button>
               <button
                 onClick={handleCopyEmbed}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg text-xs font-mono bg-white hover:bg-neutral-200 text-black font-bold transition-colors inline-flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-mono bg-white hover:bg-neutral-200 text-black font-bold transition-all duration-300 inline-flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied to Clipboard!' : 'Copy Embed Code'}

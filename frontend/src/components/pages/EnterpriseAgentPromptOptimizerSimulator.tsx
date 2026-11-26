@@ -148,30 +148,30 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
       {/* Header Breadcrumbs */}
       <div className="max-w-7xl mx-auto mb-8 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-sm font-mono text-neutral-400">
-          <Link to="/" className="hover:text-white transition-colors">Home</Link>
+          <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
           <span>/</span>
-          <Link to="/solutions/" className="hover:text-white transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-white transition-all duration-300">Solutions</Link>
           <span>/</span>
           <span className="text-neutral-200">Prompt Optimizer Simulator</span>
         </div>
         <div className="flex items-center gap-3">
           <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
             onClick={() => setIsEmbedOpen(true)}
-            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-300 hover:text-white transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-300 hover:text-white transition-all duration-300"
           >
             <Code className="w-3.5 h-3.5 text-neutral-200" />
             Embed Tool
           </button>
           <button
             onClick={copyExecutiveMemo}
-            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-white/20 bg-white/[0.05] hover:bg-white/10 text-xs font-mono text-neutral-200 hover:text-white transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-white/10 text-xs font-mono text-neutral-200 hover:text-white transition-all duration-300"
           >
             {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
             {hasCopiedMemo ? 'Memo Copied!' : 'Copy Exec Memo'}
@@ -181,7 +181,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
 
       {/* Hero Headline */}
       <div className="max-w-7xl mx-auto mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/[0.05] text-neutral-200 text-xs font-mono uppercase tracking-widest mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/[0.05] text-neutral-200 text-xs font-mono uppercase tracking-widest mb-4">
           <Sparkles className="w-3.5 h-3.5 " />
           Tool #24 • Sovereign Optimization Model
         </div>
@@ -197,7 +197,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
         {/* Sliders Configuration Panel */}
-        <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-7 shadow-xl space-y-6">
+        <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-7 shadow-xl space-y-6">
           <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
             <div className="flex items-center gap-2.5">
               <Sliders className="w-5 h-5 text-neutral-200" />
@@ -219,7 +219,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               step="25000"
               value={monthlyAgentExecutions}
               onChange={(e) => setMonthlyAgentExecutions(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>50k (Mid-Market)</span>
@@ -240,7 +240,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               step="100"
               value={avgPromptInputTokens}
               onChange={(e) => setAvgPromptInputTokens(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>500 (Concise)</span>
@@ -261,7 +261,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               step="50"
               value={avgOutputTokens}
               onChange={(e) => setAvgOutputTokens(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>150 (JSON Structured)</span>
@@ -282,7 +282,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               step="50"
               value={evaluationValidationSetSize}
               onChange={(e) => setEvaluationValidationSetSize(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>100 (Core Micro-eval)</span>
@@ -292,12 +292,12 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
 
           {/* Highlight Metrics Box */}
           <div className="pt-4 border-t border-neutral-800 grid grid-cols-2 gap-3">
-            <div className="p-3.5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-3.5 rounded-2xl border border-white/20 bg-white/[0.05]">
               <div className="text-[11px] font-mono text-neutral-200 uppercase tracking-wider">Accuracy Boost</div>
               <div className="text-2xl font-bold font-mono text-white mt-1">+{results.accuracyImprovementPct}%</div>
               <div className="text-[11px] text-neutral-400 mt-0.5">99.4% Task Success</div>
             </div>
-            <div className="p-3.5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-3.5 rounded-2xl border border-white/20 bg-white/[0.05]">
               <div className="text-[11px] font-mono text-neutral-200 uppercase tracking-wider">Token Overhead</div>
               <div className="text-2xl font-bold font-mono text-white mt-1">-{results.tokenReductionPct}%</div>
               <div className="text-[11px] text-neutral-400 mt-0.5">38.2% Compression</div>
@@ -321,7 +321,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
         {/* 3-Way Comparative Architectural Results */}
         <div className="lg:col-span-7 space-y-6">
           {/* Architecture 1: Manual Prompt Engineering */}
-          <div className="p-6 rounded-xl border border-red-900/40 bg-neutral-900/60 relative overflow-hidden">
+          <div className="p-6 rounded-[24px] border border-red-900/40 bg-neutral-900/60 relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
@@ -332,19 +332,19 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Accuracy</div>
                 <div className="text-base font-bold text-red-400">{results.manualPrompting.taskAccuracyPct}%</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Input Tokens</div>
                 <div className="text-base font-bold text-neutral-200">{results.manualPrompting.avgInputTokensPerInvocation}</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Tuning Rounds</div>
                 <div className="text-base font-bold text-neutral-400">1 (Static)</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-red-400">${results.manualPrompting.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
@@ -355,7 +355,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
           </div>
 
           {/* Architecture 2: Unconstrained Grid / Random Search */}
-          <div className="p-6 rounded-xl border border-amber-900/40 bg-neutral-900/60 relative overflow-hidden">
+          <div className="p-6 rounded-[24px] border border-amber-900/40 bg-neutral-900/60 relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
@@ -366,19 +366,19 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Accuracy</div>
                 <div className="text-base font-bold text-amber-400">{results.gridSearch.taskAccuracyPct}%</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Input Tokens</div>
                 <div className="text-base font-bold text-neutral-200">{results.gridSearch.avgInputTokensPerInvocation}</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Tuning Rounds</div>
                 <div className="text-base font-bold text-amber-400">{results.gridSearch.convergenceGenerations} rounds</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-amber-400">${results.gridSearch.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
@@ -389,7 +389,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
           </div>
 
           {/* Architecture 3: Elesium Sovereign Evolutionary Tuning */}
-          <div className="p-6 rounded-xl border border-white/30 bg-neutral-950 relative overflow-hidden shadow-2xl">
+          <div className="p-6 rounded-[24px] border border-white/30 bg-neutral-950 relative overflow-hidden shadow-2xl">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-neutral-400 " />
@@ -402,19 +402,19 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Accuracy</div>
                 <div className="text-base font-bold text-white">{results.sovereignEvolutionary.taskAccuracyPct}%</div>
               </div>
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Input Tokens</div>
                 <div className="text-base font-bold text-white">{results.sovereignEvolutionary.avgInputTokensPerInvocation}</div>
               </div>
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Tuning Rounds</div>
                 <div className="text-base font-bold text-white">{results.sovereignEvolutionary.convergenceGenerations} rounds</div>
               </div>
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-white">${results.sovereignEvolutionary.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
@@ -425,7 +425,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
           </div>
 
           {/* Annual Cost Arbitrage Banner */}
-          <div className="p-5 rounded-xl border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-5 rounded-[24px] border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Net Annual Financial Arbitrage</div>
               <div className="text-2xl font-bold font-mono text-white mt-0.5">
@@ -454,7 +454,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
           Mathematical & Engineering Architecture: Gradient-Free Optimization
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-3">
             <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Target className="w-4 h-4" />
               <span>Bayesian Surrogate Compilation</span>
@@ -463,7 +463,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               Instead of naive string concatenations, the MIPROv2 compiler fits a probabilistic Gaussian Process surrogate over validation scores. It samples candidate prompt instructions and few-shot exemplar combinations, balancing exploration and exploitation to converge on the global optimum in just 4 rounds.
             </p>
           </div>
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-3">
             <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Zap className="w-4 h-4" />
               <span>Multi-Objective Pareto Frontier</span>
@@ -472,7 +472,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
               Optimizes across competing dimensions: task accuracy, prompt token length, and inference latency. The algorithm generates a non-dominated Pareto frontier, discarding prompts that increase accuracy by 0.5% at the cost of 500 extra tokens, guaranteeing maximal return on compute.
             </p>
           </div>
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-3">
             <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Cpu className="w-4 h-4" />
               <span>Zero-Leakage Air-Gapped Loop</span>
@@ -493,11 +493,11 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="border border-neutral-800 rounded-xl bg-neutral-900/70 overflow-hidden transition-colors"
+              className="border border-neutral-800 rounded-[24px] bg-neutral-900/70 overflow-hidden transition-colors"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="active:scale-[0.97] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-mono text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
+                className="active:scale-[0.97] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-mono text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
               >
                 <span>{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-neutral-200 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -515,7 +515,7 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-700 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-700 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -535,19 +535,19 @@ RECOMMENDATION: Deploy Bayesian multi-objective prompt compilation to compress p
                 readOnly
                 value={embedCode}
                 rows={5}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
               />
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg border border-neutral-700 text-xs font-mono text-neutral-300 hover:bg-neutral-800"
+                className="active:scale-[0.97] px-4 py-2 rounded-full border border-neutral-700 text-xs font-mono text-neutral-300 hover:bg-neutral-800"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-mono text-xs font-bold transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-mono text-xs font-bold transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Code!' : 'Copy Code'}

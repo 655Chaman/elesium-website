@@ -40,7 +40,7 @@ export default function EmbedAgentKvCacheEvictionSimulator() {
   const results = useMemo(() => calculateKvCacheEviction(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: KV-Cache Eviction &amp; Attention Sink Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-kv-cache-eviction-simulator" />
@@ -97,28 +97,28 @@ export default function EmbedAgentKvCacheEvictionSimulator() {
 
       {/* Metrics Grid */}
       <div className="grid grid-cols-2 gap-2 mb-4">
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">Compression Ratio</span>
           <span className="text-lg font-bold text-white font-mono">
             {results.memoryCompressionRatio}x
           </span>
           <span className="text-[10px] text-neutral-500 block">VRAM footprint cut</span>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">Active KV Memory</span>
           <span className="text-lg font-bold text-white font-mono">
             {results.compressedKvMemoryGb} GB
           </span>
           <span className="text-[10px] text-neutral-500 block">Down from {results.uncompressedKvMemoryGb} GB</span>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">VRAM Freed</span>
           <span className="text-lg font-bold text-white font-mono">
             {results.effectiveVramSavedGb} GB
           </span>
           <span className="text-[10px] text-neutral-500 block">HBM3 capacity reclaimed</span>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">Perplexity Impact</span>
           <span className={`text-lg font-bold font-mono ${
             results.perplexityDegradationPercent > 10.0 ? 'text-red-400' : 'text-amber-400'

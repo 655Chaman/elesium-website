@@ -130,30 +130,30 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
       <div className="border-b border-neutral-800 bg-neutral-900/50 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center gap-2 text-neutral-400">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
             <span>/</span>
-            <Link to="/resources/" className="hover:text-white transition-colors">Interactive Tools</Link>
+            <Link to="/resources/" className="hover:text-white transition-all duration-300">Interactive Tools</Link>
             <span>/</span>
             <span className="text-neutral-200 font-mono">Multi-Agent Consensus Simulator</span>
           </div>
           <div className="flex items-center gap-2">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors border border-neutral-700 font-mono"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-all duration-300 border border-neutral-700 font-mono"
             >
               <Code className="w-3.5 h-3.5 text-neutral-200" />
               <span>Embed Sandbox</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/10 hover:bg-neutral-200/30 text-neutral-200 hover:text-white transition-colors border border-white/20 font-mono"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/10 hover:bg-neutral-200/30 text-neutral-200 hover:text-white transition-all duration-300 border border-white/20 font-mono"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
@@ -165,7 +165,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero Section */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono mb-4 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono mb-4 uppercase tracking-wider">
             <Users className="w-3.5 h-3.5" />
             Distributed Multi-Agent Consensus &amp; Byzantine Fault Tolerance Lab
           </div>
@@ -180,7 +180,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
         {/* Primary Simulator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+          <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4 mb-6">
               <div className="flex items-center gap-2 text-white font-semibold">
                 <Sliders className="w-5 h-5 text-neutral-200" />
@@ -203,7 +203,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   step={10000}
                   value={monthlyDecisions}
                   onChange={(e) => setMonthlyDecisions(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>10k /mo</span>
@@ -225,7 +225,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   step={2}
                   value={validatorAgentCount}
                   onChange={(e) => setValidatorAgentCount(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>3 Nodes (Fast)</span>
@@ -247,7 +247,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   step={0.5}
                   value={adversarialOrDriftRatePct}
                   onChange={(e) => setAdversarialOrDriftRatePct(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>2.0% (Tuned Prompts)</span>
@@ -269,7 +269,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   step={0.02}
                   value={costPerDecisionTokenUSD}
                   onChange={(e) => setCostPerDecisionTokenUSD(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>$0.02 (Fast Model)</span>
@@ -300,7 +300,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
           <div className="lg:col-span-7 space-y-6">
             {/* 4 Summary Stat Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Annual Savings
                 </span>
@@ -312,7 +312,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                 </span>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Hallucination Cut
                 </span>
@@ -324,7 +324,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                 </span>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Latency Speedup
                 </span>
@@ -336,7 +336,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                 </span>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   BFT Tolerance
                 </span>
@@ -350,7 +350,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
             </div>
 
             {/* Interactive Quorum Execution Visualizer */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3 mb-4">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-neutral-200" />
@@ -365,7 +365,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
 
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-                  <div className="p-3 rounded-lg bg-neutral-950 border border-neutral-800">
+                  <div className="p-3 rounded-[18px] bg-neutral-950 border border-neutral-800">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-semibold text-white">1. Proposer Agent</span>
                       <span className="font-mono text-[10px] text-neutral-200">Node #1</span>
@@ -375,7 +375,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-neutral-950 border border-white/30 relative">
+                  <div className="p-3 rounded-[18px] bg-neutral-950 border border-white/30 relative">
                     <div className="absolute -top-2 right-2 px-1.5 py-0.2 rounded bg-white text-black font-mono text-[9px] font-bold">
                       BFT Quorum
                     </div>
@@ -388,7 +388,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-neutral-950 border border-white/30">
+                  <div className="p-3 rounded-[18px] bg-neutral-950 border border-white/30">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-semibold text-white">3. Verified Commit</span>
                       <span className="font-mono text-[10px] text-neutral-200">&lt;450ms</span>
@@ -399,7 +399,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   </div>
                 </div>
 
-                <div className="p-3 bg-white/[0.05] border border-white/15 rounded-xl text-xs text-neutral-300 flex items-center justify-between">
+                <div className="p-3 bg-white/[0.05] border border-white/15 rounded-[18px] text-xs text-neutral-300 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-neutral-200 shrink-0" />
                     <span>Decision Failure Rate: <strong>0.02%</strong> (Sovereign BFT) vs <strong>{adversarialOrDriftRatePct}%</strong> (Single Agent)</span>
@@ -410,14 +410,14 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
             </div>
 
             {/* Architectural Comparison Matrix */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono border-b border-neutral-800 pb-3 mb-4">
                 Architecture Benchmark Breakdown
               </h3>
 
               <div className="space-y-4">
                 {/* 1. Single Agent */}
-                <div className="p-4 rounded-xl bg-neutral-950/70 border border-red-900/30">
+                <div className="p-4 rounded-2xl bg-neutral-950/70 border border-red-900/30">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
@@ -430,7 +430,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   <p className="text-xs text-neutral-400 mb-3">
                     {results.singleAgent.consensusVerdict}
                   </p>
-                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-lg">
+                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-xl">
                     <div>Consensus Delay: <strong className="text-white">0.0ms</strong></div>
                     <div>Failure Rate: <strong className="text-red-400">{results.singleAgent.decisionFailureOrHallucinationPct}%</strong></div>
                     <div>Byzantine Tolerance: <strong className="text-red-400">0 Nodes</strong></div>
@@ -438,7 +438,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                 </div>
 
                 {/* 2. Naive N-Way Majority Voting */}
-                <div className="p-4 rounded-xl bg-neutral-950/70 border border-amber-900/30">
+                <div className="p-4 rounded-2xl bg-neutral-950/70 border border-amber-900/30">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
@@ -451,7 +451,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   <p className="text-xs text-neutral-400 mb-3">
                     {results.naiveMajority.consensusVerdict}
                   </p>
-                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-lg">
+                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-xl">
                     <div>Consensus Delay: <strong className="text-amber-400">+{results.naiveMajority.consensusLatencyOverheadMs}ms</strong></div>
                     <div>Monthly Token Bill: <strong className="text-amber-400">${results.naiveMajority.monthlyTokenExpenseUSD.toLocaleString()}/mo</strong></div>
                     <div>Failure Rate: <strong className="text-amber-400">{results.naiveMajority.decisionFailureOrHallucinationPct}%</strong></div>
@@ -459,7 +459,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                 </div>
 
                 {/* 3. Elesium Sovereign BFT */}
-                <div className="p-4 rounded-xl bg-white/[0.05] border border-white/30 relative">
+                <div className="p-4 rounded-2xl bg-white/[0.05] border border-white/30 relative">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-neutral-400"></span>
@@ -472,7 +472,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
                   <p className="text-xs text-neutral-300 mb-3">
                     {results.sovereignBft.consensusVerdict}
                   </p>
-                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-200 bg-neutral-900/80 p-2 rounded-lg">
+                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-200 bg-neutral-900/80 p-2 rounded-xl">
                     <div>Consensus Delay: <strong className="text-neutral-200">+{results.sovereignBft.consensusLatencyOverheadMs}ms</strong></div>
                     <div>Failure Rate: <strong className="text-neutral-200">{results.sovereignBft.decisionFailureOrHallucinationPct}%</strong></div>
                     <div>Byzantine Tolerance: <strong className="text-neutral-200">{results.sovereignBft.byzantineToleranceThreshold} Nodes</strong></div>
@@ -484,7 +484,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
         </div>
 
         {/* Technical Deep Dive Matrix */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-8 shadow-xl mb-16">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-8 shadow-xl mb-16">
           <div className="border-b border-neutral-800 pb-4 mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-white">
               Multi-Agent Consensus Engineering Specification
@@ -541,7 +541,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
         </div>
 
         {/* Technical FAQ Accordion */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-8 shadow-xl mb-16">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-8 shadow-xl mb-16">
           <div className="border-b border-neutral-800 pb-4 mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-white">
               Enterprise Agent Consensus Engineering FAQ
@@ -555,11 +555,11 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950/60 transition-colors"
+                className="border border-neutral-800 rounded-[24px] overflow-hidden bg-neutral-950/60 transition-colors"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-neutral-200 hover:text-white transition-colors"
+                  className="active:scale-[0.97] w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -579,9 +579,9 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
         </div>
 
         {/* Commercial CTA & Architecture Audit Banner */}
-        <div className="bg-neutral-950 border border-white/20 rounded-xl p-8 sm:p-12 shadow-2xl text-center relative overflow-hidden">
+        <div className="bg-neutral-950 border border-white/20 rounded-[32px] p-8 sm:p-12 shadow-2xl text-center relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-200 bg-white/[0.04] px-3 py-1 rounded-lg border border-white/15">
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-200 bg-white/[0.04] px-3 py-1 rounded-full border border-white/15">
               Enterprise AI Systems Architecture Intake
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -602,7 +602,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
               </ExpandableScreen>
               <Link
                 to="/solutions/"
-                className="px-6 py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-colors border border-neutral-700"
+                className="px-6 py-3 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-all duration-300 border border-neutral-700"
               >
                 Explore All Sovereign Solutions
               </Link>
@@ -614,7 +614,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1"
@@ -628,14 +628,14 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this snippet into your engineering documentation, intranet, or technical blog:
             </p>
-            <div className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
               {embedCode}
             </div>
             <div className="flex items-center justify-between">
               <span className="text-[11px] text-neutral-400">Watermarked to Elesium Sovereign Architecture</span>
               <button
                 onClick={copyEmbedToClipboard}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all duration-300 flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Code Copied!' : 'Copy Embed Snippet'}</span>

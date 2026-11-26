@@ -94,7 +94,7 @@ export default function EmbedAgentSnnSimulator() {
         </div>
 
         {/* Mini Oscilloscope SVG */}
-        <div className="relative w-full aspect-[3/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
+        <div className="relative w-full aspect-[3/1] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
           <div className="flex justify-between items-center text-[10px] font-mono text-neutral-400">
             <span className="text-white font-bold flex items-center gap-1">
               <Activity className="w-3 h-3" /> LIF Membrane V(t) Dynamics
@@ -152,7 +152,7 @@ export default function EmbedAgentSnnSimulator() {
 
         {/* 4 Metric Cards */}
         <div className="grid grid-cols-2 gap-2">
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="flex items-center justify-between text-neutral-400 text-[10px]">
               <span>Compute Sparsity</span>
               <Zap className="w-3 h-3 text-neutral-200" />
@@ -165,7 +165,7 @@ export default function EmbedAgentSnnSimulator() {
             </div>
           </div>
 
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="flex items-center justify-between text-neutral-400 text-[10px]">
               <span>Energy per Spike</span>
               <Cpu className="w-3 h-3 text-neutral-200" />
@@ -178,7 +178,7 @@ export default function EmbedAgentSnnSimulator() {
             </div>
           </div>
 
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="flex items-center justify-between text-neutral-400 text-[10px]">
               <span>Decision Latency</span>
               <Timer className="w-3 h-3 text-amber-400" />
@@ -191,7 +191,7 @@ export default function EmbedAgentSnnSimulator() {
             </div>
           </div>
 
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="flex items-center justify-between text-neutral-400 text-[10px]">
               <span>Event Throughput</span>
               <Activity className="w-3 h-3 text-neutral-200" />
@@ -206,7 +206,7 @@ export default function EmbedAgentSnnSimulator() {
         </div>
 
         {/* Interactive Controls */}
-        <div className="space-y-3 p-3 bg-neutral-900/50 rounded-xl border border-neutral-800 text-xs">
+        <div className="space-y-3 p-3 bg-neutral-900/50 rounded-[18px] border border-neutral-800 text-xs">
           <div className="space-y-1">
             <div className="flex justify-between text-neutral-300">
               <span>Neuron Model:</span>
@@ -296,7 +296,7 @@ export default function EmbedAgentSnnSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] text-neutral-500 hover:text-white transition"
+            className="text-[11px] text-neutral-500 hover:text-white transition-all duration-300"
           >
             Engineered by <span className="text-neutral-200 font-medium underline">Elesium Sovereign AI Systems</span>
           </a>

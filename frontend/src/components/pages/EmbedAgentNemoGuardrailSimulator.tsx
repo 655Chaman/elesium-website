@@ -70,7 +70,7 @@ export default function EmbedAgentNemoGuardrailSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <div>
@@ -78,13 +78,13 @@ export default function EmbedAgentNemoGuardrailSimulator() {
               <p className="text-[10px] text-neutral-400">Colang 2.0 &amp; Sub-15ms Adversarial Prompt Interceptor</p>
             </div>
           </div>
-          <span className="text-[10px] px-2 py-0.5 rounded-lg font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
+          <span className="text-[10px] px-2 py-0.5 rounded-full font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
             {results.statusClassification}
           </span>
         </div>
 
         {/* Sliders & Controls */}
-        <div className="grid grid-cols-2 gap-3 text-xs bg-neutral-900/60 p-3 rounded-xl border border-neutral-800">
+        <div className="grid grid-cols-2 gap-3 text-xs bg-neutral-900/60 p-3 rounded-[18px] border border-neutral-800">
           <div>
             <label className="text-[11px] text-neutral-300 block mb-1">Guardrail Engine</label>
             <select
@@ -112,7 +112,7 @@ export default function EmbedAgentNemoGuardrailSimulator() {
               value={concurrencyThroughputRps}
               onChange={(e) => setConcurrencyThroughputRps(Number(e.target.value))}
               aria-label="Concurrency Throughput RPS"
-              className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
             />
           </div>
 
@@ -147,12 +147,12 @@ export default function EmbedAgentNemoGuardrailSimulator() {
         </div>
 
         {/* Vernacular Evaluation Toggle */}
-        <div className="flex items-center justify-between bg-neutral-900/40 border border-neutral-800 px-3 py-2 rounded-lg text-xs">
+        <div className="flex items-center justify-between bg-neutral-900/40 border border-neutral-800 px-3 py-2 rounded-xl text-xs">
           <span className="text-neutral-300 text-[11px]">Bilingual Indic Dialect Threat Evaluator (Hindi/Tamil)</span>
           <button
             type="button"
             onClick={() => setVernacularEvaluationEnabled(!vernacularEvaluationEnabled)}
-            className={`active:scale-[0.97] px-2.5 py-0.5 rounded text-[10px] font-mono font-medium transition ${
+            className={`active:scale-[0.97] px-2.5 py-0.5 rounded text-[10px] font-mono font-medium transition-all duration-300 ${
               vernacularEvaluationEnabled
                 ? 'bg-white/10 text-neutral-200 border border-white/20'
                 : 'bg-neutral-800 text-neutral-400'
@@ -184,7 +184,7 @@ export default function EmbedAgentNemoGuardrailSimulator() {
         </div>
 
         {/* Real-time Oscilloscope Telemetry Trace */}
-        <div className="bg-neutral-900/90 border border-neutral-800 p-3 rounded-xl space-y-2">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-3 rounded-[18px] space-y-2">
           <div className="flex items-center justify-between text-[11px]">
             <span className="text-neutral-400 font-mono">Live Guardrail Telemetry Oscilloscope</span>
             <div className="flex items-center space-x-3 text-[10px]">
@@ -199,7 +199,7 @@ export default function EmbedAgentNemoGuardrailSimulator() {
             </div>
           </div>
 
-          <div className="h-24 w-full bg-neutral-950 rounded-lg border border-neutral-800/80 relative overflow-hidden flex items-center justify-center">
+          <div className="h-24 w-full bg-neutral-950 rounded-[24px] border border-neutral-800/80 relative overflow-hidden flex items-center justify-center">
             <svg className="w-full h-full" viewBox="0 0 340 90" preserveAspectRatio="none">
               {/* Grid lines */}
               <line x1="0" y1="22" x2="340" y2="22" stroke="#262626" strokeDasharray="3 3" />
@@ -234,7 +234,7 @@ export default function EmbedAgentNemoGuardrailSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-1 text-[11px] text-neutral-200 hover:text-white transition"
+            className="inline-flex items-center space-x-1 text-[11px] text-neutral-200 hover:text-white transition-all duration-300"
           >
             <span>Simulated via Elesium Sovereign AI Security</span>
             <ArrowUpRight className="w-3 h-3" />

@@ -138,16 +138,16 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
         <div className="max-w-6xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-6 font-mono">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <a href="/" className="hover:text-white transition-all duration-300">Home</a>
             <span>/</span>
-            <a href="/solutions/" className="hover:text-white transition-colors">Tools</a>
+            <a href="/solutions/" className="hover:text-white transition-all duration-300">Tools</a>
             <span>/</span>
             <span className="text-neutral-200">Tally ERP LLM Gateway Simulator</span>
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-3 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono uppercase tracking-wider">
                 <FileText className="w-3.5 h-3.5" />
                 <span>FinOps Agent Architecture #46</span>
               </div>
@@ -162,21 +162,21 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             <div className="flex flex-wrap lg:flex-col gap-3">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] flex items-center gap-2 px-4 py-2.5 rounded-lg bg-neutral-900 border border-neutral-700 hover:border-white/30 text-neutral-200 hover:text-white transition-all text-sm font-medium shadow-sm"
+                className="active:scale-[0.97] flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-900 border border-neutral-700 hover:border-white/30 text-neutral-200 hover:text-white transition-all duration-300 text-sm font-medium shadow-sm"
               >
                 <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Simulator</span>
               </button>
               <button
                 onClick={handleCopyMemo}
-                className="active:scale-[0.97] flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 hover:bg-neutral-200/30 text-neutral-200 transition-all text-sm font-medium"
+                className="active:scale-[0.97] flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 border border-white/20 hover:bg-neutral-200/30 text-neutral-200 transition-all duration-300 text-sm font-medium"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-200" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
@@ -192,13 +192,13 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           
           {/* Controls Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/70 border border-neutral-800 rounded-xl p-6 shadow-xl space-y-6 backdrop-blur-sm">
+            <div className="bg-neutral-900/70 border border-neutral-800 rounded-[24px] p-6 shadow-xl space-y-6 backdrop-blur-sm">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
                 <div className="flex items-center gap-2 text-white font-semibold">
                   <Sliders className="w-5 h-5 text-neutral-200" />
                   <span>Pipeline Simulation Controls</span>
                 </div>
-                <div className="flex items-center bg-neutral-950 p-1 rounded-lg border border-neutral-800 text-xs">
+                <div className="flex items-center bg-neutral-950 p-1 rounded-full border border-neutral-800 text-xs">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2.5 py-1 rounded font-mono ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
@@ -227,7 +227,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                   step="500"
                   value={monthlyVoucherVolume}
                   onChange={(e) => setMonthlyVoucherVolume(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>500 (Mid-Market)</span>
@@ -248,7 +248,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                   step="0.01"
                   value={humanInTheLoopThreshold}
                   onChange={(e) => setHumanInTheLoopThreshold(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>80% (Higher STP)</span>
@@ -262,7 +262,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                 <select
                   value={tallyIntegrationMode}
                   onChange={(e) => setTallyIntegrationMode(e.target.value as TallyIntegrationMode)}
-                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="xml_http_tdl">TDL XML-over-HTTP (Port 9000 Gateway)</option>
                   <option value="odbc_sql_bridge">ODBC SQL Protocol Bridge (Read-Only)</option>
@@ -277,7 +277,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                 <select
                   value={llmAgentArchitecture}
                   onChange={(e) => setLlmAgentArchitecture(e.target.value as LlmAgentArchitecture)}
-                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="deterministic_langgraph">Deterministic LangGraph (Bounded FSM)</option>
                   <option value="local_vllm_airgapped">Local vLLM (Air-Gapped Private VPC)</option>
@@ -292,7 +292,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                 <select
                   value={reconciliationComplexity}
                   onChange={(e) => setReconciliationComplexity(e.target.value as ReconciliationComplexity)}
-                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="gst_rule_36_4_itc">GST Rule 36(4) + GSTR-2B ITC Matching</option>
                   <option value="standard_invoicing">Standard AP Purchase Voucher Ingestion</option>
@@ -308,19 +308,19 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             
             {/* KPI Cards Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-xl shadow-lg">
+              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-2xl shadow-lg">
                 <div className="text-xs font-mono uppercase text-neutral-400">Total Latency</div>
                 <div className="text-2xl font-bold text-white mt-1 font-mono">{results.voucherIngestionLatencyMs}ms</div>
                 <div className="text-[11px] text-neutral-500 mt-0.5">end-to-end voucher post</div>
               </div>
 
-              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-xl shadow-lg">
+              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-2xl shadow-lg">
                 <div className="text-xs font-mono uppercase text-neutral-400">STP Success Rate</div>
                 <div className="text-2xl font-bold text-white mt-1 font-mono">{results.autoPostingSuccessRatePct}%</div>
                 <div className="text-[11px] text-neutral-500 mt-0.5">straight-through processing</div>
               </div>
 
-              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-xl shadow-lg col-span-2 sm:col-span-1">
+              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-2xl shadow-lg col-span-2 sm:col-span-1">
                 <div className="text-xs font-mono uppercase text-neutral-400">Human Hours Saved</div>
                 <div className="text-2xl font-bold text-amber-400 mt-1 font-mono">{results.monthlyHumanHoursSaved} hrs</div>
                 <div className="text-[11px] text-neutral-500 mt-0.5">monthly staff capacity</div>
@@ -328,7 +328,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             </div>
 
             {/* Financial Impact Banner */}
-            <div className="bg-neutral-950 border border-white/15 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-950 border border-white/15 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center gap-2 text-neutral-200 font-mono text-xs uppercase tracking-wider mb-4">
                 <Coins className="w-4 h-4" />
                 <span>Executive Financial Return &amp; Tax Compliance Ledger</span>
@@ -348,7 +348,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             </div>
 
             {/* Pipeline Stage Breakdown */}
-            <div className="bg-neutral-900/70 border border-neutral-800 rounded-xl p-6 shadow-xl space-y-4">
+            <div className="bg-neutral-900/70 border border-neutral-800 rounded-[24px] p-6 shadow-xl space-y-4">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center gap-2 text-white font-semibold text-sm">
                   <Layers className="w-4 h-4 text-neutral-200" />
@@ -366,9 +366,9 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                       <span className="text-neutral-300 font-medium">{stage.label}</span>
                       <span className="font-mono text-neutral-200">{stage.latencyMs}ms</span>
                     </div>
-                    <div className="w-full bg-neutral-950 rounded-lg h-1.5 overflow-hidden">
+                    <div className="w-full bg-neutral-950 rounded-full h-1.5 overflow-hidden">
                       <div
-                        className="bg-white/80 h-1.5 rounded-lg transition-all duration-300"
+                        className="bg-white/80 h-1.5 rounded-full transition-all duration-300"
                         style={{ width: `${Math.min(100, (stage.latencyMs / results.voucherIngestionLatencyMs) * 350)}%` }}
                       ></div>
                     </div>
@@ -379,19 +379,19 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
 
             {/* Architectural Trust Points */}
             <div className="grid grid-cols-2 gap-3 text-xs text-neutral-400 font-mono">
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-neutral-950/60 border border-neutral-800">
                 <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>Zero Cloud Data Leakage (DPDP Act 2023)</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-neutral-950/60 border border-neutral-800">
                 <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>SHA-256 Audit Trail (Sec 63 BSA)</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-neutral-950/60 border border-neutral-800">
                 <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>Double-Entry Balance Enforced</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-neutral-950/60 border border-neutral-800">
                 <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>Sub-50ms TDL Port 9000 Ingestion</span>
               </div>
@@ -412,8 +412,8 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-xl space-y-3">
-              <div className="p-2 w-fit rounded-lg bg-white/[0.04] text-neutral-200 border border-white/15">
+            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-[24px] space-y-3">
+              <div className="p-2 w-fit rounded-xl bg-white/[0.04] text-neutral-200 border border-white/15">
                 <Server className="w-5 h-5" />
               </div>
               <h3 className="text-base font-semibold text-white">TDL XML-over-HTTP (Port 9000)</h3>
@@ -422,8 +422,8 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               </p>
             </div>
 
-            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-xl space-y-3">
-              <div className="p-2 w-fit rounded-lg bg-white/[0.04] text-neutral-200 border border-white/15">
+            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-[24px] space-y-3">
+              <div className="p-2 w-fit rounded-xl bg-white/[0.04] text-neutral-200 border border-white/15">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="text-base font-semibold text-white">GST Rule 36(4) Auto-Reconciliation</h3>
@@ -432,8 +432,8 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               </p>
             </div>
 
-            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-xl space-y-3">
-              <div className="p-2 w-fit rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-[24px] space-y-3">
+              <div className="p-2 w-fit rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
                 <FileText className="w-5 h-5" />
               </div>
               <h3 className="text-base font-semibold text-white">Vector Chart of Accounts Sync</h3>
@@ -450,7 +450,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-neutral-900/60 border border-neutral-800 rounded-xl overflow-hidden transition-colors"
+                  className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -472,7 +472,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           {/* Mandate Application Form Section */}
           <div className="pt-8">
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.04] text-neutral-200 text-xs font-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] text-neutral-200 text-xs font-mono uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Production Implementation</span>
               </div>
@@ -486,8 +486,8 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
 
             <div className="max-w-xl mx-auto">
               {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -500,7 +500,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -517,7 +517,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
       {/* Embed Code Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-neutral-900 border border-neutral-700 rounded-xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-700 rounded-[28px] max-w-xl w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <div className="flex items-center gap-2">
                 <Code className="w-5 h-5 text-neutral-200" />
@@ -525,7 +525,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               </div>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg hover:bg-neutral-800"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-full hover:bg-neutral-800"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -544,13 +544,13 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             <div className="flex justify-end gap-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-xs font-medium"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-xs font-medium"
               >
                 Close
               </button>
               <button
                 onClick={handleCopyEmbed}
-                className="active:scale-[0.97] flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow"
+                className="active:scale-[0.97] flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Snippet'}</span>

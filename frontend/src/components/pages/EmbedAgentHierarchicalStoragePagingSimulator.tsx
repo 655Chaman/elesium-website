@@ -40,7 +40,7 @@ export default function EmbedAgentHierarchicalStoragePagingSimulator() {
   const results = useMemo(() => calculateHierarchicalStoragePaging(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Hierarchical KV Storage Paging Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-hierarchical-storage-paging-simulator" />

@@ -195,9 +195,9 @@ TECHNICAL RECOMMENDATIONS:
       <div className="border-b border-neutral-800/80 bg-neutral-950/60 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
           <div className="flex items-center space-x-2 text-xs text-neutral-400">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <a href="/" className="hover:text-white transition-all duration-300">Home</a>
             <span>/</span>
-            <a href="/solutions/" className="hover:text-white transition-colors">Tools</a>
+            <a href="/solutions/" className="hover:text-white transition-all duration-300">Tools</a>
             <span>/</span>
             <span className="text-neutral-200 font-medium">Chunked Prefill &amp; Radix Attention</span>
           </div>
@@ -205,21 +205,21 @@ TECHNICAL RECOMMENDATIONS:
           <div className="flex items-center space-x-2">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-700/80 text-xs font-medium text-neutral-300 hover:text-white hover:border-neutral-600 transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-700/80 text-xs font-medium text-neutral-300 hover:text-white hover:border-neutral-600 transition-all duration-300 shadow-sm"
             >
               <Code className="w-3.5 h-3.5 text-neutral-200" />
               <span>Embed Widget</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/20 text-xs font-medium text-neutral-200 hover:bg-neutral-200/20 transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/20 text-xs font-medium text-neutral-200 hover:bg-neutral-200/20 transition-all duration-300 shadow-sm"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -230,7 +230,7 @@ TECHNICAL RECOMMENDATIONS:
 
       {/* Hero Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-white text-xs font-semibold uppercase tracking-wider mb-4">
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/20 text-white text-xs font-semibold uppercase tracking-wider mb-4">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Inference Serving Engine #43</span>
         </div>
@@ -248,22 +248,22 @@ TECHNICAL RECOMMENDATIONS:
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 mt-4">
         {/* Left Column: Interactive Parameters (5 cols) */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl space-y-6 backdrop-blur-sm">
+          <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl space-y-6 backdrop-blur-sm">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
               <div className="flex items-center space-x-2">
                 <Sliders className="w-5 h-5 text-neutral-200" />
                 <h2 className="font-bold text-white text-base">Serving Cluster Parameters</h2>
               </div>
-              <div className="flex items-center bg-neutral-950 p-1 rounded-lg border border-neutral-800 text-xs">
+              <div className="flex items-center bg-neutral-950 p-1 rounded-full border border-neutral-800 text-xs">
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-2.5 py-1 rounded-md font-medium transition-all ${currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded-full font-medium transition-all duration-300 ${currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'}`}
                 >
                   INR (₹)
                 </button>
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-2.5 py-1 rounded-md font-medium transition-all ${currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded-full font-medium transition-all duration-300 ${currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'}`}
                 >
                   USD ($)
                 </button>
@@ -285,7 +285,7 @@ TECHNICAL RECOMMENDATIONS:
                 step="10"
                 value={concurrentUsers}
                 onChange={(e) => setConcurrentUsers(Number(e.target.value))}
-                className="w-full accent-white h-2 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-2 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                 <span>10 Sessions</span>
@@ -309,7 +309,7 @@ TECHNICAL RECOMMENDATIONS:
                 step="1024"
                 value={promptContextLength}
                 onChange={(e) => setPromptContextLength(Number(e.target.value))}
-                className="w-full accent-white h-2 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-2 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                 <span>1k Tokens</span>
@@ -333,7 +333,7 @@ TECHNICAL RECOMMENDATIONS:
                 step="256"
                 value={sharedSystemPromptTokens}
                 onChange={(e) => setSharedSystemPromptTokens(Number(e.target.value))}
-                className="w-full accent-white h-2 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-2 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                 <span>256 Tokens</span>
@@ -349,7 +349,7 @@ TECHNICAL RECOMMENDATIONS:
                 <select
                   value={servingEngine}
                   onChange={(e) => setServingEngine(e.target.value as ServingEngine)}
-                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="sglang_radix_attention">SGLang RadixAttention</option>
                   <option value="vllm_paged_attention">vLLM PagedAttention</option>
@@ -363,7 +363,7 @@ TECHNICAL RECOMMENDATIONS:
                 <select
                   value={gpuArchitecture}
                   onChange={(e) => setGpuArchitecture(e.target.value as GpuArchitecture)}
-                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="nvidia_h100_80gb">NVIDIA H100 (80GB SXM)</option>
                   <option value="nvidia_a100_80gb">NVIDIA A100 (80GB PCIe)</option>
@@ -380,7 +380,7 @@ TECHNICAL RECOMMENDATIONS:
                 <select
                   value={kvCacheDataType}
                   onChange={(e) => setKvCacheDataType(e.target.value as KvCacheDataType)}
-                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="fp8_e4m3">FP8 E4M3 (High Fidelity)</option>
                   <option value="fp16">FP16 Full Precision</option>
@@ -393,7 +393,7 @@ TECHNICAL RECOMMENDATIONS:
                 <select
                   value={prefillChunkSize}
                   onChange={(e) => setPrefillChunkSize(Number(e.target.value))}
-                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-neutral-200 text-xs focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value={256}>256 Tokens (Zero Stutter)</option>
                   <option value={512}>512 Tokens (Balanced)</option>
@@ -408,7 +408,7 @@ TECHNICAL RECOMMENDATIONS:
         {/* Right Column: Live Simulated Metrics & Telemetry (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
           {/* Top Status Banner */}
-          <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5 shadow-xl flex items-center justify-between">
+          <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5 shadow-xl flex items-center justify-between">
             <div>
               <span className="text-xs text-neutral-400 uppercase tracking-wider font-semibold block">Serving Architecture Status</span>
               <div className="text-xl font-black text-white mt-1 flex items-center gap-2">
@@ -427,7 +427,7 @@ TECHNICAL RECOMMENDATIONS:
 
           {/* 4 Primary Metric Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-4">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl p-4">
               <div className="flex items-center space-x-1.5 text-neutral-400 text-xs font-medium mb-1">
                 <Zap className="w-3.5 h-3.5 text-neutral-200" />
                 <span>TTFT Latency</span>
@@ -438,7 +438,7 @@ TECHNICAL RECOMMENDATIONS:
               <span className="text-[11px] text-neutral-500 mt-1 block">Time to first token</span>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-4">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl p-4">
               <div className="flex items-center space-x-1.5 text-neutral-400 text-xs font-medium mb-1">
                 <Cpu className="w-3.5 h-3.5 text-neutral-200" />
                 <span>Decode Speed</span>
@@ -449,7 +449,7 @@ TECHNICAL RECOMMENDATIONS:
               <span className="text-[11px] text-neutral-500 mt-1 block">per concurrent stream</span>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-4">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl p-4">
               <div className="flex items-center space-x-1.5 text-neutral-400 text-xs font-medium mb-1">
                 <Layers className="w-3.5 h-3.5 text-neutral-200" />
                 <span>VRAM Saved</span>
@@ -460,7 +460,7 @@ TECHNICAL RECOMMENDATIONS:
               <span className="text-[11px] text-neutral-500 mt-1 block">radix tree deduplicated</span>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-4">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl p-4">
               <div className="flex items-center space-x-1.5 text-neutral-400 text-xs font-medium mb-1">
                 <Server className="w-3.5 h-3.5 text-amber-400" />
                 <span>Annual Savings</span>
@@ -473,16 +473,16 @@ TECHNICAL RECOMMENDATIONS:
           </div>
 
           {/* Dynamic SVG TTFT Latency Chart */}
-          <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5 shadow-xl">
+          <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5 shadow-xl">
             <div className="flex items-center justify-between mb-3 text-xs">
               <div className="flex items-center space-x-2">
-                <div className="w-2.5 h-2.5 rounded-lg bg-neutral-400 " />
+                <div className="w-2.5 h-2.5 rounded-full bg-neutral-400 " />
                 <span className="font-semibold text-white">Time-to-First-Token (TTFT) Scaling Curve (512 to 65k Context Depth)</span>
               </div>
               <span className="text-neutral-400 font-mono text-[11px]">Chunk Interleaving</span>
             </div>
 
-            <div className="relative h-36 w-full overflow-hidden rounded-xl bg-neutral-950 border border-neutral-800 p-2">
+            <div className="relative h-36 w-full overflow-hidden rounded-[24px] bg-neutral-950 border border-neutral-800 p-2">
               <svg viewBox="0 0 500 140" className="w-full h-full overflow-visible" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="chunkedPrefillPageGrad" x1="0" y1="0" x2="0" y2="1">
@@ -531,7 +531,7 @@ TECHNICAL RECOMMENDATIONS:
           </div>
 
           {/* Action CTA Box */}
-          <div className="bg-neutral-950 border border-white/20 rounded-xl p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-neutral-950 border border-white/20 rounded-[24px] p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="text-base font-bold text-white">Deploy Sovereign On-Premise LLM Serving</h3>
               <p className="text-xs text-neutral-400 mt-1 max-w-md">
@@ -540,7 +540,7 @@ TECHNICAL RECOMMENDATIONS:
             </div>
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs transition-all shadow-lg flex items-center space-x-1.5 whitespace-nowrap">
+                <button className="active:scale-[0.97] px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs transition-all duration-300 shadow-lg flex items-center space-x-1.5 whitespace-nowrap">
                   <span>Schedule Inference Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -566,8 +566,8 @@ TECHNICAL RECOMMENDATIONS:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 space-y-3">
-              <div className="p-3 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 space-y-3">
+              <div className="p-3 rounded-[18px] bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
                 <Layers className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">SGLang RadixAttention Tree Caching</h3>
@@ -577,8 +577,8 @@ TECHNICAL RECOMMENDATIONS:
               </p>
             </div>
 
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 space-y-3">
-              <div className="p-3 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 space-y-3">
+              <div className="p-3 rounded-[18px] bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
                 <Zap className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">Chunked Prefill &amp; Head-of-Line Dequeuing</h3>
@@ -588,8 +588,8 @@ TECHNICAL RECOMMENDATIONS:
               </p>
             </div>
 
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 space-y-3">
-              <div className="p-3 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 space-y-3">
+              <div className="p-3 rounded-[18px] bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
                 <Cpu className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">FP8 E4M3 Quantized KV Cache</h3>
@@ -619,10 +619,10 @@ TECHNICAL RECOMMENDATIONS:
                 a: "LLM decoding is memory-bandwidth bound rather than compute bound. Compressing the Key-Value cache from FP16 (2 bytes/token) to FP8 (1 byte/token) halves the bytes transferred over high-bandwidth memory (HBM) on each autoregressive step, directly doubling maximum batch size and increasing token decode throughput by up to 1.8x."
               }
             ].map((faq, idx) => (
-              <div key={idx} className="bg-neutral-900/60 border border-neutral-800 rounded-xl overflow-hidden">
+              <div key={idx} className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full p-4 text-left flex justify-between items-center text-sm font-semibold text-white hover:text-white transition-colors"
+                  className="active:scale-[0.97] w-full p-4 text-left flex justify-between items-center text-sm font-semibold text-white hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
@@ -641,7 +641,7 @@ TECHNICAL RECOMMENDATIONS:
       {/* Embed Modal Drawer */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex justify-between items-center border-b border-neutral-800 pb-3">
               <h3 className="font-bold text-white text-base flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -649,7 +649,7 @@ TECHNICAL RECOMMENDATIONS:
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-full"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -657,19 +657,19 @@ TECHNICAL RECOMMENDATIONS:
             <p className="text-xs text-neutral-400">
               Copy this lightweight responsive iframe snippet to embed the simulator directly into your technical architecture blog or documentation.
             </p>
-            <div className="bg-neutral-950 p-3 rounded-lg border border-neutral-800 font-mono text-[11px] text-neutral-200 overflow-x-auto select-all">
+            <div className="bg-neutral-950 p-3 rounded-[18px] border border-neutral-800 font-mono text-[11px] text-neutral-200 overflow-x-auto select-all">
               {embedCode}
             </div>
             <div className="flex justify-end space-x-2 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 font-medium transition-colors"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 font-medium transition-all duration-300"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold transition-all shadow-md flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-bold transition-all duration-300 shadow-md flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Embed Code'}</span>

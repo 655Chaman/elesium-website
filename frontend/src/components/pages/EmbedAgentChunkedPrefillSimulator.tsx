@@ -70,7 +70,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <Zap className="w-4 h-4" />
             </div>
             <div>
@@ -78,14 +78,14 @@ export default function EmbedAgentChunkedPrefillSimulator() {
               <p className="text-[10px] text-neutral-400">SGLang &amp; vLLM PagedAttention KV Cache Paging</p>
             </div>
           </div>
-          <span className="text-[10px] px-2 py-0.5 rounded-lg font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
+          <span className="text-[10px] px-2 py-0.5 rounded-full font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
             {results.statusClassification}
           </span>
         </div>
 
         {/* Primary Metrics Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">TTFT Latency</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.ttftMilliseconds} <span className="text-xs text-neutral-500 font-normal">ms</span>
@@ -93,7 +93,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
             <span className="text-[9px] text-neutral-500 block">Time to first token</span>
           </div>
 
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">Decode Speed</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.decodeTokensPerSecondPerUser} <span className="text-xs text-neutral-500 font-normal">tok/s</span>
@@ -101,7 +101,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
             <span className="text-[9px] text-neutral-500 block">Per concurrent user</span>
           </div>
 
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">Prefix Hit Ratio</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.prefixCacheHitRatioPct}%
@@ -109,7 +109,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
             <span className="text-[9px] text-neutral-500 block">Radix KV cache hit</span>
           </div>
 
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">VRAM Saved</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.kvCacheMemorySavedGb} <span className="text-xs text-neutral-500 font-normal">GB</span>
@@ -119,7 +119,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
         </div>
 
         {/* SVG Latency Chart */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-3">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-[18px] p-3">
           <div className="flex justify-between items-center mb-1 text-[11px]">
             <span className="text-neutral-400 flex items-center gap-1">
               <Cpu className="w-3 h-3 text-neutral-200" /> TTFT Scaling across Context Depth (512 to 65k tokens)
@@ -154,7 +154,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
         </div>
 
         {/* Interactive Controls */}
-        <div className="space-y-3 bg-neutral-900/60 border border-neutral-800/80 rounded-lg p-3 text-xs">
+        <div className="space-y-3 bg-neutral-900/60 border border-neutral-800/80 rounded-[18px] p-3 text-xs">
           <div>
             <div className="flex justify-between text-neutral-300 mb-1">
               <span>Concurrent Users: <strong className="text-white font-mono">{concurrentUsers}</strong></span>
@@ -167,7 +167,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
               step="10"
               value={concurrentUsers}
               onChange={(e) => setConcurrentUsers(Number(e.target.value))}
-              className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
             />
           </div>
 
@@ -183,7 +183,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
                 step="1024"
                 value={promptContextLength}
                 onChange={(e) => setPromptContextLength(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
             </div>
 
@@ -198,7 +198,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
                 step="256"
                 value={sharedSystemPromptTokens}
                 onChange={(e) => setSharedSystemPromptTokens(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
             </div>
           </div>
@@ -272,7 +272,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-neutral-200 hover:text-white transition-colors font-medium"
+            className="inline-flex items-center gap-1 text-neutral-200 hover:text-white transition-all duration-300 font-medium"
           >
             Powered by Elesium Enterprise AI Solutions
             <ArrowUpRight className="w-3 h-3" />

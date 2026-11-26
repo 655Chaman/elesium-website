@@ -99,11 +99,11 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-gray-950 via-[#0a0f1d] to-[#04060c] border border-white/30 shadow-2xl text-white font-sans">
+        <div className="interactive-asset my-10 p-6 md:p-8 rounded-[28px] bg-gradient-to-br from-gray-950 via-[#0a0f1d] to-[#04060c] border border-white/30 shadow-2xl text-white font-sans">
             {/* Header / ID Badge */}
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4 mb-5">
                 <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-white/10 text-neutral-200 border border-white/30">
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-white/10 text-neutral-200 border border-white/30">
                         {blueprint.id}
                     </span>
                     <span className="text-xs font-mono text-white/50">
@@ -130,14 +130,14 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
             {/* Tech Stack Pills */}
             <div className="flex flex-wrap gap-1.5 mb-6">
                 {blueprint.stack.map((item, idx) => (
-                    <span key={idx} className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-white/5 text-white/80 border border-white/10">
+                    <span key={idx} className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-white/5 text-white/80 border border-white/10">
                         {item}
                     </span>
                 ))}
             </div>
 
             {/* SLA Callout */}
-            <div className="flex items-center justify-between bg-white/[0.02] border border-white/5 rounded-xl p-3 mb-6 text-xs font-mono text-white/60">
+            <div className="flex items-center justify-between bg-white/[0.02] border border-white/5 rounded-2xl p-3.5 mb-6 text-xs font-mono text-white/60">
                 <span>Production SLA: <strong className="text-neutral-200">{blueprint.sla}</strong></span>
                 <span className="text-[10px] text-white/40">Air-Gapped VPC Architecture</span>
             </div>
@@ -146,7 +146,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
             <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button
                     onClick={handleDownload}
-                    className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-white hover:bg-neutral-200 text-black font-semibold text-xs tracking-wide transition-all shadow-lg shadow-white/20 active:scale-95"
+                    className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs tracking-wide transition-all duration-300 shadow-lg shadow-white/20 active:scale-[0.97]"
                 >
                     {downloaded ? (
                         <>
@@ -166,7 +166,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
                         setIsSpecsOpen(!isSpecsOpen);
                         onTelemetry?.('blueprint_specs_toggled', { open: !isSpecsOpen });
                     }}
-                    className="w-full sm:w-auto flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white text-xs font-semibold transition-colors"
+                    className="w-full sm:w-auto flex items-center justify-center gap-1.5 py-3 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white text-xs font-semibold active:scale-[0.97] transition-all duration-300"
                 >
                     <Layers className="h-3.5 w-3.5" />
                     <span>Technical Deployment Specs</span>
@@ -181,22 +181,23 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-6 pt-5 border-t border-white/10 text-xs font-mono space-y-3"
+                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+                        className="mt-6 pt-5 border-t border-white/10 text-xs font-mono space-y-3 overflow-hidden"
                     >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            <div className="p-3 bg-black/40 rounded-xl border border-white/5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                            <div className="p-3.5 bg-black/40 rounded-2xl border border-white/5 h-full">
                                 <div className="text-[10px] text-white/40 mb-1">Runtime Specification</div>
                                 <div className="text-white/80">{blueprint.specsSummary.runtime}</div>
                             </div>
-                            <div className="p-3 bg-black/40 rounded-xl border border-white/5">
+                            <div className="p-3.5 bg-black/40 rounded-2xl border border-white/5 h-full">
                                 <div className="text-[10px] text-white/40 mb-1">Network &amp; Subnet Isolation</div>
                                 <div className="text-white/80">{blueprint.specsSummary.vpcSubnet}</div>
                             </div>
-                            <div className="p-3 bg-black/40 rounded-xl border border-white/5">
+                            <div className="p-3.5 bg-black/40 rounded-2xl border border-white/5 h-full">
                                 <div className="text-[10px] text-white/40 mb-1">Circuit-Breaker Recovery</div>
                                 <div className="text-white/80">{blueprint.specsSummary.failoverRecovery}</div>
                             </div>
-                            <div className="p-3 bg-black/40 rounded-xl border border-white/5">
+                            <div className="p-3.5 bg-black/40 rounded-2xl border border-white/5 h-full">
                                 <div className="text-[10px] text-white/40 mb-1">Immutable Audit Cryptography</div>
                                 <div className="text-white/80">{blueprint.specsSummary.auditTrail}</div>
                             </div>

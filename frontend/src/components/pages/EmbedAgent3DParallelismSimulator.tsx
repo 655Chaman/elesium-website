@@ -48,7 +48,7 @@ export default function EmbedAgent3DParallelismSimulator() {
   const results = useMemo(() => calculateThreeDParallelism(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: 3D Parallelism Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-3d-parallelism-simulator" />
@@ -69,7 +69,7 @@ export default function EmbedAgent3DParallelismSimulator() {
           href="https://elesium.online/tools/enterprise-agent-3d-parallelism-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-colors"
+          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-all duration-300"
         >
           Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>
@@ -82,7 +82,7 @@ export default function EmbedAgent3DParallelismSimulator() {
           <select
             value={modelArchitecture}
             onChange={(e) => setModelArchitecture(e.target.value as ThreeDModelArchitecture)}
-            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-2 text-white font-mono"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-2 text-white font-mono"
           >
             <option value="sovereign_100b_agent">Sovereign 100B Autonomous Agent</option>
             <option value="llama_3_1_70b">Meta Llama-3.1 70B</option>
@@ -97,7 +97,7 @@ export default function EmbedAgent3DParallelismSimulator() {
             <select
               value={tpDegree}
               onChange={(e) => setTpDegree(Number(e.target.value) as TpDegree)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value={1}>TP=1</option>
               <option value={2}>TP=2</option>
@@ -110,7 +110,7 @@ export default function EmbedAgent3DParallelismSimulator() {
             <select
               value={ppDegree}
               onChange={(e) => setPpDegree(Number(e.target.value) as PpDegree)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value={1}>PP=1</option>
               <option value={2}>PP=2</option>
@@ -124,7 +124,7 @@ export default function EmbedAgent3DParallelismSimulator() {
             <select
               value={dpDegree}
               onChange={(e) => setDpDegree(Number(e.target.value) as DpDegree)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value={1}>DP=1</option>
               <option value={2}>DP=2</option>
@@ -142,7 +142,7 @@ export default function EmbedAgent3DParallelismSimulator() {
             <select
               value={zeroStage}
               onChange={(e) => setZeroStage(e.target.value as ZeroStage)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value="zero_3">ZeRO-3 (Partition All)</option>
               <option value="zero_2">ZeRO-2 (Opt + Grad)</option>
@@ -155,7 +155,7 @@ export default function EmbedAgent3DParallelismSimulator() {
             <select
               value={pipelineSchedule}
               onChange={(e) => setPipelineSchedule(e.target.value as PipelineSchedule)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value="zero_bubble">Zero-Bubble 1F1B</option>
               <option value="interleaved_1f1b">Interleaved 1F1B</option>
@@ -166,7 +166,7 @@ export default function EmbedAgent3DParallelismSimulator() {
       </div>
 
       {/* Output Telemetry Card */}
-      <div className="bg-neutral-950/80 border border-neutral-800 rounded-lg p-3 font-mono text-xs space-y-2 mb-3">
+      <div className="bg-neutral-950/80 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs space-y-2 mb-3">
         <div className="flex justify-between items-center text-neutral-400">
           <span>Cluster Mesh Size:</span>
           <span className="text-white font-semibold">{results.totalGpus} GPUs ({results.totalGpus / 8} Nodes)</span>

@@ -47,7 +47,7 @@ export default function EmbedSemanticCacheSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise AI Semantic Cache &amp; Embedding Deduplication Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -111,7 +111,7 @@ export default function EmbedSemanticCacheSimulator() {
           <select
             value={upstreamLlmModel}
             onChange={(e) => setUpstreamLlmModel(e.target.value as UpstreamLlmModelType)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="gpt_4o">OpenAI GPT-4o</option>
             <option value="claude_3_5_sonnet">Anthropic Claude 3.5 Sonnet</option>
@@ -124,7 +124,7 @@ export default function EmbedSemanticCacheSimulator() {
       {/* Architecture Benchmark Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
         {/* Tier 1: Uncached Direct */}
-        <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-neutral-400 font-bold uppercase tracking-wider">
               Raw Uncached LLM
@@ -152,7 +152,7 @@ export default function EmbedSemanticCacheSimulator() {
         </div>
 
         {/* Tier 2: Cache Hit */}
-        <div className="bg-white/[0.05] border border-white/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-white/[0.05] border border-white/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-white font-bold uppercase tracking-wider">
               Semantic Cache Hit
@@ -180,7 +180,7 @@ export default function EmbedSemanticCacheSimulator() {
         </div>
 
         {/* Tier 3: Blended Production */}
-        <div className="bg-white/[0.05] border border-white/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-white/[0.05] border border-white/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-white font-bold uppercase tracking-wider">
               Elesium Hybrid Cache
@@ -209,7 +209,7 @@ export default function EmbedSemanticCacheSimulator() {
       </div>
 
       {/* Forensic Verdict Box */}
-      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-3 mb-4 text-xs font-mono">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-[18px] p-3 mb-4 text-xs font-mono">
         <div className="text-neutral-400 text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center justify-between">
           <span>Architectural FinOps Optimization Guidance</span>
           <span className="text-neutral-200 flex items-center gap-1">

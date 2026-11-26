@@ -860,11 +860,11 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 {/* Hero Section */}
                 <header className="mb-14">
                     <div className="flex flex-wrap items-center gap-2 mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white text-xs font-mono">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white text-xs font-mono">
                             <MapPin className="w-3.5 h-3.5" />
                             <span>{cityData.regionName} • Sovereign Engineering Node</span>
                         </div>
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 text-xs font-mono">
+                        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 text-xs font-mono">
                             <Building2 className="w-3.5 h-3.5" />
                             <span>{cityData.localLandmark}</span>
                         </div>
@@ -879,7 +879,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     </p>
 
                     {/* Answer Capsule (Google Direct Snippet Target) */}
-                    <div className="answer-capsule p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 border-l-4 border-l-black dark:border-l-white mb-8">
+                    <div className="answer-capsule p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 border-l-4 border-l-black dark:border-l-white mb-8">
                         <div className="text-xs font-mono uppercase tracking-wider text-black dark:text-white font-semibold mb-2 flex items-center gap-2">
                             <TrendingUp className="w-4 h-4" />
                             <span>Regional Engineering Executive Summary • AEO Answer Capsule</span>
@@ -893,7 +893,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     <div className="flex flex-col sm:flex-row items-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -902,7 +902,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -912,7 +912,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             href={cityData.hasMapUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5"
                         >
                             <MapPin className="w-4 h-4" />
                             <span>View Verified Google Map Pin</span>
@@ -930,7 +930,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         {cityData.corePillars.map((pillar, i) => (
                             <div
                                 key={i}
-                                className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between"
+                                className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between h-full"
                             >
                                 <div>
                                     <div className="text-3xl font-bold font-mono text-black dark:text-white mb-1">
@@ -952,7 +952,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Target Local Industries */}
-                <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <section className="mb-14 md:mb-16 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="max-w-3xl">
                         <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                             Enterprise Sector Specialization
@@ -967,7 +967,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {cityData.targetIndustries.map((ind, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div key={i} className="flex items-center gap-3 p-4 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                 <CheckCircle2 className="w-5 h-5 text-black dark:text-white flex-shrink-0" />
                                 <span className="text-sm font-medium text-black dark:text-white">{ind}</span>
                             </div>
@@ -977,7 +977,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                 {/* Verifiable Local Case Study */}
                 <section className="mb-14 md:mb-16">
-                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-8 sm:p-10 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                         <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2">
                             <TrendingUp className="w-4 h-4 text-black dark:text-white" />
                             <span>Audited Regional Deployment Benchmark</span>
@@ -990,13 +990,13 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-sm">
-                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                 <div className="font-semibold text-black dark:text-white mb-1">Operational Bottleneck:</div>
                                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {cityData.localCaseStudy.challenge}
                                 </p>
                             </div>
-                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                 <div className="font-semibold text-black dark:text-white mb-1">Engineered Architecture:</div>
                                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {cityData.localCaseStudy.solution}
@@ -1004,7 +1004,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             </div>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-sm">
+                        <div className="p-4 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-sm">
                             <strong>Measured Outcome:</strong> {cityData.localCaseStudy.roiMetric}
                         </div>
                     </div>
@@ -1014,7 +1014,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 {cityData.cityId === 'bangalore' && (
                     <>
                         {/* ORR & Whitefield GCC Sovereign Runtimes */}
-                        <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <section className="mb-14 md:mb-16 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                             <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                                 Enterprise GCC Architecture
                             </span>
@@ -1027,20 +1027,20 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                 Elesium provisions dedicated, air-gapped vLLM model runtimes inside client-owned Virtual Private Clouds in AWS ap-south-1 (Mumbai) or local Bengaluru colocation facilities (CtrlS Tier-IV and Sify Infinit Spaces). Utilizing private network peering and dedicated NVIDIA H100 GPU clusters linked via 900 GB/s NVLink interconnects, these runtimes serve open-weights models (DeepSeek-V3, Llama-3.3-70B, Qwen-2.5) with strict network perimeter isolation and zero wide-area network routing.
                             </p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                     <div className="font-semibold text-black dark:text-white mb-1">Zero WAN Data Egress</div>
                                     <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Inference clusters execute inside client VPC subnets. Prompts, weights, and embeddings never leave the enterprise perimeter.
                                     </p>
                                 </div>
-                                <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                     <div className="font-semibold text-black dark:text-white mb-1">Sub-200ms TTFT Performance</div>
                                     <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Audited 148ms Time-To-First-Token latency with FP8 W8A8 quantization kernels, sustaining 124.5 decoded tokens per second per stream.
                                     </p>
                                 </div>
-                                <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <div className="p-5 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full">
                                     <div className="font-semibold text-black dark:text-white mb-1">US &amp; EU Dual Governance</div>
                                     <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Engineered to satisfy parent-company SOC2 Type II and SEC Rule 17a-4 WORM requirements alongside Indian data localization laws.
@@ -1058,28 +1058,28 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                                 Four-Corridor Bangalore &amp; Statewide Karnataka Delivery Coverage
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
                                     <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Koramangala &amp; Indiranagar</div>
                                     <h3 className="text-lg font-semibold text-black dark:text-white mb-2">FinTech &amp; High-Velocity B2B SaaS</h3>
                                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Headquarters on 80 Feet Road, Koramangala 4th Block. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
                                     <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Outer Ring Road &amp; Whitefield</div>
                                     <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Multinational GCC Clusters</h3>
                                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Serving Bellandur, Kadubeesanahalli, Marathahalli, and ITPL Whitefield GCCs with dedicated 8x NVIDIA H100 vLLM clusters and air-gapped ServiceNow/SAP connectors.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
                                     <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Electronic City Phases 1 &amp; 2</div>
                                     <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Hardware, SMT &amp; Semiconductor Telemetry</h3>
                                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Sub-50ms edge vision inspection on SMT assembly lines, cleanroom anomaly state machines, and SAP S/4HANA RFC lot traceability.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
                                     <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Shivamogga Pod &amp; Beyond Bengaluru</div>
                                     <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Karnataka Statewide Enterprise Delivery</h3>
                                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -1090,7 +1090,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         </section>
 
                         {/* KDEM & Karnataka Cyber Security Policy 2024 */}
-                        <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <section className="mb-14 md:mb-16 p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                             <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                                 State Statutory Governance
                             </span>
@@ -1100,7 +1100,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                                 Bengaluru and Karnataka enterprises operating under the Karnataka Digital Economy Mission (KDEM) and the Karnataka Cyber Security Policy 2024 enforce auditable data protection and breach-prevention controls. Every automated decision path generated by our LangGraph topologies records immutable audit trails, cryptographic receipts, and hardware-level memory zeroization under DPDP Act Section 8(5).
                             </p>
-                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
+                            <div className="p-5 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
                                 <div><strong className="text-black dark:text-white">KDEM Data Localization:</strong> All tenant inference data, vector indexes, and checkpoint stores reside within Karnataka and Indian sovereign cloud zones.</div>
                                 <div><strong className="text-black dark:text-white">Cryptographic Zeroization:</strong> Section 8(5) personal data wiping executes DoD 5220.22-M overwriting upon socket termination with Ed25519 receipts stored in client SIEM systems.</div>
                                 <div><strong className="text-black dark:text-white">FIPS 140-2 Level 3 HSMs:</strong> Dedicated cryptographic key isolation partitions protecting enterprise authentication tokens and model weights.</div>
@@ -1131,7 +1131,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             </p>
 
                             {/* Empirical Comparison Table */}
-                            <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-white/10">
+                            <div className="overflow-x-auto rounded-[24px] border border-neutral-200 dark:border-white/10">
                                 <table className="w-full text-left text-xs sm:text-sm">
                                     <thead className="bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-semibold">
                                         <tr>
@@ -1195,14 +1195,14 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             return (
                                 <div
                                     key={i}
-                                    className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950"
+                                    className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
                                     <button
                                         onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                                         className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
                                     >
                                         <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
+                                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
                                     </button>
                                     <AnimatePresence initial={false}>
                                         {isOpen && (
@@ -1210,7 +1210,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                 className="accordion-panel overflow-hidden"
                                             >
                                                 <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
@@ -1240,12 +1240,12 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         {Object.values(REGIONAL_CITIES).map(c => (
                             <Link
                                 key={c.cityId}
                                 to={`/${c.slug}/`}
-                                className={`p-4 rounded-xl border text-left transition-all ${
+                                className={`p-5 rounded-[20px] border text-left transition-all duration-300 h-full flex flex-col justify-between ${
                                     c.cityId === cityData.cityId
                                         ? 'border-black dark:border-white bg-neutral-100 dark:bg-neutral-900'
                                         : 'border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30'
@@ -1261,7 +1261,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         ))}
                     </div>
 
-                    <div className="mt-8 p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-wrap gap-6 text-xs sm:text-sm font-semibold">
+                    <div className="mt-8 p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-wrap gap-6 text-xs sm:text-sm font-semibold">
                         <Link to="/solutions/" className="text-black dark:text-white hover:underline">
                             Explore 100 Curated Enterprise Solutions &rarr;
                         </Link>
@@ -1278,8 +1278,8 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Bottom CTA Card */}
-                <section className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
-                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 border border-white/20 px-3 py-1 rounded-lg inline-flex items-center gap-1.5">
+                <section className="p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
+                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 border border-white/20 px-3.5 py-1 rounded-full inline-flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5" />
                         <span>Sovereign Production SLA • 90-Day Guaranteed Breakeven</span>
                     </span>
@@ -1293,7 +1293,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -1301,7 +1301,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>

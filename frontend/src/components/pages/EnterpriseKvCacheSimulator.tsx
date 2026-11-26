@@ -123,9 +123,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       {/* Breadcrumb Navigation */}
       <div className="max-w-7xl mx-auto px-6 mb-8">
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-neutral-400">
-          <Link to="/" className="hover:text-white transition-colors">Home</Link>
+          <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
           <span className="text-neutral-600">/</span>
-          <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
+          <Link to="/compare/" className="hover:text-white transition-all duration-300">Compare</Link>
           <span className="text-neutral-600">/</span>
           <span className="text-neutral-200 font-medium">KV Cache Simulator</span>
         </nav>
@@ -133,7 +133,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
       {/* Hero Header */}
       <header className="max-w-7xl mx-auto px-6 mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/15 bg-white/[0.04] mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/15 bg-white/[0.04] mb-4">
           <Cpu className="w-3.5 h-3.5 text-neutral-200" />
           <span className="text-xs font-mono uppercase tracking-widest text-neutral-200">
             Inference Architecture • Memory Management Lab
@@ -152,14 +152,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <div className="flex flex-wrap items-center gap-3 mt-6">
           <button
             onClick={() => setIsEmbedOpen(true)}
-            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-all duration-300"
           >
             <Code className="w-3.5 h-3.5 text-neutral-200" />
             Embed Interactive Simulator on Your Site
           </button>
           <button
             onClick={copyArchitecturalMemo}
-            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-all duration-300"
           >
             {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
             {hasCopiedMemo ? 'Architecture Memo Copied!' : 'Copy Executive Briefing Memo'}
@@ -171,7 +171,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       <main className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Interactive Parameters */}
         <section className="lg:col-span-5 space-y-6">
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 backdrop-blur-sm shadow-xl">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/70 backdrop-blur-sm shadow-xl">
             <h2 className="text-base font-semibold text-white flex items-center gap-2 mb-6 pb-4 border-b border-neutral-800">
               <Gauge className="w-4 h-4 text-neutral-200" />
               Model Architecture &amp; Caching Topology
@@ -190,7 +190,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     <button
                       key={key}
                       onClick={() => setModelArch(key)}
-                      className={`active:scale-[0.97] p-2.5 text-left rounded-xl border text-xs font-mono transition-all ${
+                      className={`active:scale-[0.97] p-2.5 text-left rounded-xl border text-xs font-mono transition-all duration-300 ${
                         modelArch === key
                           ? 'border-white/30 bg-white/10 text-white font-semibold'
                           : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
@@ -223,7 +223,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <button
                     key={item.key}
                     onClick={() => setCacheStrategy(item.key as CacheStrategyKey)}
-                    className={`active:scale-[0.97] p-2.5 text-left rounded-xl border text-xs font-mono transition-all ${
+                    className={`active:scale-[0.97] p-2.5 text-left rounded-xl border text-xs font-mono transition-all duration-300 ${
                       cacheStrategy === item.key
                         ? 'border-white/30 bg-white/10 text-white font-semibold'
                         : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
@@ -251,7 +251,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <button
                     key={p.key}
                     onClick={() => setCachePrecision(p.key as CachePrecisionKey)}
-                    className={`active:scale-[0.97] py-2 px-2 text-center rounded-lg border text-xs font-mono transition-all ${
+                    className={`active:scale-[0.97] py-2 px-2 text-center rounded-xl border text-xs font-mono transition-all duration-300 ${
                       cachePrecision === p.key
                         ? 'border-white/30 bg-white/10 text-white font-semibold'
                         : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
@@ -277,7 +277,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1000"
                 value={systemPromptTokens}
                 onChange={(e) => setSystemPromptTokens(Number(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>1K (Basic)</span>
@@ -299,7 +299,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1"
                 value={turnHistoryCount}
                 onChange={(e) => setTurnHistoryCount(Number(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>2 Turns</span>
@@ -321,7 +321,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="250"
                 value={tokensPerTurn}
                 onChange={(e) => setTokensPerTurn(Number(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-full cursor-pointer"
               />
             </div>
 
@@ -338,7 +338,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1"
                 value={concurrentStreams}
                 onChange={(e) => setConcurrentStreams(Number(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>1 Single</span>
@@ -353,7 +353,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <section className="lg:col-span-7 space-y-6">
           {/* Executive KPI Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-5 rounded-[24px] border border-white/20 bg-white/[0.05]">
               <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 TTFT Latency Cut
               </div>
@@ -365,7 +365,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </p>
             </div>
 
-            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-5 rounded-[24px] border border-white/20 bg-white/[0.05]">
               <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Total KV VRAM ({concurrentStreams} Streams)
               </div>
@@ -377,7 +377,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </p>
             </div>
 
-            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-5 rounded-[24px] border border-white/20 bg-white/[0.05]">
               <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Monthly Cloud OpEx Saved
               </div>
@@ -391,7 +391,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
 
           {/* Turn-by-Turn Latency Progression Table */}
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 shadow-xl overflow-hidden">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/70 shadow-xl overflow-hidden">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-base font-semibold text-white flex items-center gap-2">
                 <Zap className="w-4 h-4 text-neutral-200" />
@@ -445,7 +445,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
 
           {/* Architecture Insights Card */}
-          <div className="p-6 rounded-xl border border-white/15 bg-neutral-950">
+          <div className="p-6 rounded-[24px] border border-white/15 bg-neutral-950">
             <h3 className="text-sm font-semibold text-white flex items-center gap-2 mb-2">
               <ShieldCheck className="w-4 h-4 text-neutral-200" />
               Sovereign Inference Architecture Verdict
@@ -456,14 +456,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <div className="flex flex-wrap items-center gap-3">
               <button
                     onClick={() => openWhatsApp()}
-                    className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                    className="active:scale-[0.97] px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
                   >
                     <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                     <span>Chat on WhatsApp</span>
                   </button>
                 <ExpandableScreen>
                 <ExpandableScreenTrigger>
-                  <button className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-2">
+                  <button className="active:scale-[0.97] px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all duration-300 flex items-center gap-2">
                     Schedule Sovereign Inference Audit
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
@@ -474,7 +474,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </ExpandableScreen>
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs text-neutral-200 transition-colors"
+                className="active:scale-[0.97] px-4 py-2.5 rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs text-neutral-200 transition-all duration-300"
               >
                 Discuss KV Sizing on WhatsApp
               </button>
@@ -505,7 +505,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           ].map((item, index) => (
             <div
               key={index}
-              className="p-5 rounded-xl border border-neutral-800 bg-neutral-900/50 cursor-pointer"
+              className="p-5 rounded-[24px] border border-neutral-800 bg-neutral-900/50 cursor-pointer"
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
             >
               <div className="flex justify-between items-center text-sm font-semibold text-white">
@@ -525,7 +525,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-2xl p-6 rounded-xl border border-neutral-800 bg-neutral-900 shadow-2xl">
+          <div className="relative w-full max-w-2xl p-6 rounded-[28px] border border-neutral-800 bg-neutral-900 shadow-2xl">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -542,7 +542,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <textarea
               readOnly
               value={embedCodeSnippet}
-              className="w-full h-32 p-3 font-mono text-xs rounded-lg border border-neutral-800 bg-neutral-950 text-neutral-300 resize-none focus:outline-none"
+              className="w-full h-32 p-3 font-mono text-xs rounded-xl border border-neutral-800 bg-neutral-950 text-neutral-300 resize-none focus:outline-none"
             />
             <div className="flex justify-end gap-3 mt-4">
               <button
@@ -553,7 +553,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold flex items-center gap-2"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold flex items-center gap-2"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied to Clipboard' : 'Copy Embed Code'}

@@ -61,7 +61,7 @@ export default function EmbedAgentPostQuantumSimulator() {
         </div>
 
         {/* Mini SVG Visualizer */}
-        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex items-center justify-center p-2">
+        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex items-center justify-center p-2">
           <svg viewBox="0 -25 320 50" className="w-full h-full">
             <line x1="0" y1="0" x2="320" y2="0" stroke="#262626" strokeWidth="1" />
             <rect x="0" y="-12" width="320" height="24" fill="rgba(6, 182, 212, 0.05)" />
@@ -90,7 +90,7 @@ export default function EmbedAgentPostQuantumSimulator() {
         </div>
 
         {/* Dropdowns & Sliders */}
-        <div className="space-y-3 bg-neutral-900/50 p-3 rounded-xl border border-neutral-800/80">
+        <div className="space-y-3 bg-neutral-900/50 p-3 rounded-[18px] border border-neutral-800/80">
           <div className="grid grid-cols-2 gap-2">
             <div>
               <label className="text-[10px] text-neutral-400 block mb-1">Key Encapsulation (KEM)</label>
@@ -155,7 +155,7 @@ export default function EmbedAgentPostQuantumSimulator() {
 
         {/* Results Matrix */}
         <div className="grid grid-cols-3 gap-2">
-          <div className="p-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-center">
+          <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-center">
             <span className="text-[10px] text-neutral-400 block">HNDL Risk</span>
             <span className={`text-sm font-bold font-mono ${
               results.quantumBreachVulnerabilityRiskPercent < 1 ? 'text-neutral-200' : 'text-red-400'
@@ -163,13 +163,13 @@ export default function EmbedAgentPostQuantumSimulator() {
               {results.quantumBreachVulnerabilityRiskPercent}%
             </span>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-center">
+          <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-center">
             <span className="text-[10px] text-neutral-400 block">Latency</span>
             <span className="text-sm font-bold font-mono text-neutral-200">
               {results.nttPolynomialLatencyMs} ms
             </span>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-center">
+          <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-center">
             <span className="text-[10px] text-neutral-400 block">DPDP Score</span>
             <span className="text-sm font-bold font-mono text-white">
               {results.statutoryComplianceScore}/100
@@ -183,7 +183,7 @@ export default function EmbedAgentPostQuantumSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[10px] text-neutral-500 hover:text-white transition"
+            className="text-[10px] text-neutral-500 hover:text-white transition-all duration-300"
           >
             Powered by Elesium Sovereign Enterprise AI
           </a>

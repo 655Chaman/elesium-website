@@ -24,7 +24,7 @@ export default function EmbedAgentDeepseekUnifiedFabricSimulator() {
   const results = useMemo(() => calculateDeepseekUnifiedFabric(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: DeepSeek-V3 Grand Unified Serving Fabric Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-deepseek-v3-serving-fabric-simulator" />
@@ -114,7 +114,7 @@ export default function EmbedAgentDeepseekUnifiedFabricSimulator() {
       </div>
 
       {/* Metrics Grid */}
-      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/60 rounded-lg border border-neutral-800/80 mb-3 text-center">
+      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/60 rounded-[18px] border border-neutral-800/80 mb-3 text-center">
         <div>
           <div className="text-[10px] text-neutral-400">KV-Cache Shrink</div>
           <div className="text-sm font-bold text-white font-mono">{results.kvCacheReductionPercent}%</div>

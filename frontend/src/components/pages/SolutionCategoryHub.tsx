@@ -650,7 +650,7 @@ export default function SolutionCategoryHub() {
 
                 {/* Hero Header */}
                 <header className="mb-14">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/10 bg-neutral-950 text-neutral-300 text-xs font-mono mb-4">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/10 bg-neutral-950 text-neutral-300 text-xs font-mono mb-4">
                         <IconComponent className="w-3.5 h-3.5 text-white" />
                         <span>Thematic Silo Architecture • {displayName}</span>
                     </div>
@@ -660,7 +660,7 @@ export default function SolutionCategoryHub() {
 
                     {/* AEO Answer Capsule */}
                     {silo?.answerCapsule && (
-                        <div className="bg-neutral-950 border-l-4 border-l-white p-5 rounded-r-xl border border-white/10 mb-8 max-w-4xl">
+                        <div className="bg-neutral-950 border-l-4 border-l-white p-6 rounded-[24px] border border-white/10 mb-8 max-w-4xl">
                             <div className="text-[11px] font-mono uppercase tracking-wider text-white font-bold mb-1 flex items-center gap-1.5">
                                 <span>Architectural Answer Capsule • Executive Summary</span>
                             </div>
@@ -674,14 +674,14 @@ export default function SolutionCategoryHub() {
                     <div className="flex flex-wrap items-center gap-4">
                         <button
                             onClick={() => openWhatsApp()}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-bold text-sm transition-all"
+                            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-bold text-sm transition-all duration-300"
                         >
                             <span>Schedule Technical Architecture Audit</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
                             to="/solutions/"
-                            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/15 hover:border-white/40 active:scale-[0.97] text-neutral-300 hover:text-white text-sm font-semibold transition-all"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/15 hover:border-white/40 active:scale-[0.97] text-neutral-300 hover:text-white text-sm font-semibold transition-all duration-300"
                         >
                             <span>View All 13 Industry Silos</span>
                         </Link>
@@ -691,9 +691,9 @@ export default function SolutionCategoryHub() {
                 {/* Core Metrics Grid */}
                 {silo?.coreMetrics && (
                     <section className="mb-14">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
                             {silo.coreMetrics.map((m, idx) => (
-                                <div key={idx} className="bg-neutral-950 border border-white/10 rounded-xl p-5 text-center">
+                                <div key={idx} className="bg-neutral-950 border border-white/10 rounded-[22px] p-5 text-center h-full flex flex-col justify-between">
                                     <div className="text-xs font-mono uppercase text-neutral-400 font-semibold mb-1">{m.label}</div>
                                     <div className="text-2xl sm:text-3xl font-black text-white">{m.value}</div>
                                     <div className="text-xs text-neutral-400 mt-1">{m.desc}</div>
@@ -705,7 +705,7 @@ export default function SolutionCategoryHub() {
 
                 {/* Statutory Regulatory Framework Card */}
                 {silo?.regulatoryAuthority && (
-                    <section className="mb-14 bg-neutral-950 border border-white/10 rounded-xl p-6 sm:p-8">
+                    <section className="mb-14 bg-neutral-950 border border-white/10 rounded-[28px] p-6 sm:p-8">
                         <div className="flex items-center gap-3 mb-4">
                             <Scale className="w-6 h-6 text-white" />
                             <h2 className="text-xl sm:text-2xl font-bold text-white">Statutory &amp; Regulatory Compliance Matrix</h2>
@@ -716,16 +716,16 @@ export default function SolutionCategoryHub() {
                         <p className="text-neutral-400 text-sm leading-relaxed mb-6">
                             {silo.complianceFramework}
                         </p>
-                        <div className="grid sm:grid-cols-3 gap-3 text-xs font-mono">
-                            <div className="bg-black border border-white/10 p-3 rounded-lg text-neutral-300">
+                        <div className="grid sm:grid-cols-3 gap-4 text-xs font-mono">
+                            <div className="bg-black border border-white/10 p-4 rounded-2xl text-neutral-300 h-full">
                                 <span className="text-white font-bold block mb-0.5">DPDP Act 2023 Sec 8(5)</span>
                                 Automatic statutory data erasure upon workflow execution completion.
                             </div>
-                            <div className="bg-black border border-white/10 p-3 rounded-lg text-neutral-300">
+                            <div className="bg-black border border-white/10 p-4 rounded-2xl text-neutral-300 h-full">
                                 <span className="text-white font-bold block mb-0.5">Sovereign Data Residency</span>
                                 Tier-IV Indian datacenters (CtrlS, Yotta Shakti) with zero foreign telemetry.
                             </div>
-                            <div className="bg-black border border-white/10 p-3 rounded-lg text-neutral-300">
+                            <div className="bg-black border border-white/10 p-4 rounded-2xl text-neutral-300 h-full">
                                 <span className="text-white font-bold block mb-0.5">Cryptographic Hashing</span>
                                 SHA-256 state ledger verification for statutory explainability audits.
                             </div>
@@ -742,7 +742,7 @@ export default function SolutionCategoryHub() {
                         </h2>
                         <div className="space-y-4 text-neutral-300 text-sm sm:text-base leading-relaxed">
                             {silo.architectureDeepDive.map((para, idx) => (
-                                <p key={idx} className="bg-neutral-950 border border-white/10 rounded-xl p-5">
+                                <p key={idx} className="bg-neutral-950 border border-white/10 rounded-[22px] p-6">
                                     {para}
                                 </p>
                             ))}
@@ -756,9 +756,9 @@ export default function SolutionCategoryHub() {
                         <h2 className="text-2xl font-bold text-white mb-6">
                             Enterprise Production Capabilities
                         </h2>
-                        <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="grid sm:grid-cols-2 gap-6">
                             {silo.capabilities.map((cap, idx) => (
-                                <div key={idx} className="bg-neutral-950 border border-white/10 rounded-xl p-5 hover:border-white/30 transition-colors">
+                                <div key={idx} className="bg-neutral-950 border border-white/10 rounded-[24px] p-6 hover:border-white/30 transition-colors h-full flex flex-col">
                                     <div className="flex items-center gap-2 font-bold text-white text-base mb-2">
                                         <FileCheck2 className="w-4 h-4 text-white flex-shrink-0" />
                                         <span>{cap.title}</span>
@@ -786,12 +786,12 @@ export default function SolutionCategoryHub() {
                     </div>
 
                     {solutionsList.length > 0 ? (
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {solutionsList.map((sol) => (
                                 <Link
                                     key={sol.slug}
                                     to={`/solutions/${sol.slug}/`}
-                                    className="group bg-neutral-950 hover:bg-neutral-900 border border-white/10 hover:border-white/30 rounded-xl p-5 flex flex-col justify-between transition-all duration-200"
+                                    className="group bg-neutral-950 hover:bg-neutral-900 border border-white/10 hover:border-white/30 rounded-[24px] p-6 flex flex-col justify-between h-full transition-all duration-300"
                                 >
                                     <div>
                                         <div className="text-[10px] font-mono uppercase text-neutral-400 tracking-wider mb-2 font-semibold">
@@ -812,7 +812,7 @@ export default function SolutionCategoryHub() {
                             ))}
                         </div>
                     ) : (
-                        <div className="bg-neutral-950 border border-white/10 rounded-xl p-8 text-center">
+                        <div className="bg-neutral-950 border border-white/10 rounded-[28px] p-8 text-center">
                             <h3 className="text-lg font-bold text-white mb-2">
                                 Custom Sovereign {displayName} Architectures Available
                             </h3>
@@ -822,13 +822,13 @@ export default function SolutionCategoryHub() {
                             <div className="flex flex-wrap items-center justify-center gap-3">
                                 <Link
                                     to="/solutions/"
-                                    className="px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-mono font-semibold active:scale-[0.97] transition-all"
+                                    className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-mono font-semibold active:scale-[0.97] transition-all duration-300"
                                 >
                                     Browse Flagship Solutions &rarr;
                                 </Link>
                                 <Link
                                     to="/commercial-directory.html"
-                                    className="px-5 py-2.5 rounded-lg border border-white/20 hover:bg-white/10 text-white text-xs font-mono font-semibold active:scale-[0.97] transition-all"
+                                    className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white text-xs font-mono font-semibold active:scale-[0.97] transition-all duration-300"
                                 >
                                     Top 100 Commercial Directory &rarr;
                                 </Link>
@@ -849,14 +849,14 @@ export default function SolutionCategoryHub() {
                                 return (
                                     <div
                                         key={idx}
-                                        className="bg-neutral-950 border border-white/10 rounded-xl overflow-hidden transition-colors"
+                                        className="bg-neutral-950 border border-white/10 rounded-[20px] overflow-hidden transition-colors"
                                     >
                                         <button
                                             onClick={() => setOpenFaq(isOpen ? null : idx)}
                                             className="w-full text-left p-5 flex items-center justify-between gap-4 font-semibold text-neutral-200 hover:text-white"
                                         >
                                             <span className="text-sm sm:text-base">{faq.q}</span>
-                                            <ChevronDown className={`w-4 h-4 text-white transform transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                                            <ChevronDown className={`w-4 h-4 text-white transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                                         </button>
                                         <AnimatePresence initial={false}>
                                             {isOpen && (
@@ -864,7 +864,7 @@ export default function SolutionCategoryHub() {
                                                     initial={{ height: 0, opacity: 0 }}
                                                     animate={{ height: 'auto', opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}
-                                                    transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                    transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                     className="accordion-panel overflow-hidden"
                                                 >
                                                     <div className="px-5 pb-5 text-xs sm:text-sm text-neutral-400 leading-relaxed border-t border-white/10 pt-3">
@@ -881,7 +881,7 @@ export default function SolutionCategoryHub() {
                 )}
 
                 {/* Free Architecture Audit CTA */}
-                <section className="bg-neutral-950 border border-white/10 rounded-xl p-8 text-center sm:text-left sm:flex items-center justify-between gap-8">
+                <section className="bg-neutral-950 border border-white/10 rounded-[32px] p-8 sm:p-10 text-center sm:text-left sm:flex items-center justify-between gap-8">
                     <div className="max-w-2xl mb-6 sm:mb-0">
                         <h2 className="text-2xl font-extrabold text-white mb-2">
                             Deploy a Scoped {displayName} Pilot in 14 Days
@@ -892,7 +892,7 @@ export default function SolutionCategoryHub() {
                     </div>
                     <button
                         onClick={() => openWhatsApp()}
-                        className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-bold text-sm transition-all"
+                        className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-bold text-sm transition-all duration-300"
                     >
                         <span>Schedule Free Technical Audit</span>
                         <ArrowRight className="w-4 h-4" />

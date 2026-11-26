@@ -68,13 +68,13 @@ export function CalendarBookingEmbed({
             initial={{ opacity: 0, scale: 0.97, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 12 }}
-            transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-            className="relative w-full max-w-5xl h-[92vh] bg-neutral-950 border border-white/10 rounded-xl shadow-2xl z-10 flex flex-col overflow-hidden text-white font-sans"
+            transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+            className="relative w-full max-w-5xl h-[92vh] bg-neutral-950 border border-white/10 rounded-[28px] shadow-2xl z-10 flex flex-col overflow-hidden text-white font-sans"
           >
             {/* Top Navigation & Status Bar */}
             <div className="px-6 py-4 border-b border-white/10 bg-black flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-white">
+                <div className="p-2.5 rounded-2xl bg-white/5 border border-white/10 text-white">
                   <Terminal className="w-4 h-4" />
                 </div>
                 <div>
@@ -82,7 +82,7 @@ export function CalendarBookingEmbed({
                     <h3 className="text-sm font-bold text-white tracking-wide uppercase font-mono">
                       Principal Systems Architecture Discovery
                     </h3>
-                    <span className="px-2 py-0.5 rounded-md bg-white/10 text-neutral-300 text-[10px] font-mono border border-white/10">
+                    <span className="px-2.5 py-0.5 rounded-full bg-white/10 text-neutral-300 text-[10px] font-mono border border-white/10">
                       Chaman Shah
                     </span>
                   </div>
@@ -95,7 +95,7 @@ export function CalendarBookingEmbed({
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all text-xs font-mono"
+                className="px-3.5 py-2 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all duration-300 text-xs font-mono"
               >
                 &times; Close [ESC]
               </button>

@@ -64,7 +64,7 @@ export default function EmbedAgentMemristorCrossbarSimulator() {
         </div>
 
         {/* Mini Crossbar SVG Visualizer */}
-        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
+        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
           <div className="flex justify-between items-center text-[10px] font-mono text-neutral-400">
             <span className="text-white font-bold">Crossbar Array Conductance Map ({crossbarDimension}x{crossbarDimension})</span>
             <span>Latency: {results.analogVmmLatencyNs} ns</span>
@@ -106,7 +106,7 @@ export default function EmbedAgentMemristorCrossbarSimulator() {
         </div>
 
         {/* Controls */}
-        <div className="space-y-3 bg-neutral-900/60 p-3 rounded-xl border border-neutral-800/80 text-xs">
+        <div className="space-y-3 bg-neutral-900/60 p-3 rounded-[18px] border border-neutral-800/80 text-xs">
           <div>
             <label className="text-[11px] text-neutral-300 font-medium block mb-1">Memristor Dielectric Technology:</label>
             <select

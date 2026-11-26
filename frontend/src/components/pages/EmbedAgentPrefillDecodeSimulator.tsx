@@ -39,7 +39,7 @@ export default function EmbedAgentPrefillDecodeSimulator() {
   const results = useMemo(() => calculatePrefillDecodePerformance(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Prefill-Decode Disaggregation Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-prefill-decode-disaggregation-simulator" />
@@ -149,7 +149,7 @@ export default function EmbedAgentPrefillDecodeSimulator() {
       </div>
 
       {/* Real-Time KPIs */}
-      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/90 rounded-lg border border-neutral-800 mb-4">
+      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/90 rounded-[18px] border border-neutral-800 mb-4">
         <div className="text-center">
           <div className="text-[10px] text-neutral-400">P99 TTFT</div>
           <div className="text-lg font-black text-neutral-200 font-mono">{results.ttftLatencyMs}ms</div>

@@ -191,21 +191,21 @@ SECURITY ASSURANCE PROTOCOLS:
           <div className="flex items-center space-x-2">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-neutral-700 transition"
+              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-neutral-700 transition-all duration-300"
             >
               <Code className="w-3.5 h-3.5 text-neutral-400" />
               <span>Embed</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white hover:bg-neutral-200 text-black shadow-sm transition"
+              className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white hover:bg-neutral-200 text-black shadow-sm transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Export Memo'}</span>
@@ -217,7 +217,7 @@ SECURITY ASSURANCE PROTOCOLS:
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         {/* Intro Hero */}
         <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg text-xs font-medium bg-white/[0.04] text-neutral-200 border border-white/15">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-medium bg-white/[0.04] text-neutral-200 border border-white/15">
             <Sparkles className="w-3.5 h-3.5 text-neutral-200" />
             <span>DPDP Act 2023 &amp; Sub-15ms Adversarial Prompt Interception</span>
           </div>
@@ -229,17 +229,17 @@ SECURITY ASSURANCE PROTOCOLS:
         {/* Main Grid: Controls + Metrics */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Panel (5 cols) */}
-          <div className="lg:col-span-5 bg-neutral-900/60 rounded-xl border border-neutral-800 p-6 space-y-6">
+          <div className="lg:col-span-5 bg-neutral-900/60 rounded-[24px] border border-neutral-800 p-6 space-y-6">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
               <div className="flex items-center space-x-2">
                 <Sliders className="w-4 h-4 text-neutral-200" />
                 <h2 className="text-sm font-semibold text-white tracking-wide">Guardrail Parameters</h2>
               </div>
-              <div className="flex items-center space-x-1 bg-neutral-950 p-1 rounded-lg border border-neutral-800 text-xs">
+              <div className="flex items-center space-x-1 bg-neutral-950 p-1 rounded-full border border-neutral-800 text-xs">
                 <button
                   type="button"
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-2.5 py-0.5 rounded text-[11px] font-medium transition ${
+                  className={`active:scale-[0.97] px-2.5 py-0.5 rounded text-[11px] font-medium transition-all duration-300 ${
                     currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -248,7 +248,7 @@ SECURITY ASSURANCE PROTOCOLS:
                 <button
                   type="button"
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-2.5 py-0.5 rounded text-[11px] font-medium transition ${
+                  className={`active:scale-[0.97] px-2.5 py-0.5 rounded text-[11px] font-medium transition-all duration-300 ${
                     currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -291,7 +291,7 @@ SECURITY ASSURANCE PROTOCOLS:
                   value={concurrencyThroughputRps}
                   onChange={(e) => setConcurrencyThroughputRps(Number(e.target.value))}
                   aria-label="Throughput Load Requests Per Second"
-                  className="w-full accent-white h-2 bg-neutral-800 rounded-lg cursor-pointer"
+                  className="w-full accent-white h-2 bg-neutral-800 rounded-full cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-neutral-500 mt-1">
                   <span>50 RPS (B2B SaaS)</span>
@@ -335,7 +335,7 @@ SECURITY ASSURANCE PROTOCOLS:
               </div>
 
               {/* Vernacular Evaluation Toggle */}
-              <div className="bg-neutral-950/70 border border-neutral-800/80 p-3 rounded-xl flex items-center justify-between">
+              <div className="bg-neutral-950/70 border border-neutral-800/80 p-3 rounded-[18px] flex items-center justify-between">
                 <div>
                   <span className="text-neutral-200 text-xs font-medium block">Indic Vernacular NLU Guard</span>
                   <span className="text-[10px] text-neutral-400">Red-teaming Hindi, Hinglish, Tamil &amp; Telugu ciphers</span>
@@ -343,7 +343,7 @@ SECURITY ASSURANCE PROTOCOLS:
                 <button
                   type="button"
                   onClick={() => setVernacularEvaluationEnabled(!vernacularEvaluationEnabled)}
-                  className={`active:scale-[0.97] px-3 py-1 rounded-lg text-xs font-mono font-bold transition ${
+                  className={`active:scale-[0.97] px-3 py-1 rounded-full text-xs font-mono font-bold transition-all duration-300 ${
                     vernacularEvaluationEnabled
                       ? 'bg-white/10 text-neutral-200 border border-white/30 shadow-sm'
                       : 'bg-neutral-800 text-neutral-400'
@@ -358,14 +358,14 @@ SECURITY ASSURANCE PROTOCOLS:
           {/* Telemetry & Analysis Panel (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* Status Classification Badge */}
-            <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-5 flex items-center justify-between">
+            <div className="bg-neutral-900/60 rounded-[24px] border border-neutral-800 p-5 flex items-center justify-between">
               <div>
                 <span className="text-xs text-neutral-400 uppercase tracking-wider block">Security Posture Classification</span>
                 <span className="text-lg font-bold font-mono tracking-tight text-white mt-0.5 block">
                   {results.statusClassification.replace(/_/g, ' ')}
                 </span>
               </div>
-              <span className={`px-3 py-1 rounded-lg text-xs font-mono font-bold border ${
+              <span className={`px-3 py-1 rounded-full text-xs font-mono font-bold border ${
                 results.statusClassification === 'AIR_GAPPED_NEUTRALIZED'
                   ? 'bg-white/[0.04] border-white/20 text-neutral-200'
                   : results.statusClassification === 'HARDENED_GUARDRAILS'
@@ -378,37 +378,37 @@ SECURITY ASSURANCE PROTOCOLS:
 
             {/* Key Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-4 space-y-1">
+              <div className="bg-neutral-900/60 rounded-2xl border border-neutral-800 p-4 space-y-1">
                 <span className="text-xs text-neutral-400 block">Intercept Latency</span>
                 <span className="text-2xl font-bold font-mono text-white">{results.interceptLatencyMs} ms</span>
                 <span className="text-[11px] text-neutral-500 block">P99 on local GPU</span>
               </div>
 
-              <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-4 space-y-1">
+              <div className="bg-neutral-900/60 rounded-2xl border border-neutral-800 p-4 space-y-1">
                 <span className="text-xs text-neutral-400 block">Jailbreak Mitigation</span>
                 <span className="text-2xl font-bold font-mono text-white">{results.jailbreakDetectionRatePct}%</span>
                 <span className="text-[11px] text-neutral-500 block">Adversarial catch</span>
               </div>
 
-              <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-4 space-y-1">
+              <div className="bg-neutral-900/60 rounded-2xl border border-neutral-800 p-4 space-y-1">
                 <span className="text-xs text-neutral-400 block">False Positive Rate</span>
                 <span className="text-2xl font-bold font-mono text-neutral-300">{results.falsePositiveRejectionPct}%</span>
                 <span className="text-[11px] text-neutral-500 block">Benign rejections</span>
               </div>
 
-              <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-4 space-y-1">
+              <div className="bg-neutral-900/60 rounded-2xl border border-neutral-800 p-4 space-y-1">
                 <span className="text-xs text-neutral-400 block">PII Redaction Latency</span>
                 <span className="text-2xl font-bold font-mono text-amber-400">{results.piiMaskingLatencyMicroseconds} µs</span>
                 <span className="text-[11px] text-neutral-500 block">Aadhaar &amp; PAN hash</span>
               </div>
 
-              <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-4 space-y-1">
+              <div className="bg-neutral-900/60 rounded-2xl border border-neutral-800 p-4 space-y-1">
                 <span className="text-xs text-neutral-400 block">DPDP Act Compliance</span>
                 <span className="text-2xl font-bold font-mono text-white">{results.dpdpComplianceConfidencePct}%</span>
                 <span className="text-[11px] text-neutral-500 block">Fiduciary isolation</span>
               </div>
 
-              <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-4 space-y-1">
+              <div className="bg-neutral-900/60 rounded-2xl border border-neutral-800 p-4 space-y-1">
                 <span className="text-xs text-neutral-400 block">Annual Risk Mitigated</span>
                 <span className="text-2xl font-bold font-mono text-white">
                   {currency === 'INR' ? `₹${(results.annualBreachLossMitigated / 10000000).toFixed(1)} Cr` : `$${(results.annualBreachLossMitigated / 1000000).toFixed(1)}M`}
@@ -418,7 +418,7 @@ SECURITY ASSURANCE PROTOCOLS:
             </div>
 
             {/* Oscilloscope Waveform Display */}
-            <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-5 space-y-3">
+            <div className="bg-neutral-900/60 rounded-[24px] border border-neutral-800 p-5 space-y-3">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center space-x-2">
                   <Zap className="w-4 h-4 text-neutral-200" />
@@ -436,7 +436,7 @@ SECURITY ASSURANCE PROTOCOLS:
                 </div>
               </div>
 
-              <div className="h-32 w-full bg-neutral-950 rounded-xl border border-neutral-800 relative overflow-hidden flex items-center justify-center">
+              <div className="h-32 w-full bg-neutral-950 rounded-[24px] border border-neutral-800 relative overflow-hidden flex items-center justify-center">
                 <svg className="w-full h-full" viewBox="0 0 500 140" preserveAspectRatio="none">
                   {/* Grid Lines */}
                   <line x1="0" y1="35" x2="500" y2="35" stroke="#262626" strokeDasharray="4 4" />
@@ -461,7 +461,7 @@ SECURITY ASSURANCE PROTOCOLS:
 
         {/* Technical Deep Dive Architecture Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-          <div className="bg-neutral-900/40 rounded-xl border border-neutral-800 p-5 space-y-2.5">
+          <div className="bg-neutral-900/40 rounded-[24px] border border-neutral-800 p-5 space-y-2.5">
             <div className="flex items-center space-x-2 text-neutral-200">
               <Cpu className="w-4 h-4" />
               <h3 className="text-sm font-semibold text-white">NeMo Colang 2.0 Determinism</h3>
@@ -471,7 +471,7 @@ SECURITY ASSURANCE PROTOCOLS:
             </p>
           </div>
 
-          <div className="bg-neutral-900/40 rounded-xl border border-neutral-800 p-5 space-y-2.5">
+          <div className="bg-neutral-900/40 rounded-[24px] border border-neutral-800 p-5 space-y-2.5">
             <div className="flex items-center space-x-2 text-neutral-200">
               <Database className="w-4 h-4" />
               <h3 className="text-sm font-semibold text-white">Indian Statutory PII Redaction</h3>
@@ -481,7 +481,7 @@ SECURITY ASSURANCE PROTOCOLS:
             </p>
           </div>
 
-          <div className="bg-neutral-900/40 rounded-xl border border-neutral-800 p-5 space-y-2.5">
+          <div className="bg-neutral-900/40 rounded-[24px] border border-neutral-800 p-5 space-y-2.5">
             <div className="flex items-center space-x-2 text-amber-400">
               <Lock className="w-4 h-4" />
               <h3 className="text-sm font-semibold text-white">Air-Gapped Private VPC</h3>
@@ -493,7 +493,7 @@ SECURITY ASSURANCE PROTOCOLS:
         </div>
 
         {/* FAQ Section */}
-        <div className="bg-neutral-900/60 rounded-xl border border-neutral-800 p-6 space-y-4">
+        <div className="bg-neutral-900/60 rounded-[24px] border border-neutral-800 p-6 space-y-4">
           <h2 className="text-base font-bold text-white tracking-tight">Frequently Asked Questions for Enterprise CISOs</h2>
           <div className="divide-y divide-neutral-800">
             {faqs.map((faq, idx) => (
@@ -501,7 +501,7 @@ SECURITY ASSURANCE PROTOCOLS:
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full flex items-center justify-between text-left text-xs sm:text-sm font-medium text-neutral-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full flex items-center justify-between text-left text-xs sm:text-sm font-medium text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -517,7 +517,7 @@ SECURITY ASSURANCE PROTOCOLS:
         </div>
 
         {/* Lead Application Form Drawer / Mandate Embed */}
-        <div className="bg-neutral-900/80 rounded-xl border border-neutral-800 p-6 sm:p-8 space-y-6">
+        <div className="bg-neutral-900/80 rounded-[24px] border border-neutral-800 p-6 sm:p-8 space-y-6">
           <div className="max-w-2xl space-y-2">
             <h2 className="text-xl font-bold tracking-tight text-white">
               Schedule a Sovereign LLM Security &amp; Guardrail Architecture Audit
@@ -543,7 +543,7 @@ SECURITY ASSURANCE PROTOCOLS:
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] max-w-lg w-full p-6 space-y-4">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-bold text-white">Embed Guardrail Simulator</h3>
               <button
@@ -567,14 +567,14 @@ SECURITY ASSURANCE PROTOCOLS:
               <button
                 type="button"
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-3 py-1.5 rounded-full text-xs font-medium text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 type="button"
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold bg-white hover:bg-neutral-200 text-black transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-white hover:bg-neutral-200 text-black transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Code'}</span>

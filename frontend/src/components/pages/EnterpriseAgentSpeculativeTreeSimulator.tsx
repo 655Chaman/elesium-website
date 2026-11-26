@@ -151,7 +151,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
       <div className="max-w-7xl mx-auto">
         {/* Navigation Breadcrumb */}
         <div className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-6">
-          <a href="/resources/" className="hover:text-white transition-colors">TOOLS</a>
+          <a href="/resources/" className="hover:text-white transition-all duration-300">TOOLS</a>
           <span>/</span>
           <span className="text-neutral-200">SPECULATIVE DECODING TREES</span>
           <span>/</span>
@@ -161,7 +161,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-white/10 mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono mb-3">
               <GitFork className="w-3.5 h-3.5" />
               <span>DYNAMIC MULTI-CANDIDATE SPECULATIVE VERIFICATION</span>
             </div>
@@ -176,21 +176,21 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
           <div className="flex items-center gap-3 self-start lg:self-center">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] px-3.5 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center gap-1.5"
+              className="active:scale-[0.97] px-3.5 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all duration-300 flex items-center gap-1.5"
             >
               <Code className="w-3.5 h-3.5 text-neutral-200" />
               <span>Embed Widget</span>
             </button>
             <button
               onClick={resetDefaults}
-              className="active:scale-[0.97] p-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-all"
+              className="active:scale-[0.97] p-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-all duration-300"
               title="Reset to default settings"
               aria-label="Reset to default settings"
             >
@@ -203,13 +203,13 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Parameter Configuration */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 rounded-xl bg-[#0a0a0a] border border-white/10 shadow-xl space-y-5">
+            <div className="p-6 rounded-[24px] bg-[#0a0a0a] border border-white/10 shadow-xl space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-white/5">
                 <div className="flex items-center gap-2 text-sm font-semibold text-white">
                   <Sliders className="w-4 h-4 text-neutral-200" />
                   <span>Speculative Cluster Configuration</span>
                 </div>
-                <div className="flex items-center gap-1 bg-white/5 p-1 rounded-lg border border-white/10 text-[11px] font-mono">
+                <div className="flex items-center gap-1 bg-white/5 p-1 rounded-full border border-white/10 text-[11px] font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-white/10 text-neutral-200' : 'text-neutral-400'}`}
@@ -277,7 +277,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
                     value={treeDepth}
                     onChange={(e) => setTreeDepth(Number(e.target.value))}
                     aria-label="Tree Depth"
-                    className="w-full accent-white h-1.5 bg-white/10 rounded-lg cursor-pointer"
+                    className="w-full accent-white h-1.5 bg-white/10 rounded-full cursor-pointer"
                   />
                 </div>
                 <div>
@@ -293,7 +293,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
                     value={branchingFactor}
                     onChange={(e) => setBranchingFactor(Number(e.target.value))}
                     aria-label="Branching Factor"
-                    className="w-full accent-white h-1.5 bg-white/10 rounded-lg cursor-pointer"
+                    className="w-full accent-white h-1.5 bg-white/10 rounded-full cursor-pointer"
                   />
                 </div>
               </div>
@@ -346,13 +346,13 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
                   value={dailyTokenVolumeMillions}
                   onChange={(e) => setDailyTokenVolumeMillions(Number(e.target.value))}
                   aria-label="Daily Generation Volume"
-                  className="w-full accent-white h-1.5 bg-white/10 rounded-lg cursor-pointer"
+                  className="w-full accent-white h-1.5 bg-white/10 rounded-full cursor-pointer"
                 />
               </div>
             </div>
 
             {/* Architecture Whitepaper & Case Study Link Card */}
-            <div className="p-5 rounded-xl bg-[#0a0a0a] border border-white/10 space-y-3">
+            <div className="p-5 rounded-[24px] bg-[#0a0a0a] border border-white/10 space-y-3">
               <span className="text-[11px] font-mono text-neutral-200">TECHNICAL WHITEPAPER #113</span>
               <h4 className="text-sm font-semibold text-white">Dynamic Tree-Based Speculative Decoding at Scale</h4>
               <p className="text-xs text-neutral-400 leading-relaxed">
@@ -372,28 +372,28 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
           <div className="lg:col-span-7 space-y-6">
             {/* Primary Telemetry Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/10">
+              <div className="p-4 rounded-2xl bg-[#0a0a0a] border border-white/10">
                 <span className="text-[11px] text-neutral-400 block font-mono">ACCEPTED TOKENS</span>
                 <span className="text-2xl font-bold font-mono text-white mt-1 block">
                   {results.meanAcceptedTokensPerStep} tok
                 </span>
                 <span className="text-[10px] text-neutral-500">per target step</span>
               </div>
-              <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/10">
+              <div className="p-4 rounded-2xl bg-[#0a0a0a] border border-white/10">
                 <span className="text-[11px] text-neutral-400 block font-mono">INTER-TOKEN LATENCY</span>
                 <span className="text-2xl font-bold font-mono text-white mt-1 block">
                   {results.interTokenLatencyMs} ms
                 </span>
                 <span className="text-[10px] text-neutral-500">generation speed</span>
               </div>
-              <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/10">
+              <div className="p-4 rounded-2xl bg-[#0a0a0a] border border-white/10">
                 <span className="text-[11px] text-neutral-400 block font-mono">NODE SPEEDUP</span>
                 <span className="text-2xl font-bold font-mono text-white mt-1 block">
                   {results.throughputSpeedupMultiplier}x
                 </span>
                 <span className="text-[10px] text-neutral-500">vs autoregressive</span>
               </div>
-              <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/10">
+              <div className="p-4 rounded-2xl bg-[#0a0a0a] border border-white/10">
                 <span className="text-[11px] text-neutral-400 block font-mono">SM OCCUPANCY</span>
                 <span className="text-2xl font-bold font-mono text-amber-400 mt-1 block">
                   {results.smOccupancyPercent}%
@@ -403,13 +403,13 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
             </div>
 
             {/* Interactive Architecture SVG Visualizer */}
-            <div className="p-6 rounded-xl bg-[#0a0a0a] border border-white/10 shadow-xl space-y-4">
+            <div className="p-6 rounded-[24px] bg-[#0a0a0a] border border-white/10 shadow-xl space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-white/5">
                 <div className="flex items-center gap-2">
                   <Activity className="w-4 h-4 text-neutral-200" />
                   <h3 className="text-sm font-semibold text-white">Speculative Tree Verification &amp; Warp Alignment Topology</h3>
                 </div>
-                <span className={`px-2.5 py-1 rounded-lg text-[10px] font-mono border ${
+                <span className={`px-2.5 py-1 rounded-full text-[10px] font-mono border ${
                   results.statusClassification === 'SUB_8MS_WARP_OPTIMAL'
                     ? 'bg-white/[0.04] border-white/20 text-neutral-200'
                     : results.statusClassification === 'WARP_DIVERGENCE_BOTTLENECK'
@@ -421,7 +421,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
               </div>
 
               {/* Dynamic SVG Visualizer */}
-              <div className="w-full bg-black border border-white/5 rounded-xl p-4 overflow-x-auto">
+              <div className="w-full bg-black border border-white/5 rounded-2xl p-4 overflow-x-auto">
                 <svg viewBox="0 0 680 230" className="w-full min-w-[600px] h-auto font-mono text-xs">
                   {/* Background grid */}
                   <defs>
@@ -512,7 +512,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
             </div>
 
             {/* Direct Conversion Actions */}
-            <div className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/[0.03] via-transparent to-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 rounded-[24px] border border-white/10 bg-gradient-to-r from-white/[0.03] via-transparent to-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <h4 className="text-sm font-semibold text-white">Deploy Speculative Verification on Your Cluster</h4>
                 <p className="text-xs text-neutral-400 mt-1">Receive a validated vLLM/SGLang speculative tree recipe with custom Triton kernels.</p>
@@ -521,7 +521,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <button
                   onClick={copyMemo}
-                  className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}
@@ -533,10 +533,10 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
 
         {/* Embedded Form Section */}
         <div className="mt-16 pt-12 border-t border-white/10">
-          <div className="max-w-4xl mx-auto rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto rounded-[24px] border border-white/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -549,7 +549,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -565,10 +565,10 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
         <div className="mt-16 max-w-4xl mx-auto space-y-4">
           <h3 className="text-xl font-bold text-white mb-6">Frequently Asked Technical Questions</h3>
           {faqs.map((faq, idx) => (
-            <div key={idx} className="rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
+            <div key={idx} className="rounded-[24px] border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="active:scale-[0.97] w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors"
+                className="active:scale-[0.97] w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition-all duration-300"
               >
                 <span className="text-sm font-semibold text-white">{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-neutral-200 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -586,7 +586,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
       {/* Embed Modal Drawer */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-[#0a0a0a] border border-white/15 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+          <div className="bg-[#0a0a0a] border border-white/15 rounded-[28px] max-w-lg w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -600,19 +600,19 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
             <p className="text-xs text-neutral-400 mb-4">
               Copy this lightweight, responsive iframe snippet into your documentation, blog, or engineering portal:
             </p>
-            <div className="p-3 bg-black border border-white/10 rounded-xl font-mono text-[11px] text-neutral-300 break-all mb-4">
+            <div className="p-3 bg-black border border-white/10 rounded-[18px] font-mono text-[11px] text-neutral-300 break-all mb-4">
               {embedSnippet}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-xl border border-white/10 text-xs font-mono text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-full border border-white/10 text-xs font-mono text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbed}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs font-mono flex items-center gap-1.5 transition-colors"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs font-mono flex items-center gap-1.5 transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Code'}

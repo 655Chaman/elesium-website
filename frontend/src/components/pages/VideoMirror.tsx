@@ -257,7 +257,7 @@ export default function VideoMirror() {
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 text-xs font-mono tracking-wider uppercase">
+                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 text-xs font-mono tracking-wider uppercase">
                             <Film className="w-3.5 h-3.5" />
                             {videoMasterclasses.length} Production Breakdowns
                         </span>
@@ -268,11 +268,11 @@ export default function VideoMirror() {
                 <section className="mb-16">
                     <div className="mb-6">
                         <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-3">
-                            <span className="flex items-center gap-1 font-semibold px-2.5 py-1 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
+                            <span className="flex items-center gap-1 font-semibold px-3 py-1 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                 <Building2 className="w-3.5 h-3.5" />
                                 {activeVideo.industry}
                             </span>
-                            <span className="flex items-center gap-1 font-semibold px-2.5 py-1 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
+                            <span className="flex items-center gap-1 font-semibold px-3 py-1 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                 <Layers className="w-3.5 h-3.5" />
                                 {activeVideo.category}
                             </span>
@@ -297,7 +297,7 @@ export default function VideoMirror() {
                     </div>
 
                     {/* Cinema Player Container */}
-                    <div className="relative rounded-xl overflow-hidden border border-neutral-200 dark:border-white/10 bg-black mb-8">
+                    <div className="relative rounded-[28px] overflow-hidden border border-neutral-200 dark:border-white/10 bg-black mb-8">
                         <div className="aspect-video w-full relative">
                             <iframe
                                 className="w-full h-full"
@@ -309,7 +309,7 @@ export default function VideoMirror() {
                         </div>
 
                         {/* Top Overlay Badge on Video */}
-                        <div className="px-6 py-3 bg-neutral-950 dark:bg-black border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+                        <div className="px-6 py-3.5 bg-neutral-950 dark:bg-black border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
                             <div className="flex items-center gap-2">
                                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-white" />
                                 <span className="text-neutral-300">
@@ -330,11 +330,11 @@ export default function VideoMirror() {
                     </div>
 
                     {/* High-Impact ROI Metric Cards */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
                         {activeVideo.roiMetrics.map((m, idx) => (
                             <div
                                 key={idx}
-                                className="p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 relative overflow-hidden group hover:border-black dark:hover:border-white/30 transition-all duration-300"
+                                className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 relative overflow-hidden group hover:border-black dark:hover:border-white/30 transition-all duration-300 h-full flex flex-col justify-between"
                             >
                                 <div className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1 font-mono text-black dark:text-white">
                                     {m.value}
@@ -350,7 +350,7 @@ export default function VideoMirror() {
                     </div>
 
                     {/* Interactive Workspace (Tabs: Architecture, Moments, Transcript) */}
-                    <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-6 lg:p-8 mb-12">
+                    <div className="rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-6 lg:p-8 mb-12">
                         {/* Tabs Navigation Header */}
                         <div className="flex border-b border-neutral-200 dark:border-white/10 pb-4 mb-6 gap-6 overflow-x-auto">
                             <button
@@ -405,7 +405,7 @@ export default function VideoMirror() {
                                 {activeVideo.architectureStages.map((stage, idx) => (
                                     <div
                                         key={idx}
-                                        className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between hover:border-black dark:hover:border-white/30 transition-all duration-300"
+                                        className="p-6 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full hover:border-black dark:hover:border-white/30 transition-all duration-300"
                                     >
                                         <div>
                                             <div className="flex items-center justify-between mb-3">
@@ -445,9 +445,9 @@ export default function VideoMirror() {
                                 {activeVideo.keyMoments.map((km, idx) => (
                                     <div
                                         key={idx}
-                                        className="p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:border-black dark:hover:border-white/30 transition-all flex flex-col sm:flex-row items-start gap-4"
+                                        className="p-5 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:border-black dark:hover:border-white/30 transition-all duration-300 flex flex-col sm:flex-row items-start gap-4"
                                     >
-                                        <div className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-xs font-bold shrink-0">
+                                        <div className="px-3.5 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-xs font-bold shrink-0">
                                             {km.time}
                                         </div>
                                         <div className="flex-1">
@@ -462,7 +462,7 @@ export default function VideoMirror() {
                                             {activeVideo.timecodes && activeVideo.timecodes[idx] && (
                                                 <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-neutral-200 dark:border-white/10 text-xs font-mono">
                                                     <span className="text-neutral-500">On-Screen Caption:</span>
-                                                    <span className="text-black dark:text-white bg-neutral-100 dark:bg-neutral-900 px-2 py-0.5 rounded border border-neutral-200 dark:border-white/10 font-bold">
+                                                    <span className="text-black dark:text-white bg-neutral-100 dark:bg-neutral-900 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-white/10 font-bold">
                                                         {activeVideo.timecodes[idx].caption}
                                                     </span>
                                                 </div>
@@ -484,7 +484,7 @@ export default function VideoMirror() {
                                     <div className="flex items-center gap-3">
                                         <button
                                             onClick={() => handleCopyTranscript(activeVideo.fullTranscript)}
-                                            className="text-xs font-mono text-black dark:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all"
+                                            className="text-xs font-mono text-black dark:text-white flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all duration-300"
                                         >
                                             {hasCopiedTranscript ? <Check className="w-3.5 h-3.5 text-black dark:text-white" /> : <Copy className="w-3.5 h-3.5" />}
                                             {hasCopiedTranscript ? 'Copied Transcript' : 'Copy Full Transcript'}
@@ -506,10 +506,10 @@ export default function VideoMirror() {
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                             className="accordion-panel overflow-hidden"
                                         >
-                                            <div className="p-6 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 font-mono text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed max-h-[500px] overflow-y-auto whitespace-pre-wrap select-text">
+                                            <div className="p-6 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 font-mono text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed max-h-[500px] overflow-y-auto whitespace-pre-wrap select-text">
                                                 {activeVideo.fullTranscript}
                                             </div>
                                         </motion.div>
@@ -538,18 +538,18 @@ export default function VideoMirror() {
 
                         {/* Search Input */}
                         <div className="relative w-full md:w-80">
-                            <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                            <Search className="w-4 h-4 text-neutral-400 absolute left-4 top-1/2 -translate-y-1/2" />
                             <input
                                 type="text"
                                 placeholder="Search keyword, industry, topic..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white/40 transition-colors"
+                                className="w-full pl-11 pr-4 py-2.5 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white/40 transition-colors"
                             />
                             {searchQuery && (
                                 <button
                                     onClick={() => setSearchQuery('')}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-black dark:hover:text-white"
+                                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-black dark:hover:text-white"
                                 >
                                     <X className="w-3.5 h-3.5" />
                                 </button>
@@ -563,7 +563,7 @@ export default function VideoMirror() {
                         <div className="flex flex-wrap items-center gap-2">
                             <button
                                 onClick={() => setActiveFilter('all')}
-                                className={`text-xs px-4 py-2 rounded-lg font-medium transition-all active:scale-[0.97] ${
+                                className={`text-xs px-4 py-2 rounded-full font-medium transition-all duration-300 active:scale-[0.97] ${
                                     activeFilter === 'all'
                                         ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                         : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-neutral-200 dark:border-white/10'
@@ -574,7 +574,7 @@ export default function VideoMirror() {
 
                             <button
                                 onClick={() => setActiveFilter('shorts')}
-                                className={`text-xs px-4 py-2 rounded-lg font-medium transition-all active:scale-[0.97] flex items-center gap-1.5 ${
+                                className={`text-xs px-4 py-2 rounded-full font-medium transition-all duration-300 active:scale-[0.97] flex items-center gap-1.5 ${
                                     activeFilter === 'shorts'
                                         ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                         : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-neutral-200 dark:border-white/10'
@@ -586,7 +586,7 @@ export default function VideoMirror() {
 
                             <button
                                 onClick={() => setActiveFilter('masterclasses')}
-                                className={`text-xs px-4 py-2 rounded-lg font-medium transition-all active:scale-[0.97] flex items-center gap-1.5 ${
+                                className={`text-xs px-4 py-2 rounded-full font-medium transition-all duration-300 active:scale-[0.97] flex items-center gap-1.5 ${
                                     activeFilter === 'masterclasses'
                                         ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                         : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-neutral-200 dark:border-white/10'
@@ -606,7 +606,7 @@ export default function VideoMirror() {
                                 <button
                                     key={ind}
                                     onClick={() => setSelectedIndustry(ind)}
-                                    className={`text-[11px] font-mono px-2.5 py-1 rounded-md transition-all ${
+                                    className={`text-[11px] font-mono px-3 py-1 rounded-full transition-all duration-300 ${
                                         selectedIndustry === ind
                                             ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                             : 'bg-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white'
@@ -620,7 +620,7 @@ export default function VideoMirror() {
 
                     {/* Video Gallery Grid */}
                     {filteredVideos.length === 0 ? (
-                        <div className="p-12 text-center rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="p-12 text-center rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                             <p className="text-neutral-600 dark:text-neutral-400 text-sm">No videos match your current search query or filter.</p>
                             <button
                                 onClick={() => { setSearchQuery(''); setActiveFilter('all'); setSelectedIndustry('all'); }}
@@ -638,7 +638,7 @@ export default function VideoMirror() {
                                 return (
                                     <div
                                         key={video.id}
-                                        className={`rounded-xl border transition-all duration-300 flex flex-col justify-between overflow-hidden group ${
+                                        className={`rounded-[24px] border transition-all duration-300 flex flex-col justify-between h-full overflow-hidden group ${
                                             isCurrentActive
                                                 ? 'border-black dark:border-white bg-neutral-50 dark:bg-neutral-950'
                                                 : 'border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30'
@@ -720,17 +720,17 @@ export default function VideoMirror() {
                                         </div>
 
                                         {/* Card Actions */}
-                                        <div className="p-5 pt-0 border-t border-neutral-200 dark:border-white/10 mt-auto flex items-center justify-between gap-3 text-xs">
+                                        <div className="p-5 pt-4 border-t border-neutral-200 dark:border-white/10 mt-auto flex items-center justify-between gap-3 text-xs">
                                             <button
                                                 onClick={() => handleOpenPlayModal(video)}
-                                                className="flex-1 py-2 rounded-lg bg-white hover:bg-neutral-100 dark:bg-black dark:hover:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 font-medium active:scale-[0.97] transition-all text-center"
+                                                className="flex-1 py-2.5 rounded-full bg-white hover:bg-neutral-100 dark:bg-black dark:hover:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 font-medium active:scale-[0.97] transition-all duration-300 text-center"
                                             >
                                                 Quick Preview
                                             </button>
 
                                             <Link
                                                 to={`/videos/${video.slug}/`}
-                                                className="flex-1 py-2 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold active:scale-[0.97] transition-all text-center flex items-center justify-center gap-1"
+                                                className="flex-1 py-2.5 rounded-full bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold active:scale-[0.97] transition-all duration-300 text-center flex items-center justify-center gap-1"
                                             >
                                                 Deep Dive
                                                 <ArrowRight className="w-3.5 h-3.5" />
@@ -744,9 +744,9 @@ export default function VideoMirror() {
                 </section>
 
                 {/* BOTTOM HIGH-CONVERTING EXECUTIVE CTA */}
-                <div className="p-8 lg:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-16">
+                <div className="p-8 lg:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-16">
                     <div className="relative z-10 max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 text-white text-xs font-mono tracking-wider uppercase mb-3">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono tracking-wider uppercase mb-3">
                             Deploy Production AI Systems
                         </div>
                         <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">
@@ -760,14 +760,14 @@ export default function VideoMirror() {
                     <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full md:w-auto">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-7 rounded-full bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-semibold text-xs sm:text-sm tracking-wide transition-all duration-300"
                         >
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all duration-300"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -802,13 +802,13 @@ export default function VideoMirror() {
                             initial={{ opacity: 0, scale: 0.97, y: 12 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.97, y: 12 }}
-                            transition={{ type: "spring", stiffness: 360, damping: 28 }}
-                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white flex flex-col z-10"
+                            transition={{ type: "spring", stiffness: 280, damping: 28 }}
+                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[28px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white flex flex-col z-10"
                         >
                             {/* Modal Header */}
                             <div className="p-4 sm:p-5 border-b border-neutral-200 dark:border-white/10 flex items-center justify-between gap-4">
                                 <div className="flex items-center gap-3 truncate">
-                                    <span className="px-2.5 py-0.5 rounded-lg text-[10px] font-mono uppercase tracking-wider bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-white/10 shrink-0">
+                                    <span className="px-3 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-white/10 shrink-0">
                                         {modalVideo.duration} • {modalVideo.category}
                                     </span>
                                     <h3 className="text-sm sm:text-base font-bold text-black dark:text-white truncate">
@@ -818,7 +818,7 @@ export default function VideoMirror() {
 
                                 <button
                                     onClick={handleClosePlayModal}
-                                    className="p-1.5 rounded-lg text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors shrink-0"
+                                    className="p-2 rounded-full text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all shrink-0"
                                     aria-label="Close modal"
                                 >
                                     <X className="w-5 h-5" />
@@ -843,12 +843,12 @@ export default function VideoMirror() {
                                     <span>Time-Stamped Chapters:</span>
                                 </div>
 
-                                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                                     {modalVideo.keyMoments.map((km, idx) => (
                                         <button
                                             key={idx}
                                             onClick={() => setModalActiveMoment(idx)}
-                                            className={`p-2.5 rounded-xl border text-left transition-all ${
+                                            className={`p-3 rounded-2xl border text-left transition-all duration-300 ${
                                                 modalActiveMoment === idx
                                                     ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white'
                                                     : 'bg-white dark:bg-black border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:border-black dark:hover:border-white/30'
@@ -866,7 +866,7 @@ export default function VideoMirror() {
 
                                 {/* Active Chapter Visual & Voiceover Callout */}
                                 {modalVideo.keyMoments[modalActiveMoment] && (
-                                    <div className="mt-4 p-3.5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-xs">
+                                    <div className="mt-4 p-4 rounded-2xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-xs">
                                         <div className="font-semibold text-black dark:text-white mb-1">
                                             {modalVideo.keyMoments[modalActiveMoment].title}
                                         </div>
@@ -881,7 +881,7 @@ export default function VideoMirror() {
                             <div className="p-4 sm:p-5 bg-neutral-50 dark:bg-neutral-950 flex flex-wrap items-center justify-between gap-4">
                                 <button
                                     onClick={() => handleCopyTranscript(modalVideo.fullTranscript, true)}
-                                    className="text-xs font-mono text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white flex items-center gap-1.5 px-3 py-2 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all"
+                                    className="text-xs font-mono text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white flex items-center gap-1.5 px-4 py-2 rounded-full border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all duration-300"
                                 >
                                     {modalCopied ? <Check className="w-3.5 h-3.5 text-black dark:text-white" /> : <Copy className="w-3.5 h-3.5" />}
                                     <span>{modalCopied ? 'Copied Full Transcript' : 'Copy Verbatim Transcript'}</span>
@@ -900,7 +900,7 @@ export default function VideoMirror() {
                                     <Link
                                         to={resolveVideoActionRoute(modalVideo.slug, modalVideo.industry)}
                                         onClick={handleClosePlayModal}
-                                        className="text-xs font-semibold text-white bg-black dark:text-black dark:bg-white hover:opacity-90 active:scale-[0.97] px-4 py-2 rounded-lg transition-all"
+                                        className="text-xs font-semibold text-white bg-black dark:text-black dark:bg-white hover:opacity-90 active:scale-[0.97] px-5 py-2 rounded-full transition-all duration-300"
                                     >
                                         Explore Architecture
                                     </Link>

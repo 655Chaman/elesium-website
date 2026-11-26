@@ -85,7 +85,7 @@ export default function EmbedVectorDbBenchmark() {
               <button
                 key={dim}
                 onClick={() => setDimensions(dim)}
-                className={`active:scale-[0.97] py-0.5 text-[10px] font-mono rounded border transition-colors ${
+                className={`active:scale-[0.97] py-0.5 text-[10px] font-mono rounded border transition-all duration-300 ${
                   dimensions === dim
                     ? 'border-white/30 bg-white/10 text-white'
                     : 'border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -112,7 +112,7 @@ export default function EmbedVectorDbBenchmark() {
               <button
                 key={q.id}
                 onClick={() => setQuantizationType(q.id as any)}
-                className={`active:scale-[0.97] py-0.5 text-[10px] font-mono rounded border transition-colors ${
+                className={`active:scale-[0.97] py-0.5 text-[10px] font-mono rounded border transition-all duration-300 ${
                   quantizationType === q.id
                     ? 'border-white/30 bg-white/10 text-white'
                     : 'border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -147,7 +147,7 @@ export default function EmbedVectorDbBenchmark() {
         {results.engines.slice(0, 2).map((eng, i) => (
           <div
             key={eng.name}
-            className={`p-3 rounded-xl border ${
+            className={`p-3 rounded-[18px] border ${
               i === 0
                 ? 'border-white/30 bg-white/[0.05]'
                 : 'border-neutral-800 bg-neutral-900/40'
@@ -182,7 +182,7 @@ export default function EmbedVectorDbBenchmark() {
       </div>
 
       {/* Cloud SaaS Comparison Note */}
-      <div className="p-3 rounded-xl border border-neutral-800 bg-neutral-900/30 text-xs text-neutral-400 flex items-center justify-between">
+      <div className="p-3 rounded-[18px] border border-neutral-800 bg-neutral-900/30 text-xs text-neutral-400 flex items-center justify-between">
         <div>
           <span className="text-neutral-300 font-semibold">Pinecone Serverless: </span>
           <span>${results.engines[2].monthlyCostUsd}/mo • {results.engines[2].p99LatencyMs}ms p99 (+WAN TLS)</span>
@@ -198,7 +198,7 @@ export default function EmbedVectorDbBenchmark() {
           href="https://elesium.online/tools/enterprise-vector-db-latency-benchmark"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white flex items-center gap-1 transition-colors"
+          className="hover:text-white flex items-center gap-1 transition-all duration-300"
         >
           Open Full Benchmark
           <ExternalLink className="w-3 h-3 text-neutral-200" />

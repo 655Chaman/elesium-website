@@ -138,7 +138,7 @@ export default function Glossary() {
 
         {/* Hero Header */}
         <header className="mb-14 text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-wider mb-6">
             <BookOpen className="w-3.5 h-3.5 text-neutral-600 dark:text-neutral-400" />
             <span>Sovereign Knowledge Graph &middot; Lexicon</span>
           </div>
@@ -152,7 +152,7 @@ export default function Glossary() {
           </p>
 
           {/* Technical Overview */}
-          <div className="answer-capsule text-left mb-10 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-3xl mx-auto">
+          <div className="answer-capsule text-left mb-10 p-6 sm:p-7 rounded-[24px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-3xl mx-auto">
             <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
               <Cpu className="w-4 h-4 text-black dark:text-white" />
               Sovereign AI Engineering Terminology
@@ -170,7 +170,7 @@ export default function Glossary() {
               placeholder="Search concepts, acronyms (e.g. EDAF, MLA, DPDP)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-lg text-black dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white text-sm transition-all"
+              className="w-full pl-11 pr-4 py-3 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full text-black dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white text-sm transition-all duration-300"
             />
           </div>
 
@@ -180,7 +180,7 @@ export default function Glossary() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium active:scale-[0.97] transition-all ${
+                className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium active:scale-[0.97] transition-all duration-300 ${
                   selectedCategory === cat
                     ? 'bg-black text-white dark:bg-white dark:text-black'
                     : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/25'
@@ -213,20 +213,20 @@ export default function Glossary() {
             <article
               key={item.slug}
               id={item.slug}
-              className="group bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/30 rounded-xl p-6 sm:p-7 transition-all duration-200 flex flex-col justify-between"
+              className="group h-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/30 rounded-[28px] p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Header row */}
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 mb-2">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 mb-2">
                       {getCategoryIcon(item.category)}
                       {item.category}
                     </span>
                     <h2 className="text-lg sm:text-xl font-bold text-black dark:text-white">
                       {item.term}
                       {item.acronym && (
-                        <span className="ml-2 font-mono text-xs px-2 py-0.5 bg-white dark:bg-black text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-white/10 rounded-md">
+                        <span className="ml-2 font-mono text-xs px-2.5 py-0.5 bg-white dark:bg-black text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-white/10 rounded-full">
                           {item.acronym}
                         </span>
                       )}
@@ -235,7 +235,7 @@ export default function Glossary() {
                 </div>
 
                 {/* Short Definition */}
-                <div className="glossary-term-def bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-xl p-4 mb-4 text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 leading-relaxed font-medium">
+                <div className="glossary-term-def bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[18px] p-4 mb-4 text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 leading-relaxed font-medium">
                   {item.shortDefinition}
                 </div>
 
@@ -247,7 +247,7 @@ export default function Glossary() {
 
               {/* Benchmark SLA & Action links */}
               <div className="pt-4 border-t border-neutral-200 dark:border-white/10 mt-auto">
-                <div className="flex items-center justify-between text-xs font-mono text-black dark:text-white bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-3.5 py-2 mb-3">
+                <div className="flex items-center justify-between text-xs font-mono text-black dark:text-white bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-xl px-3.5 py-2 mb-3">
                   <span className="text-neutral-600 dark:text-neutral-400 text-[11px] uppercase tracking-wider">Production SLA:</span>
                   <span className="font-semibold">{item.productionBenchmark}</span>
                 </div>
@@ -280,13 +280,13 @@ export default function Glossary() {
 
         {/* Empty state */}
         {filteredTerms.length === 0 && (
-          <div className="text-center py-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl mb-16">
+          <div className="text-center py-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] mb-16">
             <BookOpen className="w-10 h-10 text-neutral-400 mx-auto mb-3" />
             <h3 className="text-base font-bold text-black dark:text-white mb-1">No glossary terms matched your query</h3>
             <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-4">Try searching for broader keywords like &quot;VPC&quot;, &quot;agent&quot;, or &quot;cache&quot;.</p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg text-xs font-semibold active:scale-[0.97] transition-all"
+              className="px-5 py-2.5 bg-black dark:bg-white text-white dark:text-black rounded-full text-xs font-semibold active:scale-[0.97] transition-all duration-300"
             >
               Reset Filters
             </button>
@@ -294,7 +294,7 @@ export default function Glossary() {
         )}
 
         {/* Institutional Bottom CTA */}
-        <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
+        <div className="rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-3">
             Need Custom Multi-Agent Architecture for Your Enterprise?
           </h2>
@@ -304,14 +304,14 @@ export default function Glossary() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <button
               onClick={openWhatsApp}
-              className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto h-11 px-7 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Chat on WhatsApp</span>
             </button>
             <Link
               to="/waitlist/"
-              className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+              className="w-full sm:w-auto h-11 px-7 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-1.5"
             >
               <span>ele-in SaaS Waitlist</span>
               <span>&rarr;</span>

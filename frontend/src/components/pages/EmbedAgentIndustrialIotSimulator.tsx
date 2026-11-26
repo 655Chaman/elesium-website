@@ -65,7 +65,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <Factory className="w-4 h-4" />
             </div>
             <div>
@@ -91,7 +91,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
               max="100"
               value={connectedPlcCount}
               onChange={(e) => setConnectedPlcCount(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -107,7 +107,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
               step="10"
               value={samplingFrequencyHz}
               onChange={(e) => setSamplingFrequencyHz(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -156,17 +156,17 @@ export default function EmbedAgentIndustrialIotSimulator() {
 
         {/* Primary Metrics Grid */}
         <div className="grid grid-cols-3 gap-2 pt-2">
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">Edge P99 Latency</div>
             <div className="text-base font-bold text-white mt-0.5 font-mono">{results.edgeP99LatencyMs}ms</div>
             <div className="text-[9px] text-neutral-500">Deterministic loop</div>
           </div>
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">Downtime Cut</div>
             <div className="text-base font-bold text-white mt-0.5 font-mono">{results.unplannedDowntimeReductionPct}%</div>
             <div className="text-[9px] text-neutral-500">avoided outages</div>
           </div>
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">Accuracy</div>
             <div className="text-base font-bold text-amber-400 mt-0.5 font-mono">{results.anomalyDetectionAccuracyPct}%</div>
             <div className="text-[9px] text-neutral-500">spindle wear detect</div>
@@ -174,7 +174,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
         </div>
 
         {/* SVG Latency Curve */}
-        <div className="bg-neutral-900/50 border border-neutral-800/80 rounded-lg p-3">
+        <div className="bg-neutral-900/50 border border-neutral-800/80 rounded-[18px] p-3">
           <div className="flex justify-between items-center text-[10px] text-neutral-400 mb-1.5">
             <span className="font-mono">EDGE P99 LATENCY VS PLC SCALE (1 TO {connectedPlcCount} PLCS)</span>
             <span className="text-neutral-200 font-mono">P99 {results.edgeP99LatencyMs}ms</span>
@@ -201,7 +201,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
         </div>
 
         {/* Annual Savings Callout */}
-        <div className="bg-white/[0.05] border border-white/15 rounded-lg p-2.5 flex items-center justify-between text-xs">
+        <div className="bg-white/[0.05] border border-white/15 rounded-xl p-2.5 flex items-center justify-between text-xs">
           <div>
             <div className="text-[10px] text-neutral-200 font-mono font-medium">ESTIMATED ANNUAL SCRAP SAVINGS</div>
             <div className="text-sm font-bold text-white font-mono">
@@ -220,7 +220,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-neutral-200 hover:text-white font-medium transition-colors"
+            className="flex items-center text-neutral-200 hover:text-white font-medium transition-all duration-300"
           >
             Powered by Elesium Enterprise AI
             <ArrowUpRight className="w-3 h-3 ml-0.5" />

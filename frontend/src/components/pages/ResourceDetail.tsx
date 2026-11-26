@@ -111,7 +111,7 @@ export default function ResourceDetail() {
                     >
                         {/* Meta Category & Timestamps */}
                         <div className="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-neutral-600 dark:text-neutral-400">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-medium uppercase tracking-wider text-[11px]">
+                            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-medium uppercase tracking-wider text-[11px]">
                                 <FileText className="w-3 h-3 text-black dark:text-white" />
                                 {resource.category}
                             </span>
@@ -140,7 +140,7 @@ export default function ResourceDetail() {
                         <div className="flex flex-wrap items-center gap-3 pb-10 mb-10 border-b border-neutral-200 dark:border-white/10">
                             <button
                                 onClick={openWhatsApp}
-                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-sm active:scale-[0.97] transition-all group"
+                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-sm active:scale-[0.97] transition-all duration-300 group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -151,7 +151,7 @@ export default function ResourceDetail() {
                                 href={resource.googleDriveLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-sm active:scale-[0.97] transition-all"
+                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-sm active:scale-[0.97] transition-all duration-300"
                             >
                                 <Download className="h-4 w-4" />
                                 <span>Download PDF Document</span>
@@ -159,7 +159,7 @@ export default function ResourceDetail() {
 
                             <Link
                                 to="/waitlist/"
-                                className="inline-flex items-center gap-1.5 px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-neutral-50 dark:hover:bg-white/5 text-neutral-600 dark:text-neutral-400 font-medium text-xs sm:text-sm active:scale-[0.97] transition-all"
+                                className="inline-flex items-center gap-1.5 px-6 py-3.5 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-neutral-50 dark:hover:bg-white/5 text-neutral-600 dark:text-neutral-400 font-medium text-xs sm:text-sm active:scale-[0.97] transition-all duration-300"
                             >
                                 <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
@@ -267,7 +267,7 @@ export default function ResourceDetail() {
                         <BlueprintDownloadCard onTelemetry={trackInteraction} />
 
                         {/* Live Telemetry Status Bar */}
-                        <div className="my-10 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+                        <div className="my-10 p-4 rounded-2xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                             <div className="flex items-center gap-3">
                                 <span className="flex items-center gap-1.5">
                                     Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
@@ -277,13 +277,13 @@ export default function ResourceDetail() {
                                 <span className="hidden sm:inline">|</span>
                                 <span className="hidden sm:inline">Interactions: <strong className="text-black dark:text-white">{interactionCount}</strong></span>
                             </div>
-                            <span className="text-[11px] px-2.5 py-0.5 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-semibold">
+                            <span className="text-[11px] px-3 py-0.5 rounded-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-semibold">
                                 {isLastLongestClickEligible ? 'High-Retention Verified (180s+)' : isGoodClick ? 'GoodClick Active (120s+)' : 'Logging Session Telemetry'}
                             </span>
                         </div>
 
                         {/* Direct WhatsApp Engineering Intake Card */}
-                        <div className="my-12 p-8 sm:p-10 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                        <div className="my-12 p-8 sm:p-10 rounded-[32px] bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
                             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-400">
                                 <ShieldCheck className="w-3.5 h-3.5" />
                                 <span>Direct Engineering Intake SLA</span>
@@ -297,7 +297,7 @@ export default function ResourceDetail() {
                             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <button
                                     onClick={openWhatsApp}
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-8 py-4 rounded-lg text-sm active:scale-[0.97] transition-all group"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-8 py-4 rounded-full text-sm active:scale-[0.97] transition-all duration-300 group"
                                 >
                                     <MessageSquare className="w-4 h-4 fill-current" />
                                     <span>Chat on WhatsApp with Lead Architect</span>
@@ -305,7 +305,7 @@ export default function ResourceDetail() {
                                 </button>
                                 <Link
                                     to="/waitlist/"
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-lg text-sm active:scale-[0.97] transition-all"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-7 py-4 rounded-full text-sm active:scale-[0.97] transition-all duration-300"
                                 >
                                     <span>ele-in SaaS Waitlist &rarr;</span>
                                 </Link>

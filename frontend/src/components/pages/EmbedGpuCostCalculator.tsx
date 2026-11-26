@@ -59,7 +59,7 @@ export default function EmbedGpuCostCalculator() {
         <link rel="canonical" href="https://elesium.online/embed/gpu-cost-calculator" />
       </Helmet>
 
-      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[720px] flex flex-col justify-between border border-neutral-800 rounded-xl shadow-2xl">
+      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[720px] flex flex-col justify-between border border-neutral-800 rounded-[24px] shadow-2xl">
         <div>
           {/* Header Bar */}
           <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
@@ -71,10 +71,10 @@ export default function EmbedGpuCostCalculator() {
             </div>
             
             {/* Currency toggle */}
-            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-md border border-neutral-800 text-[10px]">
+            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-full border border-neutral-800 text-[10px]">
               <button
                 onClick={() => setCurrency('USD')}
-                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-colors ${
+                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-all duration-300 ${
                   currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
                 }`}
               >
@@ -82,7 +82,7 @@ export default function EmbedGpuCostCalculator() {
               </button>
               <button
                 onClick={() => setCurrency('INR')}
-                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-colors ${
+                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-all duration-300 ${
                   currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
                 }`}
               >
@@ -143,7 +143,7 @@ export default function EmbedGpuCostCalculator() {
           </div>
 
           {/* Token Volume Slider */}
-          <div className="bg-neutral-900/80 p-3.5 rounded-xl border border-neutral-800 mb-4">
+          <div className="bg-neutral-900/80 p-3.5 rounded-2xl border border-neutral-800 mb-4">
             <div className="flex justify-between items-center text-xs font-mono mb-1.5">
               <span className="text-neutral-300">Monthly Token Volume:</span>
               <span className="text-white font-bold bg-white/[0.05] px-2 py-0.5 rounded border border-white/15">
@@ -157,7 +157,7 @@ export default function EmbedGpuCostCalculator() {
               step="10"
               value={monthlyTokenVolumeMillions}
               onChange={(e) => setMonthlyTokenVolumeMillions(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
             <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
               <span>10M tokens</span>
@@ -167,7 +167,7 @@ export default function EmbedGpuCostCalculator() {
           </div>
 
           {/* Core Results Banner */}
-          <div className="bg-neutral-950 border border-white/30 rounded-xl p-4 mb-4">
+          <div className="bg-neutral-950 border border-white/30 rounded-2xl p-4 mb-4">
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-[10px] font-mono uppercase text-neutral-400 mb-0.5">Estimated Net Monthly Savings</div>
@@ -192,22 +192,22 @@ export default function EmbedGpuCostCalculator() {
 
           {/* Quick Metrics Matrix */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono mb-4">
-            <div className="p-2.5 rounded-lg bg-neutral-900/60 border border-neutral-800">
+            <div className="p-2.5 rounded-xl bg-neutral-900/60 border border-neutral-800">
               <div className="text-[10px] text-neutral-400">Self-Hosted Cost</div>
               <div className="text-sm font-bold text-white mt-0.5">{formatFinOpsCurrency(results.monthlySelfHostedCostUSD, currency)}</div>
               <div className="text-[9px] text-neutral-400">{results.recommendedGpuCount}x GPUs</div>
             </div>
-            <div className="p-2.5 rounded-lg bg-neutral-900/60 border border-red-950/60">
+            <div className="p-2.5 rounded-xl bg-neutral-900/60 border border-red-950/60">
               <div className="text-[10px] text-neutral-400">Hyperscaler Cost</div>
               <div className="text-sm font-bold text-red-400 mt-0.5">{formatFinOpsCurrency(results.monthlyHyperscalerCostUSD, currency)}</div>
               <div className="text-[9px] text-neutral-400">{activeHyperscaler.provider}</div>
             </div>
-            <div className="p-2.5 rounded-lg bg-neutral-900/60 border border-neutral-800">
+            <div className="p-2.5 rounded-xl bg-neutral-900/60 border border-neutral-800">
               <div className="text-[10px] text-neutral-400">Cluster Throughput</div>
               <div className="text-sm font-bold text-white mt-0.5">{results.sustainedConcurrentThroughputTokensPerSec.toLocaleString()} t/s</div>
               <div className="text-[9px] text-neutral-400">PagedAttention</div>
             </div>
-            <div className="p-2.5 rounded-lg bg-neutral-900/60 border border-neutral-800">
+            <div className="p-2.5 rounded-xl bg-neutral-900/60 border border-neutral-800">
               <div className="text-[10px] text-neutral-400">Data Sovereignty</div>
               <div className="text-sm font-bold text-white mt-0.5">{results.dataSovereigntyScore}/100</div>
               <div className="text-[9px] text-neutral-400">DPDP Air-Gapped</div>

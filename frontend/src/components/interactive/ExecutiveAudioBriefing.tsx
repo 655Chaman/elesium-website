@@ -164,16 +164,16 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-8 p-5 md:p-6 rounded-2xl bg-gradient-to-r from-gray-950 via-[#0B0F19] to-gray-950 border border-white/30 shadow-2xl text-white font-sans">
+        <div className="interactive-asset my-8 p-5 md:p-6 rounded-[28px] bg-gradient-to-r from-gray-950 via-[#0B0F19] to-gray-950 border border-white/30 shadow-2xl text-white font-sans">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4 mb-4">
                 <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-neutral-800/20 border border-white/40 flex items-center justify-center text-neutral-200">
+                    <div className="h-10 w-10 rounded-2xl bg-neutral-800/20 border border-white/40 flex items-center justify-center text-neutral-200">
                         <Headphones className="h-5 w-5" />
                     </div>
                     <div>
                         <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-200 bg-white/10 px-2 py-0.5 rounded border border-white/20 flex items-center gap-1">
+                            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-200 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/20 flex items-center gap-1">
                                 <Radio className="h-2.5 w-2.5 " />
                                 Executive Audio Briefing
                             </span>
@@ -189,7 +189,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
 
                 {/* Speed Toggle */}
                 <div className="flex items-center gap-2 self-start sm:self-auto">
-                    <div className="flex items-center bg-white/5 p-1 rounded-lg border border-white/10 text-[11px] font-mono">
+                    <div className="flex items-center bg-white/5 p-1 rounded-full border border-white/10 text-[11px] font-mono">
                         {([1, 1.25, 1.5, 2] as const).map(rate => (
                             <button
                                 key={rate}
@@ -197,9 +197,9 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                                     setPlaybackRate(rate);
                                     onTelemetry?.('audio_speed_changed', { rate });
                                 }}
-                                className={`px-2 py-0.5 rounded transition-colors ${
+                                className={`px-2.5 py-0.5 rounded-full active:scale-[0.97] transition-all duration-300 ${
                                     playbackRate === rate
-                                        ? 'bg-neutral-800 text-white font-bold'
+                                        ? 'bg-white text-black font-bold'
                                         : 'text-white/60 hover:text-white'
                                 }`}
                             >
@@ -243,7 +243,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                 <div className="flex items-center gap-3">
                     <button
                         onClick={togglePlay}
-                        className="h-11 w-11 rounded-full bg-neutral-800 hover:bg-white text-white flex items-center justify-center shadow-lg shadow-neutral-800/30 transition-transform active:scale-95"
+                        className="h-11 w-11 rounded-full bg-white hover:bg-neutral-200 text-black flex items-center justify-center shadow-lg shadow-white/20 transition-all duration-300 active:scale-[0.97]"
                     >
                         {isPlaying ? (
                             <Pause className="h-5 w-5 fill-current" />
@@ -276,7 +276,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                         <button
                             key={idx}
                             onClick={() => handleSeekChapter(chap, idx)}
-                            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono transition-colors border ${
+                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono active:scale-[0.97] transition-all duration-300 border ${
                                 activeChapterIndex === idx
                                     ? 'bg-white/20 text-neutral-200 border-white/40'
                                     : 'bg-white/5 text-white/60 hover:text-white border-white/5'

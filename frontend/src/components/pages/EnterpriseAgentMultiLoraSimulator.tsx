@@ -128,7 +128,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e90a_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e90a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-4">
             <Layers className="w-3.5 h-3.5" />
             TOOL #55: MULTI-TENANT INFERENCE &amp; ADAPTER MULTIPLEXING
           </div>
@@ -144,21 +144,21 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
           <div className="mt-6 flex flex-wrap gap-3">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white text-xs font-mono transition"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white text-xs font-mono transition-all duration-300"
             >
               <Code className="w-4 h-4 text-neutral-200" />
               Embed This Calculator
             </button>
             <button
               onClick={handleCopyMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white text-xs font-mono transition"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white text-xs font-mono transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-200" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Architecture Memo'}
@@ -171,7 +171,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 setConcurrentBatchedRequests(128);
                 setHardwareCluster('nvidia_h100_sxm5');
               }}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-400 hover:text-white text-xs font-mono transition"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-400 hover:text-white text-xs font-mono transition-all duration-300"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               Reset Defaults
@@ -186,22 +186,22 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
 
           {/* Left Column: Sliders & Controls (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
                 <div className="flex items-center gap-2 text-sm font-bold text-white font-mono">
                   <Sliders className="w-4 h-4 text-neutral-200" />
                   ROUTING PARAMETERS
                 </div>
-                <div className="flex items-center gap-1 bg-neutral-950 p-1 rounded-lg border border-neutral-800 text-xs font-mono">
+                <div className="flex items-center gap-1 bg-neutral-950 p-1 rounded-full border border-neutral-800 text-xs font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`active:scale-[0.97] px-2 py-0.5 rounded transition ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded transition-all duration-300 ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
                   >
                     INR
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`active:scale-[0.97] px-2 py-0.5 rounded transition ${currency === 'USD' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded transition-all duration-300 ${currency === 'USD' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
                   >
                     USD
                   </button>
@@ -224,7 +224,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                       <button
                         key={m.id}
                         onClick={() => setBaseModelFamily(m.id as BaseModelFamily)}
-                        className={`active:scale-[0.97] p-2.5 rounded-xl border text-left transition ${
+                        className={`active:scale-[0.97] p-2.5 rounded-xl border text-left transition-all duration-300 ${
                           baseModelFamily === m.id
                             ? 'bg-white/[0.05] border-white/30 text-white font-bold shadow-lg'
                             : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -249,7 +249,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                     step="4"
                     value={numActiveAdapters}
                     onChange={(e) => setNumActiveAdapters(Number(e.target.value))}
-                    className="w-full h-1.5 bg-neutral-950 rounded-lg appearance-none cursor-pointer accent-white border border-neutral-800"
+                    className="w-full h-1.5 bg-neutral-950 rounded-full appearance-none cursor-pointer accent-white border border-neutral-800"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-neutral-500 mt-1">
                     <span>4 (Small Swarm)</span>
@@ -268,7 +268,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                       <button
                         key={r}
                         onClick={() => setAdapterRank(r)}
-                        className={`active:scale-[0.97] py-2 rounded-xl border text-center transition ${
+                        className={`active:scale-[0.97] py-2 rounded-full border text-center transition-all duration-300 ${
                           adapterRank === r
                             ? 'bg-white/[0.05] border-white/30 text-white font-bold'
                             : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -293,7 +293,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                     step="16"
                     value={concurrentBatchedRequests}
                     onChange={(e) => setConcurrentBatchedRequests(Number(e.target.value))}
-                    className="w-full h-1.5 bg-neutral-950 rounded-lg appearance-none cursor-pointer accent-white border border-neutral-800"
+                    className="w-full h-1.5 bg-neutral-950 rounded-full appearance-none cursor-pointer accent-white border border-neutral-800"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-neutral-500 mt-1">
                     <span>16 Queries</span>
@@ -317,7 +317,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                       <button
                         key={hw.id}
                         onClick={() => setHardwareCluster(hw.id as HardwareCluster)}
-                        className={`active:scale-[0.97] p-2 rounded-xl border text-left transition ${
+                        className={`active:scale-[0.97] p-2 rounded-xl border text-left transition-all duration-300 ${
                           hardwareCluster === hw.id
                             ? 'bg-white/[0.05] border-white/30 text-white font-bold'
                             : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -339,7 +339,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             {/* Top 3 Primary Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Card 1: VRAM Saved */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 relative overflow-hidden">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <Layers className="w-16 h-16 text-neutral-200" />
                 </div>
@@ -353,7 +353,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
               </div>
 
               {/* Card 2: Switching Latency */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 relative overflow-hidden">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <Gauge className="w-16 h-16 text-neutral-200" />
                 </div>
@@ -367,7 +367,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
               </div>
 
               {/* Card 3: FinOps Savings */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 relative overflow-hidden">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <Coins className="w-16 h-16 text-amber-400" />
                 </div>
@@ -382,7 +382,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             </div>
 
             {/* Throughput & Adapter Pool Specs */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-4">
                 <h3 className="text-sm font-bold text-white font-mono flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-neutral-200" />
@@ -394,22 +394,22 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
-                <div className="bg-neutral-950/70 p-3 rounded-xl border border-neutral-800/60">
+                <div className="bg-neutral-950/70 p-3 rounded-[18px] border border-neutral-800/60">
                   <div className="text-[10px] text-neutral-500">ADAPTER POOL VRAM</div>
                   <div className="text-base font-bold text-neutral-200 mt-0.5">{results.totalAdapterPoolVramGb} GB</div>
                   <div className="text-[10px] text-neutral-400 mt-0.5">{numActiveAdapters} LoRA matrices</div>
                 </div>
-                <div className="bg-neutral-950/70 p-3 rounded-xl border border-neutral-800/60">
+                <div className="bg-neutral-950/70 p-3 rounded-[18px] border border-neutral-800/60">
                   <div className="text-[10px] text-neutral-500">BATCH THROUGHPUT</div>
                   <div className="text-base font-bold text-white mt-0.5">{results.batchThroughputTokensPerSec.toLocaleString()}</div>
                   <div className="text-[10px] text-neutral-400 mt-0.5">Tokens / Second</div>
                 </div>
-                <div className="bg-neutral-950/70 p-3 rounded-xl border border-neutral-800/60">
+                <div className="bg-neutral-950/70 p-3 rounded-[18px] border border-neutral-800/60">
                   <div className="text-[10px] text-neutral-500">AVG ADAPTER SIZE</div>
                   <div className="text-base font-bold text-white mt-0.5">{Math.round((results.totalAdapterPoolVramGb * 1024) / numActiveAdapters)} MB</div>
                   <div className="text-[10px] text-neutral-400 mt-0.5">Rank {adapterRank} FP16</div>
                 </div>
-                <div className="bg-neutral-950/70 p-3 rounded-xl border border-neutral-800/60">
+                <div className="bg-neutral-950/70 p-3 rounded-[18px] border border-neutral-800/60">
                   <div className="text-[10px] text-neutral-500">EXECUTION KERNEL</div>
                   <div className="text-base font-bold text-white mt-0.5">Batched SGMV</div>
                   <div className="text-[10px] text-neutral-400 mt-0.5">Zero CUDA Stall</div>
@@ -418,7 +418,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             </div>
 
             {/* Memory Allocation Stages */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6">
               <h3 className="text-sm font-bold text-white font-mono mb-4 flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-neutral-200" />
                 PAGED GPU MEMORY ALLOCATION BREAKDOWN
@@ -428,7 +428,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 {results.adapterAllocationTrace.map((stage, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-xl border border-neutral-800/70 bg-neutral-950/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+                    className="p-3.5 rounded-2xl border border-neutral-800/70 bg-neutral-950/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
                   >
                     <div>
                       <div className="font-bold text-neutral-200 flex items-center gap-2">
@@ -452,7 +452,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
         </div>
 
         {/* Technical Architecture Deep Dive */}
-        <div className="mt-12 bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-8">
+        <div className="mt-12 bg-neutral-900/40 border border-neutral-800/80 rounded-[24px] p-8">
           <h2 className="text-xl font-bold text-white mb-4">
             Underlying Technical Architecture: Zero-Copy LoRA Multiplexing (S-LoRA &amp; Punica)
           </h2>
@@ -460,19 +460,19 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             In modern enterprise AI systems, running separate fine-tuned 70B models for individual tasks (legal, financial, customer support, and code review) leads to massive GPU VRAM replication and prohibitive cloud hosting costs. Multi-LoRA dynamic adapter switching solves this bottleneck by freezing the base foundation model and serving hundreds of low-rank delta matrices ($\Delta W = B \times A$) simultaneously on shared GPU hardware.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div className="p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+            <div className="p-4 rounded-2xl bg-neutral-950/60 border border-neutral-800">
               <h3 className="text-sm font-bold text-white mb-2">1. Unified Paged Memory Pool</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Adapters are decomposed into 2MB memory pages stored in GPU HBM. Paged memory eliminates external fragmentation, allowing hundreds of adapters with different ranks to coexist dynamically.
               </p>
             </div>
-            <div className="p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+            <div className="p-4 rounded-2xl bg-neutral-950/60 border border-neutral-800">
               <h3 className="text-sm font-bold text-white mb-2">2. Batched Segment GEMV (SGMV)</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Rather than merging adapter weights into the base model weights, custom CUDA kernels multiply token activation vectors by different adapter matrices in a single batched kernel launch.
               </p>
             </div>
-            <div className="p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+            <div className="p-4 rounded-2xl bg-neutral-950/60 border border-neutral-800">
               <h3 className="text-sm font-bold text-white mb-2">3. Sub-10ms Switching SLA</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Zero PCIe transfers occur during routine generation. Routing tokens to different task adapters is governed purely by integer metadata pointers, achieving consistent sub-5ms task switching.
@@ -490,11 +490,11 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-neutral-800/80 rounded-xl bg-neutral-900/40 overflow-hidden"
+                className="border border-neutral-800/80 rounded-[24px] bg-neutral-900/40 overflow-hidden"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full p-4 text-left font-medium text-neutral-200 flex justify-between items-center text-sm hover:text-white transition"
+                  className="active:scale-[0.97] w-full p-4 text-left font-medium text-neutral-200 flex justify-between items-center text-sm hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -512,7 +512,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
         </div>
 
         {/* Lead Generation & Mandate Application */}
-        <div className="mt-16 bg-gradient-to-b from-neutral-900/80 to-neutral-950 border border-neutral-800 rounded-xl p-8 sm:p-12 text-center">
+        <div className="mt-16 bg-gradient-to-b from-neutral-900/80 to-neutral-950 border border-neutral-800 rounded-[32px] p-8 sm:p-12 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
               Deploy Sovereign Multi-LoRA Runtimes on Private Infrastructure
@@ -520,10 +520,10 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             <p className="text-sm text-neutral-400 mb-8 leading-relaxed">
               Consolidate your enterprise task fine-tuning across legal, BFSI, and logistics into a single sovereign foundation model cluster. Schedule an architecture review with our principal AI systems engineers.
             </p>
-            <div className="text-left bg-neutral-950 p-6 rounded-xl border border-neutral-800">
+            <div className="text-left bg-neutral-950 p-6 rounded-[24px] border border-neutral-800">
               {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -536,7 +536,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -554,7 +554,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 shadow-2xl">
             <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
               <h3 className="text-sm font-bold text-white font-mono flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -573,18 +573,18 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             <textarea
               readOnly
               value={embedSnippet}
-              className="w-full h-28 bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 select-all mb-4 focus:outline-none focus:border-white/40"
+              className="w-full h-28 bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 select-all mb-4 focus:outline-none focus:border-white/40"
             />
             <div className="flex justify-end gap-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg text-xs font-mono text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-mono text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={handleCopyEmbed}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-mono font-medium flex items-center gap-1.5 transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-mono font-medium flex items-center gap-1.5 transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Snippet' : 'Copy HTML Snippet'}

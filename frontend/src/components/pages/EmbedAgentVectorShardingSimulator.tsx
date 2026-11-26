@@ -68,7 +68,7 @@ export default function EmbedAgentVectorShardingSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <Database className="w-4 h-4" />
             </div>
             <div>
@@ -76,14 +76,14 @@ export default function EmbedAgentVectorShardingSimulator() {
               <p className="text-[10px] text-neutral-400">HNSW Graph ANN Traversal &amp; Distributed Quantization</p>
             </div>
           </div>
-          <span className="text-[10px] px-2 py-0.5 rounded-lg font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
+          <span className="text-[10px] px-2 py-0.5 rounded-full font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
             {results.statusClassification}
           </span>
         </div>
 
         {/* Primary Metrics Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">P99 Latency</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.p99QueryLatencyMs} <span className="text-xs text-neutral-500 font-normal">ms</span>
@@ -91,7 +91,7 @@ export default function EmbedAgentVectorShardingSimulator() {
             <span className="text-[9px] text-neutral-500 block">P50: {results.p50QueryLatencyMs}ms</span>
           </div>
 
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">RAM Footprint</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.memoryFootprintGb} <span className="text-xs text-neutral-500 font-normal">GB</span>
@@ -99,7 +99,7 @@ export default function EmbedAgentVectorShardingSimulator() {
             <span className="text-[9px] text-neutral-500 block">Across {shardCount} shards</span>
           </div>
 
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">Recall Rate</span>
             <div className="text-lg font-black font-mono text-amber-400 mt-0.5">
               {results.recallAccuracyPct}%
@@ -107,7 +107,7 @@ export default function EmbedAgentVectorShardingSimulator() {
             <span className="text-[9px] text-neutral-500 block">Top-K accuracy</span>
           </div>
 
-          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-lg p-2.5">
+          <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-2.5">
             <span className="text-[10px] text-neutral-400 uppercase tracking-wider block font-medium">Throughput</span>
             <div className="text-lg font-black font-mono text-neutral-200 mt-0.5">
               {results.indexingThroughputVectorsPerSec.toLocaleString()}
@@ -117,7 +117,7 @@ export default function EmbedAgentVectorShardingSimulator() {
         </div>
 
         {/* SVG Latency Percentile Chart */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-3">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-[18px] p-3">
           <div className="flex justify-between items-center mb-1 text-[11px]">
             <span className="text-neutral-400 flex items-center gap-1">
               <Cpu className="w-3 h-3 text-neutral-200" /> HNSW Search Latency Distribution (P10 to P99.9)
@@ -152,7 +152,7 @@ export default function EmbedAgentVectorShardingSimulator() {
         </div>
 
         {/* Interactive Controls */}
-        <div className="space-y-3 bg-neutral-900/60 border border-neutral-800/80 rounded-lg p-3 text-xs">
+        <div className="space-y-3 bg-neutral-900/60 border border-neutral-800/80 rounded-[18px] p-3 text-xs">
           <div>
             <div className="flex justify-between text-neutral-300 mb-1">
               <span>Total Vectors: <strong className="text-white font-mono">{totalVectorsMillions}M</strong></span>
@@ -165,7 +165,7 @@ export default function EmbedAgentVectorShardingSimulator() {
               step="5"
               value={totalVectorsMillions}
               onChange={(e) => setTotalVectorsMillions(Number(e.target.value))}
-              className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
             />
           </div>
 
@@ -182,7 +182,7 @@ export default function EmbedAgentVectorShardingSimulator() {
                 step="1"
                 value={shardCount}
                 onChange={(e) => setShardCount(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
             </div>
 
@@ -198,7 +198,7 @@ export default function EmbedAgentVectorShardingSimulator() {
                 step="8"
                 value={hnswEfSearch}
                 onChange={(e) => setHnswEfSearch(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function EmbedAgentVectorShardingSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-neutral-200 hover:text-white transition-colors font-medium"
+            className="inline-flex items-center gap-1 text-neutral-200 hover:text-white transition-all duration-300 font-medium"
           >
             Powered by Elesium Enterprise AI Solutions
             <ArrowUpRight className="w-3 h-3" />

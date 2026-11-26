@@ -52,7 +52,7 @@ export default function EmbedAgentEpistemicOodSimulator() {
         </div>
 
         {/* Sliders */}
-        <div className="space-y-3 bg-neutral-900/80 p-4 rounded-xl border border-neutral-800 text-xs">
+        <div className="space-y-3 bg-neutral-900/80 p-4 rounded-2xl border border-neutral-800 text-xs">
           <div>
             <div className="flex justify-between text-neutral-300 mb-1">
               <span>Daily Queries</span>
@@ -65,7 +65,7 @@ export default function EmbedAgentEpistemicOodSimulator() {
               step="10000"
               value={dailyQueries}
               onChange={(e) => setDailyQueries(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -81,7 +81,7 @@ export default function EmbedAgentEpistemicOodSimulator() {
               step="1"
               value={oodContaminationRate}
               onChange={(e) => setOodContaminationRate(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -112,15 +112,15 @@ export default function EmbedAgentEpistemicOodSimulator() {
 
         {/* Output Metrics */}
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-neutral-900 p-2.5 rounded-lg border border-neutral-800 text-center">
+          <div className="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
             <div className="text-[10px] text-neutral-400">OOD AUROC</div>
             <div className="text-sm font-bold font-mono text-white">{results.oodAuroc}%</div>
           </div>
-          <div className="bg-neutral-900 p-2.5 rounded-lg border border-neutral-800 text-center">
+          <div className="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
             <div className="text-[10px] text-neutral-400">Autonomous Execution</div>
             <div className="text-sm font-bold font-mono text-white">{results.autonomousExecutionRate}%</div>
           </div>
-          <div className="bg-neutral-900 p-2.5 rounded-lg border border-neutral-800 text-center">
+          <div className="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
             <div className="text-[10px] text-neutral-400">P99 Latency</div>
             <div className="text-sm font-bold font-mono text-white">{results.p99LatencyMs}ms</div>
           </div>

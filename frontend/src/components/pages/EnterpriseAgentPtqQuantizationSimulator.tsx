@@ -134,20 +134,20 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
             <div className="flex items-center gap-3 self-start md:self-auto">
               <button
                 onClick={() => setCurrency(currency === 'INR' ? 'USD' : 'INR')}
-                className="active:scale-[0.97] px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 text-xs font-mono text-neutral-300 hover:text-white hover:border-neutral-600 transition"
+                className="active:scale-[0.97] px-3 py-1.5 rounded-full border border-neutral-700 bg-neutral-900 text-xs font-mono text-neutral-300 hover:text-white hover:border-neutral-600 transition-all duration-300"
               >
                 CURRENCY: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-white/20 bg-white/[0.04] text-neutral-200 hover:bg-neutral-200/20 text-xs font-mono transition"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/[0.04] text-neutral-200 hover:bg-neutral-200/20 text-xs font-mono transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5" />
                 EMBED TOOL
@@ -159,7 +159,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
         {/* Main Grid: Controls (Left) vs Output Metrics (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Panel */}
-          <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur space-y-6">
+          <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 backdrop-blur space-y-6">
             <div className="flex items-center gap-2 border-b border-neutral-800 pb-3">
               <Sliders className="w-4 h-4 text-neutral-200" />
               <h2 className="text-sm font-semibold tracking-wider text-neutral-300 uppercase font-mono">
@@ -216,7 +216,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
                   <button
                     key={item.id}
                     onClick={() => setKvCachePrecision(item.id as KvCachePrecision)}
-                    className={`active:scale-[0.97] py-2 px-2.5 rounded-xl text-xs font-mono border transition text-center ${
+                    className={`active:scale-[0.97] py-2 px-2.5 rounded-full text-xs font-mono border transition-all duration-300 text-center ${
                       kvCachePrecision === item.id
                         ? 'border-white/30 bg-white/[0.06] text-white font-bold'
                         : 'border-neutral-800 bg-neutral-950 text-neutral-400 hover:border-neutral-700'
@@ -259,7 +259,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
                   step="2048"
                   value={contextLengthTokens}
                   onChange={(e) => setContextLengthTokens(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
 
@@ -275,7 +275,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
                   step="1"
                   value={concurrentRequests}
                   onChange={(e) => setConcurrentRequests(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
             </div>
@@ -285,7 +285,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
           <div className="lg:col-span-7 space-y-6">
             {/* Top Stat Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5 backdrop-blur">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-5 backdrop-blur">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono text-neutral-400 uppercase">Net VRAM Reduction</span>
                   <Layers className="w-4 h-4 text-neutral-200" />
@@ -298,7 +298,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
                 </div>
               </div>
 
-              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5 backdrop-blur">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-5 backdrop-blur">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono text-neutral-400 uppercase">Perplexity Drift</span>
                   <Gauge className="w-4 h-4 text-neutral-200" />
@@ -311,7 +311,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
                 </div>
               </div>
 
-              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5 backdrop-blur">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-5 backdrop-blur">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono text-neutral-400 uppercase">FinOps Annual Savings</span>
                   <Coins className="w-4 h-4 text-amber-400" />
@@ -326,7 +326,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
             </div>
 
             {/* SLA Status Banner */}
-            <div className={`p-4 rounded-xl border flex items-center justify-between ${
+            <div className={`p-4 rounded-2xl border flex items-center justify-between ${
               results.slaStatus === 'PERPLEXITY_PRESERVED_PRODUCTION_READY'
                 ? 'bg-white/[0.05] border-white/30 text-neutral-200'
                 : results.slaStatus === 'BORDERLINE_NEEDS_CALIBRATION'
@@ -354,7 +354,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
             </div>
 
             {/* Layer-wise Quantization Sensitivity Table */}
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 backdrop-blur">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xs font-mono font-bold text-neutral-300 uppercase tracking-wider flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-neutral-200" />
@@ -404,14 +404,14 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={copyMemo}
-                className="active:scale-[0.97] flex-1 py-3 px-4 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-200 transition flex items-center justify-center gap-2"
+                className="active:scale-[0.97] flex-1 py-3 px-4 rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-200 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-400" />}
                 {hasCopiedMemo ? 'COPIED EXECUTIVE MEMO!' : 'COPY EXECUTIVE FINOPS MEMO'}
               </button>
               <a
                 href="#audit"
-                className="flex-1 py-3 px-4 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-xs font-mono transition flex items-center justify-center gap-2"
+                className="flex-1 py-3 px-4 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs font-mono transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
                 SCHEDULE SOVEREIGN QUANTIZATION AUDIT
@@ -421,7 +421,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-16 bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 sm:p-8 backdrop-blur">
+        <div className="mt-16 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 sm:p-8 backdrop-blur">
           <h3 className="text-xl font-bold text-white mb-6">Frequently Asked Questions: Enterprise Quantization & FinOps</h3>
           <div className="space-y-4">
             {[
@@ -442,10 +442,10 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
                 a: "Running unquantized 70B models required massive multi-GPU cloud instances, forcing many Indian enterprises to rely on foreign public APIs. By compressing 70B models to under 38 GB of VRAM, enterprises can run sovereign, air-gapped LLM instances entirely on local on-premise hardware inside sovereign Indian datacenters in Bangalore, Mumbai, or Delhi, ensuring 100% data residency compliance."
               }
             ].map((item, idx) => (
-              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/60 hover:bg-neutral-950 flex justify-between items-center transition"
+                  className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/60 hover:bg-neutral-950 flex justify-between items-center transition-all duration-300"
                 >
                   <span className="font-medium text-sm text-neutral-200">{item.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -461,7 +461,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
         </div>
 
         {/* Audit Mandate Form Section */}
-        <div id="audit" className="mt-16 bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 sm:p-10 backdrop-blur">
+        <div id="audit" className="mt-16 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 sm:p-10 backdrop-blur">
           <div className="max-w-2xl mx-auto text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Schedule Sovereign Private Quantization Audit</h2>
             <p className="mt-2 text-sm text-neutral-400">
@@ -471,8 +471,8 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
           </div>
           <div className="max-w-xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -485,7 +485,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-full bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -501,7 +501,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] max-w-lg w-full p-6 space-y-4">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-mono font-bold text-neutral-200 uppercase">Embed Simulator On Your Site</h3>
               <button onClick={() => setIsEmbedOpen(false)} className="active:scale-[0.97] text-neutral-400 hover:text-white">
@@ -511,19 +511,19 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
             <p className="text-xs text-neutral-400">
               Copy the iframe code below to embed the responsive, interactive FP8 vs INT4 Quantization Simulator with live calculation onto your website or internal portal.
             </p>
-            <div className="bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-xs text-neutral-300 break-all select-all">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs text-neutral-300 break-all select-all">
               {embedCode}
             </div>
             <div className="flex justify-end gap-2 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-mono text-neutral-400 hover:text-white transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-mono text-neutral-400 hover:text-white transition-all duration-300"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbed}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs font-mono transition flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs font-mono transition-all duration-300 flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Iframe Code'}

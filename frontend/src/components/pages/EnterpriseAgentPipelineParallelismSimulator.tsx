@@ -125,7 +125,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold bg-white/[0.04] text-white border border-white/15">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/[0.04] text-white border border-white/15">
             <Sparkles className="w-3.5 h-3.5" />
             Tool #60 • Distributed Pipeline Parallelism Architecture
           </div>
@@ -140,7 +140,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
         {/* Simulator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 space-y-6 shadow-xl backdrop-blur-sm">
+          <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 space-y-6 shadow-xl backdrop-blur-sm">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
               <h2 className="text-lg font-bold text-white flex items-center gap-2">
                 <Sliders className="w-5 h-5 text-neutral-200" />
@@ -148,7 +148,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               </h2>
               <button
                 onClick={handleReset}
-                className="active:scale-[0.97] text-xs text-neutral-400 hover:text-white flex items-center gap-1 transition-colors"
+                className="active:scale-[0.97] text-xs text-neutral-400 hover:text-white flex items-center gap-1 transition-all duration-300"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 Reset
@@ -161,7 +161,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               <select
                 value={modelScale}
                 onChange={(e) => setModelScale(e.target.value as ModelScale)}
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40"
               >
                 <option value="70b">Llama-3-70B (Dense Sovereign Tier)</option>
                 <option value="120b">Mistral-Large-123B (Enterprise Monolith)</option>
@@ -209,7 +209,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               <select
                 value={scheduleMode}
                 onChange={(e) => setScheduleMode(e.target.value as PipelineScheduleMode)}
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40"
               >
                 <option value="1f1b_interleaved">1F1B Interleaved (v=2 Virtual Stages • Recommended)</option>
                 <option value="1f1b_standard">1F1B Standard (One-Forward-One-Backward)</option>
@@ -224,7 +224,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               <select
                 value={interStageTransport}
                 onChange={(e) => setInterStageTransport(e.target.value as InterStageTransport)}
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40"
               >
                 <option value="gpudirect_rdma">GPUDirect RDMA (RoCE v2 / InfiniBand • Sub-3.2ms)</option>
                 <option value="nvlink_p2p">NVLink P2P Direct (Intra-Node Sub-1ms)</option>
@@ -236,11 +236,11 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
             {/* Currency Toggle */}
             <div className="space-y-2">
               <label className="text-xs font-semibold text-neutral-300">Currency Display</label>
-              <div className="flex rounded-lg border border-neutral-700 overflow-hidden">
+              <div className="flex rounded-[24px] border border-neutral-700 overflow-hidden">
                 <button
                   type="button"
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] flex-1 py-1.5 text-xs font-semibold transition-colors ${
+                  className={`active:scale-[0.97] flex-1 py-1.5 text-xs font-semibold transition-all duration-300 ${
                     currency === 'INR' ? 'bg-white text-black' : 'bg-neutral-900 text-neutral-400'
                   }`}
                 >
@@ -249,7 +249,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 <button
                   type="button"
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] flex-1 py-1.5 text-xs font-semibold transition-colors ${
+                  className={`active:scale-[0.97] flex-1 py-1.5 text-xs font-semibold transition-all duration-300 ${
                     currency === 'USD' ? 'bg-white text-black' : 'bg-neutral-900 text-neutral-400'
                   }`}
                 >
@@ -263,7 +263,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           <div className="lg:col-span-7 space-y-6">
             {/* KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="bg-neutral-900/90 border border-white/20 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-white/20 rounded-2xl p-4 shadow-lg">
                 <div className="text-xs text-neutral-400">Bubble Idle Fraction</div>
                 <div className="text-2xl font-black text-neutral-200 mt-1 font-mono">
                   {results.bubbleFractionPercent}%
@@ -274,7 +274,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-white/20 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-white/20 rounded-2xl p-4 shadow-lg">
                 <div className="text-xs text-neutral-400">Cluster Utilization</div>
                 <div className="text-2xl font-black text-neutral-200 mt-1 font-mono">
                   {results.effectiveGpuUtilization}%
@@ -284,7 +284,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-white/20 rounded-xl p-4 shadow-lg col-span-2 sm:col-span-1">
+              <div className="bg-neutral-900/90 border border-white/20 rounded-2xl p-4 shadow-lg col-span-2 sm:col-span-1">
                 <div className="text-xs text-neutral-400">Inter-Stage Latency</div>
                 <div className="text-2xl font-black text-neutral-200 mt-1 font-mono">
                   {results.interStageLatencyMs}ms
@@ -294,7 +294,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <div className="text-xs text-neutral-400">Throughput Multiplier</div>
                 <div className="text-2xl font-black text-white mt-1 font-mono">
                   {results.throughputMultiplier}x
@@ -304,7 +304,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <div className="text-xs text-neutral-400">Inference Throughput</div>
                 <div className="text-2xl font-black text-neutral-200 mt-1 font-mono">
                   {results.tokensPerSecond} tok/s
@@ -314,7 +314,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-amber-500/30 rounded-xl p-4 shadow-lg col-span-2 sm:col-span-1">
+              <div className="bg-neutral-900/90 border border-amber-500/30 rounded-2xl p-4 shadow-lg col-span-2 sm:col-span-1">
                 <div className="text-xs text-neutral-400">Recovered FinOps Value</div>
                 <div className="text-lg sm:text-xl font-black text-amber-400 mt-1 font-mono">
                   {results.annualFinOpsSavings}
@@ -326,7 +326,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
             </div>
 
             {/* Architecture Visualization Card */}
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 shadow-xl space-y-4">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 shadow-xl space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-bold text-white flex items-center gap-2">
                   <Layers className="w-4 h-4 text-neutral-200" />
@@ -342,10 +342,10 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               </div>
 
               {/* Dataflow Stages Visual */}
-              <div className="bg-neutral-950 border border-neutral-800 rounded-xl p-6 space-y-4">
+              <div className="bg-neutral-950 border border-neutral-800 rounded-[24px] p-6 space-y-4">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                   {Array.from({ length: Math.min(4, pipelineStages) }).map((_, idx) => (
-                    <div key={idx} className="bg-neutral-900/80 border border-white/20 rounded-lg p-3 space-y-1">
+                    <div key={idx} className="bg-neutral-900/80 border border-white/20 rounded-[18px] p-3 space-y-1">
                       <div className="text-xs font-bold text-white">Stage {idx + 1}</div>
                       <div className="text-[11px] text-neutral-300 font-mono">
                         Layers {Math.round((idx / pipelineStages) * 80)} - {Math.round(((idx + 1) / pipelineStages) * 80)}
@@ -373,21 +373,21 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               <div className="flex flex-wrap gap-3 pt-2">
                 <button
                   onClick={copyExecutiveMemo}
-                  className="active:scale-[0.97] flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-black rounded-lg text-xs font-semibold shadow-md transition-colors"
+                  className="active:scale-[0.97] flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-black rounded-full text-xs font-semibold shadow-md transition-all duration-300"
                 >
                   {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}
                 </button>
                 <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                   onClick={() => setIsEmbedOpen(true)}
-                  className="active:scale-[0.97] flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-lg text-xs font-semibold border border-neutral-700 transition-colors"
+                  className="active:scale-[0.97] flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-full text-xs font-semibold border border-neutral-700 transition-all duration-300"
                 >
                   <Code className="w-4 h-4" />
                   Embed Tool
@@ -398,11 +398,11 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
         </div>
 
         {/* Technical Architecture Notes & FAQs */}
-        <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 sm:p-8 space-y-6">
+        <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 sm:p-8 space-y-6">
           <h2 className="text-xl font-bold text-white">Frequently Asked Architectural Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950/40">
+              <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden bg-neutral-950/40">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left font-semibold text-sm text-neutral-200 hover:text-white"
@@ -421,7 +421,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
         </div>
 
         {/* Lead Generation Section */}
-        <div className="border border-neutral-800 rounded-xl p-6 sm:p-10 bg-gradient-to-b from-neutral-900/90 to-neutral-950">
+        <div className="border border-neutral-800 rounded-[24px] p-6 sm:p-10 bg-gradient-to-b from-neutral-900/90 to-neutral-950">
           <div className="max-w-2xl mx-auto text-center space-y-4 mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
               Scale Multi-Node Pipeline Parallelism with Zero Idle Bubbles
@@ -432,8 +432,8 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           </div>
           <div className="max-w-xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -446,7 +446,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -462,7 +462,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -478,7 +478,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
             <p className="text-xs text-neutral-400">
               Copy and paste this HTML snippet into your technical documentation, blog, or internal engineering wiki:
             </p>
-            <div className="bg-neutral-950 p-3 rounded-lg border border-neutral-800 text-xs font-mono text-neutral-300 break-all select-all">
+            <div className="bg-neutral-950 p-3 rounded-[18px] border border-neutral-800 text-xs font-mono text-neutral-300 break-all select-all">
               {embedCode}
             </div>
             <div className="flex justify-end gap-3 pt-2">
@@ -490,7 +490,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-1.5 bg-white hover:bg-neutral-200 text-black rounded-lg text-xs font-semibold transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-1.5 bg-white hover:bg-neutral-200 text-black rounded-full text-xs font-semibold transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied Snippet' : 'Copy HTML'}

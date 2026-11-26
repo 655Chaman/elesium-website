@@ -131,13 +131,13 @@ export function ExitIntentMemoModal({
             initial={{ opacity: 0, scale: 0.97, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 12 }}
-            transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-            className="relative w-full max-w-2xl bg-neutral-950 border border-white/10 rounded-xl p-6 sm:p-10 shadow-2xl z-10 text-white font-sans overflow-hidden"
+            transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+            className="relative w-full max-w-2xl bg-neutral-950 border border-white/10 rounded-[28px] p-6 sm:p-10 shadow-2xl z-10 text-white font-sans overflow-hidden"
           >
             {/* Top Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-5 right-5 p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all text-sm"
+              className="absolute top-5 right-5 p-2 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all duration-300 text-sm"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -146,7 +146,7 @@ export function ExitIntentMemoModal({
             {!isSuccess ? (
               <div className="space-y-6">
                 {/* Header Tag */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-semibold tracking-wider uppercase">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-semibold tracking-wider uppercase">
                   <FileText className="w-3.5 h-3.5" />
                   <span>Architecture Evaluation Snapshot Ready</span>
                 </div>
@@ -161,7 +161,7 @@ export function ExitIntentMemoModal({
                 </div>
 
                 {/* Simulated Metrics Card Preview */}
-                <div className="p-4 rounded-xl bg-black border border-white/10 font-mono text-xs space-y-2.5">
+                <div className="p-4 rounded-[18px] bg-black border border-white/10 font-mono text-xs space-y-2.5">
                   <div className="text-[10px] text-neutral-500 uppercase tracking-widest border-b border-white/10 pb-1 flex justify-between">
                     <span>Active Simulation Digest</span>
                     <span className="text-white">{toolName}</span>
@@ -186,7 +186,7 @@ export function ExitIntentMemoModal({
                       value={email}
                       onChange={(e) => handleEmailChange(e.target.value)}
                       placeholder="v.seth@company.com"
-                      className="w-full px-4 py-3 rounded-lg border border-white/10 bg-black text-white placeholder-neutral-500 focus:ring-2 focus:ring-white/30 outline-none text-sm font-sans"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-black text-white placeholder-neutral-500 focus:ring-2 focus:ring-white/30 outline-none text-sm font-sans transition-all"
                     />
 
                     {/* Live Domain Validation Feedback */}
@@ -220,14 +220,14 @@ export function ExitIntentMemoModal({
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
                       placeholder="e.g. Maersk Logistics, HDFC Securities"
-                      className="w-full px-4 py-3 rounded-lg border border-white/10 bg-black text-white placeholder-neutral-500 focus:ring-2 focus:ring-white/30 outline-none text-sm font-sans"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-black text-white placeholder-neutral-500 focus:ring-2 focus:ring-white/30 outline-none text-sm font-sans transition-all"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isLoading || (validation !== null && !validation.isAllowed)}
-                    className="w-full h-12 rounded-lg bg-white text-black hover:bg-neutral-200 font-bold text-sm flex items-center justify-center gap-2 disabled:opacity-50 active:scale-[0.97] transition-all cursor-pointer"
+                    className="w-full h-12 rounded-full bg-white text-black hover:bg-neutral-200 font-bold text-sm flex items-center justify-center gap-2 disabled:opacity-50 active:scale-[0.97] transition-all duration-300 cursor-pointer"
                   >
                     {isLoading ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -249,7 +249,7 @@ export function ExitIntentMemoModal({
               /* Success Confirmation */
               <div className="py-6 text-center space-y-6">
                 <div className="relative flex items-center justify-center h-16 w-16 mx-auto">
-                  <span className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 border border-white/20 text-white">
+                  <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/20 text-white">
                     <CheckCircle2 className="w-6 h-6" />
                   </span>
                 </div>
@@ -263,7 +263,7 @@ export function ExitIntentMemoModal({
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-black border border-white/10 max-w-md mx-auto text-left text-xs font-mono space-y-2">
+                <div className="p-4 rounded-[18px] bg-black border border-white/10 max-w-md mx-auto text-left text-xs font-mono space-y-2">
                   <div className="flex justify-between border-b border-white/10 pb-1.5">
                     <span className="text-neutral-400">ESTIMATED DELIVERY</span>
                     <span className="text-white">&lt; 3 Minutes</span>
@@ -280,7 +280,7 @@ export function ExitIntentMemoModal({
 
                 <button
                   onClick={handleClose}
-                  className="px-6 py-2.5 rounded-lg border border-white/10 hover:bg-white/5 text-neutral-300 text-xs font-mono active:scale-[0.97] transition-all"
+                  className="px-6 py-2.5 rounded-full border border-white/10 hover:bg-white/5 text-neutral-300 text-xs font-mono active:scale-[0.97] transition-all duration-300"
                 >
                   Return to Active Tool
                 </button>

@@ -210,10 +210,10 @@ export default function Waitlist() {
     }, [confirmationCode, fullName, companyName, role, workflow, hostingPreference]);
 
     const inputClass =
-        'w-full px-4 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black/20 dark:focus:ring-white/25 outline-none transition-all text-[14px]';
+        'w-full px-4 py-3.5 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black/20 dark:focus:ring-white/25 outline-none transition-all text-[14px]';
 
     const selectClass =
-        'w-full px-4 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-black/20 dark:focus:ring-white/25 outline-none transition-all text-[14px] cursor-pointer appearance-none';
+        'w-full px-4 py-3.5 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-black/20 dark:focus:ring-white/25 outline-none transition-all text-[14px] cursor-pointer appearance-none';
 
     const location = useLocation();
     const pathname = location.pathname.toLowerCase();
@@ -245,7 +245,7 @@ export default function Waitlist() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 28 }}
             className="relative min-h-[100vh] pt-24 pb-20 px-5 md:px-8 bg-white dark:bg-black text-black dark:text-white font-sans transition-colors duration-300"
         >
             <Helmet>
@@ -279,7 +279,8 @@ export default function Waitlist() {
                     <motion.div 
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mb-8 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono"
+                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+                        className="mb-8 p-4 rounded-[24px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono"
                     >
                         <div className="flex items-center gap-2">
                             <span className="text-black dark:text-white font-bold uppercase tracking-wider">Solution Blueprint Ingested:</span>
@@ -290,7 +291,7 @@ export default function Waitlist() {
                             )}
                         </div>
                         {roiParam && (
-                            <div className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300">
+                            <div className="flex items-center gap-2 px-3.5 py-1 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-full text-neutral-700 dark:text-neutral-300">
                                 <span>Target Annual Cost Elimination:</span>
                                 <strong className="font-bold text-black dark:text-white">₹{roiParam} Lakhs / Year</strong>
                             </div>
@@ -304,7 +305,7 @@ export default function Waitlist() {
                     {/* Left Column: ele-in Platform Overview */}
                     <div className="lg:col-span-5 space-y-8">
                         <div>
-                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white text-[11px] font-mono tracking-wider uppercase mb-6">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white text-[11px] font-mono tracking-wider uppercase mb-6">
                                 ele-in // Private Alpha Cohort Open
                             </div>
 
@@ -319,13 +320,13 @@ export default function Waitlist() {
                         </div>
 
                         {/* ele-in Core SaaS Architecture Pillars */}
-                        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-4">
+                        <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-4">
                             <h3 className="text-xs font-mono font-semibold tracking-wider uppercase text-neutral-500">
                                 What ele-in Delivers Out of the Box
                             </h3>
                             <div className="space-y-3.5 text-[14px]">
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
+                                    <div className="p-2 rounded-[14px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5 shrink-0">
                                         <Layers className="w-4 h-4" />
                                     </div>
                                     <div>
@@ -334,7 +335,7 @@ export default function Waitlist() {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
+                                    <div className="p-2 rounded-[14px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5 shrink-0">
                                         <ShieldCheck className="w-4 h-4" />
                                     </div>
                                     <div>
@@ -343,7 +344,7 @@ export default function Waitlist() {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
+                                    <div className="p-2 rounded-[14px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5 shrink-0">
                                         <Cpu className="w-4 h-4" />
                                     </div>
                                     <div>
@@ -352,7 +353,7 @@ export default function Waitlist() {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
+                                    <div className="p-2 rounded-[14px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5 shrink-0">
                                         <Server className="w-4 h-4" />
                                     </div>
                                     <div>
@@ -364,7 +365,7 @@ export default function Waitlist() {
                         </div>
 
                         {/* Enterprise Consulting & Custom Architecture Notice */}
-                        <div className="p-5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-3">
+                        <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-3">
                             <span className="text-xs font-semibold text-black dark:text-white block">Need Custom Enterprise Deployment Today?</span>
                             <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                 Looking for custom sovereign VPC engineering, dedicated on-premise GPU pods, or immediate technical scoping? All enterprise appointments route exclusively through our WhatsApp engineering desk.
@@ -372,7 +373,7 @@ export default function Waitlist() {
                             <button
                                 type="button"
                                 onClick={openWhatsApp}
-                                className="w-full h-11 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] text-xs font-semibold transition-all flex items-center justify-center gap-2"
+                                className="w-full h-11 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] text-xs font-semibold transition-all flex items-center justify-center gap-2"
                             >
                                 <span>Chat on WhatsApp with Lead Architect</span>
                             </button>
@@ -389,10 +390,10 @@ export default function Waitlist() {
                                     initial={{ opacity: 0, scale: 0.97, y: 12 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.97 }}
-                                    transition={{ type: 'spring', stiffness: 280, damping: 26 }}
+                                    transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                     onSubmit={handleSubmit}
                                     noValidate
-                                    className={`p-6 md:p-10 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-6 ${shakeForm ? 'animate-shake' : ''}`}
+                                    className={`p-6 md:p-10 rounded-[32px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-6 ${shakeForm ? 'animate-shake' : ''}`}
                                 >
                                     <div className="border-b border-neutral-200 dark:border-white/10 pb-5">
                                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -404,14 +405,14 @@ export default function Waitlist() {
                                                     Enter your corporate details to join the private alpha cohort.
                                                 </p>
                                             </div>
-                                            <span className="px-3 py-1 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono font-semibold">
+                                            <span className="px-3.5 py-1 rounded-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono font-semibold self-start sm:self-center">
                                                 Alpha Batch 2026
                                             </span>
                                         </div>
                                     </div>
 
                                     {validationError && (
-                                        <div className="p-3 rounded-lg border border-black/30 dark:border-white/30 bg-white dark:bg-black text-xs font-mono text-black dark:text-white">
+                                        <div className="p-4 rounded-[20px] border border-black/30 dark:border-white/30 bg-white dark:bg-black text-xs font-mono text-black dark:text-white">
                                             {validationError}
                                         </div>
                                     )}
@@ -563,7 +564,7 @@ export default function Waitlist() {
                                                         type="button"
                                                         key={standard}
                                                         onClick={() => toggleCompliance(standard)}
-                                                        className={`p-3 rounded-lg border text-left text-xs font-medium active:scale-[0.97] transition-all flex items-center justify-between ${
+                                                        className={`p-3.5 rounded-[20px] border text-left text-xs font-medium active:scale-[0.97] transition-all flex items-center justify-between ${
                                                             isChecked
                                                                 ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black'
                                                                 : 'border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:border-neutral-400 dark:hover:border-white/25 text-neutral-600 dark:text-neutral-400'
@@ -597,7 +598,7 @@ export default function Waitlist() {
                                     <button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="w-full py-4 px-6 rounded-lg bg-black text-white hover:opacity-90 dark:bg-white dark:text-black font-semibold text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full py-4 px-6 rounded-full bg-black text-white hover:opacity-90 dark:bg-white dark:text-black font-semibold text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isLoading ? (
                                             <span className="flex items-center gap-2">
@@ -624,17 +625,17 @@ export default function Waitlist() {
                                     key="ele-in-confirmation"
                                     initial={{ opacity: 0, scale: 0.97 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-                                    className="p-8 md:p-12 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-8 text-center"
+                                    transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+                                    className="p-8 md:p-12 rounded-[32px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-8 text-center"
                                 >
                                     <div className="relative flex items-center justify-center h-16 w-16 mx-auto">
-                                        <span className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white">
+                                        <span className="relative flex h-12 w-12 items-center justify-center rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                             <CheckCircle2 className="w-6 h-6" />
                                         </span>
                                     </div>
 
                                     <div>
-                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+                                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono font-semibold uppercase tracking-wider mb-4">
                                             Priority Node Registered // ele-in Alpha
                                         </div>
                                         <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white tracking-tight">
@@ -646,7 +647,7 @@ export default function Waitlist() {
                                     </div>
 
                                     {/* Technical Ingestion Receipt */}
-                                    <div className="w-full max-w-md mx-auto bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-xl p-5 text-left font-mono text-xs space-y-2.5">
+                                    <div className="w-full max-w-md mx-auto bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] p-5 text-left font-mono text-xs space-y-2.5">
                                         <div className="flex justify-between border-b border-neutral-200 dark:border-white/10 pb-2">
                                             <span className="text-neutral-500">WAITLIST REF</span>
                                             <span className="text-black dark:text-white font-bold">{confirmationCode}</span>
@@ -670,7 +671,7 @@ export default function Waitlist() {
                                     </div>
 
                                     {/* Direct WhatsApp Callout for Immediate Scoping */}
-                                    <div className="max-w-md mx-auto p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-left space-y-2">
+                                    <div className="max-w-md mx-auto p-4 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-left space-y-2">
                                         <span className="text-xs font-semibold text-black dark:text-white block">Need Custom Architecture or Immediate Deployment?</span>
                                         <p className="text-[11px] text-neutral-600 dark:text-neutral-400">
                                             All enterprise audits and custom multi-agent scoping sessions route directly through our Lead Architect on WhatsApp.
@@ -682,7 +683,7 @@ export default function Waitlist() {
                                         <button
                                             type="button"
                                             onClick={openWhatsApp}
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-black text-white dark:bg-white dark:text-black font-semibold text-xs hover:opacity-90 active:scale-[0.97] transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold text-xs hover:opacity-90 active:scale-[0.97] transition-all"
                                         >
                                             <span>Chat on WhatsApp</span>
                                         </button>
@@ -690,7 +691,7 @@ export default function Waitlist() {
                                             href={whatsappUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-medium active:scale-[0.97] transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-medium active:scale-[0.97] transition-all"
                                         >
                                             <MessageSquare className="w-3.5 h-3.5" />
                                             <span>Direct WhatsApp Link</span>

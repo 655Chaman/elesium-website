@@ -64,7 +64,7 @@ export default function EmbedAgentPhotonicComputeSimulator() {
         </div>
 
         {/* Mini Spectral SVG Visualizer */}
-        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
+        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
           <div className="flex justify-between items-center text-[10px] font-mono text-neutral-400">
             <span className="text-white font-bold">WDM C-Band Spectrum ({results.spectralPoints.length} Channels)</span>
             <span>Speed: {results.inFlightOpticalLatencyPs} ps</span>
@@ -105,7 +105,7 @@ export default function EmbedAgentPhotonicComputeSimulator() {
         </div>
 
         {/* Controls */}
-        <div className="space-y-3 bg-neutral-900/60 p-3 rounded-xl border border-neutral-800/80 text-xs">
+        <div className="space-y-3 bg-neutral-900/60 p-3 rounded-[18px] border border-neutral-800/80 text-xs">
           <div>
             <label className="text-[11px] text-neutral-300 font-medium block mb-1">Optical Substrate Architecture:</label>
             <select

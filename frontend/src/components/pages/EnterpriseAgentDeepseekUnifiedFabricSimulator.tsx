@@ -124,28 +124,28 @@ PERFORMANCE AUDIT METRICS:
       <div className="border-b border-neutral-800/80 bg-neutral-950 pt-12 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono">
               <Cpu className="w-3.5 h-3.5" />
               <span>Tool #75 · Megawatt Foundation Model Serving</span>
             </div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900/80 text-xs text-neutral-300 hover:text-white hover:border-neutral-600 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-700 bg-neutral-900/80 text-xs text-neutral-300 hover:text-white hover:border-neutral-600 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5" />
                 <span>Embed Simulator</span>
               </button>
               <button
                 onClick={resetDefaults}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-750 bg-neutral-900/80 text-xs text-neutral-400 hover:text-neutral-200 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-750 bg-neutral-900/80 text-xs text-neutral-400 hover:text-neutral-200 transition-all duration-300"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>Reset</span>
@@ -168,7 +168,7 @@ PERFORMANCE AUDIT METRICS:
           
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <h2 className="text-base font-semibold text-white flex items-center gap-2">
                   <Sliders className="w-4 h-4 text-neutral-200" />
@@ -278,10 +278,10 @@ PERFORMANCE AUDIT METRICS:
             </div>
 
             {/* Quick Actions Card */}
-            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-[24px] p-5 space-y-3">
               <button
                 onClick={copyMemo}
-                className="active:scale-[0.97] w-full py-2.5 px-4 rounded-lg bg-white hover:bg-neutral-200 text-black font-medium text-xs flex items-center justify-center gap-2 transition"
+                className="active:scale-[0.97] w-full py-2.5 px-4 rounded-full bg-white hover:bg-neutral-200 text-black font-medium text-xs flex items-center justify-center gap-2 transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Technical Memo Copied!' : 'Copy Executive Architecture Memo'}</span>
@@ -294,22 +294,22 @@ PERFORMANCE AUDIT METRICS:
             
             {/* Primary KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] font-mono text-neutral-400 block mb-1">KV-Cache Footprint</span>
                 <span className="text-xl font-bold font-mono text-white">-{results.kvCacheReductionPercent}%</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">MLA Joint Latent Vector</span>
               </div>
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] font-mono text-neutral-400 block mb-1">Decoding Throughput</span>
                 <span className="text-xl font-bold font-mono text-white">{results.effectiveDecodedSpeedupFactor}x</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">{results.decodingThroughputTokensPerSec} tok/s / node</span>
               </div>
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] font-mono text-neutral-400 block mb-1">Model Flops (MFU)</span>
                 <span className="text-xl font-bold font-mono text-white">{results.modelFlopsUtilizationPercent}%</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">DualPipe Overlap</span>
               </div>
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4">
                 <span className="text-[11px] font-mono text-neutral-400 block mb-1">Time to First Token</span>
                 <span className="text-xl font-bold font-mono text-amber-400">{results.timeToFirstTokenMs}ms</span>
                 <span className="text-[10px] text-neutral-500 block mt-1">Sub-12ms Prefill SLA</span>
@@ -317,7 +317,7 @@ PERFORMANCE AUDIT METRICS:
             </div>
 
             {/* Interactive SVG Diagram */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6">
               <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                   <Activity className="w-4 h-4 text-neutral-200" />
@@ -328,7 +328,7 @@ PERFORMANCE AUDIT METRICS:
                 </span>
               </div>
 
-              <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-850 overflow-x-auto">
+              <div className="bg-neutral-950 p-4 rounded-2xl border border-neutral-850 overflow-x-auto">
                 <svg viewBox="0 0 680 200" className="w-full h-auto min-w-[580px] font-mono text-xs">
                   {/* Layer 1: Multi-Head Latent Attention (MLA) */}
                   <rect x="20" y="20" width="180" height="70" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1.5" />
@@ -382,25 +382,25 @@ PERFORMANCE AUDIT METRICS:
             </div>
 
             {/* FinOps & Compliance Card */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2 mb-4">
                 <ShieldCheck className="w-4 h-4 text-neutral-200" />
                 Cluster FinOps & Sovereign Compliance Attestation
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-850">
+                <div className="p-3 bg-neutral-950 rounded-[18px] border border-neutral-850">
                   <span className="text-xs text-neutral-400 block mb-1">Projected Annual Savings</span>
                   <span className="text-lg font-bold font-mono text-white">
                     {currency === 'INR' ? '₹' : '$'}{results.annualClusterOpexSavings.toLocaleString()}
                   </span>
                   <span className="text-[10px] text-neutral-500 block mt-1">MFU Amortization & Power</span>
                 </div>
-                <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-850">
+                <div className="p-3 bg-neutral-950 rounded-[18px] border border-neutral-850">
                   <span className="text-xs text-neutral-400 block mb-1">Peak VRAM / GPU</span>
                   <span className="text-lg font-bold font-mono text-neutral-200">{results.peakVramPerGpuGb} GB</span>
                   <span className="text-[10px] text-neutral-500 block mt-1">Fits 80GB H100 with headroom</span>
                 </div>
-                <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-850">
+                <div className="p-3 bg-neutral-950 rounded-[18px] border border-neutral-850">
                   <span className="text-xs text-neutral-400 block mb-1">Sovereign Compliance</span>
                   <span className="text-lg font-bold font-mono text-white">100% Certified</span>
                   <span className="text-[10px] text-neutral-500 block mt-1">DPDP Act & RBI Attested</span>
@@ -412,11 +412,11 @@ PERFORMANCE AUDIT METRICS:
         </div>
 
         {/* FAQs */}
-        <div className="mt-12 bg-neutral-900/40 border border-neutral-800 rounded-xl p-6">
+        <div className="mt-12 bg-neutral-900/40 border border-neutral-800 rounded-[24px] p-6">
           <h3 className="text-lg font-semibold text-white mb-4">Architecture & Deployment Engineering FAQs</h3>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950/60">
+              <div key={i} className="border border-neutral-800 rounded-[24px] overflow-hidden bg-neutral-950/60">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="active:scale-[0.97] w-full text-left px-4 py-3 flex items-center justify-between text-sm font-medium text-neutral-200 hover:text-white"
@@ -437,8 +437,8 @@ PERFORMANCE AUDIT METRICS:
         {/* Mandate Lead Generation Form */}
         <div className="mt-12">
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -451,7 +451,7 @@ PERFORMANCE AUDIT METRICS:
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -466,7 +466,7 @@ PERFORMANCE AUDIT METRICS:
       {/* Embed Code Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#0a0a0a] border border-neutral-800 rounded-xl max-w-lg w-full p-6 text-neutral-100 shadow-2xl">
+          <div className="bg-[#0a0a0a] border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 text-neutral-100 shadow-2xl">
             <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
               <h4 className="text-base font-semibold flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -488,13 +488,13 @@ PERFORMANCE AUDIT METRICS:
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-medium text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-medium text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbed}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-medium text-xs flex items-center gap-1.5 transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-medium text-xs flex items-center gap-1.5 transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Embed Code'}</span>

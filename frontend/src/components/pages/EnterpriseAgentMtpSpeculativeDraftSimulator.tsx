@@ -134,27 +134,27 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
       <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-800/80 bg-gradient-to-b from-white/[0.03] via-transparent to-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono">
               <FastForward className="w-3.5 h-3.5" />
               TOOL #73 · MULTI-TOKEN PREDICTION (MTP) ENGINE
             </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5 text-neutral-200" /> Embed Widget
               </button>
               <button
                 onClick={copyMemo}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/90 hover:bg-neutral-200 border border-white/30 text-xs font-medium text-white transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 hover:bg-neutral-200 border border-white/30 text-xs font-medium text-white transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedMemo ? 'Memo Copied' : 'Export Executive Memo'}
@@ -175,14 +175,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column */}
-          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 p-6 rounded-xl border border-neutral-800">
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 p-6 rounded-[24px] border border-neutral-800">
             <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
               <div className="flex items-center gap-2 text-neutral-200 font-semibold text-sm">
                 <Sliders className="w-4 h-4 text-neutral-200" /> Architectural Parameters
               </div>
               <button
                 onClick={resetDefaults}
-                className="active:scale-[0.97] inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-neutral-200 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-neutral-200 transition-all duration-300"
               >
                 <RotateCcw className="w-3 h-3" /> Reset
               </button>
@@ -213,7 +213,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 value={speculativeVerificationMode}
                 onChange={(e) => setSpeculativeVerificationMode(e.target.value as MtpSimulationInputs['speculativeVerificationMode'])}
                 aria-label="Speculative Verification Mode"
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="dynamic_tree">Dynamic Speculative Tree (2D Attention Mask)</option>
                 <option value="linear_chain">Linear Chain (Sequential Rejection Rollback)</option>
@@ -228,7 +228,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 value={taskDomainComplexity}
                 onChange={(e) => setTaskDomainComplexity(e.target.value as MtpSimulationInputs['taskDomainComplexity'])}
                 aria-label="Task Domain Complexity"
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="deterministic_code">Deterministic Code Generation (High Predictability)</option>
                 <option value="structured_extraction">Structured JSON/SQL Extraction (Schema Constrained)</option>
@@ -261,7 +261,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 value={targetModelSize}
                 onChange={(e) => setTargetModelSize(e.target.value as MtpSimulationInputs['targetModelSize'])}
                 aria-label="Target Foundation Model"
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="deepseek_v3_671b">DeepSeek-V3 671B (Dual MTP Modules Native)</option>
                 <option value="deepseek_r1_671b">DeepSeek-R1 Reasoning (Chain-of-Thought Verification)</option>
@@ -276,7 +276,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 value={hardwareCluster}
                 onChange={(e) => setHardwareCluster(e.target.value as MtpSimulationInputs['hardwareCluster'])}
                 aria-label="Hardware Cluster"
-                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="8x_h100_sxm5">8x NVIDIA H100 80GB SXM5 (Hopper NVLink)</option>
                 <option value="8x_b200_nvlink">8x NVIDIA B200 192GB (Blackwell 72-GPU Domain)</option>
@@ -290,7 +290,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
               <div className="inline-flex rounded-lg border border-neutral-700 p-0.5 bg-neutral-950">
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded text-xs font-mono transition-all duration-300 ${
                     currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -298,7 +298,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 </button>
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded text-xs font-mono transition-all duration-300 ${
                     currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -312,7 +312,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
           <div className="lg:col-span-7 space-y-6">
             {/* Primary KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+              <div className="bg-neutral-900/60 p-4 rounded-2xl border border-neutral-800">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase">Speedup Ratio</div>
                 <div className="text-2xl font-bold font-mono text-white mt-1">
                   {results.decodingSpeedupRatio}x
@@ -320,7 +320,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 <div className="text-[10px] text-neutral-400 mt-1">vs Autoregressive</div>
               </div>
 
-              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+              <div className="bg-neutral-900/60 p-4 rounded-2xl border border-neutral-800">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase">Acceptance Rate</div>
                 <div className="text-2xl font-bold font-mono text-white mt-1">
                   {results.speculativeAcceptanceRate}%
@@ -328,7 +328,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 <div className="text-[10px] text-neutral-400 mt-1">{results.effectiveTokensPerStep} tok/step</div>
               </div>
 
-              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+              <div className="bg-neutral-900/60 p-4 rounded-2xl border border-neutral-800">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase">Inter-Token (ITL)</div>
                 <div className="text-2xl font-bold font-mono text-white mt-1">
                   {results.interTokenLatencyMs} ms
@@ -336,7 +336,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 <div className="text-[10px] text-neutral-400 mt-1">Sub-10ms Decode</div>
               </div>
 
-              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+              <div className="bg-neutral-900/60 p-4 rounded-2xl border border-neutral-800">
                 <div className="text-[11px] font-mono text-neutral-400 uppercase">Throughput</div>
                 <div className="text-2xl font-bold font-mono text-amber-400 mt-1">
                   {results.aggregateThroughputTokensPerSec.toLocaleString()}
@@ -346,7 +346,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
             </div>
 
             {/* Acceptance Distribution by Depth */}
-            <div className="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800 space-y-4">
+            <div className="bg-neutral-900/60 p-6 rounded-[24px] border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                   <Activity className="w-4 h-4 text-neutral-200" /> Speculative Acceptance by Prediction Depth (k)
@@ -361,7 +361,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                       <span className="text-neutral-300 font-mono">Depth k = {item.depth} Token Candidate</span>
                       <span className="font-mono text-neutral-200">{item.acceptanceRate}% Acceptance ({item.cumulativeAccepted} cumulative)</span>
                     </div>
-                    <div className="w-full bg-neutral-950 h-2 rounded-lg overflow-hidden border border-neutral-800">
+                    <div className="w-full bg-neutral-950 h-2 rounded-full overflow-hidden border border-neutral-800">
                       <div
                         className="border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-200 h-full transition-all duration-300"
                         style={{ width: `${item.acceptanceRate}%` }}
@@ -373,7 +373,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
             </div>
 
             {/* Architecture Visualizer SVG */}
-            <div className="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800 space-y-4">
+            <div className="bg-neutral-900/60 p-6 rounded-[24px] border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                   <Layers className="w-4 h-4 text-neutral-200" /> DeepSeek-V3 MTP Pipeline Telemetry
@@ -383,7 +383,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800/80">
                 <svg viewBox="0 0 600 180" className="w-full h-auto text-xs font-mono select-none">
                   <defs>
                     <linearGradient id="mtpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -426,7 +426,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
             </div>
 
             {/* Financial FinOps Card */}
-            <div className="bg-neutral-950 p-6 rounded-xl border border-white/15 space-y-3">
+            <div className="bg-neutral-950 p-6 rounded-[24px] border border-white/15 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono uppercase text-neutral-200">Annual FinOps Infrastructure Savings</span>
                 <span className="text-xs font-mono text-neutral-400">Hardware Amortization Delta</span>
@@ -442,16 +442,16 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
         </div>
 
         {/* Technical FAQ Accordion */}
-        <section className="bg-neutral-900/60 p-6 sm:p-8 rounded-xl border border-neutral-800 space-y-6">
+        <section className="bg-neutral-900/60 p-6 sm:p-8 rounded-[24px] border border-neutral-800 space-y-6">
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
             <Cpu className="w-5 h-5 text-neutral-200" /> Architectural FAQ & Technical Invariants
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/60 hover:bg-neutral-900/60 flex items-center justify-between text-xs sm:text-sm font-semibold text-neutral-200 transition-colors"
+                  className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/60 hover:bg-neutral-900/60 flex items-center justify-between text-xs sm:text-sm font-semibold text-neutral-200 transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-200 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -478,8 +478,8 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
           </div>
           <div className="max-w-xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -492,7 +492,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -508,7 +508,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mtp-speculative-draft-
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] max-w-lg w-full p-6 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" /> Embed Simulator Widget

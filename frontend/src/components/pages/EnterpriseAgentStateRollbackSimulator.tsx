@@ -131,30 +131,30 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
       <div className="border-b border-neutral-800 bg-neutral-900/50 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs">
           <div className="flex items-center gap-2 text-neutral-400">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
             <span>/</span>
-            <Link to="/resources/" className="hover:text-white transition-colors">Interactive Tools</Link>
+            <Link to="/resources/" className="hover:text-white transition-all duration-300">Interactive Tools</Link>
             <span>/</span>
             <span className="text-neutral-200 font-mono">Agent State Snapshot &amp; Rollback Simulator</span>
           </div>
           <div className="flex items-center gap-2">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors border border-neutral-700 font-mono"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-all duration-300 border border-neutral-700 font-mono"
             >
               <Code className="w-3.5 h-3.5 text-neutral-200" />
               <span>Embed Sandbox</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/10 hover:bg-neutral-200/30 text-neutral-200 hover:text-white transition-colors border border-white/20 font-mono"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/10 hover:bg-neutral-200/30 text-neutral-200 hover:text-white transition-all duration-300 border border-white/20 font-mono"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
@@ -166,7 +166,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero Section */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono mb-4 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono mb-4 uppercase tracking-wider">
             <RotateCcw className="w-3.5 h-3.5" />
             Deterministic Agentic State Persistence &amp; Zero-Downtime Rollback
           </div>
@@ -181,7 +181,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
         {/* Primary Simulator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+          <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4 mb-6">
               <div className="flex items-center gap-2 text-white font-semibold">
                 <Sliders className="w-5 h-5 text-neutral-200" />
@@ -204,7 +204,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   step={25000}
                   value={monthlyWorkflows}
                   onChange={(e) => setMonthlyWorkflows(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>25k runs/mo</span>
@@ -226,7 +226,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   step={2}
                   value={nodesPerWorkflow}
                   onChange={(e) => setNodesPerWorkflow(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>6 (Shallow)</span>
@@ -248,7 +248,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   step={8192}
                   value={statePayloadSizeBytes}
                   onChange={(e) => setStatePayloadSizeBytes(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>8 KB (Text)</span>
@@ -270,7 +270,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   step={0.5}
                   value={failureOrInterventionRatePct}
                   onChange={(e) => setFailureOrInterventionRatePct(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>1.0% (Stable)</span>
@@ -292,7 +292,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   step={0.05}
                   value={avgRerunTokenCostUSD}
                   onChange={(e) => setAvgRerunTokenCostUSD(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-neutral-400 mt-1">
                   <span>$0.05 (GPT-4o-mini)</span>
@@ -323,7 +323,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
           <div className="lg:col-span-7 space-y-6">
             {/* 4 Summary Stat Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Annual Savings
                 </span>
@@ -335,7 +335,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                 </span>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Latency Overhead Cut
                 </span>
@@ -347,7 +347,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                 </span>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Rollback Speedup
                 </span>
@@ -359,7 +359,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                 </span>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-lg">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-lg">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                   Integrity Risk
                 </span>
@@ -373,7 +373,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
             </div>
 
             {/* Interactive State Machine DAG Visualizer Card */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3 mb-4">
                 <div className="flex items-center gap-2">
                   <RotateCcw className="w-4 h-4 text-neutral-200" />
@@ -388,7 +388,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
 
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
-                  <div className="p-3 rounded-lg bg-neutral-950 border border-neutral-800">
+                  <div className="p-3 rounded-[18px] bg-neutral-950 border border-neutral-800">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-semibold text-white">1. Ingest &amp; Tokenize</span>
                       <span className="font-mono text-[10px] text-neutral-200">Node #1</span>
@@ -398,7 +398,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-neutral-950 border border-white/30 relative">
+                  <div className="p-3 rounded-[18px] bg-neutral-950 border border-white/30 relative">
                     <div className="absolute -top-2 right-2 px-1.5 py-0.2 rounded bg-white text-black font-mono text-[9px] font-bold">
                       Safe Snapshot
                     </div>
@@ -411,7 +411,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-neutral-950 border border-red-500/40">
+                  <div className="p-3 rounded-[18px] bg-neutral-950 border border-red-500/40">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-semibold text-red-300">3. Human Rejection / Fault</span>
                       <span className="font-mono text-[10px] text-red-400">Node #{nodesPerWorkflow}</span>
@@ -422,7 +422,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   </div>
                 </div>
 
-                <div className="p-3 bg-white/[0.05] border border-white/15 rounded-xl text-xs text-neutral-300 flex items-center justify-between">
+                <div className="p-3 bg-white/[0.05] border border-white/15 rounded-[18px] text-xs text-neutral-300 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-neutral-200 shrink-0" />
                     <span>Rollback Turnaround: <strong>11ms</strong> (Pointer swap) vs <strong>{(results.volatileMesh.rollbackRecoveryTurnaroundMs / 1000).toFixed(1)}s</strong> (Full token re-run)</span>
@@ -433,14 +433,14 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
             </div>
 
             {/* Comprehensive 3-Way Architectural Comparison Card */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono border-b border-neutral-800 pb-3 mb-4">
                 Architecture Benchmark Breakdown
               </h3>
 
               <div className="space-y-4">
                 {/* 1. Volatile In-Memory */}
-                <div className="p-4 rounded-xl bg-neutral-950/70 border border-red-900/30">
+                <div className="p-4 rounded-2xl bg-neutral-950/70 border border-red-900/30">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
@@ -453,7 +453,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   <p className="text-xs text-neutral-400 mb-3">
                     {results.volatileMesh.rollbackVerdict}
                   </p>
-                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-lg">
+                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-xl">
                     <div>Commit Overhead: <strong className="text-white">0.0ms</strong></div>
                     <div>Rollback Turnaround: <strong className="text-red-400">{(results.volatileMesh.rollbackRecoveryTurnaroundMs / 1000).toFixed(1)}s</strong></div>
                     <div>Rerun Waste: <strong className="text-red-400">${results.volatileMesh.monthlyWastedRerunTokensUSD.toLocaleString()}/mo</strong></div>
@@ -461,7 +461,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                 </div>
 
                 {/* 2. Synchronous Postgres JSONB */}
-                <div className="p-4 rounded-xl bg-neutral-950/70 border border-amber-900/30">
+                <div className="p-4 rounded-2xl bg-neutral-950/70 border border-amber-900/30">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
@@ -474,7 +474,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   <p className="text-xs text-neutral-400 mb-3">
                     {results.syncRelational.rollbackVerdict}
                   </p>
-                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-lg">
+                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-300 bg-neutral-900/50 p-2 rounded-xl">
                     <div>Per-Node Commit: <strong className="text-amber-400">+{results.syncRelational.perNodeCommitOverheadMs}ms</strong></div>
                     <div>Monthly Footprint: <strong className="text-amber-400">{(results.syncRelational.monthlyStorageFootprintMB / 1024).toFixed(1)} GB</strong></div>
                     <div>Rollback Turnaround: <strong className="text-amber-400">{(results.syncRelational.rollbackRecoveryTurnaroundMs / 1000).toFixed(2)}s</strong></div>
@@ -482,7 +482,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                 </div>
 
                 {/* 3. Elesium Sovereign Delta WAL */}
-                <div className="p-4 rounded-xl bg-white/[0.05] border border-white/30 relative">
+                <div className="p-4 rounded-2xl bg-white/[0.05] border border-white/30 relative">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-neutral-400"></span>
@@ -495,7 +495,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
                   <p className="text-xs text-neutral-300 mb-3">
                     {results.sovereignDeltaWal.rollbackVerdict}
                   </p>
-                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-200 bg-neutral-900/80 p-2 rounded-lg">
+                  <div className="grid grid-cols-3 gap-2 text-[11px] font-mono text-neutral-200 bg-neutral-900/80 p-2 rounded-xl">
                     <div>Per-Node Commit: <strong className="text-neutral-200">+{results.sovereignDeltaWal.perNodeCommitOverheadMs}ms</strong></div>
                     <div>Monthly Footprint: <strong className="text-neutral-200">{(results.sovereignDeltaWal.monthlyStorageFootprintMB / 1024).toFixed(1)} GB</strong></div>
                     <div>Rollback Turnaround: <strong className="text-neutral-200">{results.sovereignDeltaWal.rollbackRecoveryTurnaroundMs}ms</strong></div>
@@ -507,7 +507,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
         </div>
 
         {/* Technical Deep Dive: Feature Comparison Matrix */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-8 shadow-xl mb-16">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-8 shadow-xl mb-16">
           <div className="border-b border-neutral-800 pb-4 mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-white">
               State Persistence &amp; Rollback Architectural Specification
@@ -570,7 +570,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
         </div>
 
         {/* Enterprise Technical FAQ Accordion */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-8 shadow-xl mb-16">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-8 shadow-xl mb-16">
           <div className="border-b border-neutral-800 pb-4 mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-white">
               Enterprise State Machine &amp; Rollback Engineering FAQ
@@ -584,11 +584,11 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950/60 transition-colors"
+                className="border border-neutral-800 rounded-[24px] overflow-hidden bg-neutral-950/60 transition-colors"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-neutral-200 hover:text-white transition-colors"
+                  className="active:scale-[0.97] w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -608,9 +608,9 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
         </div>
 
         {/* Commercial CTA & Architecture Audit Banner */}
-        <div className="bg-neutral-950 border border-white/20 rounded-xl p-8 sm:p-12 shadow-2xl text-center relative overflow-hidden">
+        <div className="bg-neutral-950 border border-white/20 rounded-[32px] p-8 sm:p-12 shadow-2xl text-center relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-200 bg-white/[0.04] px-3 py-1 rounded-lg border border-white/15">
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-200 bg-white/[0.04] px-3 py-1 rounded-full border border-white/15">
               Enterprise AI Systems Architecture Intake
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -631,7 +631,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
               </ExpandableScreen>
               <Link
                 to="/solutions/"
-                className="px-6 py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-colors border border-neutral-700"
+                className="px-6 py-3 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-all duration-300 border border-neutral-700"
               >
                 Explore All Sovereign Solutions
               </Link>
@@ -643,7 +643,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1"
@@ -657,14 +657,14 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this snippet into your engineering documentation, intranet, or technical blog:
             </p>
-            <div className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
               {embedCode}
             </div>
             <div className="flex items-center justify-between">
               <span className="text-[11px] text-neutral-400">Watermarked to Elesium Sovereign Architecture</span>
               <button
                 onClick={copyEmbedToClipboard}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all duration-300 flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Code Copied!' : 'Copy Embed Snippet'}</span>

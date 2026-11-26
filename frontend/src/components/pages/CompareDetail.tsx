@@ -155,7 +155,7 @@ export default function CompareDetail() {
 
                     <button
                         onClick={handleCopyUrl}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-neutral-900 hover:bg-gray-200 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 text-xs font-medium transition-colors"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gray-100 dark:bg-neutral-900 hover:bg-gray-200 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 text-xs font-medium active:scale-[0.97] transition-all duration-300"
                         title="Copy battlecard link"
                     >
                         {copied ? (
@@ -175,7 +175,7 @@ export default function CompareDetail() {
                 {/* Hero Title Section */}
                 <header className="mb-10">
                     <div className="flex flex-wrap items-center gap-2 mb-4">
-                        <span className="px-3 py-1 rounded-md text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white uppercase tracking-wider">
+                        <span className="px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white uppercase tracking-wider">
                             {battlecard.category}
                         </span>
                         <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400">
@@ -188,14 +188,14 @@ export default function CompareDetail() {
                     </h1>
 
                     {/* Head-to-Head Visual Hero Banner */}
-                    <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 mb-8">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                            <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                    <div className="p-6 sm:p-7 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 mb-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
+                            <div className="p-5 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full flex flex-col justify-between">
                                 <span className="text-[11px] font-mono font-semibold text-neutral-500 uppercase tracking-wider block mb-1">Architecture A</span>
                                 <div className="text-lg font-bold text-black dark:text-white">{battlecard.entityALabel}</div>
                                 <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">{battlecard.entityA}</div>
                             </div>
-                            <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="p-5 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 h-full flex flex-col justify-between">
                                 <span className="text-[11px] font-mono font-semibold text-neutral-500 uppercase tracking-wider block mb-1">Architecture B</span>
                                 <div className="text-lg font-bold text-black dark:text-white">{battlecard.entityBLabel}</div>
                                 <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">{battlecard.entityB}</div>
@@ -204,9 +204,9 @@ export default function CompareDetail() {
                     </div>
 
                     {/* Fast Facts Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
                         {battlecard.fastFacts.map((fact, idx) => (
-                            <div key={idx} className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                            <div key={idx} className="p-5 rounded-[22px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 h-full flex flex-col justify-between">
                                 <span className="text-xs text-neutral-600 dark:text-neutral-400 block mb-1 font-mono">{fact.label}</span>
                                 <div className="text-base sm:text-lg font-bold text-black dark:text-white font-mono mb-1">{fact.value}</div>
                                 <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-snug">{fact.description}</p>
@@ -216,9 +216,9 @@ export default function CompareDetail() {
                 </header>
 
                 {/* Executive Engineering Verdict Box */}
-                <section className="mb-12 p-6 sm:p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                <section className="mb-12 p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                     <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center shrink-0">
                             <Scale className="w-5 h-5" />
                         </div>
                         <div>
@@ -248,7 +248,7 @@ export default function CompareDetail() {
                         </div>
                     </div>
 
-                    <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                    <div className="overflow-x-auto rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                         <table className="w-full text-left border-collapse text-xs sm:text-sm">
                             <thead>
                                 <tr className="bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white border-b border-neutral-200 dark:border-white/10">
@@ -299,7 +299,7 @@ export default function CompareDetail() {
                     {battlecard.pillars.map((pillar, idx) => (
                         <div
                             key={idx}
-                            className="p-6 sm:p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10"
+                            className="p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10"
                         >
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-neutral-200 dark:border-white/10 mb-6">
                                 <div>
@@ -315,7 +315,7 @@ export default function CompareDetail() {
                                 </div>
 
                                 {/* Metric Highlight Card */}
-                                <div className="p-3 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 shrink-0">
+                                <div className="p-3.5 rounded-[18px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 shrink-0">
                                     <span className="text-[11px] text-neutral-500 block mb-1 font-mono font-medium">{pillar.keyMetric.label}</span>
                                     <div className="flex items-center gap-3 text-xs font-mono">
                                         <div>
@@ -342,7 +342,7 @@ export default function CompareDetail() {
 
                 {/* Related Solution CTA Banner */}
                 {battlecard.relatedSolutionSlug && (
-                    <section className="mb-16 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                    <section className="mb-16 p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                             <div>
                                 <span className="text-xs font-mono font-medium text-neutral-600 dark:text-neutral-400 uppercase tracking-wider block mb-1">
@@ -357,7 +357,7 @@ export default function CompareDetail() {
                             </div>
                             <Link
                                 to={`/solutions/${battlecard.relatedSolutionSlug}/`}
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-black dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm active:scale-[0.97] transition-all hover:opacity-90 shrink-0"
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 hover:opacity-90 shrink-0"
                             >
                                 <span>Inspect Production Solution</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -383,14 +383,14 @@ export default function CompareDetail() {
                             return (
                                 <div
                                     key={idx}
-                                    className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 overflow-hidden"
+                                    className="rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 overflow-hidden"
                                 >
                                     <button
                                         onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                                         className="w-full p-4 sm:p-5 flex items-center justify-between text-left text-sm font-semibold text-black dark:text-white transition-colors"
                                     >
                                         <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                                     </button>
                                     <AnimatePresence initial={false}>
                                         {isOpen && (
@@ -398,7 +398,7 @@ export default function CompareDetail() {
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                 className="accordion-panel overflow-hidden"
                                             >
                                                 <div className="p-4 sm:p-5 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-white/10 leading-relaxed">
@@ -424,12 +424,12 @@ export default function CompareDetail() {
                                 View All 6 Comparisons &rarr;
                             </Link>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {relatedBattlecards.map(item => (
                                 <Link
                                     key={item.id}
                                     to={`/compare/${item.slug}/`}
-                                    className="p-5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/40 transition-all group flex flex-col justify-between"
+                                    className="p-6 rounded-[24px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/40 transition-all duration-300 group flex flex-col justify-between h-full"
                                 >
                                     <div>
                                         <span className="text-[10px] font-mono font-medium text-neutral-500 uppercase tracking-wider block mb-1">
@@ -453,7 +453,7 @@ export default function CompareDetail() {
                 )}
 
                 {/* Conversion & Direct Audit CTA */}
-                <section className="text-center p-8 sm:p-12 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 relative overflow-hidden">
+                <section className="text-center p-8 sm:p-12 rounded-[32px] bg-black text-white border border-neutral-200 dark:border-white/10 relative overflow-hidden">
                     <div className="relative z-10 max-w-3xl mx-auto space-y-4">
                         <span className="text-xs font-mono tracking-wider uppercase text-neutral-400 block">
                             Enterprise Systems Advisory
@@ -467,7 +467,7 @@ export default function CompareDetail() {
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto h-11 px-7 rounded-full bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-2"
                             >
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -475,7 +475,7 @@ export default function CompareDetail() {
 
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                                className="w-full sm:w-auto h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-1.5"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>

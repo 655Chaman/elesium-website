@@ -273,7 +273,7 @@ export default function CommercialDirectory() {
 
             {/* Hero Header */}
             <header className="max-w-6xl mx-auto px-6 mb-16 md:mb-24">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 mb-6">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 mb-6">
                     <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
                         Commercial Priority Directory (Top 100)
                     </span>
@@ -293,27 +293,27 @@ export default function CommercialDirectory() {
                 </div>
 
                 {/* Trust Metrics Bar */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-neutral-200 dark:border-white/10">
-                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-10 pt-8 border-t border-neutral-200 dark:border-white/10">
+                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
                         <div className="text-2xl font-mono font-semibold text-black dark:text-white">100</div>
                         <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Priority Architecture Hubs</div>
                     </div>
-                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
                         <div className="text-2xl font-mono font-semibold text-black dark:text-white">&lt; 200ms</div>
                         <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Deterministic Latency SLA</div>
                     </div>
-                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
                         <div className="text-2xl font-mono font-semibold text-black dark:text-white">100%</div>
                         <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Private VPC Data Isolation</div>
                     </div>
-                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
                         <div className="text-2xl font-mono font-semibold text-black dark:text-white">90-Day</div>
                         <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Hard Contracted ROI SLA</div>
                     </div>
                 </div>
 
                 {/* Technical Overview */}
-                <div className="mt-8 p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <div className="mt-8 p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="mb-3">
                         <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold">
                             Priority Commercial Index
@@ -343,7 +343,7 @@ export default function CommercialDirectory() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search 100 enterprise solutions by keyword, metro, or regulation..."
-                        className="w-full pl-11 pr-10 py-3.5 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-lg text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all"
+                        className="w-full pl-11 pr-10 py-3.5 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all duration-300"
                     />
                     {searchQuery && (
                         <button
@@ -364,7 +364,7 @@ export default function CommercialDirectory() {
                             <button
                                 key={sector.key}
                                 onClick={() => setSelectedSector(sector.key)}
-                                className={`px-4 py-2 rounded-lg text-xs font-mono whitespace-nowrap active:scale-[0.97] transition-all border ${
+                                className={`px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap active:scale-[0.97] transition-all duration-300 border ${
                                     isSelected
                                         ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white font-medium'
                                         : 'border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-neutral-400 dark:hover:border-white/25'
@@ -415,7 +415,7 @@ export default function CommercialDirectory() {
             {/* 5 Thematic Category Panels */}
             <main className="max-w-6xl mx-auto px-6 space-y-12">
                 {visibleCategories.length === 0 ? (
-                    <div className="p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-center my-12">
+                    <div className="p-12 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-center my-12">
                         <Search className="w-10 h-10 text-neutral-400 mx-auto mb-4" />
                         <h3 className="text-lg font-medium text-black dark:text-white mb-2">
                             No Matching Architecture Specs Found
@@ -428,7 +428,7 @@ export default function CommercialDirectory() {
                                 setSearchQuery('')
                                 setSelectedSector('all')
                             }}
-                            className="px-5 py-2.5 rounded-lg bg-black text-white dark:bg-white dark:text-black text-xs font-mono font-medium hover:opacity-90 active:scale-[0.97] transition-all"
+                            className="px-6 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-mono font-medium hover:opacity-90 active:scale-[0.97] transition-all duration-300"
                         >
                             Reset Filters
                         </button>
@@ -441,13 +441,13 @@ export default function CommercialDirectory() {
                             <section
                                 key={category.key}
                                 id={category.key}
-                                className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black mb-12"
+                                className="p-8 sm:p-10 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black mb-12"
                             >
                                 {/* Panel Header */}
                                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 mb-8 border-b border-neutral-200 dark:border-white/10">
                                     <div className="space-y-2 max-w-2xl">
                                         <div className="flex items-center gap-2.5">
-                                            <div className="p-2 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
+                                            <div className="p-2.5 rounded-2xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                                 <IconComponent className="w-5 h-5" />
                                             </div>
                                             <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
@@ -474,19 +474,19 @@ export default function CommercialDirectory() {
                                 </div>
 
                                 {/* Child solutions grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {category.solutions.map((solution: CommercialSolution) => (
                                         <Link
                                             key={solution.slug}
                                             to={`/solutions/${solution.slug}/`}
-                                            className="group relative flex flex-col justify-between p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/40 transition-all"
+                                            className="group relative h-full flex flex-col justify-between p-6 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/40 transition-all duration-300"
                                         >
                                             <div className="space-y-3">
                                                 <div className="flex items-center justify-between gap-2">
                                                     <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 truncate">
                                                         Metro: {solution.metro}
                                                     </span>
-                                                    <span className="text-[10px] font-mono px-2 py-0.5 rounded border border-neutral-200 dark:border-white/10 text-black dark:text-white shrink-0">
+                                                    <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white shrink-0">
                                                         {solution.architectureBadges[0] || 'Air-Gapped VPC'}
                                                     </span>
                                                 </div>
@@ -520,7 +520,7 @@ export default function CommercialDirectory() {
 
             {/* Transparent Institutional Pricing Tiers */}
             <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                <div className="p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 block">
                             Direct Commercial Engagement
@@ -534,7 +534,7 @@ export default function CommercialDirectory() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full">
                             <div>
                                 <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
                                 <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
@@ -546,18 +546,16 @@ export default function CommercialDirectory() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-2.5 px-5 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all duration-300"
                             >
                                 Inquire Tier 1 &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
-                            <div className="mb-2">
-                                <span className="inline-block px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded uppercase tracking-wider">
-                                    Most Deployed
-                                </span>
-                            </div>
+                        <div className="p-6 sm:p-7 rounded-[24px] border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between h-full relative">
+                            <span className="absolute -top-3 left-6 px-3 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
+                                Most Deployed
+                            </span>
                             <div>
                                 <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase">Tier 02</span>
                                 <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
@@ -569,13 +567,13 @@ export default function CommercialDirectory() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-2.5 px-5 rounded-full bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all duration-300"
                             >
                                 Deploy Suite &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full">
                             <div>
                                 <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
                                 <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
@@ -587,7 +585,7 @@ export default function CommercialDirectory() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-2.5 px-5 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all duration-300"
                             >
                                 Retain Pod &rarr;
                             </button>
@@ -611,14 +609,14 @@ export default function CommercialDirectory() {
                     {commercialFaqs.map((faq, idx) => (
                         <div
                             key={idx}
-                            className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-white dark:bg-black"
+                            className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-black"
                         >
                             <button
                                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                                 className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                             >
                                 <span>{faq.q}</span>
-                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                             </button>
                             <AnimatePresence initial={false}>
                                 {openFaq === idx && (
@@ -626,7 +624,7 @@ export default function CommercialDirectory() {
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: 'auto', opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                         className="accordion-panel overflow-hidden"
                                     >
                                         <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
@@ -642,7 +640,7 @@ export default function CommercialDirectory() {
 
             {/* Bottom Call to Action Card */}
             <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white">
+                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white">
                     <div className="relative z-10 max-w-2xl space-y-6">
                         <span className="text-xs font-mono text-neutral-400 uppercase tracking-widest block">
                             Sovereign Private VPC Deployment Protocol
@@ -661,7 +659,7 @@ export default function CommercialDirectory() {
                         <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-200 flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto h-11 px-7 rounded-full bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-2"
                             >
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -669,7 +667,7 @@ export default function CommercialDirectory() {
 
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                                className="w-full sm:w-auto h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-1.5"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>

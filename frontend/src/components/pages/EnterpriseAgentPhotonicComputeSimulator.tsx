@@ -135,7 +135,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-neutral-800 pb-8">
             <div className="space-y-2 max-w-3xl">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
                 <Radio className="w-3.5 h-3.5 mr-1 text-neutral-200" />
                 Tool #32 · Coherent Silicon Photonics &amp; Optical Neural Network GEMM
               </div>
@@ -151,27 +151,27 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
             <div className="flex items-center space-x-3 shrink-0">
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="active:scale-[0.97] px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition"
+                className="active:scale-[0.97] px-3.5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition-all duration-300"
               >
                 Currency: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition-all duration-300"
               >
                 <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Tool</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -181,7 +181,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
         </div>
 
         {/* Status Alert Banner */}
-        <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
+        <div className={`p-4 rounded-2xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
             ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'THERMALLY_COMPENSATED'
@@ -211,7 +211,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm">
             <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
               <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">Silicon Photonics Parameters</h2>
@@ -223,7 +223,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               <select
                 value={opticalArchitecture}
                 onChange={e => setOpticalArchitecture(e.target.value as any)}
-                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="mzi_clements_mesh">Mach-Zehnder Interferometer (Clements Unitary Mesh)</option>
                 <option value="mrr_wdm_crossbar">Micro-Ring Resonator (MRR Dense WDM Crossbar)</option>
@@ -243,7 +243,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                   <button
                     key={dim}
                     onClick={() => setMatrixDimension(dim)}
-                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono font-medium border transition-all duration-300 ${
                       matrixDimension === dim
                         ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
                         : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
@@ -266,7 +266,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                   <button
                     key={ch}
                     onClick={() => setWdmChannels(ch)}
-                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono font-medium border transition-all duration-300 ${
                       wdmChannels === ch
                         ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
                         : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
@@ -289,7 +289,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                   <button
                     key={bits}
                     onClick={() => setModulationPrecisionBits(bits)}
-                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono font-medium border transition-all duration-300 ${
                       modulationPrecisionBits === bits
                         ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
                         : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
@@ -314,7 +314,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                 step="0.1"
                 value={thermalDriftStdDevKelvin}
                 onChange={e => setThermalDriftStdDevKelvin(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>0.1 K (Cryo / Active TEC)</span>
@@ -336,7 +336,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                 step="5"
                 value={dailyInferenceTokensMillions}
                 onChange={e => setDailyInferenceTokensMillions(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>1M (Pilot Agent)</span>
@@ -351,7 +351,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
             {/* Top 4 Metric KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1: Waveguide Latency */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Total Optical GEMM Latency</span>
                   <Zap className="w-4 h-4 text-neutral-200" />
@@ -377,7 +377,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               </div>
 
               {/* Card 2: Energy per MAC */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Energy Consumption / MAC</span>
                   <Cpu className="w-4 h-4 text-neutral-200" />
@@ -403,7 +403,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               </div>
 
               {/* Card 3: Precision & Phase Drift */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Effective Precision (ENOB)</span>
                   <Thermometer className="w-4 h-4 text-amber-400" />
@@ -429,7 +429,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               </div>
 
               {/* Card 4: Financial OPEX Saved */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Annual Power OPEX Saved</span>
                   <Activity className="w-4 h-4 text-neutral-200" />
@@ -458,7 +458,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
             </div>
 
             {/* Dense WDM Spectral Distribution Visualizer */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm space-y-4">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
                   <Radio className="w-4 h-4 text-neutral-200" />
@@ -469,7 +469,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {results.spectralPoints.slice(0, 8).map(pt => (
-                  <div key={pt.channelIndex} className="bg-neutral-950/70 border border-neutral-800/80 rounded-xl p-3 space-y-1 font-mono text-[11px]">
+                  <div key={pt.channelIndex} className="bg-neutral-950/70 border border-neutral-800/80 rounded-[18px] p-3 space-y-1 font-mono text-[11px]">
                     <div className="flex justify-between text-white font-bold">
                       <span>CH-{pt.channelIndex}</span>
                       <span>{pt.wavelengthNm} nm</span>
@@ -497,25 +497,25 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
             </div>
 
             {/* Optical Architecture Blueprint Card */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm space-y-4">
               <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
                 <Layers className="w-4 h-4 text-neutral-200" />
                 <h3 className="text-sm font-semibold text-white">Co-Packaged Silicon Photonics Architecture Blueprint</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/60 space-y-1">
                   <p className="font-semibold text-white">1. Light Ingestion &amp; E/O</p>
                   <p className="text-neutral-400 text-[11px]">
                     Continuous-Wave (CW) DFB lasers couple into silicon rib waveguides via grating couplers. High-speed Mach-Zehnder modulators imprint activations at {modulationPrecisionBits}-bit resolution.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/60 space-y-1">
                   <p className="font-semibold text-white">2. In-Flight Matrix Multiply</p>
                   <p className="text-neutral-400 text-[11px]">
                     Coherent light propagates through the {matrixDimension}x{matrixDimension} Clements MZI mesh at 1.22x10⁸ m/s, computing unitary tensor transformations in {results.inFlightOpticalLatencyPs} ps with zero static capacitance dissipation.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/60 space-y-1">
                   <p className="font-semibold text-white">3. Photodetection &amp; Attestation</p>
                   <p className="text-neutral-400 text-[11px]">
                     Germanium-on-Silicon PIN photodiodes convert optical power to current. TIAs and high-speed ADCs yield output activations at {results.effectiveEnob} effective bits with cryptographic state integrity.
@@ -539,7 +539,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-[24px] p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Zap className="w-4 h-4 text-neutral-200" />
                 <span>Waveguide Propagation Physics</span>
@@ -550,7 +550,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-[24px] p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Thermometer className="w-4 h-4 text-amber-400" />
                 <span>Thermo-Optic Phase Drift Compensation</span>
@@ -561,7 +561,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-[24px] p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Layers className="w-4 h-4 text-neutral-200" />
                 <span>Co-Packaged Optics (CPO) Integration</span>
@@ -600,10 +600,10 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                 a: "Yes. Optical matrix engines execute the compute-intensive linear General Matrix Multiply (GEMM) layers (such as Key-Query-Value projections and Feed-Forward Networks) which account for >90% of total inference FLOPs. Non-linear activation functions (e.g. GELU, Softmax) are computed either via electro-optic saturation or in an adjacent ultra-low-power electronic digital coprocessor linked via Co-Packaged Optics (CPO)."
               }
             ].map((faq, idx) => (
-              <div key={idx} className="border border-neutral-800/80 rounded-xl bg-neutral-900/40 overflow-hidden">
+              <div key={idx} className="border border-neutral-800/80 rounded-[24px] bg-neutral-900/40 overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
@@ -619,7 +619,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
         </div>
 
         {/* Audit CTA Card */}
-        <div className="rounded-xl bg-neutral-950 border border-white/15 p-8 text-center space-y-4">
+        <div className="rounded-[32px] bg-neutral-950 border border-white/15 p-8 text-center space-y-4">
           <h2 className="text-2xl font-extrabold text-white">Deploy Sovereign Silicon Photonics &amp; Sub-Nanosecond Agent Infrastructure</h2>
           <p className="text-neutral-400 text-sm max-w-2xl mx-auto leading-relaxed">
             Eliminate copper interconnect latency and slash datacenter compute power by 85%. Partner with Elesium to architect sovereign optical accelerators and enterprise autonomous agent systems.
@@ -627,7 +627,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
           <div className="pt-2">
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="active:scale-[0.97] inline-flex items-center space-x-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-sm shadow-lg transition">
+                <button className="active:scale-[0.97] inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm shadow-lg transition-all duration-300">
                   <span>Schedule Optical Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -645,7 +645,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -666,13 +666,13 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
             <div className="flex justify-end space-x-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-all duration-300"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-medium transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}</span>

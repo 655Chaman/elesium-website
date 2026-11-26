@@ -180,16 +180,16 @@ export default function DpdpStatutoryAuditSimulator() {
           
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
             <span>/</span>
-            <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
+            <Link to="/compare/" className="hover:text-white transition-all duration-300">Compare</Link>
             <span>/</span>
             <span className="text-white">DPDP Act 2023 Audit Simulator</span>
           </div>
 
           {/* Header Title Section */}
           <div className="mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-white text-xs font-mono font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs font-mono font-medium mb-4">
               <Scale className="w-3.5 h-3.5" />
               <span>Statutory Legal Tech & Data Sovereignty Simulator</span>
             </div>
@@ -203,13 +203,13 @@ export default function DpdpStatutoryAuditSimulator() {
           </div>
 
           {/* Top Quick Action Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800 mb-8 backdrop-blur-sm">
+          <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800 mb-8 backdrop-blur-sm">
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono text-neutral-400">Statutory Currency:</span>
               <div className="inline-flex rounded-lg bg-neutral-950 p-1 border border-neutral-800">
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-3 py-1 rounded-md text-xs font-mono font-medium transition-all ${
+                  className={`active:scale-[0.97] px-3 py-1 rounded-full text-xs font-mono font-medium transition-all duration-300 ${
                     currency === 'INR'
                       ? 'bg-white text-black shadow-sm'
                       : 'text-neutral-400 hover:text-white'
@@ -219,7 +219,7 @@ export default function DpdpStatutoryAuditSimulator() {
                 </button>
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-3 py-1 rounded-md text-xs font-mono font-medium transition-all ${
+                  className={`active:scale-[0.97] px-3 py-1 rounded-full text-xs font-mono font-medium transition-all duration-300 ${
                     currency === 'USD'
                       ? 'bg-white text-black shadow-sm'
                       : 'text-neutral-400 hover:text-white'
@@ -233,14 +233,14 @@ export default function DpdpStatutoryAuditSimulator() {
             <div className="flex items-center gap-3">
               <button
                 onClick={copyAuditMemo}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-medium border border-neutral-700 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-medium border border-neutral-700 transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
                 <span>{hasCopiedMemo ? "Copied Statutory Memo!" : "Export Audit Dossier (.JSON)"}</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-medium border border-neutral-700 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-medium border border-neutral-700 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5 text-white" />
                 <span>Embed Widget</span>
@@ -253,7 +253,7 @@ export default function DpdpStatutoryAuditSimulator() {
             
             {/* Left Column: Statutory Diagnostic Controls (5 Cols) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-md">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-md">
                 <h2 className="text-base font-bold text-white flex items-center gap-2 mb-6 pb-3 border-b border-neutral-800">
                   <FileText className="w-4 h-4 text-white" />
                   <span>Statutory Architecture Inputs</span>
@@ -273,7 +273,7 @@ export default function DpdpStatutoryAuditSimulator() {
                       step="50000"
                       value={recordVolume}
                       onChange={(e) => setRecordVolume(parseInt(e.target.value))}
-                      className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg cursor-pointer"
+                      className="w-full accent-white bg-neutral-800 h-1.5 rounded-full cursor-pointer"
                     />
                     <div className="flex justify-between text-[10px] font-mono text-neutral-500 mt-1">
                       <span>10k (Startup)</span>
@@ -290,7 +290,7 @@ export default function DpdpStatutoryAuditSimulator() {
                     <select
                       value={inferenceBoundary}
                       onChange={(e) => setInferenceBoundary(e.target.value as InferenceBoundaryKey)}
-                      className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-3 py-2 text-sm text-neutral-100 focus:outline-none focus:border-white/40 font-sans"
+                      className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-sm text-neutral-100 focus:outline-none focus:border-white/40 font-sans"
                     >
                       {Object.values(INFERENCE_BOUNDARIES).map((b) => (
                         <option key={b.id} value={b.id}>
@@ -304,14 +304,14 @@ export default function DpdpStatutoryAuditSimulator() {
                   </div>
 
                   {/* Significant Data Fiduciary Status Toggle */}
-                  <div className="bg-neutral-950/70 border border-neutral-800 rounded-xl p-3 flex items-center justify-between">
+                  <div className="bg-neutral-950/70 border border-neutral-800 rounded-[18px] p-3 flex items-center justify-between">
                     <div>
                       <div className="text-xs font-bold text-neutral-200">Significant Data Fiduciary (SDF)</div>
                       <div className="text-[11px] text-neutral-400">Section 10 statutory heightened duties</div>
                     </div>
                     <button
                       onClick={() => setIsSignificantDataFiduciary(!isSignificantDataFiduciary)}
-                      className={`active:scale-[0.97] relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                      className={`active:scale-[0.97] relative inline-flex h-5 w-9 items-center rounded-full transition-all duration-300 ${
                         isSignificantDataFiduciary ? 'bg-white/10' : 'bg-neutral-800'
                       }`}
                     >
@@ -335,7 +335,7 @@ export default function DpdpStatutoryAuditSimulator() {
                           <div
                             key={p.id}
                             onClick={() => togglePii(p.id)}
-                            className={`p-2.5 rounded-lg border text-xs cursor-pointer transition-all flex items-start gap-2.5 ${
+                            className={`p-2.5 rounded-xl border text-xs cursor-pointer transition-all flex items-start gap-2.5 ${
                               isSelected
                                 ? 'bg-white/10 border-white/20 text-neutral-100'
                                 : 'bg-neutral-950/40 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -376,7 +376,7 @@ export default function DpdpStatutoryAuditSimulator() {
                           <div
                             key={item.key}
                             onClick={() => toggleSafeguard(k)}
-                            className={`p-2.5 rounded-lg border cursor-pointer transition-all flex items-center justify-between ${
+                            className={`p-2.5 rounded-xl border cursor-pointer transition-all flex items-center justify-between ${
                               isChecked
                                 ? 'bg-white/[0.04] border-white/30 text-neutral-100'
                                 : 'bg-neutral-950/40 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -403,7 +403,7 @@ export default function DpdpStatutoryAuditSimulator() {
             <div className="lg:col-span-7 space-y-6">
               
               {/* Primary Callout: Statutory Penalty Liability */}
-              <div className="bg-neutral-950 border border-white/20 rounded-xl p-6 shadow-2xl relative overflow-hidden">
+              <div className="bg-neutral-950 border border-white/20 rounded-[24px] p-6 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                   <Scale className="w-48 h-48 text-white" />
                 </div>
@@ -414,7 +414,7 @@ export default function DpdpStatutoryAuditSimulator() {
                       <AlertOctagon className="w-4 h-4 text-white" />
                       Statutory Penalty Exposure (Section 33 Liability)
                     </span>
-                    <span className={`px-2.5 py-1 rounded-md text-xs font-mono font-bold border ${
+                    <span className={`px-2.5 py-1 rounded-full text-xs font-mono font-bold border ${
                       results.complianceGrade === 'A+' || results.complianceGrade === 'A'
                         ? 'bg-white/10 text-neutral-200 border-white/20'
                         : 'bg-red-500/20 text-red-300 border-red-500/30'
@@ -460,14 +460,14 @@ export default function DpdpStatutoryAuditSimulator() {
               </div>
 
               {/* Statutory Violation Vectors */}
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6">
                 <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
                   <ShieldAlert className="w-4 h-4 text-red-400" />
                   <span>Detected Statutory Violation Vectors</span>
                 </h3>
 
                 {results.primaryViolations.length === 0 ? (
-                  <div className="p-4 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200 text-xs flex items-center gap-2">
+                  <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/15 text-neutral-200 text-xs flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-neutral-200" />
                     <span>Zero statutory violations detected. Your architecture satisfies MeitY sovereign empanelment and Section 8 safeguards.</span>
                   </div>
@@ -484,7 +484,7 @@ export default function DpdpStatutoryAuditSimulator() {
               </div>
 
               {/* Sovereign Local VPC Remediation Roadmap */}
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6">
                 <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-neutral-200" />
                   <span>Sovereign Local VPC Remediation Roadmap</span>
@@ -501,7 +501,7 @@ export default function DpdpStatutoryAuditSimulator() {
               </div>
 
               {/* Architecture Audit CTA Card */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div>
                   <h3 className="text-base font-bold text-white mb-1">
                     Lock In DPDP Statutory Safe Harbor
@@ -525,7 +525,7 @@ export default function DpdpStatutoryAuditSimulator() {
 
                   <button
                     onClick={() => openWhatsApp()}
-                    className="active:scale-[0.97] px-5 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all whitespace-nowrap flex items-center gap-2"
+                    className="active:scale-[0.97] px-5 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 whitespace-nowrap flex items-center gap-2"
                   >
                     <span className="w-2 h-2 rounded-full bg-neutral-400" />
                     Chat on WhatsApp
@@ -546,11 +546,11 @@ export default function DpdpStatutoryAuditSimulator() {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden"
+                  className="rounded-[24px] border border-neutral-800 bg-neutral-900/60 overflow-hidden"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
+                    className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
@@ -573,22 +573,22 @@ export default function DpdpStatutoryAuditSimulator() {
           <div className="border-t border-neutral-800 pt-10 text-center">
             <div className="text-xs font-mono text-neutral-500 mb-3">Explore Sovereign Architecture Tools</div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
-              <Link to="/compare/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-colors">
+              <Link to="/compare/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-all duration-300">
                 <span>Architecture Battlecard Matrix</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-neutral-700">•</span>
-              <Link to="/tools/multi-agent-token-leakage-simulator/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-colors">
+              <Link to="/tools/multi-agent-token-leakage-simulator/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-all duration-300">
                 <span>Token Leakage Simulator</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-neutral-700">•</span>
-              <Link to="/tools/enterprise-ai-roi-calculator/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-colors">
+              <Link to="/tools/enterprise-ai-roi-calculator/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-all duration-300">
                 <span>Enterprise AI ROI Calculator</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
               <span className="text-neutral-700">•</span>
-              <Link to="/solutions/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-colors">
+              <Link to="/solutions/" className="text-neutral-400 hover:text-white inline-flex items-center gap-1 transition-all duration-300">
                 <span>126 Sovereign Enterprise Solutions</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
@@ -600,10 +600,10 @@ export default function DpdpStatutoryAuditSimulator() {
         {/* Embed Modal Drawer */}
         {isEmbedOpen && (
           <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-            <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+            <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded-lg hover:bg-neutral-800 transition-colors"
+                className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded-full hover:bg-neutral-800 transition-all duration-300"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -617,7 +617,7 @@ export default function DpdpStatutoryAuditSimulator() {
                 Copy and paste this HTML snippet into your corporate intranet, legal compliance portal, or developer wiki.
               </p>
 
-              <div className="bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-[11px] text-neutral-300 break-all mb-4">
+              <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-[11px] text-neutral-300 break-all mb-4">
                 {embedCode}
               </div>
 
@@ -634,7 +634,7 @@ export default function DpdpStatutoryAuditSimulator() {
 
                 <button
                   onClick={copyEmbedSnippet}
-                  className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-md transition-colors"
+                  className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-md transition-all duration-300"
                 >
                   {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{hasCopiedEmbed ? "Copied Snippet!" : "Copy Embed HTML"}</span>

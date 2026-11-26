@@ -142,27 +142,27 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(6,182,212,0.15),transparent)]" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium tracking-wide text-neutral-200 bg-white/[0.04] border border-white/15">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wide text-neutral-200 bg-white/[0.04] border border-white/15">
               <Database className="w-3.5 h-3.5" /> Linkable Micro-SaaS Tool #14 &bull; FinOps &amp; Low-Latency
             </span>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-300 bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700/60 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-neutral-300 bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700/60 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5 text-neutral-200" />
                 Embed Calculator
               </button>
               <button
                 onClick={copyArchitecturalMemo}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-300 bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700/60 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-neutral-300 bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700/60 transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
                 {hasCopiedMemo ? 'Memo Copied!' : 'Copy Forensic Memo'}
@@ -183,7 +183,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Controls Column */}
-          <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 rounded-xl p-5 sm:p-6 shadow-xl backdrop-blur-sm space-y-6">
+          <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-5 sm:p-6 shadow-xl backdrop-blur-sm space-y-6">
             <div className="flex items-center gap-2 border-b border-neutral-800 pb-3">
               <Sliders className="w-4 h-4 text-neutral-200" />
               <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-200">
@@ -243,7 +243,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
               <select
                 value={upstreamLlmModel}
                 onChange={(e) => setUpstreamLlmModel(e.target.value as UpstreamLlmModelType)}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-3 py-2 text-xs text-neutral-200 font-mono focus:border-white/40 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-xs text-neutral-200 font-mono focus:border-white/40 focus:outline-none"
               >
                 <option value="gpt_4o">OpenAI GPT-4o ($2.50 in / $10.00 out per 1M)</option>
                 <option value="claude_3_5_sonnet">Anthropic Claude 3.5 Sonnet ($3.00 in / $15.00 out per 1M)</option>
@@ -260,7 +260,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
               <select
                 value={embeddingModel}
                 onChange={(e) => setEmbeddingModel(e.target.value as EmbeddingModelType)}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-3 py-2 text-xs text-neutral-200 font-mono focus:border-white/40 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-xs text-neutral-200 font-mono focus:border-white/40 focus:outline-none"
               >
                 <option value="text_embedding_3_small">OpenAI text-embedding-3-small (1536-dim, 14ms latency)</option>
                 <option value="bge_m3_local">BGE-M3 Self-Hosted ONNX (1024-dim, sub-8ms private VPC)</option>
@@ -276,7 +276,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
               <select
                 value={cacheStorageTier}
                 onChange={(e) => setCacheStorageTier(e.target.value as CacheStorageTierType)}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-3 py-2 text-xs text-neutral-200 font-mono focus:border-white/40 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-xs text-neutral-200 font-mono focus:border-white/40 focus:outline-none"
               >
                 <option value="redis_stack_vector">Redis Stack Vector (In-Memory HNSW, ~3.2ms lookup)</option>
                 <option value="milvus_standalone">Milvus Standalone (IVF-FLAT / HNSW, ~5.5ms lookup)</option>
@@ -321,7 +321,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
           <div className="lg:col-span-7 space-y-6">
             {/* Top KPI Metrics Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Hit Ratio</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.cacheHitRatePct}%
@@ -329,7 +329,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
                 <div className="text-[10px] text-neutral-500">Autonomous hits</div>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Latency Cut</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.averageLatencyReductionPct}%
@@ -337,7 +337,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
                 <div className="text-[10px] text-neutral-500">Weighted avg TTFT</div>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Monthly Savings</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   ${results.monthlyTokenSavingsUsd.toLocaleString()}
@@ -345,7 +345,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
                 <div className="text-[10px] text-neutral-200 font-mono">Net FinOps gain</div>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Annual Savings</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   ${results.annualTokenSavingsUsd.toLocaleString()}
@@ -359,7 +359,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
               {results.performanceTiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className={`border rounded-xl p-4 transition-all ${
+                  className={`border rounded-2xl p-4 transition-all ${
                     tier.id === 'blended_production'
                       ? 'bg-white/[0.05] border-white/30 shadow-lg'
                       : tier.id === 'semantic_cache_hit'
@@ -408,7 +408,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
             </div>
 
             {/* Architectural Guidance Box */}
-            <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
+            <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-mono uppercase text-neutral-400 font-bold flex items-center gap-1.5">
                   <TrendingDown className="w-3.5 h-3.5 text-neutral-200" />
@@ -424,7 +424,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
             </div>
 
             {/* Bottom CTA Card */}
-            <div className="bg-neutral-950 border border-white/20 rounded-xl p-4 flex flex-wrap items-center justify-between gap-4">
+            <div className="bg-neutral-950 border border-white/20 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4">
               <div>
                 <h4 className="text-sm font-bold text-white">Deploy Sovereign Semantic Cache in Your VPC</h4>
                 <p className="text-xs text-neutral-400">Lock sub-10ms response times and eliminate token waste with zero vendor lock-in.</p>
@@ -451,10 +451,10 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
           </h2>
           <div className="space-y-3">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl overflow-hidden">
+              <div key={idx} className="bg-neutral-900/40 border border-neutral-800/80 rounded-[24px] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left hover:bg-neutral-850/50 transition"
+                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left hover:bg-neutral-850/50 transition-all duration-300"
                 >
                   <span className="text-sm font-medium text-neutral-200">{faq.q}</span>
                   <ChevronDown
@@ -484,7 +484,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
             </Link>
           </div>
           <div>
-            <Link to="/tools/enterprise-ai-roi-calculator/" className="text-neutral-400 hover:text-white transition">
+            <Link to="/tools/enterprise-ai-roi-calculator/" className="text-neutral-400 hover:text-white transition-all duration-300">
               Enterprise ROI Calculator &rarr;
             </Link>
           </div>
@@ -494,7 +494,7 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
       {/* Embed Modal Drawer */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -505,19 +505,19 @@ Audit performed via https://elesium.online/tools/enterprise-semantic-cache-simul
             <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this HTML snippet into any technical blog, enterprise portal, or architecture documentation page.
             </p>
-            <div className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 font-mono text-[11px] text-neutral-300 break-all mb-4">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-[11px] text-neutral-300 break-all mb-4">
               {embedCodeSnippet}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-3 py-1.5 rounded-lg text-xs text-neutral-400 hover:text-white transition"
+                className="active:scale-[0.97] px-3 py-1.5 rounded-full text-xs text-neutral-400 hover:text-white transition-all duration-300"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied to Clipboard!' : 'Copy Embed Code'}

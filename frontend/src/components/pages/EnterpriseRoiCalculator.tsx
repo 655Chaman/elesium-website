@@ -226,9 +226,9 @@ export default function EnterpriseRoiCalculator() {
             {/* Breadcrumb Header */}
             <div className="pt-24 pb-6 px-6 md:px-12 max-w-[1440px] mx-auto">
                 <nav className="flex items-center gap-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-6">
-                    <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
+                    <Link to="/" className="hover:text-black dark:hover:text-white transition-all duration-300">Home</Link>
                     <ChevronRight className="w-3 h-3 text-neutral-400" />
-                    <Link to="/solutions/" className="hover:text-black dark:hover:text-white transition-colors">Solutions</Link>
+                    <Link to="/solutions/" className="hover:text-black dark:hover:text-white transition-all duration-300">Solutions</Link>
                     <ChevronRight className="w-3 h-3 text-neutral-400" />
                     <span className="text-black dark:text-white font-medium">ROI & TCO Calculator</span>
                 </nav>
@@ -236,7 +236,7 @@ export default function EnterpriseRoiCalculator() {
                 {/* Hero Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-neutral-100 dark:border-white/10">
                     <div className="max-w-3xl space-y-3">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 border border-neutral-400 dark:border-white/15 text-black dark:text-white text-xs font-mono tracking-wide uppercase">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-neutral-400 dark:border-white/15 text-black dark:text-white text-xs font-mono tracking-wide uppercase">
                             <Sparkles className="w-3.5 h-3.5" />
                             System 2 Interactive Micro-SaaS | CFO & Architecture Decision Engine
                         </div>
@@ -256,7 +256,7 @@ export default function EnterpriseRoiCalculator() {
                         <button
                             type="button"
                             onClick={() => setIsEmbedModalOpen(true)}
-                            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-white/5 hover:bg-neutral-100 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 text-xs font-medium transition-all shadow-sm"
+                            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-white/5 hover:bg-neutral-100 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 text-xs font-medium transition-all duration-300 shadow-sm"
                         >
                             <Code className="w-3.5 h-3.5 text-black dark:text-white" />
                             Embed on Your Site
@@ -264,7 +264,7 @@ export default function EnterpriseRoiCalculator() {
                         <button
                             type="button"
                             onClick={handleExportCsv}
-                            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-white/5 hover:bg-neutral-100 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 text-xs font-medium transition-all shadow-sm"
+                            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-white/5 hover:bg-neutral-100 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 text-xs font-medium transition-all duration-300 shadow-sm"
                         >
                             <Download className="w-3.5 h-3.5 text-black dark:text-white" />
                             Export Business Case (CSV)
@@ -272,7 +272,7 @@ export default function EnterpriseRoiCalculator() {
                         <button
                             type="button"
                             onClick={() => setIsMemoModalOpen(true)}
-                            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-neutral-400 dark:border-white/20 bg-white/10 hover:bg-neutral-200/20 text-black dark:text-white text-xs font-semibold transition-all shadow-sm"
+                            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-400 dark:border-white/20 bg-white/10 hover:bg-neutral-200/20 text-black dark:text-white text-xs font-semibold transition-all duration-300 shadow-sm"
                         >
                             <FileText className="w-3.5 h-3.5 text-black dark:text-white" />
                             Download Executive Memo
@@ -283,7 +283,7 @@ export default function EnterpriseRoiCalculator() {
 
             {/* Main Interactive Engine Section */}
             <div className="px-6 md:px-12 max-w-[1440px] mx-auto py-8">
-                <div className="bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl p-6 md:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
+                <div className="bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-[24px] p-6 md:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
                     {/* Background Glow */}
 
 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -296,11 +296,11 @@ export default function EnterpriseRoiCalculator() {
                                 </div>
 
                                 {/* Currency Toggle */}
-                                <div className="flex items-center bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg p-1 text-xs font-mono">
+                                <div className="flex items-center bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-full p-1 text-xs font-mono">
                                     <button
                                         type="button"
                                         onClick={() => handleCurrencyChange('INR')}
-                                        className={`active:scale-[0.97] flex items-center gap-1 px-3 py-1.5 rounded-md transition-all ${
+                                        className={`active:scale-[0.97] flex items-center gap-1 px-3 py-1.5 rounded-full transition-all duration-300 ${
                                             currency === 'INR'
                                                 ? 'bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm'
                                                 : 'text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white'
@@ -312,7 +312,7 @@ export default function EnterpriseRoiCalculator() {
                                     <button
                                         type="button"
                                         onClick={() => handleCurrencyChange('USD')}
-                                        className={`active:scale-[0.97] flex items-center gap-1 px-3 py-1.5 rounded-md transition-all ${
+                                        className={`active:scale-[0.97] flex items-center gap-1 px-3 py-1.5 rounded-full transition-all duration-300 ${
                                             currency === 'USD'
                                                 ? 'bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm'
                                                 : 'text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white'
@@ -338,7 +338,7 @@ export default function EnterpriseRoiCalculator() {
                                                 key={key}
                                                 type="button"
                                                 onClick={() => setIndustry(key)}
-                                                className={`active:scale-[0.97] p-3 rounded-xl text-left transition-all border ${
+                                                className={`active:scale-[0.97] p-3 rounded-xl text-left transition-all duration-300 border ${
                                                     isSelected
                                                         ? 'bg-neutral-100 dark:bg-white/10 border-neutral-400 dark:border-white/30 text-black dark:text-white font-medium shadow-sm'
                                                         : 'bg-neutral-50/70 dark:bg-neutral-900/60 border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-700'
@@ -356,10 +356,10 @@ export default function EnterpriseRoiCalculator() {
                             </div>
 
                             {/* Team Size Slider */}
-                            <div className="bg-neutral-50/60 dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-800 rounded-xl p-4 space-y-2">
+                            <div className="bg-neutral-50/60 dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl p-4 space-y-2">
                                 <div className="flex justify-between items-center text-xs">
                                     <span className="text-neutral-800 dark:text-neutral-200 font-medium">Team Footprint (Knowledge Workers)</span>
-                                    <span className="font-mono text-black dark:text-white font-bold text-sm bg-neutral-100 dark:bg-white/10 border border-neutral-300 dark:border-white/20 px-2.5 py-0.5 rounded-md">
+                                    <span className="font-mono text-black dark:text-white font-bold text-sm bg-neutral-100 dark:bg-white/10 border border-neutral-300 dark:border-white/20 px-2.5 py-0.5 rounded-full">
                                         {teamSize} {teamSize === 1 ? 'employee' : 'employees'}
                                     </span>
                                 </div>
@@ -370,7 +370,7 @@ export default function EnterpriseRoiCalculator() {
                                     step="1"
                                     value={teamSize}
                                     onChange={(e) => setTeamSize(Number(e.target.value))}
-                                    className="w-full accent-neutral-900 dark:accent-white cursor-pointer h-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg"
+                                    className="w-full accent-neutral-900 dark:accent-white cursor-pointer h-2 bg-neutral-200 dark:bg-neutral-800 rounded-full"
                                 />
                                 <div className="flex justify-between text-[10px] text-neutral-500 dark:text-neutral-500 font-mono">
                                     <span>1 member (Pilot)</span>
@@ -381,10 +381,10 @@ export default function EnterpriseRoiCalculator() {
                             </div>
 
                             {/* Monthly Salary Slider */}
-                            <div className="bg-neutral-50/60 dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-800 rounded-xl p-4 space-y-2">
+                            <div className="bg-neutral-50/60 dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl p-4 space-y-2">
                                 <div className="flex justify-between items-center text-xs">
                                     <span className="text-neutral-800 dark:text-neutral-200 font-medium">Avg Monthly Fully Loaded Salary / FTE</span>
-                                    <span className="font-mono text-black dark:text-white font-bold text-sm bg-neutral-100 dark:bg-white/10 border border-neutral-300 dark:border-white/20 px-2.5 py-0.5 rounded-md">
+                                    <span className="font-mono text-black dark:text-white font-bold text-sm bg-neutral-100 dark:bg-white/10 border border-neutral-300 dark:border-white/20 px-2.5 py-0.5 rounded-full">
                                         {formatCurrency(monthlySalary, currency)}
                                     </span>
                                 </div>
@@ -395,7 +395,7 @@ export default function EnterpriseRoiCalculator() {
                                     step={currency === 'INR' ? 5000 : 100}
                                     value={monthlySalary}
                                     onChange={(e) => setMonthlySalary(Number(e.target.value))}
-                                    className="w-full accent-neutral-900 dark:accent-white cursor-pointer h-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg"
+                                    className="w-full accent-neutral-900 dark:accent-white cursor-pointer h-2 bg-neutral-200 dark:bg-neutral-800 rounded-full"
                                 />
                                 <div className="flex justify-between text-[10px] text-neutral-500 dark:text-neutral-500 font-mono">
                                     <span>{currency === 'INR' ? '₹25k' : '$500'}</span>
@@ -405,10 +405,10 @@ export default function EnterpriseRoiCalculator() {
                             </div>
 
                             {/* Error & Re-work Rate Slider */}
-                            <div className="bg-neutral-50/60 dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-800 rounded-xl p-4 space-y-2">
+                            <div className="bg-neutral-50/60 dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl p-4 space-y-2">
                                 <div className="flex justify-between items-center text-xs">
                                     <span className="text-neutral-800 dark:text-neutral-200 font-medium">Manual Operational Error Rate</span>
-                                    <span className="font-mono text-neutral-700 dark:text-neutral-300 font-bold text-sm bg-neutral-100 dark:bg-white/10 border border-neutral-300 dark:border-white/20 px-2.5 py-0.5 rounded-md">
+                                    <span className="font-mono text-neutral-700 dark:text-neutral-300 font-bold text-sm bg-neutral-100 dark:bg-white/10 border border-neutral-300 dark:border-white/20 px-2.5 py-0.5 rounded-full">
                                         {errorRate}%
                                     </span>
                                 </div>
@@ -419,7 +419,7 @@ export default function EnterpriseRoiCalculator() {
                                     step="1"
                                     value={errorRate}
                                     onChange={(e) => setErrorRate(Number(e.target.value))}
-                                    className="w-full accent-neutral-900 dark:accent-white cursor-pointer h-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg"
+                                    className="w-full accent-neutral-900 dark:accent-white cursor-pointer h-2 bg-neutral-200 dark:bg-neutral-800 rounded-full"
                                 />
                                 <div className="flex justify-between text-[10px] text-neutral-500 dark:text-neutral-500 font-mono">
                                     <span>1% (Precision Audit)</span>
@@ -449,7 +449,7 @@ export default function EnterpriseRoiCalculator() {
                             {/* Primary KPI Header Cards */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 {/* Card 1: Net Annual Savings */}
-                                <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-300 dark:border-white/20 rounded-xl p-5 relative overflow-hidden shadow-sm">
+                                <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-300 dark:border-white/20 rounded-[24px] p-5 relative overflow-hidden shadow-sm">
                                     <div className="text-xs uppercase font-mono tracking-wider text-black dark:text-white mb-1 flex items-center justify-between">
                                         Net Annual Savings
                                         <TrendingUp className="w-4 h-4 text-black dark:text-white" />
@@ -463,7 +463,7 @@ export default function EnterpriseRoiCalculator() {
                                 </div>
 
                                 {/* Card 2: Payback Period */}
-                                <div className="bg-neutral-50/70 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 shadow-sm">
+                                <div className="bg-neutral-50/70 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-[24px] p-5 shadow-sm">
                                     <div className="text-xs uppercase font-mono tracking-wider text-neutral-500 dark:text-neutral-400 mb-1 flex items-center justify-between">
                                         Payback Period
                                         <Clock className="w-4 h-4 text-black dark:text-white" />
@@ -477,7 +477,7 @@ export default function EnterpriseRoiCalculator() {
                                 </div>
 
                                 {/* Card 3: Latency Cut */}
-                                <div className="bg-neutral-50/70 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 shadow-sm">
+                                <div className="bg-neutral-50/70 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-[24px] p-5 shadow-sm">
                                     <div className="text-xs uppercase font-mono tracking-wider text-neutral-500 dark:text-neutral-400 mb-1 flex items-center justify-between">
                                         Turnaround Speed
                                         <ShieldCheck className="w-4 h-4 text-black dark:text-white" />
@@ -492,7 +492,7 @@ export default function EnterpriseRoiCalculator() {
                             </div>
 
                             {/* 3-Way Comparative Visual Bar Chart */}
-                            <div className="bg-neutral-50/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 space-y-4">
+                            <div className="bg-neutral-50/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-[24px] p-5 space-y-4">
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                                         Year 1 Total Cost of Ownership (TCO) Comparison
@@ -511,7 +511,7 @@ export default function EnterpriseRoiCalculator() {
                                             {formatCurrency(results.manualAnnualSpend, currency)}
                                         </span>
                                     </div>
-                                    <div className="w-full bg-neutral-200 dark:bg-neutral-800 rounded-lg h-3 overflow-hidden">
+                                    <div className="w-full bg-neutral-200 dark:bg-neutral-800 rounded-full h-3 overflow-hidden">
                                         <div 
                                             className="bg-neutral-400 dark:bg-neutral-600 h-full rounded-lg transition-all duration-300"
                                             style={{ width: `${manualBarPct}%` }}
@@ -533,7 +533,7 @@ export default function EnterpriseRoiCalculator() {
                                             {formatCurrency(results.legacySaaSAnnualSpend, currency)}
                                         </span>
                                     </div>
-                                    <div className="w-full bg-neutral-200 dark:bg-neutral-800 rounded-lg h-3 overflow-hidden">
+                                    <div className="w-full bg-neutral-200 dark:bg-neutral-800 rounded-full h-3 overflow-hidden">
                                         <div 
                                             className="bg-neutral-600 dark:bg-neutral-400 h-full rounded-lg transition-all duration-300"
                                             style={{ width: `${saasBarPct}%` }}
@@ -555,7 +555,7 @@ export default function EnterpriseRoiCalculator() {
                                             {formatCurrency(results.elesiumYear1Spend, currency)}
                                         </span>
                                     </div>
-                                    <div className="w-full bg-neutral-200 dark:bg-neutral-800 rounded-lg h-3 overflow-hidden">
+                                    <div className="w-full bg-neutral-200 dark:bg-neutral-800 rounded-full h-3 overflow-hidden">
                                         <div 
                                             className="bg-black dark:bg-white h-full rounded-lg transition-all duration-300"
                                             style={{ width: `${elesiumBarPct}%` }}
@@ -568,7 +568,7 @@ export default function EnterpriseRoiCalculator() {
                             </div>
 
                             {/* 3-Year TCO Projection Table */}
-                            <div className="bg-neutral-50/70 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 space-y-3">
+                            <div className="bg-neutral-50/70 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 rounded-[24px] p-5 space-y-3">
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                                         3-Year Total Cost of Ownership (TCO) Ledger
@@ -615,7 +615,7 @@ export default function EnterpriseRoiCalculator() {
                             <div className="pt-2 flex flex-wrap items-center gap-3">
                                 <button
                                     onClick={openWhatsApp}
-                                    className="active:scale-[0.97] px-6 py-3 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs transition-all flex items-center gap-2 shadow-sm"
+                                    className="active:scale-[0.97] px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs transition-all duration-300 flex items-center gap-2 shadow-sm"
                                 >
                                     <span className="w-2 h-2 rounded-lg bg-black" />
                                     Chat on WhatsApp to Lock Projected ROI
@@ -634,7 +634,7 @@ export default function EnterpriseRoiCalculator() {
 
                                 <Link
                                     to={`/waitlist?roi=${currency === 'INR' ? (results.netAnnualSavingsYear1 / 100000).toFixed(1) : (results.netAnnualSavingsYear1 / 1000).toFixed(0)}&team=${teamSize}&industry=${industry}&ref=roi-calculator`}
-                                    className="px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/5 text-neutral-600 dark:text-neutral-400 text-xs font-mono transition-colors"
+                                    className="px-4 py-2.5 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/5 text-neutral-600 dark:text-neutral-400 text-xs font-mono transition-all duration-300"
                                 >
                                     ele-in SaaS Waitlist &rarr;
                                 </Link>
@@ -648,7 +648,7 @@ export default function EnterpriseRoiCalculator() {
             <div className="px-6 md:px-12 max-w-[1440px] mx-auto py-12">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <div className="text-center space-y-3">
-                        <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-black dark:text-white bg-white/10 px-3 py-1 rounded-lg border border-neutral-400 dark:border-white/15">
+                        <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-black dark:text-white bg-white/10 px-3 py-1 rounded-full border border-neutral-400 dark:border-white/15">
                             CFO & CTO Architectural Mandate
                         </div>
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white">
@@ -661,8 +661,8 @@ export default function EnterpriseRoiCalculator() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Box 1: The SaaS Trap */}
-                        <div className="bg-red-50/30 dark:bg-red-950/10 border border-red-200 dark:border-red-900/30 rounded-xl p-6 space-y-4">
-                            <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500">
+                        <div className="bg-red-50/30 dark:bg-red-950/10 border border-red-200 dark:border-red-900/30 rounded-[24px] p-6 space-y-4">
+                            <div className="w-10 h-10 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500">
                                 <Layers className="w-5 h-5" />
                             </div>
                             <h3 className="text-lg font-semibold text-red-900 dark:text-red-300">
@@ -685,8 +685,8 @@ export default function EnterpriseRoiCalculator() {
                         </div>
 
                         {/* Box 2: The Elesium VPC Solution */}
-                        <div className="bg-neutral-100/30 bg-white/[0.05] border border-neutral-200 dark:border-white/15 border-neutral-200 dark:border-white/15 rounded-xl p-6 space-y-4">
-                            <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-neutral-400 dark:border-white/15 flex items-center justify-center text-black dark:text-white">
+                        <div className="bg-neutral-100/30 bg-white/[0.05] border border-neutral-200 dark:border-white/15 border-neutral-200 dark:border-white/15 rounded-[24px] p-6 space-y-4">
+                            <div className="w-10 h-10 rounded-2xl bg-white/[0.04] border border-neutral-400 dark:border-white/15 flex items-center justify-center text-black dark:text-white">
                                 <Server className="w-5 h-5" />
                             </div>
                             <h3 className="text-lg font-semibold text-black dark:text-white">
@@ -731,7 +731,7 @@ export default function EnterpriseRoiCalculator() {
                                     <button
                                         type="button"
                                         onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                                        className="active:scale-[0.97] w-full flex items-center justify-between text-left text-sm sm:text-base font-medium text-neutral-900 dark:text-white hover:text-black dark:hover:text-white dark:hover:text-black dark:hover:text-white transition-colors"
+                                        className="active:scale-[0.97] w-full flex items-center justify-between text-left text-sm sm:text-base font-medium text-neutral-900 dark:text-white hover:text-black dark:hover:text-white dark:hover:text-black dark:hover:text-white transition-all duration-300"
                                     >
                                         <span>{faq.q}</span>
                                         <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
@@ -750,10 +750,10 @@ export default function EnterpriseRoiCalculator() {
 
             {/* Bottom Call to Action Card */}
             <section className="px-6 md:px-12 max-w-[1440px] mx-auto pb-16">
-                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
+                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
                     <div className="relative z-10 max-w-2xl space-y-6">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/10 text-xs font-mono">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                             <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                             <span>CFO & CTO Architecture Audit Desk</span>
                         </div>
@@ -769,7 +769,7 @@ export default function EnterpriseRoiCalculator() {
                         <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
                             <button
                                 onClick={openWhatsApp}
-                                className="active:scale-[0.97] w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-100 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-sm"
+                                className="active:scale-[0.97] w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-neutral-100 font-semibold text-xs sm:text-sm transition-all duration-300 duration-200 flex items-center justify-center gap-2 shadow-sm"
                             >
                                 <span className="w-2 h-2 rounded-lg bg-black" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -777,7 +777,7 @@ export default function EnterpriseRoiCalculator() {
                             </button>
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>
@@ -794,11 +794,11 @@ export default function EnterpriseRoiCalculator() {
             {/* 'Embed This Calculator' Modal */}
             {isEmbedModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-neutral-900 border border-neutral-800 text-neutral-100 rounded-xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl relative">
+                    <div className="bg-neutral-900 border border-neutral-800 text-neutral-100 rounded-[28px] p-6 sm:p-8 max-w-2xl w-full shadow-2xl relative">
                         <button
                             type="button"
                             onClick={() => setIsEmbedModalOpen(false)}
-                            className="active:scale-[0.97] absolute top-5 right-5 p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"
+                            className="active:scale-[0.97] absolute top-5 right-5 p-2 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-all duration-300"
                             aria-label="Close embed modal"
                         >
                             <X className="w-5 h-5" />
@@ -806,7 +806,7 @@ export default function EnterpriseRoiCalculator() {
 
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-neutral-400 dark:border-white/15 flex items-center justify-center text-neutral-700 dark:text-neutral-200">
+                                <div className="w-10 h-10 rounded-2xl bg-white/[0.04] border border-neutral-400 dark:border-white/15 flex items-center justify-center text-neutral-700 dark:text-neutral-200">
                                     <Code className="w-5 h-5" />
                                 </div>
                                 <div>
@@ -819,7 +819,7 @@ export default function EnterpriseRoiCalculator() {
                                 Copy and paste the HTML snippet below into your CMS, blog, or research portal. The widget automatically recalculates live ROI in an elegant, responsive iframe with dark-mode styling.
                             </p>
 
-                            <div className="relative bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-[11px] text-neutral-300 break-all leading-normal">
+                            <div className="relative bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-[11px] text-neutral-300 break-all leading-normal">
                                 {embedSnippet}
                             </div>
 
@@ -835,7 +835,7 @@ export default function EnterpriseRoiCalculator() {
                                 <button
                                     type="button"
                                     onClick={handleCopyEmbed}
-                                    className={`active:scale-[0.97] px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all ${
+                                    className={`active:scale-[0.97] px-4 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 transition-all duration-300 ${
                                         hasCopiedEmbed
                                             ? 'bg-white text-black'
                                             : 'bg-white hover:bg-neutral-200 text-black'

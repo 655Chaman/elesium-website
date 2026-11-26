@@ -192,14 +192,14 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsEmbedOpen(!isEmbedOpen)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-950 hover:bg-neutral-900 text-neutral-200 text-xs font-medium border border-white/10 active:scale-[0.97] transition-all"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-neutral-950 hover:bg-neutral-900 text-neutral-200 text-xs font-medium border border-white/10 active:scale-[0.97] transition-all duration-300"
             >
               <Code className="w-3.5 h-3.5 text-white" />
               <span>Embed Widget</span>
             </button>
             <button
               onClick={copyDiagnosticMemo}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold active:scale-[0.97] transition-all"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold active:scale-[0.97] transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Diagnostic Memo'}</span>
@@ -214,8 +214,8 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
               initial={{ opacity: 0, scale: 0.97, y: -8 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.97, y: -8 }}
-              transition={{ type: 'spring', stiffness: 360, damping: 28 }}
-              className="mb-8 p-5 rounded-xl bg-neutral-950 border border-white/15 text-xs space-y-3"
+              transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+              className="mb-8 p-6 rounded-[24px] bg-neutral-950 border border-white/15 text-xs space-y-3"
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-white">Embed Enterprise Architecture Grader</span>
@@ -229,11 +229,11 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                   type="text"
                   readOnly
                   value={embedCode}
-                  className="w-full bg-black p-2.5 rounded-lg border border-white/10 text-neutral-300 font-mono text-xs focus:outline-none"
+                  className="w-full bg-black p-3 rounded-xl border border-white/10 text-neutral-300 font-mono text-xs focus:outline-none"
                 />
                 <button
                   onClick={copyEmbedCode}
-                  className="px-4 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold shrink-0 active:scale-[0.97] transition-all"
+                  className="px-5 py-3 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold shrink-0 active:scale-[0.97] transition-all duration-300"
                 >
                   {hasCopiedEmbed ? 'Copied!' : 'Copy'}
                 </button>
@@ -244,7 +244,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
 
         {/* Title & Introduction */}
         <header className="mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-neutral-300 text-xs font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950 border border-white/10 text-neutral-300 text-xs font-semibold tracking-wider uppercase mb-3">
             <Gauge className="w-3.5 h-3.5 text-white" />
             Empirical Architecture Diagnostics
           </div>
@@ -266,10 +266,10 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                 Configure Current Stack Topology
               </h2>
               {/* Currency Toggle */}
-              <div className="flex items-center gap-1 bg-neutral-950 p-1 rounded-lg border border-white/10 text-xs">
+              <div className="flex items-center gap-1 bg-neutral-950 p-1 rounded-full border border-white/10 text-xs">
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`px-2.5 py-1 rounded font-medium transition-colors ${
+                  className={`px-3 py-1 rounded-full font-medium active:scale-[0.97] transition-all duration-300 ${
                     currency === 'USD' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -277,7 +277,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                 </button>
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`px-2.5 py-1 rounded font-medium transition-colors ${
+                  className={`px-3 py-1 rounded-full font-medium active:scale-[0.97] transition-all duration-300 ${
                     currency === 'INR' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -287,7 +287,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             </div>
 
             {/* Dimension 1: Concurrency */}
-            <div className="p-5 rounded-xl bg-neutral-950 border border-white/10 space-y-3">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-semibold text-white uppercase tracking-wider">
                   Dimension 01: State & Workflow Routing
@@ -302,7 +302,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                     <button
                       key={key}
                       onClick={() => setConcurrency(key)}
-                      className={`text-left p-3.5 rounded-xl border transition-all ${
+                      className={`text-left p-4 rounded-2xl border transition-all duration-300 ${
                         isSelected
                           ? 'bg-white/10 border-white'
                           : 'bg-black border-white/10 hover:border-white/30'
@@ -324,7 +324,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             </div>
 
             {/* Dimension 2: Topology */}
-            <div className="p-5 rounded-xl bg-neutral-950 border border-white/10 space-y-3">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-semibold text-white uppercase tracking-wider">
                   Dimension 02: Orchestration Topology
@@ -339,7 +339,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                     <button
                       key={key}
                       onClick={() => setTopology(key)}
-                      className={`text-left p-3.5 rounded-xl border transition-all ${
+                      className={`text-left p-4 rounded-2xl border transition-all duration-300 ${
                         isSelected
                           ? 'bg-white/10 border-white'
                           : 'bg-black border-white/10 hover:border-white/30'
@@ -361,7 +361,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             </div>
 
             {/* Dimension 3: Inference Boundary */}
-            <div className="p-5 rounded-xl bg-neutral-950 border border-white/10 space-y-3">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-semibold text-white uppercase tracking-wider">
                   Dimension 03: Inference Boundary & Data Residency
@@ -376,7 +376,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                     <button
                       key={key}
                       onClick={() => setInferenceBoundary(key)}
-                      className={`text-left p-3.5 rounded-xl border transition-all ${
+                      className={`text-left p-4 rounded-2xl border transition-all duration-300 ${
                         isSelected
                           ? 'bg-white/10 border-white'
                           : 'bg-black border-white/10 hover:border-white/30'
@@ -398,7 +398,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             </div>
 
             {/* Dimension 4: State Persistence */}
-            <div className="p-5 rounded-xl bg-neutral-950 border border-white/10 space-y-3">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-semibold text-white uppercase tracking-wider">
                   Dimension 04: State Persistence & Memory
@@ -413,7 +413,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                     <button
                       key={key}
                       onClick={() => setStatePersistence(key)}
-                      className={`text-left p-3.5 rounded-xl border transition-all ${
+                      className={`text-left p-4 rounded-2xl border transition-all duration-300 ${
                         isSelected
                           ? 'bg-white/10 border-white'
                           : 'bg-black border-white/10 hover:border-white/30'
@@ -435,7 +435,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             </div>
 
             {/* Dimension 5: Compliance */}
-            <div className="p-5 rounded-xl bg-neutral-950 border border-white/10 space-y-3">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-semibold text-white uppercase tracking-wider">
                   Dimension 05: Validation & DPDP Act 2023 Compliance
@@ -450,7 +450,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                     <button
                       key={key}
                       onClick={() => setComplianceGuardrails(key)}
-                      className={`text-left p-3.5 rounded-xl border transition-all ${
+                      className={`text-left p-4 rounded-2xl border transition-all duration-300 ${
                         isSelected
                           ? 'bg-white/10 border-white'
                           : 'bg-black border-white/10 hover:border-white/30'
@@ -472,7 +472,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             </div>
 
             {/* Monthly Volume Slider */}
-            <div className="p-5 rounded-xl bg-neutral-950 border border-white/10 space-y-3">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 space-y-3">
               <div className="flex items-center justify-between">
                 <label className="text-xs font-semibold text-neutral-200">
                   Target Production Scale (Runs / Month)
@@ -503,19 +503,19 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
           <div className="lg:col-span-5 space-y-6">
             <div className="sticky top-24 space-y-6">
               {/* Scorecard Hero Card */}
-              <div className="p-6 rounded-xl bg-neutral-950 border border-white/20 relative overflow-hidden">
+              <div className="p-6 sm:p-7 rounded-[28px] bg-neutral-950 border border-white/20 relative overflow-hidden">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono font-semibold text-neutral-400 uppercase tracking-wider">
                     Diagnostic Scorecard
                   </span>
-                  <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold border bg-white/10 text-white border-white/20">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-bold border bg-white/10 text-white border-white/20">
                     {results.tier.title.split('/')[0]}
                   </span>
                 </div>
 
                 {/* Score Meters */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-xl bg-black border border-white/10">
+                  <div className="p-4 rounded-[18px] bg-black border border-white/10 h-full flex flex-col justify-between">
                     <span className="text-[11px] text-neutral-400 block mb-1">Readiness Score</span>
                     <div className="text-3xl sm:text-4xl font-extrabold text-white font-mono">
                       {results.readinessScore}<span className="text-base text-neutral-500">/100</span>
@@ -528,7 +528,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-black border border-white/10">
+                  <div className="p-4 rounded-[18px] bg-black border border-white/10 h-full flex flex-col justify-between">
                     <span className="text-[11px] text-neutral-400 block mb-1">Fragility Index</span>
                     <div className={`text-3xl sm:text-4xl font-extrabold font-mono ${
                       results.fragilityScore > 50 ? 'text-white' : results.fragilityScore > 25 ? 'text-neutral-300' : 'text-neutral-400'
@@ -547,7 +547,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                 </div>
 
                 {/* Operational Reliability Forecast */}
-                <div className="p-4 rounded-xl bg-black border border-white/10 mb-6 space-y-3">
+                <div className="p-4 rounded-[18px] bg-black border border-white/10 mb-6 space-y-3">
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-neutral-400">Run Failure Rate:</span>
                     <span className="font-mono font-bold text-neutral-200">
@@ -563,7 +563,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                 </div>
 
                 {/* Financial Leakage Estimator */}
-                <div className="p-4 rounded-xl bg-black border border-white/15 mb-6 space-y-2.5">
+                <div className="p-4 rounded-[18px] bg-black border border-white/15 mb-6 space-y-2.5">
                   <span className="text-[11px] font-semibold text-neutral-300 uppercase tracking-wider block">
                     Estimated Annual Financial Leakage
                   </span>
@@ -594,10 +594,10 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                 </div>
 
                 {/* Direct Action Button */}
-                <div className="space-y-2">
+                <div className="space-y-2.5">
                   <button
                     onClick={() => openWhatsApp()}
-                    className="w-full px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                    className="w-full px-5 py-3 rounded-full bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
                   >
                     <span>Chat on WhatsApp</span>
                   </button>
@@ -614,7 +614,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
 
                   <button
                     onClick={() => openWhatsApp()}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-black hover:bg-neutral-900 active:scale-[0.97] text-neutral-200 text-xs font-semibold border border-white/15 transition-all"
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-black hover:bg-neutral-900 active:scale-[0.97] text-neutral-200 text-xs font-semibold border border-white/15 transition-all duration-300"
                   >
                     <span>Discuss Score with Chaman Shah</span>
                     <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
@@ -623,7 +623,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
               </div>
 
               {/* Fast Comparison Quick Links */}
-              <div className="p-5 rounded-xl bg-neutral-950 border border-white/10">
+              <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/10">
                 <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider block mb-3">
                   Compare Production Frameworks
                 </span>
@@ -670,12 +670,12 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             {results.dimensions.map((dim, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-xl bg-neutral-950 border border-white/10 flex flex-col justify-between"
+                className="p-6 rounded-[24px] bg-neutral-950 border border-white/10 flex flex-col justify-between h-full"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono font-semibold text-neutral-400">0{idx + 1}. {dim.name}</span>
-                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${
                       dim.status === 'Elite' ? 'bg-white text-black border-white' :
                       dim.status === 'Optimal' ? 'bg-white/15 text-white border-white/25' :
                       dim.status === 'Warning' ? 'bg-white/5 text-neutral-300 border-white/15' :
@@ -686,7 +686,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                   </div>
 
                   <h3 className="text-sm font-bold text-white mb-2">{dim.selectedLabel}</h3>
-                  <div className="text-xs text-neutral-400 mb-4 bg-black p-3 rounded-xl border border-white/10 leading-relaxed">
+                  <div className="text-xs text-neutral-400 mb-4 bg-black p-3.5 rounded-[18px] border border-white/10 leading-relaxed">
                     <strong className="text-neutral-200 block mb-1">Architectural Risk:</strong>
                     {dim.diagnosis}
                   </div>
@@ -702,7 +702,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
         </section>
 
         {/* 3-Phase Transformation Roadmap */}
-        <section className="mb-16 p-8 rounded-xl bg-neutral-950 border border-white/10">
+        <section className="mb-16 p-8 rounded-[28px] bg-neutral-950 border border-white/10">
           <div className="max-w-3xl mb-8">
             <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider">
               Prescribed Transformation Path
@@ -717,7 +717,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {results.recommendedRoadmap.map((step, idx) => (
-              <div key={idx} className="p-6 rounded-xl bg-black border border-white/10 flex flex-col justify-between">
+              <div key={idx} className="p-6 rounded-[22px] bg-black border border-white/10 flex flex-col justify-between h-full">
                 <div>
                   <span className="text-xs font-mono font-semibold text-neutral-400 uppercase tracking-wider block mb-1">
                     {step.phase}
@@ -749,13 +749,13 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             {faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div key={idx} className="rounded-xl border border-white/10 bg-neutral-950 overflow-hidden">
+                <div key={idx} className="rounded-[20px] border border-white/10 bg-neutral-950 overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
                     className="w-full p-4 sm:p-5 flex items-center justify-between text-left text-sm font-semibold text-white hover:opacity-80 transition-opacity"
                   >
                     <span>{faq.q}</span>
-                    <ChevronDown className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-white' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-white' : ''}`} />
                   </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (
@@ -763,7 +763,7 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                         className="accordion-panel overflow-hidden"
                       >
                         <div className="p-4 sm:p-5 pt-4 text-xs sm:text-sm text-neutral-300 border-t border-white/10 leading-relaxed">

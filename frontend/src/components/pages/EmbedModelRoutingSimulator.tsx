@@ -44,7 +44,7 @@ export default function EmbedModelRoutingSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Multi-Model Routing &amp; Token Cost Arbitrage Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -93,7 +93,7 @@ export default function EmbedModelRoutingSimulator() {
           <select
             value={routingStrategy}
             onChange={(e) => setRoutingStrategy(e.target.value as RoutingStrategy)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="balanced_enterprise">Balanced Enterprise (50% / 32% / 18%)</option>
             <option value="aggressive_finops">Aggressive FinOps (68% / 22% / 10%)</option>
@@ -108,7 +108,7 @@ export default function EmbedModelRoutingSimulator() {
           <select
             value={fastModel}
             onChange={(e) => setFastModel(e.target.value as FastModelType)}
-            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="deepseek_v3">DeepSeek V3 ($0.27 / $1.10)</option>
             <option value="llama_3_3_70b">Llama 3.3 70B ($0.50 / $0.80)</option>
@@ -120,7 +120,7 @@ export default function EmbedModelRoutingSimulator() {
       {/* Benchmark Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
         {/* Tier 1: Naive Single Model */}
-        <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-neutral-400 font-bold uppercase tracking-wider">
               Naive 100% Frontier
@@ -148,7 +148,7 @@ export default function EmbedModelRoutingSimulator() {
         </div>
 
         {/* Tier 2: Dynamic Router */}
-        <div className="bg-white/[0.05] border border-white/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-white/[0.05] border border-white/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-white font-bold uppercase tracking-wider">
               Elesium Dynamic Router
@@ -176,7 +176,7 @@ export default function EmbedModelRoutingSimulator() {
         </div>
 
         {/* Tier 3: Annual Gain */}
-        <div className="bg-white/[0.05] border border-white/30 rounded-xl p-3 relative overflow-hidden">
+        <div className="bg-white/[0.05] border border-white/30 rounded-[24px] p-3 relative overflow-hidden">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-mono text-white font-bold uppercase tracking-wider">
               FinOps Arbitrage Gain
@@ -205,7 +205,7 @@ export default function EmbedModelRoutingSimulator() {
       </div>
 
       {/* Forensic Verdict Box */}
-      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-3 mb-4 text-xs font-mono">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-[18px] p-3 mb-4 text-xs font-mono">
         <div className="text-neutral-400 text-[10px] uppercase tracking-wider font-semibold mb-1 flex items-center justify-between">
           <span>Intelligent Model Routing Recommendation</span>
           <span className="text-neutral-200 flex items-center gap-1">

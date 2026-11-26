@@ -115,10 +115,10 @@ ${results.complianceStatus}`;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="px-3 py-1 rounded-lg text-xs font-semibold tracking-wide uppercase bg-white/[0.05] text-white border border-white/15">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-white/[0.05] text-white border border-white/15">
               Interactive Tool #29
             </span>
-            <span className="px-3 py-1 rounded-lg text-xs font-semibold tracking-wide uppercase bg-neutral-800 text-neutral-300 border border-neutral-700">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-neutral-800 text-neutral-300 border border-neutral-700">
               Cryptographic Differential Privacy Lab
             </span>
           </div>
@@ -134,21 +134,21 @@ ${results.complianceStatus}`;
           <div className="flex flex-wrap items-center gap-4">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-neutral-700 transition-colors"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-neutral-700 transition-all duration-300"
             >
               <Code className="w-4 h-4 text-neutral-200" />
               Embed on Your Site
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-white/10 hover:bg-neutral-200/30 text-neutral-200 border border-white/30 transition-colors"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-white/10 hover:bg-neutral-200/30 text-neutral-200 border border-white/30 transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-200" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Audit Memo'}
@@ -163,13 +163,13 @@ ${results.complianceStatus}`;
           
           {/* Controls Panel (5 Columns) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <h2 className="text-lg font-bold text-white flex items-center gap-2">
                   <Sliders className="w-5 h-5 text-neutral-200" />
                   Privacy Budget &amp; Noise Controls
                 </h2>
-                <div className="flex items-center gap-1 bg-neutral-800 p-1 rounded-lg border border-neutral-700 text-xs">
+                <div className="flex items-center gap-1 bg-neutral-800 p-1 rounded-full border border-neutral-700 text-xs">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2.5 py-1 rounded font-semibold ${currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'}`}
@@ -198,7 +198,7 @@ ${results.complianceStatus}`;
                   step="1000"
                   value={dailyGradientSteps}
                   onChange={(e) => setDailyGradientSteps(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>1k</span>
@@ -220,7 +220,7 @@ ${results.complianceStatus}`;
                   step="0.1"
                   value={clippingNormC}
                   onChange={(e) => setClippingNormC(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>0.1 (Strict)</span>
@@ -242,7 +242,7 @@ ${results.complianceStatus}`;
                   step="0.05"
                   value={noiseMultiplierSigma}
                   onChange={(e) => setNoiseMultiplierSigma(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>0.2 (Low Noise)</span>
@@ -264,7 +264,7 @@ ${results.complianceStatus}`;
                   step="16"
                   value={batchSize}
                   onChange={(e) => setBatchSize(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
 
@@ -275,7 +275,7 @@ ${results.complianceStatus}`;
                   <button
                     type="button"
                     onClick={() => setSanitizerMethod('unsanitized')}
-                    className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all text-xs ${
+                    className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 text-xs ${
                       sanitizerMethod === 'unsanitized'
                         ? 'bg-red-950/40 border-red-500/60 text-white shadow-sm'
                         : 'bg-neutral-800/60 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -288,7 +288,7 @@ ${results.complianceStatus}`;
                   <button
                     type="button"
                     onClick={() => setSanitizerMethod('laplace_naive')}
-                    className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all text-xs ${
+                    className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 text-xs ${
                       sanitizerMethod === 'laplace_naive'
                         ? 'bg-amber-950/40 border-amber-500/60 text-white shadow-sm'
                         : 'bg-neutral-800/60 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -301,7 +301,7 @@ ${results.complianceStatus}`;
                   <button
                     type="button"
                     onClick={() => setSanitizerMethod('dpsgd_gaussian')}
-                    className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all text-xs sm:col-span-2 ${
+                    className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 text-xs sm:col-span-2 ${
                       sanitizerMethod === 'dpsgd_gaussian'
                         ? 'bg-white/[0.05] border-white/30 text-white shadow-sm'
                         : 'bg-neutral-800/60 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -328,7 +328,7 @@ ${results.complianceStatus}`;
                   step="5000"
                   value={piiRecordPenaltyINR}
                   onChange={(e) => setPiiRecordPenaltyINR(Number(e.target.value))}
-                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
 
@@ -340,7 +340,7 @@ ${results.complianceStatus}`;
             
             {/* Top Score Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4">
                 <div className="text-xs font-medium text-neutral-400 mb-1">Privacy Budget (&epsilon;)</div>
                 <div className={`text-2xl font-extrabold font-mono ${results.epsilonPrivacyBudget <= 1.5 ? 'text-neutral-200' : results.epsilonPrivacyBudget <= 4.0 ? 'text-neutral-200' : 'text-red-400'}`}>
                   {results.epsilonPrivacyBudget}
@@ -348,7 +348,7 @@ ${results.complianceStatus}`;
                 <div className="text-[11px] text-neutral-500 mt-1">&delta; = 10^-5 (Lower is safer)</div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4">
                 <div className="text-xs font-medium text-neutral-400 mb-1">Inversion Reconstruct Risk</div>
                 <div className={`text-2xl font-extrabold font-mono ${results.gradientInversionRisk <= 5.0 ? 'text-neutral-200' : results.gradientInversionRisk <= 25.0 ? 'text-amber-400' : 'text-red-400'}`}>
                   {results.gradientInversionRisk}%
@@ -356,7 +356,7 @@ ${results.complianceStatus}`;
                 <div className="text-[11px] text-neutral-500 mt-1">DLG attack success</div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4">
                 <div className="text-xs font-medium text-neutral-400 mb-1">Model Utility Retained</div>
                 <div className="text-2xl font-extrabold font-mono text-white">
                   {results.modelUtilityRetention}%
@@ -364,7 +364,7 @@ ${results.complianceStatus}`;
                 <div className="text-[11px] text-neutral-500 mt-1">Downstream task accuracy</div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4">
                 <div className="text-xs font-medium text-neutral-400 mb-1">Sanitization Latency</div>
                 <div className="text-2xl font-extrabold font-mono text-neutral-200">
                   {results.sanitizationLatencyMs}ms
@@ -374,7 +374,7 @@ ${results.complianceStatus}`;
             </div>
 
             {/* Gradient Perturbation Spectrum (SVG Chart) */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -385,12 +385,12 @@ ${results.complianceStatus}`;
                     Visualizing raw gradient distribution vs L2 clipping bound ($C = {clippingNormC}$) and injected Gaussian noise ($\sigma = {noiseMultiplierSigma}$).
                   </p>
                 </div>
-                <span className="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-white/[0.05] text-white border border-white/15">
+                <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-white/[0.05] text-white border border-white/15">
                   Reconstruction PSNR: {results.reconstructionPsnrDb} dB
                 </span>
               </div>
 
-              <div className="relative h-64 w-full bg-neutral-950/80 rounded-xl border border-neutral-800/80 p-4 flex flex-col justify-end">
+              <div className="relative h-64 w-full bg-neutral-950/80 rounded-2xl border border-neutral-800/80 p-4 flex flex-col justify-end">
                 {/* SVG Chart */}
                 <svg className="w-full h-full overflow-visible" viewBox="0 0 500 200">
                   {/* Grid Lines */}
@@ -447,7 +447,7 @@ ${results.complianceStatus}`;
             </div>
 
             {/* Financial Risk & Compliance Box */}
-            <div className="bg-neutral-950 border border-white/15 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-950 border border-white/15 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-start justify-between">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-white mb-1">Annual PII Liability Prevented</div>
@@ -499,7 +499,7 @@ ${results.complianceStatus}`;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-5">
               <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
                 <Layers className="w-4 h-4" />
                 1. Per-Sample Gradient L2 Clipping
@@ -507,7 +507,7 @@ ${results.complianceStatus}`;
               <p className="text-xs text-neutral-300 leading-relaxed mb-3">
                 To bound the sensitivity $\Delta_2$ of the update function, every individual sample gradient $g_i$ is scaled to a maximum norm $C$:
               </p>
-              <div className="bg-neutral-950 p-3 rounded-lg font-mono text-[11px] text-neutral-200 overflow-x-auto border border-neutral-800">
+              <div className="bg-neutral-950 p-3 rounded-[18px] font-mono text-[11px] text-neutral-200 overflow-x-auto border border-neutral-800">
                 g_bar_i = g_i / max(1, ||g_i||_2 / C)
               </div>
               <p className="text-xs text-neutral-400 mt-2">
@@ -515,7 +515,7 @@ ${results.complianceStatus}`;
               </p>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-5">
               <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
                 <EyeOff className="w-4 h-4" />
                 2. Calibrated Gaussian Noise Injection
@@ -523,7 +523,7 @@ ${results.complianceStatus}`;
               <p className="text-xs text-neutral-300 leading-relaxed mb-3">
                 Independent spherical Gaussian noise is added to the aggregated batch gradient before updating model weights:
               </p>
-              <div className="bg-neutral-950 p-3 rounded-lg font-mono text-[11px] text-neutral-200 overflow-x-auto border border-neutral-800">
+              <div className="bg-neutral-950 p-3 rounded-[18px] font-mono text-[11px] text-neutral-200 overflow-x-auto border border-neutral-800">
                 g_tilde = (1/B) * (&Sigma; g_bar_i + N(0, &sigma;^2 C^2 I))
               </div>
               <p className="text-xs text-neutral-400 mt-2">
@@ -533,7 +533,7 @@ ${results.complianceStatus}`;
           </div>
 
           {/* FAQ Accordion */}
-          <div className="border border-neutral-800 rounded-xl bg-neutral-900/60 p-6">
+          <div className="border border-neutral-800 rounded-[24px] bg-neutral-900/60 p-6">
             <h3 className="text-lg font-bold text-white mb-4">Frequently Asked Engineering Questions</h3>
             <div className="space-y-3">
               {[
@@ -553,7 +553,7 @@ ${results.complianceStatus}`;
                 <div key={idx} className="border-b border-neutral-800 pb-3 last:border-b-0">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="active:scale-[0.97] w-full flex justify-between items-center text-left text-sm font-semibold text-neutral-200 hover:text-white py-1 transition-colors"
+                    className="active:scale-[0.97] w-full flex justify-between items-center text-left text-sm font-semibold text-neutral-200 hover:text-white py-1 transition-all duration-300"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : 'text-neutral-500'}`} />
@@ -574,7 +574,7 @@ ${results.complianceStatus}`;
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 space-y-4 shadow-2xl">
             <div className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <Code className="w-5 h-5 text-neutral-200" />
@@ -582,7 +582,7 @@ ${results.complianceStatus}`;
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] text-neutral-400 hover:text-white transition-colors"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white transition-all duration-300"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -596,7 +596,7 @@ ${results.complianceStatus}`;
               </pre>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] absolute top-2 right-2 px-3 py-1.5 rounded bg-white hover:bg-neutral-200 text-black text-xs font-medium flex items-center gap-1.5 transition-colors"
+                className="active:scale-[0.97] absolute top-2 right-2 px-3 py-1.5 rounded bg-white hover:bg-neutral-200 text-black text-xs font-medium flex items-center gap-1.5 transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied!' : 'Copy Snippet'}

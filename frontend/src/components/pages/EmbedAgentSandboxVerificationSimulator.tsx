@@ -36,7 +36,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-[24px] border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Multi-Agent Sandboxed Code Execution &amp; Formal Verification Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -58,7 +58,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
             href="https://elesium.online/tools/enterprise-agent-sandbox-formal-verification-simulator"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-neutral-200 hover:text-white transition-colors font-mono"
+            className="inline-flex items-center gap-1 text-xs text-neutral-200 hover:text-white transition-all duration-300 font-mono"
           >
             <span>Full Simulator</span>
             <ExternalLink className="w-3 h-3" />
@@ -80,7 +80,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
             step={25000}
             value={monthlyCodeExecutions}
             onChange={(e) => setMonthlyCodeExecutions(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -96,7 +96,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
             step={50}
             value={avgExecutionTimeMs}
             onChange={(e) => setAvgExecutionTimeMs(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -112,14 +112,14 @@ export default function EmbedAgentSandboxVerificationSimulator() {
             step={0.5}
             value={adversarialOrMaliciousScriptPct}
             onChange={(e) => setAdversarialOrMaliciousScriptPct(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
       </div>
 
       {/* Live Result Metrics */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Annual Savings</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             ${(results.annualCostSavingsUSD / 1000).toFixed(1)}k
@@ -127,7 +127,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
           <span className="text-[9px] text-neutral-400 block mt-0.5">Compute &amp; Remediation</span>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Cold Boot Speedup</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             {results.bootLatencyReductionPct}%
@@ -135,7 +135,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
           <span className="text-[9px] text-neutral-400 block mt-0.5">{results.sovereignMicrovm.coldBootOverheadMs}ms vs {results.naiveDocker.coldBootOverheadMs}ms</span>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Breakout Risk</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             0.00%
@@ -143,7 +143,7 @@ export default function EmbedAgentSandboxVerificationSimulator() {
           <span className="text-[9px] text-neutral-400 block mt-0.5">Hardware KVM Isolation</span>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
           <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">RAM / Worker</span>
           <span className="text-base sm:text-lg font-bold text-white font-mono">
             {results.sovereignMicrovm.memoryFootprintPerWorkerMB} MB

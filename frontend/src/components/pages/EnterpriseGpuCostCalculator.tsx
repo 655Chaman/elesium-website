@@ -175,16 +175,16 @@ export default function EnterpriseGpuCostCalculator() {
           
           {/* Breadcrumb & Navigation */}
           <nav className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
             <span>/</span>
-            <Link to="/solutions/" className="hover:text-white transition-colors">Solutions</Link>
+            <Link to="/solutions/" className="hover:text-white transition-all duration-300">Solutions</Link>
             <span>/</span>
             <span className="text-neutral-200">GPU FinOps &amp; Throughput Calculator</span>
           </nav>
 
           {/* Hero Header */}
           <header className="mb-10 text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono font-medium mb-4">
               <Cpu className="w-3.5 h-3.5" />
               <span>NVIDIA Hopper &amp; HBM3e Roofline Hardware Model • 3-Year TCO Sizer</span>
             </div>
@@ -199,14 +199,14 @@ export default function EnterpriseGpuCostCalculator() {
             <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-mono transition-all hover:bg-neutral-850"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-mono transition-all duration-300 hover:bg-neutral-850"
               >
                 <Code className="w-3.5 h-3.5 text-neutral-200" />
                 <span>Embed On Your Site</span>
               </button>
               <button
                 onClick={copyFinOpsMemo}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-mono transition-all hover:bg-neutral-850"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-mono transition-all duration-300 hover:bg-neutral-850"
               >
                 {hasCopiedMemo ? (
                   <>
@@ -222,16 +222,16 @@ export default function EnterpriseGpuCostCalculator() {
               </button>
               
               {/* Currency Toggle */}
-              <div className="inline-flex items-center bg-neutral-900 border border-neutral-800 rounded-lg p-1 text-xs font-mono">
+              <div className="inline-flex items-center bg-neutral-900 border border-neutral-800 rounded-full p-1 text-xs font-mono">
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-2.5 py-1 rounded transition-colors ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded transition-all duration-300 ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                 >
                   USD ($)
                 </button>
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-2.5 py-1 rounded transition-colors ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded transition-all duration-300 ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                 >
                   INR (₹)
                 </button>
@@ -246,7 +246,7 @@ export default function EnterpriseGpuCostCalculator() {
             <div className="lg:col-span-7 space-y-6">
 
               {/* Workload Parameters Card */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-5">
                   <Activity className="w-5 h-5 text-neutral-200" />
                   <h2 className="text-lg font-bold text-white tracking-tight">1. Workload Concurrency &amp; Token Scale</h2>
@@ -268,7 +268,7 @@ export default function EnterpriseGpuCostCalculator() {
                       step="10"
                       value={monthlyTokenVolumeMillions}
                       onChange={(e) => setMonthlyTokenVolumeMillions(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
                       <span>10M (Proof of Concept)</span>
@@ -292,7 +292,7 @@ export default function EnterpriseGpuCostCalculator() {
                       step="1024"
                       value={averageContextLengthTokens}
                       onChange={(e) => setAverageContextLengthTokens(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
                       <span>1,024 (Short RPC)</span>
@@ -316,7 +316,7 @@ export default function EnterpriseGpuCostCalculator() {
                       step="5"
                       value={peakConcurrentRequests}
                       onChange={(e) => setPeakConcurrentRequests(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
                       <span>5 streams</span>
@@ -328,7 +328,7 @@ export default function EnterpriseGpuCostCalculator() {
               </div>
 
               {/* Model & Precision Selection Card */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-5">
                   <Layers className="w-5 h-5 text-neutral-200" />
                   <h2 className="text-lg font-bold text-white tracking-tight">2. Open-Weight Model &amp; Quantization</h2>
@@ -348,7 +348,7 @@ export default function EnterpriseGpuCostCalculator() {
                           <button
                             key={key}
                             onClick={() => setModelTier(key)}
-                            className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all ${
+                            className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 ${
                               isSelected
                                 ? 'bg-white/[0.05] border-white/30 ring-1 ring-white/20 text-white'
                                 : 'bg-neutral-950/50 border-neutral-800 hover:border-neutral-700 text-neutral-300'
@@ -379,7 +379,7 @@ export default function EnterpriseGpuCostCalculator() {
                         <button
                           key={item.id}
                           onClick={() => setQuantization(item.id as QuantizationPrecision)}
-                          className={`active:scale-[0.97] p-2.5 rounded-lg border text-left transition-all ${
+                          className={`active:scale-[0.97] p-2.5 rounded-xl border text-left transition-all duration-300 ${
                             quantization === item.id
                               ? 'bg-white/[0.05] border-white/30 text-white ring-1 ring-white/20'
                               : 'bg-neutral-950/60 border-neutral-800 hover:border-neutral-700 text-neutral-300'
@@ -395,7 +395,7 @@ export default function EnterpriseGpuCostCalculator() {
               </div>
 
               {/* Hardware & Comparison Profile Card */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-5">
                   <Server className="w-5 h-5 text-neutral-200" />
                   <h2 className="text-lg font-bold text-white tracking-tight">3. Cluster Hardware &amp; Benchmark API</h2>
@@ -415,7 +415,7 @@ export default function EnterpriseGpuCostCalculator() {
                           <button
                             key={key}
                             onClick={() => setHardware(key)}
-                            className={`active:scale-[0.97] w-full p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
+                            className={`active:scale-[0.97] w-full p-3 rounded-xl border text-left flex items-center justify-between transition-all duration-300 ${
                               isSelected
                                 ? 'bg-white/[0.05] border-white/30 ring-1 ring-white/20 text-white'
                                 : 'bg-neutral-950/50 border-neutral-800 hover:border-neutral-700 text-neutral-300'
@@ -452,7 +452,7 @@ export default function EnterpriseGpuCostCalculator() {
                           <button
                             key={key}
                             onClick={() => setHyperscalerComparison(key)}
-                            className={`active:scale-[0.97] p-2.5 rounded-lg border text-left transition-all ${
+                            className={`active:scale-[0.97] p-2.5 rounded-xl border text-left transition-all duration-300 ${
                               isSelected
                                 ? 'bg-white/[0.05] border-white/30 text-white ring-1 ring-white/20'
                                 : 'bg-neutral-950/60 border-neutral-800 hover:border-neutral-700 text-neutral-300'
@@ -480,8 +480,8 @@ export default function EnterpriseGpuCostCalculator() {
             <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
 
               {/* Main FinOps Economics Card */}
-              <div className="bg-neutral-950 border-2 border-white/30 rounded-xl p-6 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-white text-black font-extrabold text-[10px] uppercase font-mono px-3 py-1 rounded-bl-lg">
+              <div className="bg-neutral-950 border-2 border-white/30 rounded-[24px] p-6 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-white text-black font-extrabold text-[10px] uppercase font-mono px-3 py-1 rounded-bl-xl">
                   FinOps Breakeven Verified
                 </div>
 
@@ -509,7 +509,7 @@ export default function EnterpriseGpuCostCalculator() {
 
                 {/* Side-by-Side Cost Comparison */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-neutral-950/80 border border-neutral-800">
+                  <div className="p-3 rounded-[18px] bg-neutral-950/80 border border-neutral-800">
                     <div className="text-[11px] font-mono text-neutral-400 mb-1">Self-Hosted Cluster</div>
                     <div className="text-lg font-bold text-white font-mono">
                       {formatFinOpsCurrency(results.monthlySelfHostedCostUSD, currency)}
@@ -519,7 +519,7 @@ export default function EnterpriseGpuCostCalculator() {
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-neutral-950/80 border border-red-950/80">
+                  <div className="p-3 rounded-[18px] bg-neutral-950/80 border border-red-950/80">
                     <div className="text-[11px] font-mono text-neutral-400 mb-1">Hyperscaler Cloud API</div>
                     <div className="text-lg font-bold text-red-400 font-mono">
                       {formatFinOpsCurrency(results.monthlyHyperscalerCostUSD, currency)}
@@ -531,7 +531,7 @@ export default function EnterpriseGpuCostCalculator() {
                 </div>
 
                 {/* Breakeven Metric */}
-                <div className="p-3 rounded-xl bg-white/[0.05] border border-white/15 mb-6 flex items-center justify-between text-xs font-mono">
+                <div className="p-3 rounded-[18px] bg-white/[0.05] border border-white/15 mb-6 flex items-center justify-between text-xs font-mono">
                   <span className="text-neutral-300">Commercial Breakeven Threshold:</span>
                   <span className="text-white font-bold">
                     {results.breakevenMonthlyTokenThresholdMillions}M tokens / month
@@ -542,14 +542,14 @@ export default function EnterpriseGpuCostCalculator() {
                 <div className="space-y-3">
                   <button
                     onClick={() => openWhatsApp()}
-                    className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                    className="active:scale-[0.97] px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
                   >
                     <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                     <span>Chat on WhatsApp</span>
                   </button>
                 <ExpandableScreen>
                     <ExpandableScreenTrigger>
-                      <button className="active:scale-[0.97] w-full py-3.5 px-4 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-sm tracking-wide shadow-lg transition-all flex items-center justify-center gap-2">
+                      <button className="active:scale-[0.97] w-full py-3.5 px-4 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-sm tracking-wide shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
                         <span>Deploy This Sovereign Cluster in Your VPC</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
@@ -561,7 +561,7 @@ export default function EnterpriseGpuCostCalculator() {
 
                   <button
                     onClick={() => openWhatsApp()}
-                    className="active:scale-[0.97] w-full py-2.5 px-4 rounded-xl bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 text-neutral-300 font-mono text-xs tracking-wide transition-all flex items-center justify-center gap-2"
+                    className="active:scale-[0.97] w-full py-2.5 px-4 rounded-full bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 text-neutral-300 font-mono text-xs tracking-wide transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <span>Discuss Cluster Sizing via Private Channel</span>
                     <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
@@ -570,7 +570,7 @@ export default function EnterpriseGpuCostCalculator() {
               </div>
 
               {/* Hardware Sizing & Roofline Specification Card */}
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 pb-3 border-b border-neutral-800 mb-4">
                   <Gauge className="w-4 h-4 text-neutral-200" />
                   <h3 className="text-sm font-bold text-white tracking-tight uppercase font-mono">
@@ -636,7 +636,7 @@ export default function EnterpriseGpuCostCalculator() {
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden transition-colors"
+                  className="rounded-[24px] border border-neutral-800 bg-neutral-900/60 overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -660,10 +660,10 @@ export default function EnterpriseGpuCostCalculator() {
           {/* Embed Modal */}
           {isEmbedOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+              <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
-                  className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded-lg"
+                  className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded-full"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -674,19 +674,19 @@ export default function EnterpriseGpuCostCalculator() {
                 <p className="text-xs text-neutral-400 mb-4">
                   Copy and paste this clean iframe snippet into your engineering blog, internal FinOps portal, or documentation.
                 </p>
-                <div className="bg-neutral-950 p-3 rounded-lg border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all mb-4">
+                <div className="bg-neutral-950 p-3 rounded-[18px] border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all mb-4">
                   {embedCode}
                 </div>
                 <div className="flex justify-end gap-3">
                   <button
                     onClick={() => setIsEmbedOpen(false)}
-                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs font-mono text-neutral-300 transition-colors"
+                    className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-xs font-mono text-neutral-300 transition-all duration-300"
                   >
                     Close
                   </button>
                   <button
                     onClick={copyEmbedSnippet}
-                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-xs font-mono font-bold text-black transition-colors flex items-center gap-2"
+                    className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-xs font-mono font-bold text-black transition-all duration-300 flex items-center gap-2"
                   >
                     {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Snippet'}</span>

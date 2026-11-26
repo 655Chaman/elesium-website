@@ -137,7 +137,7 @@ Note: ${results.recommendationNote}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-12">
         {/* Hero Section */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono tracking-wide uppercase">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono tracking-wide uppercase">
             <Factory className="w-3.5 h-3.5" />
             <span>Industrial IoT &amp; OPC-UA Telemetry</span>
           </div>
@@ -151,21 +151,21 @@ Note: ${results.recommendationNote}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 text-xs font-medium text-neutral-200 transition-colors"
+              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 text-xs font-medium text-neutral-200 transition-all duration-300"
             >
               <Code className="w-4 h-4 text-neutral-200" />
               <span>Embed Calculator</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/80 hover:bg-neutral-200 text-xs font-medium text-white transition-colors shadow-lg"
+              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-xs font-medium text-black transition-all duration-300 shadow-lg"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Audit Memo'}</span>
@@ -176,7 +176,7 @@ Note: ${results.recommendationNote}
         {/* Simulator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 space-y-6 backdrop-blur-xl">
+          <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 space-y-6 backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
               <div className="flex items-center space-x-2">
                 <Sliders className="w-4 h-4 text-neutral-200" />
@@ -211,7 +211,7 @@ Note: ${results.recommendationNote}
                 step="1"
                 value={connectedPlcCount}
                 onChange={(e) => setConnectedPlcCount(Number(e.target.value))}
-                className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>1 Cell (Pilot)</span>
@@ -232,7 +232,7 @@ Note: ${results.recommendationNote}
                 step="10"
                 value={samplingFrequencyHz}
                 onChange={(e) => setSamplingFrequencyHz(Number(e.target.value))}
-                className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>10 Hz (Thermal/Pressure)</span>
@@ -298,7 +298,7 @@ Note: ${results.recommendationNote}
                 step="1"
                 value={dataBufferingHours}
                 onChange={(e) => setDataBufferingHours(Number(e.target.value))}
-                className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>1 Hour (Live Sync)</span>
@@ -311,7 +311,7 @@ Note: ${results.recommendationNote}
           <div className="lg:col-span-7 space-y-6">
             {/* Primary Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 text-center">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 text-center">
                 <div className="text-[10px] font-mono uppercase text-neutral-400 tracking-wider">Edge P99 Latency</div>
                 <div className="text-2xl font-extrabold text-neutral-200 font-mono mt-1">
                   {results.edgeP99LatencyMs} <span className="text-xs font-normal">ms</span>
@@ -319,7 +319,7 @@ Note: ${results.recommendationNote}
                 <div className="text-[10px] text-neutral-500 mt-0.5">Closed-loop cycle</div>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 text-center">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 text-center">
                 <div className="text-[10px] font-mono uppercase text-neutral-400 tracking-wider">Downtime Cut</div>
                 <div className="text-2xl font-extrabold text-neutral-200 font-mono mt-1">
                   {results.unplannedDowntimeReductionPct}%
@@ -327,7 +327,7 @@ Note: ${results.recommendationNote}
                 <div className="text-[10px] text-neutral-500 mt-0.5">Spindle protection</div>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 text-center">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 text-center">
                 <div className="text-[10px] font-mono uppercase text-neutral-400 tracking-wider">Uplink Bandwidth</div>
                 <div className="text-2xl font-extrabold text-neutral-200 font-mono mt-1">
                   {results.bandwidthConsumedKbps} <span className="text-xs font-normal">Kbps</span>
@@ -335,7 +335,7 @@ Note: ${results.recommendationNote}
                 <div className="text-[10px] text-neutral-500 mt-0.5">85% compression</div>
               </div>
 
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 text-center">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 text-center">
                 <div className="text-[10px] font-mono uppercase text-neutral-400 tracking-wider">Detection Acc</div>
                 <div className="text-2xl font-extrabold text-amber-400 font-mono mt-1">
                   {results.anomalyDetectionAccuracyPct}%
@@ -345,7 +345,7 @@ Note: ${results.recommendationNote}
             </div>
 
             {/* Latency Visualization Card */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-white tracking-wide font-mono uppercase">
@@ -396,7 +396,7 @@ Note: ${results.recommendationNote}
 
             {/* Economic Impact Card */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white/[0.05] border border-white/20 rounded-xl p-5 space-y-2">
+              <div className="bg-white/[0.05] border border-white/20 rounded-[24px] p-5 space-y-2">
                 <div className="flex items-center space-x-2 text-neutral-200">
                   <Coins className="w-4 h-4" />
                   <span className="text-xs font-mono uppercase tracking-wider font-bold">Annual Scrap Cost Cut</span>
@@ -409,7 +409,7 @@ Note: ${results.recommendationNote}
                 </p>
               </div>
 
-              <div className="bg-white/[0.05] border border-white/20 rounded-xl p-5 space-y-2">
+              <div className="bg-white/[0.05] border border-white/20 rounded-[24px] p-5 space-y-2">
                 <div className="flex items-center space-x-2 text-neutral-200">
                   <Cpu className="w-4 h-4" />
                   <span className="text-xs font-mono uppercase tracking-wider font-bold">Tooling Life Extension</span>
@@ -424,7 +424,7 @@ Note: ${results.recommendationNote}
             </div>
 
             {/* Architectural Status Banner */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 flex items-start space-x-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-4 flex items-start space-x-3">
               <ShieldCheck className="w-5 h-5 text-neutral-200 flex-shrink-0 mt-0.5" />
               <div>
                 <div className="text-xs font-mono uppercase tracking-wider font-bold text-white">
@@ -450,8 +450,8 @@ Note: ${results.recommendationNote}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
-              <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-[24px] p-5 space-y-3">
+              <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
                 <Server className="w-5 h-5" />
               </div>
               <h3 className="text-sm font-bold text-white font-mono uppercase">OPC-UA Standardization</h3>
@@ -460,8 +460,8 @@ Note: ${results.recommendationNote}
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
-              <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-[24px] p-5 space-y-3">
+              <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
                 <Layers className="w-5 h-5" />
               </div>
               <h3 className="text-sm font-bold text-white font-mono uppercase">Air-Gapped Reliability</h3>
@@ -470,8 +470,8 @@ Note: ${results.recommendationNote}
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
-              <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-[24px] p-5 space-y-3">
+              <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200 w-fit">
                 <Sparkles className="w-5 h-5" />
               </div>
               <h3 className="text-sm font-bold text-white font-mono uppercase">Closed-Loop ERP Sync</h3>
@@ -508,7 +508,7 @@ Note: ${results.recommendationNote}
             ].map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-neutral-900/50 border border-neutral-800 rounded-xl overflow-hidden transition-colors"
+                className="bg-neutral-900/50 border border-neutral-800 rounded-[24px] overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -543,8 +543,8 @@ Note: ${results.recommendationNote}
           </div>
           <div className="max-w-2xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -557,7 +557,7 @@ Note: ${results.recommendationNote}
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -573,12 +573,12 @@ Note: ${results.recommendationNote}
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-bold text-white font-mono uppercase">Embed Industrial IoT Simulator</h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] text-neutral-400 hover:text-white transition-colors"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white transition-all duration-300"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -586,19 +586,19 @@ Note: ${results.recommendationNote}
             <p className="text-xs text-neutral-400">
               Paste this responsive iframe snippet into your documentation, plant operations portal, or intranet:
             </p>
-            <div className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all select-all">
+            <div className="bg-neutral-950 p-3 rounded-[18px] border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all select-all">
               {embedCode}
             </div>
             <div className="flex justify-end space-x-2 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 text-xs text-neutral-300 hover:bg-neutral-700"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 text-xs text-neutral-300 hover:bg-neutral-700"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white/80 text-xs text-white font-medium hover:bg-neutral-200 inline-flex items-center space-x-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white text-xs text-black font-medium hover:bg-neutral-200 inline-flex items-center space-x-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Code'}</span>

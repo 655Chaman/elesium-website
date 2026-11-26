@@ -25,7 +25,7 @@ export default function EmbedAgentMtpSpeculativeDraftSimulator() {
   const results = useMemo(() => calculateMtpSimulation(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Multi-Token Prediction Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-mtp-speculative-draft-simulator" />

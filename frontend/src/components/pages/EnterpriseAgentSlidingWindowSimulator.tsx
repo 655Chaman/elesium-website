@@ -126,7 +126,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
       <section className="relative pt-24 pb-12 border-b border-neutral-800/80 overflow-hidden">
         <div className="absolute inset-0 bg-radial-gradient from-white/[0.03] via-transparent to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold mb-4 tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/15 text-white text-xs font-semibold mb-4 tracking-wide uppercase">
             <RotateCcw className="w-3.5 h-3.5" />
             Tool #54 · Enterprise Streaming Infrastructure &amp; Compute
           </div>
@@ -140,31 +140,31 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700/90 border border-neutral-700 text-neutral-200 text-xs font-medium transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-800/90 hover:bg-neutral-700/90 border border-neutral-700 text-neutral-200 text-xs font-medium transition-all duration-300 shadow-sm"
             >
               <Code className="w-3.5 h-3.5 text-neutral-200" />
               Embed This Simulator
             </button>
             <button
               onClick={handleCopyMemo}
-              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700/90 border border-neutral-700 text-neutral-200 text-xs font-medium transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-800/90 hover:bg-neutral-700/90 border border-neutral-700 text-neutral-200 text-xs font-medium transition-all duration-300 shadow-sm"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Architecture Memo'}
             </button>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-400">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-400">
               <Coins className="w-3.5 h-3.5 text-amber-400" />
               Currency:
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="active:scale-[0.97] font-bold text-white hover:text-white transition-colors ml-1"
+                className="active:scale-[0.97] font-bold text-white hover:text-white transition-all duration-300 ml-1"
               >
                 {currency}
               </button>
@@ -179,7 +179,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
           
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
               <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-6">
                 <Sliders className="w-4 h-4 text-neutral-200" />
                 <h2 className="text-sm font-bold text-white uppercase tracking-wider">
@@ -198,7 +198,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 <select
                   value={modelArchitecture}
                   onChange={e => setModelArchitecture(e.target.value as ModelArchitecture)}
-                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="llama_3_70b">Llama-3-70B (80 Layers, GQA)</option>
                   <option value="mistral_large_123b">Mistral Large 123B (Native SWA)</option>
@@ -220,7 +220,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                   step="32768"
                   value={streamingSequenceLength}
                   onChange={e => setStreamingSequenceLength(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
                 <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                   <span>8k (Short)</span>
@@ -240,7 +240,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                     <button
                       key={size}
                       onClick={() => setSlidingWindowSize(size)}
-                      className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono border transition-all ${
+                      className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono border transition-all duration-300 ${
                         slidingWindowSize === size
                           ? 'bg-white/[0.05] border-white/30 text-white font-bold'
                           : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -263,7 +263,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                     <button
                       key={sinks}
                       onClick={() => setNumAttentionSinks(sinks)}
-                      className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono border transition-all ${
+                      className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono border transition-all duration-300 ${
                         numAttentionSinks === sinks
                           ? 'bg-white/[0.05] border-white/30 text-white font-bold'
                           : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:border-neutral-700'
@@ -286,7 +286,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 <select
                   value={hardwareCluster}
                   onChange={e => setHardwareCluster(e.target.value as HardwareCluster)}
-                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="nvidia_h100_sxm5">NVIDIA H100 SXM5 (80GB HBM3)</option>
                   <option value="nvidia_b200_nvl">NVIDIA B200 NVL (192GB HBM3e)</option>
@@ -303,7 +303,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
 
             {/* Top Scorecard Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-sm">
                 <div className="text-[11px] font-semibold text-neutral-400 uppercase tracking-wide">
                   Active KV Tokens
                 </div>
@@ -315,7 +315,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-sm">
                 <div className="text-[11px] font-semibold text-neutral-400 uppercase tracking-wide">
                   Decode Latency
                 </div>
@@ -327,7 +327,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-sm">
                 <div className="text-[11px] font-semibold text-neutral-400 uppercase tracking-wide">
                   VRAM Saved
                 </div>
@@ -339,7 +339,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 </div>
               </div>
 
-              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 shadow-sm">
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 shadow-sm">
                 <div className="text-[11px] font-semibold text-neutral-400 uppercase tracking-wide">
                   FinOps Savings
                 </div>
@@ -353,7 +353,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             </div>
 
             {/* Latency Comparison Card */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <div className="flex items-center gap-2">
                   <Gauge className="w-4 h-4 text-neutral-200" />
@@ -361,7 +361,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                     Continuous Generation Latency Benchmark
                   </h3>
                 </div>
-                <span className={`px-2.5 py-1 rounded-lg text-[11px] font-bold font-mono tracking-wide ${
+                <span className={`px-2.5 py-1 rounded-full text-[11px] font-bold font-mono tracking-wide ${
                   results.slaStatus === 'SUB_5MS_STREAMING_LEADER'
                     ? 'bg-white/[0.05] border border-white/15 text-neutral-200'
                     : results.slaStatus === 'SUB_10MS_ACCEPTABLE'
@@ -374,7 +374,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Baseline */}
-                <div className="bg-neutral-950/80 border border-neutral-800 rounded-xl p-4">
+                <div className="bg-neutral-950/80 border border-neutral-800 rounded-2xl p-4">
                   <div className="text-xs font-semibold text-neutral-400">Baseline Unbounded Streaming</div>
                   <div className="text-3xl font-black text-red-400 font-mono mt-1">
                     {results.baselineUnboundedLatencyMs} <span className="text-sm font-medium text-neutral-500">ms/tok</span>
@@ -385,7 +385,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 </div>
 
                 {/* Sliding Window */}
-                <div className="bg-neutral-950/80 border border-white/15 rounded-xl p-4 relative overflow-hidden">
+                <div className="bg-neutral-950/80 border border-white/15 rounded-[24px] p-4 relative overflow-hidden">
                   <div className="absolute top-0 right-0 px-2 py-0.5 bg-white/10 text-white text-[10px] font-mono font-bold rounded-bl">
                     Constant Time O(1)
                   </div>
@@ -401,7 +401,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             </div>
 
             {/* Ring Buffer & Attention Sink Visualizer Trace */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 shadow-xl">
               <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-6">
                 <Cpu className="w-4 h-4 text-neutral-200" />
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider">
@@ -413,7 +413,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                 {results.ringBufferTrace.map((stage, idx) => (
                   <div
                     key={idx}
-                    className={`p-3.5 rounded-xl border transition-all ${
+                    className={`p-3.5 rounded-2xl border transition-all ${
                       stage.status === 'ANCHORED'
                         ? 'bg-amber-950/20 border-amber-900/40'
                         : stage.status === 'ROLLING_ACTIVE'
@@ -465,7 +465,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
         </div>
 
         {/* Technical FAQ Accordion */}
-        <section className="mt-16 bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 sm:p-8">
+        <section className="mt-16 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 sm:p-8">
           <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-6">
             <Sparkles className="w-4 h-4 text-neutral-200" />
             <h2 className="text-lg font-bold text-white tracking-tight">
@@ -477,11 +477,11 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="border border-neutral-800/80 rounded-xl overflow-hidden bg-neutral-950/40"
+                className="border border-neutral-800/80 rounded-[24px] overflow-hidden bg-neutral-950/40"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left font-semibold text-xs sm:text-sm text-neutral-200 hover:text-white transition-colors"
+                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left font-semibold text-xs sm:text-sm text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
@@ -497,9 +497,9 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
         </section>
 
         {/* Mandate Application Section */}
-        <section className="mt-16 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-8 shadow-xl">
+        <section className="mt-16 bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-8 shadow-xl">
           <div className="max-w-2xl mx-auto text-center mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider mb-3">
               <CheckCircle2 className="w-3.5 h-3.5" /> Sovereign Streaming LLM Mandate
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -510,8 +510,8 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             </p>
           </div>
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -524,7 +524,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-full bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -540,7 +540,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -554,18 +554,18 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             <textarea
               readOnly
               value={embedSnippet}
-              className="w-full h-32 bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-[11px] font-mono text-neutral-300 focus:outline-none focus:border-white/40 mb-4"
+              className="w-full h-32 bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-[11px] font-mono text-neutral-300 focus:outline-none focus:border-white/40 mb-4"
             />
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-xs font-medium"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-xs font-medium"
               >
                 Close
               </button>
               <button
                 onClick={handleCopyEmbed}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold shadow-md"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-bold shadow-md"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Code'}

@@ -134,7 +134,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-neutral-800 pb-8">
             <div className="space-y-2 max-w-3xl">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
                 <Grid className="w-3.5 h-3.5 mr-1 text-neutral-200" />
                 Tool #33 · Analog In-Memory Computing &amp; ReRAM Memristor Crossbars
               </div>
@@ -150,27 +150,27 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             <div className="flex items-center space-x-3 shrink-0">
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="active:scale-[0.97] px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition"
+                className="active:scale-[0.97] px-3.5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition-all duration-300"
               >
                 Currency: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition-all duration-300"
               >
                 <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Tool</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -180,7 +180,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         </div>
 
         {/* Status Alert Banner */}
-        <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
+        <div className={`p-4 rounded-2xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'ANALOG_COMPENSATED'
@@ -210,7 +210,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm">
             <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
               <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">Memristor Physical Parameters</h2>
@@ -222,7 +222,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               <select
                 value={memristorTechnology}
                 onChange={e => setMemristorTechnology(e.target.value as any)}
-                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="hfox_reram_crossbar">HfOx Filamentary ReRAM (Enterprise Standard)</option>
                 <option value="pcm_chalcogenide_crossbar">Phase-Change Memory (GST Chalcogenide PCM)</option>
@@ -242,7 +242,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                   <button
                     key={dim}
                     onClick={() => setCrossbarDimension(dim)}
-                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono font-medium border transition-all duration-300 ${
                       crossbarDimension === dim
                         ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
                         : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
@@ -265,7 +265,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                   <button
                     key={bits}
                     onClick={() => setAdcDacResolutionBits(bits)}
-                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-full text-xs font-mono font-medium border transition-all duration-300 ${
                       adcDacResolutionBits === bits
                         ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
                         : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
@@ -290,7 +290,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 step="0.01"
                 value={conductanceDriftExponent}
                 onChange={e => setConductanceDriftExponent(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>0.01 (Near-zero drift)</span>
@@ -312,7 +312,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 step="5"
                 value={ambientTemperatureKelvin}
                 onChange={e => setAmbientTemperatureKelvin(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>250 K (-23°C)</span>
@@ -334,7 +334,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 step="1"
                 value={dailySynapticEventsBillions}
                 onChange={e => setDailySynapticEventsBillions(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>1B (Edge Vision)</span>
@@ -349,7 +349,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* Top 4 Metric KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1: Analog VMM Latency */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Analog VMM Latency</span>
                   <Zap className="w-4 h-4 text-neutral-200" />
@@ -375,7 +375,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               </div>
 
               {/* Card 2: Energy per Synaptic Op */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Energy Consumption / Synaptic Op</span>
                   <Cpu className="w-4 h-4 text-neutral-200" />
@@ -401,7 +401,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               </div>
 
               {/* Card 3: SNR & Retention Horizon */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Retention Horizon &amp; SNR</span>
                   <Thermometer className="w-4 h-4 text-amber-400" />
@@ -427,7 +427,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               </div>
 
               {/* Card 4: Financial OPEX Saved */}
-              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-neutral-400 font-medium">Annual Power OPEX Saved</span>
                   <Activity className="w-4 h-4 text-neutral-200" />
@@ -456,7 +456,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             </div>
 
             {/* Crossbar Conductance Cell Grid Visualizer */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm space-y-4">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
                   <Grid className="w-4 h-4 text-neutral-200" />
@@ -467,7 +467,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {results.crossbarCells.map((cell, idx) => (
-                  <div key={idx} className="bg-neutral-950/70 border border-neutral-800/80 rounded-xl p-3 space-y-1 font-mono text-[11px]">
+                  <div key={idx} className="bg-neutral-950/70 border border-neutral-800/80 rounded-[18px] p-3 space-y-1 font-mono text-[11px]">
                     <div className="flex justify-between text-white font-bold">
                       <span>R{cell.rowIndex}:C{cell.colIndex}</span>
                       <span>{cell.conductanceMicroSiemens} µS</span>
@@ -492,25 +492,25 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             </div>
 
             {/* In-Memory Computing Architecture Blueprint */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm space-y-4">
               <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
                 <Layers className="w-4 h-4 text-neutral-200" />
                 <h3 className="text-sm font-semibold text-white">Analog In-Memory Computing (AIMC) Crossbar Architecture</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/60 space-y-1">
                   <p className="font-semibold text-white">1. Voltage Activation (Wordline)</p>
                   <p className="text-neutral-400 text-[11px]">
                     Digital input vectors are converted to analog voltage pulses via {adcDacResolutionBits}-bit DACs and applied across the {crossbarDimension} horizontal wordlines.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/60 space-y-1">
                   <p className="font-semibold text-white">2. Ohm &amp; Kirchhoff Accumulation</p>
                   <p className="text-neutral-400 text-[11px]">
                     Each memristor acts as a variable conductance state ($I = V \cdot G$). Currents sum along the vertical bitlines instantaneously via Kirchhoff&apos;s Current Law in {results.analogVmmLatencyNs} ns.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                <div className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/60 space-y-1">
                   <p className="font-semibold text-white">3. Flash ADC Quantization</p>
                   <p className="text-neutral-400 text-[11px]">
                     Peripheral column ADCs quantize accumulated bitline currents into digital activations, sustaining an effective SNR of {results.effectiveSnrDb} dB for downstream agent routing.
@@ -534,7 +534,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-[24px] p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Zap className="w-4 h-4 text-neutral-200" />
                 <span>Kirchhoff&apos;s Current Law Summation</span>
@@ -545,7 +545,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-[24px] p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Thermometer className="w-4 h-4 text-amber-400" />
                 <span>Conductance Drift Mitigation</span>
@@ -556,7 +556,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               </p>
             </div>
 
-            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-[24px] p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Cpu className="w-4 h-4 text-neutral-200" />
                 <span>Spike-Timing-Dependent Plasticity (STDP)</span>
@@ -595,10 +595,10 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 a: "Yes. In transformer architectures, linear projection layers (Key, Query, Value, and Feed-Forward Networks) account for >90% of compute cycles. These GEMM operations are offloaded directly to memristive crossbar tiles. Non-linear operations like Softmax, RMSNorm, and attention masking are executed on adjacent low-power digital RISC-V or DSP coprocessors."
               }
             ].map((faq, idx) => (
-              <div key={idx} className="border border-neutral-800/80 rounded-xl bg-neutral-900/40 overflow-hidden">
+              <div key={idx} className="border border-neutral-800/80 rounded-[24px] bg-neutral-900/40 overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
@@ -614,7 +614,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         </div>
 
         {/* Audit CTA Card */}
-        <div className="rounded-xl bg-neutral-950 border border-white/15 p-8 text-center space-y-4">
+        <div className="rounded-[32px] bg-neutral-950 border border-white/15 p-8 text-center space-y-4">
           <h2 className="text-2xl font-extrabold text-white">Deploy Sovereign Neuromorphic In-Memory Computing Infrastructure</h2>
           <p className="text-neutral-400 text-sm max-w-2xl mx-auto leading-relaxed">
             Break the Von Neumann bottleneck and reduce AI inference power by up to 90%. Partner with Elesium to architect sovereign analog in-memory compute accelerators and multi-agent infrastructure.
@@ -622,7 +622,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
           <div className="pt-2">
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="active:scale-[0.97] inline-flex items-center space-x-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-sm shadow-lg transition">
+                <button className="active:scale-[0.97] inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm shadow-lg transition-all duration-300">
                   <span>Schedule Neuromorphic Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -640,7 +640,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -661,13 +661,13 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             <div className="flex justify-end space-x-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-all duration-300"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-medium transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}</span>

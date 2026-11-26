@@ -60,7 +60,7 @@ export default function EmbedAgentZkAttestationSimulator() {
         </div>
 
         {/* Sliders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-neutral-900/60 p-4 rounded-2xl border border-neutral-800">
           <div>
             <div className="flex justify-between text-xs mb-1">
               <span className="text-neutral-400">Daily State Transitions</span>
@@ -96,21 +96,21 @@ export default function EmbedAgentZkAttestationSimulator() {
 
         {/* Results Matrix */}
         <div className="grid grid-cols-3 gap-3 text-center">
-          <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
             <div className="text-[11px] text-neutral-400 uppercase">PII Exposure</div>
             <div className="text-lg font-bold text-white font-mono mt-1">
               {results.sovereignZkSnark.piiExposureRiskPct}%
             </div>
             <div className="text-[10px] text-neutral-500">Zero-Knowledge</div>
           </div>
-          <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
             <div className="text-[11px] text-neutral-400 uppercase">Proof Footprint</div>
             <div className="text-lg font-bold text-amber-400 font-mono mt-1">
               {results.sovereignZkSnark.proofPayloadSizeBytes} B
             </div>
             <div className="text-[10px] text-neutral-500">{results.payloadCompressionFactor}x compression</div>
           </div>
-          <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-[18px]">
             <div className="text-[11px] text-neutral-400 uppercase">Verifier Latency</div>
             <div className="text-lg font-bold text-white font-mono mt-1">
               {results.sovereignZkSnark.verifierLatencyMs} ms
@@ -120,7 +120,7 @@ export default function EmbedAgentZkAttestationSimulator() {
         </div>
 
         {/* Comparison Tier Mini-Table */}
-        <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-4 text-xs">
+        <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl p-4 text-xs">
           <div className="font-semibold text-neutral-300 mb-2 flex items-center gap-1.5">
             <Sliders className="w-3.5 h-3.5 text-neutral-200" />
             Architectural Benchmark Summary

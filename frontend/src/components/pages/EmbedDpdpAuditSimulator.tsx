@@ -49,7 +49,7 @@ export default function EmbedDpdpAuditSimulator() {
         <link rel="canonical" href="https://elesium.online/embed/dpdp-audit-simulator" />
       </Helmet>
 
-      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[720px] flex flex-col justify-between border border-neutral-800 rounded-xl shadow-2xl">
+      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[720px] flex flex-col justify-between border border-neutral-800 rounded-[24px] shadow-2xl">
         <div>
           {/* Header Bar */}
           <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
@@ -61,10 +61,10 @@ export default function EmbedDpdpAuditSimulator() {
             </div>
             
             {/* Currency toggle */}
-            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-md border border-neutral-800 text-[10px]">
+            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-full border border-neutral-800 text-[10px]">
               <button
                 onClick={() => setCurrency('INR')}
-                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-colors ${
+                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-all duration-300 ${
                   currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                 }`}
               >
@@ -72,7 +72,7 @@ export default function EmbedDpdpAuditSimulator() {
               </button>
               <button
                 onClick={() => setCurrency('USD')}
-                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-colors ${
+                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-all duration-300 ${
                   currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                 }`}
               >
@@ -90,7 +90,7 @@ export default function EmbedDpdpAuditSimulator() {
               <select
                 value={inferenceBoundary}
                 onChange={(e) => setInferenceBoundary(e.target.value as InferenceBoundaryKey)}
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-white/40"
               >
                 {Object.values(INFERENCE_BOUNDARIES).map((b) => (
                   <option key={b.id} value={b.id}>
@@ -113,7 +113,7 @@ export default function EmbedDpdpAuditSimulator() {
 
           {/* Sliders Grid */}
           <div className="space-y-3 mb-5">
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
               <div className="flex justify-between text-xs font-mono mb-1">
                 <span className="text-neutral-400">Record Volume Tier:</span>
                 <span className="text-white font-bold">{formatCompactNumber(recordVolume)}</span>
@@ -125,16 +125,16 @@ export default function EmbedDpdpAuditSimulator() {
                 step="50000"
                 value={recordVolume}
                 onChange={(e) => setRecordVolume(parseInt(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-1 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-1 rounded-xl cursor-pointer"
               />
             </div>
 
             {/* SDF Toggle */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3 flex items-center justify-between text-xs">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3 flex items-center justify-between text-xs">
               <span className="text-neutral-300">Significant Data Fiduciary (SDF):</span>
               <button
                 onClick={() => setIsSignificantDataFiduciary(!isSignificantDataFiduciary)}
-                className={`active:scale-[0.97] px-3 py-1 rounded text-[11px] font-mono font-semibold transition-colors ${
+                className={`active:scale-[0.97] px-3 py-1 rounded text-[11px] font-mono font-semibold transition-all duration-300 ${
                   isSignificantDataFiduciary ? 'bg-white text-black' : 'bg-neutral-800 text-neutral-400'
                 }`}
               >
@@ -144,7 +144,7 @@ export default function EmbedDpdpAuditSimulator() {
           </div>
 
           {/* Primary Penalty Display Banner */}
-          <div className="bg-neutral-950 border border-white/20 rounded-xl p-4 mb-4">
+          <div className="bg-neutral-950 border border-white/20 rounded-2xl p-4 mb-4">
             <div className="flex items-center justify-between text-[11px] font-mono text-white mb-1">
               <span className="flex items-center gap-1">
                 <AlertOctagon className="w-3.5 h-3.5" />
@@ -171,21 +171,21 @@ export default function EmbedDpdpAuditSimulator() {
 
           {/* 3-Col KPI Metrics */}
           <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-lg p-2.5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-2.5">
               <div className="text-[10px] font-mono text-neutral-400">Compliance Score</div>
               <div className="text-sm sm:text-base font-bold text-white">
                 {results.overallComplianceScore}/100
               </div>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-lg p-2.5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-2.5">
               <div className="text-[10px] font-mono text-neutral-400">Breach Probability</div>
               <div className="text-sm sm:text-base font-bold text-red-400">
                 {results.breachProbabilityPct}%
               </div>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-lg p-2.5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-2.5">
               <div className="text-[10px] font-mono text-neutral-400">Sovereign Cut</div>
               <div className="text-sm sm:text-base font-bold text-white">
                 {results.liabilityReductionPct}%
@@ -213,7 +213,7 @@ export default function EmbedDpdpAuditSimulator() {
           <a
             href="https://elesium.online/audit"
             target="_top"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-md transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-md transition-all duration-300"
           >
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Lock In DPDP Safe Harbor</span>

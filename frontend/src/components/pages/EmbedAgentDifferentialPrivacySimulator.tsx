@@ -51,7 +51,7 @@ export default function EmbedAgentDifferentialPrivacySimulator() {
         </div>
 
         {/* Sliders */}
-        <div className="space-y-3 bg-neutral-900/80 p-4 rounded-xl border border-neutral-800 text-xs">
+        <div className="space-y-3 bg-neutral-900/80 p-4 rounded-2xl border border-neutral-800 text-xs">
           <div>
             <div className="flex justify-between text-neutral-300 mb-1">
               <span>Daily Gradient Steps</span>
@@ -64,7 +64,7 @@ export default function EmbedAgentDifferentialPrivacySimulator() {
               step="1000"
               value={dailyGradientSteps}
               onChange={(e) => setDailyGradientSteps(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -80,7 +80,7 @@ export default function EmbedAgentDifferentialPrivacySimulator() {
               step="0.1"
               value={clippingNormC}
               onChange={(e) => setClippingNormC(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -96,7 +96,7 @@ export default function EmbedAgentDifferentialPrivacySimulator() {
               step="0.05"
               value={noiseMultiplierSigma}
               onChange={(e) => setNoiseMultiplierSigma(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -127,15 +127,15 @@ export default function EmbedAgentDifferentialPrivacySimulator() {
 
         {/* Output Metrics */}
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-neutral-900 p-2.5 rounded-lg border border-neutral-800 text-center">
+          <div className="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
             <div className="text-[10px] text-neutral-400">Inversion Risk</div>
             <div className="text-sm font-bold font-mono text-white">{results.gradientInversionRisk}%</div>
           </div>
-          <div className="bg-neutral-900 p-2.5 rounded-lg border border-neutral-800 text-center">
+          <div className="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
             <div className="text-[10px] text-neutral-400">Utility Retained</div>
             <div className="text-sm font-bold font-mono text-white">{results.modelUtilityRetention}%</div>
           </div>
-          <div className="bg-neutral-900 p-2.5 rounded-lg border border-neutral-800 text-center">
+          <div className="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
             <div className="text-[10px] text-neutral-400">Latency Penalty</div>
             <div className="text-sm font-bold font-mono text-white">+{results.sanitizationLatencyMs}ms</div>
           </div>

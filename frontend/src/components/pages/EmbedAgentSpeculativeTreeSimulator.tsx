@@ -41,7 +41,7 @@ export default function EmbedAgentSpeculativeTreeSimulator() {
   const results = useMemo(() => calculateSpeculativeTree(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Speculative Verification Tree Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-speculative-tree-simulator" />
@@ -112,28 +112,28 @@ export default function EmbedAgentSpeculativeTreeSimulator() {
 
       {/* Metrics Grid */}
       <div className="grid grid-cols-2 gap-2 mb-4">
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">Accepted Tokens/Step</span>
           <span className="text-lg font-bold text-white font-mono">
             {results.meanAcceptedTokensPerStep} tok
           </span>
           <span className="text-[10px] text-neutral-500 block">vs 1.0 autoregressive</span>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">Inter-Token Latency</span>
           <span className="text-lg font-bold text-white font-mono">
             {results.interTokenLatencyMs} ms
           </span>
           <span className="text-[10px] text-neutral-500 block">Per-token generation speed</span>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">Throughput Speedup</span>
           <span className="text-lg font-bold text-white font-mono">
             {results.throughputSpeedupMultiplier}x
           </span>
           <span className="text-[10px] text-neutral-500 block">Effective node scaling</span>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl">
           <span className="text-[11px] text-neutral-400 block">SM Occupancy</span>
           <span className="text-lg font-bold text-amber-400 font-mono">
             {results.smOccupancyPercent}%

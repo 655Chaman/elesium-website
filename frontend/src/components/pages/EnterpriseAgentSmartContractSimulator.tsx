@@ -123,7 +123,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
           {/* Header */}
           <div className="mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 border-b border-neutral-800/80 pb-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono uppercase tracking-widest mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono uppercase tracking-widest mb-3">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Tool #47 // Web3 Formal Verification Simulator</span>
               </div>
@@ -137,21 +137,21 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
             <div className="flex gap-2">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 hover:bg-neutral-700 border border-neutral-700 text-xs font-medium text-neutral-300 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-800/80 hover:bg-neutral-700 border border-neutral-700 text-xs font-medium text-neutral-300 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5" />
                 <span>Embed Simulator</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.05] hover:bg-white/10 border border-white/15 text-xs font-medium text-neutral-200 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.05] hover:bg-white/10 border border-white/15 text-xs font-medium text-neutral-200 transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
@@ -162,7 +162,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
           {/* Main Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Inputs Panel (5 cols) */}
-            <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+            <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-bold text-white flex items-center gap-2">
                   <Sliders className="w-4 h-4 text-neutral-200" />
@@ -202,7 +202,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                   step="100"
                   value={contractLinesOfCode}
                   onChange={(e) => setContractLinesOfCode(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
 
@@ -221,7 +221,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                     <button
                       key={engine.id}
                       onClick={() => setFormalVerificationEngine(engine.id as FormalVerificationEngine)}
-                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         formalVerificationEngine === engine.id
                           ? 'bg-white/[0.05] border-white/30 text-white shadow-sm'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -249,7 +249,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                     <button
                       key={zk.id}
                       onClick={() => setZkProofSystem(zk.id as ZkProofSystem)}
-                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         zkProofSystem === zk.id
                           ? 'bg-white/[0.05] border-white/30 text-white'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -277,7 +277,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                     <button
                       key={surface.id}
                       onClick={() => setVulnerabilityAttackSurface(surface.id as VulnerabilityAttackSurface)}
-                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         vulnerabilityAttackSurface === surface.id
                           ? 'bg-white/[0.05] border-white/30 text-white'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -304,7 +304,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                     <button
                       key={top.id}
                       onClick={() => setMultiAgentAuditTopology(top.id as MultiAgentAuditTopology)}
-                      className={`active:scale-[0.97] w-full text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] w-full text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         multiAgentAuditTopology === top.id
                           ? 'bg-white/[0.05] border-white/30 text-white'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -335,7 +335,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                   step="1"
                   value={totalValueLockedMillions}
                   onChange={(e) => setTotalValueLockedMillions(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
             </div>
@@ -343,12 +343,12 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
             {/* Results Panel (7 cols) */}
             <div className="lg:col-span-7 space-y-6">
               {/* Classification Status Card */}
-              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 shadow-xl relative overflow-hidden">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 shadow-xl relative overflow-hidden">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono text-neutral-400 uppercase tracking-wider">
                     Verification State Classification
                   </span>
-                  <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-bold ${
+                  <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold ${
                     outputs.formalVerificationStatus === 'MATHEMATICALLY_PROVEN_IMMUTABLE'
                       ? 'bg-white/[0.05] border border-white/30 text-neutral-200'
                       : outputs.formalVerificationStatus === 'BOUNDED_SECURITY_HIGH'
@@ -362,28 +362,28 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
 
                 {/* 4 Metric Cards */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-xl p-3 text-center">
+                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-[18px] p-3 text-center">
                     <div className="text-[11px] text-neutral-400">Verification Latency</div>
                     <div className="text-lg sm:text-xl font-bold font-mono text-white mt-1">
                       {outputs.verificationLatencySeconds}s
                     </div>
                     <div className="text-[10px] text-neutral-400 mt-0.5">SMT solving cycle</div>
                   </div>
-                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-xl p-3 text-center">
+                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-[18px] p-3 text-center">
                     <div className="text-[11px] text-neutral-400">Invariant Coverage</div>
                     <div className="text-lg sm:text-xl font-bold font-mono text-white mt-1">
                       {outputs.invariantCoveragePct}%
                     </div>
                     <div className="text-[10px] text-neutral-400 mt-0.5">State space proven</div>
                   </div>
-                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-xl p-3 text-center">
+                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-[18px] p-3 text-center">
                     <div className="text-[11px] text-neutral-400">Exploit Interception</div>
                     <div className="text-lg sm:text-xl font-bold font-mono text-white mt-1">
                       {outputs.exploitInterceptionRatePct}%
                     </div>
                     <div className="text-[10px] text-neutral-400 mt-0.5">Zero-day resistance</div>
                   </div>
-                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-xl p-3 text-center">
+                  <div className="bg-neutral-950/60 border border-neutral-800 rounded-[18px] p-3 text-center">
                     <div className="text-[11px] text-neutral-400">VaR Mitigated</div>
                     <div className="text-lg sm:text-xl font-bold font-mono text-amber-400 mt-1">
                       {outputs.annualValueAtRiskMitigated}
@@ -400,7 +400,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                   </div>
                   <div className="space-y-2">
                     {outputs.verificationTrace.map((stage) => (
-                      <div key={stage.stage} className="flex items-center justify-between text-xs bg-neutral-950/40 rounded-lg p-2.5 border border-neutral-800/60">
+                      <div key={stage.stage} className="flex items-center justify-between text-xs bg-neutral-950/40 rounded-xl p-2.5 border border-neutral-800/60">
                         <div className="flex items-center gap-2 text-neutral-300">
                           <span className="font-mono text-neutral-200 text-[10px] bg-white/[0.05] border border-white/15 px-1.5 py-0.5 rounded">
                             Stage 0{stage.stage}
@@ -420,7 +420,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
               </div>
 
               {/* Technical Architecture Schema Card */}
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 shadow-xl backdrop-blur-sm">
                 <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2">
                   <Layers className="w-4 h-4 text-neutral-200" />
                   <span>Sovereign VPC Multi-Agent Verification Architecture</span>
@@ -441,16 +441,16 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
           </div>
 
           {/* FAQ Accordion */}
-          <div className="mt-12 bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
+          <div className="mt-12 bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6">
             <h3 className="text-lg font-bold text-white mb-4">
               Frequently Asked Questions // Smart Contract Formal Verification
             </h3>
             <div className="space-y-3">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
+                <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/50 hover:bg-neutral-900/80 flex justify-between items-center transition"
+                    className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/50 hover:bg-neutral-900/80 flex justify-between items-center transition-all duration-300"
                   >
                     <span className="text-sm font-semibold text-neutral-200">{faq.q}</span>
                     <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
@@ -466,7 +466,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
           </div>
 
           {/* Mandate Application Form */}
-          <div className="mt-12 bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 sm:p-8">
+          <div className="mt-12 bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-6 sm:p-8">
             <div className="text-center max-w-xl mx-auto mb-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white">
                 Deploy Formal Verification Agents in Your Sovereign VPC
@@ -476,8 +476,8 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
               </p>
             </div>
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -490,7 +490,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -504,7 +504,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
           {/* Embed Modal */}
           {isEmbedOpen && (
             <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+              <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 shadow-2xl relative">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
                   className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -518,19 +518,19 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
                 <p className="text-xs text-neutral-400 mb-4">
                   Copy and paste this iframe snippet onto your technical documentation, blog, or internal portal.
                 </p>
-                <div className="bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-xs text-neutral-300 break-all select-all mb-4">
+                <div className="bg-neutral-950 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs text-neutral-300 break-all select-all mb-4">
                   {embedCode}
                 </div>
                 <div className="flex justify-end gap-3">
                   <button
                     onClick={() => setIsEmbedOpen(false)}
-                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold text-neutral-300 transition"
+                    className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold text-neutral-300 transition-all duration-300"
                   >
                     Close
                   </button>
                   <button
                     onClick={copyEmbed}
-                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold flex items-center gap-1.5 transition"
+                    className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-bold flex items-center gap-1.5 transition-all duration-300"
                   >
                     {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Iframe Code'}</span>

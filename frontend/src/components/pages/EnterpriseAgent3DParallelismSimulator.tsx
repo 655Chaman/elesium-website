@@ -150,7 +150,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/[0.04] text-neutral-200 text-xs font-mono">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/[0.04] text-neutral-200 text-xs font-mono">
                 <Network className="w-3.5 h-3.5" />
                 <span>Tool #65 · Megatron-DeepSpeed 3D Mesh Engine</span>
               </div>
@@ -165,21 +165,21 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={handleReset}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center gap-2"
+                className="active:scale-[0.97] px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all duration-300 flex items-center gap-2"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 Reset Defaults
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center gap-2"
+                className="active:scale-[0.97] px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all duration-300 flex items-center gap-2"
               >
                 <Code className="w-3.5 h-3.5" />
                 Embed Tool
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] px-5 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+                className="active:scale-[0.97] px-5 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
               >
                 <span className="w-2 h-2 rounded-full bg-neutral-400" />
                 Chat on WhatsApp
@@ -194,13 +194,13 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Sliders & Parameter Controls (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 rounded-xl border border-white/10 bg-[#0a0a0a] space-y-5">
+            <div className="p-6 rounded-[24px] border border-white/10 bg-[#0a0a0a] space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-white/5">
                 <div className="flex items-center gap-2 text-sm font-semibold text-white">
                   <Sliders className="w-4 h-4 text-neutral-200" />
                   <span>3D Mesh Configuration</span>
                 </div>
-                <div className="flex items-center gap-1 bg-black/40 p-1 rounded-lg border border-white/10 text-[11px] font-mono">
+                <div className="flex items-center gap-1 bg-black/40 p-1 rounded-full border border-white/10 text-[11px] font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-white/10 text-neutral-200' : 'text-neutral-400'}`}
@@ -244,7 +244,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                       key={val}
                       type="button"
                       onClick={() => setTpDegree(val as TpDegree)}
-                      className={`active:scale-[0.97] py-1.5 rounded-lg border text-xs font-mono transition-all ${
+                      className={`active:scale-[0.97] py-1.5 rounded-full border text-xs font-mono transition-all duration-300 ${
                         tpDegree === val
                           ? 'border-white/30 bg-white/10 text-white font-bold'
                           : 'border-white/10 bg-black/30 text-neutral-400 hover:bg-white/5'
@@ -268,7 +268,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                       key={val}
                       type="button"
                       onClick={() => setPpDegree(val as PpDegree)}
-                      className={`active:scale-[0.97] py-1.5 rounded-lg border text-xs font-mono transition-all ${
+                      className={`active:scale-[0.97] py-1.5 rounded-full border text-xs font-mono transition-all duration-300 ${
                         ppDegree === val
                           ? 'border-white/30 bg-white/10 text-white font-bold'
                           : 'border-white/10 bg-black/30 text-neutral-400 hover:bg-white/5'
@@ -292,7 +292,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                       key={val}
                       type="button"
                       onClick={() => setDpDegree(val as DpDegree)}
-                      className={`active:scale-[0.97] py-1.5 rounded-lg border text-[11px] font-mono transition-all ${
+                      className={`active:scale-[0.97] py-1.5 rounded-full border text-[11px] font-mono transition-all duration-300 ${
                         dpDegree === val
                           ? 'border-white/30 bg-white/10 text-white font-bold'
                           : 'border-white/10 bg-black/30 text-neutral-400 hover:bg-white/5'
@@ -356,7 +356,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                   <select
                     value={sequenceLengthTokens}
                     onChange={(e) => setSequenceLengthTokens(Number(e.target.value))}
-                    className="w-full px-2.5 py-1.5 rounded-lg bg-black/50 border border-white/10 text-xs text-white font-mono"
+                    className="w-full px-2.5 py-1.5 rounded-xl bg-black/50 border border-white/10 text-xs text-white font-mono"
                   >
                     <option value={8192}>8K Tokens</option>
                     <option value={16384}>16K Tokens</option>
@@ -370,7 +370,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                   <select
                     value={batchSize}
                     onChange={(e) => setBatchSize(Number(e.target.value))}
-                    className="w-full px-2.5 py-1.5 rounded-lg bg-black/50 border border-white/10 text-xs text-white font-mono"
+                    className="w-full px-2.5 py-1.5 rounded-xl bg-black/50 border border-white/10 text-xs text-white font-mono"
                   >
                     <option value={4}>4 Concurrent</option>
                     <option value={8}>8 Concurrent</option>
@@ -386,7 +386,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
           {/* Right Column: Telemetry & Analytical Outputs (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* SLA Status Banner */}
-            <div className={`p-5 rounded-xl border flex items-center justify-between gap-4 ${
+            <div className={`p-5 rounded-[24px] border flex items-center justify-between gap-4 ${
               results.slaStatus === 'SUB_8MS_3D_OPTIMAL'
                 ? 'border-white/30 bg-white/[0.04] text-neutral-200'
                 : results.slaStatus === 'EFFICIENT_SCALED_MESH'
@@ -418,19 +418,19 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
 
             {/* Core Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+              <div className="p-4 rounded-2xl border border-white/10 bg-[#0a0a0a]">
                 <div className="text-xs font-mono text-neutral-400">Cluster Size</div>
                 <div className="text-2xl font-mono font-bold text-white mt-1">{results.totalGpus} GPUs</div>
                 <div className="text-[10px] font-mono text-neutral-200 mt-1">{results.totalGpus / 8} HGX Nodes</div>
               </div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+              <div className="p-4 rounded-2xl border border-white/10 bg-[#0a0a0a]">
                 <div className="text-xs font-mono text-neutral-400">Model FLOPs (MFU)</div>
                 <div className="text-2xl font-mono font-bold text-white mt-1">{results.modelFlopsUtilizationPercent}%</div>
                 <div className="text-[10px] font-mono text-neutral-400 mt-1">Cluster Efficiency</div>
               </div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+              <div className="p-4 rounded-2xl border border-white/10 bg-[#0a0a0a]">
                 <div className="text-xs font-mono text-neutral-400">VRAM Allocation</div>
                 <div className={`text-2xl font-mono font-bold mt-1 ${results.oomRiskPrevented ? 'text-white' : 'text-red-400'}`}>
                   {results.peakMemoryPerGpuGb} GB
@@ -438,7 +438,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                 <div className="text-[10px] font-mono text-neutral-400 mt-1">of 80GB SXM5</div>
               </div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+              <div className="p-4 rounded-2xl border border-white/10 bg-[#0a0a0a]">
                 <div className="text-xs font-mono text-neutral-400">Bubble Idle Ratio</div>
                 <div className="text-2xl font-mono font-bold text-white mt-1">{results.pipelineBubbleFractionPercent}%</div>
                 <div className="text-[10px] font-mono text-neutral-200 mt-1">Pipeline Waste</div>
@@ -446,7 +446,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             </div>
 
             {/* Interactive 3D Cartesian Mesh Diagram */}
-            <div className="p-6 rounded-xl border border-white/10 bg-[#0a0a0a] space-y-4">
+            <div className="p-6 rounded-[24px] border border-white/10 bg-[#0a0a0a] space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-xs font-mono text-white">
                   <Layers className="w-4 h-4 text-neutral-200" />
@@ -457,7 +457,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-black/60 border border-white/5 font-mono text-xs space-y-3">
+              <div className="p-4 rounded-2xl bg-black/60 border border-white/5 font-mono text-xs space-y-3">
                 <div className="flex justify-between items-center text-[11px] pb-2 border-b border-white/5">
                   <span className="text-neutral-400">DIMENSION 1: TENSOR PARALLELISM (TP={tpDegree})</span>
                   <span className="text-neutral-200">Intra-Node NVLink (900 GB/s) · Column/Row GEMM All-Reduce</span>
@@ -473,11 +473,11 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
               </div>
 
               <div className="grid grid-cols-2 gap-3 text-xs font-mono pt-1">
-                <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5 flex justify-between">
+                <div className="p-3 rounded-[18px] bg-white/[0.02] border border-white/5 flex justify-between">
                   <span className="text-neutral-400">Throughput:</span>
                   <span className="text-white font-semibold">{results.tokensPerSecondThroughput.toLocaleString()} tokens/sec</span>
                 </div>
-                <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5 flex justify-between">
+                <div className="p-3 rounded-[18px] bg-white/[0.02] border border-white/5 flex justify-between">
                   <span className="text-neutral-400">FinOps Savings:</span>
                   <span className="text-white font-semibold">{results.annualFinOpsSavings}</span>
                 </div>
@@ -485,7 +485,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             </div>
 
             {/* Direct Conversion Actions */}
-            <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 rounded-[24px] border border-white/10 bg-white/[0.02] flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <h4 className="text-sm font-semibold text-white">Deploy 3D Distributed Mesh for Your Enterprise</h4>
                 <p className="text-xs text-neutral-400 mt-1">Receive a validated Slurm job script and Megatron-DeepSpeed topology config.</p>
@@ -494,14 +494,14 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
               <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
                 <button
                   onClick={copyMemo}
-                  className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}
                 </button>
                 <button
                   onClick={() => openWhatsApp()}
-                  className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="active:scale-[0.97] px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                   Chat on WhatsApp
@@ -513,8 +513,8 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
 
         {/* Embedded Form Section */}
         <div className="mt-16 pt-12 border-t border-white/10">
-          <div className="max-w-4xl mx-auto mb-8 p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+          <div className="max-w-4xl mx-auto mb-8 p-8 rounded-[32px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
               <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
               <span>Direct Lead Architect Intake</span>
             </div>
@@ -527,7 +527,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             <div className="pt-2 flex justify-center">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+                className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
               >
                 <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -535,7 +535,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto rounded-[24px] border border-white/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
             <MandateApplicationForm source="Tool #65: 3D Parallelism Simulator" />
           </div>
         </div>
@@ -544,7 +544,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
         <div className="mt-16 max-w-4xl mx-auto space-y-4">
           <h3 className="text-xl font-bold text-white mb-6">Frequently Asked Technical Questions</h3>
           {faqs.map((faq, idx) => (
-            <div key={idx} className="rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
+            <div key={idx} className="rounded-[24px] border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                 className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white"
@@ -565,7 +565,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-lg p-6 rounded-xl bg-[#0a0a0a] border border-white/10 shadow-2xl space-y-4 text-left">
+          <div className="relative w-full max-w-lg p-6 rounded-[28px] bg-[#0a0a0a] border border-white/10 shadow-2xl space-y-4 text-left">
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <div className="flex items-center gap-2 text-sm font-semibold text-white">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -578,19 +578,19 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
             <p className="text-xs text-neutral-400">
               Copy and paste this clean iframe code into your internal engineering wiki, Confluence, or technical documentation.
             </p>
-            <div className="p-3 rounded-xl bg-black/60 border border-white/5 font-mono text-xs text-neutral-300 break-all">
+            <div className="p-3 rounded-[18px] bg-black/60 border border-white/5 font-mono text-xs text-neutral-300 break-all">
               {embedCode}
             </div>
             <div className="flex justify-end gap-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-mono text-neutral-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-full text-xs font-mono text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-mono font-semibold flex items-center gap-2"
+                className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-mono font-semibold flex items-center gap-2"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}

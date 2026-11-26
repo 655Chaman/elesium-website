@@ -111,13 +111,13 @@ type DossierFormData = {
 // ─── Shared input style ───────────────────────────────────────────────────────
 
 const inputBaseClass =
-    'w-full px-4 py-3 rounded-xl border bg-white dark:bg-white/5 text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px]'
+    'w-full px-4 py-3 rounded-[20px] border bg-white dark:bg-white/5 text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px]'
 
 const inputNormalBorder = 'border-neutral-200 dark:border-white/10'
 const inputErrorBorder = 'border-black dark:border-white ring-1 ring-black/40 dark:ring-white/40'
 
 const selectBaseClass =
-    'w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111] text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px] cursor-pointer appearance-none'
+    'w-full px-4 py-3 rounded-[20px] border bg-white dark:bg-[#111] text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px] cursor-pointer appearance-none'
 
 const labelClass = 'block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2'
 
@@ -338,7 +338,7 @@ export function MandateApplicationForm({
                     Your infrastructure requirements have been queued for direct evaluation by <strong className="text-black dark:text-white">Chaman Shah (Principal AI Systems Architect)</strong>. A preliminary LangGraph DAG state machine topology and TCO projection will be dispatched to <span className="font-mono text-black dark:text-white underline">{formData.email}</span> within 4 hours.
                 </p>
 
-                <div className="w-full max-w-md bg-neutral-50 dark:bg-white/[0.02] border border-neutral-200 dark:border-white/10 rounded-2xl p-5 text-left font-mono text-xs space-y-2.5 mb-6">
+                <div className="w-full max-w-md bg-neutral-50 dark:bg-white/[0.02] border border-neutral-200 dark:border-white/10 rounded-[24px] p-5 text-left font-mono text-xs space-y-2.5 mb-6">
                     <div className="flex justify-between border-b border-neutral-200 dark:border-white/10 pb-2">
                         <span className="text-neutral-500">STATUS</span>
                         <span className="text-black dark:text-white font-semibold flex items-center gap-1.5">
@@ -392,7 +392,7 @@ export function MandateApplicationForm({
                     <button
                         type="button"
                         onClick={() => setActiveTab('fast-track')}
-                        className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition active:scale-[0.97] ${
+                        className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium transition active:scale-[0.97] ${
                             activeTab === 'fast-track'
                                 ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                 : 'text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10'
@@ -404,7 +404,7 @@ export function MandateApplicationForm({
                     <button
                         type="button"
                         onClick={() => setActiveTab('dossier')}
-                        className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition active:scale-[0.97] ${
+                        className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium transition active:scale-[0.97] ${
                             activeTab === 'dossier'
                                 ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                 : 'text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10'
@@ -424,7 +424,7 @@ export function MandateApplicationForm({
             {/* ── Track 1: Fast-Track Direct Calendar Booking ──────────────────── */}
             {activeTab === 'fast-track' && (
                 <div className="flex-1 p-6 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center max-w-2xl mx-auto">
-                    <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-6">
+                    <div className="w-12 h-12 rounded-[20px] bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-6">
                         <Calendar className="w-6 h-6" />
                     </div>
 
@@ -440,29 +440,29 @@ export function MandateApplicationForm({
                         Meet 1-on-1 with <strong className="text-black dark:text-white">Chaman Shah (Principal AI Systems Architect)</strong> to review your existing ERP connectors, LLM latency bottlenecks, and air-gapped VPC deployment requirements.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full text-left font-mono text-xs mb-8">
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full text-left font-mono text-xs mb-8 items-stretch">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
                             <ShieldCheck className="w-4 h-4 text-black dark:text-white shrink-0 mt-0.5" />
                             <div>
                                 <div className="font-semibold text-black dark:text-white">Mutual NDA Governed</div>
                                 <div className="text-[11px] text-neutral-500">Pre-executed confidentiality terms</div>
                             </div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
                             <Cpu className="w-4 h-4 text-black dark:text-white shrink-0 mt-0.5" />
                             <div>
                                 <div className="font-semibold text-black dark:text-white">LangGraph DAG Blueprint</div>
                                 <div className="text-[11px] text-neutral-500">Hardware sizing &amp; state topology</div>
                             </div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
                             <Lock className="w-4 h-4 text-black dark:text-white shrink-0 mt-0.5" />
                             <div>
                                 <div className="font-semibold text-black dark:text-white">DPDP Act 2023 Compliant</div>
                                 <div className="text-[11px] text-neutral-500">Strict local data residency</div>
                             </div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
+                        <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50/60 dark:bg-white/[0.02] flex items-start gap-2.5">
                             <Clock className="w-4 h-4 text-black dark:text-white shrink-0 mt-0.5" />
                             <div>
                                 <div className="font-semibold text-black dark:text-white">4-Hour SLA Routing</div>
@@ -484,7 +484,7 @@ export function MandateApplicationForm({
                         <button
                             type="button"
                             onClick={() => setActiveTab('dossier')}
-                            className="h-13 px-6 rounded-xl border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/10 text-sm font-medium transition active:scale-[0.97]"
+                            className="h-13 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/10 text-sm font-medium transition active:scale-[0.97]"
                         >
                             Or Submit Architecture Dossier (Asynchronous)
                         </button>
@@ -689,14 +689,14 @@ export function MandateApplicationForm({
                                                             key={standard}
                                                             type="button"
                                                             onClick={() => toggleCompliance(standard)}
-                                                            className={`w-full px-3.5 py-2.5 rounded-xl border text-left text-xs font-mono flex items-center justify-between transition active:scale-[0.99] ${
+                                                            className={`w-full px-4 py-3 rounded-[20px] border text-left text-xs font-mono flex items-center justify-between transition active:scale-[0.99] ${
                                                                 isChecked
                                                                     ? 'border-black bg-black/5 text-black dark:border-white dark:bg-white/10 dark:text-white font-medium'
                                                                     : 'border-neutral-200 dark:border-white/10 bg-white dark:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/[0.08]'
                                                             }`}
                                                         >
                                                             <span>{standard}</span>
-                                                            <div className={`w-4 h-4 rounded flex items-center justify-center border transition-all ${
+                                                            <div className={`w-4 h-4 rounded-md flex items-center justify-center border transition-all ${
                                                                 isChecked
                                                                     ? 'bg-black border-black text-white dark:bg-white dark:border-white dark:text-black'
                                                                     : 'border-neutral-300 dark:border-white/20'
@@ -743,7 +743,7 @@ export function MandateApplicationForm({
                                             <button
                                                 type="button"
                                                 onClick={back}
-                                                className="w-1/4 h-13 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-xl text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97]"
+                                                className="w-1/4 h-13 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97]"
                                             >
                                                 <ArrowLeft className="h-4 w-4" />
                                             </button>
@@ -900,7 +900,7 @@ export function MandateApplicationForm({
                                                 type="button"
                                                 onClick={back}
                                                 disabled={isLoading}
-                                                className="w-1/4 h-13 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-xl text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97] disabled:opacity-40"
+                                                className="w-1/4 h-13 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97] disabled:opacity-40"
                                             >
                                                 <ArrowLeft className="h-4 w-4" />
                                             </button>

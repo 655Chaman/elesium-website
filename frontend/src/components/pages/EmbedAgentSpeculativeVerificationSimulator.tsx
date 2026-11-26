@@ -37,7 +37,7 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
   const results = useMemo(() => calculateSpeculativeVerification(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Speculative Verification Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-speculative-verification-simulator" />
@@ -112,7 +112,7 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
             step="8"
             value={candidateBranches}
             onChange={(e) => setCandidateBranches(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -128,14 +128,14 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
             step="1"
             value={maxTreeDepth}
             onChange={(e) => setMaxTreeDepth(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
       </div>
 
       {/* Telemetry Output Cards */}
       <div className="grid grid-cols-2 gap-2.5 mb-4">
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl text-center">
           <div className="text-[10px] text-neutral-400 uppercase tracking-wider mb-0.5">
             Speedup Multiplier
           </div>
@@ -147,7 +147,7 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
           </div>
         </div>
 
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl text-center">
           <div className="text-[10px] text-neutral-400 uppercase tracking-wider mb-0.5">
             Verify Latency
           </div>
@@ -159,7 +159,7 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
           </div>
         </div>
 
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl text-center">
           <div className="text-[10px] text-neutral-400 uppercase tracking-wider mb-0.5">
             Acceptance Rate
           </div>
@@ -171,7 +171,7 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
           </div>
         </div>
 
-        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-lg text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-2.5 rounded-xl text-center">
           <div className="text-[10px] text-neutral-400 uppercase tracking-wider mb-0.5">
             FinOps Savings
           </div>
@@ -191,7 +191,7 @@ export default function EmbedAgentSpeculativeVerificationSimulator() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-200 hover:text-white inline-flex items-center gap-1 font-medium transition-colors"
+          className="text-neutral-200 hover:text-white inline-flex items-center gap-1 font-medium transition-all duration-300"
         >
           Deploy Sovereign Agents <ArrowUpRight className="w-3 h-3" />
         </a>

@@ -60,7 +60,7 @@ export default function EmbedAgentSpeculativeDecodingSimulator() {
         </div>
 
         {/* Sliders Grid */}
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-4 sm:p-5 space-y-4">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 sm:p-5 space-y-4">
           <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
             <Sliders className="w-3.5 h-3.5 text-neutral-200" />
             <span>Telemetry Controls</span>
@@ -139,7 +139,7 @@ export default function EmbedAgentSpeculativeDecodingSimulator() {
 
         {/* 3-Tier Results Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div className="p-3.5 rounded-xl border border-red-900/40 bg-neutral-900/50">
+          <div className="p-3.5 rounded-2xl border border-red-900/40 bg-neutral-900/50">
             <div className="text-[11px] font-mono text-red-400 font-bold mb-1">Standard Autoregressive</div>
             <div className="text-xl font-bold font-mono text-red-400">{results.standardAutoregressive.meanLatencyPerTokenMs} ms</div>
             <div className="text-[11px] text-neutral-400 mt-1">Per-Token Latency</div>
@@ -149,7 +149,7 @@ export default function EmbedAgentSpeculativeDecodingSimulator() {
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-amber-900/40 bg-neutral-900/50">
+          <div className="p-3.5 rounded-2xl border border-amber-900/40 bg-neutral-900/50">
             <div className="text-[11px] font-mono text-amber-400 font-bold mb-1">Static Draft (K=4)</div>
             <div className="text-xl font-bold font-mono text-amber-400">{results.staticDraft.meanLatencyPerTokenMs} ms</div>
             <div className="text-[11px] text-neutral-400 mt-1">Per-Token Latency</div>
@@ -159,7 +159,7 @@ export default function EmbedAgentSpeculativeDecodingSimulator() {
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-white/30 bg-white/[0.05]">
+          <div className="p-3.5 rounded-2xl border border-white/30 bg-white/[0.05]">
             <div className="text-[11px] font-mono text-white font-bold mb-1">Elesium Dynamic Tree</div>
             <div className="text-xl font-bold font-mono text-white">{results.sovereignDynamic.meanLatencyPerTokenMs} ms</div>
             <div className="text-[11px] text-neutral-400 mt-1">Per-Token Latency (-{results.latencyCutPct}%)</div>
@@ -171,7 +171,7 @@ export default function EmbedAgentSpeculativeDecodingSimulator() {
         </div>
 
         {/* Delta Callout */}
-        <div className="p-3 rounded-lg border border-white/20 bg-white/[0.05] flex items-center justify-between font-mono text-xs">
+        <div className="p-3 rounded-[18px] border border-white/20 bg-white/[0.05] flex items-center justify-between font-mono text-xs">
           <span className="text-neutral-200">Net Annual GPU Compute Arbitrage:</span>
           <span className="text-white font-bold text-sm">${results.annualCostSavingsUSD.toLocaleString()} / year</span>
         </div>

@@ -201,7 +201,7 @@ export default function Industries() {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.97, y: 16 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="mb-10 max-w-3xl"
                 >
                     <div className="mb-4">
@@ -219,7 +219,7 @@ export default function Industries() {
                 </motion.div>
 
                 {/* Technical Overview */}
-                <div className="answer-capsule mt-2 mb-12 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-4xl">
+                <div className="answer-capsule mt-2 mb-12 p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 max-w-4xl">
                     <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
                         <Cpu className="w-4 h-4 text-black dark:text-white" />
                         Sovereign Market Capacities
@@ -229,19 +229,19 @@ export default function Industries() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch mb-16">
                     {industries.map((industry, index) => (
                         <motion.div
                             key={industry.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ type: 'spring', stiffness: 260, damping: 26, delay: index * 0.06 }}
-                            className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-between group hover:border-black dark:hover:border-white/30 transition-all"
+                            transition={{ type: 'spring', stiffness: 260, damping: 28, delay: index * 0.06 }}
+                            className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-6 md:p-8 flex flex-col justify-between group hover:border-black dark:hover:border-white/30 transition-all h-full"
                         >
                             <div>
                                 <div className="mb-6 flex items-center gap-3">
-                                    <div className="h-11 w-11 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                                    <div className="h-11 w-11 rounded-[16px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
                                         <industry.icon className="h-5 w-5 text-black dark:text-white" />
                                     </div>
                                     <h2 className="text-lg sm:text-xl font-bold tracking-tight text-black dark:text-white">{industry.title}</h2>
@@ -277,12 +277,12 @@ export default function Industries() {
                         </h2>
                     </div>
 
-                    <div className="divide-y divide-neutral-200 dark:divide-white/10 border-t border-b border-neutral-200 dark:border-white/10">
+                    <div className="space-y-3">
                         {industriesFaqs.map((faq, idx) => (
-                            <div key={idx} className="py-5">
+                            <div key={idx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-black">
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between text-left gap-4 group"
+                                    className="w-full flex items-center justify-between p-5 text-left gap-4 group hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                                 >
                                     <span className="text-base sm:text-lg font-semibold text-black dark:text-white transition-colors">
                                         {faq.q}
@@ -292,13 +292,14 @@ export default function Industries() {
                                 <AnimatePresence initial={false}>
                                     {openFaq === idx && (
                                         <motion.div
+                                            data-open="true"
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                                             className="accordion-panel overflow-hidden"
                                         >
-                                            <div className="mt-3 text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed pr-8">
+                                            <div className="px-5 pb-5 pt-3 border-t border-neutral-200 dark:border-white/10 text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                                 {faq.a}
                                             </div>
                                         </motion.div>
@@ -310,7 +311,7 @@ export default function Industries() {
                 </section>
 
                 {/* Bottom Call to Action Card */}
-                <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white text-center space-y-4">
+                <div className="p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white text-center space-y-4">
                     <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
                         Cross-Sector Enterprise Routing Desk
                     </span>
@@ -326,7 +327,7 @@ export default function Industries() {
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -334,7 +335,7 @@ export default function Industries() {
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>

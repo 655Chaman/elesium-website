@@ -79,7 +79,7 @@ export default function EmbedAgentTallyErpSimulator() {
         </div>
 
         {/* Controls Grid */}
-        <div className="grid grid-cols-2 gap-3 bg-neutral-900/50 p-3 rounded-lg border border-neutral-800">
+        <div className="grid grid-cols-2 gap-3 bg-neutral-900/50 p-3 rounded-[18px] border border-neutral-800">
           <div className="space-y-1">
             <div className="flex justify-between text-neutral-400 text-[11px]">
               <span>Monthly Invoices</span>
@@ -92,7 +92,7 @@ export default function EmbedAgentTallyErpSimulator() {
               step="500"
               value={monthlyVoucherVolume}
               onChange={(e) => setMonthlyVoucherVolume(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -108,7 +108,7 @@ export default function EmbedAgentTallyErpSimulator() {
               step="0.01"
               value={humanInTheLoopThreshold}
               onChange={(e) => setHumanInTheLoopThreshold(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -157,17 +157,17 @@ export default function EmbedAgentTallyErpSimulator() {
 
         {/* Primary Metrics Grid */}
         <div className="grid grid-cols-3 gap-2 pt-1">
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">End-to-End Latency</div>
             <div className="text-base font-bold text-white mt-0.5 font-mono">{results.voucherIngestionLatencyMs}ms</div>
             <div className="text-[9px] text-neutral-500">sub-second post</div>
           </div>
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">STP Auto-Post</div>
             <div className="text-base font-bold text-white mt-0.5 font-mono">{results.autoPostingSuccessRatePct}%</div>
             <div className="text-[9px] text-neutral-500">zero touch rate</div>
           </div>
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">Hours Saved/Mo</div>
             <div className="text-base font-bold text-amber-400 mt-0.5 font-mono">{results.monthlyHumanHoursSaved} hrs</div>
             <div className="text-[9px] text-neutral-500">reallocated staff</div>
@@ -176,18 +176,18 @@ export default function EmbedAgentTallyErpSimulator() {
 
         {/* Secondary Value Metrics */}
         <div className="grid grid-cols-2 gap-2">
-          <div className="bg-neutral-950/70 border border-neutral-800/80 p-2 rounded-lg flex items-center justify-between text-xs">
+          <div className="bg-neutral-950/70 border border-neutral-800/80 p-2 rounded-xl flex items-center justify-between text-xs">
             <span className="text-neutral-400">Annual AP OPEX Saved:</span>
             <span className="font-bold text-white font-mono">{results.annualFinanceOpexSavings}</span>
           </div>
-          <div className="bg-neutral-950/70 border border-neutral-800/80 p-2 rounded-lg flex items-center justify-between text-xs">
+          <div className="bg-neutral-950/70 border border-neutral-800/80 p-2 rounded-xl flex items-center justify-between text-xs">
             <span className="text-neutral-400">GST Mismatch Mitigated:</span>
             <span className="font-bold text-white font-mono">{results.gstMismatchAvoidanceValue}</span>
           </div>
         </div>
 
         {/* SVG Pipeline Latency Breakdown */}
-        <div className="bg-neutral-900/40 border border-neutral-800 rounded-lg p-2.5 space-y-1.5">
+        <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-2.5 space-y-1.5">
           <div className="flex justify-between items-center text-[11px] text-neutral-400">
             <span>Agent Execution Pipeline Latency</span>
             <span className="text-neutral-500 font-mono">7-Stage Micro-Profile</span>
@@ -220,7 +220,7 @@ export default function EmbedAgentTallyErpSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-neutral-200 hover:text-white transition-colors font-medium"
+            className="flex items-center gap-1 text-neutral-200 hover:text-white transition-all duration-300 font-medium"
           >
             Elesium Enterprise AI Solutions <ArrowUpRight className="w-3 h-3" />
           </a>

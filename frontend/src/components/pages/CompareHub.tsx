@@ -164,7 +164,7 @@ export default function CompareHub() {
 
                 {/* Hero Header */}
                 <header className="mb-12">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono uppercase tracking-wider mb-4">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono uppercase tracking-wider mb-4">
                         Programmatic Architectural Battlecards
                     </div>
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
@@ -175,7 +175,7 @@ export default function CompareHub() {
                     </p>
 
                     {/* Technical Overview */}
-                    <div className="answer-capsule mt-6 p-6 rounded-xl bg-neutral-950 border border-white/10 border-l-4 border-l-white max-w-4xl">
+                    <div className="answer-capsule mt-6 p-6 sm:p-7 rounded-[24px] bg-neutral-950 border border-white/10 border-l-4 border-l-white max-w-4xl">
                         <div className="text-xs font-mono uppercase tracking-widest text-neutral-400 font-semibold mb-2 flex items-center gap-2">
                             <Cpu className="w-4 h-4 text-white" />
                             Architectural Specifications
@@ -187,19 +187,19 @@ export default function CompareHub() {
 
                     {/* Trust Badges */}
                     <div className="mt-6 flex flex-wrap gap-3">
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                        <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
                             <Activity className="w-3.5 h-3.5 text-neutral-400" />
                             <span>12 In-Depth Technical Battlecards</span>
                         </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                        <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
                             <Server className="w-3.5 h-3.5 text-white" />
                             <span>Sub-200ms TTFT &amp; FP8 GEMM</span>
                         </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                        <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
                             <ShieldCheck className="w-3.5 h-3.5 text-white" />
                             <span>DPDP Act 2023 Sec 8(5) &amp; ISO 27001</span>
                         </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                        <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
                             <Zap className="w-3.5 h-3.5 text-white" />
                             <span>Yotta Shakti &amp; CtrlS Clusters</span>
                         </div>
@@ -207,7 +207,7 @@ export default function CompareHub() {
                 </header>
 
                 {/* Empirical Telemetry Comparison Matrix */}
-                <section className="mb-14 p-6 md:p-8 rounded-xl bg-neutral-950 border border-white/10">
+                <section className="mb-14 p-6 md:p-8 rounded-[28px] bg-neutral-950 border border-white/10">
                     <div className="mb-6">
                         <div className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold mb-1">
                             Audited Production Benchmarks
@@ -273,10 +273,10 @@ export default function CompareHub() {
                 </section>
 
                 {/* Interactive Tool Banner */}
-                <section className="mb-12 p-6 rounded-xl bg-neutral-950 border border-white/10">
+                <section className="mb-12 p-6 sm:p-8 rounded-[28px] bg-neutral-950 border border-white/10">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                         <div className="space-y-1">
-                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/10 text-white text-xs font-mono tracking-wide uppercase">
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-mono tracking-wide uppercase">
                                 <Gauge className="w-3.5 h-3.5" />
                                 Interactive Diagnostic Asset
                             </div>
@@ -289,7 +289,7 @@ export default function CompareHub() {
                         </div>
                         <Link
                             to="/tools/agentic-architecture-grader/"
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white text-black font-medium text-sm active:scale-[0.97] transition-all hover:bg-neutral-200 shrink-0"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-medium text-sm active:scale-[0.97] transition-all duration-300 hover:bg-neutral-200 shrink-0"
                         >
                             Launch Grader Tool
                             <ArrowRight className="w-4 h-4" />
@@ -303,7 +303,7 @@ export default function CompareHub() {
                         <button
                             key={category}
                             onClick={() => setSelectedCategory(category)}
-                            className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap active:scale-[0.97] transition-all ${
+                            className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap active:scale-[0.97] transition-all duration-300 ${
                                 selectedCategory === category
                                     ? 'bg-white text-black'
                                     : 'bg-white/5 text-neutral-400 hover:bg-white/10 hover:text-white'
@@ -320,15 +320,15 @@ export default function CompareHub() {
                     {filteredBattlecards.map(item => (
                         <article
                             key={item.id}
-                            className="flex flex-col justify-between p-6 rounded-xl bg-neutral-950 border border-white/10 hover:border-white/40 transition-all duration-200 group"
+                            className="flex flex-col justify-between h-full p-6 rounded-[24px] bg-neutral-950 border border-white/10 hover:border-white/40 transition-all duration-300 group"
                         >
                             <div>
                                 {/* Header badges */}
                                 <div className="flex items-center justify-between gap-2 mb-3">
-                                    <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-white/10 text-neutral-300 uppercase tracking-wide">
+                                    <span className="px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-white/10 text-neutral-300 uppercase tracking-wide">
                                         {item.category}
                                     </span>
-                                    <span className="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-white/5 text-neutral-400 border border-white/10">
+                                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-white/5 text-neutral-400 border border-white/10">
                                         Battlecard #{item.id}
                                     </span>
                                 </div>
@@ -342,11 +342,11 @@ export default function CompareHub() {
 
                                 {/* Head to Head Visual Tags */}
                                 <div className="flex items-center gap-2 text-xs font-mono font-medium text-neutral-400 mb-4 pb-3 border-b border-white/10">
-                                    <span className="text-neutral-200 bg-white/5 px-2 py-1 rounded border border-white/10">
+                                    <span className="text-neutral-200 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">
                                         {item.entityALabel}
                                     </span>
                                     <span className="text-neutral-500 font-bold">vs</span>
-                                    <span className="text-neutral-200 bg-white/5 px-2 py-1 rounded border border-white/10">
+                                    <span className="text-neutral-200 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">
                                         {item.entityBLabel}
                                     </span>
                                 </div>
@@ -357,7 +357,7 @@ export default function CompareHub() {
                                 </p>
 
                                 {/* Fast Facts Preview */}
-                                <div className="space-y-2 mb-6 bg-black p-3 rounded-xl border border-white/10">
+                                <div className="space-y-2 mb-6 bg-black p-3.5 rounded-[18px] border border-white/10">
                                     {item.fastFacts.slice(0, 2).map((fact, idx) => (
                                         <div key={idx} className="flex items-center justify-between text-xs">
                                             <span className="text-neutral-400">{fact.label}</span>
@@ -370,7 +370,7 @@ export default function CompareHub() {
                             {/* Card Action Link */}
                             <Link
                                 to={`/compare/${item.slug}/`}
-                                className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white hover:text-black text-neutral-200 text-xs font-semibold active:scale-[0.97] transition-all"
+                                className="inline-flex items-center justify-between w-full px-5 py-2.5 rounded-full bg-white/10 hover:bg-white hover:text-black text-neutral-200 text-xs font-semibold active:scale-[0.97] transition-all duration-300"
                             >
                                 <span>Inspect Comparison Matrix</span>
                                 <ArrowRight className="w-3.5 h-3.5" />
@@ -380,7 +380,7 @@ export default function CompareHub() {
                 </section>
 
                 {/* Evaluation Standards */}
-                <section className="mb-16 p-8 rounded-xl bg-neutral-950 border border-white/10">
+                <section className="mb-16 p-8 rounded-[28px] bg-neutral-950 border border-white/10">
                     <div className="max-w-3xl mb-8">
                         <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
                             Evaluation Standards
@@ -394,8 +394,8 @@ export default function CompareHub() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-5 rounded-xl bg-black border border-white/10">
-                            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white mb-3">
+                        <div className="p-6 rounded-[20px] bg-black border border-white/10 h-full flex flex-col">
+                            <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-white mb-3">
                                 <Cpu className="w-4 h-4 text-white" />
                             </div>
                             <h3 className="font-bold text-sm text-white mb-2">Deterministic State vs Heuristic Loops</h3>
@@ -404,8 +404,8 @@ export default function CompareHub() {
                             </p>
                         </div>
 
-                        <div className="p-5 rounded-xl bg-black border border-white/10">
-                            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white mb-3">
+                        <div className="p-6 rounded-[20px] bg-black border border-white/10 h-full flex flex-col">
+                            <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-white mb-3">
                                 <Server className="w-4 h-4 text-white" />
                             </div>
                             <h3 className="font-bold text-sm text-white mb-2">Sovereign Boundary vs Third-Party Telemetry</h3>
@@ -414,8 +414,8 @@ export default function CompareHub() {
                             </p>
                         </div>
 
-                        <div className="p-5 rounded-xl bg-black border border-white/10">
-                            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white mb-3">
+                        <div className="p-6 rounded-[20px] bg-black border border-white/10 h-full flex flex-col">
+                            <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-white mb-3">
                                 <Scale className="w-4 h-4 text-white" />
                             </div>
                             <h3 className="font-bold text-sm text-white mb-2">Marginal Cost at Scale</h3>
@@ -427,7 +427,7 @@ export default function CompareHub() {
                 </section>
 
                 {/* 3-Tier Enterprise Commercial Schedule */}
-                <section className="mb-16 p-8 rounded-xl bg-neutral-950 border border-white/10">
+                <section className="mb-16 p-8 sm:p-10 rounded-[32px] bg-neutral-950 border border-white/10">
                     <div className="text-center max-w-3xl mx-auto mb-10">
                         <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
                             Commercial Investment Matrix
@@ -441,7 +441,7 @@ export default function CompareHub() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-xl bg-black border border-white/10 flex flex-col justify-between">
+                        <div className="p-6 sm:p-7 rounded-[24px] bg-black border border-white/10 flex flex-col justify-between h-full">
                             <div>
                                 <div className="text-xs font-mono text-neutral-400 mb-1">TIER 01 &middot; PROTOTYPE</div>
                                 <h3 className="text-xl font-bold text-white">Pilot Architecture Sprint</h3>
@@ -464,18 +464,16 @@ export default function CompareHub() {
                             </div>
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="mt-6 w-full py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs active:scale-[0.97] transition-all"
+                                className="mt-6 w-full py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs active:scale-[0.97] transition-all duration-300"
                             >
                                 Inquire Pilot Sprint
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-xl bg-black border-2 border-white relative flex flex-col justify-between">
-                            <div className="mb-2">
-                                <span className="inline-block bg-white text-black text-[10px] font-bold uppercase tracking-wider py-0.5 px-2.5 rounded">
-                                    Most Deployed
-                                </span>
-                            </div>
+                        <div className="p-6 sm:p-7 rounded-[24px] bg-black border-2 border-white relative flex flex-col justify-between h-full">
+                            <span className="absolute -top-3 left-6 inline-block bg-white text-black text-[10px] font-bold uppercase tracking-wider py-0.5 px-3 rounded-full">
+                                Most Deployed
+                            </span>
                             <div>
                                 <div className="text-xs font-mono text-neutral-400 mb-1">TIER 02 &middot; PRODUCTION</div>
                                 <h3 className="text-xl font-bold text-white">Enterprise Multi-Agent Suite</h3>
@@ -498,13 +496,13 @@ export default function CompareHub() {
                             </div>
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="mt-6 w-full py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs active:scale-[0.97] transition-all"
+                                className="mt-6 w-full py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs active:scale-[0.97] transition-all duration-300"
                             >
                                 Deploy Enterprise Suite
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-xl bg-black border border-white/10 flex flex-col justify-between">
+                        <div className="p-6 sm:p-7 rounded-[24px] bg-black border border-white/10 flex flex-col justify-between h-full">
                             <div>
                                 <div className="text-xs font-mono text-neutral-400 mb-1">TIER 03 &middot; RETAINED POD</div>
                                 <h3 className="text-xl font-bold text-white">Autonomous Engineering Pod</h3>
@@ -527,7 +525,7 @@ export default function CompareHub() {
                             </div>
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="mt-6 w-full py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs active:scale-[0.97] transition-all"
+                                className="mt-6 w-full py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs active:scale-[0.97] transition-all duration-300"
                             >
                                 Retain Engineering Pod
                             </button>
@@ -550,7 +548,7 @@ export default function CompareHub() {
                         {compareFaqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className="border border-white/10 rounded-xl bg-neutral-950 overflow-hidden transition-colors"
+                                className="border border-white/10 rounded-[20px] bg-neutral-950 overflow-hidden transition-colors"
                             >
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -558,7 +556,7 @@ export default function CompareHub() {
                                 >
                                     <span>{faq.q}</span>
                                     <ChevronDown
-                                        className={`w-4 h-4 text-neutral-400 transition-transform duration-200 shrink-0 ${
+                                        className={`w-4 h-4 text-neutral-400 transition-transform duration-300 shrink-0 ${
                                             openFaq === idx ? 'rotate-180 text-white' : ''
                                         }`}
                                     />
@@ -569,7 +567,7 @@ export default function CompareHub() {
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                             className="accordion-panel overflow-hidden"
                                         >
                                             <div className="px-5 pb-5 text-xs md:text-sm text-neutral-300 leading-relaxed border-t border-white/10 pt-3">
@@ -584,7 +582,7 @@ export default function CompareHub() {
                 </section>
 
                 {/* Conversion & Direct Audit CTA */}
-                <section className="text-center p-8 sm:p-12 rounded-xl bg-black text-white border border-white/10 relative overflow-hidden">
+                <section className="text-center p-8 sm:p-12 rounded-[32px] bg-black text-white border border-white/10 relative overflow-hidden">
                     <div className="relative z-10 max-w-3xl mx-auto space-y-4">
                         <span className="text-xs font-mono tracking-wider uppercase text-neutral-400 block">
                             Direct Principal Consultation
@@ -598,7 +596,7 @@ export default function CompareHub() {
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto h-11 px-7 rounded-full bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-2"
                             >
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -606,7 +604,7 @@ export default function CompareHub() {
 
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                                className="w-full sm:w-auto h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-1.5"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>

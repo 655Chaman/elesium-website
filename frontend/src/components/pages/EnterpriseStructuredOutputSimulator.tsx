@@ -189,23 +189,23 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
         <div className="border-b border-neutral-800/80 bg-neutral-900/40 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs sm:text-sm">
             <div className="flex items-center space-x-2 text-neutral-400">
-              <Link to="/" className="hover:text-white transition-colors">Home</Link>
+              <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
               <span>/</span>
-              <Link to="/resources/" className="hover:text-white transition-colors">Tools</Link>
+              <Link to="/resources/" className="hover:text-white transition-all duration-300">Tools</Link>
               <span>/</span>
               <span className="text-neutral-200 font-medium">Structured Output &amp; Grammar Decoding Simulator</span>
             </div>
             <div className="flex items-center space-x-3">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1 rounded-md bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white text-xs font-medium border border-neutral-700/60 transition-all"
+                className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white text-xs font-medium border border-neutral-700/60 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5 text-neutral-200" />
                 <span>Embed Widget</span>
@@ -218,7 +218,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
         <header className="relative pt-12 pb-8 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/[0.03] via-neutral-950/20 to-neutral-950 pointer-events-none" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider mb-4">
               <FileJson className="w-3.5 h-3.5" />
               <span>Deterministic Grammar Decoding &amp; Schema Integrity Lab</span>
             </div>
@@ -240,13 +240,13 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
             
             {/* Left Configuration Column (5 Cols) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm shadow-xl">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm shadow-xl">
                 <div className="flex items-center justify-between border-b border-neutral-800 pb-4 mb-6">
                   <div className="flex items-center space-x-2">
                     <Sliders className="w-5 h-5 text-neutral-200" />
                     <h2 className="text-base font-bold text-white">Workload Parameters</h2>
                   </div>
-                  <span className="text-xs px-2.5 py-0.5 rounded-lg bg-neutral-800 text-neutral-400 border border-neutral-700 font-mono">
+                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-neutral-800 text-neutral-400 border border-neutral-700 font-mono">
                     Live Reactive
                   </span>
                 </div>
@@ -269,7 +269,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                       step="25000"
                       value={monthlyRequests}
                       onChange={(e) => setMonthlyRequests(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                       <span>10k</span>
@@ -292,7 +292,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                         <button
                           key={item.id}
                           onClick={() => setSchemaComplexity(item.id as SchemaComplexity)}
-                          className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all ${
+                          className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 ${
                             schemaComplexity === item.id
                               ? 'bg-white/[0.04] border-white/30 text-white shadow-sm'
                               : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:bg-neutral-800/80 hover:text-neutral-200'
@@ -313,7 +313,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                     <div className="grid grid-cols-2 gap-3">
                       <button
                         onClick={() => setHardwareDeployment('sovereign_vllm')}
-                        className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all ${
+                        className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 ${
                           hardwareDeployment === 'sovereign_vllm'
                             ? 'bg-white/[0.04] border-white/30 text-white'
                             : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:bg-neutral-800/80'
@@ -328,7 +328,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
 
                       <button
                         onClick={() => setHardwareDeployment('cloud_frontier')}
-                        className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all ${
+                        className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all duration-300 ${
                           hardwareDeployment === 'cloud_frontier'
                             ? 'bg-white/[0.04] border-white/30 text-white'
                             : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:bg-neutral-800/80'
@@ -360,7 +360,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                       step="50"
                       value={avgOutputTokens}
                       onChange={(e) => setAvgOutputTokens(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                       <span>150 tks (Summary)</span>
@@ -386,7 +386,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                       step="1"
                       value={pydanticRetryCountMax}
                       onChange={(e) => setPydanticRetryCountMax(Number(e.target.value))}
-                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                      className="w-full h-2 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                     />
                     <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                       <span>1 retry</span>
@@ -398,7 +398,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
               </div>
 
               {/* Action Banner */}
-              <div className="bg-neutral-950 border border-white/15 rounded-xl p-5">
+              <div className="bg-neutral-950 border border-white/15 rounded-[24px] p-5">
                 <div className="flex items-center space-x-2 text-white text-xs font-bold uppercase mb-2">
                   <ShieldCheck className="w-4 h-4" />
                   <span>Sovereign Grammar Acceleration</span>
@@ -409,7 +409,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                 <div className="mt-4 flex items-center space-x-3">
                   <button
                     onClick={copyArchitecturalMemo}
-                    className="active:scale-[0.97] w-full inline-flex items-center justify-center space-x-2 px-3 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold border border-neutral-700 transition-colors"
+                    className="active:scale-[0.97] w-full inline-flex items-center justify-center space-x-2 px-3 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold border border-neutral-700 transition-all duration-300"
                   >
                     {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
                     <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Audit Memo'}</span>
@@ -423,7 +423,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
               
               {/* High-Level Arbitrage Impact Banner */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-neutral-900/80 border border-white/20 rounded-xl p-4 relative overflow-hidden">
+                <div className="bg-neutral-900/80 border border-white/20 rounded-[24px] p-4 relative overflow-hidden">
                   <div className="text-[11px] font-semibold text-white uppercase tracking-wider flex items-center justify-between">
                     <span>Monthly Savings</span>
                     <TrendingDown className="w-4 h-4 text-neutral-200" />
@@ -436,7 +436,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                   </div>
                 </div>
 
-                <div className="bg-neutral-900/80 border border-white/20 rounded-xl p-4 relative overflow-hidden">
+                <div className="bg-neutral-900/80 border border-white/20 rounded-[24px] p-4 relative overflow-hidden">
                   <div className="text-[11px] font-semibold text-white uppercase tracking-wider flex items-center justify-between">
                     <span>Turnaround Speed</span>
                     <Zap className="w-4 h-4 text-neutral-200" />
@@ -449,7 +449,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                   </div>
                 </div>
 
-                <div className="bg-neutral-900/80 border border-white/20 rounded-xl p-4 relative overflow-hidden">
+                <div className="bg-neutral-900/80 border border-white/20 rounded-[24px] p-4 relative overflow-hidden">
                   <div className="text-[11px] font-semibold text-white uppercase tracking-wider flex items-center justify-between">
                     <span>Syntax Error Rate</span>
                     <ShieldCheck className="w-4 h-4 text-neutral-200" />
@@ -464,7 +464,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
               </div>
 
               {/* Three-Way Engine Architectural Breakdown */}
-              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm shadow-xl">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] p-6 backdrop-blur-sm shadow-xl">
                 <h3 className="text-base font-bold text-white mb-4 flex items-center space-x-2">
                   <FileJson className="w-4 h-4 text-neutral-200" />
                   <span>Architecture Comparison Matrix</span>
@@ -472,31 +472,31 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
 
                 <div className="space-y-4">
                   {/* Engine 1: Elesium Constrained Decoding */}
-                  <div className="border border-white/30 bg-white/[0.05] rounded-xl p-4 relative">
+                  <div className="border border-white/30 bg-white/[0.05] rounded-2xl p-4 relative">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <span className="w-2.5 h-2.5 rounded-lg bg-neutral-400 " />
                         <span className="text-sm font-bold text-white">Elesium Constrained Decoding (XGrammar / Outlines)</span>
                       </div>
-                      <span className="text-xs font-mono font-bold text-white bg-white/[0.05] border border-white/20 px-2 py-0.5 rounded-md">
+                      <span className="text-xs font-mono font-bold text-white bg-white/[0.05] border border-white/20 px-2 py-0.5 rounded-full">
                         100% Deterministic
                       </span>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-mono">
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Parse Failures</div>
                         <div className="text-white font-bold text-sm mt-0.5">0.0%</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">End-to-End Latency</div>
                         <div className="text-white font-bold text-sm mt-0.5">{results.constrainedDecodingEngine.totalExecutionLatencyMs}ms</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Retry Tokens</div>
                         <div className="text-white font-bold text-sm mt-0.5">0 tokens</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Monthly Cost</div>
                         <div className="text-white font-bold text-sm mt-0.5">${results.constrainedDecodingEngine.monthlyTokenCostUSD.toLocaleString()}</div>
                       </div>
@@ -507,31 +507,31 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                   </div>
 
                   {/* Engine 2: Vendor Tool Calling */}
-                  <div className="border border-neutral-800 bg-neutral-900/40 rounded-xl p-4">
+                  <div className="border border-neutral-800 bg-neutral-900/40 rounded-2xl p-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <span className="w-2.5 h-2.5 rounded-lg bg-neutral-400" />
                         <span className="text-sm font-bold text-neutral-200">Cloud Vendor Function Calling API</span>
                       </div>
-                      <span className="text-xs font-mono text-neutral-200 bg-white/[0.05] border border-white/15 px-2 py-0.5 rounded-md">
+                      <span className="text-xs font-mono text-neutral-200 bg-white/[0.05] border border-white/15 px-2 py-0.5 rounded-full">
                         Proprietary Masking
                       </span>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-mono">
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Parse Failures</div>
                         <div className="text-white font-bold text-sm mt-0.5">{results.vendorToolCalling.parseErrorRatePct}%</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">End-to-End Latency</div>
                         <div className="text-neutral-200 font-bold text-sm mt-0.5">{results.vendorToolCalling.totalExecutionLatencyMs}ms</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Retry Tokens</div>
                         <div className="text-neutral-300 font-bold text-sm mt-0.5">{results.vendorToolCalling.wastedRetryTokensPerReq} tks/req</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Monthly Cost</div>
                         <div className="text-white font-bold text-sm mt-0.5">${results.vendorToolCalling.monthlyTokenCostUSD.toLocaleString()}</div>
                       </div>
@@ -542,31 +542,31 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                   </div>
 
                   {/* Engine 3: Unconstrained Prompt + Pydantic Retries */}
-                  <div className="border border-red-500/30 bg-red-950/10 rounded-xl p-4">
+                  <div className="border border-red-500/30 bg-red-950/10 rounded-2xl p-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <AlertTriangle className="w-3.5 h-3.5 text-red-400" />
                         <span className="text-sm font-bold text-neutral-200">Unconstrained Prompt + Pydantic Retry Loop</span>
                       </div>
-                      <span className="text-xs font-mono text-red-400 bg-red-950/40 border border-red-500/20 px-2 py-0.5 rounded-md">
+                      <span className="text-xs font-mono text-red-400 bg-red-950/40 border border-red-500/20 px-2 py-0.5 rounded-full">
                         Probabilistic Flaws
                       </span>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-mono">
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Parse Failures</div>
                         <div className="text-red-400 font-bold text-sm mt-0.5">{results.unconstrainedEngine.parseErrorRatePct}%</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">End-to-End Latency</div>
                         <div className="text-red-300 font-bold text-sm mt-0.5">{results.unconstrainedEngine.totalExecutionLatencyMs}ms</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Wasted / Req</div>
                         <div className="text-red-400 font-bold text-sm mt-0.5">{results.unconstrainedEngine.wastedRetryTokensPerReq} tks</div>
                       </div>
-                      <div className="bg-neutral-900/60 p-2.5 rounded-lg border border-neutral-800">
+                      <div className="bg-neutral-900/60 p-2.5 rounded-xl border border-neutral-800">
                         <div className="text-neutral-400 text-[10px] uppercase">Monthly Cost</div>
                         <div className="text-red-300 font-bold text-sm mt-0.5">${results.unconstrainedEngine.monthlyTokenCostUSD.toLocaleString()}</div>
                       </div>
@@ -579,7 +579,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
               </div>
 
               {/* Conversion CTA Module */}
-              <div className="bg-neutral-950 border border-white/20 rounded-xl p-6 text-center">
+              <div className="bg-neutral-950 border border-white/20 rounded-[24px] p-6 text-center">
                 <h3 className="text-lg font-bold text-white mb-2">
                   Lock Zero-Exception Structured Extraction in Production
                 </h3>
@@ -611,11 +611,11 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-neutral-900/60 border border-neutral-800 rounded-xl overflow-hidden transition-colors"
+                  className="bg-neutral-900/60 border border-neutral-800 rounded-[24px] overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="active:scale-[0.97] w-full px-5 py-4 flex items-center justify-between text-left text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
+                    className="active:scale-[0.97] w-full px-5 py-4 flex items-center justify-between text-left text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
@@ -638,7 +638,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
         {/* Embed Modal */}
         {isEmbedOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-            <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 relative shadow-2xl">
+            <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 relative shadow-2xl">
               <button
                 onClick={() => setIsEmbedOpen(false)}
                 className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -657,11 +657,11 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                   readOnly
                   value={embedCodeSnippet}
                   rows={4}
-                  className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 focus:outline-none resize-none"
+                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none resize-none"
                 />
                 <button
                   onClick={copyEmbedCode}
-                  className="active:scale-[0.97] mt-3 w-full inline-flex items-center justify-center space-x-2 px-4 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold transition-colors"
+                  className="active:scale-[0.97] mt-3 w-full inline-flex items-center justify-center space-x-2 px-4 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold transition-all duration-300"
                 >
                   {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{hasCopiedEmbed ? 'Code Copied to Clipboard!' : 'Copy Embed Code'}</span>

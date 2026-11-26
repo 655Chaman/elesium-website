@@ -174,7 +174,7 @@ Date: ${today}`;
 
             <div className="max-w-4xl mx-auto">
                 <header className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-mono uppercase tracking-wider mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-mono uppercase tracking-wider mb-4">
                         <Lock className="w-3.5 h-3.5" /> Enterprise Procurement Enclave
                     </div>
                     <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white mb-4">
@@ -189,7 +189,7 @@ Date: ${today}`;
                 <div className="flex justify-between items-center mb-10 max-w-2xl mx-auto border-b border-neutral-200 dark:border-white/10 pb-4">
                     {[1, 2, 3, 4].map(num => (
                         <div key={num} className="flex items-center gap-2">
-                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs transition-colors ${step >= num ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-neutral-100 dark:bg-neutral-900 text-neutral-500 border border-neutral-200 dark:border-white/10'}`}>
+                            <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs transition-colors ${step >= num ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-neutral-100 dark:bg-neutral-900 text-neutral-500 border border-neutral-200 dark:border-white/10'}`}>
                                 {step > num ? <Check className="w-4 h-4" /> : num}
                             </div>
                             <span className={`text-xs font-medium hidden sm:inline ${step >= num ? 'text-black dark:text-white' : 'text-neutral-500'}`}>
@@ -202,9 +202,9 @@ Date: ${today}`;
                     ))}
                 </div>
 
-                <form onSubmit={handleSubmit} noValidate className={`bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 sm:p-10 overflow-hidden ${shakeField ? 'animate-shake' : ''}`}>
+                <form onSubmit={handleSubmit} noValidate className={`bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[32px] p-6 sm:p-10 overflow-hidden ${shakeField ? 'animate-shake' : ''}`}>
                     {validationError && (
-                        <div className="mb-6 p-3 rounded-lg border border-black/30 dark:border-white/30 bg-white dark:bg-black text-xs font-mono text-black dark:text-white">
+                        <div className="mb-6 p-4 rounded-[20px] border border-black/30 dark:border-white/30 bg-white dark:bg-black text-xs font-mono text-black dark:text-white">
                             {validationError}
                         </div>
                     )}
@@ -217,7 +217,7 @@ Date: ${today}`;
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                             >
                                 <h2 className="text-xl font-bold text-black dark:text-white mb-6 flex items-center gap-2">
                                     <Layers className="w-5 h-5 text-black dark:text-white" /> 1. Corporate Legal Entity &amp; Core Systems
@@ -231,7 +231,7 @@ Date: ${today}`;
                                             value={companyName}
                                             onChange={e => setCompanyName(e.target.value)}
                                             placeholder="e.g. Axis Commercial Capital Partners Ltd" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                     <div>
@@ -242,7 +242,7 @@ Date: ${today}`;
                                             value={signatoryName}
                                             onChange={e => setSignatoryName(e.target.value)}
                                             placeholder="e.g. Rajesh Subramanian" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                     <div>
@@ -250,7 +250,7 @@ Date: ${today}`;
                                         <select 
                                             value={signatoryRole}
                                             onChange={e => setSignatoryRole(e.target.value)}
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         >
                                             <option>Chief Technology Officer (CTO)</option>
                                             <option>VP of Engineering / Technology</option>
@@ -267,7 +267,7 @@ Date: ${today}`;
                                             value={email}
                                             onChange={e => setEmail(e.target.value)}
                                             placeholder="r.subramanian@axiscommercial.in" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                 </div>
@@ -287,7 +287,7 @@ Date: ${today}`;
                                                 type="button"
                                                 key={item.id}
                                                 onClick={() => toggleTech(item.id)}
-                                                className={`px-3.5 py-2 rounded-lg text-xs font-medium border active:scale-[0.97] transition-all ${techStack.includes(item.id) ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white' : 'bg-white dark:bg-black border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400 dark:hover:border-white/25'}`}
+                                                className={`px-4 py-2 rounded-full text-xs font-medium border active:scale-[0.97] transition-all ${techStack.includes(item.id) ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white' : 'bg-white dark:bg-black border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400 dark:hover:border-white/25'}`}
                                             >
                                                 {item.label}
                                             </button>
@@ -308,7 +308,7 @@ Date: ${today}`;
                                                 type="button"
                                                 key={item.id}
                                                 onClick={() => toggleCompliance(item.id)}
-                                                className={`px-3.5 py-2 rounded-lg text-xs font-medium border active:scale-[0.97] transition-all ${compliance.includes(item.id) ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white' : 'bg-white dark:bg-black border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400 dark:hover:border-white/25'}`}
+                                                className={`px-4 py-2 rounded-full text-xs font-medium border active:scale-[0.97] transition-all ${compliance.includes(item.id) ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white' : 'bg-white dark:bg-black border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400 dark:hover:border-white/25'}`}
                                             >
                                                 {item.label}
                                             </button>
@@ -320,7 +320,7 @@ Date: ${today}`;
                                     <button 
                                         type="button" 
                                         onClick={handleStep1Next}
-                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-lg text-sm active:scale-[0.97] transition-all"
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         Next: Select Procurement Tier <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -336,7 +336,7 @@ Date: ${today}`;
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                             >
                                 <h2 className="text-xl font-bold text-black dark:text-white mb-6 flex items-center gap-2">
                                     <Server className="w-5 h-5 text-black dark:text-white" /> 2. Institutional Procurement Tier &amp; SLA
@@ -346,7 +346,7 @@ Date: ${today}`;
                                         <div 
                                             key={tier.id}
                                             onClick={() => setSelectedTier(tier.id)}
-                                            className={`p-5 rounded-xl border cursor-pointer transition-all ${selectedTier === tier.id ? 'bg-white dark:bg-black border-black dark:border-white' : 'bg-white/60 dark:bg-black/40 border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/25'}`}
+                                            className={`p-5 rounded-[24px] border cursor-pointer transition-all ${selectedTier === tier.id ? 'bg-white dark:bg-black border-black dark:border-white' : 'bg-white/60 dark:bg-black/40 border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/25'}`}
                                         >
                                             <div className="flex items-center justify-between mb-2">
                                                 <div className="flex items-center gap-3">
@@ -355,7 +355,7 @@ Date: ${today}`;
                                                     </div>
                                                     <span className="font-bold text-black dark:text-white text-base">{tier.name}</span>
                                                     {tier.popular && (
-                                                        <span className="bg-black text-white dark:bg-white dark:text-black text-[10px] font-mono px-2 py-0.5 rounded uppercase">
+                                                        <span className="bg-black text-white dark:bg-white dark:text-black text-[10px] font-mono px-2.5 py-0.5 rounded-full uppercase">
                                                             Recommended
                                                         </span>
                                                     )}
@@ -381,14 +381,14 @@ Date: ${today}`;
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(1)}
-                                        className="px-5 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-lg text-xs font-medium active:scale-[0.97] transition-all"
+                                        className="px-6 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
                                     >
                                         &larr; Back
                                     </button>
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(3)}
-                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-lg text-sm active:scale-[0.97] transition-all"
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         Next: Generate Mutual NDA <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -404,7 +404,7 @@ Date: ${today}`;
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                             >
                                 <h2 className="text-xl font-bold text-black dark:text-white mb-4 flex items-center gap-2">
                                     <ShieldCheck className="w-5 h-5 text-black dark:text-white" /> 3. Instant Mutual Non-Disclosure Agreement (NDA)
@@ -413,13 +413,13 @@ Date: ${today}`;
                                     Pre-filled legally binding agreement governed under the Indian Contract Act, 1872 with exclusive Bengaluru jurisdiction and DPDP Act 2023 Section 8(5) statutory confidentiality safeguards.
                                 </p>
 
-                                <div className="bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-xl p-4 font-mono text-[11px] text-neutral-700 dark:text-neutral-300 h-64 overflow-y-auto whitespace-pre-wrap leading-relaxed mb-6">
+                                <div className="bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] p-5 font-mono text-[11px] text-neutral-700 dark:text-neutral-300 h-64 overflow-y-auto whitespace-pre-wrap leading-relaxed mb-6">
                                     {generatedNdaText}
                                 </div>
 
-                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 p-4 rounded-xl mb-6">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 p-4 rounded-[20px] mb-6">
                                     <div className="flex items-center gap-3">
-                                        <FileText className="w-8 h-8 text-black dark:text-white" />
+                                        <FileText className="w-8 h-8 text-black dark:text-white shrink-0" />
                                         <div>
                                             <div className="text-sm font-bold text-black dark:text-white">Elesium_Mutual_NDA_{companyName.replace(/[^a-zA-Z0-9]/g, '_') || 'Enterprise'}.md</div>
                                             <div className="text-xs text-neutral-600 dark:text-neutral-400">Cryptographically Stamped &middot; Ready for Legal Execution</div>
@@ -428,7 +428,7 @@ Date: ${today}`;
                                     <button
                                         type="button"
                                         onClick={handleDownloadNda}
-                                        className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 text-xs font-bold rounded-lg active:scale-[0.97] transition-all"
+                                        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 text-xs font-bold rounded-full active:scale-[0.97] transition-all shrink-0"
                                     >
                                         <Download className="w-4 h-4" /> {ndaGenerated ? "NDA Stamped & Downloaded" : "Download Executable NDA"}
                                     </button>
@@ -438,14 +438,14 @@ Date: ${today}`;
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(2)}
-                                        className="px-5 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-lg text-xs font-medium active:scale-[0.97] transition-all"
+                                        className="px-6 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
                                     >
                                         &larr; Back
                                     </button>
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(4)}
-                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-lg text-sm active:scale-[0.97] transition-all"
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         Next: Finalize &amp; Schedule <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -461,7 +461,7 @@ Date: ${today}`;
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                             >
                                 <h2 className="text-xl font-bold text-black dark:text-white mb-6 flex items-center gap-2">
                                     <Clock className="w-5 h-5 text-black dark:text-white" /> 4. Confirm Architecture Sprint &amp; Schedule
@@ -476,7 +476,7 @@ Date: ${today}`;
                                             value={phone}
                                             onChange={e => setPhone(e.target.value)}
                                             placeholder="+91 98450 12345" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                     <div>
@@ -486,12 +486,12 @@ Date: ${today}`;
                                             value={scopeBrief}
                                             onChange={e => setScopeBrief(e.target.value)}
                                             placeholder="e.g. Automate 14-day manual underwriting credit appraisal into sub-4min CAM generation multi-agent triad with private VPC enclave in Mumbai."
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                 </div>
 
-                                <div className="p-4 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-xl mb-6 flex items-start gap-3">
+                                <div className="p-4 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] mb-6 flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-black dark:text-white shrink-0 mt-0.5" />
                                     <div className="text-xs text-neutral-600 dark:text-neutral-400">
                                         <strong className="text-black dark:text-white">Direct Escalation SLA:</strong> Clicking submit connects you directly with Chaman Shah (Founder &amp; Lead Systems Architect) on WhatsApp with your pre-filled procurement dossier.
@@ -502,14 +502,14 @@ Date: ${today}`;
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(3)}
-                                        className="px-5 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-lg text-xs font-medium active:scale-[0.97] transition-all"
+                                        className="px-6 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
                                     >
                                         &larr; Back
                                     </button>
                                     <button 
                                         type="submit" 
                                         disabled={submitted}
-                                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 disabled:opacity-50 font-extrabold rounded-lg text-sm active:scale-[0.97] transition-all"
+                                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 disabled:opacity-50 font-extrabold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         <PhoneCall className="w-4 h-4" /> {submitted ? "Routing to WhatsApp Desk..." : "Submit & Open WhatsApp Desk"}
                                     </button>

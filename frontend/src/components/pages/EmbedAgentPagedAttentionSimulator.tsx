@@ -37,7 +37,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
   const results = useMemo(() => calculatePagedAttention(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: GPU VRAM PagedAttention & KV-Cache Allocator Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-pagedattention-cache-simulator" />
@@ -60,7 +60,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
           href="https://elesium.online/tools/enterprise-agent-pagedattention-cache-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-[11px] font-mono text-neutral-200 hover:text-white transition"
+          className="inline-flex items-center gap-1 text-[11px] font-mono text-neutral-200 hover:text-white transition-all duration-300"
         >
           <span>Full Tool</span>
           <ArrowUpRight className="w-3 h-3" />
@@ -81,7 +81,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
             step="5"
             value={concurrentAgentStreams}
             onChange={(e) => setConcurrentAgentStreams(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -97,7 +97,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
             step="1000"
             value={averageContextLengthTokens}
             onChange={(e) => setAverageContextLengthTokens(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -107,7 +107,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
             <select
               value={modelArchitecture}
               onChange={(e) => setModelArchitecture(e.target.value as ModelArchitecture)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="llama_3_70b">Llama-3 70B</option>
               <option value="deepseek_r1_671b">DeepSeek R1</option>
@@ -120,7 +120,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
             <select
               value={gpuHardwareType}
               onChange={(e) => setGpuHardwareType(e.target.value as GpuHardwareType)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="nvidia_h100_80gb">H100 80GB</option>
               <option value="nvidia_a100_80gb">A100 80GB</option>
@@ -133,7 +133,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
             <select
               value={memoryAllocationEngine}
               onChange={(e) => setMemoryAllocationEngine(e.target.value as MemoryAllocationEngine)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="vllm_paged_attention">vLLM Paged</option>
               <option value="tensorrt_llm_paged">TRT-LLM</option>
@@ -146,21 +146,21 @@ export default function EmbedAgentPagedAttentionSimulator() {
 
       {/* Outputs Cards */}
       <div className="grid grid-cols-3 gap-2 mb-4">
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">VRAM Utilization</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.effectiveMemoryUtilizationPct}%
           </div>
           <div className="text-[9px] text-neutral-400 mt-0.5">Near Zero Fragmentation</div>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">TTFT Latency</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.timeToFirstTokenLatencyMs} ms
           </div>
           <div className="text-[9px] text-neutral-400 mt-0.5">Prefill Decoupled</div>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Max Concurrency</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.maxConcurrentStreamsBeforeOom} streams
@@ -170,7 +170,7 @@ export default function EmbedAgentPagedAttentionSimulator() {
       </div>
 
       {/* Status Bar */}
-      <div className="p-2.5 rounded-lg bg-neutral-900/70 border border-neutral-800 flex items-center justify-between text-xs">
+      <div className="p-2.5 rounded-xl bg-neutral-900/70 border border-neutral-800 flex items-center justify-between text-xs">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-neutral-400 "></span>
           <span className="text-neutral-300 font-mono text-[11px]">{results.vramStatusClassification}</span>

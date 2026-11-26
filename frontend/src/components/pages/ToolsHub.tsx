@@ -305,7 +305,7 @@ export default function ToolsHub() {
 
                     {/* Header */}
                     <div className="max-w-4xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono uppercase tracking-wider bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 mb-4">
                             <Gauge className="w-3.5 h-3.5 text-black dark:text-white" />
                             Deterministic Telemetry &amp; Unit Economics
                         </div>
@@ -317,7 +317,7 @@ export default function ToolsHub() {
                         </p>
 
                         {/* Technical Overview */}
-                        <div className="answer-capsule bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white rounded-xl p-5 mb-10">
+                        <div className="answer-capsule bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white rounded-[24px] p-6 mb-10">
                             <div className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-1.5 flex items-center gap-2">
                                 <Cpu className="w-4 h-4 text-black dark:text-white" />
                                 Interactive Suite Summary
@@ -336,7 +336,7 @@ export default function ToolsHub() {
                                 <button
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
-                                    className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap active:scale-[0.97] transition-all ${
+                                    className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap active:scale-[0.97] transition-all duration-300 ${
                                         selectedCategory === cat
                                             ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                             : 'bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white'
@@ -349,13 +349,13 @@ export default function ToolsHub() {
 
                         {/* Search Input */}
                         <div className="relative min-w-[240px]">
-                            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
+                            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500" />
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={e => setSearchQuery(e.target.value)}
                                 placeholder="Search simulators..."
-                                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-lg pl-9 pr-4 py-1.5 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white transition-colors"
+                                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full pl-10 pr-4 py-2 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white transition-colors"
                             />
                         </div>
                     </div>
@@ -366,11 +366,11 @@ export default function ToolsHub() {
                             <Link
                                 key={tool.slug}
                                 to={`/tools/${tool.slug}/`}
-                                className="group relative flex flex-col justify-between p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all duration-200"
+                                className="group relative h-full flex flex-col justify-between p-6 rounded-[24px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all duration-300"
                             >
                                 <div>
                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                        <span className="text-[11px] font-mono uppercase tracking-wider text-black dark:text-white bg-white dark:bg-black px-2 py-0.5 rounded border border-neutral-200 dark:border-white/10">
+                                        <span className="text-[11px] font-mono uppercase tracking-wider text-black dark:text-white bg-white dark:bg-black px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-white/10">
                                             {tool.badge}
                                         </span>
                                         <span className="text-xs text-neutral-500">
@@ -397,7 +397,7 @@ export default function ToolsHub() {
                     </div>
 
                     {/* Enterprise Callout */}
-                    <div className="bg-black text-white border border-neutral-200 dark:border-white/10 rounded-xl p-8 mb-20 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="bg-black text-white border border-neutral-200 dark:border-white/10 rounded-[32px] p-8 sm:p-10 mb-20 flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="max-w-2xl">
                             <h3 className="text-2xl font-bold text-white mb-2">
                                 Need Custom Architecture Benchmarking for Your Enterprise?
@@ -408,7 +408,7 @@ export default function ToolsHub() {
                         </div>
                         <button
                             onClick={() => openWhatsApp()}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-sm whitespace-nowrap active:scale-[0.97] transition-all"
+                            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-sm whitespace-nowrap active:scale-[0.97] transition-all duration-300"
                         >
                             Book Architecture Review
                             <ArrowRight className="w-4 h-4" />
@@ -424,15 +424,15 @@ export default function ToolsHub() {
                             {toolsFaqs.map((faq, idx) => (
                                 <div
                                     key={idx}
-                                    className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950"
+                                    className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
                                     <button
                                         onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                        className="w-full flex items-center justify-between p-4 text-left font-medium text-sm sm:text-base text-black dark:text-white transition-colors"
+                                        className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-medium text-sm sm:text-base text-black dark:text-white transition-colors"
                                     >
                                         <span>{faq.q}</span>
                                         <ChevronDown
-                                            className={`w-4 h-4 text-neutral-500 transition-transform duration-200 shrink-0 ${
+                                            className={`w-4 h-4 text-neutral-500 transition-transform duration-300 shrink-0 ${
                                                 openFaq === idx ? 'rotate-180 text-black dark:text-white' : ''
                                             }`}
                                         />
@@ -443,10 +443,10 @@ export default function ToolsHub() {
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                 className="accordion-panel overflow-hidden"
                                             >
-                                                <div className="p-4 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
+                                                <div className="p-4 sm:p-5 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
                                                     {faq.a}
                                                 </div>
                                             </motion.div>

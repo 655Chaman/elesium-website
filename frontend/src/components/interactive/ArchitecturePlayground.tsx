@@ -229,7 +229,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-gray-950 via-[#0a0a0c] to-black border border-white/20 shadow-2xl text-white font-sans overflow-hidden">
+        <div className="interactive-asset my-10 p-6 md:p-8 rounded-[28px] bg-gradient-to-b from-gray-950 via-[#0a0a0c] to-black border border-white/20 shadow-2xl text-white font-sans overflow-hidden">
             {/* Header with Title and Mode Badges */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
                 <div>
@@ -248,10 +248,10 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                 </div>
 
                 {/* Workflow Switcher */}
-                <div className="flex items-center gap-2 bg-white/5 p-1 rounded-xl border border-white/10 self-start md:self-auto">
+                <div className="flex items-center gap-1.5 bg-white/5 p-1 rounded-full border border-white/10 self-start md:self-auto">
                     <button
                         onClick={() => setSelectedWorkflow('bfsi')}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                        className={`px-3.5 py-1.5 rounded-full text-xs font-semibold active:scale-[0.97] transition-all duration-300 ${
                             selectedWorkflow === 'bfsi'
                                 ? 'bg-white text-black shadow-lg shadow-white/25'
                                 : 'text-white/60 hover:text-white'
@@ -261,7 +261,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                     </button>
                     <button
                         onClick={() => setSelectedWorkflow('supply_chain')}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                        className={`px-3.5 py-1.5 rounded-full text-xs font-semibold active:scale-[0.97] transition-all duration-300 ${
                             selectedWorkflow === 'supply_chain'
                                 ? 'bg-white text-black shadow-lg shadow-white/25'
                                 : 'text-white/60 hover:text-white'
@@ -274,7 +274,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
 
             {/* Pipeline Visual Canvas */}
             <div className="my-8 relative">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-3 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5 relative z-10">
                     {nodes.map((node, idx) => {
                         const isActive = activeNodeIndex === idx;
                         const isSelected = selectedNodeDetails.id === node.id;
@@ -297,7 +297,8 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                                 }}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className={`text-left p-4 rounded-xl border transition-all duration-300 relative flex flex-col justify-between min-h-[140px] ${statusColor} ${
+                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+                                className={`text-left p-4 rounded-[18px] border transition-colors duration-300 relative flex flex-col justify-between h-full min-h-[140px] ${statusColor} ${
                                     isSelected ? 'ring-2 ring-neutral-200/80' : ''
                                 }`}
                             >
@@ -327,7 +328,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
             </div>
 
             {/* Interactive Control Panel */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-white/[0.02] border border-white/10 rounded-xl p-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-white/[0.02] border border-white/10 rounded-[22px] p-5">
                 {/* Simulation Triggers */}
                 <div className="space-y-4">
                     <div className="text-xs font-mono text-white/50 uppercase tracking-wider">
@@ -337,10 +338,10 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                         <button
                             onClick={handleRunSimulation}
                             disabled={isRunning}
-                            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wide transition-all ${
+                            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs tracking-wide transition-all duration-300 ${
                                 isRunning
                                     ? 'bg-white/30 text-white/50 cursor-not-allowed'
-                                    : 'bg-white hover:bg-neutral-200 text-black shadow-lg shadow-white/20 active:scale-95'
+                                    : 'bg-white hover:bg-neutral-200 text-black shadow-lg shadow-white/20 active:scale-[0.97]'
                             }`}
                         >
                             <Play className={`h-4 w-4 ${isRunning ? '' : 'fill-current'}`} />
@@ -349,7 +350,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
 
                         <button
                             onClick={handleReset}
-                            className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 hover:text-white text-xs font-semibold transition-all border border-white/10"
+                            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white text-xs font-semibold active:scale-[0.97] transition-all duration-300 border border-white/10"
                         >
                             <RotateCcw className="h-3.5 w-3.5" />
                             Reset
@@ -402,7 +403,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                 </div>
 
                 {/* Node Inspector Payload */}
-                <div className="lg:col-span-2 bg-black/60 rounded-xl p-4 border border-white/10 flex flex-col justify-between">
+                <div className="lg:col-span-2 bg-black/60 rounded-[18px] p-4 border border-white/10 flex flex-col justify-between">
                     <div>
                         <div className="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
                             <div className="flex items-center gap-2">

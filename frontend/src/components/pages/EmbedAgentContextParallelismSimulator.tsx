@@ -37,7 +37,7 @@ export default function EmbedAgentContextParallelismSimulator() {
   const results = useMemo(() => calculateContextParallelism(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Context Parallelism Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-context-parallelism-simulator" />
@@ -150,7 +150,7 @@ export default function EmbedAgentContextParallelismSimulator() {
       </div>
 
       {/* Real-Time KPIs */}
-      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/90 rounded-lg border border-neutral-800 mb-4">
+      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/90 rounded-[18px] border border-neutral-800 mb-4">
         <div className="text-center">
           <div className="text-[10px] text-neutral-400">Step Latency</div>
           <div className="text-lg font-black text-neutral-200 font-mono">{results.effectiveStepLatencyMs}ms</div>

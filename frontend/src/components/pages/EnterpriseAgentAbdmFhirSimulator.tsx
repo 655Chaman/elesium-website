@@ -140,7 +140,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Hero Section */}
         <div className="space-y-4 max-w-4xl">
-          <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono font-medium">
+          <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono font-medium">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Tool #37: ABDM FHIR Clinical De-Identification & Privacy Budget Simulator</span>
           </div>
@@ -155,21 +155,21 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-neutral-900 border border-neutral-800 text-xs font-semibold text-neutral-300 hover:text-white hover:border-neutral-700 transition"
+              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold text-neutral-300 hover:text-white hover:border-neutral-700 transition-all duration-300"
             >
               <Code className="w-4 h-4 text-neutral-200" />
               <span>Embed Calculator</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-semibold text-neutral-300 hover:text-white hover:border-neutral-700 transition"
+              className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold text-neutral-300 hover:text-white hover:border-neutral-700 transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Download className="w-4 h-4 text-neutral-200" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Audit Memo'}</span>
@@ -180,22 +180,22 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
         {/* Simulator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 space-y-6 backdrop-blur-xl">
+          <div className="lg:col-span-5 bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 space-y-6 backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
               <div className="flex items-center space-x-2">
                 <Sliders className="w-5 h-5 text-neutral-200" />
                 <h2 className="text-base font-bold text-white">Clinical Privacy Controls</h2>
               </div>
-              <div className="flex items-center space-x-1 bg-neutral-950 p-1 rounded-lg border border-neutral-800">
+              <div className="flex items-center space-x-1 bg-neutral-950 p-1 rounded-full border border-neutral-800">
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`active:scale-[0.97] px-2.5 py-1 text-[11px] font-mono rounded font-medium transition ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 text-[11px] font-mono rounded font-medium transition-all duration-300 ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                 >
                   INR (₹)
                 </button>
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`active:scale-[0.97] px-2.5 py-1 text-[11px] font-mono rounded font-medium transition ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 text-[11px] font-mono rounded font-medium transition-all duration-300 ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                 >
                   USD ($)
                 </button>
@@ -308,7 +308,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
           {/* Results Column (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* Primary Status Banner */}
-            <div className={`p-5 rounded-xl border backdrop-blur-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
+            <div className={`p-5 rounded-[24px] border backdrop-blur-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
               results.statusClassification === 'STATUTORY_PRIVACY_COMPLIANT'
                 ? 'bg-white/[0.04] border-white/20 text-neutral-200'
                 : results.statusClassification === 'RESIDUAL_REIDENTIFICATION_RISK'
@@ -332,7 +332,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
 
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="flex items-center space-x-2 text-neutral-400 text-xs mb-1">
                   <Activity className="w-3.5 h-3.5 text-neutral-200" />
                   <span>De-ID Latency</span>
@@ -341,7 +341,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 <div className="text-[10px] text-neutral-500 mt-1">Per clinical encounter bundle</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="flex items-center space-x-2 text-neutral-400 text-xs mb-1">
                   <ShieldAlert className="w-3.5 h-3.5 text-neutral-200" />
                   <span>Re-ID Risk</span>
@@ -350,7 +350,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 <div className="text-[10px] text-neutral-500 mt-1">Empirical linkage risk</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="flex items-center space-x-2 text-neutral-400 text-xs mb-1">
                   <HeartPulse className="w-3.5 h-3.5 text-neutral-200" />
                   <span>Clinical Utility</span>
@@ -359,7 +359,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 <div className="text-[10px] text-neutral-500 mt-1">Diagnostic AI retention</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="flex items-center space-x-2 text-neutral-400 text-xs mb-1">
                   <Cpu className="w-3.5 h-3.5 text-amber-400" />
                   <span>Gateway Velocity</span>
@@ -368,7 +368,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 <div className="text-[10px] text-neutral-500 mt-1">Requests / second throughput</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="flex items-center space-x-2 text-neutral-400 text-xs mb-1">
                   <Lock className="w-3.5 h-3.5 text-neutral-200" />
                   <span>DPDP Act Score</span>
@@ -377,7 +377,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 <div className="text-[10px] text-neutral-500 mt-1">Section 8 fiduciary rating</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="flex items-center space-x-2 text-neutral-400 text-xs mb-1">
                   <Database className="w-3.5 h-3.5 text-neutral-200" />
                   <span>Breach Mitigation</span>
@@ -390,7 +390,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
             </div>
 
             {/* SVG Oscilloscope Section */}
-            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-3">
+            <div className="p-5 rounded-[24px] bg-neutral-900/60 border border-neutral-800 space-y-3">
               <div className="flex items-center justify-between border-b border-neutral-800/80 pb-3">
                 <div className="flex items-center space-x-2">
                   <Activity className="w-4 h-4 text-neutral-200 " />
@@ -398,11 +398,11 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 </div>
                 <div className="flex items-center space-x-4 text-[10px]">
                   <span className="flex items-center space-x-1.5">
-                    <span className="w-2.5 h-1 bg-white/80 inline-block rounded-lg"></span>
+                    <span className="w-2.5 h-1 bg-white/80 inline-block rounded-full"></span>
                     <span className="text-neutral-300">Processing Latency (ms)</span>
                   </span>
                   <span className="flex items-center space-x-1.5">
-                    <span className="w-2.5 h-1 bg-white/80 inline-block rounded-lg"></span>
+                    <span className="w-2.5 h-1 bg-white/80 inline-block rounded-full"></span>
                     <span className="text-neutral-300">Re-ID Risk (%)</span>
                   </span>
                 </div>
@@ -433,7 +433,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
             </div>
 
             {/* Direct Consultation CTA Card */}
-            <div className="p-6 rounded-xl bg-neutral-950 border border-white/20 space-y-4">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/20 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-base font-bold text-white">Deploy ABDM FHIR Privacy in Your Hospital Private VPC</h3>
@@ -469,21 +469,21 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-5 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-2">
+            <div className="p-5 rounded-[24px] bg-neutral-900/50 border border-neutral-800 space-y-2">
               <h3 className="text-sm font-bold text-white">1. Laplace Differential Privacy</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Injects calibrated mathematical noise into quasi-identifiers and diagnostic metrics, guaranteeing privacy loss bounds
                 (ε &lt; 1.5) while preserving aggregate clinical utility for medical AI training.
               </p>
             </div>
-            <div className="p-5 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-2">
+            <div className="p-5 rounded-[24px] bg-neutral-900/50 border border-neutral-800 space-y-2">
               <h3 className="text-sm font-bold text-white">2. ABDM M1/M2/M3 Compliance</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Connects directly to National Health Authority (NHA) gateways for ABHA registration, Health Information Provider (HIP)
                 record publishing, and consent-driven Health Information User (HIU) record retrieval.
               </p>
             </div>
-            <div className="p-5 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-2">
+            <div className="p-5 rounded-[24px] bg-neutral-900/50 border border-neutral-800 space-y-2">
               <h3 className="text-sm font-bold text-white">3. NHCX Insurance Adjudication</h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Converts clinical narratives into IRDAI-compliant cashless pre-authorization dossiers, validating ICD-10 diagnostic
@@ -511,10 +511,10 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 a: 'By automating the synthesis of FHIR R4 discharge bundles, cross-checking pharmacy bills, and auto-submitting cashless claims to the NHCX exchange, hospital discharge wait times are slashed from 5 hours to under 35 minutes.'
               }
             ].map((faq, idx) => (
-              <div key={idx} className="border border-neutral-800 rounded-xl bg-neutral-900/40 overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-[24px] bg-neutral-900/40 overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full p-4 text-left flex items-center justify-between text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full p-4 text-left flex items-center justify-between text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -532,7 +532,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
         {/* Embed Modal */}
         {isEmbedOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-            <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+            <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 space-y-4 shadow-2xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Code className="w-5 h-5 text-neutral-200" />
@@ -549,18 +549,18 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 readOnly
                 value={embedCode}
                 rows={4}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-200 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none"
               />
               <div className="flex justify-end space-x-3">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
-                  className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 text-neutral-300 text-xs font-medium hover:bg-neutral-700 transition"
+                  className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 text-neutral-300 text-xs font-medium hover:bg-neutral-700 transition-all duration-300"
                 >
                   Close
                 </button>
                 <button
                   onClick={copyEmbedCode}
-                  className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold transition flex items-center space-x-1.5"
+                  className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-bold transition-all duration-300 flex items-center space-x-1.5"
                 >
                   {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Code'}</span>

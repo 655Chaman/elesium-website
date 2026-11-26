@@ -105,7 +105,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
 
         {/* Big Waterfall Stack Bar */}
         <div className="mb-4">
-          <div className="h-5 w-full rounded-lg overflow-hidden flex bg-neutral-950 p-0.5 border border-neutral-800">
+          <div className="h-5 w-full rounded-[24px] overflow-hidden flex bg-neutral-950 p-0.5 border border-neutral-800">
             {results.stages.map(stage => (
               <div
                 key={stage.stageId}
@@ -131,7 +131,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
             <select
               value={sttEngine}
               onChange={e => setSttEngine(e.target.value as SttEngineKey)}
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-2 py-1 text-xs font-mono text-neutral-200"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-2 py-1 text-xs font-mono text-neutral-200"
             >
               <option value="deepgram_nova2">Deepgram Nova-2 (120ms)</option>
               <option value="whisper_vllm_local">Whisper Local vLLM (110ms)</option>
@@ -144,7 +144,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
             <select
               value={llmModel}
               onChange={e => setLlmModel(e.target.value as LlmModelKey)}
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-2 py-1 text-xs font-mono text-neutral-200"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-2 py-1 text-xs font-mono text-neutral-200"
             >
               <option value="groq_llama3_8b">Groq Llama-3 8B (35ms)</option>
               <option value="vllm_local_h100">Local Llama-3 70B (25ms)</option>
@@ -158,7 +158,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
             <select
               value={ttsEngine}
               onChange={e => setTtsEngine(e.target.value as TtsEngineKey)}
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-2 py-1 text-xs font-mono text-neutral-200"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-2 py-1 text-xs font-mono text-neutral-200"
             >
               <option value="cartesia_sonic">Cartesia Sonic (85ms)</option>
               <option value="elevenlabs_flash">ElevenLabs Flash (135ms)</option>
@@ -169,7 +169,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
         </div>
 
         {/* VAD & Semantic Switch */}
-        <div className="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800 mb-3">
+        <div className="grid grid-cols-2 gap-2 p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800 mb-3">
           <div>
             <div className="flex justify-between text-[10px] font-mono mb-1">
               <span className="text-neutral-400">VAD Silence Wait:</span>
@@ -194,7 +194,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
             </div>
             <button
               onClick={() => setEnableSemanticTurnTaking(!enableSemanticTurnTaking)}
-              className={`active:scale-[0.97] w-full py-1 rounded text-[10px] font-mono font-semibold transition-colors ${
+              className={`active:scale-[0.97] w-full py-1 rounded text-[10px] font-mono font-semibold transition-all duration-300 ${
                 enableSemanticTurnTaking ? 'bg-white text-black' : 'bg-neutral-800 text-neutral-400'
               }`}
             >
@@ -205,25 +205,25 @@ export default function EmbedVoiceAgentLatencySimulator() {
 
         {/* Quantified Metrics Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
-          <div className="p-2 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">Total Latency</div>
             <div className={`text-sm font-bold ${results.gradeColor}`}>
               {results.totalTurnTakingLatencyMs} ms
             </div>
           </div>
-          <div className="p-2 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">Cost Per Call</div>
             <div className="text-sm font-bold text-white">
               ${results.estimatedCostPerCallUSD.toFixed(3)}
             </div>
           </div>
-          <div className="p-2 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">Sovereign Savings</div>
             <div className="text-sm font-bold text-white">
               {results.savingsPercentage}% Cut
             </div>
           </div>
-          <div className="p-2 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[9px] font-mono text-neutral-400 uppercase">Interruption Cut</div>
             <div className="text-sm font-bold text-white">
               {results.interruptionFalsePositiveRatePct}% Risk
@@ -239,7 +239,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-colors"
+          className="inline-flex items-center gap-1 text-white hover:text-white font-semibold transition-all duration-300"
         >
           <span>Elesium Enterprise AI Solutions</span>
           <ExternalLink className="w-3 h-3" />

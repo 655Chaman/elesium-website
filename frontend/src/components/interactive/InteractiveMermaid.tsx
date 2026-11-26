@@ -89,17 +89,17 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
     };
 
     return (
-        <div className={`interactive-asset my-10 rounded-2xl border border-white/10 bg-[#080A0F] text-white overflow-hidden shadow-2xl transition-all duration-300 ${
+        <div className={`interactive-asset my-10 rounded-[28px] border border-white/10 bg-[#080A0F] text-white overflow-hidden shadow-2xl transition-all duration-300 ${
             isExpanded ? 'fixed inset-4 z-50 max-w-6xl mx-auto flex flex-col' : 'relative'
         }`}>
             {/* Toolbar */}
-            <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-[#0C0F17] border-b border-white/5">
+            <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-3.5 bg-[#0C0F17] border-b border-white/5">
                 <div className="flex items-center gap-2">
                     <GitBranch className="h-4 w-4 text-neutral-200" />
                     <span className="text-xs font-mono font-semibold text-white/90">
                         {title}
                     </span>
-                    <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-neutral-200 border border-white/20">
+                    <span className="hidden sm:inline-block text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-white/10 text-neutral-200 border border-white/20">
                         Interactive SVG
                     </span>
                 </div>
@@ -109,21 +109,21 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                     <button
                         onClick={() => handleZoom(0.15)}
                         title="Zoom In"
-                        className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <ZoomIn className="h-3.5 w-3.5" />
                     </button>
                     <button
                         onClick={() => handleZoom(-0.15)}
                         title="Zoom Out"
-                        className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <ZoomOut className="h-3.5 w-3.5" />
                     </button>
                     <button
                         onClick={handleReset}
                         title="Reset Zoom"
-                        className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <RotateCcw className="h-3.5 w-3.5" />
                     </button>
@@ -132,7 +132,7 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
 
                     <button
                         onClick={handleCopyDsl}
-                        className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 transition-colors"
+                        className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         {copied ? <Check className="h-3.5 w-3.5 text-neutral-200" /> : <Copy className="h-3.5 w-3.5" />}
                         <span>Mermaid DSL</span>
@@ -141,7 +141,7 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                     <button
                         onClick={handleDownloadSvg}
                         title="Download SVG"
-                        className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <Download className="h-3.5 w-3.5" />
                     </button>
@@ -152,7 +152,7 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                             onTelemetry?.('mermaid_expand_toggled', { expanded: !isExpanded });
                         }}
                         title={isExpanded ? "Collapse" : "Full Screen"}
-                        className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         {isExpanded ? <Minimize2 className="h-3.5 w-3.5" /> : <Maximize2 className="h-3.5 w-3.5" />}
                     </button>

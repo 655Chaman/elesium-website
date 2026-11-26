@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import { 
   ShieldCheck, 
   Terminal, 
@@ -11,7 +12,8 @@ import {
   BookOpen, 
   Layers,
   ChevronRight,
-  MessageSquare
+  MessageSquare,
+  ArrowUpRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useWhatsApp } from '../../hooks/useWhatsApp';
@@ -73,13 +75,15 @@ export default function AuthorProfile() {
     'sameAs': [
       'https://github.com/655Chaman',
       'https://linkedin.com/in/chaman-shah-elesium',
-      'https://x.com/chamanshah_ai'
+      'https://x.com/chamanshah_ai',
+      'https://elesium.online/portfolio/'
     ],
     'address': {
       '@type': 'PostalAddress',
-      'addressLocality': 'Shivamogga',
+      'streetAddress': 'Koramangala 4th Block, 80 Feet Road',
+      'addressLocality': 'Bengaluru',
       'addressRegion': 'Karnataka',
-      'postalCode': '577205',
+      'postalCode': '560034',
       'addressCountry': 'IN'
     },
     'knowsAbout': [
@@ -141,7 +145,13 @@ export default function AuthorProfile() {
   };
 
   return (
-    <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300">
+    <motion.main
+      id="main-content"
+      initial={{ opacity: 0, scale: 0.97 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 30, mass: 0.8 }}
+      className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300"
+    >
       <WhatsAppModal />
       <Helmet>
         <title>Chaman Shah: Principal AI Systems Architect | Elesium</title>
@@ -177,21 +187,21 @@ export default function AuthorProfile() {
         </nav>
 
         {/* Hero Bio Card */}
-        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 sm:p-12 mb-12">
+        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-8 sm:p-12 mb-12">
           <div className="flex flex-col md:flex-row gap-8 items-start">
             
             {/* Avatar / Visual Placeholder with Monogram */}
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-mono text-2xl sm:text-3xl font-bold shrink-0">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-[20px] bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-mono text-2xl sm:text-3xl font-bold shrink-0">
               CS
             </div>
 
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-white dark:bg-black text-black dark:text-white border border-neutral-200 dark:border-white/10">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-white dark:bg-black text-black dark:text-white border border-neutral-200 dark:border-white/10">
                   <ShieldCheck className="w-3.5 h-3.5 text-black dark:text-white" /> Verified Author &amp; Systems Architect
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs font-mono text-neutral-600 dark:text-neutral-400">
-                  <MapPin className="w-3.5 h-3.5" /> Shivamogga, Karnataka, India
+                  <MapPin className="w-3.5 h-3.5" /> Koramangala, Bengaluru, Karnataka, India
                 </span>
               </div>
 
@@ -207,7 +217,7 @@ export default function AuthorProfile() {
               </p>
 
               {/* Technical Overview */}
-              <div className="answer-capsule mb-6 p-5 sm:p-6 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white">
+              <div className="answer-capsule mb-6 p-5 sm:p-6 rounded-[20px] bg-white dark:bg-black border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white">
                 <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-black dark:text-white" />
                   Principal Systems Architect Dossier
@@ -249,14 +259,21 @@ export default function AuthorProfile() {
                 <div className="flex flex-wrap items-center gap-3">
                   <button
                     onClick={openWhatsApp}
-                    className="inline-flex items-center gap-2 h-10 px-5 bg-black hover:opacity-90 text-white dark:bg-white dark:text-black font-semibold text-xs rounded-lg active:scale-[0.97] transition-all"
+                    className="inline-flex items-center gap-2 h-10 px-5 bg-black hover:opacity-90 text-white dark:bg-white dark:text-black font-semibold text-xs rounded-full active:scale-[0.97] transition-all"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
                     <span>Chat on WhatsApp</span>
                   </button>
                   <Link
+                    to="/portfolio/"
+                    className="inline-flex items-center gap-1.5 h-10 px-5 border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs rounded-full active:scale-[0.97] transition-all"
+                  >
+                    <span>Founder Portfolio</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link
                     to="/waitlist/"
-                    className="inline-flex items-center gap-1.5 h-10 px-5 border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs rounded-lg active:scale-[0.97] transition-all"
+                    className="inline-flex items-center gap-1.5 h-10 px-5 border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs rounded-full active:scale-[0.97] transition-all"
                   >
                     <span>ele-in SaaS Waitlist</span>
                     <span>&rarr;</span>
@@ -275,7 +292,7 @@ export default function AuthorProfile() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl">
+            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px]">
               <h3 className="font-semibold text-black dark:text-white mb-2 flex items-center gap-2">
                 <Layers className="w-4 h-4 text-black dark:text-white" /> Multi-Agent State Topologies
               </h3>
@@ -283,13 +300,13 @@ export default function AuthorProfile() {
                 Architecture of cyclic and acyclic LangGraph execution state machines with deterministic state boundaries, checkpoint rollback, and sub-200ms end-to-end execution latency.
               </p>
               <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">LangGraph</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">FastAPI</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">PostgreSQL</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">LangGraph</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">FastAPI</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">PostgreSQL</span>
               </div>
             </div>
 
-            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl">
+            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px]">
               <h3 className="font-semibold text-black dark:text-white mb-2 flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-black dark:text-white" /> Private High-Throughput Inference
               </h3>
@@ -297,13 +314,13 @@ export default function AuthorProfile() {
                 Design and optimization of air-gapped on-premise GPU clusters running vLLM with PagedAttention, FlashDecoding, and FP8 microscaling for zero-token-leakage compliance.
               </p>
               <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">vLLM</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">Triton</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">NVIDIA TensorRT</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">vLLM</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">Triton</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">NVIDIA TensorRT</span>
               </div>
             </div>
 
-            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl">
+            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px]">
               <h3 className="font-semibold text-black dark:text-white mb-2 flex items-center gap-2">
                 <Award className="w-4 h-4 text-black dark:text-white" /> DPDP Act 2023 Statutory Governance
               </h3>
@@ -311,9 +328,9 @@ export default function AuthorProfile() {
                 Engineering statutory consent artifacts, air-gapped data principal verification mechanisms, and zero-trust audit trails satisfying RBI, SEBI, and Indian data localization mandates.
               </p>
               <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">DPDP Act</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">SOC-2</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">ISO 27001</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">DPDP Act</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">SOC-2</span>
+                <span className="px-2.5 py-0.5 bg-white dark:bg-black rounded-full border border-neutral-200 dark:border-white/10">ISO 27001</span>
               </div>
             </div>
 
@@ -336,7 +353,7 @@ export default function AuthorProfile() {
               <Link
                 key={paper.slug}
                 to={paper.path || `/signals/${paper.slug}/`}
-                className="block p-5 bg-neutral-50 dark:bg-neutral-950 hover:bg-neutral-100 dark:hover:bg-black border border-neutral-200 dark:border-white/10 rounded-xl transition-all group"
+                className="block p-5 sm:p-6 bg-neutral-50 dark:bg-neutral-950 hover:bg-neutral-100 dark:hover:bg-black border border-neutral-200 dark:border-white/10 rounded-[28px] transition-all group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                   <span className="text-xs font-mono font-medium text-black dark:text-white uppercase tracking-wide">
@@ -357,8 +374,8 @@ export default function AuthorProfile() {
         </div>
 
         {/* Direct Architecture Audit CTA */}
-        <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
+        <div className="rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
             <span>Direct Systems Architect Consultation</span>
           </div>
 
@@ -373,14 +390,21 @@ export default function AuthorProfile() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <button
               onClick={openWhatsApp}
-              className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Chat on WhatsApp with Chaman</span>
             </button>
             <Link
+              to="/portfolio/"
+              className="w-full sm:w-auto h-11 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+            >
+              <span>Founder Portfolio</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+            <Link
               to="/waitlist/"
-              className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+              className="w-full sm:w-auto h-11 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
             >
               <span>ele-in SaaS Waitlist</span>
               <span>&rarr;</span>
@@ -389,6 +413,6 @@ export default function AuthorProfile() {
         </div>
 
       </div>
-    </main>
+    </motion.main>
   );
 }

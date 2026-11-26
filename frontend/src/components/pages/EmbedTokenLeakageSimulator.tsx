@@ -48,7 +48,7 @@ export default function EmbedTokenLeakageSimulator() {
         <link rel="canonical" href="https://elesium.online/embed/token-leakage-simulator" />
       </Helmet>
 
-      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[720px] flex flex-col justify-between border border-neutral-800 rounded-xl shadow-2xl">
+      <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 font-sans antialiased min-h-[720px] flex flex-col justify-between border border-neutral-800 rounded-[24px] shadow-2xl">
         <div>
           {/* Header Bar */}
           <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
@@ -60,10 +60,10 @@ export default function EmbedTokenLeakageSimulator() {
             </div>
             
             {/* Currency toggle */}
-            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-md border border-neutral-800 text-[10px]">
+            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-full border border-neutral-800 text-[10px]">
               <button
                 onClick={() => setCurrency('USD')}
-                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-colors ${
+                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-all duration-300 ${
                   currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                 }`}
               >
@@ -71,7 +71,7 @@ export default function EmbedTokenLeakageSimulator() {
               </button>
               <button
                 onClick={() => setCurrency('INR')}
-                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-colors ${
+                className={`active:scale-[0.97] px-2 py-0.5 rounded font-medium transition-all duration-300 ${
                   currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                 }`}
               >
@@ -89,7 +89,7 @@ export default function EmbedTokenLeakageSimulator() {
               <select
                 value={model}
                 onChange={(e) => setModel(e.target.value as ModelKey)}
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-white/40"
               >
                 {Object.values(MODELS).map((m) => (
                   <option key={m.id} value={m.id}>
@@ -106,7 +106,7 @@ export default function EmbedTokenLeakageSimulator() {
               <select
                 value={topology}
                 onChange={(e) => setTopology(e.target.value as TopologyKey)}
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-white/40"
               >
                 {Object.values(TOPOLOGIES).map((t) => (
                   <option key={t.id} value={t.id}>
@@ -120,7 +120,7 @@ export default function EmbedTokenLeakageSimulator() {
           {/* Sliders Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
             {/* Agent Nodes */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
               <div className="flex justify-between text-xs font-mono mb-1">
                 <span className="text-neutral-400">Agent Nodes:</span>
                 <span className="text-white font-bold">{agentNodes}</span>
@@ -132,12 +132,12 @@ export default function EmbedTokenLeakageSimulator() {
                 step="1"
                 value={agentNodes}
                 onChange={(e) => setAgentNodes(parseInt(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-1 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-1 rounded-xl cursor-pointer"
               />
             </div>
 
             {/* Recursion Depth */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
               <div className="flex justify-between text-xs font-mono mb-1">
                 <span className="text-neutral-400">Recursion Depth:</span>
                 <span className="text-white font-bold">{recursionDepth} turns</span>
@@ -149,12 +149,12 @@ export default function EmbedTokenLeakageSimulator() {
                 step="1"
                 value={recursionDepth}
                 onChange={(e) => setRecursionDepth(parseInt(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-1 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-1 rounded-xl cursor-pointer"
               />
             </div>
 
             {/* Tool Failure Rate */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
               <div className="flex justify-between text-xs font-mono mb-1">
                 <span className="text-neutral-400">Tool Parsing Failure:</span>
                 <span className="text-amber-400 font-bold">{failureRatePct}%</span>
@@ -166,12 +166,12 @@ export default function EmbedTokenLeakageSimulator() {
                 step="5"
                 value={failureRatePct}
                 onChange={(e) => setFailureRatePct(parseInt(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-1 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-1 rounded-xl cursor-pointer"
               />
             </div>
 
             {/* Monthly Runs */}
-            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-[18px] p-3">
               <div className="flex justify-between text-xs font-mono mb-1">
                 <span className="text-neutral-400">Monthly Volume:</span>
                 <span className="text-white font-bold">{formatCompactNumber(monthlyRuns)} runs</span>
@@ -183,13 +183,13 @@ export default function EmbedTokenLeakageSimulator() {
                 step="5000"
                 value={monthlyRuns}
                 onChange={(e) => setMonthlyRuns(parseInt(e.target.value))}
-                className="w-full accent-white bg-neutral-800 h-1 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-1 rounded-xl cursor-pointer"
               />
             </div>
           </div>
 
           {/* Primary Result Banner */}
-          <div className="bg-neutral-950 border border-white/30 rounded-xl p-4 mb-4">
+          <div className="bg-neutral-950 border border-white/30 rounded-2xl p-4 mb-4">
             <div className="flex items-center justify-between text-[11px] font-mono text-white mb-1">
               <span className="flex items-center gap-1">
                 <AlertTriangle className="w-3.5 h-3.5" />
@@ -214,14 +214,14 @@ export default function EmbedTokenLeakageSimulator() {
 
           {/* 3-Col KPI Metrics */}
           <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-lg p-2.5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-2.5">
               <div className="text-[10px] font-mono text-neutral-400">Token Waste / Task</div>
               <div className="text-sm sm:text-base font-bold text-white">
                 {formatCompactNumber(results.tokenLeakagePerRun)}
               </div>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-lg p-2.5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-2.5">
               <div className="text-[10px] font-mono text-neutral-400">Cascade Risk</div>
               <div className="text-sm sm:text-base font-bold text-amber-400">
                 {results.unconstrainedCascadeRiskPct}%
@@ -229,7 +229,7 @@ export default function EmbedTokenLeakageSimulator() {
               <div className="text-[9px] text-neutral-200">FSM: 0%</div>
             </div>
 
-            <div className="bg-neutral-900/80 border border-neutral-800 rounded-lg p-2.5">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-2.5">
               <div className="text-[10px] font-mono text-neutral-400">Tail Latency Cut</div>
               <div className="text-sm sm:text-base font-bold text-white">
                 ↓ {results.latencyReductionPct}%
@@ -257,7 +257,7 @@ export default function EmbedTokenLeakageSimulator() {
           <a
             href="https://elesium.online/audit"
             target="_top"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-md transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-md transition-all duration-300"
           >
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Halt Production Token Bleed</span>

@@ -55,8 +55,8 @@ const AgentTerminal = () => {
     }, []);
 
     return (
-        <div className="bg-black border border-neutral-200 dark:border-white/10 rounded-xl p-6 font-mono text-sm overflow-hidden h-[300px] flex flex-col justify-end relative">
-            <div className="flex items-center gap-2 mb-4 absolute top-4 left-4">
+        <div className="bg-black border border-neutral-200 dark:border-white/10 rounded-[28px] p-6 md:p-7 font-mono text-sm overflow-hidden h-[300px] flex flex-col justify-end relative">
+            <div className="flex items-center gap-2 mb-4 absolute top-5 left-6">
                 <span className="text-neutral-400 text-xs">elesium_agent.sh</span>
             </div>
             <div className="space-y-2 mt-8">
@@ -64,6 +64,7 @@ const AgentTerminal = () => {
                     <motion.div 
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
+                        transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                         key={`terminal-line-${i}-${line.substring(0,5)}`}
                         className={`${line.startsWith('[SUCCESS]') || line.startsWith('[OK]') ? 'text-white font-semibold' : 'text-neutral-400'}`}
                     >
@@ -116,10 +117,10 @@ export default function AIAutomation() {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.97, y: 16 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="text-center max-w-4xl mx-auto mb-16"
                 >
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-wider mb-6">
                         <Terminal className="w-3.5 h-3.5 text-black dark:text-white" />
                         <span>Deterministic Systems &middot; Private VPC</span>
                     </div>
@@ -133,7 +134,7 @@ export default function AIAutomation() {
                     </p>
 
                     {/* Technical Overview */}
-                    <div className="answer-capsule text-left mb-10 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-3xl mx-auto">
+                    <div className="answer-capsule text-left mb-10 p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 max-w-3xl mx-auto">
                         <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
                             <Cpu className="w-4 h-4 text-black dark:text-white" />
                             Sovereign Enterprise AI Automation
@@ -147,14 +148,14 @@ export default function AIAutomation() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Initiate AI Audit (WhatsApp)</span>
                         </button>
                         <Link 
                             to="/waitlist/" 
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -167,10 +168,10 @@ export default function AIAutomation() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="mb-16"
                 >
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 sm:p-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[32px] p-6 sm:p-10">
                         <div>
                             <span className="text-xs uppercase font-semibold tracking-wider text-neutral-600 dark:text-neutral-400 mb-2 block">
                                 Beyond Generic Wrappers
@@ -189,7 +190,7 @@ export default function AIAutomation() {
                                     "Automated error handling with sovereign privacy"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
-                                        <div className="w-5 h-5 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-6 h-6 rounded-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 flex items-center justify-center flex-shrink-0">
                                             <Code2 className="w-3 h-3 text-black dark:text-white" />
                                         </div>
                                         <span>{item}</span>
@@ -210,14 +211,14 @@ export default function AIAutomation() {
                         <p className="text-sm text-neutral-600 dark:text-neutral-400">Targeted AI solutions engineered for measurable business outcomes.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                         {/* Large Tile */}
-                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
+                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-7 sm:p-8 relative overflow-hidden group flex flex-col justify-end">
                             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <Network className="w-28 h-28 text-black dark:text-white" />
                             </div>
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                <div className="w-11 h-11 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
                                     <Terminal className="w-5 h-5 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-xl font-bold text-black dark:text-white mb-2">Autonomous Multi-Agent Systems</h3>
@@ -228,9 +229,9 @@ export default function AIAutomation() {
                         </div>
 
                         {/* Standard Tile */}
-                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-7 sm:p-8 relative overflow-hidden group flex flex-col justify-end">
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                <div className="w-11 h-11 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
                                     <Zap className="w-5 h-5 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-lg font-bold text-black dark:text-white mb-2">Signal-Based Outbound</h3>
@@ -241,9 +242,9 @@ export default function AIAutomation() {
                         </div>
 
                         {/* Standard Tile */}
-                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-7 sm:p-8 relative overflow-hidden group flex flex-col justify-end">
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                <div className="w-11 h-11 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
                                     <Cpu className="w-5 h-5 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-lg font-bold text-black dark:text-white mb-2">Data ETL Pipelines</h3>
@@ -254,12 +255,12 @@ export default function AIAutomation() {
                         </div>
 
                         {/* Large Tile */}
-                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
+                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-7 sm:p-8 relative overflow-hidden group flex flex-col justify-end">
                             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <Shield className="w-28 h-28 text-black dark:text-white" />
                             </div>
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                <div className="w-11 h-11 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
                                     <Lock className="w-5 h-5 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-xl font-bold text-black dark:text-white mb-2">Private VPC &amp; Sovereign Security</h3>
@@ -296,7 +297,7 @@ export default function AIAutomation() {
                                 a: "We are an engineering firm that builds custom Python/LangGraph architectures deeply integrated into your legacy on-prem systems, mandating verified ROI before writing code."
                             }
                         ].map((faq, i) => (
-                            <div key={i} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6">
+                            <div key={i} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[24px] p-6">
                                 <h3 className="text-base font-semibold text-black dark:text-white mb-2">{faq.q}</h3>
                                 <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{faq.a}</p>
                             </div>
@@ -305,8 +306,8 @@ export default function AIAutomation() {
                 </div>
 
                 {/* Bottom CTA Card */}
-                <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
+                <div className="rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
                         <span>Sovereign Private VPC Deployment Protocol</span>
                     </div>
 
@@ -321,14 +322,14 @@ export default function AIAutomation() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                         </button>
                         <Link 
                             to="/waitlist/" 
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>

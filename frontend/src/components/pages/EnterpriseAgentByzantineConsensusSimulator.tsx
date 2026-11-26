@@ -135,7 +135,7 @@ ${results.toleranceConditionSatisfied
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-neutral-800 pb-8">
             <div className="space-y-2 max-w-3xl">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
                 <Network className="w-3.5 h-3.5 mr-1" />
                 Tool #30 · Distributed AI Consensus & Cryptography
               </div>
@@ -151,27 +151,27 @@ ${results.toleranceConditionSatisfied
             <div className="flex items-center space-x-3 shrink-0">
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="active:scale-[0.97] px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition"
+                className="active:scale-[0.97] px-3.5 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition-all duration-300"
               >
                 Currency: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition-all duration-300"
               >
                 <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Tool</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition-all duration-300"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -181,7 +181,7 @@ ${results.toleranceConditionSatisfied
         </div>
 
         {/* Status Alert Banner */}
-        <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
+        <div className={`p-4 rounded-2xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'OPTIMAL_RESILIENT'
             ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'MARGINAL_RISK'
@@ -213,7 +213,7 @@ ${results.toleranceConditionSatisfied
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm">
             <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
               <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">Federated Consensus Parameters</h2>
@@ -237,7 +237,7 @@ ${results.toleranceConditionSatisfied
                   if (byzantineNodes >= val) setByzantineNodes(Math.floor(val / 3));
                   if (secretSharingThresholdT > val) setSecretSharingThresholdT(Math.floor(val * 0.7));
                 }}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>5 (Edge Cluster)</span>
@@ -259,7 +259,7 @@ ${results.toleranceConditionSatisfied
                 step="1"
                 value={byzantineNodes}
                 onChange={e => setByzantineNodes(Number(e.target.value))}
-                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>0 (Honest Quorum)</span>
@@ -274,7 +274,7 @@ ${results.toleranceConditionSatisfied
               <select
                 value={attackVector}
                 onChange={e => setAttackVector(e.target.value as any)}
-                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="sign_flip">Sign Flipping Attack (Gradient Inversion ∇W → -∇W)</option>
                 <option value="backdoor_injection">Targeted Backdoor Injection (Covert Latent Trigger)</option>
@@ -289,7 +289,7 @@ ${results.toleranceConditionSatisfied
               <select
                 value={aggregationAlgorithm}
                 onChange={e => setAggregationAlgorithm(e.target.value as any)}
-                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="fedavg">Federated Averaging / FedAvg (Naive Mean - Zero Tolerance f=0)</option>
                 <option value="coordinate_median">Coordinate-wise Median (Resilient to f &lt; N/2)</option>
@@ -300,7 +300,7 @@ ${results.toleranceConditionSatisfied
             </div>
 
             {/* SecAgg Toggle & Threshold */}
-            <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-4">
+            <div className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Lock className="w-4 h-4 text-neutral-200" />
@@ -309,7 +309,7 @@ ${results.toleranceConditionSatisfied
                 <button
                   type="button"
                   onClick={() => setSecAggEnabled(!secAggEnabled)}
-                  className={`active:scale-[0.97] w-11 h-6 flex items-center rounded-full p-1 transition duration-300 ${
+                  className={`active:scale-[0.97] w-11 h-6 flex items-center rounded-full p-1 transition-all duration-300 duration-300 ${
                     secAggEnabled ? 'bg-white/80 justify-end' : 'bg-neutral-700 justify-start'
                   }`}
                 >
@@ -333,7 +333,7 @@ ${results.toleranceConditionSatisfied
                     step="1"
                     value={secretSharingThresholdT}
                     onChange={e => setSecretSharingThresholdT(Number(e.target.value))}
-                    className="w-full accent-white h-1 bg-neutral-800 rounded-lg cursor-pointer"
+                    className="w-full accent-white h-1 bg-neutral-800 rounded-xl cursor-pointer"
                   />
                 </div>
               )}
@@ -351,7 +351,7 @@ ${results.toleranceConditionSatisfied
                     key={dims}
                     type="button"
                     onClick={() => setGradientDimensions(dims)}
-                    className={`active:scale-[0.97] py-1.5 rounded-lg border text-xs font-mono transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-full border text-xs font-mono transition-all duration-300 ${
                       gradientDimensions === dims
                         ? 'bg-white/[0.05] border-white/30 text-white font-bold'
                         : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
@@ -367,7 +367,7 @@ ${results.toleranceConditionSatisfied
           {/* Visualization & Metrics Column (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* Real-time SVG Vector Space Scatter Plot */}
-            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm space-y-4">
               <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
                   <Activity className="w-5 h-5 text-neutral-200" />
@@ -390,7 +390,7 @@ ${results.toleranceConditionSatisfied
               </div>
 
               {/* Interactive SVG Canvas */}
-              <div className="relative w-full aspect-[16/10] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex items-center justify-center p-4">
+              <div className="relative w-full aspect-[16/10] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex items-center justify-center p-4">
                 <svg viewBox="-120 -100 240 200" className="w-full h-full">
                   {/* Grid lines */}
                   <line x1="-120" y1="0" x2="120" y2="0" stroke="#262626" strokeWidth="0.8" strokeDasharray="3,3" />
@@ -490,7 +490,7 @@ ${results.toleranceConditionSatisfied
                 </svg>
 
                 {/* Overlaid Summary Badge */}
-                <div className="absolute bottom-3 left-3 bg-neutral-900/90 border border-neutral-800 rounded-lg px-3 py-1.5 text-[11px] font-mono text-neutral-300">
+                <div className="absolute bottom-3 left-3 bg-neutral-900/90 border border-neutral-800 rounded-xl px-3 py-1.5 text-[11px] font-mono text-neutral-300">
                   L2 Gradient Deviation: <span className="text-white font-bold">{results.gradientErrorNormL2}</span>
                 </div>
               </div>
@@ -498,7 +498,7 @@ ${results.toleranceConditionSatisfied
 
             {/* Key Output Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800/80">
                 <span className="text-[11px] text-neutral-400 block mb-1">Convergence Degradation</span>
                 <span className={`text-2xl font-extrabold font-mono ${
                   results.modelConvergenceDegradationPercent < 10
@@ -512,7 +512,7 @@ ${results.toleranceConditionSatisfied
                 <span className="text-[10px] text-neutral-500 block mt-1">Accuracy loss vs clean</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800/80">
                 <span className="text-[11px] text-neutral-400 block mb-1">Poisoning Success Rate</span>
                 <span className={`text-2xl font-extrabold font-mono ${
                   results.poisoningSuccessProbabilityPercent < 5
@@ -526,7 +526,7 @@ ${results.toleranceConditionSatisfied
                 <span className="text-[10px] text-neutral-500 block mt-1">Adversary backdoor absorption</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800/80">
                 <span className="text-[11px] text-neutral-400 block mb-1">Raw Gradient Leakage</span>
                 <span className={`text-2xl font-extrabold font-mono ${
                   results.rawGradientPrivacyLeakagePercent === 0
@@ -540,7 +540,7 @@ ${results.toleranceConditionSatisfied
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800/80">
                 <span className="text-[11px] text-neutral-400 block mb-1">SecAgg Mask Overhead</span>
                 <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   {results.pairwiseBlindingOverheadKb} KB
@@ -548,7 +548,7 @@ ${results.toleranceConditionSatisfied
                 <span className="text-[10px] text-neutral-500 block mt-1">Pairwise Diffie-Hellman keys</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800/80">
                 <span className="text-[11px] text-neutral-400 block mb-1">Round Execution Latency</span>
                 <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   {results.roundLatencyMs} ms
@@ -556,7 +556,7 @@ ${results.toleranceConditionSatisfied
                 <span className="text-[10px] text-neutral-500 block mt-1">Compute + crypto verification</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800/80">
                 <span className="text-[11px] text-neutral-400 block mb-1">Annual Loss Prevented</span>
                 <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   {currency === 'INR' ? '₹' : '$'}{(results.annualLossPrevented / (currency === 'INR' ? 10000000 : 1000000)).toFixed(1)}
@@ -567,7 +567,7 @@ ${results.toleranceConditionSatisfied
             </div>
 
             {/* Turnkey Deployment Card */}
-            <div className="p-6 rounded-xl bg-neutral-950 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="p-6 rounded-[24px] bg-neutral-950 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="space-y-1 text-center sm:text-left">
                 <h4 className="text-lg font-bold text-white">Deploy Sovereign Byzantine-Tolerant Consensus</h4>
                 <p className="text-xs text-neutral-400 max-w-md">
@@ -594,7 +594,7 @@ ${results.toleranceConditionSatisfied
         </div>
 
         {/* Technical Architecture & Algorithm Reference */}
-        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-8 backdrop-blur-sm space-y-6">
+        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-8 backdrop-blur-sm space-y-6">
           <div className="border-b border-neutral-800 pb-4">
             <h3 className="text-xl font-bold text-white flex items-center space-x-2">
               <Cpu className="w-5 h-5 text-neutral-200" />
@@ -623,7 +623,7 @@ ${results.toleranceConditionSatisfied
               <p>
                 To prevent the central aggregator from inspecting raw gradients (which permits Deep Leakage from Gradients reconstruction), Secure Aggregation (SecAgg) requires every node i to add zero-sum pairwise masks s(i,j) with all peer nodes j:
               </p>
-              <div className="p-3 rounded-lg bg-neutral-950 font-mono text-[11px] text-neutral-200 border border-neutral-800">
+              <div className="p-3 rounded-[18px] bg-neutral-950 font-mono text-[11px] text-neutral-200 border border-neutral-800">
                 {"\\sum_{i \\in U_1} x_i^{masked} = \\sum_{i \\in U_1} x_i + \\sum_{i, j \\in U_1, i < j} (s_{i,j} - s_{j,i}) = \\sum_{i \\in U_1} x_i"}
               </div>
               <p className="text-neutral-400">
@@ -634,7 +634,7 @@ ${results.toleranceConditionSatisfied
         </div>
 
         {/* Technical FAQ Accordion */}
-        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-8 backdrop-blur-sm space-y-4">
+        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-8 backdrop-blur-sm space-y-4">
           <h3 className="text-lg font-bold text-white mb-2">Frequently Asked Technical Questions</h3>
           <div className="space-y-3">
             {[
@@ -651,10 +651,10 @@ ${results.toleranceConditionSatisfied
                 a: "Section 8(4) of the DPDP Act mandates technical safeguards preventing unauthorized disclosure or exfiltration of personal data. Unmasked gradients can be reversed via gradient inversion attacks to reconstruct patient health records or financial transactions. SecAgg cryptographically ensures that no server or peer ever observes plaintext gradients, ensuring full statutory compliance."
               }
             ].map((item, idx) => (
-              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
                 >
                   <span>{item.q}</span>
                   <ChevronDown className={`w-4 h-4 text-neutral-400 transform transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
@@ -673,7 +673,7 @@ ${results.toleranceConditionSatisfied
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] max-w-lg w-full p-6 space-y-4">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-base font-bold text-white flex items-center space-x-2">
                 <Code className="w-4 h-4 text-neutral-200" />
@@ -681,7 +681,7 @@ ${results.toleranceConditionSatisfied
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-full"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -697,7 +697,7 @@ ${results.toleranceConditionSatisfied
               />
               <button
                 onClick={copyEmbedCode}
-                className="active:scale-[0.97] absolute top-2 right-2 px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-[11px] font-semibold flex items-center space-x-1 transition shadow"
+                className="active:scale-[0.97] absolute top-2 right-2 px-3 py-1.5 rounded-full bg-white hover:bg-neutral-200 text-black text-[11px] font-semibold flex items-center space-x-1 transition-all duration-300 shadow"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Code'}</span>

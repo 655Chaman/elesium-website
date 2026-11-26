@@ -33,7 +33,7 @@ export default function EmbedAgentAsyncCheckpointingSimulator() {
   const results = useMemo(() => calculateAsyncCheckpointing(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Asynchronous GPU Checkpointing Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-async-checkpointing-simulator" />
@@ -54,7 +54,7 @@ export default function EmbedAgentAsyncCheckpointingSimulator() {
           href="https://elesium.online/tools/enterprise-agent-async-checkpointing-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-colors"
+          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-all duration-300"
         >
           Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>
@@ -67,7 +67,7 @@ export default function EmbedAgentAsyncCheckpointingSimulator() {
           <select
             value={modelArchitecture}
             onChange={(e) => setModelArchitecture(e.target.value as AsyncCheckpointModelArchitecture)}
-            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-2 text-white font-mono"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-2 text-white font-mono"
           >
             <option value="sovereign_100b_agent">Sovereign 100B Autonomous Agent (1.8 TB State)</option>
             <option value="llama_3_1_70b">Meta Llama-3.1 70B (1.26 TB State)</option>
@@ -82,7 +82,7 @@ export default function EmbedAgentAsyncCheckpointingSimulator() {
             <select
               value={checkpointStrategy}
               onChange={(e) => setCheckpointStrategy(e.target.value as CheckpointStrategy)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value="non_blocking_cuda_pinned_host">Non-Blocking CUDA Pinned RAM</option>
               <option value="in_flight_rdma_roce">In-Flight RDMA RoCE-v2</option>
@@ -95,7 +95,7 @@ export default function EmbedAgentAsyncCheckpointingSimulator() {
             <select
               value={clusterNodesCount}
               onChange={(e) => setClusterNodesCount(Number(e.target.value))}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value={4}>4 Nodes (32 GPUs)</option>
               <option value={8}>8 Nodes (64 GPUs)</option>
@@ -107,7 +107,7 @@ export default function EmbedAgentAsyncCheckpointingSimulator() {
       </div>
 
       {/* Output Telemetry Card */}
-      <div className="bg-neutral-950/80 border border-neutral-800 rounded-lg p-3 font-mono text-xs space-y-2 mb-3">
+      <div className="bg-neutral-950/80 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs space-y-2 mb-3">
         <div className="flex justify-between items-center text-neutral-400">
           <span>Blocking Checkpoint Pause:</span>
           <span className={results.checkpointPauseMs < 100 ? 'text-white font-bold' : 'text-red-400 font-bold'}>

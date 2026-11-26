@@ -55,7 +55,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 28 }}
             className="relative z-10 bg-white dark:bg-black text-gray-900 dark:text-white"
         >
             <Helmet>
@@ -86,7 +86,7 @@ export default function Home() {
             {/* Technical Architecture Overview */}
             <section className="py-16 md:py-20 border-b border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                 <div className="max-w-6xl mx-auto px-6">
-                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                    <div className="p-8 sm:p-10 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                         <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
                             <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-widest font-semibold">
                                 Technical Architecture Standards
@@ -112,8 +112,8 @@ export default function Home() {
                         </div>
 
                         {/* Empirical Hardware & Latency Specifications Matrix */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-neutral-200 dark:border-white/10">
-                            <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 items-stretch pt-6 border-t border-neutral-200 dark:border-white/10">
+                            <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                                 <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-1">
                                     <Zap className="w-3.5 h-3.5 text-black dark:text-white" />
                                     <span>Inference Latency</span>
@@ -121,7 +121,7 @@ export default function Home() {
                                 <div className="text-xl font-bold font-mono text-black dark:text-white">&lt; 200ms TTFT</div>
                                 <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-1">FP8 GEMM + PagedAttention</div>
                             </div>
-                            <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                                 <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-1">
                                     <Lock className="w-3.5 h-3.5 text-black dark:text-white" />
                                     <span>Data Residency</span>
@@ -129,7 +129,7 @@ export default function Home() {
                                 <div className="text-xl font-bold font-mono text-black dark:text-white">100% Air-Gapped</div>
                                 <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-1">DPDP Act 2023 Sec 8(5)</div>
                             </div>
-                            <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                                 <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-1">
                                     <Server className="w-3.5 h-3.5 text-black dark:text-white" />
                                     <span>Compute Sovereign</span>
@@ -137,7 +137,7 @@ export default function Home() {
                                 <div className="text-xl font-bold font-mono text-black dark:text-white">Yotta / CtrlS</div>
                                 <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-1">Tier-IV Indian Datacenters</div>
                             </div>
-                            <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                                 <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-1">
                                     <Scale className="w-3.5 h-3.5 text-black dark:text-white" />
                                     <span>Contractual SLA</span>
@@ -171,11 +171,13 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 items-stretch">
                         {/* Tier 1 */}
-                        <div className="p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
+                        <div className="p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Tier 01</span>
+                                <div className="flex items-center justify-between gap-2 mb-1 min-h-[24px]">
+                                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Tier 01</span>
+                                </div>
                                 <h3 className="text-xl font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
                                 <div className="text-3xl font-bold text-black dark:text-white font-mono mb-1">
                                     ₹1,50,000 <span className="text-sm font-normal text-neutral-500"> - ₹3,50,000</span>
@@ -202,21 +204,21 @@ export default function Home() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-3 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-3.5 px-6 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Initiate Tier 1 Sprint &rarr;
                             </button>
                         </div>
 
                         {/* Tier 2 (Highlighted) */}
-                        <div className="p-8 rounded-xl border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
-                            <div className="mb-3">
-                                <span className="inline-block px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-md uppercase tracking-wider">
-                                    Most Requested Deployment
-                                </span>
-                            </div>
+                        <div className="p-8 rounded-[28px] border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
                             <div>
-                                <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Tier 02</span>
+                                <div className="flex items-center justify-between gap-2 mb-1 min-h-[24px]">
+                                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Tier 02</span>
+                                    <span className="inline-block px-3 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
+                                        Most Requested
+                                    </span>
+                                </div>
                                 <h3 className="text-xl font-bold text-black dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
                                 <div className="text-3xl font-bold text-black dark:text-white font-mono mb-1">
                                     ₹6,00,000 <span className="text-sm font-normal text-neutral-500"> - ₹15,00,000</span>
@@ -243,16 +245,18 @@ export default function Home() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-3.5 px-4 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-3.5 px-6 rounded-full bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Deploy Multi-Agent Suite &rarr;
                             </button>
                         </div>
 
                         {/* Tier 3 */}
-                        <div className="p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
+                        <div className="p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Tier 03</span>
+                                <div className="flex items-center justify-between gap-2 mb-1 min-h-[24px]">
+                                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Tier 03</span>
+                                </div>
                                 <h3 className="text-xl font-bold text-black dark:text-white mt-1 mb-2">Autonomous AI Engineering Pod</h3>
                                 <div className="text-3xl font-bold text-black dark:text-white font-mono mb-1">
                                     ₹4,50,000 <span className="text-sm font-normal text-neutral-500">/ month</span>
@@ -279,7 +283,7 @@ export default function Home() {
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-3 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
+                                className="w-full py-3.5 px-6 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Retain Engineering Pod &rarr;
                             </button>
@@ -304,7 +308,7 @@ export default function Home() {
                         {homeFaqs.map((faq, idx) => (
                             <div 
                                 key={idx}
-                                className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-white dark:bg-black"
+                                className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-black"
                             >
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -316,10 +320,11 @@ export default function Home() {
                                 <AnimatePresence initial={false}>
                                     {openFaq === idx && (
                                         <motion.div
+                                            data-open="true"
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                                             className="accordion-panel overflow-hidden"
                                         >
                                             <p className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
@@ -352,7 +357,7 @@ export default function Home() {
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-12 px-8 rounded-lg bg-white text-black hover:bg-neutral-200 font-bold text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2 group"
+                            className="w-full sm:w-auto h-12 px-8 rounded-full bg-white text-black hover:bg-neutral-200 font-bold text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2 group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current text-black" />
                             <span>Initiate WhatsApp Audit (+91 83173 29312)</span>
@@ -360,7 +365,7 @@ export default function Home() {
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-12 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-medium text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-12 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-medium text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>

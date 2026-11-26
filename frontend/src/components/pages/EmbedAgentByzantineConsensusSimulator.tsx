@@ -56,7 +56,7 @@ export default function EmbedAgentByzantineConsensusSimulator() {
         </div>
 
         {/* Mini SVG Visualizer */}
-        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex items-center justify-center p-2">
+        <div className="relative w-full aspect-[2/1] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex items-center justify-center p-2">
           <svg viewBox="-120 -80 240 160" className="w-full h-full">
             <line x1="-120" y1="0" x2="120" y2="0" stroke="#262626" strokeWidth="0.8" strokeDasharray="3,3" />
             <line x1="0" y1="-80" x2="0" y2="80" stroke="#262626" strokeWidth="0.8" strokeDasharray="3,3" />
@@ -100,7 +100,7 @@ export default function EmbedAgentByzantineConsensusSimulator() {
         </div>
 
         {/* Sliders */}
-        <div className="space-y-3 bg-neutral-900/50 p-3 rounded-xl border border-neutral-800/80">
+        <div className="space-y-3 bg-neutral-900/50 p-3 rounded-[18px] border border-neutral-800/80">
           <div>
             <div className="flex justify-between text-xs mb-1">
               <span className="text-neutral-300">Total Nodes (N):</span>
@@ -156,7 +156,7 @@ export default function EmbedAgentByzantineConsensusSimulator() {
               <button
                 type="button"
                 onClick={() => setSecAggEnabled(!secAggEnabled)}
-                className={`active:scale-[0.97] w-full py-1 rounded text-[11px] font-mono border transition ${
+                className={`active:scale-[0.97] w-full py-1 rounded text-[11px] font-mono border transition-all duration-300 ${
                   secAggEnabled
                     ? 'bg-white/[0.05] border-white/30 text-white font-bold'
                     : 'bg-neutral-950 border-neutral-800 text-neutral-400'
@@ -170,19 +170,19 @@ export default function EmbedAgentByzantineConsensusSimulator() {
 
         {/* Results Matrix */}
         <div className="grid grid-cols-3 gap-2">
-          <div className="p-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-center">
+          <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-center">
             <span className="text-[10px] text-neutral-400 block">Degradation</span>
             <span className="text-sm font-bold font-mono text-neutral-200">
               {results.modelConvergenceDegradationPercent}%
             </span>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-center">
+          <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-center">
             <span className="text-[10px] text-neutral-400 block">Poisoning Risk</span>
             <span className="text-sm font-bold font-mono text-neutral-200">
               {results.poisoningSuccessProbabilityPercent}%
             </span>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-center">
+          <div className="p-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-center">
             <span className="text-[10px] text-neutral-400 block">DPDP Score</span>
             <span className="text-sm font-bold font-mono text-white">
               {results.statutoryComplianceScore}/100
@@ -196,7 +196,7 @@ export default function EmbedAgentByzantineConsensusSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[10px] text-neutral-500 hover:text-white transition"
+            className="text-[10px] text-neutral-500 hover:text-white transition-all duration-300"
           >
             Powered by Elesium Sovereign Enterprise AI
           </a>

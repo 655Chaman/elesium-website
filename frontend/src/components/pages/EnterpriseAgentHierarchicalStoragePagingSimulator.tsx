@@ -136,27 +136,27 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
       <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-800/80 bg-gradient-to-b from-white/[0.03] via-transparent to-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono">
               <Database className="w-3.5 h-3.5" />
               TOOL #71 · HIERARCHICAL STORAGE &amp; PAGING ENGINE
             </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-all duration-300"
               >
                 <Code className="w-3.5 h-3.5" /> Embed Widget
               </button>
               <button
                 onClick={resetDefaults}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-all duration-300"
               >
                 <RotateCcw className="w-3.5 h-3.5" /> Reset
               </button>
@@ -178,12 +178,12 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
           
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 backdrop-blur-sm space-y-5">
+            <div className="p-5 rounded-[24px] bg-neutral-900/60 border border-neutral-800 backdrop-blur-sm space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
                 <span className="text-sm font-semibold text-neutral-200 flex items-center gap-2">
                   <Sliders className="w-4 h-4 text-neutral-200" /> Storage Topology Controls
                 </span>
-                <div className="flex items-center gap-1 bg-neutral-800/80 p-0.5 rounded-lg border border-neutral-700/60 text-[11px] font-mono">
+                <div className="flex items-center gap-1 bg-neutral-800/80 p-0.5 rounded-full border border-neutral-700/60 text-[11px] font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400'}`}
@@ -268,7 +268,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                     value={totalContextTokens}
                     onChange={(e) => setTotalContextTokens(Number(e.target.value))}
                     aria-label="Total Context Length"
-                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-full appearance-none cursor-pointer"
                   />
                 </div>
 
@@ -285,7 +285,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                     value={hbmAllocationGb}
                     onChange={(e) => setHbmAllocationGb(Number(e.target.value))}
                     aria-label="Hot HBM Allocation"
-                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-full appearance-none cursor-pointer"
                   />
                 </div>
 
@@ -302,7 +302,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                     value={cxlAllocationGb}
                     onChange={(e) => setCxlAllocationGb(Number(e.target.value))}
                     aria-label="Warm CXL 3.0 Pool"
-                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-full appearance-none cursor-pointer"
                   />
                 </div>
 
@@ -319,7 +319,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                     value={nvmeArrayThroughputGbps}
                     onChange={(e) => setNvmeArrayThroughputGbps(Number(e.target.value))}
                     aria-label="Cold NVMe Array Throughput"
-                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-full appearance-none cursor-pointer"
                   />
                 </div>
               </div>
@@ -331,7 +331,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
           <div className="lg:col-span-7 space-y-6">
             {/* Primary Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="text-[11px] text-neutral-400 font-medium">KV Cache Footprint</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.totalKvFootprintGb} <span className="text-xs text-neutral-400 font-normal">GB</span>
@@ -339,7 +339,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                 <div className="text-[10px] text-neutral-500 mt-1">Total Context Footprint</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="text-[11px] text-neutral-400 font-medium">Page Fault Latency</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.averagePageFaultLatencyMs} <span className="text-xs text-neutral-400 font-normal">ms</span>
@@ -347,7 +347,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                 <div className="text-[10px] text-neutral-200 mt-1">Sub-10ms Servicing</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="text-[11px] text-neutral-400 font-medium">Concurrent Streams</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.sustainableConcurrentStreams} <span className="text-xs text-neutral-400 font-normal">streams</span>
@@ -355,7 +355,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
                 <div className="text-[10px] text-neutral-200 mt-1">Per 8-GPU Node</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800">
                 <div className="text-[11px] text-neutral-400 font-medium">Hardware Savings</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.formattedHardwareSavings}
@@ -365,7 +365,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
             </div>
 
             {/* Architecture Telemetry Diagram */}
-            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-4">
+            <div className="p-5 rounded-[24px] bg-neutral-900/60 border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-xs font-semibold text-neutral-200 flex items-center gap-2">
                   <Activity className="w-4 h-4 text-neutral-200" /> Three-Tier Storage Allocation Telemetry
@@ -377,7 +377,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
 
               {/* Progress Bar of Memory Tiers */}
               <div className="space-y-2">
-                <div className="h-4 w-full bg-neutral-950 rounded-lg overflow-hidden flex border border-neutral-800">
+                <div className="h-4 w-full bg-neutral-950 rounded-[24px] overflow-hidden flex border border-neutral-800">
                   <div
                     style={{ width: `${results.hbmResidentPercent}%` }}
                     className="bg-white/80 h-full transition-all duration-300"
@@ -408,7 +408,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
               </div>
 
               {/* Architectural Synthesis Card */}
-              <div className="p-4 rounded-xl bg-neutral-950/80 border border-neutral-800 text-xs space-y-2 text-neutral-300 leading-relaxed">
+              <div className="p-4 rounded-2xl bg-neutral-950/80 border border-neutral-800 text-xs space-y-2 text-neutral-300 leading-relaxed">
                 <div className="font-semibold text-neutral-100">Zero-Stall Asynchronous Paging Verified</div>
                 <p>
                   Asynchronous GPUDirect DMA overlap eliminates Host-to-Device transfer stalls, sustaining an effective Inter-Token Latency of{' '}
@@ -428,14 +428,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
             </div>
 
             {/* FAQs Accordion */}
-            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-3">
+            <div className="p-5 rounded-[24px] bg-neutral-900/60 border border-neutral-800 space-y-3">
               <h3 className="text-xs font-semibold text-neutral-200">Architectural FAQs</h3>
               <div className="space-y-2">
                 {faqs.map((faq, idx) => (
-                  <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
+                  <div key={idx} className="border border-neutral-800 rounded-[24px] overflow-hidden">
                     <button
                       onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="active:scale-[0.97] w-full text-left p-3 text-xs font-medium text-neutral-200 flex justify-between items-center bg-neutral-950/40 hover:bg-neutral-950/80 transition-colors"
+                      className="active:scale-[0.97] w-full text-left p-3 text-xs font-medium text-neutral-200 flex justify-between items-center bg-neutral-950/40 hover:bg-neutral-950/80 transition-all duration-300"
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
@@ -467,8 +467,8 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
           </div>
           <div className="max-w-xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -481,7 +481,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -497,7 +497,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-[24px] max-w-lg w-full p-6 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                 <Code className="w-4 h-4 text-neutral-200" /> Embed Simulator Widget

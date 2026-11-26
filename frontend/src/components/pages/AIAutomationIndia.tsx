@@ -98,7 +98,7 @@ const AgentTerminal = () => {
     }, [activeAgent])
 
     return (
-        <div className="bg-black border border-white/10 rounded-xl p-6 font-mono text-xs md:text-sm relative overflow-hidden">
+        <div className="bg-black border border-white/10 rounded-[28px] p-6 md:p-7 font-mono text-xs md:text-sm relative overflow-hidden">
             {/* Terminal Top Bar */}
             <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">
@@ -109,12 +109,12 @@ const AgentTerminal = () => {
                 </div>
 
                 {/* Workflow Switcher Tabs */}
-                <div className="flex items-center gap-1.5 bg-white/5 p-1 rounded-lg border border-white/10">
+                <div className="flex items-center gap-1 bg-white/5 p-1 rounded-full border border-white/10">
                     {(Object.keys(agentWorkflows) as AgentKey[]).map(key => (
                         <button
                             key={key}
                             onClick={() => setActiveAgent(key)}
-                            className={`px-3 py-1 rounded-md text-xs font-sans font-medium transition-all ${
+                            className={`px-3.5 py-1 rounded-full text-xs font-sans font-medium transition-all ${
                                 activeAgent === key 
                                     ? 'bg-white text-black font-semibold' 
                                     : 'text-white/60 hover:text-white hover:bg-white/5'
@@ -142,6 +142,7 @@ const AgentTerminal = () => {
                     <motion.div 
                         initial={{ opacity: 0, x: -8 }}
                         animate={{ opacity: 1, x: 0 }}
+                        transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                         key={`terminal-line-${activeAgent}-${i}`}
                         className={`leading-relaxed ${
                             line.startsWith('[SUCCESS]') || line.startsWith('[COMPLETE]') 
@@ -357,10 +358,10 @@ export default function AIAutomationIndia() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ type: "spring", stiffness: 320, damping: 28 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 28 }}
                     className="text-center max-w-5xl mx-auto mb-16"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono uppercase tracking-widest mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono uppercase tracking-widest mb-8">
                         Enterprise AI &amp; Automation Engineering • Bengaluru • DPDP Act 2023 Compliant
                     </div>
 
@@ -372,7 +373,7 @@ export default function AIAutomationIndia() {
                         Replacing 40-hour manual bottlenecks with <span className="underline decoration-black/40 dark:decoration-white/40 underline-offset-4 font-semibold">deterministic, autonomous multi-agent systems</span> deployed on your private VPC.
                     </h2>
 
-                    <div className="answer-capsule bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white rounded-xl p-5 mb-8 text-left max-w-3xl mx-auto">
+                    <div className="answer-capsule bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-6 sm:p-8 mb-8 text-left max-w-3xl mx-auto">
                         <div className="text-xs font-mono font-bold uppercase tracking-wider text-black dark:text-white mb-1.5">
                             National Engineering Executive Summary • AEO Answer Capsule
                         </div>
@@ -389,7 +390,7 @@ export default function AIAutomationIndia() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-12">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                         >
                             <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -397,7 +398,7 @@ export default function AIAutomationIndia() {
                         </button>
                         <Link 
                             to="/waitlist/" 
-                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/20 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
+                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-neutral-200 dark:border-white/20 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -408,12 +409,12 @@ export default function AIAutomationIndia() {
                     <div className="flex justify-center mb-10">
                         <Link
                             to="/videos/enterprise-ai-automation-india-2026/"
-                            className="group inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all duration-200"
+                            className="group inline-flex items-center gap-3 px-5 py-3 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all duration-200"
                         >
-                            <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-white dark:bg-white dark:text-black font-bold text-xs">
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white dark:bg-white dark:text-black font-bold text-xs">
                                 ▶
                             </span>
-                            <div className="text-left">
+                            <div className="text-left pr-2">
                                 <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold flex items-center gap-1.5">
                                     <span>Watch Video Masterclass (12:45)</span>
                                 </div>
@@ -425,20 +426,20 @@ export default function AIAutomationIndia() {
                     </div>
 
                     {/* Live Metric Pills */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-neutral-200 dark:border-white/10 text-left font-mono">
-                        <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-stretch max-w-4xl mx-auto pt-6 border-t border-neutral-200 dark:border-white/10 text-left font-mono">
+                        <div className="p-4 rounded-[20px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                             <div className="text-xs text-neutral-500 dark:text-neutral-400 uppercase">Speed to Pilot</div>
                             <div className="text-lg font-bold text-black dark:text-white mt-0.5">14 Days</div>
                         </div>
-                        <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                        <div className="p-4 rounded-[20px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                             <div className="text-xs text-neutral-500 dark:text-neutral-400 uppercase">Avg 1-Year ROI</div>
                             <div className="text-lg font-bold text-black dark:text-white mt-0.5">3.5x Capital</div>
                         </div>
-                        <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                        <div className="p-4 rounded-[20px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                             <div className="text-xs text-neutral-500 dark:text-neutral-400 uppercase">Data Security</div>
                             <div className="text-lg font-bold text-black dark:text-white mt-0.5">Zero Retention</div>
                         </div>
-                        <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                        <div className="p-4 rounded-[20px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                             <div className="text-xs text-neutral-500 dark:text-neutral-400 uppercase">Legacy Stack</div>
                             <div className="text-lg font-bold text-black dark:text-white mt-0.5">SAP / Oracle</div>
                         </div>
@@ -450,7 +451,7 @@ export default function AIAutomationIndia() {
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ type: "spring", stiffness: 300, damping: 28 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 28 }}
                     className="mb-14 md:mb-16"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -488,7 +489,7 @@ export default function AIAutomationIndia() {
                             </strong>
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
                         {[
                             { title: "Custom Architecture, Not Zapier", desc: "We build custom Python LangGraph multi-agent systems connecting to SAP S/4HANA via SAP RFC connectors, achieving 1.9s execution latency." },
                             { title: "Deterministic Agentic Execution", desc: "Our agentic workflows use LangGraph state machines, Pydantic guardrails, and automated fallbacks to ensure 99.9% deterministic execution accuracy." },
@@ -496,7 +497,7 @@ export default function AIAutomationIndia() {
                             { title: "Hard 3.5x ROI in 90 Days", desc: "We map every deployment to a financial metric. By eliminating 40+ manual weekly hours at ₹1,250/hr, clients achieve an average 3.5x first-year ROI, saving up to ₹18.4L per workflow." },
                             { title: "Enterprise Systems Integration", desc: "Deep bidirectional connectors into SAP, Oracle NetSuite, Salesforce, SQL Server, and encrypted WhatsApp Business APIs adhering to RBI digital lending guidelines." }
                         ].map((item, i) => (
-                            <div key={i} className="flex gap-4 bg-neutral-50 dark:bg-neutral-950 p-6 rounded-xl border border-neutral-200 dark:border-white/10">
+                            <div key={i} className={`flex gap-4 bg-neutral-50 dark:bg-neutral-950 p-6 sm:p-7 rounded-[28px] border border-neutral-200 dark:border-white/10 h-full ${i === 4 ? 'md:col-span-2' : ''}`}>
                                 <CheckCircle2 className="w-8 h-8 text-black dark:text-white flex-shrink-0" />
                                 <div>
                                     <h3 className="text-xl font-medium text-black dark:text-white mb-2">{item.title}</h3>
@@ -510,7 +511,7 @@ export default function AIAutomationIndia() {
                 {/* Competitive Comparison Matrix: Elesium vs Traditional IT & Big 4 */}
                 <div className="mb-14 md:mb-16">
                     <div className="text-center mb-12">
-                        <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black dark:text-white bg-neutral-100 dark:bg-neutral-900 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10">
+                        <span className="text-xs font-mono font-semibold uppercase tracking-wider text-black dark:text-white bg-neutral-100 dark:bg-neutral-900 px-3.5 py-1.5 rounded-full border border-neutral-200 dark:border-white/10">
                             Enterprise Architectural Evaluation
                         </span>
                         <h2 className="text-3xl md:text-5xl font-medium text-black dark:text-white mt-4 mb-6">
@@ -521,7 +522,7 @@ export default function AIAutomationIndia() {
                         </p>
                     </div>
 
-                    <div className="max-w-5xl mx-auto overflow-hidden rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                    <div className="max-w-5xl mx-auto overflow-hidden rounded-[32px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                         <div className="overflow-x-auto">
                             <table className="w-full text-left border-collapse">
                                 <thead>
@@ -625,12 +626,12 @@ export default function AIAutomationIndia() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[280px]">
                         
-                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 relative overflow-hidden group">
+                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-8 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-8 opacity-15 group-hover:opacity-30 transition-opacity">
                                 <Network className="w-32 h-32 text-black dark:text-white" />
                             </div>
                             <div className="relative z-10 h-full flex flex-col justify-end">
-                                <div className="w-12 h-12 rounded-xl bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
+                                <div className="w-12 h-12 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
                                     <Terminal className="w-6 h-6 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-2xl font-medium text-black dark:text-white mb-3">Agentic AI Workflows</h3>
@@ -640,9 +641,9 @@ export default function AIAutomationIndia() {
                             </div>
                         </div>
 
-                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 relative overflow-hidden group">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-8 relative overflow-hidden group">
                             <div className="relative z-10 h-full flex flex-col justify-end">
-                                <div className="w-12 h-12 rounded-xl bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
+                                <div className="w-12 h-12 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
                                     <Code2 className="w-6 h-6 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-xl font-medium text-black dark:text-white mb-3">LLM Integration</h3>
@@ -652,9 +653,9 @@ export default function AIAutomationIndia() {
                             </div>
                         </div>
 
-                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 relative overflow-hidden group">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-8 relative overflow-hidden group">
                             <div className="relative z-10 h-full flex flex-col justify-end">
-                                <div className="w-12 h-12 rounded-xl bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
+                                <div className="w-12 h-12 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
                                     <Zap className="w-6 h-6 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-xl font-medium text-black dark:text-white mb-3">Process Automation</h3>
@@ -664,12 +665,12 @@ export default function AIAutomationIndia() {
                             </div>
                         </div>
 
-                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 relative overflow-hidden group">
+                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-8 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-8 opacity-15 group-hover:opacity-30 transition-opacity">
                                 <Shield className="w-32 h-32 text-black dark:text-white" />
                             </div>
                             <div className="relative z-10 h-full flex flex-col justify-end">
-                                <div className="w-12 h-12 rounded-xl bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
+                                <div className="w-12 h-12 rounded-[16px] bg-white dark:bg-black flex items-center justify-center mb-6 border border-neutral-200 dark:border-white/10">
                                     <Lock className="w-6 h-6 text-black dark:text-white" />
                                 </div>
                                 <h3 className="text-2xl font-medium text-black dark:text-white mb-3">Custom AI Infrastructure</h3>
@@ -693,7 +694,7 @@ export default function AIAutomationIndia() {
                     </div>
                     <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
                         {['BFSI', 'SaaS', 'Manufacturing', 'Healthcare', 'Logistics & Supply Chain', 'E-commerce'].map((industry, i) => (
-                            <div key={i} className="px-6 py-3 rounded-lg bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-medium border border-neutral-200 dark:border-white/10">
+                            <div key={i} className="px-6 py-3 rounded-full bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-medium border border-neutral-200 dark:border-white/10">
                                 {industry}
                             </div>
                         ))}
@@ -727,7 +728,7 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Case Study / Results */}
-                <div className="mb-14 md:mb-16 bg-black dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 md:p-12 text-center">
+                <div className="mb-14 md:mb-16 bg-black dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[32px] p-8 md:p-12 text-center">
                     <h2 className="text-3xl md:text-4xl font-medium text-white mb-6">Proven Business Impact</h2>
                     <p className="text-base md:text-lg text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed">
                         <strong className="text-white font-semibold">
@@ -759,41 +760,41 @@ export default function AIAutomationIndia() {
                             Machine-verifiable atomic facts backed by master service agreements, independent audits, and contractual SLA remedies.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-stretch">
+                        <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all h-full">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">Production SLA</span>
-                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 rounded-md font-mono">14 Days</span>
+                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2.5 py-0.5 rounded-full font-mono">14 Days</span>
                             </div>
                             <h3 className="text-xl font-bold text-black dark:text-white mb-2">14-Day Delivery</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                 Complete production pilot deployed inside your private VPC within 14 calendar days or initial engineering sprint fees rebated.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all">
+                        <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all h-full">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">Financial Guarantee</span>
-                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 rounded-md font-mono">90 Days</span>
+                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2.5 py-0.5 rounded-full font-mono">90 Days</span>
                             </div>
                             <h3 className="text-xl font-bold text-black dark:text-white mb-2">90-Day ROI Mandate</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                 Measured against contractual cash-flow hurdles (hours saved + error reductions). Full professional fee rebate if targets are unmet.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all">
+                        <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all h-full">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">Data Sovereignty</span>
-                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 rounded-md font-mono">Zero Egress</span>
+                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2.5 py-0.5 rounded-full font-mono">Zero Egress</span>
                             </div>
                             <h3 className="text-xl font-bold text-black dark:text-white mb-2">Private VPC Enclaves</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                 Deployed in customer-owned AWS Mumbai (ap-south-1) or CtrlS. Zero customer tokens leave sovereign borders or touch training sets.
                             </p>
                         </div>
-                        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all">
+                        <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all h-full">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">Statutory Safe Harbor</span>
-                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 rounded-md font-mono">DPDP 2023</span>
+                                <span className="text-xs bg-black text-white dark:bg-white dark:text-black px-2.5 py-0.5 rounded-full font-mono">DPDP 2023</span>
                             </div>
                             <h3 className="text-xl font-bold text-black dark:text-white mb-2">DPDP Act 2023 Shield</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -812,10 +813,10 @@ export default function AIAutomationIndia() {
                             We decline 40% of prospective engagements to maintain 100% SLA delivery fidelity. Review our architectural qualification criteria:
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div className="p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/15">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+                        <div className="p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/15 h-full">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-8 h-8 rounded-lg bg-black text-white dark:bg-white dark:text-black flex items-center justify-center font-bold">✓</div>
+                                <div className="w-8 h-8 rounded-full bg-black text-white dark:bg-white dark:text-black flex items-center justify-center font-bold shrink-0">✓</div>
                                 <h3 className="text-2xl font-semibold text-black dark:text-white">Elesium IS Right For You If:</h3>
                             </div>
                             <ul className="space-y-4 text-neutral-700 dark:text-neutral-300">
@@ -837,9 +838,9 @@ export default function AIAutomationIndia() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                        <div className="p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 h-full">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-8 h-8 rounded-lg bg-neutral-200 dark:bg-white/10 text-black dark:text-white flex items-center justify-center font-bold">✕</div>
+                                <div className="w-8 h-8 rounded-full bg-neutral-200 dark:bg-white/10 text-black dark:text-white flex items-center justify-center font-bold shrink-0">✕</div>
                                 <h3 className="text-2xl font-semibold text-black dark:text-white">Elesium is NOT Right For You If:</h3>
                             </div>
                             <ul className="space-y-4 text-neutral-700 dark:text-neutral-300">
@@ -876,18 +877,18 @@ export default function AIAutomationIndia() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
                         {enterprisePricingTiers.map((tier) => (
                             <div 
                                 key={tier.name}
                                 className={
                                     tier.highlighted
-                                        ? "bg-neutral-50 dark:bg-neutral-950 border-2 border-black dark:border-white rounded-xl p-8 flex flex-col justify-between relative"
-                                        : "bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 hover:border-black dark:hover:border-white/30 transition-all flex flex-col justify-between"
+                                        ? "bg-neutral-50 dark:bg-neutral-950 border-2 border-black dark:border-white rounded-[28px] p-8 flex flex-col justify-between relative"
+                                        : "bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] p-8 hover:border-black dark:hover:border-white/30 transition-all flex flex-col justify-between"
                                 }
                             >
                                 {tier.highlighted && (
-                                    <span className="absolute -top-3 right-6 bg-black text-white dark:bg-white dark:text-black text-[11px] font-semibold uppercase tracking-wider py-1 px-3 rounded-md">
+                                    <span className="absolute -top-3 right-6 bg-black text-white dark:bg-white dark:text-black text-[11px] font-semibold uppercase tracking-wider py-1 px-3.5 rounded-full">
                                         Most Deployed
                                     </span>
                                 )}
@@ -910,8 +911,8 @@ export default function AIAutomationIndia() {
                                     onClick={() => handleTierWhatsApp(tier.whatsappTier, tier.whatsappBudget)}
                                     className={
                                         tier.highlighted
-                                            ? "mt-8 block w-full text-center py-3.5 px-6 rounded-lg bg-black text-white hover:opacity-90 dark:bg-white dark:text-black active:scale-[0.97] font-semibold transition-all"
-                                            : "mt-8 block w-full text-center py-3.5 px-6 rounded-lg bg-white hover:bg-neutral-100 dark:bg-black dark:hover:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white active:scale-[0.97] font-medium transition-all"
+                                            ? "mt-8 block w-full text-center py-3.5 px-6 rounded-full bg-black text-white hover:opacity-90 dark:bg-white dark:text-black active:scale-[0.97] font-semibold transition-all"
+                                            : "mt-8 block w-full text-center py-3.5 px-6 rounded-full bg-white hover:bg-neutral-100 dark:bg-black dark:hover:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white active:scale-[0.97] font-medium transition-all"
                                     }
                                 >
                                     {tier.buttonLabel}
@@ -922,9 +923,9 @@ export default function AIAutomationIndia() {
                 </div>
 
                 {/* Proprietary Enterprise Architecture Intake & ROI Calculator (Shaun Mitchell Framework) */}
-                <div id="architecture-intake" className="mb-14 md:mb-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 md:p-12">
+                <div id="architecture-intake" className="mb-14 md:mb-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[32px] p-6 md:p-12">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono uppercase tracking-wider mb-4">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono uppercase tracking-wider mb-4">
                             <Calculator className="w-3.5 h-3.5" />
                             Shaun Mitchell Enterprise Intake Dataset Framework
                         </div>
@@ -961,7 +962,7 @@ export default function AIAutomationIndia() {
                                             key={opt}
                                             type="button"
                                             onClick={() => setIntakeWorkflow(opt)}
-                                            className={`text-left text-xs md:text-sm p-3.5 rounded-xl border transition-all ${
+                                            className={`text-left text-xs md:text-sm p-3.5 rounded-[20px] border transition-all ${
                                                 intakeWorkflow === opt
                                                     ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black font-medium'
                                                     : 'border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-neutral-600 dark:text-neutral-400 hover:border-black dark:hover:border-white/30'
@@ -991,7 +992,7 @@ export default function AIAutomationIndia() {
                                             key={opt}
                                             type="button"
                                             onClick={() => setIntakeErp(opt)}
-                                            className={`text-center text-xs p-3 rounded-xl border transition-all ${
+                                            className={`text-center text-xs p-3 rounded-[20px] border transition-all ${
                                                 intakeErp === opt
                                                     ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black font-medium'
                                                     : 'border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-neutral-600 dark:text-neutral-400 hover:border-black dark:hover:border-white/30'
@@ -1020,7 +1021,7 @@ export default function AIAutomationIndia() {
                                     step="10"
                                     value={intakeHours}
                                     onChange={(e) => setIntakeHours(Number(e.target.value))}
-                                    className="w-full h-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-black dark:accent-white"
+                                    className="w-full h-2 bg-neutral-200 dark:bg-neutral-800 rounded-full appearance-none cursor-pointer accent-black dark:accent-white"
                                 />
                                 <div className="flex justify-between text-xs text-neutral-500 font-mono mt-1">
                                     <span>20 hrs (Pilot team)</span>
@@ -1044,7 +1045,7 @@ export default function AIAutomationIndia() {
                                             key={opt}
                                             type="button"
                                             onClick={() => setIntakeSecurity(opt)}
-                                            className={`text-center text-xs p-3 rounded-xl border transition-all ${
+                                            className={`text-center text-xs p-3 rounded-[20px] border transition-all ${
                                                 intakeSecurity === opt
                                                     ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black font-medium'
                                                     : 'border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-neutral-600 dark:text-neutral-400 hover:border-black dark:hover:border-white/30'
@@ -1058,13 +1059,13 @@ export default function AIAutomationIndia() {
                         </div>
 
                         {/* Live Architectural Output Card */}
-                        <div className="lg:col-span-5 bg-white dark:bg-black border border-neutral-200 dark:border-white/20 rounded-xl p-7 flex flex-col justify-between">
+                        <div className="lg:col-span-5 bg-white dark:bg-black border border-neutral-200 dark:border-white/20 rounded-[24px] p-7 flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between border-b border-neutral-200 dark:border-white/10 pb-4 mb-6">
                                     <span className="text-xs font-mono uppercase tracking-widest text-black dark:text-white">
                                         Architectural Assessment
                                     </span>
-                                    <span className="text-xs px-2.5 py-0.5 rounded-md bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white font-mono">
+                                    <span className="text-xs px-3 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white font-mono">
                                         94% Deterministic Match
                                     </span>
                                 </div>
@@ -1080,7 +1081,7 @@ export default function AIAutomationIndia() {
                                         </span>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-2 text-xs">
+                                    <div className="p-4 rounded-[20px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-2 text-xs">
                                         <div className="flex justify-between">
                                             <span className="text-neutral-500">Recommended Sprint:</span>
                                             <span className="font-semibold text-black dark:text-white text-right">{recommendedSprint}</span>
@@ -1103,7 +1104,7 @@ export default function AIAutomationIndia() {
 
                             <button
                                 onClick={handleTransmitIntake}
-                                className="mt-8 w-full py-4 px-6 rounded-lg bg-black hover:opacity-90 text-white dark:bg-white dark:text-black active:scale-[0.97] font-semibold text-sm transition-all flex items-center justify-center gap-2 group"
+                                className="mt-8 w-full py-4 px-6 rounded-full bg-black hover:opacity-90 text-white dark:bg-white dark:text-black active:scale-[0.97] font-semibold text-sm transition-all flex items-center justify-center gap-2 group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Transmit Architecture Intake to WhatsApp Desk</span>
@@ -1127,7 +1128,7 @@ export default function AIAutomationIndia() {
                         {faqs.map((faq, i) => {
                             const isOpen = openFaqIndex === i;
                             return (
-                                <div key={i} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden">
+                                <div key={i} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden">
                                     <button
                                         type="button"
                                         onClick={() => setOpenFaqIndex(isOpen ? null : i)}
@@ -1139,13 +1140,14 @@ export default function AIAutomationIndia() {
                                     <AnimatePresence initial={false}>
                                         {isOpen && (
                                             <motion.div
+                                                data-open="true"
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
                                                 className="accordion-panel overflow-hidden"
                                             >
-                                                <div className="px-6 pb-6 pt-2 text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
+                                                <div className="px-6 pb-6 pt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
                                                     {faq.answer}
                                                 </div>
                                             </motion.div>
@@ -1162,11 +1164,11 @@ export default function AIAutomationIndia() {
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ type: "spring", stiffness: 300, damping: 28 }}
-                    className="bg-black text-white dark:bg-neutral-950 rounded-xl p-10 md:p-16 text-center relative overflow-hidden border border-neutral-200 dark:border-white/10"
+                    transition={{ type: "spring", stiffness: 260, damping: 28 }}
+                    className="bg-black text-white dark:bg-neutral-950 rounded-[32px] p-10 md:p-16 text-center relative overflow-hidden border border-neutral-200 dark:border-white/10"
                 >
                     <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-white/20 bg-white/10 text-xs font-mono">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
                             <span className="uppercase tracking-widest text-white font-semibold text-[11px]">
                                 Enterprise AI Engineering • Direct Principal Pairing
                             </span>
@@ -1183,7 +1185,7 @@ export default function AIAutomationIndia() {
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold px-8 py-4 rounded-lg text-sm transition-all group"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold px-8 py-4 rounded-full text-sm transition-all group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -1191,7 +1193,7 @@ export default function AIAutomationIndia() {
                             </button>
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium px-6 py-4 rounded-lg text-sm transition-all"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
                             >
                                 <Calendar className="w-4 h-4 text-white" />
                                 <span>ele-in SaaS Waitlist &rarr;</span>

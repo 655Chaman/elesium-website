@@ -36,7 +36,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
   const results = useMemo(() => calculateFp8Microscaling(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: FP8 & MXFP8 Microscaling Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-fp8-microscaling-simulator" />
@@ -57,7 +57,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
           href="https://elesium.online/tools/enterprise-agent-fp8-microscaling-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-colors"
+          className="text-xs text-neutral-200 hover:text-white flex items-center gap-1 font-mono transition-all duration-300"
         >
           Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>
@@ -70,7 +70,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
           <select
             value={modelArchitecture}
             onChange={(e) => setModelArchitecture(e.target.value as Fp8ModelArchitecture)}
-            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-2 text-white font-mono"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-2 text-white font-mono"
           >
             <option value="sovereign_100b_agent">Sovereign 100B Autonomous Agent</option>
             <option value="llama_3_1_70b">Meta Llama-3.1 70B</option>
@@ -86,7 +86,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
             <select
               value={microscalingFormat}
               onChange={(e) => setMicroscalingFormat(e.target.value as MicroscalingFormat)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value="mxfp8_ocp">OCP MXFP8 (Block Exponent)</option>
               <option value="mxfp4_microscaling">OCP MXFP4 (Sub-1% PPL)</option>
@@ -99,7 +99,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
             <select
               value={blockSize}
               onChange={(e) => setBlockSize(Number(e.target.value) as MicroscalingBlockSize)}
-              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+              className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
             >
               <option value={16}>k=16 elements</option>
               <option value={32}>k=32 elements (OCP Std)</option>
@@ -114,7 +114,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
           <select
             value={hardwareCluster}
             onChange={(e) => setHardwareCluster(e.target.value as HardwareCluster)}
-            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-lg p-1.5 text-white font-mono"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded-xl p-1.5 text-white font-mono"
           >
             <option value="nvidia_b200_blackwell">NVIDIA B200 Blackwell (Native MXFP8/4)</option>
             <option value="nvidia_h100_sxm">NVIDIA H100 SXM5 (Hopper FP8)</option>
@@ -125,7 +125,7 @@ export default function EmbedAgentFp8MicroscalingSimulator() {
       </div>
 
       {/* Output Telemetry Card */}
-      <div className="bg-neutral-950/80 border border-neutral-800 rounded-lg p-3 font-mono text-xs space-y-2 mb-3">
+      <div className="bg-neutral-950/80 border border-neutral-800 rounded-[18px] p-3 font-mono text-xs space-y-2 mb-3">
         <div className="flex justify-between items-center text-neutral-400">
           <span>GEMM Speedup Multiplier:</span>
           <span className="text-white font-bold">{results.gemmSpeedupMultiplier}x Peak TFLOPS</span>

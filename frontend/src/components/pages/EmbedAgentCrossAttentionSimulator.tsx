@@ -37,7 +37,7 @@ export default function EmbedAgentCrossAttentionSimulator() {
   const results = useMemo(() => calculateCrossAttention(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Chunked Cross-Attention Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-chunked-cross-attention-simulator" />
@@ -133,7 +133,7 @@ export default function EmbedAgentCrossAttentionSimulator() {
       </div>
 
       {/* Output Metric Badges */}
-      <div className="grid grid-cols-3 gap-2 bg-neutral-950/70 p-3 rounded-lg border border-neutral-800/80 mb-4 font-mono text-center">
+      <div className="grid grid-cols-3 gap-2 bg-neutral-950/70 p-3 rounded-[18px] border border-neutral-800/80 mb-4 font-mono text-center">
         <div>
           <div className="text-[10px] text-neutral-400">TOTAL SHARDS</div>
           <div className="text-base font-bold text-white">
@@ -166,7 +166,7 @@ export default function EmbedAgentCrossAttentionSimulator() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-200 hover:text-white inline-flex items-center gap-1 font-medium transition"
+          className="text-neutral-200 hover:text-white inline-flex items-center gap-1 font-medium transition-all duration-300"
         >
           Elesium Sovereign Solutions
           <ArrowUpRight className="w-3 h-3" />

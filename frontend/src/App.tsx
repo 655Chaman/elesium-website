@@ -12,6 +12,7 @@ import { initNavboostDwellLock } from './utils/dwellLock'
 // Lazy load heavy below-the-fold components and secondary pages
 const Gateway = lazy(() => import('./components/pages/Gateway'))
 const ConnectorHome = lazy(() => import('./components/pages/ConnectorHome'))
+const Portfolio = lazy(() => import('./components/pages/Portfolio'))
 const Home = lazy(() => import('./components/pages/Home'))
 const AuthorProfile = lazy(() => import('./components/pages/AuthorProfile'))
 const RegionalCityHub = lazy(() => import('./components/pages/RegionalCityHub'))
@@ -191,7 +192,9 @@ function App() {
     const isEmbed = location.pathname.startsWith('/embed');
     const isGateway = location.pathname === '/' || location.pathname === '';
     const isConnector = location.pathname.startsWith('/connector');
-    const hideMainLayout = isEmbed || isGateway || isConnector;
+    const isPortfolio = location.pathname.startsWith('/portfolio');
+    const hideMainLayout = isEmbed || isGateway || isConnector || isPortfolio;
+    const isCleanSurface = isGateway || isConnector || isPortfolio;
 
     // Since we're using React Router now, the Navbar and Footer are rendered once outside Routes
     // and we only animate the inner content changing.
@@ -201,14 +204,14 @@ function App() {
         initNavboostDwellLock();
     }, []);
     
-    // Sync clean route class for Gateway & Connector views
+    // Sync clean route class for Gateway, Connector & Portfolio views
     useEffect(() => {
-        if (isGateway || isConnector) {
+        if (isCleanSurface) {
             document.documentElement.classList.add('elesium-clean-route');
         } else {
             document.documentElement.classList.remove('elesium-clean-route');
         }
-    }, [isGateway, isConnector]);
+    }, [isCleanSurface]);
 
     // Scroll to top on route change
     useEffect(() => {
@@ -218,8 +221,8 @@ function App() {
 
     return (
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
-            {!isGateway && <SmoothScroll />}
-            {!isGateway && <NoiseOverlay />}
+            {!isCleanSurface && <SmoothScroll />}
+            {!isCleanSurface && <NoiseOverlay />}
             {!hideMainLayout && <InternationalGeoBanner />}
             {!hideMainLayout && <Navbar />}
 
@@ -232,6 +235,8 @@ function App() {
                             <Route path="/ai/" element={<Home />} />
                             <Route path="/connector" element={<ConnectorHome />} />
                             <Route path="/connector/" element={<ConnectorHome />} />
+                            <Route path="/portfolio" element={<Portfolio />} />
+                            <Route path="/portfolio/" element={<Portfolio />} />
                             <Route path="/how-we-work" element={<HowWeWork />} />
                             <Route path="/industries" element={<Navigate to="/markets/" replace />} />
                             <Route path="/markets" element={<Industries />} />

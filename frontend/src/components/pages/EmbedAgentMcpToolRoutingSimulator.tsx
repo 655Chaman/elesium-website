@@ -66,7 +66,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <Network className="w-4 h-4" />
             </div>
             <div>
@@ -92,7 +92,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
               max="20"
               value={mcpServerCount}
               onChange={(e) => setMcpServerCount(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -107,7 +107,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
               max="200"
               value={registeredToolsCount}
               onChange={(e) => setRegisteredToolsCount(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -150,7 +150,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
               step="4096"
               value={contextWindowTokens}
               onChange={(e) => setContextWindowTokens(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
 
@@ -166,24 +166,24 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
               step="5"
               value={concurrencyOpsPerSec}
               onChange={(e) => setConcurrencyOpsPerSec(Number(e.target.value))}
-              className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+              className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
             />
           </div>
         </div>
 
         {/* Primary Metrics Grid */}
         <div className="grid grid-cols-3 gap-2 pt-2">
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">P99 Latency</div>
             <div className="text-base font-bold text-white mt-0.5 font-mono">{results.effectiveP99LatencyMs}ms</div>
             <div className="text-[9px] text-neutral-500">Discovery: {results.toolDiscoveryLatencyMs}ms</div>
           </div>
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">Tokens Saved</div>
             <div className="text-base font-bold text-white mt-0.5 font-mono">{(results.contextTokensSavedPerCall / 1000).toFixed(1)}k</div>
             <div className="text-[9px] text-neutral-500">per inference call</div>
           </div>
-          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-lg text-center">
+          <div className="bg-neutral-900/80 border border-neutral-800 p-2.5 rounded-xl text-center">
             <div className="text-[10px] text-neutral-400 uppercase font-mono tracking-wider">Accuracy</div>
             <div className="text-base font-bold text-amber-400 mt-0.5 font-mono">{results.toolSelectionAccuracyPct}%</div>
             <div className="text-[9px] text-neutral-500">tool call precision</div>
@@ -191,7 +191,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
         </div>
 
         {/* SVG Latency Curve */}
-        <div className="bg-neutral-900/50 border border-neutral-800/80 rounded-lg p-3">
+        <div className="bg-neutral-900/50 border border-neutral-800/80 rounded-[18px] p-3">
           <div className="flex justify-between items-center text-[10px] text-neutral-400 mb-1.5">
             <span className="font-mono">P99 LATENCY VS TOOL SCALE (5 TO {registeredToolsCount} TOOLS)</span>
             <span className="text-neutral-200 font-mono">P99 {results.effectiveP99LatencyMs}ms</span>
@@ -218,7 +218,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
         </div>
 
         {/* Annual Compute Savings Callout */}
-        <div className="bg-white/[0.05] border border-white/15 rounded-lg p-2.5 flex items-center justify-between text-xs">
+        <div className="bg-white/[0.05] border border-white/15 rounded-xl p-2.5 flex items-center justify-between text-xs">
           <div>
             <div className="text-[10px] text-neutral-200 font-mono font-medium">ESTIMATED ANNUAL TOKEN SAVINGS</div>
             <div className="text-sm font-bold text-white font-mono">
@@ -237,7 +237,7 @@ export default function EmbedAgentMcpToolRoutingSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-neutral-200 hover:text-white font-medium transition-colors"
+            className="flex items-center text-neutral-200 hover:text-white font-medium transition-all duration-300"
           >
             Powered by Elesium Enterprise AI
             <ArrowUpRight className="w-3 h-3 ml-0.5" />

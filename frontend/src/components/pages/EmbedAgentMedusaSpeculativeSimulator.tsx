@@ -34,7 +34,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
   const results = useMemo(() => calculateMedusaSpeculative(inputs), [inputs]);
 
   return (
-    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-[24px] border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Medusa Speculative Decoding &amp; Tree-Attention Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-medusa-speculative-tree-simulator" />
@@ -57,7 +57,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
           href="https://elesium.online/tools/enterprise-agent-medusa-speculative-tree-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-[11px] font-mono text-white hover:text-white transition"
+          className="inline-flex items-center gap-1 text-[11px] font-mono text-white hover:text-white transition-all duration-300"
         >
           <span>Full Tool</span>
           <ArrowUpRight className="w-3 h-3" />
@@ -78,7 +78,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
             step="2"
             value={treeWidthCandidates}
             onChange={(e) => setTreeWidthCandidates(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -94,7 +94,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
             step="1"
             value={verificationDepthTokens}
             onChange={(e) => setVerificationDepthTokens(Number(e.target.value))}
-            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+            className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
           />
         </div>
 
@@ -104,7 +104,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
             <select
               value={speculativeEngine}
               onChange={(e) => setSpeculativeEngine(e.target.value as SpeculativeEngine)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="medusa_multi_head">Medusa Heads</option>
               <option value="eagle_recurrent_tree">Eagle Tree</option>
@@ -117,7 +117,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
             <select
               value={targetModel}
               onChange={(e) => setTargetModel(e.target.value as TargetModel)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="llama_3_70b">Llama-3 70B</option>
               <option value="deepseek_r1_671b">DeepSeek R1</option>
@@ -130,7 +130,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
             <select
               value={hardwareCluster}
               onChange={(e) => setHardwareCluster(e.target.value as HardwareCluster)}
-              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200"
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-2 py-1.5 text-xs text-neutral-200"
             >
               <option value="nvidia_h100_sxm5">H100 SXM5</option>
               <option value="nvidia_a100_pcie">A100 PCIe</option>
@@ -143,21 +143,21 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
 
       {/* Outputs Cards */}
       <div className="grid grid-cols-3 gap-2 mb-4">
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Token Latency</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.effectivePerTokenLatencyMs} ms
           </div>
           <div className="text-[9px] text-neutral-400 mt-0.5">Per Output Token</div>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Speedup Gain</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.speedupMultiplier}x
           </div>
           <div className="text-[9px] text-neutral-400 mt-0.5">vs Vanilla Autoregressive</div>
         </div>
-        <div className="bg-neutral-900/90 border border-neutral-800 rounded-lg p-2.5 text-center">
+        <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-2.5 text-center">
           <div className="text-[10px] text-neutral-400">Tree Acceptance</div>
           <div className="text-sm sm:text-base font-bold font-mono text-white mt-0.5">
             {results.treeAcceptanceRatePct}%
@@ -167,7 +167,7 @@ export default function EmbedAgentMedusaSpeculativeSimulator() {
       </div>
 
       {/* Status Bar */}
-      <div className="p-2.5 rounded-lg bg-neutral-900/70 border border-neutral-800 flex items-center justify-between text-xs">
+      <div className="p-2.5 rounded-xl bg-neutral-900/70 border border-neutral-800 flex items-center justify-between text-xs">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-white/10 "></span>
           <span className="text-neutral-300 font-mono text-[11px]">{results.speculationStatus}</span>

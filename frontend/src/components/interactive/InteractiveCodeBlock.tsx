@@ -77,11 +77,11 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
     };
 
     return (
-        <div className={`interactive-asset my-8 rounded-2xl border border-white/10 bg-[#08090C] text-gray-200 overflow-hidden shadow-2xl transition-all duration-300 ${
+        <div className={`interactive-asset my-8 rounded-[28px] border border-white/10 bg-[#08090C] text-gray-200 overflow-hidden shadow-2xl transition-all duration-300 ${
             isExpanded ? 'fixed inset-4 z-50 max-w-6xl mx-auto flex flex-col' : 'relative'
         }`}>
             {/* Top Toolbar */}
-            <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-[#0D0F14] border-b border-white/5">
+            <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-3.5 bg-[#0D0F14] border-b border-white/5">
                 <div className="flex items-center gap-3">
                     <div className="flex items-center gap-1.5">
                         <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -108,7 +108,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
 
                     <button
                         onClick={handleCopy}
-                        className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 text-white transition-colors border border-white/10"
+                        className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 text-white active:scale-[0.97] transition-all duration-300 border border-white/10"
                     >
                         {copied ? (
                             <>
@@ -126,7 +126,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                     <button
                         onClick={handleDownload}
                         title="Download raw file"
-                        className="p-1 rounded-lg text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <Download className="h-3.5 w-3.5" />
                     </button>
@@ -137,7 +137,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                             onTelemetry?.('code_expand_toggled', { expanded: !isExpanded });
                         }}
                         title={isExpanded ? "Collapse" : "Full Screen"}
-                        className="p-1 rounded-lg text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+                        className="p-1.5 rounded-full text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         {isExpanded ? <Minimize2 className="h-3.5 w-3.5" /> : <Maximize2 className="h-3.5 w-3.5" />}
                     </button>
@@ -145,8 +145,8 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
             </div>
 
             {/* Sub-tabs header */}
-            <div className="flex items-center justify-between px-4 py-2 bg-[#090A0E] border-b border-white/5 text-xs font-mono">
-                <div className="flex items-center gap-1 overflow-x-auto">
+            <div className="flex items-center justify-between px-5 py-2.5 bg-[#090A0E] border-b border-white/5 text-xs font-mono">
+                <div className="flex items-center gap-1.5 overflow-x-auto">
                     {tabs.map((tab, idx) => (
                         <button
                             key={idx}
@@ -154,7 +154,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                                 setActiveTabIdx(idx);
                                 onTelemetry?.('code_tab_switched', { tabLabel: tab.label });
                             }}
-                            className={`px-3 py-1 rounded-md transition-colors ${
+                            className={`px-3.5 py-1 rounded-full active:scale-[0.97] transition-all duration-300 ${
                                 activeTabIdx === idx
                                     ? 'bg-white/10 text-neutral-200 font-bold border border-white/30'
                                     : 'text-white/50 hover:text-white'

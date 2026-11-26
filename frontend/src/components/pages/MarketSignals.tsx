@@ -139,7 +139,7 @@ export default function MarketSignals() {
 
     const markdownComponents = {
         table: ({ node, ...props }: any) => (
-            <div className="my-8 overflow-x-auto rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+            <div className="my-8 overflow-x-auto rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                 <table className="w-full text-left text-xs sm:text-sm font-sans divide-y divide-neutral-200 dark:divide-white/10" {...props} />
             </div>
         ),
@@ -402,7 +402,7 @@ export default function MarketSignals() {
                                 </p>
 
                                 {/* AEO / Perplexity Definitive Answer Capsule */}
-                                <div className="p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 mb-12">
+                                <div className="p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 mb-12">
                                     <div className="flex items-center gap-2 mb-3">
                                         <span className="text-xs font-mono uppercase tracking-widest text-black dark:text-white font-semibold">
                                             AEO Answer Capsule • Perplexity Technical Grounding
@@ -419,23 +419,23 @@ export default function MarketSignals() {
                                     </p>
 
                                     {/* Telemetry Matrix */}
-                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                        <div className="p-4 rounded-[18px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black h-full flex flex-col justify-between">
                                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Inference SLA</div>
                                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">&lt; 200ms TTFT</div>
                                             <div className="text-[10px] text-neutral-400">FP8 GEMM Kernels</div>
                                         </div>
-                                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                                        <div className="p-4 rounded-[18px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black h-full flex flex-col justify-between">
                                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Memory Paging</div>
                                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">&lt; 4% Fragment</div>
                                             <div className="text-[10px] text-neutral-400">vLLM PagedAttention</div>
                                         </div>
-                                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                                        <div className="p-4 rounded-[18px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black h-full flex flex-col justify-between">
                                             <div className="text-[10px] font-mono text-neutral-500 uppercase">Data Sovereignty</div>
                                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">Air-Gapped</div>
                                             <div className="text-[10px] text-neutral-400">DPDP Act Sec 8(5)</div>
                                         </div>
-                                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                                        <div className="p-4 rounded-[18px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black h-full flex flex-col justify-between">
                                             <div className="text-[10px] font-mono text-neutral-500 uppercase">GPU Cluster</div>
                                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">Yotta / CtrlS</div>
                                             <div className="text-[10px] text-neutral-400">Tier-IV Datacenters</div>
@@ -445,7 +445,7 @@ export default function MarketSignals() {
                             </div>
 
                             {/* Articles Grid/List */}
-                            <div className="grid grid-cols-1 gap-y-8">
+                            <div className="grid grid-cols-1 gap-y-6">
                                 {blogPosts.map((article, index) => {
                                     const Icon = getIcon(article.category);
                                     return (
@@ -454,11 +454,11 @@ export default function MarketSignals() {
                                             initial={{ opacity: 0, y: 20 }}
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
-                                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                                            transition={{ type: 'spring', stiffness: 280, damping: 28, delay: Math.min(index * 0.03, 0.25) }}
                                         >
                                             <Link 
                                                 to={`/signals/${article.slug}/`}
-                                                className="group flex flex-col md:flex-row gap-4 md:gap-8 p-6 sm:p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all cursor-pointer block"
+                                                className="group flex flex-col md:flex-row gap-4 md:gap-8 p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all duration-300 cursor-pointer block"
                                             >
                                                 <div className="md:w-1/4 flex flex-col gap-2">
                                                     <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-black dark:text-white">
@@ -489,7 +489,7 @@ export default function MarketSignals() {
                             </div>
 
                             {/* Transparent Institutional Pricing Tiers */}
-                            <div className="mt-20 p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="mt-20 p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                                 <div className="text-center max-w-3xl mx-auto mb-12">
                                     <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 block">
                                         Direct Commercial Engagement
@@ -503,7 +503,7 @@ export default function MarketSignals() {
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                                    <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full">
                                         <div>
                                             <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
                                             <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
@@ -515,14 +515,14 @@ export default function MarketSignals() {
                                         </div>
                                         <button
                                             onClick={openWhatsApp}
-                                            className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black active:scale-[0.97] font-semibold text-xs font-mono transition-all"
+                                            className="w-full py-2.5 px-5 rounded-full border border-neutral-200 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black active:scale-[0.97] font-semibold text-xs font-mono transition-all duration-300"
                                         >
                                             Inquire Tier 1 &rarr;
                                         </button>
                                     </div>
 
-                                    <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
-                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-md uppercase tracking-wider">
+                                    <div className="p-6 sm:p-7 rounded-[24px] border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between h-full relative">
+                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
                                             Most Deployed
                                         </div>
                                         <div>
@@ -536,13 +536,13 @@ export default function MarketSignals() {
                                         </div>
                                         <button
                                             onClick={openWhatsApp}
-                                            className="w-full py-2.5 px-4 rounded-lg bg-black text-white hover:opacity-90 dark:bg-white dark:text-black active:scale-[0.97] font-semibold text-xs font-mono transition-all"
+                                            className="w-full py-2.5 px-5 rounded-full bg-black text-white hover:opacity-90 dark:bg-white dark:text-black active:scale-[0.97] font-semibold text-xs font-mono transition-all duration-300"
                                         >
                                             Deploy Suite &rarr;
                                         </button>
                                     </div>
 
-                                    <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                                    <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full">
                                         <div>
                                             <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
                                             <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
@@ -554,7 +554,7 @@ export default function MarketSignals() {
                                         </div>
                                         <button
                                             onClick={openWhatsApp}
-                                            className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black active:scale-[0.97] font-semibold text-xs font-mono transition-all"
+                                            className="w-full py-2.5 px-5 rounded-full border border-neutral-200 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black active:scale-[0.97] font-semibold text-xs font-mono transition-all duration-300"
                                         >
                                             Retain Pod &rarr;
                                         </button>
@@ -577,14 +577,14 @@ export default function MarketSignals() {
                                     {signalsFaqs.map((faq, idx) => (
                                         <div
                                             key={idx}
-                                            className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-white dark:bg-neutral-950"
+                                            className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-neutral-950"
                                         >
                                             <button
                                                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                                                 className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors"
                                             >
                                                 <span>{faq.q}</span>
-                                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                                             </button>
                                             <AnimatePresence initial={false}>
                                                 {openFaq === idx && (
@@ -592,7 +592,7 @@ export default function MarketSignals() {
                                                         initial={{ height: 0, opacity: 0 }}
                                                         animate={{ height: 'auto', opacity: 1 }}
                                                         exit={{ height: 0, opacity: 0 }}
-                                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                         className="accordion-panel overflow-hidden"
                                                     >
                                                         <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
@@ -607,7 +607,7 @@ export default function MarketSignals() {
                             </div>
 
                             {/* Direct Principal Systems Pairing Callout */}
-                            <div className="mt-16 p-8 sm:p-12 rounded-xl bg-black text-white dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                            <div className="mt-16 p-8 sm:p-12 rounded-[32px] bg-black text-white dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center space-y-4">
                                 <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-300">
                                     <span>Direct Principal Systems Pairing</span>
                                 </div>
@@ -620,7 +620,7 @@ export default function MarketSignals() {
                                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                     <button
                                         onClick={openWhatsApp}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold px-6 py-3.5 rounded-lg text-sm transition-all group"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold px-7 py-3.5 rounded-full text-sm transition-all duration-300 group"
                                     >
                                         <MessageSquare className="w-4 h-4 fill-current" />
                                         <span>Chat on WhatsApp with Lead Architect</span>
@@ -628,7 +628,7 @@ export default function MarketSignals() {
                                     </button>
                                     <Link
                                         to="/waitlist/"
-                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium px-5 py-3.5 rounded-lg text-sm transition-all"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium px-6 py-3.5 rounded-full text-sm transition-all duration-300"
                                     >
                                         <span>ele-in SaaS Waitlist &rarr;</span>
                                     </Link>
@@ -733,9 +733,9 @@ export default function MarketSignals() {
                                                     );
                                                 case 'metric':
                                                     return (
-                                                        <div key={sIdx} className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+                                                        <div key={sIdx} className="grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
                                                             {(section.value as { label: string; value: string; description: string }[]).map((metric, mIdx) => (
-                                                                <div key={mIdx} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-5 flex flex-col justify-between">
+                                                                <div key={mIdx} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[22px] p-5 flex flex-col justify-between h-full">
                                                                     <div>
                                                                         <div className="text-2xl sm:text-3xl font-bold font-mono text-black dark:text-white tracking-tight mb-1">
                                                                             {metric.value}
@@ -805,13 +805,13 @@ export default function MarketSignals() {
                                                     return (
                                                         <div key={sIdx} className="my-8 space-y-3">
                                                             {(section.value as { q: string; a: string }[]).map((item, fIdx) => (
-                                                                <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+                                                                <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
                                                                     <button
                                                                         onClick={() => setOpenFaq(openFaq === fIdx ? null : fIdx)}
                                                                         className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
                                                                     >
                                                                         <span>{item.q}</span>
-                                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-200 ${openFaq === fIdx ? 'rotate-180' : ''}`} />
+                                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${openFaq === fIdx ? 'rotate-180' : ''}`} />
                                                                     </button>
                                                                     <AnimatePresence initial={false}>
                                                                         {openFaq === fIdx && (
@@ -819,7 +819,7 @@ export default function MarketSignals() {
                                                                                 initial={{ height: 0, opacity: 0 }}
                                                                                 animate={{ height: 'auto', opacity: 1 }}
                                                                                 exit={{ height: 0, opacity: 0 }}
-                                                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                                                 className="accordion-panel overflow-hidden"
                                                                             >
                                                                                 <p className="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.a}</p>
@@ -867,7 +867,7 @@ export default function MarketSignals() {
 
                                 {/* System 1 -> System 2 Topical Equity Bridge: Commercial Solution Callout */}
                                 {matchedSolution && (
-                                    <div className="my-10 p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                    <div className="my-10 p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                                         <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-black dark:text-white mb-3">
                                             <span className="font-semibold">Deploy This Architecture in Production</span>
                                             <span className="text-neutral-400 text-[10px] hidden sm:inline">| Sovereign Commercial Implementation</span>
@@ -899,7 +899,7 @@ export default function MarketSignals() {
                                             <div className="flex flex-wrap items-center gap-3">
                                                 <button
                                                     onClick={openWhatsApp}
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-black text-white hover:opacity-90 dark:bg-white dark:text-black active:scale-[0.97] font-semibold text-xs font-mono tracking-wide transition-all group"
+                                                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-black text-white hover:opacity-90 dark:bg-white dark:text-black active:scale-[0.97] font-semibold text-xs font-mono tracking-wide transition-all duration-300 group"
                                                 >
                                                     <MessageSquare className="w-3.5 h-3.5 fill-current" />
                                                     <span>Chat on WhatsApp</span>
@@ -907,7 +907,7 @@ export default function MarketSignals() {
                                                 </button>
                                                 <Link
                                                     to={`/solutions/${matchedSolution.slug}/`}
-                                                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-white/20 hover:bg-neutral-100 dark:hover:bg-white/5 active:scale-[0.97] font-medium text-xs font-mono transition-all text-neutral-700 dark:text-neutral-300"
+                                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-neutral-200 dark:border-white/20 hover:bg-neutral-100 dark:hover:bg-white/5 active:scale-[0.97] font-medium text-xs font-mono transition-all duration-300 text-neutral-700 dark:text-neutral-300"
                                                 >
                                                     <span>View Architecture Details &rarr;</span>
                                                 </Link>
@@ -922,13 +922,13 @@ export default function MarketSignals() {
                                         <h2 className="text-xl font-bold text-black dark:text-white mb-6">Frequently Asked Questions</h2>
                                         <div className="space-y-3">
                                             {activeArticle.faq.map((item: any, fIdx: number) => (
-                                                <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+                                                <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
                                                     <button
                                                         onClick={() => setOpenFaq(openFaq === fIdx + 100 ? null : fIdx + 100)}
                                                         className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
                                                     >
                                                         <span>{item.q}</span>
-                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-200 ${openFaq === fIdx + 100 ? 'rotate-180' : ''}`} />
+                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${openFaq === fIdx + 100 ? 'rotate-180' : ''}`} />
                                                     </button>
                                                     <AnimatePresence initial={false}>
                                                         {openFaq === fIdx + 100 && (
@@ -936,7 +936,7 @@ export default function MarketSignals() {
                                                                 initial={{ height: 0, opacity: 0 }}
                                                                 animate={{ height: 'auto', opacity: 1 }}
                                                                 exit={{ height: 0, opacity: 0 }}
-                                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                                                                 className="accordion-panel overflow-hidden"
                                                             >
                                                                 <p className="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.a}</p>
@@ -961,7 +961,7 @@ export default function MarketSignals() {
                                                 <Link
                                                     key={rp.slug}
                                                     to={`/signals/${rp.slug}/`}
-                                                    className="group flex items-start gap-3 p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30 transition-all duration-200"
+                                                    className="group flex items-start gap-3 p-4 rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30 transition-all duration-300"
                                                 >
                                                     <ChevronRight className="h-4 w-4 mt-0.5 text-neutral-400 group-hover:text-black dark:group-hover:text-white flex-shrink-0" />
                                                     <div>
@@ -975,7 +975,7 @@ export default function MarketSignals() {
                                 )}
 
                                 {/* Bottom Architecture Action Card */}
-                                <div className="mt-12 p-8 sm:p-12 rounded-xl bg-black text-white dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                                <div className="mt-12 p-8 sm:p-12 rounded-[32px] bg-black text-white dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center space-y-4">
                                     <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-300">
                                         <span>Direct Principal Systems Pairing</span>
                                     </div>
@@ -988,7 +988,7 @@ export default function MarketSignals() {
                                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                         <button
                                             onClick={openWhatsApp}
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold px-6 py-3.5 rounded-lg text-sm transition-all group"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold px-7 py-3.5 rounded-full text-sm transition-all duration-300 group"
                                         >
                                             <MessageSquare className="w-4 h-4 fill-current" />
                                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -996,7 +996,7 @@ export default function MarketSignals() {
                                         </button>
                                         <Link
                                             to="/waitlist/"
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium px-5 py-3.5 rounded-lg text-sm transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium px-6 py-3.5 rounded-full text-sm transition-all duration-300"
                                         >
                                             <span>ele-in SaaS Waitlist &rarr;</span>
                                         </Link>

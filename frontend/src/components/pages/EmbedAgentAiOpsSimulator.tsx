@@ -67,7 +67,7 @@ export default function EmbedAgentAiOpsSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <Activity className="w-4 h-4" />
             </div>
             <div>
@@ -75,13 +75,13 @@ export default function EmbedAgentAiOpsSimulator() {
               <p className="text-[10px] text-neutral-400">eBPF Telemetry &amp; Sub-Second Pod Self-Healing</p>
             </div>
           </div>
-          <span className="text-[10px] px-2 py-0.5 rounded-lg font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
+          <span className="text-[10px] px-2 py-0.5 rounded-full font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
             {results.statusClassification}
           </span>
         </div>
 
         {/* Sliders & Controls */}
-        <div className="grid grid-cols-2 gap-3 text-xs bg-neutral-900/60 p-3 rounded-xl border border-neutral-800">
+        <div className="grid grid-cols-2 gap-3 text-xs bg-neutral-900/60 p-3 rounded-[18px] border border-neutral-800">
           <div>
             <label className="text-[11px] text-neutral-300 block mb-1">
               Cluster Size: <span className="text-neutral-200 font-mono">{clusterSizeNodes} Nodes</span>
@@ -94,7 +94,7 @@ export default function EmbedAgentAiOpsSimulator() {
               value={clusterSizeNodes}
               onChange={(e) => setClusterSizeNodes(Number(e.target.value))}
               aria-label="Cluster Size Nodes"
-              className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white h-1.5 bg-neutral-800 rounded-full cursor-pointer"
             />
           </div>
 
@@ -165,7 +165,7 @@ export default function EmbedAgentAiOpsSimulator() {
         </div>
 
         {/* Oscilloscope Waveform Display */}
-        <div className="bg-neutral-900/90 border border-neutral-800 p-3 rounded-xl space-y-2">
+        <div className="bg-neutral-900/90 border border-neutral-800 p-3 rounded-[18px] space-y-2">
           <div className="flex items-center justify-between text-[11px]">
             <span className="text-neutral-400 font-mono">Real-Time Chaos Remediation Oscilloscope</span>
             <div className="flex items-center space-x-3 text-[10px]">
@@ -180,7 +180,7 @@ export default function EmbedAgentAiOpsSimulator() {
             </div>
           </div>
 
-          <div className="h-24 w-full bg-neutral-950 rounded-lg border border-neutral-800/80 relative overflow-hidden flex items-center justify-center">
+          <div className="h-24 w-full bg-neutral-950 rounded-[24px] border border-neutral-800/80 relative overflow-hidden flex items-center justify-center">
             <svg className="w-full h-full" viewBox="0 0 340 90" preserveAspectRatio="none">
               {/* Grid lines */}
               <line x1="0" y1="22" x2="340" y2="22" stroke="#262626" strokeDasharray="3 3" />
@@ -215,7 +215,7 @@ export default function EmbedAgentAiOpsSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-1 text-[11px] text-neutral-200 hover:text-white transition"
+            className="inline-flex items-center space-x-1 text-[11px] text-neutral-200 hover:text-white transition-all duration-300"
           >
             <span>Simulated via Elesium Sovereign AIOps</span>
             <ArrowUpRight className="w-3 h-3" />

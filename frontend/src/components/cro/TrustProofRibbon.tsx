@@ -85,7 +85,7 @@ export function TrustProofRibbon() {
 
   return (
     <>
-      <div className="w-full py-4 px-4 sm:px-6 rounded-xl bg-neutral-950 border border-white/10">
+      <div className="w-full py-4 px-5 sm:px-6 rounded-[24px] bg-neutral-950 border border-white/10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Title */}
           <div className="flex items-center gap-2.5 shrink-0">
@@ -100,7 +100,7 @@ export function TrustProofRibbon() {
               <button
                 key={seal.id}
                 onClick={() => setSelectedSeal(seal)}
-                className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/25 text-neutral-300 hover:text-white text-xs font-mono active:scale-[0.97] transition-all flex items-center gap-1.5 cursor-pointer group"
+                className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/25 text-neutral-300 hover:text-white text-xs font-mono active:scale-[0.97] transition-all duration-300 flex items-center gap-1.5 cursor-pointer group"
               >
                 <ShieldCheck className="w-3.5 h-3.5 text-white group-hover:scale-105 transition-transform" />
                 <span>{seal.shortName}</span>
@@ -132,12 +132,12 @@ export function TrustProofRibbon() {
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-              className="relative w-full max-w-lg bg-neutral-950 border border-white/15 rounded-xl p-6 sm:p-8 shadow-2xl z-10 text-white font-sans space-y-5"
+              transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+              className="relative w-full max-w-lg bg-neutral-950 border border-white/15 rounded-[28px] p-6 sm:p-8 shadow-2xl z-10 text-white font-sans space-y-5"
             >
               <div className="flex justify-between items-start">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white">
+                  <div className="p-2.5 rounded-2xl bg-white/5 border border-white/10 text-white">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
@@ -147,7 +147,7 @@ export function TrustProofRibbon() {
                 </div>
                 <button
                   onClick={() => setSelectedSeal(null)}
-                  className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97]"
+                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -158,7 +158,7 @@ export function TrustProofRibbon() {
               </p>
 
               {/* Verified Clauses */}
-              <div className="space-y-2 p-3.5 rounded-lg bg-black border border-white/10 text-xs font-mono">
+              <div className="space-y-2 p-4 rounded-2xl bg-black border border-white/10 text-xs font-mono">
                 <div className="text-[10px] text-neutral-400 uppercase tracking-wider font-bold mb-1">
                   Enforced Technical Controls:
                 </div>
@@ -171,14 +171,14 @@ export function TrustProofRibbon() {
               </div>
 
               {/* Spec Hash */}
-              <div className="p-2.5 rounded-lg bg-black border border-white/10 text-[10px] font-mono text-neutral-300 truncate">
+              <div className="p-3 rounded-xl bg-black border border-white/10 text-[10px] font-mono text-neutral-300 truncate">
                 {selectedSeal.specHash}
               </div>
 
               <div className="flex justify-end pt-2">
                 <button
                   onClick={() => setSelectedSeal(null)}
-                  className="px-5 py-2 rounded-lg bg-white text-black hover:bg-neutral-200 text-xs font-medium active:scale-[0.97] transition-all"
+                  className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-medium active:scale-[0.97] transition-all duration-300"
                 >
                   Close Verification
                 </button>

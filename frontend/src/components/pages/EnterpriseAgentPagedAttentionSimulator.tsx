@@ -130,7 +130,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono mb-4">
               <Cpu className="w-3.5 h-3.5" />
               <span>Tool #48 • GPU VRAM & KV-Cache Paging Simulator</span>
             </div>
@@ -145,13 +145,13 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           {/* Main Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Left Controls Column */}
-            <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+            <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800/80 rounded-[24px] p-6 backdrop-blur-sm">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <div className="flex items-center gap-2 text-sm font-semibold text-white">
                   <Sliders className="w-4 h-4 text-neutral-200" />
                   <span>Inference & Memory Parameters</span>
                 </div>
-                <div className="flex items-center bg-neutral-800/80 rounded-lg p-1 border border-neutral-700/60">
+                <div className="flex items-center bg-neutral-800/80 rounded-full p-1 border border-neutral-700/60">
                   <button
                     onClick={() => setCurrency('INR')}
                     className={`active:scale-[0.97] px-2.5 py-1 text-xs font-mono rounded ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
@@ -185,7 +185,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   step="5"
                   value={concurrentAgentStreams}
                   onChange={(e) => setConcurrentAgentStreams(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
 
@@ -207,7 +207,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   step="1000"
                   value={averageContextLengthTokens}
                   onChange={(e) => setAverageContextLengthTokens(Number(e.target.value))}
-                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
+                  className="w-full h-1.5 bg-neutral-800 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
 
@@ -226,7 +226,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={m.id}
                       onClick={() => setModelArchitecture(m.id as ModelArchitecture)}
-                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         modelArchitecture === m.id
                           ? 'bg-white/[0.05] border-white/30 text-white shadow-sm'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -254,7 +254,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={gpu.id}
                       onClick={() => setGpuHardwareType(gpu.id as GpuHardwareType)}
-                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         gpuHardwareType === gpu.id
                           ? 'bg-white/[0.05] border-white/30 text-white'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -282,7 +282,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={engine.id}
                       onClick={() => setMemoryAllocationEngine(engine.id as MemoryAllocationEngine)}
-                      className={`active:scale-[0.97] w-full text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] w-full text-left p-2.5 rounded-xl border text-xs transition-all duration-300 ${
                         memoryAllocationEngine === engine.id
                           ? 'bg-white/[0.05] border-white/30 text-white'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -309,7 +309,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={q.id}
                       onClick={() => setKvCacheQuantization(q.id as KvCacheQuantization)}
-                      className={`active:scale-[0.97] text-left p-2 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2 rounded-xl border text-xs transition-all duration-300 ${
                         kvCacheQuantization === q.id
                           ? 'bg-white/[0.05] border-white/30 text-white'
                           : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
@@ -327,7 +327,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
             <div className="lg:col-span-7 space-y-6">
               {/* Primary Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5">
                   <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Effective VRAM Utilization</span>
                     <Gauge className="w-4 h-4 text-neutral-200" />
@@ -340,7 +340,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   </div>
                 </div>
 
-                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5">
                   <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Time-to-First-Token (TTFT)</span>
                     <Cpu className="w-4 h-4 text-neutral-200" />
@@ -353,7 +353,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   </div>
                 </div>
 
-                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5">
                   <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Max Concurrency Before OOM</span>
                     <Layers className="w-4 h-4 text-neutral-200" />
@@ -366,7 +366,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   </div>
                 </div>
 
-                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-5">
                   <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Annual Hardware Cost Savings</span>
                     <Coins className="w-4 h-4 text-amber-400" />
@@ -381,7 +381,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               </div>
 
               {/* Memory Allocation Trace */}
-              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-[24px] p-5">
                 <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
                   <Layers className="w-4 h-4 text-neutral-200" />
                   <span>GPU VRAM Virtual Allocation Trace</span>
@@ -390,7 +390,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   {outputs.memoryTrace.map((tr) => (
                     <div
                       key={tr.stage}
-                      className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/80 flex items-center justify-between text-xs"
+                      className="p-3 rounded-[18px] bg-neutral-950/60 border border-neutral-800/80 flex items-center justify-between text-xs"
                     >
                       <div>
                         <div className="font-semibold text-neutral-200 flex items-center gap-2">
@@ -417,21 +417,21 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={copyExecutiveMemo}
-                  className="active:scale-[0.97] px-4 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs flex items-center gap-2 transition shadow-lg"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-xs flex items-center gap-2 transition-all duration-300 shadow-lg"
                 >
                   {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{hasCopiedMemo ? 'Copied Telemetry Memo!' : 'Copy Executive Audit Memo'}</span>
                 </button>
                 <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                   onClick={() => setIsEmbedOpen(true)}
-                  className="active:scale-[0.97] px-4 py-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold flex items-center gap-2 border border-neutral-700 transition"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold flex items-center gap-2 border border-neutral-700 transition-all duration-300"
                 >
                   <Code className="w-4 h-4 text-neutral-200" />
                   <span>Embed Calculator on Your Site</span>
@@ -443,8 +443,8 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           {/* Consultation Lead Magnet */}
           <div className="mb-14">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+        <div className="my-10 p-6 sm:p-8 rounded-[24px] border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
             <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
@@ -457,7 +457,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
@@ -469,7 +469,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           </div>
 
           {/* Technical FAQ */}
-          <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 sm:p-8 mb-12">
+          <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-[24px] p-6 sm:p-8 mb-12">
             <h2 className="text-xl font-bold text-white mb-6">
               Frequently Asked Technical Questions: GPU VRAM Paging & Prefill Latency
             </h2>
@@ -477,11 +477,11 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="border border-neutral-800/80 rounded-xl overflow-hidden bg-neutral-950/40"
+                  className="border border-neutral-800/80 rounded-[24px] overflow-hidden bg-neutral-950/40"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="active:scale-[0.97] w-full text-left p-4 text-sm font-semibold text-neutral-200 flex justify-between items-center hover:text-white transition"
+                    className="active:scale-[0.97] w-full text-left p-4 text-sm font-semibold text-neutral-200 flex justify-between items-center hover:text-white transition-all duration-300"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : 'text-neutral-500'}`} />
@@ -499,7 +499,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           {/* Embed Modal */}
           {isEmbedOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+              <div className="bg-neutral-900 border border-neutral-800 rounded-[28px] max-w-lg w-full p-6 shadow-2xl relative">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
                   className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -516,18 +516,18 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   readOnly
                   rows={5}
                   value={embedCode}
-                  className="w-full p-3 rounded-lg bg-neutral-950 border border-neutral-800 text-[11px] font-mono text-neutral-200 mb-4 focus:outline-none"
+                  className="w-full p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-[11px] font-mono text-neutral-200 mb-4 focus:outline-none"
                 />
                 <div className="flex justify-end gap-2">
                   <button
                     onClick={() => setIsEmbedOpen(false)}
-                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold text-neutral-300 transition"
+                    className="active:scale-[0.97] px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold text-neutral-300 transition-all duration-300"
                   >
                     Close
                   </button>
                   <button
                     onClick={copyEmbed}
-                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold flex items-center gap-1.5 transition"
+                    className="active:scale-[0.97] px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-bold flex items-center gap-1.5 transition-all duration-300"
                   >
                     {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Iframe Code'}</span>

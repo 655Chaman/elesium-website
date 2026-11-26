@@ -148,30 +148,30 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
       {/* Header Breadcrumbs */}
       <div className="max-w-7xl mx-auto mb-8 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-sm font-mono text-neutral-400">
-          <Link to="/" className="hover:text-white transition-colors">Home</Link>
+          <Link to="/" className="hover:text-white transition-all duration-300">Home</Link>
           <span>/</span>
-          <Link to="/solutions/" className="hover:text-white transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-white transition-all duration-300">Solutions</Link>
           <span>/</span>
           <span className="text-neutral-200">Speculative Decoding Simulator</span>
         </div>
         <div className="flex items-center gap-3">
           <button
                 onClick={() => openWhatsApp()}
-                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all duration-300"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
             onClick={() => setIsEmbedOpen(true)}
-            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-300 hover:text-white transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-300 hover:text-white transition-all duration-300"
           >
             <Code className="w-3.5 h-3.5 text-neutral-200" />
             Embed Tool
           </button>
           <button
             onClick={copyExecutiveMemo}
-            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-white/20 bg-white/[0.05] hover:bg-white/10 text-xs font-mono text-neutral-200 hover:text-white transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-white/10 text-xs font-mono text-neutral-200 hover:text-white transition-all duration-300"
           >
             {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
             {hasCopiedMemo ? 'Memo Copied!' : 'Copy Exec Memo'}
@@ -181,7 +181,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
 
       {/* Hero Headline */}
       <div className="max-w-7xl mx-auto mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/[0.05] text-neutral-200 text-xs font-mono uppercase tracking-widest mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/[0.05] text-neutral-200 text-xs font-mono uppercase tracking-widest mb-4">
           <Zap className="w-3.5 h-3.5 " />
           Tool #25 • The Quarter-Century Asset
         </div>
@@ -197,7 +197,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
         {/* Sliders Configuration Panel */}
-        <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-7 shadow-xl space-y-6">
+        <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-[24px] p-6 sm:p-7 shadow-xl space-y-6">
           <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
             <div className="flex items-center gap-2.5">
               <Sliders className="w-5 h-5 text-neutral-200" />
@@ -219,7 +219,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="25"
               value={monthlyInferenceTokensMillions}
               onChange={(e) => setMonthlyInferenceTokensMillions(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>50M (Mid-Market)</span>
@@ -240,7 +240,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="5"
               value={targetModelParameterSizeB}
               onChange={(e) => setTargetModelParameterSizeB(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>70B (Llama-3.3 70B)</span>
@@ -261,7 +261,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="128"
               value={avgSequenceLengthTokens}
               onChange={(e) => setAvgSequenceLengthTokens(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>256 (Fast Chat)</span>
@@ -282,7 +282,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="0.25"
               value={gpuHourlyCostUSD}
               onChange={(e) => setGpuHourlyCostUSD(Number(e.target.value))}
-              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-xl cursor-pointer"
             />
             <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>$2.50 (L40S / A100)</span>
@@ -292,12 +292,12 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
 
           {/* Highlight Metrics Box */}
           <div className="pt-4 border-t border-neutral-800 grid grid-cols-2 gap-3">
-            <div className="p-3.5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-3.5 rounded-2xl border border-white/20 bg-white/[0.05]">
               <div className="text-[11px] font-mono text-neutral-200 uppercase tracking-wider">Speedup Multiplier</div>
               <div className="text-2xl font-bold font-mono text-white mt-1">{results.throughputGainMultiplier}x</div>
               <div className="text-[11px] text-neutral-400 mt-0.5">End-to-End Acceleration</div>
             </div>
-            <div className="p-3.5 rounded-xl border border-white/20 bg-white/[0.05]">
+            <div className="p-3.5 rounded-2xl border border-white/20 bg-white/[0.05]">
               <div className="text-[11px] font-mono text-neutral-200 uppercase tracking-wider">Latency Reduction</div>
               <div className="text-2xl font-bold font-mono text-white mt-1">-{results.latencyCutPct}%</div>
               <div className="text-[11px] text-neutral-400 mt-0.5">Sub-17ms / Token</div>
@@ -321,7 +321,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
         {/* 3-Way Comparative Architectural Results */}
         <div className="lg:col-span-7 space-y-6">
           {/* Architecture 1: Standard Autoregressive Decoding */}
-          <div className="p-6 rounded-xl border border-red-900/40 bg-neutral-900/60 relative overflow-hidden">
+          <div className="p-6 rounded-[24px] border border-red-900/40 bg-neutral-900/60 relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
@@ -332,19 +332,19 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Token Latency</div>
                 <div className="text-base font-bold text-red-400">{results.standardAutoregressive.meanLatencyPerTokenMs} ms</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Throughput</div>
                 <div className="text-base font-bold text-neutral-200">{results.standardAutoregressive.tokensPerSecondPerStream} tok/s</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">HBM Efficiency</div>
                 <div className="text-base font-bold text-neutral-400">{results.standardAutoregressive.memoryBandwidthEfficiencyPct}%</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-red-400">${results.standardAutoregressive.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
@@ -355,7 +355,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           </div>
 
           {/* Architecture 2: Static Draft Speculative Decoding */}
-          <div className="p-6 rounded-xl border border-amber-900/40 bg-neutral-900/60 relative overflow-hidden">
+          <div className="p-6 rounded-[24px] border border-amber-900/40 bg-neutral-900/60 relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
@@ -366,19 +366,19 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Token Latency</div>
                 <div className="text-base font-bold text-amber-400">{results.staticDraft.meanLatencyPerTokenMs} ms</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Throughput</div>
                 <div className="text-base font-bold text-neutral-200">{results.staticDraft.tokensPerSecondPerStream} tok/s</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Acceptance Rate</div>
                 <div className="text-base font-bold text-amber-400">{results.staticDraft.tokenAcceptanceRatePct}%</div>
               </div>
-              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+              <div className="bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800">
                 <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-amber-400">${results.staticDraft.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
@@ -389,7 +389,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           </div>
 
           {/* Architecture 3: Elesium Sovereign Dynamic Speculative Decoding */}
-          <div className="p-6 rounded-xl border border-white/30 bg-neutral-950 relative overflow-hidden shadow-2xl">
+          <div className="p-6 rounded-[24px] border border-white/30 bg-neutral-950 relative overflow-hidden shadow-2xl">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-neutral-400 " />
@@ -402,19 +402,19 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Token Latency</div>
                 <div className="text-base font-bold text-white">{results.sovereignDynamic.meanLatencyPerTokenMs} ms</div>
               </div>
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Throughput</div>
                 <div className="text-base font-bold text-white">{results.sovereignDynamic.tokensPerSecondPerStream} tok/s</div>
               </div>
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Acceptance Rate</div>
                 <div className="text-base font-bold text-white">{results.sovereignDynamic.tokenAcceptanceRatePct}%</div>
               </div>
-              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+              <div className="bg-neutral-950/80 p-2.5 rounded-xl border border-white/15">
                 <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-white">${results.sovereignDynamic.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
@@ -425,7 +425,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           </div>
 
           {/* Annual Cost Arbitrage Banner */}
-          <div className="p-5 rounded-xl border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-5 rounded-[24px] border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Net Annual Compute Cost Arbitrage</div>
               <div className="text-2xl font-bold font-mono text-white mt-0.5">
@@ -454,7 +454,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           Mathematical & Engineering Architecture: Dynamic Speculative Decoding
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-3">
             <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Gauge className="w-4 h-4" />
               <span>Speculative Tree Attention</span>
@@ -463,7 +463,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               Rather than proposing a single linear sequence, the draft engine constructs a candidate token tree with top-p probability branching. Using customized tree attention masks, the target model validates multiple speculative candidate paths simultaneously in a single forward pass, boosting acceptance rate to 88.4%.
             </p>
           </div>
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-3">
             <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Cpu className="w-4 h-4" />
               <span>HBM Bandwidth Amortization</span>
@@ -472,7 +472,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               Standard autoregressive generation reads 140GB of model parameters per single token output. By validating an average of 2.85 tokens per target model forward pass, HBM transfer overhead is amortized across multiple accepted tokens, elevating memory bus utilization from 34% to 92.4%.
             </p>
           </div>
-          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+          <div className="p-6 rounded-[24px] border border-neutral-800 bg-neutral-900/60 space-y-3">
             <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Activity className="w-4 h-4" />
               <span>Zero-Divergence Mathematical Equivalence</span>
@@ -493,11 +493,11 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="border border-neutral-800 rounded-xl bg-neutral-900/70 overflow-hidden transition-colors"
+              className="border border-neutral-800 rounded-[24px] bg-neutral-900/70 overflow-hidden transition-colors"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="active:scale-[0.97] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-mono text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
+                className="active:scale-[0.97] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-mono text-sm font-semibold text-neutral-200 hover:text-white transition-all duration-300"
               >
                 <span>{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-neutral-200 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
@@ -515,7 +515,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-neutral-900 border border-neutral-700 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-700 rounded-[28px] max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
               className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
@@ -535,19 +535,19 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
                 readOnly
                 value={embedCode}
                 rows={5}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
               />
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="active:scale-[0.97] px-4 py-2 rounded-lg border border-neutral-700 text-xs font-mono text-neutral-300 hover:bg-neutral-800"
+                className="active:scale-[0.97] px-4 py-2 rounded-full border border-neutral-700 text-xs font-mono text-neutral-300 hover:bg-neutral-800"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-mono text-xs font-bold transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black font-mono text-xs font-bold transition-all duration-300"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Code!' : 'Copy Code'}

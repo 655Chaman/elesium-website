@@ -69,7 +69,7 @@ export default function EmbedAgentAbdmFhirSimulator() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
+            <div className="p-2 rounded-xl bg-white/[0.04] border border-white/15 text-neutral-200">
               <HeartPulse className="w-4 h-4" />
             </div>
             <div>
@@ -77,7 +77,7 @@ export default function EmbedAgentAbdmFhirSimulator() {
               <p className="text-[10px] text-neutral-400">HL7 FHIR R4 &amp; DPDP Differential Privacy Simulator</p>
             </div>
           </div>
-          <span className="text-[10px] px-2 py-0.5 rounded-lg font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
+          <span className="text-[10px] px-2 py-0.5 rounded-full font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
             {results.statusClassification.replace(/_/g, ' ')}
           </span>
         </div>
@@ -147,22 +147,22 @@ export default function EmbedAgentAbdmFhirSimulator() {
 
         {/* Results Metrics 4-Box */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[10px] text-neutral-400">De-ID Latency</div>
             <div className="text-base font-bold font-mono text-white">{results.deidentificationLatencyMs} ms</div>
             <div className="text-[9px] text-neutral-500">Per patient record</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[10px] text-neutral-400">Re-ID Risk</div>
             <div className="text-base font-bold font-mono text-white">{results.reidentificationRiskPercentage}%</div>
             <div className="text-[9px] text-neutral-500">Empirical leak rate</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[10px] text-neutral-400">Clinical Utility</div>
             <div className="text-base font-bold font-mono text-white">{results.clinicalDataUtilityScore}%</div>
             <div className="text-[9px] text-neutral-500">AI model accuracy</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-neutral-900/80 border border-neutral-800">
+          <div className="p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800">
             <div className="text-[10px] text-neutral-400">Compliance Index</div>
             <div className="text-base font-bold font-mono text-white">{results.statutoryComplianceScore}%</div>
             <div className="text-[9px] text-neutral-500">DPDP Act / NABH</div>
@@ -170,7 +170,7 @@ export default function EmbedAgentAbdmFhirSimulator() {
         </div>
 
         {/* SVG Telemetry Oscilloscope */}
-        <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800 space-y-1.5">
+        <div className="p-3 rounded-[18px] bg-neutral-950 border border-neutral-800 space-y-1.5">
           <div className="flex items-center justify-between text-[10px] text-neutral-400">
             <div className="flex items-center space-x-1.5">
               <Activity className="w-3 h-3 text-neutral-200 " />
@@ -206,7 +206,7 @@ export default function EmbedAgentAbdmFhirSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-200 hover:text-white underline font-medium transition"
+            className="text-neutral-200 hover:text-white underline font-medium transition-all duration-300"
           >
             Elesium Healthcare AI Solutions &rarr;
           </a>

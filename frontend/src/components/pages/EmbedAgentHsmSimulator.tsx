@@ -90,7 +90,7 @@ export default function EmbedAgentHsmSimulator() {
         </div>
 
         {/* Mini Oscilloscope SVG */}
-        <div className="relative w-full aspect-[3/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
+        <div className="relative w-full aspect-[3/1] bg-neutral-950 rounded-[24px] border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
           <div className="flex justify-between items-center text-[10px] font-mono text-neutral-400">
             <span className="text-white font-bold flex items-center gap-1">
               <Activity className="w-3 h-3" /> PKCS#11 Bus Latency: {results.keyDerivationLatencyMicroseconds} µs
@@ -154,7 +154,7 @@ export default function EmbedAgentHsmSimulator() {
         </div>
 
         {/* Controls */}
-        <div className="space-y-2.5 bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-3 text-xs">
+        <div className="space-y-2.5 bg-neutral-900/40 border border-neutral-800/60 rounded-[18px] p-3 text-xs">
           <div className="grid grid-cols-2 gap-2">
             <div>
               <label className="text-[10px] text-neutral-400 block mb-1">HSM Security Profile:</label>
@@ -239,7 +239,7 @@ export default function EmbedAgentHsmSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] text-neutral-500 hover:text-white transition"
+            className="text-[11px] text-neutral-500 hover:text-white transition-all duration-300"
           >
             Engineered by <span className="text-neutral-200 font-medium underline">Elesium Sovereign AI Systems</span>
           </a>
